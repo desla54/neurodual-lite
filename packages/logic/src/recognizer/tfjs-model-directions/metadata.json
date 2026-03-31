@@ -1,0 +1,18 @@
+{
+  "directions": [
+    "up",
+    "up-right",
+    "right",
+    "down-right",
+    "down",
+    "down-left",
+    "left",
+    "up-left"
+  ],
+  "inputShape": [
+    28,
+    28,
+    1
+  ],
+  "accuracy": 0.7013750076293945
+}

@@ -12,7 +12,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor-community/admob": "^8.0.0",
     "@capacitor-community/keep-awake": "^8.0.0",
     "@capacitor-community/sqlite": "^7.0.3",
     "@capacitor/android": "^8.0.0",
@@ -27,24 +26,14 @@
     "@capacitor/splash-screen": "^8.0.1",
     "@capacitor/status-bar": "^8.0.0",
     "@capgo/capacitor-navigation-bar": "^8.0.17",
-    "@capgo/capacitor-social-login": "^8.2.18",
     "@capgo/capacitor-updater": "^8.41.12",
     "@fontsource-variable/manrope": "^5.2.8",
     "@gsap/react": "^2.1.2",
     "@leeoniya/ufuzzy": "^1.0.19",
-    "@marsidev/react-turnstile": "^1.4.0",
     "@neurodual/infra": "workspace:*",
     "@neurodual/logic": "workspace:*",
     "@neurodual/ui": "workspace:*",
     "@phosphor-icons/react": "^2.1.10",
-    "@powersync/capacitor": "0.4.1",
-    "@powersync/react": "^1.9.0",
-    "@powersync/web": "1.34.0",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.5.0",
-    "@revenuecat/purchases-capacitor": "^11.2.17",
-    "@sentry/capacitor": "^3.0.0",
-    "@sentry/react": "10.36.0",
     "@tailwindcss/vite": "^4.1.17",
     "cmdk": "^1.1.1",
     "drizzle-orm": "^0.45.1",
@@ -60,9 +49,13 @@
     "react-router": "^7.0.0",
     "recharts": "^3.6.0",
     "tailwindcss": "^4.1.17",
-    "three": "^0.183.2",
     "zod": "^4.3.6",
-    "zustand": "^5.0.2"
+    "zustand": "^5.0.2",
+    "@powersync/capacitor": "0.4.1",
+    "@powersync/react": "^1.9.0",
+    "@powersync/web": "1.34.0",
+    "@sentry/react": "10.36.0",
+    "@sentry/capacitor": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
@@ -70,6 +63,7 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "tailwindcss-animate": "^1.0.7",
     "vite-plugin-pwa": "^1.2.0",
-    "workbox-window": "^7.4.0"
+    "workbox-window": "^7.4.0",
+    "@sentry/vite-plugin": "^4.8.0"
   }
 }

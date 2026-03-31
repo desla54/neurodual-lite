@@ -1,0 +1,18 @@
+{
+  "shapes": [
+    "circle",
+    "square",
+    "triangle",
+    "diamond",
+    "pentagon",
+    "hexagon",
+    "star",
+    "cross"
+  ],
+  "inputShape": [
+    28,
+    28,
+    1
+  ],
+  "accuracy": 0.9745000004768372
+}

@@ -1,8 +1,7 @@
 /**
- * @neurodual/infra (Lite)
+ * @neurodual/infra
  *
  * Services d'infrastructure (audio, storage, etc.)
- * LOCAL-ONLY: No Supabase sync, no payments, no social login, no TF.js recognition
  */
 
 export type { AudioPreset, Language, Voice } from './audio/audio-service';
@@ -14,7 +13,26 @@ export {
   AudioLifecycleAdapter,
 } from './audio/audio-lifecycle-machine';
 
-// [REMOVED] Handwriting Recognition (CNN TensorFlow.js) — recognizer/ excluded
+// Handwriting Recognition (CNN TensorFlow.js)
+export {
+  CNNRecognizer,
+  createCNNRecognizer,
+  getSharedCNNRecognizer,
+  isSharedCNNRecognizerReady,
+  disposeSharedCNNRecognizer,
+  DigitRecognizer,
+  createDigitRecognizer,
+  getSharedDigitRecognizer,
+  isSharedDigitRecognizerReady,
+  disposeSharedDigitRecognizer,
+  DirectionRecognizer,
+  getSharedDirectionRecognizer,
+  type StrokePoint,
+  type RecognitionResult,
+  type DigitRecognitionResult,
+  type DirectionStrokePoint,
+  type DirectionRecognitionResult,
+} from './recognizer';
 
 // Database (SQLite - unified across platforms)
 // Types only - implementation is internal
@@ -128,6 +146,7 @@ export {
 
 // Platform Detection & Persistent Storage
 export { requestPersistentStorage, isCapacitorNative } from './db/platform-detector';
+// Note: setupAudio was removed - audio is initialized via audioAdapter.init()
 
 // Dev tools (no-op in production)
 export { logSessionToDev } from './dev-logger';
@@ -189,8 +208,47 @@ export { createProfileAdapter } from './profile/profile-adapter';
 export { createSettingsAdapter } from './settings/settings-adapter';
 export { createAlgorithmStateAdapter } from './algorithm-state/algorithm-state-adapter';
 
-// [REMOVED] Supabase (Auth, Subscriptions, Admin functions) — supabase/ excluded
-// [REMOVED] Payments (RevenueCat + Lemon Squeezy) — payments/ excluded
+// Supabase (Auth, Subscriptions, Admin functions)
+export {
+  getSupabase,
+  initSupabase,
+  isSupabaseConfigured,
+  supabaseAuthAdapter,
+  setAuthSignOutCallback,
+  supabaseSubscriptionAdapter,
+  freeSubscriptionAdapter,
+  // Admin functions (direct Supabase operations, not PowerSync)
+  deleteAllUserData,
+  cleanupOrphanSessions,
+  forceFullResync,
+  // No-op adapters for when Supabase is not configured
+  noopAuthAdapter,
+  noopSubscriptionAdapter,
+  noopSyncAdapter,
+  // Settings Sync
+  pullSettings,
+  pushSettings,
+  syncSettings,
+} from './supabase';
+export type {
+  Database,
+  SettingsData,
+  SettingsSyncResult,
+  Tables,
+  TablesInsert,
+  TablesUpdate,
+} from './supabase';
+
+// Payments (RevenueCat + Lemon Squeezy)
+export {
+  configureRevenueCat,
+  revenueCatAdapter,
+  type RevenueCatConfig,
+  configureLemonSqueezy,
+  lemonSqueezyAdapter,
+  initLemonSqueezyAdapter,
+  type LemonSqueezyConfig,
+} from './payments';
 
 // Journey (Training Path)
 export { createJourneyAdapter } from './journey';
@@ -327,7 +385,11 @@ export { wakeLockAdapter } from './wakelock';
 // Platform Info (device + display)
 export { createPlatformInfoPort } from './platform-info-port';
 
-// [REMOVED] Native Social Login (Google/Apple) — social-login/ excluded
+// Native Social Login (Google/Apple in-app sign-in on mobile)
+export {
+  initNativeSocialLogin,
+  type NativeSocialLoginConfig,
+} from './social-login/native-social-login';
 
 // Diagnostics (Freeze detection & debugging)
 export {
@@ -368,4 +430,53 @@ export {
   persistenceHealthAdapter,
 } from './ports';
 
-// [REMOVED] PowerSync (Real-time sync) — powersync/ excluded
+// PowerSync (Real-time sync for emt_messages)
+export {
+  // Schema
+  PowerSyncAppSchema,
+  type PowerSyncDatabase,
+  type PowerSyncEventRow,
+  type PowerSyncEventSignalRow,
+  // Database lifecycle
+  openPowerSyncDatabase,
+  initPowerSyncDatabase,
+  connectPowerSyncDatabase,
+  getPowerSyncDatabase,
+  getPowerSyncRuntimeState,
+  getPowerSyncDebugPort,
+  isPowerSyncInitialized,
+  closePowerSyncDatabase,
+  disconnectPowerSync,
+  reconnectPowerSync,
+  recordPowerSyncLifecycleSignal,
+  recordPowerSyncReconnectStart,
+  recordPowerSyncReconnectResult,
+  recordPowerSyncSyncGate,
+  samplePowerSyncRuntimeMemory,
+  // Connector
+  getPowerSyncConnector,
+  resetPowerSyncConnector,
+  SupabasePowerSyncConnector,
+  // Event watchers
+  watchUserEvents,
+  watchUserEventsByTypes,
+  watchUserEventSignalsByTypes,
+  watchSessionEvents,
+  watchSessionEnded,
+  getUserEvents,
+  getSessionEvents,
+  type EventWatchCallback,
+  type EventSignalWatchCallback,
+  // Sync adapter (implements SyncPort - replaces sync-service)
+  powerSyncSyncAdapter,
+  getPowerSyncSyncAdapter,
+  resetPowerSyncSyncAdapter,
+  startPowerSyncStatusWatcher,
+  stopPowerSyncStatusWatcher,
+  // Runtime policy helpers
+  isLikelyFatalPowerSyncStorageError,
+  markPowerSyncFallbackToIdb,
+  readPowerSyncVfsPreference,
+  writePowerSyncVfsPreference,
+  clearPowerSyncVfsPreference,
+} from './powersync';

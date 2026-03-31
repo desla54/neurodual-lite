@@ -1,0 +1,8979 @@
+{
+  "version": "1.0",
+  "generator": "ravens-fixtures/generate-fixtures.py",
+  "totalFixtures": 100,
+  "fixtures": [
+    {
+      "seed": 1000,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 2,
+        "color": 1,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "shape": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1001,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 4,
+        "color": 6,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          0,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1002,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 2,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1003,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 1,
+        "color": 7,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          2,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1004,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 8,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 4,
+        "color": 8,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          4,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1005,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 9,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 4,
+        "color": 9,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "size": [
+          4,
+          4,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1006,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 0,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "size": [
+          1,
+          1,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1007,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 2,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 2,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 1,
+        "color": 2,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "size": [
+          1,
+          1,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1008,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 1,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 2,
+        "color": 1,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "size": [
+          2,
+          2,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1009,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 8,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 8,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 3,
+        "color": 8,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "size": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1010,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 3,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 8,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 3,
+        "color": 8,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          8,
+          8,
+          8
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1011,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 0,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 0,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "color": [
+          0,
+          0,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1012,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 2,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "color": [
+          2,
+          2,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1013,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 2,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 4,
+        "color": 2,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "color": [
+          2,
+          2,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1014,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 8,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 8,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 8,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 0,
+        "color": 3,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1015,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 5,
+        "color": 6,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "angle": [
+          7,
+          7,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1016,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 1,
+        "color": 1,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "angle": [
+          5,
+          5,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1017,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 4,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 2,
+        "color": 4,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1018,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 4,
+        "color": 5,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "angle": [
+          1,
+          1,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1019,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "constant",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 1,
+        "color": 7,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          3,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1020,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 9,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1021,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": -1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 3,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 4,
+        "color": 3,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          1,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1022,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": 2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 6,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 0,
+        "color": 6,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          2,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1023,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 1,
+        "color": 6,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          2,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1024,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 8,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 2,
+        "color": 8,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1025,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 5,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 5,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 5,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 5,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          1,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1026,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": -1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 4,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 4,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 2,
+        "color": 4,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "size": [
+          4,
+          3,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1027,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 7,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 4,
+        "color": 7,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          2,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1028,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 7,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "size": [
+          5,
+          3,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1029,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 6,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 5,
+            "color": 6,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 5,
+        "color": 6,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "size": [
+          3,
+          4,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1030,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 2,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 8,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 2,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 4,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 3,
+        "color": 4,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          2,
+          3,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1031,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": -1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 5,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 0,
+        "color": 5,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "color": [
+          7,
+          6,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1032,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": 2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 3,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 9,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 8,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 8,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "color": [
+          4,
+          6,
+          8
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1033,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 1,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 3,
+        "color": 5,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "color": [
+          9,
+          7,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1034,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 3,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 3,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 3,
+        "color": 3,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "color": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1035,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 1,
+        "color": 1,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "angle": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1036,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": -1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 1,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 5,
+        "color": 1,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "angle": [
+          7,
+          6,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1037,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": 2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 0,
+        "color": 0,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          5,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1038,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 0,
+        "color": 5,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "angle": [
+          6,
+          4,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1039,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 1,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 5,
+        "color": 1,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "angle": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1040,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 0,
+        "color": 4,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          1,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1041,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 0,
+        "color": 3,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          0,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1042,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 6,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 6,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          1,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1043,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 0,
+        "color": 5,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          0,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1044,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 2,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 1,
+        "color": 2,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          0,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1045,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 7,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 4,
+        "color": 7,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          3,
+          1,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1046,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 0,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 0,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          2,
+          0,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1047,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 4,
+        "color": 2,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "size": [
+          3,
+          1,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1048,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 3,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 3,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 3,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 0,
+        "color": 3,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          0,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1049,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 4,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 4,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 4,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 4,
+        "color": 4,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          3,
+          1,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1050,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 4,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 9,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 6,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 3,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 9,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 5,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 1,
+        "color": 5,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          5,
+          0,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1051,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 0,
+        "color": 1,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "color": [
+          2,
+          1,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1052,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 3,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 8,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "color": [
+          7,
+          1,
+          8
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1053,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 3,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 0,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 3,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 1,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 4,
+        "color": 1,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "color": [
+          3,
+          2,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1054,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 9,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 0,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 9,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 9,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 0,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 8,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "color": [
+          8,
+          0,
+          8
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1055,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 6,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 5,
+        "color": 6,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          3,
+          6
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1056,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 9,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 1,
+        "color": 9,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "angle": [
+          5,
+          3,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1057,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 0,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 2,
+        "color": 0,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          4,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1058,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 0,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "angle": [
+          1,
+          1,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1059,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 0,
+        "color": 0,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "angle": [
+          0,
+          6,
+          6
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1060,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 5,
+        "color": 4,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          1,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1061,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 5,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 1,
+        "color": 5,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          2,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1062,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 0,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 0,
+        "color": 0,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          1,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1063,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 3,
+        "color": 5,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          4,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1064,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 4,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 0,
+        "color": 4,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          4,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1065,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 2,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 2,
+        "color": 2,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          5,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1066,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 6,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 5,
+        "color": 6,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "size": [
+          4,
+          3,
+          5
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1067,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 2,
+        "color": 2,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          3,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1068,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 4,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "size": [
+          1,
+          5,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1069,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 6,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 6,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          2,
+          3,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1070,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 1,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 4,
+        "color": 1,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          7,
+          5,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1071,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 8,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 7,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "color": [
+          8,
+          1,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1072,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 6,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 6,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 0,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 6,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 0,
+        "color": 7,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "color": [
+          0,
+          6,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1073,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 9,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 9,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 5,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 9,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 0,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "color": [
+          5,
+          9,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1074,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 2,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 2,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 2,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "color": [
+          5,
+          6,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1075,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 6
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 0,
+        "color": 7,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "angle": [
+          6,
+          1,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1076,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 9,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 5,
+        "color": 9,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "angle": [
+          1,
+          5,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1077,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 3,
+        "color": 7,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "angle": [
+          0,
+          2,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1078,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 4,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 5,
+        "color": 4,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "angle": [
+          3,
+          1,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1079,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 9,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 9,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "angle": [
+          7,
+          5,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1080,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "add"
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "sub"
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 9,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 4,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 6,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 8,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 3,
+        "color": 8,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          0,
+          2
+        ],
+        "color": [
+          2,
+          6,
+          8
+        ],
+        "angle": [
+          5,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1081,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": 2
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 4,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 1,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 4,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 4,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          4,
+          3
+        ],
+        "color": [
+          1,
+          7,
+          4
+        ],
+        "angle": [
+          0,
+          2,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1082,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "sub"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 1,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 2,
+        "color": 2,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          0,
+          2
+        ],
+        "color": [
+          1,
+          7,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1083,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": -1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 3,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 1,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 5,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 2,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 5,
+            "color": 5,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 4,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 3,
+        "color": 4,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "size": [
+          5,
+          4,
+          3
+        ],
+        "color": [
+          5,
+          1,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1084,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "add"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 2,
+            "angle": 0
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 2,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 2,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 2,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 2,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 2,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 2,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 2,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "size": [
+          5,
+          0,
+          1
+        ],
+        "angle": [
+          3,
+          4,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1085,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": -2
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": -2
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 1
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 5,
+            "angle": 6
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 5,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 5,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 5,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 5,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 2,
+        "color": 5,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          2,
+          0
+        ],
+        "size": [
+          0,
+          1,
+          2
+        ],
+        "angle": [
+          4,
+          2,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1086,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": 1
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 8,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 5,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 9,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 2,
+        "color": 9,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          1,
+          2
+        ],
+        "color": [
+          7,
+          8,
+          9
+        ],
+        "angle": [
+          2,
+          7,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1087,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "add"
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 5,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 7,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 4,
+        "color": 7,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          2,
+          3
+        ],
+        "size": [
+          1,
+          3,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1088,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "shape",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 8,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 0,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 4,
+            "color": 5,
+            "angle": 7
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 2,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 2,
+            "color": 6,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 0,
+            "angle": 7
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 0,
+        "angle": 7
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          1,
+          1
+        ],
+        "size": [
+          4,
+          2,
+          1
+        ],
+        "color": [
+          6,
+          6,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1089,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "sub"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": -2
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 0,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 6
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 0,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 4,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 0,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 0,
+        "color": 0,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "size": [
+          4,
+          2,
+          0
+        ],
+        "color": [
+          4,
+          2,
+          0
+        ],
+        "angle": [
+          5,
+          1,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1090,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": -2
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 9,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 1,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 9,
+            "angle": 6
+          },
+          {
+            "shape": 1,
+            "size": 3,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 1,
+        "size": 1,
+        "color": 7,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "size": [
+          5,
+          3,
+          1
+        ],
+        "color": [
+          9,
+          1,
+          7
+        ],
+        "angle": [
+          6,
+          4,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1091,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "color",
+          "step": 1
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "size"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 6,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 7,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 4,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 4
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 6,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 1,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 2,
+            "angle": 4
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 3,
+            "angle": 4
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 1,
+        "color": 3,
+        "angle": 4
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          2,
+          4
+        ],
+        "size": [
+          3,
+          2,
+          1
+        ],
+        "color": [
+          1,
+          2,
+          3
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1092,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "angle"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 8,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 1,
+            "angle": 2
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 4,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 3,
+            "angle": 4
+          }
+        ],
+        [
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 3,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 1,
+            "angle": 0
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 3,
+        "color": 2,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          2,
+          3,
+          4
+        ],
+        "color": [
+          3,
+          1,
+          2
+        ],
+        "angle": [
+          4,
+          0,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1093,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": 2
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 0,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 4
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 7,
+            "angle": 6
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 7,
+            "angle": 3
+          },
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 5,
+            "color": 0,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 7,
+            "angle": 2
+          },
+          {
+            "shape": 4,
+            "size": 2,
+            "color": 2,
+            "angle": 4
+          },
+          {
+            "shape": 4,
+            "size": 4,
+            "color": 0,
+            "angle": 6
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 4,
+        "size": 4,
+        "color": 0,
+        "angle": 6
+      },
+      "answerRowValues": {
+        "size": [
+          0,
+          2,
+          4
+        ],
+        "color": [
+          7,
+          2,
+          0
+        ],
+        "angle": [
+          2,
+          4,
+          6
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1094,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "angle",
+          "op": "sub"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": 1
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 7,
+            "angle": 0
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 5,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 7,
+            "angle": 0
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 7,
+            "angle": 7
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 7
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 7,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 7,
+            "angle": 2
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 2,
+        "size": 1,
+        "color": 7,
+        "angle": 2
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          1,
+          2
+        ],
+        "size": [
+          5,
+          4,
+          1
+        ],
+        "angle": [
+          7,
+          5,
+          2
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1095,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 2
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 0,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 2,
+            "size": 2,
+            "color": 2,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 4,
+            "color": 2,
+            "angle": 5
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 4,
+        "color": 2,
+        "angle": 5
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          2,
+          4
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1096,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "size",
+          "step": 1
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "add"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 1,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 1,
+            "size": 4,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 5,
+            "color": 7,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 1,
+            "size": 1,
+            "color": 7,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 0,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 3,
+            "color": 7,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 3,
+        "color": 7,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          1,
+          0,
+          3
+        ],
+        "size": [
+          1,
+          2,
+          3
+        ],
+        "color": [
+          7,
+          0,
+          7
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1097,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "shape"
+        },
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "sub"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 2,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 2,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 0,
+            "size": 3,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 4,
+            "size": 0,
+            "color": 2,
+            "angle": 1
+          },
+          {
+            "shape": 3,
+            "size": 1,
+            "color": 2,
+            "angle": 1
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 1,
+        "color": 2,
+        "angle": 1
+      },
+      "answerRowValues": {
+        "shape": [
+          0,
+          4,
+          3
+        ],
+        "size": [
+          1,
+          0,
+          1
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1098,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "color",
+          "op": "sub"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "angle",
+          "step": -2
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 2,
+            "angle": 7
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 8,
+            "angle": 5
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 4,
+            "angle": 1
+          }
+        ],
+        [
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 9,
+            "angle": 4
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 8,
+            "angle": 2
+          },
+          {
+            "shape": 3,
+            "size": 0,
+            "color": 1,
+            "angle": 0
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 3,
+        "size": 0,
+        "color": 1,
+        "angle": 0
+      },
+      "answerRowValues": {
+        "color": [
+          9,
+          8,
+          1
+        ],
+        "angle": [
+          4,
+          2,
+          0
+        ]
+      },
+      "valid": true
+    },
+    {
+      "seed": 1099,
+      "config": "center",
+      "ruleBindings": [
+        {
+          "ruleId": "arithmetic",
+          "attributeId": "size",
+          "op": "sub"
+        },
+        {
+          "ruleId": "progression",
+          "attributeId": "shape",
+          "step": -2
+        },
+        {
+          "ruleId": "distribute_three",
+          "attributeId": "color"
+        }
+      ],
+      "grid": [
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 6,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 1,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 2,
+            "color": 5,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 1,
+            "color": 4,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 0,
+            "color": 6,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 1,
+            "color": 5,
+            "angle": 3
+          }
+        ],
+        [
+          {
+            "shape": 4,
+            "size": 3,
+            "color": 6,
+            "angle": 3
+          },
+          {
+            "shape": 2,
+            "size": 3,
+            "color": 5,
+            "angle": 3
+          },
+          {
+            "shape": 0,
+            "size": 0,
+            "color": 4,
+            "angle": 3
+          }
+        ]
+      ],
+      "answer": {
+        "shape": 0,
+        "size": 0,
+        "color": 4,
+        "angle": 3
+      },
+      "answerRowValues": {
+        "shape": [
+          4,
+          2,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          0
+        ],
+        "color": [
+          6,
+          5,
+          4
+        ]
+      },
+      "valid": true
+    }
+  ]
+}
