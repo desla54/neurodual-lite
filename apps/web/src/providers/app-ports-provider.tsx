@@ -13,18 +13,11 @@ import {
   sessionPipelineFactoryAdapter,
   persistenceHealthAdapter,
   freeSubscriptionAdapter,
-  lemonSqueezyAdapter,
   createReplayInteractifAdapter,
   noopAuthAdapter,
   noopRewardAdapter,
-  noopSubscriptionAdapter,
   noopSyncAdapter,
-  powerSyncSyncAdapter,
-  revenueCatAdapter,
-  rewardAdapter,
   setupPersistence,
-  supabaseAuthAdapter,
-  supabaseSubscriptionAdapter,
   replayRecoveryAdapter,
   sessionRecoveryAdapter,
   settingsSyncAdapter,
@@ -36,7 +29,6 @@ import {
   audioService,
 } from '@neurodual/infra';
 import type { InfraAdapters } from '@neurodual/infra';
-import { featureFlags } from '../config/feature-flags';
 import type {
   AudioPort,
   AdminHistoryMaintenancePort,
@@ -143,6 +135,32 @@ export interface AppPorts {
   audioDebug: AudioDebugPort;
 }
 
+const noopPayment: PaymentPort = {
+  initialize: async () => {},
+  getProducts: async () => [],
+  purchase: async () => ({ success: false, error: 'Payments not available in Lite mode' }) as never,
+  restorePurchases: async () =>
+    ({
+      isActive: false,
+      activeEntitlement: null,
+      expirationDate: null,
+      isTrialing: false,
+      originalPurchaseDate: null,
+    }) as never,
+  getCustomerInfo: async () =>
+    ({
+      isActive: false,
+      activeEntitlement: null,
+      expirationDate: null,
+      isTrialing: false,
+      originalPurchaseDate: null,
+    }) as never,
+  subscribe: () => () => {},
+  setUserId: async () => {},
+  logout: async () => {},
+  isAvailable: () => false,
+};
+
 const AppPortsContext = createContext<AppPorts | null>(null);
 
 export function AppPortsProvider({ children }: { children: ReactNode }): ReactNode {
@@ -153,34 +171,12 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
   const adapters = systemCtx?.adapters ?? fallbackAdapters;
   const persistence = systemCtx?.persistence ?? null;
 
-  const hasSupabase = useMemo(() => infraProbeAdapter.isSupabaseConfigured(), []);
-
-  const auth = useMemo<AuthPort>(
-    () => (hasSupabase ? supabaseAuthAdapter : noopAuthAdapter),
-    [hasSupabase],
-  );
-
-  const subscription = useMemo<SubscriptionPort>(() => {
-    if (!featureFlags.premiumEnabled) return freeSubscriptionAdapter;
-    return hasSupabase ? supabaseSubscriptionAdapter : noopSubscriptionAdapter;
-  }, [hasSupabase]);
-
-  const sync = useMemo<SyncPort>(
-    () => (hasSupabase ? powerSyncSyncAdapter : noopSyncAdapter),
-    [hasSupabase],
-  );
-
-  const reward = useMemo<RewardPort>(() => {
-    if (!featureFlags.xpRewardsEnabled) return noopRewardAdapter;
-    return hasSupabase ? rewardAdapter : noopRewardAdapter;
-  }, [hasSupabase]);
-
-  const payment = useMemo<PaymentPort>(() => revenueCatAdapter, []);
-  const license = useMemo<LicensePort | undefined>(() => {
-    return featureFlags.premiumEnabled && !featureFlags.nativeModeEnabled
-      ? lemonSqueezyAdapter
-      : undefined;
-  }, []);
+  // Lite mode: always use noop adapters for cloud features
+  const auth = useMemo<AuthPort>(() => noopAuthAdapter, []);
+  const subscription = useMemo<SubscriptionPort>(() => freeSubscriptionAdapter, []);
+  const sync = useMemo<SyncPort>(() => noopSyncAdapter, []);
+  const reward = useMemo<RewardPort>(() => noopRewardAdapter, []);
+  const payment = useMemo<PaymentPort>(() => noopPayment, []);
 
   const platformInfo = useMemo(() => createPlatformInfoPort(), []);
 
@@ -257,13 +253,13 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
     () => ({
       adapters,
       persistence,
-      hasSupabase,
+      hasSupabase: false,
       auth,
       subscription,
       sync,
       reward,
       payment,
-      license,
+      license: undefined,
       audio: audioAdapter,
       wakeLock: wakeLockAdapter,
       haptic: hapticAdapter,
@@ -290,13 +286,11 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
     [
       adapters,
       persistence,
-      hasSupabase,
       auth,
       subscription,
       sync,
       reward,
       payment,
-      license,
       platformInfo,
       xpContext,
       replay,

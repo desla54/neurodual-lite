@@ -22,7 +22,7 @@ import { useHaptic } from '../hooks/use-haptic';
 import { useAnalytics } from '../hooks/use-analytics';
 import { useAlphaEnabled } from '../hooks/use-beta-features';
 import { useAppPorts, useCommandBus } from '../providers';
-import { useCloudSyncActions } from '../components/cloud-sync-provider';
+
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
@@ -32,7 +32,6 @@ import {
   buildTrialEvent,
   buildEndEvent,
 } from '../lib/cognitive-task-events';
-import { useAdInterstitial } from '../hooks/use-ad-interstitial';
 import { useSettingsStore } from '../stores';
 
 const DEFAULT_TOTAL_TRIALS = 96;
@@ -151,9 +150,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const { track } = useAnalytics();
   const commandBus = useCommandBus();
   const { platformInfo, persistence } = useAppPorts();
-  const { syncEventsAndProgression } = useCloudSyncActions();
-  const { complete } = useSessionCompletion({ syncToCloud: syncEventsAndProgression });
-  const { maybeShowAd } = useAdInterstitial();
+  const { complete } = useSessionCompletion({});
   const userId = useEffectiveUserId();
 
   const emitterRef = useRef<CogTaskEventEmitter>({
@@ -487,14 +484,8 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
             accuracy={summary.accuracy}
             avgRtMs={summary.avgRT}
             congruencyEffectMs={summary.congruencyEffect}
-            onPlayAgain={async () => {
-              await maybeShowAd();
-              handleRestart();
-            }}
-            onBackToHome={async () => {
-              await maybeShowAd();
-              navigate('/');
-            }}
+            onPlayAgain={() => handleRestart()}
+            onBackToHome={() => navigate('/')}
           />
         </div>
       </div>

@@ -15,21 +15,13 @@
     "@capacitor/app": "^8.0.0",
     "@capacitor/core": "^8.0.0",
     "@capacitor/haptics": "^8.0.0",
-    "@capgo/capacitor-social-login": "^8.2.18",
     "@neurodual/logic": "workspace:*",
-    "@powersync/capacitor": "0.4.1",
     "@powersync/drizzle-driver": "^0.7.3",
-    "@powersync/react": "^1.9.0",
     "@powersync/web": "1.34.0",
-    "@revenuecat/purchases-capacitor": "^11.2.17",
-    "@supabase/supabase-js": "^2.88.0",
     "@tensorflow/tfjs": "^4.22.0",
     "drizzle-orm": "^0.45.1",
     "tone": "^15.1.22",
-    "wa-sqlite": "^1.0.0",
     "xstate": "^5.19.2"
   },
-  "devDependencies": {
-    "drizzle-kit": "^0.31.9"
-  }
+  "devDependencies": {}
 }

@@ -5,13 +5,11 @@
 import {
   ArrowsLeftRight,
   Exam,
-  Crown,
   Database,
   Eye,
   GearSix,
   Globe,
   HandWaving,
-  Heart,
   Info,
   MapTrifold,
   Bell,
@@ -20,7 +18,6 @@ import {
   SquaresFour,
   User,
 } from '@phosphor-icons/react';
-import { featureFlags } from '../../../config/feature-flags';
 
 export interface SettingsNavItem {
   id: string;
@@ -60,11 +57,6 @@ export const settingsNavGroups: SettingsNavGroup[] = [
     items: [
       { id: 'profile', labelKey: 'settings.nav.profile', icon: User },
       { id: 'data', labelKey: 'settings.nav.data', icon: Database },
-      {
-        id: 'premium',
-        labelKey: featureFlags.premiumEnabled ? 'settings.nav.premium' : 'settings.nav.support',
-        icon: featureFlags.premiumEnabled ? Crown : Heart,
-      },
     ],
   },
   {
@@ -99,7 +91,6 @@ export const sectionTitles: Record<string, string> = {
   audio: 'settings.nav.audio',
   profile: 'settings.nav.profile',
   data: 'settings.nav.data',
-  premium: featureFlags.premiumEnabled ? 'settings.nav.premium' : 'settings.nav.support',
   language: 'settings.nav.language',
   personalization: 'settings.nav.personalization',
   notifications: 'settings.nav.notifications',

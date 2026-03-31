@@ -208,48 +208,6 @@ export { createProfileAdapter } from './profile/profile-adapter';
 export { createSettingsAdapter } from './settings/settings-adapter';
 export { createAlgorithmStateAdapter } from './algorithm-state/algorithm-state-adapter';
 
-// Supabase (Auth, Subscriptions, Admin functions)
-export {
-  getSupabase,
-  initSupabase,
-  isSupabaseConfigured,
-  supabaseAuthAdapter,
-  setAuthSignOutCallback,
-  supabaseSubscriptionAdapter,
-  freeSubscriptionAdapter,
-  // Admin functions (direct Supabase operations, not PowerSync)
-  deleteAllUserData,
-  cleanupOrphanSessions,
-  forceFullResync,
-  // No-op adapters for when Supabase is not configured
-  noopAuthAdapter,
-  noopSubscriptionAdapter,
-  noopSyncAdapter,
-  // Settings Sync
-  pullSettings,
-  pushSettings,
-  syncSettings,
-} from './supabase';
-export type {
-  Database,
-  SettingsData,
-  SettingsSyncResult,
-  Tables,
-  TablesInsert,
-  TablesUpdate,
-} from './supabase';
-
-// Payments (RevenueCat + Lemon Squeezy)
-export {
-  configureRevenueCat,
-  revenueCatAdapter,
-  type RevenueCatConfig,
-  configureLemonSqueezy,
-  lemonSqueezyAdapter,
-  initLemonSqueezyAdapter,
-  type LemonSqueezyConfig,
-} from './payments';
-
 // Journey (Training Path)
 export { createJourneyAdapter } from './journey';
 
@@ -284,15 +242,6 @@ export {
   type SubmitStatsResult,
   type PlayerStatsResult,
 } from './stats-sharing';
-
-// Rewards (XP-based Premium rewards)
-export {
-  rewardAdapter,
-  createRewardAdapter,
-  noopRewardAdapter,
-  initRewardAdapter,
-  resetRewardAdapter,
-} from './rewards';
 
 // XP Context (external context for XP calculation)
 export { createXPContextAdapter } from './xp/xp-context-adapter';
@@ -385,12 +334,6 @@ export { wakeLockAdapter } from './wakelock';
 // Platform Info (device + display)
 export { createPlatformInfoPort } from './platform-info-port';
 
-// Native Social Login (Google/Apple in-app sign-in on mobile)
-export {
-  initNativeSocialLogin,
-  type NativeSocialLoginConfig,
-} from './social-login/native-social-login';
-
 // Diagnostics (Freeze detection & debugging)
 export {
   startFreezeWatchdog,
@@ -420,63 +363,10 @@ export {
   replayRecoveryAdapter,
   tutorialRecoveryAdapter,
   diagnosticsAdapter,
-  settingsSyncAdapter,
   deepLinkAdapter,
   infraProbeAdapter,
-  oauthCallbackAdapter,
   eventReaderFactoryAdapter,
   adminHistoryMaintenanceAdapter,
   sessionPipelineFactoryAdapter,
   persistenceHealthAdapter,
 } from './ports';
-
-// PowerSync (Real-time sync for emt_messages)
-export {
-  // Schema
-  PowerSyncAppSchema,
-  type PowerSyncDatabase,
-  type PowerSyncEventRow,
-  type PowerSyncEventSignalRow,
-  // Database lifecycle
-  openPowerSyncDatabase,
-  initPowerSyncDatabase,
-  connectPowerSyncDatabase,
-  getPowerSyncDatabase,
-  getPowerSyncRuntimeState,
-  getPowerSyncDebugPort,
-  isPowerSyncInitialized,
-  closePowerSyncDatabase,
-  disconnectPowerSync,
-  reconnectPowerSync,
-  recordPowerSyncLifecycleSignal,
-  recordPowerSyncReconnectStart,
-  recordPowerSyncReconnectResult,
-  recordPowerSyncSyncGate,
-  samplePowerSyncRuntimeMemory,
-  // Connector
-  getPowerSyncConnector,
-  resetPowerSyncConnector,
-  SupabasePowerSyncConnector,
-  // Event watchers
-  watchUserEvents,
-  watchUserEventsByTypes,
-  watchUserEventSignalsByTypes,
-  watchSessionEvents,
-  watchSessionEnded,
-  getUserEvents,
-  getSessionEvents,
-  type EventWatchCallback,
-  type EventSignalWatchCallback,
-  // Sync adapter (implements SyncPort - replaces sync-service)
-  powerSyncSyncAdapter,
-  getPowerSyncSyncAdapter,
-  resetPowerSyncSyncAdapter,
-  startPowerSyncStatusWatcher,
-  stopPowerSyncStatusWatcher,
-  // Runtime policy helpers
-  isLikelyFatalPowerSyncStorageError,
-  markPowerSyncFallbackToIdb,
-  readPowerSyncVfsPreference,
-  writePowerSyncVfsPreference,
-  clearPowerSyncVfsPreference,
-} from './powersync';

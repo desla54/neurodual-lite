@@ -9,18 +9,6 @@ export interface FeatureAccess {
 export type StatsModeFilter =
   | 'all'
   | 'DualTempo'
-  | 'DualPlace'
-  | 'DualMemo'
-  | 'DualPick'
-  | 'DualTrace'
-  | 'DualTime'
-  | 'CorsiBlock'
-  | 'Ospan'
-  | 'RunningSpan'
-  | 'PASAT'
-  | 'SWM'
-  | 'DualTrack'
-  | 'CognitiveTask'
   | 'DualnbackClassic'
   | 'BrainWorkshop'
   | 'Libre'
@@ -114,150 +102,6 @@ export const CANONICAL_GAME_MODES: readonly GameModeMeta[] = [
       presentationKind: 'tempo',
     },
   },
-  {
-    id: 'dual-place',
-    statsMode: 'DualPlace',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.dualPlace',
-      descKey: 'stats.mode.dualPlaceDesc',
-      iconKey: 'map-pin',
-      shortCode: 'Place',
-      presentationKind: 'place',
-    },
-  },
-  {
-    id: 'dual-memo',
-    statsMode: 'DualMemo',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.dualMemo',
-      descKey: 'stats.mode.dualMemoDesc',
-      iconKey: 'database',
-      shortCode: 'Memo',
-      presentationKind: 'memo',
-    },
-  },
-  {
-    id: 'dual-pick',
-    statsMode: 'DualPick',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.dualPick',
-      descKey: 'stats.mode.dualPickDesc',
-      iconKey: 'tag',
-      shortCode: 'Pick',
-      presentationKind: 'pick',
-    },
-  },
-  {
-    id: 'dual-trace',
-    statsMode: 'DualTrace',
-    reliability: 'beta',
-    stats: {
-      labelKey: 'stats.mode.dualTrace',
-      descKey: 'stats.mode.dualTraceDesc',
-      iconKey: 'pencil',
-      shortCode: 'Trace',
-      presentationKind: 'trace',
-    },
-  },
-  {
-    id: 'dual-time',
-    statsMode: 'DualTime',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.dualTime',
-      descKey: 'stats.mode.dualTimeDesc',
-      iconKey: 'sliders',
-      shortCode: 'Time',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'corsi-block',
-    statsMode: 'CorsiBlock',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.corsiBlock',
-      descKey: 'stats.mode.corsiBlockDesc',
-      iconKey: 'database',
-      shortCode: 'Corsi',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'ospan',
-    statsMode: 'Ospan',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.ospan',
-      descKey: 'stats.mode.ospanDesc',
-      iconKey: 'brain',
-      shortCode: 'OSPAN',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'running-span',
-    statsMode: 'RunningSpan',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.runningSpan',
-      descKey: 'stats.mode.runningSpanDesc',
-      iconKey: 'brain',
-      shortCode: 'RSPAN',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'pasat',
-    statsMode: 'PASAT',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.pasat',
-      descKey: 'stats.mode.pasatDesc',
-      iconKey: 'brain',
-      shortCode: 'PASAT',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'swm',
-    statsMode: 'SWM',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.swm',
-      descKey: 'stats.mode.swmDesc',
-      iconKey: 'brain',
-      shortCode: 'SWM',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'dual-track',
-    statsMode: 'DualTrack',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.dualTrack',
-      descKey: 'stats.mode.dualTrackDesc',
-      iconKey: 'eye',
-      shortCode: 'Track',
-      presentationKind: 'other',
-    },
-  },
-  {
-    id: 'cognitive-task',
-    statsMode: 'CognitiveTask',
-    reliability: 'alpha',
-    stats: {
-      labelKey: 'stats.mode.cognitiveTask',
-      descKey: 'stats.mode.cognitiveTaskDesc',
-      iconKey: 'brain',
-      shortCode: 'CogTask',
-      presentationKind: 'other',
-    },
-  },
 ] as const;
 
 export const CANONICAL_JOURNEYS: readonly JourneyMeta[] = [
@@ -294,17 +138,6 @@ export const CANONICAL_JOURNEYS: readonly JourneyMeta[] = [
       descKey: 'stats.journey.simBrainworkshopDesc',
       iconKey: 'brain',
       shortCode: 'BW',
-    },
-  },
-  {
-    id: 'dual-track-dnb-journey',
-    kind: 'simulator',
-    reliability: 'stable',
-    stats: {
-      labelKey: 'stats.journey.dualTrackDnbHybrid',
-      descKey: 'stats.journey.dualTrackDnbHybridDesc',
-      iconKey: 'eye',
-      shortCode: 'Track+DNB',
     },
   },
 ] as const;
@@ -348,10 +181,6 @@ export function listStatsModeOptions(): readonly StatsModeOption[] {
     byMode('DualnbackClassic'),
     byMode('BrainWorkshop'),
     byMode('DualTempo'),
-    byMode('DualPlace'),
-    byMode('DualMemo'),
-    byMode('DualPick'),
-    byMode('DualTrace'),
     {
       value: 'Libre',
       labelKey: 'stats.mode.libre',

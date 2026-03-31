@@ -4,9 +4,7 @@
  * Controls feature availability based on environment variables.
  * Used to toggle between premium/free and native/PWA modes.
  *
- * For rollback to premium + stores:
- * - VITE_PREMIUM_MODE=enabled
- * - VITE_NATIVE_MODE=enabled
+ * NeuroDual Lite: premium and XP rewards are always disabled.
  */
 
 import { Capacitor } from '@capacitor/core';
@@ -17,27 +15,16 @@ function isFeatureEnabled(value: string | undefined): boolean {
   return normalized === 'enabled' || normalized === 'true' || normalized === '1';
 }
 
-function resolvePremiumEnabled(): boolean {
-  const premiumMode = import.meta.env['VITE_PREMIUM_MODE'];
-  if (premiumMode !== undefined) {
-    return isFeatureEnabled(premiumMode);
-  }
-
-  // Safety default for Capacitor builds: keep premium mode on unless explicitly disabled.
-  return Capacitor.isNativePlatform();
-}
-
-const premiumEnabled = resolvePremiumEnabled();
 const nativeModeFromEnv = isFeatureEnabled(import.meta.env['VITE_NATIVE_MODE']);
 const nativeModeEnabled = nativeModeFromEnv || Capacitor.isNativePlatform();
 const experimentalModesFromEnv = isFeatureEnabled(import.meta.env['VITE_EXPERIMENTAL_MODES']);
 const devAppEnabled = isFeatureEnabled(import.meta.env['VITE_DEV_APP']);
 
 export const featureFlags = {
-  /** Premium subscription features (N4+, cloud sync paywall) */
-  premiumEnabled,
+  /** Premium subscription features — always disabled in Lite */
+  premiumEnabled: false,
 
-  /** Native mobile features (Capacitor, RevenueCat, Capgo) */
+  /** Native mobile features (Capacitor) */
   nativeModeEnabled,
 
   /**
@@ -53,10 +40,10 @@ export const featureFlags = {
   experimentalModesEnabled: import.meta.env.DEV || experimentalModesFromEnv || !nativeModeEnabled,
 
   /** Donation links (shown when premium is disabled) */
-  donationLinksEnabled: !premiumEnabled,
+  donationLinksEnabled: true,
 
-  /** XP rewards system (train-to-own premium via XP levels) */
-  xpRewardsEnabled: isFeatureEnabled(import.meta.env['VITE_XP_REWARDS']),
+  /** XP rewards system — always disabled in Lite */
+  xpRewardsEnabled: false,
 
   /**
    * Prototype routes and features (dev only, never shipped).

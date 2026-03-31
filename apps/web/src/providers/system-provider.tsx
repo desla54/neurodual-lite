@@ -11,26 +11,16 @@
 
 import {
   AppLifecycleAdapter,
-  clearAuthTransitionMigrationMeta,
-  configureLemonSqueezy,
   createAdaptersAsync,
   createNoopInfraAdapters,
   createPlatformLifecycleSource,
   getNetworkAdapter,
   getSessionManager,
-  initNativeSocialLogin,
-  isLikelyFatalPowerSyncStorageError,
-  markPowerSyncFallbackToIdb,
   requestPersistentStorage,
   resetNetworkAdapter,
   resetSessionManager,
-  setAuthSignOutCallback,
   setupPersistence,
-  wipeLocalDeviceData,
-  powerSyncSyncAdapter,
-  resetPowerSyncSyncAdapter,
   cleanupOrphanedRuns,
-  supabaseAuthAdapter,
   withWatchdogContext,
   withWatchdogContextAsync,
   type AppLifecycleInput,
@@ -62,6 +52,7 @@ import { initSettingsStore, useSettingsStore } from '../stores/settings-store';
 import { changeLanguage } from '../i18n';
 import { logger } from '../lib';
 import { attemptAutoReload, clearReloadGuardOnSuccess } from '../services/reload-recovery';
+import { wipeLocalDeviceData } from '@neurodual/infra';
 
 // =============================================================================
 // Context Types
@@ -150,7 +141,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
   const [persistence, setPersistence] = useState<PersistencePort | null>(null);
   const persistenceRef = useRef<PersistencePort | null>(persistence);
   const initializedRef = useRef(false);
-  const persistenceErrorHandlerInstalledRef = useRef(false);
   const startupMaintenanceScheduledRef = useRef(false);
   const splashHiddenRef = useRef(false);
 
@@ -182,33 +172,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
     const runSyncInitStep = <T,>(step: string, fn: () => T): T =>
       withWatchdogContext(`SystemProvider.${step}`, fn);
 
-    // Configure Lemon Squeezy for web payments (PWA)
-    runSyncInitStep('configureLemonSqueezy', () => {
-      configureLemonSqueezy({
-        storeId: 'neurodual',
-        variants: {
-          annual: 'ebfd82d8-fb29-4ff6-bc16-f89643c6e99a',
-          lifetime: '24eb6fb2-7b6e-48ac-88f3-f4a245cb2020',
-        },
-      });
-    });
-
-    // Initialize native social login for in-app Google/Apple sign-in on mobile
-    runSyncInitStep('initNativeSocialLogin', () => {
-      initNativeSocialLogin({
-        googleWebClientId: import.meta.env.VITE_GOOGLE_WEB_CLIENT_ID,
-        appleClientId: import.meta.env.VITE_APPLE_CLIENT_ID,
-      }).catch((err: unknown) => {
-        logger.warn('[SystemProvider] Native social login init failed:', err);
-      });
-    });
-
-    // IMPORTANT:
-    // Do NOT kick off persistence eagerly here.
-    // On web, opening the PowerSync/SQLite backend (WASM/OPFS) can block the main thread for seconds
-    // on some devices (first run / cold cache / large local history). We let the AppLifecycle machine
-    // orchestrate init and display an appropriate loading state instead of freezing right after mount.
-
     // Request persistent storage (best-effort, non-blocking)
     // This tells the browser to exempt our storage from eviction under pressure (ITP, quota)
     runSyncInitStep('requestPersistentStorage', () => {
@@ -223,9 +186,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
         });
     });
 
-    // NOTE: Do not create PersistencePort or adapters here.
-    // Let the AppLifecycle machine orchestrate SQLite init to avoid doing heavy work during React mount.
-
     // 1. Create platform lifecycle source
     platformSourceRef.current = runSyncInitStep('createPlatformLifecycleSource', () =>
       createPlatformLifecycleSource(),
@@ -239,28 +199,11 @@ export function SystemProvider({ children }: SystemProviderProps) {
         );
         // Store persistence for direct access (session recovery, etc.)
         updatePersistence(persistence);
-        if (!persistenceErrorHandlerInstalledRef.current) {
-          persistenceErrorHandlerInstalledRef.current = true;
-          persistence.onError((error) => {
-            if (!isLikelyFatalPowerSyncStorageError(error)) return;
-            markPowerSyncFallbackToIdb(error);
-            attemptAutoReload('persistence-io', { cacheBust: false });
-          });
-        }
-        // PowerSync handles sync automatically - wire auth signOut cleanup
-        setAuthSignOutCallback(async () => {
-          powerSyncSyncAdapter.setAutoSync(false);
-          const authState = supabaseAuthAdapter.getState();
-          if (authState.status === 'authenticated') {
-            await clearAuthTransitionMigrationMeta(persistence, authState.session.user.id);
-          }
-        });
+
         // Create adapters with explicit injection (may already exist from eager bootstrap above)
         // Replace noop adapters with real ones now that persistence is ready
         const created = await withWatchdogContextAsync('createAdapters', async () => {
-          return createAdaptersAsync(persistence as PowerSyncPersistencePort, {
-            syncPort: powerSyncSyncAdapter,
-          });
+          return createAdaptersAsync(persistence as PowerSyncPersistencePort);
         });
         updateAdapters(created);
 
@@ -449,10 +392,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
       setNetwork(info);
     });
 
-    // Note: Session-awareness (enterSession/exitSession) is no longer needed.
-    // PowerSync connector handles this by only uploading completed sessions
-    // (those with SESSION_ENDED event) in uploadData().
-
     // Cleanup on unmount
     return () => {
       disposedRef.current = true;
@@ -464,9 +403,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
         resetSessionManager();
         sessionManagerRef.current = null;
       }
-
-      // Reset PowerSync sync adapter
-      resetPowerSyncSyncAdapter();
 
       if (networkRef.current) {
         resetNetworkAdapter();

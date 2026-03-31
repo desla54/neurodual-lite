@@ -6,19 +6,9 @@ import './wdyr';
 import { initPreloadErrorHandler } from './services/stale-assets-detector';
 import { stripReloadQueryParam } from './services/reload-recovery';
 import { initExtensionErrorFilter } from './services/extension-error-filter';
-import { initSentryEarlyCapture } from './services/sentry-early';
-import { initCapgoUpdaterBoot } from './services/capgo-updater-boot';
-import { hasPostHog } from './env';
 initPreloadErrorHandler();
 stripReloadQueryParam();
 initExtensionErrorFilter();
-initSentryEarlyCapture();
-initCapgoUpdaterBoot();
-
-if (import.meta.env.PROD && hasPostHog) {
-  void import('./services/posthog').then((m) => m.initPostHog()).catch(() => {});
-  void import('./services/web-vitals').then((m) => m.initWebVitals()).catch(() => {});
-}
 
 // iOS live-reload can run over plain HTTP, where crypto.randomUUID may be unavailable.
 // Provide a minimal RFC4122 v4 fallback so startup code using randomUUID does not crash.

@@ -70,7 +70,7 @@ import {
   CalibrationInterceptCommit,
   useCalibrationIntercept,
 } from '../hooks/use-calibration-intercept';
-import { useCloudSyncActions } from '../components/cloud-sync-provider';
+
 import {
   useAdapters,
   useAppPorts,
@@ -116,7 +116,6 @@ import {
 import { useSessionWakeLock } from '../hooks/use-session-wake-lock';
 import { useSynergySessionInvalidation } from '../hooks/use-synergy-session-invalidation';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
-import { useAdInterstitial } from '../hooks/use-ad-interstitial';
 import { useAnalytics } from '../hooks/use-analytics';
 const AdminGameToolsLazy = lazy(() =>
   import('../components/dev/AdminGameTools').then((m) => ({ default: m.AdminGameTools })),
@@ -142,9 +141,6 @@ import { getRouteForMode } from '../lib/mode-metadata';
 const isAlgorithmId = (value?: string): value is AlgorithmId =>
   value === 'adaptive' || value === 'meta-learning' || value === 'jitter-adaptive';
 
-const DualMemoTrainingPageLazy = lazy(() =>
-  import('./dual-memo-training').then((m) => ({ default: m.DualMemoTrainingPage })),
-);
 // Couleurs du HUD par mode de jeu
 // Neutral badge — subtle contrast against HUD, no distracting colors
 const MODE_BADGE_STYLE = { bg: 'bg-woven-cell-rest/60', text: 'text-woven-text' };
@@ -267,16 +263,6 @@ export function NbackTrainingPage(): ReactNode {
       ? 'sim-brainworkshop'
       : launch.effectiveMode
   ) as typeof settingsMode;
-
-  // Dispatch to the appropriate page with effective mode
-  if (effectiveMode === 'dual-memo') {
-    // Keep dual-memo in its own chunk even when routed via /nback compatibility path.
-    return (
-      <Suspense fallback={null}>
-        <DualMemoTrainingPageLazy />
-      </Suspense>
-    );
-  }
 
   return (
     <DualNBackGamePage
@@ -423,7 +409,6 @@ function DualNBackGamePage({
   // Get last adaptive session d' for session initialization (Dual Tempo mode only)
   const lastAdaptiveDPrime = useLastAdaptiveDPrime();
   const { lastGrantedRewards, clearLastGranted } = useRewardDetection();
-  const { syncEventsAndProgression } = useCloudSyncActions();
   const { shareStats } = useStatsSharing();
   const betaEnabled = useBetaEnabled();
 
@@ -434,7 +419,6 @@ function DualNBackGamePage({
     isProcessing: completionIsProcessing,
     error: completionError,
   } = useSessionCompletion({
-    syncToCloud: syncEventsAndProgression,
     onComplete: () => sessionRecovery.clearRecoverySnapshot(),
   });
 
@@ -1273,7 +1257,6 @@ function GameplayContent({
   const zoneHeaderRef = useRef<HTMLDivElement>(null);
   const zoneGameRef = useRef<HTMLDivElement>(null);
   const zoneControlsRef = useRef<HTMLDivElement>(null);
-  const { maybeShowAd } = useAdInterstitial();
   const { nextSession: nextJourneySessionForPlayAgain } = useNextJourneySessionWithContext();
 
   // Audio texture one-time info banner
@@ -1554,14 +1537,12 @@ function GameplayContent({
         return;
       }
     }
-    await maybeShowAd();
     createSession();
     setPendingAutoStart(true);
   }, [
     createSession,
     isJourneySession,
     nextJourneySessionForPlayAgain,
-    maybeShowAd,
     navigate,
     setPendingAutoStart,
     stableFinishedReport,
@@ -1575,9 +1556,8 @@ function GameplayContent({
   const handleBackToHome = useCallback(async () => {
     const r = stableFinishedReport;
     if (r) track('report_action_clicked', buildReportActionPayload(r, 'home'));
-    await maybeShowAd();
     navigate('/');
-  }, [navigate, maybeShowAd, stableFinishedReport, track]);
+  }, [navigate, stableFinishedReport, track]);
 
   const handleReplay = useCallback(() => {
     if (summary?.sessionId) {

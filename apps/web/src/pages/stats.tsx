@@ -55,14 +55,7 @@ import {
   Spinner,
   PullToRefresh,
 } from '@neurodual/ui';
-import { FlankerSessionReport } from '../components/reports/flanker-session-report';
-import { GoNoGoSessionReport } from '../components/reports/go-nogo-session-report';
-import { StopSignalSessionReport } from '../components/reports/stop-signal-session-report';
 import { StroopSessionReport } from '../components/reports/stroop-session-report';
-import { DualTrackSessionReport } from '../components/reports/dual-track-session-report';
-import { CorsiSessionReport } from '../components/reports/corsi-session-report';
-import { OspanSessionReport } from '../components/reports/ospan-session-report';
-import { DigitSpanSessionReport } from '../components/reports/digit-span-session-report';
 import { Pulse, UploadSimple, DownloadSimple, X } from '@phosphor-icons/react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useShallow } from 'zustand/react/shallow';
@@ -1092,93 +1085,6 @@ export function StatsPage(): ReactNode {
                       return (
                         <div className="p-0 md:p-6">
                           <StroopSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.taskType === 'flanker') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <FlankerSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.taskType === 'go-nogo') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <GoNoGoSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.taskType === 'stop-signal') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <StopSignalSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.taskType === 'digit-span') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <DigitSpanSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.gameMode === 'corsi-block') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <CorsiSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.gameMode === 'dual-track') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <DualTrackSessionReport
-                            report={reportForDisplay}
-                            onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
-                            onGoToJourneyStage={(stageId, nLevel) => {
-                              continueJourneyFromReport(reportForDisplay, stageId, nLevel);
-                            }}
-                          />
-                        </div>
-                      );
-                    }
-
-                    if (reportForDisplay.gameMode === 'ospan') {
-                      return (
-                        <div className="p-0 md:p-6">
-                          <OspanSessionReport
                             report={reportForDisplay}
                             onPlayAgain={closeDetailModal}
                             onBackToHome={() => navigate('/')}
