@@ -9,6 +9,6 @@ export function isSupabaseConfigured(): boolean {
   return false;
 }
 
-export function getSupabase(): never {
+export function getSupabase(): { functions: { invoke: <T = unknown>(...args: unknown[]) => Promise<{ data: T | null; error: { message: string } | null }> } } {
   throw new Error('[NeuroDual Lite] Supabase is not available in Lite mode');
 }

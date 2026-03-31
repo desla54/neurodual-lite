@@ -1283,7 +1283,7 @@ export function setupHistoryPowerSyncWatch(
       if (pendingEventSignalRows) {
         coalescedEventSignalUpdates += 1;
       }
-      pendingEventSignalRows = rows;
+      pendingEventSignalRows = rows as PowerSyncEventSignalRow[];
       scheduleEventSignalDrain();
     },
   );

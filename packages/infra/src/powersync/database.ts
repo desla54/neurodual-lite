@@ -70,8 +70,13 @@ export interface LifecycleDiagnostics {
   readonly pageshowCount: number;
   readonly onlineCount: number;
   readonly lastHiddenAt: string | null;
-  [key: string]: unknown;
+  readonly lastVisibleAt: string | null;
+  readonly lastPageHideAt: string | null;
+  readonly lastPageShowAt: string | null;
+  readonly lastOnlineAt: string | null;
+  readonly lastBackgroundDurationMs: number | null;
   readonly maxBackgroundDurationMs: number | null;
+  [key: string]: unknown;
 }
 
 export interface ReconnectDiagnostics {
@@ -94,6 +99,14 @@ export interface SyncGateDiagnostics {
   readonly instanceGuardEnabled: boolean;
   readonly instanceAllowsSync: boolean;
   readonly instanceRole: 'disabled' | 'leader' | 'follower' | 'acquiring';
+  readonly userPresent: boolean;
+  readonly blockedReason:
+    | 'supabase-not-configured'
+    | 'not-authenticated'
+    | 'no-cloud-sync'
+    | 'secondary-tab'
+    | 'instance-guard-blocked'
+    | null;
   [key: string]: unknown;
 }
 
@@ -107,7 +120,7 @@ export interface MemoryDiagnostics {
   readonly deviceMemoryGb: number | null;
 }
 
-type VfsType = 'opfs' | 'opfs-pool' | 'idb' | 'native';
+export type VfsType = 'opfs' | 'opfs-pool' | 'idb' | 'native';
 
 export interface PowerSyncRuntimeState {
   selectedVfs: VfsType | null;

@@ -36,18 +36,18 @@ function toRuntimeHealth(): PowerSyncRuntimeHealth | null {
   const rt = getPowerSyncRuntimeState();
   if (!rt) return null;
   return {
-    selectedVfs: rt.selectedVfs,
-    preferredVfs: rt.preferredVfs,
-    candidates: rt.candidates,
+    selectedVfs: rt.selectedVfs as PowerSyncRuntimeHealth['selectedVfs'],
+    preferredVfs: rt.preferredVfs as PowerSyncRuntimeHealth['preferredVfs'],
+    candidates: rt.candidates as PowerSyncRuntimeHealth['candidates'],
     platform: rt.platform,
     browser: rt.browser,
     iosWeb: rt.iosWeb,
     updatedAt: rt.updatedAt,
     lastEvents: (rt.events ?? []).slice(-12),
-    opfsDiagnostics: rt.opfsDiagnostics,
-    lifecycle: rt.lifecycle,
+    opfsDiagnostics: rt.opfsDiagnostics as PowerSyncRuntimeHealth['opfsDiagnostics'],
+    lifecycle: rt.lifecycle as PowerSyncRuntimeHealth['lifecycle'],
     reconnect: rt.reconnect,
-    syncGate: rt.syncGate,
+    syncGate: rt.syncGate as PowerSyncRuntimeHealth['syncGate'],
     memory: rt.memory,
   };
 }
