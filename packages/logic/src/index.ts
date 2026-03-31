@@ -241,6 +241,8 @@ export {
   // Trace Writing Recognition
   TRACE_WRITING_MIN_POINTS_FOR_RECOGNITION,
   TRACE_WRITING_MIN_CONFIDENCE_THRESHOLD,
+  // OSPAN
+  PROCESSING_ACCURACY_THRESHOLD,
   // Session Passed Calculator
   calculatePlaceSessionPassed,
   calculateMemoSessionPassed,
@@ -1543,6 +1545,9 @@ export {
   DualnbackClassicSpec,
   SimBrainWorkshopSpec,
   TempoSpecs,
+  // OSPAN Spec
+  OspanSpec,
+  OspanSpecs,
   // Removed: DualPlaceSpec, PlaceSpecs, PlaceSpec, DualMemoSpec, MemoSpecs, MemoSpec,
   // DualPickSpec, PickSpecs, DualTraceSpec, buildTraceSessionConfig (deleted game modes)
   // Tutorial Specs
@@ -1605,6 +1610,7 @@ export type {
   // Extension types
   DualnbackClassicExtensions,
   BrainWorkshopExtensions,
+  OspanExtensions,
   // Removed: PlaceExtensions, MemoExtensions, PickExtensions, PickSpec, TraceExtensions,
   // ArithmeticInterferenceConfig, TraceWritingMode, TraceRhythmMode (deleted game modes)
   // Tutorial types

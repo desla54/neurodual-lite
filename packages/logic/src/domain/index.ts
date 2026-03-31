@@ -383,3 +383,5 @@ export {
   createEmptyHealthMetrics,
 } from './health';
 export type { SessionHealthInput } from './health';
+// OSPAN game logic
+export { PROCESSING_ACCURACY_THRESHOLD } from './games/ospan';

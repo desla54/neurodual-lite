@@ -194,6 +194,12 @@ export const TempoSpecs = {
 export { StroopSpec, StroopSpecs } from './stroop.spec';
 
 // =============================================================================
+// OSPAN Specs (Operation Span)
+// =============================================================================
+
+export { OspanSpec, OspanSpecs, type OspanExtensions } from './ospan.spec';
+
+// =============================================================================
 // Tutorial Specs
 // =============================================================================
 
@@ -214,6 +220,7 @@ export {
 // =============================================================================
 
 import { StroopSpecs } from './stroop.spec';
+import { OspanSpecs } from './ospan.spec';
 import { TutorialSpecs } from './tutorial.spec';
 
 /**
@@ -223,6 +230,7 @@ import { TutorialSpecs } from './tutorial.spec';
 export const AllSpecs = {
   ...TempoSpecs,
   ...StroopSpecs,
+  ...OspanSpecs,
 } as const;
 
 /**
@@ -298,6 +306,7 @@ const I18N_KEY_TO_SPEC_ID: Record<string, string> = {
   BrainWorkshop: 'sim-brainworkshop',
   Libre: 'custom',
   Stroop: 'stroop',
+  Ospan: 'ospan',
 };
 
 /**
@@ -501,6 +510,7 @@ const MODE_I18N_KEY_MAP: Record<string, string> = {
   'sim-brainworkshop': 'brainWorkshop',
   custom: 'libre',
   stroop: 'stroop',
+  ospan: 'ospan',
 };
 
 /**

@@ -15,6 +15,7 @@ import {
 import { useMemo, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router';
+import { OspanMeasureButton } from '../components/profile/ospan-measure-button';
 
 import { useSettingsStore } from '../stores/settings-store';
 import { GAME_MODES, type GameModeConfig } from './settings/config';
@@ -27,7 +28,7 @@ const HOME_CATEGORIES = [
   {
     label: 'Working Memory',
     labelKey: 'settings.gameMode.categoryDualNBack',
-    modes: ['dualnback-classic', 'sim-brainworkshop'] as GameModeId[],
+    modes: ['dualnback-classic', 'sim-brainworkshop', 'ospan'] as GameModeId[],
   },
   {
     label: 'Inhibition',
@@ -83,6 +84,15 @@ export function HomePage(): ReactNode {
       data-testid="home-page"
     >
       <div className="relative flex min-h-full w-full flex-col items-center gap-6 pb-8">
+        {/* Fiche OSpan — top-left corner */}
+        <div
+          className="absolute -top-1 -left-1 z-10 flex items-start gap-1"
+          data-onboarding-target="fiches"
+        >
+          <div data-onboarding-target="fiche-ospan">
+            <OspanMeasureButton />
+          </div>
+        </div>
         {/* Header / Logo */}
         <div className="w-full pt-16 pb-3 sm:pt-20">
           <div className="px-6 py-4">

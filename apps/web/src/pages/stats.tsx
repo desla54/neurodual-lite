@@ -56,6 +56,7 @@ import {
   PullToRefresh,
 } from '@neurodual/ui';
 import { StroopSessionReport } from '../components/reports/stroop-session-report';
+import { OspanSessionReport } from '../components/reports/ospan-session-report';
 import { Pulse, UploadSimple, DownloadSimple, X } from '@phosphor-icons/react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useShallow } from 'zustand/react/shallow';
@@ -115,6 +116,7 @@ export function StatsPage(): ReactNode {
       'sim-brainworkshop': buildLabel('sim-brainworkshop'),
       tower: buildLabel('tower'),
       stroop: buildLabel('stroop'),
+      ospan: buildLabel('ospan'),
       flanker: buildLabel('flanker'),
       custom: buildLabel('custom'),
     };
@@ -1085,6 +1087,18 @@ export function StatsPage(): ReactNode {
                       return (
                         <div className="p-0 md:p-6">
                           <StroopSessionReport
+                            report={reportForDisplay}
+                            onPlayAgain={closeDetailModal}
+                            onBackToHome={() => navigate('/')}
+                          />
+                        </div>
+                      );
+                    }
+
+                    if (reportForDisplay.taskType === 'ospan') {
+                      return (
+                        <div className="p-0 md:p-6">
+                          <OspanSessionReport
                             report={reportForDisplay}
                             onPlayAgain={closeDetailModal}
                             onBackToHome={() => navigate('/')}

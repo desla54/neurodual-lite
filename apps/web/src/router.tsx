@@ -23,6 +23,12 @@ const StroopTrainingPage = lazy(() =>
 const StroopFlexTrainingPage = lazy(() =>
   import('./pages/stroop-training').then((m) => ({ default: m.StroopFlexTrainingPage })),
 );
+const OspanTrainingPage = lazy(() =>
+  import('./pages/ospan-training').then((m) => ({ default: m.OspanTrainingPage })),
+);
+const OspanMeasurePage = lazy(() =>
+  import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage })),
+);
 
 // Tutorial page
 const TutorialGuidedPage = lazy(() =>
@@ -68,6 +74,9 @@ export const router = createBrowserRouter([
           // Stroop modes
           { path: 'stroop', element: withSuspense(StroopTrainingPage) },
           { path: 'stroop-flex', element: withSuspense(StroopFlexTrainingPage) },
+          // OSPAN (Operation Span)
+          { path: 'ospan', element: withSuspense(OspanTrainingPage) },
+          { path: 'ospan-measure', element: withSuspense(OspanMeasurePage) },
           // Tutorial
           { path: 'tutorial', element: withSuspense(TutorialGuidedPage) },
           { path: 'tutorial/:specId', element: withSuspense(TutorialGuidedPage) },

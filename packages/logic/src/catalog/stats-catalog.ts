@@ -102,6 +102,18 @@ export const CANONICAL_GAME_MODES: readonly GameModeMeta[] = [
       presentationKind: 'tempo',
     },
   },
+  {
+    id: 'ospan',
+    statsMode: 'Libre',
+    reliability: 'beta',
+    stats: {
+      labelKey: 'stats.mode.ospan',
+      descKey: 'stats.mode.ospanDesc',
+      iconKey: 'brain',
+      shortCode: 'OSPAN',
+      presentationKind: 'other',
+    },
+  },
 ] as const;
 
 export const CANONICAL_JOURNEYS: readonly JourneyMeta[] = [
