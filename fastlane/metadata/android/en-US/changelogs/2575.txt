@@ -1,0 +1,4 @@
+What's new:
+• Cognitive profile: assess your strengths and weaknesses through a personalized evaluation
+• Raven's Matrices: fluid intelligence test with the full SPM protocol
+• OSPAN: working memory assessment

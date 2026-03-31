@@ -1,0 +1,7 @@
+# Android
+json_key_file("fastlane/play-store-key.json")
+package_name("com.neurodual.app")
+
+# iOS
+app_identifier("com.neurodual.app")
+team_id("36979335QS")

@@ -1,0 +1,1 @@
+Entraînement cognitif Dual N-Back et Stroop basé sur la recherche. 100% local, fonctionne hors ligne.

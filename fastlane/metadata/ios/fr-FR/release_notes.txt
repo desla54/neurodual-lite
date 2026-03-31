@@ -1,0 +1,6 @@
+• 9 jeux cognitifs : N-Back, Stroop, Flanker, Tower, Corsi Block, Gridlock et plus
+• Difficulté adaptative en temps réel
+• Parcours progressif et personnalisable
+• Statistiques détaillées et historique complet
+• Disponible sur iOS, Android et web
+• 13 langues

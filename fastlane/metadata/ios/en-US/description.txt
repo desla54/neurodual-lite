@@ -1,0 +1,22 @@
+NeuroDual brings faithful implementations of classic cognitive tasks from psychology and neuroscience research. Focused, minimalist, rigorous.
+
+DUAL N-BACK
+The gold standard of working memory training, backed by research from Jaeggi et al.
+• Classic — Fixed distribution, error-based scoring (Jaeggi protocol)
+• Brain Workshop — Faithful implementation of Brain Workshop v4.x/v5, tick-based timing
+
+STROOP
+The classic inhibition task (Stroop, 1935):
+• Stroop — Name the ink color, ignore the word
+• StroopFlex — Dynamic rule switching for an extra challenge
+
+TUTORIAL
+Step-by-step guided tutorial to learn the basics of Dual N-Back.
+
+ANALYSIS
+Every action is recorded. End-of-session reports, full history, per-modality statistics. Not just a score.
+
+FREE & LOCAL
+• Works offline
+• All data stays on your device
+• No account required

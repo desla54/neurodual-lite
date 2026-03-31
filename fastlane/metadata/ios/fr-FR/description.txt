@@ -1,0 +1,22 @@
+NeuroDual propose des implémentations fidèles de tâches cognitives classiques issues de la recherche en psychologie et neurosciences. Concentré, minimaliste, rigoureux.
+
+DUAL N-BACK
+Le standard de l'entraînement de la mémoire de travail, validé par Jaeggi et al.
+• Classique — Distribution fixe, score basé sur les erreurs (protocole Jaeggi)
+• Brain Workshop — Implémentation fidèle du protocole Brain Workshop v4.x/v5
+
+STROOP
+La tâche d'inhibition classique (Stroop, 1935) :
+• Stroop — Nommez la couleur de l'encre, ignorez le mot
+• StroopFlex — Alternance dynamique des règles pour un défi supplémentaire
+
+TUTORIEL
+Tutoriel guidé pas à pas pour apprendre les bases du Dual N-Back.
+
+ANALYSE
+Chaque action est enregistrée. Rapports de fin de session, historique complet, statistiques par modalité. Pas qu'un simple score.
+
+GRATUIT & LOCAL
+• Fonctionne hors ligne
+• Toutes vos données restent sur votre appareil
+• Aucun compte requis

@@ -1,0 +1,126 @@
+require 'fileutils'
+require 'tmpdir'
+
+default_platform(:android)
+
+FASTLANE_DIR = __dir__
+ANDROID_METADATA_PATH = File.expand_path('metadata/android', FASTLANE_DIR)
+
+def android_screenshots_supply_options(metadata_path)
+  {
+    skip_upload_apk: true,
+    skip_upload_aab: true,
+    skip_upload_images: false,
+    skip_upload_screenshots: false,
+    skip_upload_metadata: true,
+    skip_upload_changelogs: true,
+    metadata_path: metadata_path,
+  }
+end
+
+# ---------------------------------------------------------------------------
+# Android
+# ---------------------------------------------------------------------------
+platform :android do
+  desc "Push metadata (descriptions, changelogs) to Google Play — no binary upload"
+  lane :metadata do
+    supply(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_metadata: false,
+      skip_upload_changelogs: true,
+      metadata_path: ANDROID_METADATA_PATH,
+    )
+  end
+
+  desc "Upload screenshots to Google Play"
+  lane :screenshots do
+    supply(android_screenshots_supply_options(ANDROID_METADATA_PATH))
+  end
+
+  desc "Upload screenshots to Google Play for a single locale"
+  lane :screenshots_locale do |options|
+    locale = options[:locale].to_s
+    UI.user_error!("Pass locale:'fr-FR'") if locale.empty?
+
+    source_images_path = File.expand_path(File.join(locale, 'images'), ANDROID_METADATA_PATH)
+    source_screenshots = Dir.glob(File.join(source_images_path, 'phoneScreenshots', '*'))
+    if source_screenshots.empty?
+      UI.user_error!("Missing phone screenshots for locale '#{locale}' in #{source_images_path}")
+    end
+
+    Dir.mktmpdir("play-screenshots-#{locale}-") do |tmpdir|
+      locale_dir = File.join(tmpdir, locale)
+      FileUtils.mkdir_p(locale_dir)
+      FileUtils.cp_r(source_images_path, locale_dir)
+      supply(android_screenshots_supply_options(tmpdir))
+    end
+  end
+
+  desc "Upload AAB to Google Play internal track"
+  lane :deploy do |options|
+    track = options[:track] || "internal"
+    supply(
+      aab: "apps/web/android/app/build/outputs/bundle/release/app-release.aab",
+      track: track,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_changelogs: false,
+      metadata_path: ANDROID_METADATA_PATH,
+    )
+  end
+
+  desc "Full release: metadata + screenshots + AAB to production"
+  lane :release do
+    metadata
+    screenshots
+    deploy(track: "production")
+  end
+end
+
+# ---------------------------------------------------------------------------
+# iOS
+# ---------------------------------------------------------------------------
+platform :ios do
+  desc "Push metadata to App Store Connect"
+  lane :metadata do
+    deliver(
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_metadata: false,
+      metadata_path: "fastlane/metadata/ios",
+      force: true,
+    )
+  end
+
+  desc "Upload screenshots to App Store Connect"
+  lane :screenshots do
+    deliver(
+      skip_binary_upload: true,
+      skip_screenshots: false,
+      skip_metadata: true,
+      metadata_path: "fastlane/metadata/ios",
+      force: true,
+    )
+  end
+
+  desc "Upload IPA to App Store Connect"
+  lane :deploy do
+    deliver(
+      ipa: "apps/web/ios/App/build/NeuroDual.ipa",
+      skip_screenshots: true,
+      skip_metadata: true,
+      force: true,
+    )
+  end
+
+  desc "Full release: metadata + screenshots + IPA"
+  lane :release do
+    metadata
+    screenshots
+    deploy
+  end
+end

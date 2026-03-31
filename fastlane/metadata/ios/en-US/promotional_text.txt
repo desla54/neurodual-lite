@@ -1,0 +1,1 @@
+Research-based Dual N-Back and Stroop cognitive training. Local-only, works offline.
