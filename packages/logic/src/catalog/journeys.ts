@@ -6,6 +6,13 @@ export const DEFAULT_JOURNEY_ID = 'neurodual-default';
 export const DUALNBACK_CLASSIC_JOURNEY_ID = 'dualnback-classic-journey';
 export const BRAINWORKSHOP_JOURNEY_ID = 'sim-brainworkshop-journey';
 
+/** Legacy journey IDs — modes removed in Lite but IDs kept for compatibility */
+export const DUAL_TRACE_JOURNEY_ID = 'dual-trace-journey';
+export const DUAL_TRACK_EASY_JOURNEY_ID = 'dual-track-easy-journey';
+export const DUAL_TRACK_MEDIUM_JOURNEY_ID = 'dual-track-medium-journey';
+export const DUAL_TRACK_JOURNEY_ID = 'dual-track-journey';
+export const DUAL_TRACK_DNB_JOURNEY_ID = 'dual-track-dnb-journey';
+
 export interface BuiltInJourneyDefinition {
   readonly id: string;
   /** i18n label key (use in UI) */

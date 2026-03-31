@@ -370,3 +370,13 @@ export {
   sessionPipelineFactoryAdapter,
   persistenceHealthAdapter,
 } from './ports';
+
+// Noop adapters for Lite (cloud features removed)
+export {
+  noopAuthAdapter,
+  freeSubscriptionAdapter,
+  noopSyncAdapter,
+  noopRewardAdapter,
+  settingsSyncAdapter,
+  oauthCallbackAdapter,
+} from './noop-adapters';

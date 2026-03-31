@@ -1,11 +1,8 @@
 import {
   createProgressionAdapter,
   getPersistencePort,
-  getPowerSyncDebugPort,
-  getSupabase,
 } from '@neurodual/infra';
 import type { ReactNode } from 'react';
-import { hasSupabase } from './app-bootstrap';
 import { useMountEffect } from '@neurodual/ui';
 
 export function DevDebugServices(): ReactNode {
@@ -22,11 +19,9 @@ export function DevDebugServices(): ReactNode {
 
       const debugServices = {
         persistence,
-        supabase: hasSupabase ? getSupabase() : null,
-        powersync: getPowerSyncDebugPort(),
+        supabase: null, // Removed in Lite
+        powersync: null, // Removed in Lite
         resetPowerSyncAndReload: async () => {
-          const { closePowerSyncDatabase } = await import('@neurodual/infra');
-          await closePowerSyncDatabase();
           window.location.reload();
         },
         adapters: {

@@ -273,6 +273,7 @@ export {
   // Backwards Compatibility
   JOURNEY_MODE_TO_GAME_MODE,
   GAME_MODE_TO_ROUTE,
+  DUAL_TRACK_DNB_HYBRID_MODE_ID,
 } from './journey.spec';
 
 // =============================================================================
