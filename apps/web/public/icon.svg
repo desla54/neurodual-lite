@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Woven Ink Palette -->
+  <!-- ink: #1A1815, inkLight: #787570 -->
+
+  <!-- Rounded square background (matching Android shape) -->
+  <rect width="64" height="64" rx="13" fill="#F5F5F4"/>
+
+  <!-- Weave texture pattern (subtle) -->
+  <defs>
+    <pattern id="weave" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#1A1815" stroke-width="0.3" opacity="0.08"/>
+      <line x1="4" y1="0" x2="4" y2="8" stroke="#1A1815" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="url(#weave)"/>
+
+  <!-- Grid 3x3 - centered -->
+  <!-- cell: 12px, gap: 2px, total: 40px, offset: 12px -->
+  <g transform="translate(12, 12)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="12" height="12" rx="2.5" fill="#1A1815"/>
+    <rect x="14" y="0" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+    <rect x="28" y="0" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+
+    <!-- Row 2 -->
+    <rect x="0" y="14" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+    <!-- Center: focus line (gray for PWA, orange on Android) -->
+    <line x1="17" y1="20" x2="23" y2="20" stroke="#787570" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+    <rect x="28" y="14" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+
+    <!-- Row 3 -->
+    <rect x="0" y="28" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+    <rect x="14" y="28" width="12" height="12" rx="2.5" fill="none" stroke="#1A1815" stroke-width="1" opacity="0.3"/>
+    <rect x="28" y="28" width="12" height="12" rx="2.5" fill="#1A1815"/>
+  </g>
+</svg>

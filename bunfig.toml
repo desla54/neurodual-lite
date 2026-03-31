@@ -1,0 +1,4 @@
+[test]
+# Only run tests in packages (exclude e2e and refonte-poo)
+root = "./packages"
+preload = ["./packages/test-setup.ts"]

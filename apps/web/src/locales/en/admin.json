@@ -1,0 +1,386 @@
+{
+  "admin": {
+    "title": "Admin dashboard",
+    "subtitle": "Monitoring and debug tools",
+    "codeLabel": "Admin code",
+    "codePlaceholder": "Admin code...",
+    "invalidCode": "Invalid code. Try again.",
+    "unlock": "Unlock",
+    "lock": "Lock",
+    "backHome": "Back to home",
+    "gate": {
+      "title": "Admin access",
+      "description": "Enter the admin code to access the dashboard.",
+      "placeholder": "Admin code",
+      "submit": "Access",
+      "invalidCode": "Invalid code"
+    },
+    "tabs": {
+      "health": "Health",
+      "events": "Events",
+      "sync": "Sync",
+      "powersync": "PowerSync",
+      "bot": "Bot",
+      "stress": "Stress",
+      "handwriting": "Handwriting",
+      "settings": "Settings"
+    },
+    "captureTheme": {
+      "title": "Hybrid capture theme",
+      "description": "Keeps the normal visual identity, but reduces blur, aggressive shadows, and decorative weave patterns for cleaner screenshots.",
+      "note": "Designed as a middle ground: less fragile than the default theme, but less flat than a fully stripped capture theme.",
+      "enable": "Enable hybrid capture",
+      "disable": "Use default theme",
+      "lightMode": "Force light mode"
+    },
+    "powersync": {
+      "title": "PowerSync / SQLite",
+      "refresh": "Refresh",
+      "resetVfsPreference": "Reset VFS preference",
+      "healthError": "Health error",
+      "sync": {
+        "title": "Sync",
+        "status": "Status",
+        "available": "Available",
+        "pending": "Pending",
+        "lastSync": "Last sync",
+        "error": "Error",
+        "blockedReason": "Blocked reason"
+      },
+      "runtime": {
+        "title": "Runtime",
+        "stage": "Stage",
+        "vfsSelected": "VFS (selected)",
+        "vfsPreferred": "VFS (preferred)",
+        "browser": "Browser",
+        "platform": "Platform",
+        "opfsSupported": "OPFS available",
+        "opfsChecks": "Checks OPFS",
+        "activeWatches": "Active watches"
+      },
+      "projections": {
+        "title": "Projections",
+        "endedSessions": "Ended sessions (emt_messages)",
+        "sessionSummaries": "Session summaries",
+        "missingSummaries": "Missing summaries",
+        "lastChecked": "Last checked",
+        "mismatchDetected": "Mismatch detected: projections are behind raw events.",
+        "status": "Projection status",
+        "source": "Projection source",
+        "orphanSummaries": "Orphan summaries",
+        "error": "Projection error"
+      },
+      "runtimeEventsLatest": "Runtime events (latest)",
+      "lifecycle": {
+        "title": "Sleep / wake lifecycle",
+        "hiddenVisible": "Hidden / visible",
+        "pagehidePageshow": "Pagehide / pageshow",
+        "online": "Online events",
+        "lastBackground": "Last background",
+        "maxBackground": "Max background",
+        "lastHiddenAt": "Last hidden",
+        "lastVisibleAt": "Last visible"
+      },
+      "reconnect": {
+        "title": "Reconnect diagnostics",
+        "attempts": "Attempts / ok / failed",
+        "reason": "Last reason",
+        "duration": "Last duration",
+        "startedAt": "Last started",
+        "completedAt": "Last completed",
+        "error": "Last error"
+      },
+      "memory": {
+        "title": "Runtime memory / storage",
+        "sampledAt": "Sampled at",
+        "reason": "Sample reason",
+        "jsHeapUsed": "JS heap used",
+        "jsHeapLimit": "JS heap limit",
+        "storageUsage": "Storage usage",
+        "storageQuota": "Storage quota",
+        "deviceMemory": "Device memory"
+      }
+    },
+    "devPanel": {
+      "titleBot": "Dev bot",
+      "titleSync": "Sync monitor",
+      "audio": "Audio",
+      "running": "Running",
+      "autoCalib": "Auto-calib",
+      "debug": "Debug",
+      "on": "ON",
+      "off": "OFF",
+      "toggleCalib": "Toggle calib",
+      "resetCalib": "Reset calib",
+      "overallP95": "overall p95",
+      "overallMax": "overall max",
+      "visualPreP95": "visual_pre p95",
+      "audioSyncP95": "audio_sync p95",
+      "calibDelta": "calib Δ",
+      "clampRate": "clamp rate",
+      "noSamplesYet": "No samples yet",
+      "trials": "Trials",
+      "responses": "Responses",
+      "targetsFound": "Targets found",
+      "toggleHint": "Ctrl+D to toggle"
+    },
+    "sync": {
+      "title": "Audio/visual sync",
+      "description": "Monitor audio scheduling precision and run a 500ms A/V sync test.",
+      "status": {
+        "ready": "Ready",
+        "running": "Running",
+        "preset": "Preset",
+        "autoCalibration": "Auto-calibration"
+      },
+      "audioStatus": "Audio status",
+      "audioInit": "Init/Resume",
+      "audioStop": "Stop",
+      "audioPreset": "Audio preset",
+      "debugTiming": "Debug timing",
+      "on": "ON",
+      "off": "OFF",
+      "enable": "Enable",
+      "disable": "Disable",
+      "reset": "Reset",
+      "calibration": "Visual calibration",
+      "diagnostics": "Timing diagnostics",
+      "refresh": "Refresh",
+      "noDiagnostics": "No diagnostics available yet.",
+      "legacyCanonicalization": {
+        "action": "Run legacy canonicalization",
+        "running": "Canonicalizing...",
+        "success": "Legacy canonicalization done: summary modes={{summary}}, event modes={{events}}, play_context={{playContext}}",
+        "columnAdded": "play_context column added",
+        "failed": "Legacy canonicalization failed"
+      },
+      "rebuild": {
+        "title": "Session maintenance",
+        "description": "Rebuild all session summaries from raw events. Use this after changing projection/report logic.",
+        "action": "Rebuild all summaries",
+        "running": "Rebuilding...",
+        "success": "Rebuild done: {{count}} sessions reprojected and snapshots refresh scheduled.",
+        "error": "Rebuild failed",
+        "unavailable": "Persistence unavailable"
+      },
+      "test": {
+        "title": "AV sync test (500ms)",
+        "params": {
+          "bufferMs": "buffer (ms)",
+          "visualOffsetMs": "visualOffset (ms)",
+          "durationMs": "duration (ms)",
+          "interTrialMs": "interTrial (ms)",
+          "trials": "trials"
+        },
+        "stimulusZone": "Stimulus zone",
+        "running": "Running...",
+        "start": "Start",
+        "stop": "Stop"
+      }
+    },
+    "health": {
+      "title": "Session health",
+      "description": "Monitoring of recent sessions and their psychometric quality metrics.",
+      "sessionDetailsTitle": "Session details",
+      "reliabilityScore": "Reliability score",
+      "processingLag": "Processing lag",
+      "recentSessions": "Recent sessions",
+      "loading": "Loading...",
+      "refresh": "Refresh",
+      "view": "View",
+      "actions": "Actions",
+      "errorTitle": "Error",
+      "alertsTitle": "Degraded sessions",
+      "noSessions": "No sessions with health metrics",
+      "noSessionsHint": "Play a session to see health metrics here.",
+      "sessionId": "Session ID",
+      "date": "Date",
+      "nLevel": "N level",
+      "quality": "Quality",
+      "score": "Score",
+      "statLabels": {
+        "min": "min",
+        "avg": "avg",
+        "max": "max",
+        "p95": "p95"
+      },
+      "details": "Details",
+      "alerts": "Degraded session alerts",
+      "noAlerts": "No alerts — all sessions have good quality.",
+      "metrics": {
+        "processingLag": "Processing lag",
+        "eventLoopLag": "Event loop lag at start",
+        "rtStability": "RT stability (CV)",
+        "focusLoss": "Focus losses",
+        "focusLostTime": "Total focus lost",
+        "freezes": "Freezes",
+        "longTasks": "Long tasks",
+        "reliabilityScore": "Reliability score"
+      },
+      "quality_high": "High",
+      "quality_medium": "Medium",
+      "quality_degraded": "Degraded"
+    },
+    "events": {
+      "searchPlaceholder": "Search... (e.g., type:RESPONSE, RT>500)",
+      "clearSearch": "Clear",
+      "matchCount": "{{matchCount}} / {{totalCount}} events",
+      "initializingDb": "Initializing database...",
+      "loadingSessions": "Loading sessions...",
+      "noSessionsFound": "No sessions found.",
+      "noSessionsHint": "Play a session to generate a summary, or enable cloud sync to fetch your history.",
+      "sessionsCount": "{{count}} sessions",
+      "eventsInSelectedSession": "{{count}} events in selected session",
+      "includeAbandonedOn": "Abandoned: on",
+      "includeAbandonedOff": "Abandoned: off",
+      "compare": "Compare",
+      "clearLocal": "Clear local",
+      "loadingSelectedSession": "Loading selected session events...",
+      "error": "Error",
+      "confirmClearLocalTitle": "Clear local database?",
+      "confirmClearLocalHint": "If cloud sync is enabled, PowerSync may download events again after the wipe.",
+      "confirmDeleteSessionTitle": "Delete this session?",
+      "confirmDeleteSessionHint1": "This performs a soft-delete for synced events (propagates via cloud sync).",
+      "confirmDeleteSessionHint2": "Local-only events for this session will be removed too.",
+      "columns": "Columns",
+      "columnGroups": "Column groups",
+      "noEventsInSession": "No events in this session",
+      "eventsTitle": "Events",
+      "eventsTotal": "({{count}} total)",
+      "inspectPayload": "Inspect raw payload",
+      "integrity": {
+        "title": "Event payload integrity",
+        "envelopeOnly": "Envelope-only events: {{count}} / {{total}}",
+        "hasTrial": "Events with trial data: {{count}} / {{total}}",
+        "hint": "If events look empty in the grid/modal, click the bug icon to inspect the raw stored payload string."
+      },
+      "rawPayload": {
+        "title": "Raw payload sample",
+        "empty": "No rows found for this session."
+      }
+    },
+    "bot": {
+      "title": "Gameplay test bot",
+      "description": "Configure bot settings and start a session with automated responses. The bot is also available during gameplay with Ctrl+D.",
+      "mode": "Bot mode",
+      "modes": {
+        "off": {
+          "label": "Off",
+          "desc": "Bot disabled - manual play"
+        },
+        "perfect": {
+          "label": "Perfect",
+          "desc": "100% accuracy, always correct"
+        },
+        "realistic": {
+          "label": "Realistic",
+          "desc": "Configurable accuracy with natural variation"
+        },
+        "random": {
+          "label": "Random",
+          "desc": "50% random responses for stress testing"
+        }
+      },
+      "config": "Configuration",
+      "quickStart": "Quick start session",
+      "quickStarts": {
+        "dualCatch": "Dual Catch",
+        "activeTraining": "Active training",
+        "dualPlace": "Dual Place"
+      },
+      "accuracy": "Accuracy",
+      "responseDelay": "Response delay",
+      "currentConfig": "Current config",
+      "hint": "Sessions will start with the configured bot settings. Use Ctrl+D during gameplay to toggle."
+    },
+    "sessions": {
+      "all": "All",
+      "select": "Select a session...",
+      "noSessionsFound": "No sessions found",
+      "sessionsAvailable": "{{count}} sessions available",
+      "events": "{{count}} events",
+      "sessionsAvailable_one": "{{count}} session available",
+      "sessionsAvailable_other": "{{count}} sessions available",
+      "events_one": "{{count}} event",
+      "events_other": "{{count}} events",
+      "reasons": {
+        "completed": "completed",
+        "abandoned": "abandoned",
+        "error": "error"
+      },
+      "modes": {
+        "tempo": "Tempo",
+        "flow": "Dual Place",
+        "recall": "Dual Memo",
+        "dualPick": "Dual Pick",
+        "trace": "Dual Trace"
+      }
+    },
+    "analytics": {
+      "title": "Session analytics",
+      "reactionTime": "Reaction time",
+      "avg": "avg",
+      "min": "min",
+      "max": "max",
+      "accuracy": "Accuracy",
+      "correct": "Correct",
+      "responsePhase": "Response phase",
+      "during": "During",
+      "after": "After",
+      "inputMethod": "Input method",
+      "keyboard": "Keyboard",
+      "touch": "Touch",
+      "other": "Other"
+    },
+    "compare": {
+      "title": "Session comparison",
+      "syncScroll": "Sync scroll",
+      "sessionA": "Session A",
+      "sessionB": "Session B",
+      "comparisonSummary": "Comparison summary",
+      "avgRt": "Avg RT",
+      "accuracy": "Accuracy",
+      "duration": "Duration",
+      "loading": "loading...",
+      "selectSession": "Select a session",
+      "timeHeader": "+time",
+      "typeHeader": "type",
+      "valueHeader": "value"
+    },
+    "stress": {
+      "title": "Stress testing",
+      "description": "Test application stability under various load conditions. Monitor memory usage and performance during stress tests.",
+      "fullTest": "Full stress test suite",
+      "fullTestDesc": "Access the dedicated stress test page with comprehensive testing options.",
+      "open": "Open",
+      "quickTests": "Quick stress tests",
+      "tips": "Testing tips"
+    },
+    "stressRunner": {
+      "title": "Stress test runner",
+      "start": "Start",
+      "pause": "Pause",
+      "resume": "Resume",
+      "stop": "Stop",
+      "progress": "Progress",
+      "completed": "Completed",
+      "passed": "Passed",
+      "failed": "Failed",
+      "passRate": "Pass rate",
+      "duration": "Duration",
+      "phase": "Phase",
+      "currentMode": "Current mode",
+      "options": "Options",
+      "nLevelRange": "N-level range",
+      "trialsRange": "Trials range",
+      "modesToTest": "Modes to test",
+      "currentlyTesting": "Currently testing",
+      "recentResults": "Recent results",
+      "failedSessions": "Failed sessions ({{count}})",
+      "errors": "Errors",
+      "trials": "{{count}} trials",
+      "trials_one": "{{count}} trial",
+      "trials_other": "{{count}} trials"
+    }
+  }
+}

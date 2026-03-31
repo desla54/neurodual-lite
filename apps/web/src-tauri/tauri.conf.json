@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "NeuroDual",
+  "version": "0.9.27",
+  "identifier": "com.neurodual.brain",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:3000",
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "NeuroDual",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "devtools": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis", "dmg", "deb", "rpm", "appimage"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "Education",
+    "shortDescription": "Entraînement cérébral Dual N-Back",
+    "longDescription": "NeuroDual - Application d'entraînement cérébral basée sur le protocole Dual N-Back. Améliorez votre mémoire de travail et vos capacités cognitives.",
+    "copyright": "© 2025 NeuroDual",
+    "linux": {
+      "deb": {
+        "section": "misc"
+      }
+    }
+  }
+}

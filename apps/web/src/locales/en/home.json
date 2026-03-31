@@ -1,0 +1,1025 @@
+{
+  "home": {
+    "ariaLabel": "Neurodual",
+    "supportLink": "Support the project",
+    "modeSelector": {
+      "journey": "Journey",
+      "freeMode": "Training",
+      "challenge": "Challenge",
+      "synergy": "Synergy"
+    },
+    "allModes": "All games",
+    "favoriteGames": "Favorite games",
+    "journeySettings": "Journey settings",
+    "modeSettings": "Mode settings",
+    "challengeSettings": "Challenge settings",
+    "recentScores": "Last 5 sessions",
+    "recentScoresEmpty": "Play a session to see your results",
+    "journeyScoresEmpty": "Your journey scores will appear here",
+    "sessionSummary": {
+      "trials": "trials",
+      "loops": "loops"
+    },
+    "training": {
+      "howItWorksTitle": "How it works",
+      "howFavLabel": "Your favorite games",
+      "howFav": "Browse your favorite modes with a swipe. Access all available games via the dedicated button, and customize this selection in settings.",
+      "howSettingsLabel": "Quick settings",
+      "howSettings": "Adjust the level and main parameters right here. For advanced options, open the full mode settings.",
+      "howTrackingLabel": "Tracking",
+      "howTracking": "The chart shows your last 5 sessions on the selected mode, so you can track your progress at a glance."
+    },
+    "favorite": "Favorite",
+    "freeTraining": {
+      "categoryLabel": "Category",
+      "modeLabel": "Mode"
+    },
+    "modeChip": {
+      "2048": "2048",
+      "dualnback-classic": "Classic",
+      "sim-brainworkshop": "BW",
+      "dual-catch": "Catch",
+      "dual-place": "Place",
+      "dual-pick": "Pick",
+      "dual-memo": "Memo",
+      "dual-trace": "Trace",
+      "custom": "Custom",
+      "dual-time": "Time",
+      "pasat": "PASAT",
+      "corsi-block": "Corsi",
+      "ospan": "OSPAN",
+      "running-span": "R-Span",
+      "swm": "SWM",
+      "dual-track": "Track",
+      "stroop": "Stroop",
+      "flanker": "Flanker",
+      "go-nogo": "Go/No-Go",
+      "stop-signal": "SST",
+      "antisaccade": "Anti",
+      "wcst": "WCST",
+      "trail-making": "TMT",
+      "task-switching": "Switch",
+      "change-detection": "ChgDet",
+      "ant": "ANT",
+      "symmetry-span": "SymSpan",
+      "pvt": "PVT",
+      "reading-span": "RdSpan",
+      "digit-span": "DSpan",
+      "simon": "Simon",
+      "posner-cueing": "Posner",
+      "sternberg": "Sternbrg",
+      "ax-cpt": "AX-CPT",
+      "mental-rotation": "MenRot",
+      "visualLogic": "Visual Logic",
+      "visual-search": "VisSrch",
+      "letter-number": "LNS",
+      "soroban": "Soroban",
+      "lights-out": "Lights",
+      "memory-match": "MemMatch",
+      "chain-recall": "Chain",
+      "reflex": "Reflex",
+      "speed-sort": "SpSort",
+      "nonogram": "Nono",
+      "sokoban": "Sokoban",
+      "mirror": "Mirror",
+      "color-rush": "CRush",
+      "spot-diff": "SpotDf",
+      "tetris-mind": "Tetris",
+      "rhythm-tap": "Rhythm",
+      "pipeline": "Pipe",
+      "tangram": "Tangram",
+      "flood": "Flood",
+      "fifteen": "15",
+      "pegs": "Pegs",
+      "sudoku": "Sudoku",
+      "guess": "Mind",
+      "samegame": "SGame",
+      "untangle": "Untngl",
+      "unruly": "Unruly",
+      "twiddle": "Twiddl",
+      "map-coloring": "Map",
+      "towers": "Towers",
+      "bridges": "Bridge",
+      "net": "Net",
+      "inertia": "Inertia",
+      "signpost": "Sign",
+      "keen": "KenKen",
+      "dominosa": "Domino",
+      "singles": "Singls",
+      "lightup": "Akari",
+      "tents": "Tents",
+      "slant": "Slant",
+      "filling": "Fill",
+      "loopy": "Loopy",
+      "pearl": "Pearl",
+      "magnets": "Magnet",
+      "galaxies": "Galaxy",
+      "rectangles": "Rect",
+      "tracks": "Tracks",
+      "blackbox": "BBox",
+      "undead": "Undead",
+      "mosaic": "Mosaic",
+      "sixteen": "16",
+      "palisade": "Palis.",
+      "range": "Range",
+      "cube": "Cube",
+      "netslide": "NSlide",
+      "flip": "Flip",
+      "sart": "SART",
+      "dsst": "DSST",
+      "inspection-time": "IT"
+    },
+    "challenge": {
+      "title": "Challenge {{days}} days",
+      "goal": "{{minutes}} min/day",
+      "todayProgress": "{{minutes}}/{{target}} min today",
+      "completed": "Challenge completed",
+      "rules": "Rules",
+      "calendar": "Calendar",
+      "rulesTitle": "How it works",
+      "settings": {
+        "title": "Challenge settings",
+        "days": "Days",
+        "daysDesc": "Challenge duration in days",
+        "minutes": "Minutes per day",
+        "minutesDesc": "Daily training goal",
+        "start": "Start challenge",
+        "previewHint": "Preview mode: you can still increase settings until you start the challenge.",
+        "lockedHint": "First day validated: minutes per day is now locked.",
+        "readyHint": "Challenge ready: increases are allowed until your first session."
+      },
+      "howGoalLabel": "The goal",
+      "howGoal": "Train for a set number of minutes each day, over a set number of days. You choose the duration and number of days in the settings.",
+      "howCountsLabel": "What counts",
+      "howCounts": "All your completed sessions count, regardless of the mode or journey.",
+      "howPaceLabel": "One day at a time",
+      "howPace": "Each validated day unlocks one card. Extra minutes do not carry over to the next day.",
+      "validatedOn": "Validated on",
+      "minutes": "Training",
+      "done": "Done",
+      "validatedToday": {
+        "title": "Today's goal completed",
+        "body": "Your progress in the challenge will resume tomorrow."
+      },
+      "toastValidated": "Well done, you reached your daily goal of {{minutes}} min.",
+      "card": {
+        "completed": "Day completed",
+        "current": "Current day",
+        "locked": "Locked day"
+      }
+    },
+    "simulators": {
+      "jaeggiShort": "Original protocol (2008)",
+      "brainWorkshopShort": "Reference open-source app",
+      "fullSettings": "Full settings in"
+    },
+    "premiumLock": {
+      "unlock": "Unlock with Premium",
+      "message": "Level 4+ reserved for Premium. Earn XP to unlock a free pass!"
+    },
+    "dailyLimit": {
+      "unlock": "Go unlimited",
+      "message": "Today's session is done. Want to keep going? Go unlimited.",
+      "trialOffer": "Get 7 days free",
+      "trialMessage": "Today's session is done. Try unlimited training for free!",
+      "trialActivated": "7 days of unlimited training activated!",
+      "trialActive": "Free trial active",
+      "trialDaysRemaining_one": "{{count}} day remaining",
+      "trialDaysRemaining_other": "{{count}} days remaining",
+      "premiumMessage": "Enjoying the app? Support its development and help grow the catalog.",
+      "trialDaysRemaining": "Trial days remaining"
+    },
+    "betaLock": {
+      "badge": "Beta",
+      "comingSoon": "Coming soon"
+    },
+    "customMode": {
+      "title": "Custom mode",
+      "description": "Create your own training",
+      "level": "Level",
+      "trials": "Trials"
+    },
+    "journeySelector": {
+      "defaultDesc": "Follow one path at a time and unlock the next stage only when the previous one is truly mastered.",
+      "hybridDesc": "A hybrid path that alternates Dual Track and Dual N-Back within the same progression."
+    },
+    "quickSettings": "Quick settings",
+    "journeyStartLevel": "Start level",
+    "pwa": {
+      "description": "Fullscreen, faster, works offline",
+      "install": "Install",
+      "installButton": "Install the app",
+      "title": "Install Neurodual"
+    },
+    "beta": {
+      "title": "Beta features",
+      "enabled": "Beta features are enabled.",
+      "disable": "Disable beta features",
+      "activated": "Beta features activated!",
+      "redirecting": "Redirecting to settings...",
+      "activate": "Activate beta",
+      "backHome": "Back to home"
+    },
+    "showProfile": "Show cognitive profile",
+    "showOspanMeasure": "Working memory measure",
+    "hideProfile": "Back to home",
+    "lastPlayed": "Last played",
+    "synergyLoops": "×{{count}}",
+    "synergyPlay": "Play",
+    "synergyContinue": "Continue",
+    "synergyComplete": "Complete!",
+    "synergyStop": "Stop",
+    "synergyViewReport": "View report",
+    "synergyReset": "Reset",
+    "synergyResetConfirm": "Confirm reset?",
+    "synergy": {
+      "loop": "Loop",
+      "settings": "Settings",
+      "settingsDescription": "Adjust Dual Track and N-Back together before starting the tandem.",
+      "difficultyPreset": "Difficulty",
+      "presetEasy": "Easy",
+      "presetMedium": "Medium",
+      "presetHard": "Hard",
+      "loopTitle": "Tandem",
+      "loopInfoTitle": "How it works",
+      "loopInfoIdeaLabel": "The idea",
+      "loopInfoIdea": "Dual Track (Multiple Object Tracking) trains sustained attention, N-Back trains working memory. By chaining them on the same sensory channel, each task sets the stage for the next: the focus sharpened by Dual Track feeds directly into memorization, and vice versa.",
+      "loopInfoChannelLabel": "One channel",
+      "loopInfoChannel": "Both activities share the same sense: visual (position + colors) or audio (spoken letters). This direct link between tasks encourages transfer from one exercise to the other.",
+      "roundLabel": "R",
+      "chartEmpty": "Start a loop to see your scores per round",
+      "loopInfoFlowLabel": "The flow",
+      "loopInfoFlow": "You set the number of rounds (1 round = 1 Dual Track + 1 N-Back). Games follow each other seamlessly. Reports are available game by game in your history.",
+      "dualTrackTitle": "Dual Track",
+      "nbackTitle": "N-Back",
+      "dualTrack": {
+        "targets": "Targets",
+        "targetsHint": "Linked to the N-Back level.",
+        "identity": "Identity",
+        "identityColor": "Position + Color",
+        "identityLetter": "Position + Letters",
+        "duration": "Tracking duration",
+        "speed": "Speed",
+        "speedSlow": "Slow",
+        "speedMedium": "Medium",
+        "speedFast": "Fast",
+        "rounds": "Rounds",
+        "totalObjectsAuto": "Balls: Auto",
+        "proximity": "Proximity",
+        "proximityLow": "Low",
+        "proximityStandard": "Standard",
+        "proximityDense": "Dense",
+        "motion": "Motion complexity",
+        "motionSmooth": "Smooth",
+        "motionStandard": "Standard",
+        "motionAgile": "Agile",
+        "totalObjects": "Balls: {{count}}"
+      },
+      "nback": {
+        "level": "N-Level",
+        "levelHint": "Linked to Dual Track targets.",
+        "modality": "Modality",
+        "position": "Position",
+        "audio": "Audio",
+        "trials": "Trials"
+      },
+      "complete": "Synergy complete",
+      "reportHeadlineExcellent": "Very strong Synergy loop",
+      "reportHeadlineGood": "Solid Synergy loop",
+      "reportHeadlineAverage": "Loop completed, still uneven",
+      "reportHeadlineLow": "Loop finished, foundation to reinforce",
+      "reportSublineBalanced": "The two tasks stayed well aligned across {{count}} completed rounds.",
+      "reportSublineImbalanced": "{{mode}} stayed ahead. The next loop should focus on reducing the gap.",
+      "reportInsight": "Average loop score: {{score}}%.",
+      "loopReportTitle": "Loop report",
+      "loopReportDescription": "{{count}} completed rounds, one final report.",
+      "loopScore": "Loop score",
+      "loopScoreTooltip": "Average unified score across all Dual Track and N-Back steps in this loop.",
+      "totalDuration": "Duration",
+      "totalXp": "XP",
+      "roundByRound": "Round by round",
+      "stepIndex": "Step {{index}}"
+    },
+    "synergyModality": {
+      "positionColor": "Position + Color",
+      "positionAudio": "Position + Audio",
+      "infoPositionColor": "Dual Track in color mode then N-Back in position modality. Trains visual tracking and spatial memory.",
+      "infoPositionAudio": "Dual Track in color mode then N-Back in audio modality. Trains visual tracking and auditory memory."
+    },
+    "onboarding": {
+      "introTitle": "Welcome to NeuroDual",
+      "introContinue": "Discover",
+      "introProtocol": "The app structures cognitive training in three phases:",
+      "introStep1Label": "1. Measure",
+      "introStep1": "Two tests inspired by research (OSpan and Raven's Matrices) establish a starting level.",
+      "introStep2Label": "2. Train",
+      "introStep2": "Targeted exercises engage the measured abilities.",
+      "introStep3Label": "3. Re-measure",
+      "introStep3": "Retaking the tests periodically allows objective assessment of progress.",
+      "introFreeNote": "The Training tab also provides access to the full exercise library, unrelated to the assessments.",
+      "protocole": "These three cards form the assessment and training path: two measurements and targeted training.",
+      "ficheOspan": "Working memory — The OSpan (Operation Span) measures the ability to hold and manipulate information in real time. An initial session establishes the baseline. Subsequent sessions track changes over time.",
+      "ficheRavens": "Fluid intelligence — Raven's Matrices measure the ability to reason through novel problems, independent of acquired knowledge. Same principle: an initial measurement, then periodic sessions.",
+      "ficheProfile": "Targeted training — The cognitive profile offers exercises targeting working memory and reasoning, the abilities assessed by OSpan and Raven's. It constitutes the training component of the path.",
+      "tabTraining": "The Training tab provides access to the full library: Dual N-Back, Multi-Object Tracking, logic puzzles, and many more. Free training, no set framework.",
+      "_legacy_tabSynergy": "Synergy — alternating pairs of complementary modes, designed for more varied and complementary training.",
+      "_legacy_tabJourney": "Journey — pick a mode and progress level by level, following the mode's progression rules.",
+      "_legacy_tabChallenge": "Challenge — a timed challenge to measure your training consistency.",
+      "_legacy_introSection1Label": "Welcome",
+      "_legacy_introSection1": "Exercises from cognitive science research — Dual N-Back, Multi-Object Tracking, OSpan — alongside classic logic games: grid puzzles, sequences, spatial reasoning.",
+      "_legacy_introSection2Label": "Transfer",
+      "_legacy_introSection2": "Research shows that cognitive training reliably improves the abilities you practice (Simons et al., 2016). Transfer to broader abilities remains an active area of research.",
+      "_legacy_introSection3Label": "The goal",
+      "_legacy_introSection3": "Measure your initial abilities, propose synergies between exercises, and let you judge the results.",
+      "_legacy_outroTitle": "Two paths ahead",
+      "_legacy_outroBody": "Guided path — start by measuring your abilities with the OSpan and Raven cards, then train with the cognitive profile to try improving your results.\n\nFree path — already familiar with Dual N-Back, Multi-Object Tracking, or other exercises? Go straight to the Training tab and explore the library.",
+      "_legacy_outroContinue": "Get started"
+    },
+    "showVisualLogic": "Visual Logic",
+    "journeyQuickSettingsUnavailable": "No quick settings available for this journey yet.",
+    "journeyNoFavorites": "No favorite journeys yet. Add some from the settings.",
+    "journeyGoToSettings": "Journey settings",
+    "synergyRestart": "Restart"
+  },
+  "ospan": {
+    "measure": {
+      "sheetLabel": "Working memory assessment",
+      "neverTested": "No valid measure yet",
+      "sessionCount": "{{count}} valid measures",
+      "firstTestLabel": "Measure 1",
+      "firstTestTitle": "Measure your working memory",
+      "firstTestDesc": "This test takes about 10 minutes. It measures your working memory capacity.",
+      "currentSpan": "Current span",
+      "protocolLabel": "The protocol",
+      "protocolStep1": "The test consists of 15 sets of 3 to 7 letters (3 sets per size), presented in random order.",
+      "protocolStep2": "Before each letter, verify an equation (e.g. (2 × 3) + 1 = 7?) by pressing True or False. You have 5 seconds.",
+      "protocolStep3": "At the end of each set, recall the letters in order. Only fully correct sets count toward your score.",
+      "protocolStep4": "Each set recalled without error adds its number of letters to your score. Maximum possible: 75.",
+      "duration": "Estimated duration: 10 minutes",
+      "whyLabel": "Why this test?",
+      "whyParagraph1": "Working memory is the ability to hold and manipulate information in real time. It is involved in reasoning, comprehension, and learning.",
+      "whyParagraph2": "The Operation Span (Unsworth & Engle, 2005) is a standard test in cognitive science for measuring this capacity. It is more reliable than a simple span test because it forces you to process equations while memorizing — a dual-task condition closer to everyday demands.",
+      "whyParagraph3": "Each administration adds another comparable measure over time, provided equation accuracy remains high enough (≥ 85%). Below this threshold, results are considered invalid as they suggest equations were not genuinely processed.",
+      "normsLabel": "Age benchmarks",
+      "normsDisclaimer": "Approximate values from scientific literature (Cowan 2001, Unsworth & Engle 2005, Bopp & Verhaeghen 2005)",
+      "span": "Span",
+      "noData": "No data",
+      "normsAgeLabel": "Age (years)",
+      "normsYou": "You",
+      "lastSpan": "Last span {{span}}",
+      "bestSpan": "Record {{span}}",
+      "retestLabel": "Next measure",
+      "daysSince": "{{days}}d ago",
+      "retestReady": "Start a new measure",
+      "retestWait": "Start a new measure",
+      "retestDesc": "Only valid administrations contribute to the current span and evolution chart.",
+      "nextMeasureLabel": "Measure {{count}}",
+      "nextMeasureTitle": "Start a new measure",
+      "nextMeasureDesc": "Only valid administrations contribute to the current span and evolution chart.",
+      "invalidCount": "{{count}} invalidated",
+      "historyLabel": "History",
+      "historyDesc": "All completed administrations. Invalid sessions remain visible but do not count toward the current measure.",
+      "invalidSession": "Equations < 85% — not counted as current span",
+      "scoreGaugeLabel": "OSpan score gauge",
+      "baselineDesc": "Complete 3 initial measurements to establish your baseline span.",
+      "ospanScore": "OSpan score",
+      "scoreGaugeTitle": "Absolute score",
+      "scoreGaugeDesc": "Median ≈ 40 for ages 18–35 (Unsworth & Engle 2005). Maximum: 75."
+    }
+  },
+  "cognitive": {
+    "defaultName": "Player",
+    "startCalibration": "Start calibration",
+    "resumeCalibration": "Resume calibration",
+    "scoreLabel": "Score",
+    "profileSheetLabel": "Cognitive profile",
+    "profilePending": "Profile in progress",
+    "profileUnlock": "Journey locked",
+    "profileModalitiesCount_one": "{{count}}/{{total}} modality",
+    "profileModalitiesCount_other": "{{count}}/{{total}} modalities",
+    "calibrationProgressCount": "{{done}} / {{total}} completed",
+    "profileScoreLine": "Score {{score}}",
+    "calibrationLabel": "Calibration",
+    "remainingCalibrationSteps_one": "{{count}} step remaining before the journey",
+    "remainingCalibrationSteps_other": "{{count}} steps remaining before the journey",
+    "calibrationReward": "Once complete, your personalized journey unlocks automatically.",
+    "nextStepLabel": "Next step",
+    "overviewScoreLabel": "Overall score",
+    "repartitionSubLabel": "Strengths by modality",
+    "modalitiesSectionLabel": "Modalities",
+    "modalitiesSectionBody": "Detailed view of acquired levels and ongoing progression.",
+    "profileSessionsCount_one": "{{count}} session",
+    "profileSessionsCount_many": "{{count}} sessions",
+    "profileSessionsCount_other": "{{count}} sessions",
+    "skipCalibration": "Skip calibration and start at level 2",
+    "resetProfile": "Reset profile",
+    "resetConfirmTitle": "Reset profile?",
+    "resetConfirmButton": "Reset profile",
+    "resetLoading": "Resetting...",
+    "calibrationReady": "Calibration ready",
+    "profileStrongest": "Strongest: {{label}}",
+    "profileFocus": "Lever: {{label}}",
+    "profileModalitiesCount_many": "{{count}}/{{total}} modalities",
+    "remainingCalibrationSteps_many": "{{count}} more steps before the journey",
+    "training": {
+      "label": "Next session",
+      "reasonWeakest": "Weakest",
+      "reasonCatchUp": "Catch up",
+      "reasonMaster": "Master N-5",
+      "reasonTraining": "Training",
+      "reasonMaintain": "Maintain"
+    },
+    "modality": {
+      "position": "Spatial",
+      "shape": "Shapes",
+      "color": "Colors",
+      "letters": "Letters",
+      "numbers": "Numbers",
+      "emotions": "Emotions",
+      "semantic": "Words",
+      "tones": "Tones",
+      "levelLabel": "Level",
+      "progressLabel": "Toward N-{{level}}",
+      "pendingLabel": "To calibrate",
+      "progressMaxLabel": "Max level",
+      "strongest": "Strongest",
+      "focus": "To strengthen",
+      "disabledLabel": "Disabled"
+    },
+    "validateModalities": "Confirm selected modalities",
+    "customizeModalities": "Customize trained modalities",
+    "profileCalibrated": "Profile calibrated",
+    "profileNew": "New profile",
+    "profileModalitiesCount": "{{count}}/{{total}} modalities",
+    "profileSessionsCount": "{{count}} sessions",
+    "remainingCalibrationSteps": "{{count}} more steps before the journey",
+    "manageModalitiesDone": "Done",
+    "settingsOpen": "Settings",
+    "settingsTitle": "Profile settings",
+    "settingsModalities": "Customize modalities",
+    "settingsModalitiesDesc": "{{enabled}} / {{total}} active",
+    "settingsMaxLevel": "Max level",
+    "settingsMaxLevelHint": "Default max level: 5",
+    "resetConfirmDesc": "This action is irreversible. The entire cognitive profile, calibration and associated progression will be deleted."
+  },
+  "modeInfo": {
+    "2048": {
+      "howItWorks": "Swipe to slide all tiles in one direction. Tiles with the same number merge into their sum. A new tile appears after each move. Reach 2048 to win.",
+      "scoring": "Score is the sum of all merges. Higher tiles and efficient play earn more points.",
+      "tip": "Keep your highest tile in a corner. Build a descending chain along one edge."
+    },
+    "howItWorks": "How it works",
+    "scoring": "Scoring",
+    "tip": "Tip",
+    "generic": {
+      "howItWorks": "Description coming soon.",
+      "scoring": "Scoring details will be available soon.",
+      "tip": "Start slowly, prioritize accuracy, then build speed."
+    },
+    "dual-catch": {
+      "howItWorks": "The rhythm adapts in real-time to your performance. If you do well, the tempo speeds up. If you struggle, it slows down. The goal is to keep you in your optimal flow zone.",
+      "scoring": "Based on signal detection theory (d'). A good score means you distinguish targets from non-targets well. Aim for a d' between 1.0 and 2.0 to stay in the optimal zone.",
+      "tip": "Don't rush! The mode adapts to you. Focus on accuracy, not speed."
+    },
+    "dual-place": {
+      "howItWorks": "A sequence of positions and sounds plays. You must then place the stimuli in the correct order on the timeline. This is a sequential working memory exercise.",
+      "scoring": "Each correctly placed stimulus earns points. The final score depends on the number of stimuli correctly positioned relative to the total.",
+      "tip": "Try creating mental associations between position and sound to better memorize the order."
+    },
+    "dual-pick": {
+      "howItWorks": "The sequence stimuli are displayed. For each one, drag the correct temporal label (N, N-1, N-2).",
+      "scoring": "Each correctly placed label counts. The score combines your results on both modalities (position and sound).",
+      "tip": "Start with the most obvious markers, then complete by elimination."
+    },
+    "dual-track": {
+      "howItWorks": "Several objects move at once. A subset is marked as targets at the start, then all objects become identical and you must keep tracking the targets with your eyes.",
+      "scoring": "Score depends on how many targets you correctly recover at the end of each round. Accuracy matters most; crowding and confusion between objects make the task harder.",
+      "tip": "Track the group as a pattern rather than staring at one object. When objects cross, stay calm and re-anchor on the overall motion."
+    },
+    "dual-trace": {
+      "howItWorks": "Watch the sequence, then reproduce it by tracing the positions on the grid. Combines visuo-spatial memory and fine motor skills.",
+      "scoring": "The precision of your trace and the order of positions are evaluated. The more faithful your trace is to the original sequence, the better your score.",
+      "tip": "Visualize the complete path before starting to trace. This helps smooth your gesture."
+    },
+    "dual-time": {
+      "howItWorks": "You produce a target duration with a controlled gesture, then estimate the elapsed time. The task links motor timing with explicit time judgment.",
+      "scoring": "Score reflects how close your produced duration and estimate are to the target. Stable timing and low bias improve the result.",
+      "tip": "Use a steady internal rhythm instead of rushing. Consistency is more useful than trying to be perfect on one trial."
+    },
+    "dual-memo": {
+      "howItWorks": "Watch a complete sequence, then reconstruct it from memory. This is an active recall exercise that strengthens memory consolidation.",
+      "scoring": "The score depends on the number of elements correctly recalled in the right order.",
+      "tip": "Use chunking: group elements by 2 or 3 to remember them better."
+    },
+    "corsi-block": {
+      "howItWorks": "A sequence of locations lights up on a 3x3 grid. Your job is to reproduce the sequence in the same order as spans gradually increase.",
+      "scoring": "Your span reflects the longest sequence you can reproduce reliably. Higher spans indicate stronger visuo-spatial working memory capacity.",
+      "tip": "Group positions into small chunks or shapes instead of memorizing each tap separately."
+    },
+    "ospan": {
+      "howItWorks": "You alternate between solving simple arithmetic checks and memorizing letters. At the end of the set, you recall the letters in the exact order.",
+      "scoring": "The score rewards correct serial recall while keeping equation accuracy high. It measures storage under processing load, not memory alone.",
+      "tip": "Solve the math efficiently, then immediately refresh the letter in mind before the next item appears."
+    },
+    "running-span": {
+      "howItWorks": "Items stream continuously and stop unpredictably. You must recall only the last few items, which prevents easy rehearsal from the beginning.",
+      "scoring": "Score depends on how accurately you recover the most recent items in order. Updating working memory on the fly is the core demand.",
+      "tip": "Don't try to hold the whole stream. Continuously drop older items and keep attention on the latest window only."
+    },
+    "pasat": {
+      "howItWorks": "You hear or see numbers one after another and must add each new number to the one immediately before it. The sequence keeps moving, so updating must stay fast.",
+      "scoring": "Score is based on correct sums and your ability to keep up as pace increases. It taxes sustained attention, updating, and mental arithmetic together.",
+      "tip": "Focus only on the last number and the new one. If you miss a trial, reset immediately instead of trying to recover the whole chain."
+    },
+    "swm": {
+      "howItWorks": "You search multiple locations to find hidden tokens while avoiding boxes you already checked. The challenge is remembering past searches as the set grows.",
+      "scoring": "Better performance means fewer revisits to empty locations and more efficient search. It reflects strategic spatial working memory, not just speed.",
+      "tip": "Use a consistent search pattern. Good strategy reduces errors before memory capacity becomes the limiting factor."
+    },
+    "dualnback-classic": {
+      "howItWorks": "Faithful replication of the Jaeggi et al. (2008) protocol. Fixed 3-second rhythm, N-level progression between sessions based on your performance.",
+      "scoring": "Original protocol: fewer than 3 errors per modality to move up a level. More than 5 errors per modality to go down.",
+      "tip": "This mode is ideal for comparing your results to scientific studies on N-back."
+    },
+    "sim-brainworkshop": {
+      "howItWorks": "Replication of the Brain Workshop software. Fixed rhythm, automatic level progression between sessions.",
+      "scoring": "Average of correct response percentages per modality. Progression follows Brain Workshop rules.",
+      "tip": "If you know Brain Workshop, you'll find your bearings. Otherwise, it's a good classic reference."
+    },
+    "custom": {
+      "howItWorks": "You control all parameters: N-level, number of trials, active modalities. Perfect for personalized training.",
+      "scoring": "Uses the standard SDT score. You can adjust the difficulty as you wish.",
+      "tip": "Experiment! Try different combinations to find what challenges you most effectively."
+    },
+    "stroop": {
+      "howItWorks": "Color words appear in incongruent ink colors (e.g. 'BLUE' in red ink). Name the ink color, ignore the word. Measures interference control.",
+      "scoring": "Based on accuracy and reaction time. The congruency effect (RT difference between congruent and incongruent trials) is the key metric.",
+      "tip": "Focus on the color, not the text. Speed comes with practice."
+    },
+    "flanker": {
+      "howItWorks": "A central arrow is surrounded by flanking arrows. Respond to the center only. Congruent (>>>>>) vs incongruent (>><>>) trials measure attentional filtering.",
+      "scoring": "Accuracy and RT. The flanker effect (RT cost of incongruent vs congruent) measures your attentional inhibition.",
+      "tip": "Keep your eyes on the center. Peripheral distractors get easier to ignore with practice."
+    },
+    "go-nogo": {
+      "howItWorks": "Stimuli appear rapidly. Press for 'Go' stimuli, withhold for 'No-Go'. Measures your ability to suppress a prepared motor response.",
+      "scoring": "Commission errors (pressing on No-Go) and omission errors (not pressing on Go). Lower commission errors = better inhibition.",
+      "tip": "Don't anticipate — wait for each stimulus before deciding."
+    },
+    "stop-signal": {
+      "howItWorks": "Respond to Go signals, but cancel when a Stop signal appears after a variable delay. The delay adapts to find your Stop Signal Reaction Time (SSRT).",
+      "scoring": "SSRT is the key metric — how fast you can cancel an initiated response. Lower SSRT = better inhibitory control.",
+      "tip": "Don't slow down on purpose — respond naturally to Go trials. The task adapts to you."
+    },
+    "antisaccade": {
+      "howItWorks": "A stimulus flashes on one side of the screen. Tap the opposite side. Measures suppression of reflexive orienting responses.",
+      "scoring": "Accuracy (correct opposite-side responses) and RT. Errors reveal failures of voluntary control over attention.",
+      "tip": "Anticipate the rule: as soon as you see a flash, move opposite. Build the habit."
+    },
+    "wcst": {
+      "howItWorks": "Sort cards by color, shape, or number. The rule changes without warning after consecutive correct sorts. Infer the new rule from feedback.",
+      "scoring": "Categories completed, perseverative errors (sticking to old rule), and trials to first category. Fewer perseverative errors = better flexibility.",
+      "tip": "When you get an error after a streak of correct sorts, the rule has changed. Try a different dimension."
+    },
+    "trail-making": {
+      "howItWorks": "Connect nodes in alternating order: 1-A-2-B-3-C... Measures the cognitive cost of switching between two mental sets (numbers and letters).",
+      "scoring": "Completion time is the primary metric. The difference between Part B (alternating) and Part A (numbers only) isolates the switching cost.",
+      "tip": "Plan ahead — look for the next target while tapping the current one."
+    },
+    "task-switching": {
+      "howItWorks": "Alternate between two rules (e.g. odd/even vs greater/less than 5). A cue tells you which rule to apply. Measures switch cost and mixing cost.",
+      "scoring": "Switch cost (RT on switch vs repeat trials) and mixing cost (mixed block vs pure block). Lower costs = more flexible cognition.",
+      "tip": "Use the cue preparation time. The moment you see the cue, start preparing the right rule."
+    },
+    "change-detection": {
+      "howItWorks": "Memorize a brief array of colored squares. After a delay, the array reappears — one may have changed. Report 'same' or 'different'.",
+      "scoring": "Cowan's K estimates your visual WM capacity: K = Set Size x (Hit Rate - False Alarm Rate). Typical capacity: 3-4 items.",
+      "tip": "Don't try to memorize every item. Focus on a subset and you'll be more accurate."
+    },
+    "ant": {
+      "howItWorks": "Flanker task with varying cue types. Measures three attention networks: alerting (readiness from warning), orienting (spatial cueing), executive control (conflict).",
+      "scoring": "Three independent scores from RT differences: alerting effect, orienting effect, and conflict effect. Each maps to a distinct brain network.",
+      "tip": "Use the cues! They give you real information about when and where the target will appear."
+    },
+    "symmetry-span": {
+      "howItWorks": "Alternate between judging pattern symmetry and memorizing grid positions. Recall the positions at the end of each set. Set size increases with success.",
+      "scoring": "Partial-credit unit scoring: credit for each correctly recalled position in the correct serial order. Symmetry accuracy must stay above 85%.",
+      "tip": "Don't neglect the symmetry judgments — they're the processing component. Speed on those frees up resources for memory."
+    },
+    "pvt": {
+      "howItWorks": "Wait for a stimulus to appear at a random interval (2-10s), then react as fast as possible. Measures sustained attention and detects lapses.",
+      "scoring": "Median RT and number of lapses (RT > 500ms). Even one lapse reveals a momentary failure of sustained attention.",
+      "tip": "Stay alert but relaxed. Anticipating wastes energy; the stimulus will come when it comes."
+    },
+    "reading-span": {
+      "howItWorks": "Read sentences and judge if they make sense, while memorizing the last word of each. Recall all final words at the end of each set.",
+      "scoring": "Partial-credit scoring: credit for each word recalled in correct position. Sentence accuracy must stay above 85%.",
+      "tip": "Read the sentences actively — engaging with meaning helps bind the final word to memory."
+    },
+    "digit-span": {
+      "howItWorks": "Hear a sequence of digits, then recall them in order (forward) or reverse order (backward). Span increases until two consecutive failures.",
+      "scoring": "Maximum span achieved. Forward span measures storage capacity; backward span measures storage + manipulation.",
+      "tip": "Try chunking: group 7-3-9 as 'seven-thirty-nine' rather than three separate digits."
+    },
+    "simon": {
+      "howItWorks": "A colored stimulus appears on the left or right. Respond based on color, not location. When stimulus side conflicts with response side, you must inhibit the automatic spatial response.",
+      "scoring": "Simon effect: RT difference between congruent (same side) and incongruent (opposite side) trials. Smaller effect = better spatial inhibition.",
+      "tip": "Focus on the color rule. The location is irrelevant — let it fade from attention."
+    },
+    "posner-cueing": {
+      "howItWorks": "A cue hints where the target will appear. Valid cues (correct location) speed you up; invalid cues slow you down. Measures spatial attention orienting.",
+      "scoring": "Validity effect: RT(invalid) - RT(valid). Larger effect = stronger attentional capture by the cue. Also measures disengagement cost.",
+      "tip": "Use the cue but don't fixate on it. Stay ready to redirect if the target appears elsewhere."
+    },
+    "sternberg": {
+      "howItWorks": "Memorize a small set of items (1-6), then a probe appears. Decide as fast as possible if the probe was in the set.",
+      "scoring": "RT slope per item (~38ms) reveals memory scanning speed. Intercept reveals motor + decision time.",
+      "tip": "Don't rehearse during the probe — just let recognition happen. Faster scanning comes with practice."
+    },
+    "ax-cpt": {
+      "howItWorks": "Cue-probe pairs appear. Only respond 'target' to A-X pairs. All other combinations (A-Y, B-X, B-Y) are non-targets.",
+      "scoring": "B-X errors indicate reactive control failure; A-Y errors indicate proactive control overcommitment. The balance reveals your control strategy.",
+      "tip": "When you see an A cue, prepare for X but stay flexible. When you see a B cue, relax — no target is coming."
+    },
+    "mental-rotation": {
+      "howItWorks": "Two shapes appear side by side. One is rotated. Decide if they are identical or mirror images. RT increases with rotation angle.",
+      "scoring": "RT slope per degree of rotation measures mental transformation speed. Accuracy reveals spatial discrimination ability.",
+      "tip": "Try to mentally 'grab' one shape and rotate it. Some people rotate to the nearest alignment rather than all the way."
+    },
+    "visualLogic": {
+      "howItWorks": "A 3x3 matrix of patterns has one missing piece. Find the correct completion from the options by identifying the rules across rows and columns.",
+      "scoring": "Number of correct completions. Difficulty increases as rules become more complex (multiple transformations, XOR logic, distribution of elements).",
+      "tip": "Check each row AND each column. The answer must satisfy both directions simultaneously."
+    },
+    "visual-search": {
+      "howItWorks": "Find a target item among distractors. Feature search (one unique feature) is fast; conjunction search (combined features) requires scanning each item.",
+      "scoring": "Search slope: RT increase per additional distractor. Flat slope = efficient parallel search; steep slope = effortful serial search.",
+      "tip": "For conjunction targets, develop a systematic scanning pattern rather than looking randomly."
+    },
+    "letter-number": {
+      "howItWorks": "Hear a mixed sequence (e.g. K-3-A-7-B-1). Recall numbers in ascending order first, then letters alphabetically (1-3-7-A-B-K).",
+      "scoring": "Maximum span achieved while correctly reordering. Requires simultaneous storage and manipulation.",
+      "tip": "As you hear each item, mentally sort it into the 'numbers' or 'letters' bin immediately."
+    },
+    "soroban": {
+      "howItWorks": "A Japanese abacus (soroban) with vertical rods. Each rod has 1 heaven bead (worth 5) above the beam and 4 earth beads (worth 1 each) below. Tap beads to move them toward or away from the beam. Set the beads to represent the target number, then submit your answer.",
+      "scoring": "Score is based on accuracy and response time. Faster correct answers earn higher scores.",
+      "tip": "Start by learning single-digit representations. Earth beads count 0-4, the heaven bead adds 5. For example, 7 = heaven bead down (5) + 2 earth beads up (2)."
+    },
+    "lights-out": {
+      "howItWorks": "A grid of lights is partially on. Tap a cell to toggle it and its orthogonal neighbors. Goal: turn all lights off.",
+      "scoring": "Score is based on number of moves and time. Fewer moves = better planning.",
+      "tip": "Work from a corner. Toggling edges first reduces cascading confusion."
+    },
+    "memory-match": {
+      "howItWorks": "Cards are face-down on a grid. Flip two at a time — if they match, they stay revealed. Find all pairs to complete the board.",
+      "scoring": "Accuracy (fewer mismatches) and speed. Grid sizes grow with level: 3×4, 4×4, 4×5.",
+      "tip": "Mentally group card positions by region. When you reveal a card, note its location for later."
+    },
+    "chain-recall": {
+      "howItWorks": "A chain of items is presented one by one. After presentation, recall them all in order. The chain grows each round.",
+      "scoring": "Score reflects the longest chain recalled correctly. Strategy and encoding quality matter most.",
+      "tip": "Create a story linking items together — narrative encoding beats rote repetition."
+    },
+    "reflex": {
+      "howItWorks": "Targets (green) and lures (red) appear on a 3×3 grid. Tap targets quickly, withhold on lures.",
+      "scoring": "Combines reaction time for hits and accuracy (avoiding false alarms on lures).",
+      "tip": "Don't anticipate — wait to see the color before tapping. Speed comes with confidence."
+    },
+    "speed-sort": {
+      "howItWorks": "Cards appear and must be sorted into bins by the current rule (color, shape, or number). The rule changes without warning.",
+      "scoring": "Speed and accuracy. Perseverative errors (using the old rule) are penalized.",
+      "tip": "When you get an error, switch rules immediately. Don't second-guess — try the next dimension."
+    },
+    "nonogram": {
+      "howItWorks": "Number clues on rows and columns tell you which cells to fill. Deduce the pattern logically — no guessing needed.",
+      "scoring": "Accuracy and completion time. A perfect solve with no errors is the goal.",
+      "tip": "Start with rows or columns where the clue fills most of the line. Mark cells you know are empty."
+    },
+    "sokoban": {
+      "howItWorks": "Push boxes onto target positions. You can only push, not pull. Plan your moves — a wrong push can make the puzzle unsolvable.",
+      "scoring": "Number of moves and time. Optimal solutions use the fewest pushes.",
+      "tip": "Think backwards from the goal state. Never push a box into a corner unless it's the target."
+    },
+    "mirror": {
+      "howItWorks": "A pattern is shown on one side of a split grid. Reproduce it in mirror symmetry on the other side. Axis varies by level.",
+      "scoring": "Accuracy of the mirrored reproduction and response time.",
+      "tip": "For vertical axis (left-right), work row by row. For central symmetry, think of rotating 180°."
+    },
+    "color-rush": {
+      "howItWorks": "Color words appear in different ink colors. Tap the button matching the ink color, not the word. Congruent and incongruent trials alternate.",
+      "scoring": "Speed and accuracy. The Stroop interference effect (slower on incongruent) is the key metric.",
+      "tip": "Defocus from reading — train yourself to see color first. It gets easier with practice."
+    },
+    "spot-diff": {
+      "howItWorks": "Two grids are shown side by side. Some cells differ between them. Find and tap all differences before the timer runs out.",
+      "scoring": "Number of differences found and speed. Missing differences or tapping wrong cells costs points.",
+      "tip": "Scan systematically row by row instead of jumping around. Peripheral vision catches more that way."
+    },
+    "tetris-mind": {
+      "howItWorks": "A tetromino piece and a target hole are shown. Choose the correct rotation from 4 candidates that would fit the hole exactly.",
+      "scoring": "Accuracy and reaction time. Higher levels use more complex rotations.",
+      "tip": "Mentally rotate the piece step by step (90° at a time). Compare the outline, not just the shape."
+    },
+    "rhythm-tap": {
+      "howItWorks": "Listen to a rhythmic pattern of beats. Then reproduce it by tapping at the right moments. Timing precision matters.",
+      "scoring": "Score reflects how closely your taps match the original beat timing. Consistent rhythm beats raw speed.",
+      "tip": "Internalize the tempo before tapping. Count along during the listening phase."
+    },
+    "pipeline": {
+      "howItWorks": "Pipe segments are placed on a grid. Rotate them to create a connected path from the source to the drain.",
+      "scoring": "Completion time and number of rotations. Efficient solutions use fewer moves.",
+      "tip": "Trace the path mentally from source to drain before rotating. Work from both ends toward the middle."
+    },
+    "tangram": {
+      "howItWorks": "Place polyomino pieces on an 8×8 grid to fill a target silhouette exactly. Pieces can be rotated.",
+      "scoring": "Completion time and accuracy. All target cells must be filled with no overflow.",
+      "tip": "Start with the largest pieces to constrain the solution space, then fill gaps with smaller ones."
+    },
+    "flood": {
+      "howItWorks": "Starting from the top-left corner, pick a color to flood-fill. All connected cells change to your chosen color. Goal: make the entire board one color.",
+      "scoring": "Score is based on completing the puzzle within the move limit. Fewer moves = better planning.",
+      "tip": "Look several moves ahead. Try to absorb the largest groups of cells with each move."
+    },
+    "fifteen": {
+      "howItWorks": "A grid of numbered tiles with one empty space. Tap a tile adjacent to the gap to slide it. Arrange tiles in numerical order.",
+      "scoring": "Score is based on solving the puzzle. Fewer moves and faster times earn higher scores.",
+      "tip": "Work row by row from top to bottom. Get the top rows done first."
+    },
+    "pegs": {
+      "howItWorks": "A board of pegs with one empty hole. Jump a peg over another into an empty hole to remove the jumped peg. Goal: leave just one peg.",
+      "scoring": "Fewer remaining pegs is better. One peg left is a perfect solve.",
+      "tip": "Avoid isolating pegs in corners early. Keep your remaining pegs clustered together."
+    },
+    "sudoku": {
+      "howItWorks": "Fill the 9×9 grid so every row, column, and 3×3 box contains exactly the digits 1–9. Tap a cell, then tap a digit.",
+      "scoring": "Accuracy and completion time. Errors are counted but don't block progress.",
+      "tip": "Start by scanning for rows, columns, or boxes with many givens. Use elimination to find the only possible digit."
+    },
+    "guess": {
+      "howItWorks": "Guess the hidden color code. After each guess, black pegs show correct color in correct position; white pegs show correct color in wrong position.",
+      "scoring": "Fewer guesses is better. Solving within the limit counts as success.",
+      "tip": "Use your first guess to test multiple colors. Eliminate impossible combinations based on feedback."
+    },
+    "samegame": {
+      "howItWorks": "Tap a group of 2+ same-colored cells to remove them. Cells above fall down, empty columns collapse left.",
+      "scoring": "Score = (group size - 1)². Bigger groups give exponentially more points.",
+      "tip": "Resist removing small groups early. Build up large same-color regions for massive scores."
+    },
+    "untangle": {
+      "howItWorks": "A graph with crossing edges is displayed. Drag nodes to new positions until no edges cross.",
+      "scoring": "Score is based on solving the puzzle. Fewer moves and faster times are better.",
+      "tip": "Start by moving nodes that have the most crossing edges. Work from the outside in."
+    },
+    "unruly": {
+      "howItWorks": "Fill a grid with black and white cells. Rules: no three consecutive same color in any row or column, and each row/column must have equal black and white.",
+      "scoring": "Accuracy and completion time. No constraint violations allowed.",
+      "tip": "Start with cells forced by the three-in-a-row rule. If two same colors are adjacent, their neighbors must be the opposite."
+    },
+    "twiddle": {
+      "howItWorks": "A grid of numbered tiles. Tap to rotate any 2×2 group of tiles clockwise. Arrange all tiles in numerical order.",
+      "scoring": "Fewer rotations and faster solve time earn higher scores.",
+      "tip": "Focus on getting the top-left corner correct first, then work outward."
+    },
+    "map-coloring": {
+      "howItWorks": "Color each region of a map using one of 4 colors. No two adjacent regions may share the same color.",
+      "scoring": "Complete the coloring with no violations. Speed matters.",
+      "tip": "Start with regions that have the most neighbors. Pre-colored regions constrain your choices — use them as anchors."
+    },
+    "towers": {
+      "howItWorks": "Fill an NxN grid so each row and column contains digits 1-N. Clues on the edges show how many buildings are visible from that direction.",
+      "scoring": "Accuracy and speed. All clues must be satisfied.",
+      "tip": "The clue N means the tallest building is first. The clue 1 means the tallest building is at the edge."
+    },
+    "bridges": {
+      "howItWorks": "Connect numbered islands with horizontal or vertical bridges (1 or 2 per connection). Each island's number equals its total bridges. Bridges can't cross.",
+      "scoring": "Complete the puzzle with all constraints satisfied.",
+      "tip": "Start with islands whose number equals their possible connections."
+    },
+    "net": {
+      "howItWorks": "A network of pipe tiles is scrambled. Tap each tile to rotate it 90°. Connect all tiles to the central source.",
+      "scoring": "Speed and number of rotations. Fewer is better.",
+      "tip": "Start from the edges — corner tiles have limited valid orientations."
+    },
+    "inertia": {
+      "howItWorks": "Slide across ice in 8 directions. You keep sliding until hitting a wall. Collect all gems without hitting mines.",
+      "scoring": "Collect all gems. Fewer moves is better.",
+      "tip": "Plan your path carefully — once you start sliding, you can't stop mid-way. Use walls to control your trajectory."
+    },
+    "signpost": {
+      "howItWorks": "Each cell has an arrow pointing in a direction. Number cells 1 to N² so each cell's arrow points toward the next number in sequence.",
+      "scoring": "Accuracy and speed. All cells must be correctly numbered.",
+      "tip": "Start from pre-numbered cells and follow arrows forward and backward to deduce neighbors."
+    },
+    "keen": {
+      "howItWorks": "Fill an NxN grid so each row and column has digits 1-N. Cells are grouped into cages with a target number and operation (+, -, ×, ÷).",
+      "scoring": "Accuracy and completion time. All cage and latin square constraints must be met.",
+      "tip": "Start with single-cell cages and subtraction/division cages (fewer possibilities)."
+    },
+    "dominosa": {
+      "howItWorks": "A grid of numbers must be divided into dominoes. Each pair of adjacent cells forms a domino, and every possible domino value appears exactly once.",
+      "scoring": "Complete the partition correctly. Speed matters.",
+      "tip": "Start with domino values that can only appear in one place."
+    },
+    "singles": {
+      "howItWorks": "Black out cells to remove duplicate numbers from each row and column. Blacked cells can't be adjacent, and all white cells must stay connected.",
+      "scoring": "Accuracy. No constraint violations allowed.",
+      "tip": "If a number appears only once in a row/column, it must stay white. Adjacent duplicates — one must be blacked."
+    },
+    "lightup": {
+      "howItWorks": "Place bulbs on white cells to light up every cell. Bulbs shine in 4 directions until hitting a wall. Numbered walls show how many adjacent bulbs they need. No two bulbs may see each other.",
+      "scoring": "Complete illumination with no conflicts.",
+      "tip": "Start with numbered walls. A wall showing 0 means no adjacent bulbs."
+    },
+    "tents": {
+      "howItWorks": "Place one tent adjacent to each tree. Tents can't touch each other, even diagonally. Row and column numbers show the tent count.",
+      "scoring": "All constraints must be satisfied.",
+      "tip": "Rows or columns with 0 tents can be marked as grass immediately."
+    },
+    "slant": {
+      "howItWorks": "Fill each cell with a \\ or / diagonal. Numbers at grid intersections show how many diagonals touch that corner. No loops allowed.",
+      "scoring": "Complete the grid with no violations.",
+      "tip": "Corner clues of 0 or 4 are fully determined."
+    },
+    "filling": {
+      "howItWorks": "Fill cells with numbers. Connected groups of cells sharing the same number N must contain exactly N cells.",
+      "scoring": "Accuracy and speed. All groups must have the right size.",
+      "tip": "Isolated cells must be 1. Large pre-filled numbers constrain their neighborhood."
+    },
+    "loopy": {
+      "howItWorks": "Draw a single closed loop along cell edges. Numbers in cells show how many of their 4 edges are part of the loop.",
+      "scoring": "Complete the loop with all clues satisfied.",
+      "tip": "A 0 means no edges used. A 3 in a corner means 3 of its edges are used."
+    },
+    "pearl": {
+      "howItWorks": "Draw a single loop through all pearls. On black pearls the loop turns 90°; through white pearls it goes straight, turning on at least one side.",
+      "scoring": "Complete the loop satisfying all pearl constraints.",
+      "tip": "Black pearls at edges force the loop direction. White pearls in corners have very few valid configurations."
+    },
+    "magnets": {
+      "howItWorks": "Each domino region is either a magnet (+/-) or neutral. Clue numbers on edges show how many + and - in each row/column.",
+      "scoring": "Satisfy all clue counts with no adjacent same poles.",
+      "tip": "Start with rows/columns where the clue = 0 (all neutral)."
+    },
+    "galaxies": {
+      "howItWorks": "Divide the grid into regions, each containing one dot. Every region must be rotationally symmetric (180°) around its dot.",
+      "scoring": "Complete the partition with all symmetry constraints met.",
+      "tip": "Each cell must have a symmetric counterpart in the same region. Start from dots near corners — their regions are more constrained."
+    },
+    "rectangles": {
+      "howItWorks": "Divide the grid into non-overlapping rectangles. Each rectangle contains exactly one number equal to its area.",
+      "scoring": "Complete the partition correctly.",
+      "tip": "Numbers with only one possible rectangle shape (like primes) are easiest to start with."
+    },
+    "tracks": {
+      "howItWorks": "Lay a railway track connecting point A to point B. Row and column numbers show how many cells contain track.",
+      "scoring": "Complete the track satisfying all clue counts.",
+      "tip": "Start from A and B, work inward. Rows/columns with clue = 0 have no track cells."
+    },
+    "blackbox": {
+      "howItWorks": "Hidden balls are inside the grid. Fire lasers from edges — they can hit, reflect, or pass through. Deduce ball positions from results.",
+      "scoring": "Correct ball placements. Fewer laser shots is better.",
+      "tip": "Reflections happen when a laser passes diagonally adjacent to a ball."
+    },
+    "undead": {
+      "howItWorks": "Place ghosts, vampires, and zombies. Ghosts show in mirrors only, vampires directly only, zombies always.",
+      "scoring": "All clues must be satisfied.",
+      "tip": "Zombies are the simplest — count them first. Then use mirror reflections to distinguish ghosts from vampires."
+    },
+    "mosaic": {
+      "howItWorks": "Fill or leave empty each cell. Clue numbers show how many of the 9 cells in the neighborhood (cell + 8 neighbors) are filled.",
+      "scoring": "All clues must be satisfied.",
+      "tip": "Clue 0 means all 9 cells empty. Clue 9 means all filled. Start with extreme clues."
+    },
+    "sixteen": {
+      "howItWorks": "Slide entire rows or columns (tiles wrap around). Arrange all tiles in numerical order.",
+      "scoring": "Fewer moves and faster solving.",
+      "tip": "Solve one row or column at a time."
+    },
+    "palisade": {
+      "howItWorks": "Draw borders to divide the grid into regions of a fixed size. Clue numbers show how many borders touch each cell.",
+      "scoring": "All regions must have the correct size.",
+      "tip": "Cells with clue 4 are isolated (single-cell region). Cells with clue 0 have no borders — they connect to all neighbors."
+    },
+    "range": {
+      "howItWorks": "Place black cells so each number can see exactly that many white cells in the 4 cardinal directions.",
+      "scoring": "All visibility counts must match.",
+      "tip": "Numbers at edges have limited visibility — they constrain heavily. Start there."
+    },
+    "cube": {
+      "howItWorks": "Roll a cube across a grid to pick up blue squares. The cube picks up a square when it rolls onto it with the correct face.",
+      "scoring": "Collect all squares. Fewer moves is better.",
+      "tip": "Track which face is down as the cube rolls. Each roll changes the orientation."
+    },
+    "netslide": {
+      "howItWorks": "A scrambled network of pipes. Slide entire rows or columns to reconnect all tiles to the source.",
+      "scoring": "Fewer slides and faster solving.",
+      "tip": "Fix the source row/column first, then work outward."
+    },
+    "flip": {
+      "howItWorks": "A grid of light/dark cells. Click a cell to flip it and a pattern of neighbors. Goal: make all cells the same.",
+      "scoring": "Solve in fewer clicks.",
+      "tip": "Like Lights Out but with custom flip patterns. Work systematically from one corner."
+    },
+    "sart": {
+      "howItWorks": "Digits flash one at a time. Tap for every digit except 3. The high go-rate (89%) builds a strong response habit, making it hard to withhold on the rare No-Go target. Measures sustained attention and the ability to catch yourself before acting on autopilot.",
+      "scoring": "Commission errors (tapping on 3) reflect attention lapses. RT variability reveals how consistently you maintain focus. A stable, moderate RT with zero false alarms is the ideal profile.",
+      "tip": "Find a rhythm but stay alert. The 3 will catch you the moment you zone out."
+    },
+    "dsst": {
+      "howItWorks": "A key pairs each digit (1-9) with a unique symbol. A digit appears and you select the matching symbol as fast as possible. The session lasts 60 seconds — your score is how many correct matches you complete. Measures processing speed and incidental associative learning.",
+      "scoring": "Total correct responses in 60 seconds. As you internalize the key, your speed increases naturally. DSST is one of the most sensitive clinical markers of cognitive change over time.",
+      "tip": "Don't try to memorize the entire key at once. Start by referring to it, and let the associations form naturally through repetition."
+    },
+    "inspection-time": {
+      "howItWorks": "Two vertical lines of different lengths flash very briefly, then are masked. Report which line was longer. The display duration shortens as you succeed, finding the briefest exposure at which you can still discriminate. Measures basic processing speed independent of motor response.",
+      "scoring": "Your inspection time threshold — the shortest display duration at which you maintain ~85% accuracy. Lower thresholds indicate faster perceptual intake, a fundamental component of processing speed.",
+      "tip": "Don't overthink it — trust your first impression. The task measures perception, not deliberation."
+    }
+  },
+  "social": {
+    "title": "Leaderboard",
+    "community": "Community",
+    "comingSoon": {
+      "title": "Community",
+      "badge": "Coming soon",
+      "description": "Leaderboards, challenges and global statistics coming soon.",
+      "feature1": "Global leaderboards",
+      "feature2": "Weekly challenges",
+      "feature3": "Community statistics"
+    },
+    "teaser": "Community, leaderboard, global statistics"
+  },
+  "beta": {
+    "title": "Beta features",
+    "enabled": "Beta features are enabled.",
+    "disable": "Disable beta features",
+    "activated": "Beta features activated!",
+    "redirecting": "Redirecting to settings...",
+    "codeLabel": "Enter the secret code",
+    "codePlaceholder": "Enter the code...",
+    "invalidCode": "Invalid code. Try again.",
+    "activate": "Activate beta",
+    "backHome": "Back to home"
+  },
+  "modeCard": {
+    "protocol": "The protocol",
+    "why": "Why this test?"
+  },
+  "visualLogic": {
+    "measure": {
+      "accuracy": "Accuracy",
+      "level": "Level",
+      "problem": "problem",
+      "sessionCount": "{{count}} sessions",
+      "maxLevelChip": "Max level {{level}}/{{max}}",
+      "sheetLabel": "Abstract reasoning",
+      "subtitle": "Progressive Matrices (Visual Logic)",
+      "lastLevel": "Last level {{level}}",
+      "neverTested": "No sessions yet",
+      "bestAccuracy": "Best",
+      "nextSessionLabel": "Session {{count}}",
+      "daysSince": "{{days}} d ago",
+      "firstTestTitle": "Test your abstract reasoning",
+      "nextSessionTitle": "Start a new session",
+      "firstTestDesc": "30 matrices, one per level (1→30). Objective score comparable across sessions. ~15-20 minutes.",
+      "nextSessionDesc": "30 matrices (levels 1→30). Compare your score with your previous sessions.",
+      "currentAccuracy": "Accuracy",
+      "currentLevel": "Level reached",
+      "problems": "Problems",
+      "avgRt": "Avg. time",
+      "maxLevelStat": "Max level",
+      "historyLabel": "History",
+      "historyDesc": "All completed sessions, sorted from most recent to oldest.",
+      "protocolStep1": "30 matrices, one per difficulty level (1 to 30). The sequence is always the same for an objective score.",
+      "protocolStep2": "Each matrix is a 3×3 grid with the last cell missing. Observe the rules in the rows and columns.",
+      "protocolStep3": "Select an option to preview it in the missing cell, then confirm.",
+      "protocolStep4": "Your score /30 is comparable across sessions. Retake the test to track your progression.",
+      "duration": "Estimated duration: ~15-20 minutes",
+      "whyParagraph1": "Inspired by Raven's Progressive Matrices, these tasks test abstract reasoning — the ability to identify visual rules and apply them to novel problems.",
+      "whyParagraph2": "30 levels cover 9 rule types (constant, progression, arithmetic, distribution, XOR, AND, OR, cross-attribute, meta-cycle), mesh overlays, and Embretson perceptual complexity.",
+      "whyParagraph3": "Abstract reasoning is strongly correlated with working memory. Training this ability improves logical reasoning, problem solving, and learning in general.",
+      "ceilingGaugeTitle": "Score by difficulty tier",
+      "ceilingGaugeDesc": "7 difficulty tiers across 30 levels. The marker shows your last score.",
+      "ceilingGaugeLabel": "Score gauge",
+      "progressionTitle": "Progression",
+      "progressionDesc": "Ceiling level progression across sessions.",
+      "progressionXLabel": "Sessions",
+      "classicSpmLabel": "Classic SPM mode",
+      "classicSpmDesc": "60 fixed matrices, 5 series (A–E), raw score /60. I-RAVEN profile.",
+      "tier": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced",
+        "expert": "Expert",
+        "elite": "Elite",
+        "master": "Master",
+        "ceiling": "Ceiling"
+      }
+    },
+    "tutorial": {
+      "levelGate": "Level {{level}}+",
+      "dismiss": "Got it, continue"
+    }
+  }
+}

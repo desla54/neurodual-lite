@@ -1,0 +1,169 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
+  "files": {
+    "includes": [
+      "packages/**/src/**/*.ts",
+      "packages/**/src/**/*.tsx",
+      "apps/**/src/**/*.ts",
+      "apps/**/src/**/*.tsx",
+      "apps/web/*.ts",
+      "!**/*.d.ts",
+      "!**/android",
+      "!**/worktrees",
+      "!**/.worktrees",
+      "!**/prototypes",
+      "!**/brainworkshop",
+      "!**/tools",
+      "!.stryker-tmp"
+    ]
+  },
+  "assist": {
+    "enabled": false
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noConsole": "off",
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "off",
+        "useIterableCallbackReturn": "warn",
+        "useAdjacentOverloadSignatures": "off",
+        "noNonNullAssertedOptionalChain": "warn"
+      },
+      "style": {
+        "noNonNullAssertion": "warn"
+      },
+      "complexity": {
+        "useLiteralKeys": "off",
+        "noStaticOnlyClass": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "a11y": {
+        "useSemanticElements": "off",
+        "useFocusableInteractive": "off",
+        "noLabelWithoutControl": "off",
+        "noSvgWithoutTitle": "off",
+        "noAutofocus": "off",
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "always"
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.test.ts", "**/*.test.tsx"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off",
+            "noThenProperty": "off",
+            "noAssignInExpressions": "off",
+            "noSelfCompare": "off"
+          },
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "correctness": {
+            "noUnusedFunctionParameters": "off",
+            "noUnusedVariables": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/prototype-*.tsx", "**/animation-prototype.tsx"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noSvgWithoutTitle": "off",
+            "noStaticElementInteractions": "off",
+            "useKeyWithClickEvents": "off",
+            "useButtonType": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/pages/legal/*.tsx"],
+      "linter": {
+        "rules": {
+          "security": {
+            "noDangerouslySetInnerHtml": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/puzzles/*.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "suspicious": {
+            "noNonNullAssertedOptionalChain": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/pages/*-training.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "suspicious": {
+            "noNonNullAssertedOptionalChain": "off",
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "apps/web/src/hooks/**/*.ts",
+        "apps/web/src/hooks/**/*.tsx",
+        "packages/ui/src/hooks/**/*.ts",
+        "packages/ui/src/hooks/**/*.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "paths": {
+                  "react": {
+                    "importNames": ["useEffect"],
+                    "message": "Import useMountEffect for mount-only external sync, or use derived state, handlers, query hooks, or useEffectEvent instead of direct useEffect."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

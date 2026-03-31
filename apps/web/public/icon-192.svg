@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <!-- Woven Ink Favicon - 192x192 for PWA/Android -->
+
+  <!-- Rounded square background (matching Android shape) -->
+  <rect width="192" height="192" rx="38" fill="#F5F5F4"/>
+
+  <!-- Weave texture -->
+  <defs>
+    <pattern id="weave192" width="16" height="16" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="8" x2="16" y2="8" stroke="#1A1815" stroke-width="0.5" opacity="0.06"/>
+      <line x1="8" y1="0" x2="8" y2="16" stroke="#1A1815" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="192" height="192" rx="38" fill="url(#weave192)"/>
+
+  <!-- Grid 3x3 - centered, matching Android proportions -->
+  <!-- cell: 36px, gap: 6px, total: 120px, offset: 36px -->
+  <g transform="translate(36, 36)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="36" height="36" rx="7" fill="#1A1815"/>
+    <rect x="42" y="0" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+    <rect x="84" y="0" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+
+    <!-- Row 2 -->
+    <rect x="0" y="42" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+    <!-- Center: focus line (gray for PWA, orange on Android) -->
+    <line x1="51" y1="60" x2="69" y2="60" stroke="#787570" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <rect x="84" y="42" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+
+    <!-- Row 3 -->
+    <rect x="0" y="84" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+    <rect x="42" y="84" width="36" height="36" rx="7" fill="none" stroke="#1A1815" stroke-width="2" opacity="0.3"/>
+    <rect x="84" y="84" width="36" height="36" rx="7" fill="#1A1815"/>
+  </g>
+</svg>

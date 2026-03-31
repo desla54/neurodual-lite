@@ -1,0 +1,67 @@
+{
+  "name": "@neurodual/logic",
+  "version": "0.9.27",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./puzzles/fifteen": "./src/puzzles/fifteen.ts",
+    "./puzzles/flood": "./src/puzzles/flood.ts",
+    "./puzzles/unruly": "./src/puzzles/unruly.ts",
+    "./puzzles/slant": "./src/puzzles/slant.ts",
+    "./puzzles/keen": "./src/puzzles/keen.ts",
+    "./puzzles/bridges": "./src/puzzles/bridges.ts",
+    "./puzzles/loopy": "./src/puzzles/loopy.ts",
+    "./puzzles/pearl": "./src/puzzles/pearl.ts",
+    "./puzzles/magnets": "./src/puzzles/magnets.ts",
+    "./puzzles/lightup": "./src/puzzles/lightup.ts",
+    "./puzzles/tents": "./src/puzzles/tents.ts",
+    "./puzzles/filling": "./src/puzzles/filling.ts",
+    "./puzzles/dominosa": "./src/puzzles/dominosa.ts",
+    "./puzzles/singles": "./src/puzzles/singles.ts",
+    "./puzzles/towers": "./src/puzzles/towers.ts",
+    "./puzzles/tracks": "./src/puzzles/tracks.ts",
+    "./puzzles/galaxies": "./src/puzzles/galaxies.ts",
+    "./puzzles/rectangles": "./src/puzzles/rectangles.ts",
+    "./puzzles/blackbox": "./src/puzzles/blackbox.ts",
+    "./puzzles/undead": "./src/puzzles/undead.ts",
+    "./puzzles/mosaic": "./src/puzzles/mosaic.ts",
+    "./puzzles/net": "./src/puzzles/net.ts",
+    "./puzzles/signpost": "./src/puzzles/signpost.ts",
+    "./puzzles/inertia": "./src/puzzles/inertia.ts",
+    "./puzzles/sixteen": "./src/puzzles/sixteen.ts",
+    "./puzzles/palisade": "./src/puzzles/palisade.ts",
+    "./puzzles/range": "./src/puzzles/range.ts",
+    "./puzzles/cube": "./src/puzzles/cube.ts",
+    "./puzzles/netslide": "./src/puzzles/netslide.ts",
+    "./puzzles/flip": "./src/puzzles/flip.ts",
+    "./puzzles/sokoban": "./src/puzzles/sokoban.ts",
+    "./puzzles/guess": "./src/puzzles/guess.ts",
+    "./puzzles/pattern": "./src/puzzles/pattern.ts",
+    "./puzzles/pegs": "./src/puzzles/pegs.ts",
+    "./puzzles/samegame": "./src/puzzles/samegame.ts",
+    "./puzzles/twiddle": "./src/puzzles/twiddle.ts",
+    "./puzzles/untangle": "./src/puzzles/untangle.ts",
+    "./puzzles/map": "./src/puzzles/map.ts",
+    "./domain/games/chain-recall-words": "./src/domain/games/chain-recall-words.ts"
+  },
+  "sideEffects": [
+    "./src/domain/generator/jaeggi.ts",
+    "./src/domain/generator/brainworkshop.ts",
+    "./src/domain/scoring/jaeggi.ts",
+    "./src/domain/scoring/brainworkshop.ts",
+    "./src/domain/scoring/sdt.ts"
+  ],
+  "dependencies": {
+    "xstate": "^5.19.2",
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@xstate/graph": "^3.0.4"
+  }
+}

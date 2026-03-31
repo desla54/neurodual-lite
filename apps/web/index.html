@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta id="theme-color-active" name="theme-color" content="#171512" />
+    <meta
+      id="theme-color-light"
+      name="theme-color"
+      content="#F0EEE9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      id="theme-color-dark"
+      name="theme-color"
+      content="#171512"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta id="color-scheme-meta" name="color-scheme" content="light dark" />
+    <script src="/theme-boot.js"></script>
+    <meta name="description" content="Entraînement Dual N-Back : modes originaux et simulateurs des protocoles classiques. Développement actif, nouvelles fonctionnalités régulières." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://neurodual.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="192x192" href="/icon-192.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+	    <!-- PWA -->
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	    <meta name="apple-mobile-web-app-title" content="Neurodual" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neurodual.com/" />
+    <meta property="og:title" content="Neurodual - Entraînement Dual N-Back" />
+    <meta property="og:description" content="Entraînement Dual N-Back : modes originaux et simulateurs des protocoles classiques. Développement actif, nouvelles fonctionnalités régulières." />
+    <meta property="og:image" content="/icon-512.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Neurodual - Entraînement Dual N-Back" />
+    <meta name="twitter:description" content="Entraînement Dual N-Back : modes originaux et simulateurs des protocoles classiques." />
+    <meta name="twitter:image" content="/icon-512.png" />
+
+    <title>Neurodual - Entraînement Cérébral Dual N-Back</title>
+
+    <!-- Google AdSense (disabled at runtime in Capacitor native WebView via admob.ts guard) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360326805918972"
+     crossorigin="anonymous"></script>
+
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Neurodual",
+      "alternateName": "Neurodual - Dual N-Back Training",
+      "description": "Application d'entraînement cérébral Dual N-Back avec modes originaux et simulateurs des protocoles classiques (Brain Workshop).",
+      "url": "https://neurodual.com",
+      "applicationCategory": ["HealthApplication", "EducationalApplication", "GameApplication"],
+      "operatingSystem": ["Windows", "macOS", "Linux", "Android", "iOS"],
+      "browserRequirements": "Requires JavaScript. Works best in Chrome, Edge, Firefox, or Safari.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Neurodual Team"
+      },
+      "image": "https://neurodual.com/icon-512.png",
+      "screenshot": "https://neurodual.com/icon-512.png",
+      "softwareVersion": "1.0.0",
+      "datePublished": "2024-01-01",
+      "inLanguage": ["fr", "en"]
+    }
+    </script>
+
+    <style>
+      /* Critical CSS - prevent FOUC */
+      /* Colors MUST match --neuro-bg-app in styles.css */
+      html { background: #F0EEE9; }
+      html.dark { background: #171512; }
+      body { margin: 0; background: #F0EEE9; }
+      html.dark body { background: #171512; }
+      #root { height: 100%; }
+      /* Splash / loading screen — GSAP animates it out when app is ready */
+      #app-loading {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F0EEE9;
+        z-index: 9998;
+      }
+      html.dark #app-loading { background: #171512; }
+    </style>
+    <!-- Module error handler - external to comply with CSP -->
+    <script src="/module-error-handler.js"></script>
+    <!-- React Scan - dev only, activated via ?react-scan query param -->
+    <script>
+      if (location.hostname === 'localhost' && location.search.includes('react-scan')) {
+        var s = document.createElement('script');
+        s.src = 'https://unpkg.com/react-scan/dist/auto.global.js';
+        document.head.appendChild(s);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Splash / loading screen — stays visible until appState reaches 'ready'.
+         Dark/light theme set by theme-boot.js (adds html.dark class before paint). -->
+    <div id="app-loading">
+      <img src="/icon.svg" alt="" width="64" height="64" class="loading-icon" />
+    </div>
+    <div id="root" data-vaul-drawer-wrapper=""></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

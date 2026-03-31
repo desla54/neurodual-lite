@@ -1,0 +1,2442 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@config "../tailwind.config.ts";
+
+/* --- REM-BASED TYPOGRAPHY SCALE ---
+ * Respects user font-size preferences (Android Display Size, iOS Dynamic Type)
+ * Base: 16px = 1rem
+ */
+@theme {
+  --text-4xs: 0.6875rem;
+  --text-4xs--line-height: 1rem;
+
+  --text-3xs: 0.625rem;
+  --text-3xs--line-height: 0.875rem;
+
+  --text-xxs: 0.5625rem;
+  --text-xxs--line-height: 0.75rem;
+
+  --text-2xs: 0.5rem;
+  --text-2xs--line-height: 0.625rem;
+
+  --text-micro: 0.4375rem;
+  --text-micro--line-height: 0.5rem;
+}
+
+@layer base {
+  :root {
+    /* User text-size preference (app-level).
+     * 1.0 keeps the current behavior (still respects OS accessibility scaling because
+     * it multiplies on top of the computed rem size).
+     */
+    --ui-text-scale: 1;
+    /* Safe Area Variables
+     * - Works natively on iOS and Android via edge-to-edge (Capacitor 8)
+     * - Fallback to 0px for web/dev environments
+     */
+    --safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+    --safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+    --safe-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+    --safe-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+    --fullscreen-usable-height: calc(100dvh - var(--safe-top));
+
+    /* Mobile bottom nav layout tuning (avoid wasting vertical space on short viewports) */
+    --bottom-nav-reserved: 5.5rem;
+    --bottom-nav-offset: 0.75rem;
+
+    /* Fullscreen game page spacing (N-back / Dual*) */
+    --game-page-gap: 16px;
+    --game-page-pad-x: 16px;
+    --game-page-pad-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+
+    /* --- APP-WIDE TYPOGRAPHY TOKENS (Single source of truth) ---
+     * Goal: stable rendering across Android WebView variants
+     * while preserving user accessibility font scaling.
+     */
+    --typo-caption-size: calc(
+      clamp(0.6875rem, 0.67rem + 0.08vw, 0.75rem) * var(--ui-text-scale)
+    );
+    --typo-caption-line: 1.35;
+
+    --typo-body-size: calc(clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem) * var(--ui-text-scale));
+    --typo-body-line: 1.45;
+
+    --typo-button-size: calc(
+      clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem) * var(--ui-text-scale)
+    );
+    --typo-button-line: 1.35;
+
+    --typo-hud-size: calc(clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem) * var(--ui-text-scale));
+    --typo-hud-line: 1.25;
+
+    --typo-title-size: calc(clamp(1rem, 0.96rem + 0.2vw, 1.125rem) * var(--ui-text-scale));
+    --typo-title-line: 1.2;
+
+    --typo-display-size: calc(
+      clamp(1.25rem, 1.14rem + 0.45vw, 1.5rem) * var(--ui-text-scale)
+    );
+    --typo-display-line: 1.1;
+
+    /* Tailwind utility remap targets */
+    --typo-2xs-size: calc(clamp(0.5rem, 0.49rem + 0.05vw, 0.5625rem) * var(--ui-text-scale));
+    --typo-2xs-line: 1.25;
+    --typo-xxs-size: calc(
+      clamp(0.5625rem, 0.55rem + 0.06vw, 0.625rem) * var(--ui-text-scale)
+    );
+    --typo-xxs-line: 1.3;
+    --typo-3xs-size: calc(
+      clamp(0.625rem, 0.61rem + 0.08vw, 0.6875rem) * var(--ui-text-scale)
+    );
+    --typo-3xs-line: 1.35;
+    --typo-4xs-size: calc(
+      clamp(0.6875rem, 0.67rem + 0.08vw, 0.75rem) * var(--ui-text-scale)
+    );
+    --typo-4xs-line: 1.35;
+    --typo-xs-size: var(--typo-caption-size);
+    --typo-xs-line: var(--typo-caption-line);
+    --typo-sm-size: var(--typo-body-size);
+    --typo-sm-line: var(--typo-body-line);
+    --typo-base-size: calc(clamp(0.9375rem, 0.9rem + 0.14vw, 1rem) * var(--ui-text-scale));
+    --typo-base-line: 1.45;
+    --typo-lg-size: var(--typo-title-size);
+    --typo-lg-line: var(--typo-title-line);
+    --typo-xl-size: calc(clamp(1.125rem, 1.04rem + 0.3vw, 1.25rem) * var(--ui-text-scale));
+    --typo-xl-line: 1.2;
+    --typo-2xl-size: var(--typo-display-size);
+    --typo-2xl-line: var(--typo-display-line);
+
+    /* --- WOVEN INK PALETTE --- */
+    /* Palette chaleureuse inspirée du papier et de l'encre */
+
+    /* Fond principal (Papier chaud) - Assombri pour contraste avec grille */
+    --neuro-bg-app: 40 12% 90%; /* #E7E4DD - Warm paper, 3% below cell-rest */
+
+    /* Surface (Carte) - micro-chaleur, plus blanc pur */
+    --neuro-bg-surface: 40 10% 99%; /* #FFFCF9 - Warm white */
+
+    /* Texte principal (Encre) */
+    --neuro-text-primary: 30 10% 10%; /* #1A1815 - Ink */
+
+    /* Texte secondaire (Gris chaud) - assombri pour accessibilité */
+    --neuro-text-muted: 30 5% 40%; /* #6B6560 - Better contrast */
+
+    /* Accent Visual (Encre) - pour icônes/bordures */
+    --neuro-accent-visual: 30 10% 10%; /* #1A1815 - Pure ink */
+
+    /* Accent Auditif (Vert Lichen) */
+    --neuro-accent-audio: 160 35% 35%; /* #3A7A5A - Warm green */
+
+    /* Danger / Erreur (Terre Cuite) */
+    --neuro-accent-danger: 0 40% 45%; /* #A35050 - Muted red */
+
+    /* Bordures subtiles (warm) - Renforcées pour meilleure définition */
+    --neuro-border: 40 8% 78%; /* #Cac8C0 - Slightly stronger definition */
+
+    /* Ombre glass — couleur sombre chaude, jamais --border (qui glow en dark) */
+    --glass-shadow: 30 10% 12%; /* Brun très sombre — ombre naturelle */
+
+    /* Inner highlight — simulates light refracting through top edge of glass */
+    --glass-highlight: rgba(255, 255, 255, 0.12);
+    --glass-highlight-strong: rgba(255, 255, 255, 0.16);
+
+    /* --- WOVEN INK THEME (Game pages) --- */
+    /* Light mode values - Synchronized with neuro palette */
+    --woven-bg: 40 12% 90%; /* #E7E4DD - Matches neuro-bg-app */
+    --woven-surface: 40 10% 97%; /* #F7F5F1 - Warm white (HUD glass tint) */
+    --woven-grid: 38 8% 84%; /* #D7D4CD - Opaque grid surface, clearly below bg (90%) */
+    --woven-cell-rest: 38 6% 79%; /* #CCC8C1 - Distinct from grid surface */
+    --woven-cell-active: 30 10% 10%; /* #1A1815 - Ink — max contrast stimulus */
+    --woven-border: 38 8% 70%; /* #B6B2AA - Strengthened for grid definition */
+    --woven-weave: 40 8% 75%; /* Légèrement plus foncé */
+    --woven-weave-opacity: 0.22; /* Un peu plus visible pour HUD */
+    --woven-text: 30 10% 10%; /* #1A1815 */
+    --woven-text-muted: 30 5% 45%; /* #787570 - Warm gray */
+    --woven-correct: 160 35% 27%; /* #2D5A4A */
+    --woven-incorrect: 0 40% 39%; /* #8B3A3A */
+    --woven-blue: 210 35% 33%; /* #374B66 - Steel blue */
+    --woven-amber: 48 55% 42%; /* #A69030 - Warm yellow-gold */
+    --woven-orange: 20 45% 40%; /* #944B38 - Warm terracotta */
+    --woven-cyan: 185 35% 33%; /* #374F55 - Deep teal */
+    --woven-purple: 270 30% 35%; /* #4E3A73 - Muted plum */
+    --woven-magenta: 330 35% 38%; /* #83405A - Dusty rose */
+    --woven-gray: 30 8% 45%; /* #7A7570 - Warm gray */
+    --woven-focus: 38 92% 50%; /* Amber */
+
+    /* Vivid — high-contrast accent palette for game pieces, shapes, details */
+    --vivid-gray: 0 0% 42%; /* #6b6b6b - Neutral mid gray */
+    --vivid-red: 0 84% 60%; /* #ef4444 */
+    --vivid-blue: 217 91% 60%; /* #3b82f6 */
+    --vivid-green: 142 71% 45%; /* #22c55e */
+    --vivid-yellow: 48 96% 53%; /* #eab308 */
+    --vivid-purple: 271 81% 56%; /* #a855f7 */
+    --vivid-orange: 25 95% 53%; /* #f97316 */
+    --vivid-cyan: 189 94% 43%; /* #06b6d4 */
+    --vivid-magenta: 330 81% 60%; /* #ec4899 */
+
+    /* --- SHADCN MAPPING (Bridge vers le Design System) --- */
+    --background: var(--neuro-bg-app);
+    --foreground: var(--neuro-text-primary);
+
+    --card: var(--neuro-bg-surface);
+    --card-foreground: var(--neuro-text-primary);
+    --popover: var(--neuro-bg-surface);
+    --popover-foreground: var(--neuro-text-primary);
+
+    /* LIGHT MODE : Primary = Encre (élégance sobre sur papier) */
+    --primary: var(--neuro-accent-visual); /* #1A1815 - Ink */
+    --primary-foreground: 40 14% 97%; /* Papier clair */
+
+    --secondary: 40 10% 94%; /* Warm secondary */
+    --secondary-foreground: var(--neuro-text-primary);
+
+    --muted: 40 10% 94%; /* Warm muted */
+    --muted-foreground: var(--neuro-text-muted);
+
+    --accent: var(--neuro-accent-audio);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: var(--neuro-accent-danger);
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--neuro-border);
+    --input: var(--neuro-border);
+    --ring: 36 90% 45%; /* Amber ring pour focus */
+
+    --radius: 1.5rem;
+  }
+
+  /* --- DARK MODE (Rich Dark / Papier Charbon) --- */
+  .dark {
+    /* Fond: Anthracite profond (pas noir) pour garder la chaleur */
+    --neuro-bg-app: 30 10% 8%; /* #171512 - Charbon chaud */
+
+    /* Surface: Plus clair pour se détacher sans bordure agressive */
+    --neuro-bg-surface: 30 8% 14%; /* #262421 - Carton sombre */
+
+    /* Texte: Blanc cassé chaud (jamais blanc pur #FFF) */
+    --neuro-text-primary: 35 20% 90%; /* #ECEBE6 - Vieux papier */
+    --neuro-text-muted: 30 10% 68%; /* #B3ABA2 - Renforcé pour WCAG AA (~6.5:1) */
+
+    /* Bordures: Plus visibles pour écrans basse définition */
+    --neuro-border: 30 5% 28%; /* #4A4744 - Renforcé pour meilleure définition */
+
+    /* Ombre glass — quasi-noir, subtile en dark mode */
+    --glass-shadow: 30 8% 6%; /* Presque noir chaud — ombre discrète */
+
+    /* Inner highlight — toned down for dark mode (less glare) */
+    --glass-highlight: rgba(255, 255, 255, 0.07);
+    --glass-highlight-strong: rgba(255, 255, 255, 0.10);
+
+    /* Accents: On réinjecte de la couleur ! */
+    --neuro-accent-visual: 40 80% 60%; /* Amber vibrant */
+    --neuro-accent-audio: 160 40% 45%; /* #4A9A70 - Lichen lumineux */
+    --neuro-accent-danger: 0 50% 55%; /* #CC5555 - Terre cuite vive */
+
+    /* Woven Ink Dark (game-specific) */
+    --woven-bg: 30 10% 8%; /* Même que bg-app */
+    --woven-surface: 30 8% 15%; /* #272421 - HUD glass tint */
+    --woven-grid: 30 6% 14%; /* #252220 - Opaque grid surface, above bg (8%) */
+    --woven-cell-rest: 30 5% 19%; /* #322F2C - Distinct cells on grid */
+    --woven-cell-active: 35 20% 90%; /* Stimulus clair chaud — max contrast */
+    --woven-border: 30 5% 30%; /* #504C48 - Strengthened for grid definition */
+    --woven-weave: 30 5% 30%; /* Légèrement renforcé */
+    --woven-weave-opacity: 0.08; /* Juste une suggestion de grain */
+    --woven-text: 35 20% 90%; /* #ECEBE6 */
+    --woven-text-muted: 30 10% 62%; /* #A29A91 - Renforcé pour WCAG AA (~5.2:1) */
+    --woven-correct: 160 45% 40%; /* #3D9A6A */
+    --woven-incorrect: 0 45% 50%; /* #B85555 */
+    --woven-blue: 210 45% 45%; /* #3F6699 - Steel blue bright */
+    --woven-amber: 48 60% 52%; /* #D4B03D - Warm yellow-gold bright */
+    --woven-orange: 20 50% 50%; /* #BF5E40 - Terracotta bright */
+    --woven-cyan: 185 45% 42%; /* #3B7A82 - Teal bright */
+    --woven-purple: 270 35% 45%; /* #6B4DA3 - Plum bright */
+    --woven-magenta: 330 40% 48%; /* #AD4D73 - Rose bright */
+    --woven-gray: 30 8% 55%; /* #918C86 - Warm gray bright */
+    --woven-focus: 38 92% 50%; /* Amber */
+
+    /* Vivid — high-contrast accent palette for game pieces, shapes, details */
+    --vivid-gray: 0 0% 55%; /* #8c8c8c - Neutral mid gray bright */
+    --vivid-red: 0 84% 60%; /* #ef4444 */
+    --vivid-blue: 217 91% 60%; /* #3b82f6 */
+    --vivid-green: 142 71% 45%; /* #22c55e */
+    --vivid-yellow: 48 96% 53%; /* #eab308 */
+    --vivid-purple: 271 81% 56%; /* #a855f7 */
+    --vivid-orange: 25 95% 53%; /* #f97316 */
+    --vivid-cyan: 189 94% 43%; /* #06b6d4 */
+    --vivid-magenta: 330 81% 60%; /* #ec4899 */
+
+    /* SHADCN dark overrides */
+    --background: var(--neuro-bg-app);
+    --foreground: var(--neuro-text-primary);
+    --card: var(--neuro-bg-surface);
+    --card-foreground: var(--neuro-text-primary);
+    --popover: var(--neuro-bg-surface);
+    --popover-foreground: var(--neuro-text-primary);
+
+	    /* DARK MODE : Primary = Foreground (sobre, pro) */
+	    --primary: var(--foreground); /* Blanc cassé chaud */
+	    --primary-foreground: 30 10% 10%; /* Encre pour texte sur clair */
+
+    --muted: 30 8% 22%; /* Plus visible pour barres de progression */
+    --muted-foreground: var(--neuro-text-muted);
+    --secondary: 30 8% 20%; /* Légèrement renforcé */
+    --secondary-foreground: var(--neuro-text-primary);
+    --border: var(--neuro-border);
+    --input: var(--neuro-border);
+	    --ring: var(--foreground); /* Focus sobre par défaut */
+	  }
+
+  :root[data-visual-theme='capture-hybrid'] {
+    --woven-weave-opacity: 0;
+    --woven-surface: 40 10% 96%;
+    --woven-cell-rest: 40 8% 88%;
+    --woven-border: 38 8% 71%;
+    --woven-text-muted: 30 7% 34%;
+    --woven-focus: 38 92% 41%;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-canvas-weave='true'],
+  :root[data-visual-theme='capture-hybrid'] [data-nav-weave='true'] {
+    display: none !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] .shadow-soft-colored,
+  :root[data-visual-theme='capture-hybrid'] .shadow-sm,
+  :root[data-visual-theme='capture-hybrid'] .shadow-md,
+  :root[data-visual-theme='capture-hybrid'] .shadow-lg,
+  :root[data-visual-theme='capture-hybrid'] .shadow-xl,
+  :root[data-visual-theme='capture-hybrid'] .shadow-2xl,
+  :root[data-visual-theme='capture-hybrid'] [class*='shadow-[0_'],
+  :root[data-visual-theme='capture-hybrid'] [class*='shadow-[4px_'] {
+    box-shadow: 0 8px 18px -14px hsl(var(--glass-shadow) / 0.16) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='border-border/50'],
+  :root[data-visual-theme='capture-hybrid'] [class*='border-woven-border/60'],
+  :root[data-visual-theme='capture-hybrid'] [class*='border-woven-border/50'] {
+    border-color: hsl(var(--border) / 0.62) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control-surface='toolbar'] {
+    background-color: hsl(var(--card) / 0.985) !important;
+    border-color: hsl(var(--border) / 0.82) !important;
+    box-shadow: 0 10px 22px -18px hsl(var(--glass-shadow) / 0.2) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='toolbar-button'] {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='toolbar-button'] svg,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='icon'] svg,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='pill'] svg,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='ghost-icon'] svg {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='icon'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='pill'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    border-color: hsl(var(--border) / 0.78) !important;
+    box-shadow: 0 8px 18px -14px hsl(var(--glass-shadow) / 0.18) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='icon'] {
+    background-color: hsl(var(--card) / 0.97) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='pill'] {
+    background-color: hsl(var(--card) / 0.965) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='ghost-icon'] {
+    color: hsl(var(--foreground) / 0.76) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='icon'][disabled],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='icon'][aria-disabled='true'] {
+    background-color: hsl(var(--card) / 0.9) !important;
+    border-color: hsl(var(--border) / 0.5) !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control-divider='true'] {
+    width: 2px !important;
+    height: 22px !important;
+    border-radius: 9999px;
+    background: hsl(var(--border) / 0.82) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='game-hud'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='game-card'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    background-color: hsl(var(--card) / 0.985) !important;
+    border-color: hsl(var(--border) / 0.82) !important;
+    box-shadow: 0 10px 22px -18px hsl(var(--glass-shadow) / 0.18) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='game-board'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='game-grid'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='grid-center-stimulus'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    background-color: hsl(var(--woven-surface) / 0.985) !important;
+    border-color: hsl(var(--woven-border) / 0.82) !important;
+    box-shadow: 0 10px 24px -18px hsl(var(--glass-shadow) / 0.18) !important;
+    color: hsl(var(--woven-text)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-badge='game-hud'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-badge='game-hud-sm'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    background-color: hsl(var(--card) / 0.985) !important;
+    box-shadow:
+      inset 0 0 0 1px hsl(var(--border) / 0.78),
+      0 6px 14px -16px hsl(var(--glass-shadow) / 0.16) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-badge='game-hud-sm'] {
+    background-color: hsl(var(--card) / 0.97) !important;
+    color: hsl(var(--foreground) / 0.9) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-badge='game-hud'] svg,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-badge='game-hud-sm'] svg {
+    color: hsl(var(--foreground) / 0.82) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-hud-button'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-button'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    background-color: hsl(var(--card) / 0.985) !important;
+    border-color: hsl(var(--border) / 0.8) !important;
+    box-shadow: 0 8px 18px -14px hsl(var(--glass-shadow) / 0.16) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-hud-button'] svg,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-button'] svg {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-hud-button'][disabled],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-button'][disabled] {
+    background-color: hsl(var(--card) / 0.92) !important;
+    border-color: hsl(var(--border) / 0.56) !important;
+    box-shadow: none !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='grid-play-button'] {
+    background-color: hsl(var(--foreground)) !important;
+    box-shadow: 0 10px 22px -14px hsl(var(--glass-shadow) / 0.28) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-overlay='grid-pause'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='grid-node'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.38) !important;
+    border-color: hsl(var(--woven-border) / 0.76) !important;
+    box-shadow: none !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='grid-node'][data-capture-state='active'] {
+    border-color: hsl(var(--woven-border) / 0.9) !important;
+    box-shadow: inset 0 0 0 1px hsl(var(--woven-border) / 0.18) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-cell='grid-node'][data-capture-state='active']
+    .nd-stimulus-layer,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='grid-center'] .nd-stimulus-layer,
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='grid-center-stimulus'] > * {
+    filter: saturate(1.08) contrast(1.06) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='grid-center'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.5) !important;
+    border-color: hsl(var(--woven-border) / 0.82) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='empty'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='source-empty'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='target-empty'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.84) !important;
+    border-color: hsl(var(--woven-border) / 0.78) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='marked'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.62) !important;
+    border-color: hsl(var(--woven-border) / 0.72) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='filled'],
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='target-tapped'] {
+    background-color: hsl(var(--foreground) / 0.82) !important;
+    border-color: hsl(var(--foreground) / 0.66) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='source-filled'] {
+    filter: saturate(1.08) contrast(1.03) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='correct'] {
+    background-color: hsl(var(--woven-correct)) !important;
+    border-color: hsl(var(--woven-correct) / 0.72) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='incorrect'] {
+    background-color: hsl(var(--woven-incorrect)) !important;
+    border-color: hsl(var(--woven-incorrect) / 0.72) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-cell='puzzle-cell'][data-capture-state='missed'] {
+    background-color: hsl(var(--woven-amber) / 0.34) !important;
+    border-color: hsl(var(--woven-amber) / 0.72) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-surface='game-piece'] {
+    box-shadow: none !important;
+    filter: saturate(1.08) contrast(1.04) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-response-button'] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    border-color: hsl(var(--border) / 0.76) !important;
+    box-shadow: 0 8px 18px -14px hsl(var(--glass-shadow) / 0.16) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='idle'] {
+    background-color: hsl(var(--card) / 0.985) !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='visual'] {
+    background-color: hsl(var(--foreground)) !important;
+    border-color: hsl(var(--foreground) / 0.72) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='audio'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='position3'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='vis3'] {
+    background-color: hsl(var(--woven-correct)) !important;
+    border-color: hsl(var(--woven-correct) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='accent'] {
+    background-color: hsl(var(--primary)) !important;
+    border-color: hsl(var(--primary) / 0.7) !important;
+    color: hsl(var(--primary-foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='warning'] {
+    background-color: hsl(var(--woven-amber)) !important;
+    border-color: hsl(var(--woven-amber) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='position2'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='vis2'] {
+    background-color: hsl(var(--woven-incorrect)) !important;
+    border-color: hsl(var(--woven-incorrect) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='position4'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='vis4'] {
+    background-color: hsl(var(--woven-orange)) !important;
+    border-color: hsl(var(--woven-orange) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='vis1'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='image'] {
+    background-color: hsl(var(--woven-blue)) !important;
+    border-color: hsl(var(--woven-blue) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='audio2'] {
+    background-color: hsl(var(--woven-cyan)) !important;
+    border-color: hsl(var(--woven-cyan) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='arithmetic'],
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active'][data-control-color='color'] {
+    background-color: hsl(var(--woven-purple)) !important;
+    border-color: hsl(var(--woven-purple) / 0.74) !important;
+    color: hsl(var(--background)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-control='game-response-button'][disabled] {
+    background-color: hsl(var(--card) / 0.92) !important;
+    border-color: hsl(var(--border) / 0.54) !important;
+    box-shadow: none !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button']
+    [data-capture-badge='game-control-shortcut'] {
+    color: currentColor !important;
+    opacity: 0.48 !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid']
+    [data-capture-control='game-response-button'][data-capture-state='active']
+    [data-capture-badge='game-control-shortcut'] {
+    opacity: 0.7 !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-progress='track'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.62) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [data-capture-progress='fill'] {
+    background-color: hsl(var(--foreground) / 0.28) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-surface/80'][class*='backdrop-blur'],
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-surface/90'][class*='backdrop-blur'],
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-surface/95'][class*='backdrop-blur'] {
+    background-color: hsl(var(--woven-surface) / 0.985) !important;
+    border-color: hsl(var(--woven-border) / 0.82) !important;
+    box-shadow: 0 10px 22px -18px hsl(var(--glass-shadow) / 0.18) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-cell-rest/15'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.38) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-surface/40'] {
+    background-color: hsl(var(--woven-cell-rest) / 0.62) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='bg-woven-text/10'] {
+    background-color: hsl(var(--woven-text) / 0.14) !important;
+  }
+
+  :root[data-visual-theme='capture-hybrid'] [class*='border-woven-border/30'] {
+    border-color: hsl(var(--woven-border) / 0.52) !important;
+  }
+
+  /* --- USER ACCENT OVERRIDES (App personalization) --- */
+  :root[data-accent='visual'] {
+    --primary: var(--neuro-accent-visual);
+    --primary-foreground: 0 0% 100%;
+    --ring: 36 90% 45%;
+  }
+  :root[data-accent='black'] {
+    --primary: var(--foreground);
+    --primary-foreground: var(--background);
+    --ring: var(--foreground);
+  }
+  :root[data-accent='gray'] {
+    --primary: var(--woven-gray);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-gray);
+  }
+  :root[data-accent='blue'] {
+    --primary: var(--woven-blue);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-blue);
+  }
+  :root[data-accent='red'] {
+    --primary: var(--woven-incorrect);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-incorrect);
+  }
+  :root[data-accent='green'] {
+    --primary: var(--woven-correct);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-correct);
+  }
+  :root[data-accent='yellow'] {
+    --primary: var(--woven-amber);
+    --primary-foreground: 30 10% 10%;
+    --ring: var(--woven-amber);
+  }
+  :root[data-accent='purple'] {
+    --primary: var(--woven-purple);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-purple);
+  }
+  :root[data-accent='orange'] {
+    --primary: var(--woven-orange);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-orange);
+  }
+  :root[data-accent='cyan'] {
+    --primary: var(--woven-cyan);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-cyan);
+  }
+  :root[data-accent='magenta'] {
+    --primary: var(--woven-magenta);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-magenta);
+  }
+  :root[data-accent='audio'] {
+    --primary: var(--neuro-accent-audio);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--neuro-accent-audio);
+  }
+  :root[data-accent='danger'] {
+    --primary: var(--neuro-accent-danger);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--neuro-accent-danger);
+  }
+  :root[data-accent='amber'] {
+    --primary: var(--woven-amber);
+    --primary-foreground: 30 10% 10%;
+    --ring: var(--woven-amber);
+  }
+
+  /* Ensure overrides beat `.dark` primary mapping as well */
+  .dark[data-accent='visual'] {
+    --primary: var(--neuro-accent-visual);
+    --primary-foreground: 30 10% 10%;
+    --ring: 36 90% 45%;
+  }
+  .dark[data-accent='black'] {
+    --primary: var(--foreground);
+    --primary-foreground: 30 10% 10%;
+    --ring: var(--foreground);
+  }
+  .dark[data-accent='gray'] {
+    --primary: var(--woven-gray);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-gray);
+  }
+  .dark[data-accent='blue'] {
+    --primary: var(--woven-blue);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-blue);
+  }
+  .dark[data-accent='red'] {
+    --primary: var(--woven-incorrect);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-incorrect);
+  }
+  .dark[data-accent='green'] {
+    --primary: var(--woven-correct);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-correct);
+  }
+  .dark[data-accent='yellow'] {
+    --primary: var(--woven-amber);
+    --primary-foreground: 30 10% 10%;
+    --ring: var(--woven-amber);
+  }
+  .dark[data-accent='purple'] {
+    --primary: var(--woven-purple);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-purple);
+  }
+  .dark[data-accent='orange'] {
+    --primary: var(--woven-orange);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-orange);
+  }
+  .dark[data-accent='cyan'] {
+    --primary: var(--woven-cyan);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-cyan);
+  }
+  .dark[data-accent='magenta'] {
+    --primary: var(--woven-magenta);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--woven-magenta);
+  }
+  .dark[data-accent='audio'] {
+    --primary: var(--neuro-accent-audio);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--neuro-accent-audio);
+  }
+  .dark[data-accent='danger'] {
+    --primary: var(--neuro-accent-danger);
+    --primary-foreground: 0 0% 100%;
+    --ring: var(--neuro-accent-danger);
+  }
+  .dark[data-accent='amber'] {
+    --primary: var(--woven-amber);
+    --primary-foreground: 30 10% 10%;
+    --ring: var(--woven-amber);
+  }
+}
+
+@layer utilities {
+  .nd-extension-contained {
+    contain: layout paint style;
+    isolation: isolate;
+  }
+
+  .nd-secondary-metric-value {
+    display: inline-flex;
+    min-width: 0;
+    max-width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.125rem;
+    white-space: nowrap;
+    line-height: 0.9;
+    font-size: clamp(1.75rem, 1.1rem + 3.2vw, 3rem);
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+  }
+
+  .nd-secondary-metric-value > span:last-child {
+    flex: 0 0 auto;
+    font-size: 0.38em;
+    line-height: 1.1;
+  }
+
+  /* Glass grain overlay — adds subtle monochromatic noise for a tactile,
+   * physical glass feel. Requires `position: relative` on the element.
+   * Uses an inlined SVG feTurbulence pattern, resolution-independent.
+   */
+  .glass-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+
+  .dark .glass-grain::after {
+    opacity: 0.05;
+  }
+}
+
+@layer base {
+  /* Short viewport compression: iPhone SE / small Android devices */
+  @media (max-height: 700px) {
+    :root {
+      --bottom-nav-reserved: 4.75rem;
+      --bottom-nav-offset: 0.5rem;
+
+      --game-page-gap: 12px;
+      --game-page-pad-x: 12px;
+      --game-page-pad-bottom: max(8px, env(safe-area-inset-bottom, 0px));
+    }
+
+    .nd-hide-short-viewport {
+      display: none !important;
+    }
+  }
+
+  @media (max-height: 600px) {
+    :root {
+      --bottom-nav-reserved: 4.25rem;
+      --bottom-nav-offset: 0.25rem;
+
+      --game-page-gap: 10px;
+      --game-page-pad-x: 10px;
+      --game-page-pad-bottom: max(6px, env(safe-area-inset-bottom, 0px));
+    }
+  }
+}
+
+@layer base {
+  /*
+   * Recharts (v3) may focus the underlying <svg> on click/tap, which shows the browser's default
+   * focus outline (often a blue rectangle). We don't rely on keyboard focus for charts in the app UI,
+   * so we disable the outline to avoid a distracting overlay.
+   */
+  .recharts-surface:focus,
+  .recharts-surface:focus-visible,
+  .recharts-wrapper:focus,
+  .recharts-wrapper:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+
+/* --- TOUCH REACTIVITY OPTIMIZATION ---
+ * Eliminate 300ms tap delay on interactive elements
+ * See: https://developer.chrome.com/blog/300ms-tap-delay-gone-away
+ */
+button,
+[role="button"],
+a,
+button,
+input,
+select,
+textarea,
+.interactive {
+  touch-action: manipulation;
+}
+
+/* Game area - full touch control to prevent scroll/zoom during gameplay */
+.game-grid,
+.game-area,
+.game-controls,
+canvas {
+  touch-action: none;
+}
+
+/* --- TRACE: Drag Hover Feedback ---
+ * Adds a subtle focus ring while dragging to improve perceived responsiveness.
+ * Uses theme tokens so it stays "serious" in both light/dark.
+ */
+.nd-trace-drag-hover {
+  box-shadow:
+    0 0 0 3px hsl(var(--woven-text) / 0.16),
+    0 0 0 7px hsl(var(--woven-border) / 0.22),
+    0 10px 22px hsl(var(--woven-border) / 0.16);
+}
+
+/* GPU acceleration for frequently animated game elements */
+.game-controls button {
+  will-change: transform;
+  transform: translateZ(0); /* Force GPU layer */
+}
+
+/* --- Long-press suppression: hide browser context menu on interactive elements --- */
+/* Applied globally on the app shell; text-heavy pages override with user-select: auto */
+#root {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* --- Pressable: universal touch feedback --- */
+.pressable {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 80ms ease-out, opacity 80ms ease-out;
+  will-change: transform;
+}
+.pressable--pressed {
+  transform: scale(0.97);
+  opacity: 0.8;
+}
+.pressable--disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pressable { transition: none; }
+  .pressable--pressed { transform: none; }
+}
+
+html {
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: hsl(var(--neuro-bg-app));
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+body {
+  background-color: hsl(var(--neuro-bg-app));
+  color: hsl(var(--neuro-text-primary));
+  font-family:
+    "Manrope Variable",
+    "Manrope",
+    "Roboto",
+    "Noto Sans",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  font-size: var(--typo-body-size);
+  line-height: var(--typo-body-line);
+  letter-spacing: -0.01em; /* Tighter tracking - Nordic style */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Legal routes are outside MainLayout; give them their own scroll container on mobile/native. */
+.legal-scroll {
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* Safe Area Utilities - Padding */
+.pt-safe {
+  padding-top: var(--safe-top);
+}
+.pb-safe {
+  padding-bottom: var(--safe-bottom);
+}
+.pl-safe {
+  padding-left: var(--safe-left);
+}
+.pr-safe {
+  padding-right: var(--safe-right);
+}
+
+/* Safe Area Utilities - Margin */
+.mt-safe {
+  margin-top: var(--safe-top);
+}
+.mb-safe {
+  margin-bottom: var(--safe-bottom);
+}
+.ml-safe {
+  margin-left: var(--safe-left);
+}
+.mr-safe {
+  margin-right: var(--safe-right);
+}
+
+/* Safe Area Primitives - Semantic page/layout abstractions */
+.page-inset-top {
+  padding-top: var(--safe-top);
+}
+
+.page-inset-top-xs {
+  padding-top: calc(0.5rem + var(--safe-top));
+}
+
+.page-inset-top-sm {
+  padding-top: calc(0.75rem + var(--safe-top));
+}
+
+.page-inset-bottom {
+  padding-bottom: var(--safe-bottom);
+}
+
+.page-inset-bottom-sm {
+  padding-bottom: calc(0.5rem + var(--safe-bottom));
+}
+
+.page-inset-bottom-md {
+  padding-bottom: calc(1rem + var(--safe-bottom));
+}
+
+.page-inset-bottom-lg {
+  padding-bottom: calc(1.5rem + var(--safe-bottom));
+}
+
+.page-inset-bottom-xl {
+  padding-bottom: calc(2rem + var(--safe-bottom));
+}
+
+.page-inset-x {
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+}
+
+.page-inset-y {
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+}
+
+.fullscreen-usable-height {
+  height: var(--fullscreen-usable-height);
+}
+
+.fullscreen-route-content {
+  min-height: 100%;
+  min-width: 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.game-page-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: hsl(var(--woven-bg));
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-scroll {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: hsl(var(--woven-bg));
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-report-scroll {
+  height: var(--fullscreen-usable-height);
+  min-height: 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  background-color: hsl(var(--woven-bg));
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-center {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--woven-bg));
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-safe-center {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--woven-bg));
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-stage {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding-top: 8dvh;
+  padding-right: 1rem;
+  padding-bottom: var(--safe-bottom);
+  padding-left: 1rem;
+}
+
+.game-page-footer {
+  padding-bottom: calc(1.5rem + var(--safe-bottom));
+}
+
+.game-page-footer-lg {
+  padding-bottom: calc(2rem + var(--safe-bottom));
+}
+
+.game-page-bottom-spacer-sm {
+  height: 1rem;
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-bottom-spacer {
+  height: 2rem;
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-bottom-spacer-lg {
+  height: 5rem;
+  padding-bottom: var(--safe-bottom);
+}
+
+.game-page-bottom-clamp-spacer {
+  height: clamp(0.5rem, 2vh, 1rem);
+  padding-bottom: var(--safe-bottom);
+}
+
+/* ── Ambient gradient — gives backdrop-blur color variation to diffuse ──
+ * Without this, glass panels on a flat background have nothing to frost,
+ * making the glass effect invisible. Subtle warm/cool/rose blobs create
+ * just enough variation for the blur to reveal. */
+.game-page-shell,
+.game-page-scroll,
+.game-report-scroll,
+.game-page-center,
+.game-page-safe-center {
+  background-image:
+    radial-gradient(ellipse at 15% 40%, hsla(35, 28%, 82%, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, hsla(210, 22%, 84%, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 55% 85%, hsla(350, 18%, 85%, 0.3) 0%, transparent 45%);
+}
+
+.dark .game-page-shell,
+.dark .game-page-scroll,
+.dark .game-report-scroll,
+.dark .game-page-center,
+.dark .game-page-safe-center {
+  background-image:
+    radial-gradient(ellipse at 15% 40%, hsla(30, 30%, 14%, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, hsla(210, 25%, 12%, 0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 55% 85%, hsla(340, 22%, 13%, 0.4) 0%, transparent 45%);
+}
+
+/* Disable ambient gradient when capturing screenshots (flat for image export) */
+:root[data-visual-theme='capture-hybrid'] .game-page-shell,
+:root[data-visual-theme='capture-hybrid'] .game-page-scroll,
+:root[data-visual-theme='capture-hybrid'] .game-report-scroll,
+:root[data-visual-theme='capture-hybrid'] .game-page-center,
+:root[data-visual-theme='capture-hybrid'] .game-page-safe-center {
+  background-image: none;
+}
+
+.page-overlay-padding {
+  padding-top: calc(var(--safe-top) + 1rem);
+  padding-right: calc(var(--safe-right) + 1rem);
+  padding-bottom: calc(var(--safe-bottom) + 1rem);
+  padding-left: calc(var(--safe-left) + 1rem);
+}
+
+.page-overlay-padding-x {
+  padding-left: calc(var(--safe-left) + 1rem);
+  padding-right: calc(var(--safe-right) + 1rem);
+}
+
+.page-overlay-padding-y {
+  padding-top: calc(var(--safe-top) + 1rem);
+  padding-bottom: calc(var(--safe-bottom) + 1rem);
+}
+
+.page-floating-dismiss-button {
+  top: calc(0.7rem + var(--safe-top));
+  right: calc(1rem + var(--safe-right));
+}
+
+.settings-mobile-nav-sheet-safe {
+  left: max(0px, var(--safe-left));
+  max-width: calc(100vw - var(--safe-right) - 0.75rem);
+}
+
+[dir='rtl'] .settings-mobile-nav-sheet-safe {
+  left: auto;
+  right: max(0px, var(--safe-right));
+  max-width: calc(100vw - var(--safe-left) - 0.75rem);
+}
+
+.settings-mobile-nav-content-safe {
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+}
+
+.settings-mobile-nav-footer-safe {
+  padding-bottom: max(0.5rem, var(--safe-bottom));
+}
+
+.settings-upgrade-dialog-content-safe {
+  padding-top: calc(1rem + var(--safe-top));
+  padding-bottom: calc(5rem + var(--safe-bottom));
+}
+
+@media (min-width: 768px) {
+  .game-page-stage {
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+/* Safe Area Utilities - Overlays/Modals */
+.safe-overlay-padding {
+  padding-top: calc(var(--safe-top) + 1rem);
+  padding-right: calc(var(--safe-right) + 1rem);
+  padding-bottom: calc(var(--safe-bottom) + 1rem);
+  padding-left: calc(var(--safe-left) + 1rem);
+}
+
+.safe-overlay-padding-x {
+  padding-left: calc(var(--safe-left) + 1rem);
+  padding-right: calc(var(--safe-right) + 1rem);
+}
+
+.safe-overlay-padding-y {
+  padding-top: calc(var(--safe-top) + 1rem);
+  padding-bottom: calc(var(--safe-bottom) + 1rem);
+}
+
+.safe-fullscreen-inset {
+  padding-top: var(--safe-top);
+  padding-right: var(--safe-right);
+  padding-bottom: var(--safe-bottom);
+  padding-left: var(--safe-left);
+}
+
+/* Rotate fullscreen chart to landscape on portrait mobile */
+@media (orientation: portrait) and (max-width: 768px) {
+  .fullscreen-chart-landscape {
+    width: 100vh;
+    height: 100vw;
+    transform-origin: top left;
+    transform: translateX(100vw) rotate(90deg);
+  }
+
+  /* Remap safe-area insets for the 90° CW rotation */
+  .fullscreen-chart-landscape .safe-fullscreen-inset {
+    padding-top: var(--safe-right);
+    padding-right: var(--safe-bottom);
+    padding-bottom: var(--safe-left);
+    padding-left: var(--safe-top);
+  }
+}
+
+/* --- ACHIEVEMENT ANIMATIONS --- */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-confetti-fall {
+  animation: confetti-fall 3s ease-out forwards;
+}
+
+/* Subtle pulse for clickable buttons */
+@keyframes pulse-subtle {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--woven-focus) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px hsl(var(--woven-focus) / 0);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Tutorial: error feedback flash for response buttons */
+@keyframes tutorial-error-flash {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--woven-incorrect) / 0);
+  }
+  25% {
+    box-shadow: 0 0 0 7px hsl(var(--woven-incorrect) / 0.38);
+  }
+  60% {
+    box-shadow: 0 0 0 4px hsl(var(--woven-incorrect) / 0.22);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--woven-incorrect) / 0);
+  }
+}
+
+.animate-tutorial-error {
+  animation: tutorial-error-flash 520ms ease-out;
+}
+
+/* --- SCROLLBAR UTILITIES --- */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* Custom scrollbar (Woven Ink Theme) - Overrides default blue hover */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-muted {
+  /* Firefox */
+  scrollbar-color: hsl(var(--neuro-text-muted) / 0.5) transparent;
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-muted::-webkit-scrollbar {
+  height: 12px; /* Hauteur de la zone interactive augmentée */
+  width: 12px;  /* Largeur de la zone interactive augmentée */
+}
+
+.scrollbar-thumb-muted::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thumb-muted::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--neuro-text-muted) / 0.5);
+  border-radius: 9999px;
+  /* Astuce: Bordure transparente large pour créer une "fausse" barre fine */
+  /* Au repos : 12px total - 4px bordure * 2 = 4px visuel (trop fin ?) */
+  /* Essayons : 12px total - 3px bordure * 2 = 6px visuel (comme avant) */
+  border: 3px solid transparent; 
+  background-clip: content-box;
+  transition: border-width 0.2s ease; /* Transition fluide */
+}
+
+/* Au survol de la barre, on réduit la bordure transparente pour "épaissir" la partie visible */
+.scrollbar-thumb-muted::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--neuro-text-muted) / 0.8);
+  border-width: 1px; /* La barre grossit visuellement à 10px */
+}
+
+/* --- NORDIC POLISH --- */
+
+/* Glassmorphism (Frost/Ice effect) */
+/* Fallback for browsers without backdrop-filter (Android WebView) */
+.glass {
+  background: rgba(245, 248, 250, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Glass effect when backdrop-filter is supported */
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .glass {
+    background: rgba(245, 248, 250, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+}
+
+.glass-subtle {
+  background: rgba(245, 248, 250, 0.9);
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Dark mode glass - slightly lighter than bg to "catch light" */
+.dark .glass {
+  background: rgba(38, 36, 33, 0.95); /* #262421 - surface color */
+  border: 1px solid hsla(30, 10%, 35%, 0.4); /* warm border */
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .dark .glass {
+    background: rgba(38, 36, 33, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsla(30, 10%, 35%, 0.4);
+  }
+}
+
+.dark .glass-subtle {
+  background: rgba(32, 30, 27, 0.9); /* #201E1B - between bg and surface */
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .dark .glass-subtle {
+    background: rgba(32, 30, 27, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Soft Shadows - Warm tinted (Ink color, not pure black) */
+.shadow-soft {
+  box-shadow:
+    0 2px 8px -2px hsla(30, 10%, 10%, 0.08),
+    0 4px 16px -4px hsla(30, 10%, 10%, 0.06);
+}
+
+.shadow-soft-lg {
+  box-shadow:
+    0 4px 12px -4px hsla(30, 10%, 10%, 0.08),
+    0 8px 32px -8px hsla(30, 10%, 10%, 0.10);
+}
+
+/* Amber-tinted shadow for primary elements */
+.shadow-soft-colored {
+  box-shadow:
+    0 2px 8px -2px hsla(36, 90%, 45%, 0.15),
+    0 4px 16px -4px hsla(36, 90%, 45%, 0.20);
+}
+
+/* Tactile Feedback */
+.tactile {
+  transition: transform 0.1s ease-out;
+}
+.tactile:active {
+  transform: scale(0.98);
+}
+
+/* Game control button flash — imperatively toggled via classList */
+/* Uses !important to override Tailwind glassmorphism bg + backdrop-blur */
+button[data-control-color] {
+  transition: background-color 150ms ease-out, color 150ms ease-out, transform 150ms ease-out, border-color 150ms ease-out !important;
+}
+button.nd-flash-active[data-control-color] {
+  backdrop-filter: none !important;
+  border-color: transparent !important;
+  transition: background-color 0ms, color 0ms !important;
+  color: white !important;
+}
+button.nd-flash-active[data-control-color="visual"] {
+  background-color: hsl(var(--woven-text)) !important;
+  color: hsl(var(--woven-bg)) !important;
+}
+button.nd-flash-active[data-control-color="audio"] {
+  background-color: hsl(var(--woven-correct)) !important;
+}
+button.nd-flash-active[data-control-color="accent"] {
+  background-color: hsl(var(--primary)) !important;
+}
+button.nd-flash-active[data-control-color="warning"] {
+  background-color: hsl(var(--woven-amber)) !important;
+}
+button.nd-flash-active[data-control-color="position2"] {
+  background-color: hsl(var(--woven-incorrect)) !important;
+}
+button.nd-flash-active[data-control-color="position3"] {
+  background-color: hsl(var(--woven-correct)) !important;
+}
+button.nd-flash-active[data-control-color="position4"] {
+  background-color: hsl(var(--woven-orange)) !important;
+}
+button.nd-flash-active[data-control-color="vis1"] {
+  background-color: hsl(var(--woven-blue)) !important;
+}
+button.nd-flash-active[data-control-color="vis2"] {
+  background-color: hsl(var(--woven-incorrect)) !important;
+}
+button.nd-flash-active[data-control-color="vis3"] {
+  background-color: hsl(var(--woven-correct)) !important;
+}
+button.nd-flash-active[data-control-color="vis4"] {
+  background-color: hsl(var(--woven-orange)) !important;
+}
+button.nd-flash-active[data-control-color="audio2"] {
+  background-color: hsl(var(--woven-cyan)) !important;
+}
+button.nd-flash-active[data-control-color="arithmetic"] {
+  background-color: hsl(var(--woven-purple)) !important;
+}
+button.nd-flash-active[data-control-color="image"] {
+  background-color: hsl(var(--woven-blue)) !important;
+}
+button.nd-flash-active[data-control-color="color"] {
+  background-color: hsl(var(--woven-purple)) !important;
+}
+
+/* Micro-interactions */
+@keyframes gridlock-solved {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  animation: fade-in-up 0.3s ease-out backwards;
+}
+.stagger-children > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+.stagger-children > *:nth-child(2) {
+  animation-delay: 50ms;
+}
+.stagger-children > *:nth-child(3) {
+  animation-delay: 100ms;
+}
+.stagger-children > *:nth-child(4) {
+  animation-delay: 150ms;
+}
+.stagger-children > *:nth-child(5) {
+  animation-delay: 200ms;
+}
+.stagger-children > *:nth-child(6) {
+  animation-delay: 250ms;
+}
+
+/* Typography refinements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: var(--typo-title-line);
+  letter-spacing: -0.02em;
+  color: hsl(var(--neuro-text-primary)); /* Encre, pas noir pur */
+}
+
+h1 {
+  font-size: var(--typo-display-size);
+  line-height: var(--typo-display-line);
+}
+
+h2 {
+  font-size: var(--typo-title-size);
+}
+
+h3 {
+  font-size: clamp(1rem, 0.96rem + 0.24vw, 1.125rem);
+}
+
+button,
+[role="button"],
+input,
+select,
+textarea {
+  font-size: var(--typo-button-size);
+  line-height: var(--typo-button-line);
+}
+
+.text-display {
+  font-weight: 700;
+  font-size: var(--typo-display-size);
+  line-height: var(--typo-display-line);
+  letter-spacing: -0.03em;
+}
+
+/* Optional utilities to progressively migrate sensitive screens */
+.typo-caption {
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+}
+
+.typo-body {
+  font-size: var(--typo-body-size);
+  line-height: var(--typo-body-line);
+}
+
+.typo-button {
+  font-size: var(--typo-button-size);
+  line-height: var(--typo-button-line);
+}
+
+.typo-hud {
+  font-size: var(--typo-hud-size);
+  line-height: var(--typo-hud-line);
+}
+
+.typo-title {
+  font-size: var(--typo-title-size);
+  line-height: var(--typo-title-line);
+}
+
+.typo-display {
+  font-size: var(--typo-display-size);
+  line-height: var(--typo-display-line);
+}
+
+/* Shared card scope hook (kept for progressive rollout) */
+.surface-card-typography {
+  /* no-op on purpose; typography is globally tokenized */
+}
+
+/* Home card hierarchy */
+.home-card-typography .home-tab-label {
+  font-size: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.home-card-typography .home-settings-link {
+  color: hsl(var(--muted-foreground) / 0.3);
+}
+
+.home-card-typography .home-settings-link:hover {
+  color: hsl(var(--muted-foreground) / 0.85);
+}
+
+.home-card-typography .home-journey-name {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: hsl(var(--foreground) / 0.9);
+}
+
+.home-card-typography .home-journey-separator {
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+  color: hsl(var(--muted-foreground) / 0.55);
+}
+
+.home-card-typography .home-journey-range {
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+  color: hsl(var(--muted-foreground) / 0.8);
+}
+
+.home-card-typography .home-footer-pills {
+  color: hsl(var(--muted-foreground) / 0.75);
+}
+
+.home-card-typography .home-footer-pill {
+  position: relative;
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 100px;
+  background: hsl(var(--foreground) / 0.04);
+  border: 1px solid hsl(var(--border) / 0.35);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+/* Expand touch target to 44px minimum without changing visual size */
+.home-card-typography .home-footer-pill::after {
+  content: '';
+  position: absolute;
+  inset: -6px -4px;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.home-card-typography .home-footer-pill:hover {
+  background: hsl(var(--foreground) / 0.08);
+  border-color: hsl(var(--border) / 0.55);
+  color: hsl(var(--muted-foreground) / 0.95);
+}
+
+.home-card-typography .home-free-mode-title {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  line-height: 1.16;
+}
+
+.home-card-typography .home-free-mode-desc {
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+}
+
+.home-card-typography .home-mode-badge {
+  font-size: var(--typo-xxs-size);
+  line-height: var(--typo-xxs-line);
+}
+
+.home-card-typography .home-control-label {
+  font-size: var(--typo-caption-size);
+  line-height: var(--typo-caption-line);
+  font-weight: 500;
+}
+
+.home-card-typography .home-control-value {
+  font-size: clamp(1.0625rem, 1.02rem + 0.18vw, 1.1875rem);
+  line-height: 1.15;
+}
+
+.home-card-typography .home-primary-action {
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Global remap for common Tailwind text utilities */
+.text-2xs {
+  font-size: var(--typo-2xs-size);
+  line-height: var(--typo-2xs-line);
+}
+
+.text-xxs {
+  font-size: var(--typo-xxs-size);
+  line-height: var(--typo-xxs-line);
+}
+
+.text-3xs {
+  font-size: var(--typo-3xs-size);
+  line-height: var(--typo-3xs-line);
+}
+
+.text-4xs {
+  font-size: var(--typo-4xs-size);
+  line-height: var(--typo-4xs-line);
+}
+
+.text-xs {
+  font-size: var(--typo-xs-size);
+  line-height: var(--typo-xs-line);
+}
+
+.text-sm {
+  font-size: var(--typo-sm-size);
+  line-height: var(--typo-sm-line);
+}
+
+.text-base {
+  font-size: var(--typo-base-size);
+  line-height: var(--typo-base-line);
+}
+
+.text-lg {
+  font-size: var(--typo-lg-size);
+  line-height: var(--typo-lg-line);
+}
+
+.text-xl {
+  font-size: var(--typo-xl-size);
+  line-height: var(--typo-xl-line);
+}
+
+.text-2xl {
+  font-size: var(--typo-2xl-size);
+  line-height: var(--typo-2xl-line);
+}
+
+/* Compact profile: short viewport phones */
+  @media (max-height: 700px) {
+    :root {
+      --typo-caption-size: calc(
+        clamp(0.625rem, 0.61rem + 0.08vw, 0.6875rem) * var(--ui-text-scale)
+      );
+      --typo-body-size: calc(
+        clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem) * var(--ui-text-scale)
+      );
+      --typo-button-size: calc(
+        clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem) * var(--ui-text-scale)
+      );
+      --typo-hud-size: calc(
+        clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem) * var(--ui-text-scale)
+      );
+      --typo-title-size: calc(
+        clamp(0.9375rem, 0.91rem + 0.14vw, 1rem) * var(--ui-text-scale)
+      );
+      --typo-display-size: calc(
+        clamp(1.125rem, 1.02rem + 0.35vw, 1.375rem) * var(--ui-text-scale)
+      );
+
+      --typo-2xs-size: calc(clamp(0.4375rem, 0.43rem + 0.04vw, 0.5rem) * var(--ui-text-scale));
+      --typo-xxs-size: calc(clamp(0.5rem, 0.49rem + 0.05vw, 0.5625rem) * var(--ui-text-scale));
+      --typo-3xs-size: calc(
+        clamp(0.5625rem, 0.55rem + 0.06vw, 0.625rem) * var(--ui-text-scale)
+      );
+      --typo-4xs-size: calc(
+        clamp(0.625rem, 0.61rem + 0.08vw, 0.6875rem) * var(--ui-text-scale)
+      );
+      --typo-base-size: calc(
+        clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem) * var(--ui-text-scale)
+      );
+      --typo-xl-size: calc(clamp(1rem, 0.95rem + 0.2vw, 1.125rem) * var(--ui-text-scale));
+    }
+
+  .home-card-typography .home-journey-name {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .home-card-typography .home-free-mode-title {
+    font-size: clamp(0.9375rem, 0.9rem + 0.14vw, 1rem);
+  }
+
+  .home-card-typography .home-control-value {
+    font-size: clamp(0.9375rem, 0.91rem + 0.12vw, 1.0625rem);
+  }
+
+  .home-card-typography .home-primary-action {
+    font-size: clamp(0.9375rem, 0.9rem + 0.14vw, 1rem);
+  }
+}
+
+/* Large profile: roomy phones and tablets */
+  @media (min-width: 768px) and (min-height: 900px) {
+    :root {
+      --typo-caption-size: calc(clamp(0.75rem, 0.7rem + 0.1vw, 0.875rem) * var(--ui-text-scale));
+      --typo-body-size: calc(
+        clamp(0.9375rem, 0.9rem + 0.16vw, 1.0625rem) * var(--ui-text-scale)
+      );
+      --typo-button-size: calc(
+        clamp(0.9375rem, 0.9rem + 0.18vw, 1.0625rem) * var(--ui-text-scale)
+      );
+      --typo-hud-size: calc(clamp(0.875rem, 0.84rem + 0.16vw, 1rem) * var(--ui-text-scale));
+      --typo-title-size: calc(clamp(1.125rem, 1.03rem + 0.36vw, 1.5rem) * var(--ui-text-scale));
+      --typo-display-size: calc(clamp(1.5rem, 1.3rem + 0.9vw, 2.25rem) * var(--ui-text-scale));
+    }
+  }
+
+/* Letterpress effect - Light mode only (debossed into paper) */
+h1,
+.text-display {
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dark h1,
+.dark .text-display {
+  text-shadow: none; /* Pas d'effet en dark mode */
+}
+
+/* --- GHOST BUTTON (Effet tampon encre) --- */
+.btn-ghost-ink {
+  background-color: hsla(30, 10%, 10%, 0.05);
+  color: hsl(var(--neuro-text-primary));
+  transition: background-color 0.2s ease;
+}
+
+.btn-ghost-ink:hover {
+  background-color: hsla(30, 10%, 10%, 0.10);
+}
+
+.btn-ghost-ink:active {
+  background-color: hsla(30, 10%, 10%, 0.15);
+}
+
+.dark .btn-ghost-ink {
+  background-color: hsla(35, 20%, 90%, 0.05);
+  color: hsl(var(--neuro-text-primary));
+}
+
+.dark .btn-ghost-ink:hover {
+  background-color: hsla(35, 20%, 90%, 0.10);
+}
+
+/* --- SKELETON BREATHING (Loading organique) --- */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.skeleton-breathe {
+  animation: breathe 3.5s ease-in-out infinite;
+  background-color: hsl(var(--muted));
+}
+
+/* --- DPI-ADAPTIVE SUBCARD BORDERS --- */
+/* Low DPI (1x, typical desktops): Stronger borders for visibility */
+/* High DPI (2x+, phones/retina): Subtle borders that render crisply */
+
+.subcard-border {
+  /* Default: Low DPI (1x) - more visible borders */
+  border: 1px solid hsl(var(--border) / 0.55);
+}
+
+/* High DPI screens (2x and above) - subtle borders */
+@media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+  .subcard-border {
+    border: 1px solid hsl(var(--border) / 0.45);
+  }
+}
+
+/* Very high DPI (3x, flagship phones) - slightly more subtle */
+@media (min-resolution: 3dppx), (-webkit-min-device-pixel-ratio: 3) {
+  .subcard-border {
+    border: 1px solid hsl(var(--border) / 0.4);
+  }
+}
+
+/* --- REDUCED MOTION (Accessibility) --- */
+/* When user enables "Reduce animations" in settings */
+.reduce-motion,
+.reduce-motion * {
+  /* Disable all CSS animations */
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+
+  /* Disable all CSS transitions */
+  transition-duration: 0.01ms !important;
+
+  /* Disable scroll behavior */
+  scroll-behavior: auto !important;
+}
+
+/* Runtime fallback: enabled automatically when the device is under sustained lag */
+.perf-reduce-motion,
+.perf-reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Backdrop blur is expensive on low-end devices; disable it in perf fallback mode */
+.perf-reduce-motion [class*='backdrop-blur'],
+.perf-reduce-motion [class*='blur-'] {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Android/WebView fallback:
+ * backdrop-filter can rasterize very late on some GPUs/webviews, leaving dialogs/menus looking
+ * washed out for several seconds. Keep the layout, but switch glass surfaces to solid cards.
+ */
+.reduce-transparency-effects [class*='backdrop-blur'],
+.reduce-transparency-effects [class*='blur-'] {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.reduce-transparency-effects [class*='bg-card/60'] {
+  background-color: hsl(var(--card) / 0.88) !important;
+}
+
+.reduce-transparency-effects [class*='bg-card/75'] {
+  background-color: hsl(var(--card) / 0.92) !important;
+}
+
+.reduce-transparency-effects [class*='bg-card/85'] {
+  background-color: hsl(var(--card) / 0.96) !important;
+}
+
+.reduce-transparency-effects [class*='bg-surface/60'] {
+  background-color: hsl(var(--neuro-bg-surface) / 0.88) !important;
+}
+
+.reduce-transparency-effects [class*='bg-surface/75'] {
+  background-color: hsl(var(--neuro-bg-surface) / 0.92) !important;
+}
+
+.reduce-transparency-effects [class*='bg-surface/80'] {
+  background-color: hsl(var(--neuro-bg-surface) / 0.94) !important;
+}
+
+.reduce-transparency-effects [class*='bg-surface/85'] {
+  background-color: hsl(var(--neuro-bg-surface) / 0.96) !important;
+}
+
+.reduce-transparency-effects [class*='bg-woven-surface/60'] {
+  background-color: hsl(var(--woven-surface) / 0.88) !important;
+}
+
+.reduce-transparency-effects [class*='bg-woven-surface/70'] {
+  background-color: hsl(var(--woven-surface) / 0.91) !important;
+}
+
+.reduce-transparency-effects [class*='bg-woven-surface/80'] {
+  background-color: hsl(var(--woven-surface) / 0.94) !important;
+}
+
+.reduce-transparency-effects [class*='bg-woven-surface/85'] {
+  background-color: hsl(var(--woven-surface) / 0.96) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-card/60'] {
+  background-color: hsl(var(--card) / 0.9) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-card/75'] {
+  background-color: hsl(var(--card) / 0.94) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-card/85'] {
+  background-color: hsl(var(--card) / 0.97) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-surface/60'] {
+  background-color: hsl(var(--neuro-bg-surface) / 0.9) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-woven-surface/60'] {
+  background-color: hsl(var(--woven-surface) / 0.9) !important;
+}
+
+:root[data-visual-theme='capture-hybrid'].reduce-transparency-effects [class*='bg-woven-surface/80'] {
+  background-color: hsl(var(--woven-surface) / 0.95) !important;
+}
+
+/* Also respect system preference (prefers-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+  :root:not(.force-motion),
+  :root:not(.force-motion) * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- SHORT VIEWPORT UTILITIES (Mobile Web with Browser Chrome) --- */
+/* On mobile web, browser chrome (URL bar, tab bar) takes ~100-150px.
+ * dvh helps but when viewport < 700px, we need progressively tighter spacing.
+ * Target: fit HUD + Timeline + Grid + Letter + Annotation + Controls in viewport.
+ *
+ * Height budget breakdown for 550px viewport:
+ * - HUD: 48px
+ * - Timeline: ~80px (scaled)
+ * - Grid: ~180px (constrained)
+ * - Letter: 24px
+ * - Annotation: ~60px
+ * - Controls: 70px
+ * - Margins: ~40px
+ * Total: ~502px ✓
+ */
+
+/* Level 1: Moderate compression (< 750px) */
+@media (max-height: 750px) {
+  .tutorial-compact .tutorial-grid-wrapper {
+    max-width: min(240px, 40vh) !important;
+  }
+
+  .tutorial-compact .tutorial-letter {
+    height: 2rem !important;
+    margin-top: 0.125rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation {
+    margin-top: 0.125rem !important;
+    padding: 0.375rem 0.75rem !important;
+  }
+
+  .tutorial-compact .tutorial-controls {
+    margin-top: 0.25rem !important;
+  }
+
+  .tutorial-compact .tutorial-timeline {
+    transform: scale(0.8);
+    transform-origin: center top;
+    margin-bottom: -1.5rem;
+  }
+}
+
+/* Level 2: Aggressive compression (< 680px) */
+@media (max-height: 680px) {
+  .tutorial-compact .tutorial-grid-wrapper {
+    max-width: min(200px, 34vh) !important;
+  }
+
+  .tutorial-compact .tutorial-letter {
+    height: 1.75rem !important;
+    margin-top: 0 !important;
+  }
+
+  .tutorial-compact .tutorial-letter span {
+    font-size: 1.5rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation {
+    margin-top: 0 !important;
+    padding: 0.25rem 0.5rem !important;
+    margin-inline: 0.25rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation p {
+    min-height: 2.25rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .tutorial-compact .tutorial-controls {
+    margin-top: 0.125rem !important;
+  }
+
+  .tutorial-compact .tutorial-controls button {
+    padding-block: 0.625rem !important;
+  }
+
+  .tutorial-compact .tutorial-timeline {
+    transform: scale(0.7);
+    margin-bottom: -2rem;
+  }
+}
+
+/* Level 3: Maximum compression (< 600px) */
+@media (max-height: 600px) {
+  .tutorial-compact .tutorial-grid-wrapper {
+    max-width: min(170px, 30vh) !important;
+  }
+
+  .tutorial-compact .tutorial-letter {
+    height: 1.5rem !important;
+  }
+
+  .tutorial-compact .tutorial-letter span {
+    font-size: 1.25rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation {
+    padding: 0.125rem 0.375rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation p {
+    min-height: 2rem !important;
+    font-size: 0.6875rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .tutorial-compact .tutorial-controls button {
+    padding-block: 0.5rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .tutorial-compact .tutorial-timeline {
+    transform: scale(0.6);
+    margin-bottom: -2.5rem;
+  }
+}
+
+/* Level 4: Emergency compression (< 520px) - very constrained devices */
+@media (max-height: 520px) {
+  .tutorial-compact .tutorial-grid-wrapper {
+    max-width: min(140px, 26vh) !important;
+  }
+
+  .tutorial-compact .tutorial-letter {
+    height: 1.25rem !important;
+  }
+
+  .tutorial-compact .tutorial-letter span {
+    font-size: 1rem !important;
+  }
+
+  .tutorial-compact .tutorial-annotation p {
+    min-height: 1.5rem !important;
+    font-size: 0.625rem !important;
+  }
+
+  .tutorial-compact .tutorial-controls button {
+    padding-block: 0.375rem !important;
+    font-size: 0.8125rem !important;
+  }
+
+  .tutorial-compact .tutorial-timeline {
+    transform: scale(0.5);
+    margin-bottom: -3rem;
+  }
+}
+
+@keyframes nd-countdown-cue {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.nd-countdown-stack {
+  position: relative;
+  display: inline-flex;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+
+.nd-countdown-digit {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1ch;
+  height: 1em;
+  line-height: 1;
+  opacity: 0;
+  font-variant-numeric: tabular-nums;
+  will-change: opacity;
+  animation-duration: var(--nd-countdown-duration, 4000ms);
+  animation-fill-mode: both;
+  animation-timing-function: step-end;
+}
+
+.nd-countdown-digit-3 {
+  animation-name: nd-countdown-visible-3;
+}
+
+.nd-countdown-digit-2 {
+  animation-name: nd-countdown-visible-2;
+}
+
+.nd-countdown-digit-1 {
+  animation-name: nd-countdown-visible-1;
+}
+
+.nd-countdown-digit-0 {
+  animation-name: nd-countdown-visible-0;
+}
+
+@keyframes nd-countdown-visible-3 {
+  0%,
+  24.999% {
+    opacity: 1;
+  }
+
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes nd-countdown-visible-2 {
+  0%,
+  24.999% {
+    opacity: 0;
+  }
+
+  25%,
+  49.999% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes nd-countdown-visible-1 {
+  0%,
+  49.999% {
+    opacity: 0;
+  }
+
+  50%,
+  74.999% {
+    opacity: 1;
+  }
+
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes nd-countdown-visible-0 {
+  0%,
+  74.999% {
+    opacity: 0;
+  }
+
+  75%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.nd-countdown-cue-marker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  animation-name: nd-countdown-cue;
+  animation-duration: 1ms;
+  animation-fill-mode: both;
+}

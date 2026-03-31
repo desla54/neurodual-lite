@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" width="1024" height="500">
+  <defs>
+    <!-- Pattern weave identique à l'icône -->
+    <pattern id="weave-pattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="6" x2="12" y2="6" stroke="#1A1815" stroke-width="0.2" opacity="0.06"/>
+      <line x1="6" y1="0" x2="6" y2="12" stroke="#1A1815" stroke-width="0.2" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Fond weave identique à l'icône -->
+  <rect width="1024" height="500" fill="#FAFAF8"/>
+  <rect width="1024" height="500" fill="url(#weave-pattern)"/>
+
+  <!-- Contenu centré -->
+  <g transform="translate(512, 250)">
+
+    <!-- Grille 3x3 - style identique à l'icône (scale 2.5x) -->
+    <g transform="translate(-300, -67.5)">
+      <!-- Case 0,0 - active -->
+      <rect x="0" y="0" width="40" height="40" rx="10" fill="#1A1815"/>
+
+      <!-- Case 1,0 - inactive -->
+      <rect x="47.5" y="0" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 2,0 - inactive -->
+      <rect x="95" y="0" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 0,1 - inactive -->
+      <rect x="0" y="47.5" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 1,1 - centre avec trait amber -->
+      <rect x="47.5" y="47.5" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 2,1 - inactive -->
+      <rect x="95" y="47.5" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 0,2 - inactive -->
+      <rect x="0" y="95" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 1,2 - inactive -->
+      <rect x="47.5" y="95" width="40" height="40" rx="10" stroke="#1A1815" stroke-width="2" fill="none" opacity="0.3"/>
+
+      <!-- Case 2,2 - active -->
+      <rect x="95" y="95" width="40" height="40" rx="10" fill="#1A1815"/>
+
+      <!-- Trait focus central - amber -->
+      <line x1="60" y1="67.5" x2="75" y2="67.5" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Texte -->
+    <g transform="translate(-100, 0)">
+      <text
+        x="0" y="0"
+        font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-size="52"
+        font-weight="600"
+        fill="#1A1815"
+        letter-spacing="-1"
+      >NeuroDual</text>
+
+      <text
+        x="2" y="36"
+        font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-size="16"
+        font-weight="400"
+        fill="#525252"
+      >Brain Training</text>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@neurodual/logic": ["./packages/logic/src/index.ts"],
+      "@neurodual/infra": ["./packages/infra/src/index.ts"],
+      "@neurodual/ui": ["./packages/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "./packages/logic" },
+    { "path": "./packages/infra" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/web" }
+  ]
+}

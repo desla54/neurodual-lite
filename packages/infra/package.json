@@ -1,0 +1,27 @@
+{
+  "name": "@neurodual/infra",
+  "version": "0.9.27",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^8.0.0",
+    "@capacitor-community/sqlite": "^7.0.3",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/haptics": "^8.0.0",
+    "@neurodual/logic": "workspace:*",
+    "drizzle-orm": "^0.45.1",
+    "tone": "^15.1.22",
+    "wa-sqlite": "^1.0.0",
+    "xstate": "^5.19.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.9"
+  }
+}

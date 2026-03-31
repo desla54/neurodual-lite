@@ -1,0 +1,38 @@
+require_relative '../../../../node_modules/.bun/@capacitor+ios@8.0.2+15945e198350fa93/node_modules/@capacitor/ios/scripts/pods_helpers'
+
+platform :ios, '15.0'
+use_frameworks!
+
+# workaround to avoid Xcode caching of Pods that requires
+# Product -> Clean Build Folder after new Cordova plugins installed
+# Requires CocoaPods 1.6 or newer
+install! 'cocoapods', :disable_input_output_paths => true
+
+def capacitor_pods
+  pod 'Capacitor', :path => '../../../../node_modules/.bun/@capacitor+ios@8.0.2+15945e198350fa93/node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../../../node_modules/.bun/@capacitor+ios@8.0.2+15945e198350fa93/node_modules/@capacitor/ios'
+  pod 'CapacitorCommunityAdmob', :path => '../../../../node_modules/.bun/@capacitor-community+admob@8.0.0/node_modules/@capacitor-community/admob'
+  pod 'CapacitorCommunityKeepAwake', :path => '../../../../node_modules/.bun/@capacitor-community+keep-awake@8.0.0+15945e198350fa93/node_modules/@capacitor-community/keep-awake'
+  pod 'CapacitorCommunitySqlite', :path => '../../../../node_modules/.bun/@capacitor-community+sqlite@7.0.3+15945e198350fa93/node_modules/@capacitor-community/sqlite'
+  pod 'CapacitorApp', :path => '../../../../node_modules/.bun/@capacitor+app@8.0.0+15945e198350fa93/node_modules/@capacitor/app'
+  pod 'CapacitorHaptics', :path => '../../../../node_modules/.bun/@capacitor+haptics@8.0.0+15945e198350fa93/node_modules/@capacitor/haptics'
+  pod 'CapacitorKeyboard', :path => '../../../../node_modules/.bun/@capacitor+keyboard@8.0.0+15945e198350fa93/node_modules/@capacitor/keyboard'
+  pod 'CapacitorLocalNotifications', :path => '../../../../node_modules/.bun/@capacitor+local-notifications@8.0.0+15945e198350fa93/node_modules/@capacitor/local-notifications'
+  pod 'CapacitorShare', :path => '../../../../node_modules/.bun/@capacitor+share@8.0.1+15945e198350fa93/node_modules/@capacitor/share'
+  pod 'CapacitorStatusBar', :path => '../../../../node_modules/.bun/@capacitor+status-bar@8.0.0+15945e198350fa93/node_modules/@capacitor/status-bar'
+  pod 'CapgoCapacitorNavigationBar', :path => '../../../../node_modules/.bun/@capgo+capacitor-navigation-bar@8.0.17+15945e198350fa93/node_modules/@capgo/capacitor-navigation-bar'
+  pod 'CapgoCapacitorSocialLogin', :path => '../../../../node_modules/.bun/@capgo+capacitor-social-login@8.2.18+15945e198350fa93/node_modules/@capgo/capacitor-social-login'
+  pod 'CapgoCapacitorUpdater', :path => '../../../../node_modules/.bun/@capgo+capacitor-updater@8.42.7+15945e198350fa93/node_modules/@capgo/capacitor-updater'
+  pod 'PowersyncCapacitor', :path => '../../../../node_modules/.bun/@powersync+capacitor@0.4.1+7590a7bcf92bdac4/node_modules/@powersync/capacitor'
+  pod 'RevenuecatPurchasesCapacitor', :path => '../../../../node_modules/.bun/@revenuecat+purchases-capacitor@11.3.2+15945e198350fa93/node_modules/@revenuecat/purchases-capacitor'
+  pod 'SentryCapacitor', :path => '../../../../node_modules/.bun/@sentry+capacitor@3.0.0+5164e70dda379072/node_modules/@sentry/capacitor'
+end
+
+target 'App' do
+  capacitor_pods
+  # Add your Pods here
+end
+
+post_install do |installer|
+  assertDeploymentTarget(installer)
+end

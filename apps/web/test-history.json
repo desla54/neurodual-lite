@@ -1,0 +1,801 @@
+{
+  "version": 1,
+  "exportedAt": "2025-01-08T12:00:00.000Z",
+  "sessions": [
+    {
+      "id": "test-001",
+      "createdAt": "2024-12-10T08:30:00.000Z",
+      "nLevel": 2,
+      "dPrime": 1.2,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 180000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 520 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 580 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-002",
+      "createdAt": "2024-12-10T19:15:00.000Z",
+      "nLevel": 2,
+      "dPrime": 1.65,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 175000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 480 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 2, "correctRejections": 16, "avgRT": 510 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-003",
+      "createdAt": "2024-12-11T07:45:00.000Z",
+      "nLevel": 3,
+      "dPrime": 0.95,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 185000,
+      "byModality": {
+        "position": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 550 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 5, "correctRejections": 13, "avgRT": 620 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-004",
+      "createdAt": "2024-12-11T20:00:00.000Z",
+      "nLevel": 2,
+      "dPrime": 1.85,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 170000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 450 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 480 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-005",
+      "createdAt": "2024-12-12T12:30:00.000Z",
+      "nLevel": 3,
+      "dPrime": 1.45,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 178000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 490 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 530 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-006",
+      "createdAt": "2024-12-13T09:00:00.000Z",
+      "nLevel": 3,
+      "dPrime": 1.72,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 172000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 470 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 495 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-007",
+      "createdAt": "2024-12-13T18:45:00.000Z",
+      "nLevel": 4,
+      "dPrime": 0.88,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 190000,
+      "byModality": {
+        "position": { "hits": 4, "misses": 3, "falseAlarms": 5, "correctRejections": 13, "avgRT": 580 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 5, "correctRejections": 13, "avgRT": 640 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-008",
+      "createdAt": "2024-12-14T10:15:00.000Z",
+      "nLevel": 3,
+      "dPrime": 1.55,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 175000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 465 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 510 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-009",
+      "createdAt": "2024-12-15T08:00:00.000Z",
+      "nLevel": 4,
+      "dPrime": 1.15,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 182000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 520 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 570 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-010",
+      "createdAt": "2024-12-15T21:30:00.000Z",
+      "nLevel": 4,
+      "dPrime": 1.62,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 176000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 455 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 2, "correctRejections": 16, "avgRT": 490 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-011",
+      "createdAt": "2024-12-16T14:00:00.000Z",
+      "nLevel": 2,
+      "dPrime": 2.15,
+      "passed": true,
+      "trialsCount": 20,
+      "durationMs": 140000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 0, "falseAlarms": 1, "correctRejections": 13, "avgRT": 420 }
+      },
+      "generator": "Jaeggi",
+      "activeModalities": ["position"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-012",
+      "createdAt": "2024-12-17T09:30:00.000Z",
+      "nLevel": 5,
+      "dPrime": 0.72,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 195000,
+      "byModality": {
+        "position": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 610 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 680 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-013",
+      "createdAt": "2024-12-17T20:15:00.000Z",
+      "nLevel": 4,
+      "dPrime": 1.48,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 180000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 485 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 520 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-014",
+      "createdAt": "2024-12-18T07:00:00.000Z",
+      "nLevel": 4,
+      "dPrime": 1.78,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 173000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 458 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 475 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-015",
+      "createdAt": "2024-12-18T19:45:00.000Z",
+      "nLevel": 2,
+      "dPrime": 1.95,
+      "passed": true,
+      "trialsCount": 20,
+      "durationMs": 145000,
+      "byModality": {
+        "audio": { "hits": 6, "misses": 0, "falseAlarms": 1, "correctRejections": 13, "avgRT": 430 }
+      },
+      "generator": "Jaeggi",
+      "activeModalities": ["audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-016",
+      "createdAt": "2024-12-19T11:00:00.000Z",
+      "nLevel": 5,
+      "dPrime": 1.25,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 185000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 505 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 555 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-017",
+      "createdAt": "2024-12-20T08:30:00.000Z",
+      "nLevel": 5,
+      "dPrime": 1.58,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 177000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 472 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 505 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-018",
+      "createdAt": "2024-12-20T18:00:00.000Z",
+      "nLevel": 3,
+      "dPrime": 2.35,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 165000,
+      "byModality": {
+        "position": { "hits": 7, "misses": 0, "falseAlarms": 1, "correctRejections": 17, "avgRT": 395 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 420 }
+      },
+      "generator": "BrainWorkshop",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-019",
+      "createdAt": "2024-12-21T10:00:00.000Z",
+      "nLevel": 6,
+      "dPrime": 0.85,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 198000,
+      "byModality": {
+        "position": { "hits": 4, "misses": 3, "falseAlarms": 5, "correctRejections": 13, "avgRT": 595 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 665 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-020",
+      "createdAt": "2024-12-21T21:00:00.000Z",
+      "nLevel": 5,
+      "dPrime": 1.42,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 181000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 492 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 535 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-021",
+      "createdAt": "2024-12-22T09:15:00.000Z",
+      "nLevel": 5,
+      "dPrime": 1.68,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 174000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 462 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 488 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-022",
+      "createdAt": "2024-12-23T14:30:00.000Z",
+      "nLevel": 3,
+      "dPrime": 2.52,
+      "passed": true,
+      "trialsCount": 20,
+      "durationMs": 138000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 0, "falseAlarms": 0, "correctRejections": 14, "avgRT": 385 },
+        "audio": { "hits": 6, "misses": 0, "falseAlarms": 1, "correctRejections": 13, "avgRT": 405 }
+      },
+      "generator": "Jaeggi",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-023",
+      "createdAt": "2024-12-24T10:00:00.000Z",
+      "nLevel": 6,
+      "dPrime": 1.18,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 188000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 515 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 560 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-024",
+      "createdAt": "2024-12-25T11:30:00.000Z",
+      "nLevel": 6,
+      "dPrime": 1.55,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 176000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 468 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 498 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-025",
+      "createdAt": "2024-12-26T08:00:00.000Z",
+      "nLevel": 4,
+      "dPrime": 2.18,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 168000,
+      "byModality": {
+        "position": { "hits": 7, "misses": 0, "falseAlarms": 1, "correctRejections": 17, "avgRT": 415 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 438 }
+      },
+      "generator": "BrainWorkshop",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-026",
+      "createdAt": "2024-12-26T19:00:00.000Z",
+      "nLevel": 7,
+      "dPrime": 0.78,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 202000,
+      "byModality": {
+        "position": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 625 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 695 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-027",
+      "createdAt": "2024-12-27T09:30:00.000Z",
+      "nLevel": 6,
+      "dPrime": 1.35,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 183000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 498 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 542 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-028",
+      "createdAt": "2024-12-27T20:45:00.000Z",
+      "nLevel": 6,
+      "dPrime": 1.72,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 175000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 465 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 485 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-029",
+      "createdAt": "2024-12-28T10:15:00.000Z",
+      "nLevel": 3,
+      "dPrime": 1.88,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 170000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 445 }
+      },
+      "generator": "Libre",
+      "activeModalities": ["position"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-030",
+      "createdAt": "2024-12-28T18:30:00.000Z",
+      "nLevel": 7,
+      "dPrime": 1.12,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 192000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 5, "correctRejections": 13, "avgRT": 535 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 5, "correctRejections": 13, "avgRT": 585 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-031",
+      "createdAt": "2024-12-29T08:00:00.000Z",
+      "nLevel": 7,
+      "dPrime": 1.52,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 178000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 478 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 512 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-032",
+      "createdAt": "2024-12-29T19:00:00.000Z",
+      "nLevel": 3,
+      "dPrime": 2.42,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 162000,
+      "byModality": {
+        "audio": { "hits": 7, "misses": 0, "falseAlarms": 1, "correctRejections": 17, "avgRT": 392 }
+      },
+      "generator": "Libre",
+      "activeModalities": ["audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-033",
+      "createdAt": "2024-12-30T11:00:00.000Z",
+      "nLevel": 8,
+      "dPrime": 0.68,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 210000,
+      "byModality": {
+        "position": { "hits": 3, "misses": 4, "falseAlarms": 7, "correctRejections": 11, "avgRT": 650 },
+        "audio": { "hits": 2, "misses": 5, "falseAlarms": 7, "correctRejections": 11, "avgRT": 720 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-034",
+      "createdAt": "2024-12-30T20:30:00.000Z",
+      "nLevel": 7,
+      "dPrime": 1.28,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 186000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 505 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 4, "correctRejections": 14, "avgRT": 548 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-035",
+      "createdAt": "2024-12-31T09:00:00.000Z",
+      "nLevel": 7,
+      "dPrime": 1.65,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 175000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 468 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 492 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-036",
+      "createdAt": "2024-12-31T17:00:00.000Z",
+      "nLevel": 4,
+      "dPrime": 2.75,
+      "passed": true,
+      "trialsCount": 20,
+      "durationMs": 135000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 0, "falseAlarms": 0, "correctRejections": 14, "avgRT": 365 },
+        "audio": { "hits": 6, "misses": 0, "falseAlarms": 0, "correctRejections": 14, "avgRT": 382 }
+      },
+      "generator": "Jaeggi",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-037",
+      "createdAt": "2025-01-01T10:30:00.000Z",
+      "nLevel": 8,
+      "dPrime": 1.05,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 195000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 5, "correctRejections": 13, "avgRT": 545 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 5, "correctRejections": 13, "avgRT": 598 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-038",
+      "createdAt": "2025-01-01T19:15:00.000Z",
+      "nLevel": 8,
+      "dPrime": 1.58,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 178000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 475 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 510 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-039",
+      "createdAt": "2025-01-02T08:45:00.000Z",
+      "nLevel": 5,
+      "dPrime": 2.28,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 165000,
+      "byModality": {
+        "position": { "hits": 7, "misses": 0, "falseAlarms": 1, "correctRejections": 17, "avgRT": 405 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 428 }
+      },
+      "generator": "BrainWorkshop",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-040",
+      "createdAt": "2025-01-02T20:00:00.000Z",
+      "nLevel": 9,
+      "dPrime": 0.75,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 215000,
+      "byModality": {
+        "position": { "hits": 3, "misses": 4, "falseAlarms": 7, "correctRejections": 11, "avgRT": 665 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 7, "correctRejections": 11, "avgRT": 735 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-041",
+      "createdAt": "2025-01-03T09:30:00.000Z",
+      "nLevel": 8,
+      "dPrime": 1.38,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 184000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 502 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 545 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-042",
+      "createdAt": "2025-01-03T18:45:00.000Z",
+      "nLevel": 8,
+      "dPrime": 1.72,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 174000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 462 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 485 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-043",
+      "createdAt": "2025-01-04T10:00:00.000Z",
+      "nLevel": 4,
+      "dPrime": 2.15,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 168000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 1, "correctRejections": 17, "avgRT": 418 }
+      },
+      "generator": "Libre",
+      "activeModalities": ["position"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-044",
+      "createdAt": "2025-01-04T19:30:00.000Z",
+      "nLevel": 9,
+      "dPrime": 1.15,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 198000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 5, "correctRejections": 13, "avgRT": 552 },
+        "audio": { "hits": 4, "misses": 3, "falseAlarms": 5, "correctRejections": 13, "avgRT": 605 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-045",
+      "createdAt": "2025-01-05T08:15:00.000Z",
+      "nLevel": 9,
+      "dPrime": 1.52,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 180000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 480 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 518 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-046",
+      "createdAt": "2025-01-05T17:45:00.000Z",
+      "nLevel": 5,
+      "dPrime": 2.65,
+      "passed": true,
+      "trialsCount": 20,
+      "durationMs": 140000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 0, "falseAlarms": 0, "correctRejections": 14, "avgRT": 372 },
+        "audio": { "hits": 6, "misses": 0, "falseAlarms": 0, "correctRejections": 14, "avgRT": 388 }
+      },
+      "generator": "Jaeggi",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-047",
+      "createdAt": "2025-01-06T09:00:00.000Z",
+      "nLevel": 10,
+      "dPrime": 0.92,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 208000,
+      "byModality": {
+        "position": { "hits": 4, "misses": 3, "falseAlarms": 6, "correctRejections": 12, "avgRT": 615 },
+        "audio": { "hits": 3, "misses": 4, "falseAlarms": 6, "correctRejections": 12, "avgRT": 682 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-048",
+      "createdAt": "2025-01-06T20:15:00.000Z",
+      "nLevel": 9,
+      "dPrime": 1.45,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 182000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 3, "correctRejections": 15, "avgRT": 488 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 532 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-049",
+      "createdAt": "2025-01-07T10:30:00.000Z",
+      "nLevel": 9,
+      "dPrime": 1.68,
+      "passed": true,
+      "trialsCount": 25,
+      "durationMs": 175000,
+      "byModality": {
+        "position": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 465 },
+        "audio": { "hits": 6, "misses": 1, "falseAlarms": 2, "correctRejections": 16, "avgRT": 488 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    },
+    {
+      "id": "test-050",
+      "createdAt": "2025-01-07T19:00:00.000Z",
+      "nLevel": 10,
+      "dPrime": 1.35,
+      "passed": false,
+      "trialsCount": 25,
+      "durationMs": 188000,
+      "byModality": {
+        "position": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 512 },
+        "audio": { "hits": 5, "misses": 2, "falseAlarms": 4, "correctRejections": 14, "avgRT": 555 }
+      },
+      "generator": "Adaptive",
+      "activeModalities": ["position", "audio"],
+      "reason": "completed"
+    }
+  ]
+}

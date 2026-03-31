@@ -1,0 +1,386 @@
+{
+  "admin": {
+    "title": "Tableau de bord Admin",
+    "subtitle": "Outils de monitoring et de débogage",
+    "codeLabel": "Code administrateur",
+    "codePlaceholder": "Code admin...",
+    "invalidCode": "Code invalide. Réessayez.",
+    "unlock": "Débloquer",
+    "lock": "Verrouiller",
+    "backHome": "Retour à l'accueil",
+    "gate": {
+      "title": "Accès Admin",
+      "description": "Entrez le code admin pour accéder au tableau de bord.",
+      "placeholder": "Code admin",
+      "submit": "Accéder",
+      "invalidCode": "Code invalide"
+    },
+    "tabs": {
+      "health": "Santé",
+      "events": "Événements",
+      "sync": "Sync",
+      "powersync": "PowerSync",
+      "bot": "Bot",
+      "stress": "Stress",
+      "handwriting": "Écriture",
+      "settings": "Paramètres"
+    },
+    "captureTheme": {
+      "title": "Thème de capture hybride",
+      "description": "Conserve l'identité visuelle normale, mais réduit le flou, les ombres agressives et les quadrillages décoratifs pour des captures plus propres.",
+      "note": "Conçu comme un compromis : plus propre que le thème normal, mais moins aplati qu'un thème de capture extrême.",
+      "enable": "Activer la capture hybride",
+      "disable": "Utiliser le thème normal",
+      "lightMode": "Forcer le mode clair"
+    },
+    "powersync": {
+      "title": "PowerSync / SQLite",
+      "refresh": "Actualiser",
+      "resetVfsPreference": "Réinitialiser la préférence VFS",
+      "healthError": "Erreur de santé",
+      "sync": {
+        "title": "Sync",
+        "status": "Statut",
+        "available": "Disponible",
+        "pending": "En attente",
+        "lastSync": "Dernière synchro",
+        "error": "Erreur",
+        "blockedReason": "Raison du blocage"
+      },
+      "runtime": {
+        "title": "Runtime",
+        "stage": "Étape",
+        "vfsSelected": "VFS (sélectionné)",
+        "vfsPreferred": "VFS (préféré)",
+        "browser": "Navigateur",
+        "platform": "Plateforme",
+        "opfsSupported": "OPFS disponible",
+        "opfsChecks": "Checks OPFS",
+        "activeWatches": "Surveillances actives"
+      },
+      "projections": {
+        "title": "Projections",
+        "endedSessions": "Sessions terminées (emt_messages)",
+        "sessionSummaries": "Résumés de session",
+        "missingSummaries": "Résumés manquants",
+        "lastChecked": "Dernière vérification",
+        "mismatchDetected": "Incohérence détectée : les projections sont en retard sur les événements bruts.",
+        "status": "Statut des projections",
+        "source": "Source de projection",
+        "orphanSummaries": "Résumés orphelins",
+        "error": "Erreur de projection"
+      },
+      "runtimeEventsLatest": "Événements runtime (derniers)",
+      "lifecycle": {
+        "title": "Cycle veille / réveil",
+        "hiddenVisible": "Caché / visible",
+        "pagehidePageshow": "Pagehide / pageshow",
+        "online": "Événements en ligne",
+        "lastBackground": "Dernier arrière-plan",
+        "maxBackground": "Max arrière-plan",
+        "lastHiddenAt": "Dernière mise en veille",
+        "lastVisibleAt": "Dernier réveil"
+      },
+      "reconnect": {
+        "title": "Diagnostics de reconnexion",
+        "attempts": "Tentatives / ok / échouées",
+        "reason": "Dernière raison",
+        "duration": "Dernière durée",
+        "startedAt": "Dernier démarrage",
+        "completedAt": "Dernière complétion",
+        "error": "Dernière erreur"
+      },
+      "memory": {
+        "title": "Mémoire / stockage",
+        "sampledAt": "Échantillonné à",
+        "reason": "Raison",
+        "jsHeapUsed": "Tas JS utilisé",
+        "jsHeapLimit": "Limite du tas JS",
+        "storageUsage": "Utilisation stockage",
+        "storageQuota": "Quota stockage",
+        "deviceMemory": "Mémoire appareil"
+      }
+    },
+    "devPanel": {
+      "titleBot": "Bot dev",
+      "titleSync": "Moniteur de sync",
+      "audio": "Audio",
+      "running": "Actif",
+      "autoCalib": "Auto-calib",
+      "debug": "Debug",
+      "on": "ON",
+      "off": "OFF",
+      "toggleCalib": "Basculer calib",
+      "resetCalib": "Réinitialiser calib",
+      "overallP95": "overall p95",
+      "overallMax": "overall max",
+      "visualPreP95": "visual_pre p95",
+      "audioSyncP95": "audio_sync p95",
+      "calibDelta": "calib Δ",
+      "clampRate": "taux clamp",
+      "noSamplesYet": "Pas encore d'échantillons",
+      "trials": "Essais",
+      "responses": "Réponses",
+      "targetsFound": "Cibles trouvées",
+      "toggleHint": "Ctrl+D pour afficher/masquer"
+    },
+    "sync": {
+      "title": "Synchronisation Audio/Visuel",
+      "description": "Surveille la précision du scheduling audio et lance un test de synchronisation 500ms.",
+      "status": {
+        "ready": "Prêt",
+        "running": "En cours",
+        "preset": "Preset",
+        "autoCalibration": "Auto-calibration"
+      },
+      "audioStatus": "Statut audio",
+      "audioInit": "Init/Reprendre",
+      "audioStop": "Stop",
+      "audioPreset": "Preset audio",
+      "debugTiming": "Debug timing",
+      "on": "ON",
+      "off": "OFF",
+      "enable": "Activer",
+      "disable": "Désactiver",
+      "reset": "Réinitialiser",
+      "calibration": "Calibration visuelle",
+      "diagnostics": "Diagnostics timing",
+      "refresh": "Actualiser",
+      "noDiagnostics": "Aucun diagnostic disponible pour le moment.",
+      "legacyCanonicalization": {
+        "action": "Lancer la canonicalisation legacy",
+        "running": "Canonicalisation...",
+        "success": "Canonicalisation legacy terminée : summary modes={{summary}}, event modes={{events}}, play_context={{playContext}}",
+        "columnAdded": "colonne play_context ajoutée",
+        "failed": "Échec de la canonicalisation legacy"
+      },
+      "rebuild": {
+        "title": "Maintenance des sessions",
+        "description": "Reconstruit tous les résumés de session depuis les événements bruts. À utiliser après un changement de logique de projection/rapport.",
+        "action": "Rebuild complet des résumés",
+        "running": "Rebuild en cours...",
+        "success": "Rebuild terminé : {{count}} sessions reprojetées et refresh des snapshots planifié.",
+        "error": "Le rebuild a échoué",
+        "unavailable": "Persistance indisponible"
+      },
+      "test": {
+        "title": "Test Sync A/V (500ms)",
+        "params": {
+          "bufferMs": "buffer (ms)",
+          "visualOffsetMs": "visualOffset (ms)",
+          "durationMs": "durée (ms)",
+          "interTrialMs": "interTrial (ms)",
+          "trials": "essais"
+        },
+        "stimulusZone": "Zone de stimulus",
+        "running": "En cours...",
+        "start": "Démarrer",
+        "stop": "Arrêter"
+      }
+    },
+    "health": {
+      "title": "Santé des Sessions",
+      "description": "Monitoring des sessions récentes et de leurs métriques de qualité psychométrique.",
+      "sessionDetailsTitle": "Détails de session",
+      "reliabilityScore": "Score de fiabilité",
+      "processingLag": "Latence de traitement",
+      "recentSessions": "Sessions récentes",
+      "loading": "Chargement...",
+      "refresh": "Actualiser",
+      "view": "Voir",
+      "actions": "Actions",
+      "errorTitle": "Erreur",
+      "alertsTitle": "Sessions dégradées",
+      "noSessions": "Aucune session avec métriques de santé",
+      "noSessionsHint": "Jouez une session pour voir les métriques de santé ici.",
+      "sessionId": "ID Session",
+      "date": "Date",
+      "nLevel": "Niveau N",
+      "quality": "Qualité",
+      "score": "Score",
+      "statLabels": {
+        "min": "min",
+        "avg": "moy",
+        "max": "max",
+        "p95": "p95"
+      },
+      "details": "Détails",
+      "alerts": "Alertes de sessions dégradées",
+      "noAlerts": "Aucune alerte — toutes les sessions ont une bonne qualité.",
+      "metrics": {
+        "processingLag": "Latence de traitement",
+        "eventLoopLag": "Latence Event Loop au démarrage",
+        "rtStability": "Stabilité TR (CV)",
+        "focusLoss": "Pertes de focus",
+        "focusLostTime": "Temps total perdu",
+        "freezes": "Blocages",
+        "longTasks": "Tâches longues",
+        "reliabilityScore": "Score de fiabilité"
+      },
+      "quality_high": "Haute",
+      "quality_medium": "Moyenne",
+      "quality_degraded": "Dégradée"
+    },
+    "events": {
+      "searchPlaceholder": "Rechercher... (ex: type:RESPONSE, RT>500)",
+      "clearSearch": "Effacer",
+      "matchCount": "{{matchCount}} / {{totalCount}} événements",
+      "initializingDb": "Initialisation de la base...",
+      "loadingSessions": "Chargement des sessions...",
+      "noSessionsFound": "Aucune session trouvée.",
+      "noSessionsHint": "Jouez une session pour générer un résumé, ou activez la sync cloud pour récupérer votre historique.",
+      "sessionsCount": "{{count}} sessions",
+      "eventsInSelectedSession": "{{count}} événements dans la session sélectionnée",
+      "includeAbandonedOn": "Abandons : oui",
+      "includeAbandonedOff": "Abandons : non",
+      "compare": "Comparer",
+      "clearLocal": "Vider le local",
+      "loadingSelectedSession": "Chargement des événements de la session...",
+      "error": "Erreur",
+      "confirmClearLocalTitle": "Vider la base locale ?",
+      "confirmClearLocalHint": "Si la sync cloud est activée, PowerSync peut retélécharger les événements après la suppression.",
+      "confirmDeleteSessionTitle": "Supprimer cette session ?",
+      "confirmDeleteSessionHint1": "Effectue une suppression logique pour les événements synchronisés (propagé via la sync cloud).",
+      "confirmDeleteSessionHint2": "Les événements locaux uniquement de cette session seront aussi supprimés.",
+      "columns": "Colonnes",
+      "columnGroups": "Groupes de colonnes",
+      "noEventsInSession": "Aucun événement dans cette session",
+      "eventsTitle": "Événements",
+      "eventsTotal": "({{count}} total)",
+      "inspectPayload": "Inspecter le payload brut",
+      "integrity": {
+        "title": "Intégrité du payload d'événements",
+        "envelopeOnly": "Événements enveloppe seule : {{count}} / {{total}}",
+        "hasTrial": "Événements avec données trial : {{count}} / {{total}}",
+        "hint": "Si les événements semblent vides dans la grille/la modale, cliquez sur l'icône bug pour inspecter la chaîne de payload brute stockée."
+      },
+      "rawPayload": {
+        "title": "Extrait de payload brut",
+        "empty": "Aucune ligne trouvée pour cette session."
+      }
+    },
+    "bot": {
+      "title": "Bot de test de gameplay",
+      "description": "Configurez les paramètres du bot et lancez une session avec réponses automatisées. Le bot est aussi disponible en jeu avec Ctrl+D.",
+      "mode": "Mode du bot",
+      "modes": {
+        "off": {
+          "label": "Désactivé",
+          "desc": "Bot désactivé - jeu manuel"
+        },
+        "perfect": {
+          "label": "Parfait",
+          "desc": "100% de précision, toujours correct"
+        },
+        "realistic": {
+          "label": "Réaliste",
+          "desc": "Précision configurable avec variation naturelle"
+        },
+        "random": {
+          "label": "Aléatoire",
+          "desc": "50% de réponses aléatoires pour les tests de stress"
+        }
+      },
+      "config": "Configuration",
+      "quickStart": "Démarrage rapide",
+      "quickStarts": {
+        "dualCatch": "Dual Catch",
+        "activeTraining": "Entraînement actif",
+        "dualPlace": "Dual Place"
+      },
+      "accuracy": "Précision",
+      "responseDelay": "Délai de réponse",
+      "currentConfig": "Config actuelle",
+      "hint": "Les sessions démarreront avec les paramètres du bot configurés. Utilisez Ctrl+D en jeu pour activer/désactiver."
+    },
+    "sessions": {
+      "all": "Tout",
+      "select": "Sélectionnez une session...",
+      "noSessionsFound": "Aucune session trouvée",
+      "sessionsAvailable": "{{count}} sessions disponibles",
+      "events": "{{count}} événements",
+      "sessionsAvailable_one": "{{count}} session disponible",
+      "sessionsAvailable_other": "{{count}} sessions disponibles",
+      "events_one": "{{count}} événement",
+      "events_other": "{{count}} événements",
+      "reasons": {
+        "completed": "terminée",
+        "abandoned": "abandonnée",
+        "error": "erreur"
+      },
+      "modes": {
+        "tempo": "Tempo",
+        "flow": "Dual Place",
+        "recall": "Dual Memo",
+        "dualPick": "Dual Pick",
+        "trace": "Dual Trace"
+      }
+    },
+    "analytics": {
+      "title": "Analyse de session",
+      "reactionTime": "Temps de réaction",
+      "avg": "moy",
+      "min": "min",
+      "max": "max",
+      "accuracy": "Précision",
+      "correct": "Correct",
+      "responsePhase": "Phase de réponse",
+      "during": "Pendant",
+      "after": "Après",
+      "inputMethod": "Méthode d'entrée",
+      "keyboard": "Clavier",
+      "touch": "Tactile",
+      "other": "Autre"
+    },
+    "compare": {
+      "title": "Comparaison de sessions",
+      "syncScroll": "Scroll synchronisé",
+      "sessionA": "Session A",
+      "sessionB": "Session B",
+      "comparisonSummary": "Résumé de comparaison",
+      "avgRt": "TR moyen",
+      "accuracy": "Précision",
+      "duration": "Durée",
+      "loading": "chargement...",
+      "selectSession": "Sélectionnez une session",
+      "timeHeader": "+temps",
+      "typeHeader": "type",
+      "valueHeader": "valeur"
+    },
+    "stress": {
+      "title": "Tests de stress",
+      "description": "Testez la stabilité de l'application sous différentes conditions de charge. Surveillez l'utilisation mémoire et les performances pendant les tests de stress.",
+      "fullTest": "Suite complète de tests",
+      "fullTestDesc": "Accédez à la page dédiée aux tests de stress avec options de tests complètes.",
+      "open": "Ouvrir",
+      "quickTests": "Tests rapides",
+      "tips": "Conseils de test"
+    },
+    "stressRunner": {
+      "title": "Lanceur de tests de stress",
+      "start": "Démarrer",
+      "pause": "Pause",
+      "resume": "Reprendre",
+      "stop": "Arrêter",
+      "progress": "Progression",
+      "completed": "Terminées",
+      "passed": "Réussies",
+      "failed": "Échouées",
+      "passRate": "Taux de réussite",
+      "duration": "Durée",
+      "phase": "Phase",
+      "currentMode": "Mode actuel",
+      "options": "Options",
+      "nLevelRange": "Plage de niveaux N",
+      "trialsRange": "Plage d'essais",
+      "modesToTest": "Modes à tester",
+      "currentlyTesting": "Test en cours",
+      "recentResults": "Résultats récents",
+      "failedSessions": "Sessions échouées ({{count}})",
+      "errors": "Erreurs",
+      "trials": "{{count}} essais",
+      "trials_one": "{{count}} essai",
+      "trials_other": "{{count}} essais"
+    }
+  }
+}

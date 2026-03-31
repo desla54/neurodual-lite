@@ -1,0 +1,42 @@
+# Auto-detect text files and normalize to LF in repo
+* text=auto eol=lf
+
+# Force LF for these file types (even on Windows)
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sql text eol=lf
+*.sh text eol=lf
+*.toml text eol=lf
+
+# Lock files
+bun.lock text eol=lf
+package-lock.json text eol=lf
+
+# Binary files (no conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.webp binary
+*.pdf binary
+
+# Windows-specific (keep CRLF)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

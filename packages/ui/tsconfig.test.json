@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist-test",
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "jsx": "react-jsx",
+    "types": ["bun"],
+    "noPropertyAccessFromIndexSignature": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src/**/*.test.ts", "src/**/*.test.tsx"],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "../logic" }, { "path": "../infra" }, { "path": "." }]
+}

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NeuroDual animated splash icon.
+  Scaled to 0.72 to fit within the Android 12+ circular mask (192dp visible in 288dp area).
+  Animation: circle draws → cells pop → dash draws → breathing pulse loop.
+-->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="288dp"
+            android:height="288dp"
+            android:viewportWidth="100"
+            android:viewportHeight="100">
+
+            <!-- Scale wrapper: 0.72x around center to fit the 192dp circular mask -->
+            <group
+                android:name="root_scale"
+                android:pivotX="50"
+                android:pivotY="50"
+                android:scaleX="0.72"
+                android:scaleY="0.72">
+
+                <!-- Outer circle border -->
+                <path
+                    android:name="circle_border"
+                    android:pathData="M50,6 A44,44,0,1,1,50,94 A44,44,0,1,1,50,6Z"
+                    android:fillColor="@android:color/transparent"
+                    android:strokeColor="#ECEBE6"
+                    android:strokeWidth="1.8"
+                    android:strokeAlpha="0.3"
+                    android:trimPathEnd="0" />
+
+                <!-- 6 outlined cells (always visible) -->
+                <path android:pathData="M46,23 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+                <path android:pathData="M65,23 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+                <path android:pathData="M65,42 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+                <path android:pathData="M46,61 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+                <path android:pathData="M27,61 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+                <path android:pathData="M27,42 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                    android:fillColor="@android:color/transparent" android:strokeColor="#ECEBE6" android:strokeWidth="1.8" android:strokeAlpha="0.3" />
+
+                <!-- Filled cell (0,0) top-left with pulse wrapper -->
+                <group android:name="pulse_0_0" android:pivotX="31" android:pivotY="31">
+                    <group android:name="pop_0_0" android:pivotX="31" android:pivotY="31"
+                        android:scaleX="0" android:scaleY="0">
+                        <path android:pathData="M27,23 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                            android:fillColor="#ECEBE6" />
+                    </group>
+                </group>
+
+                <!-- Filled cell (2,2) bot-right with pulse wrapper -->
+                <group android:name="pulse_2_2" android:pivotX="69" android:pivotY="69">
+                    <group android:name="pop_2_2" android:pivotX="69" android:pivotY="69"
+                        android:scaleX="0" android:scaleY="0">
+                        <path android:pathData="M65,61 h8 a4,4,0,0,1,4,4 v8 a4,4,0,0,1,-4,4 h-8 a4,4,0,0,1,-4,-4 v-8 a4,4,0,0,1,4,-4Z"
+                            android:fillColor="#ECEBE6" />
+                    </group>
+                </group>
+
+                <!-- Amber center dash -->
+                <path
+                    android:name="center_dash"
+                    android:pathData="M47,50 L53,50"
+                    android:fillColor="@android:color/transparent"
+                    android:strokeColor="#f59e0b"
+                    android:strokeWidth="2.5"
+                    android:strokeLineCap="round"
+                    android:trimPathEnd="0" />
+
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- ==================== PHASE 1: SLOW BUILD-UP ==================== -->
+
+    <!-- Circle draws: 0-1000ms -->
+    <target android:name="circle_border">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:duration="1000"
+                android:interpolator="@android:interpolator/decelerate_cubic" />
+        </aapt:attr>
+    </target>
+
+    <!-- Top-left cell pops: 900-1500ms -->
+    <target android:name="pop_0_0">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="900"
+                    android:duration="600"
+                    android:interpolator="@android:interpolator/overshoot" />
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="900"
+                    android:duration="600"
+                    android:interpolator="@android:interpolator/overshoot" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Bot-right cell pops: 1500-2100ms (starts when first cell finishes) -->
+    <target android:name="pop_2_2">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="1500"
+                    android:duration="600"
+                    android:interpolator="@android:interpolator/overshoot" />
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="1500"
+                    android:duration="600"
+                    android:interpolator="@android:interpolator/overshoot" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Amber dash draws: 2100-2500ms (starts when second cell finishes) -->
+    <target android:name="center_dash">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="2100"
+                android:duration="400"
+                android:interpolator="@android:interpolator/decelerate_cubic" />
+        </aapt:attr>
+    </target>
+
+    <!-- ==================== PHASE 2: BREATHING PULSE (loops) ==================== -->
+
+    <target android:name="pulse_0_0">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="1"
+                    android:valueTo="1.08"
+                    android:startOffset="2600"
+                    android:duration="900"
+                    android:repeatCount="-1"
+                    android:repeatMode="reverse"
+                    android:interpolator="@android:interpolator/accelerate_decelerate" />
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="1"
+                    android:valueTo="1.08"
+                    android:startOffset="1300"
+                    android:duration="900"
+                    android:repeatCount="-1"
+                    android:repeatMode="reverse"
+                    android:interpolator="@android:interpolator/accelerate_decelerate" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="pulse_2_2">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="1"
+                    android:valueTo="1.08"
+                    android:startOffset="3000"
+                    android:duration="900"
+                    android:repeatCount="-1"
+                    android:repeatMode="reverse"
+                    android:interpolator="@android:interpolator/accelerate_decelerate" />
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="1"
+                    android:valueTo="1.08"
+                    android:startOffset="3000"
+                    android:duration="900"
+                    android:repeatCount="-1"
+                    android:repeatMode="reverse"
+                    android:interpolator="@android:interpolator/accelerate_decelerate" />
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

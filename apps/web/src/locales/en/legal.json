@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "All rights reserved.",
+    "terms": {
+      "title": "Terms of service",
+      "version": "Version 3.0 — Last updated: 2026-03-04",
+      "healthWarning": {
+        "title": "IMPORTANT HEALTH WARNING",
+        "content": "NeuroDual is a cognitive training and wellness app. <strong>It is not a medical device.</strong> It does not diagnose, treat, cure, or prevent any disease. If you have any concerns or experience discomfort, stop using the app and consult a healthcare professional."
+      },
+      "section1": {
+        "title": "1. Purpose and Acceptance",
+        "content": "By downloading, installing, or using NeuroDual, you unconditionally accept these Terms of Service. If you do not accept these terms, please do not use the application."
+      },
+      "section2": {
+        "title": "2. Service Description",
+        "content": "NeuroDual provides Dual N-Back working memory training, with local data management and synchronization options via an account. The service is provided as-is and may evolve.",
+        "item1": "Compatibility: web and mobile applications (subject to availability).",
+        "item2": "Access: some features require an internet connection and/or account creation.",
+        "item3": "Updates: we may deploy fixes or updates without notice for security or performance reasons.",
+        "item4": "Advertising: the free mobile version may display interstitial ads (Google AdMob). Premium users see no advertising."
+      },
+      "section3": {
+        "title": "3. Accounts and Security",
+        "item1": "Optional account creation via email or identity provider (Google, Apple).",
+        "item2": "You are responsible for maintaining the confidentiality of your credentials and all actions performed with your account.",
+        "item3": "Account and associated data deletion is available from Settings.",
+        "item4": "We may suspend or terminate an account in case of violation of these Terms, fraud attempts, or security breaches."
+      },
+      "section4": {
+        "title": "4. Usage Rules and Restrictions",
+        "item1": "Do not bypass security measures or technical limitations.",
+        "item2": "Do not use the application for illegal or harmful purposes.",
+        "item3": "Do not attempt reverse engineering or unauthorized content extraction.",
+        "item4": "Respect intellectual property rights on the application and its contents."
+      },
+      "section5": {
+        "title": "5. Intellectual Property",
+        "content": "All elements (text, graphics, sounds, source code, logos) are protected by copyright and remain the property of the publisher or its licensors. No license is granted except the personal, non-exclusive, and non-transferable right to use the application in accordance with these Terms."
+      },
+      "section6": {
+        "title": "6. Availability and Support",
+        "content": "The service is accessible 24/7 subject to maintenance or force majeure. We do not guarantee continuous availability or performance. Support: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. In-App Purchases / Subscriptions",
+        "content": "Premium subscriptions are available: annual and lifetime (10 years). Payments are managed by RevenueCat (mobile) or Lemon Squeezy (web). The <strong>Terms of Sale</strong> apply (pricing, withdrawal, renewal, cancellation, refund) and are available before purchase."
+      },
+      "section8": {
+        "title": "8. Liability",
+        "item1": "The service is provided \"as-is\" without warranty of results.",
+        "item2": "We are not responsible for direct or indirect damages related to use, loss of unsaved local data, or interpretation of statistics.",
+        "item3": "If you experience discomfort, adverse effects, or concerns about your health, discontinue use."
+      },
+      "section9": {
+        "title": "9. Personal Data",
+        "content": "Personal data processing is described in the <a>Privacy policy</a>. In case of conflict between the Terms and the Privacy policy regarding data matters, the Privacy policy prevails."
+      },
+      "section10": {
+        "title": "10. Changes to Terms",
+        "content": "We may modify these Terms for legal, technical, or service reasons. The update date will appear at the top of the document. In case of substantial changes, a notification will be displayed in the application."
+      },
+      "section11": {
+        "title": "11. Applicable Law and Disputes",
+        "content": "These Terms are governed by French law. In case of dispute and after amicable attempts, consumer users may use consumer mediation or the European Online Dispute Resolution (ODR) platform. Otherwise, French courts shall have exclusive jurisdiction."
+      },
+      "section12": {
+        "title": "12. Contact",
+        "content": "For any questions regarding these Terms:"
+      }
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "version": "Version 3.0 — Last updated: 2026-03-04",
+      "intro": {
+        "p1": "This Privacy Policy describes how NeuroDual (\"we\", \"our\", \"us\") processes your personal data when you use our mobile application and website.",
+        "p2": "We apply the principles of the General Data Protection Regulation (GDPR) and the French Data Protection Act. We favor a \"local-first\" architecture, do not sell or rent your data, and use audience measurement to improve the product."
+      },
+      "section1": {
+        "title": "1. Data Controller",
+        "responsible": "Controller:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Registered office:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, France",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Email:",
+        "dpo": "DPO: AGUILAL Abdeslam (same contact). For any questions about your data, contact the address above."
+      },
+      "section2": {
+        "title": "2. Data We Collect",
+        "sub1": {
+          "title": "2.1 User-Generated Data (Local Mode)",
+          "content": "Stored only on your device via SQLite while you remain logged out:",
+          "item1": "Scores and N-Back session history.",
+          "item2": "Game configuration settings.",
+          "item3": "Local profile (nickname, chosen avatar).",
+          "note": "This data does not pass through our servers until you create an account. If you uninstall the app, this data is lost."
+        },
+        "sub2": {
+          "title": "2.2 Account Data (Optional)",
+          "content": "If you create an account to sync your data:",
+          "item1": "Email address (unique identifier).",
+          "item2": "User ID provided by the identity provider (Google, Apple).",
+          "note": "This data is managed through our authentication provider (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Technical Logs",
+          "content": "Pseudonymized logs (errors, sync status, performance) for security and support."
+        },
+        "sub4": {
+          "title": "2.4 Support Data",
+          "content": "Email exchanges with support may contain your contact details and request content in order to respond."
+        },
+        "sub5": {
+          "title": "2.5 Monitoring and Error Tracking",
+          "content": "Technical data (errors, performance, abnormal behavior) collected via Sentry to improve application stability. Pseudonymized data, no advertising targeting."
+        },
+        "sub6": {
+          "title": "2.6 Audience Measurement and Product Analytics",
+          "content": "Anonymized usage data collected via PostHog (pages visited, in-app actions, device type) to improve the product. No personally identifiable data is transmitted. No advertising targeting."
+        },
+        "sub7": {
+          "title": "2.7 Advertising (Free Mobile Version)",
+          "content": "The free Android version displays interstitial ads via Google AdMob. Google may collect an advertising identifier and technical data (device type, language, ad interactions). Premium users are not exposed to advertising. For more information: Google Ads privacy policy."
+        }
+      },
+      "section3": {
+        "title": "3. Purposes and Legal Bases",
+        "content": "We use your data only for:",
+        "item1": "<strong>Service operation</strong> (local backup, statistics, multi-device sync) — Legal basis: contract performance (Art. 6.1.b GDPR).",
+        "item2": "<strong>Security and fraud prevention</strong> (technical logging, access control) — Legal basis: legitimate interest (Art. 6.1.f GDPR).",
+        "item3": "<strong>User support</strong> — Legal basis: legitimate interest (responding to requests).",
+        "item4": "<strong>Legal obligations</strong> — Legal basis: legal obligation (Art. 6.1.c GDPR).",
+        "item5": "<strong>Monitoring and error tracking</strong> — Legal basis: legitimate interest (stability improvement); pseudonymized data, no personalized advertising.",
+        "item6": "<strong>Audience measurement</strong> (anonymized product analytics via PostHog) — Legal basis: legitimate interest (Art. 6.1.f GDPR); anonymized data.",
+        "note": "Any change in purpose will be documented in an update to this policy.",
+        "item7": "<strong>Advertising</strong> (display of interstitial ads for free mobile users) — Legal basis: legitimate interest (Art. 6.1.f GDPR).",
+        "item8": "<strong>Marketing and newsletters</strong> — Legal basis: explicit consent (Art. 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Retention Periods",
+        "item1": "<strong>Local data:</strong> stored on your device and deleted upon uninstallation or reset.",
+        "item2": "<strong>Account and synced data:</strong> retained while the account is active. Deleted within 30 days of account deletion request.",
+        "item3": "<strong>Technical logs:</strong> retained for a maximum of 12 months, then automatically deleted.",
+        "item4": "<strong>Monitoring:</strong> pseudonymized technical data retained for 90 days for error tracking and product improvement.",
+        "item5": "<strong>Support requests:</strong> retained for 24 months after ticket closure, then deleted.",
+        "item6": "<strong>Audience data (PostHog):</strong> anonymized, retained for 12 months."
+      },
+      "section5": {
+        "title": "5. Recipients, Processors, and Transfers",
+        "content": "Your data may be processed by the following providers:",
+        "item1": "Supabase Inc. (authentication and cloud database, EU hosting).",
+        "item2": "Amazon Web Services (Supabase infrastructure, EU regions).",
+        "item3": "Cloudflare Inc. (web application hosting, CDN, and security).",
+        "item4": "Sentry (error and performance monitoring; non-EU transfers governed by Standard Contractual Clauses).",
+        "item5": "RevenueCat Inc. (mobile subscription and in-app payment management; does not store credit card data).",
+        "note": "If a new provider is added, this section will be updated.",
+        "transfers": "<strong>Non-EU transfers:</strong> when providers outside the EU are involved (e.g., Cloudflare, Supabase US entity, Sentry, RevenueCat, Google AdMob), transfers are governed by the European Commission's Standard Contractual Clauses (SCC) or an equivalent mechanism.",
+        "item6": "PostHog Inc. (audience measurement and product analytics; anonymized data; EU hosting).",
+        "item7": "Lemon Squeezy (web payment management; does not store credit card data).",
+        "item8": "Google AdMob (advertising display on free mobile version; non-EU transfers governed by Standard Contractual Clauses)."
+      },
+      "section6": {
+        "title": "6. Your Rights",
+        "content": "Under the GDPR, you have the following rights:",
+        "item1": "Access, rectification, erasure.",
+        "item2": "Restriction and objection (depending on legal basis).",
+        "item3": "Portability (export your data in JSON or CSV).",
+        "item4": "Withdrawal of consent (where applicable).",
+        "item5": "Complaint to the supervisory authority (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Account deletion:</strong> you can delete your account and all associated data directly from the application Settings. This action is irreversible.",
+        "exercise": "To exercise your other rights, contact <strong>support@neurodual.fr</strong>. Proof of identity may be requested in case of reasonable doubt. Response time: 1 month (extendable to 3 months in complex cases)."
+      },
+      "section7": {
+        "title": "7. Security",
+        "content": "Encrypted communications (HTTPS/TLS), restricted administrator access, permission controls. In case of a data breach likely to pose a risk, legal notifications will be made (CNIL and affected individuals)."
+      },
+      "section8": {
+        "title": "8. Cookies and Local Storage",
+        "content": "The application uses SQLite to store your progress directly on your device. Only essential technical cookies (authentication, session) are used. The free mobile version uses Google AdMob which may set cookies or advertising identifiers."
+      },
+      "section9": {
+        "title": "9. Minors",
+        "content": "NeuroDual is intended for users over 16 years old. Minors must use the application under the responsibility of a legal guardian."
+      },
+      "section10": {
+        "title": "10. Changes",
+        "content": "Any updated version will be published here with the last update date. In case of substantial changes, a notification will be provided in the application."
+      },
+      "section11": {
+        "title": "11. Contact",
+        "content": "For any questions or to exercise your rights:",
+        "email": "Email: support@neurodual.fr",
+        "responsible": "Data Controller: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Terms of Sale",
+      "version": "Annual and lifetime subscriptions — Last updated: 2026-03-04",
+      "section1": {
+        "title": "1. Purpose",
+        "content": "These Terms of Sale govern the subscription to NeuroDual premium plans (annual and lifetime). They complement the <a1>Terms of Service</a1> and the <a2>Privacy Policy</a2>."
+      },
+      "section2": {
+        "title": "2. Offer and Pricing",
+        "item1": "<strong>Annual subscription</strong>: price displayed before payment (including tax if applicable), automatically renewed each year.",
+        "item2": "<strong>Lifetime subscription (10 years)</strong>: one-time payment granting access to premium features for 10 years without automatic renewal.",
+        "item3": "Premium access: multi-device cloud sync, remote backups, access to all N-levels, advanced exports, ad-free experience, priority support.",
+        "item4": "Current prices are available on the in-app subscription page and on the stores (App Store, Google Play).",
+        "item5": "Prices may change; any modification is communicated before renewal to allow cancellation (not applicable to lifetime)."
+      },
+      "section3": {
+        "title": "3. Duration, Renewal, and Cancellation",
+        "item1": "<strong>Annual subscription</strong>: 12-month duration from the subscription date.",
+        "item2": "<strong>Lifetime subscription</strong>: 10-year duration from the subscription date, no renewal.",
+        "item3": "Renewal (annual): automatic renewal at each term unless cancelled in advance.",
+        "item4": "Cancellation (annual): possible at any time from the app or store settings (App Store, Google Play). Takes effect at the end of the current period.",
+        "item5": "Lifetime is non-cancellable but remains subject to the legal withdrawal right (see section 5)."
+      },
+      "section4": {
+        "title": "4. Payment",
+        "item1": "Payments are managed by RevenueCat via stores (App Store, Google Play) or Lemon Squeezy for web. We do not store your credit card data.",
+        "item2": "In case of payment failure (recurring subscriptions), premium access may be suspended until resolved.",
+        "item3": "Refunds for purchases via App Store or Google Play must be requested from the respective store."
+      },
+      "section5": {
+        "title": "5. Right of Withdrawal",
+        "content": "Digital service provided after purchase. If you request immediate execution before the end of the 14-day legal period, you acknowledge waiving your right of withdrawal upon full service delivery. Without express waiver, you may exercise the right of withdrawal within 14 days of purchase by writing to support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Refund",
+        "content": "Outside the legal right of withdrawal, subscriptions already started are not refundable except for mandatory provisions or major defects attributable to the service."
+      },
+      "section7": {
+        "title": "7. Offer Changes",
+        "content": "Premium features may evolve. Any removal of an essential feature will be communicated in advance and, if applicable, with an option to cancel without charge before the term."
+      },
+      "section8": {
+        "title": "8. Personal Data",
+        "content": "Processing of billing and account data is detailed in the <a>Privacy Policy</a>."
+      },
+      "section9": {
+        "title": "9. Customer Service",
+        "content": "For any questions, refunds under the right of withdrawal, or complaints:"
+      }
+    },
+    "mentions": {
+      "title": "Legal notice",
+      "version": "Last updated:",
+      "section1": {
+        "title": "1. Publisher",
+        "company": "Company name:",
+        "companyValue": "AGUILAL Abdeslam (Sole proprietorship)",
+        "address": "Address:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, France",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Email:"
+      },
+      "section2": {
+        "title": "2. Publication Director",
+        "name": "AGUILAL Abdeslam",
+        "email": "Email:"
+      },
+      "section3": {
+        "title": "3. Hosting",
+        "content": "The NeuroDual application is hosted by:",
+        "webapp": "Web Application",
+        "database": "Database and Authentication",
+        "databaseInfra": "Infrastructure: Amazon Web Services (EU region - eu-central-1)",
+        "monitoring": "Monitoring and Error Tracking",
+        "subscriptions": "Subscription management",
+        "analytics": "Audience measurement",
+        "analyticsInfra": "EU hosting",
+        "advertising": "Advertising (free mobile version)",
+        "payments": "Web payments",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Intellectual Property",
+        "p1": "All elements of the NeuroDual application (text, graphics, sounds, source code, logos, trademarks) are protected by copyright and trademark law. Any unauthorized reproduction, representation, or exploitation is prohibited.",
+        "p2": "The source code of certain features uses open source libraries whose respective licenses are honored."
+      },
+      "section5": {
+        "title": "5. Personal Data",
+        "content": "Personal data processing is described in our <a>Privacy policy</a>.",
+        "responsible": "Data Controller:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediation and Dispute Resolution",
+        "p1": "In accordance with Articles L.611-1 et seq. of the French Consumer Code, consumer users may, in case of unresolved dispute after prior complaint to our customer service, resort free of charge to a consumer mediator.",
+        "odr": "European Online Dispute Resolution (ODR) platform:"
+      },
+      "section7": {
+        "title": "7. Legal Documents",
+        "privacy": "Privacy policy",
+        "privacyNote": "(GDPR)",
+        "terms": "Terms of service",
+        "termsNote": "(ToS)",
+        "cgv": "Terms of sale",
+        "cgvNote": "(Sales)"
+      },
+      "section8": {
+        "title": "8. Contact",
+        "content": "For any questions regarding this legal notice:",
+        "email": "Email:"
+      }
+    }
+  }
+}

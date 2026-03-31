@@ -1,0 +1,12 @@
+export { sessionRecoveryAdapter } from './session-recovery-adapter';
+export { replayRecoveryAdapter } from './replay-recovery-adapter';
+export { tutorialRecoveryAdapter } from './tutorial-recovery-adapter';
+export { diagnosticsAdapter } from './diagnostics-adapter';
+export { settingsSyncAdapter } from './settings-sync-adapter';
+export { deepLinkAdapter } from './deep-link-adapter';
+export { infraProbeAdapter } from './infra-probe-adapter';
+export { oauthCallbackAdapter } from './oauth-callback-adapter';
+export { eventReaderFactoryAdapter } from './event-reader-factory-adapter';
+export { adminHistoryMaintenanceAdapter } from './admin-history-maintenance-adapter';
+export { sessionPipelineFactoryAdapter } from './session-pipeline-factory-adapter';
+export { persistenceHealthAdapter } from './persistence-health-adapter';

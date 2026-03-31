@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.neurodual.app",
+      "sha256_cert_fingerprints": [
+        "CA:AE:B9:69:1C:D5:18:80:C3:E3:7A:65:9F:24:44:8E:19:71:43:CC:70:EE:28:B3:52:12:08:76:E4:B1:E1:E6"
+      ]
+    }
+  }
+]

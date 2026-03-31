@@ -1,0 +1,16 @@
+# Neurodual - robots.txt
+# https://neurodual.com
+
+User-agent: *
+Allow: /
+
+# Pages de jeu (pas besoin d'indexer les états de jeu)
+Disallow: /game
+Disallow: /active-training
+Disallow: /flow
+Disallow: /dual-label
+Disallow: /trace
+Disallow: /replay
+
+# Sitemap
+Sitemap: https://neurodual.com/sitemap.xml

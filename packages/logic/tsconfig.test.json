@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist-test",
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "types": ["bun"],
+    "noPropertyAccessFromIndexSignature": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src/**/*.test.ts", "src/test-utils/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "." }]
+}

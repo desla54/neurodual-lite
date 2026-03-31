@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/logic" },
+    { "path": "./packages/infra" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/web" }
+  ]
+}

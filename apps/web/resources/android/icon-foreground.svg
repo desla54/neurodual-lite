@@ -1,0 +1,40 @@
+<svg width="432" height="432" viewBox="0 0 432 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Adaptive icon foreground - icon centered in safe zone -->
+  <!-- Safe zone is 66% of canvas = 285px, centered -->
+
+  <g transform="translate(216, 216) scale(1.8)">
+    <!-- Cercle extérieur - trait fin -->
+    <circle
+      cx="0"
+      cy="0"
+      r="44"
+      stroke="#787570"
+      stroke-width="1.5"
+      fill="none"
+      opacity="0.4"
+    />
+
+    <!-- Grille 3x3 - centrée -->
+    <g transform="translate(-28.5, -28.5)">
+      <!-- Case 0,0 - active -->
+      <rect x="0" y="0" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="#1A1815"/>
+      <!-- Case 1,0 -->
+      <rect x="19" y="0" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 2,0 -->
+      <rect x="38" y="0" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 0,1 -->
+      <rect x="0" y="19" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 2,1 -->
+      <rect x="38" y="19" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 0,2 -->
+      <rect x="0" y="38" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 1,2 -->
+      <rect x="19" y="38" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <!-- Case 2,2 - active -->
+      <rect x="38" y="38" width="16" height="16" rx="4" stroke="#1A1815" stroke-width="1.5" fill="#1A1815"/>
+
+      <!-- Trait focus central -->
+      <line x1="24" y1="27" x2="30" y2="27" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

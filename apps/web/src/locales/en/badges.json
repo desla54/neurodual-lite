@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Consistency",
+      "performance": "Performance",
+      "resilience": "Resilience",
+      "exploration": "Exploration",
+      "milestone": "Milestones",
+      "cognitive": "Cognitive"
+    },
+    "first_session": {
+      "name": "Awakened Neuron",
+      "description": "First session completed."
+    },
+    "sessions_10": {
+      "name": "Pillar (Bronze)",
+      "description": "10 sessions completed."
+    },
+    "sessions_25": {
+      "name": "Pillar (Silver)",
+      "description": "25 sessions completed."
+    },
+    "marathoner": {
+      "name": "Pillar (Gold)",
+      "description": "50 sessions completed."
+    },
+    "streak_3": {
+      "name": "Nascent Ritual",
+      "description": "3-day streak."
+    },
+    "streak_7": {
+      "name": "Daily Ritual",
+      "description": "7-day streak."
+    },
+    "streak_14": {
+      "name": "Anchored Habit",
+      "description": "14-day streak."
+    },
+    "streak_30": {
+      "name": "Iron Discipline",
+      "description": "30-day streak."
+    },
+    "early_bird": {
+      "name": "Early Bird",
+      "description": "5 different days with session before 8am."
+    },
+    "night_owl": {
+      "name": "Night Owl",
+      "description": "5 different days with session after 10pm."
+    },
+    "brain_n3": {
+      "name": "Sharp Brain",
+      "description": "Reach level N-3."
+    },
+    "brain_n4": {
+      "name": "Muscular Brain",
+      "description": "Reach level N-4."
+    },
+    "brain_n5": {
+      "name": "Olympic Brain",
+      "description": "Reach level N-5."
+    },
+    "brain_n7": {
+      "name": "Cognitive Elite",
+      "description": "Reach level N-7."
+    },
+    "brain_n10": {
+      "name": "Superhuman",
+      "description": "Reach level N-10."
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "> 90% accuracy at N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Surgical Precision",
+      "description": "> 95% accuracy at N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% accuracy at N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Untouchable",
+      "description": "Perfect session (0 errors) at N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Quick Reflex",
+      "description": "Average reaction time < 500ms with ≥70% accuracy."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Average reaction time < 400ms with ≥70% accuracy."
+    },
+    "rt_300": {
+      "name": "Lightning",
+      "description": "Average reaction time < 300ms with ≥70% accuracy."
+    },
+    "consistent": {
+      "name": "Consistent",
+      "description": "RT standard deviation < 100ms (≥10 responses required)."
+    },
+    "dprime_master": {
+      "name": "d' Master",
+      "description": "d-prime > 3.0 in a session."
+    },
+    "dprime_4": {
+      "name": "SDT Expert",
+      "description": "d-prime > 4.0 in a session."
+    },
+    "no_pause": {
+      "name": "Uninterrupted",
+      "description": "5 consecutive sessions without pause with ≥75% accuracy."
+    },
+    "steady_hands": {
+      "name": "Steady Hands",
+      "description": "No false inputs during session (≥80% accuracy)."
+    },
+    "zen_master": {
+      "name": "Zen Master",
+      "description": "10 sessions without ever quitting."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "Level up after a level down."
+    },
+    "persistent": {
+      "name": "Persistent",
+      "description": "3 sessions the same day after a failure."
+    },
+    "second_wind": {
+      "name": "Second Wind",
+      "description": "Improve d-prime between half 1 and 2 (d′ ≥ 2.0 required)."
+    },
+    "plateau_breaker": {
+      "name": "Plateau Breaker",
+      "description": "Progress after 10+ sessions at the same level."
+    },
+    "no_surrender": {
+      "name": "No Surrender",
+      "description": "25 sessions without quitting."
+    },
+    "ironwill": {
+      "name": "Iron Will",
+      "description": "50 sessions without quitting."
+    },
+    "audiophile": {
+      "name": "Audiophile",
+      "description": "Audio > 80% but Visual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Eagle Eye",
+      "description": "Visual > 80% but Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Synchronized",
+      "description": "Audio and Visual scores within 5% (≥60% required)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio AND Visual > 85% in the same session (≥6 lures/modality)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio AND Visual > 90% in the same session at N ≥ 3 (≥6 lures/modality)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 sessions completed."
+    },
+    "sessions_250": {
+      "name": "Legend (Emerald)",
+      "description": "250 sessions completed."
+    },
+    "sessions_500": {
+      "name": "Immortal (Diamond)",
+      "description": "500 sessions completed."
+    },
+    "trials_500": {
+      "name": "Practitioner",
+      "description": "500 total trials played."
+    },
+    "trials_1000": {
+      "name": "Trained",
+      "description": "1,000 total trials played."
+    },
+    "trials_5000": {
+      "name": "Seasoned",
+      "description": "5,000 total trials played."
+    },
+    "trials_10k": {
+      "name": "10,000 Trials",
+      "description": "10,000 total trials played."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "50,000 total trials played."
+    },
+    "streak_90": {
+      "name": "Flawless Quarter",
+      "description": "90-day streak."
+    },
+    "streak_365": {
+      "name": "Perfect Year",
+      "description": "365-day streak."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 year of usage."
+    },
+    "metronome": {
+      "name": "The Metronome",
+      "description": "RT variance < 50ms on ≥20 trials (active responses required)."
+    },
+    "flow_state": {
+      "name": "State of Grace",
+      "description": "Flow detected across an entire session."
+    },
+    "sang_froid": {
+      "name": "Cool Head",
+      "description": "No error cascade after an error (≥70% accuracy)."
+    },
+    "imperturbable": {
+      "name": "Unshakeable",
+      "description": "Full session without losing focus (≥60% accuracy)."
+    },
+    "comeback_strong": {
+      "name": "Strong Comeback",
+      "description": "Beat your d-prime record after 3+ days away (d′ ≥ 2.5)."
+    }
+  }
+}

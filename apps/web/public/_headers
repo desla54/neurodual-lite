@@ -1,0 +1,30 @@
+# Cloudflare Pages Headers
+# PWA offline-first: keep HTML/SW/manifest fresh, cache hashed assets forever
+
+# Security headers (all routes)
+# Note: COEP removed - OPFSCoopSyncVFS doesn't require COI headers,
+# and require-corp/credentialless block third-party resources (Supabase, Sentry)
+/*
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-QjGxxMAUAluNlit/l4SDFUQ+gD8J0klgZU7rTJTXrN4=' 'sha256-8kC81AUTdf3BmvDwBesc9htaWeafqhSUvJTt/U2t3nI=' 'sha256-0+kFUqB/s/9c5rU2l99m3oqH7RGSmLUZ/1WJrnWEOEU=' https://*.sentry.io https://challenges.cloudflare.com https://eu.i.posthog.com https://eu-assets.i.posthog.com https://pagead2.googlesyndication.com https://*.googleadservices.com https://adservice.google.com https://www.googletagmanager.com https://*.adtrafficquality.google; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://pagead2.googlesyndication.com https://*.google.com https://*.doubleclick.net; font-src 'self' data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://sync.neurodual.fr wss://sync.neurodual.fr https://*.sentry.io https://*.ingest.sentry.io https://eu.i.posthog.com https://eu-assets.i.posthog.com https://pagead2.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google; frame-src https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://*.doubleclick.net https://googleads.g.doubleclick.net; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Cache-Control: no-cache
+
+# Hashed assets - cache forever
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Ensure SW + manifest are always revalidated
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# Android App Links verification
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: no-cache

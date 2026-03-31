@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Training path",
+    "pageSubtitle": "Choose, organize and create your journeys",
+    "enabled": "Enable training path",
+    "description": "30 progressive stages from N-1 to N-10",
+    "progress": "Progress",
+    "locked": "Locked",
+    "createJourney": "Create a journey",
+    "viewJourneys": "View journeys",
+    "current": "Current journey",
+    "myJourneys": "My journeys",
+    "stage": "Stage",
+    "stages": "stages",
+    "stagesShort": "st.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "Name",
+    "namePlaceholder": "E.g. N-5 Challenge",
+    "levels": "Levels",
+    "levelRange": "Level range",
+    "levelTo": "to",
+    "createNew": "New journey",
+    "new": "New",
+    "defaultCustomName": "My journey",
+    "created": "Journey created!",
+    "deleted": "Journey deleted",
+    "sessionSettings": "Session settings",
+    "savedStatus": "Settings saved",
+    "preset": {
+      "easy": "Easy",
+      "medium": "Recommended",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "Journey & profiles",
+      "journey": "Journey",
+      "journeyNone": "Select…",
+      "profile": "Profile",
+      "profileNone": "Select…",
+      "configure": "Configure",
+      "configureNone": "Select a journey",
+      "create": "New journey",
+      "createDesc": "Create a new journey"
+    },
+    "deleteConfirmTitle": "Delete this journey?",
+    "deleteConfirmMessage": "The journey \"{{name}}\" will be permanently deleted.",
+    "renameTitle": "Rename this journey",
+    "renameMessage": "Edit the name of \"{{name}}\".",
+    "renamed": "Journey renamed.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Default"
+    },
+    "mode": "Mode",
+    "modeStandard": "Journey (4 modes)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Classic",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} validating session(s)",
+      "needed": "{{count}} session(s) remaining",
+      "excellent": "Excellent!",
+      "good": "Good!",
+      "passing": "Passed"
+    },
+    "progression": {
+      "title": "Progression",
+      "description": "To advance to the next level, achieve a good score:",
+      "excellent": "≥95% → 1 session",
+      "good": "≥85% → 2 sessions",
+      "passing": "≥80% → 3 sessions",
+      "rules": "Progression rules",
+      "jaeggi": {
+        "description": "Based on the weakest modality:",
+        "up": "< 3 errors → Level up",
+        "stay": "3 to 5 errors → Stay at this level",
+        "down": "> 5 errors → Level down"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop protocol (BW score):",
+        "up": "≥80% → Level up",
+        "stay": "50-79% → Stay at level",
+        "strike": "3 consecutive scores <50% → Level down"
+      },
+      "hybrid": {
+        "description": "This journey runs {{trackCount}} Dual Track session(s), then {{dnbCount}} Dual N-Back session(s) at the same level.",
+        "alternation": "The loop always restarts with Dual Track whenever a decision is reached.",
+        "authority": "Only Dual N-Back sessions decide up, stay, or down.",
+        "up": "0-1 error → Level up",
+        "stay": "2-3 errors → Stay",
+        "down": "4+ errors → Level down",
+        "streakRule": "Two sessions in a row in the same zone trigger the decision.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Validated {{current}}/{{required}}",
+        "stayProgress": "Hold {{current}}/{{required}}",
+        "downProgress": "Fail {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track uses a continuous mastery bar for each target-count stage:",
+        "calibration": "A first calibration estimates your starting target count",
+        "goodSession": "Each good session fills the current stage a little",
+        "mastery": "Near-perfect sessions fill it faster, but ordinary sessions stay modest",
+        "regression": "Weak sessions can also make the current mastery bar go down",
+        "unlock": "The next target count unlocks only when the current stage reaches 100%"
+      }
+    },
+    "switcher": {
+      "open": "Open journey switcher",
+      "current": "Current",
+      "showAll": "All journeys",
+      "settings": "Journey settings"
+    },
+    "previous": "Previous journey",
+    "next": "Next journey",
+    "calibration": {
+      "title": "First session",
+      "subtitle": "A short calibration will determine your starting level, or you can start directly at level 2.",
+      "skipToN2": "or start at N-2",
+      "continueAt": "or continue at N-{{level}}",
+      "start": "Start calibration",
+      "redo": "Redo calibration",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "Custom",
+      "currentSlotView": "Custom",
+      "lockedTitle": "Some options are locked",
+      "lockedDesc": "To keep progression comparable, modalities (and a few options) can’t change after the journey has started."
+    },
+    "completed": {
+      "title": "Journey completed!",
+      "subtitle": "All stages validated. Well done!",
+      "continueFree": "Continue training"
+    },
+    "report": {
+      "stage": "Stage",
+      "level": "Level",
+      "score": "Score",
+      "sessionValidated": "Session validated!",
+      "sessionNotValidated": "Session not validated",
+      "minScore": "Minimum required:",
+      "stageCompleted": "Stage completed!",
+      "stageUnlocked": "Stage {{stage}} unlocked!",
+      "replay": "Replay",
+      "nextStage": "Next stage",
+      "home": "Home",
+      "hits": "Hits",
+      "misses": "Misses",
+      "falseAlarms": "False alarms",
+      "correctRejections": "Correct rejections"
+    }
+  }
+}
