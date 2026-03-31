@@ -13,25 +13,26 @@ export function getActivePowerSyncWatchSubscriptions(): number {
 
 export function watchUserDeletedSessions(
   _db: AbstractPowerSyncDatabase,
-  _userIds: readonly string[],
-  _callback: (rows: unknown[]) => void,
+  _userIds: string | readonly string[],
+  _callback: (rows: Array<{ id: string; session_id: string; [key: string]: unknown }>) => void,
 ): () => void {
   return () => {};
 }
 
 export function watchUserEventSignalsByTypes(
   _db: AbstractPowerSyncDatabase,
-  _userIds: readonly string[],
+  _userIds: string | readonly string[],
   _types: readonly string[],
-  _callback: (rows: unknown[]) => void,
+  _optionsOrCallback?: unknown,
+  _callback?: (rows: unknown[]) => void,
 ): () => void {
   return () => {};
 }
 
 export function watchUserResets(
   _db: AbstractPowerSyncDatabase,
-  _userIds: readonly string[],
-  _callback: (rows: unknown[]) => void,
+  _userIds: string | readonly string[],
+  _callback: (rows: Array<{ reset_at?: string; [key: string]: unknown }>) => void,
 ): () => void {
   return () => {};
 }

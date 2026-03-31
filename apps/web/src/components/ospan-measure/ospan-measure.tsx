@@ -6,10 +6,10 @@
  */
 
 import { cn, useEffectiveUserId } from '@neurodual/ui';
-import { type ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
-import { usePowerSyncWatch } from '../../hooks/use-powersync-watch';
+import { useAppPorts } from '../../providers';
 import { ModeCard } from '../mode-card/mode-card';
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -460,17 +460,28 @@ export function OspanMeasure({ onClose }: OspanMeasureProps): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const userId = useEffectiveUserId();
+  const { persistence } = useAppPorts();
 
   // Query OSpan sessions from session_summaries
-  const sessionsQuery = usePowerSyncWatch<OspanSessionRecord>(
-    `SELECT session_id, n_level, accuracy, created_at, duration_ms, trials_count, total_hits,
-            global_d_prime AS processing_accuracy, absolute_score
-     FROM session_summaries
-     WHERE user_id IN (?, 'local') AND session_type = 'ospan' AND reason = 'completed'
-     ORDER BY created_at ASC`,
-    [userId],
-  );
-  const sessions = sessionsQuery.data.filter((s) => s.n_level > 0);
+  const [sessions, setSessions] = useState<OspanSessionRecord[]>([]);
+
+  const loadSessions = useCallback(() => {
+    persistence
+      ?.query<OspanSessionRecord>(
+        `SELECT session_id, n_level, accuracy, created_at, duration_ms, trials_count, total_hits,
+                global_d_prime AS processing_accuracy, absolute_score
+         FROM session_summaries
+         WHERE user_id IN (?, 'local') AND session_type = 'ospan' AND reason = 'completed'
+         ORDER BY created_at ASC`,
+        [userId],
+      )
+      .then((result) => setSessions((result.rows ?? []).filter((s) => s.n_level > 0)))
+      .catch(() => {});
+  }, [persistence, userId]);
+
+  useEffect(() => {
+    loadSessions();
+  }, [loadSessions]);
   const validSessions = sessions.filter((s) => s.processing_accuracy >= PROCESSING_THRESHOLD);
   const lastSession = validSessions.length > 0 ? validSessions[validSessions.length - 1] : null;
   const bestSpan = validSessions.length > 0 ? Math.max(...validSessions.map((s) => s.n_level)) : 0;

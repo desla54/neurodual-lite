@@ -25,6 +25,14 @@ export function isPowerSyncInitialized(): boolean {
   return _db !== null;
 }
 
+/**
+ * Opens (returns) the PowerSync database singleton.
+ * In Lite mode this simply returns the previously-set database.
+ */
+export async function openPowerSyncDatabase(): Promise<AbstractPowerSyncDatabase> {
+  return getPowerSyncDatabase();
+}
+
 export async function closePowerSyncDatabase(): Promise<void> {
   if (_db) {
     try {

@@ -6,10 +6,9 @@
  * All auth calls return 'unauthenticated' / null.
  */
 
-export interface AuthState {
-  status: 'authenticated' | 'unauthenticated';
-  session: { user: { id: string } } | null;
-}
+export type AuthState =
+  | { status: 'authenticated'; session: { user: { id: string } } }
+  | { status: 'unauthenticated'; session: null };
 
 export interface SubscriptionState {
   tier: string;

@@ -20,7 +20,7 @@ import { ErrorBoundary } from './components/error-boundary';
 import { JourneyExpansionHandler } from './components/journey-expansion-handler';
 import { LanguageSync } from './components/language-sync';
 import { ReducedMotionSync } from './components/reduced-motion-sync';
-import { SynergyLoopSync } from './components/synergy/synergy-loop-sync';
+
 import { ChallengeDayValidationObserver } from './components/challenge-day-validation-observer';
 import { TrainingRemindersSync } from './components/training-reminders-sync';
 import { PWAPrompts } from '@pwa-prompts';
@@ -174,7 +174,7 @@ function AppWithJourneyConfig() {
     <DevRenderProfiler id="AppWithJourneyConfig">
       <NeurodualQueryProvider adapters={adapters} journeyConfig={journeyConfig}>
         <JourneyExpansionHandler />
-        <SynergyLoopSync />
+
         <StatsProvider value={injectedAdapters.stats}>
           <ReplayInteractifProvider value={replayInteractif}>
             <AppContent />
