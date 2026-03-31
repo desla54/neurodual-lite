@@ -1625,12 +1625,7 @@ export {
   buildTraceSessionConfig,
   // Tutorial Specs
   ClassicTutorialSpec,
-  PlaceTutorialSpec,
-  PickTutorialSpec,
-  TraceTutorialSpec,
-  MemoTutorialSpec,
   TutorialSpecs,
-  AllTutorialSpecs,
   getTutorialSpec,
   TUTORIAL_HUB_ORDER,
   // Modality UI Helpers

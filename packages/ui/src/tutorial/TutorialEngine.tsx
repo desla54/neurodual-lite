@@ -22,10 +22,8 @@ import { cn } from '../lib/utils';
 import { Button } from '../primitives/button';
 import { CanvasWeave } from '../primitives/canvas-weave';
 import { AnnotationZone } from './AnnotationZone';
-import { DualPickControls } from './dual-pick-controls';
-import { TraceTutorialControls } from './trace-tutorial-controls';
-import { PlaceTutorialControls } from './place-tutorial-controls';
-import { MemoTutorialControls } from './memo-tutorial-controls';
+// NeuroDual Lite: Only classic (dual-catch) tutorial controls are used.
+// DualPickControls, TraceTutorialControls, PlaceTutorialControls, MemoTutorialControls removed.
 import type { GsapTimelineHandle } from './gsap-timeline';
 import { GsapTimeline } from './gsap-timeline';
 import { useTutorialLayout } from './hooks/use-tutorial-layout';
@@ -1209,50 +1207,7 @@ export function TutorialEngine({
               isAssessment ? 'pb-safe' : '',
             )}
           >
-            {isTrace ? (
-              <TraceTutorialControls
-                expectedSwipe={currentStep?.expectedSwipe}
-                positionResponded={tracePositionResponded}
-                audioResponded={traceAudioResponded}
-                onPositionTap={handleTracePositionTap}
-                onAudioTap={handleTraceAudioTap}
-                disabled={isWaiting || !isResponse}
-              />
-            ) : isDualPick ? (
-              <DualPickControls
-                onRespond={handleResponse}
-                activeSelection={(userResponse.classification || {}) as ExpectedClassification}
-              />
-            ) : isPlace ? (
-              // Place tutorial controls - placeholder until machine is extended
-              <div className="w-full max-w-md px-4 text-center">
-                <p className="text-woven-text-muted text-sm">
-                  {t('tutorial.place.comingSoon', 'Place tutorial is under development')}
-                </p>
-                <PlaceTutorialControls
-                  cards={[]}
-                  positionSlots={[]}
-                  audioSlots={[]}
-                  onCardPlaced={() => {}}
-                  disabled={true}
-                />
-              </div>
-            ) : isMemo ? (
-              // Memo tutorial controls - placeholder until machine is extended
-              <div className="w-full max-w-md px-4 text-center">
-                <p className="text-woven-text-muted text-sm">
-                  {t('tutorial.memo.comingSoon', 'Memo tutorial is under development')}
-                </p>
-                <MemoTutorialControls
-                  positionSlots={[]}
-                  audioSlots={[]}
-                  onSlotFilled={() => {}}
-                  onValidate={() => {}}
-                  allFilled={false}
-                  disabled={true}
-                />
-              </div>
-            ) : (
+            {/* NeuroDual Lite: Only classic (dual-catch) controls */}
               <div
                 className={cn(
                   'w-full flex justify-center',
@@ -1267,7 +1222,6 @@ export function TutorialEngine({
                   width={isAssessment ? assessmentGridSize : layout.gridSize}
                 />
               </div>
-            )}
           </div>
 
           {showAssessmentGate && (

@@ -168,6 +168,18 @@ export {
 export { StroopSpec, StroopSpecs } from './stroop.spec';
 
 // =============================================================================
+// Tutorial Specs
+// =============================================================================
+
+export {
+  ClassicTutorialSpec,
+  TutorialSpecs,
+  getTutorialSpec,
+  TUTORIAL_HUB_ORDER,
+  type TutorialSpecId,
+} from './tutorial.spec';
+
+// =============================================================================
 // All Specs Registry (Lite: 3 modes only)
 // =============================================================================
 

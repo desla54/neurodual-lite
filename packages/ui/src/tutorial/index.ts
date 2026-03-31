@@ -12,14 +12,6 @@ export { useTutorialSession, type UseTutorialSessionReturn } from './use-tutoria
 export { AnnotationZone, type AnnotationZoneProps } from './AnnotationZone';
 export { TutorialHub } from './tutorial-hub';
 export { GsapTimeline, type GsapTimelineHandle } from './gsap-timeline';
-export { DualPickControls } from './dual-pick-controls';
-export { TraceTutorialControls } from './trace-tutorial-controls';
-export {
-  PlaceTutorialControls,
-  type PlaceTutorialCard,
-  type PlaceTutorialSlot,
-} from './place-tutorial-controls';
-export { MemoTutorialControls, type MemoTutorialSlot } from './memo-tutorial-controls';
 export {
   SpotlightOverlay,
   type SpotlightStep,

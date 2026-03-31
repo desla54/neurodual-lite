@@ -24,6 +24,11 @@ const StroopFlexTrainingPage = lazy(() =>
   import('./pages/stroop-training').then((m) => ({ default: m.StroopFlexTrainingPage })),
 );
 
+// Tutorial page
+const TutorialGuidedPage = lazy(() =>
+  import('./pages/tutorial-guided').then((m) => ({ default: m.TutorialGuidedPage })),
+);
+
 // Utility pages
 const StatsPage = lazy(() => import('./pages/stats').then((m) => ({ default: m.StatsPage })));
 const SettingsPage = lazy(() =>
@@ -63,6 +68,9 @@ export const router = createBrowserRouter([
           // Stroop modes
           { path: 'stroop', element: withSuspense(StroopTrainingPage) },
           { path: 'stroop-flex', element: withSuspense(StroopFlexTrainingPage) },
+          // Tutorial
+          { path: 'tutorial', element: withSuspense(TutorialGuidedPage) },
+          { path: 'tutorial/:specId', element: withSuspense(TutorialGuidedPage) },
           // Utility pages
           { path: 'stats', element: withSuspense(StatsPage) },
           { path: 'settings/:section?/:subSection?', element: withSuspense(SettingsPage) },
