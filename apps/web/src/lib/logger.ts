@@ -117,21 +117,8 @@ export const logger = {
       });
     }
 
-    // Sentry (lazy import to avoid blocking initial paint)
-    if (import.meta.env.PROD && import.meta.env['VITE_SENTRY_DSN']) {
-      void import('../services/sentry')
-        .then(({ reportError }) => {
-          const error = context instanceof Error ? context : new Error(message);
-          reportError(error, {
-            message,
-            ...(context && !(context instanceof Error) ? { context } : {}),
-          });
-        })
-        .catch((err: unknown) => {
-          if (import.meta.env.DEV) {
-            console.warn('[Logger] Failed to report error to Sentry:', err);
-          }
-        });
+    // Sentry removed in Lite — error logging is local-only
+    if (false) {
     }
   },
 

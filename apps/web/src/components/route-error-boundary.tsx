@@ -26,11 +26,8 @@ export function RouteErrorBoundary() {
 
   useEffect(() => {
     if (!(error instanceof Error)) return;
-    import('../services/sentry')
-      .then(({ reportError }) => {
-        reportError(error, { route: window.location.pathname });
-      })
-      .catch(() => {});
+    // Sentry removed in Lite — error logging is local-only
+    console.error('[RouteError]', error);
   }, [error]);
 
   // Determine error type

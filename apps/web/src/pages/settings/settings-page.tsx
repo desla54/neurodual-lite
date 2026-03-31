@@ -50,9 +50,8 @@ const ProfileSection = lazy(async () => {
   return { default: Component };
 });
 const DataSection = lazy(() => import('./sections/data').then((m) => ({ default: m.DataSection })));
-const PremiumSection = lazy(() =>
-  import('./sections/premium').then((m) => ({ default: m.PremiumSection })),
-);
+// Premium section removed in Lite
+const PremiumSection = lazy(() => Promise.resolve({ default: () => null }));
 const LanguageSection = lazy(() =>
   import('./sections/language').then((m) => ({ default: m.LanguageSection })),
 );

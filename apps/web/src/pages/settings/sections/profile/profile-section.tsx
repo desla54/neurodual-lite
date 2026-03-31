@@ -8,7 +8,7 @@ import { Avatar, Card, Section } from '@neurodual/ui';
 import { AvatarPicker, UsernameInput } from '../../../../components/profile';
 import { useSettingsStore } from '../../../../stores/settings-store';
 
-/**
+/** Profile section — local-only profile editor */
 export function ProfileSection(): ReactNode {
   const { t } = useTranslation();
 

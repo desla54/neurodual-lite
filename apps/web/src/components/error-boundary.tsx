@@ -79,14 +79,7 @@ export class ErrorBoundary extends Component<Props, State> {
     // Log to localStorage for local debugging
     logError(error, errorInfo.componentStack ?? undefined);
 
-    // Report to Sentry for remote monitoring (lazy loaded)
-    import('../services/sentry')
-      .then(({ reportError }) => {
-        reportError(error, {
-          componentStack: errorInfo.componentStack,
-        });
-      })
-      .catch(() => {});
+    // Sentry removed in Lite — error logging is local-only
 
     const autoReload = getAutoReloadConfig(error);
     if (!autoReload) return;
