@@ -1,8 +1,8 @@
 /**
- * License Queries (Lemon Squeezy)
+ * License Queries (Lite - Noop)
  *
- * TanStack Query hooks for license key validation and management.
- * Only available on web platform (mobile uses RevenueCat IAP).
+ * Simplified license queries for local-only mode.
+ * No license key validation needed - everything is free.
  */
 
 import {
@@ -27,7 +27,7 @@ import { createEmptyLicenseState } from '@neurodual/logic';
 import { queryKeys } from './keys';
 
 // =============================================================================
-// Adapter Reference (injected via Provider)
+// Adapter Reference (noop - no licenses in Lite)
 // =============================================================================
 
 let licenseAdapter: LicensePort | null = null;
@@ -59,8 +59,7 @@ const licenseKeys = queryKeys.license;
 
 /**
  * Get current license state.
- *
- * Returns empty state if license system is not available (mobile).
+ * Always returns empty state in Lite mode.
  */
 export function useLicenseState(): UseQueryResult<LicenseState> {
   return useQuery<LicenseState>({
@@ -71,13 +70,14 @@ export function useLicenseState(): UseQueryResult<LicenseState> {
       }
       return getLicenseAdapter().getState();
     },
-    staleTime: 30 * 1000, // 30 seconds
+    staleTime: 30 * 1000,
     placeholderData: createEmptyLicenseState(),
   });
 }
 
 /**
  * Check if user has a valid license.
+ * Always false in Lite mode (but premium is free anyway).
  */
 export function useHasValidLicense(): boolean {
   const { data } = useLicenseState();
@@ -85,7 +85,8 @@ export function useHasValidLicense(): boolean {
 }
 
 /**
- * Check if license system is available (web only).
+ * Check if license system is available.
+ * Always false in Lite mode.
  */
 export function useIsLicenseAvailable(): boolean {
   if (!hasLicenseAdapter()) {
@@ -96,6 +97,7 @@ export function useIsLicenseAvailable(): boolean {
 
 /**
  * Get available license products.
+ * Always empty in Lite mode.
  */
 export function useLicenseProducts(): UseQueryResult<LicenseProduct[]> {
   return useQuery<LicenseProduct[]>({
@@ -106,88 +108,61 @@ export function useLicenseProducts(): UseQueryResult<LicenseProduct[]> {
       }
       return getLicenseAdapter().getProducts();
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes
+    staleTime: 5 * 60 * 1000,
     placeholderData: [],
   });
 }
 
 // =============================================================================
-// Mutations
+// Mutations (noop in Lite)
 // =============================================================================
 
-/**
- * Validate a license key without activating.
- */
 export function useValidateLicense(): UseMutationResult<LicenseValidationResult, Error, string> {
   return useMutation<LicenseValidationResult, Error, string>({
     mutationFn: (licenseKey: string) => getLicenseAdapter().validateLicense(licenseKey),
   });
 }
 
-/**
- * Activate a license key.
- *
- * On success, invalidates license and subscription queries.
- */
 export function useActivateLicense(): UseMutationResult<LicenseActivationResult, Error, string> {
   const queryClient = useQueryClient();
-
   return useMutation<LicenseActivationResult, Error, string>({
     mutationFn: (licenseKey: string) => getLicenseAdapter().activateLicense(licenseKey),
     onSuccess: (result) => {
       if (result.activated) {
-        // Invalidate license queries
         queryClient.invalidateQueries({ queryKey: licenseKeys.all });
-        // Also invalidate subscription since license grants premium
         queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
       }
     },
   });
 }
 
-/**
- * Deactivate the current license.
- *
- * On success, invalidates license and subscription queries.
- */
 export function useDeactivateLicense(): UseMutationResult<LicenseDeactivationResult, Error, void> {
   const queryClient = useQueryClient();
-
   return useMutation<LicenseDeactivationResult, Error, void>({
     mutationFn: () => getLicenseAdapter().deactivateLicense(),
     onSuccess: (result) => {
       if (result.deactivated) {
-        // Invalidate license queries
         queryClient.invalidateQueries({ queryKey: licenseKeys.all });
-        // Also invalidate subscription
         queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
       }
     },
   });
 }
 
-/**
- * Refresh (re-validate) the stored license.
- */
 export function useRefreshLicense(): UseMutationResult<
   LicenseValidationResult | null,
   Error,
   void
 > {
   const queryClient = useQueryClient();
-
   return useMutation<LicenseValidationResult | null, Error, void>({
     mutationFn: () => getLicenseAdapter().refreshLicense(),
     onSuccess: () => {
-      // Update state query
       queryClient.invalidateQueries({ queryKey: licenseKeys.state() });
     },
   });
 }
 
-/**
- * Get checkout URL for purchasing.
- */
 export function useGetCheckoutUrl(): UseMutationResult<
   CheckoutUrlResult,
   Error,
@@ -198,12 +173,8 @@ export function useGetCheckoutUrl(): UseMutationResult<
   });
 }
 
-/**
- * Clear stored license (logout).
- */
 export function useClearLicense(): UseMutationResult<void, Error, void> {
   const queryClient = useQueryClient();
-
   return useMutation<void, Error, void>({
     mutationFn: () => getLicenseAdapter().clearLicense(),
     onSuccess: () => {
@@ -214,39 +185,18 @@ export function useClearLicense(): UseMutationResult<void, Error, void> {
 }
 
 // =============================================================================
-// Listener Wiring
+// Listener Wiring (noop in Lite)
 // =============================================================================
 
-/**
- * Set up license listener to sync with TanStack Query cache.
- *
- * Call this once during app initialization (in NeurodualQueryProvider).
- * Returns unsubscribe function.
- */
-export function setupLicenseListener(queryClient: QueryClient): () => void {
-  if (!hasLicenseAdapter()) {
-    // Not available on mobile - return no-op
-    return () => {};
-  }
-
-  const adapter = getLicenseAdapter();
-
-  return adapter.subscribe((state) => {
-    // Update cache directly for immediate UI update
-    queryClient.setQueryData(licenseKeys.state(), state);
-
-    // Also invalidate subscription queries
-    queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
-  });
+export function setupLicenseListener(_queryClient: QueryClient): () => void {
+  // No license listener in Lite mode
+  return () => {};
 }
 
 // =============================================================================
 // Cache Helpers
 // =============================================================================
 
-/**
- * Invalidate all license queries.
- */
 export function invalidateLicenseQueries(queryClient: QueryClient): void {
   queryClient.invalidateQueries({ queryKey: licenseKeys.all });
 }

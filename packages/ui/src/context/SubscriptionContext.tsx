@@ -1,71 +1,69 @@
 'use client';
 
 /**
- * Subscription Context
+ * Subscription Context (Lite - Always Free)
  *
- * Provides subscription adapter access via module-level injection.
- * Uses TanStack Query for state caching.
+ * Simplified subscription context. All features unlocked.
  */
 
 import type { SubscriptionPort, SubscriptionState } from '@neurodual/logic';
-import { useCallback, useSyncExternalStore } from 'react';
 import {
   getSubscriptionAdapter,
   useSubscriptionQuery as useSubscriptionQueryQuery,
-  useHasPremiumAccess as useHasPremiumAccessQuery,
-  useHasCloudSync as useHasCloudSyncQuery,
-  useCanAccessNLevel as useCanAccessNLevelQuery,
-  useIsTrialing as useIsTrialingQuery,
 } from '../queries';
 
 /**
  * Hook to get the subscription adapter.
- * Adapter is injected via NeurodualQueryProvider.
  */
 export function useSubscriptionAdapter(): SubscriptionPort {
   return getSubscriptionAdapter();
 }
 
 /**
- * Hook to get current subscription state with automatic updates.
- * Uses TanStack Query + adapter subscription for immediate updates.
+ * Hook to get current subscription state.
+ * Always returns full-access in Lite mode.
  */
 export function useSubscriptionQuery(): SubscriptionState {
-  const adapter = useSubscriptionAdapter();
-  // Query hook ensures TanStack Query is initialized for this data
-  useSubscriptionQueryQuery();
-
-  // Subscribe to adapter for immediate subscription state changes
-  return useSyncExternalStore(
-    useCallback((cb) => adapter.subscribe(() => cb()), [adapter]),
-    () => adapter.getState(),
+  const { data } = useSubscriptionQueryQuery();
+  return (
+    data ?? {
+      subscription: null,
+      hasPremiumAccess: true,
+      hasCloudSync: false,
+      isTrialing: false,
+      daysRemaining: null,
+    }
   );
 }
 
 /**
- * Hook to check if user has premium access (N4+).
+ * Hook to check if user has premium access.
+ * Always true in Lite mode.
  */
 export function useHasPremiumAccess(): boolean {
-  return useHasPremiumAccessQuery();
+  return true;
 }
 
 /**
  * Hook to check if user can sync to cloud.
+ * Always false in Lite mode.
  */
 export function useHasCloudSync(): boolean {
-  return useHasCloudSyncQuery();
+  return false;
 }
 
 /**
  * Hook to check if a specific N-level is accessible.
+ * Always true in Lite mode - all levels unlocked.
  */
-export function useCanAccessNLevel(nLevel: number): boolean {
-  return useCanAccessNLevelQuery(nLevel);
+export function useCanAccessNLevel(_nLevel: number): boolean {
+  return true;
 }
 
 /**
  * Hook to check if user is in trial period.
+ * Always false in Lite mode.
  */
 export function useIsTrialing(): boolean {
-  return useIsTrialingQuery();
+  return false;
 }

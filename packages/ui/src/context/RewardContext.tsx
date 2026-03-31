@@ -1,10 +1,9 @@
 'use client';
 
 /**
- * Reward Context
+ * Reward Context (Lite - Noop)
  *
- * Provides reward adapter access via module-level injection.
- * Uses TanStack Query for state caching.
+ * Simplified reward context. No XP-based premium rewards - all features are free.
  */
 
 import type {
@@ -15,7 +14,6 @@ import type {
   RewardPort,
   RewardState,
 } from '@neurodual/logic';
-import { useCallback, useSyncExternalStore } from 'react';
 import {
   getRewardAdapter,
   useGrantedRewards as useGrantedRewardsQuery,
@@ -29,21 +27,22 @@ import {
 
 /**
  * Hook to get the reward adapter.
- * Adapter is injected via NeurodualQueryProvider.
  */
 export function useRewardAdapter(): RewardPort {
   return getRewardAdapter();
 }
 
 /**
- * Hook to get granted rewards with automatic updates.
+ * Hook to get granted rewards.
+ * Always empty in Lite mode.
  */
 export function useGrantedRewards(): GrantedReward[] {
   return useGrantedRewardsQuery();
 }
 
 /**
- * Hook to get pending rewards (offline queue).
+ * Hook to get pending rewards.
+ * Always empty in Lite mode.
  */
 export function usePendingRewards(): PendingReward[] {
   return usePendingRewardsQuery();
@@ -51,26 +50,26 @@ export function usePendingRewards(): PendingReward[] {
 
 /**
  * Hook to check if a specific reward has been granted.
+ * Always false in Lite mode.
  */
 export function useHasReward(rewardId: PremiumRewardType): boolean {
   return useHasRewardQuery(rewardId);
 }
 
 /**
- * Hook to get the full reward state with live updates.
+ * Hook to get the full reward state.
  */
 export function useRewardState(): RewardState {
-  const adapter = useRewardAdapter();
-
-  // Subscribe to adapter for immediate updates
-  return useSyncExternalStore(
-    useCallback((cb) => adapter.subscribe(() => cb()), [adapter]),
-    () => adapter.getState(),
-  );
+  return {
+    grantedRewards: [],
+    pendingRewards: [],
+    isProcessing: false,
+  };
 }
 
 /**
  * Hook to grant a reward.
+ * Noop in Lite mode.
  */
 export function useGrantReward(): {
   grant: (rewardId: PremiumRewardType) => Promise<RewardGrantResult>;
@@ -79,7 +78,6 @@ export function useGrantReward(): {
   lastResult?: RewardGrantResult;
 } {
   const mutation = useGrantRewardMutation();
-
   return {
     grant: mutation.mutateAsync,
     isPending: mutation.isPending,
@@ -89,7 +87,8 @@ export function useGrantReward(): {
 }
 
 /**
- * Hook to queue a reward for offline processing.
+ * Hook to queue a reward.
+ * Noop in Lite mode.
  */
 export function useQueueReward(): {
   queue: (rewardId: PremiumRewardType) => void;
@@ -99,6 +98,7 @@ export function useQueueReward(): {
 
 /**
  * Hook to process pending rewards.
+ * Noop in Lite mode.
  */
 export function useProcessPendingRewards(): {
   process: () => Promise<void>;
@@ -108,7 +108,8 @@ export function useProcessPendingRewards(): {
 }
 
 /**
- * Hook to refresh rewards from server.
+ * Hook to refresh rewards.
+ * Noop in Lite mode.
  */
 export function useRefreshRewards(): {
   refresh: () => Promise<void>;
@@ -118,17 +119,17 @@ export function useRefreshRewards(): {
 }
 
 /**
- * Hook to check if user is currently processing rewards.
+ * Hook to check if processing rewards.
+ * Always false in Lite mode.
  */
 export function useIsProcessingRewards(): boolean {
-  const state = useRewardState();
-  return state.isProcessing;
+  return false;
 }
 
 /**
- * Hook to get the count of pending rewards.
+ * Hook to get pending rewards count.
+ * Always 0 in Lite mode.
  */
 export function usePendingRewardsCount(): number {
-  const pending = usePendingRewards();
-  return pending.length;
+  return 0;
 }

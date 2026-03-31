@@ -1,14 +1,13 @@
 'use client';
 
 /**
- * Auth Context
+ * Auth Context (Lite - Local Only)
  *
- * Provides auth adapter access via module-level injection.
- * Uses TanStack Query for state caching.
+ * Simplified auth context. Always returns unauthenticated state.
  */
 
 import type { AuthPort, AuthState, AuthUser, AuthUserProfile } from '@neurodual/logic';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { getAuthAdapter, useAuthQuery as useAuthQueryQuery } from '../queries';
 
 type CurrentUser = AuthUser & {
@@ -18,33 +17,23 @@ type CurrentUser = AuthUser & {
 
 /**
  * Hook to get the auth adapter.
- * Adapter is injected via NeurodualQueryProvider.
  */
 export function useAuthAdapter(): AuthPort {
   return getAuthAdapter();
 }
 
 /**
- * Hook to get current auth state with automatic updates.
- * Uses TanStack Query + adapter subscription for immediate updates.
+ * Hook to get current auth state.
+ * Always returns unauthenticated in Lite mode.
  */
 export function useAuthQuery(): AuthState {
-  const adapter = useAuthAdapter();
-  // Query hook ensures TanStack Query is initialized for this data
-  useAuthQueryQuery();
-  const [state, setState] = useState<AuthState>(adapter.getState());
-
-  // Subscribe to adapter for immediate auth state changes
-  useEffect(() => {
-    return adapter.subscribe(setState);
-  }, [adapter]);
-
-  // Return the most recent state (prefer local state for immediate updates)
-  return state;
+  const { data } = useAuthQueryQuery();
+  return data ?? { status: 'unauthenticated' };
 }
 
 /**
  * Hook to check if user is authenticated.
+ * Always false in Lite mode.
  */
 export function useIsAuthenticated(): boolean {
   return useAuthQuery().status === 'authenticated';
@@ -52,6 +41,7 @@ export function useIsAuthenticated(): boolean {
 
 /**
  * Hook to get current user (null if not authenticated).
+ * Always null in Lite mode.
  */
 export function useCurrentUser(): CurrentUser | null {
   const state = useAuthQuery();

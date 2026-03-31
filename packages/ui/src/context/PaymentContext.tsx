@@ -1,10 +1,9 @@
 'use client';
 
 /**
- * Payment Context
+ * Payment Context (Lite - Noop)
  *
- * Re-exports TanStack Query payment hooks with backward-compatible API.
- * The actual implementation is in queries/payment.ts.
+ * Simplified payment context. No in-app purchases - everything is free.
  */
 
 import type {
@@ -14,110 +13,90 @@ import type {
   ProductId,
   PurchaseResult,
 } from '@neurodual/logic';
-import {
-  getPaymentAdapter,
-  useCustomerInfo as useCustomerInfoQuery,
-  useIsPaymentAvailable as useIsPaymentAvailableQuery,
-  useIsPurchaseActive as useIsPurchaseActiveQuery,
-  useProducts as useProductsQuery,
-  usePurchase as usePurchaseMutation,
-  useRestorePurchases as useRestorePurchasesMutation,
-} from '../queries';
+import { getPaymentAdapter } from '../queries';
 
 /**
  * Hook to get the payment adapter.
- * Adapter is injected via NeurodualQueryProvider.
  */
 export function usePaymentAdapter(): PaymentPort {
   return getPaymentAdapter();
 }
 
 /**
- * Hook to get current customer info with automatic updates.
- * Returns CustomerInfo directly for backward compatibility.
+ * Hook to get current customer info.
+ * Always returns inactive in Lite mode.
  */
 export function useCustomerInfo(): CustomerInfo {
-  const { data } = useCustomerInfoQuery();
-  return (
-    data ?? {
-      isActive: false,
-      activeEntitlement: null,
-      expirationDate: null,
-      isTrialing: false,
-      originalPurchaseDate: null,
-    }
-  );
+  return {
+    isActive: false,
+    activeEntitlement: null,
+    expirationDate: null,
+    isTrialing: false,
+    originalPurchaseDate: null,
+  };
 }
 
 /**
  * Hook to check if user has any active purchase.
+ * Always false in Lite mode.
  */
 export function useIsPurchaseActive(): boolean {
-  return useIsPurchaseActiveQuery();
+  return false;
 }
 
 /**
- * Hook to check if payments are available (mobile only).
+ * Hook to check if payments are available.
+ * Always false in Lite mode.
  */
 export function useIsPaymentAvailable(): boolean {
-  return useIsPaymentAvailableQuery();
+  return false;
 }
 
 /**
  * Hook to get available products.
- * Returns backward-compatible object with products, loading, and refresh.
+ * Always empty in Lite mode.
  */
 export function useProducts(): { products: Product[]; loading: boolean; refresh: () => void } {
-  const { data, isLoading, refetch } = useProductsQuery();
   return {
-    products: data ?? [],
-    loading: isLoading,
-    refresh: () => {
-      refetch();
-    },
+    products: [],
+    loading: false,
+    refresh: () => {},
   };
 }
 
 /**
  * Hook to purchase a product.
- * Returns backward-compatible object with purchase function and purchasing state.
+ * Noop in Lite mode.
  */
 export function usePurchase(): {
   purchase: (productId: ProductId) => Promise<PurchaseResult>;
   purchasing: boolean;
 } {
-  const mutation = usePurchaseMutation();
-
   return {
-    purchase: async (productId: ProductId): Promise<PurchaseResult> => {
-      try {
-        return await mutation.mutateAsync(productId);
-      } catch (error) {
-        // Convert thrown errors to PurchaseResult format
-        return {
-          success: false,
-          errorMessage: error instanceof Error ? error.message : 'Purchase failed',
-        };
-      }
-    },
-    purchasing: mutation.isPending,
+    purchase: async (_productId: ProductId): Promise<PurchaseResult> => ({
+      success: false,
+      errorMessage: 'Payments not available in Lite mode',
+    }),
+    purchasing: false,
   };
 }
 
 /**
  * Hook to restore purchases.
- * Returns backward-compatible object with restore function and restoring state.
+ * Noop in Lite mode.
  */
 export function useRestorePurchases(): {
   restore: () => Promise<CustomerInfo>;
   restoring: boolean;
 } {
-  const mutation = useRestorePurchasesMutation();
-
   return {
-    restore: async (): Promise<CustomerInfo> => {
-      return mutation.mutateAsync();
-    },
-    restoring: mutation.isPending,
+    restore: async (): Promise<CustomerInfo> => ({
+      isActive: false,
+      activeEntitlement: null,
+      expirationDate: null,
+      isTrialing: false,
+      originalPurchaseDate: null,
+    }),
+    restoring: false,
   };
 }

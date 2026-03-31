@@ -1,8 +1,8 @@
 /**
- * Reward Queries
+ * Reward Queries (Lite - Noop)
  *
- * TanStack Query hooks for XP-based Premium rewards.
- * Uses module-level adapter injection pattern.
+ * Simplified reward queries for local-only mode.
+ * No XP-based premium rewards - all features are free.
  */
 
 import type {
@@ -17,26 +17,27 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { queryKeys } from './keys';
 
 // =============================================================================
-// Module-level Adapter
+// Module-level Adapter (noop - no rewards in Lite)
 // =============================================================================
 
-let rewardAdapter: RewardPort | null = null;
+const noopRewardAdapter: RewardPort = {
+  getState: () => ({ grantedRewards: [], pendingRewards: [], isProcessing: false }),
+  subscribe: () => () => {},
+  getGrantedRewards: async () => [],
+  getPendingRewards: async () => [],
+  grantReward: async () => ({ granted: false, reason: 'not-available' }) as RewardGrantResult,
+  queueReward: () => {},
+  processPendingRewards: async () => {},
+  refresh: async () => {},
+} as RewardPort;
 
-/**
- * Set the reward adapter (called by NeurodualQueryProvider).
- */
+let rewardAdapter: RewardPort = noopRewardAdapter;
+
 export function setRewardAdapter(adapter: RewardPort): void {
   rewardAdapter = adapter;
 }
 
-/**
- * Get the reward adapter.
- * Throws if not initialized.
- */
 export function getRewardAdapter(): RewardPort {
-  if (!rewardAdapter) {
-    throw new Error('RewardAdapter not initialized. Wrap app with NeurodualQueryProvider.');
-  }
   return rewardAdapter;
 }
 
@@ -46,36 +47,35 @@ export function getRewardAdapter(): RewardPort {
 
 /**
  * Hook to get granted rewards.
+ * Always empty in Lite mode.
  */
 export function useGrantedRewards(): GrantedReward[] {
   const adapter = getRewardAdapter();
-
   const { data = [] } = useQuery({
     queryKey: queryKeys.reward.granted(),
     queryFn: () => adapter.getGrantedRewards(),
-    staleTime: 60 * 1000, // 1 minute
+    staleTime: 60 * 1000,
   });
-
   return data;
 }
 
 /**
- * Hook to get pending rewards (offline queue).
+ * Hook to get pending rewards.
+ * Always empty in Lite mode.
  */
 export function usePendingRewards(): PendingReward[] {
   const adapter = getRewardAdapter();
-
   const { data = [] } = useQuery({
     queryKey: queryKeys.reward.pending(),
     queryFn: () => adapter.getPendingRewards(),
-    staleTime: 0, // Always fresh
+    staleTime: 0,
   });
-
   return data;
 }
 
 /**
  * Hook to check if a specific reward has been granted.
+ * Always false in Lite mode.
  */
 export function useHasReward(rewardId: PremiumRewardType): boolean {
   const grantedRewards = useGrantedRewards();
@@ -88,21 +88,17 @@ export function useHasReward(rewardId: PremiumRewardType): boolean {
 export function useRewardState(): RewardState {
   const grantedRewards = useGrantedRewards();
   const pendingRewards = usePendingRewards();
-
   return {
     grantedRewards,
     pendingRewards,
-    isProcessing: false, // Updated via subscription in context
+    isProcessing: false,
   };
 }
 
 // =============================================================================
-// Mutation Hooks
+// Mutation Hooks (noop in Lite)
 // =============================================================================
 
-/**
- * Hook to grant a reward.
- */
 export function useGrantReward(): {
   mutate: (rewardId: PremiumRewardType) => void;
   mutateAsync: (rewardId: PremiumRewardType) => Promise<RewardGrantResult>;
@@ -113,17 +109,12 @@ export function useGrantReward(): {
 } {
   const adapter = getRewardAdapter();
   const queryClient = useQueryClient();
-
   const mutation = useMutation({
     mutationFn: (rewardId: PremiumRewardType) => adapter.grantReward(rewardId),
     onSuccess: () => {
-      // Invalidate reward queries to refresh state
       queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
-      // Also invalidate subscription as it may have changed
-      queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
     },
   });
-
   return {
     mutate: mutation.mutate,
     mutateAsync: mutation.mutateAsync,
@@ -134,67 +125,50 @@ export function useGrantReward(): {
   };
 }
 
-/**
- * Hook to queue a reward (for offline mode).
- */
 export function useQueueReward(): {
   queue: (rewardId: PremiumRewardType) => void;
 } {
   const adapter = getRewardAdapter();
   const queryClient = useQueryClient();
-
   const queue = (rewardId: PremiumRewardType): void => {
     adapter.queueReward(rewardId);
-    // Invalidate pending rewards to reflect change
     queryClient.invalidateQueries({ queryKey: queryKeys.reward.pending() });
   };
-
   return { queue };
 }
 
-/**
- * Hook to process pending rewards.
- */
 export function useProcessPendingRewards(): {
   process: () => Promise<void>;
   isPending: boolean;
 } {
   const adapter = getRewardAdapter();
   const queryClient = useQueryClient();
-
   const mutation = useMutation({
     mutationFn: () => adapter.processPendingRewards(),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
-      queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
     },
   });
-
   return {
-    process: mutation.mutateAsync,
+    process: mutation.mutateAsync as () => Promise<void>,
     isPending: mutation.isPending,
   };
 }
 
-/**
- * Hook to refresh rewards from server.
- */
 export function useRefreshRewards(): {
   refresh: () => Promise<void>;
   isPending: boolean;
 } {
   const adapter = getRewardAdapter();
   const queryClient = useQueryClient();
-
   const mutation = useMutation({
     mutationFn: () => adapter.refresh(),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
     },
   });
-
   return {
-    refresh: mutation.mutateAsync,
+    refresh: mutation.mutateAsync as () => Promise<void>,
     isPending: mutation.isPending,
   };
 }
@@ -203,9 +177,6 @@ export function useRefreshRewards(): {
 // Invalidation Helpers
 // =============================================================================
 
-/**
- * Invalidate all reward queries.
- */
 export function invalidateRewardQueries(queryClient: ReturnType<typeof useQueryClient>): void {
   queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
 }

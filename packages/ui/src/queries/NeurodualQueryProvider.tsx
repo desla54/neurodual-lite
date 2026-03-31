@@ -1,8 +1,8 @@
 /**
- * NeurodualQueryProvider
+ * NeurodualQueryProvider (Lite)
  *
  * Unified provider that sets up TanStack Query with all adapters.
- * Replaces the deep nesting of individual context providers.
+ * Cloud/payment/license/reward adapters are optional in Lite mode.
  */
 
 import { QueryClientProvider } from '@tanstack/react-query';
@@ -27,7 +27,7 @@ import type {
 import { createQueryClient, setQueryClient } from './query-client';
 import { setAuthAdapter } from './auth';
 import { setHistoryAdapter } from './history';
-import { setPaymentAdapter, setupPaymentListener } from './payment';
+import { setPaymentAdapter } from './payment';
 import { setPipelineAdapter } from './pipeline';
 import { setProfileAdapter } from './profile';
 import { setProgressionAdapter } from './progression';
@@ -35,10 +35,9 @@ import { setRewardAdapter } from './reward';
 import { setSubscriptionAdapter } from './subscription';
 import { setSyncAdapter } from './sync';
 import { setJourneyAdapter } from './journey';
-import { setLicenseAdapter, setupLicenseListener } from './license';
+import { setLicenseAdapter } from './license';
 import { setReadModelsAdapter, setProfileReadModel, setJourneyReadModel } from './read-models';
 import { createProfileReadModel, createJourneyReadModel } from '@neurodual/infra';
-// Zustand stores are deprecated - TanStack Query handles all data fetching now
 import { queryKeys } from './keys';
 import { JourneyConfigProvider } from '../context/JourneyConfigContext';
 
@@ -49,20 +48,24 @@ import { JourneyConfigProvider } from '../context/JourneyConfigContext';
 export interface NeurodualQueryProviderProps {
   children: ReactNode;
   adapters: {
-    auth: AuthPort;
+    auth?: AuthPort;
     history: HistoryPort;
     journey: JourneyPort;
     readModels: ReadModelPort;
-    /** License key validation (web only - Lemon Squeezy) */
+    /** License key validation (web only - Lemon Squeezy) - optional in Lite */
     license?: LicensePort;
-    payment: PaymentPort;
-    /** Session completion pipeline (XState-based) - optional, enables robust session completion */
+    /** Payment adapter - optional in Lite */
+    payment?: PaymentPort;
+    /** Session completion pipeline (XState-based) - optional */
     pipeline?: SessionEndPipelinePort;
     profile: ProfilePort;
     progression: ProgressionPort;
-    reward: RewardPort;
-    subscription: SubscriptionPort;
-    sync: SyncPort;
+    /** Reward adapter - optional in Lite */
+    reward?: RewardPort;
+    /** Subscription adapter - optional in Lite */
+    subscription?: SubscriptionPort;
+    /** Sync adapter - optional in Lite */
+    sync?: SyncPort;
   };
   /** Initial journey configuration (from settings) */
   journeyConfig: JourneyConfig;
@@ -77,11 +80,6 @@ export function NeurodualQueryProvider({
   adapters,
   journeyConfig,
 }: NeurodualQueryProviderProps): ReactNode {
-  // Create QueryClient once AND initialize TanStack Query adapters synchronously.
-  // This MUST happen before children render (some hooks throw if adapters aren't set).
-  //
-  // IMPORTANT: The QueryClient must remain stable. Recreating it on prop changes
-  // (e.g., when `journeyConfig` changes) will drop cache, subscriptions, and in-flight state.
   const queryClientRef = useRef<ReturnType<typeof createQueryClient> | null>(null);
   const prevAdaptersRef = useRef<NeurodualQueryProviderProps['adapters'] | null>(null);
   if (!queryClientRef.current) {
@@ -107,8 +105,7 @@ export function NeurodualQueryProvider({
 
   if (adaptersChanged) {
     // Initialize/update all TanStack Query adapters synchronously.
-    // This must happen before children render so hooks always read the latest adapters.
-    setAuthAdapter(adapters.auth);
+    if (adapters.auth) setAuthAdapter(adapters.auth);
     setHistoryAdapter(adapters.history);
     setJourneyAdapter(adapters.journey);
     setReadModelsAdapter(adapters.readModels);
@@ -117,83 +114,63 @@ export function NeurodualQueryProvider({
     if (adapters.license && prevAdapters?.license !== adapters.license) {
       setLicenseAdapter(adapters.license);
     }
-    setPaymentAdapter(adapters.payment);
+    if (adapters.payment) setPaymentAdapter(adapters.payment);
     if (adapters.pipeline && prevAdapters?.pipeline !== adapters.pipeline) {
       setPipelineAdapter(adapters.pipeline);
     }
     setProfileAdapter(adapters.profile);
     setProgressionAdapter(adapters.progression);
-    setRewardAdapter(adapters.reward);
-    setSubscriptionAdapter(adapters.subscription);
-    setSyncAdapter(adapters.sync);
+    if (adapters.reward) setRewardAdapter(adapters.reward);
+    if (adapters.subscription) setSubscriptionAdapter(adapters.subscription);
+    if (adapters.sync) setSyncAdapter(adapters.sync);
     prevAdaptersRef.current = adapters;
   }
   const queryClient = queryClientRef.current;
 
   // Subscribe to external adapters and invalidate TanStack queries when they change
-  // This bridges adapter listeners → TanStack Query reactivity
   useEffect(() => {
-    // Auth adapter → invalidate auth queries
-    const unsubscribeAuth = adapters.auth.subscribe(() => {
-      queryClient.invalidateQueries({ queryKey: queryKeys.auth.all });
-    });
+    const cleanups: Array<() => void> = [];
 
-    // Subscription adapter → invalidate subscription queries
-    const unsubscribeSubscription = adapters.subscription.subscribe(() => {
-      queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
-      // Also invalidate sync since it depends on subscription (cloud sync access)
-      queryClient.invalidateQueries({ queryKey: queryKeys.sync.all });
-    });
+    // Auth adapter → invalidate auth queries (optional)
+    if (adapters.auth) {
+      cleanups.push(
+        adapters.auth.subscribe(() => {
+          queryClient.invalidateQueries({ queryKey: queryKeys.auth.all });
+        }),
+      );
+    }
 
-    // Sync adapter → update cache directly for efficiency
-    // setQueryData is faster than invalidateQueries since we have the exact data
-    const unsubscribeSync = adapters.sync.subscribe((newState) => {
-      // Update cache directly instead of invalidating (more efficient)
-      queryClient.setQueryData(queryKeys.sync.state(), newState);
+    // Subscription adapter → invalidate subscription queries (optional)
+    if (adapters.subscription) {
+      cleanups.push(
+        adapters.subscription.subscribe(() => {
+          queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
+        }),
+      );
+    }
 
-      // NOTE: forceRefresh() was removed - it caused double work with PowerSync.
-      // PowerSync watched queries (useSessionsQuery) auto-update when SQLite changes.
-      // Profile/Journey/Progression derive from sessions via useMemo, so they update instantly.
-      // Manual forceRefresh() after sync was redundant and caused main thread freezes.
-    });
+    // Sync adapter → update cache directly (optional)
+    if (adapters.sync) {
+      cleanups.push(
+        adapters.sync.subscribe((newState) => {
+          queryClient.setQueryData(queryKeys.sync.state(), newState);
+        }),
+      );
+    }
 
-    // Reward adapter → invalidate reward queries on state changes
-    // Note: Mutations also invalidate in onSuccess, but this handles non-mutation changes
-    // (init, background sync, etc.). TanStack Query deduplicates multiple invalidations.
-    // The adapter uses setTimeout(0) + re-entrant protection to prevent infinite loops.
-    const unsubscribeReward = adapters.reward.subscribe(() => {
-      queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
-      queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
-    });
-
-    // NOTE: Profile and Progression reactivity is now handled by PowerSync via useSessionsQuery().
-    // Profile and Progression states are computed from sessions using projectProfileFromSessions()
-    // and projectProgressionFromSessions(). They auto-update when session_summaries table changes.
-    // No manual subscription needed - the useMemo in useProfileQuery/useProgressionQuery
-    // recalculates when useSessionsQuery() data changes.
-
-    // NOTE: Journey reactivity is now handled by PowerSync via useSessionsQuery().
-    // Journey state is computed from sessions in useJourneyState(), which auto-updates
-    // when session_summaries table changes. No manual subscription needed.
-
-    // Payment adapter → sync RevenueCat listener with TanStack Query cache
-    // This updates customerInfo in cache directly when RevenueCat notifies of changes
-    const unsubscribePayment = setupPaymentListener(queryClient);
-
-    // License adapter → sync Lemon Squeezy listener with TanStack Query cache (web only)
-    const unsubscribeLicense = adapters.license ? setupLicenseListener(queryClient) : () => {};
-
-    // NOTE: History reactivity is now handled by PowerSync native useQuery with rowComparator.
-    // No manual subscription/invalidation needed - PowerSync watched queries auto-update.
-    // See packages/ui/src/queries/history.ts for the implementation.
+    // Reward adapter → invalidate reward queries (optional)
+    if (adapters.reward) {
+      cleanups.push(
+        adapters.reward.subscribe(() => {
+          queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
+        }),
+      );
+    }
 
     return () => {
-      unsubscribeAuth();
-      unsubscribeSubscription();
-      unsubscribeSync();
-      unsubscribeReward();
-      unsubscribePayment();
-      unsubscribeLicense();
+      for (const cleanup of cleanups) {
+        cleanup();
+      }
     };
   }, [
     adapters.auth,

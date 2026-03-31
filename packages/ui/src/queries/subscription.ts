@@ -1,7 +1,8 @@
 /**
- * Subscription Queries
+ * Subscription Queries (Lite - Always Free)
  *
- * TanStack Query hooks for subscription/premium status.
+ * Simplified subscription queries for local-only mode.
+ * All features are unlocked - no premium restrictions.
  */
 
 import {
@@ -12,29 +13,42 @@ import {
   type UseQueryResult,
 } from '@tanstack/react-query';
 import type { SubscriptionPort, SubscriptionState } from '@neurodual/logic';
-import { useIsPurchaseActive as useIsPurchaseActiveQuery } from './payment';
-import { useHasValidLicense as useHasValidLicenseQuery } from './license';
 import { queryKeys } from './keys';
 
 // =============================================================================
-// Adapter Reference (injected via Provider)
+// Adapter Reference (noop - no subscriptions in Lite)
 // =============================================================================
 
-let subscriptionAdapter: SubscriptionPort | null = null;
+/**
+ * In Lite mode, everyone has full access.
+ * hasPremiumAccess = true to unlock all features.
+ */
+const FREE_SUBSCRIPTION_STATE: SubscriptionState = {
+  subscription: null,
+  hasPremiumAccess: true,
+  hasCloudSync: false,
+  isTrialing: false,
+  daysRemaining: null,
+};
+
+const noopSubscriptionAdapter: SubscriptionPort = {
+  getState: () => FREE_SUBSCRIPTION_STATE,
+  subscribe: () => () => {},
+  refresh: async () => {},
+} as SubscriptionPort;
+
+let subscriptionAdapter: SubscriptionPort = noopSubscriptionAdapter;
 
 export function setSubscriptionAdapter(adapter: SubscriptionPort): void {
   subscriptionAdapter = adapter;
 }
 
 export function getSubscriptionAdapter(): SubscriptionPort {
-  if (!subscriptionAdapter) {
-    throw new Error('Subscription adapter not initialized. Call setSubscriptionAdapter first.');
-  }
   return subscriptionAdapter;
 }
 
 // =============================================================================
-// Query Keys (extend base keys)
+// Query Keys
 // =============================================================================
 
 const subscriptionKeys = {
@@ -47,110 +61,70 @@ const subscriptionKeys = {
 // =============================================================================
 
 /**
- * Default subscription state for loading/placeholder.
- * Free tier by default - enables basic UI while loading.
- */
-const DEFAULT_SUBSCRIPTION_STATE: SubscriptionState = {
-  subscription: null,
-  hasPremiumAccess: false,
-  hasCloudSync: false,
-  isTrialing: false,
-  daysRemaining: null,
-};
-
-/**
  * Get current subscription state.
- *
- * Uses placeholderData to ensure UI renders immediately while loading.
+ * In Lite mode, always returns full-access state.
  */
 export function useSubscriptionQuery(): UseQueryResult<SubscriptionState> {
   return useQuery<SubscriptionState>({
     queryKey: subscriptionKeys.state(),
     queryFn: () => Promise.resolve(getSubscriptionAdapter().getState()),
-    staleTime: 60 * 1000, // 1 minute
-    // Provide default state while loading
-    placeholderData: DEFAULT_SUBSCRIPTION_STATE,
+    staleTime: 60 * 1000,
+    placeholderData: FREE_SUBSCRIPTION_STATE,
   });
 }
 
 /**
  * Check if user has premium access.
- *
- * Fuses 3 sources for immediate UI updates:
- * 1. SubscriptionPort (Supabase DB via webhook) - delayed 1-30s
- * 2. PaymentPort (RevenueCat mobile IAP) - immediate
- * 3. LicensePort (Lemon Squeezy web license) - immediate
- *
- * Any source confirming premium → premium.
- * Both payment/license hooks are safe to call unconditionally:
- * - useIsPurchaseActive uses enabled:adapter.isAvailable() → false on web → placeholderData(false)
- * - useHasValidLicense handles missing adapter → returns empty state → false
+ * Always true in Lite mode - all features unlocked.
  */
 export function useHasPremiumAccess(): boolean {
-  const { data } = useSubscriptionQuery();
-  const subscriptionPremium = data?.hasPremiumAccess ?? false;
-
-  // Immediate source: RevenueCat (mobile)
-  const purchaseActive = useIsPurchaseActiveQuery();
-
-  // Immediate source: Lemon Squeezy license key (web)
-  const licenseValid = useHasValidLicenseQuery();
-
-  return subscriptionPremium || purchaseActive || licenseValid;
+  return true;
 }
 
 /**
  * Check if user has cloud sync.
+ * Always false in Lite mode - local only.
  */
 export function useHasCloudSync(): boolean {
-  const { data } = useSubscriptionQuery();
-  return data?.hasCloudSync ?? false;
+  return false;
 }
 
 /**
  * Check if user is in trial.
+ * Always false in Lite mode - no trials needed.
  */
 export function useIsTrialing(): boolean {
-  const { data } = useSubscriptionQuery();
-  return data?.isTrialing ?? false;
+  return false;
 }
 
 /**
  * Get days remaining in subscription/trial.
+ * Always null in Lite mode.
  */
 export function useDaysRemaining(): number | null {
-  const { data } = useSubscriptionQuery();
-  return data?.daysRemaining ?? null;
+  return null;
 }
 
 /**
  * Check if user can access a specific N-level.
- * Uses the fused premium check (all 3 sources).
+ * Always true in Lite mode - all levels unlocked.
  */
-export function useCanAccessNLevel(nLevel: number): boolean {
-  // Free users can access N1-N5, premium can access all
-  const hasPremium = useHasPremiumAccess();
-  return hasPremium || nLevel <= 5;
+export function useCanAccessNLevel(_nLevel: number): boolean {
+  return true;
 }
 
 // =============================================================================
-// Mutations
+// Mutations (noop in Lite)
 // =============================================================================
 
-/**
- * Refresh subscription from server.
- */
 export function useRefreshSubscription(): UseMutationResult<void, Error, void> {
   const queryClient = useQueryClient();
-
   return useMutation<void, Error, void>({
     mutationFn: async (): Promise<void> => {
       return getSubscriptionAdapter().refresh();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: subscriptionKeys.all });
-      // Also invalidate sync state since it depends on subscription
-      queryClient.invalidateQueries({ queryKey: queryKeys.sync.all });
     },
   });
 }
@@ -159,9 +133,6 @@ export function useRefreshSubscription(): UseMutationResult<void, Error, void> {
 // Cache Helpers
 // =============================================================================
 
-/**
- * Invalidate subscription queries.
- */
 export function invalidateSubscriptionQueries(
   queryClient: ReturnType<typeof useQueryClient>,
 ): void {

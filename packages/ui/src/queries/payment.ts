@@ -1,8 +1,8 @@
 /**
- * Payment Queries (RevenueCat)
+ * Payment Queries (Lite - Noop)
  *
- * TanStack Query hooks for in-app purchases.
- * Uses RevenueCat SDK under the hood via PaymentPort.
+ * Simplified payment queries for local-only mode.
+ * No in-app purchases - everything is free.
  */
 
 import {
@@ -23,34 +23,7 @@ import type {
 import { queryKeys } from './keys';
 
 // =============================================================================
-// Adapter Reference (injected via Provider)
-// =============================================================================
-
-let paymentAdapter: PaymentPort | null = null;
-
-export function setPaymentAdapter(adapter: PaymentPort): void {
-  paymentAdapter = adapter;
-}
-
-export function getPaymentAdapter(): PaymentPort {
-  if (!paymentAdapter) {
-    throw new Error('Payment adapter not initialized. Call setPaymentAdapter first.');
-  }
-  return paymentAdapter;
-}
-
-export function hasPaymentAdapter(): boolean {
-  return paymentAdapter !== null;
-}
-
-// =============================================================================
-// Query Keys (local reference)
-// =============================================================================
-
-const paymentKeys = queryKeys.payment;
-
-// =============================================================================
-// Default Values
+// Adapter Reference (noop - no payments in Lite)
 // =============================================================================
 
 const DEFAULT_CUSTOMER_INFO: CustomerInfo = {
@@ -61,44 +34,70 @@ const DEFAULT_CUSTOMER_INFO: CustomerInfo = {
   originalPurchaseDate: null,
 };
 
+const noopPaymentAdapter: PaymentPort = {
+  isAvailable: () => false,
+  getProducts: async () => [],
+  getCustomerInfo: async () => DEFAULT_CUSTOMER_INFO,
+  purchase: async () => ({ success: false, errorMessage: 'Payments not available in Lite' }),
+  restorePurchases: async () => DEFAULT_CUSTOMER_INFO,
+  subscribe: () => () => {},
+} as PaymentPort;
+
+let paymentAdapter: PaymentPort = noopPaymentAdapter;
+
+export function setPaymentAdapter(adapter: PaymentPort): void {
+  paymentAdapter = adapter;
+}
+
+export function getPaymentAdapter(): PaymentPort {
+  return paymentAdapter;
+}
+
+export function hasPaymentAdapter(): boolean {
+  return paymentAdapter !== noopPaymentAdapter;
+}
+
+// =============================================================================
+// Query Keys (local reference)
+// =============================================================================
+
+const paymentKeys = queryKeys.payment;
+
 // =============================================================================
 // Queries
 // =============================================================================
 
 /**
  * Get available products for purchase.
- *
- * Products are cached for 5 minutes since they rarely change.
+ * Always empty in Lite mode.
  */
 export function useProducts(): UseQueryResult<Product[]> {
-  const adapter = getPaymentAdapter();
   return useQuery<Product[]>({
     queryKey: paymentKeys.products(),
-    queryFn: () => adapter.getProducts(),
-    enabled: adapter.isAvailable(),
-    staleTime: 5 * 60 * 1000, // 5 minutes
+    queryFn: () => getPaymentAdapter().getProducts(),
+    enabled: getPaymentAdapter().isAvailable(),
+    staleTime: 5 * 60 * 1000,
     placeholderData: [],
   });
 }
 
 /**
- * Get current customer info (entitlements).
- *
- * Uses placeholderData to ensure UI renders immediately.
+ * Get current customer info.
+ * Always returns inactive in Lite mode.
  */
 export function useCustomerInfo(): UseQueryResult<CustomerInfo> {
-  const adapter = getPaymentAdapter();
   return useQuery<CustomerInfo>({
     queryKey: paymentKeys.customerInfo(),
-    queryFn: () => adapter.getCustomerInfo(),
-    enabled: adapter.isAvailable(),
-    staleTime: 60 * 1000, // 1 minute
+    queryFn: () => getPaymentAdapter().getCustomerInfo(),
+    enabled: getPaymentAdapter().isAvailable(),
+    staleTime: 60 * 1000,
     placeholderData: DEFAULT_CUSTOMER_INFO,
   });
 }
 
 /**
- * Check if user has an active purchase (premium).
+ * Check if user has an active purchase.
+ * Always false in Lite mode.
  */
 export function useIsPurchaseActive(): boolean {
   const { data } = useCustomerInfo();
@@ -106,53 +105,37 @@ export function useIsPurchaseActive(): boolean {
 }
 
 /**
- * Check if payments are available (mobile only).
- * This is a sync check, no query needed.
+ * Check if payments are available.
+ * Always false in Lite mode.
  */
 export function useIsPaymentAvailable(): boolean {
   return getPaymentAdapter().isAvailable();
 }
 
 // =============================================================================
-// Mutations
+// Mutations (noop in Lite)
 // =============================================================================
 
-/**
- * Purchase a product.
- *
- * On success, invalidates customerInfo and subscription queries.
- */
 export function usePurchase(): UseMutationResult<PurchaseResult, Error, ProductId> {
   const queryClient = useQueryClient();
-
   return useMutation<PurchaseResult, Error, ProductId>({
     mutationFn: (productId: ProductId) => getPaymentAdapter().purchase(productId),
     onSuccess: (result) => {
       if (result.success) {
-        // Invalidate all payment-related queries
         queryClient.invalidateQueries({ queryKey: paymentKeys.all });
-        // Also invalidate subscription since it depends on purchases
         queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
       }
     },
   });
 }
 
-/**
- * Restore previous purchases.
- *
- * On success, invalidates customerInfo and subscription queries.
- */
 export function useRestorePurchases(): UseMutationResult<CustomerInfo, Error, void> {
   const queryClient = useQueryClient();
-
   return useMutation<CustomerInfo, Error, void>({
     mutationFn: () => getPaymentAdapter().restorePurchases(),
     onSuccess: (result) => {
       if (result.isActive) {
-        // Invalidate all payment-related queries
         queryClient.invalidateQueries({ queryKey: paymentKeys.all });
-        // Also invalidate subscription since it depends on purchases
         queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
       }
     },
@@ -160,34 +143,18 @@ export function useRestorePurchases(): UseMutationResult<CustomerInfo, Error, vo
 }
 
 // =============================================================================
-// Listener Wiring
+// Listener Wiring (noop in Lite)
 // =============================================================================
 
-/**
- * Set up RevenueCat listener to sync with TanStack Query cache.
- *
- * Call this once during app initialization (in NeurodualQueryProvider).
- * Returns unsubscribe function.
- */
-export function setupPaymentListener(queryClient: QueryClient): () => void {
-  const adapter = getPaymentAdapter();
-
-  return adapter.subscribe((customerInfo) => {
-    // Update cache directly for immediate UI update
-    queryClient.setQueryData(paymentKeys.customerInfo(), customerInfo);
-
-    // Also invalidate subscription queries since they depend on this
-    queryClient.invalidateQueries({ queryKey: queryKeys.subscription.all });
-  });
+export function setupPaymentListener(_queryClient: QueryClient): () => void {
+  // No payment listener in Lite mode
+  return () => {};
 }
 
 // =============================================================================
 // Cache Helpers
 // =============================================================================
 
-/**
- * Invalidate all payment queries.
- */
 export function invalidatePaymentQueries(queryClient: QueryClient): void {
   queryClient.invalidateQueries({ queryKey: paymentKeys.all });
 }
