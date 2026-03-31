@@ -24,12 +24,6 @@ export {
   DEFAULT_JOURNEY_ID,
   DUALNBACK_CLASSIC_JOURNEY_ID,
   BRAINWORKSHOP_JOURNEY_ID,
-  DUAL_TRACE_JOURNEY_ID,
-  DUAL_TRACK_EASY_JOURNEY_ID,
-  DUAL_TRACK_MEDIUM_JOURNEY_ID,
-  DUAL_TRACK_JOURNEY_ID,
-  DUAL_TRACK_DNB_JOURNEY_ID,
-  DUAL_TRACK_DNB_HYBRID_MODE_ID,
   BUILT_IN_JOURNEYS,
 } from './catalog/journeys';
 
@@ -47,66 +41,7 @@ export {
   isSessionStartEventType,
   type SessionStartEventType,
 } from './engine/session-start-event-types';
-export * from './tower';
-export * from './gridlock';
-export * from './mental-rotation';
-export * from './ravens';
-export {
-  GO_PROBABILITY as GO_NOGO_GO_PROBABILITY,
-  generateTrials as generateGoNoGoTrials,
-  getOutcome as getGoNoGoOutcome,
-  isCorrectOutcome as isCorrectGoNoGoOutcome,
-  computeDPrime as computeGoNoGoDPrime,
-  computeSummary as computeGoNoGoSummary,
-} from './domain/games/go-nogo';
-export type {
-  GoNoGoTrial,
-  GoNoGoTrialResult,
-  GoNoGoSummary,
-  Outcome as GoNoGoOutcome,
-  TrialType as GoNoGoTrialType,
-} from './domain/games/go-nogo';
-export {
-  GO_PROBABILITY as STOP_SIGNAL_GO_PROBABILITY,
-  INITIAL_SSD_MS as STOP_SIGNAL_INITIAL_SSD_MS,
-  SSD_STEP_MS as STOP_SIGNAL_SSD_STEP_MS,
-  SSD_MIN_MS as STOP_SIGNAL_SSD_MIN_MS,
-  SSD_MAX_MS as STOP_SIGNAL_SSD_MAX_MS,
-  generateTrialSequence as generateStopSignalTrialSequence,
-  classifyOutcome as classifyStopSignalOutcome,
-  isCorrect as isStopSignalOutcomeCorrect,
-  adaptSsd as adaptStopSignalSsd,
-  computeSSRT as computeStopSignalSsrt,
-  computeSummary as computeStopSignalSummary,
-} from './domain/games/stop-signal';
-export type {
-  Direction as StopSignalDirection,
-  Outcome as StopSignalOutcome,
-  StopSignalSummary,
-  StopSignalTrial,
-  TrialResult as StopSignalTrialResult,
-  TrialType as StopSignalTrialType,
-} from './domain/games/stop-signal';
-export {
-  TMT_A_COUNT,
-  TMT_B_COUNT,
-  DEFAULT_CIRCLE_RADIUS as TRAIL_MAKING_DEFAULT_CIRCLE_RADIUS,
-  DEFAULT_MIN_DISTANCE as TRAIL_MAKING_DEFAULT_MIN_DISTANCE,
-  generateTmtALabels,
-  generateTmtBLabels,
-  generatePositions as generateTrailMakingPositions,
-  generateTmtACircles,
-  generateTmtBCircles,
-  isCorrectTap as isTrailMakingTapCorrect,
-  computeBMinusA as computeTrailMakingBMinusA,
-  computeSummary as computeTrailMakingSummary,
-} from './domain/games/trail-making';
-export type {
-  CircleItem as TrailMakingCircleItem,
-  TrailPhase as TrailMakingPhase,
-  TrailResult as TrailMakingResult,
-  TrailSummary as TrailMakingSummary,
-} from './domain/games/trail-making';
+// Removed: tower, gridlock, mental-rotation, ravens, go-nogo, stop-signal, trail-making (deleted game modes)
 // =============================================================================
 // Coach (trial generation and stats)
 // =============================================================================
@@ -1009,8 +944,7 @@ export type {
   TraceArithmeticColorCue,
   TraceArithmeticCueToken,
 } from './session/machine/trace-session-plugins';
-export type { TraceTimingsFromIsi } from './specs/trace-timing-utils';
-export { calculateTraceTimingsFromIsi } from './specs/trace-timing-utils';
+// Removed: trace-timing-utils (deleted with trace game mode)
 
 // DualPick session plugins
 export { createDefaultDualPickPlugins } from './session/machine/dual-pick-session-plugins';
@@ -1527,7 +1461,7 @@ export type {
   UnifiedModalityStats,
   UnifiedTotals,
 } from './types/session-report';
-export { PROCESSING_ACCURACY_THRESHOLD } from './domain/games/ospan';
+// Removed: ospan (deleted game mode)
 // Note: FocusStats (for session report) is exported from './ports' as part of stats-port
 export {
   resolveJourneyPresentation,
@@ -1609,20 +1543,8 @@ export {
   DualnbackClassicSpec,
   SimBrainWorkshopSpec,
   TempoSpecs,
-  // Flow Specs
-  DualPlaceSpec,
-  PlaceSpecs,
-  type PlaceSpec,
-  // Memo Specs
-  DualMemoSpec,
-  MemoSpecs,
-  type MemoSpec,
-  // Label Specs
-  DualPickSpec,
-  PickSpecs,
-  // Trace Specs
-  DualTraceSpec,
-  buildTraceSessionConfig,
+  // Removed: DualPlaceSpec, PlaceSpecs, PlaceSpec, DualMemoSpec, MemoSpecs, MemoSpec,
+  // DualPickSpec, PickSpecs, DualTraceSpec, buildTraceSessionConfig (deleted game modes)
   // Tutorial Specs
   ClassicTutorialSpec,
   TutorialSpecs,
@@ -1664,10 +1586,7 @@ export {
   // Storage Monitoring
   STORAGE_WARNING_THRESHOLD_PERCENT,
   STORAGE_CRITICAL_THRESHOLD_PERCENT,
-  // Trajectory Limits
-  TRAJECTORY_MAX_POINTS,
-  TRAJECTORY_MAX_DURATION_MS,
-  TRAJECTORY_WARNING_POINTS,
+  // Removed: TRAJECTORY_MAX_POINTS, TRAJECTORY_MAX_DURATION_MS, TRAJECTORY_WARNING_POINTS (deleted with trace mode)
 } from './specs';
 export type {
   ModeSpec,
@@ -1686,14 +1605,8 @@ export type {
   // Extension types
   DualnbackClassicExtensions,
   BrainWorkshopExtensions,
-  PlaceExtensions,
-  MemoExtensions,
-  PickExtensions,
-  PickSpec,
-  TraceExtensions,
-  ArithmeticInterferenceConfig,
-  TraceWritingMode as SpecTraceWritingMode, // Renamed to avoid conflict with types/trace
-  TraceRhythmMode as SpecTraceRhythmMode, // Renamed to avoid conflict with types/trace
+  // Removed: PlaceExtensions, MemoExtensions, PickExtensions, PickSpec, TraceExtensions,
+  // ArithmeticInterferenceConfig, TraceWritingMode, TraceRhythmMode (deleted game modes)
   // Tutorial types
   TutorialSpec,
   TutorialStepSpec,

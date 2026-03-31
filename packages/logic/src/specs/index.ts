@@ -76,6 +76,23 @@ export type {
 
 export { hasExtension } from './types';
 
+// Stub types for deleted game modes (Place, Memo, Pick, Trace)
+export type PlaceSpec = ModeSpec;
+export type MemoSpec = ModeSpec;
+export type PickSpec = ModeSpec;
+export type PlaceExtensions = Record<string, unknown>;
+export type MemoExtensions = Record<string, unknown>;
+export type PickExtensions = Record<string, unknown>;
+export type TraceExtensions = Record<string, unknown>;
+export type ArithmeticInterferenceConfig = Record<string, unknown>;
+export type TraceWritingMode = string;
+export type TraceRhythmMode = string;
+
+// Stub constants for deleted modes
+export const TRAJECTORY_MAX_POINTS = 1000;
+export const TRAJECTORY_MAX_DURATION_MS = 30000;
+export const TRAJECTORY_WARNING_POINTS = 800;
+
 // =============================================================================
 // Thresholds
 // =============================================================================
