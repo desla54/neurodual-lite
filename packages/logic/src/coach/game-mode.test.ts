@@ -146,13 +146,12 @@ describe('GameModeRegistry', () => {
       expect(trainingModes.every((m) => m.tags.includes('training'))).toBe(true);
     });
 
-    it('should include gridlock in the built-in registry', () => {
-      expect(gameModeRegistry.has('gridlock')).toBe(true);
-      expect(gameModeRegistry.get('gridlock').id).toBe('gridlock');
-    });
+    // gridlock test removed (mode pruned in NeuroDual Lite)
 
-    it('should register every mode spec from AllSpecs', () => {
-      for (const modeId of Object.keys(AllSpecs)) {
+    it('should register every non-stub mode spec from AllSpecs', () => {
+      for (const [modeId, spec] of Object.entries(AllSpecs)) {
+        // Skip stub specs for removed modes
+        if (!(spec as any).generation || !(spec as any).adaptivity) continue;
         expect(gameModeRegistry.has(modeId)).toBe(true);
       }
     });
@@ -269,16 +268,7 @@ describe('GameModeRegistry', () => {
       expect(resolved.config.nLevel).toBe(5);
     });
 
-    it('should merge corsi direction into spec extensions', () => {
-      const resolved = gameModeRegistry.resolveWithSettings('corsi-block', {
-        nLevel: 4,
-        corsiDirection: 'backward',
-      });
-
-      expect(resolved.config.nLevel).toBe(4);
-      expect(resolved.spec.extensions?.['direction']).toBe('backward');
-      expect(resolved.spec.defaults.nLevel).toBe(4);
-    });
+    // corsi-block test removed (mode pruned in NeuroDual Lite)
 
     it('should handle custom algorithm override if permitted', () => {
       const settings: ModeSettings = {
@@ -329,8 +319,6 @@ describe('GameModeRegistry', () => {
         { id: 'custom', gen: 'BrainWorkshop', algo: 'none' },
         { id: 'dualnback-classic', gen: 'DualnbackClassic', algo: 'jaeggi-v1' },
         { id: 'sim-brainworkshop', gen: 'BrainWorkshop', algo: 'brainworkshop-v1' },
-        { id: 'dual-memo', gen: 'Sequence', algo: 'adaptive' },
-        { id: 'dual-place', gen: 'Sequence', algo: 'adaptive' },
       ];
 
       for (const m of modes) {
@@ -341,15 +329,7 @@ describe('GameModeRegistry', () => {
       }
     });
 
-    it('dual-memo should have memo sequenceMode', () => {
-      const memo = gameModeRegistry.get('dual-memo');
-      expect((memo as unknown as { sequenceMode: string }).sequenceMode).toBe('memo');
-    });
-
-    it('dual-place should have flow sequenceMode', () => {
-      const place = gameModeRegistry.get('dual-place');
-      expect((place as unknown as { sequenceMode: string }).sequenceMode).toBe('flow');
-    });
+    // dual-memo and dual-place tests removed (modes pruned in NeuroDual Lite)
   });
 
   describe('resolveWithSettings exhaustive', () => {
@@ -383,47 +363,7 @@ describe('GameModeRegistry', () => {
       expect(resolved.config.nLevel).toBe(2); // Default for custom
     });
 
-    it('should apply dual-track color identity mode to extensions', () => {
-      const resolved = gameModeRegistry.resolveWithSettings('dual-track', {
-        nLevel: 3,
-        trackingIdentityMode: 'color',
-      });
-
-      expect(resolved.spec.extensions?.['trackingIdentityMode']).toBe('color');
-      expect(resolved.spec.extensions?.['targetCount']).toBe(3);
-    });
-
-    it('should apply dual-track position identity mode to extensions', () => {
-      const resolved = gameModeRegistry.resolveWithSettings('dual-track', {
-        nLevel: 3,
-        trackingIdentityMode: 'position',
-      });
-
-      expect(resolved.spec.extensions?.['trackingIdentityMode']).toBe('position');
-      expect(resolved.spec.extensions?.['targetCount']).toBe(3);
-    });
-
-    it('should apply dual-track spoken letter option to extensions', () => {
-      const resolved = gameModeRegistry.resolveWithSettings('dual-track', {
-        nLevel: 3,
-        trackingLetterAudioEnabled: true,
-      });
-
-      expect(resolved.spec.extensions?.['trackingIdentityMode']).toBe('classic');
-      expect(resolved.spec.extensions?.['trackingLetterAudioEnabled']).toBe(true);
-      expect(resolved.spec.extensions?.['targetCount']).toBe(3);
-    });
-
-    it('keeps legacy letter identity settings compatible', () => {
-      const resolved = gameModeRegistry.resolveWithSettings('dual-track', {
-        nLevel: 3,
-        trackingIdentityMode: 'letter',
-      });
-
-      expect(resolved.spec.extensions?.['trackingIdentityMode']).toBe('classic');
-      expect(resolved.spec.extensions?.['trackingLetterAudioEnabled']).toBe(true);
-      expect(resolved.spec.extensions?.['targetCount']).toBe(3);
-    });
+    // dual-track tests removed (mode pruned in NeuroDual Lite)
 
     it('should handle missing context when nLevelSource is profile', () => {
       const profileSpec = createTestSpec({

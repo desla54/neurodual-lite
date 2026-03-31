@@ -770,8 +770,8 @@ describe('convertGenericSession', () => {
     const baseInput: GenericSessionInput = {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
-      gameMode: 'dual-place',
-      gameModeLabel: 'Dual Place',
+      gameMode: 'dual-catch',
+      gameModeLabel: 'Dual Catch',
       nLevel: 2,
       activeModalities: ['position'],
       trialsCount: 10,
@@ -780,20 +780,18 @@ describe('convertGenericSession', () => {
       byModality: {},
       unifiedAccuracy: 0.8,
       modeScoreValue: 80,
-      modeScoreLabelKey: 'report.modeScore.placementAccuracy',
+      modeScoreLabelKey: 'report.modeScore.accuracy',
       modeScoreUnit: '%',
       avgRT: 1000,
     };
 
-    const flowResult = convertGenericSession(baseInput);
+    const tempoResult = convertGenericSession(baseInput);
     // Speed label comes from spec - check it's the right i18n key
-    expect(flowResult.speedStats?.labelKey).toBe('report.speed.placementTime');
-
-    const memoResult = convertGenericSession({ ...baseInput, gameMode: 'dual-memo' });
-    expect(memoResult.speedStats?.labelKey).toBe('report.speed.recallTime');
-
-    const tempoResult = convertGenericSession({ ...baseInput, gameMode: 'dual-catch' });
     expect(tempoResult.speedStats?.labelKey).toBe('report.speed.reactionTime');
+
+    // Unknown modes fall back to default display spec
+    const unknownResult = convertGenericSession({ ...baseInput, gameMode: 'unknown-mode' });
+    expect(unknownResult.speedStats?.labelKey).toBe('report.speed.reactionTime');
   });
 });
 

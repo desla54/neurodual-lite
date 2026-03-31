@@ -997,5 +997,7 @@ function registerBuiltInMode(spec: BuiltInModeSpec): void {
 }
 
 for (const spec of Object.values(AllSpecs)) {
+  // Skip stub specs for removed modes (they lack required fields like generation/adaptivity)
+  if (!spec.generation || !spec.adaptivity) continue;
   registerBuiltInMode(spec);
 }

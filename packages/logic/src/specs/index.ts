@@ -223,14 +223,30 @@ import { StroopSpecs } from './stroop.spec';
 import { OspanSpecs } from './ospan.spec';
 import { TutorialSpecs } from './tutorial.spec';
 
+// Stub specs for removed modes (still referenced by AllSpecs consumers)
+import { DualTimeSpec } from './time.spec';
+import { DualTrackSpec } from './track.spec';
+import { CorsiBlockSpec } from './corsi.spec';
+import { RunningSpanSpec } from './running-span.spec';
+import { PasatSpec } from './pasat.spec';
+import { SwmSpec } from './swm.spec';
+
 /**
  * All mode specs in a single registry.
  * Use this to iterate over all modes or look up by ID.
+ * Includes stubs for removed modes so runtime lookups don't crash.
  */
 export const AllSpecs = {
   ...TempoSpecs,
   ...StroopSpecs,
   ...OspanSpecs,
+  // Stubs for removed modes (minimal shape, enough for runtime lookups)
+  'dual-time': DualTimeSpec,
+  'dual-track': DualTrackSpec,
+  'corsi-block': CorsiBlockSpec,
+  'running-span': RunningSpanSpec,
+  pasat: PasatSpec,
+  swm: SwmSpec,
 } as const;
 
 /**

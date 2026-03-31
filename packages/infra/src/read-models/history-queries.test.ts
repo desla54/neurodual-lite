@@ -210,7 +210,7 @@ describe('filter combinations', () => {
     it('specific game mode adds game_mode IN clause', () => {
       const result = buildSessionSummariesFilteredCountCompiledQuery(
         ['user-1'],
-        makeFilters({ mode: 'DualPlace' }),
+        makeFilters({ mode: 'DualTempo' }),
       );
       // Should have a game_mode filter, not a play_context filter
       expect(result.sql).toContain('game_mode');
