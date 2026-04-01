@@ -29,7 +29,9 @@
       "advancedPerformanceTitle": "Analyse avancée par mode",
       "advancedPerformanceBody": "La synthèse UPS, la distribution et la répartition globale restent réservées à l'alpha. Pour une analyse déjà aboutie, utilisez le filtre Mode.",
       "advancedEvolutionTitle": "Évolution avancée par mode",
-      "advancedEvolutionBody": "Les tendances avancées sont plus fiables lorsqu'elles sont lues dans le contexte d'un mode précis. Utilisez le filtre Mode pour afficher cette vue."
+      "advancedEvolutionBody": "Les tendances avancées sont plus fiables lorsqu'elles sont lues dans le contexte d'un mode précis. Utilisez le filtre Mode pour afficher cette vue.",
+      "comingSoonTitle": "Statistiques bientôt disponibles",
+      "comingSoonBody": "Les statistiques détaillées pour ce mode sont en cours de développement. En attendant, vos sessions sont bien enregistrées dans l'historique."
     },
     "report": {
       "levelUp": "Niveau Supérieur !",

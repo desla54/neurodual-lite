@@ -29,7 +29,9 @@
       "advancedPerformanceTitle": "Advanced analysis by mode",
       "advancedPerformanceBody": "The UPS synthesis, distribution and overall breakdown remain reserved for the alpha. For a thorough analysis, use the Mode filter.",
       "advancedEvolutionTitle": "Advanced trends by mode",
-      "advancedEvolutionBody": "Advanced trends are more reliable when read in the context of a specific mode. Use the Mode filter to display this view."
+      "advancedEvolutionBody": "Advanced trends are more reliable when read in the context of a specific mode. Use the Mode filter to display this view.",
+      "comingSoonTitle": "Statistics coming soon",
+      "comingSoonBody": "Detailed statistics for this mode are being developed. In the meantime, your sessions are recorded in the history tab."
     },
     "report": {
       "levelUp": "Level up!",

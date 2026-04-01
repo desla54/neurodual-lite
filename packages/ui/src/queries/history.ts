@@ -461,6 +461,26 @@ export function useSessionSummariesCountQuery(): {
   };
 }
 
+/**
+ * Returns the game_mode of the most recent completed session among the given mode IDs.
+ * Used to auto-select the last played mode when switching stats tabs.
+ */
+export function useLatestStatsGameModeQuery(gameModeIds: readonly string[]): {
+  gameMode: string | null;
+  isPending: boolean;
+} {
+  const user = useCurrentUser();
+  const stableIds = useMemo(() => gameModeIds, [gameModeIds.join(',')]);
+  const snap = useSubscribable(
+    getReadModelsAdapter().historyLatestStatsGameMode(user?.id ?? null, stableIds),
+  );
+  const rows = snap.data as Array<{ game_mode: string | null }>;
+  return {
+    gameMode: rows?.[0]?.game_mode ?? null,
+    isPending: snap.isPending,
+  };
+}
+
 export function useMaxAchievedLevelForModeQuery(gameMode: string): {
   maxLevel: number | null;
   isPending: boolean;

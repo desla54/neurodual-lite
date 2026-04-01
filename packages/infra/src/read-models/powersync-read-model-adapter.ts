@@ -19,6 +19,7 @@ import {
   buildJourneySessionsCompiledQuery,
   buildLatestJourneySessionCompiledQuery,
   buildLastAdaptiveDPrimeCompiledQuery,
+  buildLatestStatsGameModeCompiledQuery,
   buildMaxAchievedLevelCompiledQuery,
   buildRecentSessionsForTrendCompiledQuery,
   buildSessionDetailsCompiledQuery,
@@ -1136,6 +1137,13 @@ export function createPowerSyncReadModelAdapter(): ReadModelPort {
       const userIds = userIdsWithLocal(userId);
       const compiled = buildLastAdaptiveDPrimeCompiledQuery(userIds);
       const cacheKey = `historyLastAdaptiveDPrime:${userId ?? 'local'}`;
+      return watchRows({ cacheKey, compiled, cache: historyCache });
+    },
+
+    historyLatestStatsGameMode: (userId, gameModeIds) => {
+      const userIds = userIdsWithLocal(userId);
+      const compiled = buildLatestStatsGameModeCompiledQuery(userIds, gameModeIds);
+      const cacheKey = `historyLatestStatsGameMode:${userId ?? 'local'}:${gameModeIds.join(',')}`;
       return watchRows({ cacheKey, compiled, cache: historyCache });
     },
 

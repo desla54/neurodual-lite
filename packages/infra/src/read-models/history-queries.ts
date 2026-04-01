@@ -444,6 +444,33 @@ export function buildLastAdaptiveDPrimeCompiledQuery(userIds: readonly string[])
   return compileQuery(query);
 }
 
+/**
+ * Returns the game_mode of the most recent completed session among the given mode IDs.
+ */
+export function buildLatestStatsGameModeCompiledQuery(
+  userIds: readonly string[],
+  gameModeIds: readonly string[],
+): CompiledSqlQuery {
+  const conditions: Array<SQL | undefined> = [
+    userScopeCondition(userIds),
+    completedSessionsCondition(),
+  ];
+
+  if (gameModeIds.length > 0) {
+    conditions.push(inArray(sessionSummaries.game_mode, [...gameModeIds]));
+  } else {
+    conditions.push(sql`1 = 0`);
+  }
+
+  const query = historyQueryBuilder
+    .select({ game_mode: sessionSummaries.game_mode })
+    .from(sessionSummaries)
+    .where(combineConditions(conditions.filter(nonNullable)))
+    .orderBy(desc(sessionSummaries.created_at), desc(sessionSummaries.session_id))
+    .limit(1);
+  return compileQuery(query);
+}
+
 export function buildRecentSessionsForTrendCompiledQuery(input: {
   userIds: readonly string[];
   gameMode: string;

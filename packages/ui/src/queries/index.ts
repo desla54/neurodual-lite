@@ -98,6 +98,7 @@ export {
   useSessionSummariesFilteredCountQuery,
   useSessionSummariesHeaderCountsQuery,
   useMaxAchievedLevelForModeQuery,
+  useLatestStatsGameModeQuery,
   useJourneyRecordableSessionsQuery,
   useSessionSummariesPageQuery,
   type SessionSummariesCursor,

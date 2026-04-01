@@ -573,6 +573,7 @@ export function createNoopInfraAdapters(): InfraAdapters {
     historySessionDetails: () => emptyRowsStore,
     historySessionSummaries: () => emptyRowsStore,
     historyLastAdaptiveDPrime: () => emptyRowsStore,
+    historyLatestStatsGameMode: () => emptyRowsStore,
     historyRecentSessionsForTrend: () => emptyRowsStore,
     historySessionsByGameMode: () => emptyRowsStore,
     historyJourneySessions: () => emptyRowsStore,

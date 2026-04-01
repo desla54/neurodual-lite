@@ -93,6 +93,10 @@ export interface ReadModelPort {
   historyLastAdaptiveDPrime(
     userId: string | null,
   ): Subscribable<ReadModelSnapshot<readonly unknown[]>>;
+  historyLatestStatsGameMode(
+    userId: string | null,
+    gameModeIds: readonly string[],
+  ): Subscribable<ReadModelSnapshot<readonly unknown[]>>;
   historyRecentSessionsForTrend(
     userId: string | null,
     input: {

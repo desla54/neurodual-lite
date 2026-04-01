@@ -6,6 +6,7 @@
 import {
   SessionHistoryExportSchema,
   generateContextualMessageData,
+  getGameModeMeta,
   getModeI18nKey,
   type JourneyConfig,
   type SessionEndReportModel,
@@ -43,6 +44,7 @@ import {
   useAvailableJourneyIdsQuery,
   useLatestJourneySessionQuery,
   useSessionSummariesHeaderCountsQuery,
+  useLatestStatsGameModeQuery,
   useDeleteSession,
   useDeleteSessions,
   useExportSessions,
@@ -85,6 +87,9 @@ import { translateContextualMessage } from '../utils/contextual-message';
 type TabValue = 'simple' | 'advanced' | 'history' | 'progression';
 const VALID_TABS: TabValue[] = ['simple', 'advanced', 'history', 'progression'];
 const SHOW_STATS_CONTEXT_SUBFILTERS = false;
+
+/** Game mode IDs that have full stats support (Simple/Advanced tabs). */
+const STATS_SUPPORTED_GAME_MODE_IDS = ['dualnback-classic', 'sim-brainworkshop'] as const;
 
 export function StatsPage(): ReactNode {
   const { t, i18n } = useTranslation();
@@ -151,21 +156,38 @@ export function StatsPage(): ReactNode {
     (s) => s.ui.journeyModeSettingsByJourneyId,
   );
 
-  // Tab (validated)
-  const activeTab: TabValue = VALID_TABS.includes(storedTab as TabValue)
-    ? (storedTab as TabValue)
-    : 'history';
-
-  const handleTabChange = (value: string) => {
-    setStatsTab(value);
-  };
-
   // Mode filter (validated) - default to 'all'
   const mode: ModeType = VALID_MODES.includes(storedMode as ModeType)
     ? (storedMode as ModeType)
     : 'all';
   const effectiveMode: ModeType =
     !SHOW_STATS_CONTEXT_SUBFILTERS && (mode === 'Journey' || mode === 'Libre') ? 'all' : mode;
+
+  // Latest played mode among supported stats modes (for smart tab switching)
+  const { gameMode: latestStatsGameMode } =
+    useLatestStatsGameModeQuery(STATS_SUPPORTED_GAME_MODE_IDS);
+
+  // Tab (validated)
+  const activeTab: TabValue = VALID_TABS.includes(storedTab as TabValue)
+    ? (storedTab as TabValue)
+    : 'history';
+
+  const handleTabChange = (value: string) => {
+    const tab = value as TabValue;
+    setStatsTab(value);
+
+    // Smart mode switching:
+    // - History/Progression → 'all' (see all sessions)
+    // - Simple/Advanced → last played supported mode (show meaningful stats)
+    if (tab === 'history' || tab === 'progression') {
+      if (mode !== 'all') setStatsMode('all');
+    } else if (tab === 'simple' || tab === 'advanced') {
+      if (mode === 'all' && latestStatsGameMode) {
+        const meta = getGameModeMeta(latestStatsGameMode);
+        if (meta) setStatsMode(meta.statsMode);
+      }
+    }
+  };
 
   const setMode = useCallback(
     (newMode: ModeType) => {

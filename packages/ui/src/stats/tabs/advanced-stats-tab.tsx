@@ -11,7 +11,7 @@
 import type { ReactNode } from 'react';
 import { useEffect, useEffectEvent, useState, useCallback, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Warning, Brain } from '@phosphor-icons/react';
+import { Warning, Brain, HourglassHigh } from '@phosphor-icons/react';
 
 import {
   getStatsSpec,
@@ -287,6 +287,29 @@ export function AdvancedStatsTab({
   const handleInputMethodChange = useCallback((newMethod: StatsInputMethod) => {
     setInputMethod(newMethod);
   }, []);
+
+  // Coming soon placeholder for modes without detailed stats yet
+  const COMING_SOON_MODES = new Set(['StroopFlex', 'Ospan', 'Gridlock']);
+  if (COMING_SOON_MODES.has(effectiveMode)) {
+    return (
+      <div className="flex flex-col items-center justify-center py-16 text-center space-y-4">
+        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+          <HourglassHigh size={32} weight="duotone" className="text-primary" />
+        </div>
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-foreground">
+            {t('stats.placeholders.comingSoonTitle', 'Statistics coming soon')}
+          </p>
+          <p className="text-sm text-muted-foreground max-w-xs">
+            {t(
+              'stats.placeholders.comingSoonBody',
+              'Detailed statistics for this mode are being developed. In the meantime, your sessions are recorded in the history tab.',
+            )}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   // Loading state
   if (loading) {
