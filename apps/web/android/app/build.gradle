@@ -8,7 +8,7 @@ def getVersionCode = { ->
             commandLine 'git', 'rev-list', '--count', 'HEAD'
             standardOutput = stdout
         }
-        return 1000 + Integer.parseInt(stdout.toString().trim())
+        return 3000 + Integer.parseInt(stdout.toString().trim())
     } catch (Exception e) {
         return 1000
     }
