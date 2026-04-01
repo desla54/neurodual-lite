@@ -169,7 +169,14 @@ function calculateDualPickAccuracy(data: DualPickAccuracyData): number {
  * Returns 0-100 scale.
  */
 function calculateBrainWorkshopAccuracy(data: TempoAccuracyData): number {
-  return Math.round(computeBrainWorkshopScoreFromRaw(data.hits, data.correctRejections, data.falseAlarms, data.misses));
+  return Math.round(
+    computeBrainWorkshopScoreFromRaw(
+      data.hits,
+      data.correctRejections,
+      data.falseAlarms,
+      data.misses,
+    ),
+  );
 }
 
 // =============================================================================

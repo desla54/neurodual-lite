@@ -1,17 +1,18 @@
 /**
  * Journey Scoring - Stub for backward compatibility
  */
-import {
-  JAEGGI_POINTS_PER_ERROR,
-  SCORE_MAX, SCORE_MIN,
-} from '../../specs/thresholds';
+import { JAEGGI_POINTS_PER_ERROR, SCORE_MAX, SCORE_MIN } from '../../specs/thresholds';
 import {
   calculateTempoSessionPassed as calculateTempoPassedFromCentralized,
   type ModalitySDTCounts,
 } from '../scoring/session-passed';
 
 export type JourneyScoringStrategy =
-  | 'brainworkshop' | 'dualnback-classic' | 'jaeggi' | 'balanced' | 'dprime';
+  | 'brainworkshop'
+  | 'dualnback-classic'
+  | 'jaeggi'
+  | 'balanced'
+  | 'dprime';
 
 export interface JourneyScoreResult {
   readonly score: number;
@@ -72,7 +73,13 @@ export function computeBrainWorkshopScoreFromRaw(
 ): number {
   const total = hits + correctRejections + falseAlarms + misses;
   if (total === 0) return 0;
-  return Math.max(SCORE_MIN, Math.min(SCORE_MAX, ((hits + correctRejections - falseAlarms - misses) / total + 1) / 2 * SCORE_MAX));
+  return Math.max(
+    SCORE_MIN,
+    Math.min(
+      SCORE_MAX,
+      (((hits + correctRejections - falseAlarms - misses) / total + 1) / 2) * SCORE_MAX,
+    ),
+  );
 }
 
 export function computeDualnbackClassicScoreFromRaw(
@@ -82,12 +89,13 @@ export function computeDualnbackClassicScoreFromRaw(
   for (const stats of Object.values(byModality)) {
     totalErrors += stats.falseAlarms + stats.misses;
   }
-  return Math.max(SCORE_MIN, Math.min(SCORE_MAX, SCORE_MAX - totalErrors * JAEGGI_POINTS_PER_ERROR));
+  return Math.max(
+    SCORE_MIN,
+    Math.min(SCORE_MAX, SCORE_MAX - totalErrors * JAEGGI_POINTS_PER_ERROR),
+  );
 }
 
-export function aggregateRawStats(
-  byModality: Record<string, RawSDTStats>,
-): RawSDTStats {
+export function aggregateRawStats(byModality: Record<string, RawSDTStats>): RawSDTStats {
   const result: RawSDTStats = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 };
   for (const stats of Object.values(byModality)) {
     result.hits += stats.hits;

@@ -282,7 +282,6 @@ export const ClassicTutorialSpec: TutorialSpec = {
   },
 };
 
-
 // Place, Pick, Trace, Memo tutorials removed (NeuroDual Lite)
 
 // =============================================================================
@@ -312,6 +311,4 @@ export function getTutorialSpec(id: TutorialSpecId): TutorialSpec {
 /**
  * List of all tutorial IDs in display order for the Hub.
  */
-export const TUTORIAL_HUB_ORDER: readonly TutorialSpecId[] = [
-  'basics',
-];
+export const TUTORIAL_HUB_ORDER: readonly TutorialSpecId[] = ['basics'];
