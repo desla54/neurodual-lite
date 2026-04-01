@@ -17,7 +17,6 @@ import {
   sessionSummaryRowToHistoryItem,
   getModeName,
   SESSION_REPORT_PROJECTION_VERSION,
-  SESSION_END_EVENT_TYPES,
   SESSION_END_EVENT_TYPES_ARRAY,
   isSessionEndEventType,
   type HistoryPort,
@@ -36,28 +35,35 @@ import { deleteSessionEvents, deleteSessionEventsBatch } from '../persistence/se
 import { historyLog } from '../logger';
 import { insertSessionSummaryFromEvent } from './history-projection';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
-import {
-  getActivePowerSyncWatchSubscriptions,
-  watchUserDeletedSessions,
-  watchUserEventSignalsByTypes,
-  watchUserResets,
-} from '../powersync/event-watcher';
+// Event-watcher stubs inlined (no-ops after ES removal)
+const getActivePowerSyncWatchSubscriptions = () => 0;
+const watchUserDeletedSessions = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _callback: (rows: Array<{ id: string; session_id: string; [key: string]: unknown }>) => void): (() => void) => () => {};
+const watchUserEventSignalsByTypes = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _types: readonly string[], _optionsOrCallback?: unknown, _callback?: (rows: unknown[]) => void): (() => void) => () => {};
+const watchUserResets = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _callback: (rows: Array<{ reset_at?: string; [key: string]: unknown }>) => void): (() => void) => () => {};
 import { createEventReader } from '../events/event-reader';
 import {
   getSessionEvents as getSessionEventsFromEmmettSql,
-  getStreamVersion,
   countSessionEvents,
   getSessionEndEventsAfterPosition,
   getLatestEndEventsForSessions,
   buildEventSignalCountQuery,
   type EventRow,
-} from '../es-emmett/event-queries';
+} from '../persistence/session-queries';
 import { exportSessionsToJSON, importSessionsFromJSON } from './history-import-export';
 import { rebuildStatsProjectionsForUser } from '../projections/session-summaries-projection';
 import { wipeLocalDeviceData } from '../lifecycle/local-data-wipe';
-import { getLastAppliedResetAtMs, setLastAppliedResetAtMs } from '../sync/reset-marker';
-import { supabaseAuthAdapter, supabaseSubscriptionAdapter } from '../supabase';
-import { isSupabaseConfigured } from '../supabase/client';
+// ---------------------------------------------------------------------------
+// Inline stubs replacing removed sync/supabase modules
+// ---------------------------------------------------------------------------
+
+const _resetMarkerMemory = new Map<string, number>();
+function getLastAppliedResetAtMs(userId: string): number | null {
+  return _resetMarkerMemory.get(userId) ?? null;
+}
+function setLastAppliedResetAtMs(userId: string, ms: number): void {
+  _resetMarkerMemory.set(userId, ms);
+}
+
 import { bulkDeleteWhereIn } from '../db/sql-executor';
 import type { PowerSyncEventSignalRow } from '../powersync/schema';
 import { withWatchdogContextAsync, withWatchdogStepAsync } from '../diagnostics/freeze-watchdog';
@@ -213,13 +219,10 @@ export function createHistoryAdapter(
     // Use centralized event-queries for O(1) indexed reads (stream version + event count).
     try {
       const psDb = await requirePowerSyncDb(persistence);
-      const [version, count] = await Promise.all([
-        getStreamVersion(psDb, `session:${sessionId}`),
-        countSessionEvents(psDb, sessionId),
-      ]);
+      const count = await countSessionEvents(psDb, sessionId);
 
       if (count === 0) return '0:0';
-      return `events:${count}:${String(version ?? 0n)}`;
+      return `events:${count}:0`;
     } catch {
       return '0:0';
     }
@@ -306,26 +309,7 @@ export function createHistoryAdapter(
   let isReadyState = true; // Default true for local-only mode (no sync processing)
 
   function getScopedHistoryUserIds(): string[] {
-    let userIds: string[] = ['local'];
-
-    if (isSupabaseConfigured()) {
-      const authState = supabaseAuthAdapter.getState();
-      if (authState.status === 'authenticated') {
-        // Keep local sessions visible alongside authenticated sessions.
-        // This matches PowerSync query behavior (effectiveUserIdsWithLocal).
-        userIds = [authState.session.user.id, 'local'];
-      } else {
-        // Not authenticated: use 'local' to show sessions created before login
-        // Privacy note: After logout, the user's cloud sessions are not visible
-        // because they have a different user_id (the authenticated one).
-        // Only local sessions (user_id='local') will be shown.
-        historyLog.debug(
-          'getSessionsFromSQL: Supabase configured but not authenticated, using local userId',
-        );
-        userIds = ['local'];
-      }
-    }
-    return userIds;
+    return ['local'];
   }
 
   async function getSessionsFromSQL(filters?: {
@@ -447,13 +431,7 @@ export function createHistoryAdapter(
     async importSessions(data: SessionHistoryExport): Promise<ImportResult> {
       const existingSessions = await this.getSessions();
 
-      // Get targetUserId for cloud sync (deterministic IDs + correct user_id)
-      const authState = supabaseAuthAdapter.getState();
-      const subState = supabaseSubscriptionAdapter.getState();
-      const targetUserId =
-        authState.status === 'authenticated' && subState.hasCloudSync
-          ? authState.session.user.id
-          : undefined;
+      const targetUserId: string | undefined = undefined;
 
       const result = await importSessionsFromJSON(persistence, data, existingSessions, {
         targetUserId,
@@ -475,11 +453,7 @@ export function createHistoryAdapter(
 
     async getReport(sessionId: string): Promise<SessionEndReportModel | null> {
       try {
-        const authState = supabaseAuthAdapter.getState();
-        const userId =
-          isSupabaseConfigured() && authState.status === 'authenticated'
-            ? authState.session.user.id
-            : 'local';
+        const userId = 'local';
         const revision = await getReportRevision(sessionId);
         const report = await uiCache.getOrCompute({
           userId,
@@ -649,38 +623,11 @@ export function setupHistoryPowerSyncWatch(
   const EMT_COUNT_TRIGGER_COOLDOWN_MS = 1_500;
 
   async function ensureProjectionsUpToDate(
-    reason: string,
-    options?: { invalidateCache?: boolean },
+    _reason: string,
+    _options?: { invalidateCache?: boolean },
   ): Promise<void> {
-    try {
-      const report = await withWatchdogStepAsync(
-        `PowerSyncWatch.ensureProjectionsUpToDate(${reason})`,
-        async () => {
-          const { getProcessorEngine } = await import('../es-emmett/processor-engine');
-          const engine = getProcessorEngine();
-          if (options?.invalidateCache) {
-            engine.invalidateCache();
-          }
-          return engine.ensureUpToDate();
-        },
-        { warnAfterMs: 1500 },
-      );
-      if (report.replayed.length > 0) {
-        historyLog.info(
-          `[PowerSync] Projection replay (${reason}): ${report.replayed.join(', ')} (${
-            report.totalEventsProcessed
-          } events)`,
-        );
-      } else if (report.caughtUp.length > 0) {
-        historyLog.debug(
-          `[PowerSync] Projection catch-up (${reason}): ${report.caughtUp.join(', ')} (${
-            report.totalEventsProcessed
-          } events)`,
-        );
-      }
-    } catch (error) {
-      historyLog.warn(`[PowerSync] Projection ensureUpToDate failed (${reason})`, error);
-    }
+    // No-op: Emmett processor engine has been removed.
+    // Projections are now maintained via direct SQLite writes.
   }
 
   const scheduleProjectionCatchUp = (
@@ -919,10 +866,8 @@ export function setupHistoryPowerSyncWatch(
 
     let reprojected = 0;
 
-    // Get latest end events via centralized event-queries module (CTE + chunked internally).
-    const endTypes = Array.from(SESSION_END_EVENT_TYPES);
-    const streamIds = sessionIds.map((id) => `session:${id}`);
-    const latestEndEvents = await getLatestEndEventsForSessions(db, streamIds, endTypes);
+    // Get latest end events via session-queries module.
+    const latestEndEvents = await getLatestEndEventsForSessions(db, sessionIds);
     const budget = { lastYieldMs: nowMs() };
 
     for (const latestEndEvent of latestEndEvents) {

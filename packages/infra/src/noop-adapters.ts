@@ -46,6 +46,11 @@ export const noopSyncAdapter: SyncPort = {
 /** Reward adapter with no rewards */
 export const noopRewardAdapter: RewardPort = {
   getRewards: () => [],
+  getGrantedRewards: async () => [],
+  getPendingRewards: () => [],
+  grantReward: async () => ({ success: false, error: 'not available' }),
+  queueReward: () => {},
+  processPendingRewards: async () => {},
   claimReward: async () => {},
   onRewardChange: () => ({ unsubscribe: () => {} }),
   subscribe: () => () => {},

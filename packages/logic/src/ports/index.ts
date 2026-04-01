@@ -233,7 +233,7 @@ export type {
   SQLQueryPort,
   SettingsStorePort,
   AlgorithmStateStorePort,
-  PersistenceSyncPort,
+  MetaStorePort,
   PendingDeletionsPort,
   StatsHelpersPort,
   DatabaseLifecyclePort,

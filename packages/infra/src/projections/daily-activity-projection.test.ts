@@ -2,7 +2,15 @@ import { describe, expect, it } from 'bun:test';
 import { Database } from 'bun:sqlite';
 
 import type { GameEvent } from '@neurodual/logic';
-import type { StoredEvent as EmmettStoredEvent } from '../es-emmett/powersync-emmett-event-store';
+type EmmettStoredEvent = {
+  eventId: string;
+  streamPosition: bigint;
+  globalPosition: bigint;
+  type: string;
+  data: Record<string, unknown>;
+  metadata: Record<string, unknown>;
+  createdAt: Date;
+};
 import { SQLITE_SCHEMA } from '../db/sqlite-schema';
 import {
   createInitialDailyActivityState,

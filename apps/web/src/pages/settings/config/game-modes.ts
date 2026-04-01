@@ -109,6 +109,7 @@ export type GameMode =
   | 'pattern-recognition'
   | 'tower'
   | 'gridlock'
+  | 'dual-mix'
   | 'maze'
   | 'word-flow'
   | 'word-chain'
@@ -369,6 +370,7 @@ export const MODE_LINE_COLORS: Record<GameMode, string> = {
   'pattern-recognition': 'bg-amber-400',
   tower: 'bg-orange-400',
   gridlock: 'bg-sky-400',
+  'dual-mix': 'bg-purple-400',
   maze: 'bg-lime-400',
   'word-flow': 'bg-green-400',
   'word-chain': 'bg-emerald-400',
@@ -844,6 +846,12 @@ export const MODE_COLORS: Record<
     border: 'border-sky-200 dark:border-sky-500/30',
     text: 'text-sky-700 dark:text-sky-300',
     textLight: 'text-sky-600 dark:text-sky-400',
+  },
+  'dual-mix': {
+    bg: 'bg-purple-50 dark:bg-purple-500/10',
+    border: 'border-purple-200 dark:border-purple-500/30',
+    text: 'text-purple-700 dark:text-purple-300',
+    textLight: 'text-purple-600 dark:text-purple-400',
   },
   maze: {
     bg: 'bg-lime-50 dark:bg-lime-500/10',
@@ -2478,6 +2486,15 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
     colorClass: 'text-[hsl(var(--woven-blue))]',
     bgClass: 'bg-[hsl(var(--woven-blue)/0.12)]',
     badge: 'beta',
+  },
+  {
+    value: 'dual-mix',
+    labelKey: 'settings.gameMode.dualMix',
+    descKey: 'settings.gameMode.dualMixDesc',
+    icon: Shuffle,
+    colorClass: 'text-[hsl(var(--woven-purple))]',
+    bgClass: 'bg-[hsl(var(--woven-purple)/0.12)]',
+    badge: 'alpha',
   },
   {
     value: 'maze',
@@ -4172,6 +4189,7 @@ export const MODE_CATEGORIES: readonly ModeCategory[] = [
       'dual-pick',
       'dual-memo',
       'dual-trace',
+      'dual-mix',
       'custom',
     ],
   },
@@ -4578,6 +4596,7 @@ const LITE_MODES = new Set<GameMode>([
   'ospan',
   'stroop-flex',
   'gridlock',
+  'dual-mix',
 ]);
 
 export const GAME_MODES: GameModeConfig[] = BASE_GAME_MODES

@@ -38,34 +38,6 @@ export interface PowerSyncRuntimeHealth {
     readonly lastBackgroundDurationMs: number | null;
     readonly maxBackgroundDurationMs: number | null;
   };
-  readonly reconnect: {
-    readonly attempts: number;
-    readonly successes: number;
-    readonly failures: number;
-    readonly lastReason: string | null;
-    readonly lastStartedAt: string | null;
-    readonly lastCompletedAt: string | null;
-    readonly lastDurationMs: number | null;
-    readonly lastError: string | null;
-  };
-  readonly syncGate: {
-    readonly desiredEnabled: boolean;
-    readonly supabaseConfigured: boolean;
-    readonly isAuthed: boolean;
-    readonly hasCloudSync: boolean;
-    readonly forceEnable: boolean;
-    readonly instanceGuardEnabled: boolean;
-    readonly instanceAllowsSync: boolean;
-    readonly instanceRole: 'leader' | 'follower' | 'acquiring' | 'disabled';
-    readonly userPresent: boolean;
-    readonly blockedReason:
-      | 'supabase-not-configured'
-      | 'not-authenticated'
-      | 'no-cloud-sync'
-      | 'secondary-tab'
-      | 'instance-guard-blocked'
-      | null;
-  } | null;
   readonly memory: {
     readonly sampledAt: string;
     readonly reason: string;

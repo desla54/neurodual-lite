@@ -1,74 +1,11 @@
 /**
  * PowerSync Schema
  *
- * Defines the schema for:
- * - `emt_messages` (synced, canonical event store)
- * - `deleted_sessions` (synced tombstones)
- * - `user_resets` (synced reset markers)
- * - Local-only tables used by the app (settings, summaries, etc.)
- *
- * Synced table columns should stay aligned with the server-side sync rules.
- *
- * Note: PowerSync automatically injects a text `id` column for synced tables, so
- * the client schema intentionally omits it even when the bucket SELECT returns `id`.
- *
- * Local-only tables are stored in the same PowerSync SQLite database but do not sync.
+ * Local-only SQLite schema (via PowerSync driver).
+ * All tables are local-only — no cloud sync.
  */
 
 import { column, Schema, Table } from '@powersync/web';
-
-/**
- * Deleted sessions table - synced via PowerSync
- *
- * Maps to Supabase public.deleted_sessions table.
- * Used as a scalable session tombstone stream (do NOT replicate deleted events).
- *
- * Keep non-id columns aligned with sync_rules.yaml bucket SELECT.
- */
-const deleted_sessions = new Table(
-  {
-    session_id: column.text,
-    user_id: column.text,
-    created_at: column.text,
-  },
-  {
-    indexes: {
-      user_idx: ['user_id'],
-      session_idx: ['session_id'],
-      created_at_idx: ['created_at'],
-    },
-  },
-);
-
-/**
- * User reset markers table - synced via PowerSync
- *
- * Maps to Supabase public.user_resets table.
- * Used to propagate cross-device "reset my data" wipes.
- *
- * Keep non-id columns aligned with sync_rules.yaml bucket SELECT.
- */
-const user_resets = new Table(
-  {
-    user_id: column.text,
-    reset_at: column.text,
-    created_at: column.text,
-  },
-  {
-    indexes: {
-      user_idx: ['user_id'],
-      reset_at_idx: ['reset_at'],
-    },
-  },
-);
-
-/**
- * Local-only events (no PowerSync upload queue).
- *
- * Used when the session user id is not a real auth UUID (e.g. "local").
- */
-// Note: Emmett stores local-only sessions in the same `emt_messages` table.
-// We no longer maintain a separate events_local table.
 
 // Local-only settings (id = key, e.g. "local_config")
 const settings = new Table(
@@ -113,133 +50,8 @@ const algorithm_states = new Table(
   },
 );
 
-// =============================================================================
-// Emmett Event Sourcing Tables (local-only)
-// See: https://github.com/event-driven-io/emmett
-// =============================================================================
-
-/**
- * Emmett streams table - tracks stream state and version
- * PK: (stream_id, partition, is_archived)
- *
- * Note: Position columns use TEXT (not INTEGER) because JavaScript Number type
- * loses precision for integers > 2^53. TEXT preserves full BIGINT precision.
- */
-const emt_streams = new Table(
-  {
-    stream_id: column.text,
-    stream_position: column.text, // BIGINT stored as TEXT to preserve precision
-    partition: column.text,
-    stream_type: column.text,
-    stream_metadata: column.text, // JSONB as TEXT (PowerSync doesn't have JSONB type)
-    is_archived: column.integer, // BOOLEAN as INTEGER (0 = false, 1 = true)
-  },
-  {
-    localOnly: true,
-    indexes: {
-      stream_id_idx: ['stream_id'],
-      stream_partition_idx: ['stream_id', 'partition', 'is_archived'],
-    },
-  },
-);
-
-/**
- * Emmett messages table - canonical synced event store with global ordering
- *
- * UNIQUE: global_position (enforced via index - see local-db-migrations)
- *
- * Note: Position columns use TEXT (not INTEGER) because JavaScript Number type
- * loses precision for integers > 2^53. TEXT preserves full BIGINT precision.
- */
-const emt_messages = new Table(
-  {
-    stream_id: column.text,
-    stream_position: column.text, // BIGINT stored as TEXT to preserve precision
-    partition: column.text,
-    message_kind: column.text, // CHAR(1) - 'E' for event, 'L' for link
-    message_data: column.text, // JSONB as TEXT
-    message_metadata: column.text, // JSONB as TEXT
-    message_schema_version: column.text,
-    message_type: column.text,
-    message_id: column.text,
-    is_archived: column.integer,
-    global_position: column.text, // BIGINT stored as TEXT to preserve precision
-    created: column.text, // DATETIME as ISO string
-  },
-  {
-    indexes: {
-      stream_position_idx: ['stream_id', 'stream_position', 'partition', 'is_archived'],
-      stream_messages_idx: ['stream_id', 'partition', 'global_position'],
-      global_position_unique_idx: ['global_position'],
-      kind_archived_idx: ['message_kind', 'is_archived'],
-    },
-  },
-);
-
-/**
- * Emmett subscriptions table - tracks subscription checkpoints
- *
- * Note: Position columns use TEXT (not INTEGER) because JavaScript Number type
- * loses precision for integers > 2^53. TEXT preserves full BIGINT precision.
- */
-const emt_subscriptions = new Table(
-  {
-    subscription_id: column.text,
-    version: column.integer,
-    partition: column.text,
-    last_processed_position: column.text, // BIGINT stored as TEXT to preserve precision
-  },
-  {
-    localOnly: true,
-    indexes: {
-      subscription_idx: ['subscription_id', 'partition', 'version'],
-    },
-  },
-);
-
-// Local-only idempotence store for command handling (command_id is globally unique)
-//
-// Note: Position columns use TEXT (not INTEGER) because JavaScript Number type
-// loses precision for integers > 2^53. TEXT preserves full BIGINT precision.
-const processed_commands = new Table(
-  {
-    command_id: column.text,
-    aggregate_id: column.text,
-    aggregate_type: column.text,
-    processed_at: column.text,
-    from_stream_position: column.text, // BIGINT stored as TEXT to preserve precision
-    to_stream_position: column.text, // BIGINT stored as TEXT to preserve precision
-  },
-  {
-    localOnly: true,
-    indexes: {
-      command_id_idx: ['command_id'],
-      aggregate_processed_idx: ['aggregate_id', 'aggregate_type', 'processed_at'],
-    },
-  },
-);
-
-// Emmett session_in_progress intermediate rows (local-only)
-// Append-only rows keyed by `${sessionId}:${globalPosition}`; deleted after finalization.
-const session_in_progress_events = new Table(
-  {
-    session_id: column.text,
-    event_type: column.text,
-    event_data: column.text,
-    global_position: column.text,
-    created_at: column.integer,
-  },
-  {
-    localOnly: true,
-    indexes: {
-      session_idx: ['session_id'],
-      session_position_idx: ['session_id', 'global_position'],
-    },
-  },
-);
-
 // Session events archive (local-only) — stores raw events as JSON blob per session.
-// Used by replay and history adapters. Replaces per-event rows in emt_messages.
+// Used by replay and history adapters.
 const session_events = new Table(
   {
     session_id: column.text,
@@ -544,36 +356,23 @@ const cognitive_profile_projection = new Table(
 /**
  * PowerSync App Schema
  *
- * Single local DB:
- * - synced tables: `emt_messages`, `deleted_sessions`, `user_resets`
- * - local-only tables: everything else
+ * Single local SQLite DB (local-only, no cloud sync).
  */
 export const PowerSyncAppSchema = new Schema({
-  deleted_sessions,
-  user_resets,
   settings,
   sync_meta,
   pending_deletions,
   algorithm_states,
-  // Emmett event sourcing tables
-  emt_streams,
-  emt_messages,
-  emt_subscriptions,
-  processed_commands,
-  session_in_progress_events,
   session_summaries,
   session_events,
   replay_runs,
   replay_events,
-  // Projection tables (Phase 3)
   streak_projection,
   daily_activity_projection,
   n_level_projection,
   journey_state_projection,
-  // Stats projections (Emmett running aggregates)
   user_stats_projection,
   user_modality_stats_projection,
-  // Cognitive profile projection
   cognitive_profile_projection,
 });
 
@@ -583,28 +382,7 @@ export const PowerSyncAppSchema = new Schema({
 export type PowerSyncDatabase = (typeof PowerSyncAppSchema)['types'];
 
 /**
- * Event row type from PowerSync queries (derived from `emt_messages`)
- *
- * Note: This is a query shape. The physical synced table is `emt_messages`.
- */
-export interface PowerSyncEventRow {
-  id: string;
-  session_id: string;
-  user_id: string | null;
-  type: string;
-  timestamp: number;
-  payload: string;
-  deleted: number;
-  created_at: string | null;
-  // Note: updated_at excluded from sync (format mismatch causes loops)
-}
-
-/**
  * Lightweight "signal" row for watchers.
- *
- * Use this for high-frequency watch streams: it avoids pulling large `payload`
- * blobs for every row on every sync tick, and lets the caller fetch payloads
- * only for the rows that actually changed.
  */
 export interface PowerSyncEventSignalRow {
   id: string;
@@ -612,18 +390,4 @@ export interface PowerSyncEventSignalRow {
   type: string;
   timestamp: number;
   deleted: number;
-}
-
-export interface PowerSyncDeletedSessionRow {
-  id: string;
-  session_id: string;
-  user_id: string | null;
-  created_at: string | null;
-}
-
-export interface PowerSyncUserResetRow {
-  id: string;
-  user_id: string | null;
-  reset_at: string | null;
-  created_at: string | null;
 }

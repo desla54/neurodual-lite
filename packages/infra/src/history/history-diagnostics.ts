@@ -3,12 +3,83 @@ import { SESSION_END_EVENT_TYPES_ARRAY } from '@neurodual/logic';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import { historyLog } from '../logger';
 import {
-  countLocalEventsForUser,
-  getUserSessionIds,
-  findMissingSessionSummaries,
-  findOrphanSessionSummaries,
-  findMixedOwnerSessions,
-} from '../es-emmett/event-queries';
+  countAllSessionEvents,
+  getDistinctSessionIds,
+  getSessionEndEvents,
+} from '../persistence/session-queries';
+
+// ---------------------------------------------------------------------------
+// Inline stubs replacing es-emmett/event-queries helpers
+// ---------------------------------------------------------------------------
+
+async function countLocalEventsForUser(db: AbstractPowerSyncDatabase): Promise<number> {
+  return countAllSessionEvents(db);
+}
+
+async function getUserSessionIds(
+  db: AbstractPowerSyncDatabase,
+  userId: string,
+): Promise<string[]> {
+  try {
+    const rows = await db.getAll<{ session_id: string }>(
+      `SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?`,
+      [userId],
+    );
+    return rows.map((r) => r.session_id);
+  } catch {
+    return [];
+  }
+}
+
+async function findMissingSessionSummaries(
+  db: AbstractPowerSyncDatabase,
+  _endTypes: readonly string[],
+  _userId?: string,
+): Promise<string[]> {
+  try {
+    const allIds = await getDistinctSessionIds(db);
+    if (allIds.length === 0) return [];
+    const missing: string[] = [];
+    for (const sid of allIds) {
+      const endEvents = await getSessionEndEvents(db, sid);
+      if (endEvents.length === 0) continue;
+      const row = await db.getOptional<{ c: number }>(
+        'SELECT COUNT(*) as c FROM session_summaries WHERE session_id = ?',
+        [sid],
+      );
+      if ((row?.c ?? 0) === 0) missing.push(sid);
+    }
+    return missing;
+  } catch {
+    return [];
+  }
+}
+
+async function findOrphanSessionSummaries(
+  db: AbstractPowerSyncDatabase,
+  _endTypes: readonly string[],
+  _userId?: string,
+): Promise<number> {
+  try {
+    const row = await db.getOptional<{ c: number }>(
+      `SELECT COUNT(*) as c FROM session_summaries ss
+       WHERE NOT EXISTS (
+         SELECT 1 FROM session_events se WHERE se.session_id = ss.session_id
+       )`,
+    );
+    return row?.c ?? 0;
+  } catch {
+    return 0;
+  }
+}
+
+async function findMixedOwnerSessions(
+  _db: AbstractPowerSyncDatabase,
+  _userId: string,
+): Promise<number> {
+  // Without Emmett's per-event userId, mixed-owner detection is not applicable.
+  return 0;
+}
 import { runAuthTransitionHistoryMigration } from './history-migration';
 import {
   repairDriftedSessionSummaries,

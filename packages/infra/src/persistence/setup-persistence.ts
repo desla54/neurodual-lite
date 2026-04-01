@@ -2,12 +2,7 @@
  * Persistence Setup
  *
  * Initialise et expose UNE SEULE DB locale via PowerSync (SQLite).
- * Emmett (emt_messages) est la source de verite pour les events.
- *
- * Important:
- * - La DB PowerSync peut être utilisée en local sans compte (pas de connect()).
- * - Le sync (connect()) n'est activé que si l'utilisateur est authentifié et autorisé.
- * - Les events "cloud" doivent avoir un user_id valide (UUID) pour être uploadés.
+ * Les sessions sont persistées directement via SessionWriter/DirectCommandBus.
  */
 
 import type { PersistencePort } from '@neurodual/logic';
@@ -22,7 +17,6 @@ import {
 } from './instrumented-persistence';
 import { runLocalDbMigrations } from './local-db-migrations';
 import { wipeLocalDeviceData } from '../lifecycle/local-data-wipe';
-import { countLocalUserEvents } from '../es-emmett/event-queries';
 
 const IS_DEV =
   typeof import.meta !== 'undefined' &&
@@ -68,16 +62,9 @@ function isDebugResetPersistenceOnHmrEnabled(): boolean {
 // Setup (HMR-resistant via globalThis)
 // =============================================================================
 
-import type { EmmettEventStore } from '../es-emmett/powersync-emmett-event-store';
-
 // Extended port type with PowerSync-specific access
 export type PowerSyncPersistencePort = PersistencePort & {
   getPowerSyncDb(): Promise<AbstractPowerSyncDatabase>;
-  /**
-   * Get the Emmett event store for indexed event reads.
-   * Returns null if not yet initialized (during early startup).
-   */
-  getEventStore(): Promise<EmmettEventStore | null>;
 };
 
 // Type-safe accessor for globalThis extensions
@@ -148,13 +135,9 @@ function writeAutoWipeMarker(): void {
   }
 }
 
-async function hasAnyLocalOnlyData(db: AbstractPowerSyncDatabase): Promise<boolean> {
-  try {
-    return (await countLocalUserEvents(db)) > 0;
-  } catch {
-    // If we can't query, do not assume safe to wipe.
-    return true;
-  }
+async function hasAnyLocalOnlyData(_db: AbstractPowerSyncDatabase): Promise<boolean> {
+  // Local-only mode: always assume data exists to be safe
+  return true;
 }
 
 async function attemptMigrationAutoWipe(persistence: PowerSyncPersistencePort): Promise<boolean> {
@@ -168,12 +151,7 @@ async function attemptMigrationAutoWipe(persistence: PowerSyncPersistencePort): 
   const db = await persistence.getPowerSyncDb();
   if (await hasAnyLocalOnlyData(db)) return false;
 
-  // Also avoid wiping if there are pending uploads.
-  try {
-    if (await persistence.hasUnsyncedEvents()) return false;
-  } catch {
-    return false;
-  }
+  // Cloud sync removed — no pending uploads to check.
 
   writeAutoWipeMarker();
   const wiped = await wipeLocalDeviceData();

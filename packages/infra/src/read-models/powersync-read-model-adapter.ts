@@ -33,13 +33,30 @@ import {
   buildSessionsListCompiledQuery,
   type CompiledSqlQuery,
 } from './history-queries';
-import { sessionStreamFilterSql, sessionStreamIdSql } from '../es-emmett/stream-id';
-import {
-  EMT_EVENTS_TABLE,
-  eventBaseWhere,
-  eventOrderAsc,
-  eventOrderDesc,
-} from '../es-emmett/event-queries';
+// Inlined SQL helpers (es-emmett removed)
+const EMT_EVENTS_TABLE = 'emt_messages' as const;
+function sessionStreamIdSql(column: string = 'stream_id'): string {
+  return `CASE
+    WHEN ${column} LIKE 'training:session:%' THEN substr(${column}, 18)
+    WHEN ${column} LIKE 'session:%' THEN substr(${column}, 9)
+    ELSE NULL
+  END`;
+}
+function sessionStreamFilterSql(column: string = 'stream_id'): string {
+  return `(${column} LIKE 'session:%' OR ${column} LIKE 'training:session:%')`;
+}
+function eventBaseWhere(alias: string = ''): string {
+  const p = alias ? `${alias}.` : '';
+  return `${p}message_kind = 'E' AND ${p}is_archived = 0`;
+}
+function eventOrderAsc(alias: string = ''): string {
+  const p = alias ? `${alias}.` : '';
+  return `ORDER BY CAST(${p}global_position AS INTEGER) ASC`;
+}
+function eventOrderDesc(alias: string = ''): string {
+  const p = alias ? `${alias}.` : '';
+  return `ORDER BY CAST(${p}global_position AS INTEGER) DESC`;
+}
 type Listener = () => void;
 type RafWindow = typeof window & {
   requestAnimationFrame?: (cb: (timestamp: number) => void) => number;

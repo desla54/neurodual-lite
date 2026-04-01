@@ -36,7 +36,7 @@ import {
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import type { ProjectedEvent, ProjectionDefinition } from './projection-definition';
 import { safeJsonParse } from '../db/sql-helpers';
-import { getSessionEvents, type EventRow } from '../es-emmett/event-queries';
+import { getSessionEvents, type EventRow } from '../persistence/session-queries';
 import { projectSessionSummaryFromRawEvents } from '../history/project-session-summary-from-events';
 
 // =============================================================================

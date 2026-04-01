@@ -44,6 +44,7 @@ import { createFreePlayIntent } from '../lib/play-intent';
 const modeConfigMap = new Map<string, GameModeConfig>(GAME_MODES.map((m) => [m.value, m]));
 
 const ALL_MODES: GameModeId[] = ['dualnback-classic', 'sim-brainworkshop', 'ospan', 'stroop-flex', 'gridlock'];
+const EMPTY_SETTINGS: Readonly<Record<string, unknown>> = Object.freeze({});
 
 const JOURNEY_OPTIONS = [
   { id: DUALNBACK_CLASSIC_JOURNEY_ID, labelKey: 'home.journey.dualnbackClassic', label: 'Dual N-Back Classic', gameMode: 'dualnback-classic' },
@@ -95,9 +96,19 @@ export function HomePage(): ReactNode {
   const journeyGameMode = JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.gameMode ?? 'dualnback-classic';
   const journeyState = useMemo<JourneyState>(() => buildJourneyState(journeyStartLevel, journeyTargetLevel), [journeyStartLevel, journeyTargetLevel]);
 
+  // Selected journey stage (null = free play mode)
+  const [selectedJourneyStageId, setSelectedJourneyStageId] = useState<number | null>(null);
+  const journeyStageDefinitions = useMemo(
+    () => generateJourneyStages(journeyTargetLevel, journeyStartLevel, true),
+    [journeyStartLevel, journeyTargetLevel],
+  );
+  const selectedStageDef = selectedJourneyStageId !== null
+    ? journeyStageDefinitions.find((s) => s.stageId === selectedJourneyStageId)
+    : null;
+
   // Quick settings toggle
   const [showQuickSettings, setShowQuickSettings] = useState(false);
-  const modeSettings = useSettingsStore((s) => s.modes[currentMode as keyof typeof s.modes] ?? {});
+  const modeSettings = useSettingsStore((s) => s.modes[currentMode as keyof typeof s.modes]) ?? EMPTY_SETTINGS;
   const setModeSetting = useSettingsStore((s) => s.setModeSetting);
   const currentModeNLevel = (modeSettings as any).nLevel ?? 2;
   const currentModeTrialsCount = (modeSettings as any).trialsCount ?? 20;
@@ -105,9 +116,19 @@ export function HomePage(): ReactNode {
 
   const handleSelectMode = (modeId: GameModeId) => {
     setCurrentMode(modeId);
+    setSelectedJourneyStageId(null); // Deselect journey stage when switching mode
   };
 
   const handleLaunchMode = () => {
+    if (selectedStageDef) {
+      // Launch journey stage
+      const route = getRouteForMode(journeyGameMode as GameModeId);
+      setCurrentMode(journeyGameMode as GameModeId);
+      navigate(route === '/nback' ? `/nback?mode=${journeyGameMode}` : route, {
+        state: createFreePlayIntent(journeyGameMode as GameModeId),
+      });
+      return;
+    }
     const route = getRouteForMode(currentMode as GameModeId);
     navigate(route === '/nback' ? `/nback?mode=${currentMode}` : route, { state: createFreePlayIntent(currentMode as GameModeId) });
   };
@@ -260,11 +281,8 @@ export function HomePage(): ReactNode {
               onStageClick={(stageId) => {
                 const stage = journeyState.stages.find((s) => s.stageId === stageId);
                 if (!stage || stage.status === 'locked') return;
-                const route = getRouteForMode(journeyGameMode as GameModeId);
-                setCurrentMode(journeyGameMode as GameModeId);
-                navigate(route === '/nback' ? `/nback?mode=${journeyGameMode}` : route, {
-                  state: createFreePlayIntent(journeyGameMode as GameModeId),
-                });
+                // Toggle selection: deselect if already selected
+                setSelectedJourneyStageId((prev) => prev === stageId ? null : stageId);
               }}
             />
           </div>
@@ -384,35 +402,57 @@ export function HomePage(): ReactNode {
         </div>
         )}
 
-        {/* Spacer for sticky bar */}
-        <div className="h-14" />
+        {/* ═══ Sticky Play Bar ═══ */}
+        {(selectedModeConfig || selectedStageDef) && (
+          <div className="sticky bottom-2 z-20 flex justify-center px-4">
+            <button
+              type="button"
+              onClick={handleLaunchMode}
+              className="flex flex-col items-center gap-0.5 px-5 py-2.5 rounded-2xl bg-foreground text-background shadow-lg active:scale-[0.98] transition-transform"
+            >
+              {selectedStageDef ? (
+                <>
+                  <div className="flex items-center gap-3">
+                    <span className="shrink-0 p-1.5 rounded-xl bg-background/20">
+                      {(() => {
+                        const journeyModeConfig = modeConfigMap.get(journeyGameMode);
+                        const Icon = journeyModeConfig?.icon;
+                        return Icon ? <Icon size={18} weight="duotone" className="text-background" /> : null;
+                      })()}
+                    </span>
+                    <span className="text-sm font-semibold whitespace-nowrap text-background">
+                      {t('home.journey.stageLabel', 'Étape {{id}} · N-{{n}}', { id: selectedStageDef.stageId, n: selectedStageDef.nLevel })}
+                    </span>
+                    <span className="shrink-0 p-1 rounded-full bg-background/20">
+                      <Play size={16} weight="fill" className="text-background" />
+                    </span>
+                  </div>
+                  <span className="text-[10px] text-background/60 font-mono">
+                    {JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.label ?? 'Parcours'}
+                  </span>
+                </>
+              ) : selectedModeConfig ? (
+                <>
+                  <div className="flex items-center gap-3">
+                    <span className="shrink-0 p-1.5 rounded-xl bg-background/20">
+                      <selectedModeConfig.icon size={18} weight="duotone" className="text-background" />
+                    </span>
+                    <span className="text-sm font-semibold whitespace-nowrap text-background">
+                      {t(selectedModeConfig.labelKey)}
+                    </span>
+                    <span className="shrink-0 p-1 rounded-full bg-background/20">
+                      <Play size={16} weight="fill" className="text-background" />
+                    </span>
+                  </div>
+                  <span className="text-[10px] text-background/60 font-mono">
+                    N-{currentModeNLevel} · {currentModeTrialsCount} {t('home.sticky.trials', 'essais')}
+                  </span>
+                </>
+              ) : null}
+            </button>
+          </div>
+        )}
       </div>
-
-      {/* ═══ Sticky Play Bar ═══ */}
-      {selectedModeConfig && (
-        <div className="fixed bottom-[calc(var(--bottom-nav-offset,0.75rem)+3.5rem+0.5rem)] left-0 right-0 z-20 pointer-events-none flex justify-center px-4 md:bottom-4">
-          <button
-            type="button"
-            onClick={handleLaunchMode}
-            className="pointer-events-auto flex flex-col items-center gap-0.5 px-5 py-2.5 rounded-2xl bg-transparent backdrop-blur-xl border-2 border-foreground shadow-lg active:scale-[0.98] transition-transform"
-          >
-            <div className="flex items-center gap-3">
-              <span className="shrink-0 p-1.5 rounded-xl bg-foreground">
-                <selectedModeConfig.icon size={18} weight="duotone" className="text-background" />
-              </span>
-              <span className="text-sm font-semibold whitespace-nowrap text-foreground">
-                {t(selectedModeConfig.labelKey)}
-              </span>
-              <span className="shrink-0 p-1 rounded-full bg-foreground">
-                <Play size={16} weight="fill" className="text-background" />
-              </span>
-            </div>
-            <span className="text-[10px] text-muted-foreground font-mono">
-              N-{currentModeNLevel} · {currentModeTrialsCount} {t('home.sticky.trials', 'essais')}
-            </span>
-          </button>
-        </div>
-      )}
     </PageTransition>
   );
 }

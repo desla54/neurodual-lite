@@ -210,20 +210,6 @@ export function SystemProvider({ children }: SystemProviderProps) {
         // Inject strict command bus for infra writers (system events, etc.).
         const { setSystemEventWriterCommandBus } = await import('@neurodual/infra');
         setSystemEventWriterCommandBus(created.commandBus);
-
-        // Inject session-end workflow runner for derived effects.
-        const { SessionEndWorkflowRunner } = await import('@neurodual/infra');
-        const sessionEndRunner = new SessionEndWorkflowRunner(
-          persistence,
-          created,
-          created.commandBus,
-        );
-        // Explicit injection (avoid globalThis wiring; runner depends on bus so we use a setter).
-        (
-          created.commandBus as unknown as {
-            setSessionEndWorkflowRunner: (runner: unknown) => void;
-          }
-        ).setSessionEndWorkflowRunner(sessionEndRunner);
       },
       initSettings: async () => {
         if (!adaptersRef.current) {

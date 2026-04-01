@@ -1,6 +1,3 @@
-import { supabaseAuthAdapter } from '../supabase';
-import { isSupabaseConfigured } from '../supabase/client';
-
 export function normalizeEffectiveUserIds(
   userIds: readonly (string | null | undefined)[],
 ): string[] {
@@ -24,16 +21,7 @@ export function effectiveUserIdsWithLocal(userId: string | null | undefined): st
 }
 
 export function getAuthenticatedUserId(): string | null {
-  if (!isSupabaseConfigured()) {
-    return null;
-  }
-
-  const authState = supabaseAuthAdapter.getState();
-  if (authState.status !== 'authenticated') {
-    return null;
-  }
-
-  return authState.session.user.id;
+  return null;
 }
 
 export function getActiveEffectiveUserIds(): string[] {

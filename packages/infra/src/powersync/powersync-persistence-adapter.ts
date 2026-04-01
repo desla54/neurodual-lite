@@ -1,7 +1,6 @@
 import type {
   AlgorithmStateResult,
   BadgeHistorySnapshot,
-  EventInput,
   EventQueryOptions,
   PersistenceWriteTransaction,
   PersistencePort,
@@ -22,9 +21,6 @@ import {
 } from '../persistence/instrumented-persistence';
 import { openPowerSyncDatabase } from './database';
 import { isLikelyClosedPowerSyncError, isLikelyFatalPowerSyncStorageError } from './runtime-policy';
-import type { EmmettEventStore } from '../es-emmett/powersync-emmett-event-store';
-import { createEmmettEventStore } from '../es-emmett/powersync-emmett-event-store';
-import { parseSessionIdFromStreamId } from '../es-emmett/stream-id';
 import {
   getSessionEvents,
   querySessionEvents,
@@ -32,15 +28,9 @@ import {
   countAllSessionEvents,
   countSessionEvents,
   getSessionUserId,
-  archiveSessionEvents,
-  archiveAllEvents,
-  archiveEventsByMessageIds,
-  getPendingCrudEventIds,
-  getEventsByRowIds,
-  hasPendingCrudEvents,
-  getEventByMessageId,
+  deleteSessionEventsById,
   getDistinctSessionIds,
-} from '../es-emmett/event-queries';
+} from '../persistence/session-queries';
 import { rebuildStatsProjectionsForUser } from '../projections/session-summaries-projection';
 import {
   SESSION_SUMMARY_INSERT_COLUMNS,
@@ -54,10 +44,6 @@ import {
 
 // Avoid confusion with similarly-named domain types (e.g. types/progression.DailyActivity).
 type DailyActivity = { date: string; count: number };
-
-function isUuid(value: string): boolean {
-  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
-}
 
 function toIso(value: unknown): string {
   if (value instanceof Date) return value.toISOString();
@@ -152,30 +138,9 @@ function toSqlCommentLabel(value: string): string {
   return value.replace(/[^a-zA-Z0-9:_-]/g, '_');
 }
 
-/**
- * Emmett note: `emt_messages.message_data` stores an envelope `{ id, type, data }`.
- * All SQL read paths assume `data.userId` and `data.timestamp` exist.
- */
-function toEmmettMessageData(event: EventInput): Record<string, unknown> {
-  const payload =
-    event.payload && typeof event.payload === 'object'
-      ? (event.payload as Record<string, unknown>)
-      : {};
-
-  return {
-    ...payload,
-    id: event.id,
-    type: event.type,
-    sessionId: event.sessionId,
-    timestamp: event.timestamp,
-    ...(typeof event.userId === 'string' ? { userId: event.userId } : {}),
-  };
-}
-
 export class PowerSyncPersistenceAdapter implements PersistencePort {
   private db: AbstractPowerSyncDatabase | null = null;
   private drizzleDb: NeuroDualDrizzleDatabase | null = null;
-  private emmettEventStore: EmmettEventStore | null = null;
   private initialized = false;
   private initPromise: Promise<void> | null = null;
   private onErrorCallback: ((error: Error) => void) | null = null;
@@ -190,7 +155,6 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
   private resetConnectionState(): void {
     this.db = null;
     this.drizzleDb = null;
-    this.emmettEventStore = null;
     this.initialized = false;
     this.initPromise = null;
   }
@@ -245,7 +209,6 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
       this.db = db;
       this.drizzleDb = createDrizzleClient(db);
 
-      // Phase 7: events_all VIEW creation removed - all reads now use emt_messages directly
       this.initialized = true;
 
       const totalDuration = performance.now() - totalStart;
@@ -277,20 +240,6 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
     return this.ensureReady();
   }
 
-  /**
-   * Get the Emmett event store for indexed event reads.
-   * Returns null if the database is not yet initialized.
-   */
-  async getEventStore(): Promise<EmmettEventStore | null> {
-    if (!this.initialized || !this.db) {
-      return null;
-    }
-    if (!this.emmettEventStore) {
-      this.emmettEventStore = createEmmettEventStore(this.db);
-    }
-    return this.emmettEventStore;
-  }
-
   isReady(): boolean {
     return this.initialized;
   }
@@ -314,130 +263,11 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
   }
 
   // ===========================================================================
-  // Events - Write (DEPRECATED - Phase 7)
-  // ===========================================================================
-  // All write operations should now go through CommandBus:
-  // - Use createCommandBus() and handle() with SessionStartCommand/SessionEndCommand
-  // - CommandBus writes to emt_messages via EmmettEventStore.appendToStream()
-  // - These legacy methods are kept for tests and compatibility only
-
-  /**
-   * @deprecated Use CommandBus with SessionStartCommand/SessionEndCommand instead.
-   * Compatibility method that writes to emt_messages.
-   * Will be removed in Phase 8 after full migration to CommandBus.
-   */
-  async append(event: EventInput): Promise<StoredEvent | null> {
-    try {
-      await this.ensureReady();
-      const store = await this.getEventStore();
-      if (!store) {
-        throw new Error('[PowerSyncPersistence] Emmett event store not available');
-      }
-
-      await store.appendToStream({
-        streamId: { aggregateType: 'session', aggregateId: event.sessionId },
-        events: [
-          {
-            eventId: event.id,
-            type: event.type,
-            data: toEmmettMessageData(event),
-          },
-        ],
-      });
-      return this.getEventById(event.id);
-    } catch (error) {
-      this.reportFatal(error);
-      throw error;
-    }
-  }
-
-  /**
-   * @deprecated Use CommandBus with SessionStartCommand/SessionEndCommand instead.
-   * Compatibility method that writes to emt_messages.
-   * Will be removed in Phase 8 after full migration to CommandBus.
-   */
-  appendFireAndForget(event: EventInput): void {
-    this.append(event).catch((error) => {
-      const err = error instanceof Error ? error : new Error(String(error));
-      this.onErrorCallback?.(err);
-    });
-  }
-
-  /**
-   * @deprecated Use CommandBus with SessionStartCommand/SessionEndCommand instead.
-   * Compatibility method that writes to emt_messages.
-   * Will be removed in Phase 8 after full migration to CommandBus.
-   */
-  async appendBatch(events: EventInput[]): Promise<number> {
-    if (events.length === 0) return 0;
-    try {
-      await this.ensureReady();
-      const store = await this.getEventStore();
-      if (!store) {
-        throw new Error('[PowerSyncPersistence] Emmett event store not available');
-      }
-
-      const bySession = new Map<string, EventInput[]>();
-      for (const event of events) {
-        const existing = bySession.get(event.sessionId) ?? [];
-        existing.push(event);
-        bySession.set(event.sessionId, existing);
-      }
-
-      let affected = 0;
-      for (const [sessionId, sessionEvents] of bySession) {
-        await store.appendToStream({
-          streamId: { aggregateType: 'session', aggregateId: sessionId },
-          events: sessionEvents.map((event) => ({
-            eventId: event.id,
-            type: event.type,
-            data: toEmmettMessageData(event),
-          })),
-        });
-        affected += sessionEvents.length;
-      }
-
-      return affected;
-    } catch (error) {
-      this.reportFatal(error);
-      throw error;
-    }
-  }
-
-  // ===========================================================================
   // Events - Read
   // ===========================================================================
 
   async getSession(sessionId: string): Promise<StoredEvent[]> {
     const db = await this.ensureReady();
-
-    // Try session_events (new direct-write path) first
-    try {
-      const seRows = await db.getAll<{ events_json: string; created_at: string }>(
-        'SELECT events_json, created_at FROM session_events WHERE session_id = ? LIMIT 1',
-        [sessionId],
-      );
-      if (seRows.length > 0 && seRows[0]?.events_json) {
-        const rawEvents = JSON.parse(seRows[0].events_json) as Record<string, unknown>[];
-        const createdAt = seRows[0].created_at ?? new Date().toISOString();
-        return rawEvents.map((e, i) => ({
-          id: typeof e['id'] === 'string' ? (e['id'] as string) : `${sessionId}:${i}`,
-          user_id: typeof e['userId'] === 'string' ? (e['userId'] as string) : null,
-          session_id: sessionId,
-          type: String(e['type'] ?? ''),
-          timestamp: typeof e['timestamp'] === 'number' ? (e['timestamp'] as number) : 0,
-          payload: e,
-          created_at: createdAt,
-          updated_at: createdAt,
-          deleted: false,
-          synced: false,
-        }));
-      }
-    } catch {
-      // Fallback to emt_messages below
-    }
-
-    // Fallback: read from emt_messages (legacy data)
     const rows = await getSessionEvents(db, sessionId);
     return rows.map((r) => parseStoredEventRow(r as unknown as Record<string, unknown>));
   }
@@ -480,27 +310,10 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
     const db = await this.ensureReady();
 
     const count = await countSessionEvents(db, sessionId);
-
     const userId = await getSessionUserId(db, sessionId);
-    const isAuthenticatedUser = userId && isUuid(userId);
 
     await db.writeTransaction(async function deleteSessionTx(tx) {
-      // For authenticated users: insert tombstone in deleted_sessions (synced table)
-      // This propagates the deletion to Supabase and other devices via PowerSync
-      if (isAuthenticatedUser) {
-        const tombstoneId = `${userId}:${sessionId}`;
-        await tx.execute(
-          `INSERT OR IGNORE INTO deleted_sessions (id, session_id, user_id, created_at)
-           VALUES (?, ?, ?, ?)`,
-          [tombstoneId, sessionId, userId, new Date().toISOString()],
-        );
-        persistenceLog.debug(`[deleteSession] Created tombstone for session ${sessionId}`);
-      }
-
-      // Archive Emmett messages instead of deleting (for potential replay/debugging)
-      await archiveSessionEvents(tx, sessionId);
-
-      // Cleanup related tables
+      await deleteSessionEventsById(tx, sessionId);
       await tx.execute(`DELETE FROM session_summaries WHERE session_id = ?`, [sessionId]);
       await tx.execute(
         `DELETE FROM replay_events
@@ -535,29 +348,13 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
           countSessionEvents(db, sessionId),
           getSessionUserId(db, sessionId),
         ]);
-        return {
-          sessionId,
-          count,
-          userId,
-          isAuthenticatedUser: Boolean(userId && isUuid(userId)),
-        };
+        return { sessionId, count, userId };
       }),
     );
 
     await db.writeTransaction(async function deleteSessionsBatchTx(tx) {
-      for (const { sessionId, userId, isAuthenticatedUser } of sessionMetadata) {
-        if (isAuthenticatedUser && userId) {
-          const tombstoneId = `${userId}:${sessionId}`;
-          await tx.execute(
-            `INSERT OR IGNORE INTO deleted_sessions (id, session_id, user_id, created_at)
-             VALUES (?, ?, ?, ?)`,
-            [tombstoneId, sessionId, userId, new Date().toISOString()],
-          );
-        }
-      }
-
       for (const { sessionId } of sessionMetadata) {
-        await archiveSessionEvents(tx, sessionId);
+        await deleteSessionEventsById(tx, sessionId);
       }
 
       await bulkDeleteWhereIn(tx, 'session_summaries', 'session_id', uniqueSessionIds);
@@ -592,18 +389,14 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
   async clear(): Promise<void> {
     const db = await this.ensureReady();
     await db.writeTransaction(async function clearPersistenceTx(tx) {
-      // Archive all Emmett event messages instead of hard delete
-      await archiveAllEvents(tx);
-
+      await tx.execute(`DELETE FROM session_events`);
       await tx.execute(`DELETE FROM session_summaries`);
       await tx.execute(`DELETE FROM user_stats_projection`);
       await tx.execute(`DELETE FROM user_modality_stats_projection`);
       await tx.execute(`DELETE FROM journey_state_projection`);
-      await tx.execute(`DELETE FROM session_in_progress`);
       await tx.execute(`DELETE FROM replay_events`);
       await tx.execute(`DELETE FROM replay_runs`);
       await tx.execute(`DELETE FROM pending_deletions`);
-      await tx.execute(`DELETE FROM sync_meta`);
     });
   }
 
@@ -795,36 +588,8 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
   }
 
   // ===========================================================================
-  // Sync (legacy interface, kept for compatibility)
+  // Meta Store (local key-value for DB versioning, migration state)
   // ===========================================================================
-
-  async getUnsyncedEvents(): Promise<StoredEvent[]> {
-    // With PowerSync, unsynced events are tracked in ps_crud table.
-    const db = await this.ensureReady();
-    try {
-      const ids = await getPendingCrudEventIds(db);
-      if (ids.length === 0) return [];
-
-      const rows = await getEventsByRowIds(db, ids);
-      return rows.map((r) => parseStoredEventRow(r as unknown as Record<string, unknown>));
-    } catch {
-      // ps_crud might not exist or be accessible in some edge cases
-      return [];
-    }
-  }
-
-  async hasUnsyncedEvents(): Promise<boolean> {
-    // With PowerSync, check ps_crud table for pending uploads
-    const db = await this.ensureReady();
-    return hasPendingCrudEvents(db);
-  }
-
-  async markEventsSyncedBatch(_eventIds: string[]): Promise<void> {
-    // With PowerSync, sync state is managed automatically via ps_crud.
-    // This method is a no-op - PowerSync handles marking items as synced
-    // after successful upload via the connector's uploadData().
-    // Kept for interface compatibility.
-  }
 
   async getSyncMeta(key: string): Promise<string | null> {
     const db = await this.ensureReady();
@@ -845,63 +610,6 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
       `INSERT INTO sync_meta (id, value, updated_at) VALUES (?, ?, datetime('now')) /* sync_meta:set:${label} */`,
       [key, value],
     );
-  }
-
-  async upsertEvent(event: EventInput): Promise<void> {
-    await this.append(event);
-  }
-
-  async upsertEventsBatch(events: EventInput[]): Promise<void> {
-    await this.appendBatch(events);
-  }
-
-  async deleteEventsByIds(eventIds: string[]): Promise<void> {
-    if (eventIds.length === 0) return;
-    const db = await this.ensureReady();
-    await db.writeTransaction(async function deleteEventsByIdsTx(tx) {
-      await archiveEventsByMessageIds(tx, eventIds);
-    });
-  }
-
-  async getEventById(eventId: string): Promise<StoredEvent | null> {
-    const db = await this.ensureReady();
-    const row = await getEventByMessageId(db, eventId);
-
-    if (!row) {
-      return null;
-    }
-
-    // Parse event format (new session_events or legacy emt_messages)
-    let data: Record<string, unknown>;
-    if (row.message_data) {
-      try {
-        const parsed = JSON.parse(row.message_data);
-        data = (parsed.data as Record<string, unknown>) ?? parsed;
-      } catch {
-        data = typeof row.payload === 'object' ? (row.payload as Record<string, unknown>) : {};
-      }
-    } else {
-      data = typeof row.payload === 'object' ? (row.payload as Record<string, unknown>) : {};
-    }
-
-    const sessionId = row.stream_id
-      ? (parseSessionIdFromStreamId(row.stream_id) ?? row.session_id)
-      : row.session_id;
-
-    const payload = data;
-
-    return {
-      id: row.message_id ?? row.id,
-      user_id: (payload['userId'] as string | undefined) ?? null,
-      session_id: sessionId ?? '',
-      type: row.message_type ?? row.type,
-      timestamp: (payload['timestamp'] as number) ?? Date.now(),
-      payload,
-      created_at: row.created ?? row.created_at ?? '',
-      updated_at: row.created ?? row.created_at ?? '',
-      deleted: false,
-      synced: true,
-    };
   }
 
   async getAllSessionIds(): Promise<string[]> {

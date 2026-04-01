@@ -12,7 +12,6 @@
 import type { GameEvent, StreakInfo } from '@neurodual/logic';
 import { SESSION_END_EVENT_TYPES } from '@neurodual/logic';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
-import type { StoredEvent as EmmettStoredEvent } from '../es-emmett/powersync-emmett-event-store';
 import type { ProjectedEvent, ProjectionDefinition } from './projection-definition';
 
 // =============================================================================
@@ -157,7 +156,7 @@ export function evolveStreakState(state: StreakState, event: GameEvent): StreakS
  */
 export function evolveStreakStateFromEmmett(
   state: StreakState,
-  event: EmmettStoredEvent,
+  event: { type: string; data: Record<string, unknown>; createdAt: Date },
 ): StreakState {
   // Only count completed sessions
   if (

@@ -76,36 +76,6 @@ interface PowerSyncRuntimeLifecycleStats {
   maxBackgroundDurationMs: number | null;
 }
 
-interface PowerSyncRuntimeReconnectStats {
-  attempts: number;
-  successes: number;
-  failures: number;
-  lastReason: string | null;
-  lastStartedAt: string | null;
-  lastCompletedAt: string | null;
-  lastDurationMs: number | null;
-  lastError: string | null;
-}
-
-interface PowerSyncRuntimeSyncGate {
-  desiredEnabled: boolean;
-  supabaseConfigured: boolean;
-  isAuthed: boolean;
-  hasCloudSync: boolean;
-  forceEnable: boolean;
-  instanceGuardEnabled: boolean;
-  instanceAllowsSync: boolean;
-  instanceRole: 'leader' | 'follower' | 'acquiring' | 'disabled';
-  userPresent: boolean;
-  blockedReason:
-    | 'supabase-not-configured'
-    | 'not-authenticated'
-    | 'no-cloud-sync'
-    | 'secondary-tab'
-    | 'instance-guard-blocked'
-    | null;
-}
-
 interface PowerSyncRuntimeState {
   updatedAt: string;
   selectedVfs: WebPowerSyncVfs | 'native' | null;
@@ -116,8 +86,6 @@ interface PowerSyncRuntimeState {
   candidates: WebPowerSyncVfs[];
   events: PowerSyncRuntimeEntry[];
   lifecycle: PowerSyncRuntimeLifecycleStats;
-  reconnect: PowerSyncRuntimeReconnectStats;
-  syncGate: PowerSyncRuntimeSyncGate | null;
   memory: PowerSyncRuntimeMemoryStats | null;
   opfsDiagnostics: OpfsSupportDiagnostics | null;
 }
@@ -168,19 +136,6 @@ function createDefaultLifecycleStats(): PowerSyncRuntimeLifecycleStats {
   };
 }
 
-function createDefaultReconnectStats(): PowerSyncRuntimeReconnectStats {
-  return {
-    attempts: 0,
-    successes: 0,
-    failures: 0,
-    lastReason: null,
-    lastStartedAt: null,
-    lastCompletedAt: null,
-    lastDurationMs: null,
-    lastError: null,
-  };
-}
-
 function withRuntimeDefaults(
   previous?: Partial<PowerSyncRuntimeState> | undefined,
 ): PowerSyncRuntimeState {
@@ -197,11 +152,6 @@ function withRuntimeDefaults(
       ...createDefaultLifecycleStats(),
       ...(previous?.lifecycle ?? {}),
     },
-    reconnect: {
-      ...createDefaultReconnectStats(),
-      ...(previous?.reconnect ?? {}),
-    },
-    syncGate: previous?.syncGate ?? null,
     memory: previous?.memory ?? null,
     opfsDiagnostics: previous?.opfsDiagnostics ?? null,
   };
@@ -256,8 +206,6 @@ function appendPowerSyncRuntimeEvent(
       candidates: patch?.candidates ?? base.candidates,
       events,
       lifecycle: patch?.lifecycle ?? base.lifecycle,
-      reconnect: patch?.reconnect ?? base.reconnect,
-      syncGate: patch?.syncGate ?? base.syncGate,
       memory: patch?.memory ?? base.memory,
       opfsDiagnostics: patch?.opfsDiagnostics ?? base.opfsDiagnostics,
     };
@@ -341,76 +289,6 @@ export function recordPowerSyncLifecycleSignal(
   });
 }
 
-export function recordPowerSyncReconnectStart(reason: string): void {
-  const nowIso = new Date().toISOString();
-  updatePowerSyncRuntime((previous) => {
-    const base = withRuntimeDefaults(previous);
-    const reconnect = {
-      ...base.reconnect,
-      attempts: base.reconnect.attempts + 1,
-      lastReason: reason,
-      lastStartedAt: nowIso,
-      lastCompletedAt: null,
-      lastDurationMs: null,
-      lastError: null,
-    };
-    return {
-      ...base,
-      updatedAt: nowIso,
-      reconnect,
-      events: pushPowerSyncRuntimeEvent(base, 'reconnect:start', reason),
-    };
-  });
-}
-
-export function recordPowerSyncReconnectResult(
-  reason: string,
-  result: { ok: true } | { ok: false; error: unknown },
-): void {
-  const nowIso = new Date().toISOString();
-  updatePowerSyncRuntime((previous) => {
-    const base = withRuntimeDefaults(previous);
-    const reconnect = { ...base.reconnect };
-    const startedAt = reconnect.lastStartedAt ? Date.parse(reconnect.lastStartedAt) : null;
-    const completedAt = Date.parse(nowIso);
-    const durationMs =
-      startedAt != null && Number.isFinite(startedAt) ? Math.max(0, completedAt - startedAt) : null;
-    reconnect.lastReason = reason;
-    reconnect.lastCompletedAt = nowIso;
-    reconnect.lastDurationMs = durationMs;
-    if (result.ok) {
-      reconnect.successes += 1;
-      reconnect.lastError = null;
-    } else {
-      reconnect.failures += 1;
-      reconnect.lastError = toRuntimeDetail(result.error);
-    }
-    return {
-      ...base,
-      updatedAt: nowIso,
-      reconnect,
-      events: pushPowerSyncRuntimeEvent(
-        base,
-        result.ok ? 'reconnect:success' : 'reconnect:failure',
-        result.ok
-          ? `${reason}${durationMs !== null ? ` durationMs=${durationMs}` : ''}`
-          : `${reason}: ${toRuntimeDetail(result.error)}`,
-      ),
-    };
-  });
-}
-
-export function recordPowerSyncSyncGate(syncGate: PowerSyncRuntimeSyncGate): void {
-  updatePowerSyncRuntime((previous) => {
-    const base = withRuntimeDefaults(previous);
-    return {
-      ...base,
-      updatedAt: new Date().toISOString(),
-      syncGate,
-    };
-  });
-}
-
 export function samplePowerSyncRuntimeMemory(
   reason: string,
   options?: { force?: boolean },
@@ -487,11 +365,10 @@ function isIosForceIndexedDbEnabled(): boolean {
 }
 
 /**
- * Initialize the PowerSync database.
+ * Initialize the PowerSync database (local-only, no cloud sync).
  *
- * `PowerSyncDatabase` can be used offline/local-only without connecting to a backend.
- * Use `connectPowerSyncDatabase()` (or `initPowerSyncDatabase()` for compatibility)
- * when auth + entitlement allow cloud sync.
+ * PowerSync is used purely as a SQLite driver. This function handles
+ * platform-aware VFS selection and database initialization.
  *
  * @returns The PowerSync database instance
  */
@@ -751,61 +628,6 @@ export async function openPowerSyncDatabase(): Promise<AbstractPowerSyncDatabase
 }
 
 /**
- * Connect PowerSync to the backend (enables sync).
- * Requires a configured backend connector and an authenticated user.
- */
-export async function connectPowerSyncDatabase(): Promise<AbstractPowerSyncDatabase> {
-  // Cloud sync removed in Lite — just open the local database
-  const db = await openPowerSyncDatabase();
-  return db;
-  // Dead code below kept for reference
-  const connector = null as any;
-  const startedAt = getNowMs();
-  appendPowerSyncRuntimeEvent('connect-start', 'connectPowerSyncDatabase');
-  try {
-    const { SyncClientImplementation } = await import('@powersync/web');
-    const { isCapacitorNative } = await import('../db/platform-detector');
-
-    // Use sequential fetch strategy on mobile/Capacitor to prevent WebSocket keepalive
-    // failures on low-end devices. Buffered mode (default) can accumulate sync messages
-    // faster than the device can process them, causing keepalive timeouts.
-    const isMobile =
-      isCapacitorNative() ||
-      (typeof navigator !== 'undefined' &&
-        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent ?? ''));
-
-    // Use Rust sync client for significantly faster sync performance
-    await db.connect(connector, {
-      clientImplementation: SyncClientImplementation.RUST,
-      // FetchStrategy enum is not re-exported from @powersync/web; runtime value "sequential" matches.
-      // biome-ignore lint/suspicious/noExplicitAny: FetchStrategy enum not exported from @powersync/web
-      ...(isMobile ? { fetchStrategy: 'sequential' as any } : {}),
-    });
-    appendPowerSyncRuntimeEvent(
-      'connect-success',
-      `durationMs=${Math.round(getNowMs() - startedAt)} mobile=${String(isMobile)}`,
-    );
-    void samplePowerSyncRuntimeMemory('connect-success');
-    powerSyncLog.info(
-      `Connected to sync service (Rust client${isMobile ? ', sequential fetch' : ''})`,
-    );
-  } catch (error) {
-    console.error('[PowerSync] Failed to connect to sync service:', error);
-    appendPowerSyncRuntimeEvent('connect-failed', getPowerSyncErrorMessage(error));
-    void samplePowerSyncRuntimeMemory('connect-failed', { force: true });
-    throw error;
-  }
-  return db;
-}
-
-/**
- * Backwards-compatible name: initializes (opens) + connects.
- */
-export async function initPowerSyncDatabase(): Promise<AbstractPowerSyncDatabase> {
-  return connectPowerSyncDatabase();
-}
-
-/**
  * Get the PowerSync database instance.
  *
  * @throws Error if database is not initialized
@@ -837,11 +659,9 @@ export async function closePowerSyncDatabase(): Promise<void> {
     appendPowerSyncRuntimeEvent('close-start', 'closePowerSyncDatabase');
     try {
       powerSyncLog.info('Closing database...');
-      await db.disconnect();
       await db.close();
       g.__NEURODUAL_POWERSYNC_DB__ = null;
       g.__NEURODUAL_POWERSYNC_INIT_PROMISE__ = null;
-      // supabase-connector removed in Lite
       appendPowerSyncRuntimeEvent('close-success', 'closePowerSyncDatabase');
       void samplePowerSyncRuntimeMemory('close-success', { force: true });
       powerSyncLog.info('Database closed');
@@ -851,56 +671,6 @@ export async function closePowerSyncDatabase(): Promise<void> {
       throw error;
     }
   }
-}
-
-/**
- * Disconnect PowerSync but keep the database open.
- * Useful for temporary offline mode or auth token refresh.
- */
-export async function disconnectPowerSync(): Promise<void> {
-  const db = getGlobal().__NEURODUAL_POWERSYNC_DB__ ?? null;
-  if (!db) return;
-
-  // Avoid calling into SDK disconnect path when already offline.
-  // On some runtimes this can still trigger costly internal work.
-  const status = db as unknown as { connected?: unknown; connecting?: unknown };
-  const isConnected = status.connected === true || status.connecting === true;
-  if (!isConnected) {
-    powerSyncLog.debug('disconnectPowerSync skipped: already disconnected');
-    appendPowerSyncRuntimeEvent('disconnect-skipped', 'already disconnected');
-    return;
-  }
-
-  const startedAt =
-    typeof performance !== 'undefined' && typeof performance.now === 'function'
-      ? performance.now()
-      : Date.now();
-  appendPowerSyncRuntimeEvent('disconnect-start', 'disconnectPowerSync');
-  try {
-    await db.disconnect();
-    const durationMs =
-      (typeof performance !== 'undefined' && typeof performance.now === 'function'
-        ? performance.now()
-        : Date.now()) - startedAt;
-    if (durationMs > 500) {
-      powerSyncLog.warn(`[PowerSync] disconnect() took ${Math.round(durationMs)}ms`);
-    }
-    appendPowerSyncRuntimeEvent('disconnect-success', `durationMs=${Math.round(durationMs)}`);
-    void samplePowerSyncRuntimeMemory('disconnect-success');
-    powerSyncLog.info('Disconnected from sync service');
-  } catch (error) {
-    appendPowerSyncRuntimeEvent('disconnect-failed', getPowerSyncErrorMessage(error));
-    void samplePowerSyncRuntimeMemory('disconnect-failed', { force: true });
-    throw error;
-  }
-}
-
-/**
- * Reconnect PowerSync after disconnect.
- * Useful after auth token refresh or coming back online.
- */
-export async function reconnectPowerSync(): Promise<void> {
-  // Cloud sync removed in Lite — reconnect is a no-op
 }
 
 // =============================================================================

@@ -9,14 +9,6 @@ import {
   migrateLocalUserIdSummaries,
   runAuthTransitionHistoryMigration,
 } from './history-migration';
-import { parseSessionIdFromStreamId } from '../es-emmett/stream-id';
-
-interface EmtMessageRow {
-  stream_id: string;
-  message_kind: 'E' | 'L';
-  is_archived: 0 | 1;
-  message_data: string;
-}
 
 interface SummaryRow {
   session_id: string;
@@ -33,127 +25,60 @@ interface NLevelProjectionRow {
   user_id: string;
 }
 
+interface SessionEventRow {
+  session_id: string;
+}
+
 interface MockState {
-  emtMessages: EmtMessageRow[];
+  sessionEvents: SessionEventRow[];
   summaries: SummaryRow[];
   algorithmStates: AlgorithmStateRow[];
   nLevelProjections: NLevelProjectionRow[];
 }
 
-function isLocalUserId(value: string | null): boolean {
-  return value === 'local' || value === '' || value === null;
-}
-
-function getSessionIdFromStreamId(streamId: string): string | null {
-  return parseSessionIdFromStreamId(streamId);
-}
-
-function getUserIdFromMessageData(messageData: string): string | null {
-  try {
-    const parsed = JSON.parse(messageData) as { data?: { userId?: unknown } } | null;
-    const userId = parsed?.data?.userId;
-    if (userId === undefined || userId === null) return null;
-    return String(userId);
-  } catch {
-    return null;
-  }
-}
-
-function isLocalEventMessage(row: EmtMessageRow): boolean {
-  if (row.message_kind !== 'E') return false;
-  if (row.is_archived !== 0) return false;
-  if (!parseSessionIdFromStreamId(row.stream_id)) return false;
-  return isLocalUserId(getUserIdFromMessageData(row.message_data));
-}
-
-function isAuthenticatedEventMessage(row: EmtMessageRow, authenticatedUserId: string): boolean {
-  if (row.message_kind !== 'E') return false;
-  if (row.is_archived !== 0) return false;
-  if (!parseSessionIdFromStreamId(row.stream_id)) return false;
-  return getUserIdFromMessageData(row.message_data) === authenticatedUserId;
-}
-
-function createMessage(args: {
-  sessionId: string;
-  userId: string | null;
-  isArchived?: 0 | 1;
-  kind?: 'E' | 'L';
-  id?: string;
-  type?: string;
-}): EmtMessageRow {
-  const envelope = {
-    id: args.id ?? crypto.randomUUID(),
-    type: args.type ?? 'SESSION_ENDED',
-    data: {
-      userId: args.userId,
-    },
-  };
-
-  return {
-    stream_id: `session:${args.sessionId}`,
-    message_kind: args.kind ?? 'E',
-    is_archived: args.isArchived ?? 0,
-    message_data: JSON.stringify(envelope),
-  };
-}
-
-function patchMessageUserId(messageData: string, newUserId: string): string {
-  const parsed = JSON.parse(messageData) as { data?: Record<string, unknown> };
-  const data = parsed.data ?? {};
-  data['userId'] = newUserId;
-  parsed.data = data;
-  return JSON.stringify(parsed);
-}
-
 function createMockPersistence(state: MockState): PersistencePort {
   const syncMeta = new Map<string, string>();
 
-  const query = mock(async <T extends object>(sql: string, params: unknown[] = []) => {
-    // getLocalOwnerSessionIds: SELECT DISTINCT ... session_id ... FROM emt_messages ... local
+  const handleSql = (sql: string, params: unknown[] = []): { rows: Record<string, unknown>[] } => {
+    // countAllSessionEvents: SELECT COUNT(*) as c FROM session_events
+    if (sql.includes('COUNT(*)') && sql.includes('FROM session_events')) {
+      return { rows: [{ c: state.sessionEvents.length }] };
+    }
+
+    // getLocalOwnerSessionIds: SELECT DISTINCT session_id FROM session_summaries WHERE user_id = 'local'
     if (
       sql.includes('SELECT DISTINCT') &&
       sql.includes('session_id') &&
-      sql.includes('FROM emt_messages') &&
-      sql.includes("json_extract(message_data, '$.data.userId') = 'local'")
+      sql.includes('FROM session_summaries') &&
+      sql.includes("user_id = 'local'") &&
+      !sql.includes('COUNT')
     ) {
       const sessionIds = Array.from(
         new Set(
-          state.emtMessages
-            .filter(isLocalEventMessage)
-            .map((row) => getSessionIdFromStreamId(row.stream_id))
-            .filter((sessionId): sessionId is string => Boolean(sessionId)),
+          state.summaries
+            .filter((s) => s.user_id === 'local')
+            .map((s) => s.session_id),
         ),
       );
-      return { rows: sessionIds.map((session_id) => ({ session_id })) as T[] };
+      return { rows: sessionIds.map((session_id) => ({ session_id })) };
     }
 
-    // getUserSessionIds: SELECT DISTINCT ... session_id ... FROM emt_messages ... userId = ?
+    // getUserSessionIds: SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?
     if (
       sql.includes('SELECT DISTINCT') &&
       sql.includes('session_id') &&
-      sql.includes('FROM emt_messages') &&
-      sql.includes("json_extract(message_data, '$.data.userId') = ?")
+      sql.includes('FROM session_summaries') &&
+      sql.includes('user_id = ?')
     ) {
-      const authenticatedUserId = String(params[0] ?? '');
+      const userId = String(params[0] ?? '');
       const sessionIds = Array.from(
         new Set(
-          state.emtMessages
-            .filter((row) => isAuthenticatedEventMessage(row, authenticatedUserId))
-            .map((row) => getSessionIdFromStreamId(row.stream_id))
-            .filter((sessionId): sessionId is string => Boolean(sessionId)),
+          state.summaries
+            .filter((s) => s.user_id === userId)
+            .map((s) => s.session_id),
         ),
       );
-      return { rows: sessionIds.map((session_id) => ({ session_id })) as T[] };
-    }
-
-    // countLocalOwnerEvents: COUNT(*) FROM emt_messages ... local/null/empty
-    if (
-      sql.includes('COUNT(*)') &&
-      sql.includes('FROM emt_messages') &&
-      sql.includes("json_extract(message_data, '$.data.userId') = 'local'")
-    ) {
-      const count = state.emtMessages.filter(isLocalEventMessage).length;
-      return { rows: [{ count }] as T[] };
+      return { rows: sessionIds.map((session_id) => ({ session_id })) };
     }
 
     // localSummariesPending: COUNT(*) FROM session_summaries WHERE user_id = 'local' AND session_id IN (...)
@@ -162,12 +87,11 @@ function createMockPersistence(state: MockState): PersistencePort {
       sql.includes('FROM session_summaries') &&
       sql.includes("user_id = 'local'")
     ) {
-      // params are the session_id values from the IN clause
       const sessionIdSet = new Set(params.map(String));
       const count = state.summaries.filter(
         (summary) => summary.user_id === 'local' && sessionIdSet.has(summary.session_id),
       ).length;
-      return { rows: [{ count }] as T[] };
+      return { rows: [{ count }] };
     }
 
     // algorithm_states count
@@ -177,7 +101,7 @@ function createMockPersistence(state: MockState): PersistencePort {
       sql.includes("user_id = 'local'")
     ) {
       const count = state.algorithmStates.filter((r) => r.user_id === 'local').length;
-      return { rows: [{ count }] as T[] };
+      return { rows: [{ count }] };
     }
 
     // n_level_projection count
@@ -187,26 +111,40 @@ function createMockPersistence(state: MockState): PersistencePort {
       sql.includes("user_id = 'local'")
     ) {
       const count = state.nLevelProjections.filter((r) => r.user_id === 'local').length;
-      return { rows: [{ count }] as T[] };
+      return { rows: [{ count }] };
+    }
+
+    // getDistinctSessionIds: SELECT DISTINCT session_id FROM session_events
+    if (
+      sql.includes('SELECT DISTINCT') &&
+      sql.includes('session_id') &&
+      sql.includes('FROM session_events')
+    ) {
+      const sessionIds = Array.from(new Set(state.sessionEvents.map((e) => e.session_id)));
+      return { rows: sessionIds.map((session_id) => ({ session_id })) };
     }
 
     throw new Error(`Unexpected query in test mock: ${sql}`);
+  };
+
+  const query = mock(async <T extends object>(sql: string, params: unknown[] = []) => {
+    return handleSql(sql, params) as { rows: T[] };
   });
 
   const execute: PersistencePort['execute'] = async (sql: string, params: unknown[] = []) => {
+    // UPDATE session_summaries SET user_id = ? WHERE user_id = 'local' AND session_id IN (SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?)
     if (
       sql.includes('UPDATE session_summaries') &&
       sql.includes("WHERE user_id = 'local'") &&
-      sql.includes('FROM emt_messages')
+      sql.includes('FROM session_summaries')
     ) {
       const newUserId = String(params[0] ?? '');
       const authenticatedUserId = String(params[1] ?? newUserId);
 
       const sessionIds = new Set(
-        state.emtMessages
-          .filter((row) => isAuthenticatedEventMessage(row, authenticatedUserId))
-          .map((row) => getSessionIdFromStreamId(row.stream_id))
-          .filter((sessionId): sessionId is string => Boolean(sessionId)),
+        state.summaries
+          .filter((s) => s.user_id === authenticatedUserId)
+          .map((s) => s.session_id),
       );
 
       for (const summary of state.summaries) {
@@ -280,26 +218,6 @@ function createMockPersistence(state: MockState): PersistencePort {
     fn({
       execute: async (sql: string, params: unknown[] = []) => {
         if (
-          sql.includes('UPDATE emt_messages') &&
-          sql.includes("json_set(message_data, '$.data.userId'") &&
-          sql.includes("WHERE message_kind = 'E'")
-        ) {
-          const authenticatedUserId = String(params[0] ?? '');
-          const sessionId = String(params[1] ?? '');
-          const targetStreamId = `session:${sessionId}`;
-
-          state.emtMessages = state.emtMessages.map((row) => {
-            if (row.stream_id !== targetStreamId) return row;
-            if (!isLocalEventMessage(row)) return row;
-            return {
-              ...row,
-              message_data: patchMessageUserId(row.message_data, authenticatedUserId),
-            };
-          });
-          return;
-        }
-
-        if (
           sql.includes('UPDATE session_summaries') &&
           sql.includes('SET user_id = ?') &&
           sql.includes("WHERE user_id = 'local' AND session_id = ?")
@@ -318,15 +236,13 @@ function createMockPersistence(state: MockState): PersistencePort {
       },
     });
 
-  // Mock AbstractPowerSyncDatabase that routes through the same query/execute handlers
+  // Mock AbstractPowerSyncDatabase that routes through the same SQL handler
   const mockPowerSyncDb = {
     getAll: async (sql: string, params?: unknown[]) => {
-      const result = await query(sql, params);
-      return result.rows;
+      return handleSql(sql, params ?? []).rows;
     },
     getOptional: async (sql: string, params?: unknown[]) => {
-      const result = await query(sql, params);
-      return result.rows[0] ?? null;
+      return handleSql(sql, params ?? []).rows[0] ?? null;
     },
   };
 
@@ -346,25 +262,10 @@ describe('history migration', () => {
   it('migrates local events repeatedly (not one-shot)', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [
-        createMessage({
-          id: 'local-e1',
-          sessionId: 'session-a',
-          userId: 'local',
-          type: 'SESSION_STARTED',
-        }),
-        createMessage({
-          id: 'local-e2',
-          sessionId: 'session-a',
-          userId: 'local',
-          type: 'SESSION_ENDED',
-        }),
-        createMessage({
-          id: 'local-e3',
-          sessionId: 'session-b',
-          userId: 'local',
-          type: 'SESSION_ENDED',
-        }),
+      sessionEvents: [
+        { session_id: 'session-a' },
+        { session_id: 'session-a' },
+        { session_id: 'session-b' },
       ],
       summaries: [
         { session_id: 'session-a', user_id: 'local' },
@@ -376,37 +277,20 @@ describe('history migration', () => {
     const persistence = createMockPersistence(state);
 
     const first = await migrateLocalEventsToAuthenticatedUser(persistence, userId);
+    // eventsMigrated is now the total count of session_events rows (used as proxy)
     expect(first.eventsMigrated).toBe(3);
     expect(first.sessionsMigrated).toBe(2);
     expect(first.alreadyMigrated).toBe(false);
-    expect(state.emtMessages.filter(isLocalEventMessage)).toHaveLength(0);
-    expect(
-      state.emtMessages.every((row) => getUserIdFromMessageData(row.message_data) === userId),
-    ).toBe(true);
+    // After migration, local summaries should be updated to authenticated user
     expect(state.summaries.every((summary) => summary.user_id === userId)).toBe(true);
 
     // Later, user creates another local session while logged out.
-    state.emtMessages.push(
-      createMessage({
-        id: 'local-e4',
-        sessionId: 'session-c',
-        userId: 'local',
-        type: 'SESSION_ENDED',
-      }),
-    );
+    state.sessionEvents.push({ session_id: 'session-c' });
     state.summaries.push({ session_id: 'session-c', user_id: 'local' });
 
     const second = await migrateLocalEventsToAuthenticatedUser(persistence, userId);
-    expect(second.eventsMigrated).toBe(1);
+    expect(second.eventsMigrated).toBe(4);
     expect(second.sessionsMigrated).toBe(1);
-    expect(state.emtMessages.filter(isLocalEventMessage)).toHaveLength(0);
-    expect(
-      state.emtMessages.some(
-        (row) =>
-          row.stream_id === 'session:session-c' &&
-          getUserIdFromMessageData(row.message_data) === userId,
-      ),
-    ).toBe(true);
     expect(state.summaries.find((summary) => summary.session_id === 'session-c')?.user_id).toBe(
       userId,
     );
@@ -415,26 +299,14 @@ describe('history migration', () => {
   it('migrates only matching local summaries for the authenticated user', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [
-        createMessage({ id: 'event-1', sessionId: 'session-a', userId, type: 'SESSION_ENDED' }),
-        // Archived (deleted) session should not count.
-        createMessage({
-          id: 'event-2',
-          sessionId: 'session-b',
-          userId,
-          type: 'SESSION_ENDED',
-          isArchived: 1,
-        }),
-        createMessage({
-          id: 'event-3',
-          sessionId: 'session-c',
-          userId: 'another-user',
-          type: 'SESSION_ENDED',
-        }),
-      ],
+      sessionEvents: [],
       summaries: [
+        // session-a has a summary owned by the authenticated user (will be matched)
+        { session_id: 'session-a', user_id: userId },
         { session_id: 'session-a', user_id: 'local' },
+        // session-b only has a local summary (no authenticated user ownership)
         { session_id: 'session-b', user_id: 'local' },
+        // session-c only has a local summary (no authenticated user ownership)
         { session_id: 'session-c', user_id: 'local' },
       ],
       algorithmStates: [],
@@ -444,9 +316,10 @@ describe('history migration', () => {
 
     const migrated = await migrateLocalUserIdSummaries(persistence, userId);
     expect(migrated).toBe(1);
-    expect(state.summaries.find((summary) => summary.session_id === 'session-a')?.user_id).toBe(
-      userId,
-    );
+    // session-a's local summary should be migrated (it has a matching userId summary)
+    const sessionASummaries = state.summaries.filter((s) => s.session_id === 'session-a');
+    expect(sessionASummaries.every((s) => s.user_id === userId)).toBe(true);
+    // session-b and session-c should remain local
     expect(state.summaries.find((summary) => summary.session_id === 'session-b')?.user_id).toBe(
       'local',
     );
@@ -458,7 +331,7 @@ describe('history migration', () => {
   it('coordinates auth-transition migration and writes marker', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [createMessage({ id: 'local-e1', sessionId: 'session-a', userId: 'local' })],
+      sessionEvents: [{ session_id: 'session-a' }],
       summaries: [{ session_id: 'session-a', user_id: 'local' }],
       algorithmStates: [],
       nLevelProjections: [],
@@ -479,7 +352,6 @@ describe('history migration', () => {
       'history:auth-transition-migration:v1:',
     );
 
-    expect(state.emtMessages.filter(isLocalEventMessage)).toHaveLength(0);
     expect(state.summaries).toHaveLength(1);
     expect(state.summaries[0]?.user_id).toBe(userId);
   });
@@ -487,7 +359,7 @@ describe('history migration', () => {
   it('serializes concurrent auth-transition runs for the same user', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [createMessage({ id: 'local-e1', sessionId: 'session-a', userId: 'local' })],
+      sessionEvents: [{ session_id: 'session-a' }],
       summaries: [{ session_id: 'session-a', user_id: 'local' }],
       algorithmStates: [],
       nLevelProjections: [],
@@ -502,14 +374,13 @@ describe('history migration', () => {
     expect(firstResult).toEqual(secondResult);
     expect(setSyncMetaSpy).toHaveBeenCalledTimes(1);
 
-    expect(state.emtMessages.filter(isLocalEventMessage)).toHaveLength(0);
     expect(state.summaries[0]?.user_id).toBe(userId);
   });
 
   it('skips auth-transition re-scan when a success marker already exists, until logout clears it', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [createMessage({ id: 'local-e1', sessionId: 'session-a', userId: 'local' })],
+      sessionEvents: [{ session_id: 'session-a' }],
       summaries: [{ session_id: 'session-a', user_id: 'local' }],
       algorithmStates: [],
       nLevelProjections: [],
@@ -527,21 +398,18 @@ describe('history migration', () => {
 
     await clearAuthTransitionMigrationMeta(persistence, userId);
 
-    state.emtMessages.push(
-      createMessage({ id: 'local-e2', sessionId: 'session-b', userId: 'local' }),
-    );
+    state.sessionEvents.push({ session_id: 'session-b' });
     state.summaries.push({ session_id: 'session-b', user_id: 'local' });
 
     const third = await runAuthTransitionHistoryMigration(persistence, userId);
-    expect(third.eventsMigrated).toBe(1);
-    expect(state.emtMessages.filter(isLocalEventMessage)).toHaveLength(0);
+    expect(third.eventsMigrated).toBe(2);
     expect(state.summaries.every((summary) => summary.user_id === userId)).toBe(true);
   });
 
   it('migrates local algorithm_states rows', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [],
+      sessionEvents: [],
       summaries: [],
       algorithmStates: [
         { id: 'local:adaptive', user_id: 'local' },
@@ -566,7 +434,7 @@ describe('history migration', () => {
   it('skips algorithm_states migration when none are local', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [],
+      sessionEvents: [],
       summaries: [],
       algorithmStates: [{ id: `${userId}:adaptive`, user_id: userId }],
       nLevelProjections: [],
@@ -580,7 +448,7 @@ describe('history migration', () => {
   it('migrates local n_level_projection rows', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [],
+      sessionEvents: [],
       summaries: [],
       algorithmStates: [],
       nLevelProjections: [
@@ -605,7 +473,7 @@ describe('history migration', () => {
   it('skips n_level_projection migration when none are local', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [],
+      sessionEvents: [],
       summaries: [],
       algorithmStates: [],
       nLevelProjections: [{ id: `${userId}:2`, user_id: userId }],
@@ -619,7 +487,7 @@ describe('history migration', () => {
   it('auth-transition migration includes algorithm_states and n_level_projection', async () => {
     const userId = '11111111-1111-1111-1111-111111111111';
     const state: MockState = {
-      emtMessages: [],
+      sessionEvents: [],
       summaries: [],
       algorithmStates: [{ id: 'local:adaptive', user_id: 'local' }],
       nLevelProjections: [{ id: 'local:2', user_id: 'local' }],

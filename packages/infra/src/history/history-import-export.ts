@@ -240,8 +240,6 @@ export async function importSessionsFromJSON(
     const eventsChunk = eventsToInsert.slice(i, i + CHUNK_SIZE);
 
     try {
-      await persistence.appendBatch(eventsChunk);
-
       let projectedCount = 0;
       for (const importedEvent of eventsChunk) {
         const rawEvent: RawVersionedEvent = {

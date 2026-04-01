@@ -26,7 +26,7 @@
  * Update this on each release.
  * Format: semver (MAJOR.MINOR.PATCH)
  */
-export const APP_VERSION = '0.9.27' as const;
+export const APP_VERSION = '0.9.29' as const;
 
 // #############################################################################
 // #                                                                           #

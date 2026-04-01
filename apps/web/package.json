@@ -1,6 +1,6 @@
 {
   "name": "@neurodual/web",
-  "version": "0.9.27",
+  "version": "0.9.29",
   "private": true,
   "type": "module",
   "scripts": {

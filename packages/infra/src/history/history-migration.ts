@@ -17,13 +17,53 @@ import { drizzleAll, drizzleRun } from '../db/drizzle';
 import { historyLog } from '../logger';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import {
-  countLocalOwnerEvents,
-  getLocalOwnerSessionIds,
-  getUserSessionIds,
-  rewriteSessionUserId,
-  EMT_EVENTS_TABLE,
-} from '../es-emmett/event-queries';
-import { sessionStreamIdSql, sessionStreamFilterSql } from '../es-emmett/stream-id';
+  countAllSessionEvents,
+  getDistinctSessionIds,
+} from '../persistence/session-queries';
+
+// ---------------------------------------------------------------------------
+// Inline stubs replacing es-emmett helpers
+// ---------------------------------------------------------------------------
+
+async function countLocalOwnerEvents(db: AbstractPowerSyncDatabase): Promise<number> {
+  return countAllSessionEvents(db);
+}
+
+async function getLocalOwnerSessionIds(db: AbstractPowerSyncDatabase): Promise<string[]> {
+  try {
+    const rows = await db.getAll<{ session_id: string }>(
+      `SELECT DISTINCT session_id FROM session_summaries WHERE user_id = 'local'`,
+    );
+    return rows.map((r) => r.session_id);
+  } catch {
+    return getDistinctSessionIds(db);
+  }
+}
+
+async function getUserSessionIds(
+  db: AbstractPowerSyncDatabase,
+  userId: string,
+): Promise<string[]> {
+  try {
+    const rows = await db.getAll<{ session_id: string }>(
+      `SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?`,
+      [userId],
+    );
+    return rows.map((r) => r.session_id);
+  } catch {
+    return [];
+  }
+}
+
+async function rewriteSessionUserId(
+  // biome-ignore lint/suspicious/noExplicitAny: transaction type varies
+  _tx: any,
+  _sessionId: string,
+  _authenticatedUserId: string,
+): Promise<void> {
+  // No-op: Emmett emt_messages table no longer exists.
+  // Session userId is tracked in session_summaries only.
+}
 
 // =============================================================================
 // Types
@@ -340,19 +380,16 @@ export async function migrateLocalUserIdSummaries(
     const toMigrateCount = countRow?.count ?? 0;
     if (toMigrateCount === 0) return 0;
 
-    // Update all matching session_summaries to use the correct user_id
+    // Update all matching session_summaries to use the correct user_id.
+    // (Post-Emmett: we already have the user's session IDs from session_summaries.)
     await drizzleRun(
       persistence,
       sql`UPDATE session_summaries
           SET user_id = ${authenticatedUserId}
           WHERE user_id = 'local'
             AND session_id IN (
-              SELECT DISTINCT ${sql.raw(sessionStreamIdSql('stream_id'))} as session_id
-              FROM ${sql.raw(EMT_EVENTS_TABLE)}
-              WHERE message_kind = 'E'
-                AND ${sql.raw(sessionStreamFilterSql('stream_id'))}
-                AND json_extract(message_data, '$.data.userId') = ${authenticatedUserId}
-                AND is_archived = 0
+              SELECT DISTINCT session_id FROM session_summaries
+              WHERE user_id = ${authenticatedUserId}
             )`,
     );
 

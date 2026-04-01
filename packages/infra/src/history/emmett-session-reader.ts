@@ -8,11 +8,20 @@
  * Phase 3 Migration: Use readStream() for O(log n) indexed reads instead of full table scan.
  */
 
-import type { StoredEvent as EmmettStoredEvent } from '../es-emmett/powersync-emmett-event-store';
-
 // =============================================================================
 // Types
 // =============================================================================
+
+/** Inline replacement for the removed Emmett StoredEvent type. */
+interface EmmettStoredEvent {
+  eventId: string;
+  streamPosition: bigint;
+  globalPosition: bigint;
+  type: string;
+  data: Record<string, unknown>;
+  metadata: Record<string, unknown>;
+  createdAt: Date;
+}
 
 export interface SessionRevision {
   count: number;

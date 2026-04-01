@@ -11,7 +11,6 @@
 
 import type { GameEvent } from '@neurodual/logic';
 import { SESSION_END_EVENT_TYPES } from '@neurodual/logic';
-import type { StoredEvent as EmmettStoredEvent } from '../es-emmett/powersync-emmett-event-store';
 import type { ProjectionDefinition } from './projection-definition';
 
 // =============================================================================
@@ -105,7 +104,7 @@ export function evolveDailyActivityState(
  */
 export function evolveDailyActivityStateFromEmmett(
   state: DailyActivityState,
-  event: EmmettStoredEvent,
+  event: { type: string; data: Record<string, unknown>; createdAt: Date },
 ): DailyActivityState {
   // Only count completed sessions
   if (

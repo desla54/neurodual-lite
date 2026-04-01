@@ -207,35 +207,16 @@ describe('collectDbDiagnostics', () => {
     expect(result!.tables_count).toBe(2);
   });
 
-  it('includes emt details from centralized event-queries', async () => {
+  it('returns zero/empty emt details (ES removed, inline stubs)', async () => {
     const result = await collectDbDiagnostics();
-    expect(result!.emt_messages_count).toBe(10);
-    expect(result!.emt_streams_count).toBe(3);
-    expect(result!.emt_subscriptions_count).toBe(2);
-    expect(result!.emt_distinct_streams).toBe(3);
-    expect(result!.emt_oldest_created).toBe('2026-01-01T00:00:00Z');
-    expect(result!.emt_newest_created).toBe('2026-03-15T00:00:00Z');
-    expect(result!.emt_archived_count).toBe(1);
-    expect(result!.emt_message_types).toEqual({ SESSION_STARTED: 5, SESSION_ENDED: 5 });
-  });
-
-  it('falls back gracefully when getEmtTableCounts throws', async () => {
-    mockGetEmtTableCounts.mockRejectedValueOnce(new Error('boom'));
-    const result = await collectDbDiagnostics();
-    expect(result).not.toBeNull();
-    expect(result!.emt_messages_count).toBe(-1);
-    expect(result!.emt_streams_count).toBe(-1);
-    expect(result!.emt_subscriptions_count).toBe(-1);
-  });
-
-  it('falls back gracefully when getEmtMessageDetails throws', async () => {
-    mockGetEmtMessageDetails.mockRejectedValueOnce(new Error('boom'));
-    const result = await collectDbDiagnostics();
-    expect(result).not.toBeNull();
+    expect(result!.emt_messages_count).toBe(0);
+    expect(result!.emt_streams_count).toBe(0);
+    expect(result!.emt_subscriptions_count).toBe(0);
     expect(result!.emt_distinct_streams).toBe(0);
     expect(result!.emt_oldest_created).toBeNull();
     expect(result!.emt_newest_created).toBeNull();
     expect(result!.emt_archived_count).toBe(0);
+    expect(result!.emt_message_types).toEqual({});
   });
 
   it('reports null projections when projection tables are empty', async () => {

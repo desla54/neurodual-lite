@@ -34,11 +34,11 @@ import { projectionLog } from '../logger';
 import { requireDrizzleDb } from '../db/drizzle';
 import { cleanupAbandonedSessionById } from './abandoned-cleanup';
 import {
-  getSessionEndEvents,
+  getAllSessionEndEvents as getSessionEndEvents,
   findMissingSessionSummaries,
   getSessionEndEventsForSessions,
   getLatestSessionEndEvent,
-} from '../es-emmett/event-queries';
+} from '../persistence/session-queries';
 
 // =============================================================================
 // Constants

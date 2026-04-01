@@ -181,6 +181,8 @@
       "towerDesc": "Move discs to match the target configuration in minimum moves.",
       "gridlock": "Gridlock",
       "gridlockDesc": "Slide vehicles on a 6×6 grid to free the red car. Planning and spatial reasoning.",
+      "dualMix": "Dual Mix",
+      "dualMixDesc": "Cycle through N-Back, Stroop Flex, and Gridlock each round.",
       "maze": "Maze",
       "mazeDesc": "Navigate through mazes from start to goal. Spatial planning.",
       "dualTask": "Dual Task",

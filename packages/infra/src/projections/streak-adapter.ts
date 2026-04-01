@@ -9,8 +9,6 @@
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import type { StreakInfo } from '@neurodual/logic';
 import { streakStateToInfo, type StreakState } from './streak-projection';
-import { getProcessorEngine as getConfiguredProcessorEngine } from '../es-emmett/processor-engine';
-
 // =============================================================================
 // Streak Adapter
 // =============================================================================
@@ -52,8 +50,7 @@ export function createStreakAdapter(
   }
 
   async function reset(): Promise<void> {
-    const engine = getConfiguredProcessorEngine(db);
-    await engine.rebuild('streak');
+    // No-op: processor engine removed (ES removal)
   }
 
   return {

@@ -20,10 +20,7 @@ import type {
   UnlockedBadge,
 } from '@neurodual/logic';
 import { createEmptyProgression } from '@neurodual/logic';
-import type { AbstractPowerSyncDatabase } from '@powersync/web';
-import { parseSqlDate, safeJsonParse } from '../db/sql-helpers';
-import { progressionLog } from '../logger';
-import { getBadgeUnlockEvents } from '../es-emmett/event-queries';
+import { parseSqlDate } from '../db/sql-helpers';
 import {
   buildProjectionScopeClause,
   buildSessionSummaryScopeClause,
@@ -48,54 +45,11 @@ function computeDaysSince(dateString: string | null | undefined): number | null 
 // =============================================================================
 
 async function projectBadgesFromEvents(
-  persistence: PersistencePort,
-  userIds: readonly string[],
+  _persistence: PersistencePort,
+  _userIds: readonly string[],
 ): Promise<UnlockedBadge[]> {
-  // Get PowerSync db via duck-type cast (available at runtime on PowerSyncPersistencePort)
-  const getPsDb = (persistence as { getPowerSyncDb?: () => Promise<AbstractPowerSyncDatabase> })
-    .getPowerSyncDb;
-  if (!getPsDb) return [];
-  const db = await getPsDb.call(persistence);
-
-  const primaryUserId = userIds[0] ?? 'local';
-  const secondaryUserId = userIds[1];
-  const rows = await getBadgeUnlockEvents(db, primaryUserId, secondaryUserId);
-
-  const badges: UnlockedBadge[] = [];
-  for (const row of rows) {
-    try {
-      const payload =
-        typeof row.payload === 'string'
-          ? safeJsonParse<Record<string, unknown> | null>(row.payload, null)
-          : row.payload;
-      const badgeId =
-        payload && typeof payload === 'object' && typeof payload['badgeId'] === 'string'
-          ? payload['badgeId']
-          : '';
-      if (!badgeId) continue;
-
-      const unlockedAt = parseSqlDate(row.timestamp);
-      if (!unlockedAt) {
-        progressionLog.warn(
-          `[ProgressionAdapter] Skipping BADGE_UNLOCKED row with invalid timestamp (session=${row.session_id ?? 'unknown'})`,
-        );
-        continue;
-      }
-
-      badges.push({
-        badgeId,
-        sessionId: row.session_id ?? '',
-        unlockedAt,
-      });
-    } catch (error) {
-      progressionLog.warn(
-        `[ProgressionAdapter] Skipping malformed BADGE_UNLOCKED row (session=${row.session_id ?? 'unknown'})`,
-        error,
-      );
-    }
-  }
-
-  return badges;
+  // Badge unlock events are no longer stored separately
+  return [];
 }
 
 export async function getBadgesForUserScope(

@@ -1,6 +1,6 @@
 {
   "name": "@neurodual/infra",
-  "version": "0.9.27",
+  "version": "0.9.29",
   "private": true,
   "type": "module",
   "sideEffects": false,

@@ -41,8 +41,6 @@ import { cleanupAbandonedSessionById } from '../history/abandoned-cleanup';
 import { getPlayContextFromEvents } from '../utils/session-event-helpers';
 import { nowMs, yieldIfOverBudget } from '../utils/yield-to-main';
 import type { ProjectedEvent, ProjectionDefinition } from './projection-definition';
-import { sessionStreamEqualsSql } from '../es-emmett/stream-id';
-import { EMT_EVENTS_TABLE, eventBaseWhere } from '../es-emmett/event-queries';
 import { bulkDeleteWhereIn, bulkInsert } from '../db/sql-executor';
 import { parseSqlDateToMs, safeJsonParse } from '../db/sql-helpers';
 import {
@@ -349,8 +347,8 @@ async function readSessionEventsFromDb(
     created: string | null;
   }>(
     `SELECT message_type, message_data, global_position, created
-     FROM ${EMT_EVENTS_TABLE}
-     WHERE ${sessionStreamEqualsSql('stream_id')} AND ${eventBaseWhere()}
+     FROM emt_messages
+     WHERE (stream_id = 'session:' || ? OR stream_id = 'training:session:' || ?) AND message_kind = 'E' AND is_archived = 0
      ORDER BY CAST(global_position AS INTEGER) ASC`,
     [sessionId, sessionId],
   );

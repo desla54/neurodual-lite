@@ -25,9 +25,7 @@ import {
   type RawVersionedEvent,
   migrateAndValidateEventBatch,
 } from '@neurodual/logic';
-import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import { sessionRecoveryLog } from '../logger';
-import { getStreamVersion } from '../es-emmett/event-queries';
 
 // =============================================================================
 // Constants
@@ -262,28 +260,7 @@ export async function buildRecoveredState(
   // 2. Fetch events from SQLite
   const storedEvents = await persistence.getSession(snapshot.sessionId);
 
-  // 3. CRITICAL: Read stream version from emt_streams (authoritative source)
-  // This ensures we have the correct version even if existingEvents are filtered
-  let streamVersion: number | undefined;
-  try {
-    // Get PowerSync db via duck-type cast (available at runtime on PowerSyncPersistencePort)
-    const getPsDb = (persistence as { getPowerSyncDb?: () => Promise<AbstractPowerSyncDatabase> })
-      .getPowerSyncDb;
-    if (getPsDb) {
-      const db = await getPsDb.call(persistence);
-      const version = await getStreamVersion(db, `session:${snapshot.sessionId}`);
-      if (version !== null) {
-        streamVersion = Number(version);
-        sessionRecoveryLog.debug('Read stream version from emt_streams:', {
-          sessionId: snapshot.sessionId,
-          streamVersion,
-        });
-      }
-    }
-  } catch (e) {
-    // If query fails (e.g., table doesn't exist for legacy sessions), fall back to event count
-    console.warn('[SessionRecovery] Failed to read stream version from emt_streams:', e);
-  }
+  const streamVersion: number | undefined = undefined;
 
   sessionRecoveryLog.debug('Fetched events for session:', {
     sessionId: snapshot.sessionId,

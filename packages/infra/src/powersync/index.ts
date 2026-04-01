@@ -6,13 +6,8 @@ export {
   getPowerSyncDatabase,
   isPowerSyncInitialized,
   closePowerSyncDatabase,
-  connectPowerSyncDatabase,
-  initPowerSyncDatabase,
-  disconnectPowerSync,
-  reconnectPowerSync,
   // Runtime state
   getPowerSyncRuntimeState,
-  recordPowerSyncSyncGate,
   samplePowerSyncRuntimeMemory,
   type PowerSyncRuntimeState,
 } from './database';

@@ -26,10 +26,19 @@ import {
   type PersistencePort,
   type CommandBusPort,
 } from '@neurodual/logic';
-import type {
-  StreamId,
-  StoredEvent as EmmettStoredEvent,
-} from '../es-emmett/powersync-emmett-event-store';
+/** Inline replacement for removed Emmett StreamId type. */
+type StreamId = { aggregateId: string; aggregateType: string };
+
+/** Inline replacement for removed Emmett StoredEvent type. */
+type EmmettStoredEvent = {
+  eventId: string;
+  streamPosition: bigint;
+  globalPosition: bigint;
+  type: string;
+  data: Record<string, unknown>;
+  metadata: Record<string, unknown>;
+  createdAt: Date;
+};
 import { ReplayLoadError } from './errors';
 
 // =============================================================================

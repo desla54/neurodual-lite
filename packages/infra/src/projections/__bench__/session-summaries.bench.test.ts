@@ -11,7 +11,7 @@
  *  1. Write   – INSERT batch (100 / 500 / 1000 rows, transaction unique)
  *  2. Read    – 4 requêtes stats clés à 1K / 5K / 10K rows
  *  3. Index   – EXPLAIN QUERY PLAN (révèle si les index sont utilisés)
- *  4. getSession cost – scan séquentiel N×1 vs 1 scan IN(…) (bottleneck projection)
+ *  4. getSession cost – sequential N×1 vs 1 batch IN(…) (session_events JSON blobs)
  */
 
 import { afterAll, beforeAll, describe, it } from 'bun:test';
@@ -416,77 +416,52 @@ describe('Bench › 3. Index (EXPLAIN QUERY PLAN)', () => {
 
 describe('Bench › 4. getSession cost (bottleneck projection)', () => {
   /**
-   * Mini adapter inline — reproduit le getSession() de l'event store Emmett.
+   * Mini adapter inline — uses session_events (JSON blob per session).
    * Isole le coût DB pur sans les dépendances PowerSync.
    */
-  class EmtBenchDb {
+  class SessionEventsBenchDb {
     readonly raw: Database;
-    private globalPos = 0;
-    private streamPositions = new Map<string, number>();
 
     constructor() {
       this.raw = new Database(':memory:');
       this.raw.exec(SQLITE_SCHEMA);
     }
 
-    appendEvent(sessionId: string, type: string, payload: Record<string, unknown>): void {
-      const streamId = `session:${sessionId}`;
-      const streamPos = (this.streamPositions.get(streamId) ?? 0) + 1;
-      this.streamPositions.set(streamId, streamPos);
-      this.globalPos++;
-
-      const data = { id: crypto.randomUUID(), type, sessionId, timestamp: Date.now(), ...payload };
+    /** Write a full session as a JSON blob into session_events */
+    writeSession(sessionId: string, events: Record<string, unknown>[]): void {
+      const eventsJson = JSON.stringify(events);
+      const now = new Date().toISOString();
       this.raw
-        .query(`
-        INSERT INTO emt_messages (
-          id, stream_id, stream_position, partition,
-          message_kind, message_data, message_metadata,
-          message_schema_version, message_type, message_id,
-          is_archived, global_position, created
-        ) VALUES (?, ?, ?, 'global', 'E', ?, '{}', '1', ?, ?, 0, ?, datetime('now'))
-      `)
-        .run(
-          `${streamId}:${streamPos}`,
-          streamId,
-          String(streamPos),
-          JSON.stringify({ id: data.id, type, data }),
-          type,
-          data.id,
-          String(this.globalPos),
-        );
+        .query(
+          `INSERT OR REPLACE INTO session_events (id, session_id, events_json, created_at)
+           VALUES (?, ?, ?, ?)`,
+        )
+        .run(sessionId, sessionId, eventsJson, now);
     }
 
     /** Pattern ACTUEL : 1 requête par session (O(N) queries) */
     getSession(sessionId: string): Record<string, unknown>[] {
-      return this.raw
-        .query(`
-        SELECT message_data FROM emt_messages
-        WHERE message_kind = 'E' AND is_archived = 0 AND stream_id = ?
-        ORDER BY CAST(global_position AS INTEGER) ASC
-      `)
-        .all(`session:${sessionId}`) as Record<string, unknown>[];
+      const row = this.raw
+        .query('SELECT events_json FROM session_events WHERE session_id = ? LIMIT 1')
+        .get(sessionId) as { events_json: string } | undefined;
+      if (!row?.events_json) return [];
+      return JSON.parse(row.events_json) as Record<string, unknown>[];
     }
 
     /** Pattern ALTERNATIF : 1 requête IN(...) pour N sessions */
     getSessionsBatch(sessionIds: string[]): Map<string, Record<string, unknown>[]> {
       if (sessionIds.length === 0) return new Map();
       const placeholders = sessionIds.map(() => '?').join(', ');
-      const streamIds = sessionIds.map((id) => `session:${id}`);
       const rows = this.raw
-        .query(`
-        SELECT stream_id, message_data FROM emt_messages
-        WHERE message_kind = 'E' AND is_archived = 0
-          AND stream_id IN (${placeholders})
-        ORDER BY CAST(global_position AS INTEGER) ASC
-      `)
-        .all(...streamIds) as { stream_id: string; message_data: string }[];
+        .query(
+          `SELECT session_id, events_json FROM session_events
+           WHERE session_id IN (${placeholders})`,
+        )
+        .all(...sessionIds) as { session_id: string; events_json: string }[];
 
       const result = new Map<string, Record<string, unknown>[]>();
       for (const row of rows) {
-        const sessionId = row.stream_id.replace('session:', '');
-        const events = result.get(sessionId) ?? [];
-        events.push(JSON.parse(row.message_data) as Record<string, unknown>);
-        result.set(sessionId, events);
+        result.set(row.session_id, JSON.parse(row.events_json) as Record<string, unknown>[]);
       }
       return result;
     }
@@ -496,21 +471,25 @@ describe('Bench › 4. getSession cost (bottleneck projection)', () => {
     }
   }
 
-  function seedEmtSessions(
-    db: EmtBenchDb,
+  function seedSessionEvents(
+    db: SessionEventsBenchDb,
     sessionCount: number,
     eventsPerSession: number,
   ): string[] {
     const sessionIds: string[] = [];
     const tx = db.raw.transaction(() => {
       for (let s = 0; s < sessionCount; s++) {
-        const sessionId = `emt-session-${s}`;
+        const sessionId = `bench-session-${s}`;
         sessionIds.push(sessionId);
-        db.appendEvent(sessionId, 'SESSION_STARTED', { schemaVersion: 1, nLevel: 2 });
+
+        const events: Record<string, unknown>[] = [];
+        events.push({ id: crypto.randomUUID(), type: 'SESSION_STARTED', sessionId, timestamp: Date.now(), schemaVersion: 1, nLevel: 2 });
         for (let e = 0; e < eventsPerSession - 2; e++) {
-          db.appendEvent(sessionId, 'TRIAL_PRESENTED', { schemaVersion: 1, trialIndex: e });
+          events.push({ id: crypto.randomUUID(), type: 'TRIAL_PRESENTED', sessionId, timestamp: Date.now(), schemaVersion: 1, trialIndex: e });
         }
-        db.appendEvent(sessionId, 'SESSION_ENDED', { schemaVersion: 1, reason: 'completed' });
+        events.push({ id: crypto.randomUUID(), type: 'SESSION_ENDED', sessionId, timestamp: Date.now(), schemaVersion: 1, reason: 'completed' });
+
+        db.writeSession(sessionId, events);
       }
     });
     tx();
@@ -524,8 +503,8 @@ describe('Bench › 4. getSession cost (bottleneck projection)', () => {
     [500, 20],
   ] as const) {
     it(`${sessionCount} sessions × ${eventsPerSession} events/session — séquentiel vs batch`, () => {
-      const db = new EmtBenchDb();
-      const sessionIds = seedEmtSessions(db, sessionCount, eventsPerSession);
+      const db = new SessionEventsBenchDb();
+      const sessionIds = seedSessionEvents(db, sessionCount, eventsPerSession);
       const totalEvents = sessionCount * eventsPerSession;
 
       // Warm-up (1 session)

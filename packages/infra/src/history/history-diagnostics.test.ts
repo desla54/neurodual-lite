@@ -16,78 +16,93 @@ function createMockPersistence(before: Counts, after: Counts): PersistencePort {
     localSummariesPending: 0,
     missingSummaries: 0,
     orphanSummaries: 0,
-    mixedOwnerSessions: 0,
+    orphanSummariesCount: 0,
   };
 
-  const getCount = (key: keyof Counts): number => {
+  const getCount = (key: keyof typeof hits): number => {
     const hit = hits[key];
     hits[key] += 1;
-    return hit === 0 ? before[key] : after[key];
+    if (key === 'orphanSummariesCount') {
+      return hit === 0 ? before.orphanSummaries : after.orphanSummaries;
+    }
+    return hit === 0 ? before[key as keyof Counts] : after[key as keyof Counts];
   };
 
-  // event-queries functions use db.getAll()/db.getOptional() via AbstractPowerSyncDatabase.
-  // The diagnostics module now calls these functions instead of drizzle-backed SQL.
-  // Route all queries through this single handler.
-  const handleSql = (sql: string): { rows: Record<string, unknown>[] } => {
-    // countLocalEventsForUser: COUNT local userId events
+  // Post-ES: diagnostics uses session_events and session_summaries tables directly.
+  // findMixedOwnerSessions always returns 0 (no-op without Emmett per-event userId).
+  const handleSql = (sql: string, _params?: unknown[]): { rows: Record<string, unknown>[] } => {
+    // findOrphanSessionSummaries: session_summaries NOT EXISTS session_events
+    // Must be checked before countAllSessionEvents since both contain session_events
     if (
-      sql.includes('FROM emt_messages') &&
-      sql.includes("json_extract(message_data, '$.data.userId') = 'local'") &&
-      sql.includes('COUNT')
+      sql.includes('NOT EXISTS') &&
+      sql.includes('FROM session_summaries') &&
+      sql.includes('session_events')
     ) {
-      return { rows: [{ count: getCount('localEventsPending') }] };
+      return { rows: [{ c: getCount('orphanSummariesCount') }] };
     }
-    // getUserSessionIds: returns session_id rows (used for localSummariesPending subquery)
-    // Exclude CTE queries (findMissingSessionSummaries) which also contain SELECT DISTINCT + session_id
+
+    // findMissingSessionSummaries check: SELECT COUNT(*) as c FROM session_summaries WHERE session_id = ?
+    if (
+      sql.includes('COUNT(*)') &&
+      sql.includes('FROM session_summaries') &&
+      sql.includes('session_id = ?')
+    ) {
+      // Return 0 so this session is counted as missing
+      return { rows: [{ c: 0 }] };
+    }
+
+    // getSessionEvents (events_json): used by findMissingSessionSummaries to check for end events
+    if (sql.includes('events_json') && sql.includes('FROM session_events')) {
+      // Return a fake end event so the session counts as having end events
+      return {
+        rows: [{ events_json: JSON.stringify([{ type: 'SESSION_ENDED', timestamp: 1 }]) }],
+      };
+    }
+
+    // getDistinctSessionIds: SELECT DISTINCT session_id FROM session_events
     if (
       sql.includes('SELECT DISTINCT') &&
       sql.includes('session_id') &&
-      sql.includes("json_extract(message_data, '$.data.userId') = ?") &&
-      !sql.includes('WITH sessions AS')
+      sql.includes('FROM session_events')
+    ) {
+      // Used by findMissingSessionSummaries iteration
+      const count = getCount('missingSummaries');
+      return { rows: Array.from({ length: count }, (_, i) => ({ session_id: `missing-${i}` })) };
+    }
+
+    // countAllSessionEvents: SELECT COUNT(*) as c FROM session_events
+    if (sql.includes('COUNT(*)') && sql.includes('FROM session_events')) {
+      return { rows: [{ c: getCount('localEventsPending') }] };
+    }
+
+    // getUserSessionIds: SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?
+    if (
+      sql.includes('SELECT DISTINCT') &&
+      sql.includes('session_id') &&
+      sql.includes('FROM session_summaries') &&
+      sql.includes('user_id = ?')
     ) {
       // Return a dummy session ID so the localSummariesPending query gets executed
       return { rows: [{ session_id: 'dummy-session' }] };
     }
+
     // localSummariesPending: session_summaries with user_id='local' AND session_id IN (...)
     if (sql.includes('FROM session_summaries') && sql.includes("user_id = 'local'")) {
       return { rows: [{ count: getCount('localSummariesPending') }] };
     }
-    // findMissingSessionSummaries: CTE with NOT EXISTS on session_summaries
-    if (
-      sql.includes('WITH sessions AS') ||
-      (sql.includes('NOT EXISTS') &&
-        sql.includes('session_summaries s') &&
-        sql.includes('sessions.session_id'))
-    ) {
-      const count = getCount('missingSummaries');
-      return { rows: Array.from({ length: count }, (_, i) => ({ session_id: `missing-${i}` })) };
-    }
-    // findOrphanSessionSummaries: session_summaries NOT EXISTS emt_messages
-    if (
-      sql.includes('NOT EXISTS') &&
-      sql.includes('FROM session_summaries s') &&
-      sql.includes('em.stream_id')
-    ) {
-      const count = getCount('orphanSummaries');
-      return { rows: Array.from({ length: count }, (_, i) => ({ session_id: `orphan-${i}` })) };
-    }
-    // findMixedOwnerSessions: GROUP BY session_id HAVING COUNT(DISTINCT userId) > 1
-    if (sql.includes('HAVING') && sql.includes('COUNT(DISTINCT')) {
-      const count = getCount('mixedOwnerSessions');
-      return { rows: Array.from({ length: count }, (_, i) => ({ session_id: `mixed-${i}` })) };
-    }
+
     console.log('[DIAGNOSTICS-MOCK] Unmatched SQL:', sql.substring(0, 120));
     return { rows: [] };
   };
 
-  const query = mock(async (sql: string) => {
-    return handleSql(sql);
+  const query = mock(async (sql: string, params?: unknown[]) => {
+    return handleSql(sql, params);
   });
 
   // Mock AbstractPowerSyncDatabase that routes through the same SQL handler
   const mockPowerSyncDb = {
-    getAll: async (sql: string, _params?: unknown[]) => handleSql(sql).rows,
-    getOptional: async (sql: string, _params?: unknown[]) => handleSql(sql).rows[0] ?? null,
+    getAll: async (sql: string, params?: unknown[]) => handleSql(sql, params).rows,
+    getOptional: async (sql: string, params?: unknown[]) => handleSql(sql, params).rows[0] ?? null,
   };
 
   const syncMeta = new Map<string, string>();

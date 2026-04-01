@@ -80,58 +80,13 @@ describe('ProgressionAdapter', () => {
       expect(await adapter.getBadges()).toHaveLength(0);
     });
 
-    it('skips malformed badge rows instead of throwing', async () => {
-      const badgePersistence = {
-        getDrizzleDb: mock(() => mockDrizzleDb),
-        getPowerSyncDb: mock(async () => ({
-          getAll: mock(async () => [
-            {
-              session_id: 'bad-json',
-              payload: '{invalid}',
-              timestamp: Date.now(),
-            },
-            {
-              session_id: 'bad-date',
-              payload: JSON.stringify({ badgeId: 'sniper' }),
-              timestamp: 'not-a-date',
-            },
-            {
-              session_id: 'ok',
-              payload: JSON.stringify({ badgeId: 'focus-master' }),
-              timestamp: '2026-03-16T10:20:30.000Z',
-            },
-          ]),
-        })),
-      };
-
-      const adapter = createProgressionAdapter(badgePersistence as any);
-      await expect(adapter.getBadges()).resolves.toEqual([
-        {
-          badgeId: 'focus-master',
-          sessionId: 'ok',
-          unlockedAt: new Date('2026-03-16T10:20:30.000Z'),
-        },
-      ]);
+    it('always returns empty badges (badge events no longer stored separately)', async () => {
+      const adapter = createProgressionAdapter(mockPersistence as any);
+      await expect(adapter.getBadges()).resolves.toEqual([]);
     });
 
-    it('includes authenticated and local badge scope for explicit lookups', async () => {
-      badgeDb.getAll.mockResolvedValueOnce([
-        {
-          session_id: 'scoped',
-          payload: JSON.stringify({ badgeId: 'merged-history' }),
-          timestamp: '2026-03-16T10:20:30.000Z',
-        },
-      ]);
-
-      await expect(getBadgesForUserScope(mockPersistence as any, 'user-42')).resolves.toEqual([
-        {
-          badgeId: 'merged-history',
-          sessionId: 'scoped',
-          unlockedAt: new Date('2026-03-16T10:20:30.000Z'),
-        },
-      ]);
-
-      expect(badgeDb.getAll.mock.calls[0]?.[1]).toEqual(['user-42', 'local']);
+    it('getBadgesForUserScope always returns empty array', async () => {
+      await expect(getBadgesForUserScope(mockPersistence as any, 'user-42')).resolves.toEqual([]);
     });
   });
 

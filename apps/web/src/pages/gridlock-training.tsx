@@ -63,7 +63,8 @@ import { useNavigate } from 'react-router';
 
 import { GameQuitModal } from '../components/game';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
-import { useCloudSyncActions } from '../components/cloud-sync-provider';
+// Cloud sync removed — stub the hook
+const useCloudSyncActions = () => ({ syncEventsAndProgression: async () => {} });
 import { useAnalytics } from '../hooks/use-analytics';
 import { useHaptic } from '../hooks/use-haptic';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
@@ -77,7 +78,8 @@ import { buildReportActionPayload } from '../lib/analytics-journey-props';
 import { getStatsPresetForReport } from '../lib/stats-preset';
 import { useAppPorts, useCommandBus } from '../providers';
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
-import { useAdInterstitial } from '../hooks/use-ad-interstitial';
+// Ad interstitial removed — stub the hook
+const useAdInterstitial = () => ({ maybeShowAd: async () => {} });
 import { useSettingsStore } from '../stores';
 import { translateContextualMessage } from '../utils/contextual-message';
 
@@ -1246,14 +1248,14 @@ export function GridlockTrainingPage() {
               <div
                 className="flex h-full w-full items-center justify-center rounded-r-lg border-y-2 border-r-2"
                 style={{
-                  backgroundColor: 'hsl(var(--woven-incorrect) / 0.18)',
-                  borderColor: 'hsl(var(--woven-incorrect) / 0.7)',
+                  backgroundColor: 'hsl(var(--woven-correct) / 0.18)',
+                  borderColor: 'hsl(var(--woven-correct) / 0.7)',
                 }}
               >
                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                   <path
                     d="M1 1L7 7L1 13"
-                    stroke="hsl(var(--woven-incorrect))"
+                    stroke="hsl(var(--woven-correct))"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"

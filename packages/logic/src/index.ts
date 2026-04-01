@@ -46,7 +46,8 @@ export {
   isSessionStartEventType,
   type SessionStartEventType,
 } from './engine/session-start-event-types';
-// Removed: tower, gridlock, mental-rotation, ravens, go-nogo, stop-signal, trail-making (deleted game modes)
+// Removed: tower, mental-rotation, ravens, go-nogo, stop-signal, trail-making (deleted game modes)
+export * from './gridlock';
 // =============================================================================
 // Coach (trial generation and stats)
 // =============================================================================
@@ -1102,7 +1103,7 @@ export type {
   SQLQueryPort,
   SettingsStorePort,
   AlgorithmStateStorePort,
-  PersistenceSyncPort,
+  MetaStorePort,
   PendingDeletionsPort,
   StatsHelpersPort,
   DatabaseLifecyclePort,

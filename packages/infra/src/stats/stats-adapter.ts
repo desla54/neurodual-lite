@@ -46,9 +46,25 @@ import type {
 import { resolveGameModeIdsForStatsMode, TEMPO_PES_THRESHOLDS } from '@neurodual/logic';
 import { SESSION_SUMMARIES_PROJECTION_VERSION } from '../history/history-projection';
 import { buildInClause, percentile, stddev, toFiniteNumber } from '../db/sql-helpers';
-import { buildStatsEventQuery, buildStatsEventJoinQuery } from '../es-emmett/event-queries';
-import { isSupabaseConfigured } from '../supabase/client';
-import { supabaseAuthAdapter } from '../supabase';
+// ---------------------------------------------------------------------------
+// Inline stubs replacing removed es-emmett/supabase modules
+// ---------------------------------------------------------------------------
+
+function buildStatsEventQuery(
+  _messageType: string,
+  _selectColumns: string,
+  _extraWhere: string = '',
+): string {
+  return 'SELECT 1 WHERE 0';
+}
+
+function buildStatsEventJoinQuery(
+  _messageType: string,
+  _selectColumns: string,
+  _extraWhere: string = '',
+): string {
+  return 'SELECT 1 WHERE 0';
+}
 
 // =============================================================================
 // Stats Cache (RAM + SQLite)
@@ -295,18 +311,6 @@ function createStatsCache(persistence: SQLQueryPort): StatsCache {
  * - If Supabase IS configured but not authenticated → return 'local' (for local sessions)
  */
 function getActiveUserId(): string {
-  if (!isSupabaseConfigured()) {
-    // Local-only mode: use 'local' as user_id
-    return 'local';
-  }
-
-  const authState = supabaseAuthAdapter.getState();
-  if (authState.status === 'authenticated') {
-    return authState.session.user.id;
-  }
-
-  // Not authenticated: use 'local' to show local sessions
-  // Privacy note: Cloud sessions have a different user_id and won't be visible
   return 'local';
 }
 

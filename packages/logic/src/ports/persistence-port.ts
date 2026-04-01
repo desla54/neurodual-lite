@@ -228,11 +228,8 @@ export interface PersistenceWriteTransaction {
 // Focused Sub-Interfaces
 // =============================================================================
 
-/** Event store operations (append, read, delete events) */
+/** Event store operations (read, delete events) */
 export interface EventStorePort {
-  append(event: EventInput): Promise<StoredEvent | null>;
-  appendFireAndForget(event: EventInput): void;
-  appendBatch(events: EventInput[]): Promise<number>;
   getSession(sessionId: string): Promise<StoredEvent[]>;
   queryEvents(options: EventQueryOptions): Promise<StoredEvent[]>;
   all(): Promise<StoredEvent[]>;
@@ -274,18 +271,10 @@ export interface AlgorithmStateStorePort {
   clearAlgorithmStates(userId: string): Promise<void>;
 }
 
-/** Cloud sync operations */
-export interface PersistenceSyncPort {
-  getUnsyncedEvents(): Promise<StoredEvent[]>;
-  hasUnsyncedEvents(): Promise<boolean>;
-  markEventsSyncedBatch(eventIds: string[]): Promise<void>;
+/** Local key-value metadata (DB version tracking, migration state, etc.) */
+export interface MetaStorePort {
   getSyncMeta(key: string): Promise<string | null>;
   setSyncMeta(key: string, value: string): Promise<void>;
-  upsertEvent(event: EventInput): Promise<void>;
-  upsertEventsBatch(events: EventInput[]): Promise<void>;
-  deleteEventsByIds(eventIds: string[]): Promise<void>;
-  getEventById(eventId: string): Promise<StoredEvent | null>;
-  getAllSessionIds(): Promise<string[]>;
 }
 
 /** Pending deletions queue for cross-device sync */
@@ -330,8 +319,8 @@ export interface DatabaseLifecyclePort {
  * ```typescript
  * class HistoryAdapter {
  *   constructor(
- *     private readonly eventStore: EventStorePort,
  *     private readonly summaryStore: SessionSummaryStorePort,
+ *     private readonly statsHelpers: StatsHelpersPort,
  *   ) {}
  * }
  * ```
@@ -378,6 +367,6 @@ export interface PersistencePort
     SQLQueryPort,
     SettingsStorePort,
     AlgorithmStateStorePort,
-    PersistenceSyncPort,
+    MetaStorePort,
     PendingDeletionsPort,
     StatsHelpersPort {}

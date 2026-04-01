@@ -68,6 +68,7 @@ type KnownGameModeId =
   | 'pattern-recognition'
   | 'tower'
   | 'gridlock'
+  | 'dual-mix'
   | 'maze'
   | 'word-flow'
   | 'word-chain'
@@ -308,6 +309,7 @@ export type GameRoute =
   | '/pattern-recognition'
   | '/tower'
   | '/gridlock'
+  | '/dual-mix'
   | '/maze'
   | '/word-flow'
   | '/word-chain'
@@ -559,6 +561,7 @@ export const GAME_MODE_ROUTES: Record<KnownGameModeId, GameRoute> = {
   'pattern-recognition': '/pattern-recognition',
   tower: '/tower',
   gridlock: '/gridlock',
+  'dual-mix': '/dual-mix',
   maze: '/maze',
   'word-flow': '/word-flow',
   'word-chain': '/word-chain',
@@ -837,6 +840,7 @@ export const MODE_DEFAULTS: Record<KnownGameModeId, ModeDefaults> = {
   'pattern-recognition': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   tower: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
   gridlock: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
+  'dual-mix': { nLevel: 2, trialsCount: 10 },
   maze: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
   'word-flow': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   'word-chain': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },

@@ -9,7 +9,6 @@
 
 import { getPowerSyncDatabase, isPowerSyncInitialized } from '../powersync/database';
 import { getPowerSyncRuntimeState } from '../powersync/database';
-import { getEmtTableCounts, getEmtMessageDetails } from '../es-emmett/event-queries';
 
 // ─── Public Types ────────────────────────────────────────────────────────────
 
@@ -186,12 +185,8 @@ export async function collectDbDiagnostics(): Promise<DbDiagnostics | null> {
       null,
     ),
 
-    // Row counts — emt_* tables via centralized event-queries module
-    getEmtTableCounts(db).catch(() => ({
-      emt_messages_count: -1,
-      emt_streams_count: -1,
-      emt_subscriptions_count: -1,
-    })),
+    // Row counts — emt_* tables (removed with ES, return empty stub)
+    Promise.resolve({} as Record<string, number>),
     safeCount(db, 'session_summaries'),
     safeCount(db, 'deleted_sessions'),
     safeCount(db, 'user_resets'),
@@ -209,14 +204,14 @@ export async function collectDbDiagnostics(): Promise<DbDiagnostics | null> {
     safeScalar<number>(db, `SELECT COUNT(*) as c FROM ps_crud`, 0),
     safeScalar<string | null>(db, `SELECT id FROM ps_crud ORDER BY id ASC LIMIT 1`, null),
 
-    // emt_messages details via centralized event-queries module
-    getEmtMessageDetails(db).catch(() => ({
+    // emt_messages details (removed with ES, return empty stub)
+    Promise.resolve({
       emt_distinct_streams: 0,
-      emt_oldest_created: null,
-      emt_newest_created: null,
+      emt_oldest_created: null as string | null,
+      emt_newest_created: null as string | null,
       emt_archived_count: 0,
       emt_message_types: {} as Record<string, number>,
-    })),
+    }),
 
     // Session summaries details
     safeScalar<string | null>(
@@ -263,14 +258,14 @@ export async function collectDbDiagnostics(): Promise<DbDiagnostics | null> {
     tables_list: allTables.map((r) => r.name),
     tables_count: allTables.length,
 
-    emt_messages_count: emtTableCounts.emt_messages_count,
+    emt_messages_count: (emtTableCounts as Record<string, number>)['emt_messages_count'] ?? 0,
     session_summaries_count: sessionSummariesCount,
-    emt_streams_count: emtTableCounts.emt_streams_count,
+    emt_streams_count: (emtTableCounts as Record<string, number>)['emt_streams_count'] ?? 0,
     deleted_sessions_count: deletedSessionsCount,
     user_resets_count: userResetsCount,
     session_in_progress_events_count: sessionInProgressCount,
     processed_commands_count: processedCommandsCount,
-    emt_subscriptions_count: emtTableCounts.emt_subscriptions_count,
+    emt_subscriptions_count: (emtTableCounts as Record<string, number>)['emt_subscriptions_count'] ?? 0,
     user_stats_projection_count: userStatsCount,
     user_modality_stats_projection_count: userModalityStatsCount,
     streak_projection_count: streakProjectionCount,

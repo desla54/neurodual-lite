@@ -38,43 +38,11 @@ export {
 // Types only - implementation is internal
 export type { EventInput, StoredEvent } from '@neurodual/logic';
 
-// Emmett (strict command-based writes)
-export type { AppendEvent, EmmettEventStore } from './es-emmett/powersync-emmett-event-store';
-export {
-  createStreamId,
-  parseStreamId,
-  streamIdToString,
-  createEmmettEventStore,
-} from './es-emmett/powersync-emmett-event-store';
-export {
-  ConcurrencyError,
-  StreamNotFoundError,
-  StreamAlreadyExistsError,
-} from './es-emmett/errors';
-export {
-  EVENT_SCHEMA_VERSION,
-  type EventStoreConfig,
-  defaultEventStoreConfig,
-} from './es-emmett/config';
-export { createCommandBus } from './es-emmett/command-bus';
-
-// Projections (read models from Emmett event store)
+// Projections
 export {
   computeStreak,
   computeNLevel,
 } from './projections/projection-manager';
-// Projection processor and engine have been removed (replaced by direct writes).
-// Re-export stub types for backward compatibility.
-export {
-  getProcessorEngine as getConfiguredProcessorEngine,
-  resetProcessorEngine,
-  invalidateProcessorEngineCache,
-  type ProcessorEngine,
-} from './es-emmett/processor-engine';
-export type {
-  ProcessorEvent as ProjectedEvent,
-  ProcessorDefinition as ProjectionDefinition,
-} from './es-emmett/processor-definition';
 export {
   applyBaselineDirectly,
   applyProfileSessionDirectly,
@@ -116,8 +84,6 @@ export {
   setSystemEventWriterCommandBus,
   setSystemEventWriterPersistence,
 } from './events/system-event-writer';
-
-export { SessionEndWorkflowRunner } from './es-emmett/session-end-workflow-runner';
 
 // Schema (Single Source of Truth for DB schema)
 export { SQLITE_SCHEMA } from './db/sqlite-schema';

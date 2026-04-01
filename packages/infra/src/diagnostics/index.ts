@@ -20,7 +20,9 @@ export {
   type LongTaskEvent,
 } from './freeze-watchdog';
 
-export { installEventStoreFlushOnPageHide } from './event-store-flush';
+export function installEventStoreFlushOnPageHide(_timeoutMs = 2000): () => void {
+  return () => {};
+}
 
 export { collectDbDiagnostics, type DbDiagnostics } from './db-diagnostics';
 

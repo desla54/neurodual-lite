@@ -7,12 +7,7 @@ import {
 } from './system-event-writer';
 
 describe('system-event-writer', () => {
-  it('rejects JOURNEY_TRANSITION_DECIDED (no longer a system event)', async () => {
-    setSystemEventWriterPersistence({} as never);
-    setSystemEventWriterCommandBus({
-      handle: async () => ({ events: [], fromCache: false }),
-    } as never);
-
+  it('is a no-op and resolves without error', async () => {
     await expect(
       appendSystemEvents([
         {
@@ -21,30 +16,12 @@ describe('system-event-writer', () => {
           sessionId: 'session-1',
           timestamp: Date.now(),
           schemaVersion: 1,
-          journeyId: 'journey-1',
-          journeyStartLevel: 2,
-          journeyTargetLevel: 5,
-          stageId: 1,
-          stageMode: 'simulator',
-          nLevel: 2,
-          journeyName: 'Hybrid',
-          upsThreshold: 50,
-          isValidating: false,
-          validatingSessions: 0,
-          sessionsRequired: 1,
-          stageCompleted: false,
-          nextStageUnlocked: null,
         } as never,
       ]),
-    ).rejects.toThrow('No command mapping');
+    ).resolves.toBeUndefined();
   });
 
-  it('throws on unsupported system event types', async () => {
-    setSystemEventWriterPersistence({} as never);
-    setSystemEventWriterCommandBus({
-      handle: async () => ({ events: [], fromCache: false }),
-    } as never);
-
+  it('resolves for any event type (no-op)', async () => {
     await expect(
       appendSystemEvents([
         {
@@ -55,10 +32,10 @@ describe('system-event-writer', () => {
           schemaVersion: 1,
         } as never,
       ]),
-    ).rejects.toThrow('No command mapping');
+    ).resolves.toBeUndefined();
   });
 
-  it('fails fast when persistence or command bus is not injected', async () => {
+  it('resolves even when persistence and command bus are null', async () => {
     setSystemEventWriterPersistence(null);
     setSystemEventWriterCommandBus(null);
 
@@ -72,6 +49,6 @@ describe('system-event-writer', () => {
           schemaVersion: 1,
         } as never,
       ]),
-    ).rejects.toThrow();
+    ).resolves.toBeUndefined();
   });
 });

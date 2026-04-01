@@ -1,7 +1,7 @@
 /**
  * SQLite Schema
  *
- * Source de vérité UNIQUE pour le schema de la base de données SQLite (PowerSync + local-only).
+ * Source de vérité UNIQUE pour le schema de la base de données SQLite locale.
  * Unified local storage schema for web and mobile platforms.
  *
  * Conversions PostgreSQL → SQLite :
@@ -61,74 +61,7 @@ PRAGMA cache_size = -64000;
 PRAGMA temp_store = MEMORY;
 
 -- =============================================================================
--- PowerSync Synced Tables
--- =============================================================================
--- Canonical event store (synced): Emmett messages
-CREATE TABLE IF NOT EXISTS emt_messages (
-  id TEXT PRIMARY KEY,
-  stream_id TEXT NOT NULL,
-  stream_position TEXT NOT NULL,
-  partition TEXT NOT NULL,
-  message_kind TEXT NOT NULL,
-  message_data TEXT,
-  message_metadata TEXT,
-  message_schema_version TEXT,
-  message_type TEXT,
-  message_id TEXT,
-  is_archived INTEGER NOT NULL DEFAULT 0,
-  global_position TEXT NOT NULL,
-  created TEXT
-);
-
-CREATE INDEX IF NOT EXISTS emt_messages_stream_position_idx
-  ON emt_messages(stream_id, stream_position, partition, is_archived);
-CREATE INDEX IF NOT EXISTS emt_messages_stream_messages_idx
-  ON emt_messages(stream_id, partition, global_position);
-CREATE UNIQUE INDEX IF NOT EXISTS emt_messages_global_position_unique_idx
-  ON emt_messages(global_position);
-CREATE INDEX IF NOT EXISTS emt_messages_kind_archived_idx
-  ON emt_messages(message_kind, is_archived);
-CREATE INDEX IF NOT EXISTS emt_messages_kind_archived_stream_idx
-  ON emt_messages(message_kind, is_archived, stream_id)
-  WHERE is_archived = 0;
-CREATE INDEX IF NOT EXISTS emt_messages_session_stream_idx
-  ON emt_messages(message_kind, stream_id, global_position)
-  WHERE message_kind = 'E' AND is_archived = 0;
-CREATE INDEX IF NOT EXISTS emt_messages_kind_type_idx
-  ON emt_messages(message_kind, message_type)
-  WHERE message_kind = 'E' AND is_archived = 0;
-CREATE INDEX IF NOT EXISTS emt_messages_message_id_idx
-  ON emt_messages(message_id)
-  WHERE message_kind = 'E' AND is_archived = 0;
--- global_position is stored as TEXT (BigInt). Read paths use CAST(global_position AS INTEGER)
--- for ordering/range filtering; a plain TEXT index cannot serve those queries.
-CREATE INDEX IF NOT EXISTS emt_messages_global_position_int_idx
-  ON emt_messages(CAST(global_position AS INTEGER))
-  WHERE message_kind = 'E' AND is_archived = 0;
-
--- Session tombstones (synced)
-CREATE TABLE IF NOT EXISTS deleted_sessions (
-  id TEXT PRIMARY KEY,
-  session_id TEXT,
-  user_id TEXT,
-  created_at TEXT
-);
-CREATE INDEX IF NOT EXISTS deleted_sessions_user_idx ON deleted_sessions(user_id);
-CREATE INDEX IF NOT EXISTS deleted_sessions_session_idx ON deleted_sessions(session_id);
-CREATE INDEX IF NOT EXISTS deleted_sessions_created_at_idx ON deleted_sessions(created_at);
-
--- User reset markers (synced)
-CREATE TABLE IF NOT EXISTS user_resets (
-  id TEXT PRIMARY KEY,
-  user_id TEXT,
-  reset_at TEXT,
-  created_at TEXT
-);
-CREATE INDEX IF NOT EXISTS user_resets_user_idx ON user_resets(user_id);
-CREATE INDEX IF NOT EXISTS user_resets_reset_at_idx ON user_resets(reset_at);
-
--- =============================================================================
--- PowerSync Local-Only Tables
+-- Local-Only Tables
 -- =============================================================================
 CREATE TABLE IF NOT EXISTS settings (
   id TEXT PRIMARY KEY,
@@ -159,55 +92,16 @@ CREATE INDEX IF NOT EXISTS algorithm_states_user_algo_idx
   ON algorithm_states(user_id, algorithm_type);
 
 -- =============================================================================
--- Emmett Local-Only Tables
+-- Session Events (raw event archive as JSON blob per session)
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS emt_streams (
-  id TEXT PRIMARY KEY,
-  stream_id TEXT NOT NULL,
-  stream_position TEXT NOT NULL,
-  partition TEXT NOT NULL,
-  stream_type TEXT,
-  stream_metadata TEXT,
-  is_archived INTEGER NOT NULL DEFAULT 0
+CREATE TABLE IF NOT EXISTS session_events (
+  id TEXT PRIMARY KEY NOT NULL,
+  session_id TEXT NOT NULL,
+  events_json TEXT NOT NULL,
+  created_at TEXT NOT NULL
 );
-CREATE INDEX IF NOT EXISTS emt_streams_stream_id_idx ON emt_streams(stream_id);
-CREATE INDEX IF NOT EXISTS emt_streams_stream_partition_idx
-  ON emt_streams(stream_id, partition, is_archived);
-
-CREATE TABLE IF NOT EXISTS emt_subscriptions (
-  id TEXT PRIMARY KEY,
-  subscription_id TEXT NOT NULL,
-  version INTEGER NOT NULL,
-  partition TEXT NOT NULL,
-  last_processed_position TEXT NOT NULL
-);
-CREATE INDEX IF NOT EXISTS emt_subscriptions_subscription_idx
-  ON emt_subscriptions(subscription_id, partition, version);
-
-CREATE TABLE IF NOT EXISTS processed_commands (
-  id TEXT PRIMARY KEY,
-  command_id TEXT NOT NULL,
-  aggregate_id TEXT NOT NULL,
-  aggregate_type TEXT NOT NULL,
-  processed_at TEXT NOT NULL,
-  from_stream_position TEXT NOT NULL,
-  to_stream_position TEXT NOT NULL
-);
-CREATE INDEX IF NOT EXISTS processed_commands_command_id_idx
-  ON processed_commands(command_id);
-CREATE INDEX IF NOT EXISTS processed_commands_aggregate_processed_idx
-  ON processed_commands(aggregate_id, aggregate_type, processed_at);
-
-CREATE TABLE IF NOT EXISTS projection_effects (
-  id TEXT PRIMARY KEY,
-  projection_id TEXT NOT NULL,
-  effect_key TEXT NOT NULL,
-  applied_at TEXT NOT NULL DEFAULT (datetime('now'))
-);
-CREATE UNIQUE INDEX IF NOT EXISTS projection_effects_projection_key_idx
-  ON projection_effects(projection_id, effect_key);
-CREATE INDEX IF NOT EXISTS projection_effects_projection_idx
-  ON projection_effects(projection_id, applied_at);
+CREATE INDEX IF NOT EXISTS session_events_session_id_idx
+  ON session_events(session_id);
 
 -- =============================================================================
 -- Read Models / Projections (local-only)
@@ -437,26 +331,9 @@ CREATE TABLE IF NOT EXISTS cognitive_profile_projection (
 CREATE INDEX IF NOT EXISTS cognitive_profile_projection_user_idx
   ON cognitive_profile_projection(user_id);
 
--- Emmett session_in_progress intermediate rows (local-only)
--- Append-only rows eliminate JSON.parse/JSON.stringify churn on a growing blob.
--- Pattern: SESSION_STARTED/intermediates → append; SESSION_ENDED → project → DELETE session rows.
-CREATE TABLE IF NOT EXISTS session_in_progress_events (
-  id TEXT PRIMARY KEY,  -- = session_id:global_position
-  session_id TEXT NOT NULL,
-  event_type TEXT NOT NULL,
-  event_data TEXT NOT NULL DEFAULT '{}',
-  global_position TEXT NOT NULL,
-  created_at INTEGER NOT NULL
-);
-CREATE INDEX IF NOT EXISTS session_in_progress_events_session_idx
-  ON session_in_progress_events(session_id);
-CREATE INDEX IF NOT EXISTS session_in_progress_events_session_position_idx
-  ON session_in_progress_events(session_id, global_position);
-
 -- =============================================================================
--- Stats Projections (Emmett running aggregates - local-only)
--- Maintained incrementally at SESSION_*_ENDED via session-summaries-projection.
--- Eliminates O(N) full-scan queries on stats page for the unfiltered case.
+-- Stats Projections (local-only)
+-- Maintained incrementally at session end via SessionWriter.
 -- =============================================================================
 
 -- Running totals per user (all completed sessions)
@@ -504,22 +381,4 @@ CREATE INDEX IF NOT EXISTS user_modality_user_idx
 CREATE INDEX IF NOT EXISTS user_modality_user_modality_idx
   ON user_modality_stats_projection(user_id, modality);
 
--- Dead Letter Queue for failed projections (best-effort retry)
-CREATE TABLE IF NOT EXISTS es_projection_errors (
-  id TEXT PRIMARY KEY,
-  projector_name TEXT NOT NULL,
-  event_global_position TEXT NOT NULL,
-  event_stream_id TEXT NOT NULL,
-  event_type TEXT NOT NULL,
-  error_message TEXT,
-  error_stack TEXT,
-  failed_at TEXT NOT NULL,
-  retry_count INTEGER NOT NULL DEFAULT 0,
-  last_retry_at TEXT
-);
-CREATE INDEX IF NOT EXISTS es_projection_errors_retry_idx
-  ON es_projection_errors(retry_count, failed_at)
-  WHERE retry_count < 5;
-CREATE INDEX IF NOT EXISTS es_projection_errors_event_idx
-  ON es_projection_errors(event_global_position, event_stream_id);
 `;

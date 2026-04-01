@@ -6,20 +6,36 @@ import type {
   ReadModelSnapshot,
   Subscribable,
 } from '@neurodual/logic';
-import { SESSION_END_EVENT_TYPES_ARRAY } from '@neurodual/logic';
-import { getActivePowerSyncWatchSubscriptions } from '../powersync/event-watcher';
 import {
   getPowerSyncDatabase,
   getPowerSyncRuntimeState,
   isPowerSyncInitialized,
   samplePowerSyncRuntimeMemory,
 } from '../powersync/database';
-import { powerSyncSyncAdapter } from '../powersync/powersync-sync-adapter';
-import {
-  countEndedSessions,
-  findMissingSessionSummaries,
-  findOrphanSessionSummaries,
-} from '../es-emmett/event-queries';
+type SyncState = {
+  status: 'disabled';
+  lastSyncedAt: null;
+  lastSyncAt: null;
+  pendingCount: number;
+  errorMessage: null;
+  error: null;
+  isAvailable: boolean;
+};
+
+const DISABLED_SYNC_STATE: SyncState = {
+  status: 'disabled',
+  lastSyncedAt: null,
+  lastSyncAt: null,
+  pendingCount: 0,
+  errorMessage: null,
+  error: null,
+  isAvailable: false,
+};
+
+const powerSyncSyncAdapter = {
+  getState: (): SyncState => DISABLED_SYNC_STATE,
+  subscribe: (_cb: (state: SyncState) => void) => () => {},
+};
 
 type Listener = () => void;
 
@@ -46,8 +62,6 @@ function toRuntimeHealth(): PowerSyncRuntimeHealth | null {
     lastEvents: (rt.events ?? []).slice(-12),
     opfsDiagnostics: rt.opfsDiagnostics as PowerSyncRuntimeHealth['opfsDiagnostics'],
     lifecycle: rt.lifecycle as PowerSyncRuntimeHealth['lifecycle'],
-    reconnect: rt.reconnect,
-    syncGate: rt.syncGate as PowerSyncRuntimeHealth['syncGate'],
     memory: rt.memory,
   };
 }
@@ -72,15 +86,18 @@ async function computeProjectionHealth(): Promise<ProjectionHealth> {
     const db = getPowerSyncDatabase();
 
     const [endedValue, summariesValue, missingIds, orphanIds] = await Promise.all([
-      countEndedSessions(db, SESSION_END_EVENT_TYPES_ARRAY),
+      // ES removed — countEndedSessions no longer available, stub with 0
+      Promise.resolve(0),
       (async () => {
         const row = await db.getOptional<{ count: number }>(
           `SELECT COUNT(*) as count FROM session_summaries WHERE reason != 'abandoned'`,
         );
         return row?.count ?? 0;
       })(),
-      findMissingSessionSummaries(db, SESSION_END_EVENT_TYPES_ARRAY),
-      findOrphanSessionSummaries(db, SESSION_END_EVENT_TYPES_ARRAY, ''),
+      // ES removed — findMissingSessionSummaries no longer available, stub with []
+      Promise.resolve([] as string[]),
+      // ES removed — findOrphanSessionSummaries no longer available, stub with []
+      Promise.resolve([] as string[]),
     ]);
 
     const missingValue = missingIds.length;
@@ -119,7 +136,7 @@ export async function collectPersistenceHealthSnapshot(): Promise<PersistenceHea
     sync: powerSyncSyncAdapter.getState(),
     powerSync: toRuntimeHealth(),
     projections: await computeProjectionHealth(),
-    activeWatchSubscriptions: getActivePowerSyncWatchSubscriptions(),
+    activeWatchSubscriptions: 0,
   };
 }
 
@@ -139,7 +156,7 @@ function createHealthStore(): Subscribable<ReadModelSnapshot<PersistenceHealthDa
         lastCheckedAt: null,
         errorMessage: null,
       },
-      activeWatchSubscriptions: getActivePowerSyncWatchSubscriptions(),
+      activeWatchSubscriptions: 0,
     },
     isPending: true,
     error: null,

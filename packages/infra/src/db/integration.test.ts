@@ -3,18 +3,18 @@
  *
  * Tests the full cycle:
  * 1. Create realistic events
- * 2. Persist to real SQLite (in-memory)
+ * 2. Persist to real SQLite (in-memory) via session_events table
  * 3. Query back from SQLite
  * 4. Project via SessionProjector
  * 5. Verify consistency
  *
  * Unlike unit tests that mock everything, these tests use a REAL SQLite database.
+ * Post-Emmett: writes go to session_events (JSON blob per session) instead of emt_messages.
  */
 
 import { describe, expect, it, beforeEach, afterEach } from 'bun:test';
 import { Database } from 'bun:sqlite';
 import { SQLITE_SCHEMA } from './sqlite-schema';
-import { buildInClause } from './sql-helpers';
 import { SessionProjector } from '@neurodual/logic';
 import type {
   GameEvent,
@@ -25,182 +25,83 @@ import type {
 } from '@neurodual/logic';
 
 // =============================================================================
-// Test SQLite Adapter (simplified PersistencePort for tests)
+// Test SQLite Adapter (session_events based)
 // =============================================================================
-
-type TestEmtMessageRow = {
-  message_data: string;
-};
 
 class TestSQLiteAdapter {
   private db: Database;
-  private globalPosition = 0n;
-  private streamPositions = new Map<string, bigint>();
 
   constructor() {
-    // In-memory database
     this.db = new Database(':memory:');
-    this.initSchema();
-  }
-
-  private initSchema(): void {
-    // Execute the entire schema as one block
-    // bun:sqlite can handle multi-statement execution
     this.db.exec(SQLITE_SCHEMA);
   }
 
-  private nextPositions(streamId: string): { streamPosition: bigint; globalPosition: bigint } {
-    const nextStreamPosition = (this.streamPositions.get(streamId) ?? 0n) + 1n;
-    this.streamPositions.set(streamId, nextStreamPosition);
-    this.globalPosition += 1n;
-    return { streamPosition: nextStreamPosition, globalPosition: this.globalPosition };
-  }
-
-  append(event: {
-    id: string;
-    sessionId: string;
-    userId?: string;
-    type: string;
-    timestamp: number;
-    payload: Record<string, unknown>;
-  }): void {
-    const streamId = `session:${event.sessionId}`;
-    const { streamPosition, globalPosition } = this.nextPositions(streamId);
-
-    const data: Record<string, unknown> = {
-      ...event.payload,
-      id: event.id,
-      type: event.type,
-      sessionId: event.sessionId,
-      timestamp: event.timestamp,
-      ...(typeof event.userId === 'string' ? { userId: event.userId } : {}),
-    };
-
-    const messageData = JSON.stringify({ id: event.id, type: event.type, data });
-    const created = new Date(event.timestamp).toISOString();
-
-    const stmt = this.db.prepare(`
-      INSERT INTO emt_messages (
-        id,
-        stream_id,
-        stream_position,
-        partition,
-        message_kind,
-        message_data,
-        message_metadata,
-        message_schema_version,
-        message_type,
-        message_id,
-        is_archived,
-        global_position,
-        created
-      ) VALUES (?, ?, ?, ?, 'E', ?, ?, ?, ?, ?, 0, ?, ?)
-    `);
-
-    stmt.run(
-      `${streamId}:${streamPosition.toString()}`,
-      streamId,
-      streamPosition.toString(),
-      'global',
-      messageData,
-      '{}',
-      '1',
-      event.type,
-      event.id,
-      globalPosition.toString(),
-      created,
-    );
-  }
-
-  appendBatch(
-    events: Array<{
-      id: string;
-      sessionId: string;
-      userId?: string;
-      type: string;
-      timestamp: number;
-      payload: Record<string, unknown>;
-    }>,
-  ): number {
-    const insertMany = this.db.transaction((evts: typeof events) => {
-      for (const event of evts) {
-        this.append(event);
-      }
-      return evts.length;
-    });
-
-    return insertMany(events);
+  /**
+   * Write a batch of events for a session as a single JSON blob
+   * into session_events (mirrors SessionWriter.finalizeSession).
+   */
+  writeSession(sessionId: string, events: GameEvent[]): void {
+    const eventsJson = JSON.stringify(events);
+    const now = new Date().toISOString();
+    this.db
+      .prepare(
+        `INSERT OR REPLACE INTO session_events (id, session_id, events_json, created_at)
+         VALUES (?, ?, ?, ?)`,
+      )
+      .run(sessionId, sessionId, eventsJson, now);
   }
 
   getSession(sessionId: string): GameEvent[] {
-    const stmt = this.db.prepare(`
-      SELECT message_data
-      FROM emt_messages
-      WHERE message_kind = 'E'
-        AND is_archived = 0
-        AND stream_id = ?
-      ORDER BY CAST(global_position AS INTEGER) ASC
-    `);
+    const row = this.db
+      .prepare('SELECT events_json FROM session_events WHERE session_id = ? LIMIT 1')
+      .get(sessionId) as { events_json: string } | undefined;
 
-    const rows = stmt.all(`session:${sessionId}`) as TestEmtMessageRow[];
-    return rows.map((row) => this.rowToEvent(row));
+    if (!row?.events_json) return [];
+    return JSON.parse(row.events_json) as GameEvent[];
   }
 
   queryEvents(options: { sessionId?: string; type?: string | string[] }): GameEvent[] {
-    let sql = `
-      SELECT message_data
-      FROM emt_messages
-      WHERE message_kind = 'E'
-        AND is_archived = 0
-    `;
-    const params: unknown[] = [];
+    // Load all matching sessions then filter in JS (mirrors real read path)
+    let events: GameEvent[];
 
     if (options.sessionId) {
-      sql += ' AND stream_id = ?';
-      params.push(`session:${options.sessionId}`);
+      events = this.getSession(options.sessionId);
+    } else {
+      // Load all sessions
+      const rows = this.db
+        .prepare('SELECT events_json FROM session_events')
+        .all() as { events_json: string }[];
+      events = rows.flatMap((r) => JSON.parse(r.events_json) as GameEvent[]);
     }
 
     if (options.type) {
-      if (Array.isArray(options.type)) {
-        const { sql: typesSql, params: typeParams } = buildInClause([...options.type]);
-        sql += ` AND message_type IN ${typesSql}`;
-        params.push(...typeParams);
-      } else {
-        sql += ' AND message_type = ?';
-        params.push(options.type);
-      }
+      const types = Array.isArray(options.type) ? options.type : [options.type];
+      events = events.filter((e) => types.includes(e.type));
     }
 
-    sql += ' ORDER BY CAST(global_position AS INTEGER) ASC';
-
-    const stmt = this.db.prepare(sql);
-    const rows = stmt.all(...(params as any[])) as TestEmtMessageRow[];
-    return rows.map((row) => this.rowToEvent(row));
+    return events;
   }
 
   count(): number {
-    const stmt = this.db.prepare(`
-      SELECT COUNT(*) as count
-      FROM emt_messages
-      WHERE message_kind = 'E' AND is_archived = 0
-    `);
-    const result = stmt.get() as { count: number };
-    return result.count;
+    const rows = this.db
+      .prepare('SELECT events_json FROM session_events')
+      .all() as { events_json: string }[];
+    return rows.reduce((sum, r) => {
+      const parsed = JSON.parse(r.events_json) as unknown[];
+      return sum + parsed.length;
+    }, 0);
+  }
+
+  deleteSession(sessionId: string): void {
+    this.db.prepare('DELETE FROM session_events WHERE session_id = ?').run(sessionId);
   }
 
   clear(): void {
-    this.db.exec('DELETE FROM emt_messages');
-    this.globalPosition = 0n;
-    this.streamPositions.clear();
+    this.db.exec('DELETE FROM session_events');
   }
 
   close(): void {
     this.db.close();
-  }
-
-  private rowToEvent(row: TestEmtMessageRow): GameEvent {
-    const envelope = JSON.parse(row.message_data) as { data: Record<string, unknown> };
-    return envelope.data as GameEvent;
   }
 }
 
@@ -355,21 +256,7 @@ describe('SQLite Integration Tests', () => {
       const sessionId = crypto.randomUUID();
       const event = createSessionStartedEvent(sessionId, Date.now());
 
-      adapter.append({
-        id: event.id,
-        sessionId: event.sessionId,
-        userId: event.userId,
-        type: event.type,
-        timestamp: event.timestamp,
-        payload: {
-          schemaVersion: event.schemaVersion,
-          nLevel: event.nLevel,
-          device: event.device,
-          context: event.context,
-          config: event.config,
-          gameMode: event.gameMode,
-        },
-      });
+      adapter.writeSession(sessionId, [event]);
 
       const retrieved = adapter.getSession(sessionId);
       expect(retrieved).toHaveLength(1);
@@ -377,25 +264,13 @@ describe('SQLite Integration Tests', () => {
       expect(retrieved[0]!.sessionId).toBe(sessionId);
     });
 
-    it('should handle null userId gracefully', () => {
+    it('should handle event without userId gracefully', () => {
       const sessionId = crypto.randomUUID();
       const event = createSessionStartedEvent(sessionId, Date.now());
+      // Remove userId to simulate undefined
+      const { userId: _, ...eventWithoutUser } = event as Record<string, unknown>;
 
-      adapter.append({
-        id: event.id,
-        sessionId: event.sessionId,
-        userId: undefined,
-        type: event.type,
-        timestamp: event.timestamp,
-        payload: {
-          schemaVersion: event.schemaVersion,
-          nLevel: event.nLevel,
-          device: event.device,
-          context: event.context,
-          config: event.config,
-          gameMode: event.gameMode,
-        },
-      });
+      adapter.writeSession(sessionId, [eventWithoutUser as GameEvent]);
 
       const retrieved = adapter.getSession(sessionId);
       expect(retrieved).toHaveLength(1);
@@ -411,7 +286,7 @@ describe('SQLite Integration Tests', () => {
       const sessionId = crypto.randomUUID();
       const baseTime = Date.now();
 
-      const events = [
+      const events: GameEvent[] = [
         createSessionStartedEvent(sessionId, baseTime),
         createTrialPresentedEvent(sessionId, baseTime + 100, 0, { isBuffer: true }),
         createTrialPresentedEvent(sessionId, baseTime + 3000, 1, { isBuffer: true }),
@@ -420,16 +295,7 @@ describe('SQLite Integration Tests', () => {
         createSessionEndedEvent(sessionId, baseTime + 60000, 60000),
       ];
 
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       const retrieved = adapter.getSession(sessionId);
       expect(retrieved).toHaveLength(6);
@@ -451,7 +317,7 @@ describe('SQLite Integration Tests', () => {
       }
     });
 
-    it('should handle batch insert efficiently', () => {
+    it('should handle batch write for a full session', () => {
       const sessionId = crypto.randomUUID();
       const baseTime = Date.now();
 
@@ -484,32 +350,25 @@ describe('SQLite Integration Tests', () => {
 
       events.push(createSessionEndedEvent(sessionId, baseTime + 70000, 70000));
 
-      const batchEvents = events.map((event) => ({
-        id: event.id,
-        sessionId: event.sessionId,
-        userId: (event as SessionStartedEvent).userId,
-        type: event.type,
-        timestamp: event.timestamp,
-        payload: extractPayload(event),
-      }));
-
-      const count = adapter.appendBatch(batchEvents);
-      expect(count).toBe(events.length);
+      adapter.writeSession(sessionId, events);
 
       const retrieved = adapter.getSession(sessionId);
       expect(retrieved).toHaveLength(events.length);
     });
 
-    it('should handle empty batch insert', () => {
-      const count = adapter.appendBatch([]);
-      expect(count).toBe(0);
+    it('should handle empty session write', () => {
+      const sessionId = crypto.randomUUID();
+      adapter.writeSession(sessionId, []);
+
+      const retrieved = adapter.getSession(sessionId);
+      expect(retrieved).toHaveLength(0);
     });
 
     it('should query events by type', () => {
       const sessionId = crypto.randomUUID();
       const baseTime = Date.now();
 
-      const events = [
+      const events: GameEvent[] = [
         createSessionStartedEvent(sessionId, baseTime),
         createTrialPresentedEvent(sessionId, baseTime + 100, 0),
         createTrialPresentedEvent(sessionId, baseTime + 3000, 1),
@@ -517,16 +376,7 @@ describe('SQLite Integration Tests', () => {
         createSessionEndedEvent(sessionId, baseTime + 10000, 10000),
       ];
 
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       const trials = adapter.queryEvents({ type: 'TRIAL_PRESENTED' });
       expect(trials).toHaveLength(2);
@@ -540,7 +390,7 @@ describe('SQLite Integration Tests', () => {
       const sessionId = crypto.randomUUID();
       const baseTime = Date.now();
 
-      const events = [
+      const events: GameEvent[] = [
         createSessionStartedEvent(sessionId, baseTime),
         createTrialPresentedEvent(sessionId, baseTime + 100, 0),
         createTrialPresentedEvent(sessionId, baseTime + 3000, 1),
@@ -548,16 +398,7 @@ describe('SQLite Integration Tests', () => {
         createSessionEndedEvent(sessionId, baseTime + 10000, 10000),
       ];
 
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       const results = adapter.queryEvents({ type: ['TRIAL_PRESENTED', 'USER_RESPONDED'] });
       expect(results).toHaveLength(3);
@@ -567,22 +408,13 @@ describe('SQLite Integration Tests', () => {
       const sessionId = crypto.randomUUID();
       const baseTime = Date.now();
 
-      const events = [
+      const events: GameEvent[] = [
         createSessionStartedEvent(sessionId, baseTime),
         createTrialPresentedEvent(sessionId, baseTime + 100, 0),
         createSessionEndedEvent(sessionId, baseTime + 5000, 5000),
       ];
 
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       const allEvents = adapter.queryEvents({});
       expect(allEvents).toHaveLength(3);
@@ -637,17 +469,8 @@ describe('SQLite Integration Tests', () => {
 
       events.push(createSessionEndedEvent(sessionId, baseTime + 35000, 35000));
 
-      // Persist all events
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      // Persist all events as JSON blob
+      adapter.writeSession(sessionId, events);
 
       // Retrieve and project
       const retrieved = adapter.getSession(sessionId);
@@ -696,16 +519,7 @@ describe('SQLite Integration Tests', () => {
       events.push(createSessionEndedEvent(sessionId, baseTime + 20000, 20000));
 
       // Persist
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       // Retrieve and project
       const retrieved = adapter.getSession(sessionId);
@@ -726,34 +540,21 @@ describe('SQLite Integration Tests', () => {
       const baseTime = Date.now();
 
       // Create events for two different sessions
-      const session1Events = [
+      const session1Events: GameEvent[] = [
         createSessionStartedEvent(session1, baseTime),
         createTrialPresentedEvent(session1, baseTime + 1000, 0),
         createSessionEndedEvent(session1, baseTime + 5000, 5000),
       ];
 
-      const session2Events = [
+      const session2Events: GameEvent[] = [
         createSessionStartedEvent(session2, baseTime + 10000),
         createTrialPresentedEvent(session2, baseTime + 11000, 0),
         createTrialPresentedEvent(session2, baseTime + 14000, 1),
         createSessionEndedEvent(session2, baseTime + 20000, 10000),
       ];
 
-      // Persist interleaved (simulating concurrent sessions)
-      const allEvents = [...session1Events, ...session2Events].sort(
-        (a, b) => a.timestamp - b.timestamp,
-      );
-
-      for (const event of allEvents) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(session1, session1Events);
+      adapter.writeSession(session2, session2Events);
 
       // Verify each session has correct events
       const s1Events = adapter.getSession(session1);
@@ -791,21 +592,7 @@ describe('SQLite Integration Tests', () => {
         config: largeConfig as SessionStartedEvent['config'],
       });
 
-      adapter.append({
-        id: event.id,
-        sessionId: event.sessionId,
-        userId: event.userId,
-        type: event.type,
-        timestamp: event.timestamp,
-        payload: {
-          schemaVersion: event.schemaVersion,
-          nLevel: event.nLevel,
-          device: event.device,
-          context: event.context,
-          config: largeConfig,
-          gameMode: event.gameMode,
-        },
-      });
+      adapter.writeSession(sessionId, [event]);
 
       const retrieved = adapter.getSession(sessionId);
       expect(retrieved).toHaveLength(1);
@@ -820,23 +607,14 @@ describe('SQLite Integration Tests', () => {
 
       expect(adapter.count()).toBe(0);
 
-      const events = [
+      const events: GameEvent[] = [
         createSessionStartedEvent(sessionId, baseTime),
         createTrialPresentedEvent(sessionId, baseTime + 1000, 0),
         createTrialPresentedEvent(sessionId, baseTime + 4000, 1),
         createSessionEndedEvent(sessionId, baseTime + 10000, 10000),
       ];
 
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId, events);
 
       expect(adapter.count()).toBe(4);
 
@@ -849,37 +627,18 @@ describe('SQLite Integration Tests', () => {
       const sessionId2 = crypto.randomUUID();
       const baseTime = Date.now();
 
-      const events1 = [
+      const events1: GameEvent[] = [
         createSessionStartedEvent(sessionId1, baseTime),
         createTrialPresentedEvent(sessionId1, baseTime + 1000, 0),
       ];
 
-      const events2 = [
+      const events2: GameEvent[] = [
         createSessionStartedEvent(sessionId2, baseTime + 2000),
         createTrialPresentedEvent(sessionId2, baseTime + 3000, 0),
       ];
 
-      for (const event of events1) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
-
-      for (const event of events2) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      adapter.writeSession(sessionId1, events1);
+      adapter.writeSession(sessionId2, events2);
 
       expect(adapter.count()).toBe(4);
 
@@ -925,17 +684,8 @@ describe('SQLite Integration Tests', () => {
 
       events.push(createSessionEndedEvent(sessionId, baseTime + 65000, 65000));
 
-      // Persist
-      for (const event of events) {
-        adapter.append({
-          id: event.id,
-          sessionId: event.sessionId,
-          userId: (event as SessionStartedEvent).userId,
-          type: event.type,
-          timestamp: event.timestamp,
-          payload: extractPayload(event),
-        });
-      }
+      // Persist as JSON blob
+      adapter.writeSession(sessionId, events);
 
       // Reconstruct from DB
       const retrieved = adapter.getSession(sessionId);
@@ -967,14 +717,3 @@ describe('SQLite Integration Tests', () => {
     });
   });
 });
-
-// =============================================================================
-// Helpers
-// =============================================================================
-
-function extractPayload(event: GameEvent): Record<string, unknown> {
-  // Extract all fields except the base event fields
-  const eventObj = event as unknown as Record<string, unknown>;
-  const { id, sessionId, type, timestamp, ...payload } = eventObj;
-  return payload;
-}

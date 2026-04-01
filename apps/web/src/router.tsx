@@ -29,6 +29,9 @@ const OspanTrainingPage = lazy(() =>
 const GridlockTrainingPage = lazy(() =>
   import('./pages/gridlock-training').then((m) => ({ default: m.GridlockTrainingPage })),
 );
+const DualMixTrainingPage = lazy(() =>
+  import('./pages/dual-mix-training').then((m) => ({ default: m.DualMixTrainingPage })),
+);
 const OspanMeasurePage = lazy(() =>
   import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage })),
 );
@@ -84,6 +87,8 @@ export const router = createBrowserRouter([
           { path: 'ospan', element: withSuspense(OspanTrainingPage) },
           // Gridlock (spatial reasoning)
           { path: 'gridlock', element: withSuspense(GridlockTrainingPage) },
+          // Dual Mix (composite: N-Back + Stroop + Gridlock)
+          { path: 'dual-mix', element: withSuspense(DualMixTrainingPage) },
           { path: 'ospan-measure', element: withSuspense(OspanMeasurePage) },
           // Tutorial
           { path: 'tutorial', element: withSuspense(TutorialGuidedPage) },
