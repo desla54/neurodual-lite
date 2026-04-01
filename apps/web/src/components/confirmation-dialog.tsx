@@ -47,12 +47,12 @@ export function ConfirmationDialog({
       <button
         type="button"
         onClick={onCancel}
-        className="absolute inset-0 cursor-default bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 cursor-default bg-black/50"
         aria-label={t('common.close', 'Close')}
         disabled={isLoading}
       />
 
-      <div className="relative w-full max-w-sm animate-in rounded-2xl border border-border/50 bg-surface/95 p-5 shadow-soft backdrop-blur-xl fade-in zoom-in-95">
+      <div className="relative w-full max-w-sm animate-in rounded-2xl border border-border/50 bg-surface p-5 shadow-soft fade-in zoom-in-95">
         <div className="mb-5 text-center">
           <div
             className={cn(

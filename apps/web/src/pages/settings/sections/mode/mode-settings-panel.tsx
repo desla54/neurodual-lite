@@ -949,7 +949,7 @@ export function ModeSettingsPanel({
       {isBrainWorkshop ? (
         <div
           className={cn(
-            'surface-card-typography bg-card/75 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden mt-2',
+            'surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden mt-2',
             interactionsLocked && 'pointer-events-none opacity-80',
           )}
         >
@@ -1590,7 +1590,7 @@ export function ModeSettingsPanel({
       {!isBrainWorkshop && (
         <div
           className={cn(
-            'surface-card-typography bg-card/75 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden mt-2',
+            'surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden mt-2',
             interactionsLocked && 'pointer-events-none opacity-80',
           )}
         >

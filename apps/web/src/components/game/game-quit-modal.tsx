@@ -43,7 +43,7 @@ export function GameQuitModal({
       <button
         type="button"
         aria-label={labels.close}
-        className="absolute inset-0 bg-black/30 backdrop-blur-sm cursor-default"
+        className="absolute inset-0 bg-black/30 cursor-default"
         onClick={onCancel}
         onKeyDown={(e) => e.key === 'Escape' && onCancel()}
       />

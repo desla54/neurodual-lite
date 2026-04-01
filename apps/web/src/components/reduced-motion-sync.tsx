@@ -112,7 +112,7 @@ export function ReducedMotionSync({ children }: ReducedMotionSyncProps): ReactNo
     root.classList.toggle('reduce-motion', reducedMotion);
     // Runtime performance fallback
     root.classList.toggle('perf-reduce-motion', adaptiveReducedMotion);
-    // Android/WebView fallback for glassmorphism surfaces that can lag behind badly.
+    // Android/WebView fallback for surfaces that can lag behind badly.
     root.classList.toggle('reduce-transparency-effects', reduceTransparencyEffects);
     setPerformanceReducedMotionOverride(adaptiveReducedMotion);
     return () => {

@@ -54,7 +54,7 @@ export function ProfileButton({
   const compactClassName =
     chrome === 'embedded'
       ? 'flex h-9 w-9 items-center justify-center rounded-full transition duration-200 hover:bg-foreground/6 active:scale-95 group'
-      : 'flex h-11 w-11 items-center justify-center rounded-full border border-woven-border bg-woven-surface hover:bg-woven-surface/80 active:scale-95 transition duration-200 group';
+      : 'flex h-11 w-11 items-center justify-center rounded-full border border-woven-border bg-woven-surface hover:bg-woven-surface active:scale-95 transition duration-200 group';
 
   // Loading state - show skeleton
   if (isLoading) {
@@ -91,7 +91,7 @@ export function ProfileButton({
           className={
             compact
               ? compactClassName
-              : 'flex items-center gap-3 pl-1.5 pr-1.5 sm:pr-4 py-1.5 bg-woven-surface border border-woven-border rounded-full hover:bg-woven-surface/80 active:scale-95 transition duration-200 group'
+              : 'flex items-center gap-3 pl-1.5 pr-1.5 sm:pr-4 py-1.5 bg-woven-surface border border-woven-border rounded-full hover:bg-woven-surface active:scale-95 transition duration-200 group'
           }
           aria-label={localDisplayName}
           title={localDisplayName}
@@ -153,7 +153,7 @@ export function ProfileButton({
         className={
           compact
             ? compactClassName
-            : 'flex items-center gap-3 pl-1.5 pr-1.5 sm:pr-4 py-1.5 bg-woven-surface border border-woven-border rounded-full hover:bg-woven-surface/80 active:scale-95 transition duration-200 group'
+            : 'flex items-center gap-3 pl-1.5 pr-1.5 sm:pr-4 py-1.5 bg-woven-surface border border-woven-border rounded-full hover:bg-woven-surface active:scale-95 transition duration-200 group'
         }
         aria-label={t('settings.profile.openProfile', { username: profile?.username ?? 'User' })}
         title={profile?.username ?? t('settings.profile.yourName')}

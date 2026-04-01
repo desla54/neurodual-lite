@@ -198,7 +198,7 @@ export function PWAInstallButton(): ReactNode {
       {/* Expanded card state - positioned below button */}
       <div
         ref={cardRef}
-        className={`surface-card-typography absolute top-14 end-0 w-72 bg-card/85 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg p-4 ${
+        className={`surface-card-typography absolute top-14 end-0 w-72 bg-card border border-border/50 rounded-2xl shadow-lg p-4 ${
           state !== 'expanded' ? 'hidden' : 'flex'
         } flex-col gap-3`}
       >

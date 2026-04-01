@@ -405,7 +405,7 @@ export function GameSettingsOverlay({
       {/* Menu */}
       <div
         className={cn(
-          'relative bg-surface/95 backdrop-blur-md border border-border rounded-2xl shadow-xl p-4',
+          'relative bg-surface border border-border rounded-2xl shadow-xl p-4',
           isScaleView
             ? 'fixed left-1/2 -translate-x-1/2 w-[min(420px,92vw)]'
             : 'min-w-[280px] max-w-[90vw] w-[420px] animate-in fade-in zoom-in-95 duration-200',
@@ -644,7 +644,7 @@ export function GameSettingsOverlay({
                                     'w-6 h-6 rounded-full',
                                     opt.swatchClassName,
                                     opt.id === 'black'
-                                      ? 'shadow-[inset_0_0_0_1px_hsl(var(--glass-shadow)/0.6)]'
+                                      ? 'shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
                                       : '',
                                   )}
                                 />

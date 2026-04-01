@@ -188,7 +188,7 @@ export function ModeCard({
                     className="shrink-0 text-foreground/70"
                   />
                   <div className="p-1.5">
-                    <Avatar id={avatarId} size={42} className="border-border/30 bg-background/70" />
+                    <Avatar id={avatarId} size={42} className="border-border/30 bg-background" />
                   </div>
                   <Hatching
                     id={h('avatar-right')}
@@ -374,7 +374,7 @@ export function ModeCard({
                 {stats.map((stat, i) => (
                   <div
                     key={i}
-                    className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm p-2.5"
+                    className="rounded-xl border border-border/60 bg-muted shadow-sm p-2.5"
                   >
                     <p className="text-[10px] uppercase tracking-wide text-muted-foreground">
                       {stat.label}

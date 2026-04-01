@@ -32,7 +32,7 @@ export function AvatarSelectionModal({
     <div className="fixed inset-0 z-[10010] flex items-center justify-center safe-overlay-padding sm:py-6 animate-in fade-in duration-200">
       <button
         type="button"
-        className="absolute inset-0 bg-background/80 backdrop-blur-sm cursor-default w-full h-full border-none p-0 m-0"
+        className="absolute inset-0 bg-background cursor-default w-full h-full border-none p-0 m-0"
         onClick={onClose}
         aria-label={t('common.close')}
       />

@@ -22,6 +22,7 @@ import { LanguageSync } from './components/language-sync';
 import { ReducedMotionSync } from './components/reduced-motion-sync';
 
 import { ChallengeDayValidationObserver } from './components/challenge-day-validation-observer';
+import { JourneyProgressionObserver } from './components/journey-progression-observer';
 import { TrainingRemindersSync } from './components/training-reminders-sync';
 import { PWAPrompts } from '@pwa-prompts';
 import { initStaleAssetsDetector } from './services/stale-assets-detector';
@@ -116,11 +117,9 @@ function AppWithJourneyConfig() {
     sessionPipelineFactory,
     replayInteractif,
     auth,
+    premium,
     subscription,
     sync,
-    reward,
-    payment,
-    license,
   } = useAppPorts();
 
   const pipelineRecoveryStorage = useMemo(() => createLocalStoragePipelineRecoveryStorage(), []);
@@ -153,9 +152,7 @@ function AppWithJourneyConfig() {
   const adapters = useMemo(
     () => ({
       auth,
-      license,
-      payment,
-      reward,
+      premium,
       subscription,
       sync,
       history: injectedAdapters.history,
@@ -164,7 +161,7 @@ function AppWithJourneyConfig() {
       progression: injectedAdapters.progression,
       pipeline,
     }),
-    [auth, injectedAdapters, license, payment, pipeline, reward, subscription, sync],
+    [auth, injectedAdapters, pipeline, premium, subscription, sync],
   );
 
   return (
@@ -176,6 +173,7 @@ function AppWithJourneyConfig() {
           <ReplayInteractifProvider value={replayInteractif}>
             <AppContent />
             <ChallengeDayValidationObserver />
+            <JourneyProgressionObserver />
             <Toaster
               position="top-center"
               closeButton

@@ -63,8 +63,8 @@ export function GameModeSelector({
               onClick={() => handleModeChange(mode.value)}
               className={cn(
                 'relative flex flex-col items-center gap-2 rounded-2xl border p-4 text-center transition-all',
-                'border-border/50 bg-card/85 backdrop-blur-lg',
-                'hover:border-border/70 hover:bg-card/95',
+                'border-border/50 bg-card',
+                'hover:border-border/70 hover:bg-card',
                 'active:scale-[0.97]',
                 isSelected
                   ? 'border-2 border-primary/50 ring-1 ring-primary/20 shadow-sm'

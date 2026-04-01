@@ -12,10 +12,10 @@ import {
   adminHistoryMaintenanceAdapter,
   sessionPipelineFactoryAdapter,
   persistenceHealthAdapter,
+  createPremiumAdapter,
   freeSubscriptionAdapter,
   createReplayInteractifAdapter,
   noopAuthAdapter,
-  noopRewardAdapter,
   noopSyncAdapter,
   setupPersistence,
   replayRecoveryAdapter,
@@ -40,13 +40,11 @@ import type {
   EventReaderFactoryPort,
   HapticPort,
   InfraProbePort,
-  LicensePort,
   OAuthCallbackPort,
-  PaymentPort,
   PersistencePort,
+  PremiumPort,
   PersistenceHealthPort,
   PlatformInfoPort,
-  RewardPort,
   ReplayInteractifPort,
   SessionPipelineFactoryPort,
   InteractiveReplayLifecyclePort,
@@ -87,11 +85,9 @@ export interface AppPorts {
 
   // TanStack Query adapters (ui)
   auth: AuthPort;
+  premium: PremiumPort;
   subscription: SubscriptionPort;
   sync: SyncPort;
-  reward: RewardPort;
-  payment: PaymentPort;
-  license?: LicensePort;
 
   // Common ports
   audio: AudioPort;
@@ -135,32 +131,6 @@ export interface AppPorts {
   audioDebug: AudioDebugPort;
 }
 
-const noopPayment: PaymentPort = {
-  initialize: async () => {},
-  getProducts: async () => [],
-  purchase: async () => ({ success: false, error: 'Payments not available in Lite mode' }) as never,
-  restorePurchases: async () =>
-    ({
-      isActive: false,
-      activeEntitlement: null,
-      expirationDate: null,
-      isTrialing: false,
-      originalPurchaseDate: null,
-    }) as never,
-  getCustomerInfo: async () =>
-    ({
-      isActive: false,
-      activeEntitlement: null,
-      expirationDate: null,
-      isTrialing: false,
-      originalPurchaseDate: null,
-    }) as never,
-  subscribe: () => () => {},
-  setUserId: async () => {},
-  logout: async () => {},
-  isAvailable: () => false,
-};
-
 const AppPortsContext = createContext<AppPorts | null>(null);
 
 export function AppPortsProvider({ children }: { children: ReactNode }): ReactNode {
@@ -175,8 +145,25 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
   const auth = useMemo<AuthPort>(() => noopAuthAdapter, []);
   const subscription = useMemo<SubscriptionPort>(() => freeSubscriptionAdapter, []);
   const sync = useMemo<SyncPort>(() => noopSyncAdapter, []);
-  const reward = useMemo<RewardPort>(() => noopRewardAdapter, []);
-  const payment = useMemo<PaymentPort>(() => noopPayment, []);
+
+  const premium = useMemo<PremiumPort>(() => {
+    return createPremiumAdapter({
+      apiUrl: import.meta.env.VITE_ACTIVATION_API_URL || 'https://neurodual-activation-api.abdeslam-aguilal.workers.dev',
+      getSetting: async (key) => localStorage.getItem(`nd_${key}`),
+      setSetting: async (key, value) => localStorage.setItem(`nd_${key}`, value),
+      getTotalPlaytimeMs: async () => {
+        if (!persistence) return 0;
+        try {
+          const result = await persistence.query<{ total: number }>(
+            'SELECT COALESCE(SUM(duration_ms), 0) as total FROM session_summaries',
+          );
+          return result.rows[0]?.total ?? 0;
+        } catch {
+          return 0;
+        }
+      },
+    });
+  }, [persistence]);
 
   const platformInfo = useMemo(() => createPlatformInfoPort(), []);
 
@@ -255,11 +242,9 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
       persistence,
       hasSupabase: false,
       auth,
+      premium,
       subscription,
       sync,
-      reward,
-      payment,
-      license: undefined,
       audio: audioAdapter,
       wakeLock: wakeLockAdapter,
       haptic: hapticAdapter,
@@ -287,10 +272,9 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
       adapters,
       persistence,
       auth,
+      premium,
       subscription,
       sync,
-      reward,
-      payment,
       platformInfo,
       xpContext,
       replay,

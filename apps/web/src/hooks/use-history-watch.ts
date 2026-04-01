@@ -1,5 +1,5 @@
 /**
- * useHistoryWatch — monitors emt_messages for new events and triggers projection
+ * useHistoryWatch — monitors session_events for new events and triggers projection
  * catch-up (session_summaries, cognitive_profile, streaks, etc.).
  *
  * Purely local — does NOT depend on cloud sync or authentication.

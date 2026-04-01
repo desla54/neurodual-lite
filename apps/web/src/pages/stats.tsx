@@ -103,18 +103,11 @@ export function StatsPage(): ReactNode {
       return key ? t(key) : gameMode;
     };
     return {
-      'dual-catch': buildLabel('dual-catch'),
-      'dual-place': buildLabel('dual-place'),
-      'dual-memo': buildLabel('dual-memo'),
-      'dual-pick': buildLabel('dual-pick'),
-      'dual-trace': buildLabel('dual-trace'),
-      'dual-track': buildLabel('dual-track'),
       'dualnback-classic': buildLabel('dualnback-classic'),
       'sim-brainworkshop': buildLabel('sim-brainworkshop'),
-      tower: buildLabel('tower'),
-      stroop: buildLabel('stroop'),
+      gridlock: buildLabel('gridlock'),
+      'stroop-flex': buildLabel('stroop-flex'),
       ospan: buildLabel('ospan'),
-      flanker: buildLabel('flanker'),
       custom: buildLabel('custom'),
     };
   }, [t]);
@@ -124,13 +117,11 @@ export function StatsPage(): ReactNode {
 
   const VALID_MODES: ModeType[] = [
     'all',
-    'DualTempo',
-    'DualPlace',
-    'DualMemo',
-    'DualPick',
-    'DualTrace',
     'DualnbackClassic',
     'BrainWorkshop',
+    'Gridlock',
+    'StrobeFlex',
+    'Ospan',
     'Libre',
     'Journey',
   ];
@@ -688,7 +679,7 @@ export function StatsPage(): ReactNode {
         />
 
         {/* Tabs Card */}
-        <div className="surface-card-typography bg-card/70 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--border)/0.15)]">
+        <div className="surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--border)/0.15)]">
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="w-full rounded-none border-0 bg-transparent p-2">
               <TabsTrigger value="simple" className="flex-1 rounded-xl">
@@ -761,7 +752,7 @@ export function StatsPage(): ReactNode {
                 role="button"
                 tabIndex={0}
                 aria-label={t('common.close')}
-                className="absolute inset-0 bg-black/60 backdrop-blur-md hidden md:block"
+                className="absolute inset-0 bg-black/60 hidden md:block"
                 onClick={closeDetailModal}
                 onKeyDown={(e) => e.key === 'Escape' && closeDetailModal()}
               />
@@ -1070,7 +1061,7 @@ export function StatsPage(): ReactNode {
                           onPlayAgain={closeDetailModal}
                           onBackToHome={() => navigate('/')}
                           onStartAtLevel={(level) => {
-                            const gameMode = reportForDisplay.gameMode ?? 'dual-catch';
+                            const gameMode = reportForDisplay.gameMode ?? 'dualnback-classic';
                             setModeSettingFor(gameMode, 'nLevel', Math.max(1, Math.round(level)));
                             closeDetailModal();
                             navigate(getRouteForMode(gameMode), {
@@ -1094,12 +1085,9 @@ export function StatsPage(): ReactNode {
                           onReplay={() => navigate(`/replay/${selectedSessionId}${runIdQuery}`)}
                           onCorrect={
                             [
-                              'dual-catch',
                               'dualnback-classic',
                               'sim-brainworkshop',
                               'custom',
-                              'dual-place',
-                              'dual-memo',
                             ].includes(reportData.gameMode ?? '')
                               ? () => navigate(`/replay/${selectedSessionId}${interactiveQuery}`)
                               : undefined

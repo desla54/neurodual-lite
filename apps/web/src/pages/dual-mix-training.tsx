@@ -665,7 +665,7 @@ export function DualMixTrainingPage() {
             {totalRounds} rounds · N-{nLevel} · {Math.round(summary.durationMs / 1000)}s
           </p>
           <div className="w-full max-w-sm space-y-4">
-            <div className="rounded-xl border border-border/50 bg-card/80 p-4">
+            <div className="rounded-xl border border-border/50 bg-card p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
                 N-Back
               </h3>
@@ -686,7 +686,7 @@ export function DualMixTrainingPage() {
                 <span className="text-sm font-mono font-bold">{summary.nbackAcc}%</span>
               </div>
             </div>
-            <div className="rounded-xl border border-border/50 bg-card/80 p-4">
+            <div className="rounded-xl border border-border/50 bg-card p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
                 Stroop Flex
               </h3>
@@ -699,7 +699,7 @@ export function DualMixTrainingPage() {
                 <span className="text-sm font-mono font-bold">{summary.stroopAvgRT} ms</span>
               </div>
             </div>
-            <div className="rounded-xl border border-border/50 bg-card/80 p-4">
+            <div className="rounded-xl border border-border/50 bg-card p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
                 Gridlock
               </h3>
@@ -764,7 +764,7 @@ export function DualMixTrainingPage() {
       <div className="game-page-stage">
         <div
           key={fadeKey}
-          className="relative flex aspect-square w-full max-w-[360px] items-center justify-center rounded-2xl border border-white/18 bg-woven-surface/52 shadow-[0_24px_60px_hsl(var(--foreground)/0.10)] backdrop-blur-2xl sm:max-w-[420px] animate-in fade-in duration-200"
+          className="relative flex aspect-square w-full max-w-[360px] items-center justify-center rounded-2xl border border-white/18 bg-woven-surface shadow-[0_24px_60px_hsl(var(--foreground)/0.10)] sm:max-w-[420px] animate-in fade-in duration-200"
         >
           <div className="absolute inset-0 bg-[linear-gradient(180deg,hsl(var(--background)/0.40),hsl(var(--background)/0.18))]" />
           <CanvasWeave opacity={0.15} className="stroke-neutral-400" />

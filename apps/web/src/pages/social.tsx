@@ -15,7 +15,7 @@ export function SocialPage(): ReactNode {
     <PageTransition className="flex-1 flex items-center justify-center">
       <div className="w-full max-w-md mx-auto text-center px-4">
         {/* Coming soon card */}
-        <div className="surface-card-typography bg-card/75 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--glass-shadow)/0.15)]">
+        <div className="surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--border)/0.15)]">
           {/* Header with icon */}
           <div className="pt-10 pb-6">
             <div className="w-20 h-20 mx-auto bg-amber-100 dark:bg-amber-500/20 rounded-full flex items-center justify-center mb-4">

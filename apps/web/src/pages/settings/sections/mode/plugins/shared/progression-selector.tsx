@@ -49,7 +49,7 @@ export function ProgressionSelector({
                   ? 'bg-violet-500 text-white shadow-md'
                   : isLocked
                     ? 'bg-muted text-muted-foreground cursor-not-allowed'
-                    : 'bg-muted text-foreground hover:bg-muted/80'
+                    : 'bg-muted text-foreground hover:bg-muted'
               }`}
             >
               <div className="flex items-center justify-between">

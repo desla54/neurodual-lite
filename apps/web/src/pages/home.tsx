@@ -18,13 +18,12 @@ import {
   SelectTrigger,
   SelectValue,
   useChallenge20Query,
-  useHasPremiumAccess,
+  useIsPremium,
 } from '@neurodual/ui';
 import {
   formatLocalDayKey,
   generateJourneyStages,
   JOURNEY_MAX_LEVEL,
-  type JourneyState,
 } from '@neurodual/logic';
 import { type ReactNode, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -36,10 +35,12 @@ import { isChallengeValidatedToday } from '../lib/challenge-feedback';
 import {
   DUALNBACK_CLASSIC_JOURNEY_ID,
   BRAINWORKSHOP_JOURNEY_ID,
+  NEURODUAL_MIX_JOURNEY_ID,
   useSettingsStore,
 } from '../stores/settings-store';
+import { useJourneyStateQuery } from '../hooks/use-journey-state-query';
 import { GAME_MODES, type GameModeConfig } from './settings/config';
-import { createFreePlayIntent } from '../lib/play-intent';
+import { createFreePlayIntent, createJourneyPlayIntent } from '../lib/play-intent';
 
 const modeConfigMap = new Map<string, GameModeConfig>(GAME_MODES.map((m) => [m.value, m]));
 
@@ -54,40 +55,30 @@ const EMPTY_SETTINGS: Readonly<Record<string, unknown>> = Object.freeze({});
 
 const JOURNEY_OPTIONS = [
   {
+    id: NEURODUAL_MIX_JOURNEY_ID,
+    labelKey: 'home.journey.neurodualMix',
+    label: 'Parcours NeuroDual',
+    gameMode: 'neurodual-mix',
+  },
+  {
     id: DUALNBACK_CLASSIC_JOURNEY_ID,
     labelKey: 'home.journey.dualnbackClassic',
-    label: 'Dual N-Back Classic',
+    label: 'Parcours DNB Classique',
     gameMode: 'dualnback-classic',
   },
   {
     id: BRAINWORKSHOP_JOURNEY_ID,
     labelKey: 'home.journey.brainworkshop',
-    label: 'Brain Workshop',
+    label: 'Parcours Brain Workshop',
     gameMode: 'sim-brainworkshop',
   },
 ] as const;
 
-function buildJourneyState(startLevel: number, targetLevel: number): JourneyState {
-  const stages = generateJourneyStages(targetLevel, startLevel, true);
-  return {
-    currentStage: 1,
-    stages: stages.map((s) => ({
-      stageId: s.stageId,
-      status: s.stageId === 1 ? 'unlocked' : 'locked',
-      validatingSessions: 0,
-      bestScore: null,
-    })),
-    isActive: true,
-    startLevel,
-    targetLevel,
-    isSimulator: true,
-  };
-}
 
 export function HomePage(): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const hasPremium = useHasPremiumAccess();
+  const hasPremium = useIsPremium();
   const currentMode = useSettingsStore((s) => s.currentMode);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
@@ -113,20 +104,24 @@ export function HomePage(): ReactNode {
   const activeJourney = useSettingsStore((s) =>
     s.savedJourneys.find((j) => j.id === activeJourneyId),
   );
-  const journeyStartLevel = activeJourney?.startLevel ?? 2;
+  const journeyStartLevel = activeJourney?.startLevel ?? (activeJourneyId === NEURODUAL_MIX_JOURNEY_ID ? 1 : 2);
   const journeyTargetLevel = activeJourney?.targetLevel ?? 5;
   const journeyGameMode =
     JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.gameMode ?? 'dualnback-classic';
-  const journeyState = useMemo<JourneyState>(
-    () => buildJourneyState(journeyStartLevel, journeyTargetLevel),
-    [journeyStartLevel, journeyTargetLevel],
+
+  // Read persisted journey state from SQLite (all parcours)
+  const { data: journeyState } = useJourneyStateQuery(
+    activeJourneyId,
+    journeyStartLevel,
+    journeyTargetLevel,
+    journeyGameMode,
   );
 
   // Selected journey stage (null = free play mode)
   const [selectedJourneyStageId, setSelectedJourneyStageId] = useState<number | null>(null);
   const journeyStageDefinitions = useMemo(
-    () => generateJourneyStages(journeyTargetLevel, journeyStartLevel, true),
-    [journeyStartLevel, journeyTargetLevel],
+    () => generateJourneyStages(journeyTargetLevel, journeyStartLevel, true, journeyGameMode),
+    [journeyStartLevel, journeyTargetLevel, journeyGameMode],
   );
   const selectedStageDef =
     selectedJourneyStageId !== null
@@ -215,11 +210,20 @@ export function HomePage(): ReactNode {
 
   const handleLaunchMode = () => {
     if (selectedStageDef) {
-      // Launch journey stage
-      const route = getRouteForMode(journeyGameMode as GameModeId);
-      setCurrentMode(journeyGameMode as GameModeId);
-      navigate(route === '/nback' ? `/nback?mode=${journeyGameMode}` : route, {
-        state: createFreePlayIntent(journeyGameMode as GameModeId),
+      // Launch journey stage — resolve composite modes (neurodual-mix) to a concrete game mode
+      const concreteMode =
+        journeyState?.nextSessionGameMode ??
+        (journeyGameMode === 'neurodual-mix' ? 'dualnback-classic' : journeyGameMode);
+      const route = getRouteForMode(concreteMode as GameModeId);
+      setCurrentMode(concreteMode as GameModeId);
+      navigate(route === '/nback' ? `/nback?mode=${concreteMode}` : route, {
+        state: createJourneyPlayIntent(selectedStageDef.stageId, activeJourneyId ?? undefined, {
+          gameModeId: concreteMode,
+          journeyStartLevel,
+          journeyTargetLevel,
+          journeyGameModeId: journeyGameMode,
+          journeyNLevel: selectedStageDef.nLevel,
+        }),
       });
       return;
     }
@@ -268,8 +272,8 @@ export function HomePage(): ReactNode {
                   onClick={() => handleSelectMode(modeId)}
                   className={cn(
                     'flex flex-col items-center gap-1.5 rounded-2xl border px-2 py-3 text-center transition-all',
-                    'border-border/50 bg-card/85 backdrop-blur-2xl',
-                    'hover:border-border/70 hover:bg-card/95',
+                    'border-border/50 bg-card',
+                    'hover:border-border/70 hover:bg-card',
                     'active:scale-[0.97]',
                     isActive && 'ring-2 ring-primary/40 border-primary/30 shadow-md',
                   )}
@@ -300,8 +304,8 @@ export function HomePage(): ReactNode {
               onClick={() => setShowQuickSettings((v) => !v)}
               className={cn(
                 'flex flex-col items-center gap-1.5 rounded-2xl border px-2 py-3 text-center transition-all',
-                'border-border/50 bg-card/85 backdrop-blur-2xl',
-                'hover:border-border/70 hover:bg-card/95',
+                'border-border/50 bg-card',
+                'hover:border-border/70 hover:bg-card',
                 'active:scale-[0.97]',
                 showQuickSettings && 'ring-2 ring-primary/40 border-primary/30 shadow-md',
               )}
@@ -319,7 +323,7 @@ export function HomePage(): ReactNode {
         {/* ═══ Quick Settings (replaces progression when active) ═══ */}
         {showQuickSettings ? (
           <div className="w-full px-3">
-            <div className="rounded-[20px] border border-border/50 bg-card/50 backdrop-blur-xl overflow-hidden shadow-[0_8px_32px_-16px_hsl(var(--glass-shadow)/0.2)]">
+            <div className="rounded-[20px] border border-border/50 bg-card overflow-hidden shadow-[0_8px_32px_-16px_hsl(var(--border)/0.2)]">
               <div className="home-card-typography p-5 space-y-5">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
@@ -350,7 +354,7 @@ export function HomePage(): ReactNode {
                         onClick={() =>
                           setModeSetting('nLevel', Math.max(quickCfg.nMin, currentModeNLevel - 1))
                         }
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                         disabled={currentModeNLevel <= quickCfg.nMin}
                       >
                         <CaretLeft size={20} />
@@ -363,7 +367,7 @@ export function HomePage(): ReactNode {
                         onClick={() =>
                           setModeSetting('nLevel', Math.min(quickCfg.nMax, currentModeNLevel + 1))
                         }
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                         disabled={currentModeNLevel >= quickCfg.nMax}
                       >
                         <CaretRight size={20} />
@@ -389,7 +393,7 @@ export function HomePage(): ReactNode {
                             Math.max(quickCfg.tMin, currentModeTrialsCount - quickCfg.tStep),
                           )
                         }
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                         disabled={currentModeTrialsCount <= quickCfg.tMin}
                       >
                         <CaretLeft size={20} />
@@ -405,7 +409,7 @@ export function HomePage(): ReactNode {
                             Math.min(quickCfg.tMax, currentModeTrialsCount + quickCfg.tStep),
                           )
                         }
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                         disabled={currentModeTrialsCount >= quickCfg.tMax}
                       >
                         <CaretRight size={20} />
@@ -430,7 +434,7 @@ export function HomePage(): ReactNode {
         ) : (
           /* ═══ Progression zone — Parcours + Challenge ═══ */
           <div className="w-full px-3">
-            <div className="rounded-[20px] border border-border/50 bg-card/50 backdrop-blur-xl overflow-hidden shadow-[0_8px_32px_-16px_hsl(var(--glass-shadow)/0.2)]">
+            <div className="rounded-[20px] border border-border/50 bg-card overflow-hidden shadow-[0_8px_32px_-16px_hsl(var(--border)/0.2)]">
               {/* ── Parcours ── */}
               <section className="home-card-typography pt-4">
                 <div className="flex items-center justify-between px-5 mb-3">
@@ -471,26 +475,69 @@ export function HomePage(): ReactNode {
                       }
                     >
                       <div className="space-y-4 text-muted-foreground typo-body">
-                        <p>
-                          <span className="font-semibold text-foreground">
-                            {t('home.journey.howProgressionLabel', 'Progression')}
-                          </span>
-                          {' — '}
-                          {t(
-                            'home.journey.howProgression',
-                            'Complete sessions at each N-level to advance.',
-                          )}
-                        </p>
-                        <p>
-                          <span className="font-semibold text-foreground">
-                            {t('home.journey.howScoringLabel', 'Scoring')}
-                          </span>
-                          {' — '}
-                          {t(
-                            'home.journey.howScoring',
-                            'Each stage requires a minimum score to pass.',
-                          )}
-                        </p>
+                        {journeyGameMode === 'dualnback-classic' && (
+                          <>
+                            <p className="font-semibold text-foreground">
+                              {t('journey.progression.jaeggi.description', 'Based on your weakest modality:')}
+                            </p>
+                            <ul className="space-y-2 list-none pl-0">
+                              <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 font-bold shrink-0">↑</span>
+                                <span>{t('journey.progression.jaeggi.up', 'Fewer than 3 errors → Level up')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-amber-500 font-bold shrink-0">→</span>
+                                <span>{t('journey.progression.jaeggi.stay', '3 to 5 errors → Stay at this level')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-destructive font-bold shrink-0">↓</span>
+                                <span>{t('journey.progression.jaeggi.down', 'More than 5 errors → Level down')}</span>
+                              </li>
+                            </ul>
+                          </>
+                        )}
+                        {journeyGameMode === 'sim-brainworkshop' && (
+                          <>
+                            <p className="font-semibold text-foreground">
+                              {t('journey.progression.brainworkshop.description', 'Brain Workshop protocol:')}
+                            </p>
+                            <ul className="space-y-2 list-none pl-0">
+                              <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 font-bold shrink-0">↑</span>
+                                <span>{t('journey.progression.brainworkshop.up', '80% or higher → Level up')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-amber-500 font-bold shrink-0">→</span>
+                                <span>{t('journey.progression.brainworkshop.stay', '50% to 79% → Stay')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-destructive font-bold shrink-0">↓</span>
+                                <span>{t('journey.progression.brainworkshop.strike', '3 scores in a row under 50% → Level down')}</span>
+                              </li>
+                            </ul>
+                          </>
+                        )}
+                        {journeyGameMode === 'neurodual-mix' && (
+                          <>
+                            <p className="font-semibold text-foreground">
+                              {t('journey.progression.neurodualMix.description', 'NeuroDual Mix — DNB Classic + Stroop Flex:')}
+                            </p>
+                            <ul className="space-y-2 list-none pl-0">
+                              <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 font-bold shrink-0">↑</span>
+                                <span>{t('journey.progression.neurodualMix.fill', 'Each session with 85%+ accuracy fills the stage by 10%')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-amber-500 font-bold shrink-0">→</span>
+                                <span>{t('journey.progression.neurodualMix.both', 'Both DNB Classic and Stroop Flex sessions count')}</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span className="text-primary font-bold shrink-0">✓</span>
+                                <span>{t('journey.progression.neurodualMix.unlock', 'At 100%, the next N-level unlocks')}</span>
+                              </li>
+                            </ul>
+                          </>
+                        )}
                       </div>
                     </DrawerSheet>
                     <DrawerSheet
@@ -520,7 +567,7 @@ export function HomePage(): ReactNode {
                                   journeyTargetLevel,
                                 )
                               }
-                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                               disabled={journeyStartLevel <= 2}
                             >
                               <CaretLeft size={20} />
@@ -536,7 +583,7 @@ export function HomePage(): ReactNode {
                                   journeyTargetLevel,
                                 )
                               }
-                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                               disabled={journeyStartLevel >= journeyTargetLevel}
                             >
                               <CaretRight size={20} />
@@ -561,7 +608,7 @@ export function HomePage(): ReactNode {
                                   Math.max(journeyStartLevel, journeyTargetLevel - 1),
                                 )
                               }
-                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                               disabled={journeyTargetLevel <= journeyStartLevel}
                             >
                               <CaretLeft size={20} />
@@ -577,7 +624,7 @@ export function HomePage(): ReactNode {
                                   Math.min(JOURNEY_MAX_LEVEL, journeyTargetLevel + 1),
                                 )
                               }
-                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                               disabled={journeyTargetLevel >= JOURNEY_MAX_LEVEL}
                             >
                               <CaretRight size={20} />
@@ -681,7 +728,7 @@ export function HomePage(): ReactNode {
                               <button
                                 type="button"
                                 onClick={() => setChallengeTotalDays(challengeTotalDays - 1)}
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                                 disabled={challengeTotalDays <= 1}
                               >
                                 <CaretLeft size={20} />
@@ -692,7 +739,7 @@ export function HomePage(): ReactNode {
                               <button
                                 type="button"
                                 onClick={() => setChallengeTotalDays(challengeTotalDays + 1)}
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                                 disabled={challengeTotalDays >= 365}
                               >
                                 <CaretRight size={20} />
@@ -714,7 +761,7 @@ export function HomePage(): ReactNode {
                                 onClick={() =>
                                   setChallengeTargetMinutesPerDay(challengeTargetMinutesPerDay - 1)
                                 }
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                                 disabled={challengeTargetMinutesPerDay <= 1}
                               >
                                 <CaretLeft size={20} />
@@ -727,7 +774,7 @@ export function HomePage(): ReactNode {
                                 onClick={() =>
                                   setChallengeTargetMinutesPerDay(challengeTargetMinutesPerDay + 1)
                                 }
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/60 disabled:opacity-40"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card disabled:opacity-40"
                                 disabled={challengeTargetMinutesPerDay >= 240}
                               >
                                 <CaretRight size={20} />

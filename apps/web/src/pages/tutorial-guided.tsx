@@ -145,7 +145,7 @@ export function TutorialGuidedPage(): ReactNode {
     const progress = Math.round(((recoveryCheck.stepIndex + 1) / activeSpec.steps.length) * 100);
     return (
       <div className="game-page-safe-center p-6">
-        <div className="bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm rounded-2xl p-6 max-w-sm w-full shadow-lg">
+        <div className="bg-woven-surface border border-woven-border/60 shadow-sm rounded-2xl p-6 max-w-sm w-full shadow-lg">
           <h2 className="text-xl font-bold text-woven-text mb-2">
             {t('tutorial.recovery.title', 'Resume tutorial?')}
           </h2>

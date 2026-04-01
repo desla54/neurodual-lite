@@ -3,7 +3,7 @@
  * Woven Ink design with subtle canvas texture
  */
 
-import { cn, Logo, useHasPremiumAccess } from '@neurodual/ui';
+import { cn, Logo, useIsPremium } from '@neurodual/ui';
 import {
   ArrowLeft,
   BookOpenText,
@@ -61,7 +61,7 @@ export function NavBar(): ReactNode {
   const { t } = useTranslation();
   const location = useLocation();
   const pathname = location.pathname;
-  const hasPremium = useHasPremiumAccess();
+  const hasPremium = useIsPremium();
   // Legacy tutorial spotlight — hidden for now, kept for future rework
   // const tutorialCompleted = useSettingsStore((s) => s.ui.tutorialCompleted);
   const setTutorialCompleted = useSettingsStore((s) => s.setTutorialCompleted);
@@ -163,7 +163,7 @@ export function NavBar(): ReactNode {
           <NavLink
             to="/tutorial"
             onClick={dismissSpotlight}
-            className="pointer-events-auto mb-2 px-4 py-2.5 bg-amber-500/60 backdrop-blur-2xl backdrop-saturate-150 border border-amber-400/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-150 active:brightness-90 transition-transform"
+            className="pointer-events-auto mb-2 px-4 py-2.5 bg-amber-500/60 border border-amber-400/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-150 active:brightness-90 transition-transform"
           >
             <BookOpenText size={18} weight="regular" className="text-white shrink-0" />
             <span className="text-sm text-white font-medium">
@@ -184,7 +184,7 @@ export function NavBar(): ReactNode {
           </NavLink>
         )}
 
-        <div className="relative flex items-center justify-evenly w-full p-2 bg-woven-surface/60 backdrop-blur-2xl backdrop-saturate-150 border border-woven-border/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full pointer-events-auto overflow-hidden">
+        <div className="relative flex items-center justify-evenly w-full p-2 bg-woven-surface border border-woven-border/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full pointer-events-auto overflow-hidden">
           {/* Weave texture background - tighter grid for mobile */}
           <svg
             data-nav-weave="true"
@@ -231,7 +231,7 @@ export function NavBar(): ReactNode {
                 className={cn(
                   'relative flex flex-col items-center justify-center w-14 h-14 rounded-full transition duration-200 active:scale-[0.92]',
                   isActive
-                    ? 'bg-primary text-primary-foreground shadow-soft-colored font-bold'
+                    ? 'bg-primary text-primary-foreground shadow-soft font-bold'
                     : 'text-muted-foreground hover:bg-muted/50',
                   isSpotlighted &&
                     !isActive &&
@@ -250,7 +250,7 @@ export function NavBar(): ReactNode {
       {/* --- DESKTOP SIDEBAR --- */}
       <nav
         className={cn(
-          'fixed start-0 top-0 bottom-0 flex-col items-center py-6 bg-surface/60 backdrop-blur-2xl backdrop-saturate-150 border-e border-border/30 shadow-[4px_0_16px_-4px_hsl(var(--glass-shadow)/0.15)] z-40 text-muted-foreground transition-all duration-300 ease-out',
+          'fixed start-0 top-0 bottom-0 flex-col items-center py-6 bg-surface border-e border-border/30 shadow-[4px_0_16px_-4px_hsl(var(--border)/0.15)] z-40 text-muted-foreground transition-all duration-300 ease-out',
           isGamePage ? 'hidden' : 'hidden md:flex',
           isExpanded ? 'w-56' : 'w-20',
         )}
@@ -471,7 +471,7 @@ export function NavBar(): ReactNode {
                           ? 'w-full justify-start gap-3 px-4 h-14'
                           : 'justify-center w-14 h-14',
                         isActive
-                          ? 'bg-primary text-primary-foreground shadow-soft-colored'
+                          ? 'bg-primary text-primary-foreground shadow-soft'
                           : 'text-muted-foreground hover:bg-secondary/60',
                       )}
                     >
@@ -489,7 +489,7 @@ export function NavBar(): ReactNode {
                     {/* Spotlight badge for tutorial - isolated from sidebar hover */}
                     {isSpotlighted && (
                       <div
-                        className="absolute start-full top-1/2 -translate-y-1/2 ms-3 px-3 py-2 bg-amber-500/60 backdrop-blur-2xl backdrop-saturate-150 border border-amber-400/50 text-white text-xs font-medium rounded-full shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] whitespace-nowrap z-50 flex items-center gap-2 animate-in fade-in slide-in-from-left-2 duration-300"
+                        className="absolute start-full top-1/2 -translate-y-1/2 ms-3 px-3 py-2 bg-amber-500/60 border border-amber-400/50 text-white text-xs font-medium rounded-full shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] whitespace-nowrap z-50 flex items-center gap-2 animate-in fade-in slide-in-from-left-2 duration-300"
                         onMouseEnter={(e) => {
                           e.stopPropagation();
                           // Clear any pending sidebar expansion timer
@@ -547,7 +547,7 @@ export function NavBar(): ReactNode {
                       ? 'w-full justify-start gap-3 px-4 h-14'
                       : 'justify-center w-14 h-14',
                     isPrimaryTabActive(pathname, settingsLink.tab)
-                      ? 'bg-primary text-primary-foreground shadow-soft-colored'
+                      ? 'bg-primary text-primary-foreground shadow-soft'
                       : 'text-muted-foreground hover:bg-secondary/60',
                   )}
                 >
@@ -572,7 +572,7 @@ export function NavBar(): ReactNode {
         type="button"
         onClick={() => setDarkMode(!darkMode)}
         className={cn(
-          'fixed bottom-4 end-4 z-50 w-10 h-10 items-center justify-center rounded-full bg-surface/80 backdrop-blur-xl backdrop-saturate-150 border border-border/50 text-foreground shadow-soft hover:bg-secondary/60 transition duration-150 active:brightness-90',
+          'fixed bottom-4 end-4 z-50 w-10 h-10 items-center justify-center rounded-full bg-surface border border-border/50 text-foreground shadow-soft hover:bg-secondary/60 transition duration-150 active:brightness-90',
           isGamePage ? 'hidden' : 'hidden md:flex',
         )}
         aria-label={darkMode ? t('nav.lightMode', 'Light mode') : t('nav.darkMode', 'Dark mode')}

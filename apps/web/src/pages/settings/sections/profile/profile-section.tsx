@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { Avatar, Card, Section } from '@neurodual/ui';
 import { AvatarPicker, UsernameInput } from '../../../../components/profile';
 import { useSettingsStore } from '../../../../stores/settings-store';
+import { PremiumSection } from './premium-section';
 
 /** Profile section — local-only profile editor */
 export function ProfileSection(): ReactNode {
@@ -20,6 +21,8 @@ export function ProfileSection(): ReactNode {
 
   return (
     <div className="space-y-6">
+      <PremiumSection />
+
       <Section title={t('settings.profile.title')}>
         {/* Local Profile Card */}
         <Card className="space-y-5">

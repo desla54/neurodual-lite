@@ -146,7 +146,7 @@ export function RewardCelebration({
       ref={overlayRef}
       role="button"
       tabIndex={0}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
       onClick={handleDismiss}
       onKeyDown={(e) => e.key === 'Escape' && handleDismiss()}
     >

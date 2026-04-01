@@ -811,7 +811,7 @@ export const MODE_DEFAULTS: Record<KnownGameModeId, ModeDefaults> = {
   swm: { nLevel: 4, trialsCount: 12 },
   custom: { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   stroop: { nLevel: 1, trialsCount: 96 },
-  'stroop-flex': { nLevel: 1, trialsCount: 96 },
+  'stroop-flex': { nLevel: 1, trialsCount: 20 },
   flanker: { nLevel: 1, trialsCount: 96 },
   'go-nogo': { nLevel: 1, trialsCount: 96 },
   'stop-signal': { nLevel: 1, trialsCount: 96 },

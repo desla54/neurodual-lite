@@ -27,10 +27,10 @@ export interface NumericKeypadProps {
 }
 
 const DIGIT_CLASS =
-  'min-h-[3.2rem] sm:min-h-[3.5rem] rounded-2xl bg-woven-surface/80 backdrop-blur-lg backdrop-saturate-150 border border-woven-border/60 shadow-sm text-2xl font-bold tabular-nums text-woven-text active:brightness-90 transition-transform touch-manipulation select-none';
+  'min-h-[3.2rem] sm:min-h-[3.5rem] rounded-2xl bg-woven-surface border border-woven-border/60 shadow-sm text-2xl font-bold tabular-nums text-woven-text active:brightness-90 transition-transform touch-manipulation select-none';
 
 const ACTION_CLASS =
-  'min-h-[3.2rem] sm:min-h-[3.5rem] rounded-2xl bg-woven-surface/80 backdrop-blur-lg backdrop-saturate-150 border border-woven-border/60 shadow-sm text-sm font-bold text-woven-text-muted active:brightness-90 transition-transform touch-manipulation select-none';
+  'min-h-[3.2rem] sm:min-h-[3.5rem] rounded-2xl bg-woven-surface border border-woven-border/60 shadow-sm text-sm font-bold text-woven-text-muted active:brightness-90 transition-transform touch-manipulation select-none';
 
 export function NumericKeypad({
   onDigit,
@@ -94,7 +94,7 @@ export function NumericKeypad({
             'min-h-[3.2rem] sm:min-h-[3.5rem] rounded-2xl border text-sm font-bold active:scale-95 transition-transform touch-manipulation select-none',
             submitEnabled && !disabled
               ? 'bg-primary border-primary text-primary-foreground shadow-sm'
-              : 'bg-woven-surface/80 backdrop-blur-lg backdrop-saturate-150 border-woven-border/60 text-woven-text-muted opacity-50',
+              : 'bg-woven-surface border-woven-border/60 text-woven-text-muted opacity-50',
           )}
         >
           {submitLabel}

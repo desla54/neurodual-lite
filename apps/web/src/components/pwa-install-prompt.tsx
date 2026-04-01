@@ -104,7 +104,7 @@ export function PWAInstallPrompt(): ReactNode {
 
   return (
     <div className="fixed bottom-20 md:bottom-4 left-4 right-4 z-50 mx-auto max-w-md">
-      <div className="flex items-center gap-3 rounded-xl bg-card/85 backdrop-blur-xl border border-border/50 p-4 text-card-foreground shadow-lg">
+      <div className="flex items-center gap-3 rounded-xl bg-card border border-border/50 p-4 text-card-foreground shadow-lg">
         <DownloadSimple size={24} weight="bold" className="shrink-0 text-primary" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium">

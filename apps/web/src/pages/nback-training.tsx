@@ -51,7 +51,6 @@ import {
   GameQuitModal,
   SyncHUD,
 } from '../components/game';
-import { RewardCelebration } from '../components/reward-celebration';
 import { BugReportModal } from '../components/bug-report/bug-report-modal';
 import { AnimatedCountdownDigits } from '../components/game/animated-countdown-digits';
 import {
@@ -1169,8 +1168,8 @@ function GameplayContent({
   completionIsProcessing,
   completionError,
   complete,
-  lastGrantedRewards,
-  clearLastGranted,
+  lastGrantedRewards: _lastGrantedRewards,
+  clearLastGranted: _clearLastGranted,
   shareStats,
   createSession,
   showQuitModal,
@@ -2102,16 +2101,6 @@ function GameplayContent({
             betaEnabled={betaScoringEnabled}
           />
 
-          {/* Premium Reward Celebration (XP-based) */}
-          {lastGrantedRewards.length > 0 && lastGrantedRewards[0] && (
-            <RewardCelebration
-              reward={lastGrantedRewards[0].reward}
-              expiresAt={
-                lastGrantedRewards[0].result.success ? lastGrantedRewards[0].result.expiresAt : null
-              }
-              onDismiss={clearLastGranted}
-            />
-          )}
         </div>
       </div>
     );
@@ -2265,7 +2254,7 @@ function GameplayContent({
               : `${Math.min(layout.availableWidth, layout.gridSize + 32)}px`,
           }}
         >
-          <div className="flex flex-col bg-card/85 backdrop-blur-xl border border-border/50 rounded-2xl shadow-xl p-4">
+          <div className="flex flex-col bg-card border border-border/50 rounded-2xl shadow-xl p-4">
             {/* Icon + description */}
             <div className="flex items-start gap-2.5">
               <div className="p-2 rounded-xl bg-primary/10 text-primary shrink-0 mt-0.5">
@@ -2384,7 +2373,7 @@ function GameplayContent({
           className="pt-0"
         />
 
-        {/* ========== BINAURAL MUTE PILL — below glass block ========== */}
+        {/* ========== BINAURAL MUTE PILL — below mute pill ========== */}
         {betaEnabled && reserveMutePillSpace && (
           <div
             className={`mt-2 flex items-center gap-1.5 ${showMutePill ? 'animate-in fade-in slide-in-from-top-1 duration-300' : 'invisible'}`}
@@ -2397,7 +2386,7 @@ function GameplayContent({
                 markTextureMuted();
               }}
               data-capture-control="pill"
-              className="relative flex items-center gap-1.5 py-2.5 px-4 rounded-full bg-woven-surface/55 backdrop-blur-xl border border-woven-border/25 text-woven-text text-xs font-medium transition-colors hover:bg-woven-cell-rest"
+              className="relative flex items-center gap-1.5 py-2.5 px-4 rounded-full bg-woven-surface border border-woven-border/25 text-woven-text text-xs font-medium transition-colors hover:bg-woven-cell-rest"
             >
               <CanvasWeave lineCount={6} rounded="full" opacity={0.04} />
               <SpeakerSlashIcon size={14} className="relative z-10 shrink-0" />
@@ -2576,10 +2565,10 @@ function GameplayContent({
           )}
           {showClassicGridFinalizingOverlay && (
             <div className="absolute inset-0 z-30 rounded-2xl pointer-events-auto">
-              {/* Avoid backdrop-blur here: it can be extremely expensive and freeze UI on some GPUs/webviews */}
+              {/* Avoid here: it can be extremely expensive and freeze UI on some GPUs/webviews */}
               <div className="absolute inset-0 rounded-2xl bg-woven-bg/85" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex flex-col items-center gap-1.5 rounded-2xl border border-woven-border bg-woven-surface/95 px-4 py-2.5 shadow-sm">
+                <div className="flex flex-col items-center gap-1.5 rounded-2xl border border-woven-border bg-woven-surface px-4 py-2.5 shadow-sm">
                   <Spinner size={18} className="text-woven-text-muted" />
                   <span className="text-sm font-semibold text-woven-text leading-none">
                     {t('common.loading', 'Loading...')}
@@ -2592,7 +2581,7 @@ function GameplayContent({
             </div>
           )}
           {reportFailed && (
-            <div className="absolute inset-x-4 bottom-4 z-30 rounded-xl border border-destructive/30 bg-background/90 p-3 text-center shadow-sm">
+            <div className="absolute inset-x-4 bottom-4 z-30 rounded-xl border border-destructive/30 bg-background p-3 text-center shadow-sm">
               <p className="text-xs font-semibold text-destructive">
                 {t('stats.report.errorLoading', 'Could not load report')}
               </p>

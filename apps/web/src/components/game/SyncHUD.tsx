@@ -198,7 +198,7 @@ export function SyncHUD({
 
   return (
     <div className="absolute top-2 right-2 z-50 select-none">
-      <div className="rounded-lg border border-white/10 bg-black/70 text-white shadow-lg backdrop-blur px-3 py-2">
+      <div className="rounded-lg border border-white/10 bg-black/70 text-white shadow-lg px-3 py-2">
         <div className="flex items-center gap-2">
           <button
             type="button"

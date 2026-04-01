@@ -35,8 +35,8 @@ import {
 import { useSettingsStore } from '../stores';
 
 const DEFAULT_TOTAL_TRIALS = 96;
-const MIN_TOTAL_TRIALS = 48;
-const MAX_TOTAL_TRIALS = 128;
+const MIN_TOTAL_TRIALS = 5;
+const MAX_TOTAL_TRIALS = 160;
 const STIMULUS_TIMEOUT_MS = 2500;
 const FIXATION_MS = 500;
 const FEEDBACK_MS = 300;
@@ -571,7 +571,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       </div>
 
       <div className="game-page-stage">
-        <div className="relative flex aspect-square w-full max-w-[360px] items-center justify-center overflow-hidden rounded-2xl border border-white/18 bg-woven-surface/52 shadow-[0_24px_60px_hsl(var(--foreground)/0.10)] shadow-[inset_0_0_0_1px_hsl(var(--woven-border)/0.32)] backdrop-blur-2xl sm:max-w-[420px]">
+        <div className="relative flex aspect-square w-full max-w-[360px] items-center justify-center overflow-hidden rounded-2xl border border-white/18 bg-woven-surface shadow-[0_24px_60px_hsl(var(--foreground)/0.10)] shadow-[inset_0_0_0_1px_hsl(var(--woven-border)/0.32)] sm:max-w-[420px]">
           <div className="absolute inset-0 bg-[linear-gradient(180deg,hsl(var(--background)/0.40),hsl(var(--background)/0.18))]" />
           <div className="absolute inset-[1px] rounded-[15px] bg-white/8" />
           <CanvasWeave opacity={0.15} className="stroke-neutral-400" />

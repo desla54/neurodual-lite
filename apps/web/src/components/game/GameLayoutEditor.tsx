@@ -90,7 +90,7 @@ export function GameLayoutEditor({
   return (
     <div className="relative w-full h-full bg-woven-bg">
       {/* Toolbar — floats over canvas */}
-      <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-2 bg-woven-surface/90 backdrop-blur border-b border-woven-border">
+      <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-2 bg-woven-surface border-b border-woven-border">
         <div className="flex items-center gap-2 text-sm font-medium text-woven-text">
           <ArrowsOutCardinal size={18} className="text-primary" />
           {t('game.layoutEdit.title', 'Edit layout')}
@@ -179,7 +179,7 @@ export function GameLayoutEditor({
       </div>
 
       {/* Instructions */}
-      <div className="absolute bottom-0 left-0 right-0 z-50 px-4 py-1.5 text-center text-xs text-woven-text-muted bg-woven-surface/90 backdrop-blur border-t border-woven-border">
+      <div className="absolute bottom-0 left-0 right-0 z-50 px-4 py-1.5 text-center text-xs text-woven-text-muted bg-woven-surface border-t border-woven-border">
         {t('game.layoutEdit.instructions', 'Drag to reposition · Resize from edges and corners')}
       </div>
     </div>

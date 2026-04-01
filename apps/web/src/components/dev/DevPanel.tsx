@@ -165,7 +165,7 @@ export function DevPanel({
   return (
     <div
       ref={panelRef}
-      className="fixed z-50 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl text-white text-sm select-none"
+      className="fixed z-50 bg-black/90 border border-white/20 rounded-lg shadow-xl text-white text-sm select-none"
       style={{
         left: position.x,
         top: position.y,

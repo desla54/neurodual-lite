@@ -48,7 +48,7 @@ export function NLevelSlider({
               className={`relative flex-1 py-2 rounded-lg text-xs font-bold transition-all ${
                 isActive
                   ? 'bg-primary text-white shadow-md scale-105 z-10'
-                  : 'bg-muted text-foreground hover:bg-muted/80'
+                  : 'bg-muted text-foreground hover:bg-muted'
               } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {level}

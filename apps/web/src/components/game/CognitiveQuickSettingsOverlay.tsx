@@ -39,7 +39,7 @@ export function CognitiveQuickSettingsOverlay({
         aria-label={t('common.close', 'Close')}
       />
 
-      <div className="relative w-[min(420px,92vw)] max-h-[80vh] overflow-auto rounded-2xl border border-border bg-background/95 p-4 shadow-xl backdrop-blur-md dark:backdrop-blur-none">
+      <div className="relative w-[min(420px,92vw)] max-h-[80vh] overflow-auto rounded-2xl border border-border bg-background p-4 shadow-xl">
         <div className="mb-4 flex items-center justify-between gap-3">
           <div className="min-w-0">
             <div className="text-sm font-bold uppercase tracking-wide text-foreground">

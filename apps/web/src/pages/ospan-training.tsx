@@ -634,7 +634,7 @@ export function OspanTrainingPage() {
                     ? t('game.cogTask.sessionInterrupted')
                     : t('settings.gameMode.ospan', 'Operation Span')}
                   {'\u00A0'}
-                  <span className="inline-flex align-middle -translate-y-px items-center px-3 py-1.5 rounded-lg text-sm font-bold leading-none tabular-nums tracking-wide whitespace-nowrap bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm text-woven-text">
+                  <span className="inline-flex align-middle -translate-y-px items-center px-3 py-1.5 rounded-lg text-sm font-bold leading-none tabular-nums tracking-wide whitespace-nowrap bg-woven-surface border border-woven-border/60 shadow-sm text-woven-text">
                     {t('game.cogTask.span')} {summary?.maxSpanReached ?? startSpan}
                   </span>
                 </h2>
@@ -696,7 +696,7 @@ export function OspanTrainingPage() {
 
                   {/* ═══ ZONE 3: STATS ROW ═══ */}
                   <div className="px-2 mt-4 grid grid-cols-4 gap-2 text-center">
-                    <div className="rounded-xl bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm p-2.5">
+                    <div className="rounded-xl bg-woven-surface border border-woven-border/60 shadow-sm p-2.5">
                       <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                         {t('game.cogTask.sets')}
                       </p>
@@ -704,7 +704,7 @@ export function OspanTrainingPage() {
                         {summary.totalSets}
                       </p>
                     </div>
-                    <div className="rounded-xl bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm p-2.5">
+                    <div className="rounded-xl bg-woven-surface border border-woven-border/60 shadow-sm p-2.5">
                       <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                         {t('game.cogTask.correct')}
                       </p>
@@ -712,7 +712,7 @@ export function OspanTrainingPage() {
                         {summary.correctSets}
                       </p>
                     </div>
-                    <div className="rounded-xl bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm p-2.5">
+                    <div className="rounded-xl bg-woven-surface border border-woven-border/60 shadow-sm p-2.5">
                       <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                         {t('game.cogTask.equations')}
                       </p>
@@ -727,7 +727,7 @@ export function OspanTrainingPage() {
                         {summary.processingAccuracy}%
                       </p>
                     </div>
-                    <div className="rounded-xl bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm p-2.5">
+                    <div className="rounded-xl bg-woven-surface border border-woven-border/60 shadow-sm p-2.5">
                       <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                         {t('game.cogTask.recall')}
                       </p>
@@ -801,7 +801,7 @@ export function OspanTrainingPage() {
                           {summary.results.map((r, i) => (
                             <div
                               key={i}
-                              className="flex items-center gap-2 rounded-lg bg-woven-surface/80 backdrop-blur-lg border border-woven-border/60 shadow-sm px-3 py-2"
+                              className="flex items-center gap-2 rounded-lg bg-woven-surface border border-woven-border/60 shadow-sm px-3 py-2"
                             >
                               <span className="text-xs font-bold text-woven-text-muted w-5 text-right tabular-nums">
                                 {i + 1}
@@ -844,7 +844,7 @@ export function OspanTrainingPage() {
                   <button
                     type="button"
                     onClick={handleRestart}
-                    className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft-colored transition-all active:scale-[0.98]"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft transition-all active:scale-[0.98]"
                   >
                     <ArrowClockwise size={18} weight="bold" />
                     <span>{t('game.cogTask.restart')}</span>

@@ -296,7 +296,7 @@ export function StroopSessionReport({
           <Hatching id="stroop-report-score-hatch" className="mt-3 text-foreground/70" />
 
           <div className="px-2 mt-4 grid grid-cols-4 gap-2 text-center">
-            <div className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-2.5">
+            <div className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-2.5">
               <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                 {t('game.cogTask.trials')}
               </p>
@@ -304,7 +304,7 @@ export function StroopSessionReport({
                 {resolvedTotalTrials}
               </p>
             </div>
-            <div className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-2.5">
+            <div className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-2.5">
               <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                 {t('game.cogTask.correct')}
               </p>
@@ -312,13 +312,13 @@ export function StroopSessionReport({
                 {resolvedCorrectTrials}
               </p>
             </div>
-            <div className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-2.5">
+            <div className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-2.5">
               <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                 {t('game.cogTask.errors')}
               </p>
               <p className="text-lg font-bold tabular-nums text-woven-incorrect">{totalErrors}</p>
             </div>
-            <div className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-2.5">
+            <div className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-2.5">
               <p className="text-[10px] uppercase tracking-wide text-woven-text-muted">
                 {isFlexMode
                   ? t('report.stroopFlex.switchCost', 'Switch cost')
@@ -341,7 +341,7 @@ export function StroopSessionReport({
                     {ruleStats.map((rule) => (
                       <div
                         key={rule.id}
-                        className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-3"
+                        className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-3"
                       >
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-bold text-woven-text">{rule.label}</span>
@@ -374,7 +374,7 @@ export function StroopSessionReport({
                       </div>
                     ))}
                     {transitionStats && (
-                      <div className="col-span-2 rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-3">
+                      <div className="col-span-2 rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-3">
                         <div className="grid grid-cols-2 gap-3 text-xs text-woven-text-muted sm:grid-cols-4">
                           <div className="rounded-lg bg-woven-bg px-3 py-2">
                             <div>{t('report.stroopFlex.switchTrials', 'Switch trials')}</div>
@@ -416,7 +416,7 @@ export function StroopSessionReport({
                   {colorStats.map((color) => (
                     <div
                       key={color.id}
-                      className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm p-3"
+                      className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm p-3"
                     >
                       <div className="flex items-center gap-2">
                         <span
@@ -484,7 +484,7 @@ export function StroopSessionReport({
                                   : 'bg-woven-incorrect',
                             )}
                           />
-                          <div className="rounded-xl border border-woven-border/60 bg-woven-surface/80 backdrop-blur-lg shadow-sm px-3 py-3">
+                          <div className="rounded-xl border border-woven-border/60 bg-woven-surface shadow-sm px-3 py-3">
                             <div className="flex items-center gap-2">
                               <span className="text-xs font-bold tabular-nums text-woven-text-muted">
                                 {String(turn.index).padStart(2, '0')}
@@ -578,7 +578,7 @@ export function StroopSessionReport({
               <button
                 type="button"
                 onClick={onPlayAgain}
-                className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft-colored transition-all active:scale-[0.98]"
+                className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft transition-all active:scale-[0.98]"
               >
                 <ArrowClockwise size={18} weight="bold" />
                 <span>{t('game.cogTask.restart')}</span>

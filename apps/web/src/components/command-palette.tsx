@@ -358,7 +358,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         className={cn(
           chrome === 'embedded'
             ? 'flex h-9 w-9 items-center justify-center rounded-full text-foreground transition duration-200 hover:bg-foreground/6 active:scale-95'
-            : 'shrink-0 flex h-11 w-11 items-center justify-center rounded-full border border-woven-border bg-woven-surface text-foreground shadow-sm transition duration-200 hover:bg-woven-surface/80 active:scale-95',
+            : 'shrink-0 flex h-11 w-11 items-center justify-center rounded-full border border-woven-border bg-woven-surface text-foreground shadow-sm transition duration-200 hover:bg-woven-surface active:scale-95',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2',
         )}
         aria-label={t('commandPalette.open', 'Quick search')}
@@ -380,9 +380,9 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
           if (!next) setSearch('');
         }}
         label={t('commandPalette.title', 'Quick search')}
-        overlayClassName="fixed inset-0 z-[110] bg-black/35 md:bg-black/18 md:backdrop-blur-sm"
+        overlayClassName="fixed inset-0 z-[110] bg-black/35 md:bg-black/18"
         contentClassName={cn(
-          'fixed left-1/2 top-[max(0.75rem,6vh)] z-[111] w-[calc(100vw-1rem)] max-w-xl -translate-x-1/2 overflow-hidden rounded-[22px] border border-border/50 bg-card/85 backdrop-blur-2xl shadow-[0_24px_70px_-36px_hsl(var(--glass-shadow)/0.45)] outline-none',
+          'fixed left-1/2 top-[max(0.75rem,6vh)] z-[111] w-[calc(100vw-1rem)] max-w-xl -translate-x-1/2 overflow-hidden rounded-[22px] border border-border/50 bg-card shadow-[0_24px_70px_-36px_hsl(var(--border)/0.45)] outline-none',
           'data-[state=open]:animate-in data-[state=closed]:animate-out duration-200',
           'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
           'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
@@ -392,7 +392,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         <CommandPrimitive className="overflow-hidden" shouldFilter>
           <DialogTitle className="sr-only">{t('commandPalette.title', 'Quick search')}</DialogTitle>
           <div className="flex items-center gap-2.5 border-b border-border/60 px-3.5 py-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-muted/70 text-muted-foreground">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-muted text-muted-foreground">
               <MagnifyingGlass size={16} weight="bold" />
             </div>
             <div className="min-w-0 flex-1">
@@ -406,7 +406,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
                 placeholder={t('commandPalette.placeholder', 'Search a page, setting or mode...')}
               />
             </div>
-            <div className="hidden sm:flex items-center gap-1 rounded-full border border-border/70 bg-background/80 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">
+            <div className="hidden sm:flex items-center gap-1 rounded-full border border-border/70 bg-background px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">
               <Keyboard size={13} weight="bold" />
               <span>{shortcutLabel}</span>
             </div>
@@ -536,7 +536,7 @@ function PaletteItem({
         <div className="flex items-center gap-1.5">
           <span className="truncate text-sm font-semibold text-foreground">{action.label}</span>
           {action.badge ? (
-            <span className="rounded-full border border-border/70 bg-background/80 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+            <span className="rounded-full border border-border/70 bg-background px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
               {action.badge}
             </span>
           ) : null}

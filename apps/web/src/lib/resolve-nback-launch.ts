@@ -48,6 +48,7 @@ export function resolveNbackLaunch(params: {
       ? params.playIntent.gameModeId
       : undefined;
   const isHybridJourney = journeyGameMode === DUAL_TRACK_DNB_HYBRID_MODE_ID;
+  const isCompositeJourney = journeyGameMode === 'neurodual-mix';
 
   const journeyStageId =
     params.playIntent.journeyStageId ??
@@ -95,6 +96,7 @@ export function resolveNbackLaunch(params: {
   ) {
     effectiveMode =
       params.journeyStateNextSessionGameMode ??
+      (isCompositeJourney ? 'dualnback-classic' : undefined) ??
       (!isHybridJourney ? journeyGameMode : undefined) ??
       effectiveMode;
   }

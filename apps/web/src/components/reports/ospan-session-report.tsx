@@ -153,7 +153,7 @@ export function OspanSessionReport({
                 ? t('game.cogTask.sessionInterrupted')
                 : t('settings.gameMode.ospan', 'Operation Span')}
               {'\u00A0'}
-              <span className="inline-flex align-middle -translate-y-px items-center px-3 py-1.5 rounded-lg text-sm font-bold leading-none tabular-nums tracking-wide whitespace-nowrap bg-muted/80 backdrop-blur-lg border border-border/60 shadow-sm text-foreground">
+              <span className="inline-flex align-middle -translate-y-px items-center px-3 py-1.5 rounded-lg text-sm font-bold leading-none tabular-nums tracking-wide whitespace-nowrap bg-muted border border-border/60 shadow-sm text-foreground">
                 {t('game.cogTask.span')} {resolvedMaxSpan}
               </span>
             </h2>
@@ -215,7 +215,7 @@ export function OspanSessionReport({
 
               {/* ═══ ZONE 3: STATS ROW ═══ */}
               <div className="px-2 mt-4 grid grid-cols-4 gap-2 text-center">
-                <div className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm p-2.5">
+                <div className="rounded-xl border border-border/60 bg-muted shadow-sm p-2.5">
                   <p className="text-[10px] uppercase tracking-wide text-muted-foreground">
                     {t('game.cogTask.sets')}
                   </p>
@@ -223,7 +223,7 @@ export function OspanSessionReport({
                     {resolvedTotalSets}
                   </p>
                 </div>
-                <div className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm p-2.5">
+                <div className="rounded-xl border border-border/60 bg-muted shadow-sm p-2.5">
                   <p className="text-[10px] uppercase tracking-wide text-muted-foreground">
                     {t('game.cogTask.correct')}
                   </p>
@@ -231,7 +231,7 @@ export function OspanSessionReport({
                     {resolvedCorrectSets}
                   </p>
                 </div>
-                <div className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm p-2.5">
+                <div className="rounded-xl border border-border/60 bg-muted shadow-sm p-2.5">
                   <p className="text-[10px] uppercase tracking-wide text-muted-foreground">
                     {t('game.cogTask.equations')}
                   </p>
@@ -246,7 +246,7 @@ export function OspanSessionReport({
                     {resolvedProcessingAccuracy}%
                   </p>
                 </div>
-                <div className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm p-2.5">
+                <div className="rounded-xl border border-border/60 bg-muted shadow-sm p-2.5">
                   <p className="text-[10px] uppercase tracking-wide text-muted-foreground">
                     {t('game.cogTask.recall')}
                   </p>
@@ -319,7 +319,7 @@ export function OspanSessionReport({
                         resolvedResults.map((r, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-2 rounded-lg border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm px-3 py-2"
+                            className="flex items-center gap-2 rounded-lg border border-border/60 bg-muted shadow-sm px-3 py-2"
                           >
                             <span className="text-xs font-bold text-muted-foreground w-5 text-right tabular-nums">
                               {i + 1}
@@ -343,7 +343,7 @@ export function OspanSessionReport({
                           </div>
                         ))
                       ) : (
-                        <div className="rounded-xl border border-border/60 bg-muted/80 backdrop-blur-lg backdrop-saturate-150 shadow-sm px-3 py-3 text-sm text-muted-foreground">
+                        <div className="rounded-xl border border-border/60 bg-muted shadow-sm px-3 py-3 text-sm text-muted-foreground">
                           {t(
                             'report.ospan.noDetailedSets',
                             'Detailed set history is unavailable for this session.',
@@ -370,7 +370,7 @@ export function OspanSessionReport({
               <button
                 type="button"
                 onClick={onPlayAgain}
-                className="flex flex-1 min-w-0 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft-colored transition-all active:scale-[0.98]"
+                className="flex flex-1 min-w-0 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-soft transition-all active:scale-[0.98]"
               >
                 <ArrowClockwise size={18} weight="bold" />
                 <span className="min-w-0 text-center">{t('game.cogTask.restart')}</span>

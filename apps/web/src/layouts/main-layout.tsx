@@ -190,7 +190,7 @@ export function MainLayout(): ReactNode {
                 <div className="absolute top-4 end-4 z-40 flex items-start gap-2 md:fixed md:top-6 md:end-6">
                   <PWAInstallButton />
                   <div
-                    className="flex items-center gap-1 rounded-full border border-woven-border bg-woven-surface/95 px-1.5 py-1 shadow-sm backdrop-blur-sm"
+                    className="flex items-center gap-1 rounded-full border border-woven-border bg-woven-surface px-1.5 py-1 shadow-sm"
                     data-capture-control-surface="toolbar"
                   >
                     <CommandPalette chrome="embedded" />

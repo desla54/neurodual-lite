@@ -80,7 +80,7 @@ export function SessionRecoveryModal({
         role="button"
         tabIndex={0}
         aria-label={t('common.close')}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/60"
         onClick={onDismiss}
         onKeyDown={(e) => e.key === 'Escape' && onDismiss()}
       />
