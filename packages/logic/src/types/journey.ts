@@ -20,7 +20,7 @@ export const JOURNEY_MODE_TO_GAME_MODE: Record<JourneyModeType, string> = {
   pick: 'dual-pick',
   place: 'dual-place',
   memo: 'dual-memo',
-  catch: 'dual-catch',
+  catch: 'dualnback-classic',
   simulator: '__INVALID_USE_JOURNEY_GAMEMODE__',
 } as const;
 

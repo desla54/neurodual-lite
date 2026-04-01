@@ -169,7 +169,7 @@ function deriveImportedSessionType(
   if (normalizedGameMode === 'dual-pick') return 'dual-pick';
   if (normalizedGameMode === 'dual-trace') return 'trace';
   if (
-    normalizedGameMode === 'dual-catch' ||
+    normalizedGameMode === 'dualnback-classic' ||
     normalizedGameMode === 'dualnback-classic' ||
     normalizedGameMode === 'sim-brainworkshop'
   ) {
@@ -228,7 +228,7 @@ function calculateImportedUpsFallback(
       falseAlarms: totalFa,
       correctRejections: totalCr,
     },
-    normalizeModeId(gameMode ?? 'dual-catch'),
+    normalizeModeId(gameMode ?? 'dualnback-classic'),
   );
 }
 
@@ -320,7 +320,7 @@ export function projectTempoSessionToSummaryInput(input: {
 
   const gameMode = startEventCandidate?.gameMode
     ? normalizeModeId(startEventCandidate.gameMode)
-    : 'dual-catch';
+    : 'dualnback-classic';
 
   const tempoProjection = projectTempoSessionEntrypoint({
     sessionId: input.sessionId,

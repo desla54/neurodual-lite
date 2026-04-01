@@ -119,7 +119,7 @@ const ACTIVE_MODALITIES_CSV_EXPR = sql<string>`COALESCE(
 )`;
 
 const CANONICAL_GAME_MODE_IDS = [
-  'dual-catch',
+  'dualnback-classic',
   'dual-place',
   'dual-memo',
   'dual-pick',

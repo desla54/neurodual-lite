@@ -46,20 +46,6 @@ const DEFAULT_NAVIGATION: ModeSettingsNavigation = {
 };
 
 const MODE_NAVIGATION_OVERRIDES: Partial<Record<GameMode, Partial<ModeSettingsNavigation>>> = {
-  'dual-track': {
-    base: {
-      title: 'settings.modeSections.dualTrack.base.title',
-      titleDefault: 'Cibles et modalites',
-      subtitle: 'settings.modeSections.dualTrack.base.subtitle',
-      subtitleDefault: 'Nombre de cibles, position, couleur, audio',
-    },
-    tempo: {
-      title: 'settings.modeSections.dualTrack.tempo.title',
-      titleDefault: 'Mouvement et duree',
-      subtitle: 'settings.modeSections.dualTrack.tempo.subtitle',
-      subtitleDefault: 'Proximite, vitesse, trajectoires, duree de suivi',
-    },
-  },
   tower: {
     sectionTitle: 'settings.modeSections.tower.sectionTitle',
     sectionTitleDefault: 'Reglages Tower of London',
@@ -84,34 +70,6 @@ const MODE_NAVIGATION_OVERRIDES: Partial<Record<GameMode, Partial<ModeSettingsNa
       titleDefault: 'Aides et reperes',
       subtitle: 'settings.modeSections.gridlock.advanced.subtitle',
       subtitleDefault: 'Assistance, HUD, fin de puzzle',
-    },
-  },
-  'dual-trace': {
-    base: {
-      title: 'settings.modeSections.dualTrace.base.title',
-      titleDefault: 'Session de base',
-      subtitle: 'settings.modeSections.dualTrace.base.subtitle',
-      subtitleDefault: 'Niveau, modalites et duree',
-    },
-    tempo: {
-      title: 'settings.modeSections.dualTrace.tempo.title',
-      titleDefault: 'Rythme et feedback',
-      subtitle: 'settings.modeSections.dualTrace.tempo.subtitle',
-      subtitleDefault: 'Stimulus, intervalles et fenetres de reponse',
-    },
-    advanced: {
-      title: 'settings.modeSections.dualTrace.advanced.title',
-      titleDefault: 'Regles dynamiques',
-      subtitle: 'settings.modeSections.dualTrace.advanced.subtitle',
-      subtitleDefault: 'Variantes, interferences et comportement du swipe',
-    },
-  },
-  'dual-place': {
-    generator: {
-      title: 'settings.modeSections.dualPlace.generator.title',
-      titleDefault: 'Timeline et distracteurs',
-      subtitle: 'settings.modeSections.dualPlace.generator.subtitle',
-      subtitleDefault: 'Ordre de placement, timeline et cartes parasites',
     },
   },
   'memory-match': {
@@ -154,14 +112,6 @@ const MODE_NAVIGATION_OVERRIDES: Partial<Record<GameMode, Partial<ModeSettingsNa
       subtitleDefault: 'Essais et duree',
     },
   },
-  pasat: {
-    base: {
-      title: 'settings.modeSections.pasat.base.title',
-      titleDefault: 'Reglages principaux',
-      subtitle: 'settings.modeSections.pasat.base.subtitle',
-      subtitleDefault: 'Essais et rythme',
-    },
-  },
   'digit-span': {
     base: {
       title: 'settings.modeSections.digitSpan.base.title',
@@ -176,14 +126,6 @@ const MODE_NAVIGATION_OVERRIDES: Partial<Record<GameMode, Partial<ModeSettingsNa
       titleDefault: 'Reglages principaux',
       subtitle: 'settings.modeSections.symmetrySpan.base.subtitle',
       subtitleDefault: 'Empan et series',
-    },
-  },
-  'corsi-block': {
-    base: {
-      title: 'settings.modeSections.corsi.base.title',
-      titleDefault: 'Reglages principaux',
-      subtitle: 'settings.modeSections.corsi.base.subtitle',
-      subtitleDefault: 'Empan et direction',
     },
   },
   'mental-rotation': {
@@ -264,14 +206,6 @@ const MODE_NAVIGATION_OVERRIDES: Partial<Record<GameMode, Partial<ModeSettingsNa
       titleDefault: 'Reglages principaux',
       subtitle: 'settings.modeSections.sokoban.base.subtitle',
       subtitleDefault: 'Difficulte et puzzles',
-    },
-  },
-  'dual-pick': {
-    generator: {
-      title: 'settings.modeSections.dualPick.generator.title',
-      titleDefault: 'Timeline et labels',
-      subtitle: 'settings.modeSections.dualPick.generator.subtitle',
-      subtitleDefault: 'Ordre de placement, timeline et distracteurs',
     },
   },
   'sim-brainworkshop': {

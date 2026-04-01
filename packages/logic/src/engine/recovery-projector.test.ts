@@ -45,7 +45,7 @@ describe('RecoveryProjector', () => {
       stimulusDurationMs: 500,
       generator: 'Sequence',
     },
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     trialsSeed: 'seed-123',
   });
 
@@ -146,7 +146,7 @@ describe('RecoveryProjector', () => {
     const result = RecoveryProjector.project(events);
 
     expect(result).not.toBeNull();
-    expect(result!.gameMode).toBe('dual-catch');
+    expect(result!.gameMode).toBe('dualnback-classic');
     expect(result!.trialsSeed).toBe('seed-123');
   });
 

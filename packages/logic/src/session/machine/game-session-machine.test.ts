@@ -419,7 +419,7 @@ describe('GameSessionMachine', () => {
     it('does not set audioPreset when spec has no audioPreset', async () => {
       const mockAudio = createMockAudio();
       const specWithoutPreset = {
-        metadata: { id: 'dual-catch', displayName: 'Dual Catch' },
+        metadata: { id: 'dualnback-classic', displayName: 'Dual Catch' },
         sessionType: 'GameSession' as const,
         scoring: { strategy: 'sdt' as const, passThreshold: 1.5 },
         timing: {

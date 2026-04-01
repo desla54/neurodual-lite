@@ -256,7 +256,7 @@ export const ClassicTutorialSpec: TutorialSpec = {
   })(),
 
   // Hub Metadata
-  associatedModeId: 'dual-catch',
+  associatedModeId: 'dualnback-classic',
   titleKey: 'tutorial.hub.basics.title',
   descriptionKey: 'tutorial.hub.basics.description',
   iconName: 'GraduationCap',

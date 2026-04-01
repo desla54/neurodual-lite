@@ -119,8 +119,8 @@ describe('runIndicatorPipeline', () => {
       expect(runIndicatorPipeline(report)).toBeNull();
     });
 
-    it('returns null for dual-catch (no indicator)', () => {
-      const report = baseDualClassic({ gameMode: 'dual-catch' as any });
+    it('returns null for dualnback-classic (no indicator)', () => {
+      const report = baseDualClassic({ gameMode: 'dualnback-classic' as any });
       expect(runIndicatorPipeline(report)).toBeNull();
     });
 

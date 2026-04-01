@@ -19,14 +19,14 @@ import {
   MODE_COLOR_DUAL_CATCH,
 } from './thresholds';
 
-export interface DualCatchExtensions extends TempoUiExtensions {
+export interface DualnbackClassicExtensions extends TempoUiExtensions {
   readonly adaptiveTargetDPrime: number;
   readonly fixedStimulusDurationMs: number;
 }
 
-export const DualCatchSpec: ModeSpec & { extensions: DualCatchExtensions } = {
+export const DualnbackClassicSpec: ModeSpec & { extensions: DualnbackClassicExtensions } = {
   metadata: {
-    id: 'dual-catch',
+    id: 'dualnback-classic',
     displayName: 'Dual Catch',
     description: 'Attrape les correspondances N-back.',
     tags: ['training', 'default', 'adaptive'],

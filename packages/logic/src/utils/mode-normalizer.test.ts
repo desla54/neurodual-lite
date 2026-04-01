@@ -4,7 +4,7 @@ import { normalizeModeId } from './mode-normalizer';
 describe('mode-normalizer', () => {
   describe('normalizeModeId', () => {
     it('returns canonical IDs unchanged', () => {
-      expect(normalizeModeId('dual-catch')).toBe('dual-catch');
+      expect(normalizeModeId('dualnback-classic')).toBe('dualnback-classic');
       expect(normalizeModeId('dual-place')).toBe('dual-place');
       expect(normalizeModeId('dual-memo')).toBe('dual-memo');
       expect(normalizeModeId('dual-pick')).toBe('dual-pick');

@@ -22,7 +22,7 @@ import { cn } from '../lib/utils';
 
 // Icon mapping - matches game mode icons
 const ICON_MAP: Record<string, Icon> = {
-  GraduationCap, // dual-catch (basics)
+  GraduationCap, // dualnback-classic (basics)
   MapPin, // dual-place
   Tag, // dual-pick
   Fingerprint, // dual-trace

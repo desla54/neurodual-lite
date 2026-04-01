@@ -80,7 +80,7 @@ const sessionTypeArb = fc.constantFrom<SessionSummaryInput['sessionType']>(
 
 /** Generate valid game modes */
 const gameModeArb = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'brainworkshop',
   'dual-place',

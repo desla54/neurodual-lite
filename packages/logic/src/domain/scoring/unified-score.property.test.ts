@@ -151,7 +151,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
 
   describe('calculateTempoAccuracy(data, gameMode) - spec-driven', () => {
     const gameModeArb = fc.constantFrom(
-      'dual-catch',
+      'dualnback-classic',
       'dualnback-classic',
       'sim-brainworkshop',
       'custom',
@@ -178,7 +178,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
 
     it('perfect performance = 100 for all modes', () => {
       // All hits, no misses, no FA, all CR
-      for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop']) {
+      for (const mode of ['dualnback-classic', 'sim-brainworkshop']) {
         expect(
           UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: 20, misses: 0, falseAlarms: 0, correctRejections: 20 },
@@ -188,7 +188,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
       }
     });
 
-    it('SDT mode (dual-catch): geometric mean sqrt(hitRate * crRate)', () => {
+    it('SDT mode (dualnback-classic): geometric mean sqrt(hitRate * crRate)', () => {
       fc.assert(
         fc.property(
           fc.integer({ min: 1, max: 50 }),
@@ -198,7 +198,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
           (hits, misses, fa, cr) => {
             const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
               { hits, misses, falseAlarms: fa, correctRejections: cr },
-              'dual-catch',
+              'dualnback-classic',
             );
 
             const hitRate = hits / (hits + misses);
@@ -257,7 +257,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
     });
 
     it('returns 0 when no trials for all modes', () => {
-      for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop']) {
+      for (const mode of ['dualnback-classic', 'sim-brainworkshop']) {
         expect(
           UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 },
@@ -412,7 +412,7 @@ describe('UnifiedScoreCalculator - Property Tests', () => {
   describe('mode-specific calculators', () => {
     it('calculateTempo returns valid UPS for all game modes', () => {
       const gameModeArb = fc.constantFrom(
-        'dual-catch',
+        'dualnback-classic',
         'dualnback-classic',
         'sim-brainworkshop',
         'custom',

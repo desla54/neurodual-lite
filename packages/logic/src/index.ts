@@ -1267,9 +1267,8 @@ export {
   // Spec → BlockConfig helper (Phase 4/7: spec-first simplification)
   getBlockConfigFromSpec,
   // Tempo Specs
-  DualCatchSpec,
-  CustomModeSpec,
   DualnbackClassicSpec,
+  CustomModeSpec,
   SimBrainWorkshopSpec,
   TempoSpecs,
   // OSPAN Spec

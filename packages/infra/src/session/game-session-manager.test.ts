@@ -105,26 +105,26 @@ describe('GameSessionManager', () => {
     it('registers a session and transitions to active', () => {
       const session = createMockSession({ sessionId: 'abc-123' });
 
-      const info = manager.registerSession(session, 'tempo', 'dual-catch');
+      const info = manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       expect(manager.hasActiveSession()).toBe(true);
       expect(manager.getState()).toBe('active');
       expect(info.sessionId).toBe('abc-123');
       expect(info.mode).toBe('tempo');
-      expect(info.gameMode).toBe('dual-catch');
+      expect(info.gameMode).toBe('dualnback-classic');
       expect(info.state).toBe('active');
     });
 
     it('subscribes to session updates', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       expect(session.subscribe).toHaveBeenCalledTimes(1);
     });
 
     it('stores journey context', () => {
       const session = createMockSession();
-      const info = manager.registerSession(session, 'tempo', 'dual-catch', 'journey-1', 3);
+      const info = manager.registerSession(session, 'tempo', 'dualnback-classic', 'journey-1', 3);
 
       expect(info.journeyId).toBe('journey-1');
       expect(info.journeyStageId).toBe(3);
@@ -134,7 +134,7 @@ describe('GameSessionManager', () => {
       const session1 = createMockSession({ sessionId: 'first' });
       const session2 = createMockSession({ sessionId: 'second' });
 
-      manager.registerSession(session1, 'tempo', 'dual-catch');
+      manager.registerSession(session1, 'tempo', 'dualnback-classic');
       manager.registerSession(session2, 'flow', 'dual-place');
 
       expect(manager.getActiveSession()?.sessionId).toBe('second');
@@ -145,19 +145,19 @@ describe('GameSessionManager', () => {
   describe('spawn', () => {
     it('creates a pending session info', async () => {
       const info = await manager.spawn({
-        gameMode: 'dual-catch',
+        gameMode: 'dualnback-classic',
         userId: 'user-1',
       });
 
       expect(info.sessionId).toMatch(/^pending-/);
       expect(info.mode).toBe('tempo');
-      expect(info.gameMode).toBe('dual-catch');
+      expect(info.gameMode).toBe('dualnback-classic');
       expect(info.state).toBe('starting');
     });
 
     it('throws if a session is already active', async () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       await expect(manager.spawn({ gameMode: 'dual-place', userId: 'user-1' })).rejects.toThrow(
         /another session is already active/,
@@ -166,7 +166,7 @@ describe('GameSessionManager', () => {
 
     it('maps game modes to correct session modes', async () => {
       const cases: Array<[string, string]> = [
-        ['dual-catch', 'tempo'],
+        ['dualnback-classic', 'tempo'],
         ['dual-place', 'flow'],
         ['dual-memo', 'recall'],
         ['dual-pick', 'pick'],
@@ -189,7 +189,7 @@ describe('GameSessionManager', () => {
 
     it('stores journey context from spawn options', async () => {
       const info = await manager.spawn({
-        gameMode: 'dual-catch',
+        gameMode: 'dualnback-classic',
         userId: 'user-1',
         journeyId: 'j-1',
         journeyStageId: 5,
@@ -203,7 +203,7 @@ describe('GameSessionManager', () => {
   describe('pause / resume', () => {
     it('pauses an active session', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.pause('user');
 
@@ -213,7 +213,7 @@ describe('GameSessionManager', () => {
 
     it('resumes a paused session', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.pause('user');
       manager.resume();
@@ -229,7 +229,7 @@ describe('GameSessionManager', () => {
 
     it('resume is no-op when not paused', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.resume(); // already active, not paused
       expect(manager.getState()).toBe('active');
@@ -238,7 +238,7 @@ describe('GameSessionManager', () => {
 
     it('pause is no-op when session has no pause method', () => {
       const session = createMockSession({ pause: undefined });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.pause('user');
       // State remains active because session cannot be paused
@@ -249,7 +249,7 @@ describe('GameSessionManager', () => {
   describe('stop', () => {
     it('stops an active session and returns to idle', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.stop('user');
 
@@ -270,7 +270,7 @@ describe('GameSessionManager', () => {
           throw new Error('stop failed');
         }),
       });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       // Should not throw
       manager.stop('error');
@@ -290,7 +290,7 @@ describe('GameSessionManager', () => {
         }),
       });
 
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
       expect(snapshotListener).toBeDefined();
 
       // Simulate session finishing
@@ -309,7 +309,7 @@ describe('GameSessionManager', () => {
         }),
       });
 
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
       snapshotListener!({ value: 'finished' });
 
       expect(manager.hasActiveSession()).toBe(false);
@@ -324,7 +324,7 @@ describe('GameSessionManager', () => {
         }),
       });
 
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
       snapshotListener!({ phase: 'playing' });
 
       expect(manager.hasActiveSession()).toBe(true);
@@ -338,7 +338,7 @@ describe('GameSessionManager', () => {
       manager.subscribe((e) => events.push(e));
 
       const session = createMockSession({ sessionId: 'test-id' });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       expect(events.some((e) => e.type === 'SESSION_STARTED')).toBe(true);
       const started = events.find((e) => e.type === 'SESSION_STARTED');
@@ -348,7 +348,7 @@ describe('GameSessionManager', () => {
     it('emits SESSION_PAUSED on pause', () => {
       const events: GameSessionManagerEvent[] = [];
       const session = createMockSession({ sessionId: 'pause-test' });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.subscribe((e) => events.push(e));
       manager.pause('backgrounded');
@@ -361,7 +361,7 @@ describe('GameSessionManager', () => {
     it('emits SESSION_RESUMED on resume', () => {
       const events: GameSessionManagerEvent[] = [];
       const session = createMockSession({ sessionId: 'resume-test' });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
       manager.pause('user');
 
       manager.subscribe((e) => events.push(e));
@@ -373,7 +373,7 @@ describe('GameSessionManager', () => {
     it('emits SESSION_STOPPED on stop', () => {
       const events: GameSessionManagerEvent[] = [];
       const session = createMockSession({ sessionId: 'stop-test' });
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.subscribe((e) => events.push(e));
       manager.stop('error');
@@ -390,7 +390,7 @@ describe('GameSessionManager', () => {
       unsubscribe();
 
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       expect(events).toHaveLength(0);
     });
@@ -402,7 +402,7 @@ describe('GameSessionManager', () => {
 
       const session = createMockSession();
       // Should not throw
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
     });
   });
 
@@ -412,7 +412,7 @@ describe('GameSessionManager', () => {
       const mgr = new GameSessionManager({ appLifecycle });
 
       const session = createMockSession();
-      mgr.registerSession(session, 'tempo', 'dual-catch');
+      mgr.registerSession(session, 'tempo', 'dualnback-classic');
 
       expect(appLifecycle.enterSession).toHaveBeenCalledTimes(1);
       mgr.dispose();
@@ -423,7 +423,7 @@ describe('GameSessionManager', () => {
       const mgr = new GameSessionManager({ appLifecycle });
 
       const session = createMockSession();
-      mgr.registerSession(session, 'tempo', 'dual-catch');
+      mgr.registerSession(session, 'tempo', 'dualnback-classic');
       mgr.stop('user');
 
       expect(appLifecycle.exitSession).toHaveBeenCalledTimes(1);
@@ -434,7 +434,7 @@ describe('GameSessionManager', () => {
       const appLifecycle = createMockAppLifecycle();
       const mgr = new GameSessionManager({ appLifecycle });
 
-      await mgr.spawn({ gameMode: 'dual-catch', userId: 'user-1' });
+      await mgr.spawn({ gameMode: 'dualnback-classic', userId: 'user-1' });
 
       expect(appLifecycle.enterSession).toHaveBeenCalledTimes(1);
       mgr.dispose();
@@ -447,7 +447,7 @@ describe('GameSessionManager', () => {
       const mgr = new GameSessionManager({ platformLifecycle: platform });
 
       const session = createMockSession();
-      mgr.registerSession(session, 'tempo', 'dual-catch');
+      mgr.registerSession(session, 'tempo', 'dualnback-classic');
 
       platform.emit('BACKGROUNDED');
 
@@ -461,7 +461,7 @@ describe('GameSessionManager', () => {
       const mgr = new GameSessionManager({ platformLifecycle: platform });
 
       const session = createMockSession();
-      mgr.registerSession(session, 'tempo', 'dual-catch');
+      mgr.registerSession(session, 'tempo', 'dualnback-classic');
 
       platform.emit('BACKGROUNDED');
       platform.emit('FOREGROUNDED');
@@ -475,7 +475,7 @@ describe('GameSessionManager', () => {
   describe('dispose', () => {
     it('stops active session on dispose', () => {
       const session = createMockSession();
-      manager.registerSession(session, 'tempo', 'dual-catch');
+      manager.registerSession(session, 'tempo', 'dualnback-classic');
 
       manager.dispose();
 
@@ -499,7 +499,7 @@ describe('GameSessionManager', () => {
       const mgr = new GameSessionManager({ platformLifecycle: platform });
 
       const session = createMockSession();
-      mgr.registerSession(session, 'tempo', 'dual-catch');
+      mgr.registerSession(session, 'tempo', 'dualnback-classic');
 
       mgr.dispose();
 
@@ -534,7 +534,7 @@ describe('Singleton pattern', () => {
   it('resetSessionManager disposes and clears instance', () => {
     const mgr1 = getSessionManager();
     const session = createMockSession();
-    mgr1.registerSession(session, 'tempo', 'dual-catch');
+    mgr1.registerSession(session, 'tempo', 'dualnback-classic');
 
     resetSessionManager();
 

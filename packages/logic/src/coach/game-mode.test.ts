@@ -65,13 +65,13 @@ describe('GameModeRegistry', () => {
   describe('Basic operations', () => {
     it('should list registered modes', () => {
       const modes = gameModeRegistry.list();
-      expect(modes).toContain('dual-catch');
+      expect(modes).toContain('dualnback-classic');
       expect(modes).toContain('custom');
     });
 
     it('should get mode definition by ID', () => {
-      const mode = gameModeRegistry.get('dual-catch');
-      expect(mode.id).toBe('dual-catch');
+      const mode = gameModeRegistry.get('dualnback-classic');
+      expect(mode.id).toBe('dualnback-classic');
       expect(mode.displayName).toBe('Dual Catch');
     });
 
@@ -136,7 +136,7 @@ describe('GameModeRegistry', () => {
     });
 
     it('should throw when registering existing ID', () => {
-      const duplicate = { id: 'dual-catch' } as GameModeDefinition;
+      const duplicate = { id: 'dualnback-classic' } as GameModeDefinition;
       expect(() => gameModeRegistry.register(duplicate)).toThrow(/already registered/);
     });
 
@@ -165,9 +165,9 @@ describe('GameModeRegistry', () => {
         activeModalities: ['audio'],
       };
 
-      // Mode 'dual-catch' has configurableSettings: ['nLevel', 'activeModalities']
+      // Mode 'dualnback-classic' has configurableSettings: ['nLevel', 'activeModalities']
       // 'trialsCount' is NOT configurable for this mode.
-      const resolved = gameModeRegistry.resolveWithSettings('dual-catch', settings);
+      const resolved = gameModeRegistry.resolveWithSettings('dualnback-classic', settings);
 
       expect(resolved.config.nLevel).toBe(4);
       expect(resolved.config.activeModalities).toEqual(['audio']);
@@ -315,7 +315,7 @@ describe('GameModeRegistry', () => {
   describe('GameModeRegistry - Default Modes', () => {
     it('should have all expected default modes with correct properties', () => {
       const modes = [
-        { id: 'dual-catch', gen: 'Sequence', algo: 'adaptive' },
+        { id: 'dualnback-classic', gen: 'Sequence', algo: 'adaptive' },
         { id: 'custom', gen: 'BrainWorkshop', algo: 'none' },
         { id: 'dualnback-classic', gen: 'DualnbackClassic', algo: 'jaeggi-v1' },
         { id: 'sim-brainworkshop', gen: 'BrainWorkshop', algo: 'brainworkshop-v1' },

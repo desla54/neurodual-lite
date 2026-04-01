@@ -8,22 +8,22 @@ import { computeSpecDrivenTempoAccuracy } from './tempo-accuracy';
 describe('computeSpecDrivenTempoAccuracy', () => {
   describe('SDT strategy (default)', () => {
     it('computes geometric mean of hit rate and CR rate', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 8, 2, 2, 8);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 8, 2, 2, 8);
       expect(accuracy).toBeGreaterThan(0);
     });
 
     it('returns 0 when hit rate is 0', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 0, 10, 0, 10);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 0, 10, 0, 10);
       expect(accuracy).toBe(0);
     });
 
     it('returns 0 when CR rate is 0', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 10, 0, 10, 0);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 10, 0, 10, 0);
       expect(accuracy).toBe(0);
     });
 
     it('returns 0 for empty counts', () => {
-      expect(computeSpecDrivenTempoAccuracy('dual-catch', 0, 0, 0, 0)).toBe(0);
+      expect(computeSpecDrivenTempoAccuracy('dualnback-classic', 0, 0, 0, 0)).toBe(0);
     });
   });
 
@@ -35,7 +35,7 @@ describe('computeSpecDrivenTempoAccuracy', () => {
     });
 
     it('returns value between 0 and 1', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 8, 2, 2, 8);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 8, 2, 2, 8);
       expect(accuracy).toBeGreaterThanOrEqual(0);
       expect(accuracy).toBeLessThanOrEqual(1);
     });
@@ -43,12 +43,12 @@ describe('computeSpecDrivenTempoAccuracy', () => {
 
   describe('edge cases', () => {
     it('handles signal-only scenarios', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 10, 0, 0, 0);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 10, 0, 0, 0);
       expect(accuracy).toBe(0);
     });
 
     it('handles noise-only scenarios', () => {
-      const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 0, 0, 0, 10);
+      const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 0, 0, 0, 10);
       expect(accuracy).toBe(0);
     });
 

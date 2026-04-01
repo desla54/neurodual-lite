@@ -144,7 +144,7 @@ const validSDTCounts = fc
  * Generate game mode identifiers.
  */
 const gameMode = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'dual-tempo',
@@ -165,7 +165,7 @@ describe('Tempo Accuracy Property Tests', () => {
     fc.assert(
       fc.property(sdtCounts, (counts) => {
         const accuracy = computeSpecDrivenTempoAccuracy(
-          'dual-catch', // SDT mode
+          'dualnback-classic', // SDT mode
           counts.hits,
           counts.misses,
           counts.falseAlarms,
@@ -246,7 +246,7 @@ describe('Tempo Accuracy Property Tests', () => {
   test('6. No signal trials (hits=0, misses=0) returns 0 for SDT', () => {
     fc.assert(
       fc.property(nonNegativeInt, nonNegativeInt, (fa, cr) => {
-        const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 0, 0, fa, cr);
+        const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 0, 0, fa, cr);
         expect(accuracy).toBe(0);
       }),
       { numRuns: 200 },
@@ -256,7 +256,7 @@ describe('Tempo Accuracy Property Tests', () => {
   test('7. No noise trials (FA=0, CR=0) returns 0 for SDT', () => {
     fc.assert(
       fc.property(nonNegativeInt, nonNegativeInt, (hits, misses) => {
-        const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', hits, misses, 0, 0);
+        const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, 0, 0);
         expect(accuracy).toBe(0);
       }),
       { numRuns: 200 },
@@ -276,9 +276,9 @@ describe('Tempo Accuracy Property Tests', () => {
         positiveInt,
         positiveInt,
         (hits, misses, fa, cr, extraHits) => {
-          const acc1 = computeSpecDrivenTempoAccuracy('dual-catch', hits, misses, fa, cr);
+          const acc1 = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, cr);
           const acc2 = computeSpecDrivenTempoAccuracy(
-            'dual-catch',
+            'dualnback-classic',
             hits + extraHits,
             misses,
             fa,
@@ -301,8 +301,8 @@ describe('Tempo Accuracy Property Tests', () => {
         positiveInt,
         positiveInt,
         (hits, misses, fa, cr, extraCR) => {
-          const acc1 = computeSpecDrivenTempoAccuracy('dual-catch', hits, misses, fa, cr);
-          const acc2 = computeSpecDrivenTempoAccuracy('dual-catch', hits, misses, fa, cr + extraCR);
+          const acc1 = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, cr);
+          const acc2 = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, cr + extraCR);
           expect(acc2).toBeGreaterThanOrEqual(acc1 - 0.001);
         },
       ),
@@ -366,7 +366,7 @@ describe('Tempo Accuracy Property Tests', () => {
   test('12. Perfect performance (all hits, all CR) gives accuracy 1 for SDT', () => {
     fc.assert(
       fc.property(positiveInt, positiveInt, (hits, cr) => {
-        const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', hits, 0, 0, cr);
+        const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, 0, 0, cr);
         expect(accuracy).toBe(1);
       }),
       { numRuns: 200 },
@@ -400,7 +400,7 @@ describe('Tempo Accuracy Property Tests', () => {
   test('15. All misses (hits=0) returns 0 for SDT', () => {
     fc.assert(
       fc.property(positiveInt, positiveInt, positiveInt, (misses, fa, cr) => {
-        const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', 0, misses, fa, cr);
+        const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', 0, misses, fa, cr);
         expect(accuracy).toBe(0);
       }),
       { numRuns: 200 },
@@ -410,7 +410,7 @@ describe('Tempo Accuracy Property Tests', () => {
   test('16. All FA (cr=0) returns 0 for SDT', () => {
     fc.assert(
       fc.property(positiveInt, positiveInt, positiveInt, (hits, misses, fa) => {
-        const accuracy = computeSpecDrivenTempoAccuracy('dual-catch', hits, misses, fa, 0);
+        const accuracy = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, 0);
         expect(accuracy).toBe(0);
       }),
       { numRuns: 200 },
@@ -448,7 +448,7 @@ describe('Tempo Accuracy Property Tests', () => {
     fc.assert(
       fc.property(validSDTCounts, (counts) => {
         const sdtAccuracy = computeSpecDrivenTempoAccuracy(
-          'dual-catch',
+          'dualnback-classic',
           counts.hits,
           counts.misses,
           counts.falseAlarms,

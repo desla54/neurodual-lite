@@ -13,7 +13,7 @@
  * @returns The same mode ID
  *
  * @example
- * normalizeModeId('dual-catch') // → 'dual-catch'
+ * normalizeModeId('dualnback-classic') // → 'dualnback-classic'
  */
 export function normalizeModeId(modeId: string): string {
   return modeId;

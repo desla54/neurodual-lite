@@ -61,7 +61,7 @@ const nonZeroCrArb = fc.integer({ min: 1, max: 100 });
 
 /** Game modes */
 const gameModeArb = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'custom',
@@ -207,11 +207,11 @@ describe('Metamorphic: Monotonicity', () => {
         (hits, misses, fa, cr, delta) => {
           const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch', // SDT mode uses CR
+            'dualnback-classic', // SDT mode uses CR
           );
           const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: cr + delta },
-            'dual-catch',
+            'dualnback-classic',
           );
           return acc2 >= acc1;
         },
@@ -490,7 +490,7 @@ describe('Metamorphic: Component Contribution', () => {
     expect(avgAccImpact).toBeGreaterThanOrEqual(avgConfImpact * 1.0);
   });
 
-  it('C5: Each SDT component contributes to overall accuracy (dual-catch)', () => {
+  it('C5: Each SDT component contributes to overall accuracy (dualnback-classic)', () => {
     fc.assert(
       fc.property(
         fc.integer({ min: 5, max: 20 }),
@@ -500,24 +500,24 @@ describe('Metamorphic: Component Contribution', () => {
         (hits, misses, fa, cr) => {
           const base = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           // Improve each component separately
           const moreHits = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: hits + 3, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const fewerMisses = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses: Math.max(0, misses - 2), falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const fewerFA = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: Math.max(0, fa - 2), correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const moreCR = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: cr + 3 },
-            'dual-catch',
+            'dualnback-classic',
           );
 
           return moreHits >= base && fewerMisses >= base && fewerFA >= base && moreCR >= base;
@@ -839,11 +839,11 @@ describe('Metamorphic: Symmetry', () => {
           // If we have h/(h+m) and c/(c+f), swapping (h,m) with (c,f) should give same result
           const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: h, misses: m, falseAlarms: f, correctRejections: c },
-            'dual-catch',
+            'dualnback-classic',
           );
           const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: c, misses: f, falseAlarms: m, correctRejections: h },
-            'dual-catch',
+            'dualnback-classic',
           );
           return Math.abs(acc1 - acc2) <= 1; // Allow rounding difference
         },
@@ -860,7 +860,7 @@ describe('Metamorphic: Symmetry', () => {
       correctRejections: 20,
     };
 
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop'] as const) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop'] as const) {
       const acc = UnifiedScoreCalculator.calculateTempoAccuracy(perfectData, mode);
       expect(acc).toBe(100);
     }
@@ -874,7 +874,7 @@ describe('Metamorphic: Symmetry', () => {
       correctRejections: 0,
     };
 
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop'] as const) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop'] as const) {
       const acc = UnifiedScoreCalculator.calculateTempoAccuracy(zeroData, mode);
       expect(acc).toBe(0);
     }
@@ -943,7 +943,7 @@ describe('Metamorphic: Composition', () => {
       fc.property(nonZeroHitsArb, missesArb, faArb, nonZeroCrArb, (h, m, f, c) => {
         const acc = UnifiedScoreCalculator.calculateTempoAccuracy(
           { hits: h, misses: m, falseAlarms: f, correctRejections: c },
-          'dual-catch',
+          'dualnback-classic',
         );
 
         const hitRate = h / (h + m);
@@ -1165,7 +1165,7 @@ describe('Metamorphic: Extreme Values', () => {
         (hits, cr) => {
           const acc = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses: 0, falseAlarms: 0, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           return acc === 100;
         },
@@ -1198,14 +1198,14 @@ describe('Metamorphic: Extreme Values', () => {
   it('E8: All-false-alarms is 0% accuracy for SDT', () => {
     const acc = UnifiedScoreCalculator.calculateTempoAccuracy(
       { hits: 20, misses: 0, falseAlarms: 20, correctRejections: 0 },
-      'dual-catch',
+      'dualnback-classic',
     );
     // SDT with 0 CR rate = 0 (geometric mean with 0)
     expect(acc).toBe(0);
   });
 
   it('E9: Empty session yields 0', () => {
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop'] as const) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop'] as const) {
       const acc = UnifiedScoreCalculator.calculateTempoAccuracy(
         { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 },
         mode,

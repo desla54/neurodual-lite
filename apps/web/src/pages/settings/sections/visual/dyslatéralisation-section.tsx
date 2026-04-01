@@ -83,7 +83,7 @@ export function DyslateralisationSection(): ReactNode {
   };
 
   // Modes that have dyslat settings
-  const supportedModes = new Set<GameMode>(['dual-trace', 'dual-place', 'dual-pick', 'stroop']);
+  const supportedModes = new Set<GameMode>(['stroop']);
   const selectedModeConfig = selectedMode
     ? GAME_MODES.find((mode) => mode.value === selectedMode)
     : null;
@@ -109,9 +109,7 @@ export function DyslateralisationSection(): ReactNode {
   const stroopSubtitle = stroopDyslatEnabled ? t('common.on') : t('common.off');
 
   const goToSettings = () => {
-    if (selectedMode === 'dual-trace') setPage('trace');
-    else if (selectedMode === 'dual-place' || selectedMode === 'dual-pick') setPage('flow');
-    else if (selectedMode === 'stroop') setPage('stroop');
+    if (selectedMode === 'stroop') setPage('stroop');
   };
 
   if (page === 'mode') {
@@ -290,13 +288,9 @@ export function DyslateralisationSection(): ReactNode {
                 <div className="text-xs text-muted-foreground font-medium mt-0.5 truncate">
                   {!selectedMode
                     ? t('settings.dyslatéralisation.optionsNone')
-                    : selectedMode === 'dual-trace'
-                      ? traceSubtitle
-                      : selectedMode === 'dual-place' || selectedMode === 'dual-pick'
-                        ? flowSubtitle
-                        : selectedMode === 'stroop'
-                          ? stroopSubtitle
-                          : t('settings.dyslatéralisation.comingSoon')}
+                    : selectedMode === 'stroop'
+                      ? stroopSubtitle
+                      : t('settings.dyslatéralisation.comingSoon')}
                 </div>
               </div>
               <CaretRight size={16} weight="bold" className="shrink-0 text-muted-foreground" />

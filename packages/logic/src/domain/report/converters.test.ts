@@ -181,7 +181,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -191,7 +191,7 @@ describe('convertTempoSession', () => {
     const result = convertTempoSession(input);
 
     expect(result.sessionId).toBe('s1');
-    expect(result.gameMode).toBe('dual-catch');
+    expect(result.gameMode).toBe('dualnback-classic');
     expect(result.nLevel).toBe(2);
     expect(result.trialsCount).toBe(20);
     expect(result.passed).toBe(true);
@@ -265,7 +265,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -284,7 +284,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -302,7 +302,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -324,7 +324,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -351,7 +351,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -379,7 +379,7 @@ describe('convertTempoSession', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,
@@ -717,7 +717,7 @@ describe('convertGenericSession', () => {
     const input: GenericSessionInput = {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       nLevel: 3,
       activeModalities: ['position', 'audio'],
@@ -759,7 +759,7 @@ describe('convertGenericSession', () => {
     const result = convertGenericSession(input);
 
     expect(result.sessionId).toBe('s1');
-    expect(result.gameMode).toBe('dual-catch');
+    expect(result.gameMode).toBe('dualnback-classic');
     expect(result.nLevel).toBe(3);
     expect(result.unifiedAccuracy).toBe(0.85);
     expect(result.modeScore.value).toBe(2.1);
@@ -770,7 +770,7 @@ describe('convertGenericSession', () => {
     const baseInput: GenericSessionInput = {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       nLevel: 2,
       activeModalities: ['position'],
@@ -805,7 +805,7 @@ describe('Error Profile computation', () => {
       sessionId: 's1',
       createdAt: '2024-01-15T10:00:00Z',
       summary: createTempoSummary(),
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       gameModeLabel: 'Dual Catch',
       activeModalities: ['position', 'audio'],
       passed: true,

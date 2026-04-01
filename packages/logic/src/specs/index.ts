@@ -10,8 +10,7 @@
  * - types.ts             → Interface ModeSpec (the contract)
  * - thresholds.ts        → All scoring thresholds (SSOT)
  * - tempo-shared.ts      → Shared types for tempo modes
- * - dual-catch.spec.ts   → Dual Catch (SDT scoring)
- * - dualnback-classic.spec.ts → Sim Jaeggi (clinical protocol)
+ * - dualnback-classic.spec.ts → Sim Jaeggi (clinical protocol, error-based scoring)
  * - brainworkshop.spec.ts→ Sim BrainWorkshop (BW protocol)
  * - stroop.spec.ts       → Stroop (inhibitory control)
  * - custom.spec.ts       → Custom (full manual control)
@@ -20,7 +19,7 @@
  * - journey.spec.ts → Parcours, modes, seuils, routing
  *
  * Usage:
- *   import { DualCatchSpec, THRESHOLDS, JourneyModeSpecs } from '@neurodual/logic/specs';
+ *   import { DualnbackClassicSpec, THRESHOLDS, JourneyModeSpecs } from '@neurodual/logic/specs';
  */
 
 // =============================================================================
@@ -158,10 +157,7 @@ export {
 // Shared types
 export type { TempoUiExtensions } from './tempo-shared';
 
-// Dual Catch
-export { DualCatchSpec } from './dual-catch.spec';
-
-// Sim Jaeggi
+// Sim Jaeggi (Dual N-Back Classic)
 export { DualnbackClassicSpec, type DualnbackClassicExtensions } from './dualnback-classic.spec';
 
 // Sim BrainWorkshop
@@ -176,13 +172,11 @@ export {
 export { CustomModeSpec } from './custom.spec';
 
 // Combined registry for backwards compatibility
-import { DualCatchSpec } from './dual-catch.spec';
 import { DualnbackClassicSpec } from './dualnback-classic.spec';
 import { SimBrainWorkshopSpec } from './brainworkshop.spec';
 import { CustomModeSpec } from './custom.spec';
 
 export const TempoSpecs = {
-  'dual-catch': DualCatchSpec,
   'dualnback-classic': DualnbackClassicSpec,
   'sim-brainworkshop': SimBrainWorkshopSpec,
   custom: CustomModeSpec,
@@ -287,7 +281,7 @@ import type { ModeStatsSpec } from './types';
  *
  * This mapping handles the translation between:
  * - i18n keys used in UI (PascalCase: DualTempo, DualnbackClassic, Libre)
- * - Spec IDs used in logic (kebab-case: dual-catch, dualnback-classic, custom)
+ * - Spec IDs used in logic (kebab-case: dualnback-classic, dualnback-classic, custom)
  *
  * Used by:
  * - getStatsSpec() for resolving stats page configuration
@@ -299,7 +293,7 @@ import type { ModeStatsSpec } from './types';
  * @see getModeI18nKey() for the inverse mapping (spec ID → i18n key)
  */
 const I18N_KEY_TO_SPEC_ID: Record<string, string> = {
-  DualTempo: 'dual-catch',
+  DualTempo: 'dualnback-classic',
   DualnbackClassic: 'dualnback-classic',
   BrainWorkshop: 'sim-brainworkshop',
   Libre: 'custom',
@@ -413,7 +407,7 @@ const DEFAULT_MODE_COLORS: ModeColorSpec = {
  * Get the display spec for a game mode.
  * Falls back to default if mode not found or display not configured.
  *
- * @param gameMode The game mode ID (e.g., 'dual-catch', 'stroop')
+ * @param gameMode The game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @returns The ReportDisplaySpec for this mode
  */
 export function getModeDisplaySpec(gameMode: string, taskType?: string): ReportDisplaySpec {
@@ -433,7 +427,7 @@ export function getModeDisplaySpec(gameMode: string, taskType?: string): ReportD
  * Get the color spec for a game mode.
  * Falls back to default colors if mode not found.
  *
- * @param gameMode The game mode ID (e.g., 'dual-catch', 'stroop')
+ * @param gameMode The game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @param taskType Optional cognitive task type for spec-driven lookup
  * @returns The ModeColorSpec for this mode
  */
@@ -482,7 +476,7 @@ export function getReportSections(
  *
  * Falls back to undefined if mode not found (caller handles fallback).
  *
- * @param gameMode The game mode ID (e.g., 'dual-catch', 'sim-brainworkshop')
+ * @param gameMode The game mode ID (e.g., 'dualnback-classic', 'sim-brainworkshop')
  * @returns The scoring strategy from the spec, or undefined
  */
 export function getModeScoringStrategy(
@@ -504,7 +498,6 @@ export function getModeScoringStrategy(
  * SSOT: All mode → i18n key mappings are defined here.
  */
 const MODE_I18N_KEY_MAP: Record<string, string> = {
-  'dual-catch': 'dualCatch',
   'dualnback-classic': 'dualnbackClassic',
   'sim-brainworkshop': 'brainWorkshop',
   custom: 'libre',
@@ -520,10 +513,9 @@ const MODE_I18N_KEY_MAP: Record<string, string> = {
  *
  * Pattern: settings.gameMode.{keySuffix}
  * Examples:
- *   'dual-catch' → 'settings.gameMode.dualCatch'
  *   'dualnback-classic' → 'settings.gameMode.dualnbackClassic'
  *
- * @param gameMode The game mode ID (e.g., 'dual-catch', 'dualnback-classic')
+ * @param gameMode The game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @returns The i18n translation key
  */
 export function getModeI18nKey(gameMode: string | undefined): string {
@@ -541,7 +533,7 @@ export function getModeI18nKey(gameMode: string | undefined): string {
  * translation function instead of this method which returns the raw
  * displayName from the spec (which may not be localized).
  *
- * @param gameMode The game mode ID (e.g., 'dual-catch', 'stroop')
+ * @param gameMode The game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @returns The display name from the spec, or the mode ID as fallback
  */
 export function getModeName(gameMode: string | undefined): string {

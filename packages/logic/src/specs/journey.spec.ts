@@ -59,13 +59,6 @@ export const JOURNEY_PREMIUM_N_THRESHOLD = PREMIUM_N_THRESHOLD;
 export const JOURNEY_MODES_PER_LEVEL = _JOURNEY_MODES_PER_LEVEL;
 
 export const SimulatorSpecs: Record<string, SimulatorJourneySpec> = {
-  'dual-catch': {
-    gameMode: 'dual-catch',
-    route: '/nback',
-    scoringStrategy: 'dprime',
-    binaryProgression: false,
-    projectionKind: 'continuous-dprime',
-  },
   'dualnback-classic': {
     gameMode: 'dualnback-classic',
     route: '/nback',
@@ -184,14 +177,13 @@ export const JOURNEY_MODE_TO_GAME_MODE: Record<JourneyModeType, string> = {
   pick: 'dual-pick',
   place: 'dual-place',
   memo: 'dual-memo',
-  catch: 'dual-catch',
+  catch: 'dualnback-classic',
   simulator: '__INVALID_USE_JOURNEY_GAMEMODE__',
 } as const;
 
 export const GAME_MODE_TO_ROUTE: Record<string, string> = {
   'dualnback-classic': '/nback',
   'sim-brainworkshop': '/nback',
-  'dual-catch': '/nback',
   custom: '/nback',
   ospan: '/ospan',
   stroop: '/stroop',

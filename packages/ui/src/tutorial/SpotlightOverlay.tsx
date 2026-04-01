@@ -12,7 +12,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useMemo, type ReactNode } from 'react';
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '../lib/utils';
 

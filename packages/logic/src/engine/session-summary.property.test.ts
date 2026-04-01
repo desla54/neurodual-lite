@@ -54,7 +54,7 @@ const activemodalitiesArb = fc
   .array(modalityArb, { minLength: 1, maxLength: 3 })
   .map((arr) => [...new Set(arr)] as ModalityId[]);
 
-const gameModeArb = fc.constantFrom('dual-catch', 'dualnback-classic', 'sim-brainworkshop');
+const gameModeArb = fc.constantFrom('dualnback-classic', 'sim-brainworkshop');
 
 // =============================================================================
 // Event Factories
@@ -65,7 +65,7 @@ const createSessionStarted = (
   nLevel: number,
   timestamp: number,
   activeModalities: readonly ModalityId[] = ['position', 'audio'],
-  gameMode = 'dual-catch',
+  gameMode = 'dualnback-classic',
 ): SessionStartedEvent =>
   createMockEvent('SESSION_STARTED', {
     id: generateId(),
@@ -234,7 +234,7 @@ const generateSession = (
   trialsConfig: readonly TrialConfig[],
   completed: boolean,
   activeModalities: readonly ModalityId[] = ['position', 'audio'],
-  gameMode = 'dual-catch',
+  gameMode = 'dualnback-classic',
   focusLostCount = 0,
 ): GameEvent[] => {
   const events: GameEvent[] = [];
@@ -552,7 +552,7 @@ describe('SessionProjector - Property Tests', () => {
               trials,
               true,
               ['position', 'audio'],
-              'dual-catch',
+              'dualnback-classic',
               focusLostCount,
             );
             const summary = SessionProjector.project(events);
@@ -951,7 +951,7 @@ describe('SessionProjector - Property Tests', () => {
               trials,
               true,
               ['position', 'audio'],
-              'dual-catch',
+              'dualnback-classic',
               focusLostCount,
             );
             const summary = SessionProjector.project(events);

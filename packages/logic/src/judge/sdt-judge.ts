@@ -4,7 +4,7 @@
  * Evaluates trials using SDT metrics (hits, misses, false alarms, correct rejections).
  * Computes d' (d-prime) for sensitivity measurement.
  *
- * Used by: DualCatch, SimJaeggi, SimBrainWorkshop, Custom modes.
+ * Used by: DualnbackClassic, SimJaeggi, SimBrainWorkshop, Custom modes.
  */
 
 import { getIsTarget as getIsTargetFromAdapter } from '../domain/modality';

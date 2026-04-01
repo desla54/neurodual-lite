@@ -76,7 +76,7 @@ const MODALITY_KEY_MAP: Record<string, CalibrationModality> = {
 };
 
 function resolveCalibrationGameMode(gameMode: string | null): CalibrationGameMode {
-  const isDualTrack = gameMode === 'dual-track' || gameMode === 'dual-catch';
+  const isDualTrack = gameMode === 'dual-track' || gameMode === 'dualnback-classic';
   return isDualTrack ? 'dual-track' : 'nback';
 }
 

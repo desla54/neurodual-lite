@@ -202,7 +202,7 @@ describe('dualnback-classic home event sourcing projector', () => {
       sessionId,
       gameModeLabel: 'Dual Catch',
       events: noisyEvents,
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       activeModalities: ['position', 'audio'],
     });
 

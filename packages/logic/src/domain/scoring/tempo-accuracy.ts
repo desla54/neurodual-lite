@@ -97,7 +97,7 @@ function computeSimpleAccuracy(hits: number, misses: number): number {
  * - 'brainworkshop': BW formula (H / (H + M + FA))
  * - 'accuracy': Simple accuracy (H / (H + M))
  *
- * @param gameMode - The game mode ID (e.g., 'dualnback-classic', 'dual-catch')
+ * @param gameMode - The game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @param hits - Number of hits
  * @param misses - Number of misses
  * @param falseAlarms - Number of false alarms

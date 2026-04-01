@@ -23,20 +23,9 @@ export type GameModeId = string;
  * Known game mode IDs (for type safety in this module's records)
  */
 type KnownGameModeId =
-  | 'dual-catch'
-  | 'dual-place'
-  | 'dual-pick'
-  | 'dual-trace'
-  | 'dual-memo'
   | 'dualnback-classic'
   | 'sim-brainworkshop'
-  | 'dual-time'
-  | 'dual-track'
-  | 'corsi-block'
   | 'ospan'
-  | 'running-span'
-  | 'pasat'
-  | 'swm'
   | 'custom'
   | 'stroop'
   | 'stroop-flex'
@@ -268,17 +257,7 @@ type KnownGameModeId =
 
 export type GameRoute =
   | '/nback'
-  | '/dual-place'
-  | '/dual-memo'
-  | '/dual-pick'
-  | '/dual-trace'
-  | '/dual-time'
-  | '/dual-track'
-  | '/corsi-block'
   | '/ospan'
-  | '/running-span'
-  | '/pasat'
-  | '/swm'
   | '/stroop'
   | '/stroop-flex'
   | '/flanker'
@@ -518,18 +497,7 @@ export type GameRoute =
 export const GAME_MODE_ROUTES: Record<KnownGameModeId, GameRoute> = {
   'dualnback-classic': '/nback',
   'sim-brainworkshop': '/nback',
-  'dual-catch': '/nback',
-  'dual-place': '/dual-place',
-  'dual-pick': '/dual-pick',
-  'dual-memo': '/dual-memo',
-  'dual-trace': '/dual-trace',
-  'dual-time': '/dual-time',
-  'dual-track': '/dual-track',
-  'corsi-block': '/corsi-block',
   ospan: '/ospan',
-  'running-span': '/running-span',
-  pasat: '/pasat',
-  swm: '/swm',
   custom: '/nback',
   stroop: '/stroop',
   'stroop-flex': '/stroop-flex',
@@ -794,21 +762,9 @@ export interface ModeDefaults {
  * Default configurations per mode
  */
 export const MODE_DEFAULTS: Record<KnownGameModeId, ModeDefaults> = {
-  'dual-catch': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
-  'dual-place': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
-  'dual-pick': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
-  // Dual Trace has mode-specific defaults in the spec (n=1, 20 trials).
-  'dual-trace': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
-  'dual-memo': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
   'dualnback-classic': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   'sim-brainworkshop': { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
-  'dual-time': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
-  'dual-track': { nLevel: 3, trialsCount: 10 },
-  'corsi-block': { nLevel: 2, trialsCount: 14 },
   ospan: { nLevel: 2, trialsCount: 15 },
-  'running-span': { nLevel: 3, trialsCount: 15 },
-  pasat: { nLevel: 1, trialsCount: 20 },
-  swm: { nLevel: 4, trialsCount: 12 },
   custom: { nLevel: DEFAULT_N_LEVEL, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   stroop: { nLevel: 1, trialsCount: 96 },
   'stroop-flex': { nLevel: 1, trialsCount: 20 },
@@ -1114,7 +1070,6 @@ export function getModeForRoute(route: string): GameModeId | undefined {
  */
 export function isTempoMode(modeId: GameModeId): boolean {
   return (
-    modeId === 'dual-catch' ||
     modeId === 'dualnback-classic' ||
     modeId === 'sim-brainworkshop' ||
     modeId === 'custom'

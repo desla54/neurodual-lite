@@ -18,7 +18,7 @@ import { safeJsonParse } from './sql-helpers';
 
 describe('JSON Corruption Handling', () => {
   describe('safeJsonParse resilience', () => {
-    const fallback = { level: 1, mode: 'dual-catch' };
+    const fallback = { level: 1, mode: 'dualnback-classic' };
 
     it('handles completely corrupted JSON', () => {
       const corruptedValues = [

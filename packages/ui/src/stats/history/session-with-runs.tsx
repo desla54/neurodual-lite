@@ -162,7 +162,7 @@ export const SessionWithRuns = memo(function SessionWithRuns({
   const sessionMeta = useMemo(
     () => ({
       nLevel: session.nLevel,
-      mode: session.gameMode ?? 'dual-catch',
+      mode: session.gameMode ?? 'dualnback-classic',
       createdAt: session.createdAt,
       durationMs: session.durationMs,
     }),

@@ -146,7 +146,7 @@ function createSessionStartedEvent(
       stimulusDurationSeconds: 0.5,
       generator: 'Sequence',
     },
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     ...overrides,
   } as SessionStartedEvent;
 }

@@ -109,8 +109,8 @@ describe('deriveProtocolConfig', () => {
       expect(cfg!.postProcess).toBeDefined();
     });
 
-    it('returns null for dual-catch (no indicator)', () => {
-      const cfg = deriveProtocolConfig('dual-catch');
+    it('returns null for dualnback-classic (no indicator)', () => {
+      const cfg = deriveProtocolConfig('dualnback-classic');
       expect(cfg).toBeNull();
     });
 

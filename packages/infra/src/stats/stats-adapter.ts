@@ -1486,7 +1486,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
         SELECT
           CASE
             WHEN ${JOURNEY_SESSION_SQL} THEN 'Journey'
-            WHEN game_mode = 'dual-catch' THEN 'DualTempo'
+            WHEN game_mode = 'dualnback-classic' THEN 'DualTempo'
             WHEN game_mode = 'dual-place' THEN 'DualPlace'
             WHEN game_mode = 'dual-memo' THEN 'DualMemo'
             WHEN game_mode = 'dual-pick' THEN 'DualPick'

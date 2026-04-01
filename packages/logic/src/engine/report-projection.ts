@@ -75,7 +75,7 @@ function inferTempoGameModeFromGenerator(generator: string | undefined): string 
   if (generator === 'DualnbackClassic') return 'dualnback-classic';
   if (generator === 'BrainWorkshop') return 'sim-brainworkshop';
   if (generator === 'Aleatoire') return 'custom';
-  return 'dual-catch';
+  return 'dualnback-classic';
 }
 
 function isModalityId(value: string): value is ModalityId {

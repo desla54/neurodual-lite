@@ -85,7 +85,7 @@ const arbTotals = (withFA: boolean): fc.Arbitrary<UnifiedTotals> =>
 
 /** Generate a valid game mode */
 const arbGameMode = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dual-place',
   'dual-memo',
   'dual-trace',
@@ -134,7 +134,7 @@ const arbSessionReport = (withFA = true): fc.Arbitrary<SessionEndReportModel> =>
         createdAt: new Date().toISOString(),
         userId: 'test-user',
         reason,
-        gameMode: 'dual-catch' as const,
+        gameMode: 'dualnback-classic' as const,
         gameModeLabel: 'Dual Catch',
         nLevel,
         activeModalities: ['position', 'audio'] as const,
@@ -574,7 +574,7 @@ describe('Property Tests: Score Converters', () => {
       fc.property(fc.integer({ min: 5, max: 50 }), (hits) => {
         const input = createTempoInput(2, hits, 0, 0, hits);
         const result = convertTempoSession(input as any);
-        // For dual-catch with balanced accuracy formula
+        // For dualnback-classic with balanced accuracy formula
         expect(result.unifiedAccuracy).toBeGreaterThanOrEqual(0.9);
       }),
       { numRuns: 50 },
@@ -629,7 +629,7 @@ describe('Property Tests: Report Formatting', () => {
   it('34. gameMode is set correctly for each converter', () => {
     // Tempo
     const tempoResult = convertTempoSession(createTempoInput(2, 10, 2, 1, 7) as any);
-    expect(tempoResult.gameMode).toBe('dual-catch');
+    expect(tempoResult.gameMode).toBe('dualnback-classic');
 
     // Memo
     const memoResult = convertMemoSession(createMemoInput(2, 30, 40) as any);
@@ -762,7 +762,7 @@ function createReportWithAccuracy(
     createdAt: new Date().toISOString(),
     userId: 'test-user',
     reason,
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     gameModeLabel: 'Dual Catch',
     nLevel: 2,
     activeModalities: ['position', 'audio'],
@@ -809,7 +809,7 @@ function createAbandonedShortSessionReport(accuracy: number): SessionEndReportMo
     createdAt: new Date().toISOString(),
     userId: 'test-user',
     reason: 'abandoned',
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     gameModeLabel: 'Dual Catch',
     nLevel: 2,
     activeModalities: ['position', 'audio'],
@@ -854,7 +854,7 @@ function createNoResponseReport(): SessionEndReportModel {
     createdAt: new Date().toISOString(),
     userId: 'test-user',
     reason: 'completed',
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     gameModeLabel: 'Dual Catch',
     nLevel: 2,
     activeModalities: ['position', 'audio'],
@@ -921,7 +921,7 @@ interface TempoInputMutable {
       };
     };
   };
-  gameMode: 'dual-catch' | 'sim-brainworkshop' | 'dualnback-classic' | 'custom';
+  gameMode: 'dualnback-classic' | 'sim-brainworkshop' | 'custom';
   gameModeLabel: string;
   activeModalities: readonly ('position' | 'audio')[];
   passed: boolean;
@@ -979,7 +979,7 @@ function createTempoInput(
         },
       },
     },
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     gameModeLabel: 'Dual Catch',
     activeModalities: ['position', 'audio'],
     passed: true,
@@ -1131,7 +1131,7 @@ function createGenericInput(nLevel: number, accuracy: number, upsScore: number) 
   return {
     sessionId: 'test-session',
     createdAt: new Date().toISOString(),
-    gameMode: 'dual-catch' as const,
+    gameMode: 'dualnback-classic' as const,
     gameModeLabel: 'Dual Catch',
     nLevel,
     activeModalities: ['position', 'audio'] as const,

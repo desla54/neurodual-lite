@@ -44,7 +44,7 @@ const createSessionStarted = (
     sessionId,
     userId: 'test-user',
     nLevel,
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     device: {
       platform: 'web',
       screenWidth: 1920,

@@ -16,12 +16,6 @@ import { normalizeModeId, type GameModeId } from '@neurodual/logic';
  */
 const GAME_MODE_KEYS: Record<string, string> = {
   // Current IDs → i18n keys
-  'dual-catch': 'dualCatch',
-  'dual-place': 'dualPlace',
-  'dual-memo': 'dualMemo',
-  'dual-pick': 'dualPick',
-  'dual-trace': 'dualTrace',
-  'dual-track': 'dualTrack',
   'dualnback-classic': 'dualnbackClassic',
   'sim-brainworkshop': 'brainWorkshop',
   custom: 'libre',

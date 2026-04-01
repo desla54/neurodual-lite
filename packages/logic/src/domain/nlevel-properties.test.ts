@@ -1681,8 +1681,8 @@ describe('N-Level Progression - Determinism', () => {
 // =============================================================================
 
 describe('N-Level Progression - Mode Consistency', () => {
-  it('P145: SDT strategy detected for dual-catch', () => {
-    expect(detectScoringStrategy('dual-catch', 'dual-catch')).toBe('sdt');
+  it('P145: Jaeggi strategy detected for dualnback-classic', () => {
+    expect(detectScoringStrategy('dualnback-classic', 'dualnback-classic')).toBe('dualnback-classic');
   });
 
   it('P146: Jaeggi strategy detected', () => {

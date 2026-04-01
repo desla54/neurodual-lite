@@ -37,7 +37,7 @@ import {
  * Supported game modes for session reports.
  */
 export type ReportGameMode =
-  | 'dual-catch'
+  | 'dualnback-classic'
   | 'dual-place'
   | 'dual-memo'
   | 'dual-trace'

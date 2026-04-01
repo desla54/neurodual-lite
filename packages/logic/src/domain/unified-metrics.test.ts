@@ -169,14 +169,14 @@ describe('Unified Metrics', () => {
     // Test data: 8 hits, 2 misses, 1 FA, 19 CR (good performance)
     const goodPerfData = { hits: 8, misses: 2, fa: 1, cr: 19 };
 
-    describe('SDT strategy (dual-catch)', () => {
+    describe('SDT strategy (dualnback-classic)', () => {
       it('should use Geometric Mean formula', () => {
         // hits=8, misses=2, FA=1, CR=19
         // hitRate = 8/10 = 0.8
         // crRate = 19/20 = 0.95
         // geometric = sqrt(0.8 * 0.95) ≈ 0.8718
         const result = computeSpecDrivenTempoAccuracy(
-          'dual-catch',
+          'dualnback-classic',
           goodPerfData.hits,
           goodPerfData.misses,
           goodPerfData.fa,
@@ -188,7 +188,7 @@ describe('Unified Metrics', () => {
       it('should return 0 when never clicking (all misses)', () => {
         // Never clicking: hitRate = 0, crRate = 1 → sqrt(0 * 1) = 0
         const result = computeSpecDrivenTempoAccuracy(
-          'dual-catch',
+          'dualnback-classic',
           neverClickData.hits,
           neverClickData.misses,
           neverClickData.fa,
@@ -280,7 +280,7 @@ describe('Unified Metrics', () => {
           goodPerfData.cr,
         );
         const specDriven = computeSpecDrivenTempoAccuracy(
-          'dual-catch',
+          'dualnback-classic',
           goodPerfData.hits,
           goodPerfData.misses,
           goodPerfData.fa,

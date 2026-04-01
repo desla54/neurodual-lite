@@ -29,7 +29,7 @@ export interface JourneyPathProps {
   /** Click handler for a stage */
   onStageClick?: (stageId: number) => void;
   /** Specific game mode for simulator journeys (affects icon) */
-  gameMode?: 'dual-catch' | 'dualnback-classic' | 'sim-brainworkshop' | 'dual-trace' | string;
+  gameMode?: 'dualnback-classic' | 'sim-brainworkshop' | 'dual-trace' | string;
   /** Translations */
   labels?: {
     locked?: string;

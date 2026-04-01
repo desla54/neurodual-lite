@@ -8,7 +8,7 @@ export type StatsPreset = {
 
 function mapGameModeToModeFilter(gameMode: SessionEndReportModel['gameMode']): ModeType {
   switch (gameMode) {
-    case 'dual-catch':
+    case 'dualnback-classic':
       return 'DualTempo';
     case 'dual-place':
       return 'DualPlace';

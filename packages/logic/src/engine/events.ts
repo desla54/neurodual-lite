@@ -340,7 +340,7 @@ const FeedbackConfigSchema = z
 const PlayContextSchema = z.enum(['journey', 'free', 'synergy', 'calibration', 'profile']);
 
 const GameModeIdSchema = z.enum([
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'dual-place',

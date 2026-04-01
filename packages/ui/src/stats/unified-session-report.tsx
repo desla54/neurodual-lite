@@ -127,7 +127,7 @@ function getReportSections(gameMode: string, taskType?: string): readonly Report
 }
 
 const TEMPO_GAME_MODES = new Set<SessionEndReportModel['gameMode']>([
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'custom',

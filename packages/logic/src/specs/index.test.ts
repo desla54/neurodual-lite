@@ -13,7 +13,7 @@ import {
   JourneyStatsSpec,
   DefaultStatsSpec,
   AllSpecs,
-  DualCatchSpec,
+  DualnbackClassicSpec,
   SimBrainWorkshopSpec,
   DualPlaceSpec,
   DualMemoSpec,
@@ -36,7 +36,7 @@ describe('specs/index', () => {
     it('should return correct spec for i18n key DualTempo', () => {
       const spec = getStatsSpec('DualTempo');
       // @ts-expect-error test override
-      expect(spec).toBe(DualCatchSpec.stats);
+      expect(spec).toBe(DualnbackClassicSpec.stats);
     });
 
     it('should return correct spec for i18n key DualPlace', () => {
@@ -82,9 +82,9 @@ describe('specs/index', () => {
     });
 
     it('should return correct spec for direct mode id', () => {
-      const spec = getStatsSpec('dual-catch');
+      const spec = getStatsSpec('dualnback-classic');
       // @ts-expect-error test override
-      expect(spec).toBe(DualCatchSpec.stats);
+      expect(spec).toBe(DualnbackClassicSpec.stats);
     });
 
     it('should return DefaultStatsSpec for unknown mode', () => {
@@ -94,9 +94,9 @@ describe('specs/index', () => {
   });
 
   describe('getModeDisplaySpec', () => {
-    it('should return display spec for dual-catch', () => {
-      const spec = getModeDisplaySpec('dual-catch');
-      expect(spec).toBe(DualCatchSpec.report?.display);
+    it('should return display spec for dualnback-classic', () => {
+      const spec = getModeDisplaySpec('dualnback-classic');
+      expect(spec).toBe(DualnbackClassicSpec.report?.display);
     });
 
     it('should return default for unknown mode', () => {
@@ -106,9 +106,9 @@ describe('specs/index', () => {
   });
 
   describe('getModeColors', () => {
-    it('should return colors for dual-catch', () => {
-      const colors = getModeColors('dual-catch');
-      expect(colors).toBe(DualCatchSpec.report?.display?.colors);
+    it('should return colors for dualnback-classic', () => {
+      const colors = getModeColors('dualnback-classic');
+      expect(colors).toBe(DualnbackClassicSpec.report?.display?.colors);
     });
 
     it('should return default colors for unknown mode', () => {
@@ -121,9 +121,9 @@ describe('specs/index', () => {
   });
 
   describe('getReportSections', () => {
-    it('should return sections for dual-catch', () => {
-      const sections = getReportSections('dual-catch');
-      expect(sections).toBe(DualCatchSpec.report?.sections);
+    it('should return sections for dualnback-classic', () => {
+      const sections = getReportSections('dualnback-classic');
+      expect(sections).toBe(DualnbackClassicSpec.report?.sections);
     });
 
     it('should return default sections for unknown mode', () => {
@@ -133,8 +133,8 @@ describe('specs/index', () => {
   });
 
   describe('getModeScoringStrategy', () => {
-    it('should return sdt for dual-catch', () => {
-      const strategy = getModeScoringStrategy('dual-catch');
+    it('should return sdt for dualnback-classic', () => {
+      const strategy = getModeScoringStrategy('dualnback-classic');
       expect(strategy).toBe('sdt');
     });
 
@@ -160,9 +160,9 @@ describe('specs/index', () => {
   });
 
   describe('getModeI18nKey', () => {
-    it('should return correct key for dual-catch', () => {
-      const key = getModeI18nKey('dual-catch');
-      expect(key).toBe('settings.gameMode.dualCatch');
+    it('should return correct key for dualnback-classic', () => {
+      const key = getModeI18nKey('dualnback-classic');
+      expect(key).toBe('settings.gameMode.dualnbackClassic');
     });
 
     it('should return correct key for dualnback-classic', () => {
@@ -192,9 +192,9 @@ describe('specs/index', () => {
   });
 
   describe('getModeName', () => {
-    it('should return display name for dual-catch', () => {
-      const name = getModeName('dual-catch');
-      expect(name).toBe(DualCatchSpec.metadata.displayName);
+    it('should return display name for dualnback-classic', () => {
+      const name = getModeName('dualnback-classic');
+      expect(name).toBe(DualnbackClassicSpec.metadata.displayName);
     });
 
     it('should return display name for dual-place', () => {
@@ -216,7 +216,7 @@ describe('specs/index', () => {
   describe('getAllModeIds', () => {
     it('should return all mode ids', () => {
       const ids = getAllModeIds();
-      expect(ids).toContain('dual-catch');
+      expect(ids).toContain('dualnback-classic');
       expect(ids).toContain('dualnback-classic');
       expect(ids).toContain('sim-brainworkshop');
       expect(ids).toContain('custom');
@@ -235,18 +235,18 @@ describe('specs/index', () => {
 
   describe('getBlockConfigFromSpec', () => {
     it('should convert basic spec to block config', () => {
-      const config = getBlockConfigFromSpec(DualCatchSpec);
-      expect(config.nLevel).toBe(DualCatchSpec.defaults.nLevel);
-      expect(config.generator).toBe(DualCatchSpec.generation.generator);
-      expect(config.trialsCount).toBe(DualCatchSpec.defaults.trialsCount);
-      expect(config.targetProbability).toBe(DualCatchSpec.generation.targetProbability);
-      expect(config.intervalSeconds).toBe(DualCatchSpec.timing.intervalMs / 1000);
-      expect(config.stimulusDurationSeconds).toBe(DualCatchSpec.timing.stimulusDurationMs / 1000);
+      const config = getBlockConfigFromSpec(DualnbackClassicSpec);
+      expect(config.nLevel).toBe(DualnbackClassicSpec.defaults.nLevel);
+      expect(config.generator).toBe(DualnbackClassicSpec.generation.generator);
+      expect(config.trialsCount).toBe(DualnbackClassicSpec.defaults.trialsCount);
+      expect(config.targetProbability).toBe(DualnbackClassicSpec.generation.targetProbability);
+      expect(config.intervalSeconds).toBe(DualnbackClassicSpec.timing.intervalMs / 1000);
+      expect(config.stimulusDurationSeconds).toBe(DualnbackClassicSpec.timing.stimulusDurationMs / 1000);
     });
 
     it('should handle lureProbability default', () => {
-      const config = getBlockConfigFromSpec(DualCatchSpec);
-      expect(config.lureProbability).toBe(DualCatchSpec.generation.lureProbability ?? 0);
+      const config = getBlockConfigFromSpec(DualnbackClassicSpec);
+      expect(config.lureProbability).toBe(DualnbackClassicSpec.generation.lureProbability ?? 0);
     });
 
     describe('BrainWorkshop multi-stimulus expansion', () => {
@@ -371,9 +371,9 @@ describe('specs/index', () => {
     });
 
     it('should pass through activeModalities for non-BrainWorkshop generators', () => {
-      const config = getBlockConfigFromSpec(DualCatchSpec);
+      const config = getBlockConfigFromSpec(DualnbackClassicSpec);
       expect(config.activeModalities).toEqual(
-        expect.arrayContaining(DualCatchSpec.defaults.activeModalities),
+        expect.arrayContaining(DualnbackClassicSpec.defaults.activeModalities),
       );
     });
   });

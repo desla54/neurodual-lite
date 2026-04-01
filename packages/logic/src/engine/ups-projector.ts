@@ -187,7 +187,7 @@ export class UPSProjector {
     const confidence = summary.tempoConfidence?.score ?? null;
 
     // Calculate UPS using spec-driven accuracy and weights (gameMode determines formulas)
-    const gameMode = sessionStart.gameMode ?? 'dual-catch';
+    const gameMode = sessionStart.gameMode ?? 'dualnback-classic';
     const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(accuracyData, gameMode);
     const ups = UnifiedScoreCalculator.calculate(accuracy, confidence, isGaming, gameMode);
 

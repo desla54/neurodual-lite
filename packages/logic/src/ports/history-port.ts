@@ -43,7 +43,7 @@ export interface SessionHistoryItemJSON {
   readonly durationMs: number;
   readonly byModality: Record<string, HistoryModalityStats>;
   readonly generator: string;
-  /** Mode de jeu canonique (dual-catch, dualnback-classic, etc.) */
+  /** Mode de jeu canonique (dualnback-classic, dualnback-classic, etc.) */
   readonly gameMode?: string;
   readonly activeModalities: readonly string[];
   readonly reason: SessionEndReason;
@@ -102,7 +102,7 @@ export interface SessionHistoryItem {
   readonly byModality: Record<string, HistoryModalityStats>;
   /** Nom du générateur utilisé (BrainWorkshop, Jaeggi, Adaptive) */
   readonly generator: string;
-  /** Mode de jeu canonique (dual-catch, dualnback-classic, etc.) */
+  /** Mode de jeu canonique (dualnback-classic, dualnback-classic, etc.) */
   readonly gameMode?: string;
   /** Modalités actives pendant la session */
   readonly activeModalities: readonly string[];

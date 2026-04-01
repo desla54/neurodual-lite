@@ -101,7 +101,7 @@ const blockConfigArb = fc.record({
 });
 
 const gameModeArb = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dual-place',
   'dual-memo',
   'dual-trace',

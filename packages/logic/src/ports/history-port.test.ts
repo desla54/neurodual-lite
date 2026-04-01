@@ -19,7 +19,7 @@ describe('sessionSummaryRowToHistoryItem', () => {
       global_d_prime: 1.1,
       accuracy: 0.7,
       generator: 'Adaptive',
-      game_mode: 'dual-catch',
+      game_mode: 'dualnback-classic',
       passed: true,
       reason: 'completed',
       journey_stage_id: '4',

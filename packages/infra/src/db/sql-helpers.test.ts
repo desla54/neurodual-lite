@@ -322,12 +322,12 @@ describe('safeJsonParse', () => {
 
   describe('realistic SQLite scenarios', () => {
     it('should handle TEXT column storing JSON', () => {
-      const dbValue = '{"config": {"level": 2, "mode": "dual-catch"}}';
+      const dbValue = '{"config": {"level": 2, "mode": "dualnback-classic"}}';
       const result = safeJsonParse(dbValue, {
         config: { level: 0, mode: '' },
       });
       expect(result.config.level).toBe(2);
-      expect(result.config.mode).toBe('dual-catch');
+      expect(result.config.mode).toBe('dualnback-classic');
     });
 
     it('should handle malformed data from database', () => {

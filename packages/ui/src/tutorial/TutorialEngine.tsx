@@ -21,7 +21,7 @@ import { cn } from '../lib/utils';
 import { Button } from '../primitives/button';
 import { CanvasWeave } from '../primitives/canvas-weave';
 import { AnnotationZone } from './AnnotationZone';
-// NeuroDual Lite: Only classic (dual-catch) tutorial controls are used.
+// NeuroDual Lite: Only classic (dualnback-classic) tutorial controls are used.
 // DualPickControls, TraceTutorialControls, PlaceTutorialControls, MemoTutorialControls removed.
 import type { GsapTimelineHandle } from './gsap-timeline';
 import { GsapTimeline } from './gsap-timeline';
@@ -1182,7 +1182,7 @@ export function TutorialEngine({
               isAssessment ? 'pb-safe' : '',
             )}
           >
-            {/* NeuroDual Lite: Only classic (dual-catch) controls */}
+            {/* NeuroDual Lite: Only classic (dualnback-classic) controls */}
             <div
               className={cn(
                 'w-full flex justify-center',

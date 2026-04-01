@@ -780,7 +780,7 @@ function DualNBackGamePage({
         // Feedback config (sounds gated by UI setting)
         feedbackConfig: { visualFeedback: false, audioFeedback: soundEnabled },
         // Pass last d' for Dual Tempo mode to continue from previous session's difficulty
-        initialDPrime: effectiveMode === 'dual-catch' ? lastAdaptiveDPrime : undefined,
+        initialDPrime: effectiveMode === 'dualnback-classic' ? lastAdaptiveDPrime : undefined,
         // Pass user-selected adaptive algorithm
         algorithmId,
         // Algorithm state persistence for meta-learning
@@ -901,7 +901,7 @@ function DualNBackGamePage({
       // Feedback config (sounds gated by UI setting)
       feedbackConfig: { visualFeedback: false, audioFeedback: soundEnabled },
       // Pass last d' for Dual Tempo mode to continue from previous session's difficulty
-      initialDPrime: effectiveMode === 'dual-catch' ? lastAdaptiveDPrime : undefined,
+      initialDPrime: effectiveMode === 'dualnback-classic' ? lastAdaptiveDPrime : undefined,
       // Pass user-selected adaptive algorithm
       algorithmId,
       // Algorithm state persistence for meta-learning
@@ -1769,8 +1769,8 @@ function GameplayContent({
           generator: finishedSummary.generator,
           gameMode: effectiveMode,
           gameModeLabel:
-            effectiveMode === 'dual-catch'
-              ? t('settings.gameMode.dualCatch')
+            effectiveMode === 'dualnback-classic'
+              ? t('settings.gameMode.dualnbackClassic')
               : effectiveMode === 'dualnback-classic'
                 ? t('settings.gameMode.dualnbackClassic')
                 : effectiveMode === 'sim-brainworkshop'
@@ -2077,7 +2077,7 @@ function GameplayContent({
             onReplay={handleReplay}
             onCorrect={
               [
-                'dual-catch',
+                'dualnback-classic',
                 'dual-place',
                 'dual-memo',
                 'dualnback-classic',

@@ -602,7 +602,7 @@ export function ModeSettingsPanel({
 
   // Mode helpers
   const canConfigure = (key: ConfigurableSettingKey) => configurableSettings.includes(key);
-  const isAuto = mode === 'dual-catch';
+  const isAuto = mode === 'dualnback-classic';
   const isDualMemo = mode === 'dual-memo';
   const isDualPlace = mode === 'dual-place';
   const isDualPick = mode === 'dual-pick';

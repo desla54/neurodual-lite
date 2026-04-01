@@ -18,17 +18,17 @@ describe('Journey Projector', () => {
   describe('projectJourneyFromHistory', () => {
     describe('continuous simulator progression (Dual Catch)', () => {
       it('should fill progressPct and unlock next stage when reaching 100%', () => {
-        const journeyId = 'dual-catch-journey';
+        const journeyId = 'dualnback-classic-journey';
         const sessions = Array.from({ length: 15 }, (_, i) => ({
           journeyStageId: 1,
           journeyId,
           nLevel: 2,
           dPrime: 2.5,
-          gameMode: 'dual-catch' as const,
+          gameMode: 'dualnback-classic' as const,
           timestamp: i + 1,
         }));
 
-        const state = projectJourneyFromHistory(sessions, 3, 2, journeyId, true, 'dual-catch');
+        const state = projectJourneyFromHistory(sessions, 3, 2, journeyId, true, 'dualnback-classic');
 
         expect(state.currentStage).toBe(2);
         expect(state.stages[0]?.status).toBe('completed');

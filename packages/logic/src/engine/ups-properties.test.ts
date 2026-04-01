@@ -83,7 +83,7 @@ const nullablePressDurationArb = fc.option(pressDurationArb, { nil: null });
 
 // Game mode arbitraries
 const gameModeArb = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'custom',
@@ -637,11 +637,11 @@ describe('4. Accuracy Component Properties', () => {
           const hits2 = hits1 + 1;
           const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: hits1, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: hits2, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           // More hits should generally increase accuracy (unless edge cases)
           return acc2 >= acc1 - 1; // Allow small rounding differences
@@ -662,11 +662,11 @@ describe('4. Accuracy Component Properties', () => {
           const fa2 = fa1 + 5;
           const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa1, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa2, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           return acc2 <= acc1 + 1; // More FA should decrease accuracy
         },
@@ -755,7 +755,7 @@ describe('4. Accuracy Component Properties', () => {
 
   it('4.7 Tempo accuracy returns 0 for empty data (all game modes)', () => {
     const emptyData = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 };
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop']) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop']) {
       expect(UnifiedScoreCalculator.calculateTempoAccuracy(emptyData, mode)).toBe(0);
     }
   });
@@ -770,7 +770,7 @@ describe('4. Accuracy Component Properties', () => {
         (hits, misses, fa, cr) => {
           const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
 
           const hitRate = hits / (hits + misses);
@@ -833,7 +833,7 @@ describe('4. Accuracy Component Properties', () => {
 
   it('4.11 Perfect tempo performance gives 100 for all modes', () => {
     const perfectData = { hits: 20, misses: 0, falseAlarms: 0, correctRejections: 20 };
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop']) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop']) {
       expect(UnifiedScoreCalculator.calculateTempoAccuracy(perfectData, mode)).toBe(100);
     }
   });
@@ -1213,26 +1213,26 @@ describe('6. Reaction Time Properties', () => {
 describe('7. D-Prime to Accuracy Conversion', () => {
   it('7.1 Perfect discrimination gives high accuracy', () => {
     const perfectData = { hits: 50, misses: 0, falseAlarms: 0, correctRejections: 50 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(perfectData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(perfectData, 'dualnback-classic');
     expect(accuracy).toBe(100);
   });
 
   it('7.2 Chance performance gives ~50% accuracy', () => {
     // Equal hits and misses, equal FA and CR
     const chanceData = { hits: 25, misses: 25, falseAlarms: 25, correctRejections: 25 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(chanceData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(chanceData, 'dualnback-classic');
     expect(accuracy).toBeCloseTo(50, 0);
   });
 
   it('7.3 No discrimination (all miss, all FA) gives 0', () => {
     const noDiscrimData = { hits: 0, misses: 50, falseAlarms: 50, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(noDiscrimData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(noDiscrimData, 'dualnback-classic');
     expect(accuracy).toBe(0);
   });
 
   it('7.4 High hit rate with high FA gives moderate accuracy', () => {
     const highBothData = { hits: 45, misses: 5, falseAlarms: 30, correctRejections: 20 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(highBothData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(highBothData, 'dualnback-classic');
     expect(accuracy).toBeGreaterThan(30);
     expect(accuracy).toBeLessThan(80);
   });
@@ -1240,14 +1240,14 @@ describe('7. D-Prime to Accuracy Conversion', () => {
   it('7.5 Geometric mean punishes extreme behavior', () => {
     // All hits but all FA (always pressing)
     const alwaysPress = { hits: 50, misses: 0, falseAlarms: 50, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(alwaysPress, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(alwaysPress, 'dualnback-classic');
     expect(accuracy).toBe(0);
   });
 
   it('7.6 Never pressing gives 0 (despite 100% CR)', () => {
     // Never responding
     const neverPress = { hits: 0, misses: 50, falseAlarms: 0, correctRejections: 50 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(neverPress, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(neverPress, 'dualnback-classic');
     expect(accuracy).toBe(0);
   });
 
@@ -1256,11 +1256,11 @@ describe('7. D-Prime to Accuracy Conversion', () => {
 
     const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
       { ...baseData, hits: 30 },
-      'dual-catch',
+      'dualnback-classic',
     );
     const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
       { ...baseData, hits: 40 },
-      'dual-catch',
+      'dualnback-classic',
     );
 
     expect(acc2).toBeGreaterThanOrEqual(acc1);
@@ -1271,11 +1271,11 @@ describe('7. D-Prime to Accuracy Conversion', () => {
 
     const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(
       { ...baseData, correctRejections: 30 },
-      'dual-catch',
+      'dualnback-classic',
     );
     const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(
       { ...baseData, correctRejections: 40 },
-      'dual-catch',
+      'dualnback-classic',
     );
 
     expect(acc2).toBeGreaterThanOrEqual(acc1);
@@ -1286,8 +1286,8 @@ describe('7. D-Prime to Accuracy Conversion', () => {
     const data1 = { hits: 40, misses: 10, falseAlarms: 20, correctRejections: 30 };
     const data2 = { hits: 30, misses: 20, falseAlarms: 10, correctRejections: 40 };
 
-    const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(data1, 'dual-catch');
-    const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(data2, 'dual-catch');
+    const acc1 = UnifiedScoreCalculator.calculateTempoAccuracy(data1, 'dualnback-classic');
+    const acc2 = UnifiedScoreCalculator.calculateTempoAccuracy(data2, 'dualnback-classic');
 
     // Geometric mean is symmetric
     expect(acc1).toBe(acc2);
@@ -1296,7 +1296,7 @@ describe('7. D-Prime to Accuracy Conversion', () => {
   it('7.10 Different modes give different accuracy for same data', () => {
     const data = { hits: 30, misses: 10, falseAlarms: 15, correctRejections: 25 };
 
-    const sdtAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+    const sdtAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     const jaeggiAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     const bwAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'sim-brainworkshop');
 
@@ -2068,7 +2068,7 @@ describe('13. Numerical Stability', () => {
 
   it('13.8 Large counts in SDT data do not cause overflow', () => {
     const largeData = { hits: 10000, misses: 5000, falseAlarms: 3000, correctRejections: 8000 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(largeData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(largeData, 'dualnback-classic');
     expect(Number.isFinite(accuracy)).toBe(true);
     expect(accuracy).toBeGreaterThanOrEqual(0);
     expect(accuracy).toBeLessThanOrEqual(100);
@@ -2076,7 +2076,7 @@ describe('13. Numerical Stability', () => {
 
   it('13.9 Very small ratios in SDT do not cause issues', () => {
     const edgeData = { hits: 1, misses: 1000, falseAlarms: 1000, correctRejections: 1 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(edgeData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(edgeData, 'dualnback-classic');
     expect(Number.isFinite(accuracy)).toBe(true);
   });
 
@@ -2131,7 +2131,7 @@ describe('13. Numerical Stability', () => {
 
   it('13.12 All zero SDT data returns 0', () => {
     const zeroData = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 };
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop']) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop']) {
       const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(zeroData, mode);
       expect(accuracy).toBe(0);
     }
@@ -2296,11 +2296,11 @@ describe('14. Monotonicity Properties', () => {
 
           const accLowMiss = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses: lowMiss, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const accHighMiss = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses: highMiss, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           return accHighMiss <= accLowMiss + 1; // Allow rounding
         },
@@ -2323,11 +2323,11 @@ describe('14. Monotonicity Properties', () => {
 
           const accLowFA = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: lowFA, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const accHighFA = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: highFA, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           return accHighFA <= accLowFA + 1; // Allow rounding
         },
@@ -2350,11 +2350,11 @@ describe('14. Monotonicity Properties', () => {
 
           const accLowHits = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: lowHits, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           const accHighHits = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits: highHits, misses, falseAlarms: fa, correctRejections: cr },
-            'dual-catch',
+            'dualnback-classic',
           );
           return accHighHits >= accLowHits - 1; // Allow rounding
         },
@@ -2377,11 +2377,11 @@ describe('14. Monotonicity Properties', () => {
 
           const accLowCR = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: lowCR },
-            'dual-catch',
+            'dualnback-classic',
           );
           const accHighCR = UnifiedScoreCalculator.calculateTempoAccuracy(
             { hits, misses, falseAlarms: fa, correctRejections: highCR },
-            'dual-catch',
+            'dualnback-classic',
           );
           return accHighCR >= accLowCR - 1; // Allow rounding
         },
@@ -2450,25 +2450,25 @@ describe('14. Monotonicity Properties', () => {
 describe('15. Edge Cases and Special Values', () => {
   it('15.1 Handles empty SDT data', () => {
     const emptyData = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(emptyData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(emptyData, 'dualnback-classic');
     expect(accuracy).toBe(0);
   });
 
   it('15.2 Handles single hit only', () => {
     const singleHit = { hits: 1, misses: 0, falseAlarms: 0, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleHit, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleHit, 'dualnback-classic');
     expect(accuracy).toBe(0); // No CR means CR rate is 0, geometric mean is 0
   });
 
   it('15.3 Handles single CR only', () => {
     const singleCR = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 1 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleCR, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleCR, 'dualnback-classic');
     expect(accuracy).toBe(0); // No hits means hit rate is 0, geometric mean is 0
   });
 
   it('15.4 Handles single trial (hit + CR)', () => {
     const singleTrial = { hits: 1, misses: 0, falseAlarms: 0, correctRejections: 1 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleTrial, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleTrial, 'dualnback-classic');
     expect(accuracy).toBe(100); // Both rates are 1.0
   });
 
@@ -2542,7 +2542,7 @@ describe('15. Edge Cases and Special Values', () => {
       falseAlarms: 30000,
       correctRejections: 100000,
     };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(largeData, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(largeData, 'dualnback-classic');
     expect(Number.isFinite(accuracy)).toBe(true);
     expect(accuracy).toBeGreaterThanOrEqual(0);
     expect(accuracy).toBeLessThanOrEqual(100);
@@ -2595,7 +2595,7 @@ describe('16. Additional Properties', () => {
 
   it('16.4 All game modes produce valid accuracy for same data', () => {
     const data = { hits: 20, misses: 5, falseAlarms: 3, correctRejections: 22 };
-    for (const mode of ['dual-catch', 'dualnback-classic', 'sim-brainworkshop', 'custom']) {
+    for (const mode of ['dualnback-classic', 'sim-brainworkshop', 'custom']) {
       const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, mode);
       expect(accuracy).toBeGreaterThanOrEqual(0);
       expect(accuracy).toBeLessThanOrEqual(100);
@@ -2801,7 +2801,7 @@ describe('16. Additional Properties', () => {
 
   it('16.13 Different game modes can give different accuracy for same data', () => {
     const data = { hits: 30, misses: 10, falseAlarms: 15, correctRejections: 25 };
-    const sdtAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+    const sdtAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     const jaeggiAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     const bwAcc = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'sim-brainworkshop');
 

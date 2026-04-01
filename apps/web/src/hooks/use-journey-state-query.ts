@@ -25,7 +25,7 @@ export function useJourneyStateQuery(
   const pipelineState = usePipelineState();
   const [state, setState] = useState<JourneyState | null>(null);
   const [isPending, setIsPending] = useState(true);
-  const timerRef = useRef<ReturnType<typeof window.setTimeout> | undefined>(undefined);
+  const timerRef = useRef<number | undefined>(undefined);
 
   const load = useCallback(async () => {
     if (!persistence) return;

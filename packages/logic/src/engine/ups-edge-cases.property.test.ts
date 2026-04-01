@@ -243,7 +243,7 @@ describe('UPS Edge Cases - Core Formula Invariants', () => {
 // =============================================================================
 
 describe('UPS Edge Cases - Tempo Accuracy', () => {
-  const gameModes = ['dual-catch', 'dualnback-classic', 'sim-brainworkshop', 'custom'] as const;
+  const gameModes = ['dualnback-classic', 'sim-brainworkshop', 'custom'] as const;
 
   describe('Bounds Invariant - Accuracy always in [0, 100]', () => {
     it('accuracy is never NaN for any SDT counts', () => {
@@ -349,25 +349,25 @@ describe('UPS Edge Cases - Tempo Accuracy', () => {
     });
   });
 
-  describe('SDT Geometric Mean Edge Cases (dual-catch)', () => {
+  describe('SDT Geometric Mean Edge Cases (dualnback-classic)', () => {
     it('perfect hitRate with zero crRate gives 0 (geometric mean)', () => {
       // All hits, but all FA (no CR) -> crRate = 0 -> sqrt(1 * 0) = 0
       const data = { hits: 100, misses: 0, falseAlarms: 100, correctRejections: 0 };
-      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
       expect(accuracy).toBe(0);
     });
 
     it('perfect crRate with zero hitRate gives 0 (geometric mean)', () => {
       // All misses, but all CR (no FA) -> hitRate = 0 -> sqrt(0 * 1) = 0
       const data = { hits: 0, misses: 100, falseAlarms: 0, correctRejections: 100 };
-      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
       expect(accuracy).toBe(0);
     });
 
     it('balanced performance gives expected geometric mean', () => {
       // 50% hit rate, 50% CR rate -> sqrt(0.5 * 0.5) = 0.5 -> 50
       const data = { hits: 50, misses: 50, falseAlarms: 50, correctRejections: 50 };
-      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
       expect(accuracy).toBe(50);
     });
   });
@@ -613,7 +613,7 @@ describe('UPS Edge Cases - Tempo Confidence', () => {
 
 describe('UPS Edge Cases - Full Pipeline', () => {
   describe('calculateTempo Integration', () => {
-    const gameModes = ['dual-catch', 'dualnback-classic', 'sim-brainworkshop', 'custom'] as const;
+    const gameModes = ['dualnback-classic', 'sim-brainworkshop', 'custom'] as const;
 
     it('full UPS result is valid for all game modes with zero data', () => {
       const zeroData = { hits: 0, misses: 0, falseAlarms: 0, correctRejections: 0 };
@@ -631,8 +631,8 @@ describe('UPS Edge Cases - Full Pipeline', () => {
     it('gaming flag correctly marks ineligible', () => {
       const perfectData = { hits: 100, misses: 0, falseAlarms: 0, correctRejections: 100 };
 
-      const notGaming = UnifiedScoreCalculator.calculateTempo('dual-catch', perfectData, [], false);
-      const gaming = UnifiedScoreCalculator.calculateTempo('dual-catch', perfectData, [], true);
+      const notGaming = UnifiedScoreCalculator.calculateTempo('dualnback-classic', perfectData, [], false);
+      const gaming = UnifiedScoreCalculator.calculateTempo('dualnback-classic', perfectData, [], true);
 
       expect(notGaming.journeyEligible).toBe(true);
       expect(gaming.journeyEligible).toBe(false);
@@ -724,7 +724,7 @@ describe('UPS Edge Cases - NaN Propagation Prevention', () => {
     ];
 
     for (const data of extremeCases) {
-      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+      const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
       expect(!Number.isNaN(accuracy)).toBe(true);
       expect(Number.isFinite(accuracy)).toBe(true);
     }
@@ -777,7 +777,7 @@ describe('UPS Edge Cases - Stress Tests', () => {
       falseAlarms: 0,
       correctRejections: largeCount,
     };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     expect(accuracy).toBe(100); // Perfect performance should still be 100
   });
 });
@@ -825,7 +825,7 @@ describe('UPS Edge Cases - Floating Point Precision', () => {
       falseAlarms: 1,
       correctRejections: 999,
     };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dual-catch');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(data, 'dualnback-classic');
     expect(accuracy).toBeGreaterThanOrEqual(0);
     expect(accuracy).toBeLessThanOrEqual(100);
     // sqrt(0.001 * 0.999) * 100 = ~3.16, rounded = 3
@@ -879,11 +879,11 @@ describe('UPS Edge Cases - Scoring Strategy Correctness', () => {
     it('geometric mean = 0 when either rate is 0', () => {
       // Zero hit rate (all misses)
       const zeroHitRate = { hits: 0, misses: 10, falseAlarms: 0, correctRejections: 10 };
-      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroHitRate, 'dual-catch')).toBe(0);
+      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroHitRate, 'dualnback-classic')).toBe(0);
 
       // Zero CR rate (all false alarms)
       const zeroCRRate = { hits: 10, misses: 0, falseAlarms: 10, correctRejections: 0 };
-      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroCRRate, 'dual-catch')).toBe(0);
+      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroCRRate, 'dualnback-classic')).toBe(0);
     });
 
     it('geometric mean < arithmetic mean (for unequal rates)', () => {
@@ -964,7 +964,7 @@ describe('UPS Edge Cases - Scoring Strategy Correctness', () => {
 
       const sdtAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
         biasedResponder,
-        'dual-catch',
+        'dualnback-classic',
       );
       const jaeggiAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
         biasedResponder,
@@ -981,7 +981,7 @@ describe('UPS Edge Cases - Scoring Strategy Correctness', () => {
       // Conservative: rarely responds, few hits but also few FA
       const conservative = { hits: 5, misses: 95, falseAlarms: 5, correctRejections: 95 };
 
-      const sdtAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(conservative, 'dual-catch');
+      const sdtAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(conservative, 'dualnback-classic');
       const jaeggiAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
         conservative,
         'dualnback-classic',
@@ -1279,7 +1279,7 @@ describe('UPS Edge Cases - Mathematical Correctness', () => {
       for (const { hits, misses, fa, cr, expected } of testCases) {
         const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
           { hits, misses, falseAlarms: fa, correctRejections: cr },
-          'dual-catch',
+          'dualnback-classic',
         );
         expect(accuracy).toBe(expected);
       }

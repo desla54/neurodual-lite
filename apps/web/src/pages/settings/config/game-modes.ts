@@ -25,7 +25,6 @@ import {
   CursorClick,
   Diamond,
   Eye,
-  Fingerprint,
   FlowArrow,
   GraduationCap,
   GridFour,
@@ -38,7 +37,6 @@ import {
   ListMagnifyingGlass,
   ListNumbers,
   MagnifyingGlass,
-  MapPin,
   MusicNote,
   Notebook,
   Palette,
@@ -64,21 +62,10 @@ import { getReliabilityForGameMode, type ReliabilityLevel } from '../../../confi
 import { getModeTier, type ModeTier } from '../../../config/mode-tiers';
 
 export type GameMode =
-  | 'dual-catch'
-  | 'dual-place'
-  | 'dual-pick'
-  | 'dual-trace'
-  | 'dual-time'
-  | 'corsi-block'
-  | 'ospan'
-  | 'running-span'
-  | 'pasat'
-  | 'swm'
-  | 'dual-track'
   | 'dualnback-classic'
+  | 'ospan'
   | 'sim-brainworkshop'
   | 'custom'
-  | 'dual-memo'
   | 'stroop'
   | 'stroop-flex'
   | 'flanker'
@@ -324,19 +311,8 @@ export interface GameModeConfig {
 
 /** Line colors for the connection between mode selector and settings */
 export const MODE_LINE_COLORS: Record<GameMode, string> = {
-  'dual-catch': 'bg-violet-400',
-  'dual-place': 'bg-orange-400',
-  'dual-pick': 'bg-pink-400',
-  'dual-trace': 'bg-teal-400',
-  'dual-time': 'bg-amber-400',
-  'corsi-block': 'bg-indigo-400',
+  'dualnback-classic': 'bg-violet-400',
   ospan: 'bg-rose-400',
-  'running-span': 'bg-cyan-400',
-  pasat: 'bg-amber-400',
-  swm: 'bg-teal-400',
-  'dual-track': 'bg-sky-400',
-  'dual-memo': 'bg-blue-400',
-  'dualnback-classic': 'bg-yellow-400',
   'sim-brainworkshop': 'bg-cyan-400',
   custom: 'bg-emerald-400',
   stroop: 'bg-red-400',
@@ -571,35 +547,11 @@ export const MODE_COLORS: Record<
   GameMode,
   { bg: string; border: string; text: string; textLight: string }
 > = {
-  'dual-catch': {
+  'dualnback-classic': {
     bg: 'bg-violet-50 dark:bg-violet-500/10',
     border: 'border-violet-200 dark:border-violet-500/30',
     text: 'text-violet-700 dark:text-violet-300',
     textLight: 'text-violet-600 dark:text-violet-400',
-  },
-  'dual-place': {
-    bg: 'bg-orange-50 dark:bg-orange-500/10',
-    border: 'border-orange-200 dark:border-orange-500/30',
-    text: 'text-orange-700 dark:text-orange-300',
-    textLight: 'text-orange-600 dark:text-orange-400',
-  },
-  'dual-pick': {
-    bg: 'bg-pink-50 dark:bg-pink-500/10',
-    border: 'border-pink-200 dark:border-pink-500/30',
-    text: 'text-pink-700 dark:text-pink-300',
-    textLight: 'text-pink-600 dark:text-pink-400',
-  },
-  'dual-memo': {
-    bg: 'bg-blue-50 dark:bg-blue-500/10',
-    border: 'border-blue-200 dark:border-blue-500/30',
-    text: 'text-blue-700 dark:text-blue-300',
-    textLight: 'text-blue-600 dark:text-blue-400',
-  },
-  'dualnback-classic': {
-    bg: 'bg-yellow-50 dark:bg-yellow-500/10',
-    border: 'border-yellow-200 dark:border-yellow-500/30',
-    text: 'text-yellow-700 dark:text-yellow-300',
-    textLight: 'text-yellow-600 dark:text-yellow-400',
   },
   'sim-brainworkshop': {
     bg: 'bg-cyan-50 dark:bg-cyan-500/10',
@@ -613,53 +565,11 @@ export const MODE_COLORS: Record<
     text: 'text-emerald-700 dark:text-emerald-300',
     textLight: 'text-emerald-600 dark:text-emerald-400',
   },
-  'dual-trace': {
-    bg: 'bg-teal-50 dark:bg-teal-500/10',
-    border: 'border-teal-200 dark:border-teal-500/30',
-    text: 'text-teal-700 dark:text-teal-300',
-    textLight: 'text-teal-600 dark:text-teal-400',
-  },
-  'dual-time': {
-    bg: 'bg-amber-50 dark:bg-amber-500/10',
-    border: 'border-amber-200 dark:border-amber-500/30',
-    text: 'text-amber-700 dark:text-amber-300',
-    textLight: 'text-amber-600 dark:text-amber-400',
-  },
-  'corsi-block': {
-    bg: 'bg-indigo-50 dark:bg-indigo-500/10',
-    border: 'border-indigo-200 dark:border-indigo-500/30',
-    text: 'text-indigo-700 dark:text-indigo-300',
-    textLight: 'text-indigo-600 dark:text-indigo-400',
-  },
   ospan: {
     bg: 'bg-rose-50 dark:bg-rose-500/10',
     border: 'border-rose-200 dark:border-rose-500/30',
     text: 'text-rose-700 dark:text-rose-300',
     textLight: 'text-rose-600 dark:text-rose-400',
-  },
-  'running-span': {
-    bg: 'bg-cyan-50 dark:bg-cyan-500/10',
-    border: 'border-cyan-200 dark:border-cyan-500/30',
-    text: 'text-cyan-700 dark:text-cyan-300',
-    textLight: 'text-cyan-600 dark:text-cyan-400',
-  },
-  pasat: {
-    bg: 'bg-amber-50 dark:bg-amber-500/10',
-    border: 'border-amber-200 dark:border-amber-500/30',
-    text: 'text-amber-700 dark:text-amber-300',
-    textLight: 'text-amber-600 dark:text-amber-400',
-  },
-  swm: {
-    bg: 'bg-teal-50 dark:bg-teal-500/10',
-    border: 'border-teal-200 dark:border-teal-500/30',
-    text: 'text-teal-700 dark:text-teal-300',
-    textLight: 'text-teal-600 dark:text-teal-400',
-  },
-  'dual-track': {
-    bg: 'bg-sky-50 dark:bg-sky-500/10',
-    border: 'border-sky-200 dark:border-sky-500/30',
-    text: 'text-sky-700 dark:text-sky-300',
-    textLight: 'text-sky-600 dark:text-sky-400',
   },
   stroop: {
     bg: 'bg-red-50 dark:bg-red-500/10',
@@ -2030,68 +1940,15 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
     bgClass: 'bg-[hsl(var(--woven-correct)/0.12)]',
     badge: 'alpha',
   },
-  // === Dual Trace ===
-  {
-    value: 'dual-trace',
-    labelKey: 'settings.gameMode.dualTrace',
-    descKey: 'settings.gameMode.dualTraceDesc',
-    icon: Fingerprint,
-    colorClass: 'text-[hsl(var(--woven-cyan))]',
-    bgClass: 'bg-[hsl(var(--woven-cyan)/0.12)]',
-  },
   // === Original modes (alpha) ===
   {
-    value: 'dual-catch',
-    labelKey: 'settings.gameMode.dualCatch',
-    descKey: 'settings.gameMode.dualCatchDesc',
+    value: 'dualnback-classic',
+    labelKey: 'settings.gameMode.dualnbackClassic',
+    descKey: 'settings.gameMode.dualnbackClassicDesc',
     icon: Target,
     colorClass: 'text-[hsl(var(--woven-purple))]',
     bgClass: 'bg-[hsl(var(--woven-purple)/0.12)]',
     badge: 'alpha',
-  },
-  {
-    value: 'dual-place',
-    labelKey: 'settings.gameMode.dualPlace',
-    descKey: 'settings.gameMode.dualPlaceDesc',
-    icon: MapPin,
-    colorClass: 'text-[hsl(var(--woven-orange))]',
-    bgClass: 'bg-[hsl(var(--woven-orange)/0.12)]',
-    badge: 'alpha',
-  },
-  {
-    value: 'dual-pick',
-    labelKey: 'settings.gameMode.dualPick',
-    descKey: 'settings.gameMode.dualPickDesc',
-    icon: ListNumbers,
-    colorClass: 'text-[hsl(var(--woven-magenta))]',
-    bgClass: 'bg-[hsl(var(--woven-magenta)/0.12)]',
-    badge: 'alpha',
-  },
-  {
-    value: 'dual-memo',
-    labelKey: 'settings.gameMode.dualMemo',
-    descKey: 'settings.gameMode.dualMemoDesc',
-    icon: Notebook,
-    colorClass: 'text-[hsl(var(--woven-blue))]',
-    bgClass: 'bg-[hsl(var(--woven-blue)/0.12)]',
-    badge: 'alpha',
-  },
-  {
-    value: 'dual-time',
-    labelKey: 'settings.gameMode.dualTime',
-    descKey: 'settings.gameMode.dualTimeDesc',
-    icon: Hourglass,
-    colorClass: 'text-[hsl(var(--woven-amber))]',
-    bgClass: 'bg-[hsl(var(--woven-amber)/0.12)]',
-    badge: 'beta',
-  },
-  {
-    value: 'corsi-block',
-    labelKey: 'settings.gameMode.corsiBlock',
-    descKey: 'settings.gameMode.corsiBlockDesc',
-    icon: GridNine,
-    colorClass: 'text-[hsl(var(--woven-blue))]',
-    bgClass: 'bg-[hsl(var(--woven-blue)/0.12)]',
   },
   {
     value: 'ospan',
@@ -2101,41 +1958,6 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
     colorClass: 'text-[hsl(var(--woven-magenta))]',
     bgClass: 'bg-[hsl(var(--woven-magenta)/0.12)]',
     badge: 'beta',
-  },
-  {
-    value: 'running-span',
-    labelKey: 'settings.gameMode.runningSpan',
-    descKey: 'settings.gameMode.runningSpanDesc',
-    icon: Queue,
-    colorClass: 'text-[hsl(var(--woven-cyan))]',
-    bgClass: 'bg-[hsl(var(--woven-cyan)/0.12)]',
-    badge: 'alpha',
-  },
-  {
-    value: 'pasat',
-    labelKey: 'settings.gameMode.pasat',
-    descKey: 'settings.gameMode.pasatDesc',
-    icon: PlusCircle,
-    colorClass: 'text-[hsl(var(--woven-amber))]',
-    bgClass: 'bg-[hsl(var(--woven-amber)/0.12)]',
-    badge: 'beta',
-  },
-  {
-    value: 'swm',
-    labelKey: 'settings.gameMode.swm',
-    descKey: 'settings.gameMode.swmDesc',
-    icon: Scan,
-    colorClass: 'text-[hsl(var(--woven-cyan))]',
-    bgClass: 'bg-[hsl(var(--woven-cyan)/0.12)]',
-    badge: 'alpha',
-  },
-  {
-    value: 'dual-track',
-    labelKey: 'settings.gameMode.dualTrack',
-    descKey: 'settings.gameMode.dualTrackDesc',
-    icon: Eye,
-    colorClass: 'text-[hsl(var(--woven-blue))]',
-    bgClass: 'bg-[hsl(var(--woven-blue)/0.12)]',
   },
   // === Inhibition ===
   {
@@ -4166,8 +3988,6 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
 export const ESSENTIAL_MODES: readonly GameMode[] = [
   'dualnback-classic',
   'sim-brainworkshop',
-  'dual-track',
-  'dual-trace',
 ];
 
 export interface ModeCategory {
@@ -4184,12 +4004,6 @@ export const MODE_CATEGORIES: readonly ModeCategory[] = [
     modes: [
       'dualnback-classic',
       'sim-brainworkshop',
-      'dual-catch',
-      'dual-place',
-      'dual-pick',
-      'dual-memo',
-      'dual-trace',
-      'dual-mix',
       'custom',
     ],
   },
@@ -4197,8 +4011,6 @@ export const MODE_CATEGORIES: readonly ModeCategory[] = [
     labelKey: 'settings.gameMode.categorySpeedTime',
     section: 'training',
     modes: [
-      'dual-time',
-      'pasat',
       'time-estimation',
       'rhythm',
       'duration-reproduction',
@@ -4218,16 +4030,13 @@ export const MODE_CATEGORIES: readonly ModeCategory[] = [
   {
     labelKey: 'settings.gameMode.categoryAttention',
     section: 'training',
-    modes: ['dual-track', 'visual-search', 'spot-diff'],
+    modes: ['visual-search', 'spot-diff'],
   },
   {
     labelKey: 'settings.gameMode.categoryWorkingMemory',
     section: 'training',
     modes: [
-      'corsi-block',
       'ospan',
-      'running-span',
-      'swm',
       'symmetry-span',
       'reading-span',
       'digit-span',

@@ -522,7 +522,7 @@ class GameModeRegistryClass {
 
       // Tempo modes: guided/mirror + HUD options
       if (
-        normalizedId === 'dual-catch' ||
+        normalizedId === 'dualnback-classic' ||
         normalizedId === 'custom' ||
         normalizedId === 'dualnback-classic' ||
         normalizedId === 'sim-brainworkshop'

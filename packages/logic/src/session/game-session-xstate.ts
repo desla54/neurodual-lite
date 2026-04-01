@@ -645,7 +645,7 @@ export class GameSessionXState implements IntentHandler {
   }
 
   private createSequenceAlgorithm(mode: AdaptationMode, config: GameConfig) {
-    const dualCatchExtensions = this.spec.extensions as
+    const dualnbackClassicExtensions = this.spec.extensions as
       | {
           readonly adaptiveTargetDPrime?: unknown;
           readonly fixedStimulusDurationMs?: unknown;
@@ -653,19 +653,19 @@ export class GameSessionXState implements IntentHandler {
       | undefined;
 
     const fixedStimulusDurationMs =
-      this.spec.metadata.id === 'dual-catch'
-        ? typeof dualCatchExtensions?.fixedStimulusDurationMs === 'number' &&
-          Number.isFinite(dualCatchExtensions.fixedStimulusDurationMs) &&
-          dualCatchExtensions.fixedStimulusDurationMs > 0
-          ? dualCatchExtensions.fixedStimulusDurationMs
+      this.spec.metadata.id === 'dualnback-classic'
+        ? typeof dualnbackClassicExtensions?.fixedStimulusDurationMs === 'number' &&
+          Number.isFinite(dualnbackClassicExtensions.fixedStimulusDurationMs) &&
+          dualnbackClassicExtensions.fixedStimulusDurationMs > 0
+          ? dualnbackClassicExtensions.fixedStimulusDurationMs
           : this.spec.timing.stimulusDurationMs
         : undefined;
 
     const targetDPrime =
-      this.spec.metadata.id === 'dual-catch' &&
-      typeof dualCatchExtensions?.adaptiveTargetDPrime === 'number' &&
-      Number.isFinite(dualCatchExtensions.adaptiveTargetDPrime)
-        ? dualCatchExtensions.adaptiveTargetDPrime
+      this.spec.metadata.id === 'dualnback-classic' &&
+      typeof dualnbackClassicExtensions?.adaptiveTargetDPrime === 'number' &&
+      Number.isFinite(dualnbackClassicExtensions.adaptiveTargetDPrime)
+        ? dualnbackClassicExtensions.adaptiveTargetDPrime
         : this.spec.scoring.passThreshold;
 
     const baseConfig = {

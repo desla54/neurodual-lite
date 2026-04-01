@@ -31,7 +31,7 @@ export type SessionLifecycleState =
  * Options for spawning a new session.
  */
 export interface SpawnSessionOptions {
-  /** Game mode ID (e.g., 'dual-catch', 'dual-place', 'dual-memo') */
+  /** Game mode ID (e.g., 'dualnback-classic', 'dual-place', 'dual-memo') */
   gameMode: GameModeId;
 
   /** User ID for the session */

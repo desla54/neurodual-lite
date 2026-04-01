@@ -24,7 +24,7 @@ describe('mode-metadata sync with specs', () => {
     });
 
     it('trialsCount should match spec defaults', () => {
-      const tempoModes = ['dual-catch', 'dualnback-classic', 'sim-brainworkshop', 'custom'];
+      const tempoModes = ['dualnback-classic', 'sim-brainworkshop', 'custom'];
       const flowModes = ['dual-place', 'dual-pick', 'dual-trace', 'dual-memo'];
 
       // Tempo modes should use trialsTempo

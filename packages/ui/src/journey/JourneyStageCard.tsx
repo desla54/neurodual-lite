@@ -42,7 +42,7 @@ export interface JourneyStageCardProps {
   /** Is the stage accessible to this user? (premium check) */
   isAccessible: boolean;
   /** Specific game mode for simulator journeys (affects icon) */
-  gameMode?: 'dual-catch' | 'dualnback-classic' | 'sim-brainworkshop' | 'dual-trace' | string;
+  gameMode?: 'dualnback-classic' | 'sim-brainworkshop' | 'dual-trace' | string;
   /** Click handler */
   onClick?: () => void;
   /**
@@ -102,7 +102,7 @@ export function JourneyStageCard({
   const { status, validatingSessions, bestScore } = progress;
   const isHero = emphasis === 'hero';
   const isBrainWorkshopJourney = gameMode === 'sim-brainworkshop';
-  const isDualCatchJourney = gameMode === 'dual-catch';
+  const isDualnbackClassicJourney = gameMode === 'dualnback-classic';
   const progressivePct =
     typeof progress.progressPct === 'number' && Number.isFinite(progress.progressPct)
       ? Math.max(0, Math.min(100, progress.progressPct))
@@ -112,7 +112,7 @@ export function JourneyStageCard({
   const isBinaryStrikesMode = consecutiveStrikes !== undefined;
   const livesRemaining = isBinaryStrikesMode ? 3 - consecutiveStrikes : 3;
 
-  const simulatorColor = isDualCatchJourney ? ('purple' as const) : ('amber' as const);
+  const simulatorColor = isDualnbackClassicJourney ? ('purple' as const) : ('amber' as const);
 
   // Mode colors and icons
   const modeConfig = {

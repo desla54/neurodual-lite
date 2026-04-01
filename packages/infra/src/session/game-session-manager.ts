@@ -341,7 +341,7 @@ export class GameSessionManager implements GameSessionManagerPort {
   private gameModeToSessionMode(gameMode: GameModeId): SessionMode {
     // Map game mode IDs to session modes
     switch (gameMode) {
-      case 'dual-catch':
+      case 'dualnback-classic':
       case 'dualnback-classic':
       case 'sim-brainworkshop':
       case 'custom':

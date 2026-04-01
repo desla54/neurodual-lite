@@ -51,7 +51,7 @@ const outcomeArb = fc.constantFrom('hit', 'miss', 'fa', 'cr') as fc.Arbitrary<Ou
 
 const modalityArb = fc.constantFrom('position', 'audio') as fc.Arbitrary<ModalityId>;
 
-const gameModeArb = fc.constantFrom('dual-catch', 'dualnback-classic', 'sim-brainworkshop');
+const gameModeArb = fc.constantFrom('dualnback-classic', 'sim-brainworkshop');
 
 // =============================================================================
 // Event Factories
@@ -62,7 +62,7 @@ const createSessionStarted = (
   nLevel: number,
   timestamp: number,
   activeModalities: readonly ModalityId[] = ['position', 'audio'],
-  gameMode = 'dual-catch',
+  gameMode = 'dualnback-classic',
 ): SessionStartedEvent =>
   createMockEvent('SESSION_STARTED', {
     id: generateId(),
@@ -235,7 +235,7 @@ const generateSession = (
   trialsConfig: readonly TrialConfig[],
   completed: boolean,
   activeModalities: readonly ModalityId[] = ['position', 'audio'],
-  gameMode = 'dual-catch',
+  gameMode = 'dualnback-classic',
   focusLostCount = 0,
   startTimestamp = Date.now(),
 ): GameEvent[] => {
@@ -769,7 +769,7 @@ describe('SessionProjector - Metamorphic Tests', () => {
               trials,
               true,
               ['position', 'audio'],
-              'dual-catch',
+              'dualnback-classic',
               focusLostCount,
             );
             const summary = SessionProjector.project(events);
@@ -1145,7 +1145,7 @@ describe('SessionProjector - Metamorphic Tests', () => {
               trials,
               true,
               ['position', 'audio'],
-              'dual-catch',
+              'dualnback-classic',
               focusLostCount,
             );
             const summary = SessionProjector.project(events);

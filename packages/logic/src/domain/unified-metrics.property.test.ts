@@ -58,7 +58,7 @@ const reactionTimeArb = fc.option(fc.integer({ min: 100, max: 2000 }), { nil: nu
 
 /** Game mode for spec-driven accuracy */
 const gameModeArb = fc.constantFrom(
-  'dual-catch',
+  'dualnback-classic',
   'dualnback-classic',
   'sim-brainworkshop',
   'custom',

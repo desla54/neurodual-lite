@@ -237,7 +237,7 @@ export default defineConfig(({ mode }) => {
                     name: 'Dual Catch',
                     short_name: 'Dual Catch',
                     description: 'Mode principal avec scoring SDT',
-                    url: '/nback?mode=dual-catch',
+                    url: '/nback?mode=dualnback-classic',
                     icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }],
                   },
                   {

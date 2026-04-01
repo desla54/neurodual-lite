@@ -14,7 +14,7 @@ function makePayload(overrides: Partial<SessionStatsPayload> = {}): SessionStats
   return {
     playerId: 'player-1',
     sessionId: 'session-1',
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     nLevel: 2,
     accuracy: 0.85,
     trialCount: 40,
@@ -28,7 +28,7 @@ function makePayload(overrides: Partial<SessionStatsPayload> = {}): SessionStats
 function makeReport(overrides: Record<string, unknown> = {}) {
   return {
     sessionId: 'session-1',
-    gameMode: 'dual-catch',
+    gameMode: 'dualnback-classic',
     nLevel: 2,
     unifiedAccuracy: 0.85,
     totals: {
@@ -55,7 +55,7 @@ describe('StatsSharing Service', () => {
 
       expect(payload.playerId).toBe('player-1');
       expect(payload.sessionId).toBe('session-1');
-      expect(payload.gameMode).toBe('dual-catch');
+      expect(payload.gameMode).toBe('dualnback-classic');
       expect(payload.nLevel).toBe(2);
       expect(payload.accuracy).toBe(0.85);
       expect(payload.durationMs).toBe(120_000);
@@ -172,7 +172,7 @@ describe('StatsSharing Service', () => {
 
   describe('fetchPlayerStats', () => {
     it('returns empty result (Supabase removed)', async () => {
-      const result = await fetchPlayerStats('player-1', 'dual-catch', 2);
+      const result = await fetchPlayerStats('player-1', 'dualnback-classic', 2);
 
       expect(result.percentile).toBeNull();
       expect(result.avgAccuracy).toBeNull();
@@ -190,7 +190,7 @@ describe('StatsSharing Service', () => {
     });
 
     it('does not throw', async () => {
-      await expect(fetchPlayerStats('player-1', 'dual-catch', 2)).resolves.toBeDefined();
+      await expect(fetchPlayerStats('player-1', 'dualnback-classic', 2)).resolves.toBeDefined();
     });
   });
 });

@@ -161,7 +161,7 @@ describe('UnifiedScoreCalculator', () => {
 // =============================================================================
 
 describe('Tempo Mode UPS', () => {
-  test('calculates spec-driven accuracy for SDT mode (dual-catch)', () => {
+  test('calculates spec-driven accuracy for SDT mode (dualnback-classic)', () => {
     // 10/12 hits = 83.3%, 7/8 CR = 87.5%
     // Geometric Mean (SDT) = sqrt(0.833 * 0.875) ≈ 0.854 → 85%
     const accuracy = createTempoAccuracy({
@@ -172,7 +172,7 @@ describe('Tempo Mode UPS', () => {
     });
     const responses = createTempoResponses(15);
 
-    const result = UnifiedScoreCalculator.calculateTempo('dual-catch', accuracy, responses);
+    const result = UnifiedScoreCalculator.calculateTempo('dualnback-classic', accuracy, responses);
 
     expect(result.components.accuracy).toBe(85);
   });
@@ -213,7 +213,7 @@ describe('Tempo Mode UPS', () => {
     const accuracy = createTempoAccuracy();
     const responses = createTempoResponses(15); // >= 10 trials
 
-    const result = UnifiedScoreCalculator.calculateTempo('dual-catch', accuracy, responses);
+    const result = UnifiedScoreCalculator.calculateTempo('dualnback-classic', accuracy, responses);
 
     expect(result.components.confidence).not.toBeNull();
   });
@@ -222,7 +222,7 @@ describe('Tempo Mode UPS', () => {
     const accuracy = createTempoAccuracy();
     const responses: TempoResponseData[] = []; // Empty = no data
 
-    const result = UnifiedScoreCalculator.calculateTempo('dual-catch', accuracy, responses);
+    const result = UnifiedScoreCalculator.calculateTempo('dualnback-classic', accuracy, responses);
 
     expect(result.components.confidence).toBeNull();
   });
@@ -236,7 +236,7 @@ describe('Tempo Mode UPS', () => {
     });
     const responses = createTempoResponses(20);
 
-    const result = UnifiedScoreCalculator.calculateTempo('dual-catch', accuracy, responses);
+    const result = UnifiedScoreCalculator.calculateTempo('dualnback-classic', accuracy, responses);
 
     expect(result.components.accuracy).toBe(100);
   });
@@ -250,7 +250,7 @@ describe('Tempo Mode UPS', () => {
     });
     const responses: TempoResponseData[] = [];
 
-    const result = UnifiedScoreCalculator.calculateTempo('dual-catch', accuracy, responses);
+    const result = UnifiedScoreCalculator.calculateTempo('dualnback-classic', accuracy, responses);
 
     expect(result.components.accuracy).toBe(0);
   });

@@ -527,11 +527,11 @@ describe('buildSessionSummariesHeaderCountsCompiledQuery', () => {
 
 describe('buildMaxAchievedLevelCompiledQuery', () => {
   it('selects max(n_level) for given game mode with passed=1', () => {
-    const result = buildMaxAchievedLevelCompiledQuery(['user-1'], 'dual-catch');
+    const result = buildMaxAchievedLevelCompiledQuery(['user-1'], 'dualnback-classic');
     assertCompiledQuery(result);
     expect(result.sql).toContain('max(');
     expect(result.sql).toContain('n_level');
-    expect(result.parameters).toContain('dual-catch');
+    expect(result.parameters).toContain('dualnback-classic');
     expect(result.parameters).toContain(1); // passed = 1
   });
 });
@@ -564,13 +564,13 @@ describe('buildRecentSessionsForTrendCompiledQuery', () => {
   it('filters by game mode, excludes session, and limits before reference date', () => {
     const result = buildRecentSessionsForTrendCompiledQuery({
       userIds: ['user-1'],
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       referenceCreatedAtIso: '2025-06-15T10:00:00.000Z',
       excludeSessionId: 'sess-99',
       limit: 5,
     });
     assertCompiledQuery(result);
-    expect(result.parameters).toContain('dual-catch');
+    expect(result.parameters).toContain('dualnback-classic');
     expect(result.parameters).toContain('sess-99');
     expect(result.parameters).toContain('2025-06-15T10:00:00.000Z');
     expect(result.parameters).toContain(5);
@@ -581,7 +581,7 @@ describe('buildRecentSessionsForTrendCompiledQuery', () => {
   it('null referenceCreatedAtIso adds impossible condition', () => {
     const result = buildRecentSessionsForTrendCompiledQuery({
       userIds: ['user-1'],
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       referenceCreatedAtIso: null,
       excludeSessionId: 'sess-99',
       limit: 5,

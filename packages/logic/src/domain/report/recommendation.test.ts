@@ -26,10 +26,10 @@ describe('recommendNextLevelFromPassed', () => {
 });
 
 describe('recommendNextLevelForTempo', () => {
-  it('uses SDT thresholds for dual-catch', () => {
+  it('uses SDT thresholds for dualnback-classic', () => {
     const up = recommendNextLevelForTempo({
       currentLevel: 2,
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       globalDPrime: 1.7,
       byModality: {},
     });
@@ -38,7 +38,7 @@ describe('recommendNextLevelForTempo', () => {
 
     const down = recommendNextLevelForTempo({
       currentLevel: 3,
-      gameMode: 'dual-catch',
+      gameMode: 'dualnback-classic',
       globalDPrime: 0.2,
       byModality: {},
     });

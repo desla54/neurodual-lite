@@ -372,7 +372,7 @@ function mapModeToReportMode(mode: SessionMode, gameMode?: string): ReportGameMo
     case 'tempo':
       if (gameMode?.includes('dualnback')) return 'dualnback-classic';
       if (gameMode?.includes('brainworkshop')) return 'sim-brainworkshop';
-      return 'dual-catch';
+      return 'dualnback-classic';
     case 'flow':
       return 'dual-place';
     case 'recall':
@@ -400,7 +400,7 @@ function mapModeToReportMode(mode: SessionMode, gameMode?: string): ReportGameMo
  *
  * @param nLevel - Current N-level
  * @param passed - Whether session passed (from calculateTempoSessionPassed)
- * @param gameMode - Game mode ID (e.g., 'dualnback-classic', 'dual-catch')
+ * @param gameMode - Game mode ID (e.g., 'dualnback-classic', 'stroop')
  * @param globalDPrime - Aggregate d' for SDT-based modes
  * @param byModality - SDT counts per modality (for Jaeggi/BW evaluators)
  */

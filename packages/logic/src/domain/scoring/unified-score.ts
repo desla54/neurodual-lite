@@ -255,11 +255,11 @@ export class UnifiedScoreCalculator {
    * Calculate UPS for Tempo mode using spec-driven accuracy.
    *
    * The accuracy formula depends on the game mode's scoring.strategy:
-   * - 'sdt' (dual-catch): Geometric Mean
+   * - 'sdt' (dualnback-classic): Geometric Mean
    * - 'jaeggi' (dualnback-classic): Error-based (1 - errorRate)
    * - 'brainworkshop' (sim-brainworkshop): BW formula
    *
-   * @param gameMode - The game mode ID (e.g., 'dual-catch', 'dualnback-classic')
+   * @param gameMode - The game mode ID (e.g., 'dualnback-classic', 'stroop')
    * @param accuracyData - Hits, misses, FA, CR counts
    * @param responseData - Response details for confidence calculation
    * @param isGaming - Optional gaming detection result

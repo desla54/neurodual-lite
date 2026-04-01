@@ -177,9 +177,9 @@ function normalizePerformance(session: AnySessionSummary): {
 } {
   if (isTempoSession(session)) {
     // Tempo mode:
-    // - dual-catch/custom (SDT): performance from d-prime
+    // - dualnback-classic/custom (SDT): performance from d-prime
     // - dualnback-classic / sim-brainworkshop: performance from native score (error-rate based)
-    const gameMode = session.gameMode ?? 'dual-catch';
+    const gameMode = session.gameMode ?? 'dualnback-classic';
     const totals = getTotalStats(session.finalStats);
     const nativeAccuracy = computeSpecDrivenTempoAccuracy(
       gameMode,
@@ -240,7 +240,7 @@ function normalizePerformance(session: AnySessionSummary): {
  * Calculates XP for ANY game mode with consistent rules:
  *
  * Phase 1 - Performance Normalization:
- * - Tempo: mode-native score (SDT d' for dual-catch, error-rate/native for Jaeggi/BW)
+ * - Tempo: mode-native score (SDT d' for dualnback-classic, error-rate/native for Jaeggi/BW)
  * - Recall/Flow/DualPick/Trace: accuracy based (80% = 160 XP)
  *
  * Phase 2 - Multipliers (The Core Rules):

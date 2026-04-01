@@ -50,7 +50,7 @@ export interface SubmitStatsResult {
 }
 
 const VALID_GAME_MODES = new Set([
-  'dual-catch',
+  'dualnback-classic',
   'dual-place',
   'dual-pick',
   'dual-memo',
