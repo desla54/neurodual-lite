@@ -9,6 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   cn,
   CanvasWeave,
+  Toggle,
   useSessionCompletion,
   WOVEN_COLORS,
   resolveThemeColor,
@@ -128,6 +129,12 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const modeLabel = isFlex ? t('settings.gameMode.stroopFlex') : t('settings.gameMode.stroop');
   const modeSettings = useSettingsStore((state) => state.modes[variant] ?? EMPTY_MODE_SETTINGS);
   const colorModalityTheme = useSettingsStore((s) => s.ui.colorModalityTheme);
+  const hapticEnabled = useSettingsStore((s) => s.ui.hapticEnabled);
+  const setHapticEnabled = useSettingsStore((s) => s.setHapticEnabled);
+  const buttonSoundsEnabled = useSettingsStore((s) => s.ui.buttonSoundsEnabled);
+  const setButtonSoundsEnabled = useSettingsStore((s) => s.setButtonSoundsEnabled);
+  const soundEnabled = useSettingsStore((s) => s.ui.soundEnabled);
+  const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
   const alphaEnabled = useAlphaEnabled();
   const dyslatEnabled =
     variant === 'stroop' && alphaEnabled && modeSettings.stroopDyslatEnabled === true;
@@ -557,6 +564,26 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         isPaused={phase === 'paused'}
         canPause={phase !== 'idle' && phase !== 'finished'}
         onTogglePause={handleTogglePause}
+        settingsMenuTitle={modeLabel}
+        settingsMenuContent={
+          <div className="divide-y divide-border/60">
+            <Toggle
+              label={t('settings.audio.haptic', 'Haptic feedback')}
+              checked={hapticEnabled}
+              onChange={setHapticEnabled}
+            />
+            <Toggle
+              label={t('settings.audio.buttonSounds', 'Button sounds')}
+              checked={buttonSoundsEnabled}
+              onChange={setButtonSoundsEnabled}
+            />
+            <Toggle
+              label={t('settings.audio.gameplaySounds', 'Gameplay sounds')}
+              checked={soundEnabled}
+              onChange={setSoundEnabled}
+            />
+          </div>
+        }
       />
 
       <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
