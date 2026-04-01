@@ -74,27 +74,6 @@ export const queryKeys = {
     state: () => [...queryKeys.subscription.all, 'state'] as const,
   },
 
-  // Payment queries (RevenueCat)
-  payment: {
-    all: ['payment'] as const,
-    products: () => [...queryKeys.payment.all, 'products'] as const,
-    customerInfo: () => [...queryKeys.payment.all, 'customerInfo'] as const,
-  },
-
-  // Reward queries (XP-based Premium rewards)
-  reward: {
-    all: ['reward'] as const,
-    granted: () => [...queryKeys.reward.all, 'granted'] as const,
-    pending: () => [...queryKeys.reward.all, 'pending'] as const,
-    state: () => [...queryKeys.reward.all, 'state'] as const,
-  },
-
-  // License queries (Lemon Squeezy - web only)
-  license: {
-    all: ['license'] as const,
-    state: () => [...queryKeys.license.all, 'state'] as const,
-    products: () => [...queryKeys.license.all, 'products'] as const,
-  },
 } as const;
 
 export type QueryKeys = typeof queryKeys;

@@ -56,6 +56,7 @@ export {
   useCanAccessNLevel,
   useIsTrialing,
 } from './context/SubscriptionContext';
+export { useIsPremium, getPremiumAdapter } from './queries/premium';
 export { useDailyPlaytimeGate, type DailyPlaytimeGate } from './queries/daily-playtime-gate';
 export {
   useSyncAdapter,
@@ -65,28 +66,6 @@ export {
   usePendingCount,
   useSync,
 } from './context/SyncContext';
-export {
-  usePaymentAdapter,
-  useCustomerInfo,
-  useIsPurchaseActive,
-  useIsPaymentAvailable,
-  useProducts,
-  usePurchase,
-  useRestorePurchases,
-} from './context/PaymentContext';
-export {
-  useRewardAdapter,
-  useGrantedRewards,
-  usePendingRewards,
-  useHasReward,
-  useRewardState,
-  useGrantReward,
-  useQueueReward,
-  useProcessPendingRewards,
-  useRefreshRewards,
-  useIsProcessingRewards,
-  usePendingRewardsCount,
-} from './context/RewardContext';
 export {
   AudioProvider,
   type AudioProviderProps,

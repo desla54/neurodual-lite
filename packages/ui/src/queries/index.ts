@@ -162,54 +162,6 @@ export { useDailyPlaytimeGate, type DailyPlaytimeGate } from './daily-playtime-g
 // Realtime integration (auth only)
 export { invalidateAfterLogin, invalidateAfterLogout } from './realtime';
 
-// Payment queries (RevenueCat via TanStack Query)
-export {
-  setPaymentAdapter,
-  getPaymentAdapter,
-  hasPaymentAdapter,
-  useProducts,
-  useCustomerInfo,
-  useIsPurchaseActive,
-  useIsPaymentAvailable,
-  usePurchase,
-  useRestorePurchases,
-  setupPaymentListener,
-  invalidatePaymentQueries,
-} from './payment';
-
-// License queries (Lemon Squeezy - web only)
-export {
-  setLicenseAdapter,
-  getLicenseAdapter,
-  hasLicenseAdapter,
-  useLicenseState,
-  useHasValidLicense,
-  useIsLicenseAvailable,
-  useLicenseProducts,
-  useValidateLicense,
-  useActivateLicense,
-  useDeactivateLicense,
-  useRefreshLicense,
-  useGetCheckoutUrl,
-  useClearLicense,
-  setupLicenseListener,
-  invalidateLicenseQueries,
-} from './license';
-
-// Reward queries (XP-based Premium rewards)
-export {
-  setRewardAdapter,
-  getRewardAdapter,
-  useGrantedRewards,
-  usePendingRewards,
-  useHasReward,
-  useRewardState,
-  useGrantReward,
-  useQueueReward,
-  useProcessPendingRewards,
-  useRefreshRewards,
-  invalidateRewardQueries,
-} from './reward';
 
 // Pipeline queries (XState-based session completion)
 export {
@@ -227,6 +179,20 @@ export {
   type SessionCompletionResultWithLevel,
   type CompleteSessionOptions,
 } from './pipeline';
+
+// Premium queries (activation code system)
+export {
+  setPremiumAdapter,
+  getPremiumAdapter,
+  usePremiumState,
+  useIsPremium,
+  useCanAccessNLevel as usePremiumCanAccessNLevel,
+  useActivateCode,
+  useDeactivateDevice,
+  useVerifyPremium,
+  setupPremiumListener,
+  invalidatePremiumQueries,
+} from './premium';
 
 // Provider
 export { NeurodualQueryProvider, type NeurodualQueryProviderProps } from './NeurodualQueryProvider';

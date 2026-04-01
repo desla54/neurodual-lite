@@ -24,6 +24,7 @@ export {
   DEFAULT_JOURNEY_ID,
   DUALNBACK_CLASSIC_JOURNEY_ID,
   BRAINWORKSHOP_JOURNEY_ID,
+  NEURODUAL_MIX_JOURNEY_ID,
   DUAL_TRACE_JOURNEY_ID,
   DUAL_TRACK_EASY_JOURNEY_ID,
   DUAL_TRACK_MEDIUM_JOURNEY_ID,
@@ -556,31 +557,13 @@ export type {
   SyncState,
   SyncStateListener,
   SyncStatus,
-  // Payment Port
-  CustomerInfo,
-  PaymentPort,
-  PaymentStateListener,
-  Product,
-  ProductId,
-  PurchaseResult,
-  // License Port (Lemon Squeezy)
-  LicensePort,
-  LicenseState,
-  LicenseStateListener,
-  LicenseStatus,
-  LicenseValidationResult,
-  LicenseActivationResult,
-  LicenseDeactivationResult,
-  LicenseProduct,
-  CheckoutOptions,
-  CheckoutUrlResult,
-  // Reward Port
-  RewardPort,
-  RewardGrantResult,
-  RewardState,
-  RewardStateListener,
-  PendingReward,
-  GrantedReward,
+  // Premium Port
+  PremiumPort,
+  PremiumState,
+  PremiumStateListener,
+  ActivationResult,
+  DeactivationResult,
+  DeviceActivation,
   // XP Context Port
   XPContextPort,
   XPExternalContext,
@@ -624,11 +607,13 @@ export {
   // Random adapters
   cryptoRandom,
   createSeededRandom,
+  // Premium Port
+  FREE_PLAYTIME_MS,
+  PREMIUM_GATE_N_LEVEL,
+  MAX_ACTIVATIONS,
+  createDefaultPremiumState,
   // XP Context (null implementation)
   nullXPContextPort,
-  // License helpers
-  maskLicenseKey,
-  createEmptyLicenseState,
   // Session End Pipeline helpers
   PIPELINE_STAGES,
   calculatePipelineProgress,
@@ -902,6 +887,7 @@ export {
   JOURNEY_MODE_TO_GAME_MODE,
   JOURNEY_MODES_PER_LEVEL,
   generateJourneyStages,
+  NEURODUAL_MIX_GAME_MODES,
 } from './types/journey';
 // Removed: domain/journey exports (deleted module)
 // Re-export scoring helpers from domain/journey/scoring stub

@@ -76,11 +76,9 @@ export function useSubscriptionQuery(): UseQueryResult<SubscriptionState> {
 
 /**
  * Check if user has premium access.
- * Always true in Lite mode - all features unlocked.
+ * Delegates to the activation-code system (PremiumPort).
  */
-export function useHasPremiumAccess(): boolean {
-  return true;
-}
+export { useIsPremium as useHasPremiumAccess } from './premium';
 
 /**
  * Check if user has cloud sync.

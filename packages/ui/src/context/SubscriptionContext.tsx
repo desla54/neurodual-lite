@@ -1,9 +1,10 @@
 'use client';
 
 /**
- * Subscription Context (Lite - Always Free)
+ * Subscription Context (Lite)
  *
- * Simplified subscription context. All features unlocked.
+ * Now backed by the premium activation system.
+ * Premium = activated via code. Free = 30 min then level 3+ locked.
  */
 
 import type { SubscriptionPort, SubscriptionState } from '@neurodual/logic';
@@ -11,6 +12,7 @@ import {
   getSubscriptionAdapter,
   useSubscriptionQuery as useSubscriptionQueryQuery,
 } from '../queries';
+import { useIsPremium, usePremiumState } from '../queries/premium';
 
 /**
  * Hook to get the subscription adapter.
@@ -21,7 +23,6 @@ export function useSubscriptionAdapter(): SubscriptionPort {
 
 /**
  * Hook to get current subscription state.
- * Always returns full-access in Lite mode.
  */
 export function useSubscriptionQuery(): SubscriptionState {
   const { data } = useSubscriptionQueryQuery();
@@ -38,10 +39,14 @@ export function useSubscriptionQuery(): SubscriptionState {
 
 /**
  * Hook to check if user has premium access.
- * Always true in Lite mode.
+ * Backed by the activation code system.
  */
 export function useHasPremiumAccess(): boolean {
-  return true;
+  const isPremium = useIsPremium();
+  const { data } = usePremiumState();
+  // Premium if activated OR free time not exhausted
+  if (isPremium) return true;
+  return !(data?.isFreeTimeExhausted ?? false);
 }
 
 /**
@@ -54,15 +59,20 @@ export function useHasCloudSync(): boolean {
 
 /**
  * Hook to check if a specific N-level is accessible.
- * Always true in Lite mode - all levels unlocked.
+ * Blocked at N3+ after 30min free time exhausted.
  */
-export function useCanAccessNLevel(_nLevel: number): boolean {
-  return true;
+export function useCanAccessNLevel(nLevel: number): boolean {
+  const isPremium = useIsPremium();
+  if (isPremium) return true;
+  const { data } = usePremiumState();
+  if (!data) return true;
+  if (nLevel < 3) return true;
+  return !data.isFreeTimeExhausted;
 }
 
 /**
  * Hook to check if user is in trial period.
- * Always false in Lite mode.
+ * Always false — we use free playtime instead.
  */
 export function useIsTrialing(): boolean {
   return false;

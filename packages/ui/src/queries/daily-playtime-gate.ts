@@ -1,36 +1,38 @@
 /**
- * Daily Playtime Gate (Lite - No Restrictions)
+ * Daily Playtime Gate
  *
- * In Lite mode, there are no playtime limits.
- * All users have unlimited access.
+ * Tracks total gameplay time and gates access after 30 min free.
+ * Backed by the PremiumPort.
  */
 
 import { useMemo } from 'react';
+import { FREE_PLAYTIME_MS } from '@neurodual/logic';
+import { usePremiumState, useIsPremium } from './premium';
 
 // =============================================================================
 // Types
 // =============================================================================
 
 export interface DailyPlaytimeGate {
-  /** Is the daily limit reached? Always false in Lite. */
+  /** Is the free time exhausted? */
   readonly isLimitReached: boolean;
-  /** Time played today in ms */
+  /** Total time played in ms */
   readonly playedTodayMs: number;
-  /** Daily limit in ms (Infinity in Lite) */
+  /** Free time limit in ms */
   readonly dailyLimitMs: number;
-  /** Remaining time in ms (Infinity in Lite) */
+  /** Remaining free time in ms */
   readonly remainingMs: number;
-  /** Is the user in the grace period? Always false in Lite. */
+  /** Is the user in the grace period? Always false. */
   readonly isGracePeriod: boolean;
-  /** Is the free trial available? Always false in Lite. */
+  /** Is the free trial available? Always false. */
   readonly isTrialAvailable: boolean;
-  /** Is the user currently in the free trial? Always false in Lite. */
+  /** Is the user currently in the free trial? Always false. */
   readonly isInFreeTrial: boolean;
-  /** Days remaining in free trial (always null in Lite) */
+  /** Days remaining in free trial (always null) */
   readonly trialDaysRemaining: number | null;
-  /** Activate the free trial (noop in Lite) */
+  /** Activate the free trial (noop) */
   readonly activateTrial: () => void;
-  /** Is loading? Always false in Lite. */
+  /** Is loading? */
   readonly isPending: boolean;
 }
 
@@ -38,24 +40,40 @@ export interface DailyPlaytimeGate {
 // Hook
 // =============================================================================
 
-/**
- * In Lite mode, there are no playtime restrictions.
- * Always returns unlimited access.
- */
 export function useDailyPlaytimeGate(): DailyPlaytimeGate {
-  return useMemo<DailyPlaytimeGate>(
-    () => ({
-      isLimitReached: false,
-      playedTodayMs: 0,
-      dailyLimitMs: Number.POSITIVE_INFINITY,
-      remainingMs: Number.POSITIVE_INFINITY,
+  const isPremium = useIsPremium();
+  const { data, isPending } = usePremiumState();
+
+  return useMemo<DailyPlaytimeGate>(() => {
+    if (isPremium) {
+      return {
+        isLimitReached: false,
+        playedTodayMs: data?.totalPlaytimeMs ?? 0,
+        dailyLimitMs: Number.POSITIVE_INFINITY,
+        remainingMs: Number.POSITIVE_INFINITY,
+        isGracePeriod: false,
+        isTrialAvailable: false,
+        isInFreeTrial: false,
+        trialDaysRemaining: null,
+        activateTrial: () => {},
+        isPending,
+      };
+    }
+
+    const totalMs = data?.totalPlaytimeMs ?? 0;
+    const remaining = Math.max(0, FREE_PLAYTIME_MS - totalMs);
+
+    return {
+      isLimitReached: totalMs >= FREE_PLAYTIME_MS,
+      playedTodayMs: totalMs,
+      dailyLimitMs: FREE_PLAYTIME_MS,
+      remainingMs: remaining,
       isGracePeriod: false,
       isTrialAvailable: false,
       isInFreeTrial: false,
       trialDaysRemaining: null,
       activateTrial: () => {},
-      isPending: false,
-    }),
-    [],
-  );
+      isPending,
+    };
+  }, [isPremium, data, isPending]);
 }

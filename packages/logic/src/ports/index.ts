@@ -66,26 +66,19 @@ export type {
   SyncStatus,
 } from './sync-port';
 export type {
-  CustomerInfo,
-  PaymentPort,
-  PaymentStateListener,
-  Product,
-  ProductId,
-  PurchaseResult,
-} from './payment-port';
-export type {
-  LicensePort,
-  LicenseState,
-  LicenseStateListener,
-  LicenseStatus,
-  LicenseValidationResult,
-  LicenseActivationResult,
-  LicenseDeactivationResult,
-  LicenseProduct,
-  CheckoutOptions,
-  CheckoutUrlResult,
-} from './license-port';
-export { maskLicenseKey, createEmptyLicenseState } from './license-port';
+  PremiumPort,
+  PremiumState,
+  PremiumStateListener,
+  ActivationResult,
+  DeactivationResult,
+  DeviceActivation,
+} from './premium-port';
+export {
+  FREE_PLAYTIME_MS,
+  PREMIUM_GATE_N_LEVEL,
+  MAX_ACTIVATIONS,
+  createDefaultPremiumState,
+} from './premium-port';
 export type { ClockPort } from './clock-port';
 export { browserClock } from './clock-port';
 export type { RandomPort } from './random-port';
@@ -150,14 +143,6 @@ export type {
   InteractiveReplayStateListener,
   InteractiveReplayContextListener,
 } from './interactive-replay-lifecycle-port';
-export type {
-  RewardPort,
-  RewardGrantResult,
-  RewardState,
-  RewardStateListener,
-  PendingReward,
-  GrantedReward,
-} from './reward-port';
 export type { XPContextPort, XPExternalContext } from './xp-context-port';
 export { nullXPContextPort } from './xp-context-port';
 export type {

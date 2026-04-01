@@ -13,12 +13,10 @@ import type {
   AuthPort,
   HistoryPort,
   JourneyConfig,
-  LicensePort,
-  PaymentPort,
+  PremiumPort,
   ProfilePort,
   ProgressionPort,
   ReadModelPort,
-  RewardPort,
   SessionEndPipelinePort,
   SubscriptionPort,
   SyncPort,
@@ -26,14 +24,12 @@ import type {
 import { createQueryClient, setQueryClient } from './query-client';
 import { setAuthAdapter } from './auth';
 import { setHistoryAdapter } from './history';
-import { setPaymentAdapter } from './payment';
 import { setPipelineAdapter } from './pipeline';
 import { setProfileAdapter } from './profile';
 import { setProgressionAdapter } from './progression';
-import { setRewardAdapter } from './reward';
 import { setSubscriptionAdapter } from './subscription';
 import { setSyncAdapter } from './sync';
-import { setLicenseAdapter } from './license';
+import { setPremiumAdapter } from './premium';
 import { setReadModelsAdapter, setProfileReadModel } from './read-models';
 import { createProfileReadModel } from '@neurodual/infra';
 import { queryKeys } from './keys';
@@ -49,16 +45,12 @@ export interface NeurodualQueryProviderProps {
     auth?: AuthPort;
     history: HistoryPort;
     readModels: ReadModelPort;
-    /** License key validation (web only - Lemon Squeezy) - optional in Lite */
-    license?: LicensePort;
-    /** Payment adapter - optional in Lite */
-    payment?: PaymentPort;
     /** Session completion pipeline (XState-based) - optional */
     pipeline?: SessionEndPipelinePort;
+    /** Premium activation adapter */
+    premium?: PremiumPort;
     profile: ProfilePort;
     progression: ProgressionPort;
-    /** Reward adapter - optional in Lite */
-    reward?: RewardPort;
     /** Subscription adapter - optional in Lite */
     subscription?: SubscriptionPort;
     /** Sync adapter - optional in Lite */
@@ -90,13 +82,11 @@ export function NeurodualQueryProvider({
     prevAdapters.auth !== adapters.auth ||
     prevAdapters.history !== adapters.history ||
     prevAdapters.readModels !== adapters.readModels ||
-    prevAdapters.payment !== adapters.payment ||
+    prevAdapters.premium !== adapters.premium ||
     prevAdapters.profile !== adapters.profile ||
     prevAdapters.progression !== adapters.progression ||
-    prevAdapters.reward !== adapters.reward ||
     prevAdapters.subscription !== adapters.subscription ||
     prevAdapters.sync !== adapters.sync ||
-    prevAdapters.license !== adapters.license ||
     prevAdapters.pipeline !== adapters.pipeline;
 
   if (adaptersChanged) {
@@ -105,16 +95,12 @@ export function NeurodualQueryProvider({
     setHistoryAdapter(adapters.history);
     setReadModelsAdapter(adapters.readModels);
     setProfileReadModel(createProfileReadModel(adapters.readModels));
-    if (adapters.license && prevAdapters?.license !== adapters.license) {
-      setLicenseAdapter(adapters.license);
-    }
-    if (adapters.payment) setPaymentAdapter(adapters.payment);
     if (adapters.pipeline && prevAdapters?.pipeline !== adapters.pipeline) {
       setPipelineAdapter(adapters.pipeline);
     }
     setProfileAdapter(adapters.profile);
     setProgressionAdapter(adapters.progression);
-    if (adapters.reward) setRewardAdapter(adapters.reward);
+    if (adapters.premium) setPremiumAdapter(adapters.premium);
     if (adapters.subscription) setSubscriptionAdapter(adapters.subscription);
     if (adapters.sync) setSyncAdapter(adapters.sync);
     prevAdaptersRef.current = adapters;
@@ -152,15 +138,6 @@ export function NeurodualQueryProvider({
       );
     }
 
-    // Reward adapter → invalidate reward queries (optional)
-    if (adapters.reward) {
-      cleanups.push(
-        adapters.reward.subscribe(() => {
-          queryClient.invalidateQueries({ queryKey: queryKeys.reward.all });
-        }),
-      );
-    }
-
     return () => {
       for (const cleanup of cleanups) {
         cleanup();
@@ -168,11 +145,8 @@ export function NeurodualQueryProvider({
     };
   }, [
     adapters.auth,
-    adapters.license,
     adapters.subscription,
     adapters.sync,
-    adapters.reward,
-    adapters.payment,
     queryClient,
   ]);
 

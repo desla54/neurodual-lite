@@ -7,7 +7,6 @@ import type {
   AuthPort,
   SubscriptionPort,
   SyncPort,
-  RewardPort,
   SettingsSyncPort,
   OAuthCallbackPort,
 } from '@neurodual/logic';
@@ -47,20 +46,6 @@ export const noopSyncAdapter: SyncPort = {
   subscribe: () => () => {},
   getState: () => ({ connected: false, uploading: false, downloading: false }),
 } as unknown as SyncPort;
-
-/** Reward adapter with no rewards */
-export const noopRewardAdapter: RewardPort = {
-  getRewards: () => [],
-  getGrantedRewards: async () => [],
-  getPendingRewards: () => [],
-  grantReward: async () => ({ success: false, error: 'not available' }),
-  queueReward: () => {},
-  processPendingRewards: async () => {},
-  claimReward: async () => {},
-  onRewardChange: () => ({ unsubscribe: () => {} }),
-  subscribe: () => () => {},
-  getState: () => ({ rewards: [], pending: [] }),
-} as unknown as RewardPort;
 
 /** Settings sync adapter (noop — local only) */
 export const settingsSyncAdapter: SettingsSyncPort = {

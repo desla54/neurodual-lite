@@ -325,7 +325,9 @@ export {
   noopAuthAdapter,
   freeSubscriptionAdapter,
   noopSyncAdapter,
-  noopRewardAdapter,
   settingsSyncAdapter,
   oauthCallbackAdapter,
 } from './noop-adapters';
+
+// Premium (activation code system)
+export { createPremiumAdapter, type PremiumAdapterDeps } from './premium/premium-adapter';
