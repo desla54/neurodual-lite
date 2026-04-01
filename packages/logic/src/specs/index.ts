@@ -195,6 +195,12 @@ export { StroopSpec, StroopFlexSpec, StroopSpecs } from './stroop.spec';
 export { OspanSpec, OspanSpecs, type OspanExtensions } from './ospan.spec';
 
 // =============================================================================
+// Gridlock Specs (Sliding Puzzle)
+// =============================================================================
+
+export { GridlockSpec, GridlockSpecs } from './gridlock.spec';
+
+// =============================================================================
 // Tutorial Specs
 // =============================================================================
 
@@ -212,6 +218,7 @@ export {
 
 import { StroopSpecs } from './stroop.spec';
 import { OspanSpecs } from './ospan.spec';
+import { GridlockSpecs } from './gridlock.spec';
 import { TutorialSpecs } from './tutorial.spec';
 
 /**
@@ -222,6 +229,7 @@ export const AllSpecs = {
   ...TempoSpecs,
   ...StroopSpecs,
   ...OspanSpecs,
+  ...GridlockSpecs,
 } as const;
 
 /**
