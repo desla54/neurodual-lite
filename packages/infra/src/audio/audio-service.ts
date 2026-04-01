@@ -1761,6 +1761,67 @@ export class AudioService {
     this.fireFeedbackSound(noteByStep[value], durationByStep[value], velocity, 'playCountdownTick');
   }
 
+  /**
+   * Pre-schedule all 4 countdown ticks (3, 2, 1, 0) via Web Audio scheduling.
+   * Audio runs on the OS audio thread, so timing is sample-accurate regardless
+   * of main-thread load (React renders, page init, etc.).
+   *
+   * Returns a cancel function to abort scheduled ticks (e.g. on early STOP).
+   */
+  scheduleCountdownTicks(prepDelayMs: number): () => void {
+    const rawCtx = this.getRunningRawAudioContext();
+    if (!rawCtx) return () => {};
+
+    const dest = this.getFeedbackDestination(rawCtx);
+    const stepSec = prepDelayMs / 4000; // seconds per step
+    const baseTime = rawCtx.currentTime;
+
+    const steps = [3, 2, 1, 0] as const;
+    const noteByStep: Record<3 | 2 | 1 | 0, number> = { 3: 520, 2: 560, 1: 600, 0: 680 };
+    const durationByStep: Record<3 | 2 | 1 | 0, number> = { 3: 0.028, 2: 0.03, 1: 0.032, 0: 0.036 };
+
+    const nodes: { osc: OscillatorNode; gain: GainNode }[] = [];
+
+    for (let i = 0; i < steps.length; i++) {
+      const value = steps[i]!;
+      const urgency = (3 - value) / 3;
+      const velocity = 0.07 + urgency * 0.035;
+      const freq = noteByStep[value];
+      const dur = durationByStep[value];
+      const startAt = baseTime + stepSec * i;
+
+      const osc = rawCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+
+      const gain = rawCtx.createGain();
+      gain.gain.setValueAtTime(0.001, startAt);
+      gain.gain.linearRampToValueAtTime(velocity, startAt + 0.005);
+      gain.gain.setTargetAtTime(0.001, startAt + 0.005, dur * 0.3);
+
+      osc.connect(gain);
+      gain.connect(dest);
+
+      osc.start(startAt);
+      osc.stop(startAt + dur + 0.05);
+
+      osc.onended = () => {
+        try { osc.disconnect(); } catch { /* ignore */ }
+        try { gain.disconnect(); } catch { /* ignore */ }
+      };
+
+      nodes.push({ osc, gain });
+    }
+
+    return () => {
+      for (const { osc, gain } of nodes) {
+        try { osc.stop(); } catch { /* already stopped */ }
+        try { osc.disconnect(); } catch { /* ignore */ }
+        try { gain.disconnect(); } catch { /* ignore */ }
+      }
+    };
+  }
+
   playSwipe(): void {
     this.configureToneForLowLatency();
     void this.ensureAudioRunningAndWarmed()

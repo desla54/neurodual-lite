@@ -181,11 +181,14 @@ function StartingCountdown({
   prepDelayMs,
   getReadyText,
   onCountdownSecond,
+  scheduleAudio,
 }: {
   phase: string;
   prepDelayMs: number;
   getReadyText: string;
   onCountdownSecond?: (value: 3 | 2 | 1 | 0) => void;
+  /** Pre-schedule countdown sounds via Web Audio (jitter-free) */
+  scheduleAudio?: (prepDelayMs: number) => () => void;
 }): React.ReactNode {
   // Show during starting (audio init) or countdown phase
   if (phase !== 'starting' && phase !== 'countdown') {
@@ -203,7 +206,7 @@ function StartingCountdown({
   return (
     <p className="text-sm text-muted-foreground animate-in fade-in duration-200">
       {getReadyText}
-      <AnimatedCountdownDigits prepDelayMs={prepDelayMs} onCountdownSecond={onCountdownSecond} />
+      <AnimatedCountdownDigits prepDelayMs={prepDelayMs} onCountdownSecond={onCountdownSecond} scheduleAudio={scheduleAudio} />
     </p>
   );
 }
@@ -1595,12 +1598,12 @@ function GameplayContent({
     void audio.init().catch(() => {});
   }, [audio]);
 
-  const playCountdownDropCue = useCallback(
-    (value: 3 | 2 | 1 | 0) => {
-      if (!buttonSoundsEnabled) return;
-      audio.playCountdownTick?.(value);
+  const scheduleCountdownAudio = useCallback(
+    (prepDelayMs: number) => {
+      if (!buttonSoundsEnabled) return () => {};
+      return audio.scheduleCountdownTicks?.(prepDelayMs) ?? (() => {});
     },
-    [buttonSoundsEnabled],
+    [buttonSoundsEnabled, audio],
   );
   const { onClaimTelemetry: handleClaimTelemetry } = useNbackInputTelemetry({
     phase,
@@ -2434,7 +2437,7 @@ function GameplayContent({
                 phase={phase}
                 prepDelayMs={prepDelayMs}
                 getReadyText={t('game.starting.getReady')}
-                onCountdownSecond={playCountdownDropCue}
+                scheduleAudio={scheduleCountdownAudio}
               />
             )}
           </div>

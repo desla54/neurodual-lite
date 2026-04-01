@@ -3,14 +3,27 @@ import { type CSSProperties, type ReactNode, useEffect, useRef } from 'react';
 export function AnimatedCountdownDigits({
   prepDelayMs,
   onCountdownSecond,
+  scheduleAudio,
 }: {
   prepDelayMs: number;
+  /** Legacy per-tick callback (still used for visual sync, non-audio side-effects) */
   onCountdownSecond?: (value: 3 | 2 | 1 | 0) => void;
+  /** Pre-schedule all countdown sounds via Web Audio for jitter-free timing */
+  scheduleAudio?: (prepDelayMs: number) => () => void;
 }): ReactNode {
   const countdownDurationMs = Math.max(1, prepDelayMs);
   const countdownStepDurationMs = countdownDurationMs / 4;
 
-  // Fire countdown cues via setTimeout — more reliable than CSS onAnimationStart
+  // ── Web Audio pre-scheduling (jitter-free, runs on OS audio thread) ──
+  const scheduleAudioRef = useRef(scheduleAudio);
+  scheduleAudioRef.current = scheduleAudio;
+
+  useEffect(() => {
+    const cancel = scheduleAudioRef.current?.(countdownDurationMs);
+    return () => cancel?.();
+  }, [countdownDurationMs]);
+
+  // ── Legacy setTimeout cues (for visual sync / non-audio callbacks) ──
   const callbackRef = useRef(onCountdownSecond);
   callbackRef.current = onCountdownSecond;
 

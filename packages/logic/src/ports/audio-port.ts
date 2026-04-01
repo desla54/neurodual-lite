@@ -210,6 +210,13 @@ export interface AudioPort {
   playCountdownTick?(value: 3 | 2 | 1 | 0): void;
 
   /**
+   * Pre-schedule all countdown ticks via Web Audio for sample-accurate timing.
+   * Returns a cancel function to abort scheduled ticks (e.g. on early STOP).
+   * Falls back to per-tick playCountdownTick if not implemented.
+   */
+  scheduleCountdownTicks?(prepDelayMs: number): () => void;
+
+  /**
    * Get current audio volume level (0-1).
    * Returns null if volume cannot be determined.
    */

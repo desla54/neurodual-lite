@@ -113,6 +113,7 @@ export const audioAdapter: AudioPort = {
   playClick: () => audioService.playClick(),
   playSwipe: () => audioService.playSwipe(),
   playCountdownTick: (value) => audioService.playCountdownTick(value),
+  scheduleCountdownTicks: (prepDelayMs) => audioService.scheduleCountdownTicks(prepDelayMs),
   // Volume
   getVolumeLevel: () => audioService.getVolumeLevel(),
 };
