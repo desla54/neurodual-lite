@@ -66,8 +66,8 @@ export function stddev(arr: number[]): number | null {
  *
  * @example
  * const ids = ['a', 'b', 'c'];
- * const sql = `SELECT * FROM emt_messages WHERE id IN (${buildPlaceholders(ids.length)})`;
- * // Result: "SELECT * FROM emt_messages WHERE id IN (?, ?, ?)"
+ * const sql = `SELECT * FROM session_events WHERE id IN (${buildPlaceholders(ids.length)})`;
+ * // Result: "SELECT * FROM session_events WHERE id IN (?, ?, ?)"
  */
 export function buildPlaceholders(count: number): string {
   if (count <= 0) return '';

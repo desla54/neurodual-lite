@@ -7,8 +7,8 @@
  * before signing in. After login, these sessions become invisible because
  * queries filter by the authenticated user id.
  *
- * Solution (Emmett): On login, rewrite `emt_messages.message_data.$.data.userId`
- * from 'local'/NULL/'' to the authenticated user id, then update session_summaries.
+ * Solution: On login, update session_summaries.user_id and session_events
+ * from 'local'/NULL/'' to the authenticated user id.
  */
 
 import type { PersistencePort } from '@neurodual/logic';
@@ -55,8 +55,7 @@ async function rewriteSessionUserId(
   _sessionId: string,
   _authenticatedUserId: string,
 ): Promise<void> {
-  // No-op: Emmett emt_messages table no longer exists.
-  // Session userId is tracked in session_summaries only.
+  // No-op: Emmett event store removed. Session userId is tracked in session_summaries only.
 }
 
 // =============================================================================
@@ -263,9 +262,8 @@ async function getPendingAuthTransitionWork(
  * Migrate local events to the authenticated user.
  *
  * This function:
- * 1. Finds all session streams in emt_messages with userId='local'/NULL/''
- * 2. Rewrites `emt_messages.message_data.$.data.userId` to authenticatedUserId
- * 3. Updates session_summaries to use the authenticated user_id
+ * 1. Finds all sessions with userId='local'/NULL/''
+ * 2. Updates session_summaries and related projections to the authenticated user_id
  *
  * The function is idempotent - safe to call multiple times.
  *
@@ -315,8 +313,8 @@ export async function migrateLocalEventsToAuthenticatedUser(
     // Step 2: Migrate per-session to keep each write bounded and allow yielding.
     for (const sessionId of sessionIds) {
       await persistence.writeTransaction(async (tx) => {
-        // Rewrite userId inside emt_messages JSON envelope.
-        // This unblocks RLS-protected sync for rows created pre-login.
+        // Rewrite userId in session event data.
+        // This ensures consistency for rows created pre-login.
         await rewriteSessionUserId(tx, sessionId, authenticatedUserId);
 
         // Update summary row if already projected.

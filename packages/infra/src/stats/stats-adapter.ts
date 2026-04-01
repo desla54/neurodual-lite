@@ -46,25 +46,7 @@ import type {
 import { resolveGameModeIdsForStatsMode, TEMPO_PES_THRESHOLDS } from '@neurodual/logic';
 import { SESSION_SUMMARIES_PROJECTION_VERSION } from '../history/history-projection';
 import { buildInClause, percentile, stddev, toFiniteNumber } from '../db/sql-helpers';
-// ---------------------------------------------------------------------------
-// Inline stubs replacing removed es-emmett/supabase modules
-// ---------------------------------------------------------------------------
-
-function buildStatsEventQuery(
-  _messageType: string,
-  _selectColumns: string,
-  _extraWhere: string = '',
-): string {
-  return 'SELECT 1 WHERE 0';
-}
-
-function buildStatsEventJoinQuery(
-  _messageType: string,
-  _selectColumns: string,
-  _extraWhere: string = '',
-): string {
-  return 'SELECT 1 WHERE 0';
-}
+import { createEventStatsReader, type EventStatsReader } from './session-event-stats-reader';
 
 // =============================================================================
 // Stats Cache (RAM + SQLite)
@@ -703,7 +685,17 @@ function isBaselineQuery(filters: StatsFilters): boolean {
 // Stats Adapter
 // =============================================================================
 
-function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
+function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsReader): StatsPort {
+  /** Execute the filtered_session_ids CTE and return the list of session IDs. */
+  async function getFilteredSessionIds(filters: StatsFilters): Promise<string[]> {
+    const { sql: cte, params } = buildFilteredSessionIdsCTE(filters);
+    const result = await query<{ session_id: string }>(
+      `${cte} SELECT session_id FROM filtered_session_ids`,
+      params,
+    );
+    return result.rows.map((r) => r.session_id);
+  }
+
   return {
     /**
      * Get activity stats (sessions count, total time, avg daily time on active days, active days)
@@ -1622,85 +1614,36 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
       // When inputMethod filter is active, we need event-level data
       // (inputMethod is not stored in session_summaries)
       if (filters.inputMethod) {
-        // Input method normalization:
-        // - explicit inputMethod wins
-        // - missing inputMethod + buttonPosition => mouse
-        // - missing inputMethod without buttonPosition => keyboard
-        const params = [...baseParams, filters.inputMethod];
+        const sessionIds = await getFilteredSessionIds(filters);
+        const inputMethodFilter = filters.inputMethod;
 
-        const rtResult = await query<{
-          rt: number | null;
-          phase: string | null;
-          input_method: string | null;
-          normalized_input_method: string | null;
-          response_index_in_trial: number | null;
-          modality: string | null;
-          captured_at_ms: number | null;
-          stimulus_shown_at_ms: number | null;
-          stimulus_hidden_at_ms: number | null;
-          processing_lag_ms: number | null;
-        }>(
-          `
-	      ${cte},
-	        responses AS (
-	          ${buildStatsEventQuery(
-              'USER_RESPONDED',
-              `
-	            json_extract(em.message_data, '$.data.modality') as modality,
-	            CAST(json_extract(em.message_data, '$.data.reactionTimeMs') AS REAL) as rt,
-	            json_extract(em.message_data, '$.data.responsePhase') as phase,
-	            json_extract(em.message_data, '$.data.inputMethod') as input_method,
-	            CASE
-	              WHEN (
-	                json_extract(em.message_data, '$.data.inputMethod') IS NULL
-	                OR json_extract(em.message_data, '$.data.inputMethod') = ''
-	              )
-	                THEN CASE
-	                  WHEN json_extract(em.message_data, '$.data.buttonPosition.x') IS NOT NULL THEN 'mouse'
-	                  ELSE 'keyboard'
-	                END
-	              ELSE json_extract(em.message_data, '$.data.inputMethod')
-	            END as normalized_input_method,
-	            CAST(json_extract(em.message_data, '$.data.responseIndexInTrial') AS INTEGER) as response_index_in_trial,
-	            CAST(json_extract(em.message_data, '$.data.capturedAtMs') AS REAL) as captured_at_ms,
-	            CAST(json_extract(em.message_data, '$.data.stimulusShownAtMs') AS REAL) as stimulus_shown_at_ms,
-	            CAST(json_extract(em.message_data, '$.data.stimulusHiddenAtMs') AS REAL) as stimulus_hidden_at_ms,
-	            CAST(json_extract(em.message_data, '$.data.processingLagMs') AS REAL) as processing_lag_ms`,
-            )}
-	        )
-	        SELECT rt, phase, input_method, normalized_input_method, response_index_in_trial, modality, captured_at_ms, stimulus_shown_at_ms, stimulus_hidden_at_ms, processing_lag_ms
-	        FROM responses
-	        WHERE rt > 0
-          AND (response_index_in_trial IS NULL OR response_index_in_trial = 0)
-          AND (modality IS NULL OR modality != 'arithmetic')
-          AND normalized_input_method = ?
-      `,
-          params,
-        );
+        // Load all event types in parallel from session_events JSON blobs
+        const [responseEvents, filteredEvents, duplicateCount, pipelineEvents, trialEvents] =
+          await Promise.all([
+            eventReader.getResponseEvents(sessionIds),
+            eventReader.getFilteredResponseEvents(sessionIds),
+            eventReader.countDuplicateResponseEvents(sessionIds, inputMethodFilter),
+            eventReader.getPipelineLatencyEvents(sessionIds),
+            eventReader.getTrialPresentedEvents(sessionIds),
+          ]);
 
+        // Filter and compute RT values from USER_RESPONDED events
         let computedRtCount = 0;
-        const computed = rtResult.rows
+        const computed = responseEvents
           .filter(
-            (
-              r,
-            ): r is {
-              rt: number;
-              phase: string | null;
-              input_method: string | null;
-              response_index_in_trial: number | null;
-              modality: string | null;
-              captured_at_ms: number | null;
-              stimulus_shown_at_ms: number | null;
-              stimulus_hidden_at_ms: number | null;
-              processing_lag_ms: number | null;
-              normalized_input_method: string | null;
-            } => typeof r.rt === 'number' && Number.isFinite(r.rt) && r.rt > 0,
+            (r) =>
+              typeof r.rt === 'number' &&
+              Number.isFinite(r.rt) &&
+              r.rt > 0 &&
+              (r.responseIndexInTrial === null || r.responseIndexInTrial === 0) &&
+              (r.modality === null || r.modality !== 'arithmetic') &&
+              r.normalizedInputMethod === inputMethodFilter,
           )
           .map((r) => {
-            const legacyRt = r.rt;
-            const capturedAtMs = r.captured_at_ms;
-            const stimulusShownAtMs = r.stimulus_shown_at_ms;
-            const stimulusHiddenAtMs = r.stimulus_hidden_at_ms;
+            const legacyRt = r.rt!;
+            const capturedAtMs = r.capturedAtMs;
+            const stimulusShownAtMs = r.stimulusShownAtMs;
+            const stimulusHiddenAtMs = r.stimulusHiddenAtMs;
 
             let rtMs = legacyRt;
             let didRecomputeRt = false;
@@ -1747,8 +1690,8 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
               phase,
               afterOffsetRtMs,
               processingLagMs:
-                typeof r.processing_lag_ms === 'number' && Number.isFinite(r.processing_lag_ms)
-                  ? r.processing_lag_ms
+                typeof r.processingLagMs === 'number' && Number.isFinite(r.processingLagMs)
+                  ? r.processingLagMs
                   : null,
             };
           })
@@ -1775,140 +1718,60 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
           .map((r) => r.processingLagMs)
           .filter((v): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0);
 
-        const filteredResult = await query<{ reason: string | null; count: number }>(
-          `
-	        ${cte}
-	        ${buildStatsEventQuery(
-            'RESPONSE_FILTERED',
-            `
-	          json_extract(em.message_data, '$.data.reason') as reason,
-	          COUNT(*) as count`,
-            `(
-	            CASE
-	              WHEN (
-	                json_extract(em.message_data, '$.data.inputMethod') IS NULL
-	                OR json_extract(em.message_data, '$.data.inputMethod') = ''
-	              )
-	                THEN 'keyboard'
-	              ELSE json_extract(em.message_data, '$.data.inputMethod')
-	            END
-	          ) = ?`,
-          )}
-	        GROUP BY reason
-	      `,
-          params,
-        );
-
+        // RESPONSE_FILTERED counts by reason
         let filteredTooFastCount = 0;
         let filteredTouchBounceCount = 0;
-        for (const row of filteredResult.rows) {
-          if (row.reason === 'too_fast') filteredTooFastCount += row.count ?? 0;
-          if (row.reason === 'touch_bounce') filteredTouchBounceCount += row.count ?? 0;
+        for (const row of filteredEvents) {
+          if (row.normalizedInputMethod !== inputMethodFilter) continue;
+          if (row.reason === 'too_fast') filteredTooFastCount++;
+          if (row.reason === 'touch_bounce') filteredTouchBounceCount++;
         }
 
-        const duplicateResult = await query<{ count: number }>(
-          `
-	        ${cte}
-	        ${buildStatsEventQuery(
-            'DUPLICATE_RESPONSE_DETECTED',
-            'COUNT(*) as count',
-            `(
-	            CASE
-	              WHEN (
-	                json_extract(em.message_data, '$.data.inputMethod') IS NULL
-	                OR json_extract(em.message_data, '$.data.inputMethod') = ''
-	              )
-	                THEN 'keyboard'
-	              ELSE json_extract(em.message_data, '$.data.inputMethod')
-	            END
-	          ) = ?`,
-          )}
-	      `,
-          params,
-        );
-        const duplicateResponseCount = duplicateResult.rows[0]?.count ?? 0;
+        const duplicateResponseCount = duplicateCount;
 
-        const pipelineResult = await query<{
-          input_to_dispatch_ms: number | null;
-          input_to_paint_ms: number | null;
-          normalized_input_method: string | null;
-        }>(
-          `
-	        ${cte},
-	        pipeline AS (
-	          ${buildStatsEventQuery(
-              'INPUT_PIPELINE_LATENCY',
-              `
-	            CAST(json_extract(em.message_data, '$.data.inputToDispatchMs') AS REAL) as input_to_dispatch_ms,
-	            CAST(json_extract(em.message_data, '$.data.inputToPaintMs') AS REAL) as input_to_paint_ms,
-	            CASE
-	              WHEN (
-	                json_extract(em.message_data, '$.data.inputMethod') IS NULL
-	                OR json_extract(em.message_data, '$.data.inputMethod') = ''
-	              )
-	                THEN 'keyboard'
-	              ELSE json_extract(em.message_data, '$.data.inputMethod')
-	            END as normalized_input_method`,
-            )}
-	        )
-	        SELECT input_to_dispatch_ms, input_to_paint_ms, normalized_input_method
-	        FROM pipeline
-	        WHERE input_to_dispatch_ms IS NOT NULL
-          AND input_to_dispatch_ms >= 0
-          AND input_to_dispatch_ms <= 60000
-          AND normalized_input_method = ?
-      `,
-          params,
-        );
+        // INPUT_PIPELINE_LATENCY
+        const inputToDispatchValues = pipelineEvents
+          .filter(
+            (r) =>
+              r.normalizedInputMethod === inputMethodFilter &&
+              typeof r.inputToDispatchMs === 'number' &&
+              Number.isFinite(r.inputToDispatchMs) &&
+              r.inputToDispatchMs >= 0 &&
+              r.inputToDispatchMs <= 60000,
+          )
+          .map((r) => r.inputToDispatchMs!);
+        const inputToPaintValues = pipelineEvents
+          .filter(
+            (r) =>
+              r.normalizedInputMethod === inputMethodFilter &&
+              typeof r.inputToPaintMs === 'number' &&
+              Number.isFinite(r.inputToPaintMs) &&
+              r.inputToPaintMs >= 0,
+          )
+          .map((r) => r.inputToPaintMs!);
 
-        const inputToDispatchValues = pipelineResult.rows
-          .map((r) => r.input_to_dispatch_ms)
-          .filter((v): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0);
-        const inputToPaintValues = pipelineResult.rows
-          .map((r) => r.input_to_paint_ms)
-          .filter((v): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0);
-
-        const driftResult = await query<{
-          audio_sync_at_ms: number | null;
-          stimulus_shown_at_ms: number | null;
-          audio_ended_at_ms: number | null;
-          stimulus_hidden_at_ms: number | null;
-        }>(
-          `
-	        ${cte}
-	        ${buildStatsEventQuery(
-            'TRIAL_PRESENTED',
-            `
-	          CAST(json_extract(em.message_data, '$.data.audioSyncAtMs') AS REAL) as audio_sync_at_ms,
-	          CAST(json_extract(em.message_data, '$.data.stimulusShownAtMs') AS REAL) as stimulus_shown_at_ms,
-	          CAST(json_extract(em.message_data, '$.data.audioEndedAtMs') AS REAL) as audio_ended_at_ms,
-	          CAST(json_extract(em.message_data, '$.data.stimulusHiddenAtMs') AS REAL) as stimulus_hidden_at_ms`,
-          )}
-	      `,
-          baseParams,
-        );
-
+        // TRIAL_PRESENTED drift values
         const showDriftValues: number[] = [];
         const hideDriftValues: number[] = [];
-        for (const row of driftResult.rows) {
+        for (const row of trialEvents) {
           if (
-            typeof row.audio_sync_at_ms === 'number' &&
-            Number.isFinite(row.audio_sync_at_ms) &&
-            typeof row.stimulus_shown_at_ms === 'number' &&
-            Number.isFinite(row.stimulus_shown_at_ms)
+            typeof row.audioSyncAtMs === 'number' &&
+            Number.isFinite(row.audioSyncAtMs) &&
+            typeof row.stimulusShownAtMs === 'number' &&
+            Number.isFinite(row.stimulusShownAtMs)
           ) {
-            const drift = row.stimulus_shown_at_ms - row.audio_sync_at_ms;
+            const drift = row.stimulusShownAtMs - row.audioSyncAtMs;
             if (Number.isFinite(drift) && drift >= -60000 && drift <= 60000) {
               showDriftValues.push(drift);
             }
           }
           if (
-            typeof row.audio_ended_at_ms === 'number' &&
-            Number.isFinite(row.audio_ended_at_ms) &&
-            typeof row.stimulus_hidden_at_ms === 'number' &&
-            Number.isFinite(row.stimulus_hidden_at_ms)
+            typeof row.audioEndedAtMs === 'number' &&
+            Number.isFinite(row.audioEndedAtMs) &&
+            typeof row.stimulusHiddenAtMs === 'number' &&
+            Number.isFinite(row.stimulusHiddenAtMs)
           ) {
-            const drift = row.stimulus_hidden_at_ms - row.audio_ended_at_ms;
+            const drift = row.stimulusHiddenAtMs - row.audioEndedAtMs;
             if (Number.isFinite(drift) && drift >= -60000 && drift <= 60000) {
               hideDriftValues.push(drift);
             }
@@ -2008,43 +1871,13 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
      * Uses JS helpers for percentile and stddev
      */
     async getModalityTimingStats(filters: StatsFilters): Promise<ModalityTimingStats[]> {
-      const { sql: cte, params: baseParams } = buildFilteredSessionIdsCTE(filters);
-
-      // Fetch raw response times by modality
-      const result = await query<{
-        modality: string | null;
-        rt: number | null;
-        input_method: string | null;
-        button_position_x: number | null;
-        response_index_in_trial: number | null;
-        phase: string | null;
-        captured_at_ms: number | null;
-        stimulus_shown_at_ms: number | null;
-        stimulus_hidden_at_ms: number | null;
-      }>(
-        `
-	      ${cte}
-	      ${buildStatsEventJoinQuery(
-          'USER_RESPONDED',
-          `
-	        json_extract(em.message_data, '$.data.modality') as modality,
-	        CAST(json_extract(em.message_data, '$.data.reactionTimeMs') AS REAL) as rt,
-	        json_extract(em.message_data, '$.data.inputMethod') as input_method,
-	        CAST(json_extract(em.message_data, '$.data.buttonPosition.x') AS REAL) as button_position_x,
-	        CAST(json_extract(em.message_data, '$.data.responseIndexInTrial') AS INTEGER) as response_index_in_trial,
-	        json_extract(em.message_data, '$.data.responsePhase') as phase,
-	        CAST(json_extract(em.message_data, '$.data.capturedAtMs') AS REAL) as captured_at_ms,
-	        CAST(json_extract(em.message_data, '$.data.stimulusShownAtMs') AS REAL) as stimulus_shown_at_ms,
-	        CAST(json_extract(em.message_data, '$.data.stimulusHiddenAtMs') AS REAL) as stimulus_hidden_at_ms`,
-        )}
-	    `,
-        baseParams,
-      );
+      const sessionIds = await getFilteredSessionIds(filters);
+      const responseEvents = await eventReader.getResponseEvents(sessionIds);
 
       // Group by modality and calculate stats
       const byModality = new Map<string, { all: number[]; during: number[] }>();
       const allowedInputMethods = new Set(['keyboard', 'mouse', 'touch']);
-      for (const row of result.rows) {
+      for (const row of responseEvents) {
         if (typeof row.rt !== 'number' || !Number.isFinite(row.rt) || row.rt <= 0) {
           continue;
         }
@@ -2055,34 +1888,27 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
           continue;
         }
         // Prefer first response in trial for stability; older events may not have responseIndexInTrial.
-        if (typeof row.response_index_in_trial === 'number' && row.response_index_in_trial !== 0) {
+        if (typeof row.responseIndexInTrial === 'number' && row.responseIndexInTrial !== 0) {
           continue;
         }
 
-        const normalizedInputMethod =
-          typeof row.input_method === 'string' && row.input_method.length > 0
-            ? row.input_method
-            : typeof row.button_position_x === 'number' && Number.isFinite(row.button_position_x)
-              ? 'mouse'
-              : 'keyboard';
-
         if (filters.inputMethod) {
           if (filters.inputMethod === 'keyboard') {
-            if (normalizedInputMethod !== 'keyboard') {
+            if (row.normalizedInputMethod !== 'keyboard') {
               continue;
             }
-          } else if (normalizedInputMethod !== filters.inputMethod) {
+          } else if (row.normalizedInputMethod !== filters.inputMethod) {
             continue;
           }
-        } else if (!allowedInputMethods.has(normalizedInputMethod)) {
+        } else if (!allowedInputMethods.has(row.normalizedInputMethod)) {
           continue;
         }
 
         const existing = byModality.get(row.modality) ?? { all: [], during: [] };
 
-        const capturedAtMs = row.captured_at_ms;
-        const stimulusShownAtMs = row.stimulus_shown_at_ms;
-        const stimulusHiddenAtMs = row.stimulus_hidden_at_ms;
+        const capturedAtMs = row.capturedAtMs;
+        const stimulusShownAtMs = row.stimulusShownAtMs;
+        const stimulusHiddenAtMs = row.stimulusHiddenAtMs;
 
         let rtMs = row.rt;
         if (
@@ -2097,7 +1923,7 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
           }
         }
 
-        let phase = row.phase;
+        let phase: string | null = row.phase;
         if (
           typeof capturedAtMs === 'number' &&
           Number.isFinite(capturedAtMs) &&
@@ -2151,107 +1977,52 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
      * - PES uses RT on those post-error hits compared to baseline hit RTs
      */
     async getPostErrorSlowingStats(filters: StatsFilters): Promise<PostErrorSlowingStats[]> {
-      const { sql: cte, params: baseParams } = buildFilteredSessionIdsCTE(filters);
+      const sessionIds = await getFilteredSessionIds(filters);
 
-      const trialsResult = await query<{
-        session_id: string;
-        trial_index: number | null;
-        is_position_target: number | null;
-        is_audio_target: number | null;
-      }>(
-        `
-	      ${cte}
-	      ${buildStatsEventJoinQuery(
-          'TRIAL_PRESENTED',
-          `
-	        substr(em.stream_id, 9) as session_id,
-	        CAST(json_extract(em.message_data, '$.data.trial.index') AS INTEGER) as trial_index,
-	        CAST(json_extract(em.message_data, '$.data.trial.isPositionTarget') AS INTEGER) as is_position_target,
-	        COALESCE(
-	          CAST(json_extract(em.message_data, '$.data.trial.isSoundTarget') AS INTEGER),
-	          CAST(json_extract(em.message_data, '$.data.trial.isAudioTarget') AS INTEGER)
-	        ) as is_audio_target`,
-        )}
-	    `,
-        baseParams,
-      );
-
-      const responsesResult = await query<{
-        session_id: string;
-        modality: string | null;
-        trial_index: number | null;
-        rt: number | null;
-        input_method: string | null;
-        button_position_x: number | null;
-        response_index_in_trial: number | null;
-        captured_at_ms: number | null;
-        stimulus_shown_at_ms: number | null;
-      }>(
-        `
-	      ${cte}
-	      ${buildStatsEventJoinQuery(
-          'USER_RESPONDED',
-          `
-	        substr(em.stream_id, 9) as session_id,
-	        json_extract(em.message_data, '$.data.modality') as modality,
-	        CAST(json_extract(em.message_data, '$.data.trialIndex') AS INTEGER) as trial_index,
-	        CAST(json_extract(em.message_data, '$.data.reactionTimeMs') AS REAL) as rt,
-	        json_extract(em.message_data, '$.data.inputMethod') as input_method,
-	        CAST(json_extract(em.message_data, '$.data.buttonPosition.x') AS REAL) as button_position_x,
-	        CAST(json_extract(em.message_data, '$.data.responseIndexInTrial') AS INTEGER) as response_index_in_trial,
-	        CAST(json_extract(em.message_data, '$.data.capturedAtMs') AS REAL) as captured_at_ms,
-	        CAST(json_extract(em.message_data, '$.data.stimulusShownAtMs') AS REAL) as stimulus_shown_at_ms`,
-        )}
-	    `,
-        baseParams,
-      );
+      // Load trial and response events in parallel from session_events JSON blobs
+      const [trialEventsRaw, responseEventsRaw] = await Promise.all([
+        eventReader.getTrialPresentedEvents(sessionIds),
+        eventReader.getResponseEvents(sessionIds),
+      ]);
 
       type Modality = 'position' | 'audio';
       type TrialTargets = { position: boolean; audio: boolean };
       type ResponseRtByModality = Partial<Record<Modality, number>>;
 
       const trialsBySession = new Map<string, Map<number, TrialTargets>>();
-      for (const row of trialsResult.rows) {
-        if (!row.session_id) continue;
-        if (typeof row.trial_index !== 'number' || !Number.isFinite(row.trial_index)) continue;
-        const trialIndex = row.trial_index;
+      for (const row of trialEventsRaw) {
+        if (!row.sessionId) continue;
+        if (typeof row.trialIndex !== 'number' || !Number.isFinite(row.trialIndex)) continue;
 
         const sessionTrials =
-          trialsBySession.get(row.session_id) ?? new Map<number, TrialTargets>();
-        sessionTrials.set(trialIndex, {
-          position: row.is_position_target === 1,
-          audio: row.is_audio_target === 1,
+          trialsBySession.get(row.sessionId) ?? new Map<number, TrialTargets>();
+        sessionTrials.set(row.trialIndex, {
+          position: row.isPositionTarget,
+          audio: row.isAudioTarget,
         });
-        trialsBySession.set(row.session_id, sessionTrials);
+        trialsBySession.set(row.sessionId, sessionTrials);
       }
 
       const rtsBySession = new Map<string, Map<number, ResponseRtByModality>>();
       const allowedInputMethods = new Set<StatsInputMethod>(['keyboard', 'mouse', 'touch']);
 
-      for (const row of responsesResult.rows) {
-        if (!row.session_id) continue;
+      for (const row of responseEventsRaw) {
+        if (!row.sessionId) continue;
         if (row.modality !== 'position' && row.modality !== 'audio') continue;
-        if (typeof row.trial_index !== 'number' || !Number.isFinite(row.trial_index)) continue;
+        if (typeof row.trialIndex !== 'number' || !Number.isFinite(row.trialIndex)) continue;
         if (typeof row.rt !== 'number' || !Number.isFinite(row.rt) || row.rt <= 0) continue;
-        if (typeof row.response_index_in_trial === 'number' && row.response_index_in_trial !== 0) {
+        if (typeof row.responseIndexInTrial === 'number' && row.responseIndexInTrial !== 0) {
           continue;
         }
-
-        const normalizedInputMethod: StatsInputMethod =
-          typeof row.input_method === 'string' && row.input_method.length > 0
-            ? (row.input_method as StatsInputMethod)
-            : typeof row.button_position_x === 'number' && Number.isFinite(row.button_position_x)
-              ? 'mouse'
-              : 'keyboard';
 
         if (filters.inputMethod) {
-          if (normalizedInputMethod !== filters.inputMethod) continue;
-        } else if (!allowedInputMethods.has(normalizedInputMethod)) {
+          if (row.normalizedInputMethod !== filters.inputMethod) continue;
+        } else if (!allowedInputMethods.has(row.normalizedInputMethod as StatsInputMethod)) {
           continue;
         }
 
-        const capturedAtMs = row.captured_at_ms;
-        const stimulusShownAtMs = row.stimulus_shown_at_ms;
+        const capturedAtMs = row.capturedAtMs;
+        const stimulusShownAtMs = row.stimulusShownAtMs;
         let rtMs = row.rt;
         if (
           typeof capturedAtMs === 'number' &&
@@ -2267,20 +2038,20 @@ function createStatsAdapterWithQuery(query: QueryFn): StatsPort {
 
         if (!Number.isFinite(rtMs) || rtMs <= 0 || rtMs > 30000) continue;
 
-        const sessionTrials = trialsBySession.get(row.session_id);
-        if (!sessionTrials || !sessionTrials.has(row.trial_index)) continue;
+        const sessionTrials = trialsBySession.get(row.sessionId);
+        if (!sessionTrials || !sessionTrials.has(row.trialIndex)) continue;
 
         const sessionRts =
-          rtsBySession.get(row.session_id) ?? new Map<number, ResponseRtByModality>();
-        const byTrial = sessionRts.get(row.trial_index) ?? {};
+          rtsBySession.get(row.sessionId) ?? new Map<number, ResponseRtByModality>();
+        const byTrial = sessionRts.get(row.trialIndex) ?? {};
         const modality = row.modality as Modality;
 
         const existing = byTrial[modality];
         if (existing === undefined || rtMs < existing) {
           byTrial[modality] = rtMs;
         }
-        sessionRts.set(row.trial_index, byTrial);
-        rtsBySession.set(row.session_id, sessionRts);
+        sessionRts.set(row.trialIndex, byTrial);
+        rtsBySession.set(row.sessionId, sessionRts);
       }
 
       const mean = (values: readonly number[]): number =>
@@ -2603,7 +2374,8 @@ function withoutInputMethod(filters: StatsFilters): StatsFilters {
  * Only needs SQLQueryPort (read-only SQL queries).
  */
 export function createStatsAdapter(persistence: SQLQueryPort): StatsPort {
-  const base = createStatsAdapterWithQuery(persistence.query.bind(persistence));
+  const reader = createEventStatsReader(persistence);
+  const base = createStatsAdapterWithQuery(persistence.query.bind(persistence), reader);
   let cache = statsCacheByPersistence.get(persistence);
   if (!cache) {
     cache = createStatsCache(persistence);

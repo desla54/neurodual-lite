@@ -2,11 +2,8 @@
 /**
  * Replay Adapter
  *
- * Implementation of ReplayPort using Emmett Event Store.
- * Loads session events from emt_messages table with indexed stream_position.
- *
- * Migration (Phase 1): Replaced persistence.getSession() (events_all VIEW) with
- * eventStore.readStream() for O(log n) indexed reads.
+ * Implementation of ReplayPort.
+ * Loads session events from session_events table (JSON blob per session).
  */
 
 import {

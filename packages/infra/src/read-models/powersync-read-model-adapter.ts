@@ -33,30 +33,8 @@ import {
   buildSessionsListCompiledQuery,
   type CompiledSqlQuery,
 } from './history-queries';
-// Inlined SQL helpers (es-emmett removed)
-const EMT_EVENTS_TABLE = 'emt_messages' as const;
-function sessionStreamIdSql(column: string = 'stream_id'): string {
-  return `CASE
-    WHEN ${column} LIKE 'training:session:%' THEN substr(${column}, 18)
-    WHEN ${column} LIKE 'session:%' THEN substr(${column}, 9)
-    ELSE NULL
-  END`;
-}
-function sessionStreamFilterSql(column: string = 'stream_id'): string {
-  return `(${column} LIKE 'session:%' OR ${column} LIKE 'training:session:%')`;
-}
-function eventBaseWhere(alias: string = ''): string {
-  const p = alias ? `${alias}.` : '';
-  return `${p}message_kind = 'E' AND ${p}is_archived = 0`;
-}
-function eventOrderAsc(alias: string = ''): string {
-  const p = alias ? `${alias}.` : '';
-  return `ORDER BY CAST(${p}global_position AS INTEGER) ASC`;
-}
-function eventOrderDesc(alias: string = ''): string {
-  const p = alias ? `${alias}.` : '';
-  return `ORDER BY CAST(${p}global_position AS INTEGER) DESC`;
-}
+// Legacy emt_messages SQL helpers removed — all event reads now go through
+// session_events.events_json (parsed in JS) or session_summaries (pre-aggregated).
 type Listener = () => void;
 type RafWindow = typeof window & {
   requestAnimationFrame?: (cb: (timestamp: number) => void) => number;
@@ -995,31 +973,12 @@ export function createPowerSyncReadModelAdapter(): ReadModelPort {
     },
 
     badgesUnlocked: (userId: string | null) => {
-      // Use event-queries fragments (single source of truth for event table access)
-      const effectiveUserIds = userIdsWithLocal(userId);
-      const placeholders = effectiveUserIds.map(() => '?').join(', ');
-      const includeLegacy = effectiveUserIds.includes('local');
-
-      const userClause = includeLegacy
-        ? `(json_extract(em.message_data, '$.data.userId') IN (${placeholders})
-            OR json_extract(em.message_data, '$.data.userId') IS NULL
-            OR json_extract(em.message_data, '$.data.userId') = '')`
-        : `json_extract(em.message_data, '$.data.userId') IN (${placeholders})`;
-
+      // Badge unlock events were stored in emt_messages (removed).
+      // Badges are now derived dynamically in useProgression — return empty result.
       const cacheKey = `badgesUnlocked:${userId ?? 'local'}`;
       const compiled: CompiledSqlQuery = {
-        sql: `SELECT
-	            em.message_id as id,
-	            json_extract(em.message_data, '$.data.badgeId') as badge_id,
-	            ${sessionStreamIdSql('em.stream_id')} as session_id,
-	            CAST(json_extract(em.message_data, '$.data.timestamp') AS INTEGER) as timestamp
-	          FROM ${EMT_EVENTS_TABLE} em
-	          WHERE ${eventBaseWhere('em')}
-	            AND ${sessionStreamFilterSql('em.stream_id')}
-	            AND em.message_type = 'BADGE_UNLOCKED'
-	            AND ${userClause}
-	          ${eventOrderAsc('em')}`,
-        parameters: effectiveUserIds,
+        sql: `SELECT NULL AS id, NULL AS badge_id, NULL AS session_id, NULL AS timestamp WHERE 0`,
+        parameters: [],
       };
 
       return watchRows({ cacheKey, compiled, cache: badgesUnlockedCache });
@@ -1231,24 +1190,13 @@ export function createPowerSyncReadModelAdapter(): ReadModelPort {
     // -----------------------------------------------------------------------
 
     adminRecentSessionHealth: (userId: string, refreshToken?: number) => {
+      // Health metrics were stored in emt_messages SESSION_ENDED events (removed).
+      // Return empty result — admin health panel needs migration to session_events.
       const token = typeof refreshToken === 'number' ? refreshToken : 0;
       const cacheKey = `adminHealth:${userId}:${token}`;
       const compiled: CompiledSqlQuery = {
-        sql: `/* refresh:${token} */
-          SELECT
-            substr(e.stream_id, 9) as session_id,
-            CAST(json_extract(e.message_data, '$.data.timestamp') AS INTEGER) as timestamp,
-            json_extract(e.message_data, '$.data.healthMetrics') AS health_metrics,
-            json_extract(e.message_data, '$.data.userId') as e_user_id,
-            substr(e.stream_id, 9) as e_session_id
-          FROM ${EMT_EVENTS_TABLE} e
-	          WHERE ${eventBaseWhere('e')}
-	            AND e.message_type = 'SESSION_ENDED'
-	            AND json_extract(e.message_data, '$.data.userId') = ?
-	            AND json_extract(e.message_data, '$.data.healthMetrics') IS NOT NULL
-	          ${eventOrderDesc('e')}
-	          LIMIT 25`,
-        parameters: [userId],
+        sql: `SELECT NULL AS session_id, NULL AS timestamp, NULL AS health_metrics, NULL AS e_user_id, NULL AS e_session_id WHERE 0`,
+        parameters: [],
       };
       return watchRows({ cacheKey, compiled, cache: adminHealthCache });
     },

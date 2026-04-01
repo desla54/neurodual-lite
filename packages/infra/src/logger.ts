@@ -143,7 +143,6 @@ export const audioLog = createLogger('AudioService');
 export const progressionLog = createLogger('ProgressionAdapter');
 export const historyLog = createLogger('HistoryAdapter');
 export const persistenceLog = createLogger('Persistence');
-export const revenueCatLog = createLogger('RevenueCat');
 export const subscriptionLog = createLogger('SubscriptionAdapter');
 export const settingsSyncLog = createLogger('SettingsSync');
 export const lifecycleLog = createLogger('AppLifecycle');

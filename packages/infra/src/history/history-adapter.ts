@@ -169,7 +169,7 @@ export interface HistoryAdapterOptions {
   syncPort?: SyncPort;
   /**
    * Optional event store reader for faster indexed reads.
-   * If provided, uses emt_messages table instead of events_all VIEW.
+   * If provided, uses session_events table for indexed reads.
    */
   eventStore?: {
     readStream(args: {
@@ -255,7 +255,7 @@ export function createHistoryAdapter(
     // We read raw stored events and normalize them via migrateAndValidateEventBatch (strict=false),
     // so legacy/forward-compatible keys never make historical reports disappear.
 
-    // Read session events from emt_messages via centralized event-queries module.
+    // Read session events from session_events via centralized event-queries module.
     let rawEvents: RawVersionedEvent[] = [];
     try {
       const psDb = await requirePowerSyncDb(persistence);
@@ -1039,7 +1039,7 @@ export function setupHistoryPowerSyncWatch(
     const isDeletedRow = (row: { deleted?: unknown }): boolean =>
       row.deleted === true || Number(row.deleted) === 1;
 
-    // Initial snapshot: catch up from emt_messages (global_position checkpoint) to bring read models to latest state.
+    // Initial snapshot: catch up from session_events to bring read models to latest state.
     if (!hasReceivedInitialSnapshot) {
       hasReceivedInitialSnapshot = true;
       historyLog.debug('[PowerSync] Initial session-end snapshot received:', rows.length);
@@ -1098,7 +1098,7 @@ export function setupHistoryPowerSyncWatch(
     }
 
     // Process new sessions arriving from sync.
-    // The projection processor reads emt_messages from the last checkpoint,
+    // The projection processor reads session_events from the last checkpoint,
     // so calling ensureUpToDate picks up any events synced since last run.
     const newRows = await filterAlreadyPatchedXpBreakdownSignals(
       persistence,
@@ -1147,7 +1147,7 @@ export function setupHistoryPowerSyncWatch(
     },
   );
 
-  // Secondary trigger: raw emt_messages count (no json_extract = max reliability).
+  // Secondary trigger: raw session_events count (no json_extract = max reliability).
   //
   // PowerSync's change query parser can be flaky on mobile WebView with complex SQL
   // expressions (json_extract, computed columns). This watch is intentionally simple
@@ -1217,7 +1217,7 @@ export function setupHistoryPowerSyncWatch(
       lastRawEmtCount = count;
     },
     onError: (err: unknown) => {
-      historyLog.warn('[PowerSync] emt_messages count watch error (ignored)', err);
+      historyLog.warn('[PowerSync] session_events count watch error (ignored)', err);
     },
   });
 

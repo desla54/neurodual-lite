@@ -5,8 +5,7 @@
  * Computes user streak from session events.
  * Tracks current streak, best streak, and last active date.
  *
- * Phase 3 Migration: New projection using Emmett for O(1) streak queries
- * instead of CTE SQL on session_summaries.
+ * Projection maintained incrementally for O(1) streak queries.
  */
 
 import type { GameEvent, StreakInfo } from '@neurodual/logic';
@@ -46,7 +45,7 @@ export interface StreakState {
 }
 
 export interface StreakCheckpoint {
-  position: number; // global_position from emt_messages
+  position: number; // checkpoint position (legacy: global_position)
   state: StreakState;
 }
 
@@ -151,8 +150,8 @@ export function evolveStreakState(state: StreakState, event: GameEvent): StreakS
 }
 
 /**
- * Evolve streak state from Emmett stored event.
- * Optimized version that reads directly from emt_messages format.
+ * Evolve streak state from a stored event.
+ * Reads event type and data from the projected event format.
  */
 export function evolveStreakStateFromEmmett(
   state: StreakState,

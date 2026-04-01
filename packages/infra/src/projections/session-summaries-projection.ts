@@ -1,6 +1,6 @@
 // packages/infra/src/projections/session-summaries-projection.ts
 /**
- * session_summaries Projection (Emmett session_in_progress pattern)
+ * session_summaries Projection
  *
  * Accumulates session events incrementally in `session_in_progress_events` (local-only table).
  * At SESSION_*_ENDED → finalize → insert session_summaries → DELETE session_in_progress_events.
@@ -9,10 +9,7 @@
  * - Eliminates persistence.getSession() from the hot path (was 1–2 OPFS IPC round-trips per session)
  * - O(total_events) single pass vs O(sessions × events_per_session) repeated reads on replay
  *
- * Upgrade path: sessions started before v18 have no in-progress rows.
- * When they finalize, a one-time fallback read from emt_messages is performed.
- *
- * Pattern (Emmett evolveState):
+ * Pattern:
  *   SESSION_STARTED / intermediates → append session_in_progress_events
  *   SESSION_*_ENDED                 → finalize → insert session_summaries → DELETE in-progress rows
  *   JOURNEY_TRANSITION_DECIDED / XP_BREAKDOWN_COMPUTED (post-finalize)
@@ -42,7 +39,7 @@ import { getPlayContextFromEvents } from '../utils/session-event-helpers';
 import { nowMs, yieldIfOverBudget } from '../utils/yield-to-main';
 import type { ProjectedEvent, ProjectionDefinition } from './projection-definition';
 import { bulkDeleteWhereIn, bulkInsert } from '../db/sql-executor';
-import { parseSqlDateToMs, safeJsonParse } from '../db/sql-helpers';
+// parseSqlDateToMs and safeJsonParse removed — no longer needed after emt_messages removal
 import {
   SESSION_SUMMARY_INSERT_COLUMNS,
   sessionSummaryInsertValues,
@@ -149,8 +146,8 @@ const SESSION_STREAM_EVENT_TYPES: ReadonlySet<string> = new Set([
   'COGNITIVE_TASK_SESSION_ENDED',
   // Derived / context events
   'XP_BREAKDOWN_COMPUTED',
-  // Note: BADGE_UNLOCKED is NOT accumulated here — badges are read directly from
-  // emt_messages by the progression adapter and do not contribute to session_summaries.
+  // Note: BADGE_UNLOCKED is NOT accumulated here — badges are derived dynamically
+  // by the progression adapter and do not contribute to session_summaries.
 ]);
 
 /** Session start events (any mode). Imported from centralized registry. */
@@ -333,31 +330,17 @@ async function loadSessionsInProgress(
 // in handle() to produce a single watcher notification.
 
 // =============================================================================
-// emt_messages fallback (upgrade path: session started before v18)
+// Legacy emt_messages fallback (no-op: table removed)
 // =============================================================================
 
 async function readSessionEventsFromDb(
-  db: AbstractPowerSyncDatabase,
-  sessionId: string,
+  _db: AbstractPowerSyncDatabase,
+  _sessionId: string,
 ): Promise<StoredSessionEvent[]> {
-  const rows = await db.getAll<{
-    message_type: string;
-    message_data: string | null;
-    global_position: string;
-    created: string | null;
-  }>(
-    `SELECT message_type, message_data, global_position, created
-     FROM emt_messages
-     WHERE (stream_id = 'session:' || ? OR stream_id = 'training:session:' || ?) AND message_kind = 'E' AND is_archived = 0
-     ORDER BY CAST(global_position AS INTEGER) ASC`,
-    [sessionId, sessionId],
-  );
-  return rows.map((row) => {
-    const envelope = safeJsonParse<Record<string, unknown>>(row.message_data ?? '{}', {});
-    const parsed = (envelope['data'] as Record<string, unknown>) ?? envelope;
-    const c = parseSqlDateToMs(row.created) ?? 0;
-    return { t: row.message_type, d: parsed, p: row.global_position, c };
-  });
+  // emt_messages table has been removed. Sessions started before v18 that haven't
+  // been migrated to session_events will be missing start events. This is safe —
+  // the caller handles empty results gracefully.
+  return [];
 }
 
 // =============================================================================
@@ -1253,8 +1236,8 @@ export function createSessionSummariesProjectionDefinition(
 
         if (hasSessionEndInNew) {
           // Finalize this session.
-          // Upgrade path: if no start event is present (session started before v18),
-          // fall back to reading all events from emt_messages.
+          // Legacy upgrade path: if no start event is present (session started before v18),
+          // attempt to read from legacy storage (no-op since emt_messages removal).
           let finalEvents = allEvents;
           if (!allEvents.some((e) => SESSION_START_TYPES.has(e.t))) {
             try {
@@ -1264,7 +1247,7 @@ export function createSessionSummariesProjectionDefinition(
               }
             } catch (err) {
               console.warn(
-                `[session-summaries] emt_messages fallback failed for session ${sessionId}`,
+                `[session-summaries] legacy fallback failed for session ${sessionId}`,
                 err,
               );
             }
@@ -1402,7 +1385,7 @@ export function createSessionSummariesProjectionDefinition(
       if (!batchMode) flushFinalizeTiming();
 
       // Phase 5: Rebuild projections that still depend on persisted session_summaries.
-      // The cognitive profile now rebuilds directly from Emmett session streams.
+      // The cognitive profile now rebuilds directly from session_events.
       if (batchMode) {
         for (const config of journeyRebuildConfigs.values()) {
           pendingJourneyRebuildConfigs.set(config.journeyId, config);

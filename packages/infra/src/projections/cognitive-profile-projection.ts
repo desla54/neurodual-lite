@@ -1,5 +1,5 @@
 /**
- * Cognitive Profile Projection (Emmett incremental evolve pattern)
+ * Cognitive Profile Projection (incremental evolve pattern)
  *
  * Maintains calibration state incrementally via evolve(state, event) → state.
  * Each incoming event is applied to the stored snapshot — no full rebuild.
@@ -305,7 +305,7 @@ async function writeSnapshot(
 // =============================================================================
 
 /**
- * Reconstruct a single session from emt_messages and extract CalibrationSessionFact(s).
+ * Reconstruct a single session from session_events and extract CalibrationSessionFact(s).
  * O(events_per_session) — typically 20-100 events.
  */
 async function extractSessionFacts(
@@ -336,7 +336,7 @@ async function extractSessionFacts(
 }
 
 // =============================================================================
-// Incremental handler — Emmett evolve(state, event) → state
+// Incremental handler — evolve(state, event) → state
 // =============================================================================
 
 /**
@@ -489,82 +489,75 @@ export async function rebuildCalibrationProfile(
   // Delete existing row for this user
   await db.execute('DELETE FROM cognitive_profile_projection WHERE user_id = ?', [userId]);
 
-  // Collect all relevant events from emt_messages for this user
-  const rows = await db.getAll<{
-    message_type: string;
-    message_data: string;
-    created: string;
-    global_position: string;
+  // Collect all relevant events from session_events for this user
+  const sessionRows = await db.getAll<{
+    session_id: string;
+    events_json: string;
+    created_at: string;
   }>(
-    `SELECT message_type, message_data, created, global_position
-     FROM emt_messages
-     WHERE message_kind = 'E' AND is_archived = 0
-       AND (
-         message_type IN ('CALIBRATION_BASELINE_SET', 'CALIBRATION_RESET')
-         OR message_type IN (${SESSION_END_EVENT_TYPES_ARRAY.map(() => '?').join(',')})
-       )
-     ORDER BY CAST(COALESCE(
-       json_extract(message_data, '$.data.timestamp'),
-       CAST(strftime('%%s', created) AS INTEGER) * 1000
-     ) AS INTEGER) ASC`,
-    [...SESSION_END_EVENT_TYPES_ARRAY],
+    `SELECT session_id, events_json, created_at FROM session_events ORDER BY created_at ASC`,
   );
 
-  // Convert to ProjectedEvent format, filtering by userId for all event types
+  const relevantTypes = new Set([
+    'CALIBRATION_BASELINE_SET',
+    'CALIBRATION_RESET',
+    ...SESSION_END_EVENT_TYPES_ARRAY,
+  ]);
+
+  // Convert to ProjectedEvent format, filtering by userId and event type
   const events: ProjectedEvent[] = [];
-  for (const row of rows) {
-    const data = safeJsonParse<Record<string, unknown>>(row.message_data, {});
-    const eventData = (data?.['data'] as Record<string, unknown>) ?? {};
-
-    // For baseline/reset events, check userId directly
-    if (
-      row.message_type === 'CALIBRATION_BASELINE_SET' ||
-      row.message_type === 'CALIBRATION_RESET'
-    ) {
-      if (eventData['userId'] !== userId) continue;
+  let posCounter = 0;
+  for (const sessionRow of sessionRows) {
+    let rawEvents: Record<string, unknown>[];
+    try {
+      rawEvents = JSON.parse(sessionRow.events_json) as Record<string, unknown>[];
+    } catch {
+      continue;
     }
 
-    // For session end events, check userId if present, skip non-calibration contexts
-    if (isSessionEndEventType(row.message_type)) {
-      const playContext = eventData['playContext'];
-      if (
-        typeof playContext === 'string' &&
-        playContext !== 'calibration' &&
-        playContext !== 'profile'
-      ) {
-        continue;
+    // Resolve session userId
+    let sessionUserId: string | undefined;
+    for (const e of rawEvents) {
+      const uid = e['userId'];
+      if (typeof uid === 'string' && uid.trim().length > 0) {
+        sessionUserId = uid.trim();
+        break;
+      }
+    }
+
+    for (const e of rawEvents) {
+      const type = String(e['type'] ?? '');
+      if (!relevantTypes.has(type)) continue;
+
+      // For baseline/reset events, check userId directly
+      if (type === 'CALIBRATION_BASELINE_SET' || type === 'CALIBRATION_RESET') {
+        if (e['userId'] !== userId) continue;
       }
 
-      // Resolve userId: try event data first, then query start event
-      let eventUserId = eventData['userId'];
-      if (typeof eventUserId !== 'string' || eventUserId.trim().length === 0) {
-        const sid = eventData['sessionId'];
-        if (typeof sid === 'string' && sid.trim().length > 0) {
-          try {
-            const uidRows = await db.getAll<{ uid: string | null }>(
-              `SELECT json_extract(message_data, '$.data.userId') as uid
-               FROM emt_messages
-               WHERE message_kind = 'E' AND is_archived = 0
-                 AND (stream_id = 'session:' || ? OR stream_id = 'training:session:' || ?)
-                 AND json_extract(message_data, '$.data.userId') IS NOT NULL
-               LIMIT 1`,
-              [sid.trim(), sid.trim()],
-            );
-            eventUserId = uidRows[0]?.uid ?? undefined;
-          } catch {
-            // best-effort
-          }
+      // For session end events, skip non-calibration contexts
+      if (isSessionEndEventType(type)) {
+        const playContext = e['playContext'];
+        if (
+          typeof playContext === 'string' &&
+          playContext !== 'calibration' &&
+          playContext !== 'profile'
+        ) {
+          continue;
         }
+        const eventUserId = (typeof e['userId'] === 'string' && e['userId'].trim().length > 0)
+          ? e['userId'].trim()
+          : sessionUserId;
+        if (eventUserId !== userId) continue;
       }
-      if (eventUserId !== userId) continue;
-    }
 
-    events.push({
-      type: row.message_type,
-      data: eventData,
-      globalPosition: BigInt(row.global_position),
-      createdAt: new Date(row.created),
-    });
+      const ts = typeof e['timestamp'] === 'number' ? e['timestamp'] : 0;
+      events.push({
+        type,
+        data: e,
+        globalPosition: BigInt(posCounter++),
+        createdAt: new Date(ts || sessionRow.created_at),
+      });
+    }
   }
 
   // Replay directly through processUserEvents (avoids double userId resolution)
@@ -700,7 +693,7 @@ export async function applyProfileSessionDirectly(
 // =============================================================================
 
 export const cognitiveProfileProjectionDefinition: ProjectionDefinition = {
-  // v8: resolve userId from session start events in emt_messages when
+  // v8: resolve userId from session start events in session_events when
   // end events lack userId (which is the norm for MOT/Track sessions).
   id: 'cognitive-profile',
   version: 10,
@@ -714,7 +707,7 @@ export const cognitiveProfileProjectionDefinition: ProjectionDefinition = {
   async handle(events: readonly ProjectedEvent[], db: AbstractPowerSyncDatabase) {
     // Phase 1: Filter relevant events and resolve userId.
     // Session *_ENDED events often lack userId in their data (only *_STARTED has it).
-    // For end events without userId, we query emt_messages for the session's start event.
+    // For end events without userId, we query session_events for the session's start event.
     const eventsByUser = new Map<string, ProjectedEvent[]>();
 
     for (const event of events) {
@@ -733,7 +726,7 @@ export const cognitiveProfileProjectionDefinition: ProjectionDefinition = {
       // Resolve userId from event data
       let userId = event.data['userId'];
 
-      // Fallback: query emt_messages for the session's start event which carries userId
+      // Fallback: query session_events for the session's userId
       if (
         (typeof userId !== 'string' || userId.trim().length === 0) &&
         isSessionEndEventType(event.type)
@@ -741,16 +734,20 @@ export const cognitiveProfileProjectionDefinition: ProjectionDefinition = {
         const sid = event.data['sessionId'];
         if (typeof sid === 'string' && sid.trim().length > 0) {
           try {
-            const rows = await db.getAll<{ uid: string | null }>(
-              `SELECT json_extract(message_data, '$.data.userId') as uid
-               FROM emt_messages
-               WHERE message_kind = 'E' AND is_archived = 0
-                 AND (stream_id = 'session:' || ? OR stream_id = 'training:session:' || ?)
-                 AND json_extract(message_data, '$.data.userId') IS NOT NULL
-               LIMIT 1`,
-              [sid.trim(), sid.trim()],
+            const rows = await db.getAll<{ events_json: string }>(
+              `SELECT events_json FROM session_events WHERE session_id = ? LIMIT 1`,
+              [sid.trim()],
             );
-            userId = rows[0]?.uid ?? undefined;
+            if (rows[0]?.events_json) {
+              const evts = JSON.parse(rows[0].events_json) as Record<string, unknown>[];
+              for (const e of evts) {
+                const uid = e['userId'];
+                if (typeof uid === 'string' && uid.trim().length > 0) {
+                  userId = uid.trim();
+                  break;
+                }
+              }
+            }
           } catch {
             // best-effort
           }

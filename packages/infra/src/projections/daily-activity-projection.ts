@@ -5,8 +5,7 @@
  * Counts completed sessions per day.
  * Used for activity charts and streak calculation.
  *
- * Phase 3 Migration: New projection using Emmett for O(1) daily activity queries
- * instead of CTE SQL on session_summaries.
+ * Projection maintained incrementally for O(1) daily activity queries.
  */
 
 import type { GameEvent } from '@neurodual/logic';
@@ -31,7 +30,7 @@ export interface DailyActivityState {
 }
 
 export interface DailyActivityCheckpoint {
-  position: number; // global_position from emt_messages
+  position: number; // checkpoint position (legacy: global_position)
   state: DailyActivityState;
 }
 
@@ -99,8 +98,8 @@ export function evolveDailyActivityState(
 }
 
 /**
- * Evolve daily activity state from Emmett stored event.
- * Optimized version that reads directly from emt_messages format.
+ * Evolve daily activity state from a stored event.
+ * Reads event type and data from the projected event format.
  */
 export function evolveDailyActivityStateFromEmmett(
   state: DailyActivityState,

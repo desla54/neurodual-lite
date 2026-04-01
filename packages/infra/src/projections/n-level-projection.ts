@@ -1,6 +1,6 @@
 // packages/infra/src/projections/n-level-projection.ts
 /**
- * N-Level Projection (Emmett-inspired: handle + truncate)
+ * N-Level Projection (handle + truncate pattern)
  *
  * Tracks Brain Workshop N-level recommendations per user.
  * Uses the 3-strike system: 3 sessions < 50% → decrease, 3 > 80% → increase.
