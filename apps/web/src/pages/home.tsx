@@ -213,7 +213,7 @@ export function HomePage(): ReactNode {
       // Launch journey stage — resolve composite modes (neurodual-mix) to a concrete game mode
       const concreteMode =
         journeyState?.nextSessionGameMode ??
-        (journeyGameMode === 'neurodual-mix' ? 'dualnback-classic' : journeyGameMode);
+        (journeyGameMode === 'neurodual-mix' ? 'stroop-flex' : journeyGameMode);
       const route = getRouteForMode(concreteMode as GameModeId);
       setCurrentMode(concreteMode as GameModeId);
       navigate(route === '/nback' ? `/nback?mode=${concreteMode}` : route, {

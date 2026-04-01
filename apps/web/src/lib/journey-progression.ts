@@ -146,22 +146,68 @@ export function applyNeuroDualMixSession(
   const found = findCurrentStage(state, result.nLevel, 'neurodual-mix');
   if (!found) return null;
 
-  if (result.accuracy < NEURODUAL_ACCURACY_THRESHOLD) return null;
-
+  const isStroop = result.gameMode === 'stroop-flex';
+  const isDnb = result.gameMode === 'dualnback-classic';
+  const passed = result.accuracy >= NEURODUAL_ACCURACY_THRESHOLD;
   const currentPct = found.stageProgress.progressPct ?? 0;
-  const newPct = Math.min(100, currentPct + NEURODUAL_PROGRESS_PER_SESSION);
+  const score = Math.round(result.accuracy * 100);
 
-  return applyStageResult(
-    state,
-    found.stageDef.stageId,
-    {
-      progressPct: newPct,
-      validatingSessions: found.stageProgress.validatingSessions + 1,
-      bestScore: Math.max(found.stageProgress.bestScore ?? 0, Math.round(result.accuracy * 100)),
-      stageCompleted: newPct >= 100,
-    },
-    'neurodual-mix',
-  );
+  // --- Stroop Flex ---
+  if (isStroop) {
+    if (!passed) {
+      // Failed Stroop: stay on Stroop, no progression change
+      return null;
+    }
+    // Passed Stroop: +10%, next = DNB Classic
+    const newPct = Math.min(100, currentPct + NEURODUAL_PROGRESS_PER_SESSION);
+    const updated = applyStageResult(
+      state,
+      found.stageDef.stageId,
+      {
+        progressPct: newPct,
+        validatingSessions: found.stageProgress.validatingSessions + 1,
+        bestScore: Math.max(found.stageProgress.bestScore ?? 0, score),
+        stageCompleted: newPct >= 100,
+      },
+      'neurodual-mix',
+    );
+    return { ...updated, nextSessionGameMode: 'dualnback-classic' };
+  }
+
+  // --- DNB Classic ---
+  if (isDnb) {
+    if (passed) {
+      // Passed DNB: +10%, next = Stroop Flex
+      const newPct = Math.min(100, currentPct + NEURODUAL_PROGRESS_PER_SESSION);
+      const updated = applyStageResult(
+        state,
+        found.stageDef.stageId,
+        {
+          progressPct: newPct,
+          validatingSessions: found.stageProgress.validatingSessions + 1,
+          bestScore: Math.max(found.stageProgress.bestScore ?? 0, score),
+          stageCompleted: newPct >= 100,
+        },
+        'neurodual-mix',
+      );
+      return { ...updated, nextSessionGameMode: 'stroop-flex' };
+    }
+    // Failed DNB: cancel previous Stroop gain (-10%), next = Stroop Flex
+    const newPct = Math.max(0, currentPct - NEURODUAL_PROGRESS_PER_SESSION);
+    const updated = applyStageResult(
+      state,
+      found.stageDef.stageId,
+      {
+        progressPct: newPct,
+        bestScore: Math.max(found.stageProgress.bestScore ?? 0, score),
+        stageCompleted: false,
+      },
+      'neurodual-mix',
+    );
+    return { ...updated, nextSessionGameMode: 'stroop-flex' };
+  }
+
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -326,6 +372,8 @@ export function buildFreshJourneyState(
     isSimulator: true,
     // Only BrainWorkshop uses the strikes system (hearts UI)
     consecutiveStrikes: gameMode === 'sim-brainworkshop' ? 0 : undefined,
+    // NeuroDual Mix always starts with Stroop Flex
+    nextSessionGameMode: gameMode === 'neurodual-mix' ? 'stroop-flex' : undefined,
   };
 }
 
