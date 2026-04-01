@@ -553,14 +553,13 @@ const ControlBtn = memo(
           !orphanMode && 'w-full',
           heightStyles[heightMode],
           sizeStyles[sizeMode],
-          'bg-woven-surface/75 backdrop-blur-xl backdrop-saturate-150 border border-woven-border/60 shadow-[0_4px_16px_-4px_hsl(var(--woven-border)/0.3)]',
+          'bg-woven-surface border border-woven-border/60 shadow-[0_4px_16px_-4px_hsl(var(--woven-border)/0.3)]',
           colorStyles[color],
           !disabled && !editMode && 'hover:border-woven-border/70 hover:bg-woven-cell-rest/40',
           !disabled && !editMode && activePressStyles[color],
           !disabled && !editMode && 'active:scale-[0.985]',
           active && activeStyles[color],
           // Flash styling: handled in styles.css via button.nd-flash-active[data-control-id]
-          // (CSS !important needed to override Tailwind glassmorphism bg + backdrop-blur)
           // Error flash for tutorials
           error &&
             'bg-woven-incorrect text-white border-woven-incorrect/70 ring-2 ring-woven-incorrect/45 shadow-lg shadow-woven-incorrect/30 animate-tutorial-error scale-[0.98]',

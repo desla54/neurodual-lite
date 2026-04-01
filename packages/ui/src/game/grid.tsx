@@ -430,8 +430,8 @@ export const Grid = memo(function Grid({
         className={cn(
           'relative grid grid-cols-3 grid-rows-3 aspect-square',
           isTraceGridStyle
-            ? 'bg-woven-grid border border-woven-border gap-3 p-4 rounded-2xl overflow-hidden shadow-[0_8px_28px_-6px_hsl(var(--woven-border)/0.45),0_1px_3px_0_hsl(var(--woven-border)/0.2),inset_0_1px_0_0_var(--glass-highlight)]'
-            : 'bg-woven-grid border border-woven-border rounded-2xl overflow-hidden shadow-[0_8px_28px_-6px_hsl(var(--woven-border)/0.45),0_1px_3px_0_hsl(var(--woven-border)/0.2),inset_0_1px_0_0_var(--glass-highlight)]',
+            ? 'bg-woven-grid border border-woven-border gap-3 p-4 rounded-2xl overflow-hidden shadow-[0_8px_28px_-6px_hsl(var(--woven-border)/0.45),0_1px_3px_0_hsl(var(--woven-border)/0.2)]'
+            : 'bg-woven-grid border border-woven-border rounded-2xl overflow-hidden shadow-[0_8px_28px_-6px_hsl(var(--woven-border)/0.45),0_1px_3px_0_hsl(var(--woven-border)/0.2)]',
           borderColor && !isTraceGridStyle && 'border-4',
           borderColor,
         )}

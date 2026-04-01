@@ -289,14 +289,14 @@ function CalendarDayCell({ cell }: { cell: DayCellInfo }): ReactNode {
         GLASS_SHADOW_SM,
         // States
         cellState === 'completed' &&
-          'bg-emerald-500/25 backdrop-blur-xl backdrop-saturate-150 border border-emerald-500/50',
+          'bg-emerald-500/25 border border-emerald-500/50',
         cellState === 'current' &&
-          'bg-card/75 backdrop-blur-2xl backdrop-saturate-150 border-2 border-primary ring-1 ring-primary/40',
+          'bg-card border-2 border-primary ring-1 ring-primary/40',
         cellState === 'has-training' &&
-          'bg-card/60 backdrop-blur-xl backdrop-saturate-150 border border-border/50',
+          'bg-card border border-border/50',
         cellState === 'empty' &&
-          'bg-card/60 backdrop-blur-xl backdrop-saturate-150 border border-border/50',
-        cellState === 'outside' && 'opacity-40 bg-card/30 backdrop-blur-sm border border-border/20',
+          'bg-card border border-border/50',
+        cellState === 'outside' && 'opacity-40 bg-card border border-border/20',
       )}
       title={minutes > 0 ? `${minutes} min` : undefined}
     >

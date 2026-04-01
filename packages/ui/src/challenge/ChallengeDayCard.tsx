@@ -82,7 +82,7 @@ export function ChallengeDayCard({
         className={cn(
           'relative flex flex-col items-center gap-1.5 p-3 transition-all duration-200',
           // Glass foundation
-          'rounded-[1rem] border border-border/50 bg-card/75 backdrop-blur-2xl',
+          'rounded-[1rem] border border-border/50 bg-card',
           GLASS_SHADOW,
           isHero
             ? 'min-w-[96px] w-[96px] sm:min-w-[104px] sm:w-[104px] p-3.5'
@@ -91,7 +91,7 @@ export function ChallengeDayCard({
           isHero && isPast && !isCurrent && 'opacity-65 scale-[0.94]',
           isHero && isNext && !isCurrent && !isPast && 'opacity-100 scale-[1.02]',
           isLocked && 'opacity-50',
-          isCompleted && 'border-emerald-500/35 bg-card/85',
+          isCompleted && 'border-emerald-500/35 bg-card',
           isCurrent && [
             isHero
               ? `scale-[1.06] ${GLASS_SHADOW_LG} border-foreground/70 ring-2 ring-offset-2 ring-offset-background ring-foreground/90`
@@ -132,7 +132,7 @@ export function ChallengeDayCard({
             isHero
               ? 'absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold z-10'
               : 'absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold z-10',
-            'bg-card/85 border border-border/50',
+            'bg-card border border-border/50',
             GLASS_SHADOW_SM,
             isCompleted && 'bg-emerald-500 text-white border-emerald-500/60',
           )}

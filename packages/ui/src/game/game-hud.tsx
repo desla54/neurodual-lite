@@ -62,9 +62,9 @@ export interface GameHUDProps {
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
-/** Glass container — overflow-hidden is safe now that children no longer have their own backdrop-blur */
+/** HUD container — flat surface with warm shadow */
 const GLASS =
-  'relative flex flex-col w-fit max-w-full sm:max-w-md rounded-2xl overflow-hidden border border-woven-border/60 bg-woven-surface/60 backdrop-blur-2xl backdrop-saturate-150 backdrop-brightness-[1.04] shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25),inset_0_1px_0_0_var(--glass-highlight)]';
+  'relative flex flex-col w-fit max-w-full sm:max-w-md rounded-2xl overflow-hidden border border-woven-border/60 bg-woven-surface shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)]';
 
 /** Info badge */
 export const HUD_BADGE =
@@ -74,9 +74,9 @@ export const HUD_BADGE =
 export const HUD_BADGE_SM =
   'px-2 py-1 rounded-lg text-xs font-bold border border-woven-border/40 bg-woven-text/[0.07] shadow-[inset_0_1px_3px_0_hsl(var(--woven-border)/0.2)] whitespace-nowrap';
 
-/** Action button (no own blur — nested inside GLASS container; no active:scale — creates stacking context) */
+/** Action button (no active:scale — creates stacking context) */
 export const HUD_BTN =
-  'w-10 h-10 flex items-center justify-center rounded-lg transition-colors border border-woven-border/50 bg-woven-surface/60 text-woven-text active:brightness-90 shadow-sm';
+  'w-10 h-10 flex items-center justify-center rounded-lg transition-colors border border-woven-border/50 bg-woven-surface text-woven-text active:brightness-90 shadow-sm';
 
 // =============================================================================
 // Component
@@ -247,7 +247,7 @@ export const GameHUD = memo(function GameHUD({
                 onHaptic?.(10);
                 onRestart();
               }}
-              className="w-9 h-9 flex items-center justify-center rounded-lg border border-destructive/45 bg-woven-surface/60 text-woven-text transition-colors hover:bg-woven-cell-rest/60 active:brightness-90"
+              className="w-9 h-9 flex items-center justify-center rounded-lg border border-destructive/45 bg-woven-surface text-woven-text transition-colors hover:bg-woven-cell-rest/60 active:brightness-90"
               data-capture-control="game-hud-button"
             >
               <ArrowClockwise size={15} />

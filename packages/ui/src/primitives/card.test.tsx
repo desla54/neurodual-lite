@@ -12,7 +12,7 @@ describe('Card', () => {
     it('should have base classes', () => {
       render(<Card>Content</Card>);
       const card = screen.getByText('Content');
-      expect(card.className).toContain('bg-card/75');
+      expect(card.className).toContain('bg-card');
       expect(card.className).toContain('rounded-2xl');
       expect(card.className).toContain('border');
     });
@@ -73,7 +73,7 @@ describe('SubCard', () => {
     it('should have glass light classes', () => {
       render(<SubCard>Content</SubCard>);
       const subCard = screen.getByText('Content');
-      expect(subCard.className).toContain('bg-card/60');
+      expect(subCard.className).toContain('bg-card');
     });
   });
 

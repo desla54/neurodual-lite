@@ -14,19 +14,19 @@ export default {
         xs: '375px',
       },
       colors: {
-        // Override slate with warm grays (Woven Ink palette)
+        // Override slate with neutral grays (flat palette)
         slate: {
-          50: '#F0EEE9' /* Warm paper - matches bg-app */,
-          100: '#F5F4F1' /* Light warm */,
-          200: '#E8E6E1' /* Warm border */,
-          300: '#D4D2CA' /* Warm divider - matches border */,
-          400: '#9A958D' /* Warm muted */,
-          500: '#787570' /* Medium warm */,
-          600: '#5A5550' /* Warm charcoal */,
-          700: '#3A3835' /* Dark warm */,
-          800: '#252320' /* Very dark warm */,
-          900: '#1A1815' /* Ink */,
-          950: '#0F0E0D' /* Deep ink */,
+          50: '#E9E8E7' /* Neutral bg - matches bg-app */,
+          100: '#F0F0EF' /* Light neutral */,
+          200: '#E5E5E3' /* Neutral border */,
+          300: '#D4D4D2' /* Neutral divider */,
+          400: '#9C9B98' /* Neutral muted */,
+          500: '#6E6D6A' /* Medium neutral */,
+          600: '#545350' /* Charcoal */,
+          700: '#3A3938' /* Dark */,
+          800: '#252524' /* Very dark */,
+          900: '#1A1A19' /* Ink */,
+          950: '#0F0F0E' /* Deep ink */,
         },
         // Override accent colors with warm Woven Ink versions
         violet: {
@@ -174,10 +174,10 @@ export default {
         danger: 'hsl(var(--neuro-accent-danger) / <alpha-value>)',
         // INK PALETTE (warm tones)
         ink: {
-          DEFAULT: '#1A1815' /* Primary ink color */,
-          light: '#5A5550' /* Warm charcoal */,
-          paper: '#FAF9F6' /* Warm paper */,
-          muted: '#787570' /* Warm gray */,
+          DEFAULT: '#1A1A19' /* Primary ink color */,
+          light: '#545350' /* Charcoal */,
+          paper: '#FAFAFA' /* Neutral paper */,
+          muted: '#6E6D6A' /* Neutral gray */,
         },
         // WOVEN INK THEME (Game pages)
         woven: {

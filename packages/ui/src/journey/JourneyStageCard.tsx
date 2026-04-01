@@ -158,7 +158,7 @@ export function JourneyStageCard({
         className={cn(
           'relative flex flex-col items-center gap-1.5 p-3 transition-all duration-200',
           // Glass foundation
-          'rounded-[1rem] border border-border/50 bg-card/75 backdrop-blur-2xl',
+          'rounded-[1rem] border border-border/50 bg-card',
           GLASS_SHADOW,
           isHero
             ? 'min-w-[96px] w-[96px] sm:min-w-[104px] sm:w-[104px] p-3.5'
@@ -169,7 +169,7 @@ export function JourneyStageCard({
           // Status styles
           isLocked && 'opacity-50',
           // Completed: subtle emerald tint on glass
-          isCompleted && 'border-emerald-500/35 bg-card/85',
+          isCompleted && 'border-emerald-500/35 bg-card',
           // Current stage highlight
           isCurrent && [
             isHero
@@ -184,7 +184,7 @@ export function JourneyStageCard({
           // Interaction
           canInteract &&
             !isCurrent &&
-            'cursor-pointer hover:scale-105 hover:border-border/70 hover:bg-card/85 active:scale-95',
+            'cursor-pointer hover:scale-105 hover:border-border/70 hover:bg-muted/30 active:scale-95',
           canInteract && isCurrent && 'cursor-pointer active:scale-[1.03]',
           !canInteract && 'cursor-default',
         )}
@@ -212,7 +212,7 @@ export function JourneyStageCard({
             isHero
               ? 'absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold z-10'
               : 'absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold z-10',
-            'bg-card/85 border border-border/50',
+            'bg-card border border-border/50',
             GLASS_SHADOW_SM,
             isCompleted && 'bg-emerald-500 text-white border-emerald-500/60',
           )}

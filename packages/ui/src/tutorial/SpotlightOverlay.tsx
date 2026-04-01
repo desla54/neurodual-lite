@@ -1,21 +1,20 @@
 /**
  * SpotlightOverlay - Premium onboarding spotlight effect
  *
- * Features:
- * - Glassmorphism overlay (backdrop-blur)
- * - Soft-edged spotlight with radial gradient
- * - GSAP-powered smooth transitions
- * - Frosted glass callouts without ugly arrows
- * - Sequential step progression
+ * Unified flow: intro, spotlight steps, and outro are all part of the same
+ * sequential progression. No separate modal phases.
+ *
+ * - Steps with a target: spotlight cutout + positioned callout
+ * - Steps without a target (intro/outro): full overlay + centered callout
+ * - Same tappable callout UI throughout (dots + chevron)
  */
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import type { ReactNode } from 'react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useMemo, type ReactNode } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '../lib/utils';
-// CanvasWeave removed — callout is now borderless text on overlay
 
 // =============================================================================
 // TYPES
@@ -39,11 +38,11 @@ export interface SpotlightOverlayProps {
   onComplete: () => void;
   /** Optional: intro message before spotlight begins */
   introMessage?: ReactNode;
-  /** Optional: intro button text */
+  /** Optional: intro button text (unused, kept for API compat) */
   introButtonText?: string;
   /** Optional: outro message after spotlight ends */
   outroMessage?: ReactNode;
-  /** Optional: outro button text */
+  /** Optional: outro button text (unused, kept for API compat) */
   outroButtonText?: string;
   /** Optional: ref to the grid element for positioning intro/outro messages */
   gridRef?: React.RefObject<HTMLElement | null>;
@@ -55,7 +54,7 @@ export interface SpotlightOverlayProps {
    * not after animation delays.
    */
   onImmediateComplete?: () => void;
-  /** Called when the current step changes (index, step ID) */
+  /** Called when the current step changes (index, step ID) — only for real spotlight steps */
   onStepChange?: (stepIndex: number, stepId: string) => void;
   /** Optional skip link shown under callout dots */
   skipLabel?: string;
@@ -66,11 +65,29 @@ export interface SpotlightOverlayProps {
 }
 
 // =============================================================================
+// INTERNAL TYPES
+// =============================================================================
+
+interface InternalStep {
+  id: string;
+  content: ReactNode;
+  target?: React.RefObject<HTMLElement | null> | string;
+  position?: 'top' | 'bottom' | 'left' | 'right' | 'center';
+}
+
+// =============================================================================
 // CONSTANTS
 // =============================================================================
 
-const SPOTLIGHT_PADDING = 12; // Padding around the target element
-const TRANSITION_DURATION = 0.5;
+const SPOTLIGHT_PADDING = 12;
+const CUTOUT_MOVE_DURATION = 0.55;
+const CUTOUT_EASE = 'back.out(1.15)';
+const CALLOUT_ENTER_DURATION = 0.4;
+const CALLOUT_EXIT_DURATION = 0.2;
+/** Duration for overlay fade during reveal transition */
+const REVEAL_FADE_DURATION = 0.3;
+/** Pause after overlay fades before spotlight appears */
+const REVEAL_PAUSE_DURATION = 0.3;
 
 const CALLOUT_EST_HEIGHT_PX = 140;
 const VIEWPORT_MARGIN_PX = 16;
@@ -83,10 +100,10 @@ export function SpotlightOverlay({
   steps,
   onComplete,
   introMessage,
-  introButtonText,
+  introButtonText: _introButtonText,
   outroMessage,
-  outroButtonText,
-  gridRef,
+  outroButtonText: _outroButtonText,
+  gridRef: _gridRef,
   className,
   onImmediateComplete,
   onStepChange,
@@ -95,42 +112,53 @@ export function SpotlightOverlay({
   dotGroups: _dotGroups,
 }: SpotlightOverlayProps) {
   const { t } = useTranslation();
-  const [phase, setPhase] = useState<'intro' | 'reveal' | 'spotlight' | 'outro' | 'complete'>(
-    'intro',
-  );
 
-  // Apply default button texts using translations
-  const resolvedIntroButtonText = introButtonText ?? t('tutorial.spotlight.continue', 'Continue');
-  const resolvedOutroButtonText = outroButtonText ?? t('tutorial.spotlight.start', 'Start');
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  // ── Build unified steps array ──
+  const allSteps = useMemo(() => {
+    const result: InternalStep[] = [];
+    if (introMessage) {
+      result.push({ id: '__intro', content: introMessage });
+    }
+    for (const step of steps) {
+      result.push(step);
+    }
+    if (outroMessage) {
+      result.push({ id: '__outro', content: outroMessage });
+    }
+    return result;
+  }, [introMessage, outroMessage, steps]);
+
+  const [phase, setPhase] = useState<'active' | 'reveal' | 'complete'>('active');
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [spotlightRect, setSpotlightRect] = useState<DOMRect | null>(null);
-  const [gridRect, setGridRect] = useState<DOMRect | null>(null);
 
   const overlayRef = useRef<HTMLDivElement>(null);
+  const overlayBgRef = useRef<HTMLDivElement>(null);
   const spotlightRef = useRef<HTMLDivElement>(null);
   const calloutRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
+  const dotsRef = useRef<HTMLDivElement>(null);
+  const isFirstSpotlightRef = useRef(true);
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
 
-  // Update grid rect when phase changes to intro/outro
-  useEffect(() => {
-    if ((phase === 'intro' || phase === 'outro') && gridRef?.current) {
-      setGridRect(gridRef.current.getBoundingClientRect());
-    }
-  }, [phase, gridRef]);
+  const currentStep = allSteps[currentIndex];
+  const hasTarget = !!currentStep?.target;
 
-  const currentStep = steps[currentStepIndex];
+  // Map internal index to real step index for onStepChange
+  const introOffset = introMessage ? 1 : 0;
 
-  // Get target element from ref or selector
-  const getTargetElement = useCallback((target: SpotlightStep['target']): HTMLElement | null => {
+  // ── Get target element ──
+  const getTargetElement = useCallback((target: InternalStep['target']): HTMLElement | null => {
+    if (!target) return null;
     if (typeof target === 'string') {
       return document.querySelector(target);
     }
     return target.current;
   }, []);
 
-  // Update spotlight position based on target element
+  // ── Update spotlight position ──
   const updateSpotlightPosition = useCallback(() => {
-    if (!currentStep || phase !== 'spotlight') return;
+    if (!currentStep?.target || phase !== 'active') return;
 
     const targetEl = getTargetElement(currentStep.target);
     if (!targetEl) return;
@@ -147,190 +175,322 @@ export function SpotlightOverlay({
     });
   }, [currentStep, phase, getTargetElement]);
 
-  // Animate spotlight to new position (rectangular cutout via box-shadow)
+  // ── Animate spotlight cutout ──
   useGSAP(
     () => {
       if (!spotlightRect || !spotlightRef.current) return;
 
       const pad = SPOTLIGHT_PADDING;
+      const isFirst = isFirstSpotlightRef.current;
 
-      // Animate the cutout element to the target rect
-      gsap.to(spotlightRef.current, {
-        '--cut-left': `${spotlightRect.left - pad}px`,
-        '--cut-top': `${spotlightRect.top - pad}px`,
-        '--cut-width': `${spotlightRect.width + pad * 2}px`,
-        '--cut-height': `${spotlightRect.height + pad * 2}px`,
-        duration: TRANSITION_DURATION,
-        ease: 'power2.out',
-      });
+      if (isFirst) {
+        isFirstSpotlightRef.current = false;
+        gsap.set(spotlightRef.current, {
+          '--cut-left': `${spotlightRect.left - pad}px`,
+          '--cut-top': `${spotlightRect.top - pad}px`,
+          '--cut-width': `${spotlightRect.width + pad * 2}px`,
+          '--cut-height': `${spotlightRect.height + pad * 2}px`,
+          scale: 1.1,
+          opacity: 0,
+        });
+        gsap.to(spotlightRef.current, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.3,
+          ease: 'back.out(1.8)',
+        });
+      } else {
+        gsap.to(spotlightRef.current, {
+          '--cut-left': `${spotlightRect.left - pad}px`,
+          '--cut-top': `${spotlightRect.top - pad}px`,
+          '--cut-width': `${spotlightRect.width + pad * 2}px`,
+          '--cut-height': `${spotlightRect.height + pad * 2}px`,
+          duration: CUTOUT_MOVE_DURATION,
+          ease: CUTOUT_EASE,
+        });
+      }
 
-      // Animate glow ring
+      // Glow ring
       if (glowRef.current) {
-        gsap.to(glowRef.current, {
+        const glowVars: gsap.TweenVars = {
           left: spotlightRect.left - pad - 2,
           top: spotlightRect.top - pad - 2,
           width: spotlightRect.width + pad * 2 + 4,
           height: spotlightRect.height + pad * 2 + 4,
           opacity: 1,
-          duration: TRANSITION_DURATION,
-          ease: 'power2.out',
-        });
+          duration: isFirst ? 0.35 : CUTOUT_MOVE_DURATION,
+          ease: isFirst ? 'power2.out' : CUTOUT_EASE,
+        };
+        if (isFirst) glowVars.delay = 0.05;
+        gsap.to(glowRef.current, glowVars);
       }
     },
     { dependencies: [spotlightRect], scope: overlayRef },
   );
 
-  // Animate callout entrance
-  useGSAP(
-    () => {
-      if (!calloutRef.current || phase !== 'spotlight') return;
+  // ── Animate callout entrance ──
+  // Tracks whether callout is actually mounted in the DOM.
+  // For target steps, it only mounts after spotlightRect is set.
+  const calloutMounted = phase === 'active' && !!currentStep && (!hasTarget || !!spotlightRect);
 
-      gsap.fromTo(
-        calloutRef.current,
-        { opacity: 0, y: 8 },
-        {
+  // Callout entrance animation.
+  // Uses a double-RAF to survive React strict mode's effect double-fire.
+  useEffect(() => {
+    if (!calloutMounted) return;
+
+    let raf1 = 0;
+    let raf2 = 0;
+    let tween: gsap.core.Tween | null = null;
+
+    // First RAF: skip strict mode's synchronous cleanup/re-run cycle
+    raf1 = requestAnimationFrame(() => {
+      // Second RAF: element is guaranteed painted
+      raf2 = requestAnimationFrame(() => {
+        const el = calloutRef.current;
+        if (!el) return;
+
+        const calloutDelay = hasTarget ? CUTOUT_MOVE_DURATION * 0.45 : 0;
+        gsap.set(el, { opacity: 0, y: 12 });
+        tween = gsap.to(el, {
           opacity: 1,
           y: 0,
-          duration: 0.35,
-          delay: TRANSITION_DURATION + 0.1,
-          ease: 'power2.out',
-        },
-      );
-    },
-    { dependencies: [currentStepIndex, phase], scope: overlayRef },
-  );
+          duration: CALLOUT_ENTER_DURATION,
+          delay: calloutDelay,
+          ease: 'power3.out',
+        });
+      });
+    });
 
-  // Update position on resize and step change
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+      tween?.kill();
+    };
+  }, [currentIndex, calloutMounted, hasTarget]);
+
+  // ── Animate dot pulse ──
+  useEffect(() => {
+    const container = dotsRef.current;
+    if (!container || phase !== 'active') return;
+
+    const dots = container.querySelectorAll('[data-dot]');
+    const activeDot = dots[currentIndex];
+    if (!activeDot) return;
+
+    const tween = gsap.fromTo(
+      activeDot,
+      { scale: 1.6 },
+      { scale: 1, duration: 0.35, ease: 'back.out(3)' },
+    );
+
+    return () => { tween.kill(); };
+  }, [currentIndex, phase]);
+
+  // ── Resize handling ──
   useEffect(() => {
     let rafId: number | null = null;
-
     const handleResize = () => {
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-      }
-
+      if (rafId !== null) cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(() => {
         updateSpotlightPosition();
         rafId = null;
       });
     };
-
     handleResize();
     window.addEventListener('resize', handleResize, { passive: true });
     window.visualViewport?.addEventListener('resize', handleResize, { passive: true });
-
     return () => {
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-      }
+      if (rafId !== null) cancelAnimationFrame(rafId);
       window.removeEventListener('resize', handleResize);
       window.visualViewport?.removeEventListener('resize', handleResize);
     };
   }, [updateSpotlightPosition]);
 
-  // Handle intro → reveal → spotlight transition
-  const handleIntroComplete = useCallback(() => {
-    // Phase 'reveal': overlay fades out, user sees the full UI for ~2.5s, no interaction
-    setPhase('reveal');
-    setTimeout(() => {
-      setPhase('spotlight');
-      if (steps[0]) onStepChange?.(0, steps[0].id);
-    }, 1000);
-  }, [steps, onStepChange]);
+  // ── Helpers for step advancement ──
+  /** Immediately resolve spotlight rect for a target step */
+  const resolveTargetRect = useCallback(
+    (step: InternalStep) => {
+      if (!step.target) return;
+      const el = getTargetElement(step.target);
+      if (el) setSpotlightRect(el.getBoundingClientRect());
+    },
+    [getTargetElement],
+  );
 
-  // Handle step advancement
-  const handleAdvance = useCallback(() => {
-    if (currentStepIndex < steps.length - 1) {
-      const nextIdx = currentStepIndex + 1;
-      const nextStep = steps[nextIdx];
-      // Hide callout first
+  /** Fire onStepChange for real spotlight steps (not intro/outro) */
+  const fireStepChange = useCallback(
+    (internalIdx: number) => {
+      const realIdx = internalIdx - introOffset;
+      if (realIdx >= 0 && realIdx < steps.length) {
+        onStepChange?.(realIdx, steps[realIdx]!.id);
+      }
+    },
+    [introOffset, steps, onStepChange],
+  );
+
+  // ── Advance to next step ──
+  const advanceToIndex = useCallback(
+    (nextIdx: number) => {
+      const nextStep = allSteps[nextIdx];
+      if (!nextStep) return;
+
+      const wasNoTarget = !allSteps[currentIndex]?.target;
+      const nextHasTarget = !!nextStep.target;
+
+      // Transition from no-target → target: do reveal animation
+      if (wasNoTarget && nextHasTarget) {
+        if (calloutRef.current) {
+          gsap.to(calloutRef.current, { opacity: 0, y: -8, duration: CALLOUT_EXIT_DURATION, ease: 'power2.in' });
+        }
+        if (overlayBgRef.current) {
+          gsap.to(overlayBgRef.current, {
+            opacity: 0,
+            duration: REVEAL_FADE_DURATION,
+            ease: 'power2.inOut',
+            onComplete: () => {
+              setPhase('reveal');
+              gsap.delayedCall(REVEAL_PAUSE_DURATION, () => {
+                setCurrentIndex(nextIdx);
+                setPhase('active');
+                resolveTargetRect(nextStep);
+                fireStepChange(nextIdx);
+              });
+            },
+          });
+        } else {
+          setCurrentIndex(nextIdx);
+          resolveTargetRect(nextStep);
+          fireStepChange(nextIdx);
+        }
+        return;
+      }
+
+      // Normal transition (target → target, or no-target → no-target)
+      const commitAdvance = () => {
+        setCurrentIndex(nextIdx);
+        if (nextHasTarget) resolveTargetRect(nextStep);
+        fireStepChange(nextIdx);
+      };
+
       if (calloutRef.current) {
         gsap.to(calloutRef.current, {
           opacity: 0,
-          y: -10,
-          duration: 0.2,
+          y: -8,
+          duration: CALLOUT_EXIT_DURATION,
           ease: 'power2.in',
-          onComplete: () => {
-            setCurrentStepIndex(nextIdx);
-            if (nextStep) onStepChange?.(nextIdx, nextStep.id);
-          },
+          onComplete: commitAdvance,
         });
       } else {
-        setCurrentStepIndex(nextIdx);
-        if (nextStep) onStepChange?.(nextIdx, nextStep.id);
+        commitAdvance();
       }
-    } else {
-      // Go to outro if there's an outro message, otherwise complete
-      if (outroMessage) {
-        setPhase('outro');
-      } else {
-        handleFinalComplete();
-      }
-    }
-  }, [currentStepIndex, steps.length, outroMessage]);
+    },
+    [allSteps, currentIndex, introOffset, steps, onStepChange],
+  );
 
-  // Handle outro → complete transition
-  const handleOutroComplete = useCallback(() => {
-    handleFinalComplete();
-  }, []);
+  const handleAdvance = useCallback(() => {
+    if (currentIndex < allSteps.length - 1) {
+      advanceToIndex(currentIndex + 1);
+    } else {
+      // Last step — complete
+      handleFinalComplete();
+    }
+  }, [currentIndex, allSteps.length, advanceToIndex]);
 
   const handleFinalComplete = useCallback(() => {
     // CRITICAL: Call onImmediateComplete SYNCHRONOUSLY before any animation.
-    // On iOS, AudioContext must be resumed during the user gesture context,
-    // not after animation delays (which lose the gesture context).
+    // On iOS, AudioContext must be resumed during the user gesture context.
     onImmediateComplete?.();
 
     if (overlayRef.current) {
-      gsap.to(overlayRef.current, {
-        opacity: 0,
-        duration: 0.4,
-        ease: 'power2.out',
+      const tl = gsap.timeline({
         onComplete: () => {
           setPhase('complete');
           onComplete();
         },
       });
+
+      if (calloutRef.current) {
+        tl.to(calloutRef.current, { opacity: 0, y: -8, duration: 0.2, ease: 'power2.in' }, 0);
+      }
+      if (spotlightRef.current) {
+        tl.to(spotlightRef.current, { opacity: 0, scale: 1.08, duration: 0.3, ease: 'power2.in' }, 0.05);
+      }
+      if (glowRef.current) {
+        tl.to(glowRef.current, { opacity: 0, duration: 0.2, ease: 'power2.in' }, 0);
+      }
+      tl.to(overlayRef.current, { opacity: 0, duration: 0.3, ease: 'power2.out' }, 0.1);
     } else {
       setPhase('complete');
       onComplete();
     }
   }, [onComplete, onImmediateComplete]);
 
-  // Position text below the spotlight rectangle, centered, in the opaque zone.
+  // ── Swipe gesture ──
+  const handleTouchStart = useCallback(
+    (e: React.TouchEvent) => {
+      if (phase !== 'active') return;
+      const touch = e.touches[0];
+      if (!touch) return;
+      touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
+    },
+    [phase],
+  );
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (phase !== 'active' || !touchStartRef.current) return;
+      const touch = e.changedTouches[0];
+      if (!touch) return;
+
+      const dx = touch.clientX - touchStartRef.current.x;
+      const dy = touch.clientY - touchStartRef.current.y;
+      const dt = Date.now() - touchStartRef.current.time;
+      touchStartRef.current = null;
+
+      const absDx = Math.abs(dx);
+      const absDy = Math.abs(dy);
+      const isSwipe = absDx > 40 && absDx > absDy * 1.5 && dt < 400;
+
+      if (isSwipe && dx < 0) {
+        if (e.cancelable) e.preventDefault();
+        e.stopPropagation();
+        handleAdvance();
+      }
+    },
+    [phase, handleAdvance],
+  );
+
+  // ── Callout position ──
+  const calloutCentered = !hasTarget || !spotlightRect;
   const getCalloutStyle = useCallback((): React.CSSProperties => {
-    if (!spotlightRect || !currentStep) {
-      return { top: '50%', left: VIEWPORT_MARGIN_PX, right: VIEWPORT_MARGIN_PX };
-    }
-
-    const padding = SPOTLIGHT_PADDING + 24; // below the cutout + glow
-    const viewportH = window.innerHeight;
-
-    // Prefer below; flip to above if no room
-    const belowTop = spotlightRect.bottom + padding;
-    const canFitBelow = belowTop + CALLOUT_EST_HEIGHT_PX < viewportH - 80; // 80px for bottom bar
-
-    if (canFitBelow) {
+    // No-target step: use inset-0 flex centering (no transform — GSAP-safe)
+    if (calloutCentered) {
       return {
-        top: `${belowTop}px`,
+        inset: 0,
         left: VIEWPORT_MARGIN_PX,
         right: VIEWPORT_MARGIN_PX,
       };
     }
+
+    const padding = SPOTLIGHT_PADDING + 24;
+    const viewportH = window.innerHeight;
+    const belowTop = spotlightRect!.bottom + padding;
+    const canFitBelow = belowTop + CALLOUT_EST_HEIGHT_PX < viewportH - 80;
+
+    if (canFitBelow) {
+      return { top: `${belowTop}px`, left: VIEWPORT_MARGIN_PX, right: VIEWPORT_MARGIN_PX };
+    }
     return {
-      bottom: `${viewportH - spotlightRect.top + padding}px`,
+      bottom: `${viewportH - spotlightRect!.top + padding}px`,
       left: VIEWPORT_MARGIN_PX,
       right: VIEWPORT_MARGIN_PX,
     };
-  }, [spotlightRect, currentStep]);
+  }, [calloutCentered, spotlightRect]);
 
-  // ==========================================================================
-  // RENDER
-  // ==========================================================================
-
-  // Handle keyboard navigation
+  // ── Keyboard ──
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
-      if (phase === 'spotlight' && (e.key === 'Enter' || e.key === ' ')) {
+      if (phase === 'active' && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         handleAdvance();
       }
@@ -338,148 +498,128 @@ export function SpotlightOverlay({
     [phase, handleAdvance],
   );
 
+  if (phase === 'complete') return null;
+
+  // Should we show the spotlight cutout?
+  const showCutout = phase === 'active' && hasTarget;
+  // Should we show the full overlay background?
+  const showFullOverlay = phase === 'active' && !hasTarget;
+
   return (
     <div
       ref={overlayRef}
       className={cn('fixed inset-0 z-[2500]', className)}
-      onClick={phase === 'spotlight' ? handleAdvance : undefined}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       onKeyDown={handleKeyDown}
       role="dialog"
       aria-modal="true"
       aria-label={t('aria.tutorialIntro')}
-      tabIndex={phase === 'spotlight' ? 0 : -1}
+      tabIndex={phase === 'active' ? 0 : -1}
     >
-      {/* Full-screen backdrop for non-spotlight phases */}
-      {phase !== 'spotlight' && (
+      {/* Full opaque overlay for no-target steps (intro/outro) */}
+      {showFullOverlay && (
         <div
-          className={cn(
-            'absolute inset-0 transition-all',
-            phase === 'reveal'
-              ? 'bg-transparent duration-500'
-              : phase === 'intro' || phase === 'outro'
-                ? 'bg-woven-bg/95 backdrop-blur-sm duration-300'
-                : 'bg-woven-bg/5 duration-300',
-          )}
+          ref={overlayBgRef}
+          className="absolute inset-0"
+          style={{
+            backgroundColor: 'hsl(var(--woven-bg) / 0.97)',
+            backdropFilter: 'blur(4px)',
+          }}
         />
       )}
 
-      {/* Rectangular spotlight cutout via box-shadow technique */}
-      {phase === 'spotlight' && (
+      {/* Spotlight cutout for target steps */}
+      {showCutout && (
         <div
           ref={spotlightRef}
-          className="absolute rounded-2xl pointer-events-none transition-all"
+          className="absolute rounded-2xl pointer-events-none"
           style={{
             left: 'var(--cut-left, 50%)',
             top: 'var(--cut-top, 50%)',
             width: 'var(--cut-width, 100px)',
             height: 'var(--cut-height, 100px)',
             boxShadow: '0 0 0 9999px hsl(var(--woven-bg) / 0.97)',
+            willChange: 'transform',
           }}
         />
       )}
 
-      {/* Subtle ring around spotlight target */}
-      {phase === 'spotlight' && (
+      {/* Glow ring */}
+      {showCutout && (
         <div
           ref={glowRef}
-          className="absolute pointer-events-none rounded-2xl opacity-0 border border-woven-text/15"
+          className="absolute pointer-events-none rounded-2xl opacity-0 border border-woven-text/20 shadow-[0_0_20px_-4px_hsl(var(--woven-text)/0.08)]"
         />
       )}
 
-      {/* Intro message — structured fiche card, glassmorphism */}
-      {phase === 'intro' && introMessage && gridRect && (
-        <div
-          className="absolute flex flex-col items-center rounded-[22px] border border-border/50 bg-card/85 shadow-[0_24px_70px_-36px_hsl(var(--glass-shadow)/0.45)] backdrop-blur-2xl overflow-hidden"
-          style={{
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 'calc(100vw - 2rem)',
-            maxWidth: 440,
-            maxHeight: 'calc(100vh - 6rem)',
-          }}
-        >
-          <div className="relative z-10 w-full overflow-y-auto px-5 pt-6 pb-4 sm:px-6 sm:pt-8 sm:pb-5">
-            {introMessage}
-          </div>
-          <div className="relative z-10 w-full px-5 pb-5 sm:px-6 sm:pb-6 flex justify-center">
-            <button
-              type="button"
-              onClick={handleIntroComplete}
-              className="px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-woven-text text-woven-bg font-semibold shadow-md transition-all hover:bg-woven-text/90 hover:shadow-lg active:bg-woven-text/80 active:scale-[0.98]"
-            >
-              {resolvedIntroButtonText}
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Outro message — same glassmorphism card */}
-      {phase === 'outro' && outroMessage && gridRect && (
-        <div
-          className="absolute flex flex-col items-center rounded-[22px] border border-border/50 bg-card/85 shadow-[0_24px_70px_-36px_hsl(var(--glass-shadow)/0.45)] backdrop-blur-2xl overflow-hidden"
-          style={{
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 'calc(100vw - 2rem)',
-            maxWidth: 440,
-            maxHeight: 'calc(100vh - 6rem)',
-          }}
-        >
-          <div className="relative z-10 w-full overflow-y-auto px-5 pt-6 pb-4 sm:px-6 sm:pt-8 sm:pb-5">
-            {outroMessage}
-          </div>
-          <div className="relative z-10 w-full px-5 pb-5 sm:px-6 sm:pb-6 flex justify-center">
-            <button
-              type="button"
-              onClick={handleOutroComplete}
-              className="px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-woven-text text-woven-bg font-semibold shadow-md transition-all hover:bg-woven-text/90 hover:shadow-lg active:bg-woven-text/80 active:scale-[0.98]"
-            >
-              {resolvedOutroButtonText}
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Floating text — no box, directly on the opaque overlay zone */}
-      {phase === 'spotlight' && currentStep && spotlightRect && (
+      {/* Unified callout — same UI for all steps */}
+      {phase === 'active' && currentStep && (hasTarget ? spotlightRect : true) && (
         <div
           ref={calloutRef}
-          className="absolute pointer-events-none flex justify-center"
+          className={cn('absolute flex justify-center z-30', calloutCentered && 'items-center')}
           style={getCalloutStyle()}
         >
-          <div className="max-w-md px-4 text-woven-text text-[15px] sm:text-base font-semibold leading-[1.7] whitespace-pre-line">
-            {currentStep.content}
-          </div>
-        </div>
-      )}
-
-      {/* Bottom bar — dots (grouped) + tap hint + skip */}
-      {phase === 'spotlight' && (
-        <div className="absolute bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] left-0 right-0 z-20 px-5 flex flex-col items-center gap-2">
-          {/* One dot per step */}
-          {steps.length > 1 && (
-            <div className="flex items-center gap-1.5">
-              {steps.map((step, index) => (
-                <div
-                  key={step.id}
-                  className={cn(
-                    'w-[7px] h-[7px] rounded-full transition-all duration-300',
-                    index === currentStepIndex
-                      ? 'bg-woven-text'
-                      : index < currentStepIndex
-                        ? 'bg-woven-text/45'
-                        : 'bg-woven-text/18',
-                  )}
-                />
-              ))}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAdvance();
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleAdvance();
+              }
+            }}
+            className="max-w-md px-4 cursor-pointer select-none active:opacity-70 transition-opacity duration-100"
+          >
+            {/* Text content */}
+            <div className="text-woven-text text-[15px] sm:text-base font-semibold leading-[1.7] whitespace-pre-line">
+              {currentStep.content}
             </div>
-          )}
 
-          {/* Tap hint — centered */}
-          <div className="text-woven-text/40 text-xs font-medium">
-            {t('tutorial.spotlight.tapToContinue', 'Tap anywhere to continue')}
+            {/* Dots + chevron */}
+            <div className="flex items-center justify-between mt-3">
+              {allSteps.length > 1 ? (
+                <div ref={dotsRef} className="flex items-center gap-1.5">
+                  {allSteps.map((step, index) => (
+                    <div
+                      key={step.id}
+                      data-dot
+                      className={cn(
+                        'rounded-full',
+                        index === currentIndex
+                          ? 'w-[7px] h-[7px] bg-woven-text'
+                          : index < currentIndex
+                            ? 'w-[6px] h-[6px] bg-woven-text/40'
+                            : 'w-[6px] h-[6px] bg-woven-text/15',
+                      )}
+                      style={{ transition: 'width 0.3s, height 0.3s, background-color 0.3s' }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div />
+              )}
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                className="text-woven-text/50"
+              >
+                <path
+                  d="M6 3.5L10.5 8L6 12.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       )}

@@ -97,7 +97,7 @@ export function PullToRefresh({
 
       if (content) {
         // Clear transform entirely at rest to avoid creating a permanent stacking
-        // context that traps children's backdrop-filter (glassmorphism).
+        // context that can affect children's rendering.
         content.style.transform = distance > 0 ? `translate3d(0, ${distance}px, 0)` : '';
         content.style.willChange = distance > 0 ? 'transform' : '';
       }
