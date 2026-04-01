@@ -6,6 +6,9 @@ export const DEFAULT_JOURNEY_ID = 'neurodual-default';
 export const DUALNBACK_CLASSIC_JOURNEY_ID = 'dualnback-classic-journey';
 export const BRAINWORKSHOP_JOURNEY_ID = 'sim-brainworkshop-journey';
 
+/** NeuroDual mixed journey (DNB Classic + Stroop Flex alternating per N-level) */
+export const NEURODUAL_MIX_JOURNEY_ID = 'neurodual-mix-journey';
+
 /** Legacy journey IDs — modes removed in Lite but IDs kept for compatibility */
 export const DUAL_TRACE_JOURNEY_ID = 'dual-trace-journey';
 export const DUAL_TRACK_EASY_JOURNEY_ID = 'dual-track-easy-journey';
@@ -52,6 +55,17 @@ export const BUILT_IN_JOURNEYS: readonly BuiltInJourneyDefinition[] = [
     startLevel: 2,
     targetLevel: 5,
     gameMode: 'sim-brainworkshop',
+    reliability: 'stable',
+    isDefault: true,
+    createdAt: 0,
+  },
+  {
+    id: NEURODUAL_MIX_JOURNEY_ID,
+    nameKey: 'stats.journey.neurodualMix',
+    name: 'Parcours NeuroDual',
+    startLevel: 1,
+    targetLevel: 5,
+    gameMode: 'neurodual-mix',
     reliability: 'stable',
     isDefault: true,
     createdAt: 0,

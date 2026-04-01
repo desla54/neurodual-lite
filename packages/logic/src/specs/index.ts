@@ -148,6 +148,7 @@ export {
   STROOP_DEFAULT_TRIALS,
   STROOP_STIMULUS_TIMEOUT_MS,
   STROOP_ITI_MS,
+  MODE_COLOR_STROOP_FLEX,
 } from './thresholds';
 
 // =============================================================================
@@ -191,7 +192,7 @@ export const TempoSpecs = {
 // Stroop Specs
 // =============================================================================
 
-export { StroopSpec, StroopSpecs } from './stroop.spec';
+export { StroopSpec, StroopFlexSpec, StroopSpecs } from './stroop.spec';
 
 // =============================================================================
 // OSPAN Specs (Operation Span)
@@ -303,6 +304,7 @@ const I18N_KEY_TO_SPEC_ID: Record<string, string> = {
   BrainWorkshop: 'sim-brainworkshop',
   Libre: 'custom',
   Stroop: 'stroop',
+  StroopFlex: 'stroop-flex',
   Ospan: 'ospan',
 };
 
@@ -507,7 +509,9 @@ const MODE_I18N_KEY_MAP: Record<string, string> = {
   'sim-brainworkshop': 'brainWorkshop',
   custom: 'libre',
   stroop: 'stroop',
+  'stroop-flex': 'stroopFlex',
   ospan: 'ospan',
+  gridlock: 'gridlock',
 };
 
 /**

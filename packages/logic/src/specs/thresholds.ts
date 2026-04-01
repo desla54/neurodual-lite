@@ -2494,6 +2494,13 @@ export const MODE_COLOR_STROOP = {
   accent: 'rose-500',
 } as const;
 
+export const MODE_COLOR_STROOP_FLEX = {
+  bg: 'bg-fuchsia-100 dark:bg-fuchsia-500/20',
+  border: 'border-fuchsia-200',
+  text: 'text-fuchsia-600 dark:text-fuchsia-400',
+  accent: 'fuchsia-500',
+} as const;
+
 // =============================================================================
 // Flanker Task (Eriksen)
 // =============================================================================

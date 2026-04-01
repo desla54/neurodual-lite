@@ -26,9 +26,11 @@ describe('stats-catalog', () => {
   });
 
   test('resolveGameModeIdsForStatsMode maps known modes', () => {
-    expect(resolveGameModeIdsForStatsMode('DualTempo')).toEqual(['dual-catch']);
     expect(resolveGameModeIdsForStatsMode('DualnbackClassic')).toEqual(['dualnback-classic']);
     expect(resolveGameModeIdsForStatsMode('BrainWorkshop')).toEqual(['sim-brainworkshop']);
+    expect(resolveGameModeIdsForStatsMode('Gridlock')).toEqual(['gridlock']);
+    expect(resolveGameModeIdsForStatsMode('StrobeFlex')).toEqual(['stroop-flex']);
+    expect(resolveGameModeIdsForStatsMode('Ospan')).toEqual(['ospan']);
   });
 
   test('resolveEffectiveStatsGameModeId resolves simulator journeys', () => {

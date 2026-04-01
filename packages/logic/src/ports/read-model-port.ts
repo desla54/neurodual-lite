@@ -151,6 +151,8 @@ export type ModeType =
   | 'CognitiveTask'
   | 'DualnbackClassic'
   | 'BrainWorkshop'
+  | 'Gridlock'
+  | 'StrobeFlex'
   | 'Libre'
   | 'Journey';
 

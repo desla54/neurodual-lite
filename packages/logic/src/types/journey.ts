@@ -58,6 +58,8 @@ export interface JourneyStageDefinition {
   readonly stageId: number;
   readonly nLevel: number;
   readonly mode: JourneyModeType;
+  /** For multi-mode stages (e.g. NeuroDual mix): game modes that count toward this stage. */
+  readonly gameModes?: readonly string[];
 }
 
 export type JourneyProtocol =
@@ -114,19 +116,38 @@ export interface JourneyState {
   };
 }
 
+/** Game modes accepted for the NeuroDual mix journey. */
+export const NEURODUAL_MIX_GAME_MODES = ['dualnback-classic', 'stroop-flex'] as const;
+
 /**
  * Generate journey stages for a given target level.
  * In NeuroDual Lite, journeys are always simulator (1 stage per level).
+ * For 'neurodual-mix', each stage covers both DNB Classic and Stroop Flex.
  */
 export function generateJourneyStages(
   targetLevel: number,
   startLevel: number = JOURNEY_DEFAULT_START_LEVEL,
   isSimulator: boolean = true,
+  gameMode?: string,
 ): JourneyStageDefinition[] {
   const validTarget = Math.max(1, Math.min(targetLevel, JOURNEY_MAX_LEVEL));
   const validStart = Math.max(1, Math.min(startLevel, validTarget));
   const stages: JourneyStageDefinition[] = [];
   let stageId = 1;
+
+  if (gameMode === 'neurodual-mix') {
+    for (let nLevel = validStart; nLevel <= validTarget; nLevel++) {
+      stages.push({
+        stageId,
+        nLevel,
+        mode: 'simulator',
+        gameModes: NEURODUAL_MIX_GAME_MODES,
+      });
+      stageId++;
+    }
+    return stages;
+  }
+
   const modes: JourneyModeType[] = isSimulator ? ['simulator'] : ['catch'];
   for (let nLevel = validStart; nLevel <= validTarget; nLevel++) {
     for (const mode of modes) {

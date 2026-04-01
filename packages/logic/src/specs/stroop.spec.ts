@@ -17,6 +17,7 @@ import {
   STROOP_STIMULUS_TIMEOUT_MS,
   STROOP_ITI_MS,
   MODE_COLOR_STROOP,
+  MODE_COLOR_STROOP_FLEX,
 } from './thresholds';
 
 // =============================================================================
@@ -85,9 +86,75 @@ export const StroopSpec: ModeSpec = {
 };
 
 // =============================================================================
+// Stroop Flex Specification
+// =============================================================================
+
+export const StroopFlexSpec: ModeSpec = {
+  metadata: {
+    id: 'stroop-flex',
+    displayName: 'Stroop Flex',
+    description: 'Stroop with dynamic rule switching. Measures cognitive flexibility.',
+    tags: ['training', 'inhibition', 'flexibility', 'attention'],
+    difficultyLevel: 3,
+    version: '0.1.0',
+  },
+
+  sessionType: 'GameSession',
+
+  scoring: {
+    strategy: 'accuracy',
+    passThreshold: ACCURACY_PASS_NORMALIZED,
+  },
+
+  timing: {
+    stimulusDurationMs: STROOP_STIMULUS_TIMEOUT_MS,
+    intervalMs: STROOP_ITI_MS,
+  },
+
+  generation: {
+    generator: 'Sequence',
+    targetProbability: GEN_TARGET_PROBABILITY_DEFAULT,
+    lureProbability: 0,
+    sequenceMode: 'tempo',
+  },
+
+  defaults: {
+    nLevel: 1,
+    trialsCount: 20,
+    activeModalities: ['position'],
+  },
+
+  adaptivity: {
+    algorithm: 'none',
+    nLevelSource: 'user',
+    configurableSettings: ['trialsCount', 'nLevel'],
+  },
+
+  report: {
+    sections: ['HERO', 'RECENT_TREND', 'PERFORMANCE', 'SPEED', 'DETAILS'],
+    display: {
+      modeScoreKey: 'report.modeScore.accuracy',
+      modeScoreTooltipKey: 'report.modeScore.accuracyTooltip',
+      speedStatKey: 'report.speed.reactionTime',
+      colors: MODE_COLOR_STROOP_FLEX,
+    },
+  },
+
+  stats: {
+    simple: {
+      sections: ['ACTIVITY_KPIS', 'SESSIONS_PER_DAY', 'PERFORMANCE_KPIS'],
+    },
+    advanced: {
+      sections: ['UPS_SUMMARY', 'DISTRIBUTION'],
+    },
+  },
+};
+
+// =============================================================================
 // All Stroop Specs
 // =============================================================================
 
 export const StroopSpecs = {
   stroop: StroopSpec,
+  'stroop-flex': StroopFlexSpec,
 } as const;

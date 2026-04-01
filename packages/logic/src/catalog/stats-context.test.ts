@@ -2,16 +2,18 @@ import { describe, expect, test } from 'bun:test';
 import { resolveStatsContext } from './stats-context';
 
 describe('resolveStatsContext', () => {
-  test('locks beta modes when beta disabled', () => {
+  test('all main modes are stable and unlocked', () => {
     const ctx = resolveStatsContext({
-      mode: 'DualTempo',
+      mode: 'all',
       journeyFilter: 'all',
       availableJourneyIds: [],
       access: { betaEnabled: false, alphaEnabled: false },
     });
 
-    const mode = ctx.options.modes.find((m) => m.value === 'DualTempo');
-    expect(mode?.locked).toBe(true);
+    for (const value of ['DualnbackClassic', 'BrainWorkshop', 'Gridlock', 'StrobeFlex', 'Ospan']) {
+      const mode = ctx.options.modes.find((m) => m.value === value);
+      expect(mode?.locked).toBe(false);
+    }
   });
 
   test('returns simulator chartsMode for simulator journey', () => {

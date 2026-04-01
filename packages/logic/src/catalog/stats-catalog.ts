@@ -11,6 +11,9 @@ export type StatsModeFilter =
   | 'DualTempo'
   | 'DualnbackClassic'
   | 'BrainWorkshop'
+  | 'Gridlock'
+  | 'StrobeFlex'
+  | 'Ospan'
   | 'Libre'
   | 'Journey';
 export type JourneyFilter = 'all' | (string & {});
@@ -91,21 +94,33 @@ export const CANONICAL_GAME_MODES: readonly GameModeMeta[] = [
     },
   },
   {
-    id: 'dual-catch',
-    statsMode: 'DualTempo',
-    reliability: 'alpha',
+    id: 'gridlock',
+    statsMode: 'Gridlock',
+    reliability: 'stable',
     stats: {
-      labelKey: 'stats.mode.dualCatch',
-      descKey: 'stats.mode.dualCatchDesc',
-      iconKey: 'lightning',
-      shortCode: 'Catch',
-      presentationKind: 'tempo',
+      labelKey: 'stats.mode.gridlock',
+      descKey: 'stats.mode.gridlockDesc',
+      iconKey: 'brain',
+      shortCode: 'Grid',
+      presentationKind: 'other',
+    },
+  },
+  {
+    id: 'stroop-flex',
+    statsMode: 'StrobeFlex',
+    reliability: 'stable',
+    stats: {
+      labelKey: 'stats.mode.strobeFlex',
+      descKey: 'stats.mode.strobeFlexDesc',
+      iconKey: 'eye',
+      shortCode: 'Strobe',
+      presentationKind: 'other',
     },
   },
   {
     id: 'ospan',
-    statsMode: 'Libre',
-    reliability: 'beta',
+    statsMode: 'Ospan',
+    reliability: 'stable',
     stats: {
       labelKey: 'stats.mode.ospan',
       descKey: 'stats.mode.ospanDesc',
@@ -192,7 +207,9 @@ export function listStatsModeOptions(): readonly StatsModeOption[] {
   return [
     byMode('DualnbackClassic'),
     byMode('BrainWorkshop'),
-    byMode('DualTempo'),
+    byMode('Gridlock'),
+    byMode('StrobeFlex'),
+    byMode('Ospan'),
     {
       value: 'Libre',
       labelKey: 'stats.mode.libre',
