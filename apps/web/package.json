@@ -23,11 +23,13 @@
     "@capacitor/status-bar": "^8.0.0",
     "@capgo/capacitor-navigation-bar": "^8.0.17",
     "@capgo/capacitor-updater": "^8.41.12",
+    "@capgo/native-purchases": "^8.3.0",
     "@fontsource-variable/manrope": "^5.2.8",
     "@neurodual/infra": "workspace:*",
     "@neurodual/logic": "workspace:*",
     "@neurodual/ui": "workspace:*",
     "@phosphor-icons/react": "^2.1.10",
+    "@powersync/web": "1.34.0",
     "@tailwindcss/vite": "^4.1.17",
     "cmdk": "^1.1.1",
     "gsap": "^3.14.1",
@@ -39,8 +41,7 @@
     "react-router": "^7.0.0",
     "tailwindcss": "^4.1.17",
     "zod": "^4.3.6",
-    "zustand": "^5.0.2",
-    "@powersync/web": "1.34.0"
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@powersync/capacitor": "0.4.1",

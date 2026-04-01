@@ -84,31 +84,19 @@ const envSchema = z.object({
   VITE_POSTHOG_DISABLED: booleanString.describe('Disable PostHog even if key is set'),
 
   // ==========================================================================
-  // RevenueCat (optional - mobile payments)
+  // Activation API (premium unlock)
   // ==========================================================================
-  VITE_REVENUECAT_ANDROID_KEY: z.string().optional().describe('RevenueCat Android API key'),
-  VITE_REVENUECAT_IOS_KEY: z.string().optional().describe('RevenueCat iOS API key'),
-
-  // ==========================================================================
-  // Social Auth (optional - native Google sign-in)
-  // ==========================================================================
-  VITE_GOOGLE_WEB_CLIENT_ID: z
+  VITE_ACTIVATION_API_URL: z
     .string()
+    .url()
     .optional()
-    .describe('Google OAuth web client ID for native Google sign-in'),
-
-  // ==========================================================================
-  // Lemon Squeezy (optional - web payments)
-  // ==========================================================================
-  VITE_LEMON_SQUEEZY_STORE_ID: z.string().optional().describe('Lemon Squeezy store ID'),
-  VITE_LEMON_SQUEEZY_API_KEY: z.string().optional().describe('Lemon Squeezy API key'),
+    .default('https://neurodual-activation-api.abdeslam-aguilal.workers.dev')
+    .describe('Activation API Worker URL'),
 
   // ==========================================================================
   // Feature Flags
   // ==========================================================================
-  VITE_PREMIUM_MODE: booleanString.describe('Enable premium/subscription mode'),
   VITE_NATIVE_MODE: booleanString.describe('Enable native mobile features'),
-  VITE_XP_REWARDS: booleanString.describe('Enable XP rewards system'),
 
   // ==========================================================================
   // External Links
@@ -157,19 +145,6 @@ export function validateProductionEnv(): void {
       errors.push('VITE_SUPABASE_ANON_KEY is required in production');
     }
 
-    // PowerSync is optional (app works offline-only without it)
-    // but warn if premium mode is enabled
-    if (env.VITE_PREMIUM_MODE && !env.VITE_POWERSYNC_URL) {
-      console.warn(
-        '[env] VITE_POWERSYNC_URL not set but VITE_PREMIUM_MODE is enabled. Cloud sync will be disabled.',
-      );
-    }
-
-    if (env.VITE_NATIVE_MODE && !env.VITE_GOOGLE_WEB_CLIENT_ID) {
-      console.warn(
-        '[env] VITE_GOOGLE_WEB_CLIENT_ID not set in native mode. Native Google sign-in will be disabled.',
-      );
-    }
 
     if (errors.length > 0) {
       throw new Error(`Missing required environment variables:\n${errors.join('\n')}`);

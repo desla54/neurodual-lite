@@ -542,9 +542,6 @@ export default defineConfig(({ mode }) => {
     },
 
     optimizeDeps: {
-      // async-lock is a CJS dependency of PowerSync that needs to be pre-bundled
-      // Use nested dependency syntax since it's a transitive dependency
-      include: ['@powersync/web > async-lock'],
       // PowerSync bundles wa-sqlite internally, so we exclude all SQLite-related packages
       // to prevent Vite's optimizer from conflicting with their internal workers
       exclude: ['@powersync/web', '@powersync/capacitor', 'wa-sqlite'],

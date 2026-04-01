@@ -1,0 +1,15 @@
+{
+  "name": "neurodual-activation-api",
+  "compatibility_date": "2025-12-10",
+  "main": "src/index.ts",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "neurodual-activations",
+      "database_id": "fcf92076-4b7c-4276-81ae-48c77537deea"
+    }
+  ],
+  "vars": {
+    "MAX_ACTIVATIONS": "3"
+  }
+}

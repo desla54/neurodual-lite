@@ -18,7 +18,7 @@
     },
     "apps/web": {
       "name": "@neurodual/web",
-      "version": "0.9.27",
+      "version": "0.9.29",
       "dependencies": {
         "@capacitor/android": "^8.0.0",
         "@capacitor/app": "^8.0.0",
@@ -31,6 +31,7 @@
         "@capacitor/status-bar": "^8.0.0",
         "@capgo/capacitor-navigation-bar": "^8.0.17",
         "@capgo/capacitor-updater": "^8.41.12",
+        "@capgo/native-purchases": "^8.3.0",
         "@fontsource-variable/manrope": "^5.2.8",
         "@neurodual/infra": "workspace:*",
         "@neurodual/logic": "workspace:*",
@@ -65,7 +66,7 @@
     },
     "packages/infra": {
       "name": "@neurodual/infra",
-      "version": "0.9.27",
+      "version": "0.9.29",
       "dependencies": {
         "@capacitor-community/keep-awake": "^8.0.0",
         "@capacitor-community/sqlite": "^7.0.3",
@@ -83,7 +84,7 @@
     },
     "packages/logic": {
       "name": "@neurodual/logic",
-      "version": "0.9.27",
+      "version": "0.9.29",
       "dependencies": {
         "xstate": "^5.19.2",
         "zod": "^4.3.6",
@@ -97,7 +98,7 @@
     },
     "packages/ui": {
       "name": "@neurodual/ui",
-      "version": "0.9.27",
+      "version": "0.9.29",
       "dependencies": {
         "@gsap/react": "^2.1.2",
         "@neurodual/infra": "workspace:*",
@@ -366,6 +367,8 @@
     "@capgo/capacitor-navigation-bar": ["@capgo/capacitor-navigation-bar@8.0.25", "", { "peerDependencies": { "@capacitor/core": ">=8.0.0" } }, "sha512-iQDNIWsx4giBwZORs89DvFoDqV5+qvskpV5CXZ1tWQZfNwMdfL4ILUI7yiyN4GfK201tAf9oqFP0x1zKt/YFVA=="],
 
     "@capgo/capacitor-updater": ["@capgo/capacitor-updater@8.45.0", "", { "peerDependencies": { "@capacitor/core": "^8.0.0" } }, "sha512-r0PIg+yFPCbxRrNUBk6yHgk8HCfLS95qVr6pnFpJil6WcOOL7NNNl/anmVCeuI76gJ7BXfhKD8nU4MFnim4Z1w=="],
+
+    "@capgo/native-purchases": ["@capgo/native-purchases@8.3.0", "", { "peerDependencies": { "@capacitor/core": ">=8.0.0" } }, "sha512-KcB3JVh9JtyhOWxHyPrIBfBrmz0Pxo3EyynavPcKhx/4+vwXBNddQ/F4Id5xJZmwZymRliaCKsq+//lKsI5INg=="],
 
     "@date-fns/tz": ["@date-fns/tz@1.4.1", "", {}, "sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA=="],
 
