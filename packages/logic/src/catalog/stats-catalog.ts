@@ -12,7 +12,7 @@ export type StatsModeFilter =
   | 'DualnbackClassic'
   | 'BrainWorkshop'
   | 'Gridlock'
-  | 'StrobeFlex'
+  | 'StroopFlex'
   | 'Ospan'
   | 'Libre'
   | 'Journey';
@@ -29,7 +29,10 @@ export type IconKey =
   | 'tag'
   | 'sliders'
   | 'pencil'
-  | 'eye';
+  | 'eye'
+  | 'shuffle'
+  | 'calculator'
+  | 'car-profile';
 
 export interface StatsModeOption {
   readonly value: StatsModeFilter;
@@ -100,20 +103,20 @@ export const CANONICAL_GAME_MODES: readonly GameModeMeta[] = [
     stats: {
       labelKey: 'stats.mode.gridlock',
       descKey: 'stats.mode.gridlockDesc',
-      iconKey: 'brain',
+      iconKey: 'car-profile',
       shortCode: 'Grid',
       presentationKind: 'other',
     },
   },
   {
     id: 'stroop-flex',
-    statsMode: 'StrobeFlex',
+    statsMode: 'StroopFlex',
     reliability: 'stable',
     stats: {
-      labelKey: 'stats.mode.strobeFlex',
-      descKey: 'stats.mode.strobeFlexDesc',
-      iconKey: 'eye',
-      shortCode: 'Strobe',
+      labelKey: 'stats.mode.stroopFlex',
+      descKey: 'stats.mode.stroopFlexDesc',
+      iconKey: 'shuffle',
+      shortCode: 'Stroop',
       presentationKind: 'other',
     },
   },
@@ -124,7 +127,7 @@ export const CANONICAL_GAME_MODES: readonly GameModeMeta[] = [
     stats: {
       labelKey: 'stats.mode.ospan',
       descKey: 'stats.mode.ospanDesc',
-      iconKey: 'brain',
+      iconKey: 'calculator',
       shortCode: 'OSPAN',
       presentationKind: 'other',
     },
@@ -208,7 +211,7 @@ export function listStatsModeOptions(): readonly StatsModeOption[] {
     byMode('DualnbackClassic'),
     byMode('BrainWorkshop'),
     byMode('Gridlock'),
-    byMode('StrobeFlex'),
+    byMode('StroopFlex'),
     byMode('Ospan'),
     {
       value: 'Libre',

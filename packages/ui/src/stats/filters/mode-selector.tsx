@@ -6,7 +6,9 @@ import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Brain,
+  Calculator,
   CaretDown,
+  CarProfile,
   Check,
   Database,
   Eye,
@@ -16,6 +18,7 @@ import {
   MapPin,
   MapTrifold,
   PencilSimple,
+  Shuffle,
   SlidersHorizontal,
   Stack,
   Tag,
@@ -66,6 +69,9 @@ const ICONS: Record<IconKey, typeof Brain> = {
   sliders: SlidersHorizontal,
   pencil: PencilSimple,
   eye: Eye,
+  shuffle: Shuffle,
+  calculator: Calculator,
+  'car-profile': CarProfile,
 };
 
 export function ModeSelector({

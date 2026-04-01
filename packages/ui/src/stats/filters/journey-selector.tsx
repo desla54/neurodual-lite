@@ -29,6 +29,9 @@ const ICONS: Record<IconKey, typeof MapTrifold> = {
   sliders: Stack,
   pencil: Stack,
   eye: Stack,
+  shuffle: Stack,
+  calculator: Stack,
+  'car-profile': Stack,
 };
 
 export function JourneySelector({

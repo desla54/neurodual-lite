@@ -10,7 +10,7 @@ describe('resolveStatsContext', () => {
       access: { betaEnabled: false, alphaEnabled: false },
     });
 
-    for (const value of ['DualnbackClassic', 'BrainWorkshop', 'Gridlock', 'StrobeFlex', 'Ospan']) {
+    for (const value of ['DualnbackClassic', 'BrainWorkshop', 'Gridlock', 'StroopFlex', 'Ospan']) {
       const mode = ctx.options.modes.find((m) => m.value === value);
       expect(mode?.locked).toBe(false);
     }

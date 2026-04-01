@@ -120,7 +120,7 @@ export function StatsPage(): ReactNode {
     'DualnbackClassic',
     'BrainWorkshop',
     'Gridlock',
-    'StrobeFlex',
+    'StroopFlex',
     'Ospan',
     'Libre',
     'Journey',

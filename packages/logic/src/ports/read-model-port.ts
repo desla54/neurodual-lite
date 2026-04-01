@@ -152,7 +152,7 @@ export type ModeType =
   | 'DualnbackClassic'
   | 'BrainWorkshop'
   | 'Gridlock'
-  | 'StrobeFlex'
+  | 'StroopFlex'
   | 'Libre'
   | 'Journey';
 
