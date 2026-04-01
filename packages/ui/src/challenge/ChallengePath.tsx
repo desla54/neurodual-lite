@@ -105,7 +105,7 @@ export function ChallengePath({
           onScroll={emphasis === 'hero' ? updateScrollHints : undefined}
           className={cn(
             'w-full flex overflow-x-auto px-3 scrollbar-hide',
-            emphasis === 'hero' ? 'py-5' : 'py-2',
+            emphasis === 'hero' ? 'py-2' : 'py-2',
           )}
         >
           {cards.map((card, idx) => {

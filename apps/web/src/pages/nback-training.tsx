@@ -2,6 +2,7 @@
  * Game page - Dual N-Back gameplay
  */
 
+import { useJourneyStateWithContext, useNextJourneySessionWithContext } from '../lib/journey-stubs';
 import type {
   CreateRecoverySnapshotParams,
   JourneyState,
@@ -30,8 +31,6 @@ import {
   type StimulusStyle,
   type GridStyle,
   useGameSession,
-  useJourneyStateWithContext,
-  useNextJourneySessionWithContext,
   useRewardDetection,
   useUserProfile,
   useSessionCompletion,
@@ -447,13 +446,13 @@ function DualNBackGamePage({
 
       // Journey fallback: rely on the journey projector state (authoritative).
       if (input.sessionPlayMode === 'journey') {
-        return journeyState.consecutiveStrikes ?? 0;
+        return journeyState?.consecutiveStrikes ?? 0;
       }
 
       // Free-mode fallback: no persisted strike tracking (yet).
       return 0;
     },
-    [completionResult?.report, effectiveMode, journeyState.consecutiveStrikes],
+    [completionResult?.report, effectiveMode, journeyState?.consecutiveStrikes],
   );
 
   // UI state for quit modal, settings overlay, layout editor, bug report and auto-start after "Play Again"
@@ -691,9 +690,9 @@ function DualNBackGamePage({
     !recoveryLoading &&
     journeyState?.isActive &&
     typeof journeyStageId === 'number' &&
-    typeof journeyState.currentStage === 'number' &&
-    journeyStageId !== journeyState.currentStage &&
-    journeyStageId < journeyState.currentStage;
+    typeof journeyState?.currentStage === 'number' &&
+    journeyStageId !== journeyState?.currentStage &&
+    journeyStageId < journeyState?.currentStage;
 
   const cursorPositionPort = useCursorTrackingPort();
   useJourneyActivation({

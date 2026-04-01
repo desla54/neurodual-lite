@@ -1,4 +1,3 @@
-/// <reference types="@welldone-software/why-did-you-render" />
 import React from 'react';
 
 if (import.meta.env.DEV && import.meta.env['VITE_WDYR'] === '1') {

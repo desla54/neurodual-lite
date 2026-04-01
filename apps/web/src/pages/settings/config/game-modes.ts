@@ -4571,12 +4571,23 @@ const KNOWN_GAME_MODES = BASE_GAME_MODES.map((mode) => mode.value) as readonly G
 
 export const GAME_MODE_SECTION_BY_MODE = buildModeSectionIndex(MODE_CATEGORIES, KNOWN_GAME_MODES);
 
-export const GAME_MODES: GameModeConfig[] = BASE_GAME_MODES.map((mode) => ({
-  ...mode,
-  section: GAME_MODE_SECTION_BY_MODE[mode.value],
-  reliability: getReliabilityForGameMode(mode.value),
-  tier: getModeTier(mode.value),
-}));
+// NeuroDual Lite: only keep the 5 supported modes
+const LITE_MODES = new Set<GameMode>([
+  'dualnback-classic',
+  'sim-brainworkshop',
+  'ospan',
+  'stroop-flex',
+  'gridlock',
+]);
+
+export const GAME_MODES: GameModeConfig[] = BASE_GAME_MODES
+  .filter((mode) => LITE_MODES.has(mode.value))
+  .map((mode) => ({
+    ...mode,
+    section: GAME_MODE_SECTION_BY_MODE[mode.value],
+    reliability: getReliabilityForGameMode(mode.value),
+    tier: getModeTier(mode.value),
+  }));
 
 export const TRAINING_CATEGORIES = MODE_CATEGORIES.filter((c) => c.section === 'training');
 export const TEST_CATEGORIES = MODE_CATEGORIES.filter((c) => c.section === 'test');

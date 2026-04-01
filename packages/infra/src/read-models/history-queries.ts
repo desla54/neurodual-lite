@@ -163,7 +163,7 @@ function buildSessionSummariesFilterConditions(
     } else if (filters.mode === 'Libre') {
       conditions.push(eq(sessionSummaries.play_context, 'free'));
       if (filters.freeModeFilter !== 'all') {
-        const gameModeIds = resolveGameModeIdsForStatsMode(filters.freeModeFilter);
+        const gameModeIds = resolveGameModeIdsForStatsMode(filters.freeModeFilter as any);
         if (gameModeIds.length === 0) {
           conditions.push(sql`1 = 0`);
         } else {
@@ -171,7 +171,7 @@ function buildSessionSummariesFilterConditions(
         }
       }
     } else {
-      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode);
+      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode as any);
       if (gameModeIds.length === 0) {
         conditions.push(sql`1 = 0`);
       } else {

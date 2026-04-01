@@ -3,15 +3,12 @@
  */
 
 import {
-  ArrowsLeftRight,
-  Exam,
   Database,
   Eye,
   GearSix,
   Globe,
   HandWaving,
   Info,
-  MapTrifold,
   Bell,
   Palette,
   SpeakerHigh,
@@ -39,14 +36,6 @@ export const settingsNavGroups: SettingsNavGroup[] = [
     labelKey: 'settings.nav.game',
     items: [
       { id: 'mode', labelKey: 'settings.nav.mode', icon: SquaresFour },
-      { id: 'journey', labelKey: 'settings.nav.journey', icon: MapTrifold },
-      { id: 'tests', labelKey: 'settings.nav.tests', icon: Exam },
-      {
-        id: 'dyslatéralisation',
-        labelKey: 'settings.nav.dyslatéralisation',
-        icon: ArrowsLeftRight,
-        alphaOnly: true,
-      },
       { id: 'visual', labelKey: 'settings.nav.visual', icon: Eye },
       { id: 'audio', labelKey: 'settings.nav.audio', icon: SpeakerHigh },
     ],
@@ -83,10 +72,7 @@ export function getSectionIcon(sectionId: string): typeof GearSix {
 
 /** Section titles - Maps section ID to translation keys */
 export const sectionTitles: Record<string, string> = {
-  journey: 'settings.nav.journey',
   mode: 'settings.nav.mode',
-  tests: 'settings.nav.tests',
-  dyslatéralisation: 'settings.nav.dyslatéralisation',
   visual: 'settings.nav.visual',
   audio: 'settings.nav.audio',
   profile: 'settings.nav.profile',

@@ -1,98 +1,22 @@
 import type {
   BadgeHistorySnapshot,
   GameEvent,
-  JourneyRecordableSession,
-  SessionCompletionWithXPResult,
   SessionPipelineFactoryPort,
 } from '@neurodual/logic';
-import { hasSDTStats, SESSION_START_EVENT_TYPES } from '@neurodual/logic';
+import { SESSION_START_EVENT_TYPES } from '@neurodual/logic';
 import {
   SessionEndPipelineAdapter,
   type PipelineDependencies,
 } from '../pipeline/session-end-pipeline-machine';
 import { ensureSummaryProjectedForSession } from '../history/history-projection';
 
-function getAdaptivePathProgressPct(result: SessionCompletionWithXPResult): number | undefined {
-  const details = result.report?.modeDetails;
-  if (details?.kind === 'track' && typeof details.masteryStageProgressPct === 'number') {
-    return details.masteryStageProgressPct;
-  }
-  return undefined;
-}
-
-function toJourneyRecordableSession(
-  result: SessionCompletionWithXPResult,
-): JourneyRecordableSession | null {
-  const summary = result.summary as JourneyRecordableSession & {
-    finalStats?: { accuracy?: number };
-    score?: number;
-  };
-  const adaptivePathProgressPct = getAdaptivePathProgressPct(result);
-
-  if (hasSDTStats(summary)) {
-    return {
-      ...summary,
-      gameMode: summary.gameMode ?? result.report.gameMode,
-    };
-  }
-
-  if (typeof summary.score === 'number') {
-    return {
-      sessionId: summary.sessionId,
-      score: summary.score,
-      gameMode: result.report.gameMode,
-      adaptivePathProgressPct,
-    };
-  }
-
-  const accuracy = summary.finalStats?.accuracy;
-  if (typeof accuracy === 'number') {
-    return {
-      sessionId: summary.sessionId,
-      score: Math.round(accuracy * 100),
-      gameMode: result.report.gameMode,
-      adaptivePathProgressPct,
-    };
-  }
-
-  if (typeof result.ups?.score === 'number') {
-    return {
-      sessionId: summary.sessionId,
-      score: Math.round(result.ups.score),
-      gameMode: result.report.gameMode,
-      adaptivePathProgressPct,
-    };
-  }
-
-  return null;
-}
-
 export const sessionPipelineFactoryAdapter: SessionPipelineFactoryPort = {
   create(options) {
     const { historyAdapter, progressionAdapter } = options;
-    const journeyAdapter = options.journeyAdapter;
     const persistence = options.persistence ?? null;
     const getActiveUserIdForPersistence = options.getActiveUserIdForPersistence ?? (() => 'local');
 
-    const recordJourneyAttempt =
-      options.recordJourneyAttempt ??
-      (journeyAdapter
-        ? async (stageId, result, journeyMeta) => {
-            if (!journeyMeta?.journeyId) return null;
-            const session = toJourneyRecordableSession(result);
-            if (!session) return null;
-            return await journeyAdapter.recordAttempt(
-              {
-                journeyId: journeyMeta.journeyId,
-                startLevel: journeyMeta.startLevel,
-                targetLevel: journeyMeta.targetLevel,
-                gameMode: journeyMeta.gameMode,
-              },
-              stageId,
-              session,
-            );
-          }
-        : undefined);
+    const recordJourneyAttempt = options.recordJourneyAttempt;
 
     const dependencies: PipelineDependencies = {
       // Persistence

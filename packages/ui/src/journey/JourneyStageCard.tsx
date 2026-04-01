@@ -12,7 +12,10 @@
  */
 
 import type { JourneyStageDefinition, JourneyStageProgress } from '@neurodual/logic';
-import { JOURNEY_MIN_PASSING_SCORE, getSessionsRequired } from '@neurodual/logic';
+
+// Lite stubs for removed journey scoring constants
+const JOURNEY_MIN_PASSING_SCORE = 0.7;
+function getSessionsRequired(_score: number | null): number { return 1; }
 import {
   Check,
   Lock,

@@ -901,41 +901,6 @@ export async function disconnectPowerSync(): Promise<void> {
  */
 export async function reconnectPowerSync(): Promise<void> {
   // Cloud sync removed in Lite — reconnect is a no-op
-  return;
-  const db = getGlobal().__NEURODUAL_POWERSYNC_DB__ ?? null;
-  if (db) {
-    const startedAt = getNowMs();
-    appendPowerSyncRuntimeEvent('reconnect-start', 'reconnectPowerSync');
-    try {
-      const connector = null as any;
-      const { SyncClientImplementation } = await import('@powersync/web');
-      const { isCapacitorNative } = await import('../db/platform-detector');
-
-      const isMobile =
-        isCapacitorNative() ||
-        (typeof navigator !== 'undefined' &&
-          /Android|iPhone|iPad|iPod/i.test(navigator.userAgent ?? ''));
-
-      // Use Rust sync client for significantly faster sync performance
-      await db.connect(connector, {
-        clientImplementation: SyncClientImplementation.RUST,
-        // biome-ignore lint/suspicious/noExplicitAny: FetchStrategy enum not exported from @powersync/web
-        ...(isMobile ? { fetchStrategy: 'sequential' as any } : {}),
-      });
-      appendPowerSyncRuntimeEvent(
-        'reconnect-success',
-        `durationMs=${Math.round(getNowMs() - startedAt)} mobile=${String(isMobile)}`,
-      );
-      void samplePowerSyncRuntimeMemory('reconnect-success');
-      powerSyncLog.info(
-        `Reconnected to sync service (Rust client${isMobile ? ', sequential fetch' : ''})`,
-      );
-    } catch (error) {
-      appendPowerSyncRuntimeEvent('reconnect-failed', getPowerSyncErrorMessage(error));
-      void samplePowerSyncRuntimeMemory('reconnect-failed', { force: true });
-      throw error;
-    }
-  }
 }
 
 // =============================================================================

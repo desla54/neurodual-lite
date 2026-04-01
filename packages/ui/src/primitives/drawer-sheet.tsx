@@ -53,7 +53,7 @@ export function DrawerSheet({ trigger, title, srTitle, children }: DrawerSheetPr
   );
 
   return (
-    <Drawer.Root direction={direction} open={open} onOpenChange={setOpen} shouldScaleBackground>
+    <Drawer.Root direction={direction} open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>{trigger}</Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay

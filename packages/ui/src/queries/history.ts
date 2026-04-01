@@ -11,7 +11,6 @@ import type {
   BrainWorkshopSessionData,
   HistoryModalityStats,
   HistoryPort,
-  JourneyProjectionSession,
   SessionEndReportModel,
   SessionHistoryExport,
   SessionHistoryItem,
@@ -117,7 +116,7 @@ export function buildSessionSummariesWhere(
     } else if (filters.mode === 'Libre') {
       clauses.push(`play_context = 'free'`);
       if (filters.freeModeFilter !== 'all') {
-        const expected = resolveGameModeIdsForStatsMode(filters.freeModeFilter);
+        const expected = resolveGameModeIdsForStatsMode(filters.freeModeFilter as Parameters<typeof resolveGameModeIdsForStatsMode>[0]);
         if (!expected || expected.length === 0) {
           clauses.push('1 = 0');
         } else {
@@ -127,7 +126,7 @@ export function buildSessionSummariesWhere(
         }
       }
     } else {
-      const expected = resolveGameModeIdsForStatsMode(filters.mode);
+      const expected = resolveGameModeIdsForStatsMode(filters.mode as Parameters<typeof resolveGameModeIdsForStatsMode>[0]);
       if (!expected || expected.length === 0) {
         clauses.push('1 = 0');
       } else {
@@ -209,7 +208,20 @@ export type { SessionSummariesCursor, SessionSummariesFilters };
 // Read-model hooks
 // =============================================================================
 
-export type { JourneyProjectionSession };
+/** Inline replacement for deleted JourneyProjectionSession from logic */
+export interface JourneyProjectionSession {
+  journeyStageId?: number;
+  journeyId?: string;
+  nLevel?: number;
+  dPrime: number;
+  gameMode?: string;
+  upsScore?: number | null;
+  timestamp?: number;
+  byModality?: Record<string, HistoryModalityStats>;
+  passed?: boolean;
+  sessionId?: string;
+  adaptivePathProgressPct?: number;
+}
 
 export function useJourneyRecordableSessionsQuery(
   journeyId: string | null,

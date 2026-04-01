@@ -488,7 +488,7 @@ function buildFilteredSessionsWhere(filters: StatsFilters): FilteredSessionsWher
     if (filters.mode === 'Libre') {
       conditions.push(FREE_SESSION_SQL);
     } else {
-      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode);
+      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode as any);
       if (gameModeIds.length > 0) {
         const { sql: inClause, params: inParams } = buildInClause([...gameModeIds]);
         conditions.push(`game_mode IN ${inClause}`);

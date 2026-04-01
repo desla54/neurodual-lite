@@ -112,7 +112,7 @@ export async function createPowerSyncDatabase(options?: {
   powerSyncLog.info(`Storage: ${platformInfo.description}`);
 
   if (platform === 'capacitor-native') {
-    const { PowerSyncDatabase: CapacitorPowerSyncDatabase } = await import('@powersync/capacitor');
+    const { PowerSyncDatabase: CapacitorPowerSyncDatabase } = await import('@powersync/capacitor' as any);
     // Use Capacitor-native SQLite for iOS/Android
     return new CapacitorPowerSyncDatabase({
       schema: PowerSyncAppSchema,

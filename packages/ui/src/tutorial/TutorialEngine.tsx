@@ -1,7 +1,6 @@
 import {
   THRESHOLDS,
   type AudioPort,
-  type ExpectedClassification,
   type Sound,
   type SpotlightTarget,
   type TutorialSpec,
@@ -310,9 +309,9 @@ export function TutorialEngine({
     totalSteps,
     nLevel,
     isDualPick,
-    isTrace,
-    isPlace,
-    isMemo,
+    isTrace: _isTrace,
+    isPlace: _isPlace,
+    isMemo: _isMemo,
     awaitingResponse,
     feedbackActive,
   } = useTutorialSession({
@@ -464,8 +463,8 @@ export function TutorialEngine({
   ]);
 
   // Trace mode: track position and audio responses separately
-  const [tracePositionResponded, setTracePositionResponded] = useState(false);
-  const [traceAudioResponded, setTraceAudioResponded] = useState(false);
+  const [_tracePositionResponded, setTracePositionResponded] = useState(false);
+  const [_traceAudioResponded, setTraceAudioResponded] = useState(false);
 
   // Reset trace responses when step changes
   useEffect(() => {
@@ -897,29 +896,6 @@ export function TutorialEngine({
   const handlePause = useCallback(() => send({ type: 'PAUSE' }), [send]);
   const handleResume = useCallback(() => send({ type: 'RESUME' }), [send]);
 
-  // Trace mode handlers
-  const handleTracePositionTap = useCallback(
-    (position: number) => {
-      if (!isResponse || !isTrace) return;
-      const expectedPosition = currentStep?.expectedSwipe?.targetPosition;
-      if (position === expectedPosition) {
-        setTracePositionResponded(true);
-        // If no audio match expected, send response immediately
-        if (!currentStep?.expectedSwipe?.audioMatch) {
-          send({ type: 'RESPOND', channel: 'position' });
-        }
-      }
-    },
-    [isResponse, isTrace, currentStep?.expectedSwipe, send],
-  );
-
-  const handleTraceAudioTap = useCallback(() => {
-    if (!isResponse || !isTrace || !tracePositionResponded) return;
-    setTraceAudioResponded(true);
-    // Both position and audio responded, send combined response
-    send({ type: 'RESPOND', channel: 'position' });
-    send({ type: 'RESPOND', channel: 'audio' });
-  }, [isResponse, isTrace, tracePositionResponded, send]);
 
   const targetRefMap = useMemo(
     () =>

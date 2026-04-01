@@ -213,15 +213,7 @@ export type {
   InteractiveReplayEvent,
   RunScoreDelta,
 } from './interactive-replay-engine';
-// Journey Projector (training path progression - binary modes only)
-export {
-  computeJourneyScore,
-  createEmptyJourneyState,
-  getCurrentStageProgress,
-  isJourneyComplete,
-  projectJourneyFromHistory,
-} from './journey-projector';
-export type { JourneyProjectionSession } from './journey-projector';
+// Journey Projector removed (deleted with journey system)
 // Challenge projector (statistical daily challenge - local time)
 export {
   createDefaultChallenge20Config,
@@ -265,13 +257,7 @@ export {
   projectRecallSessionToSummaryInput,
   projectTempoSessionToSummaryInput,
   projectTraceSessionToSummaryInput,
-  projectTimeSessionToSummaryInput,
-  projectTrackSessionToSummaryInput,
-  projectCorsiSessionToSummaryInput,
   projectOspanSessionToSummaryInput,
-  projectRunningSpanSessionToSummaryInput,
-  projectPasatSessionToSummaryInput,
-  projectSwmSessionToSummaryInput,
 } from './session-summary-input-projectors';
 export {
   projectSessionReportFromEvents,
@@ -285,7 +271,7 @@ export {
 } from './dualnback-classic-home-es';
 // Statistical Calculator - OOP class
 export { StatisticalCalculator } from './statistical-calculator';
-// NOTE: SnapshotStore supprimé - SQLite est l'unique source de vérité
+// NOTE: SnapshotStore supprime - SQLite est l'unique source de verite
 export type { EventQuery } from './event-query';
 
 // Turn Projectors (lazy-loaded turn-by-turn detail for reports)
@@ -305,14 +291,4 @@ export type { RecoverableState } from './recovery-projector';
 // Replay Recovery Projector (extract recoverable state from interrupted replays)
 export { ReplayRecoveryProjector } from './replay-recovery-projector';
 
-// PASAT Session Projection
-export { projectPasatSessionFromEvents } from './pasat-session-projection';
-export type { PasatSessionProjection } from './pasat-session-projection';
-
-// Dual Track / MOT Session Projection
-export { projectTrackSessionFromEvents } from './track-session-projection';
-export type { TrackSessionProjection } from './track-session-projection';
-
-// SWM Session Projection
-export { projectSwmSessionFromEvents } from './swm-session-projection';
-export type { SwmSessionProjection } from './swm-session-projection';
+// Removed: PASAT, Track, SWM session projections (deleted game modes)

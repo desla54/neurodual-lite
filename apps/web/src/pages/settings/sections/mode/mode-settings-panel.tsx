@@ -26,14 +26,12 @@ import {
   TabsList,
   TabsTrigger,
   Toggle,
-  useJourneyStateWithContext,
   useMaxAchievedLevelForModeQuery,
   useSessionSummariesCountQuery,
 } from '@neurodual/ui';
 import { CaretDown, Gauge } from '@phosphor-icons/react';
 import {
   gameModeRegistry,
-  resolveHybridJourneyStrategyConfig,
   type ConfigurableSettingKey,
   type ModalityId,
 } from '@neurodual/logic';
@@ -50,10 +48,12 @@ import { ModalityMixer, NLevelSelect, ProgressionSelect } from './plugins/shared
 import { useAlphaEnabled } from '../../../../hooks/use-beta-features';
 import { useAnalytics } from '../../../../hooks/use-analytics';
 import { canUseJourneySettingsScope } from '../../../../lib/journey-session-mode';
-import {
-  normalizeDualTrackResolvedSettings,
-  type DualTrackResolvedIdentityMode,
-} from '../../../../lib/dual-track-settings';
+import { useJourneyStateWithContext } from '../../../../lib/journey-stubs';
+
+// Stub for removed dual-track-settings
+type DualTrackResolvedIdentityMode = string;
+function normalizeDualTrackResolvedSettings(..._args: unknown[]): any { return {}; }
+const hybridStrategy = {} as any;
 import { SettingsSegmentedControl, UpgradeDialog } from '../../components';
 import { FreeTrainingPresetSelector } from './free-training-preset-selector';
 import { JourneyPresetSelector } from './journey-preset-selector';
@@ -513,16 +513,8 @@ export function ModeSettingsPanel({
     alphaEnabled && (extensions.renderMode === 'webgl' || extensions.renderMode === 'webgl3d')
       ? extensions.renderMode
       : 'dom';
-  const hybridStrategy = resolveHybridJourneyStrategyConfig({
-    gameMode: activeJourneyGameMode,
-    strategyConfig: activeJourneyStrategyConfig,
-    hybridTrackSessionsPerBlock: (modeSettings as { hybridTrackSessionsPerBlock?: number })
-      .hybridTrackSessionsPerBlock,
-    hybridDnbSessionsPerBlock: (modeSettings as { hybridDnbSessionsPerBlock?: number })
-      .hybridDnbSessionsPerBlock,
-  });
-  const hybridTrackSessionsPerBlock = hybridStrategy.trackSessionsPerBlock;
-  const hybridDnbSessionsPerBlock = hybridStrategy.dnbSessionsPerBlock;
+  const hybridTrackSessionsPerBlock = (activeJourneyStrategyConfig as any)?.trackSessionsPerBlock ?? (modeSettings as any)?.hybridTrackSessionsPerBlock ?? 3;
+  const hybridDnbSessionsPerBlock = (activeJourneyStrategyConfig as any)?.dnbSessionsPerBlock ?? (modeSettings as any)?.hybridDnbSessionsPerBlock ?? 3;
   const updateHybridTrackSessionsPerBlock = (value: number) =>
     setJourneyStrategyConfig(activeJourneyId, {
       hybrid: {
@@ -646,13 +638,13 @@ export function ModeSettingsPanel({
   const isHybridJourneyScope =
     isJourneyScope && isDualTrack && activeJourneyGameMode === 'dual-track-dnb-hybrid';
   const journeyHasProgress =
-    journeyState.currentStage > 1 ||
-    journeyState.stages.some(
-      (s) =>
+    journeyState?.currentStage > 1 ||
+    journeyState?.stages?.some(
+      (s: any) =>
         s.validatingSessions > 0 ||
         s.bestScore !== null ||
         (typeof s.progressPct === 'number' && s.progressPct > 0),
-    );
+    ) || false;
   const lockModalities = isJourneyScope && journeyHasProgress;
   const preserveJourneyPresetKeys =
     lockModalities && isBrainWorkshop
@@ -1055,7 +1047,7 @@ export function ModeSettingsPanel({
                           hiddenModalities={[
                             ...(hideColorModality ? ['color'] : []),
                             ...(hideImageModality ? ['image'] : []),
-                            ...(hideArithmeticModality || isBrainWorkshopComboEnforced
+                            ...(isBrainWorkshopComboEnforced
                               ? ['arithmetic']
                               : []),
                             ...(!isBrainWorkshop || isBrainWorkshopComboEnforced

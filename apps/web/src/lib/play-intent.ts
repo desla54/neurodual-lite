@@ -8,7 +8,18 @@
  */
 
 import type { CalibrationPlayConfig, JourneyStrategyConfig } from '@neurodual/logic';
-import type { NextJourneySession } from '@neurodual/infra';
+
+// Stub for removed NextJourneySession
+type NextJourneySession = {
+  stageId: number;
+  journeyId: string;
+  gameMode: string;
+  startLevel: number;
+  targetLevel: number;
+  journeyGameMode?: string;
+  strategyConfig?: JourneyStrategyConfig;
+  nLevel: number;
+};
 
 export type { CalibrationPlayConfig } from '@neurodual/logic';
 

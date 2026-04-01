@@ -13,7 +13,6 @@ import {
   type UseQueryResult,
 } from '@tanstack/react-query';
 import type { SubscriptionPort, SubscriptionState } from '@neurodual/logic';
-import { queryKeys } from './keys';
 
 // =============================================================================
 // Adapter Reference (noop - no subscriptions in Lite)
@@ -35,7 +34,9 @@ const noopSubscriptionAdapter: SubscriptionPort = {
   getState: () => FREE_SUBSCRIPTION_STATE,
   subscribe: () => () => {},
   refresh: async () => {},
-} as SubscriptionPort;
+  canAccessNLevel: () => true,
+  canSyncToCloud: () => false,
+};
 
 let subscriptionAdapter: SubscriptionPort = noopSubscriptionAdapter;
 

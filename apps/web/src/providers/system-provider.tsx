@@ -51,7 +51,7 @@ import { Logo, setReducedMotionOverride, useMountEffect } from '@neurodual/ui';
 import { initSettingsStore, useSettingsStore } from '../stores/settings-store';
 import { changeLanguage } from '../i18n';
 import { logger } from '../lib';
-import { attemptAutoReload, clearReloadGuardOnSuccess } from '../services/reload-recovery';
+import { clearReloadGuardOnSuccess } from '../services/reload-recovery';
 import { wipeLocalDeviceData } from '@neurodual/infra';
 
 // =============================================================================

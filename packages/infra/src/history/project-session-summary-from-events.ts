@@ -6,19 +6,13 @@ import type {
 } from '@neurodual/logic';
 import {
   migrateAndValidateEventBatch,
-  projectCorsiSessionToSummaryInput,
   projectDualPickSessionToSummaryInput,
   projectFlowSessionToSummaryInput,
   projectImportedSessionToSummaryInput,
   projectOspanSessionToSummaryInput,
-  projectPasatSessionToSummaryInput,
   projectRecallSessionToSummaryInput,
-  projectRunningSpanSessionToSummaryInput,
-  projectSwmSessionToSummaryInput,
   projectTempoSessionToSummaryInput,
-  projectTimeSessionToSummaryInput,
   projectTraceSessionToSummaryInput,
-  projectTrackSessionToSummaryInput,
 } from '@neurodual/logic';
 
 function looksLikeUuid(value: string): boolean {
@@ -123,38 +117,8 @@ function projectValidatedSessionSummary(
     return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
   }
 
-  if (sessionEvents.some((event) => event.type === 'TIME_SESSION_ENDED')) {
-    const summary = projectTimeSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
-  if (sessionEvents.some((event) => event.type === 'MOT_SESSION_ENDED')) {
-    const summary = projectTrackSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
-  if (sessionEvents.some((event) => event.type === 'CORSI_SESSION_ENDED')) {
-    const summary = projectCorsiSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
   if (sessionEvents.some((event) => event.type === 'OSPAN_SESSION_ENDED')) {
     const summary = projectOspanSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
-  if (sessionEvents.some((event) => event.type === 'RUNNING_SPAN_SESSION_ENDED')) {
-    const summary = projectRunningSpanSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
-  if (sessionEvents.some((event) => event.type === 'PASAT_SESSION_ENDED')) {
-    const summary = projectPasatSessionToSummaryInput({ sessionId, sessionEvents, userId });
-    return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
-  }
-
-  if (sessionEvents.some((event) => event.type === 'SWM_SESSION_ENDED')) {
-    const summary = projectSwmSessionToSummaryInput({ sessionId, sessionEvents, userId });
     return summary ? enrichSummaryWithDerivedContext(summary, sessionEvents) : null;
   }
 

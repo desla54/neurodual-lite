@@ -42,10 +42,12 @@ export function initAppBootstrap(): void {
   setDataManagementAdapter({
     deleteAllUserData: async () => {
       // No cloud data to delete in Lite mode
+      return { success: true };
     },
   });
   setForceFullResyncFn(async () => {
     // No cloud sync to resync in Lite mode
+    return { success: true };
   });
 
   configureLazyAudioLifecycleMachine(async () => {

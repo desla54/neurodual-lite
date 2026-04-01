@@ -35,13 +35,16 @@ const DEFAULT_CUSTOMER_INFO: CustomerInfo = {
 };
 
 const noopPaymentAdapter: PaymentPort = {
+  initialize: async () => {},
   isAvailable: () => false,
   getProducts: async () => [],
   getCustomerInfo: async () => DEFAULT_CUSTOMER_INFO,
-  purchase: async () => ({ success: false, errorMessage: 'Payments not available in Lite' }),
+  purchase: async () => ({ success: false as const, errorMessage: 'Payments not available in Lite' }),
   restorePurchases: async () => DEFAULT_CUSTOMER_INFO,
   subscribe: () => () => {},
-} as PaymentPort;
+  setUserId: async () => {},
+  logout: async () => {},
+};
 
 let paymentAdapter: PaymentPort = noopPaymentAdapter;
 

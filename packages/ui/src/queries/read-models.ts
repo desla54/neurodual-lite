@@ -1,9 +1,8 @@
 import type { ReadModelPort } from '@neurodual/logic';
-import type { ProfileReadModel, JourneyReadModel } from '@neurodual/infra';
+import type { ProfileReadModel } from '@neurodual/infra';
 
 let readModelsAdapter: ReadModelPort | null = null;
 let profileReadModelInstance: ProfileReadModel | null = null;
-let journeyReadModelInstance: JourneyReadModel | null = null;
 
 export function setReadModelsAdapter(adapter: ReadModelPort): void {
   readModelsAdapter = adapter;
@@ -27,13 +26,3 @@ export function getProfileReadModel(): ProfileReadModel {
   return profileReadModelInstance;
 }
 
-export function setJourneyReadModel(instance: JourneyReadModel): void {
-  journeyReadModelInstance = instance;
-}
-
-export function getJourneyReadModel(): JourneyReadModel {
-  if (!journeyReadModelInstance) {
-    throw new Error('JourneyReadModel not initialized. Call setJourneyReadModel first.');
-  }
-  return journeyReadModelInstance;
-}

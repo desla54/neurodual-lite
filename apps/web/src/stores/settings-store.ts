@@ -17,7 +17,6 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import {
-  createDefaultHybridJourneyStrategyConfig,
   gameModeRegistry,
   BUILT_IN_JOURNEYS,
   DEFAULT_JOURNEY_ID as DEFAULT_JOURNEY_ID_FROM_LOGIC,
@@ -32,7 +31,6 @@ import {
   type GameModeId,
   type JourneyStrategyConfig,
   type ModeSettings,
-  resolveJourneyStrategyConfig,
   type UserSettings,
   type SettingsPort,
 } from '@neurodual/logic';
@@ -920,18 +918,12 @@ function normalizeModeSettingsByJourneyId(value: unknown): Partial<Record<string
 
 function normalizeJourneyStrategyConfig(
   value: unknown,
-  gameMode?: string,
-  legacyModeSettings?: ModeSettings,
+  _gameMode?: string,
+  _legacyModeSettings?: ModeSettings,
 ): JourneyStrategyConfig | undefined {
   const strategyCandidate =
     value && typeof value === 'object' ? (value as JourneyStrategyConfig) : undefined;
-  const resolved = resolveJourneyStrategyConfig({
-    gameMode,
-    strategyConfig: strategyCandidate,
-    hybridTrackSessionsPerBlock: legacyModeSettings?.hybridTrackSessionsPerBlock,
-    hybridDnbSessionsPerBlock: legacyModeSettings?.hybridDnbSessionsPerBlock,
-  });
-  return resolved;
+  return strategyCandidate;
 }
 
 function migrateJourneyWithStrategy(
@@ -948,7 +940,7 @@ function migrateJourneyWithStrategy(
         journey.strategyConfig,
         journey.gameMode,
         legacyModeSettings,
-      ) ?? createDefaultHybridJourneyStrategyConfig(),
+      ) ?? ({ trackSessionsPerBlock: 3, dnbSessionsPerBlock: 3 } as JourneyStrategyConfig),
   };
 }
 
@@ -2359,7 +2351,7 @@ export const useSettingsStore = create<SettingsState>()(
         gameMode,
         strategyConfig:
           gameMode === DUAL_TRACK_DNB_HYBRID_MODE_ID
-            ? createDefaultHybridJourneyStrategyConfig()
+            ? ({ trackSessionsPerBlock: 3, dnbSessionsPerBlock: 3 } as JourneyStrategyConfig)
             : undefined,
         reliability: getReliabilityForGameMode(gameMode),
       };

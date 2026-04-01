@@ -451,13 +451,7 @@ export {
   projectFlowSessionToSummaryInput,
   projectDualPickSessionToSummaryInput,
   projectTraceSessionToSummaryInput,
-  projectTimeSessionToSummaryInput,
-  projectTrackSessionToSummaryInput,
-  projectCorsiSessionToSummaryInput,
   projectOspanSessionToSummaryInput,
-  projectRunningSpanSessionToSummaryInput,
-  projectPasatSessionToSummaryInput,
-  projectSwmSessionToSummaryInput,
 } from './engine';
 
 export type {
@@ -710,20 +704,6 @@ export type {
 // =============================================================================
 export {
   GameSessionXState,
-  // Trace Session XState Wrapper (BETA)
-  TraceSessionXState,
-  analyzeTimeSpeed,
-  buildTimeSessionSummary,
-  buildTimeTrialResult,
-  computeTimeAccuracyScore,
-  computeTimeRegularityScore,
-  createInitialTimeSessionState,
-  transitionTimeSessionMachine,
-  // Corsi Block
-  createInitialCorsiSessionState,
-  transitionCorsiSessionMachine,
-  generateCorsiSequence,
-  buildCorsiSessionSummary,
   // OSPAN
   createInitialOspanSessionState,
   transitionOspanSessionMachine,
@@ -731,21 +711,6 @@ export {
   generateStandardOspanSequence,
   selectOspanLetters,
   buildOspanSessionSummary,
-  // Running Span
-  createInitialRunningSpanSessionState,
-  transitionRunningSpanSessionMachine,
-  generateRunningSpanStream,
-  buildRunningSpanSessionSummary,
-  // PASAT
-  createInitialPasatSessionState,
-  transitionPasatSessionMachine,
-  generatePasatNumber,
-  buildPasatSessionSummary,
-  // SWM
-  createInitialSwmSessionState,
-  transitionSwmSessionMachine,
-  generateSwmTokenPosition,
-  buildSwmSessionSummary,
   // Decider (Phase 0: shared contract for pure session state machines)
   createEnvelopeFactory,
   givenDecider,
@@ -768,40 +733,6 @@ export type {
   SessionListener,
   SessionPhase,
   SessionSnapshot,
-  // Trace Session XState Wrapper (BETA)
-  TraceWrapperSnapshot,
-  TraceWrapperListener,
-  TraceWrapperPhase,
-  TraceWrapperDeps,
-  SliderSample,
-  SlideResult,
-  SpeedSegment,
-  TimeTrialResult,
-  TimeTrialPhase,
-  TimeSessionPhase,
-  TimeSessionEndReason,
-  TimeSliderShape,
-  TimeSliderDirection,
-  TimeSessionSummary,
-  TimeSessionMachineConfig,
-  TimeSessionMachineState,
-  TimeSessionMachineAction,
-  TimeSessionEventDraft,
-  TimeCompletionDraft,
-  TimeSessionMachineTransition,
-  // Corsi Block
-  CorsiDirection,
-  CorsiTrialPhase,
-  CorsiSessionPhase,
-  CorsiEndReason,
-  CorsiTrialResult,
-  CorsiSessionSummary,
-  CorsiSessionMachineConfig,
-  CorsiSessionMachineState,
-  CorsiSessionMachineAction,
-  CorsiSessionEventDraft,
-  CorsiCompletionDraft,
-  CorsiSessionMachineTransition,
   // OSPAN
   OspanTrialPhase,
   OspanSessionPhase,
@@ -815,51 +746,11 @@ export type {
   OspanSessionEventDraft,
   OspanCompletionDraft,
   OspanSessionMachineTransition,
-  // Running Span
-  RunningSpanTrialPhase,
-  RunningSpanSessionPhase,
-  RunningSpanEndReason,
-  RunningSpanTrialResult,
-  RunningSpanSessionSummary,
-  RunningSpanSessionMachineConfig,
-  RunningSpanSessionMachineState,
-  RunningSpanSessionMachineAction,
-  RunningSpanSessionEventDraft,
-  RunningSpanCompletionDraft,
-  RunningSpanSessionMachineTransition,
-  // PASAT
-  PasatTrialPhase,
-  PasatSessionPhase,
-  PasatEndReason,
-  PasatTrialResult,
-  PasatSessionSummary,
-  PasatSessionMachineConfig,
-  PasatSessionMachineState,
-  PasatSessionMachineAction,
-  PasatSessionEventDraft,
-  PasatCompletionDraft,
-  PasatSessionMachineTransition,
-  // SWM
-  SwmRoundPhase,
-  SwmSessionPhase,
-  SwmEndReason,
-  SwmRoundResult,
-  SwmSessionSummary,
-  SwmSessionMachineConfig,
-  SwmSessionMachineState,
-  SwmSessionMachineAction,
-  SwmSessionEventDraft,
-  SwmCompletionDraft,
-  SwmSessionMachineTransition,
 } from './session';
 // XState Machine (new)
 export {
   gameSessionMachine,
   tutorialSessionMachine,
-  traceSessionMachine,
-  dualPickSessionMachine,
-  memoSessionMachine,
-  placeSessionMachine,
 } from './session/machine';
 export type {
   GameSessionInput,
@@ -874,96 +765,11 @@ export type {
   TutorialSessionStateValue,
   TutorialCompletionReport,
   TutorialAssessmentResult,
-  // Trace Session Machine
-  TraceSessionInput as TraceSessionMachineInput,
-  TraceSessionContext as TraceSessionMachineContext,
-  TraceSessionEvent as TraceSessionMachineEvent,
-  TraceSessionSnapshot as TraceSessionMachineSnapshot,
-  TracePhase as TraceSessionMachinePhase,
-  TraceSpec as TraceSessionMachineSpec,
   TutorialSessionSnapshot,
   TutorialStimulus,
   TutorialUserResponse,
-  // DualPick Session Machine
-  DualPickSessionInput as DualPickMachineInput,
-  DualPickSessionEvent as DualPickMachineEvent,
-  DualPickSessionSnapshot as DualPickMachineSnapshot,
-  DualPickSessionSnapshot, // Alias for backward compatibility
-  DualPickPhase as DualPickMachinePhase,
-  DualPickSession, // Session proxy interface for UI hooks
-  // Memo Session Machine (alias to avoid conflict with report's MemoSessionInput)
-  MemoSessionInput as MemoSessionMachineInput,
-  MemoSessionEvent,
-  MemoSessionSnapshot,
-  MemoPhase,
-  // Flow Session Machine (alias to avoid conflict with report's PlaceSessionInput)
-  PlaceSessionInput as PlaceSessionMachineInput,
-  PlaceSessionMachineEvent,
-  PlaceSessionMachineSnapshot,
-  PlaceSessionMachineSnapshot as PlaceSessionSnapshot, // Alias for backward compatibility
-  PlaceSessionMachineStateValue,
 } from './session/machine';
-// Trace session helpers
-export {
-  getEnabledModalities,
-  isWarmupTrial,
-  getExpectedPosition,
-  getExpectedSound,
-  getExpectedWritingSound,
-  getExpectedColor,
-  getExpectedWritingColor,
-  getExpectedImage,
-  getExpectedDigit,
-  getExpectedEmotion,
-  getExpectedWord,
-  getExpectedTone,
-  getExpectedSpatialDirection,
-  getNBackActiveModalities,
-  getTrialCycleDuration,
-} from './session/machine/trace-session-types';
-export {
-  buildDualTraceSessionMachineInput,
-  createTimingSourceFromTraceSessionTimings,
-  deriveTraceSessionTimings,
-  resolveTraceGridMode,
-} from './session/machine/trace-session-input-builder';
-export type {
-  BuildDualTraceSessionMachineInputArgs,
-  DualTraceSessionBuildResult,
-  TraceMirrorAxisSetting,
-  TraceSelfPacedTimingSettings,
-  TraceSessionTimings,
-} from './session/machine/trace-session-input-builder';
-export type {
-  GenerateTraceTrialsOptions,
-  TraceTrialGenerationRandom,
-} from './session/trace-trial-generation';
-export {
-  generateTraceActiveModalities,
-  generateTraceTrials,
-} from './session/trace-trial-generation';
-// Trace session plugins
-export type {
-  TraceSessionPlugins,
-  TimingSource,
-  TimingSourceUpdate,
-  TraceArithmeticProblem,
-  TraceArithmeticColorCue,
-  TraceArithmeticCueToken,
-} from './session/machine/trace-session-plugins';
-// Removed: trace-timing-utils (deleted with trace game mode)
-
-// DualPick session plugins
-export { createDefaultDualPickPlugins } from './session/machine/dual-pick-session-plugins';
-export type { DualPickSessionPlugins } from './session/machine/dual-pick-session-plugins';
-
-// Memo session plugins
-export { createDefaultMemoPlugins } from './session/machine/memo-session-plugins';
-export type { MemoSessionPlugins } from './session/machine/memo-session-plugins';
-
-// Flow session plugins
-export { createDefaultPlacePlugins } from './session/machine/place-session-plugins';
-export type { PlaceSessionPlugins } from './session/machine/place-session-plugins';
+// Removed: Trace/DualPick/Memo/Place session helpers and plugins (deleted game modes)
 
 // =============================================================================
 // Memo Types (from types/recall.ts)
@@ -1094,92 +900,30 @@ export {
   JOURNEY_MAX_LEVEL,
   JOURNEY_MODE_TO_GAME_MODE,
   JOURNEY_MODES_PER_LEVEL,
-} from './types/journey';
-export {
-  // Journey constants and generators
-  ALTERNATING_JOURNEY_FIRST_MODE,
-  ALTERNATING_JOURNEY_SECOND_MODE,
-  createDefaultHybridJourneyStrategyConfig,
-  DEFAULT_DUAL_TRACK_JOURNEY_PRESET,
   generateJourneyStages,
-  getAcceptedGameModesForJourney,
-  getFirstPremiumStage,
-  isAlternatingJourneyMode,
-  resolveDualTrackJourneyPreset,
-  resolveHybridJourneyStrategyConfig,
-  resolveHybridJourneyTrackProfile,
-  resolveJourneyStrategyConfig,
-  getSessionsRequired,
-  getSessionsRequired as getRequiredSessions,
-  getStageDefinition,
-  getTotalStagesForTarget,
-  isSimulatorMode,
-  isStageRequiresPremium,
-  JOURNEY_MIN_PASSING_SCORE,
-  JOURNEY_PREMIUM_N_THRESHOLD,
-  JOURNEY_SCORE_THRESHOLDS,
-  // Journey native scoring (source of truth)
-  computeNativeJourneyScore,
-  computeJourneyScoreFromStats,
-  computeJourneyScoreForSession,
-  createScoreResultFromPrecomputed,
-  hasSDTStats,
-  getScoringStrategyForMode,
-  getThresholdForStrategy,
-  BW_THRESHOLD,
-  BALANCED_THRESHOLD,
-  // Journey router
-  getJourneyRoute,
-  getRouteForGameMode,
-  hasSpecificRoute,
-  // Raw stats scoring helpers
+} from './types/journey';
+// Removed: domain/journey exports (deleted module)
+// Re-export scoring helpers from domain/journey/scoring stub
+export {
+  isSessionPassing,
   aggregateRawStats,
   computeBrainWorkshopScoreFromRaw,
   computeDualnbackClassicScoreFromRaw,
-  isSessionPassing,
-  // Jaeggi binary protocol (2008)
-  computeJaeggiProgression,
-  buildJourneyTransitionRecord,
-  decideJourneyAttempt,
-  journeyTransitionRecordToContext,
-  deriveJourneyContextFromState,
-  // Journey workflow
-  deriveNextSession,
-  toWorkflowConfig,
-} from './domain/journey';
-export type { DeriveJourneyContextInput } from './domain/journey';
+} from './domain/journey/scoring';
 export type {
-  // Journey scoring types
   JourneyScoringStrategy,
   JourneyScoreResult,
   JourneyScoreDetails,
   PrecomputedScoreSession,
   RawSDTStats,
-  // Jaeggi binary protocol types
-  JaeggiProgression,
-  DualnbackClassicProgressionResult,
-  // Journey router types
-  JourneyRoute,
-  // Journey workflow types
-  JourneyEvent,
-  JourneyCommand,
-  JourneyOutput,
-  NextSessionCommand,
-  JourneyWorkflowConfig,
-} from './domain/journey';
+} from './domain/journey/scoring';
 export {
-  computeJourneyScore,
-  createEmptyJourneyState,
-  getCurrentStageProgress,
-  isJourneyComplete,
-  projectJourneyFromHistory,
   // Session Completion Projector (Single Source of Truth for session completion)
   SessionCompletionProjector,
   projectSessionReportFromEvents,
   SESSION_REPORT_PROJECTION_VERSION,
   projectDualnbackClassicTempoWithHomeEs,
 } from './engine';
-export type { JourneyProjectionSession } from './engine';
 export type {
   Challenge20Config,
   Challenge20State,
@@ -1212,11 +956,7 @@ export type {
   XPContextInput,
   TempoProjectionEntrypointResult,
 } from './engine';
-export type {
-  AttemptResult,
-  JourneyPort,
-  JourneyRecordableSession,
-} from './ports';
+// Removed: JourneyPort exports (deleted module)
 // =============================================================================
 // Migration (event versioning and migration)
 // =============================================================================
@@ -1470,12 +1210,7 @@ export type {
 } from './types/session-report';
 // Removed: ospan (deleted game mode)
 // Note: FocusStats (for session report) is exported from './ports' as part of stats-port
-export {
-  resolveJourneyPresentation,
-  type JourneyPresentationModel,
-  type JourneyPresentationRule,
-  type JourneyPresentationText,
-} from './domain/journey/presentation';
+// Removed: domain/journey/presentation exports (deleted module)
 export {
   generateContextualMessageData,
   generateContextualMessage,

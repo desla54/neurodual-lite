@@ -21,6 +21,8 @@ export const noopAuthAdapter: AuthPort = {
   signOut: async () => {},
   onAuthStateChange: () => ({ unsubscribe: () => {} }),
   deleteAccount: async () => {},
+  subscribe: () => () => {},
+  getState: () => ({ user: null, session: null, isAuthenticated: false, isLoading: false }),
 } as unknown as AuthPort;
 
 /** Subscription adapter that always returns premium (everything free in Lite) */
@@ -28,6 +30,8 @@ export const freeSubscriptionAdapter: SubscriptionPort = {
   hasPremiumAccess: () => true,
   getSubscriptionStatus: () => 'free',
   onSubscriptionChange: () => ({ unsubscribe: () => {} }),
+  subscribe: () => () => {},
+  getState: () => ({ status: 'free', hasPremiumAccess: true, canAccessNLevel: () => true, canSyncToCloud: false }),
 } as unknown as SubscriptionPort;
 
 /** Sync adapter that never syncs */
@@ -35,6 +39,8 @@ export const noopSyncAdapter: SyncPort = {
   sync: async () => {},
   getStatus: () => ({ connected: false, uploading: false, downloading: false }),
   onStatusChange: () => ({ unsubscribe: () => {} }),
+  subscribe: () => () => {},
+  getState: () => ({ connected: false, uploading: false, downloading: false }),
 } as unknown as SyncPort;
 
 /** Reward adapter with no rewards */
@@ -42,6 +48,8 @@ export const noopRewardAdapter: RewardPort = {
   getRewards: () => [],
   claimReward: async () => {},
   onRewardChange: () => ({ unsubscribe: () => {} }),
+  subscribe: () => () => {},
+  getState: () => ({ rewards: [], pending: [] }),
 } as unknown as RewardPort;
 
 /** Settings sync adapter (noop — local only) */

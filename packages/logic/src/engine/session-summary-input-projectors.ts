@@ -1,7 +1,7 @@
 import { ACCURACY_PASS_NORMALIZED, TRACE_ACCURACY_PASS_NORMALIZED } from '../specs/thresholds';
 import type { SessionSummaryInput } from '../ports/persistence-port';
 import { normalizeModeId } from '../utils/mode-normalizer';
-import { isSessionPassing } from '../domain/journey/scoring';
+import { calculateTempoSessionPassed } from '../domain/scoring/session-passed';
 import { UnifiedScoreCalculator } from '../domain/scoring/unified-score';
 import type {
   DualPickSessionEndedEvent,
@@ -10,7 +10,6 @@ import type {
   MemoSessionEndedEvent,
   MemoSessionStartedEvent,
   MemoStimulusShownEvent,
-  MotSessionStartedEvent,
   PlaceSessionEndedEvent,
   PlaceSessionStartedEvent,
   SessionEndedEvent,
@@ -26,14 +25,7 @@ import { projectTempoSessionEntrypoint } from './tempo-projection-entrypoint';
 import { MemoSessionProjector } from './memo-projector';
 import { PlaceSessionProjector } from './place-projector';
 import { DualPickSessionProjector } from './dual-pick-projector';
-import { projectTimeSessionFromEvents } from './time-session-projection';
-import { projectTrackSessionFromEvents } from './track-session-projection';
-import { projectCorsiSessionFromEvents } from './corsi-session-projection';
 import { projectOspanSessionFromEvents } from './ospan-session-projection';
-import { projectRunningSpanSessionFromEvents } from './running-span-session-projection';
-import { projectPasatSessionFromEvents } from './pasat-session-projection';
-import { projectSwmSessionFromEvents } from './swm-session-projection';
-import { SwmSpec } from '../specs/swm.spec';
 import { UPSProjector } from './ups-projector';
 
 interface TimingMetrics {
@@ -156,7 +148,7 @@ function computeWorstModalityErrorRate(
   return errorRates.length > 0 ? Math.max(...errorRates) : undefined;
 }
 
-function calculateTempoSessionPassed(
+function calculateTempoSessionPassedLocal(
   generator: string | undefined,
   gameMode: string | undefined,
   byModality: Record<
@@ -165,8 +157,7 @@ function calculateTempoSessionPassed(
   >,
   globalDPrime: number,
 ): boolean {
-  const effectiveMode = gameMode || generator;
-  return isSessionPassing(byModality, effectiveMode, globalDPrime);
+  return calculateTempoSessionPassed({ generator, gameMode, byModality, globalDPrime });
 }
 
 function deriveImportedSessionType(
@@ -261,30 +252,7 @@ function parseFlexibleDate(value: unknown, fallbackTimestamp?: number): Date {
   throw new Error(`Invalid date value: ${String(value)}`);
 }
 
-const TRACK_CALIBRATION_MODALITY_TO_ACTIVE_MODALITY: Record<string, string> = {
-  position: 'position',
-  letters: 'audio',
-  color: 'color',
-  shape: 'image',
-  spatial: 'spatial',
-  numbers: 'digits',
-  emotions: 'emotions',
-  semantic: 'words',
-  tones: 'tones',
-};
-
-function resolveTrackSummaryModality(startEvent: MotSessionStartedEvent | undefined): string {
-  if (startEvent?.playContext !== 'calibration' && startEvent?.playContext !== 'profile') {
-    return 'position';
-  }
-
-  const calibrationModality = startEvent.config.calibrationModality;
-  if (typeof calibrationModality !== 'string') {
-    return 'position';
-  }
-
-  return TRACK_CALIBRATION_MODALITY_TO_ACTIVE_MODALITY[calibrationModality] ?? 'position';
-}
+// Removed: Track calibration modality helpers (deleted game mode)
 
 export function projectImportedSessionToSummaryInput(
   event: SessionImportedEvent,
@@ -424,7 +392,7 @@ export function projectTempoSessionToSummaryInput(input: {
     totalFa,
     totalCr,
     globalDPrime: stats.globalDPrime,
-    passed: calculateTempoSessionPassed(
+    passed: calculateTempoSessionPassedLocal(
       generator,
       gameMode,
       byModality as unknown as Record<
@@ -760,145 +728,11 @@ export function projectTraceSessionToSummaryInput(input: {
   };
 }
 
-// =============================================================================
-// TIME (Dual Time) Projector
-// =============================================================================
+// Removed: projectTimeSessionToSummaryInput (deleted game mode)
 
-export function projectTimeSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectTimeSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
+// Removed: projectTrackSessionToSummaryInput (deleted game mode)
 
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'time',
-    createdAt: projection.createdAt,
-    nLevel: 1,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalTrials,
-    totalHits: projection.successfulTrials,
-    totalMisses: projection.failedTrials,
-    totalFa: 0,
-    totalCr: 0,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator: 'dual-time',
-    gameMode: 'dual-time',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    byModality: {},
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
-
-// =============================================================================
-// TRACK (Dual Track) Projector
-// =============================================================================
-
-export function projectTrackSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectTrackSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
-  const summaryModality = resolveTrackSummaryModality(projection.startEvent);
-  const journeyId = projection.startEvent?.journeyId ?? projection.endEvent.journeyId;
-  const journeyStageId = (
-    projection.startEvent?.journeyStageId ?? projection.endEvent.journeyStageId
-  )?.toString();
-
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'track',
-    createdAt: projection.createdAt,
-    nLevel: projection.targetCount,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalTrials,
-    totalHits: projection.totalHits,
-    totalMisses: projection.totalMisses,
-    totalFa: projection.totalFalseAlarms,
-    totalCr: projection.totalCorrectRejections,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator:
-      projection.startEvent?.playContext === 'calibration'
-        ? 'dual-track-calibration'
-        : 'dual-track',
-    gameMode: 'dual-track',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    journeyId,
-    journeyStageId,
-    adaptivePathProgressPct: projection.masteryStageProgressPct ?? undefined,
-    byModality: {
-      [summaryModality]: {
-        hits: projection.totalHits,
-        misses: projection.totalMisses,
-        falseAlarms: projection.totalFalseAlarms,
-        correctRejections: projection.totalCorrectRejections,
-        avgRT: projection.avgResponseTimeMs,
-        dPrime: null,
-      },
-    },
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    avgResponseTimeMs: projection.avgResponseTimeMs ?? undefined,
-    medianResponseTimeMs: projection.medianResponseTimeMs ?? undefined,
-    responseTimeStdDev: projection.responseTimeStdDev ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
-
-// =============================================================================
-// CORSI BLOCK Projector
-// =============================================================================
-
-export function projectCorsiSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectCorsiSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
-
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'corsi',
-    createdAt: projection.createdAt,
-    nLevel: projection.maxSpan,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalTrials,
-    totalHits: projection.correctTrials,
-    totalMisses: Math.max(0, projection.totalTrials - projection.correctTrials),
-    totalFa: 0,
-    totalCr: 0,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator: 'corsi-block',
-    gameMode: 'corsi-block',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    byModality: {},
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
+// Removed: projectCorsiSessionToSummaryInput (deleted game mode)
 
 // =============================================================================
 // OSPAN (Operation Span) Projector
@@ -943,122 +777,5 @@ export function projectOspanSessionToSummaryInput(input: {
   };
 }
 
-// =============================================================================
-// Running Span → SessionSummaryInput
-// =============================================================================
-
-export function projectRunningSpanSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectRunningSpanSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
-
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'running-span',
-    createdAt: projection.createdAt,
-    nLevel: projection.maxSpan,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalTrials,
-    totalHits: projection.correctTrials,
-    totalMisses: Math.max(0, projection.totalTrials - projection.correctTrials),
-    totalFa: 0,
-    totalCr: 0,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator: 'running-span',
-    gameMode: 'running-span',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    byModality: {},
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
-
-// =============================================================================
-// PASAT → SessionSummaryInput
-// =============================================================================
-
-export function projectPasatSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectPasatSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
-
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'pasat',
-    createdAt: projection.createdAt,
-    nLevel: 1,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalTrials,
-    totalHits: projection.correctTrials,
-    totalMisses: Math.max(0, projection.totalTrials - projection.correctTrials),
-    totalFa: 0,
-    totalCr: 0,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator: 'pasat',
-    gameMode: 'pasat',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    byModality: {},
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
-
-// =============================================================================
-// SWM → SessionSummaryInput
-// =============================================================================
-
-export function projectSwmSessionToSummaryInput(input: {
-  sessionId: string;
-  sessionEvents: readonly GameEvent[];
-  userId: string;
-}): SessionSummaryInput | null {
-  const projection = projectSwmSessionFromEvents(input.sessionEvents);
-  if (!projection?.endEvent) return null;
-
-  const extensions = SwmSpec.extensions as { startBoxes?: number } | undefined;
-  const startBoxes = extensions?.startBoxes ?? 4;
-
-  return {
-    sessionId: input.sessionId,
-    userId: input.userId,
-    sessionType: 'swm',
-    createdAt: projection.createdAt,
-    nLevel: startBoxes,
-    durationMs: projection.durationMs,
-    trialsCount: projection.totalRounds,
-    totalHits: projection.correctRounds,
-    totalMisses: Math.max(0, projection.totalRounds - projection.correctRounds),
-    totalFa: 0,
-    totalCr: 0,
-    accuracy: projection.accuracyNormalized,
-    globalDPrime: projection.accuracyNormalized * 3,
-    passed: projection.passed,
-    generator: 'swm',
-    gameMode: 'swm',
-    reason: projection.reason,
-    playContext: projection.playContext,
-    byModality: {},
-    upsScore: projection.ups.score,
-    upsAccuracy: projection.ups.components.accuracy,
-    upsConfidence: projection.ups.components.confidence ?? undefined,
-    inputMethods: extractInputMethods(input.sessionEvents),
-  };
-}
+// Removed: projectRunningSpanSessionToSummaryInput, projectPasatSessionToSummaryInput,
+// projectSwmSessionToSummaryInput (deleted game modes)

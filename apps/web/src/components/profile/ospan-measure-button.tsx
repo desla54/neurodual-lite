@@ -54,8 +54,9 @@ export function OspanMeasureButton(): ReactNode {
   const [lastScore, setLastScore] = useState<number | null>(null);
 
   useEffect(() => {
+    if (!persistence) return;
     persistence
-      .rawQuery?.<{ absolute_score: number | null }>(
+      .query<{ absolute_score: number | null }>(
         `SELECT absolute_score FROM session_summaries
          WHERE user_id IN (?, 'local') AND session_type = 'ospan' AND reason = 'completed'
            AND global_d_prime >= 85
@@ -63,7 +64,7 @@ export function OspanMeasureButton(): ReactNode {
          ORDER BY created_at DESC LIMIT 1`,
         [userId],
       )
-      .then((rows) => setLastScore(rows?.[0]?.absolute_score ?? null))
+      .then(({ rows }) => setLastScore(rows?.[0]?.absolute_score ?? null))
       .catch(() => {});
   }, [persistence, userId]);
 

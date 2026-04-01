@@ -10,6 +10,10 @@ export { Drawer } from 'vaul';
 // TanStack Query hooks and utilities
 export * from './queries';
 
+// Journey (structured progression)
+export { JourneyPath, type JourneyPathProps } from './journey';
+export { JourneyStageCard, type JourneyStageCardProps } from './journey';
+
 // Challenge (statistical daily challenge)
 export { ChallengeCalendar, type ChallengeCalendarProps } from './challenge';
 export { ChallengePath, type ChallengePathProps } from './challenge';
@@ -319,18 +323,6 @@ export {
   useSessionCompletion,
   type UseSessionCompletionOptions,
   type UseSessionCompletionReturn,
-  // Trace Session Machine (XState)
-  useTraceSessionMachine,
-  type UseTraceSessionMachineResult,
-  // Dual Label Session Machine (XState)
-  useDualPickSessionMachine,
-  type UseDualPickSessionMachineResult,
-  // Memo Session Machine (XState)
-  useMemoSessionMachine,
-  type UseMemoSessionMachineResult,
-  // Place Session Machine (XState)
-  usePlaceSessionMachine,
-  type UsePlaceSessionMachineResult,
   // PowerSync Status Hooks
   usePowerSyncStatus,
   usePowerSyncConnected,
@@ -400,19 +392,6 @@ export {
   XPBar,
   type XPBarProps,
 } from './progression';
-
-// Journey components
-export {
-  JourneyPath,
-  type JourneyPathProps,
-  JourneySessionReport,
-  type JourneySessionReportData,
-  type JourneySessionReportLabels,
-  type JourneySessionReportProps,
-  type ModalityDetailedStats,
-  JourneyStageCard,
-  type JourneyStageCardProps,
-} from './journey';
 
 // Place components
 export * from './place';

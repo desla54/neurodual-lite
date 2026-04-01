@@ -2,8 +2,8 @@ import type { ModalityId, Trial, Sound, Color } from '../types/core';
 import { normalizeModeId } from '../utils/mode-normalizer';
 import { SessionCompletionProjector } from './session-completion-projector';
 import { convertTraceSession } from '../domain/report/converters';
-import { journeyTransitionRecordToContext } from '../domain/journey';
-import type { GameEvent, MotEvent } from './events';
+// Removed: journeyTransitionRecordToContext import (domain/journey deleted)
+import type { GameEvent } from './events';
 import type { SessionEndReportModel } from '../types/session-report';
 import type { JourneyContext } from '../types/session-report';
 import type { TraceSessionSummary, TraceResponse, TraceWritingResult } from '../types/trace';
@@ -14,14 +14,8 @@ import {
   BW_STRIKES_TO_DOWN,
 } from '../specs/thresholds';
 import { UPSProjector } from './ups-projector';
-import { projectTimeSessionFromEvents } from './time-session-projection';
-import { projectTrackSessionFromEvents } from './track-session-projection';
-import { projectTrackTurns, projectCorsiTurns, projectOspanTurns } from './turn-projectors';
-import { projectCorsiSessionFromEvents } from './corsi-session-projection';
+import { projectOspanTurns } from './turn-projectors';
 import { projectOspanSessionFromEvents } from './ospan-session-projection';
-import { projectRunningSpanSessionFromEvents } from './running-span-session-projection';
-import { projectPasatSessionFromEvents } from './pasat-session-projection';
-import { projectSwmSessionFromEvents } from './swm-session-projection';
 import { SOUNDS } from '../types/core';
 
 const VALID_MODALITIES = new Set<ModalityId>([
@@ -58,12 +52,7 @@ type ProjectableMode =
   | 'recall'
   | 'dual-pick'
   | 'trace'
-  | 'time'
-  | 'track'
   | 'ospan'
-  | 'running-span'
-  | 'pasat'
-  | 'swm'
   | 'cognitive-task';
 
 export interface ProjectSessionReportFromEventsInput {
@@ -185,17 +174,7 @@ export function projectSessionReportFromEvents(
     return aId.localeCompare(bId);
   });
   const detectedMode = input.modeHint ?? SessionCompletionProjector.detectMode(events);
-  const journeyContext: JourneyContext | undefined = (() => {
-    for (let i = events.length - 1; i >= 0; i--) {
-      const e = events[i];
-      if (e?.type === 'JOURNEY_TRANSITION_DECIDED') {
-        return journeyTransitionRecordToContext(
-          e as unknown as Parameters<typeof journeyTransitionRecordToContext>[0],
-        );
-      }
-    }
-    return input.journeyContextFallback;
-  })();
+  const journeyContext: JourneyContext | undefined = input.journeyContextFallback;
   const journeyIdFromEvents: string | undefined = (() => {
     for (let i = events.length - 1; i >= 0; i--) {
       const journeyId = (events[i] as unknown as { journeyId?: unknown })?.journeyId;
@@ -609,227 +588,7 @@ export function projectSessionReportFromEvents(
     };
   }
 
-  if (detectedMode === 'time') {
-    const projection = projectTimeSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'dual-time',
-      gameModeLabel: resolveGameModeLabel('dual-time', input),
-      nLevel: 1,
-      activeModalities: [],
-      trialsCount: projection.totalTrials,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.accuracy',
-        value: Math.round(projection.accuracyPercent),
-        unit: '%',
-        tooltipKey: 'report.modeScore.accuracyTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.successfulTrials,
-        misses: projection.failedTrials,
-        falseAlarms: 0,
-        correctRejections: 0,
-      },
-      byModality: {},
-      errorProfile: {
-        errorRate: 1 - projection.accuracyNormalized,
-        missShare: 1,
-        faShare: 0,
-      },
-      playContext: projection.playContext,
-    };
-    return {
-      ...report,
-      journeyContext: enrichedJourneyContext,
-      journeyId: report.journeyId ?? report.journeyContext?.journeyId ?? journeyIdFromEvents,
-      journeyStageId:
-        report.journeyStageId ?? report.journeyContext?.stageId ?? journeyStageIdFromEvents,
-    };
-  }
-
-  if (detectedMode === 'track') {
-    const projection = projectTrackSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-    const trackEvents = events.filter((event): event is MotEvent => {
-      return (
-        event.type === 'MOT_SESSION_STARTED' ||
-        event.type === 'MOT_TRIAL_DEFINED' ||
-        event.type === 'MOT_TRIAL_COMPLETED' ||
-        event.type === 'MOT_SESSION_ENDED'
-      );
-    });
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'dual-track',
-      gameModeLabel: resolveGameModeLabel('dual-track', input),
-      nLevel: projection.targetCount,
-      activeModalities: [
-        'position',
-        ...(projection.hasColorIdentity ? ['color' as const] : []),
-        ...(projection.hasAudioIdentity ? ['audio' as const] : []),
-      ],
-      trialsCount: projection.totalTrials,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.accuracy',
-        value: Math.round(projection.accuracyPercent),
-        unit: '%',
-        tooltipKey: 'report.modeScore.accuracyTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.totalHits,
-        misses: projection.totalMisses,
-        falseAlarms: projection.totalFalseAlarms,
-        correctRejections: projection.totalCorrectRejections,
-      },
-      byModality: {
-        position: {
-          hits: projection.totalHits,
-          misses: projection.totalMisses,
-          falseAlarms: projection.totalFalseAlarms,
-          correctRejections: projection.totalCorrectRejections,
-          avgRT: projection.avgResponseTimeMs,
-          dPrime: null,
-        },
-        ...(projection.colorBindingStats
-          ? {
-              color: {
-                hits: projection.colorBindingStats.hits,
-                misses: projection.colorBindingStats.misses,
-                falseAlarms: null,
-                correctRejections: null,
-                avgRT: null,
-                dPrime: null,
-              },
-            }
-          : {}),
-        ...(projection.audioBindingStats
-          ? {
-              audio: {
-                hits: projection.audioBindingStats.hits,
-                misses: projection.audioBindingStats.misses,
-                falseAlarms: null,
-                correctRejections: null,
-                avgRT: null,
-                dPrime: null,
-              },
-            }
-          : {}),
-      },
-      modeDetails: {
-        kind: 'track',
-        totalObjects: projection.totalObjects,
-        targetCount: projection.targetCount,
-        perfectRounds: projection.perfectTrials,
-        selectionPrecision: projection.selectionPrecisionNormalized,
-        selectionQuality: projection.selectionQualityNormalized,
-        avgResponseTimeMs: projection.avgResponseTimeMs ?? undefined,
-        trackingDurationMs: projection.trackingDurationMs,
-        speedPxPerSec: projection.speedPxPerSec,
-        motionComplexity: projection.motionComplexity,
-        crowdingThresholdPx: projection.crowdingThresholdPx,
-        totalCrowdingEvents: projection.totalCrowdingEvents,
-        avgCrowdingEventsPerTrial: projection.avgCrowdingEventsPerTrial ?? undefined,
-        minInterObjectDistancePx: projection.minInterObjectDistancePx ?? undefined,
-        masteryTargetCountStage: projection.masteryTargetCountStage ?? undefined,
-        masteryDifficultyTier: projection.masteryDifficultyTier ?? undefined,
-        masteryTierCount: projection.masteryTierCount ?? undefined,
-        masteryStageProgressPct: projection.masteryStageProgressPct ?? undefined,
-        masteryPhaseIndex: projection.masteryPhaseIndex ?? undefined,
-        masteryPhaseIdentityMode: projection.masteryPhaseIdentityMode ?? undefined,
-        highestCompletedTargetCount: projection.highestCompletedTargetCount ?? undefined,
-        promotedTargetCount: projection.promotedTargetCount,
-        performanceBand: projection.performanceBand ?? undefined,
-        nextTargetCountStage: projection.nextTargetCountStage ?? undefined,
-        nextDifficultyTier: projection.nextDifficultyTier ?? undefined,
-      },
-      errorProfile: {
-        errorRate:
-          projection.totalHits + projection.totalMisses + projection.totalFalseAlarms > 0
-            ? (projection.totalMisses + projection.totalFalseAlarms) /
-              (projection.totalHits + projection.totalMisses + projection.totalFalseAlarms)
-            : 0,
-        missShare:
-          projection.totalMisses + projection.totalFalseAlarms > 0
-            ? projection.totalMisses / (projection.totalMisses + projection.totalFalseAlarms)
-            : 0,
-        faShare:
-          projection.totalMisses + projection.totalFalseAlarms > 0
-            ? projection.totalFalseAlarms / (projection.totalMisses + projection.totalFalseAlarms)
-            : 0,
-      },
-      turns: projectTrackTurns(trackEvents),
-      playContext: projection.playContext,
-      speedStats: projection.avgResponseTimeMs
-        ? {
-            labelKey: 'report.speed.reactionTime',
-            valueMs: projection.avgResponseTimeMs,
-          }
-        : undefined,
-    };
-    return {
-      ...report,
-      journeyContext: enrichedJourneyContext,
-      journeyId: report.journeyId ?? report.journeyContext?.journeyId ?? journeyIdFromEvents,
-      journeyStageId:
-        report.journeyStageId ?? report.journeyContext?.stageId ?? journeyStageIdFromEvents,
-    };
-  }
-
-  if (detectedMode === 'corsi') {
-    const projection = projectCorsiSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'corsi-block',
-      gameModeLabel: resolveGameModeLabel('corsi-block', input),
-      nLevel: projection.maxSpan,
-      activeModalities: [],
-      trialsCount: projection.totalTrials,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.corsiSpan',
-        value: projection.maxSpan,
-        unit: 'score',
-        tooltipKey: 'report.modeScore.corsiSpanTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.correctTrials,
-        misses: Math.max(0, projection.totalTrials - projection.correctTrials),
-        falseAlarms: 0,
-        correctRejections: 0,
-      },
-      byModality: {},
-      errorProfile: {
-        errorRate: 1 - projection.accuracyNormalized,
-        missShare: 1,
-        faShare: 0,
-      },
-      turns: projectCorsiTurns(events),
-      playContext: projection.playContext,
-    };
-    return report;
-  }
+  // Removed: time, track, corsi mode blocks (deleted game modes)
 
   if (detectedMode === 'ospan') {
     const projection = projectOspanSessionFromEvents(events);
@@ -889,133 +648,7 @@ export function projectSessionReportFromEvents(
     return report;
   }
 
-  if (detectedMode === 'running-span') {
-    const projection = projectRunningSpanSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'running-span',
-      gameModeLabel: resolveGameModeLabel('running-span', input),
-      nLevel: projection.maxSpan,
-      activeModalities: [],
-      trialsCount: projection.totalTrials,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.runningSpan',
-        value: projection.maxSpan,
-        unit: 'score',
-        tooltipKey: 'report.modeScore.runningSpanTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.correctTrials,
-        misses: Math.max(0, projection.totalTrials - projection.correctTrials),
-        falseAlarms: 0,
-        correctRejections: 0,
-      },
-      byModality: {},
-      errorProfile: {
-        errorRate: 1 - projection.accuracyNormalized,
-        missShare: 1,
-        faShare: 0,
-      },
-      playContext: projection.playContext,
-    };
-    return report;
-  }
-
-  if (detectedMode === 'pasat') {
-    const projection = projectPasatSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'pasat',
-      gameModeLabel: resolveGameModeLabel('pasat', input),
-      nLevel: 1,
-      activeModalities: [],
-      trialsCount: projection.totalTrials,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.pasatAccuracy',
-        value: Math.round(projection.accuracyPercent),
-        unit: '%',
-        tooltipKey: 'report.modeScore.pasatAccuracyTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.correctTrials,
-        misses: Math.max(0, projection.totalTrials - projection.correctTrials),
-        falseAlarms: 0,
-        correctRejections: 0,
-      },
-      byModality: {},
-      errorProfile: {
-        errorRate: 1 - projection.accuracyNormalized,
-        missShare: 1,
-        faShare: 0,
-      },
-      speedStats: {
-        labelKey: 'report.speed.reactionTime',
-        valueMs: projection.avgResponseTimeMs,
-      },
-      playContext: projection.playContext,
-    };
-    return report;
-  }
-
-  if (detectedMode === 'swm') {
-    const projection = projectSwmSessionFromEvents(events);
-    if (!projection?.startEvent) return null;
-
-    const report: SessionEndReportModel = {
-      sessionId: input.sessionId,
-      createdAt: projection.createdAt.toISOString(),
-      reason: projection.reason,
-      gameMode: 'swm',
-      gameModeLabel: resolveGameModeLabel('swm', input),
-      nLevel: projection.maxSpanReached,
-      activeModalities: [],
-      trialsCount: projection.totalRounds,
-      durationMs: projection.durationMs,
-      ups: projection.ups,
-      unifiedAccuracy: projection.accuracyNormalized,
-      modeScore: {
-        labelKey: 'report.modeScore.swmErrors',
-        value: Math.round(projection.accuracyPercent),
-        unit: '%',
-        tooltipKey: 'report.modeScore.swmErrorsTooltip',
-      },
-      passed: projection.passed,
-      totals: {
-        hits: projection.correctRounds,
-        misses: Math.max(0, projection.totalRounds - projection.correctRounds),
-        falseAlarms: 0,
-        correctRejections: 0,
-      },
-      byModality: {},
-      errorProfile: {
-        errorRate: 1 - projection.accuracyNormalized,
-        missShare: 1,
-        faShare: 0,
-      },
-      speedStats: {
-        labelKey: 'report.speed.reactionTime',
-        valueMs: projection.avgRoundTimeMs,
-      },
-      playContext: projection.playContext,
-    };
-    return report;
-  }
+  // Removed: running-span, pasat, swm mode blocks (deleted game modes)
 
   if (detectedMode === 'cognitive-task') {
     const startEvent = events.find((e) => e.type === 'COGNITIVE_TASK_SESSION_STARTED') as

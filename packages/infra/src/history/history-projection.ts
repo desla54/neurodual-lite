@@ -19,13 +19,7 @@ import {
   projectRecallSessionToSummaryInput,
   projectTempoSessionToSummaryInput,
   projectTraceSessionToSummaryInput,
-  projectTimeSessionToSummaryInput,
-  projectTrackSessionToSummaryInput,
-  projectCorsiSessionToSummaryInput,
   projectOspanSessionToSummaryInput,
-  projectRunningSpanSessionToSummaryInput,
-  projectPasatSessionToSummaryInput,
-  projectSwmSessionToSummaryInput,
   normalizeModeId,
   type PersistencePort,
   // Migration
@@ -404,69 +398,9 @@ export async function insertSessionSummaryFromEvent(
     await projectTraceSession(sessionId, sessionEvents, userId, effectiveWriter);
     return;
   }
-  if (sessionEvents.some((e) => e.type === 'TIME_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectTimeSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
-  if (sessionEvents.some((e) => e.type === 'MOT_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectTrackSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
-  if (sessionEvents.some((e) => e.type === 'CORSI_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectCorsiSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
   if (sessionEvents.some((e) => e.type === 'OSPAN_SESSION_ENDED')) {
     await projectGenericSession(
       projectOspanSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
-  if (sessionEvents.some((e) => e.type === 'RUNNING_SPAN_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectRunningSpanSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
-  if (sessionEvents.some((e) => e.type === 'PASAT_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectPasatSessionToSummaryInput,
-      sessionId,
-      sessionEvents,
-      userId,
-      effectiveWriter,
-    );
-    return;
-  }
-  if (sessionEvents.some((e) => e.type === 'SWM_SESSION_ENDED')) {
-    await projectGenericSession(
-      projectSwmSessionToSummaryInput,
       sessionId,
       sessionEvents,
       userId,

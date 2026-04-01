@@ -5,7 +5,6 @@
 
 import {
   SessionHistoryExportSchema,
-  deriveJourneyContextFromState,
   generateContextualMessageData,
   getModeI18nKey,
   type JourneyConfig,
@@ -43,8 +42,6 @@ import {
   useSessionStoredReportQuery,
   useAvailableJourneyIdsQuery,
   useLatestJourneySessionQuery,
-  useJourneyState,
-  useNextJourneySession,
   useSessionSummariesHeaderCountsQuery,
   useDeleteSession,
   useDeleteSessions,
@@ -409,8 +406,8 @@ export function StatsPage(): ReactNode {
       legacyJourneyModeSettings: scopedSettings,
     });
   }, [journeyIdForFreshness, journeyModeSettingsByJourneyId, savedJourneys]);
-  const { state: currentJourneyState } = useJourneyState(reportJourneyConfig);
-  const { nextSession: currentNextJourneySession } = useNextJourneySession(reportJourneyConfig);
+  const currentJourneyState = null as any;
+  const currentNextJourneySession = null as any;
 
   const { journeyIds: journeyIdsFromDb } = useAvailableJourneyIdsQuery();
   // Sort: known journeys first (classic, dualnback-classic, sim-brainworkshop), then custom.
@@ -480,7 +477,7 @@ export function StatsPage(): ReactNode {
       closeDetailModal();
       const targetModeId =
         report.journeyContext?.nextSessionGameMode ??
-        currentJourneyState.nextSessionGameMode ??
+        currentJourneyState?.nextSessionGameMode ??
         reportJourneyConfig.gameMode ??
         report.gameMode;
       navigate(getRouteForMode(targetModeId as GameModeId), {
@@ -498,7 +495,7 @@ export function StatsPage(): ReactNode {
     },
     [
       closeDetailModal,
-      currentJourneyState.nextSessionGameMode,
+      currentJourneyState?.nextSessionGameMode,
       expandJourneyStartLevel,
       navigate,
       reportJourneyConfig.gameMode,
@@ -854,58 +851,8 @@ export function StatsPage(): ReactNode {
                         </div>
                       );
                     }
-                    const sessionJourneyId =
-                      reportData.journeyId ??
-                      reportData.journeyContext?.journeyId ??
-                      selectedSessionDetails?.journeyId ??
-                      selectedSessionDetails?.journeyContext?.journeyId ??
-                      null;
-                    const sessionJourneyStageId =
-                      reportData.journeyStageId ??
-                      reportData.journeyContext?.stageId ??
-                      selectedSessionDetails?.journeyStageId ??
-                      selectedSessionDetails?.journeyContext?.stageId ??
-                      null;
-                    const derivedJourneyContext =
-                      !isRunReportView &&
-                      typeof sessionJourneyId === 'string' &&
-                      sessionJourneyId.length > 0 &&
-                      typeof sessionJourneyStageId === 'number' &&
-                      reportJourneyConfig.journeyId === sessionJourneyId
-                        ? deriveJourneyContextFromState({
-                            journeyState: currentJourneyState,
-                            sessionStageId: sessionJourneyStageId,
-                            sessionNLevel: reportData.nLevel,
-                            journeyId: sessionJourneyId,
-                            journeyGameMode:
-                              reportData.journeyContext?.journeyGameMode ??
-                              reportJourneyConfig.gameMode ??
-                              reportData.gameMode,
-                            journeyName: reportData.journeyContext?.journeyName,
-                            journeyNameShort: reportData.journeyContext?.journeyNameShort,
-                          })
-                        : null;
-                    const reportWithComputedJourney: SessionEndReportModel = derivedJourneyContext
-                      ? {
-                          ...reportData,
-                          journeyContext: {
-                            ...derivedJourneyContext,
-                            ...(reportData.journeyContext ?? {}),
-                            nextPlayableStage:
-                              reportData.journeyContext?.nextPlayableStage ??
-                              derivedJourneyContext.nextPlayableStage,
-                            nextSessionGameMode:
-                              reportData.journeyContext?.nextSessionGameMode ??
-                              derivedJourneyContext.nextSessionGameMode,
-                            suggestedStartLevel:
-                              reportData.journeyContext?.suggestedStartLevel ??
-                              derivedJourneyContext.suggestedStartLevel,
-                            guidanceSource:
-                              reportData.journeyContext?.guidanceSource ??
-                              derivedJourneyContext.guidanceSource,
-                          },
-                        }
-                      : reportData;
+                    // Journey context derivation removed (NeuroDual Lite)
+                    const reportWithComputedJourney: SessionEndReportModel = reportData;
                     const message = translateContextualMessage(
                       t,
                       generateContextualMessageData(reportWithComputedJourney, {

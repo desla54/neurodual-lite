@@ -24,7 +24,9 @@ import { Link } from 'react-router';
 import { useAlphaEnabled } from '../../../../hooks/use-beta-features';
 import { useSettingsStore } from '../../../../stores';
 import { GAME_MODES, type GameMode } from '../../config';
-import type { TraceExtensions } from '@neurodual/logic';
+
+/** Local type alias for trace mode extensions (removed from @neurodual/logic public API). */
+type TraceExtensions = Record<string, unknown>;
 
 export function DyslateralisationSection(): ReactNode {
   const { t } = useTranslation();
@@ -60,8 +62,8 @@ export function DyslateralisationSection(): ReactNode {
     [traceModeSettings],
   );
   const traceExtensions = resolvedTraceMode.spec.extensions as unknown as TraceExtensions;
-  const traceMirrorSwipe = traceExtensions.dyslatéralisation?.mirrorSwipe ?? false;
-  const traceMirrorAxis = traceExtensions.dyslatéralisation?.mirrorAxis ?? 'horizontal';
+  const traceMirrorSwipe = (traceExtensions as any)?.['dyslatéralisation']?.['mirrorSwipe'] ?? false;
+  const traceMirrorAxis = (traceExtensions as any)?.['dyslatéralisation']?.['mirrorAxis'] ?? 'horizontal';
 
   const setTraceMirrorSwipe = (enabled: boolean) => {
     setModeSettingFor('dual-trace', 'dyslatMirrorSwipe', enabled);

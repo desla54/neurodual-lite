@@ -30,10 +30,12 @@ const DEFAULT_SYNC_STATE: SyncState = {
 const noopSyncAdapter: SyncPort = {
   getState: () => DEFAULT_SYNC_STATE,
   subscribe: () => () => {},
-  sync: async () => {},
+  sync: async () => ({ success: true, pushedCount: 0, pulledCount: 0 }),
   getUnsyncedEvents: async () => [],
   setAutoSync: () => {},
-} as SyncPort;
+  isAutoSyncEnabled: () => false,
+  refreshPendingCount: async () => {},
+};
 
 let syncAdapter: SyncPort = noopSyncAdapter;
 

@@ -11,7 +11,7 @@ import {
   UIProvider,
   useMountEffect,
 } from '@neurodual/ui';
-import { memo, useEffect, useMemo, useRef } from 'react';
+import { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RouterProvider } from 'react-router';
 import { AudioConfigSync } from './components/audio-config-sync';
@@ -133,7 +133,6 @@ function AppWithJourneyConfig() {
     return sessionPipelineFactory.create({
       historyAdapter: injectedAdapters.history,
       progressionAdapter: injectedAdapters.progression,
-      journeyAdapter: injectedAdapters.journey,
       persistence,
       getActiveUserIdForPersistence,
       recoveryStorage: pipelineRecoveryStorage,
@@ -141,7 +140,6 @@ function AppWithJourneyConfig() {
   }, [
     injectedAdapters.history,
     injectedAdapters.progression,
-    injectedAdapters.journey,
     persistence,
     getActiveUserIdForPersistence,
     pipelineRecoveryStorage,
@@ -161,7 +159,6 @@ function AppWithJourneyConfig() {
       subscription,
       sync,
       history: injectedAdapters.history,
-      journey: injectedAdapters.journey,
       readModels: injectedAdapters.readModels,
       profile: injectedAdapters.profile,
       progression: injectedAdapters.progression,

@@ -143,27 +143,6 @@ export {
 // Challenge queries (PowerSync reactive - INSTANT updates)
 export { useChallenge20Query } from './challenge';
 
-// Journey queries (PowerSync reactive - INSTANT updates)
-export {
-  setJourneyAdapter,
-  getJourneyAdapter,
-  // Query hooks
-  useJourneyState,
-  useCurrentStage,
-  useJourneyData,
-  useNextRoute,
-  useStageDefinition,
-  // Read model hooks
-  useNextJourneySession,
-  useNextJourneySessionSafe,
-  useNextJourneySessionWithContext,
-  // Context-based wrapper hooks
-  useJourneyStateWithContext,
-  // Mutations
-  useRecordAttempt,
-  useRecordAttemptWithContext,
-} from './journey';
-
 // Subscription queries
 export {
   setSubscriptionAdapter,

@@ -1,7 +1,10 @@
 import type { SessionCompletionWithXPResult } from '../engine/session-completion-projector';
 import type { JourneyMeta } from '../types/journey';
 import type { HistoryPort } from './history-port';
-import type { JourneyPort, AttemptResult } from './journey-port';
+
+// Stub types - journey-port deleted
+type AttemptResult = { readonly success: boolean };
+type JourneyPort = Record<string, unknown>;
 import type { PersistencePort } from './persistence-port';
 import type { ProgressionPort } from './progression-port';
 import type { PersistedPipelineState, SessionEndPipelinePort } from './session-end-pipeline-port';

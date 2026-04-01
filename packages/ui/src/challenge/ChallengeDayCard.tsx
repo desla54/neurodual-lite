@@ -174,18 +174,18 @@ export function ChallengeDayCard({
               : '—'}
         </span>
 
-        {/* Secondary label */}
-        <span
-          className={cn(
-            'relative z-10 font-medium',
-            isHero ? 'text-2xs' : 'text-3xs',
-            isLocked && 'text-muted-foreground',
-            isCurrent && 'text-primary',
-            isCompleted && 'text-emerald-500 dark:text-emerald-400',
-          )}
-        >
-          {isCompleted && completedLabel ? completedLabel : '\u00A0'}
-        </span>
+        {/* Secondary label — only when there's actual content */}
+        {isCompleted && completedLabel && (
+          <span
+            className={cn(
+              'relative z-10 font-medium',
+              isHero ? 'text-2xs' : 'text-3xs',
+              'text-emerald-500 dark:text-emerald-400',
+            )}
+          >
+            {completedLabel}
+          </span>
+        )}
 
         {/* Completed tooltip */}
         {isCompleted && completedLabel && (

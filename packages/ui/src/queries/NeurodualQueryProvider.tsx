@@ -13,7 +13,6 @@ import type {
   AuthPort,
   HistoryPort,
   JourneyConfig,
-  JourneyPort,
   LicensePort,
   PaymentPort,
   ProfilePort,
@@ -34,10 +33,9 @@ import { setProgressionAdapter } from './progression';
 import { setRewardAdapter } from './reward';
 import { setSubscriptionAdapter } from './subscription';
 import { setSyncAdapter } from './sync';
-import { setJourneyAdapter } from './journey';
 import { setLicenseAdapter } from './license';
-import { setReadModelsAdapter, setProfileReadModel, setJourneyReadModel } from './read-models';
-import { createProfileReadModel, createJourneyReadModel } from '@neurodual/infra';
+import { setReadModelsAdapter, setProfileReadModel } from './read-models';
+import { createProfileReadModel } from '@neurodual/infra';
 import { queryKeys } from './keys';
 import { JourneyConfigProvider } from '../context/JourneyConfigContext';
 
@@ -50,7 +48,6 @@ export interface NeurodualQueryProviderProps {
   adapters: {
     auth?: AuthPort;
     history: HistoryPort;
-    journey: JourneyPort;
     readModels: ReadModelPort;
     /** License key validation (web only - Lemon Squeezy) - optional in Lite */
     license?: LicensePort;
@@ -92,7 +89,6 @@ export function NeurodualQueryProvider({
     !prevAdapters ||
     prevAdapters.auth !== adapters.auth ||
     prevAdapters.history !== adapters.history ||
-    prevAdapters.journey !== adapters.journey ||
     prevAdapters.readModels !== adapters.readModels ||
     prevAdapters.payment !== adapters.payment ||
     prevAdapters.profile !== adapters.profile ||
@@ -107,10 +103,8 @@ export function NeurodualQueryProvider({
     // Initialize/update all TanStack Query adapters synchronously.
     if (adapters.auth) setAuthAdapter(adapters.auth);
     setHistoryAdapter(adapters.history);
-    setJourneyAdapter(adapters.journey);
     setReadModelsAdapter(adapters.readModels);
     setProfileReadModel(createProfileReadModel(adapters.readModels));
-    setJourneyReadModel(createJourneyReadModel(adapters.readModels));
     if (adapters.license && prevAdapters?.license !== adapters.license) {
       setLicenseAdapter(adapters.license);
     }

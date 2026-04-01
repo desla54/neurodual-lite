@@ -1,17 +1,8 @@
 import type { AbstractPowerSyncDatabase, QueryParam } from '@powersync/web';
 
 import {
-  ALTERNATING_JOURNEY_FIRST_MODE,
-  createEmptyJourneyState,
-  isSimulatorMode,
-  resolveHybridJourneyStrategyConfig,
-  projectJourneyFromHistory,
-  getAcceptedGameModesForJourney,
-  deriveNextSession,
-  type JourneyProjectionSession,
   type JourneyConfig,
   type JourneyState,
-  type JourneyWorkflowConfig,
   type SessionSummariesCursor,
   type SessionSummariesFilters,
   type ReadModelPort,
@@ -49,8 +40,6 @@ import {
   eventOrderAsc,
   eventOrderDesc,
 } from '../es-emmett/event-queries';
-import { parseSqlDateToMs, safeJsonParse } from '../db/sql-helpers';
-
 type Listener = () => void;
 type RafWindow = typeof window & {
   requestAnimationFrame?: (cb: (timestamp: number) => void) => number;
@@ -651,8 +640,6 @@ function createPowerSyncWatchStore<T>(options: {
 }
 
 export function createPowerSyncReadModelAdapter(): ReadModelPort {
-  const journeyCache = new Map<string, Subscribable<ReadModelSnapshot<JourneyState>>>();
-
   const profileSummaryCache = new Map<
     string,
     Subscribable<ReadModelSnapshot<readonly unknown[]>>
@@ -737,153 +724,10 @@ export function createPowerSyncReadModelAdapter(): ReadModelPort {
   };
 
   return {
-    journeyState: (config: JourneyConfig, userId: string | null) => {
-      const journeyId = config.journeyId?.trim() ?? '';
-      const enabled = journeyId.length > 0;
-      const isSimulator = isSimulatorMode(config.gameMode);
-      const hybridStrategy = resolveHybridJourneyStrategyConfig(config);
-      const empty = createEmptyJourneyState(config.targetLevel, config.startLevel, isSimulator);
-      if (config.gameMode === 'dual-track-dnb-hybrid') {
-        empty.nextSessionGameMode = ALTERNATING_JOURNEY_FIRST_MODE;
-      }
-      if (!enabled) {
-        return createStaticSubscribable({ data: empty, isPending: false, error: null });
-      }
-
-      const key = JSON.stringify({
-        journeyId,
-        userId: userId ?? 'local',
-        startLevel: config.startLevel,
-        targetLevel: config.targetLevel,
-        isSimulator,
-        hybridTrackSessionsPerBlock: hybridStrategy.trackSessionsPerBlock,
-        hybridDnbSessionsPerBlock: hybridStrategy.dnbSessionsPerBlock,
-      });
-      const existing = journeyCache.get(key);
-      if (existing) return existing;
-
-      // Watch session_summaries directly for INSTANT reactivity.
-      // PowerSync fires the watch callback as soon as session_summaries changes,
-      // and we project the journey state synchronously in the map callback.
-      // This eliminates the async rebuild → journey_state_projection indirection.
-      const acceptedModes = getAcceptedGameModesForJourney(config.gameMode);
-      const modeFilter =
-        acceptedModes && acceptedModes.length > 0
-          ? `AND game_mode IN (${acceptedModes.map(() => '?').join(', ')})`
-          : '';
-      const modeParams = acceptedModes ? [...acceptedModes] : [];
-
-      const sql = `SELECT session_id, journey_stage_id, journey_id, n_level, global_d_prime,
-              game_mode, ups_score, created_at, by_modality, passed, adaptive_path_progress_pct
-       FROM session_summaries
-       WHERE play_context = 'journey'
-         AND journey_id = ?
-         AND reason = 'completed'
-         ${modeFilter}
-       ORDER BY created_at ASC`;
-      const params = [journeyId, ...modeParams];
-
-      const store = createPowerSyncWatchStore<JourneyState>({
-        name: 'journeyState',
-        getDb,
-        sql,
-        params,
-        initial: { data: empty, isPending: true, error: null },
-        map: (rows) => {
-          const sessions: JourneyProjectionSession[] = rows.map((row) => {
-            let byModality:
-              | Record<
-                  string,
-                  { hits: number; misses: number; falseAlarms: number; correctRejections: number }
-                >
-              | undefined;
-            const rawModality = row['by_modality'];
-            if (typeof rawModality === 'string') {
-              const parsed = safeJsonParse<Record<
-                string,
-                { hits: number; misses: number; falseAlarms: number; correctRejections: number }
-              > | null>(rawModality, null);
-              byModality = parsed ?? undefined;
-            }
-            return {
-              sessionId: row['session_id'] as string,
-              journeyStageId:
-                row['journey_stage_id'] != null ? Number(row['journey_stage_id']) : undefined,
-              journeyId: (row['journey_id'] as string) ?? undefined,
-              nLevel: row['n_level'] != null ? Number(row['n_level']) : undefined,
-              dPrime: typeof row['global_d_prime'] === 'number' ? row['global_d_prime'] : 0,
-              gameMode: (row['game_mode'] as string) ?? undefined,
-              upsScore: row['ups_score'] != null ? Number(row['ups_score']) : undefined,
-              timestamp: parseSqlDateToMs(row['created_at']) ?? undefined,
-              byModality,
-              passed: row['passed'] != null ? row['passed'] === 1 : undefined,
-              adaptivePathProgressPct:
-                row['adaptive_path_progress_pct'] != null
-                  ? Number(row['adaptive_path_progress_pct'])
-                  : undefined,
-            };
-          });
-
-          if (sessions.length === 0) return empty;
-
-          let effectiveStartLevel = config.startLevel;
-          let state = projectJourneyFromHistory(
-            sessions,
-            config.targetLevel,
-            effectiveStartLevel,
-            journeyId,
-            isSimulator,
-            config.gameMode,
-            hybridStrategy,
-          );
-
-          // Auto-expand if player regressed below startLevel
-          if (
-            typeof state.suggestedStartLevel === 'number' &&
-            state.suggestedStartLevel < effectiveStartLevel
-          ) {
-            effectiveStartLevel = state.suggestedStartLevel;
-            state = projectJourneyFromHistory(
-              sessions,
-              config.targetLevel,
-              effectiveStartLevel,
-              journeyId,
-              isSimulator,
-              config.gameMode,
-              hybridStrategy,
-            );
-          }
-
-          // Derive next session command
-          const workflowConfig: JourneyWorkflowConfig = {
-            journeyId,
-            startLevel: effectiveStartLevel,
-            targetLevel: config.targetLevel,
-            gameMode: config.gameMode,
-            isSimulator,
-            hybridTrackSessionsPerBlock: hybridStrategy.trackSessionsPerBlock,
-            hybridDnbSessionsPerBlock: hybridStrategy.dnbSessionsPerBlock,
-          };
-          const nextSessionCmd = deriveNextSession(state, workflowConfig);
-          state.nextSession = nextSessionCmd
-            ? {
-                stageId: nextSessionCmd.stageId,
-                nLevel: nextSessionCmd.nLevel,
-                gameMode: nextSessionCmd.gameMode,
-                route: nextSessionCmd.route,
-              }
-            : undefined;
-
-          return state;
-        },
-        onDispose: () => {
-          removeStoreDebug(key);
-          journeyCache.delete(key);
-        },
-      });
-
-      journeyCache.set(key, store);
-      return store;
+    journeyState: (_config: JourneyConfig, _userId: string | null) => {
+      // Journey projection removed — return empty state
+      const empty = {} as JourneyState;
+      return createStaticSubscribable({ data: empty, isPending: false, error: null });
     },
 
     // -----------------------------------------------------------------------

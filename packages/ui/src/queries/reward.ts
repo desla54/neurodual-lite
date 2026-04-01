@@ -24,12 +24,13 @@ const noopRewardAdapter: RewardPort = {
   getState: () => ({ grantedRewards: [], pendingRewards: [], isProcessing: false }),
   subscribe: () => () => {},
   getGrantedRewards: async () => [],
-  getPendingRewards: async () => [],
-  grantReward: async () => ({ granted: false, reason: 'not-available' }) as RewardGrantResult,
+  getPendingRewards: () => [],
+  grantReward: async () => ({ success: false, error: 'not_eligible' }) as RewardGrantResult,
   queueReward: () => {},
   processPendingRewards: async () => {},
+  hasReward: async () => false,
   refresh: async () => {},
-} as RewardPort;
+};
 
 let rewardAdapter: RewardPort = noopRewardAdapter;
 

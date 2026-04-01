@@ -90,11 +90,11 @@ export type { ClockPort } from './clock-port';
 export { browserClock } from './clock-port';
 export type { RandomPort } from './random-port';
 export { cryptoRandom, createSeededRandom } from './random-port';
-export type {
-  AttemptResult,
-  JourneyPort,
-  JourneyRecordableSession,
-} from './journey-port';
+// Removed: journey-port exports (deleted with journey system)
+// Stub types for backward compatibility
+export type AttemptResult = { readonly success: boolean };
+export type JourneyPort = Record<string, unknown>;
+export type JourneyRecordableSession = Record<string, unknown>;
 
 export type { OAuthCallbackPort, OAuthCodeExchangeResult } from './oauth-callback-port';
 export type { EventReaderPort, EventReaderFactoryPort } from './event-reader-port';

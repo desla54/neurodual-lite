@@ -30,7 +30,8 @@ import type {
   MotSessionEndedEvent,
 } from './events';
 import type { SessionPhase, SessionSnapshot } from '../session/game-session-types';
-import type { PlaceSessionMachineSnapshot as PlaceSessionSnapshot } from '../session/machine/place-session-types';
+// Stub type for deleted place-session-types
+type PlaceSessionSnapshot = Record<string, unknown>;
 import type {
   PlaceSessionConfig,
   PlacePhase,
@@ -46,7 +47,9 @@ import type {
   MemoTrend,
 } from '../types/memo';
 import { getWindowDepthForTrial } from '../types/memo';
-import type { MemoSessionSnapshot, MemoPhase } from '../session/machine/memo-session-types';
+// Stub types for deleted memo-session-types
+type MemoSessionSnapshot = Record<string, unknown>;
+type MemoPhase = string;
 import { SDTCalculator } from '../domain/scoring/helpers/sdt-calculator';
 import { getIsTarget } from '../domain/modality';
 import type { CompactTrajectory } from '../types/trajectory';
@@ -1288,7 +1291,8 @@ export function getMemoPicksAtTime(
 // DualPick Replay Projector
 // =============================================================================
 
-import type { DualPickSessionSnapshot } from '../session/machine/dual-pick-session-types';
+// Stub type for deleted dual-pick-session-types
+type DualPickSessionSnapshot = Record<string, unknown>;
 import type {
   DualPickSessionConfig,
   DualPickPhase,

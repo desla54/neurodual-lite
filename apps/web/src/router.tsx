@@ -26,6 +26,9 @@ const StroopFlexTrainingPage = lazy(() =>
 const OspanTrainingPage = lazy(() =>
   import('./pages/ospan-training').then((m) => ({ default: m.OspanTrainingPage })),
 );
+const GridlockTrainingPage = lazy(() =>
+  import('./pages/gridlock-training').then((m) => ({ default: m.GridlockTrainingPage })),
+);
 const OspanMeasurePage = lazy(() =>
   import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage })),
 );
@@ -34,6 +37,9 @@ const OspanMeasurePage = lazy(() =>
 const TutorialGuidedPage = lazy(() =>
   import('./pages/tutorial-guided').then((m) => ({ default: m.TutorialGuidedPage })),
 );
+
+// Social page (placeholder)
+const SocialPage = lazy(() => import('./pages/social').then((m) => ({ default: m.SocialPage })));
 
 // Utility pages
 const StatsPage = lazy(() => import('./pages/stats').then((m) => ({ default: m.StatsPage })));
@@ -76,10 +82,14 @@ export const router = createBrowserRouter([
           { path: 'stroop-flex', element: withSuspense(StroopFlexTrainingPage) },
           // OSPAN (Operation Span)
           { path: 'ospan', element: withSuspense(OspanTrainingPage) },
+          // Gridlock (spatial reasoning)
+          { path: 'gridlock', element: withSuspense(GridlockTrainingPage) },
           { path: 'ospan-measure', element: withSuspense(OspanMeasurePage) },
           // Tutorial
           { path: 'tutorial', element: withSuspense(TutorialGuidedPage) },
           { path: 'tutorial/:specId', element: withSuspense(TutorialGuidedPage) },
+          // Social
+          { path: 'social', element: withSuspense(SocialPage) },
           // Utility pages
           { path: 'stats', element: withSuspense(StatsPage) },
           { path: 'settings/:section?/:subSection?', element: withSuspense(SettingsPage) },

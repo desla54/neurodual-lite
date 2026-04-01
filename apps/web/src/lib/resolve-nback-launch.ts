@@ -1,9 +1,6 @@
 import type { ResolvedPlayIntent } from './play-intent';
 import {
   DUAL_TRACK_DNB_HYBRID_MODE_ID,
-  JOURNEY_MODE_TO_GAME_MODE,
-  getStageDefinition,
-  getTotalStagesForTarget,
 } from '@neurodual/logic';
 
 export interface NbackJourneyConfigSnapshot {
@@ -102,42 +99,6 @@ export function resolveNbackLaunch(params: {
       params.journeyStateNextSessionGameMode ??
       (!isHybridJourney ? journeyGameMode : undefined) ??
       effectiveMode;
-  }
-
-  if (
-    shouldUseJourneyContext &&
-    typeof journeyStageId === 'number' &&
-    Number.isFinite(journeyStageId)
-  ) {
-    const totalStages = getTotalStagesForTarget(
-      journeyTargetLevel,
-      journeyStartLevel,
-      isSimulatorJourney,
-    );
-    journeyStageId = Math.max(1, Math.min(Math.round(journeyStageId), totalStages));
-
-    const stageDef = getStageDefinition(
-      journeyStageId,
-      journeyTargetLevel,
-      journeyStartLevel,
-      isSimulatorJourney,
-    );
-
-    if (stageDef) {
-      if (stageDef.mode === 'simulator' && (explicitJourneySessionMode ?? journeyGameMode)) {
-        effectiveMode =
-          explicitJourneySessionMode ??
-          params.journeyStateNextSessionGameMode ??
-          (!isHybridJourney ? journeyGameMode : undefined) ??
-          effectiveMode;
-      } else {
-        effectiveMode = JOURNEY_MODE_TO_GAME_MODE[stageDef.mode];
-      }
-      // Only use derived nLevel as fallback when no authoritative nLevel was provided
-      if (journeyNLevel == null) {
-        journeyNLevel = stageDef.nLevel;
-      }
-    }
   }
 
   return {

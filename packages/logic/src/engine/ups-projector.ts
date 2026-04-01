@@ -29,13 +29,7 @@ import { SessionProjector } from './session-projector';
 import { PlaceSessionProjector } from './place-projector';
 import { MemoSessionProjector } from './memo-projector';
 import { DualPickSessionProjector } from './dual-pick-projector';
-import { projectTimeSessionFromEvents } from './time-session-projection';
-import { projectTrackSessionFromEvents } from './track-session-projection';
-import { projectCorsiSessionFromEvents } from './corsi-session-projection';
 import { projectOspanSessionFromEvents } from './ospan-session-projection';
-import { projectRunningSpanSessionFromEvents } from './running-span-session-projection';
-import { projectPasatSessionFromEvents } from './pasat-session-projection';
-import { projectSwmSessionFromEvents } from './swm-session-projection';
 import { UnifiedScoreCalculator } from '../domain/scoring/unified-score';
 
 // =============================================================================
@@ -51,13 +45,7 @@ export type SessionMode =
   | 'recall'
   | 'dual-pick'
   | 'trace'
-  | 'time'
-  | 'track'
-  | 'corsi'
   | 'ospan'
-  | 'running-span'
-  | 'pasat'
-  | 'swm'
   | 'cognitive-task'
   | 'unknown';
 
@@ -96,14 +84,7 @@ function detectSessionMode(events: readonly GameEvent[]): SessionMode {
     if (event.type === 'RECALL_SESSION_STARTED') return 'recall';
     if (event.type === 'DUAL_PICK_SESSION_STARTED') return 'dual-pick';
     if (event.type === 'TRACE_SESSION_STARTED') return 'trace';
-    if (event.type === 'TIME_SESSION_STARTED') return 'time';
-    if (event.type === 'MOT_SESSION_STARTED') return 'track';
-    if (event.type === 'CORSI_SESSION_STARTED') return 'corsi';
     if (event.type === 'OSPAN_SESSION_STARTED') return 'ospan';
-    if (event.type === 'RUNNING_SPAN_SESSION_STARTED') return 'running-span';
-    if (event.type === 'PASAT_SESSION_STARTED' || event.type === 'PASAT_SESSION_ENDED')
-      return 'pasat';
-    if (event.type === 'SWM_SESSION_STARTED' || event.type === 'SWM_SESSION_ENDED') return 'swm';
     if (event.type === 'COGNITIVE_TASK_SESSION_STARTED') return 'cognitive-task';
     if (event.type === 'SESSION_STARTED') return 'tempo';
   }
@@ -173,20 +154,8 @@ export class UPSProjector {
         return UPSProjector.projectDualPick(events, isGaming);
       case 'trace':
         return UPSProjector.projectTrace(events, isGaming);
-      case 'time':
-        return UPSProjector.projectTime(events, isGaming);
-      case 'track':
-        return UPSProjector.projectTrack(events, isGaming);
-      case 'corsi':
-        return UPSProjector.projectCorsi(events, isGaming);
       case 'ospan':
         return UPSProjector.projectOspan(events, isGaming);
-      case 'running-span':
-        return UPSProjector.projectRunningSpan(events, isGaming);
-      case 'pasat':
-        return UPSProjector.projectPasat(events, isGaming);
-      case 'swm':
-        return UPSProjector.projectSwm(events, isGaming);
       case 'cognitive-task':
         return UPSProjector.projectCognitiveTask(events, isGaming);
       default:
@@ -395,59 +364,7 @@ export class UPSProjector {
     };
   }
 
-  /**
-   * Projette UPS pour une session Dual Time.
-   */
-  static projectTime(events: readonly GameEvent[], isGaming = false): UPSProjectionResult | null {
-    const projection = projectTimeSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'time',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: 1,
-      totalTrials: projection.totalTrials,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
-
-  /**
-   * Projette UPS pour une session Dual Track.
-   */
-  static projectTrack(events: readonly GameEvent[], isGaming = false): UPSProjectionResult | null {
-    const projection = projectTrackSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'track',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: projection.targetCount,
-      totalTrials: projection.totalTrials,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
-
-  /**
-   * Projette UPS pour une session Corsi Block.
-   */
-  static projectCorsi(events: readonly GameEvent[], isGaming = false): UPSProjectionResult | null {
-    const projection = projectCorsiSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'corsi',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: projection.maxSpan,
-      totalTrials: projection.totalTrials,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
+  // Removed: projectTime, projectTrack, projectCorsi (deleted game modes)
 
   /**
    * Projette UPS pour une session OSPAN.
@@ -467,62 +384,7 @@ export class UPSProjector {
     };
   }
 
-  /**
-   * Projette UPS pour une session Running Span.
-   */
-  static projectRunningSpan(
-    events: readonly GameEvent[],
-    isGaming = false,
-  ): UPSProjectionResult | null {
-    const projection = projectRunningSpanSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'running-span',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: projection.maxSpan,
-      totalTrials: projection.totalTrials,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
-
-  /**
-   * Projette UPS pour une session PASAT.
-   */
-  static projectPasat(events: readonly GameEvent[], isGaming = false): UPSProjectionResult | null {
-    const projection = projectPasatSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'pasat',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: 1,
-      totalTrials: projection.totalTrials,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
-
-  /**
-   * Projette UPS pour une session SWM.
-   */
-  static projectSwm(events: readonly GameEvent[], isGaming = false): UPSProjectionResult | null {
-    const projection = projectSwmSessionFromEvents(events, isGaming);
-    if (!projection?.startEvent) return null;
-
-    return {
-      mode: 'swm',
-      ups: projection.ups,
-      sessionId: projection.startEvent.sessionId,
-      nLevel: projection.maxSpanReached,
-      totalTrials: projection.totalRounds,
-      durationMs: projection.durationMs,
-      completed: projection.reason === 'completed',
-    };
-  }
+  // Removed: projectRunningSpan, projectPasat, projectSwm (deleted game modes)
 
   /**
    * Projette UPS pour une session Cognitive Task.

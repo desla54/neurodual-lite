@@ -13,7 +13,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router';
 import { ArrowLeft } from '@phosphor-icons/react';
 import { PageTransition } from '@neurodual/ui';
-import { useAlphaEnabled } from '../../hooks/use-beta-features';
 import { useSettingsStore } from '../../stores';
 import {
   DEFAULT_TEST_MODE,
@@ -26,17 +25,11 @@ import { SettingsMobileNav } from './components';
 
 // Lazy load sections for code splitting
 const JourneySection = lazy(() =>
-  import('./sections/journey').then((m) => ({ default: m.JourneySection })),
+  Promise.resolve({ default: () => null as any }),
 );
 const ModeSection = lazy(() => import('./sections/mode').then((m) => ({ default: m.ModeSection })));
-const TestsSection = lazy(() =>
-  import('./sections/tests').then((m) => ({ default: m.TestsSection })),
-);
 const VisualSection = lazy(() =>
   import('./sections/visual').then((m) => ({ default: m.VisualSection })),
-);
-const DyslateralisationSection = lazy(() =>
-  import('./sections/visual').then((m) => ({ default: m.DyslateralisationSection })),
 );
 const AudioSection = lazy(() =>
   import('./sections/audio').then((m) => ({ default: m.AudioSection })),
@@ -85,7 +78,6 @@ export function SettingsPage(): ReactNode {
     subSection?: string;
   }>();
   const navigate = useNavigate();
-  const isAlphaEnabled = useAlphaEnabled();
   const currentMode = useSettingsStore((s) => s.currentMode);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
@@ -111,10 +103,6 @@ export function SettingsPage(): ReactNode {
               return <JourneySection />;
             case 'mode':
               return <ModeSection />;
-            case 'tests':
-              return <TestsSection />;
-            case 'dyslatéralisation':
-              return isAlphaEnabled ? <DyslateralisationSection /> : <JourneySection />;
             case 'visual':
               return <VisualSection />;
             case 'audio':
