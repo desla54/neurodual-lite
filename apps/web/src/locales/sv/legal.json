@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Alla rättigheter förbehållna.",
+    "terms": {
+      "title": "Användarvillkor",
+      "version": "Version 3.0 — Senast uppdaterad: 2026-03-04",
+      "healthWarning": {
+        "title": "VIKTIG HÄLSOVARNING",
+        "content": "NeuroDual är en app för kognitiv träning och välbefinnande. <strong>Det är inte en medicinsk produkt.</strong> Den diagnostiserar, behandlar, botar eller förebygger inte någon sjukdom. Om du har funderingar eller upplever obehag, sluta använda appen och kontakta en vårdgivare."
+      },
+      "section1": {
+        "title": "1. Syfte och Godkännande",
+        "content": "Genom att ladda ner, installera eller använda NeuroDual godkänner du villkorslöst dessa Användarvillkor. Om du inte godkänner dessa villkor, vänligen använd inte applikationen."
+      },
+      "section2": {
+        "title": "2. Tjänstebeskrivning",
+        "content": "NeuroDual erbjuder Dual N-Back arbetsminnesträning, med lokal datahantering och synkroniseringsalternativ via ett konto. Tjänsten tillhandahålls i befintligt skick och kan utvecklas.",
+        "item1": "Kompatibilitet: webb- och mobilapplikationer (beroende på tillgänglighet).",
+        "item2": "Åtkomst: vissa funktioner kräver internetanslutning och/eller kontoskapande.",
+        "item3": "Uppdateringar: vi kan distribuera korrigeringar eller uppdateringar utan förvarning av säkerhets- eller prestandaskäl.",
+        "item4": "Annonser: den kostnadsfria mobilversionen kan visa interstitiella annonser (Google AdMob). Premium-användare ser inga annonser."
+      },
+      "section3": {
+        "title": "3. Konton och Säkerhet",
+        "item1": "Valfritt kontoskapande via e-post eller identitetsleverantör (Google, Apple).",
+        "item2": "Du ansvarar för att hålla dina inloggningsuppgifter konfidentiella och för alla åtgärder som utförs med ditt konto.",
+        "item3": "Konto- och tillhörande dataradering finns tillgänglig från Inställningar.",
+        "item4": "Vi kan stänga av eller avsluta ett konto vid brott mot dessa Villkor, bedrägeriförsök eller säkerhetsöverträdelser."
+      },
+      "section4": {
+        "title": "4. Användningsregler och Begränsningar",
+        "item1": "Kringgå inte säkerhetsåtgärder eller tekniska begränsningar.",
+        "item2": "Använd inte applikationen för olagliga eller skadliga syften.",
+        "item3": "Försök inte reverse engineering eller obehörig innehållsextraktion.",
+        "item4": "Respektera immateriella rättigheter för applikationen och dess innehåll."
+      },
+      "section5": {
+        "title": "5. Immateriella Rättigheter",
+        "content": "Alla element (text, grafik, ljud, källkod, logotyper) är upphovsrättsskyddade och förblir utgivarens eller dess licensgivares egendom. Ingen licens beviljas förutom den personliga, icke-exklusiva och icke-överlåtbara rätten att använda applikationen i enlighet med dessa Villkor."
+      },
+      "section6": {
+        "title": "6. Tillgänglighet och Support",
+        "content": "Tjänsten är tillgänglig dygnet runt med förbehåll för underhåll eller force majeure. Vi garanterar inte kontinuerlig tillgänglighet eller prestanda. Support: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Köp i Appen / Prenumerationer",
+        "content": "Premium-prenumerationer finns tillgängliga: årsvis och livstid (10 år). Betalningar hanteras av RevenueCat (mobil) eller Lemon Squeezy (webb). <strong>Försäljningsvillkoren</strong> gäller (prissättning, ångerrätt, förnyelse, avbokning, återbetalning) och finns tillgängliga före köp."
+      },
+      "section8": {
+        "title": "8. Ansvar",
+        "item1": "Tjänsten tillhandahålls \"i befintligt skick\" utan resultatgaranti.",
+        "item2": "Vi ansvarar inte för direkta eller indirekta skador relaterade till användning, förlust av osparad lokal data eller tolkning av statistik.",
+        "item3": "Om du upplever obehag, biverkningar eller oro för din hälsa, avbryt användningen."
+      },
+      "section9": {
+        "title": "9. Personuppgifter",
+        "content": "Behandlingen av personuppgifter beskrivs i <a>Integritetspolicyn</a>. Vid konflikt mellan Villkoren och Integritetspolicyn gällande datafrågor har Integritetspolicyn företräde."
+      },
+      "section10": {
+        "title": "10. Ändringar av Villkor",
+        "content": "Vi kan ändra dessa Villkor av rättsliga, tekniska eller tjänsterelaterade skäl. Uppdateringsdatumet visas högst upp i dokumentet. Vid väsentliga ändringar visas ett meddelande i applikationen."
+      },
+      "section11": {
+        "title": "11. Tillämplig Lag och Tvister",
+        "content": "Dessa Villkor regleras av fransk lag. Vid tvist och efter vänskapliga försök kan konsumentanvändare använda konsumentmedling eller den europeiska plattformen för tvistlösning online (ODR). I annat fall har franska domstolar exklusiv behörighet."
+      },
+      "section12": {
+        "title": "12. Kontakt",
+        "content": "För frågor om dessa Villkor:"
+      }
+    },
+    "privacy": {
+      "title": "Integritetspolicy",
+      "version": "Version 3.0 — Senast uppdaterad: 2026-03-04",
+      "intro": {
+        "p1": "Denna Integritetspolicy beskriver hur NeuroDual (\"vi\", \"vår\") behandlar dina personuppgifter när du använder vår mobilapplikation och webbplats.",
+        "p2": "Vi tillämpar principerna i den allmänna dataskyddsförordningen (GDPR) och den franska dataskyddslagen. Vi föredrar en \"lokal-först\"-arkitektur, säljer eller hyr inte ut dina uppgifter och använder målgruppsmätning för att förbättra produkten."
+      },
+      "section1": {
+        "title": "1. Personuppgiftsansvarig",
+        "responsible": "Ansvarig:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Säte:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Frankrike",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "E-post:",
+        "dpo": "DPO: AGUILAL Abdeslam (samma kontaktuppgifter). För frågor om dina uppgifter, kontakta adressen ovan."
+      },
+      "section2": {
+        "title": "2. Uppgifter Vi Samlar in",
+        "sub1": {
+          "title": "2.1 Användargenererade Uppgifter (Lokalt Läge)",
+          "content": "Lagras endast på din enhet via SQLite medan du är utloggad:",
+          "item1": "Poäng och N-Back-sessionshistorik.",
+          "item2": "Spelkonfigurationsinställningar.",
+          "item3": "Lokal profil (smeknamn, vald avatar).",
+          "note": "Dessa uppgifter passerar inte våra servrar förrän du skapar ett konto. Om du avinstallerar appen försvinner dessa uppgifter."
+        },
+        "sub2": {
+          "title": "2.2 Kontouppgifter (Valfritt)",
+          "content": "Om du skapar ett konto för att synkronisera dina uppgifter:",
+          "item1": "E-postadress (unik identifierare).",
+          "item2": "Användar-ID tillhandahållet av identitetsleverantören (Google, Apple).",
+          "note": "Dessa uppgifter hanteras genom vår autentiseringsleverantör (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Tekniska Loggar",
+          "content": "Pseudonymiserade loggar (fel, synkroniseringsstatus, prestanda) för säkerhet och support."
+        },
+        "sub4": {
+          "title": "2.4 Supportdata",
+          "content": "E-postutbyten med supporten kan innehålla dina kontaktuppgifter och förfrågningsinnehåll för att svara."
+        },
+        "sub5": {
+          "title": "2.5 Övervakning och Felspårning",
+          "content": "Teknisk data (fel, prestanda, onormalt beteende) insamlad via Sentry för att förbättra applikationens stabilitet. Pseudonymiserad data, ingen annonsrikting."
+        },
+        "sub6": {
+          "title": "2.6 Målgruppsmätning och Produktanalys",
+          "content": "Anonymiserad användningsdata insamlad via PostHog (besökta sidor, åtgärder i appen, enhetstyp) för att förbättra produkten. Ingen personligt identifierbar data överförs. Ingen annonsrikting."
+        },
+        "sub7": {
+          "title": "2.7 Annonser (Kostnadsfri Mobilversion)",
+          "content": "Den kostnadsfria Android-versionen visar interstitiella annonser via Google AdMob. Google kan samla in en annonsidentifierare och teknisk data (enhetstyp, språk, annonsinteraktioner). Premium-användare exponeras inte för annonser. Mer information: Google Ads integritetspolicy."
+        }
+      },
+      "section3": {
+        "title": "3. Ändamål och Rättsliga Grunder",
+        "content": "Vi använder dina uppgifter endast för:",
+        "item1": "<strong>Tjänstedrift</strong> (lokal säkerhetskopiering, statistik, synkronisering med flera enheter) — Rättslig grund: fullgörande av avtal (Art. 6.1.b GDPR).",
+        "item2": "<strong>Säkerhet och bedrägeriförebyggande</strong> (teknisk loggning, åtkomstkontroll) — Rättslig grund: berättigat intresse (Art. 6.1.f GDPR).",
+        "item3": "<strong>Användarsupport</strong> — Rättslig grund: berättigat intresse (svara på förfrågningar).",
+        "item4": "<strong>Rättsliga skyldigheter</strong> — Rättslig grund: rättslig förpliktelse (Art. 6.1.c GDPR).",
+        "item5": "<strong>Övervakning och felspårning</strong> — Rättslig grund: berättigat intresse (stabilitetsförbättring); pseudonymiserad data, ingen personanpassad annonsering.",
+        "item6": "<strong>Målgruppsmätning</strong> (anonymiserad produktanalys via PostHog) — Rättslig grund: berättigat intresse (Art. 6.1.f GDPR); anonymiserad data.",
+        "note": "Varje ändring av ändamål dokumenteras i en uppdatering av denna policy.",
+        "item7": "<strong>Annonsering</strong> (visning av interstitiella annonser för kostnadsfria mobilanvändare) — Rättslig grund: berättigat intresse (Art. 6.1.f GDPR).",
+        "item8": "<strong>Marknadsföring och nyhetsbrev</strong> — Rättslig grund: uttryckligt samtycke (Art. 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Lagringstider",
+        "item1": "<strong>Lokal data:</strong> lagras på din enhet och raderas vid avinstallation eller återställning.",
+        "item2": "<strong>Konto- och synkroniserade uppgifter:</strong> behålls medan kontot är aktivt. Raderas inom 30 dagar från begäran om kontoborttagning.",
+        "item3": "<strong>Tekniska loggar:</strong> behålls i högst 12 månader, raderas sedan automatiskt.",
+        "item4": "<strong>Övervakning:</strong> pseudonymiserad teknisk data behålls i 90 dagar för felspårning och produktförbättring.",
+        "item5": "<strong>Supportförfrågningar:</strong> behålls i 24 månader efter ärendets stängning, raderas sedan.",
+        "item6": "<strong>Målgruppsdata (PostHog):</strong> anonymiserad, behålls i 12 månader."
+      },
+      "section5": {
+        "title": "5. Mottagare, Personuppgiftsbiträden och Överföringar",
+        "content": "Dina uppgifter kan behandlas av följande leverantörer:",
+        "item1": "Supabase Inc. (autentisering och molndatabas, EU-hosting).",
+        "item2": "Amazon Web Services (Supabase-infrastruktur, EU-regioner).",
+        "item3": "Cloudflare Inc. (webbapplikationshosting, CDN och säkerhet).",
+        "item4": "Sentry (fel- och prestandaövervakning; överföringar utanför EU regleras av Standardavtalsklausuler).",
+        "item5": "RevenueCat Inc. (hantering av mobilprenumerationer och betalningar i appen; lagrar inte kreditkortsuppgifter).",
+        "note": "Om en ny leverantör läggs till uppdateras detta avsnitt.",
+        "transfers": "<strong>Överföringar utanför EU:</strong> när leverantörer utanför EU är involverade (t.ex. Cloudflare, Supabase USA-enhet, Sentry, RevenueCat, Google AdMob) regleras överföringarna av Europeiska kommissionens Standardavtalsklausuler (SCC) eller en likvärdig mekanism.",
+        "item6": "PostHog Inc. (målgruppsmätning och produktanalys; anonymiserad data; EU-hosting).",
+        "item7": "Lemon Squeezy (hantering av webbbetalningar; lagrar inte kreditkortsuppgifter).",
+        "item8": "Google AdMob (annonsvisning i kostnadsfri mobilversion; överföringar utanför EU regleras av Standardavtalsklausuler)."
+      },
+      "section6": {
+        "title": "6. Dina Rättigheter",
+        "content": "Enligt GDPR har du följande rättigheter:",
+        "item1": "Tillgång, rättelse, radering.",
+        "item2": "Begränsning och invändning (beroende på rättslig grund).",
+        "item3": "Dataportabilitet (exportera dina uppgifter i JSON eller CSV).",
+        "item4": "Återkallande av samtycke (i tillämpliga fall).",
+        "item5": "Klagomål till tillsynsmyndigheten (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Kontoborttagning:</strong> du kan ta bort ditt konto och alla tillhörande uppgifter direkt från applikationens Inställningar. Denna åtgärd är oåterkallelig.",
+        "exercise": "För att utöva dina andra rättigheter, kontakta <strong>support@neurodual.fr</strong>. Identitetsbevis kan begäras vid rimligt tvivel. Svarstid: 1 månad (kan förlängas till 3 månader i komplexa fall)."
+      },
+      "section7": {
+        "title": "7. Säkerhet",
+        "content": "Krypterad kommunikation (HTTPS/TLS), begränsad administratörsåtkomst, behörighetskontroller. Vid dataintrång som sannolikt utgör en risk görs rättsliga anmälningar (CNIL och berörda individer)."
+      },
+      "section8": {
+        "title": "8. Kakor och Lokal Lagring",
+        "content": "Applikationen använder SQLite för att lagra dina framsteg direkt på din enhet. Endast väsentliga tekniska kakor (autentisering, session) används. Den kostnadsfria mobilversionen använder Google AdMob som kan sätta kakor eller annonsidentifierare."
+      },
+      "section9": {
+        "title": "9. Minderåriga",
+        "content": "NeuroDual är avsedd för användare över 16 år. Minderåriga måste använda applikationen under ansvar av en vårdnadshavare."
+      },
+      "section10": {
+        "title": "10. Ändringar",
+        "content": "Varje uppdaterad version publiceras här med senaste uppdateringsdatum. Vid väsentliga ändringar ges ett meddelande i applikationen."
+      },
+      "section11": {
+        "title": "11. Kontakt",
+        "content": "För frågor eller för att utöva dina rättigheter:",
+        "email": "E-post: support@neurodual.fr",
+        "responsible": "Personuppgiftsansvarig: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Försäljningsvillkor",
+      "version": "Års- och livstidsprenumerationer — Senast uppdaterad: 2026-03-04",
+      "section1": {
+        "title": "1. Syfte",
+        "content": "Dessa Försäljningsvillkor reglerar prenumerationen på NeuroDual Premium-planer (årsvis och livstid). De kompletterar <a1>Användarvillkoren</a1> och <a2>Integritetspolicyn</a2>."
+      },
+      "section2": {
+        "title": "2. Erbjudande och Priser",
+        "item1": "<strong>Årsprenumeration</strong>: pris som visas före betalning (inklusive moms om tillämpligt), förnyas automatiskt varje år.",
+        "item2": "<strong>Livstidsprenumeration (10 år)</strong>: engångsbetalning som ger tillgång till premiumfunktioner i 10 år utan automatisk förnyelse.",
+        "item3": "Premium-åtkomst: molnsynkronisering med flera enheter, fjärrsäkerhetskopior, tillgång till alla N-nivåer, avancerade exporter, reklamfri upplevelse, prioriterad support.",
+        "item4": "Aktuella priser finns tillgängliga på prenumerationssidan i appen och i butikerna (App Store, Google Play).",
+        "item5": "Priserna kan ändras; eventuella ändringar meddelas före förnyelse för att möjliggöra avbokning (gäller inte livstid)."
+      },
+      "section3": {
+        "title": "3. Varaktighet, Förnyelse och Avbokning",
+        "item1": "<strong>Årsprenumeration</strong>: 12 månaders varaktighet från prenumerationsdatumet.",
+        "item2": "<strong>Livstidsprenumeration</strong>: 10 års varaktighet från prenumerationsdatumet, ingen förnyelse.",
+        "item3": "Förnyelse (årsvis): automatisk förnyelse vid varje period om inte avbokad i förväg.",
+        "item4": "Avbokning (årsvis): möjlig när som helst från app- eller butiksinställningar (App Store, Google Play). Träder i kraft vid slutet av aktuell period.",
+        "item5": "Livstid kan inte avbokas men omfattas fortfarande av den lagstadgade ångerrätten (se avsnitt 5)."
+      },
+      "section4": {
+        "title": "4. Betalning",
+        "item1": "Betalningar hanteras av RevenueCat via butiker (App Store, Google Play) eller Lemon Squeezy för webb. Vi lagrar inte dina kreditkortsuppgifter.",
+        "item2": "Vid betalningsfel (återkommande prenumerationer) kan premiumåtkomst stängas av tills det är löst.",
+        "item3": "Återbetalningar för köp via App Store eller Google Play måste begäras från respektive butik."
+      },
+      "section5": {
+        "title": "5. Ångerrätt",
+        "content": "Digital tjänst tillhandahållen efter köp. Om du begär omedelbar utförande före utgången av den 14-dagars lagstadgade perioden, bekräftar du att du avstår från din ångerrätt vid full tjänsteleverans. Utan uttryckligt avstående kan du utöva ångerrätten inom 14 dagar från köpet genom att skriva till support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Återbetalning",
+        "content": "Utöver den lagstadgade ångerrätten återbetalas inte redan påbörjade prenumerationer förutom vid tvingande bestämmelser eller väsentliga brister hänförliga till tjänsten."
+      },
+      "section7": {
+        "title": "7. Erbjudandeändringar",
+        "content": "Premiumfunktioner kan utvecklas. Borttagning av en väsentlig funktion meddelas i förväg och, om tillämpligt, med möjlighet att avboka kostnadsfritt före perioden."
+      },
+      "section8": {
+        "title": "8. Personuppgifter",
+        "content": "Behandling av fakturerings- och kontouppgifter beskrivs i <a>Integritetspolicyn</a>."
+      },
+      "section9": {
+        "title": "9. Kundtjänst",
+        "content": "För frågor, återbetalningar enligt ångerrätten eller klagomål:"
+      }
+    },
+    "mentions": {
+      "title": "Juridiskt meddelande",
+      "version": "Senast uppdaterad:",
+      "section1": {
+        "title": "1. Utgivare",
+        "company": "Företagsnamn:",
+        "companyValue": "AGUILAL Abdeslam (Enskild firma)",
+        "address": "Adress:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Frankrike",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "E-post:"
+      },
+      "section2": {
+        "title": "2. Publikationsdirektör",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-post:"
+      },
+      "section3": {
+        "title": "3. Hosting",
+        "content": "NeuroDual-applikationen hostas av:",
+        "webapp": "Webbapplikation",
+        "database": "Databas och Autentisering",
+        "databaseInfra": "Infrastruktur: Amazon Web Services (EU-region - eu-central-1)",
+        "monitoring": "Övervakning och Felspårning",
+        "subscriptions": "Prenumerationshantering",
+        "analytics": "Målgruppsmätning",
+        "analyticsInfra": "EU-hosting",
+        "advertising": "Annonsering (kostnadsfri mobilversion)",
+        "payments": "Webbbetalningar",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Immateriella Rättigheter",
+        "p1": "Alla element i NeuroDual-applikationen (text, grafik, ljud, källkod, logotyper, varumärken) skyddas av upphovsrätts- och varumärkeslagstiftning. Obehörig reproduktion, visning eller utnyttjande är förbjudet.",
+        "p2": "Källkoden för vissa funktioner använder öppna källkodsbibliotek vars respektive licenser respekteras."
+      },
+      "section5": {
+        "title": "5. Personuppgifter",
+        "content": "Behandlingen av personuppgifter beskrivs i vår <a>Integritetspolicy</a>.",
+        "responsible": "Personuppgiftsansvarig:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Medling och Tvistlösning",
+        "p1": "I enlighet med artiklarna L.611-1 och följande i den franska konsumentlagen kan konsumentanvändare, vid olöst tvist efter tidigare klagomål till vår kundtjänst, kostnadsfritt anlita en konsumentmedlare.",
+        "odr": "Europeiska plattformen för tvistlösning online (ODR):"
+      },
+      "section7": {
+        "title": "7. Juridiska Dokument",
+        "privacy": "Integritetspolicy",
+        "privacyNote": "(GDPR)",
+        "terms": "Användarvillkor",
+        "termsNote": "(AV)",
+        "cgv": "Försäljningsvillkor",
+        "cgvNote": "(Försäljning)"
+      },
+      "section8": {
+        "title": "8. Kontakt",
+        "content": "För frågor om detta juridiska meddelande:",
+        "email": "E-post:"
+      }
+    }
+  }
+}

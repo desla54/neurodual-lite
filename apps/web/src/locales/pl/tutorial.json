@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Samouczek",
+    "exitConfirm": "Opuścić samouczek?",
+    "exitWarning": "Postęp nie zostanie zapisany.",
+    "continue": "Kontynuuj",
+    "quit": "Wyjdź",
+    "stepLabel": "Krok {{step}}",
+    "previous": "Wstecz",
+    "restart": "Uruchom ponownie",
+    "next": "Dalej",
+    "startGame": "Rozpocznij",
+    "progress": "Licznik",
+    "tapToContinue": "Dotknij, aby kontynuować",
+    "controls": {
+      "position": "Pozycja",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Instrukcja"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Dobra robota. Samouczek zaliczony.",
+        "stay": "Prawie. Jeszcze trochę praktyki i będzie dobrze.",
+        "down": "Jeszcze niezaliczone. Powtórz samouczek, aby utrwalić podstawy."
+      },
+      "header": {
+        "up": "Samouczek zaliczony!",
+        "down": "Do powtórki",
+        "stay": "Prawie!"
+      },
+      "noteMinAssessment": "Uwaga: aby ocena była dokładniejsza, samouczki oceniają co najmniej 8 odpowiedzi.",
+      "guidance": {
+        "passed": "Można przejść do treningu swobodnego.",
+        "failed": "Zalecane jest powtórzenie tego samouczka przed przejściem do treningu."
+      },
+      "correctAnswers": "{{correct}}/{{total}} poprawnych odpowiedzi",
+      "actions": {
+        "backToHome": "Wróć do strony głównej",
+        "retryTutorial": "Powtórz samouczek",
+        "explainLevels": "Poznaj poziomy N (N)",
+        "goToTraining": "Przejdź do treningu",
+        "continueToTraining": "Kontynuuj do treningu"
+      }
+    },
+    "welcome": {
+      "title": "Wprowadzenie do treningu",
+      "description": "Dual N-Back trenuje pamięć roboczą, wymagając jednoczesnego śledzenia dwóch strumieni informacji: pozycji wizualnej i dźwięku. Ten samouczek prowadzi krok po kroku.",
+      "button": "Rozpocznij samouczek"
+    },
+    "timeline": {
+      "legend": "Oś czasu ułatwia porównanie — podczas gry jest ukryta",
+      "past": "Wcześniej",
+      "present": "Teraz"
+    },
+    "hub": {
+      "title": "Samouczki",
+      "subtitle": "Wybierz tryb do nauki",
+      "basics": {
+        "title": "Podstawy",
+        "description": "Poznaj odruch i rytm klasycznego Dual N-Back."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Opanuj rozmieszczanie czasowe na osi czasu."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Naucz się klasyfikować każdy bodziec."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Poznaj gesty aktywnego przypominania przez rysowanie."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Odtwórz pełną sekwencję z pamięci."
+      },
+      "soroban": {
+        "title": "Opanuj Soroban",
+        "description": "Naucz się japońskiego liczydła krok po kroku przez 8 progresywnych poziomów."
+      }
+    },
+    "place": {
+      "comingSoon": "Samouczek Place jest w trakcie tworzenia",
+      "cardPool": "Dostępne karty",
+      "slot": "Slot",
+      "observe": "Obserwuj: pozycję na siatce i literę audio.",
+      "buffer": "Drugi bodziec. Bufor N-back się zapełnia.",
+      "cardsAppear": "Pojawiają się karty! Reprezentują 3 ostatnie bodźce.",
+      "firstDrag": "Kliknij zaznaczoną kartę, potem slot N-2 (najstarszy).",
+      "timelineExplain": "Oś czasu pokazuje czas: N-2 = najstarsze, N = teraz.",
+      "positionN1": "Umieść środkową pozycję w slocie N-1.",
+      "positionN": "Świetnie! Na koniec umieść najnowszą pozycję (slot N).",
+      "audioIntro": "Teraz karty audio! Ta sama zasada.",
+      "audioN2": "Umieść pierwszą usłyszaną literę w slocie N-2.",
+      "audioN1": "Kontynuuj z literą środkową (slot N-1).",
+      "audioN": "Na koniec umieść najnowszą literę (slot N).",
+      "dualIntro": "Nowa próba! Umieść pozycje ORAZ litery.",
+      "dualPractice": "Umieść wszystkie 6 kart w odpowiednich slotach. Nie spiesz się!",
+      "rhythmExplain": "W prawdziwej rozgrywce czas będzie ograniczony.",
+      "autonomy": "Teraz kolej! Umieść wszystkie karty poprawnie.",
+      "conclusion": "Dobra robota! Opanowano podstawy Dual Place.",
+      "selectCard": "Wybierz kartę, potem kliknij jej slot",
+      "clickSlot": "Kliknij właściwy slot, aby umieścić kartę",
+      "wrongSlot": "To nie ten slot! Spójrz na kolejność czasową.",
+      "wrongCard": "To nie ta karta. Znajdź tę, która pasuje do slotu.",
+      "tryAgain": "Spróbuj ponownie! Właściwy slot jest podświetlony."
+    },
+    "memo": {
+      "comingSoon": "Samouczek Memo jest w trakcie tworzenia",
+      "selectPosition": "Wybierz pozycję",
+      "selectAudio": "Wybierz literę",
+      "clickToRecall": "Kliknij slot, aby przypomnieć wartość",
+      "validate": "Zatwierdź",
+      "observeFirst": "Pierwszy bodziec. Zapamiętaj pozycję ORAZ literę!",
+      "observeSecond": "Drugi bodziec. Zapamiętuj dalej.",
+      "observeThird": "Trzeci bodziec. Bufor pełny. Przygotuj się!",
+      "recallIntro": "Siatka znika! Przypomnij z pamięci. Kliknij slot N-2.",
+      "firstRecall": "Kliknij slot N-2. Jaka była pierwsza pozycja?",
+      "feedbackExplain": "Zielony = poprawnie. Czerwony = błąd. Można poprawić do 3 razy!",
+      "multiSlot": "Kontynuuj! Odtwórz pozycje N-1 i N.",
+      "newStimulus": "Nowy bodziec! Okno N-back przesuwa się o jeden.",
+      "windowShift": "Okno się przesunęło. Stare N-2 wypada, nowe N wchodzi.",
+      "fullPosition": "Odtwórz wszystkie 3 pozycje. Skup się!",
+      "audioIntro": "Nowy bodziec. Teraz dodajemy przypominanie audio!",
+      "firstAudioRecall": "Kliknij slot audio N-2. Jaka litera?",
+      "fullAudio": "Kontynuuj z literami N-1 i N.",
+      "dualIntro": "W prawdziwej rozgrywce odtwarzasz pozycje ORAZ litery jednocześnie.",
+      "dualPractice": "Odtwórz wszystkie 6 pól, potem kliknij Zatwierdź.",
+      "correctionExplain": "Jeśli popełnisz błąd, kliknij ponownie, aby poprawić. Maks. 3 razy.",
+      "withCorrection": "Spróbuj! Jeśli jest źle, popraw klikając ponownie.",
+      "conclusion": "Świetnie! Opanowano aktywne przypominanie. Rozpocznij sesję!",
+      "wrongAnswer": "To nie to. Zastanów się: jaki bodziec był wtedy?",
+      "tryAgain": "Spróbuj ponownie! Nadal można poprawić.",
+      "maxCorrections": "Wykorzystano 3 poprawki. Ten slot jest zablokowany.",
+      "validateHint": "Wszystkie sloty są wypełnione. Kliknij Zatwierdź!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Witaj w Dual Pick! Naucz się klasyfikować każdy bodziec.",
+        "hud": "U góry: postęp w samouczku.",
+        "grid": "Siatka jest podzielona na 3 strefy: GÓRA, ŚRODEK, DÓŁ.",
+        "controls": "Te przyciski służą do klasyfikacji. Pozycja po lewej, Dźwięk po prawej.",
+        "outro": "Gotowe? Zaczynajmy od klasyfikacji pozycji!"
+      },
+      "intro": "W Dual Pick klasyfikuj każdy bodziec według dwóch kryteriów: strefy siatki i typu dźwięku.",
+      "gridExplain": "Siatka ma 3 strefy: GÓRA (górny rząd), ŚRODEK (centrum), DÓŁ (dolny rząd).",
+      "positionHaut": "Kwadrat jest u góry. Kliknij GÓRA.",
+      "positionMilieu": "Kwadrat jest w środku. Kliknij ŚRODEK.",
+      "positionBas": "Kwadrat jest na dole. Kliknij DÓŁ.",
+      "positionRecap": "Świetnie! GÓRA = górny rząd, ŚRODEK = centrum, DÓŁ = dolny rząd.",
+      "positionPractice": "Teraz kolej! Sklasyfikuj tę pozycję.",
+      "soundIntro": "Teraz dźwięki. Są dwa typy: SAMOGŁOSKA (A, E, I, O, U) i SPÓŁGŁOSKA (wszystkie pozostałe).",
+      "soundVoyelle": "Słychać A. To samogłoska. Kliknij SAMOGŁOSKA.",
+      "soundConsonne": "Słychać T. To spółgłoska. Kliknij SPÓŁGŁOSKA.",
+      "soundRecap": "Zapamiętaj: A, E, I, O, U = SAMOGŁOSKI. Reszta = SPÓŁGŁOSKI.",
+      "soundPractice": "Teraz kolej! Sklasyfikuj ten dźwięk.",
+      "dualIntro": "W prawdziwej rozgrywce klasyfikujesz OBA jednocześnie: pozycję ORAZ dźwięk.",
+      "dualFirst": "Sklasyfikuj pozycję ORAZ dźwięk. Nie spiesz się.",
+      "dualSecond": "Kontynuuj. Pozycja + Dźwięk.",
+      "dualThird": "Świetnie! Jeszcze jedna próba.",
+      "rhythm": "W sesji utrzymuj stały rytm. Płynność przychodzi z praktyką.",
+      "conclusion": "Dobra robota! Opanowano klasyfikację. Rozpocznij sesję Dual Pick!",
+      "buttons": {
+        "top": "GÓRA",
+        "middle": "ŚRODEK",
+        "bottom": "DÓŁ",
+        "vowel": "SAMOGŁOSKA",
+        "consonant": "SPÓŁGŁOSKA"
+      },
+      "feedback": {
+        "correctPosition": "Dobra strefa!",
+        "correctSound": "Dobry typ dźwięku!",
+        "wrongPosition": "To nie ta strefa. Spójrz, gdzie jest kwadrat.",
+        "wrongSound": "To nie to. A, E, I, O, U = samogłoski."
+      }
+    },
+    "trace": {
+      "intro": "Witaj w Dual Trace. Bez przycisków: aktywnie odtwarzaj poprzednią pozycję gestem przeciągnięcia.",
+      "observe": "Zapamiętaj tę pozycję. W następnym kroku przeciągnij w jej kierunku.",
+      "firstSwipe": "Pierwsze przeciągnięcie! Przesuń palcem w stronę pozycji z poprzedniej tury. Strzałka prowadzi.",
+      "firstAudioMatch": "Ta sama litera co w poprzedniej turze! Przeciągnij do pozycji ORAZ stuknij dwukrotnie, aby zgłosić dopasowanie audio.",
+      "audioMatch": "Wykryto dopasowanie audio! Przeciągnij + stuknij dwukrotnie.",
+      "swipe1": "Przeciągnij w stronę pozycji N-1. Zapamiętaj, gdzie był kwadrat.",
+      "swipe2": "Kontynuuj. Każde przeciągnięcie wzmacnia pamięć aktywną.",
+      "swipe3": "Aktywne przypominanie jest trudniejsze niż rozpoznawanie.",
+      "swipe4": "Skup się. Wyobraź sobie pozycję przed przeciągnięciem.",
+      "swipe5": "Świetnie! Opanowano gest przypominania.",
+      "complete": "Samouczek ukończony. Można przejść do treningu Dual Trace.",
+      "tapTarget": "Dotknij pozycji z poprzedniej tury",
+      "tapTargetAndAudio": "Dotknij pozycji celu, potem Audio"
+    },
+    "ui": {
+      "startExercise": "Rozpocznij ćwiczenie",
+      "score": "Wynik: {{current}}/{{total}}",
+      "complete": "Zakończ",
+      "correct": "✓ Poprawnie!",
+      "expectedMatch": "✗ Oczekiwano: Dopasowanie",
+      "expectedNoMatch": "✗ Oczekiwano: Brak dopasowania",
+      "memorize": "Zapamiętaj pozycję...",
+      "memorizeLetter": "Zapamiętaj literę...",
+      "matchDetected": "✓ Wykryto dopasowanie!",
+      "noMatch": "✗ Brak dopasowania",
+      "matchExplanation": "Dopasowanie! Krok {{current}} = Krok {{previous}}",
+      "exerciseComplete": "Ćwiczenie ukończone!",
+      "match": "Dopasowanie",
+      "noMatchButton": "Brak dopasowania",
+      "none": "Brak",
+      "both": "Oba",
+      "position": "Pozycja",
+      "audio": "Audio",
+      "posShort": "Poz."
+    },
+    "spotlight": {
+      "hud": "Twój panel: poziom N-back, licznik tur i kontrolki sesji.",
+      "timeline": "Oś czasu przechowuje 3 ostatnie bodźce, aby ułatwić porównanie. W prawdziwej rozgrywce ta pomoc jest ukryta.",
+      "grid": "Siatka: w każdej turze jedna komórka zapala się w jednej z 8 pozycji. Jednocześnie wypowiadana jest litera.",
+      "controls": "Przyciski odpowiedzi. Naciśnij, gdy wykryjesz powtórzenie.",
+      "intro": "Witaj! Poznaj interfejs gry.",
+      "continue": "Kontynuuj",
+      "outro": "Przejdź teraz do sesji prowadzonej. Obserwuj animacje i wykonuj polecenia.",
+      "start": "Rozpocznij",
+      "tapToContinue": "Dotknij w dowolnym miejscu, aby kontynuować"
+    },
+    "speed": {
+      "label": "Szybkość: {{speed}}",
+      "pauseToChange": "Wstrzymaj, aby zmienić szybkość"
+    },
+    "assessment": {
+      "title": "Faza oceniana",
+      "subtitle": "Od teraz krótki klasyczny przebieg.",
+      "body": "Tempo jest ciągłe i nie będzie już podpowiedzi. Graj jak w prawdziwej sesji.",
+      "goal": "Cel: co najmniej {{min}}% trafności w {{count}} próbach.",
+      "cta": "Zaczynaj"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Zrozum poziomy N",
+        "desc": "Poznano N=2. Oto jak uogólnia się od N=1 do N=3.",
+        "start": "Rozpocznij",
+        "done": "Zakończ",
+        "skip": "Pomiń",
+        "hud": "N = liczba tur wstecz.",
+        "present": "N = bieżący bodziec (teraz).",
+        "past": "Porównaj z N-{{n}}.",
+        "pressPosition": "Jeśli pozycja się powtarza, naciśnij Pozycja.",
+        "pressAudio": "Jeśli dźwięk się powtarza, naciśnij Audio.",
+        "annotation": {
+          "n1": "N=1: porównaj bieżący bodziec (N) z poprzednią turą (N-1).",
+          "n2": "N=2: porównaj bieżący bodziec (N) z bodźcem sprzed dwóch tur (N-2).",
+          "n3": "N=3: porównaj bieżący bodziec (N) z bodźcem sprzed trzech tur (N-3)."
+        },
+        "outroTitle": "I tak dalej…",
+        "outroBody": "Jeśli przejdziesz na N=4, porównasz z N-4. Zasada się nie zmienia — rośnie tylko odległość."
+      }
+    },
+    "annotations": {
+      "intro": "Obserwuj: komórka zapala się na siatce, a jednocześnie wypowiadana jest litera.",
+      "observe": "Zapamiętaj. Oś czasu zapisuje bodźce.",
+      "firstComparison": "Historia jest już wystarczająca do porównania.",
+      "firstPositionMatch": "Ta sama pozycja co 2 tury temu! Porównaj N i N-2 na osi czasu, potem naciśnij Pozycja.",
+      "firstAudioMatch": "Ta sama litera co 2 tury temu! Porównaj N i N-2 na osi czasu, potem naciśnij Audio.",
+      "firstDualMatch": "Podwójne dopasowanie! Powtarza się pozycja ORAZ dźwięk. Naciśnij oba przyciski.",
+      "positionMatch": "Ta sama pozycja. Naciśnij Pozycja.",
+      "audioMatch": "Ten sam dźwięk. Naciśnij Audio.",
+      "dualMatch": "Oba pasują. Naciśnij Pozycja i Audio.",
+      "noMatch": "Brak dopasowania w tej turze. Zapamiętuj dalej.",
+      "noMatch1": "Tym razem bez powtórzenia. Dotknij, aby kontynuować.",
+      "noMatch2": "Nadal bez dopasowania. Skup się na przepływie: pozycja + dźwięk.",
+      "noMatch3": "Nic do zgłoszenia. Zawsze porównuj z N-2 na osi czasu.",
+      "noMatch4": "Brak dopasowania. Tempo teraz rośnie.",
+      "noMatch5": "Kontynuuj. Dopasowania pojawiają się nieprzewidywalnie.",
+      "noMatch6": "Brak dopasowania. Trzymaj się — rytm już opanowany.",
+      "noMatch7": "Ostatnia prosta. Skup się.",
+      "noMatch8": "Prawie koniec. Jeszcze kilka bodźców.",
+      "complete": "Gratulacje! Opanowano podstawy Dual N-Back. Gotowe na trening?"
+    },
+    "exit": {
+      "confirm": "Wyjdź",
+      "title": "Opuścić samouczek?",
+      "message": "Twój postęp zostanie zapisany. Możesz wrócić później."
+    },
+    "recovery": {
+      "message": "Wykryto przerwaną sesję.",
+      "staleMessage": "Wykryto przerwaną sesję sprzed ponad 30 minut.",
+      "resume": "Wznów",
+      "startFresh": "Zacznij od nowa",
+      "title": "Wznowić samouczek?"
+    }
+  }
+}

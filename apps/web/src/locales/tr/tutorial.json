@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Öğretici",
+    "exitConfirm": "Öğreticiden çık?",
+    "exitWarning": "İlerlemen kaydedilmeyecek.",
+    "continue": "Devam",
+    "quit": "Çık",
+    "stepLabel": "Adım {{step}}",
+    "previous": "Önceki",
+    "restart": "Yeniden başlat",
+    "next": "Sonraki",
+    "startGame": "Başla",
+    "progress": "Sayaç",
+    "tapToContinue": "Devam etmek için dokun",
+    "controls": {
+      "position": "Konum",
+      "audio": "Ses"
+    },
+    "annotation": {
+      "label": "Talimat"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Güzel iş. Öğreticiyi geçtin.",
+        "stay": "Neredeyse başardın. Biraz daha pratik yapman gerekiyor.",
+        "down": "Henüz doğrulanmadı. Temelleri pekiştirmek için öğreticiyi tekrar dene."
+      },
+      "header": {
+        "up": "Öğretici tamamlandı!",
+        "down": "Gözden geçir",
+        "stay": "Neredeyse!"
+      },
+      "noteMinAssessment": "Not: Daha doğru bir değerlendirme için öğreticiler en az 8 yanıtı değerlendirir.",
+      "guidance": {
+        "passed": "Serbest eğitime hazırsın.",
+        "failed": "Eğitime geçmeden önce bu öğreticiyi tekrar denemenizi öneririz."
+      },
+      "correctAnswers": "{{correct}}/{{total}} doğru yanıt",
+      "actions": {
+        "backToHome": "Ana sayfaya dön",
+        "retryTutorial": "Öğreticiyi tekrar dene",
+        "explainLevels": "N seviyelerini anla (N)",
+        "goToTraining": "Eğitime git",
+        "continueToTraining": "Eğitime devam et"
+      }
+    },
+    "welcome": {
+      "title": "Eğitime giriş",
+      "description": "Dual N-Back, iki bilgi akışını aynı anda takip etmenizi gerektirerek çalışma belleğinizi zorlar: görsel bir konum ve bir ses. Bu öğretici seni adım adım yönlendirir.",
+      "button": "Öğreticiye başla"
+    },
+    "timeline": {
+      "legend": "Zaman çizelgesi karşılaştırmaya yardımcı olur — oyun sırasında gizlidir",
+      "past": "Geçmiş",
+      "present": "Şimdi"
+    },
+    "hub": {
+      "title": "Öğreticiler",
+      "subtitle": "Öğrenmek için bir mod seç",
+      "basics": {
+        "title": "Temel bilgiler",
+        "description": "Klasik Dual N-Back'in refleksini ve ritmini öğren."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Zaman çizelgesinde zamansal yerleştirmeyi öğren."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Her uyaranı zamansal referansıyla etiketle (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Çizim yoluyla aktif geri çağırma hareketlerini öğren."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Tam diziyi bellekten yeniden oluştur."
+      },
+      "soroban": {
+        "title": "Soroban Ustalığı",
+        "description": "8 aşamalı ilerlemede Japon abaküsünü adım adım öğren."
+      }
+    },
+    "place": {
+      "comingSoon": "Place öğreticisi geliştirme aşamasında",
+      "cardPool": "Mevcut kartlar",
+      "slot": "Yuva",
+      "observe": "Gözlemle: ızgarada bir konum ve bir sesli harf.",
+      "buffer": "İkinci uyaran. N-back tamponu dolmaya başlıyor.",
+      "cardsAppear": "Kartlar belirdi! Son 3 uyaranı temsil ediyorlar.",
+      "firstDrag": "İşaretli karta tıkla, sonra N-2 yuvasına (en eski).",
+      "timelineExplain": "Zaman çizelgesi zamanı gösterir: N-2 = en eski, N = şimdi.",
+      "positionN1": "Ortadaki konumu N-1 yuvasına yerleştir.",
+      "positionN": "Harika! En son konumla bitir (N yuvası).",
+      "audioIntro": "Şimdi ses kartları! Aynı prensip.",
+      "audioN2": "Duyduğun ilk harfi N-2 yuvasına yerleştir.",
+      "audioN1": "Ortadaki harfle devam et (N-1 yuvası).",
+      "audioN": "En son harfle bitir (N yuvası).",
+      "dualIntro": "Yeni deneme! Konumları VE harfleri yerleştir.",
+      "dualPractice": "6 kartın hepsini doğru yuvalara yerleştir. Acele etme!",
+      "rhythmExplain": "Gerçek oyunda süren sınırlı olacak.",
+      "autonomy": "Sıra sende! Tüm kartları doğru yerleştir.",
+      "conclusion": "Aferin! Dual Place'in temellerini öğrendin.",
+      "selectCard": "Bir kart seç, sonra yuvasına tıkla",
+      "clickSlot": "Kartı yerleştirmek için doğru yuvaya tıkla",
+      "wrongSlot": "O yuva değil! Zamansal sıraya bak.",
+      "wrongCard": "O kart değil. Yuvaya uyan kartı bul.",
+      "tryAgain": "Tekrar dene! Doğru yuva vurgulanıyor."
+    },
+    "memo": {
+      "comingSoon": "Memo öğreticisi geliştirme aşamasında",
+      "selectPosition": "Konumu seç",
+      "selectAudio": "Harfi seç",
+      "clickToRecall": "Değeri hatırlamak için bir yuvaya tıkla",
+      "validate": "Doğrula",
+      "observeFirst": "İlk uyaran. Hem konumu HEM de harfi ezberle!",
+      "observeSecond": "İkinci uyaran. Ezberlemeye devam et.",
+      "observeThird": "Üçüncü uyaran. Tampon tamamlandı. Hazır ol!",
+      "recallIntro": "Izgara kayboldu! Bellekten hatırla. N-2 yuvasına tıkla.",
+      "firstRecall": "N-2 yuvasına tıkla. İlk konum neydi?",
+      "feedbackExplain": "Yeşil = doğru. Kırmızı = hata. 3 kereye kadar düzeltebilirsin!",
+      "multiSlot": "Devam! N-1 ve N konumlarını hatırla.",
+      "newStimulus": "Yeni uyaran! N-back penceresi bir kaydı.",
+      "windowShift": "Pencere kaydı. Eski N-2 çıktı, yeni N girdi.",
+      "fullPosition": "3 konumun hepsini hatırla. Odaklan!",
+      "audioIntro": "Yeni uyaran. Şimdi ses geri çağırma ekliyoruz!",
+      "firstAudioRecall": "Ses N-2 yuvasına tıkla. Hangi harf?",
+      "fullAudio": "N-1 ve N harfleriyle devam et.",
+      "dualIntro": "Gerçek oyunda konumları VE harfleri birlikte hatırlarsın.",
+      "dualPractice": "6 hücrenin hepsini hatırla ve Doğrula'ya tıkla.",
+      "correctionExplain": "Hata yaparsan düzeltmek için tekrar tıkla. Maks 3 kez.",
+      "withCorrection": "Dene! Yanlışsan tekrar tıklayarak düzelt.",
+      "conclusion": "Mükemmel! Aktif geri çağırmayı öğrendin. Bir oturum başlat!",
+      "wrongAnswer": "Bu değil. Düşün, o anda hangi uyaran vardı?",
+      "tryAgain": "Tekrar dene! Hâlâ düzeltebilirsin.",
+      "maxCorrections": "3 düzeltmeye ulaşıldı. Bu yuva kilitlendi.",
+      "validateHint": "Tüm yuvalar dolu. Doğrula'ya tıkla!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Dual Pick'e hoş geldin! Her uyaranı sınıflandırmayı öğren.",
+        "hud": "Üst: öğreticideki ilerlemen.",
+        "grid": "Izgara 3 bölgeye ayrılmıştır: ÜST, ORTA, ALT.",
+        "controls": "Bu düğmeler sınıflandırır. Sol tarafta konum, sağ tarafta ses.",
+        "outro": "Hazır mısın? Konum sınıflandırmasıyla başlayalım!"
+      },
+      "intro": "Dual Pick'te her uyaranı iki kritere göre sınıflandırırsın: ızgara bölgesi ve ses tipi.",
+      "gridExplain": "Izgaranın 3 bölgesi var: ÜST (üst satır), ORTA (merkez), ALT (alt satır).",
+      "positionHaut": "Kare üstte. ÜST'e tıkla.",
+      "positionMilieu": "Kare ortada. ORTA'ya tıkla.",
+      "positionBas": "Kare altta. ALT'a tıkla.",
+      "positionRecap": "Mükemmel! ÜST = üst satır, ORTA = merkez, ALT = alt satır.",
+      "positionPractice": "Sıra sende! Bu konumu sınıflandır.",
+      "soundIntro": "Şimdi sesler. İki tür var: ÜNLÜ (A, E, I, O, U) ve ÜNSÜZ (diğerleri).",
+      "soundVoyelle": "A harfini duyuyorsun. Ünlü. ÜNLÜ'ye tıkla.",
+      "soundConsonne": "T harfini duyuyorsun. Ünsüz. ÜNSÜZ'e tıkla.",
+      "soundRecap": "Hatırla: A, E, I, O, U = ÜNLÜ. Geri kalanı = ÜNSÜZ.",
+      "soundPractice": "Sıra sende! Bu sesi sınıflandır.",
+      "dualIntro": "Gerçek oyunda İKİSİNİ aynı anda sınıflandırırsın: konum VE ses.",
+      "dualFirst": "Konumu VE sesi sınıflandır. Acele etme.",
+      "dualSecond": "Devam et. Konum + Ses.",
+      "dualThird": "Harika! Pratik için bir tane daha.",
+      "rhythm": "Oturumda düzenli bir ritim tut. Akıcılık pratikle gelir.",
+      "conclusion": "Aferin! Sınıflandırmayı öğrendin. Bir Dual Pick oturumu başlat!",
+      "buttons": {
+        "top": "ÜST",
+        "middle": "ORTA",
+        "bottom": "ALT",
+        "vowel": "ÜNLÜ",
+        "consonant": "ÜNSÜZ"
+      },
+      "feedback": {
+        "correctPosition": "Doğru bölge!",
+        "correctSound": "Doğru ses tipi!",
+        "wrongPosition": "O bölge değil. Karenin nerede olduğuna bak.",
+        "wrongSound": "Bu değil. A, E, I, O, U = ünlüler."
+      }
+    },
+    "trace": {
+      "intro": "Dual Trace'e hoş geldin. Burada düğme yok: önceki konumu kaydırma hareketiyle aktif olarak hatırlayacaksın.",
+      "observe": "Bu konumu ezberle. Sonraki turda ona doğru kaydırman gerekecek.",
+      "firstSwipe": "İlk kaydırma! Parmağını önceki turun konumuna doğru kaydır. Ok seni yönlendirir.",
+      "firstAudioMatch": "Önceki turla aynı harf! Konuma kaydır VE ses eşleşmesini belirtmek için çift dokun.",
+      "audioMatch": "Ses eşleşmesi algılandı! Kaydır + çift dokun.",
+      "swipe1": "N-1 konumuna doğru kaydır. Karenin nerede olduğunu hatırla.",
+      "swipe2": "Devam et. Her kaydırma aktif belleğini güçlendirir.",
+      "swipe3": "Aktif geri çağırma basit tanımadan daha zorludur.",
+      "swipe4": "Odaklanmaya devam et. Kaydırmadan önce konumu görselleştir.",
+      "swipe5": "Mükemmel! Geri çağırma hareketini öğrendin.",
+      "complete": "Öğretici tamamlandı. Dual Trace eğitimine hazırsın.",
+      "tapTarget": "Önceki turun konumuna dokun",
+      "tapTargetAndAudio": "Hedef konuma dokun, sonra Ses'e"
+    },
+    "ui": {
+      "startExercise": "Alıştırmayı başlat",
+      "score": "Puan: {{current}}/{{total}}",
+      "complete": "Tamamlandı",
+      "correct": "✓ Doğru!",
+      "expectedMatch": "✗ Beklenen: Eşleşme",
+      "expectedNoMatch": "✗ Beklenen: Eşleşme yok",
+      "memorize": "Konumu ezberle...",
+      "memorizeLetter": "Harfi ezberle...",
+      "matchDetected": "✓ Eşleşme algılandı!",
+      "noMatch": "✗ Eşleşme yok",
+      "matchExplanation": "Eşleşme! Adım {{current}} = Adım {{previous}}",
+      "exerciseComplete": "Alıştırma tamamlandı!",
+      "match": "Eşleşme",
+      "noMatchButton": "Eşleşme yok",
+      "none": "Yok",
+      "both": "İkisi de",
+      "position": "Konum",
+      "audio": "Ses",
+      "posShort": "Kon"
+    },
+    "spotlight": {
+      "hud": "Panon: N-back seviyesi, tur sayacı ve oturum kontrolleri.",
+      "timeline": "Zaman çizelgesi karşılaştırma için son 3 uyaranı tutar. Gerçek oyunda bu yardım gizlidir.",
+      "grid": "Izgara: her turda 8 konumdan birinde bir hücre yanar. Aynı anda bir harf okunur.",
+      "controls": "Yanıt düğmelerin. Tekrar algıladığında bas.",
+      "intro": "Hoş geldin! Oyun arayüzünü birlikte keşfedelim.",
+      "continue": "Devam",
+      "outro": "Şimdi rehberli bir oturuma geçelim. Animasyonları izle ve talimatları takip et.",
+      "start": "Başla",
+      "tapToContinue": "Devam etmek için herhangi bir yere dokun"
+    },
+    "speed": {
+      "label": "Hız: {{speed}}",
+      "pauseToChange": "Hızı değiştirmek için duraklat"
+    },
+    "assessment": {
+      "title": "Değerlendirme aşaması",
+      "subtitle": "Bundan sonrası kısa bir klasik çalışma.",
+      "body": "Tempo sürekli ve artık ipucu almayacaksın. Gerçek bir oturum gibi oyna.",
+      "goal": "Hedef: {{count}} deneme üzerinden en az %{{min}} doğruluk.",
+      "cta": "Hadi başlayalım"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N seviyelerini anlama",
+        "desc": "N=2'yi öğrendin. İşte N=1'den N=4'e nasıl genelleştirilir.",
+        "start": "Başla",
+        "done": "Bitir",
+        "skip": "Atla",
+        "hud": "N = kaç tur geriye.",
+        "present": "N = mevcut uyaran (şimdi).",
+        "past": "N-{{n}} ile karşılaştır.",
+        "pressPosition": "Konum tekrarlanırsa Konum'a bas.",
+        "pressAudio": "Ses tekrarlanırsa Ses'e bas.",
+        "annotation": {
+          "n1": "N=1: mevcut uyaranı (N) önceki turla (N-1) karşılaştır.",
+          "n2": "N=2: mevcut uyaranı (N) iki tur öncesiyle (N-2) karşılaştır.",
+          "n3": "N=3: mevcut uyaranı (N) üç tur öncesiyle (N-3) karşılaştır."
+        },
+        "outroTitle": "Ve böyle devam eder…",
+        "outroBody": "N=5'e geçersen N-5 ile karşılaştırırsın. Kural aynı kalır; sadece mesafe artar."
+      }
+    },
+    "annotations": {
+      "intro": "Gözlemle: ızgarada bir hücre yanar ve aynı anda bir harf okunur.",
+      "observe": "Ezberle. Zaman çizelgesi uyaranları takip eder.",
+      "firstComparison": "Artık karşılaştırma için yeterli geçmişin var.",
+      "firstPositionMatch": "2 tur öncekiyle aynı konum! Zaman çizelgesinde N ve N-2'yi karşılaştır, sonra Konum'a bas.",
+      "firstAudioMatch": "2 tur öncekiyle aynı harf! Zaman çizelgesinde N ve N-2'yi karşılaştır, sonra Ses'e bas.",
+      "firstDualMatch": "Çift eşleşme! Hem konum HEM de ses tekrarlanıyor. İki düğmeye de bas.",
+      "positionMatch": "Aynı konum. Konum'a bas.",
+      "audioMatch": "Aynı ses. Ses'e bas.",
+      "dualMatch": "İkisi de eşleşiyor. Konum ve Ses'e bas.",
+      "noMatch": "Bu turda eşleşme yok. Ezberlemeye devam et.",
+      "noMatch1": "Bu sefer tekrar yok. Devam etmek için dokun.",
+      "noMatch2": "Hâlâ eşleşme yok. Konum + ses akışına odaklan.",
+      "noMatch3": "Raporlanacak bir şey yok. Her zaman zaman çizelgesinde N-2 ile karşılaştır.",
+      "noMatch4": "Eşleşme yok. Tempo artıyor.",
+      "noMatch5": "Devam et. Eşleşmeler öngörülemez şekilde gelir.",
+      "noMatch6": "Eşleşme yok. Devam et, ritmi yakaladın.",
+      "noMatch7": "Son düzlük. Odaklanmaya devam et.",
+      "noMatch8": "Neredeyse bitti. Birkaç uyaran daha.",
+      "complete": "Tebrikler! Dual N-Back'in temellerini öğrendin. Eğitime hazır mısın?"
+    },
+    "exit": {
+      "confirm": "Çık",
+      "title": "Öğreticiden çık?",
+      "message": "İlerlemen kaydedilecek. Daha sonra devam edebilirsin."
+    },
+    "recovery": {
+      "message": "Yarıda kalmış bir oturum bulundu.",
+      "staleMessage": "30 dakikadan eski yarıda kalmış bir oturum bulundu.",
+      "resume": "Devam et",
+      "startFresh": "Yeniden başla",
+      "title": "Öğreticiye devam et?"
+    }
+  }
+}

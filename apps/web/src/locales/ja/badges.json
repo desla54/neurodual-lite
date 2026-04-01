@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "継続",
+      "performance": "パフォーマンス",
+      "resilience": "回復力",
+      "exploration": "探索",
+      "milestone": "マイルストーン",
+      "cognitive": "認知"
+    },
+    "first_session": {
+      "name": "覚醒ニューロン",
+      "description": "初めてのセッションを完了。"
+    },
+    "sessions_10": {
+      "name": "柱 (ブロンズ)",
+      "description": "10セッション完了。"
+    },
+    "sessions_25": {
+      "name": "柱 (シルバー)",
+      "description": "25セッション完了。"
+    },
+    "marathoner": {
+      "name": "柱 (ゴールド)",
+      "description": "50セッション完了。"
+    },
+    "streak_3": {
+      "name": "芽生える習慣",
+      "description": "3日連続。"
+    },
+    "streak_7": {
+      "name": "毎日の習慣",
+      "description": "7日連続。"
+    },
+    "streak_14": {
+      "name": "根付いた習慣",
+      "description": "14日連続。"
+    },
+    "streak_30": {
+      "name": "鉄の規律",
+      "description": "30日連続。"
+    },
+    "early_bird": {
+      "name": "早起き鳥",
+      "description": "午前8時前のセッションを5日間達成。"
+    },
+    "night_owl": {
+      "name": "夜のフクロウ",
+      "description": "午後10時以降のセッションを5日間達成。"
+    },
+    "brain_n3": {
+      "name": "鋭い頭脳",
+      "description": "レベルN-3に到達。"
+    },
+    "brain_n4": {
+      "name": "逞しい頭脳",
+      "description": "レベルN-4に到達。"
+    },
+    "brain_n5": {
+      "name": "オリンピック頭脳",
+      "description": "レベルN-5に到達。"
+    },
+    "brain_n7": {
+      "name": "認知エリート",
+      "description": "レベルN-7に到達。"
+    },
+    "brain_n10": {
+      "name": "超人",
+      "description": "レベルN-10に到達。"
+    },
+    "sniper": {
+      "name": "スナイパー",
+      "description": "N ≥ 2で正確率 > 90%。"
+    },
+    "accuracy_95": {
+      "name": "外科的精密さ",
+      "description": "N ≥ 2で正確率 > 95%。"
+    },
+    "accuracy_98": {
+      "name": "レーザー",
+      "description": "N ≥ 2で正確率 > 98%。"
+    },
+    "untouchable": {
+      "name": "アンタッチャブル",
+      "description": "N ≥ 2で完璧なセッション（エラー0）。"
+    },
+    "rt_500": {
+      "name": "素早い反射",
+      "description": "平均反応時間 < 500ms（正確率≥70%）。"
+    },
+    "flash": {
+      "name": "閃光",
+      "description": "平均反応時間 < 400ms（正確率≥70%）。"
+    },
+    "rt_300": {
+      "name": "稲妻",
+      "description": "平均反応時間 < 300ms（正確率≥70%）。"
+    },
+    "consistent": {
+      "name": "安定",
+      "description": "RT標準偏差 < 100ms（≥10回の回答が必要）。"
+    },
+    "dprime_master": {
+      "name": "d'マスター",
+      "description": "1セッションでd-prime > 3.0。"
+    },
+    "dprime_4": {
+      "name": "SDTエキスパート",
+      "description": "1セッションでd-prime > 4.0。"
+    },
+    "no_pause": {
+      "name": "ノンストップ",
+      "description": "正確率≥75%で一時停止なし5セッション連続。"
+    },
+    "steady_hands": {
+      "name": "安定した手",
+      "description": "セッション中の誤入力なし（正確率≥80%）。"
+    },
+    "zen_master": {
+      "name": "禅マスター",
+      "description": "途中退出なしで10セッション。"
+    },
+    "comeback_kid": {
+      "name": "逆転劇",
+      "description": "レベルが下がった後にレベルアップする。"
+    },
+    "persistent": {
+      "name": "粘り強い",
+      "description": "失敗後に同日3セッション。"
+    },
+    "second_wind": {
+      "name": "セカンドウインド",
+      "description": "前半と後半の間でd-primeを改善（d′ ≥ 2.0必要）。"
+    },
+    "plateau_breaker": {
+      "name": "停滞打破",
+      "description": "同じレベルで10回以上のセッション後に進歩する。"
+    },
+    "no_surrender": {
+      "name": "不屈",
+      "description": "途中退出なしで25セッション。"
+    },
+    "ironwill": {
+      "name": "鉄の意志",
+      "description": "途中退出なしで50セッション。"
+    },
+    "audiophile": {
+      "name": "聴覚派",
+      "description": "聴覚 > 80%、視覚 < 70%。"
+    },
+    "eagle_eye": {
+      "name": "鷹の目",
+      "description": "視覚 > 80%、聴覚 < 70%。"
+    },
+    "synchronized": {
+      "name": "シンクロ",
+      "description": "聴覚と視覚のスコアが5%以内（≥60%必要）。"
+    },
+    "dual_master": {
+      "name": "Dualマスター",
+      "description": "同セッションで聴覚・視覚ともに > 85%（≥6ルアー/モダリティ）。"
+    },
+    "dual_elite": {
+      "name": "Dualエリート",
+      "description": "N ≥ 3で同セッション、聴覚・視覚ともに > 90%（≥6ルアー/モダリティ）。"
+    },
+    "centurion": {
+      "name": "百人隊長",
+      "description": "100セッション完了。"
+    },
+    "sessions_250": {
+      "name": "伝説 (エメラルド)",
+      "description": "250セッション完了。"
+    },
+    "sessions_500": {
+      "name": "不滅 (ダイヤモンド)",
+      "description": "500セッション完了。"
+    },
+    "trials_500": {
+      "name": "修行者",
+      "description": "累計500試行プレイ。"
+    },
+    "trials_1000": {
+      "name": "鍛錬済み",
+      "description": "累計1,000試行プレイ。"
+    },
+    "trials_5000": {
+      "name": "熟練者",
+      "description": "累計5,000試行プレイ。"
+    },
+    "trials_10k": {
+      "name": "10,000試行",
+      "description": "累計10,000試行プレイ。"
+    },
+    "trials_50k": {
+      "name": "巨神",
+      "description": "累計50,000試行プレイ。"
+    },
+    "streak_90": {
+      "name": "完璧な四半期",
+      "description": "90日連続。"
+    },
+    "streak_365": {
+      "name": "完璧な1年",
+      "description": "365日連続。"
+    },
+    "veteran": {
+      "name": "ベテラン",
+      "description": "1年間の利用。"
+    },
+    "metronome": {
+      "name": "メトロノーム",
+      "description": "≥20試行でRT分散 < 50ms（能動的回答が必要）。"
+    },
+    "flow_state": {
+      "name": "恩寵の境地",
+      "description": "セッション全体でフロー状態を検出。"
+    },
+    "sang_froid": {
+      "name": "冷静沈着",
+      "description": "エラー後のエラー連鎖なし（正確率≥70%）。"
+    },
+    "imperturbable": {
+      "name": "泰然自若",
+      "description": "集中力を失わずセッション完了（正確率≥60%）。"
+    },
+    "comeback_strong": {
+      "name": "力強い復帰",
+      "description": "3日以上の不在後にd-prime記録を更新（d′ ≥ 2.5）。"
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "튜토리얼",
+    "exitConfirm": "튜토리얼을 종료할까요?",
+    "exitWarning": "진행 상황이 저장되지 않습니다.",
+    "continue": "계속하기",
+    "quit": "종료",
+    "stepLabel": "단계 {{step}}",
+    "previous": "이전",
+    "restart": "다시 시작",
+    "next": "다음",
+    "startGame": "시작",
+    "progress": "카운터",
+    "tapToContinue": "탭하여 계속하기",
+    "controls": {
+      "position": "위치",
+      "audio": "소리"
+    },
+    "annotation": {
+      "label": "안내"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "잘했어요. 튜토리얼을 통과했습니다.",
+        "stay": "거의 다 왔어요. 조금만 더 연습하면 됩니다.",
+        "down": "아직 통과하지 못했어요. 기초를 다지기 위해 튜토리얼을 다시 해보세요."
+      },
+      "header": {
+        "up": "튜토리얼 완료!",
+        "down": "복습",
+        "stay": "거의!"
+      },
+      "noteMinAssessment": "참고: 더 정확한 평가를 위해 튜토리얼은 최소 8개의 답변을 평가합니다.",
+      "guidance": {
+        "passed": "자유 훈련을 시작할 준비가 되었습니다.",
+        "failed": "훈련으로 넘어가기 전에 이 튜토리얼을 다시 하는 것을 추천합니다."
+      },
+      "correctAnswers": "{{correct}}/{{total}} 정답",
+      "actions": {
+        "backToHome": "홈으로 돌아가기",
+        "retryTutorial": "튜토리얼 다시하기",
+        "explainLevels": "N 레벨 이해하기 (N)",
+        "goToTraining": "훈련으로 가기",
+        "continueToTraining": "훈련 계속하기"
+      }
+    },
+    "welcome": {
+      "title": "훈련 소개",
+      "description": "Dual N-Back은 시각적 위치와 소리라는 두 가지 정보 흐름을 동시에 추적하도록 요구하여 작업 기억에 도전합니다. 이 튜토리얼이 단계별로 안내합니다.",
+      "button": "튜토리얼 시작"
+    },
+    "timeline": {
+      "legend": "타임라인은 비교를 도와줍니다 — 게임 중에는 숨겨집니다",
+      "past": "과거",
+      "present": "현재"
+    },
+    "hub": {
+      "title": "튜토리얼",
+      "subtitle": "배울 모드를 선택하세요",
+      "basics": {
+        "title": "기본",
+        "description": "클래식 Dual N-Back의 반사와 리듬을 배우세요."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "타임라인에서 시간적 배치를 마스터하세요."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "각 자극에 시간적 참조 (N, N-1, N-2)를 붙이세요."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "트레이싱을 통한 능동적 회상 제스처를 배워봅시다."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "기억에서 전체 시퀀스를 재구성하세요."
+      },
+      "soroban": {
+        "title": "Soroban 마스터하기",
+        "description": "8개의 단계별 레벨을 통해 일본 주판을 차근차근 배워보세요."
+      }
+    },
+    "place": {
+      "comingSoon": "Place 튜토리얼 개발 중입니다",
+      "cardPool": "사용 가능한 카드",
+      "slot": "슬롯",
+      "observe": "관찰하세요: 격자 위의 위치와 오디오 글자.",
+      "buffer": "두 번째 자극. N-Back 버퍼가 채워지고 있습니다.",
+      "cardsAppear": "카드가 나타났습니다! 마지막 3개의 자극을 나타냅니다.",
+      "firstDrag": "표시된 카드를 클릭한 다음 N-2 슬롯(가장 오래된 것)을 클릭하세요.",
+      "timelineExplain": "타임라인은 시간을 보여줍니다: N-2 = 가장 오래된, N = 현재.",
+      "positionN1": "가운데 위치를 N-1 슬롯에 배치하세요.",
+      "positionN": "좋아요! 가장 최근 위치(N 슬롯)로 마무리하세요.",
+      "audioIntro": "이제 오디오 카드! 같은 원리입니다.",
+      "audioN2": "처음 들은 글자를 N-2 슬롯에 배치하세요.",
+      "audioN1": "가운데 글자(N-1 슬롯)로 계속하세요.",
+      "audioN": "가장 최근 글자(N 슬롯)로 마무리하세요.",
+      "dualIntro": "새로운 시행! 위치와 글자 모두 배치하세요.",
+      "dualPractice": "6장의 카드를 모두 올바른 슬롯에 배치하세요. 천천히 하세요!",
+      "rhythmExplain": "실제 게임에서는 시간 제한이 있습니다.",
+      "autonomy": "당신 차례! 모든 카드를 올바르게 배치하세요.",
+      "conclusion": "잘했어요! Dual Place의 기본을 마스터했습니다.",
+      "selectCard": "카드를 선택한 다음 슬롯을 클릭하세요",
+      "clickSlot": "카드를 배치할 올바른 슬롯을 클릭하세요",
+      "wrongSlot": "그 슬롯이 아닙니다! 시간 순서를 확인하세요.",
+      "wrongCard": "그 카드가 아닙니다. 슬롯에 맞는 카드를 찾으세요.",
+      "tryAgain": "다시 시도하세요! 올바른 슬롯이 강조되어 있습니다."
+    },
+    "memo": {
+      "comingSoon": "Memo 튜토리얼 개발 중입니다",
+      "selectPosition": "위치 선택",
+      "selectAudio": "글자 선택",
+      "clickToRecall": "슬롯을 클릭하여 값을 떠올려보세요",
+      "validate": "확인",
+      "observeFirst": "첫 번째 자극. 위치와 글자 모두 기억하세요!",
+      "observeSecond": "두 번째 자극. 계속 기억하세요.",
+      "observeThird": "세 번째 자극. 버퍼 완성. 준비하세요!",
+      "recallIntro": "격자가 사라집니다! 기억에서 떠올리세요. N-2 슬롯을 클릭하세요.",
+      "firstRecall": "N-2 슬롯을 클릭하세요. 첫 번째 위치가 뭐였나요?",
+      "feedbackExplain": "초록 = 정답. 빨강 = 오류. 3번까지 수정할 수 있어요!",
+      "multiSlot": "계속하세요! N-1과 N 위치를 떠올리세요.",
+      "newStimulus": "새 자극! N-Back 창이 하나 이동합니다.",
+      "windowShift": "창이 이동했습니다. 이전 N-2가 빠지고 새 N이 들어옵니다.",
+      "fullPosition": "3개 위치 모두 떠올리세요. 집중!",
+      "audioIntro": "새 자극. 이제 오디오 회상을 추가합니다!",
+      "firstAudioRecall": "오디오 N-2 슬롯을 클릭하세요. 어떤 글자?",
+      "fullAudio": "N-1과 N 글자로 계속하세요.",
+      "dualIntro": "실제 게임에서는 위치와 글자를 함께 떠올립니다.",
+      "dualPractice": "6개 셀 모두 떠올린 다음 확인을 클릭하세요.",
+      "correctionExplain": "실수하면 다시 클릭하여 수정하세요. 최대 3번.",
+      "withCorrection": "해보세요! 틀리면 다시 클릭하여 수정하세요.",
+      "conclusion": "훌륭해요! 능동적 회상을 마스터했습니다. 세션을 시작하세요!",
+      "wrongAnswer": "그게 아닙니다. 생각해보세요, 그 순간의 자극이 뭐였나요?",
+      "tryAgain": "다시 시도하세요! 아직 수정할 수 있어요.",
+      "maxCorrections": "3번 수정 완료. 이 슬롯은 잠겼습니다.",
+      "validateHint": "모든 슬롯이 채워졌습니다. 확인을 클릭하세요!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Dual Pick에 오신 것을 환영합니다! 각 자극을 분류하는 법을 배우세요.",
+        "hud": "상단: 튜토리얼 진행 상황.",
+        "grid": "격자는 3개 영역으로 나뉩니다: 위, 가운데, 아래.",
+        "controls": "이 버튼들이 분류합니다. 위치는 왼쪽, 소리는 오른쪽.",
+        "outro": "준비됐나요? 위치 분류부터 시작합시다!"
+      },
+      "intro": "Dual Pick에서는 각 자극을 두 가지 기준으로 분류합니다: 격자 영역과 소리 유형.",
+      "gridExplain": "격자에는 3개 영역이 있습니다: 위 (상단 행), 가운데 (중앙), 아래 (하단 행).",
+      "positionHaut": "사각형이 위에 있습니다. 위를 클릭하세요.",
+      "positionMilieu": "사각형이 가운데에 있습니다. 가운데를 클릭하세요.",
+      "positionBas": "사각형이 아래에 있습니다. 아래를 클릭하세요.",
+      "positionRecap": "완벽! 위 = 상단 행, 가운데 = 중앙, 아래 = 하단 행.",
+      "positionPractice": "당신 차례! 이 위치를 분류하세요.",
+      "soundIntro": "이제 소리. 두 가지 유형이 있습니다: 모음 (A, E, I, O, U)과 자음 (나머지 모두).",
+      "soundVoyelle": "A가 들립니다. 이것은 모음입니다. 「모음」을 클릭하세요.",
+      "soundConsonne": "T가 들립니다. 이것은 자음입니다. 「자음」을 클릭하세요.",
+      "soundRecap": "기억하세요: A, E, I, O, U = 모음. 나머지 = 자음.",
+      "soundPractice": "당신 차례! 이 소리를 분류하세요.",
+      "dualIntro": "실제 게임에서는 위치와 소리를 동시에 분류합니다.",
+      "dualFirst": "위치와 소리를 분류하세요. 천천히 하세요.",
+      "dualSecond": "계속하세요. 위치 + 소리.",
+      "dualThird": "훌륭해요! 연습 한 번 더.",
+      "rhythm": "세션에서는 일정한 리듬을 유지하세요. 유창함은 연습으로 옵니다.",
+      "conclusion": "잘했어요! 분류를 마스터했습니다. Dual Pick 세션을 시작하세요!",
+      "buttons": {
+        "top": "위",
+        "middle": "가운데",
+        "bottom": "아래",
+        "vowel": "모음",
+        "consonant": "자음"
+      },
+      "feedback": {
+        "correctPosition": "올바른 영역!",
+        "correctSound": "올바른 소리 유형!",
+        "wrongPosition": "그 영역이 아닙니다. 사각형이 어디에 있는지 보세요.",
+        "wrongSound": "그게 아닙니다. A, E, I, O, U = 모음."
+      }
+    },
+    "trace": {
+      "intro": "Dual Trace에 오신 것을 환영합니다. 여기에는 버튼이 없습니다: 스와이프 제스처로 이전 위치를 능동적으로 떠올립니다.",
+      "observe": "이 위치를 기억하세요. 다음 턴에 이 위치로 스와이프해야 합니다.",
+      "firstSwipe": "첫 번째 스와이프! 이전 턴의 위치를 향해 손가락을 밀어주세요. 화살표가 안내합니다.",
+      "firstAudioMatch": "이전 턴과 같은 글자! 위치를 향해 스와이프하고 더블탭으로 오디오 매치를 알리세요.",
+      "audioMatch": "오디오 매치 감지! 스와이프 + 더블탭.",
+      "swipe1": "N-1 위치를 향해 스와이프하세요. 사각형이 어디에 있었는지 기억하세요.",
+      "swipe2": "계속하세요. 각 스와이프가 능동적 기억을 강화합니다.",
+      "swipe3": "능동적 회상은 단순한 인식보다 더 어렵습니다.",
+      "swipe4": "집중을 유지하세요. 스와이프 전에 위치를 떠올려보세요.",
+      "swipe5": "훌륭해요! 회상 제스처를 마스터했습니다.",
+      "complete": "튜토리얼 완료. Dual Trace 훈련 준비가 됐습니다.",
+      "tapTarget": "이전 턴의 위치를 탭하세요",
+      "tapTargetAndAudio": "목표 위치를 탭한 다음 소리"
+    },
+    "ui": {
+      "startExercise": "연습 시작",
+      "score": "점수: {{current}}/{{total}}",
+      "complete": "완료",
+      "correct": "✓ 정답!",
+      "expectedMatch": "✗ 예상: 매치",
+      "expectedNoMatch": "✗ 예상: 매치 없음",
+      "memorize": "위치를 기억하세요...",
+      "memorizeLetter": "글자를 기억하세요...",
+      "matchDetected": "✓ 매치 감지!",
+      "noMatch": "✗ 매치 없음",
+      "matchExplanation": "매치! 단계 {{current}} = 단계 {{previous}}",
+      "exerciseComplete": "연습 완료!",
+      "match": "매치",
+      "noMatchButton": "매치 없음",
+      "none": "없음",
+      "both": "둘 다",
+      "position": "위치",
+      "audio": "소리",
+      "posShort": "위치"
+    },
+    "spotlight": {
+      "hud": "대시보드: N-back 레벨, 턴 카운터, 세션 컨트롤.",
+      "timeline": "타임라인은 비교를 위해 마지막 3개 자극을 보여줍니다. 실제 게임에서는 이 도움이 숨겨집니다.",
+      "grid": "격자: 매 턴마다 8개 위치 중 하나에서 칸이 빛납니다. 동시에 글자가 들립니다.",
+      "controls": "응답 버튼. 반복을 감지하면 누르세요.",
+      "intro": "환영합니다! 함께 게임 인터페이스를 살펴봅시다.",
+      "continue": "계속하기",
+      "outro": "이제 가이드 세션으로 넘어갑시다. 애니메이션을 관찰하고 지시를 따르세요.",
+      "start": "시작",
+      "tapToContinue": "아무 곳이나 탭하여 계속하기"
+    },
+    "speed": {
+      "label": "속도: {{speed}}",
+      "pauseToChange": "속도를 변경하려면 일시정지"
+    },
+    "assessment": {
+      "title": "평가 단계",
+      "subtitle": "이제부터 짧은 클래식 라운드입니다.",
+      "body": "템포는 연속적이며 더 이상 힌트가 없습니다. 실전처럼 플레이하세요.",
+      "goal": "목표: {{count}}회 시도에서 최소 {{min}}% 정확도.",
+      "cta": "시작하자"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N 레벨 이해하기",
+        "desc": "N=2를 배웠습니다. N=1부터 N=4까지 어떻게 적용되는지 알아봅시다.",
+        "start": "시작",
+        "done": "완료",
+        "skip": "건너뛰기",
+        "hud": "N = 몇 턴 전의 자극을 기억해야 하는지를 나타냅니다.",
+        "present": "N = 현재 자극 (현재).",
+        "past": "N-{{n}}과 비교하세요.",
+        "pressPosition": "위치가 반복되면 위치를 누르세요.",
+        "pressAudio": "소리가 반복되면 소리를 누르세요.",
+        "annotation": {
+          "n1": "N=1: 현재 자극(N)을 이전 턴(N-1)과 비교합니다.",
+          "n2": "N=2: 현재 자극(N)을 두 턴 전(N-2)과 비교합니다.",
+          "n3": "N=3: 현재 자극(N)을 세 턴 전(N-3)과 비교합니다."
+        },
+        "outroTitle": "계속해서…",
+        "outroBody": "N=5로 넘어가면 N-5와 비교합니다. 규칙은 같고, 거리만 늘어납니다."
+      }
+    },
+    "annotations": {
+      "intro": "관찰하세요: 격자의 한 칸이 빛나고 동시에 글자가 들립니다.",
+      "observe": "기억하세요. 타임라인이 자극을 추적합니다.",
+      "firstComparison": "이제 비교할 충분한 기록이 있습니다.",
+      "firstPositionMatch": "2턴 전과 같은 위치! 타임라인에서 N과 N-2를 비교한 다음 위치를 누르세요.",
+      "firstAudioMatch": "2턴 전과 같은 글자! 타임라인에서 N과 N-2를 비교한 다음 소리를 누르세요.",
+      "firstDualMatch": "더블 매치! 위치와 소리 모두 반복됩니다. 두 버튼 모두 누르세요.",
+      "positionMatch": "같은 위치. 위치를 누르세요.",
+      "audioMatch": "같은 소리. 소리를 누르세요.",
+      "dualMatch": "둘 다 일치. 위치와 소리를 누르세요.",
+      "noMatch": "이번 턴은 매치 없음. 계속 기억하세요.",
+      "noMatch1": "이번에는 반복 없음. 탭하여 계속하세요.",
+      "noMatch2": "아직 매치 없음. 위치 + 소리 흐름에 집중하세요.",
+      "noMatch3": "보고할 것 없음. 항상 타임라인에서 N-2와 비교하세요.",
+      "noMatch4": "매치 없음. 속도가 빨라지고 있습니다.",
+      "noMatch5": "계속하세요. 매치는 예측 불가능하게 옵니다.",
+      "noMatch6": "매치 없음. 계속 가세요, 리듬을 잘 타고 있어요.",
+      "noMatch7": "마지막 구간. 집중을 유지하세요.",
+      "noMatch8": "거의 끝났어요. 자극 몇 개 더.",
+      "complete": "축하합니다! Dual N-Back의 기본을 마스터했습니다. 훈련할 준비가 됐나요?"
+    },
+    "exit": {
+      "confirm": "종료",
+      "title": "튜토리얼을 종료할까요?",
+      "message": "진행 상황이 저장됩니다. 나중에 다시 시작할 수 있습니다."
+    },
+    "recovery": {
+      "message": "중단된 세션이 발견되었습니다.",
+      "staleMessage": "30분 이상 전에 중단된 세션이 발견되었습니다.",
+      "resume": "재개하기",
+      "startFresh": "새로 시작",
+      "title": "튜토리얼을 재개할까요?"
+    }
+  }
+}

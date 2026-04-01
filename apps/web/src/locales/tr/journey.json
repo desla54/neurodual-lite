@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Eğitim yolu",
+    "pageSubtitle": "Yolculuklarını seç, düzenle ve oluştur",
+    "enabled": "Eğitim yolunu etkinleştir",
+    "description": "N-1'den N-10'a 30 aşamalı ilerleme",
+    "progress": "İlerleme",
+    "locked": "Kilitli",
+    "createJourney": "Yolculuk oluştur",
+    "viewJourneys": "Yolculukları görüntüle",
+    "current": "Mevcut yolculuk",
+    "myJourneys": "Yolculuklarım",
+    "stage": "Aşama",
+    "stages": "aşama",
+    "stagesShort": "aş.",
+    "stageLabels": {
+      "pick": "Seç",
+      "catch": "Yakala",
+      "place": "Yerleştir",
+      "memo": "Hafıza"
+    },
+    "name": "Ad",
+    "namePlaceholder": "Örn. N-5 Meydan Okuma",
+    "levels": "Seviyeler",
+    "levelRange": "Seviye aralığı",
+    "levelTo": "-",
+    "createNew": "Yeni yolculuk",
+    "new": "Yeni",
+    "defaultCustomName": "Yolculuğum",
+    "created": "Yolculuk oluşturuldu!",
+    "deleted": "Yolculuk silindi",
+    "sessionSettings": "Oturum ayarları",
+    "savedStatus": "Ayarlar kaydedildi",
+    "preset": {
+      "easy": "Kolay",
+      "medium": "Önerilen",
+      "hard": "Zor"
+    },
+    "setup": {
+      "title": "Yolculuk ve profiller",
+      "journey": "Yolculuk",
+      "journeyNone": "Seç…",
+      "profile": "Profil",
+      "profileNone": "Seç…",
+      "configure": "Yapılandır",
+      "configureNone": "Bir yolculuk seç",
+      "create": "Yeni yolculuk",
+      "createDesc": "Yeni bir yolculuk oluştur"
+    },
+    "deleteConfirmTitle": "Bu yolculuğu sil?",
+    "deleteConfirmMessage": "\"{{name}}\" yolculuğu kalıcı olarak silinecek.",
+    "renameTitle": "Bu yolculuğu yeniden adlandır",
+    "renameMessage": "\"{{name}}\" adını düzenle.",
+    "renamed": "Yolculuk yeniden adlandırıldı.",
+    "badge": {
+      "simulator": "Simülatör",
+      "beta": "Beta",
+      "default": "Varsayılan"
+    },
+    "mode": "Mod",
+    "modeStandard": "Yolculuk (4 mod)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simülatör",
+      "jaeggi": "Klasik",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} doğrulama oturumu",
+      "needed": "{{count}} kalan oturum",
+      "excellent": "Mükemmel!",
+      "good": "İyi!",
+      "passing": "Geçti"
+    },
+    "progression": {
+      "title": "İlerleme",
+      "description": "Sonraki seviyeye geçmek için iyi bir puan al:",
+      "excellent": "≥95% → 1 oturum",
+      "good": "≥85% → 2 oturum",
+      "passing": "≥80% → 3 oturum",
+      "rules": "İlerleme kuralları",
+      "jaeggi": {
+        "description": "En zayıf modaliteye göre:",
+        "up": "< 3 hata → Seviye atla",
+        "stay": "3 - 5 hata → Bu seviyede kal",
+        "down": "> 5 hata → Seviye düş"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop protokolü (BW puanı):",
+        "up": "≥80% → Seviye atla",
+        "stay": "50-79% → Seviyede kal",
+        "strike": "Art arda 3 puan <50% → Seviye düş"
+      },
+      "hybrid": {
+        "description": "Bu yolculuk aynı seviyede {{trackCount}} Dual Track oturumu, ardından {{dnbCount}} Dual N-Back oturumu çalıştırır.",
+        "alternation": "Bir karar verildiğinde döngü her zaman Dual Track ile yeniden başlar.",
+        "authority": "Yalnızca Dual N-Back oturumları yukarı, kal veya aşağı kararı verir.",
+        "up": "0-1 hata → Seviye atla",
+        "stay": "2-3 hata → Kal",
+        "down": "4+ hata → Seviye düş",
+        "streakRule": "Aynı bölgede art arda iki oturum kararı tetikler.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Doğrulandı {{current}}/{{required}}",
+        "stayProgress": "Bekle {{current}}/{{required}}",
+        "downProgress": "Başarısız {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track her hedef sayısı aşaması için sürekli bir ustalık çubuğu kullanır:",
+        "calibration": "İlk kalibrasyon başlangıç hedef sayını belirler",
+        "goodSession": "Her iyi oturum mevcut aşamayı biraz doldurur",
+        "mastery": "Mükemmele yakın oturumlar daha hızlı doldurur, sıradan oturumlar mütevazı kalır",
+        "regression": "Zayıf oturumlar mevcut ustalık çubuğunu düşürebilir",
+        "unlock": "Sonraki hedef sayısı yalnızca mevcut aşama %100'e ulaştığında açılır"
+      }
+    },
+    "switcher": {
+      "open": "Yolculuk değiştiriciyi aç",
+      "current": "Mevcut",
+      "showAll": "Tüm yolculuklar",
+      "settings": "Yolculuk ayarları"
+    },
+    "previous": "Önceki yolculuk",
+    "next": "Sonraki yolculuk",
+    "calibration": {
+      "title": "İlk oturum",
+      "subtitle": "Kısa bir kalibrasyon başlangıç seviyeni belirleyecek veya doğrudan seviye 2'den başlayabilirsin.",
+      "skipToN2": "veya N-2'den başla",
+      "continueAt": "veya N-{{level}}'den devam et",
+      "start": "Kalibrasyonu başlat",
+      "redo": "Kalibrasyonu tekrarla",
+      "badge": "Kalibrasyon"
+    },
+    "presets": {
+      "currentSlot": "Özel",
+      "currentSlotView": "Özel",
+      "lockedTitle": "Bazı seçenekler kilitli",
+      "lockedDesc": "İlerlemeyi karşılaştırılabilir tutmak için, yolculuk başladıktan sonra modaliteler (ve bazı seçenekler) değiştirilemez."
+    },
+    "completed": {
+      "title": "Yolculuk tamamlandı!",
+      "subtitle": "Tüm aşamalar doğrulandı. Aferin!",
+      "continueFree": "Eğitime devam et"
+    },
+    "report": {
+      "stage": "Aşama",
+      "level": "Seviye",
+      "score": "Puan",
+      "sessionValidated": "Oturum doğrulandı!",
+      "sessionNotValidated": "Oturum doğrulanmadı",
+      "minScore": "Gereken minimum:",
+      "stageCompleted": "Aşama tamamlandı!",
+      "stageUnlocked": "Aşama {{stage}} açıldı!",
+      "replay": "Tekrar oyna",
+      "nextStage": "Sonraki aşama",
+      "home": "Ana sayfa",
+      "hits": "İsabetler",
+      "misses": "Kaçırılanlar",
+      "falseAlarms": "Yanlış alarmlar",
+      "correctRejections": "Doğru redler"
+    }
+  }
+}

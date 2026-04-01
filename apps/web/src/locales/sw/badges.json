@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Uthabiti",
+      "performance": "Utendaji",
+      "resilience": "Ustahimilivu",
+      "exploration": "Uchunguzi",
+      "milestone": "Milestones",
+      "cognitive": "Utambuzi"
+    },
+    "first_session": {
+      "name": "Neuron Iliyoamshwa",
+      "description": "Kikao cha kwanza kimekamilika."
+    },
+    "sessions_10": {
+      "name": "Nguzo (Shaba)",
+      "description": "Vikao 10 vimekamilika."
+    },
+    "sessions_25": {
+      "name": "Nguzo (Fedha)",
+      "description": "Vikao 25 ​​vimekamilika."
+    },
+    "marathoner": {
+      "name": "Nguzo (Dhahabu)",
+      "description": "Vikao 50 vimekamilika."
+    },
+    "streak_3": {
+      "name": "Tambiko la Nascent",
+      "description": "Mfululizo wa siku 3."
+    },
+    "streak_7": {
+      "name": "Tambiko la Kila Siku",
+      "description": "Mfululizo wa siku 7."
+    },
+    "streak_14": {
+      "name": "Anchored Tabia",
+      "description": "Mfululizo wa siku 14."
+    },
+    "streak_30": {
+      "name": "Nidhamu ya Chuma",
+      "description": "Mfululizo wa siku 30."
+    },
+    "early_bird": {
+      "name": "Mapema Ndege",
+      "description": "Siku 5 tofauti na kipindi kabla ya 8am."
+    },
+    "night_owl": {
+      "name": "Bundi wa Usiku",
+      "description": "Siku 5 tofauti na kipindi baada ya 10 jioni."
+    },
+    "brain_n3": {
+      "name": "Ubongo Mkali",
+      "description": "Fikia kiwango cha N-3."
+    },
+    "brain_n4": {
+      "name": "Ubongo wa Misuli",
+      "description": "Fikia kiwango cha N-4."
+    },
+    "brain_n5": {
+      "name": "Ubongo wa Olimpiki",
+      "description": "Fikia kiwango cha N-5."
+    },
+    "brain_n7": {
+      "name": "Wasomi wa Utambuzi",
+      "description": "Fikia kiwango cha N-7."
+    },
+    "brain_n10": {
+      "name": "Superhuman",
+      "description": "Fikia kiwango cha N-10."
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "> Usahihi wa 90% katika N ≥2."
+    },
+    "accuracy_95": {
+      "name": "Usahihi wa Upasuaji",
+      "description": "> Usahihi wa 95% katika N ≥2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> Usahihi wa 98% katika N ≥2."
+    },
+    "untouchable": {
+      "name": "Isiyoguswa",
+      "description": "Kipindi bora (hitilafu 0) katika N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Reflex ya haraka",
+      "description": "Muda wa wastani wa majibu < 500ms na usahihi wa ≥70%."
+    },
+    "flash": {
+      "name": "Mwako",
+      "description": "Muda wa wastani wa majibu < 400ms na usahihi wa ≥70%."
+    },
+    "rt_300": {
+      "name": "Umeme",
+      "description": "Muda wa wastani wa majibu < 300ms na usahihi wa ≥70%."
+    },
+    "consistent": {
+      "name": "Sambamba",
+      "description": "Mkengeuko wa kawaida wa RT <100ms (majibu ≥10 yanahitajika)."
+    },
+    "dprime_master": {
+      "name": "d'Mwalimu",
+      "description": "d-prime > 3.0 katika kipindi."
+    },
+    "dprime_4": {
+      "name": "Mtaalam wa SDT",
+      "description": "d-prime > 4.0 katika kipindi."
+    },
+    "no_pause": {
+      "name": "Bila kukatizwa",
+      "description": "Vipindi 5 mfululizo bila kusitisha kwa usahihi wa ≥75%."
+    },
+    "steady_hands": {
+      "name": "Mikono Imara",
+      "description": "Hakuna maingizo ya uwongo wakati wa kipindi (usahihi ≥80%)."
+    },
+    "zen_master": {
+      "name": "Mwalimu wa Zen",
+      "description": "Vipindi 10 bila kuacha."
+    },
+    "comeback_kid": {
+      "name": "Rudia Kijana",
+      "description": "Ngazi juu baada ya ngazi ya chini."
+    },
+    "persistent": {
+      "name": "Kudumu",
+      "description": "Vikao 3 siku hiyo hiyo baada ya kutofaulu."
+    },
+    "second_wind": {
+      "name": "Upepo wa Pili",
+      "description": "Boresha d-prime kati ya nusu 1 na 2 (d′ ≥ 2.0 inahitajika)."
+    },
+    "plateau_breaker": {
+      "name": "Mvunjaji wa Plateau",
+      "description": "Endelea baada ya vipindi 10+ kwa kiwango sawa."
+    },
+    "no_surrender": {
+      "name": "Hakuna Kujisalimisha",
+      "description": "Vikao 25 ​​bila kuacha."
+    },
+    "ironwill": {
+      "name": "Mapenzi ya Chuma",
+      "description": "Vikao 50 bila kuacha."
+    },
+    "audiophile": {
+      "name": "Audiophile",
+      "description": "Sauti > 80% lakini Visual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Jicho la Tai",
+      "description": "Visual > 80% lakini Sauti <70%."
+    },
+    "synchronized": {
+      "name": "Imesawazishwa",
+      "description": "Alama za Sauti na Zinazoonekana ndani ya 5% (≥60% zinahitajika)."
+    },
+    "dual_master": {
+      "name": "Mwalimu Mbili",
+      "description": "Sauti NA Inayoonekana > 85% katika kipindi sawa (≥6 vivutio/utaratibu)."
+    },
+    "dual_elite": {
+      "name": "Wasomi Wawili",
+      "description": "Sauti NA Inayoonekana > 90% katika kipindi sawa katika N ≥ 3 (≥6 vivutio/utaratibu)."
+    },
+    "centurion": {
+      "name": "Jemadari",
+      "description": "Vikao 100 vimekamilika."
+    },
+    "sessions_250": {
+      "name": "Hadithi (Zamaradi)",
+      "description": "Vikao 250 vimekamilika."
+    },
+    "sessions_500": {
+      "name": "Asiyekufa (Almasi)",
+      "description": "Vikao 500 vimekamilika."
+    },
+    "trials_500": {
+      "name": "Mtaalamu",
+      "description": "Jumla ya majaribio 500 yaliyochezwa."
+    },
+    "trials_1000": {
+      "name": "Umefunzwa",
+      "description": "Jumla ya majaribio 1,000 yaliyochezwa."
+    },
+    "trials_5000": {
+      "name": "Iliyowekwa",
+      "description": "Jumla ya majaribio 5,000 yaliyochezwa."
+    },
+    "trials_10k": {
+      "name": "Majaribio 10,000",
+      "description": "Jumla ya majaribio 10,000 yaliyochezwa."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Jumla ya majaribio 50,000 yaliyochezwa."
+    },
+    "streak_90": {
+      "name": "Robo isiyo na dosari",
+      "description": "Mfululizo wa siku 90."
+    },
+    "streak_365": {
+      "name": "Mwaka Mkamilifu",
+      "description": "Mfululizo wa siku 365."
+    },
+    "veteran": {
+      "name": "Mkongwe",
+      "description": "Mwaka 1 wa matumizi."
+    },
+    "metronome": {
+      "name": "Metronome",
+      "description": "Tofauti ya RT < 50ms kwenye majaribio ≥20 (majibu amilifu yanahitajika)."
+    },
+    "flow_state": {
+      "name": "Jimbo la Neema",
+      "description": "Mtiririko umegunduliwa katika kipindi kizima."
+    },
+    "sang_froid": {
+      "name": "Kichwa baridi",
+      "description": "Hakuna mpororo wa hitilafu baada ya hitilafu (usahihi ≥70%)."
+    },
+    "imperturbable": {
+      "name": "Isiyotikisika",
+      "description": "Kipindi kamili bila kupoteza mwelekeo (≥60% usahihi)."
+    },
+    "comeback_strong": {
+      "name": "Nguvu ya Kurudi",
+      "description": "Shinda rekodi yako ya d-prime baada ya siku 3+ kutoka (d′ ≥ 2.5)."
+    }
+  }
+}

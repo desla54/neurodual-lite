@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "कसं वाटतंय?",
+      "tired": "थकले",
+      "normal": "सामान्य",
+      "energized": "उत्साही"
+    },
+    "aria": {
+      "trialTimer": "चाचणी टाइमर",
+      "positionMatch": "स्थिती जुळवा",
+      "audioMatch": "ऑडिओ जुळणी",
+      "audioLetter": "ऑडिओ पत्र:",
+      "traceGrid": "ट्रेस ग्रिड"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "समक्रमण मॉनिटर टॉगल करा",
+      "start": "प्रारंभ",
+      "end": "शेवट",
+      "pinLabel": "पिन",
+      "pinTitle": "स्क्रीनवर पिन करा",
+      "inputLabel": "इनपुट",
+      "inputTitle": "इनपुट लेटन्सी प्रोफाइलिंग टॉगल करा (स्थानिक स्टोरेज ND_INPUT_DEBUG_TIMING)",
+      "on": "वर",
+      "off": "बंद",
+      "hideLabel": "लपवा",
+      "hideTitle": "लपवा (syncHud=1 किंवा ND_AUDIO_DEBUG_TIMING=1 असल्याशिवाय)",
+      "endRef": {
+        "audio": "ऑडिओ",
+        "expected": "अपेक्षित"
+      },
+      "labels": {
+        "trial": "चाचणी",
+        "lagShow": "डिस्प्ले लॅग",
+        "lagHide": "रिटार्ड मास्क्वेज",
+        "winErr": "चुकून विजय",
+        "endRef": "संदर्भ समाप्त",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "इनपुट->डिस्पॅच p95",
+        "inputToCommitP95": "इनपुट->कमिट p95",
+        "inputToPaintP95": "इनपुट->पेंट p95",
+        "inputPending": "इनपुट प्रलंबित",
+        "inputSamples": "इनपुट नमुने",
+        "touchSamples": "स्पर्श नमुने",
+        "mouseSamples": "माऊसचे नमुने",
+        "keyboardSamples": "कीबोर्ड नमुने",
+        "latestMethod": "नवीनतम (पद्धत)",
+        "latestModality": "नवीनतम पद्धती",
+        "audioCueMode": "ऑडिओ संकेत",
+        "audioCodec": "कोडेक"
+      },
+      "resetInputProfiler": "इनपुट प्रोफाइलर रीसेट करा"
+    },
+    "hud": {
+      "resume": "पुन्हा सुरू करा",
+      "pause": "विराम द्या",
+      "quit": "सोडा",
+      "restart": "रीस्टार्ट करा",
+      "spaceToStart": "सुरू करण्यासाठी जागा",
+      "settings": "सेटिंग्ज",
+      "enterToAdvance": "पुढे जाण्यासाठी प्रवेश करा",
+      "trial": "चाचणी",
+      "muteTexture": "पार्श्वभूमी आवाज नि:शब्द करा"
+    },
+    "status": {
+      "paused": "विराम दिला"
+    },
+    "completed": "पूर्ण झाले",
+    "starting": {
+      "getReady": "तयार व्हा..."
+    },
+    "quitModal": {
+      "title": "सत्र सोडायचे?",
+      "message": "तुमची प्रगती जतन केली जाणार नाही.",
+      "confirm": "सोडा",
+      "cancel": "चालू ठेवा",
+      "close": "बंद करा"
+    },
+    "controls": {
+      "position": "स्थिती",
+      "position2": "स्थान 2",
+      "position3": "स्थान 3",
+      "position4": "स्थान 4",
+      "visvis": "विस आणि एन-व्हिस",
+      "visaudio": "दृश्य आणि n-ऑडिओ",
+      "audiovis": "ऑडिओ आणि एन-व्हिज",
+      "vis1": "विस. १",
+      "vis2": "विस. 2",
+      "vis3": "विस. 3",
+      "vis4": "विस. 4",
+      "audio": "ऑडिओ",
+      "audio2": "ऑडिओ २",
+      "color": "रंग",
+      "arithmetic": "अंकगणित",
+      "image": "आकार"
+    },
+    "arithmetic": {
+      "answer": "उत्तर द्या",
+      "clear": "साफ",
+      "hint": "कीबोर्ड: 0-9 · '-' चिन्हासाठी · '.' दशांशांसाठी · बॅकस्पेस साफ करण्यासाठी"
+    },
+    "navigation": {
+      "back": "मागे"
+    },
+    "xp": {
+      "title": "XP मिळवला",
+      "base": "बेस (N-{{level}})",
+      "performance": "कामगिरी",
+      "accuracy": "अचूकता",
+      "streakBonus": "स्ट्रीक बोनस",
+      "dailyBonus": "दिवसाचा पहिला",
+      "badgeBonus": "बॅज",
+      "flowBonus": "ड्युअल प्लेस बोनस",
+      "confidenceMultiplier": "आत्मविश्वास",
+      "dailyCapReached": "दैनिक XP मर्यादा गाठली",
+      "levelReached": "{{level}} पातळी गाठली!"
+    },
+    "badges": {
+      "newUnlocked": "नवीन बॅज अनलॉक केले"
+    },
+    "getReady": "तयार व्हा...",
+    "layoutEdit": {
+      "done": "झाले",
+      "reset": "रीसेट करा",
+      "instructions": "पुनर्क्रमित करण्यासाठी झोन ड्रॅग करा. हँडल्स वापरून आकार बदला.",
+      "title": "मोड संपादित करा",
+      "cancel": "रद्द करा",
+      "save": "कुलूप",
+      "editLayout": "लेआउट संपादित करा"
+    },
+    "paused": "विराम दिला",
+    "pressEscapeToResume": "पुन्हा सुरू करण्यासाठी Escape दाबा",
+    "settings": {
+      "editLayout": "लेआउट संपादित करा",
+      "gridAndButtons": "ग्रिड आणि बटणे",
+      "swapPositionAudio": "स्वॅप पोझिशन / ऑडिओ",
+      "title": "सेटिंग्ज",
+      "quickHint": "गेम न सोडता काही सेटिंग्ज समायोजित करा.",
+      "quickUnavailable": "या मोडसाठी अद्याप कोणतीही द्रुत सेटिंग्ज उपलब्ध नाहीत."
+    },
+    "pinkNoiseInfo": "प्रत्येक उत्तेजनासोबत पार्श्वभूमी टोन असतो. तुम्ही ते ऑडिओ सेटिंग्जमध्ये सानुकूलित किंवा अक्षम करू शकता.",
+    "pinkNoiseDismiss": "चालू ठेवा",
+    "audioMode": "ऑडिओ मोड",
+    "cogTask": {
+      "precision": "अचूकता",
+      "avgRt": "सरासरी RT",
+      "avgRtShort": "सरासरी RT",
+      "trials": "चाचण्या",
+      "correct": "बरोबर",
+      "errors": "चुका",
+      "effect": "प्रभाव",
+      "restart": "रीस्टार्ट करा",
+      "home": "घर",
+      "performance": "कामगिरी",
+      "trialDetail": "चाचणी तपशील",
+      "setDetail": "तपशील सेट करा",
+      "roundDetail": "गोलाकार तपशील",
+      "problemDetail": "समस्या तपशील",
+      "phaseDetail": "टप्पा तपशील",
+      "feedbackCorrect": "बरोबर",
+      "feedbackIncorrect": "चुकीचे",
+      "feedbackTimeout": "खूप हळू!",
+      "preparing": "तयार व्हा...",
+      "loading": "लोड करत आहे...",
+      "left": "बाकी",
+      "right": "बरोबर",
+      "up": "वर",
+      "down": "खाली",
+      "congruent": "एकरूप",
+      "incongruent": "विसंगत",
+      "congruencyEffect": "एकरूपता प्रभाव",
+      "maxSpan": "कमाल कालावधी",
+      "startingSpan": "स्पॅन सुरू होत आहे",
+      "maxSpanReached": "कमाल कालावधी गाठला",
+      "longestStreak": "सर्वात लांब योग्य स्ट्रीक",
+      "series": "स्ट्रीक",
+      "avgResponseTime": "सरासरी प्रतिसाद वेळ",
+      "recall": "आठवते",
+      "expected": "अपेक्षित",
+      "submit": "सबमिट करा",
+      "cancel": "रद्द करा",
+      "clear": "साफ",
+      "delete": "DEL",
+      "true": "खरे",
+      "false": "खोटे",
+      "target": "लक्ष्य",
+      "nonTarget": "लक्ष्य नसलेले",
+      "distractor": "विचलित करणारा",
+      "same": "समान",
+      "different": "वेगळे",
+      "identical": "एकसारखे",
+      "mirror": "आरसा",
+      "symmetric": "सममितीय",
+      "asymmetric": "असममित",
+      "symShort": "सिम.",
+      "present": "उपस्थित",
+      "absent": "अनुपस्थित",
+      "noTrials": "कोणत्याही चाचण्या पूर्ण झाल्या नाहीत.",
+      "noSets": "कोणतेही संच पूर्ण झाले नाहीत.",
+      "noRounds": "कोणतीही फेरी पूर्ण झाली नाही.",
+      "noProblems": "कोणत्याही समस्या पूर्ण झाल्या नाहीत.",
+      "noPhases": "कोणतेही टप्पे पूर्ण झाले नाहीत.",
+      "sets": "सेट",
+      "rounds": "फेऱ्या",
+      "equations": "समीकरणे",
+      "sentences": "वाक्य",
+      "equationAccuracy": "समीकरण अचूकता",
+      "forward": "पुढे",
+      "backward": "मागासलेले",
+      "forwardMaxSpan": "कमाल स्पॅन फॉरवर्ड करा",
+      "backwardMaxSpan": "मागास कमाल स्पॅन",
+      "odd": "विषम",
+      "even": "अगदी",
+      "score": "स्कोअर",
+      "easy": "सोपे",
+      "hard": "कठिण",
+      "totalTrials": "एकूण चाचण्या",
+      "totalErrors": "एकूण त्रुटी",
+      "totalErrShort": "एकूण चूक.",
+      "hits": "हिट्स",
+      "misses": "चुकतो",
+      "falseAlarms": "खोटे अल.",
+      "correctRejections": "कोर. रेजे.",
+      "yes": "होय",
+      "no": "नाही",
+      "sessionInterrupted": "सत्रात व्यत्यय आला",
+      "reverseOrder": "उलट क्रमाने",
+      "normalOrder": "क्रमाने",
+      "lnsInstruction": "चढत्या क्रमाने संख्या, नंतर A-Z अक्षरे",
+      "vs": "वि",
+      "simon": {
+        "simonEffect": "सायमन प्रभाव",
+        "blue": "निळा",
+        "red": "लाल",
+        "heroTitle": "सायमन"
+      },
+      "soroban": {
+        "target": "या क्रमांकाचे प्रतिनिधित्व करा",
+        "submit": "सबमिट करा",
+        "rodLabel": "रॉड {{n}}",
+        "heavenBead": "स्वर्गीय मणी (मूल्य 5)",
+        "earthBead": "पृथ्वीचे मणी (मूल्य 1)",
+        "instrBeadTitle": "मणी कसे कार्य करतात",
+        "instrBeadDesc": "प्रत्येक रॉड एक अंक दर्शवितो. वरच्या मणी (स्वर्ग) ची किंमत 5 आहे. तळाच्या मणी (पृथ्वी) प्रत्येकी 1 किमतीची आहेत. मणी सक्रिय करण्यासाठी मध्यवर्ती पट्टीकडे हलवा.",
+        "instrExampleTitle": "उदाहरण: 7",
+        "instrExampleDesc": "7 = स्वर्गातील मणी खाली (5) + 2 पृथ्वीचे मणी वर (2). त्यांना हलविण्यासाठी मणी टॅप करा किंवा ड्रॅग करा.",
+        "instrGoalTitle": "आपले ध्येय",
+        "instrGoalDesc": "एक नंबर दिसेल. त्याचे प्रतिनिधित्व करण्यासाठी मणी सेट करा, नंतर सबमिट करा वर टॅप करा. अचूक आणि जलद व्हा!",
+        "startButton": "सुरू करा",
+        "settings": "सेटिंग्ज",
+        "closeSettings": "सेटिंग्ज बंद करा",
+        "settingsRods": "रॉडची संख्या",
+        "settingsRodsHint": "गेम सेटिंग्जमध्ये एन-लेव्हलद्वारे सेट करा",
+        "settingsTrials": "प्रति सत्र चाचण्या",
+        "settingsTrialsHint": "गेम सेटिंग्जमध्ये चाचण्यांद्वारे सेट करा",
+        "settingsRange": "संख्या श्रेणी"
+      },
+      "stroop": {
+        "pressInkColorButton": "शाईच्या रंगाशी जुळणारे बटण दाबा",
+        "redWord": "लाल",
+        "redLabel": "लाल",
+        "blueWord": "निळा",
+        "blueLabel": "निळा",
+        "greenWord": "हिरवा",
+        "greenLabel": "हिरवा",
+        "yellowWord": "पिवळा",
+        "yellowLabel": "पिवळा"
+      },
+      "stroopFlex": {
+        "followRule": "नियम",
+        "ruleInk": "शाई रंग",
+        "ruleWord": "लिखित शब्द",
+        "pressMatchingRuleButton": "वर्तमान नियमाशी जुळणारे बटण दाबा"
+      },
+      "goNogo": {
+        "goTrials": "चाचण्या जा",
+        "nogoTrials": "नो-गो चाचण्या",
+        "hitRate": "हिट रेट (जा)",
+        "faRate": "खोटा अलार्म दर (नो-गो)",
+        "meanRt": "सरासरी प्रतिक्रिया वेळ",
+        "sensitivity": "संवेदनशीलता",
+        "press": "दाबा",
+        "withhold": "रोखणे"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (स्टॉप सिग्नल आरटी)",
+        "ssdMean": "मीन SSD (यशस्वी थांबे)",
+        "ssd": "SSD",
+        "goRt": "RT वर जा",
+        "successfulInhibition": "यशस्वी प्रतिबंध",
+        "stop": "थांबा",
+        "meanGoRt": "सरासरी GO प्रतिक्रिया वेळ",
+        "ssrtInvalid": "अपुरा डेटा",
+        "ssrtNegativeNote": "SSRT नकारात्मक आहे (म्हणजे SSD > म्हणजे GO RT) — वर्तमान चाचणी मोजणीसह परिणाम अविश्वसनीय आहे."
+      },
+      "pvt": {
+        "rtMedian": "मध्यवर्ती RT",
+        "rtMean": "म्हणजे RT",
+        "fastest": "सर्वात वेगवान",
+        "slowest": "सर्वात मंद",
+        "falseStarts": "खोटे सुरू होते",
+        "falseStartsShort": "खोटे सेंट.",
+        "lapses": "लॅप्स",
+        "mean": "मीन",
+        "reaction": "प्रतिक्रिया",
+        "wait": "थांबा...",
+        "pressStimulus": "उत्तेजनाची प्रतीक्षा करा...",
+        "pressAnywhere": "काउंटर दिसल्यावर कुठेही दाबा",
+        "press": "दाबा!",
+        "tooEarly": "खूप लवकर!",
+        "lapsesLabel": "लॅप्स"
+      },
+      "posner": {
+        "cueingEffect": "क्यूइंग प्रभाव",
+        "validMeanRt": "सरासरी वैध RT",
+        "invalidMeanRt": "सरासरी अवैध RT",
+        "validAccuracy": "वैध अचूकता",
+        "invalidAccuracy": "अवैध अचूकता",
+        "validTrials": "वैध चाचण्या",
+        "invalidTrials": "अवैध चाचण्या",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "वैध",
+        "invalid": "अवैध"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade खर्च",
+        "proAccuracy": "प्रो अचूकता",
+        "antiAccuracy": "अचूकता विरोधी",
+        "pro": "प्रो",
+        "anti": "विरोधी",
+        "proRt": "प्रो RT",
+        "antiRt": "अँटी RT",
+        "proMeanRt": "मीन प्रो-सॅकेड RT",
+        "antiMeanRt": "मीन अँटी-सॅकेड RT",
+        "costLabel": "खर्च",
+        "antiLabel": "विरोधी"
+      },
+      "axCpt": {
+        "dPrime": "d'- संदर्भ",
+        "axAccuracy": "AX अचूकता",
+        "bxFa": "BX खोटा अलार्म",
+        "ayError": "AY त्रुटी",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY चूक",
+        "cogControl": "संज्ञानात्मक नियंत्रण",
+        "target": "लक्ष्य",
+        "nonTarget": "लक्ष्य नसलेले"
+      },
+      "ant": {
+        "scores": "एएनटी स्कोअर",
+        "alerting": "इशारा (नो-क्यू - डबल-क्यू)",
+        "orienting": "ओरिएंटिंग (मध्यभागी - अवकाशीय)",
+        "executive": "कार्यकारी (विसंगत - एकरूप)"
+      },
+      "changeDet": {
+        "kCowan": "के क्षमता (कोवन)",
+        "sameShort": "समान",
+        "diffShort": "फरक."
+      },
+      "swm": {
+        "withinErrors": "शोधातील त्रुटी",
+        "betweenErrors": "दरम्यान-शोध त्रुटी",
+        "totalErrors": "एकूण त्रुटी",
+        "errorFree": "त्रुटी मुक्त",
+        "foundErrorFree": "त्रुटी-मुक्त आढळले!",
+        "errorCount": "{{count}} त्रुटी",
+        "tapsLabel": "टॅप"
+      },
+      "taskSwitch": {
+        "switchCost": "खर्च स्विच करा",
+        "rtRepeat": "मीन RT (पुनरावृत्ती)",
+        "rtSwitch": "मीन RT (स्विच)",
+        "oddEven": "विषम/सम",
+        "highLow": "उच्च / निम्न",
+        "title": "टास्क स्विचिंग"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A वेळ",
+        "tmtBTime": "TMT-B वेळ",
+        "executiveCost": "कार्यकारी खर्च (B − A)",
+        "executiveCostShort": "कार्यकारी खर्च (B-A)",
+        "tmtA": "टीएमटी-ए",
+        "tmtB": "टीएमटी-बी",
+        "errA": "चूक. ए",
+        "errB": "चूक. बी",
+        "preparingB": "TMT-B तयार करत आहे...",
+        "tmtADone": "TMT-A झाले!",
+        "totalErrors": "एकूण त्रुटी",
+        "tmtALabel": "TMT-A: क्रमांक",
+        "tmtBLabel": "TMT-B: संख्या आणि अक्षरे",
+        "next": "पुढे",
+        "heroTitle": "ट्रेल बनवणे",
+        "alternateHint": "पर्यायी संख्या आणि अक्षरे: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI मि",
+        "fastestIsi": "सर्वात वेगवान ISI"
+      },
+      "wcst": {
+        "referenceCards": "संदर्भ कार्डे",
+        "testCard": "चाचणी कार्ड",
+        "categories": "श्रेण्या",
+        "categoriesCompleted": "श्रेणी पूर्ण केल्या",
+        "perseverativeErrors": "चिकाटीच्या चुका",
+        "persevShort": "पर्सेव्ह.",
+        "avgRt": "सरासरी RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "कोनानुसार RT",
+        "findMatch": "जुळणारे आकार शोधा",
+        "reference": "संदर्भ आकार",
+        "referenceLabel": "संदर्भ",
+        "candidate": "उमेदवार",
+        "distractor": "इतर",
+        "mirrorErrors": "आरसे",
+        "title": "मानसिक परिभ्रमण"
+      },
+      "sternberg": {
+        "rtBySize": "सेट आकारानुसार RT",
+        "title": "स्टर्नबर्ग",
+        "avgRt": "सरासरी RT"
+      },
+      "visualSearch": {
+        "rtBySize": "सेट आकारानुसार RT",
+        "title": "व्हिज्युअल शोध"
+      },
+      "ospan": {
+        "typeLetters": "क्रमाने अक्षरे टाइप करा",
+        "trueOrFalse": "खरे की खोटे?",
+        "processingWarning": "85% पेक्षा कमी समीकरण अचूकता - परिणाम खरे कार्यरत मेमरी क्षमता दर्शवू शकत नाहीत"
+      },
+      "readingSpan": {
+        "s0": "सूर्य पूर्वेला उगवतो.",
+        "s1": "मासे झाडांमध्ये राहतात.",
+        "s2": "पॅरिस ही फ्रान्सची राजधानी आहे.",
+        "s3": "त्रिकोणाला चार बाजू असतात.",
+        "s4": "पाणी 100 अंशांवर उकळते.",
+        "s5": "मांजरी सरपटणारे प्राणी आहेत.",
+        "s6": "पृथ्वी सूर्याभोवती फिरते.",
+        "s7": "चॉकलेट खडकांवर वाढते.",
+        "s8": "वर्षात बारा महिने असतात.",
+        "s9": "पक्षी पाण्याखाली श्वास घेतात.",
+        "s10": "दूध पांढरे असते.",
+        "s11": "गाड्या रुळांवर चालतात.",
+        "s12": "मधमाश्या मध तयार करतात.",
+        "s13": "बर्फ गरम आहे.",
+        "s14": "हृदय रक्त पंप करते.",
+        "s15": "दगड पाण्यावर तरंगतात.",
+        "s16": "चंद्र रात्री उजळतो.",
+        "s17": "सापांना पाय असतात.",
+        "s18": "लाकूड पाण्यावर तरंगते.",
+        "s19": "आग थंड आहे.",
+        "s20": "मानवाला पाच ज्ञानेंद्रिये आहेत.",
+        "s21": "कोळ्यांना सहा पाय असतात.",
+        "s22": "भाकरी मैद्याने बनवली जाते.",
+        "s23": "व्हेल मासे आहेत.",
+        "w0": "घर",
+        "w1": "कुत्रा",
+        "w2": "पुस्तक",
+        "w3": "फ्लॉवर",
+        "w4": "दार",
+        "w5": "टेबल",
+        "w6": "झाड",
+        "w7": "रोड",
+        "w8": "ढग",
+        "w9": "तारा",
+        "w10": "बीच",
+        "w11": "बर्फ",
+        "w12": "LAMP",
+        "w13": "पाऊस",
+        "w14": "काच",
+        "w15": "गवत",
+        "w16": "ट्रेन",
+        "w17": "जग",
+        "w18": "सूर्य",
+        "w19": "जंगल",
+        "w20": "ICE",
+        "w21": "पृथ्वी",
+        "w22": "SKY",
+        "w23": "दगड",
+        "d0": "सकाळ",
+        "d1": "हृदय",
+        "d2": "फॅब्रिक",
+        "d3": "लीफ",
+        "d4": "आवाज",
+        "d5": "बाग",
+        "d6": "सावली",
+        "d7": "बेल",
+        "d8": "ब्रिज",
+        "d9": "धुम्रपान",
+        "d10": "वाळू",
+        "d11": "सूप",
+        "heroTitle": "वाचन कालावधी"
+      },
+      "memorizeSequence": "क्रम लक्षात ठेवा...",
+      "reproduce": "पुनरुत्पादन करा",
+      "span": "स्पॅन",
+      "size": "आकार",
+      "fixateCenter": "मध्यभागी स्थिर करा...",
+      "identicalOrMirror": "एकसारखे किंवा मिरर?",
+      "wellInhibited": "चांगले प्रतिबंधित!",
+      "badDirection": "चुकीची दिशा!",
+      "stopMissed": "चुकले थांबा!",
+      "falseAlarm": "खोटा अलार्म!",
+      "pressNow": "दाबा!",
+      "hitBang": "मारा!",
+      "miss": "मिस!",
+      "doNotTouch": "स्पर्श करू नका!",
+      "whichDirection": "कोणत्या दिशेला?",
+      "stopBang": "थांबा!",
+      "cueBang": "क्यू!",
+      "memorizeLetters": "ही अक्षरे लक्षात ठेवा",
+      "memorizeLetter": "हे पत्र लक्षात ठेवा",
+      "memorizeSequenceLetters": "क्रम लक्षात ठेवा...",
+      "memorizeDigits": "अंक लक्षात ठेवा...",
+      "memorizeColors": "रंग लक्षात ठेवा!",
+      "memorizePosition": "ही स्थिती लक्षात ठेवा...",
+      "retainWord": "हा शब्द लक्षात ठेवा",
+      "retainNumber": "हा नंबर लक्षात ठेवा",
+      "addWithPrevious": "मागील सह जोडा",
+      "sentenceTrueOrFalse": "हे वाक्य खरे आहे का?",
+      "findRedCircle": "लाल वर्तुळ शोधा!",
+      "findHiddenToken": "लपलेले टोकन शोधा!",
+      "chooseMatchingCard": "जुळणारे कार्ड निवडा",
+      "arrowDirection": "मध्य बाणाची दिशा?",
+      "attention": "लक्ष...",
+      "preparation": "तयारी...",
+      "recallLettersInOrder": "क्रमाने {{count}} अक्षरे आठवा",
+      "recallWordsInOrder": "{{count}} शब्द क्रमाने आठवा",
+      "recallLastLetters": "शेवटची {{count}} अक्षरे आठवा",
+      "typeLastLetters": "शेवटची {{count}} अक्षरे टाइप करा",
+      "recallPositionsInOrder": "स्मरण करा: क्रमाने स्थानांवर टॅप करा",
+      "pressEnterToValidate": "सत्यापित करण्यासाठी एंटर दाबा",
+      "pressAnywhereToContinue": "सुरू ठेवण्यासाठी कुठेही दाबा",
+      "temporalPrecision": "ऐहिक अचूकता",
+      "estimationPrecision": "अंदाज अचूकता",
+      "touchStartClockwise": "प्रारंभ बिंदूला स्पर्श करा नंतर घड्याळाच्या दिशेने स्वाइप करा",
+      "touchAtoB": "बिंदू A ला स्पर्श करा नंतर B वर स्वाइप करा",
+      "cue": "क्यू",
+      "retainCue": "संकेत लक्षात ठेवा...",
+      "targetOrNot": "लक्ष्य किंवा लक्ष्य नसलेले?",
+      "whereIsTarget": "लक्ष्य कुठे आहे?",
+      "wasLetterInSet": "हे पत्र सेटमध्ये होते का?",
+      "regular": "नियमित",
+      "regularity": "नियमितता",
+      "msDeviation": "एमएस विचलन",
+      "boxes": "बॉक्स",
+      "found": "{{count}} सापडले",
+      "past": "भूतकाळ",
+      "tooSlow": "खूप हळू",
+      "tooFast": "खूप जलद",
+      "timeout": "खूप हळू!",
+      "answer": "उत्तर द्या",
+      "dontPress": "दाबू नका!",
+      "feedbackWrong": "चुकीचे!",
+      "level": "पातळी",
+      "wrong": "चुकीचे",
+      "you": "आपण",
+      "paused": "विराम द्या",
+      "instructions": "सूचना",
+      "selectAnswer": "एक उत्तर निवडा",
+      "tapTheOddOne": "विषम वर टॅप करा",
+      "pal": {
+        "subtitle": "पेअर असोसिएट्स लर्निंग",
+        "pairsLearned": "जोड्या शिकल्या",
+        "maxSetSize": "कमाल सेट आकार",
+        "totalErrors": "एकूण त्रुटी",
+        "round": "गोलाकार",
+        "pairs": "जोड्या",
+        "meanRt": "मीन RT (बरोबर)",
+        "studyPhase": "अभ्यास - पदे लक्षात ठेवा",
+        "testPhase": "हा आकार कुठे होता?",
+        "studying": "अभ्यास करत आहे",
+        "tapBox": "हा आकार जिथे दाखवला होता त्या बॉक्सवर टॅप करा"
+      },
+      "visualLogic": {
+        "easy": "सोपे",
+        "hard": "कठिण",
+        "oneRule": "1 नियम",
+        "twoRules": "2 नियम",
+        "findMissing": "गहाळ तुकडा शोधा",
+        "maxLevel": "कमाल Lvl",
+        "finalLevel": "अंतिम Lvl",
+        "nextMode": "पुढील सत्र मोड",
+        "adaptive": "अनुकूल",
+        "fixed": "निश्चित",
+        "spm": "एसपीएम ६०",
+        "level": "पातळी",
+        "confirm": "व्हॅलिडर"
+      },
+      "tetrisMind": {
+        "findPiece": "कोणता तुकडा छिद्रात बसतो?",
+        "target": "लक्ष्य"
+      },
+      "timeEstimation": {
+        "overestimationBias": "ओव्हरस्टिमेशन बायस",
+        "underestimationBias": "कमी लेखणे पूर्वाग्रह",
+        "noBias": "लक्षणीय पूर्वाग्रह नाही",
+        "avgError": "सरासरी त्रुटी",
+        "overestimations": "ओव्हरस्टिमेशन्स",
+        "underestimations": "कमी लेखणे",
+        "avgAbsoluteError": "सरासरी संपूर्ण त्रुटी",
+        "avgRelativeError": "सरासरी सापेक्ष त्रुटी",
+        "cv": "भिन्नतेचे गुणांक",
+        "watchDemo": "कालावधी पहा",
+        "getReady": "तयार व्हा...",
+        "holdToReproduce": "पुनरुत्पादन करण्यासाठी धरा!",
+        "tooLong": "खूप लांब!",
+        "tooShort": "खूप लहान!",
+        "target": "लक्ष्य",
+        "demoLabel": "संदर्भ",
+        "yourTurn": "तुमची पाळी",
+        "watchInstruction": "पहा",
+        "holdInstruction": "पुनरुत्पादन करण्यासाठी धरा",
+        "heroTitle": "वेळेचा अंदाज"
+      },
+      "puzzleDetails": "कोडे तपशील",
+      "roundDetails": "गोल तपशील",
+      "stageResults": "स्टेज परिणाम",
+      "recognized": "ओळखले",
+      "missed": "चुकले",
+      "win": "जिंकणे",
+      "lose": "हरले",
+      "winBang": "जिंका!",
+      "loseBang": "हरले!",
+      "correctBang": "बरोबर!",
+      "wrongBang": "चुकीचे!",
+      "completeBang": "पूर्ण!",
+      "repeatedBang": "वारंवार!",
+      "incompleteBang": "अपूर्ण!",
+      "levelCompleteBang": "पातळी पूर्ण!",
+      "timesUp": "वेळ संपली",
+      "seeResults": "परिणाम पहा",
+      "nextRound": "पुढची फेरी",
+      "startBlock": "ब्लॉक सुरू करा",
+      "continue": "चालू ठेवा",
+      "patientChoice": "रुग्णाची निवड",
+      "immediateChoice": "तात्काळ निवड",
+      "immediate": "तात्काळ",
+      "digitSpan": {
+        "heroTitle": "डिजिट स्पॅन"
+      },
+      "resume": "पुन्हा सुरू करा",
+      "numericalStroop": {
+        "heroTitle": "संख्यात्मक Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "रेखा अभिमुखतेचा निर्णय"
+      },
+      "chain": "साखळी",
+      "undo": "पूर्ववत करा",
+      "vocalProsody": {
+        "heroTitle": "व्होकल प्रोसोडी"
+      },
+      "letterNumber": {
+        "title": "पत्र-क्रमांक अनुक्रम.",
+        "expectedAnswer": "अपेक्षित उत्तर"
+      },
+      "patternComparison": {
+        "heroTitle": "नमुना तुलना"
+      },
+      "speedPack": {
+        "title": "स्पीड पॅक",
+        "whenFoldedWhichTouch": "दुमडल्यावर कोणत्या चौकोनांना स्पर्श होतो?"
+      },
+      "dotProbe": {
+        "heroTitle": "डॉट प्रोब"
+      },
+      "reflex": {
+        "heroTitle": "प्रतिक्षेप"
+      },
+      "hooperVisual": {
+        "title": "हूपर व्हिज्युअल संस्था",
+        "whatIsThisObject": "ही वस्तु काय आहे?"
+      },
+      "blockDesign": {
+        "heroTitle": "ब्लॉक डिझाइन"
+      },
+      "accuracy": "अचूकता",
+      "avgTime": "सरासरी वेळ",
+      "check": "तपासा",
+      "dualTrace": {
+        "playArea": "खेळण्याचे क्षेत्र"
+      },
+      "paperFolding": {
+        "title": "कागदाची घडी",
+        "foldSequenceHolePunch": "फोल्ड अनुक्रम आणि छिद्र पंच",
+        "whichPatternWhenUnfolded": "कोणता नमुना उलगडला जातो?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "शाब्दिक निर्णय"
+      },
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxGrid": "कमाल ग्रिड",
+      "symmetry": "सममिती",
+      "threshold": "उंबरठा",
+      "hitRate": "हिट दर",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "डिटेक्शन बदला"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogisms"
+      },
+      "subitizing": {
+        "title": "सबबिट करत आहे",
+        "range": "श्रेणी"
+      },
+      "jitter": "जिटर",
+      "sentenceCompletion": {
+        "title": "वाक्य पूर्ण करणे (क्लोज)",
+        "highCloze": "उच्च क्लोज",
+        "lowCloze": "कमी क्लोज"
+      },
+      "grid": "ग्रिड",
+      "pinballRecall": {
+        "title": "पिनबॉल रिकॉल",
+        "byBounces": "बाऊन्स करून",
+        "whereDoesItLand": "ते कुठे उतरते?"
+      },
+      "mean": "मीन",
+      "speedup": "स्पीडअप",
+      "memorize": "लक्षात ठेवा",
+      "time": "वेळ",
+      "surfaceDevelopment": {
+        "title": "पृष्ठभाग विकास",
+        "whichEdgeMatches": "कोणती धार जुळते?"
+      },
+      "crowding": {
+        "heroTitle": "व्हिज्युअल गर्दी",
+        "spacing": "अंतर"
+      },
+      "patternRecognition": {
+        "heroTitle": "नमुना ओळख"
+      },
+      "brixton": {
+        "heroTitle": "ब्रिक्सटन"
+      },
+      "dualMemo": {
+        "trial": "चाचणी",
+        "position": "स्थिती",
+        "audio": "ऑडिओ"
+      },
+      "sceneCrasher": {
+        "heroTitle": "दृश्य घुसखोर",
+        "detect": "शोधा"
+      },
+      "eyesTest": {
+        "heroTitle": "डोळ्यांत मनाचे वाचन"
+      }
+    },
+    "gridlock": {
+      "undone": "शेवटची हालचाल पूर्ववत केली.",
+      "resetMessage": "कोडे रीसेट.",
+      "hintMessage": "इशारा: {{pieceId}} {{dir}} {{delta}} स्लाइड करा.",
+      "previewCountdown": "बोर्डाचा अभ्यास करा. {{seconds}}s मध्ये सुरू होते.",
+      "challenge": "आव्हान",
+      "optimal": "इष्टतम",
+      "moves": "चालते",
+      "piece": "तुकडा {{id}}",
+      "targetPiece": "पीस {{id}} (लक्ष्य - लाल कार)",
+      "challengeClassic": "क्लासिक",
+      "challengePrecision": "सुस्पष्टता",
+      "challengeMemory": "स्मृती",
+      "challengeTimed": "कालबद्ध",
+      "hint": "इशारा",
+      "reset": "रीसेट करा",
+      "undo": "पूर्ववत करा",
+      "nextPuzzle": "पुढील कोडे →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "ब्लॉक 1 हिट",
+      "block2Hits": "ब्लॉक 2 हिट",
+      "goPositive": "जा = सकारात्मक",
+      "goNegative": "गो = नकारात्मक",
+      "title": "प्रभावी Go/No-Go",
+      "block1CommissionErrors": "1 कमिशन त्रुटी अवरोधित करा",
+      "block2CommissionErrors": "ब्लॉक 2 कमिशन त्रुटी",
+      "block": "ब्लॉक करा",
+      "go": "जा"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "सरासरी स्विच दर",
+      "meanSwitchesfigure": "मीन स्विचेस/आकृती",
+      "totalSwitches": "एकूण स्विचेस",
+      "title": "अस्पष्ट आकडे",
+      "meanSwitches": "मीन स्विचेस",
+      "switchRate": "स्विच दर",
+      "figures": "आकडे",
+      "totalSwitchesLabel": "एकूण स्विचेस",
+      "duration": "कालावधी",
+      "switchesCount": "s | स्विचेस:",
+      "switchButton": "स्विच करा!"
+    },
+    "analogies": {
+      "verbalCorrect": "तोंडी बरोबर",
+      "timeout": "कालबाह्य",
+      "title": "उपमा"
+    },
+    "ansComparison": {
+      "weber": "वेबर",
+      "title": "ANS तुलना",
+      "ratio": "प्रमाण",
+      "leftMore": "अजून बाकी",
+      "rightMore": "बरोबर अधिक"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "खोटा अलार्म दर",
+      "grammatical": "व्याकरणिक",
+      "memorizeTheseStrings": "या स्ट्रिंग्स लक्षात ठेवा",
+      "testPhase": "चाचणी टप्पा",
+      "ungrammatical": "व्याकरणहीन",
+      "learning": "शिकत आहे",
+      "test": "चाचणी",
+      "title": "कृत्रिम व्याकरण",
+      "learningPhase": "शिकत आहे",
+      "testIntroText": "तुम्हाला आता नवीन स्ट्रिंग्स दिसतील. तुम्ही नुकत्याच अभ्यासलेल्या स्ट्रिंगप्रमाणेच प्रत्येकाने समान नियम पाळले आहेत का ते ठरवा.",
+      "startTest": "चाचणी सुरू करा",
+      "followsRules": "नियम पाळतो",
+      "breaksRules": "नियम मोडतो"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "ब्लिंक मॅग्निट्यूड",
+      "title": "लक्षपूर्वक ब्लिंक",
+      "blink": "लुकलुकणे",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "पहिले हिरवे पत्र?",
+      "secondGreenLetter": "दुसरे हिरवे अक्षर?"
+    },
+    "attentionalCapture": {
+      "captureCost": "कॅप्चर खर्च",
+      "singletonPresent": "सिंगलटन प्रेझेंट",
+      "noSingleton": "सिंगलटन नाही",
+      "title": "लक्षपूर्वक कॅप्चर",
+      "capture": "कॅप्चर करा",
+      "horizontal": "क्षैतिज",
+      "vertical": "उभ्या"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "बंधनकारक विंडो",
+      "title": "दृकश्राव्य बंधनकारक",
+      "window": "खिडकी",
+      "pssLabel": "PSS (पोइंट ऑफ सब्जेक्टिव सिमल्टेनिटी)",
+      "simultaneousOrNot": "एकाच वेळी की नाही?",
+      "simultaneous": "एकाचवेळी",
+      "notSimultaneous": "एकाचवेळी नाही"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "कालावधी थ्रेशोल्ड",
+      "reference": "संदर्भ",
+      "weberFraction": "वेबर अपूर्णांक",
+      "title": "श्रवण कालावधी",
+      "threshold": "उंबरठा",
+      "weber": "वेबर",
+      "whichLonger": "कोणते लांब आहे?",
+      "firstLonger": "प्रथम अधिक काळ",
+      "secondLonger": "दुसरा जास्त काळ"
+    },
+    "bart": {
+      "adjustedAvgPumps": "समायोजित सरासरी पंप",
+      "avgTimeballoon": "सरासरी वेळ/फुगा",
+      "banked": "बँक केलेले!",
+      "lostEarnings": "कमाई गमावली!",
+      "overallAvgPumps": "एकूण सरासरी पंप",
+      "popRate": "पॉप रेट",
+      "totalEarned": "एकूण कमाई",
+      "balloons": "फुगे",
+      "cashed": "रोखठोक",
+      "popped": "पॉप्ड",
+      "adjPumps": "ॲड. पंप",
+      "pop": "पॉप",
+      "pump": "पंप",
+      "cashIn": "कॅश इन"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "सरासरी निर्णय वेळ",
+      "drawBeadsToGatherEvidence": "पुरावे गोळा करण्यासाठी मणी काढा",
+      "jtc": "जेटीसी",
+      "title": "मणी कार्य",
+      "meanDraws": "सरासरी काढतो",
+      "rounds": "फेऱ्या",
+      "jtcRate": "जेटीसी दर",
+      "meanDrawsToDecision": "मीन ड्रॉ टू डिसिजन",
+      "jtcRateThreshold": "JTC दर (<{{threshold}} अनिर्णित)",
+      "round": "गोलाकार",
+      "jarDescription": "जार A: 85% हिरवा / जार B: 85% लाल",
+      "itWasJar": "तो जार होता",
+      "drawABead": "एक मणी काढा",
+      "jarAGreen": "जार एक हिरवा",
+      "jarBRed": "जार ब लाल"
+    },
+    "binding": {
+      "changedTrials": "चाचण्या बदलल्या",
+      "sameAccuracy": "समान अचूकता",
+      "sameTrials": "त्याच चाचण्या",
+      "title": "वैशिष्ट्य बंधनकारक",
+      "binding": "बंधनकारक",
+      "bindingAccuracyChanged": "अचूकता बदला",
+      "same": "समान",
+      "different": "वेगळे"
+    },
+    "blockDesign": {
+      "cells": "पेशी",
+      "target": "लक्ष्य",
+      "yourAnswer": "तुमचे उत्तर",
+      "tapHint": "रंग सायकल करण्यासाठी टॅप करा",
+      "check": "तपासा"
+    },
+    "brixton": {
+      "adapt": "जुळवून घ्या",
+      "adaptationCost": "अनुकूलन खर्च",
+      "nonswitchTrials": "नॉन-स्विच चाचण्या",
+      "switchTrials": "चाचण्या स्विच करा"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "ही अक्षरे लक्षात ठेवा",
+      "selectThe3Letters": "3 अक्षरे निवडा",
+      "title": "ब्राउन-पीटरसन टास्क",
+      "forgetting": "विसरून जातो",
+      "sDelay": "एस विलंब",
+      "minus3": "उणे ३",
+      "delay": "विलंब"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "निर्णय गुणवत्ता",
+      "finalPoints": "अंतिम गुण",
+      "meanBet": "मीन पैज",
+      "winRate": "विजय दर",
+      "wins": "जिंकतो",
+      "title": "केंब्रिज जुगार टास्क",
+      "totalPoints": "एकूण गुण",
+      "quality": "गुणवत्ता",
+      "rational": "तर्कशुद्ध",
+      "avgBet": "सरासरी पैज",
+      "trial": "चाचणी",
+      "whichColorHidesToken": "कोणता रंग टोकन लपवतो?",
+      "youChose": "आपण निवडले",
+      "howMuchToBet": "किती पैज लावायची?"
+    },
+    "cancellation": {
+      "false": "खोटे",
+      "target": "लक्ष्य:",
+      "total": "एकूण",
+      "title": "रद्द करण्याचे कार्य (d2)",
+      "misses": "चुकतो",
+      "targetDescription": "d 2 गुणांसह"
+    },
+    "changeBlindness": {
+      "detectionRate": "शोध दर",
+      "found": "सापडले",
+      "meanDetectionTime": "मीन डिटेक्शन टाइम",
+      "title": "अंधत्व बदला",
+      "missed": "चुकले",
+      "avgTime": "सरासरी वेळ",
+      "instructions": "सूचना"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "सर्वोत्तम अंदाज",
+      "meanScore": "सरासरी स्कोअर",
+      "worstEstimate": "सर्वात वाईट अंदाज",
+      "inRange": "चांगला अंदाज!",
+      "title": "संज्ञानात्मक अंदाज",
+      "meanScoreLabel": "सरासरी स्कोअर",
+      "inRangeLabel": "रेंजमध्ये",
+      "extreme": "अत्यंत",
+      "scoreLabel": "स्कोअर",
+      "submit": "सबमिट करा"
+    },
+    "common": {
+      "accuracy": "अचूकता",
+      "bias": "पक्षपात",
+      "falseAlarmRate": "खोटा अलार्म दर",
+      "hitRate": "दर दाबा",
+      "hits": "हिट्स",
+      "listening": "ऐकत आहे...",
+      "meanRt": "म्हणजे RT",
+      "timedOut": "कालबाह्य",
+      "timedOut2": "कालबाह्य",
+      "faRate": "Taux de FA",
+      "paused": "विराम दिला"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "तुमचा किती विश्वास आहे?",
+      "rateYourConfidence": "तुमचा आत्मविश्वास रेट करा",
+      "title": "आत्मविश्वास कॅलिब्रेशन",
+      "calError": "कॅलिब्रेशन त्रुटी",
+      "confidence": "आत्मविश्वास"
+    },
+    "consequences": {
+      "best": "सर्वोत्तम",
+      "nextRound": "पुढची फेरी...",
+      "time": "वेळ",
+      "placeholder": "परिणाम टाइप करा...",
+      "title": "परिणाम",
+      "totalIdeas": "एकूण कल्पना",
+      "avgPerRound": "सरासरी प्रति फेरी",
+      "rounds": "फेऱ्या",
+      "noConsequencesListed": "कोणतेही परिणाम सूचीबद्ध नाहीत",
+      "roundProgress": "फेरी {{current}} / {{total}}",
+      "typeAndPressAdd": "टाईप करा आणि Add दाबा"
+    },
+    "contextualCueing": {
+      "cueingEffect": "क्यूइंग प्रभाव",
+      "newConfigRt": "नवीन कॉन्फिग आरटी",
+      "oldConfigRt": "जुनी कॉन्फिग आरटी",
+      "title": "संदर्भित क्यूइंग",
+      "cueing": "क्यूइंग",
+      "oldRt": "जुना आर.टी",
+      "newRt": "नवीन RT",
+      "prompt": "प्रॉम्प्ट",
+      "left": "बाकी",
+      "right": "बरोबर"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "थ्रेशोल्ड जिटर",
+      "title": "समोच्च एकत्रीकरण",
+      "pipeJitter": "| गोंधळ"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "थ्रेशोल्ड कॉन्ट्रास्ट",
+      "title": "कॉन्ट्रास्ट सेन्सिटिव्हिटी",
+      "threshold": "उंबरठा",
+      "left": "बाकी",
+      "right": "बरोबर"
+    },
+    "cpt": {
+      "nontargets": "लक्ष्य नसलेले",
+      "target": "लक्ष्य",
+      "nonTarget": "लक्ष्य नसलेले",
+      "dPrime": "डी'",
+      "targetsLetter": "लक्ष्य पत्र",
+      "tapForLetterOnly": "फक्त लक्ष्य पत्रासाठी टॅप करा"
+    },
+    "crowding": {
+      "criticalSpacing": "गंभीर अंतर",
+      "leftAccuracy": "डावी अचूकता",
+      "rightAccuracy": "योग्य अचूकता"
+    },
+    "cryptogram": {
+      "hints": "इशारे",
+      "title": "क्रिप्टोग्राम",
+      "solved": "सोडवला",
+      "time": "वेळ",
+      "puzzles": "कोडी",
+      "puzzle": "कोडे",
+      "hint": "इशारा",
+      "clear": "साफ"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "वक्र अंतर्गत क्षेत्र",
+      "discountRateK": "सवलत दर (k)",
+      "impulsivityIndex": "आवेग निर्देशांक",
+      "title": "विलंब सवलत",
+      "aucPatience": "AUC संयम",
+      "patient": "पेशंट",
+      "kRate": "के दर",
+      "impuls": "आवेग",
+      "indifferencePoints": "उदासीनता गुण",
+      "whichPrefer": "तुम्हाला कोणते प्राधान्य आहे?",
+      "today": "आज"
+    },
+    "delayedMatching": {
+      "long": "लांब",
+      "longDelay68s": "दीर्घ विलंब (६-८ से)",
+      "med": "मेड",
+      "mediumDelay46s": "मध्यम विलंब (४-६से)",
+      "short": "लहान",
+      "shortDelay34s": "अल्प विलंब (३-४से)",
+      "title": "विलंबित जुळणी",
+      "delay": "विलंब",
+      "rememberThisPattern": "हा नमुना लक्षात ठेवा",
+      "whichWasIt": "ते कोणते होते?"
+    },
+    "dichoticListening": {
+      "alertDetection": "अलर्ट डिटेक्शन",
+      "attendToTheLeftColumn": "डाव्या स्तंभात उपस्थित रहा",
+      "attendedAccuracy": "अचूकता उपस्थित",
+      "ignoreTheRightColumn": "उजव्या स्तंभाकडे दुर्लक्ष करा",
+      "right": "बरोबर",
+      "title": "द्विगुणित ऐकणे",
+      "attendedAcc": "अचूकता उपस्थित",
+      "alertDet": "अलर्ट डिटेक्शन",
+      "alerts": "इशारे",
+      "selectLeftColumnWords": "डाव्या स्तंभातील शब्द निवडा",
+      "submit": "सबमिट करा",
+      "alertQuestion": "अलर्ट प्रश्न"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "अचूकता विसरून जा",
+      "forgettingEffect": "प्रभाव विसरणे",
+      "newRejection": "नवीन नकार",
+      "rememberAccuracy": "अचूकता लक्षात ठेवा",
+      "title": "दिग्दर्शित विसरणे",
+      "remember": "लक्षात ठेवा",
+      "forget": "विसरून जा",
+      "round": "गोलाकार",
+      "word": "शब्द",
+      "wasThisWordShown": "हा शब्द दाखवला होता का?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "लक्ष बायस स्कोअर",
+      "congruentAcc": "एकरूप Acc",
+      "congruentRt": "एकरूप RT",
+      "incongruentAcc": "विसंगत Acc",
+      "incongruentRt": "विसंगत RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "कार किंवा ट्रक?",
+      "minDisplayReached": "किमान प्रदर्शन गाठले",
+      "positionAccuracy": "स्थिती अचूकता",
+      "thresholdDisplay": "थ्रेशोल्ड डिस्प्ले",
+      "vehicleAccuracy": "वाहन अचूकता",
+      "whereWasTheDiamond": "हिरा कुठे होता?",
+      "title": "दुहेरी निर्णय",
+      "threshold": "उंबरठा",
+      "bothOk": "दोन्ही बरोबर",
+      "vehicle": "वाहन",
+      "position": "स्थिती",
+      "car": "कार",
+      "truck": "ट्रक"
+    },
+    "dsst": {
+      "items": "वस्तू",
+      "itemsCompleted": "आयटम पूर्ण झाले",
+      "speedItemsmin": "गती (आयटम/मिनिट)",
+      "attempts": "प्रयत्न",
+      "itemsPerMin": "आयटम / मि"
+    },
+    "dualTask": {
+      "dualtaskCost": "ड्युअल-टास्कची किंमत",
+      "taskANumber": "कार्य A (संख्या)",
+      "taskBSymbol": "टास्क बी (प्रतीक)",
+      "title": "ड्युअल टास्क",
+      "taskA": "टास्क ए",
+      "taskB": "टास्क बी",
+      "number": "क्रमांक",
+      "symbol": "प्रतीक",
+      "up": "वर",
+      "down": "खाली"
+    },
+    "dualTime": {
+      "sessionEnPause": "सत्र थांबवले",
+      "votreEstimationSecondes": "तुमचा अंदाज (सेकंद)",
+      "sessionInterrupted": "सत्रात व्यत्यय आला",
+      "target": "लक्ष्य",
+      "estimation": "अंदाज",
+      "avgTime": "सरासरी वेळ",
+      "avgError": "सरासरी त्रुटी",
+      "trials": "चाचण्या",
+      "resumeToContinue": "सुरू ठेवण्यासाठी पुन्हा सुरू करा",
+      "aimFor": "साठी लक्ष्य ठेवा",
+      "second": "दुसरा",
+      "howLongDidYouTake": "आपण किती वेळ घेतला?"
+    },
+    "dualTrack": {
+      "confirmer": "पुष्टी करा",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "सुरू ठेवण्यासाठी पुन्हा सुरू करा.",
+      "sessionEnPause": "सत्र थांबवले",
+      "tapezLesCibles": "लक्ष्यांवर टॅप करा",
+      "tapezLaCible": "लक्ष्य टॅप करा",
+      "appuyezConfirmer": "पुष्टी करा दाबा",
+      "targetsCountLabel": "{{count}} लक्ष्य",
+      "distractorsCountLabel": "{{count}} विचलित करणारे",
+      "roundsCountLabel": "{{count}} फेऱ्या",
+      "calibrationRoundsLabel": "{{count}} कॅलिब्रेशन राउंड",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = अंतर्गत प्रवास अडचण टियर.",
+      "tierHelpCurrentWithPhase": "तुम्ही सध्या {{targets}} लक्ष्यांसाठी {{total}} पैकी T{{current}} वर आहात. सध्याचा टप्पा: {{phase}}. पुढील लक्ष्य पातळीपूर्वी {{remaining}} टियर बाकी आहेत.",
+      "phaseTracking": "ट्रॅकिंग",
+      "phaseAudio": "ट्रॅकिंग + ऑडिओ",
+      "phaseColor": "ट्रॅकिंग + रंग",
+      "phaseCombined": "ट्रॅकिंग + ऑडिओ + रंग",
+      "passLetters": "अक्षरे",
+      "passColors": "रंग",
+      "moveInstruction": "सूचना हलवा",
+      "moveConfirmBtn": "पुष्टी बटण हलवा",
+      "preparingSession": "सत्राची तयारी करत आहे...",
+      "preparing3dScene": "3D देखावा तयार करत आहे...",
+      "startJourney": "प्रवास सुरू करा",
+      "calibrationDescription": "पहिल्या टप्प्यापूर्वी, एक लांब कॅलिब्रेशन तुमच्या सुरुवातीच्या पातळीचा अंदाज लावेल.",
+      "defaultDescription": "गोळे उजळतील. ते फिरत असताना त्यांचे अनुसरण करा, नंतर त्यांना ओळखा.",
+      "startCalibration": "कॅलिब्रेशन सुरू करा",
+      "calibrationTitle": "कॅलिब्रेशन",
+      "estimatedStart": "अंदाज प्रारंभ",
+      "roundsAnalyzed": "फेऱ्यांचे विश्लेषण केले",
+      "willStartAt": "वाजता सुरू होईल",
+      "targetsCount": "लक्ष्य",
+      "thenProgress": "नंतर प्रगती"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "मीन ॲब्सोल्युट एरर",
+      "ratio": "प्रमाण",
+      "slope": "उतार",
+      "vierordtSlope": "Vierordt उतार",
+      "wait": "थांबा...",
+      "title": "कालावधी पुनरुत्पादन",
+      "meanError": "मीन एरर",
+      "meanRatio": "सरासरी प्रमाण (उत्पादित/लक्ष्य)",
+      "holdNow": "आता धरा",
+      "target": "लक्ष्य",
+      "error": "त्रुटी"
+    },
+    "embeddedFigures": {
+      "fastest": "सर्वात वेगवान",
+      "found": "सापडले",
+      "meanDetectionTime": "सरासरी ओळख वेळ",
+      "slowest": "सर्वात मंद",
+      "title": "एम्बेड केलेले आकडे",
+      "missed": "चुकले",
+      "fastestLabel": "सर्वात वेगवान",
+      "findThisShape": "हा आकार शोधा",
+      "memorizeShape": "आकार लक्षात ठेवा...",
+      "foundIt": "ते सापडले!",
+      "giveUp": "सोडून द्या"
+    },
+    "emotionalNback": {
+      "falseAlarms": "खोटे अलार्म",
+      "misses": "चुकतो",
+      "title": "भावनिक N-Back",
+      "match": "जुळवा"
+    },
+    "emotionalStroop": {
+      "neutralRt": "तटस्थ RT",
+      "positiveRt": "सकारात्मक RT",
+      "threatRt": "धमकी RT",
+      "title": "भावनिक Stroop",
+      "interference": "हस्तक्षेप",
+      "interferenceThreatNeutral": "हस्तक्षेप (धमकी - तटस्थ)"
+    },
+    "eyesTest": {
+      "totalTime": "एकूण वेळ"
+    },
+    "faceName": {
+      "gain": "मिळवणे",
+      "learningImprovement": "शिक्षण सुधारणा",
+      "round1Accuracy": "फेरी 1 अचूकता",
+      "round2Accuracy": "फेरी 2 अचूकता",
+      "whoIsThis": "हे कोण आहे?",
+      "title": "फेस-नेम असोसिएशन",
+      "round": "गोलाकार",
+      "testPhase": "चाचणी टप्पा"
+    },
+    "fauxPas": {
+      "who": "कोण?",
+      "why": "का?",
+      "title": "चुकीची ओळख",
+      "detection": "तपास",
+      "scenarios": "परिस्थिती",
+      "fpFound": "चुकीचे पास सापडले",
+      "control": "नियंत्रण",
+      "readyToAnswer": "उत्तर द्यायला तयार",
+      "didSomeoneSay": "कोणीतरी असे काही बोलले आहे जे त्यांच्याकडे नसावे?",
+      "whoSaidIt": "कोणी सांगितले?",
+      "whyInappropriate": "ते अयोग्य का होते?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "अचूकता आठवा",
+      "recognitionAccuracy": "ओळख अचूकता",
+      "recallPlaceholder": "तुमचे उत्तर टाइप करा...",
+      "unlikely": "संभव नाही",
+      "certain": "निश्चित",
+      "title": "जाणून घेण्याची भावना",
+      "recall": "आठवते",
+      "recognition": "ओळख",
+      "fokR": "फोक आर",
+      "questions": "प्रश्न",
+      "recalled": "आठवले",
+      "recognized": "ओळखले",
+      "fokSensitivity": "FOK संवेदनशीलता",
+      "submit": "सबमिट करा",
+      "dontKnow": "माहीत नाही",
+      "fokPrompt": "ओळखाल का?",
+      "selectCorrectAnswer": "योग्य उत्तर निवडा",
+      "answer": "उत्तर द्या"
+    },
+    "fingerTapping": {
+      "firstTrial": "पहिली चाचणी",
+      "lastTrial": "शेवटची चाचणी",
+      "sequence": "क्रम",
+      "speedupT1VsT12": "स्पीडअप (T1 वि T12)",
+      "title": "फिंगर टॅपिंग"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "सरासरी हालचाल वेळ",
+      "avgThroughput": "सरासरी थ्रूपुट",
+      "title": "फिट्स टॅपिंग",
+      "throughput": "थ्रूपुट",
+      "tapTarget": "हायलाइट केलेल्या लक्ष्यावर टॅप करा"
+    },
+    "foreperiod": {
+      "early": "लवकर",
+      "slope": "उतार",
+      "title": "तात्पुरती तयारी",
+      "fpEffectSlope": "FP प्रभाव उतार"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "उलथापालथ",
+      "threshold": "उंबरठा",
+      "tone1": "स्वर १",
+      "tone2": "टोन 2",
+      "weber": "वेबर",
+      "weberFraction": "वेबर अपूर्णांक",
+      "hz": "Hz",
+      "title": "वारंवारता भेदभाव",
+      "thresholdLabel": "उंबरठा",
+      "hzDiff": "Hz फरक",
+      "whichWasHigher": "कोणते उच्च होते?",
+      "firstHigher": "प्रथम उच्च",
+      "secondHigher": "दुसरा उच्च"
+    },
+    "gabor": {
+      "gaborPatch": "गबोर पॅच",
+      "leftAccuracy": "डावी अचूकता",
+      "leftTrials": "बाकी चाचण्या",
+      "noiseMask": "आवाज मुखवटा",
+      "rightAccuracy": "योग्य अचूकता",
+      "rightTrials": "योग्य चाचण्या",
+      "thresholdAngle": "थ्रेशोल्ड कोन",
+      "title": "गबोर",
+      "threshold": "उंबरठा",
+      "reversals": "उलथापालथ",
+      "timedOut": "कालबाह्य",
+      "left": "बाकी",
+      "right": "बरोबर"
+    },
+    "gameOfDice": {
+      "finalPoints": "अंतिम गुण",
+      "risky": "धोकादायक",
+      "riskyChoices": "धोकादायक निवडी",
+      "safe": "सुरक्षित",
+      "winRate": "विजय दर",
+      "wins": "जिंकतो",
+      "title": "गेम ऑफ डाइस टास्क",
+      "totalPoints": "एकूण गुण",
+      "riskyLabel": "धोकादायक",
+      "roll": "रोल करा",
+      "chooseYourBet": "तुमची पैज निवडा",
+      "pickNumbers": "तुमचे नंबर निवडा"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "अंतर किंवा अंतर नाही?",
+      "gapThreshold": "अंतर थ्रेशोल्ड",
+      "title": "मौन शोध",
+      "noGap": "गॅप नाही"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "नजर कुठे होती?",
+      "direct": "थेट",
+      "left": "बाकी",
+      "right": "बरोबर",
+      "title": "टक लावून पाहण्याची दिशा",
+      "dPrimeDirectGaze": "डी प्राइम डायरेक्ट टक"
+    },
+    "hayling": {
+      "part1Initiation": "भाग १ (दीक्षा)",
+      "part2": "भाग २",
+      "part2Suppression": "भाग २ (दडपशाही)",
+      "suppressionCost": "दडपशाही खर्च",
+      "title": "हेलिंग",
+      "part1": "भाग १",
+      "part2Label": "भाग २",
+      "suppression": "दडपशाही",
+      "obvious": "उघड",
+      "obviousPicksPart2": "स्पष्ट निवडी (भाग २)",
+      "chooseUnrelated": "असंबंधित शब्द निवडा",
+      "completelyUnrelated": "पूर्णपणे असंबंधित",
+      "doNotPickObvious": "स्पष्ट शब्द निवडू नका!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "पुढच्या टप्प्यावर जात आहे...",
+      "stageComplete": "स्टेज पूर्ण!",
+      "title": "आयईडी सेट शिफ्ट",
+      "stages": "टप्पे",
+      "edsCost": "EDS खर्च",
+      "stage": "स्टेज",
+      "correctNeeded": "पुढे जाण्यासाठी योग्य"
+    },
+    "informationSampling": {
+      "cost": "खर्च",
+      "free": "मोफत",
+      "meanTilesCost": "सरासरी टाइल्स (किंमत)",
+      "meanTilesFree": "मीन टाइल्स (विनामूल्य)",
+      "totalCost": "एकूण खर्च",
+      "title": "माहिती नमुना",
+      "tiles": "फरशा",
+      "tapToReveal": "प्रकट करण्यासाठी टॅप करा"
+    },
+    "inspectionTime": {
+      "final": "अंतिम",
+      "finalDisplayTime": "अंतिम प्रदर्शन वेळ",
+      "minCorrectIt": "किमान बरोबर आयटी",
+      "threshold": "उंबरठा",
+      "title": "तपासणी वेळ",
+      "thresholdLabel": "उंबरठा",
+      "minIt": "किमान आयटी"
+    },
+    "iowaGambling": {
+      "balance": "शिल्लक:",
+      "chooseADeck": "एक डेक निवडा",
+      "deckADraws": "डेक ए काढतो",
+      "deckBDraws": "डेक बी काढतो",
+      "deckCDraws": "डेक सी काढतो",
+      "deckDDraws": "डेक डी काढतो",
+      "first40Advantageous": "प्रथम 40 फायदेशीर",
+      "last40Advantageous": "शेवटचे 40 फायदेशीर",
+      "learn": "शिका",
+      "learningIndex": "शिक्षण निर्देशांक",
+      "title": "आयोवा जुगार",
+      "advantageousPct": "फायदेशीर %",
+      "earnings": "कमाई",
+      "last40": "शेवटचे ४०"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "कॅलिब्रेशन बायस",
+      "meanJol": "म्हणजे JOL",
+      "nowTestYourRecall": "आता तुमच्या आठवणीची चाचणी घ्या",
+      "studyComplete": "अभ्यास पूर्ण",
+      "whatWasPairedWith": "काय जोडले होते...?",
+      "title": "शिकण्याचा निर्णय",
+      "recallAccuracy": "अचूकता आठवा",
+      "jolGamma": "JOL गामा",
+      "jolAccuracyGamma": "JOL अचूकता (गामा)",
+      "howLikelyRemember": "तुम्हाला किती आठवत असेल?",
+      "hiddenAnswer": "लपलेले उत्तर"
+    },
+    "judgmentOfRecency": {
+      "close": "बंद करा",
+      "closeGap13": "क्लोज गॅप (१-३)",
+      "far": "दूर",
+      "farGap9": "फार अंतर (9+)",
+      "mediumGap48": "मध्यम अंतर (4-8)",
+      "title": "Recency चा निर्णय",
+      "medium": "मध्यम",
+      "studyPhaseMemorizeOrder": "अभ्यासाचा टप्पा - ऑर्डर लक्षात ठेवा",
+      "whichMoreRecently": "जे अधिक अलीकडे दिसले?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "मीन RT (शब्द नसलेले)",
+      "meanRtWords": "मीन RT (शब्द)",
+      "nonwordsAccuracy": "शब्द नसलेली अचूकता",
+      "wordsAccuracy": "शब्दांची अचूकता",
+      "word": "शब्द",
+      "nonword": "शब्द नसलेले"
+    },
+    "maze": {
+      "duration": "कालावधी",
+      "optimalSteps": "इष्टतम पावले",
+      "pathEfficiency": "पथ कार्यक्षमता",
+      "totalSteps": "एकूण पायऱ्या",
+      "wallHits": "वॉल हिट्स",
+      "title": "चक्रव्यूह",
+      "completed": "पूर्ण झाले",
+      "efficiency": "कार्यक्षमता",
+      "wallHitsLabel": "वॉल हिट्स",
+      "steps": "पायऱ्या"
+    },
+    "memobox": {
+      "easy": "सोपे",
+      "easy2Boxes": "सोपे (2 बॉक्स)",
+      "hard": "कठिण",
+      "hard4Boxes": "कठीण (4 बॉक्स)",
+      "medium3Boxes": "मध्यम (3 बॉक्स)",
+      "title": "मेमोबॉक्स",
+      "rounds": "फेऱ्या",
+      "medium": "मध्यम",
+      "watchMovements": "हालचाली पहा...",
+      "howManyBalls": "प्रत्येक बॉक्समध्ये किती चेंडू आहेत?",
+      "submit": "सबमिट करा",
+      "roundOf": "{{total}} चे {{current}} गोल"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "क्रॉस-सेक्शन म्हणजे काय?",
+      "title": "मानसिक कटिंग"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "जुने, समान किंवा नवीन?",
+      "patternSeparation": "नमुना वेगळे करणे",
+      "sep": "सप्टें.",
+      "old": "जुने",
+      "similar": "तत्सम",
+      "new": "नवीन",
+      "ldi": "LDI",
+      "title": "मेमोनिक भेदभाव",
+      "hitRateOldDetected": "हिट रेट (जुने आढळले)",
+      "lureDiscrimination": "लुअर डिसक्रिमिनेशन (LDI)",
+      "memorize": "लक्षात ठेवा",
+      "testPhase": "चाचणी टप्पा"
+    },
+    "multiArmedBandit": {
+      "earnings": "कमाई:",
+      "pickMachine": "एक मशीन निवडा",
+      "title": "बहु-सशस्त्र डाकू",
+      "totalReward": "एकूण बक्षीस",
+      "optimal": "इष्टतम",
+      "regret": "खंत",
+      "exploit": "शोषण",
+      "machine": "यंत्र",
+      "armsExplored": "शस्त्रांचा शोध घेतला"
+    },
+    "navon": {
+      "globalBigLetter": "जागतिक (मोठे अक्षर)",
+      "localSmallLetter": "स्थानिक (लहान अक्षर)",
+      "title": "नवोन",
+      "globalAdv": "जागतिक ॲड.",
+      "whatBigLetter": "कोणते मोठे पत्र?",
+      "whatSmallLetter": "कोणते छोटे अक्षर?"
+    },
+    "negativePriming": {
+      "controlRt": "RT नियंत्रित करा",
+      "nameTheRedShape": "लाल आकाराचे नाव द्या",
+      "negativePrimingRt": "निगेटिव्ह प्राइमिंग आरटी",
+      "positivePrimingRt": "पॉझिटिव्ह प्राइमिंग RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP प्रभाव",
+      "title": "नकारात्मक प्राइमिंग",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "अंदाज पूर्वाग्रह",
+      "linearityRsup2": "रेखीयता (R²)",
+      "meanAbsoluteError": "म्हणजे निरपेक्ष त्रुटी",
+      "tapTheLineToPlaceTheNumber": "नंबर ठेवण्यासाठी ओळीवर टॅप करा",
+      "title": "क्रमांक रेखा",
+      "meanError": "मीन एरर",
+      "yourEstimate": "तुमचा अंदाज",
+      "correct": "बरोबर"
+    },
+    "oddOneOut": {
+      "colorTrials": "रंग चाचण्या",
+      "shapeTrials": "आकार चाचण्या",
+      "shape": "आकार",
+      "color": "रंग",
+      "timeout": "कालबाह्य",
+      "shapeDiffAccuracy": "आकार भिन्न. अचूकता",
+      "colorDiffAccuracy": "रंगात फरक. अचूकता",
+      "shapeDiffAvgRt": "आकार भिन्न. सरासरी RT",
+      "colorDiffAvgRt": "रंगात फरक. सरासरी RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "कोणत्या मार्गाने?",
+      "thresholdAngle": "थ्रेशोल्ड कोन",
+      "title": "अभिमुखता भेदभाव",
+      "threshold": "उंबरठा",
+      "counterCw": "CCW",
+      "clockwise": "घड्याळाच्या दिशेने"
+    },
+    "patternComparison": {
+      "differentTrials": "वेगवेगळ्या चाचण्या",
+      "sameTrials": "त्याच चाचण्या",
+      "same": "समान",
+      "different": "वेगळे"
+    },
+    "patternRecognition": {
+      "newPatterns": "नवीन नमुने",
+      "oldPatterns": "जुने नमुने",
+      "old": "जुने",
+      "new": "नवीन",
+      "studyPatterns": "नमुन्यांचा काळजीपूर्वक अभ्यास करा",
+      "memorize": "लक्षात ठेवा ({{current}}/{{total}})",
+      "getReady": "तयार व्हा...",
+      "testPhaseStarting": "चाचणी टप्पा सुरू होत आहे..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "अगदी बरोबर",
+      "meanAngularError": "सरासरी कोनीय त्रुटी",
+      "withinTolerance": "सहिष्णुतेच्या आत",
+      "title": "दृष्टीकोन घेणे",
+      "avgErr": "सरासरी त्रुटी",
+      "youAreAt": "तुम्ही येथे आहात",
+      "facing": "तोंड देत",
+      "pointTo": "कडे निर्देश करा"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "वारंवारता उंबरठा",
+      "seq1": "अनुक्रम १",
+      "seq2": "Seq 2",
+      "title": "फोनेम भेदभाव",
+      "thresh": "मळणी",
+      "sameOrDifferent": "समान की वेगळे?",
+      "same": "समान",
+      "different": "वेगळे"
+    },
+    "predictionMotion": {
+      "biasLate": "बायस (+ = उशीरा)",
+      "meanAbsoluteError": "मीन ॲब्सोल्युट एरर",
+      "precisionSd": "अचूकता (SD)",
+      "title": "अंदाज मोशन",
+      "absError": "Abs. त्रुटी",
+      "precision": "सुस्पष्टता",
+      "responded": "प्रतिसाद दिला",
+      "tapWhenReachesTarget": "लक्ष्यापर्यंत पोहोचल्यावर टॅप करा"
+    },
+    "promem": {
+      "ongoingAccuracy": "चालू अचूकता",
+      "ongoingRt": "चालू आर.टी",
+      "pmHitRate": "पीएम हिट रेट",
+      "pmRt": "PM RT",
+      "pmTargets": "पंतप्रधानांवर निशाणा साधला",
+      "title": "संभाव्य मेमरी",
+      "ongoing": "चालू आहे",
+      "pmHits": "पीएम हिट्स",
+      "pmMisses": "PM चुकतो",
+      "living": "जगणे",
+      "nonLiving": "निर्जीव",
+      "redWordInstruction": "लाल शब्द = दाबा"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "डिस्ट्रॅक्टर एरर",
+      "literalErrorRate": "शाब्दिक त्रुटी दर",
+      "literalErrors": "शाब्दिक चुका",
+      "title": "म्हणी व्याख्या",
+      "literal": "शाब्दिक",
+      "litRate": "लिट. रेट करा",
+      "whatDoesThisMean": "याचा अर्थ काय?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "अनुसरण करण्यास तयार व्हा",
+      "meanTimeOnTarget": "लक्ष्यावर सरासरी वेळ",
+      "meanTrackingError": "सरासरी ट्रॅकिंग त्रुटी",
+      "placeYourFingerOnTheScreen": "तुमचे बोट स्क्रीनवर ठेवा",
+      "title": "पाठपुरावा ट्रॅकिंग",
+      "timeOnTarget": "लक्ष्यावर वेळ",
+      "error": "त्रुटी",
+      "onTarget": "लक्ष्यावर",
+      "avgError": "सरासरी त्रुटी",
+      "improve": "सुधारणा करा",
+      "improvementT1VsT": "सुधारणा T1 वि T",
+      "errorLabel": "त्रुटी",
+      "followGreenTarget": "हिरव्या लक्ष्याचे अनुसरण करा"
+    },
+    "rapidNaming": {
+      "roundComplete": "फेरी पूर्ण",
+      "totalErrors": "एकूण त्रुटी",
+      "title": "जलद नामकरण",
+      "avgSpeed": "सरासरी गती",
+      "totalTime": "एकूण वेळ",
+      "round": "गोलाकार",
+      "getReady": "तयार व्हा!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "सरासरी सोडवण्याची वेळ",
+      "solved": "सोडवला",
+      "wrong": "चुकीचे",
+      "placeholder": "तुमचे उत्तर...",
+      "title": "Rebus कोडी",
+      "puzzles": "कोडी",
+      "timeout": "कालबाह्य",
+      "submit": "सबमिट करा",
+      "answer": "उत्तर द्या"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "सरासरी सोडवण्याची वेळ",
+      "solved": "सोडवला",
+      "placeholder": "तुमचे उत्तर...",
+      "title": "रिमोट असोसिएट्स",
+      "timeout": "कालबाह्य",
+      "submit": "सबमिट करा",
+      "answer": "उत्तर द्या"
+    },
+    "reversalLearning": {
+      "adapt": "जुळवून घ्या",
+      "loseshiftRate": "लूज-शिफ्ट रेट",
+      "score": "स्कोअर:",
+      "winstayRate": "विन-स्टे रेट",
+      "title": "रिव्हर्सल लर्निंग",
+      "rewards": "बक्षिसे",
+      "reversals": "उलथापालथ",
+      "persev": "पर्सेव्ह",
+      "avgTrialsToCriterion": "सरासरी निकषासाठी चाचण्या",
+      "pickACard": "एक कार्ड निवडा"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7 ने मागे मोजा",
+      "reproduceThePatternFromMemory": "मेमरीमधून नमुना पुनरुत्पादित करा",
+      "title": "रे कॉम्प्लेक्स आकृती",
+      "copy": "कॉपी करा",
+      "recall": "आठवते",
+      "retention": "धारणा",
+      "trial": "चाचणी",
+      "target": "लक्ष्य",
+      "yourCopy": "तुमची प्रत",
+      "submit": "सबमिट करा"
+    },
+    "rhythm": {
+      "avgTimingError": "सरासरी वेळेची त्रुटी",
+      "bestTrialError": "सर्वोत्तम चाचणी त्रुटी",
+      "correctTrials": "योग्य चाचण्या",
+      "worstTrialError": "सर्वात वाईट चाचणी त्रुटी",
+      "watchRhythm": "लय पहा",
+      "getReady": "तयार व्हा...",
+      "tapTheRhythm": "ताल टॅप करा!",
+      "tooFarOff": "खूप दूर!",
+      "tapToReproduce": "पुनरुत्पादन करण्यासाठी टॅप करा",
+      "beats": "{{count}} बीट्स",
+      "bestTrial": "सर्वोत्तम चाचणी",
+      "worstTrial": "सर्वात वाईट चाचणी",
+      "title": "ताल",
+      "msErr": "ms चूक"
+    },
+    "routePlanning": {
+      "time": "वेळ",
+      "title": "मार्ग नियोजन",
+      "levels": "स्तर",
+      "completed": "पूर्ण झाले",
+      "avgMoves": "सरासरी हालचाल",
+      "clear": "साफ",
+      "submit": "सबमिट करा",
+      "instructions": "सूचना"
+    },
+    "rvp": {
+      "detect357246468": "शोधा: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "लक्ष्य क्रम",
+      "fa": "एफए",
+      "hitRate": "हिट दर",
+      "misses": "चुकतो",
+      "sequences": "क्रम"
+    },
+    "sart": {
+      "commissionErrors": "आयोगाच्या चुका",
+      "omissionErrors": "वगळणे चुका",
+      "tapAllDigits": "3 वगळता सर्व अंकांवर टॅप करा",
+      "except3": "3 वगळता"
+    },
+    "sceneCrasher": {
+      "adds": "जोडते",
+      "studyTheScene": "दृश्याचा अभ्यास करा",
+      "swaps": "स्वॅप्स",
+      "tapTheNewchangedObject": "नवीन/बदललेल्या ऑब्जेक्टवर टॅप करा"
+    },
+    "sentenceVerification": {
+      "falseSentences": "खोटी वाक्ये",
+      "trueSentences": "सत्य वाक्ये",
+      "byCategory": "श्रेणीनुसार",
+      "title": "वाक्य पडताळणी",
+      "trueRt": "खरे RT",
+      "true": "खरे",
+      "false": "खोटे",
+      "pressKey": "दाबा"
+    },
+    "soundSweeps": {
+      "down": "खाली",
+      "downAccuracy": "अचूकता कमी",
+      "durationThreshold": "कालावधी थ्रेशोल्ड",
+      "up": "वर",
+      "upAccuracy": "अचूकता वर",
+      "title": "ध्वनी स्वीप्स",
+      "threshold": "उंबरठा",
+      "upOrDown": "वर की खाली?"
+    },
+    "sourceMemory": {
+      "color": "रंग",
+      "colorRecall": "रंग आठवतो",
+      "frame": "फ्रेम",
+      "frameRecall": "फ्रेम रिकॉल",
+      "getReadyForTheTest": "परीक्षेसाठी सज्ज व्हा!",
+      "itemRecognition": "आयटम ओळख",
+      "positionRecall": "पोझिशन रिकॉल",
+      "sourceAccuracy": "स्रोत अचूकता",
+      "title": "स्त्रोत मेमरी",
+      "source": "स्त्रोत",
+      "position": "स्थिती",
+      "word": "शब्द",
+      "wasThisWordShown": "हा शब्द दाखवला होता का?",
+      "bottom": "तळ",
+      "blue": "निळा",
+      "orange": "संत्रा",
+      "circle": "वर्तुळ",
+      "square": "चौरस"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "आवाज थ्रेशोल्ड",
+      "title": "भाषण-इन-गोंगाट",
+      "noise": "गोंगाट",
+      "whichWordWasIt": "कोणता शब्द होता तो?"
+    },
+    "srtt": {
+      "learningEffect": "शिकण्याचा प्रभाव",
+      "learning": "शिकत आहे",
+      "block": "ब्लॉक करा"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "संधी पातळी",
+      "learningDetected": "शिकणे आढळले",
+      "testPhase": "चाचणी टप्पा",
+      "whichPairLooksMoreFamiliar": "कोणती जोडी अधिक परिचित दिसते?",
+      "title": "सांख्यिकी शिक्षण",
+      "learning": "शिकत आहे",
+      "watchTheShapes": "आकार पहा"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "विश्वास पूर्वाग्रह प्रभाव",
+      "conclusion": "निष्कर्ष",
+      "premise1": "प्रिमिस १",
+      "premise2": "प्रिमिस २",
+      "logicalValidityQuestion": "हे तार्किकदृष्ट्या वैध आहे का?",
+      "valid": "वैध",
+      "invalid": "अवैध"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "अनुपस्थित अचूकता",
+      "presentAccuracy": "वर्तमान अचूकता",
+      "title": "चिन्ह शोध",
+      "present": "उपस्थित",
+      "absent": "अनुपस्थित",
+      "targets": "लक्ष्य",
+      "searchGroup": "शोध गट"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "असिंक्रोनी",
+      "drift": "वाहून नेणे",
+      "cv": "CV",
+      "title": "सिंक-चालू",
+      "meanCv": "म्हणजे CV",
+      "tempos": "टेंपो",
+      "tempo": "टेम्पो",
+      "ioi": "आयओआय",
+      "getReady": "तयार व्हा...",
+      "nextTempo": "पुढचा टेम्पो..."
+    },
+    "taskJuggling": {
+      "correctResets": "योग्य रीसेट",
+      "duration": "कालावधी",
+      "missedCounters": "मिस्ड काउंटर",
+      "prematureResets": "अकाली रीसेट",
+      "totalEvents": "एकूण घटना",
+      "tooEarly": "खूप लवकर!",
+      "missed": "चुकले!",
+      "title": "टास्क जुगलिंग",
+      "premature": "अकाली",
+      "counter": "काउंटर",
+      "tapCounterInstruction": "प्रत्येक काउंटर त्याच्या उंबरठ्यावर पोहोचल्यावर टॅप करा. कोणत्याही ओव्हरफ्लो होऊ देऊ नका!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "दुभाजक बिंदू (PSE)",
+      "curveSteepness": "वक्र steepness",
+      "idealMidpoint": "आदर्श मध्यबिंदू",
+      "pse": "PSE",
+      "title": "ऐहिक दुभाजक",
+      "steepness": "स्टेपनेस",
+      "shortOrLong": "लहान की लांब?",
+      "trainingPhase": "प्रशिक्षण टप्पा",
+      "short": "लहान",
+      "long": "लांब"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "ग्रेडियंट रुंदी",
+      "rememberThisDuration": "हा कालावधी लक्षात ठेवा",
+      "width": "रुंदी",
+      "standard": "मानक",
+      "title": "ऐहिक सामान्यीकरण",
+      "hitRate": "हिट दर",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "हिट रेट (मानक शोधा)",
+      "sameDuration": "समान कालावधी?",
+      "trainingPhase": "प्रशिक्षण टप्पा",
+      "same": "समान",
+      "different": "वेगळे"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "थ्रेशोल्ड SOA",
+      "title": "पोत भेदभाव",
+      "threshold": "उंबरठा"
+    },
+    "timePromem": {
+      "avgTimingError": "सरासरी वेळेची त्रुटी",
+      "clockChecks": "घड्याळ तपासतो",
+      "ongoingAccuracy": "चालू अचूकता",
+      "ongoingTrials": "चालू असलेल्या चाचण्या",
+      "totalPmPresses": "एकूण पीएम प्रेस",
+      "pmAccuracy": "पीएम अचूकता",
+      "pmMisses": "PM चुकतो",
+      "title": "वेळ संभाव्य",
+      "ongoing": "चालू आहे",
+      "pmHitsLabel": "पीएम मारले",
+      "timingErr": "वेळेची चूक",
+      "pmHitsExpected": "पीएम हिट्स/अपेक्षित",
+      "pmPresses": "पीएम प्रेस",
+      "checkClock": "घड्याळ तपासा",
+      "thirtySecMark": "30 चे मार्क"
+    },
+    "toj": {
+      "meanResponseTime": "मीन प्रतिसाद वेळ",
+      "temporalResolution": "ऐहिक ठराव",
+      "title": "तात्पुरत्या आदेशाचा निर्णय",
+      "threshold": "उंबरठा",
+      "whichCameFirst": "कोणता पहिला आला?",
+      "leftFirst": "प्रथम डावीकडे",
+      "rightFirst": "बरोबर प्रथम"
+    },
+    "tower": {
+      "budget": "बजेट",
+      "challenge": "आव्हान",
+      "challengeClassic": "क्लासिक",
+      "challengeExpert": "तज्ञ",
+      "challengeMemory": "स्मृती",
+      "challengePrecision": "सुस्पष्टता",
+      "dragDiscAriaLabel": "पेग {{peg}} वरून शीर्ष डिस्क ड्रॅग करा",
+      "goal": "ध्येय",
+      "goalHiddenStatus": "ध्येय लपवले. ते थोडक्यात दाखवण्यासाठी Reveal वापरा.",
+      "goalRevealedMessage": "3 सेकंदांसाठी गोल प्रकट झाला.",
+      "hint": "इशारा",
+      "hintDescription": "सर्वोत्तम पुढील हालचाल दाखवा",
+      "hintMessage": "इशारा: शीर्ष डिस्क पेग {{fromPeg}} वरून पेग {{toPeg}} वर हलवा.",
+      "hiddenGoalDescription": "खेळादरम्यान ध्येय लपलेले असते. जेव्हा तुम्हाला लहान रिफ्रेशची आवश्यकता असेल तेव्हा रिव्हल वापरा.",
+      "hiddenGoalTitle": "मेमरी आव्हान",
+      "invalid": "अवैध",
+      "moves": "चालते",
+      "optimal": "इष्टतम",
+      "pegFullMessage": "तो पेग भरला आहे.",
+      "previewMemoryCountdown": "ध्येय लक्षात ठेवा. {{seconds}}s मध्ये सुरू होते.",
+      "previewPlanCountdown": "{{moves}}-मूव्ह सोल्यूशनची योजना करा. {{seconds}} मध्ये सुरू होते.",
+      "reset": "रीसेट करा",
+      "resetDescription": "हे कोडे पुन्हा सुरू करा",
+      "resetMessage": "कोडे रीसेट.",
+      "reveal": "प्रकट करा",
+      "revealDescription": "लपलेले ध्येय उघड करा",
+      "statusOptimalSolve": "इष्टतम निराकरण. स्कोअर {{score}}.",
+      "statusSolvedScore": "{{moves}} मूव्ह (+{{extraMoves}}) मध्ये सोडवले. स्कोअर {{score}}.",
+      "undo": "पूर्ववत करा",
+      "undoDescription": "शेवटची चाल उलटा",
+      "undoneMessage": "शेवटची हालचाल पूर्ववत केली.",
+      "yourPegs": "आपले पेग"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "योग्य वितरण",
+      "trainsLost": "गाड्या हरवल्या",
+      "wrongStation": "चुकीचे स्टेशन",
+      "title": "ट्रेन ऑफ थॉट",
+      "trains": "गाड्या",
+      "missed": "चुकले",
+      "scoreLabel": "स्कोअर",
+      "instructions": "सूचना"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "वापरलेले सरासरी प्रश्न",
+      "title": "वीस प्रश्न",
+      "avgQuestions": "सरासरी प्रश्न",
+      "rounds": "फेऱ्या",
+      "efficiency": "कार्यक्षमता",
+      "avgQuestionsCorrectOnly": "सरासरी प्रश्न (फक्त बरोबर)",
+      "questionsLabel": "प्रश्न",
+      "remaining": "बाकी",
+      "readyToGuess": "मी अंदाज लावायला तयार आहे!",
+      "tapTheTarget": "तुम्हाला लक्ष्य वाटत असलेल्या ऑब्जेक्टवर टॅप करा!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "दृश्याचे उपयुक्त क्षेत्र",
+      "visualNoiseMask": "व्हिज्युअल आवाज मुखवटा",
+      "whatWasInTheCenter": "केंद्रात काय होते?",
+      "whereWasTheTarget": "लक्ष्य कुठे होते?",
+      "avgThreshold": "सरासरी उंबरठा",
+      "speed": "गती",
+      "accuracy": "अचूकता",
+      "central": "मध्यवर्ती",
+      "peripheral": "परिधीय",
+      "overall": "एकूणच",
+      "block": "ब्लॉक करा",
+      "trials": "चाचण्या",
+      "start": "सुरू करा",
+      "focus": "लक्ष केंद्रित करा",
+      "threshold": "उंबरठा",
+      "stimulus": "उत्तेजक",
+      "respondFromMemory": "स्मृतीतून प्रतिसाद द्या",
+      "truck": "ट्रक",
+      "choosePeripheralLocation": "परिधीय स्थान निवडा",
+      "currentBlock": "{{n}} ब्लॉक करा",
+      "exposure": "एक्सपोजर"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} ने सुरू होणारे शब्द",
+      "title": "शाब्दिक प्रवाह",
+      "totalWords": "एकूण शब्द",
+      "duplicates": "डुप्लिकेट",
+      "letter": "पत्र",
+      "round": "गोलाकार",
+      "roundComplete": "फेरी पूर्ण",
+      "nextRound": "पुढची फेरी",
+      "middotRound": "· गोल"
+    },
+    "vernierAcuity": {
+      "whichSide": "कोणत्या बाजूने?",
+      "title": "व्हर्नियर तीक्ष्णता",
+      "leftOffset": "डावीकडे ऑफसेट",
+      "rightOffset": "योग्य ऑफसेट",
+      "offset": "ऑफसेट"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "इष्टतम धोरण",
+      "correct": "बरोबर!",
+      "wrong": "चुकीचे",
+      "title": "हवामान अंदाज",
+      "optimal": "इष्टतम",
+      "learningCurve": "शिकणे वक्र",
+      "predictTheWeather": "हवामानाचा अंदाज घ्या",
+      "rain": "पाऊस"
+    },
+    "wordChain": {
+      "avgResponseTime": "सरासरी प्रतिसाद वेळ",
+      "chain": "साखळी",
+      "longestChain": "सर्वात लांब साखळी",
+      "totalCorrect": "एकूण बरोबर",
+      "totalWords": "एकूण शब्द",
+      "words": "शब्द",
+      "title": "शब्द साखळी",
+      "longest": "सर्वात लांब",
+      "avgRt": "सरासरी RT",
+      "endsWith": "ने समाप्त होते",
+      "chainLabel": "साखळी",
+      "bestLabel": "सर्वोत्तम"
+    },
+    "wordFlow": {
+      "avgWordLength": "सरासरी शब्द लांबी",
+      "correct": "बरोबर",
+      "invalidWords": "अवैध शब्द",
+      "totalWordsSelected": "एकूण शब्द निवडले",
+      "validWords": "वैध शब्द",
+      "wordsPerMinute": "शब्द प्रति मिनिट",
+      "wrong": "चुकीचे",
+      "seeResults": "परिणाम पहा",
+      "nextRound": "पुढील फेरी ({{current}}/{{total}})",
+      "title": "शाब्दिक प्रवाह",
+      "validWordsLabel": "वैध शब्द",
+      "wordsPerMinLabel": "शब्द/मि",
+      "avgLengthLabel": "सरासरी लांबी",
+      "invalidLabel": "अवैध",
+      "round": "गोलाकार",
+      "selectWordsBelongTo": "संबंधित शब्द निवडा",
+      "selected": "निवडले"
+    },
+    "wordList": {
+      "avgRtCorrect": "सरासरी RT (बरोबर)",
+      "primacyEffect": "प्राइमसी इफेक्ट",
+      "recencyEffect": "अलीकडील प्रभाव",
+      "studyPhaseRememberEachWord": "अभ्यासाचा टप्पा - प्रत्येक शब्द लक्षात ठेवा",
+      "wordsRecalled": "शब्द आठवले",
+      "title": "शब्द सूची",
+      "serialPositionCurve": "क्रमिक स्थिती वक्र",
+      "wasWordInList": "हा शब्द यादीत होता का?",
+      "seenBefore": "आधी पाहिले",
+      "newWord": "नवीन"
+    },
+    "speedSort": {
+      "switchAccuracy": "अचूकता स्विच करा",
+      "switchTrials": "चाचण्या स्विच करा",
+      "sortByColor": "COLOR नुसार क्रमवारी लावा",
+      "sortByShape": "SHAPE नुसार क्रमवारी लावा",
+      "sortByNumber": "NUMBER नुसार क्रमवारी लावा",
+      "ruleChanged": "नियम बदलला!",
+      "binRed": "लाल",
+      "binBlue": "निळा",
+      "binGreen": "हिरवा",
+      "binYellow": "पिवळा",
+      "binCircle": "वर्तुळ",
+      "binSquare": "चौरस",
+      "binTriangle": "त्रिकोण",
+      "binStar": "तारा",
+      "title": "गती क्रमवारी",
+      "switch": "स्विचेस"
+    },
+    "reflex": {
+      "target": "लक्ष्य",
+      "lure": "प्रलोभन",
+      "tooSlow": "खूप हळू!",
+      "wrongTarget": "चुकीचे लक्ष्य!",
+      "tapTargets": "हिरव्या मंडळांवर टॅप करा!",
+      "hits": "हिट्स",
+      "misses": "चुकतो",
+      "fa": "एफए"
+    },
+    "chainCalculation": {
+      "rememberTotal": "एकूण धावणे लक्षात ठेवा...",
+      "title": "साखळी गणना",
+      "stepChains": "{{len}}-चरण साखळी",
+      "start": "सुरू करा",
+      "step": "पायरी",
+      "whatIsTheResult": "परिणाम काय?"
+    },
+    "alternateUses": {
+      "placeholder": "वापर टाइप करा...",
+      "title": "पर्यायी उपयोग",
+      "totalUses": "एकूण उपयोग",
+      "perObject": "प्रति वस्तु",
+      "rounds": "फेऱ्या",
+      "bestObject": "सर्वोत्तम वस्तू",
+      "bestCount": "सर्वोत्तम गणना",
+      "noUsesSubmitted": "कोणतेही उपयोग सबमिट केलेले नाहीत",
+      "timesUp": "वेळ संपली!",
+      "nextObject": "पुढील ऑब्जेक्ट ({{object}})",
+      "listCreativeUses": "या ऑब्जेक्टसाठी क्रिएटिव्ह वापरांची यादी करा"
+    },
+    "anagram": {
+      "placeholder": "शब्द टाइप करा...",
+      "title": "ॲनाग्राम",
+      "avgSolve": "सरासरी सोडवणे",
+      "letterWords": "{{len}}-अक्षर शब्द",
+      "submit": "सबमिट करा"
+    },
+    "facialEmotion": {
+      "happy": "आनंदी",
+      "sad": "उदास",
+      "angry": "रागावला",
+      "fearful": "भयभीत",
+      "disgusted": "वैतागलेला",
+      "surprised": "आश्चर्य वाटले",
+      "lc": "LC",
+      "title": "चेहर्यावरील भावना ओळख",
+      "topConfusions": "वरचा गोंधळ"
+    },
+    "numberSeries": {
+      "easy": "सोपे",
+      "hard": "कठिण"
+    },
+    "chainRecall": {
+      "round": "गोलाकार",
+      "title": "चेन रिकॉल",
+      "chain": "साखळी",
+      "placeholder": "प्लेसहोल्डर"
+    },
+    "emotionalGoNogo": {
+      "fa": "एफए",
+      "title": "भावनिक Go/No-Go",
+      "block1CommissionErrors": "1 कमिशन त्रुटी अवरोधित करा",
+      "block2CommissionErrors": "ब्लॉक 2 कमिशन त्रुटी",
+      "goHappy": "जा = आनंदी",
+      "goSad": "जाणे = दुःखी",
+      "block": "ब्लॉक करा",
+      "go": "जा"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop प्रभाव",
+      "title": "रंगीत गर्दी",
+      "congShort": "काँग्रेस",
+      "incongShort": "इनकॉन्ग.",
+      "congruentAccuracy": "एकरूप अचूकता",
+      "incongruentAccuracy": "विसंगत अचूकता"
+    },
+    "mirror": {
+      "avgCorrectCells": "योग्य पेशी (सरासरी)",
+      "symmetryType": "सममिती प्रकार",
+      "title": "आरसा"
+    },
+    "rhythmTap": {
+      "correctTrials": "योग्य चाचण्या",
+      "avgRhythmScore": "सरासरी ताल स्कोअर",
+      "bestTrialScore": "सर्वोत्तम चाचणी स्कोअर",
+      "worstTrialScore": "सर्वात वाईट चाचणी स्कोअर",
+      "level": "पातळी",
+      "rhythm": "ताल",
+      "bestTrial": "सर्वोत्तम चाचणी",
+      "worstTrial": "सर्वात वाईट चाचणी"
+    },
+    "vocalProsody": {
+      "questioning": "प्रश्न करत आहे"
+    },
+    "arithmeticSpeed": {
+      "multiply": "गुणाकार करा",
+      "add": "ॲड",
+      "subtract": "वजा करा",
+      "title": "अंकगणित गती",
+      "score": "स्कोअर",
+      "solved": "सोडवला",
+      "missed": "चुकले"
+    },
+    "puzzle": {
+      "avgSolveTime": "सरासरी सोडवण्याची वेळ",
+      "totalMoves": "एकूण चाल",
+      "totalErrors": "एकूण त्रुटी",
+      "gridSize": "ग्रिड आकार",
+      "maxGridReached": "कमाल ग्रिड गाठली",
+      "maxLevelReached": "कमाल पातळी गाठली",
+      "maxNodesReached": "कमाल नोड्स गाठले",
+      "puzzleDetails": "कोडे तपशील",
+      "roundDetails": "गोल तपशील",
+      "solved": "सोडवले!",
+      "undo": "पूर्ववत करा",
+      "reset": "रीसेट करा",
+      "check": "तपासा",
+      "moves": "चालते",
+      "time": "वेळ",
+      "level": "पातळी",
+      "errors": "चुका",
+      "score": "स्कोअर",
+      "grid": "ग्रिड",
+      "crossings": "क्रॉसिंग",
+      "pearls": "मोती",
+      "clues": "सुगावा",
+      "region": "प्रदेश",
+      "filled": "भरले",
+      "cells": "पेशी",
+      "undosLeft": "पूर्ववत करणे बाकी आहे",
+      "gems": "हिरे",
+      "connected": "जोडलेले",
+      "slides": "स्लाइड्स",
+      "progress": "प्रगती",
+      "rotations": "परिभ्रमण",
+      "puzzle": "कोडे",
+      "uncovered": "उघडलेले",
+      "colored": "रंगीत",
+      "violations": "उल्लंघन",
+      "blacked": "काळवंडलेले",
+      "empty": "रिकामे",
+      "remaining": "बाकी",
+      "pairs": "जोड्या",
+      "flips": "फ्लिप",
+      "found": "सापडले",
+      "balls": "गोळे",
+      "guesses": "अंदाज लावतात",
+      "original": "मूळ",
+      "findDifferences": "फरक शोधा",
+      "totalDrags": "एकूण ड्रॅग",
+      "totalUndos": "एकूण पूर्ववत",
+      "totalEdgesDrawn": "एकूण कडा काढल्या",
+      "totalLasers": "एकूण लेसर",
+      "totalSlides": "एकूण स्लाइड्स",
+      "totalRotations": "एकूण फिरणे",
+      "totalRectangles": "एकूण आयत",
+      "totalScore": "एकूण स्कोअर",
+      "avgTime": "सरासरी वेळ",
+      "cellsCleared": "सेल साफ केले",
+      "totalDiffsFound": "एकूण फरक आढळले",
+      "gemsCollected": "रत्ने गोळा केली",
+      "pushBoxesOntoTargets": "सर्व बॉक्स लक्ष्यांवर ढकलून द्या",
+      "fireLasersMarkBalls": "काठावरुन लेसर फायर करा, नंतर बॉल पोझिशन्स चिन्हांकित करा",
+      "revealingAnswer": "उत्तर उघड करत आहे...",
+      "checkAnswer": "उत्तर तपासा",
+      "pickNumberBelow": "खालील नंबर निवडा",
+      "tapCellToAssign": "नंबर नियुक्त करण्यासाठी सेलवर टॅप करा",
+      "tapEdgesToPlaceWalls": "भिंती ठेवण्यासाठी कडा टॅप करा. K च्या प्रदेशात विभागा.",
+      "ghosts": "भुते",
+      "vampires": "व्हॅम्पायर्स",
+      "zombies": "झोम्बी",
+      "dominoes": "डोमिनोज",
+      "islands": "बेटे",
+      "pegsLeft": "पेग्स डावे",
+      "bestRemaining": "सर्वोत्तम उर्वरित",
+      "puzzlesSolved": "कोडी सोडवली",
+      "flooded": "पूर आला",
+      "edges": "कडा",
+      "totalPlacements": "एकूण प्लेसमेंट",
+      "totalRemovals": "एकूण काढणे",
+      "maxTileReached": "कमाल टाइल गाठली",
+      "target": "लक्ष्य",
+      "placed": "ठेवले",
+      "totalGuesses": "एकूण अंदाज",
+      "guessesLeft": "अंदाज सोडला",
+      "difficulty": "अडचण"
+    },
+    "palisade": {
+      "title": "पालिसडे",
+      "puzzles": "कोडी",
+      "maxLevel": "कमाल पातळी"
+    },
+    "keen": {
+      "title": "केनकेन",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "errors": "चुका",
+      "avgTime": "सरासरी वेळ",
+      "erase": "पुसून टाका"
+    },
+    "blackbox": {
+      "title": "ब्लॅक बॉक्स",
+      "puzzles": "कोडी",
+      "lasers": "लेसर",
+      "avgTime": "सरासरी वेळ"
+    },
+    "designFluency": {
+      "title": "डिझाइन ओघ",
+      "uniqueDesigns": "अद्वितीय डिझाइन्स",
+      "duplicates": "डुप्लिकेट",
+      "round": "गोलाकार",
+      "roundComplete": "फेरी पूर्ण",
+      "youCreatedDesigns": "तुम्ही {{count}} डिझाइन्स तयार केल्या आहेत",
+      "startRound": "फेरी सुरू करा",
+      "instructions": "सूचना",
+      "designs": "डिझाईन्स",
+      "clear": "साफ",
+      "addDesign": "ॲड"
+    },
+    "signpost": {
+      "title": "साइनपोस्ट",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "avgTime": "सरासरी वेळ",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "sokoban": {
+      "title": "सोकोबान",
+      "level": "पातळी",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "undos": "पूर्ववत करा",
+      "puzzle": "कोडे"
+    },
+    "numericalStroop": {
+      "left": "बाकी",
+      "right": "बरोबर"
+    },
+    "biologicalMotion": {
+      "title": "जैविक गती",
+      "noiseDots": "आवाजाचे ठिपके",
+      "whichDirection": "कोणत्या दिशेला?",
+      "left": "बाकी",
+      "right": "बरोबर"
+    },
+    "inertia": {
+      "title": "जडत्व",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "gems": "हिरे",
+      "moves": "चालते"
+    },
+    "waterLevel": {
+      "title": "पाण्याची पातळी",
+      "error": "त्रुटी",
+      "tilt": "तिरपा",
+      "waterLine": "पाण्याची लाईन?"
+    },
+    "twiddle": {
+      "title": "वळवळ",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "sudoku": {
+      "title": "सुडोकू",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "errors": "चुका",
+      "avgTime": "सरासरी वेळ",
+      "erase": "पुसून टाका"
+    },
+    "rectangles": {
+      "title": "आयत",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "rectanglesCount": "आयत",
+      "maxGrid": "कमाल ग्रिड",
+      "cancelSelection": "निवड रद्द करा"
+    },
+    "filling": {
+      "title": "भरणे",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "avgTime": "सरासरी वेळ",
+      "grid": "ग्रिड"
+    },
+    "spacedRetrieval": {
+      "title": "अंतरावरील पुनर्प्राप्ती",
+      "studyPair": "या जोडीचा अभ्यास करा",
+      "waitAndSolve": "थांबा… मग सोडवा",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "मध्यांतर: कोणत्या जोड्या?"
+    },
+    "prototypeDistortion": {
+      "title": "प्रोटोटाइप विरूपण",
+      "studyPhase": "अभ्यासाचा टप्पा",
+      "testPhase": "चाचणी टप्पा",
+      "yesBelongs": "होय — संबंधित आहे",
+      "noRandom": "नाही — यादृच्छिक"
+    },
+    "motionCoherence": {
+      "title": "गती सुसंगतता",
+      "threshold": "उंबरठा",
+      "coherence": "सुसंगतता",
+      "whichDirection": "कोणत्या दिशेला?"
+    },
+    "cube": {
+      "title": "घन",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxLevel": "कमाल पातळी",
+      "cubeFaces": "घन चेहरे",
+      "moveUp": "वर",
+      "moveLeft": "बाकी",
+      "moveDown": "खाली",
+      "moveRight": "बरोबर"
+    },
+    "sameGame": {
+      "title": "समान खेळ",
+      "score": "स्कोअर",
+      "cleared": "साफ केले",
+      "cells": "पेशी",
+      "accuracy": "अचूकता"
+    },
+    "crossModalMatching": {
+      "title": "क्रॉस-मॉडल जुळणी",
+      "chance": "संधी",
+      "whichPatternMatchesRhythm": "कोणता नमुना तालाशी जुळतो?"
+    },
+    "mosaic": {
+      "title": "मोझॅक",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "spotDiff": {
+      "title": "फरक ओळखा",
+      "level": "पातळी",
+      "grid": "ग्रिड",
+      "accuracy": "अचूकता",
+      "perfect": "परफेक्ट",
+      "avgTime": "सरासरी वेळ",
+      "found": "सापडले"
+    },
+    "lightsOut": {
+      "title": "दिवे बाहेर",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "pipeline": {
+      "title": "पाइपलाइन",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "rotations": "परिभ्रमण",
+      "avgTime": "सरासरी वेळ"
+    },
+    "tracks": {
+      "title": "ट्रॅक",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "errors": "चुका",
+      "avgTime": "सरासरी वेळ"
+    },
+    "netslide": {
+      "title": "नेटस्लाईड",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "slides": "स्लाइड्स",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "cognitiveBias": {
+      "title": "संज्ञानात्मक पूर्वाग्रह प्रशिक्षण",
+      "biasResistance": "पूर्वाग्रह प्रतिकार",
+      "biased": "पक्षपाती",
+      "continue": "चालू ठेवा"
+    },
+    "empathicAccuracy": {
+      "title": "सहानुभूतीपूर्ण अचूकता",
+      "emotionId": "भावना",
+      "avgRatingError": "सरासरी रेटिंग त्रुटी",
+      "scenarios": "परिस्थिती",
+      "perfect": "परफेक्ट",
+      "rating": "रेटिंग",
+      "howDoesCharacterFeel": "पात्र कसे वाटते?",
+      "rateIntensity": "तीव्रता रेट करा",
+      "whatEmotion": "कोणती भावना?",
+      "yourRating": "तुमचे रेटिंग",
+      "correct": "बरोबर",
+      "emotion": "भावना"
+    },
+    "guess": {
+      "title": "सूत्रधार",
+      "solved": "सोडवला",
+      "guesses": "अंदाज लावतात"
+    },
+    "dominosa": {
+      "title": "डोमिनोसा",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxLevel": "कमाल पातळी"
+    },
+    "magnets": {
+      "title": "चुंबक",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxLevel": "कमाल पातळी"
+    },
+    "tangram": {
+      "placeAll": "सर्व तुकडे ठेवा",
+      "solved": "सोडवले!",
+      "notRight": "अगदी बरोबर नाही",
+      "title": "टँग्राम",
+      "level": "पातळी",
+      "puzzles": "कोडी",
+      "placements": "प्लेसमेंट",
+      "removals": "काढणे",
+      "puzzleNumber": "कोडे {{n}}",
+      "pieces": "तुकडे",
+      "targetCells": "सिबल",
+      "dragHint": "ग्रिडवर तुकडा ड्रॅग करा किंवा ठेवा",
+      "selectHint": "एक तुकडा निवडा",
+      "rotate": "टूरनर",
+      "undo": "वलयकार",
+      "check": "तपासा"
+    },
+    "galaxies": {
+      "title": "आकाशगंगा"
+    },
+    "flood": {
+      "title": "पूर"
+    },
+    "pegs": {
+      "title": "पेग",
+      "bestPegs": "सर्वोत्तम पेग"
+    },
+    "auditoryFigureGround": {
+      "title": "श्रवण आकृती-ग्राउंड",
+      "patternPresent": "नमुना उपस्थित?",
+      "pattern": "नमुना",
+      "noPattern": "नमुना नाही"
+    },
+    "selfOrderedPointing": {
+      "title": "स्व-आदेशित पॉइंटिंग",
+      "maxSpan": "कमाल कालावधी",
+      "errors": "चुका",
+      "round": "गोलाकार",
+      "setOf": "{{count}} चा संच"
+    },
+    "mirrorTracing": {
+      "title": "मिरर ट्रेसिंग",
+      "totalErrors": "एकूण त्रुटी",
+      "avgTime": "सरासरी वेळ",
+      "shapes": "आकार",
+      "perfect": "परफेक्ट",
+      "improvement": "सुधारणा",
+      "errorsMiddot": "चुका ·",
+      "shape": "आकार",
+      "errors": "चुका",
+      "xIsMirrored": "X मिरर आहे!"
+    },
+    "clockDrawing": {
+      "title": "घड्याळ रेखाचित्र",
+      "avgError": "सरासरी त्रुटी",
+      "setTo": "वर सेट करा",
+      "submit": "सबमिट करा"
+    },
+    "cognitiveMap": {
+      "title": "संज्ञानात्मक नकाशा",
+      "explore": "एक्सप्लोर करा",
+      "sRemaining": "एस बाकी",
+      "from": "पासून",
+      "whichDirectionIs": "कोणती दिशा आहे"
+    },
+    "sixteen": {
+      "title": "सोळा"
+    },
+    "loopy": {
+      "title": "पळवाट"
+    },
+    "lightup": {
+      "title": "उजेड करा"
+    },
+    "twentyFortyEight": {
+      "maxTile": "कमाल टाइल",
+      "moves": "चालते",
+      "max": "कमाल"
+    },
+    "bridges": {
+      "title": "पुल",
+      "puzzles": "कोडी",
+      "maxLevel": "कमाल पातळी",
+      "level": "पातळी"
+    },
+    "net": {
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxGrid": "कमाल ग्रिड"
+    },
+    "flip": {
+      "title": "फ्लिप"
+    },
+    "range": {
+      "title": "श्रेणी"
+    },
+    "slant": {
+      "title": "तिरकस"
+    },
+    "towers": {
+      "title": "टॉवर्स",
+      "puzzles": "कोडी",
+      "avgTime": "सरासरी वेळ",
+      "erase": "पुसून टाका"
+    },
+    "pearl": {
+      "title": "मोती",
+      "edges": "कडा"
+    },
+    "mapColoring": {
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "moves": "चालते",
+      "maxLevel": "कमाल पातळी"
+    },
+    "singles": {
+      "title": "अविवाहित"
+    },
+    "nonogram": {
+      "title": "नॉनोग्राम"
+    },
+    "undead": {
+      "title": "अनडेड",
+      "accuracy": "अचूकता",
+      "puzzles": "कोडी",
+      "avgTime": "सरासरी वेळ"
+    },
+    "untangle": {
+      "title": "उलगडणे",
+      "drags": "ड्रॅग करतो",
+      "maxNodes": "कमाल नोडस्"
+    },
+    "unruly": {
+      "title": "अनियंत्रित"
+    },
+    "fifteen": {
+      "title": "पंधरा"
+    },
+    "tents": {
+      "title": "तंबू"
+    },
+    "mesker": {
+      "pen": "पेन",
+      "stroke": "स्ट्रोक",
+      "penPressureHint": "पेनच्या सतत दाबाने लिहा"
+    },
+    "modality": {
+      "position": "स्थिती",
+      "audio": "ऑडिओ"
+    },
+    "validate": "प्रमाणित करा"
+  },
+  "trace": {
+    "instructions": "एन-बॅक स्थितीवर स्वाइप करा. समान स्थिती असल्यास दोनदा टॅप करा.",
+    "hint": {
+      "validated": "प्रमाणित",
+      "draw": "अक्षर काढा • प्रमाणित करण्यासाठी टॅप करा",
+      "drawWithColor": "अक्षर काढा • रंग निवडा • प्रमाणित करण्यासाठी टॅप करा",
+      "type": "पत्र टाइप करा • प्रमाणित करण्यासाठी एंटर करा",
+      "typeWithColor": "अक्षर टाइप करा • रंग निवडा • प्रमाणित करण्यासाठी एंटर करा",
+      "typeResult": "परिणाम टाइप करा • प्रमाणित करण्यासाठी प्रविष्ट करा",
+      "writeResult": "परिणाम लिहा • प्रमाणित करण्यासाठी टॅप करा"
+    },
+    "keyboard": {
+      "letterInput": "पत्र",
+      "numberInput": "क्रमांक"
+    },
+    "arithmetic": {
+      "cueHint": "2 अंक लक्षात ठेवा",
+      "refresh": "नवीन"
+    },
+    "hintPosition": "{{n}} वळण पूर्वी कुठे होते?",
+    "hintN0": "वर्तमान प्रेरणा दर्शवा",
+    "warmupHint": "पोझिशन्स लक्षात ठेवा. प्रतिसादाची गरज नाही.",
+    "hintDraw": "अक्षर काढा • प्रमाणित करण्यासाठी टॅप करा",
+    "hintDrawWithColor": "अक्षर काढा • रंग निवडा • प्रमाणित करण्यासाठी टॅप करा",
+    "hintWriteResult": "परिणाम लिहा • प्रमाणित करण्यासाठी टॅप करा",
+    "guide": {
+      "swipeNormal": "{{n}} पायऱ्यांपूर्वी (N-{{n}}) शेवटच्या स्थितीपासून (N-0) स्थितीवर स्वाइप करा. समान स्थिती असल्यास दोनदा टॅप करा.",
+      "swipeSequential": "N-0 ते N-{{n}} पर्यंत स्टेप बाय स्टेप स्वाइप करा, प्रत्येक इंटरमीडिएट पोझिशनमधून जा. समान स्थिती असल्यास दोनदा टॅप करा.",
+      "swipeDynamic": "प्रदर्शित नियमाचे अनुसरण करून स्वाइप करा. समान स्थिती असल्यास दोनदा टॅप करा.",
+      "tapN0": "वर्तमान स्थितीवर टॅप करा.",
+      "warmup": "पोझिशन्स लक्षात ठेवा - प्रतिसाद आवश्यक नाही.",
+      "writeDraw": "{{n}} पायऱ्यांपूर्वी ऐकलेले अक्षर काढा • प्रमाणित करण्यासाठी टॅप करा",
+      "writeDrawColor": "{{n}} पायऱ्यांपूर्वी ऐकलेले अक्षर काढा • त्याचा रंग निवडा • प्रमाणित करण्यासाठी टॅप करा",
+      "writeType": "{{n}} पावले आधी ऐकलेले पत्र टाइप करा • प्रमाणित करण्यासाठी प्रविष्ट करा",
+      "writeTypeColor": "{{n}} पावले आधी ऐकलेले अक्षर टाइप करा • त्याचा रंग निवडा • प्रमाणित करण्यासाठी Enter",
+      "writeDrawN0": "तुम्ही नुकतेच ऐकलेले अक्षर काढा • प्रमाणित करण्यासाठी टॅप करा",
+      "writeDrawColorN0": "तुम्ही नुकतेच ऐकलेले अक्षर काढा • त्याचा रंग निवडा • प्रमाणित करण्यासाठी टॅप करा",
+      "writeTypeN0": "तुम्ही नुकतेच ऐकलेले पत्र टाइप करा • प्रमाणित करण्यासाठी एंटर करा",
+      "writeTypeColorN0": "तुम्ही नुकतेच ऐकलेले अक्षर टाइप करा • त्याचा रंग निवडा • प्रमाणित करण्यासाठी एंटर करा",
+      "writeResult": "परिणाम लिहा • प्रमाणित करण्यासाठी टॅप करा",
+      "validated": "प्रमाणित",
+      "holdMindful": "{{seconds}}s साठी सेल धरून ठेवा",
+      "swipeMindful": "{{seconds}} मध्ये स्वाइप करा"
+    },
+    "settings": {
+      "adaptiveTiming": "अनुकूल वेळ",
+      "inputKeyboard": "कीबोर्ड",
+      "inputHandwriting": "हस्ताक्षर",
+      "writingInput": "अक्षरे/संख्या",
+      "section": {
+        "grid": "ग्रिड",
+        "input": "इनपुट",
+        "rhythm": "ताल",
+        "interface": "इंटरफेस",
+        "interfaceNone": "मानक",
+        "sound": "आवाज"
+      },
+      "isi": "मध्यांतर (ISI)",
+      "stimulusDuration": "उत्तेजन कालावधी",
+      "feedbackDuration": "अभिप्राय कालावधी",
+      "ruleDisplay": "नियम कालावधी",
+      "blankInterval": "रिक्त अंतराल",
+      "showProgressBar": "प्रगती बार",
+      "showInstructions": "इन-गेम सूचना",
+      "arithmeticInterference": "अंकगणित हस्तक्षेप",
+      "fullMenu": "पूर्ण मेनू",
+      "gridStyle": "ग्रिड शैली",
+      "gridStyleClassic": "क्लासिक",
+      "gridStyleTrace": "ट्रेस",
+      "guide": {
+        "swipeMindful": "{{seconds}} मध्ये स्वाइप करा",
+        "holdMindful": "{{seconds}}s साठी सेल धरून ठेवा"
+      },
+      "feedback": {
+        "gestureDuration": "हावभाव",
+        "holdDuration": "धरा",
+        "writingDuration": "लेखन"
+      }
+    },
+    "feedback": {
+      "holdDuration": "धरा",
+      "gestureDuration": "हावभाव",
+      "writingDuration": "लेखन"
+    },
+    "image": "आकार",
+    "digits": "अंक",
+    "emotions": "भावना",
+    "words": "शब्द",
+    "tones": "स्वर",
+    "spatial": "दिशा"
+  },
+  "replay": {
+    "title": "सत्र रीप्ले",
+    "play": "खेळा",
+    "pause": "विराम द्या",
+    "restart": "रीस्टार्ट करा",
+    "speed": "गती",
+    "loading": "सत्र लोड करत आहे...",
+    "unavailable": "या सत्रासाठी रिप्ले अनुपलब्ध आहे",
+    "backToStats": "आकडेवारीकडे परत",
+    "runStack": {
+      "original": "मूळ",
+      "correction": "सुधारणा",
+      "delta": "Δ डी'",
+      "inProgress": "प्रगतीपथावर आहे",
+      "completed": "पूर्ण झाले"
+    },
+    "abandon": "सोडून द्या",
+    "badge": "रिप्ले करा",
+    "completionReport": {
+      "backToHome": "मागे",
+      "correctAgain": "पुन्हा दुरुस्त करा",
+      "deltaVsOriginal": "वि मूळ",
+      "deltaVsParent": "मागील रन वि",
+      "falseAlarmsSkipped": "चुका टाळल्या",
+      "missesCorrections": "दुरुस्त्या",
+      "newFalseAlarms": "नवीन चुका",
+      "replayAgain": "रिप्ले करा",
+      "scoreLabel": "d' स्कोअर",
+      "title": "दुरुस्ती पूर्ण"
+    },
+    "controls": "नियंत्रणे",
+    "correction": "सुधारणा",
+    "finished": "रीप्लेचा शेवट",
+    "home": "घर",
+    "parseError": "सत्र वाचण्यात अक्षम",
+    "tapSlotToPlace": "ठेवण्यासाठी स्लॉटवर टॅप करा",
+    "timeline": "टाइमलाइन",
+    "focusTimeline": {
+      "open": "टाइमलाइन दाखवा",
+      "close": "टाइमलाइन बंद करा",
+      "title": "N-Back टाइमलाइन",
+      "fillAll": "सर्व भरा",
+      "fillCard": "कार्ड भरा"
+    },
+    "hud": {
+      "counterDisplay": "काउंटर प्रदर्शन",
+      "toggleCounterDisplay": "काउंटर डिस्प्ले टॉगल करा"
+    },
+    "validate": "प्रमाणित करा"
+  },
+  "recovery": {
+    "title": "सत्रात व्यत्यय आला",
+    "description": "एक सत्र चालू होते. तुम्ही पुन्हा सुरू करू इच्छिता?",
+    "mode": "मोड",
+    "level": "पातळी",
+    "progress": "प्रगती",
+    "timeAgo": "वेळ",
+    "resume": "सत्र पुन्हा सुरू करा",
+    "startFresh": "नव्याने सुरुवात करा",
+    "staleWarning": "हे सत्र जुने आहे, पुन्हा सुरू करणे कदाचित आव्हानात्मक असेल.",
+    "modes": {
+      "game": "प्रशिक्षण",
+      "activeTraining": "सक्रिय प्रशिक्षण",
+      "flowTraining": "ड्युअल प्लेस प्रशिक्षण",
+      "dualPickTraining": "ड्युअल पिक",
+      "traceTraining": "ड्युअल ट्रेस"
+    }
+  },
+  "rewards": {
+    "congratulations": "अभिनंदन!",
+    "duration": "{{days}} दिवस प्रीमियम",
+    "lifetimeLabel": "आजीवन प्रवेश",
+    "expiresAt": "{{date}} पर्यंत वैध",
+    "neverExpires": "कधीही कालबाह्य होत नाही",
+    "continue": "चालू ठेवा",
+    "discovery": {
+      "name": "शोध पास",
+      "description": "7 दिवस प्रीमियम — सर्व वैशिष्ट्ये एक्सप्लोर करा"
+    },
+    "engagement": {
+      "name": "प्रतिबद्धता पास",
+      "description": "1 महिन्याचा प्रीमियम — तुमची शिस्त चुकते"
+    },
+    "expert": {
+      "name": "तज्ञ पास",
+      "description": "3 महिने प्रीमियम - तुम्ही खरे अभ्यासक आहात"
+    },
+    "lifetime": {
+      "name": "आजीवन प्रवेश",
+      "description": "प्रीमियम कायमचे — तुम्ही न्यूरोड्युअलमध्ये प्रभुत्व मिळवले आहे"
+    },
+    "xpRemaining": "XP शिल्लक",
+    "permanentAccessUnlocked": "कायमस्वरूपी प्रवेश अनलॉक केला",
+    "reachedTheTop": "तुम्ही शीर्षस्थानी पोहोचला आहात!"
+  },
+  "progression": {
+    "level": "पातळी {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "पुढील स्तर",
+    "reached": "पोहोचले",
+    "inProgress": "प्रगतीपथावर आहे"
+  },
+  "gridlock": {
+    "nextPuzzle": "पुढील कोडे →"
+  }
+}

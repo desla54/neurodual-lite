@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "စဉ်ဆက်မပြတ်",
+      "performance": "စွမ်းဆောင်ရည်",
+      "resilience": "ခံနိုင်ရည်",
+      "exploration": "စူးစမ်းရှာဖွေမှု",
+      "milestone": "မှတ်တိုင်",
+      "cognitive": "သိမြင်မှု"
+    },
+    "first_session": {
+      "name": "နိုးထလာသော Neuron",
+      "description": "ပထမ session ပြီးဆုံးခဲ့သည်။"
+    },
+    "sessions_10": {
+      "name": "မဏ္ဍိုင် (ကြေးနီ)",
+      "description": "Session ၁၀ ခု ပြီးဆုံးခဲ့သည်။"
+    },
+    "sessions_25": {
+      "name": "မဏ္ဍိုင် (ငွေ)",
+      "description": "Session ၂၅ ခု ပြီးဆုံးခဲ့သည်။"
+    },
+    "marathoner": {
+      "name": "မဏ္ဍိုင် (ရွှေ)",
+      "description": "Session ၅၀ ခု ပြီးဆုံးခဲ့သည်။"
+    },
+    "streak_3": {
+      "name": "အစပျိုးထုံးစံ",
+      "description": "၃ ရက်ဆက်တိုက် streak။"
+    },
+    "streak_7": {
+      "name": "နေ့စဥ်ထုံးစံ",
+      "description": "၇ ရက်ဆက်တိုက် streak။"
+    },
+    "streak_14": {
+      "name": "အမြစ်တွယ်ပြီးသော အလေ့အကျင့်",
+      "description": "၁၄ ရက်ဆက်တိုက် streak။"
+    },
+    "streak_30": {
+      "name": "သံမဏိ စည်းကမ်း",
+      "description": "၃၀ ရက်ဆက်တိုက် streak။"
+    },
+    "early_bird": {
+      "name": "Early Bird",
+      "description": "မနက် ၈ နာရီမတိုင်မီ session ကစားသော မတူညီသောရက် ၅ ရက်။"
+    },
+    "night_owl": {
+      "name": "ညဇီးကွက်",
+      "description": "ည ၁၀ နာရီပြီးနောက် session ကစားသော မတူညီသောရက် ၅ ရက်။"
+    },
+    "brain_n3": {
+      "name": "ထက်မြက်သောဦးနှောက်",
+      "description": "Level N-3 ရောက်ရှိသည်။"
+    },
+    "brain_n4": {
+      "name": "ကြွက်သားပြည့်ဦးနှောက်",
+      "description": "Level N-4 ရောက်ရှိသည်။"
+    },
+    "brain_n5": {
+      "name": "အိုလံပစ် ဦးနှောက်",
+      "description": "Level N-5 ရောက်ရှိသည်။"
+    },
+    "brain_n7": {
+      "name": "သိမှုအထက်တန်းစား",
+      "description": "Level N-7 ရောက်ရှိသည်။"
+    },
+    "brain_n10": {
+      "name": "ဒိဗ္ဗ",
+      "description": "Level N-10 ရောက်ရှိသည်။"
+    },
+    "sniper": {
+      "name": "စနိုက်ပါ",
+      "description": "N ≥ 2 တွင် > 90% accuracy။"
+    },
+    "accuracy_95": {
+      "name": "ခွဲစိတ်မှု တိကျမှု",
+      "description": "N ≥ 2 တွင် > 95% accuracy။"
+    },
+    "accuracy_98": {
+      "name": "လေဆာ",
+      "description": "N ≥ 2 တွင် > 98% accuracy။"
+    },
+    "untouchable": {
+      "name": "မထိမခိုက်နိုင်သော",
+      "description": "N ≥ 2 တွင် ပြည့်စုံသော session (error ၀)။"
+    },
+    "rt_500": {
+      "name": "လျင်မြန်သော Reflex",
+      "description": "ပျမ်းမျှ reaction time < 500ms နှင့် ≥70% accuracy။"
+    },
+    "flash": {
+      "name": "မီးရောင်",
+      "description": "ပျမ်းမျှ reaction time < 400ms နှင့် ≥70% accuracy။"
+    },
+    "rt_300": {
+      "name": "လျှပ်စီး",
+      "description": "ပျမ်းမျှ reaction time < 300ms နှင့် ≥70% accuracy။"
+    },
+    "consistent": {
+      "name": "တသမတ်တည်း",
+      "description": "RT standard deviation < 100ms (အနည်းဆုံး တုံ့ပြန်မှု ≥10 ခု လိုအပ်)။"
+    },
+    "dprime_master": {
+      "name": "d' ဆရာကြီး",
+      "description": "Session တစ်ခုတွင် d-prime > 3.0။"
+    },
+    "dprime_4": {
+      "name": "SDT ကျွမ်းကျင်သူ",
+      "description": "Session တစ်ခုတွင် d-prime > 4.0။"
+    },
+    "no_pause": {
+      "name": "ရပ်နားမှုမရှိ",
+      "description": "ခေတ္တရပ်ခြင်းမရှိဘဲ ဆက်တိုက် session ၅ ခု ≥75% accuracy ဖြင့်။"
+    },
+    "steady_hands": {
+      "name": "တည်ငြိမ်သောလက်များ",
+      "description": "Session တွင် မှားယွင်းသော input မရှိ (≥80% accuracy)။"
+    },
+    "zen_master": {
+      "name": "ဇင်ဆရာကြီး",
+      "description": "ဘယ်တော့မှ ထွက်မသွားဘဲ session ၁၀ ခု။"
+    },
+    "comeback_kid": {
+      "name": "Comeback ကလေး",
+      "description": "Level ကျပြီးနောက် ပြန်တက်သည်။"
+    },
+    "persistent": {
+      "name": "ဝီရိယ",
+      "description": "ကျရှုံးပြီးနောက် တစ်နေ့တည်းတွင် session ၃ ခု။"
+    },
+    "second_wind": {
+      "name": "ဒုတိယလေ",
+      "description": "အပိုင်း ၁ နှင့် ၂ ကြားတွင် d-prime တိုးတက်သည် (d′ ≥ 2.0 လိုအပ်)။"
+    },
+    "plateau_breaker": {
+      "name": "Plateau Breaker",
+      "description": "တူညီသော level တွင် session ၁၀+ ပြီးနောက် တိုးတက်သည်။"
+    },
+    "no_surrender": {
+      "name": "လက်နက်ချခြင်း မရှိပါ။",
+      "description": "ထွက်မသွားဘဲ session ၂၅ ခု။"
+    },
+    "ironwill": {
+      "name": "Iron Will",
+      "description": "ထွက်မသွားဘဲ session ၅၀ ခု။"
+    },
+    "audiophile": {
+      "name": "အသံဖိုင်",
+      "description": "Audio > 80% ဒါပေမယ့် Visual < 70%။"
+    },
+    "eagle_eye": {
+      "name": "လင်းယုန်မျက်လုံး",
+      "description": "Visual > 80% ဒါပေမယ့် Audio < 70%။"
+    },
+    "synchronized": {
+      "name": "ထပ်တူပြုသည်။",
+      "description": "Audio နှင့် Visual score 5% အတွင်း (≥60% လိုအပ်)။"
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "တူညီသော session တွင် Audio နှင့် Visual > 85% (≥6 lure/modality)။"
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "N ≥ 3 တွင် တူညီသော session တွင် Audio နှင့် Visual > 90% (≥6 lure/modality)။"
+    },
+    "centurion": {
+      "name": "တပ်မှူး",
+      "description": "Session ၁၀၀ ပြီးဆုံးခဲ့သည်။"
+    },
+    "sessions_250": {
+      "name": "ကျော်ကျော် (မြ)",
+      "description": "Session ၂၅၀ ပြီးဆုံးခဲ့သည်။"
+    },
+    "sessions_500": {
+      "name": "မသေနိုင်သော (စိန်)",
+      "description": "Session ၅၀၀ ပြီးဆုံးခဲ့သည်။"
+    },
+    "trials_500": {
+      "name": "တော်ပါပေတယ်။",
+      "description": "စုစုပေါင်း trial ၅၀၀ ကစားပြီး။"
+    },
+    "trials_1000": {
+      "name": "လေ့ကျင့်ပြီး",
+      "description": "စုစုပေါင်း trial ၁,၀၀၀ ကစားပြီး။"
+    },
+    "trials_5000": {
+      "name": "အတွေ့အကြုံရှိ",
+      "description": "စုစုပေါင်း trial ၅,၀၀၀ ကစားပြီး။"
+    },
+    "trials_10k": {
+      "name": "Trial ၁၀,၀၀၀",
+      "description": "စုစုပေါင်း trial ၁၀,၀၀၀ ကစားပြီး။"
+    },
+    "trials_50k": {
+      "name": "တိုက်တန်",
+      "description": "စုစုပေါင်း trial ၅၀,၀၀၀ ကစားပြီး။"
+    },
+    "streak_90": {
+      "name": "ပြည့်စုံသော Quarter",
+      "description": "၉၀ ရက်ဆက်တိုက် streak။"
+    },
+    "streak_365": {
+      "name": "ပြည့်စုံသောနှစ်",
+      "description": "၃၆၅ ရက်ဆက်တိုက် streak။"
+    },
+    "veteran": {
+      "name": "ဝါရင့်",
+      "description": "အသုံးပြုမှု ၁ နှစ်။"
+    },
+    "metronome": {
+      "name": "Metronome",
+      "description": "Trial ≥20 တွင် RT variance < 50ms (တက်ကြွသော တုံ့ပြန်မှု လိုအပ်)။"
+    },
+    "flow_state": {
+      "name": "ကျေးဇူးတော်ပြည်နယ်",
+      "description": "Session တစ်ခုလုံးတွင် flow ကိုတွေ့ရှိသည်။"
+    },
+    "sang_froid": {
+      "name": "အေးဆေး ခေါင်း",
+      "description": "Error တစ်ခုပြီးနောက် ဆက်တိုက် error မရှိ (≥70% accuracy)။"
+    },
+    "imperturbable": {
+      "name": "မတုန်မလှုပ်",
+      "description": "အာရုံပျက်ခြင်းမရှိဘဲ session တစ်ခုလုံး (≥60% accuracy)။"
+    },
+    "comeback_strong": {
+      "name": "ပြင်းထန်သော Comeback",
+      "description": "၃+ ရက်ခွာပြီးနောက် d-prime record ကို ကျော်ဖြတ်သည် (d′ ≥ 2.5)။"
+    }
+  }
+}

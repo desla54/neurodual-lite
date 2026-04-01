@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Unajisikiaje?",
+      "tired": "Uchovu",
+      "normal": "Kawaida",
+      "energized": "Imetiwa nguvu"
+    },
+    "aria": {
+      "trialTimer": "Kipima muda cha majaribio",
+      "positionMatch": "Nafasi mechi",
+      "audioMatch": "Ulinganisho wa sauti",
+      "audioLetter": "Barua ya sauti:",
+      "traceGrid": "Gridi ya kufuatilia"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Geuza kifuatiliaji cha kusawazisha",
+      "start": "kuanza",
+      "end": "mwisho",
+      "pinLabel": "pini",
+      "pinTitle": "Bandika kwenye skrini",
+      "inputLabel": "pembejeo",
+      "inputTitle": "Geuza ucheleweshaji wa muda wa kuingiza data (Hifadhi ya ndani ND_INPUT_DEBUG_TIMING)",
+      "on": "juu",
+      "off": "imezimwa",
+      "hideLabel": "kujificha",
+      "hideTitle": "Ficha (isipokuwa syncHud=1 au ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "sauti",
+        "expected": "inayotarajiwa"
+      },
+      "labels": {
+        "trial": "jaribio",
+        "lagShow": "Onyesha lag",
+        "lagHide": "Punguza maski",
+        "winErr": "kushinda kosa",
+        "endRef": "mwisho ref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "kusawazisha_sauti p95",
+        "visualPostP95": "picha_ya_chapisho p95",
+        "inputToDispatchP95": "pembejeo-> tuma p95",
+        "inputToCommitP95": "pembejeo->jitolea p95",
+        "inputToPaintP95": "pembejeo-> rangi p95",
+        "inputPending": "ingizo linasubiri",
+        "inputSamples": "sampuli za pembejeo",
+        "touchSamples": "sampuli za kugusa",
+        "mouseSamples": "sampuli za panya",
+        "keyboardSamples": "sampuli za kibodi",
+        "latestMethod": "karibuni (mbinu)",
+        "latestModality": "mtindo wa hivi karibuni",
+        "audioCueMode": "viashiria vya sauti",
+        "audioCodec": "kodeki"
+      },
+      "resetInputProfiler": "weka upya kiweka wasifu"
+    },
+    "hud": {
+      "resume": "Endelea",
+      "pause": "Sitisha",
+      "quit": "Acha",
+      "restart": "Anzisha upya",
+      "spaceToStart": "Nafasi ya kuanza",
+      "settings": "Mipangilio",
+      "enterToAdvance": "Ingiza ili kuendeleza",
+      "trial": "Jaribio",
+      "muteTexture": "Zima sauti ya usuli"
+    },
+    "status": {
+      "paused": "Imesitishwa"
+    },
+    "completed": "Imekamilika",
+    "starting": {
+      "getReady": "Jiandae..."
+    },
+    "quitModal": {
+      "title": "Ungependa kuacha kipindi?",
+      "message": "Maendeleo yako hayatahifadhiwa.",
+      "confirm": "Acha",
+      "cancel": "Endelea",
+      "close": "Funga"
+    },
+    "controls": {
+      "position": "Nafasi",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-sauti",
+      "audiovis": "Sauti & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Sauti",
+      "audio2": "Sauti 2",
+      "color": "Rangi",
+      "arithmetic": "Hesabu",
+      "image": "Umbo"
+    },
+    "arithmetic": {
+      "answer": "Jibu",
+      "clear": "Wazi",
+      "hint": "Kibodi: 0–9 · '-' kwa ishara · '.' kwa desimali · Nafasi ya nyuma ili kufuta"
+    },
+    "navigation": {
+      "back": "Nyuma"
+    },
+    "xp": {
+      "title": "XP iliyopatikana",
+      "base": "Msingi (N-{{level}})",
+      "performance": "Utendaji",
+      "accuracy": "Usahihi",
+      "streakBonus": "Bonasi ya mfululizo",
+      "dailyBonus": "Kwanza ya siku",
+      "badgeBonus": "Beji",
+      "flowBonus": "Bonasi ya Mahali Pawili",
+      "confidenceMultiplier": "Kujiamini",
+      "dailyCapReached": "Kiwango cha juu cha kila siku cha XP kimefikiwa",
+      "levelReached": "Kiwango {{level}} kimefikiwa!"
+    },
+    "badges": {
+      "newUnlocked": "Beji mpya zimefunguliwa"
+    },
+    "getReady": "Jiandae...",
+    "layoutEdit": {
+      "done": "Imekamilika",
+      "reset": "Weka upya",
+      "instructions": "Buruta maeneo ili kupanga upya. Badilisha ukubwa kwa kutumia vishikizo.",
+      "title": "Hali ya kuhariri",
+      "cancel": "Ghairi",
+      "save": "Funga",
+      "editLayout": "Badilisha mpangilio"
+    },
+    "paused": "Imesitishwa",
+    "pressEscapeToResume": "Bonyeza Escape ili kuendelea",
+    "settings": {
+      "editLayout": "Badilisha mpangilio",
+      "gridAndButtons": "Gridi na vifungo",
+      "swapPositionAudio": "Badilisha Nafasi / Sauti",
+      "title": "Mipangilio",
+      "quickHint": "Rekebisha mipangilio michache bila kuacha mchezo.",
+      "quickUnavailable": "Bado hakuna mipangilio ya haraka inayopatikana ya hali hii."
+    },
+    "pinkNoiseInfo": "Toni ya usuli huandamana na kila kichocheo. Unaweza kuigeuza kukufaa au kuizima katika mipangilio ya sauti.",
+    "pinkNoiseDismiss": "Endelea",
+    "audioMode": "Hali ya sauti",
+    "cogTask": {
+      "precision": "Usahihi",
+      "avgRt": "Wastani wa RT",
+      "avgRtShort": "Wastani wa RT",
+      "trials": "Majaribio",
+      "correct": "Sahihi",
+      "errors": "Makosa",
+      "effect": "Athari",
+      "restart": "Anzisha upya",
+      "home": "Nyumbani",
+      "performance": "Utendaji",
+      "trialDetail": "Maelezo ya jaribio",
+      "setDetail": "Weka maelezo",
+      "roundDetail": "Maelezo ya pande zote",
+      "problemDetail": "Maelezo ya shida",
+      "phaseDetail": "Maelezo ya awamu",
+      "feedbackCorrect": "Sahihi",
+      "feedbackIncorrect": "Si sahihi",
+      "feedbackTimeout": "Polepole sana!",
+      "preparing": "Jiandae...",
+      "loading": "Inapakia...",
+      "left": "Kushoto",
+      "right": "Sawa",
+      "up": "Juu",
+      "down": "Chini",
+      "congruent": "Sambamba",
+      "incongruent": "Hailingani",
+      "congruencyEffect": "Athari ya ulinganifu",
+      "maxSpan": "Muda wa juu zaidi",
+      "startingSpan": "Muda wa kuanzia",
+      "maxSpanReached": "Upeo wa muda umefikiwa",
+      "longestStreak": "Mfululizo mrefu zaidi sahihi",
+      "series": "Mfululizo",
+      "avgResponseTime": "Muda wa wastani wa majibu",
+      "recall": "Kumbuka",
+      "expected": "Inatarajiwa",
+      "submit": "Wasilisha",
+      "cancel": "Ghairi",
+      "clear": "Wazi",
+      "delete": "DEL",
+      "true": "Kweli",
+      "false": "Uongo",
+      "target": "Lengo",
+      "nonTarget": "Isiyolengwa",
+      "distractor": "Kipotoshi",
+      "same": "Sawa",
+      "different": "Tofauti",
+      "identical": "Sawa",
+      "mirror": "Kioo",
+      "symmetric": "Ulinganifu",
+      "asymmetric": "Asymmetric",
+      "symShort": "Sym.",
+      "present": "Wasilisha",
+      "absent": "Haipo",
+      "noTrials": "Hakuna majaribio yaliyokamilishwa.",
+      "noSets": "Hakuna seti zilizokamilishwa.",
+      "noRounds": "Hakuna raundi zilizokamilika.",
+      "noProblems": "Hakuna matatizo yaliyokamilishwa.",
+      "noPhases": "Hakuna awamu zilizokamilishwa.",
+      "sets": "Seti",
+      "rounds": "Mizunguko",
+      "equations": "Milinganyo",
+      "sentences": "Sentensi",
+      "equationAccuracy": "Usahihi wa equation",
+      "forward": "Mbele",
+      "backward": "Nyuma",
+      "forwardMaxSpan": "Muda wa juu zaidi wa kusonga mbele",
+      "backwardMaxSpan": "Upeo wa juu wa kurudi nyuma",
+      "odd": "Isiyo ya kawaida",
+      "even": "Hata",
+      "score": "Alama",
+      "easy": "Rahisi",
+      "hard": "Ngumu",
+      "totalTrials": "Jumla ya majaribio",
+      "totalErrors": "Jumla ya makosa",
+      "totalErrShort": "Kosa Jumla.",
+      "hits": "Vipigo",
+      "misses": "Amekosa",
+      "falseAlarms": "Al uwongo.",
+      "correctRejections": "Kor. Rej.",
+      "yes": "Ndiyo",
+      "no": "Hapana",
+      "sessionInterrupted": "Kikao kimekatizwa",
+      "reverseOrder": "kwa mpangilio wa nyuma",
+      "normalOrder": "kwa utaratibu",
+      "lnsInstruction": "Nambari zinazopanda, kisha herufi A-Z",
+      "vs": "dhidi ya",
+      "simon": {
+        "simonEffect": "Athari ya Simon",
+        "blue": "Bluu",
+        "red": "Nyekundu",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Wakilisha nambari hii",
+        "submit": "Wasilisha",
+        "rodLabel": "Fimbo {{n}}",
+        "heavenBead": "Ushanga wa mbinguni (thamani 5)",
+        "earthBead": "Ushanga wa ardhi (thamani 1)",
+        "instrBeadTitle": "Jinsi shanga zinavyofanya kazi",
+        "instrBeadDesc": "Kila fimbo inawakilisha tarakimu. Shanga ya juu (mbinguni) ina thamani ya 5. Shanga za chini (dunia) zina thamani 1 kila moja. Sogeza shanga kuelekea upau wa katikati ili kuziwasha.",
+        "instrExampleTitle": "Mfano: 7",
+        "instrExampleDesc": "7 = ushanga wa mbinguni chini (5) + 2 shanga za dunia juu (2). Gonga au buruta shanga ili kuzisogeza.",
+        "instrGoalTitle": "Lengo lako",
+        "instrGoalDesc": "Nambari itaonekana. Weka shanga ili kuiwakilisha, kisha uguse Wasilisha. Kuwa sahihi na haraka!",
+        "startButton": "Anza",
+        "settings": "Mipangilio",
+        "closeSettings": "Funga mipangilio",
+        "settingsRods": "Idadi ya viboko",
+        "settingsRodsHint": "Weka kupitia N-Level katika mipangilio ya mchezo",
+        "settingsTrials": "Majaribio kwa kila kipindi",
+        "settingsTrialsHint": "Weka kupitia Majaribio katika mipangilio ya mchezo",
+        "settingsRange": "Masafa ya nambari"
+      },
+      "stroop": {
+        "pressInkColorButton": "Bonyeza kitufe kinacholingana na rangi ya wino",
+        "redWord": "NYEKUNDU",
+        "redLabel": "Nyekundu",
+        "blueWord": "BLUU",
+        "blueLabel": "Bluu",
+        "greenWord": "KIJANI",
+        "greenLabel": "Kijani",
+        "yellowWord": "MANJANO",
+        "yellowLabel": "Njano"
+      },
+      "stroopFlex": {
+        "followRule": "Kanuni",
+        "ruleInk": "Rangi ya wino",
+        "ruleWord": "Neno lililoandikwa",
+        "pressMatchingRuleButton": "Bonyeza kitufe kinacholingana na sheria ya sasa"
+      },
+      "goNogo": {
+        "goTrials": "Nenda kwenye majaribio",
+        "nogoTrials": "Majaribio ya No-Go",
+        "hitRate": "Kiwango cha kupiga (Nenda)",
+        "faRate": "Kasi ya kengele ya uwongo (No-Go)",
+        "meanRt": "Maana wakati wa majibu",
+        "sensitivity": "usikivu",
+        "press": "Bonyeza",
+        "withhold": "Zuia"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Wastani wa SSD (vituo vilivyofaulu)",
+        "ssd": "SSD",
+        "goRt": "Nenda kwa RT",
+        "successfulInhibition": "Kuzuia kwa mafanikio",
+        "stop": "Acha",
+        "meanGoRt": "Maana ya muda wa majibu ya GO",
+        "ssrtInvalid": "data haitoshi",
+        "ssrtNegativeNote": "SSRT ni hasi (maana ya SSD > inamaanisha GO RT) — matokeo hayategemewi na hesabu ya sasa ya majaribio."
+      },
+      "pvt": {
+        "rtMedian": "RT ya wastani",
+        "rtMean": "Maana ya RT",
+        "fastest": "Haraka zaidi",
+        "slowest": "Polepole zaidi",
+        "falseStarts": "Uongo huanza",
+        "falseStartsShort": "Uongo wa St.",
+        "lapses": "Hupunguka",
+        "mean": "Maana",
+        "reaction": "Mwitikio",
+        "wait": "Subiri...",
+        "pressStimulus": "Subiri kichocheo...",
+        "pressAnywhere": "Bonyeza popote kaunta inaonekana",
+        "press": "Bonyeza!",
+        "tooEarly": "Mapema sana!",
+        "lapsesLabel": "Hupunguka"
+      },
+      "posner": {
+        "cueingEffect": "Athari ya kuota",
+        "validMeanRt": "Inamaanisha RT halali",
+        "invalidMeanRt": "Inamaanisha RT batili",
+        "validAccuracy": "Usahihi halali",
+        "invalidAccuracy": "Usahihi batili",
+        "validTrials": "Majaribio halali",
+        "invalidTrials": "Majaribio batili",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "Uwekezaji wa RT.",
+        "valid": "Halali",
+        "invalid": "Batili"
+      },
+      "antisaccade": {
+        "cost": "Gharama ya Antisaccade",
+        "proAccuracy": "Usahihi wa Pro",
+        "antiAccuracy": "Kupinga usahihi",
+        "pro": "Pro",
+        "anti": "Mpinga",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Inamaanisha pro-saccade RT",
+        "antiMeanRt": "Maana ya anti-saccade RT",
+        "costLabel": "Gharama",
+        "antiLabel": "Mpinga"
+      },
+      "axCpt": {
+        "dPrime": "d'-muktadha",
+        "axAccuracy": "Usahihi wa AX",
+        "bxFa": "BX kengele ya uwongo",
+        "ayError": "Hitilafu ya AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY makosa",
+        "cogControl": "Udhibiti wa utambuzi",
+        "target": "Lengo",
+        "nonTarget": "Isiyolengwa"
+      },
+      "ant": {
+        "scores": "Alama za ANT",
+        "alerting": "Kutahadharisha (hakuna-cue - alama mbili)",
+        "orienting": "Mwelekeo (katikati - anga)",
+        "executive": "Mtendaji (kinyume - kilinganifu)"
+      },
+      "changeDet": {
+        "kCowan": "Uwezo wa K (Cowan)",
+        "sameShort": "Sawa",
+        "diffShort": "Tofauti."
+      },
+      "swm": {
+        "withinErrors": "Hitilafu za ndani ya utafutaji",
+        "betweenErrors": "Kati ya makosa ya utafutaji",
+        "totalErrors": "Jumla ya makosa",
+        "errorFree": "Bila hitilafu",
+        "foundErrorFree": "Imepata bila hitilafu!",
+        "errorCount": "{{count}} makosa",
+        "tapsLabel": "Gonga"
+      },
+      "taskSwitch": {
+        "switchCost": "Badilisha gharama",
+        "rtRepeat": "Maana ya RT (Rudia)",
+        "rtSwitch": "RT ya maana (Badili)",
+        "oddEven": "Isiyo ya kawaida / Sawa",
+        "highLow": "Juu / Chini",
+        "title": "Kubadilisha Kazi"
+      },
+      "trailMaking": {
+        "tmtATime": "Wakati wa TMT-A",
+        "tmtBTime": "Wakati wa TMT-B",
+        "executiveCost": "Gharama ya utendaji (B − A)",
+        "executiveCostShort": "Gharama ya utendaji (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Kosa. A",
+        "errB": "Kosa. B",
+        "preparingB": "Inatayarisha TMT-B...",
+        "tmtADone": "TMT-A imekamilika!",
+        "totalErrors": "Jumla ya makosa",
+        "tmtALabel": "TMT-A: Nambari",
+        "tmtBLabel": "TMT-B: Nambari na Barua",
+        "next": "Inayofuata",
+        "heroTitle": "Kutengeneza Trail",
+        "alternateHint": "Nambari na herufi mbadala: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "ISI yenye kasi zaidi"
+      },
+      "wcst": {
+        "referenceCards": "Kadi za kumbukumbu",
+        "testCard": "Kadi ya mtihani",
+        "categories": "Kategoria",
+        "categoriesCompleted": "Kategoria zimekamilika",
+        "perseverativeErrors": "Makosa ya kudumu",
+        "persevShort": "Persev.",
+        "avgRt": "Wastani. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT kwa pembe",
+        "findMatch": "Tafuta sura inayolingana",
+        "reference": "Umbo la kumbukumbu",
+        "referenceLabel": "Kumb.",
+        "candidate": "Mgombea",
+        "distractor": "Nyingine",
+        "mirrorErrors": "Vioo",
+        "title": "Mzunguko wa Akili"
+      },
+      "sternberg": {
+        "rtBySize": "RT kwa saizi iliyowekwa",
+        "title": "Sternberg",
+        "avgRt": "Wastani. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT kwa saizi iliyowekwa",
+        "title": "Utafutaji wa Visual"
+      },
+      "ospan": {
+        "typeLetters": "Andika herufi kwa mpangilio",
+        "trueOrFalse": "Kweli au uongo?",
+        "processingWarning": "Usahihi wa equation chini ya 85% - matokeo yanaweza yasionyeshe uwezo halisi wa kumbukumbu ya kufanya kazi"
+      },
+      "readingSpan": {
+        "s0": "Jua huchomoza mashariki.",
+        "s1": "Samaki wanaishi kwenye miti.",
+        "s2": "Paris ni mji mkuu wa Ufaransa.",
+        "s3": "Pembetatu ina pande nne.",
+        "s4": "Maji huchemka kwa digrii 100.",
+        "s5": "Paka ni reptilia.",
+        "s6": "Dunia inazunguka Jua.",
+        "s7": "Chokoleti hukua kwenye miamba.",
+        "s8": "Mwaka una miezi kumi na mbili.",
+        "s9": "Ndege hupumua chini ya maji.",
+        "s10": "Maziwa ni nyeupe.",
+        "s11": "Magari hutembea kwenye reli.",
+        "s12": "Nyuki hutoa asali.",
+        "s13": "Theluji ni moto.",
+        "s14": "Moyo husukuma damu.",
+        "s15": "Mawe huelea juu ya maji.",
+        "s16": "Mwezi huwaka usiku.",
+        "s17": "Nyoka wana miguu.",
+        "s18": "Mbao huelea juu ya maji.",
+        "s19": "Moto ni baridi.",
+        "s20": "Binadamu ana hisi tano.",
+        "s21": "Buibui wana miguu sita.",
+        "s22": "Mkate unafanywa na unga.",
+        "s23": "Nyangumi ni samaki.",
+        "w0": "NYUMBA",
+        "w1": "MBWA",
+        "w2": "KITABU",
+        "w3": "MAUA",
+        "w4": "MLANGO",
+        "w5": "JEDWALI",
+        "w6": "MTI",
+        "w7": "BARABARA",
+        "w8": "WINGU",
+        "w9": "NYOTA",
+        "w10": "UFUKWENI",
+        "w11": "Theluji",
+        "w12": "TAA",
+        "w13": "MVUA",
+        "w14": "KIOO",
+        "w15": "NYASI",
+        "w16": "TRENI",
+        "w17": "ULIMWENGU",
+        "w18": "JUA",
+        "w19": "MSITU",
+        "w20": "BARAFU",
+        "w21": "DUNIA",
+        "w22": "ANGA",
+        "w23": "JIWE",
+        "d0": "ASUBUHI",
+        "d1": "MOYO",
+        "d2": "KITAMBAA",
+        "d3": "JANI",
+        "d4": "KELELE",
+        "d5": "BUSTANI",
+        "d6": "KIVULI",
+        "d7": "KENGELE",
+        "d8": "DARAJA",
+        "d9": "MOSHI",
+        "d10": "MCHANGA",
+        "d11": "SUPU",
+        "heroTitle": "Muda wa Kusoma"
+      },
+      "memorizeSequence": "Kariri mlolongo...",
+      "reproduce": "Kuzaliana",
+      "span": "Muda",
+      "size": "Ukubwa",
+      "fixateCenter": "Rekebisha katikati...",
+      "identicalOrMirror": "Inafanana au Kioo?",
+      "wellInhibited": "Imezuiliwa vizuri!",
+      "badDirection": "Mwelekeo mbaya!",
+      "stopMissed": "Acha kukosa!",
+      "falseAlarm": "Kengele ya uwongo!",
+      "pressNow": "Bonyeza!",
+      "hitBang": "Piga!",
+      "miss": "Binti!",
+      "doNotTouch": "Usiguse!",
+      "whichDirection": "Uelekeo gani?",
+      "stopBang": "SIMAMA!",
+      "cueBang": "Kumbe!",
+      "memorizeLetters": "Kariri barua hizi",
+      "memorizeLetter": "Kariri barua hii",
+      "memorizeSequenceLetters": "Kariri mlolongo...",
+      "memorizeDigits": "Kariri tarakimu...",
+      "memorizeColors": "Kariri rangi!",
+      "memorizePosition": "Kariri nafasi hii...",
+      "retainWord": "Kumbuka neno hili",
+      "retainNumber": "Kumbuka nambari hii",
+      "addWithPrevious": "Ongeza na uliopita",
+      "sentenceTrueOrFalse": "Je, sentensi hii ni kweli?",
+      "findRedCircle": "Tafuta duara nyekundu!",
+      "findHiddenToken": "Pata ishara iliyofichwa!",
+      "chooseMatchingCard": "Chagua kadi inayolingana",
+      "arrowDirection": "Mwelekeo wa mshale wa kati?",
+      "attention": "Tahadhari...",
+      "preparation": "Maandalizi...",
+      "recallLettersInOrder": "Kumbuka herufi za {{count}} kwa mpangilio",
+      "recallWordsInOrder": "Kumbuka maneno ya {{count}} kwa mpangilio",
+      "recallLastLetters": "Kumbuka herufi {{count}} za mwisho",
+      "typeLastLetters": "Andika {{count}} herufi za mwisho",
+      "recallPositionsInOrder": "Kumbuka: gonga nafasi kwa mpangilio",
+      "pressEnterToValidate": "Bonyeza Enter ili kuthibitisha",
+      "pressAnywhereToContinue": "Bonyeza popote ili kuendelea",
+      "temporalPrecision": "Usahihi wa muda",
+      "estimationPrecision": "Usahihi wa makadirio",
+      "touchStartClockwise": "Gusa sehemu ya kuanzia kisha telezesha kidole saa",
+      "touchAtoB": "Sehemu ya mguso A kisha telezesha kidole hadi B",
+      "cue": "Cue",
+      "retainCue": "Kumbuka msemo...",
+      "targetOrNot": "Inalenga au Isiyolengwa?",
+      "whereIsTarget": "Mlengwa yuko wapi?",
+      "wasLetterInSet": "Je, barua hii ilikuwa katika seti?",
+      "regular": "mara kwa mara",
+      "regularity": "Kawaida",
+      "msDeviation": "kupotoka kwa ms",
+      "boxes": "masanduku",
+      "found": "{{count}} imepatikana",
+      "past": "Zamani",
+      "tooSlow": "polepole sana",
+      "tooFast": "haraka sana",
+      "timeout": "Polepole sana!",
+      "answer": "Jibu",
+      "dontPress": "Usibonyeze!",
+      "feedbackWrong": "Si sahihi!",
+      "level": "Kiwango",
+      "wrong": "Si sahihi",
+      "you": "Wewe",
+      "paused": "Sitisha",
+      "instructions": "Maagizo",
+      "selectAnswer": "Chagua jibu",
+      "tapTheOddOne": "Gonga ile isiyo ya kawaida",
+      "pal": {
+        "subtitle": "Kujifunza kwa Washirika Waliooanishwa",
+        "pairsLearned": "Jozi walijifunza",
+        "maxSetSize": "Ukubwa wa Max Weka",
+        "totalErrors": "Jumla ya Makosa",
+        "round": "Mzunguko",
+        "pairs": "jozi",
+        "meanRt": "RT maana (sahihi)",
+        "studyPhase": "Kusoma - kukariri nafasi",
+        "testPhase": "Umbo hili lilikuwa wapi?",
+        "studying": "Kusoma",
+        "tapBox": "Gonga kisanduku ambapo umbo hili lilionyeshwa"
+      },
+      "visualLogic": {
+        "easy": "Rahisi",
+        "hard": "Ngumu",
+        "oneRule": "1 kanuni",
+        "twoRules": "2 sheria",
+        "findMissing": "Tafuta kipande kilichokosekana",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Lvl ya mwisho",
+        "nextMode": "Hali ya kipindi kijacho",
+        "adaptive": "Inabadilika",
+        "fixed": "Imerekebishwa",
+        "spm": "SPM 60",
+        "level": "Kiwango",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Ni kipande gani kinacholingana na shimo?",
+        "target": "Lengo"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Upendeleo wa kukadiria kupita kiasi",
+        "underestimationBias": "Upendeleo wa kudharau",
+        "noBias": "Hakuna upendeleo mkubwa",
+        "avgError": "Hitilafu ya Wastani",
+        "overestimations": "Makadirio kupita kiasi",
+        "underestimations": "Makadirio ya chini",
+        "avgAbsoluteError": "Hitilafu kamili ya wastani",
+        "avgRelativeError": "Wastani wa Hitilafu Inayohusiana",
+        "cv": "Mgawo wa Tofauti",
+        "watchDemo": "Tazama muda",
+        "getReady": "Jiandae...",
+        "holdToReproduce": "Shikilia kuzaliana!",
+        "tooLong": "Muda mrefu sana!",
+        "tooShort": "Mfupi sana!",
+        "target": "Lengo",
+        "demoLabel": "Rejea",
+        "yourTurn": "Zamu yako",
+        "watchInstruction": "Tazama",
+        "holdInstruction": "Shikilia kuzaliana",
+        "heroTitle": "Ukadiriaji wa Muda"
+      },
+      "puzzleDetails": "Maelezo ya fumbo",
+      "roundDetails": "Maelezo ya pande zote",
+      "stageResults": "Matokeo ya Hatua",
+      "recognized": "Inatambulika",
+      "missed": "Umekosa",
+      "win": "Shinda",
+      "lose": "Kupoteza",
+      "winBang": "Shinda!",
+      "loseBang": "Kupoteza!",
+      "correctBang": "Sahihi!",
+      "wrongBang": "Si sahihi!",
+      "completeBang": "Kamilisha!",
+      "repeatedBang": "Imerudiwa!",
+      "incompleteBang": "Haijakamilika!",
+      "levelCompleteBang": "Kiwango Kimekamilika!",
+      "timesUp": "Muda Umekwisha",
+      "seeResults": "Tazama matokeo",
+      "nextRound": "Raundi inayofuata",
+      "startBlock": "Anza kuzuia",
+      "continue": "Endelea",
+      "patientChoice": "Chaguo la mgonjwa",
+      "immediateChoice": "Chaguo la papo hapo",
+      "immediate": "Mara moja",
+      "digitSpan": {
+        "heroTitle": "Nafasi ya tarakimu"
+      },
+      "resume": "Endelea",
+      "numericalStroop": {
+        "heroTitle": "Stroop ya Nambari"
+      },
+      "lineOrientation": {
+        "heroTitle": "Hukumu ya Mwelekeo wa Mstari"
+      },
+      "chain": "Mnyororo",
+      "undo": "Tendua",
+      "vocalProsody": {
+        "heroTitle": "Prosody ya Sauti"
+      },
+      "letterNumber": {
+        "title": "Barua-Nambari Seq.",
+        "expectedAnswer": "Jibu linalotarajiwa"
+      },
+      "patternComparison": {
+        "heroTitle": "Ulinganisho wa Muundo"
+      },
+      "speedPack": {
+        "title": "Kifurushi cha kasi",
+        "whenFoldedWhichTouch": "Inapokunjwa, ni miraba gani inagusa?"
+      },
+      "dotProbe": {
+        "heroTitle": "Uchunguzi wa nukta"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Shirika la Visual la Hooper",
+        "whatIsThisObject": "Kitu hiki ni nini?"
+      },
+      "blockDesign": {
+        "heroTitle": "Kuzuia Kubuni"
+      },
+      "accuracy": "Usahihi",
+      "avgTime": "Wastani. wakati",
+      "check": "Angalia",
+      "dualTrace": {
+        "playArea": "Eneo la kucheza"
+      },
+      "paperFolding": {
+        "title": "Kukunja Karatasi",
+        "foldSequenceHolePunch": "Kunja mlolongo & ngumi ya shimo",
+        "whichPatternWhenUnfolded": "Ni muundo gani unapofunuliwa?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Uamuzi wa Lexical"
+      },
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxGrid": "Upeo wa gridi ya taifa",
+      "symmetry": "Ulinganifu",
+      "threshold": "Kizingiti",
+      "hitRate": "Kiwango cha hit",
+      "faRate": "Taux ya FA",
+      "changeDetection": {
+        "heroTitle": "Badilisha Utambuzi"
+      },
+      "syllogisms": {
+        "heroTitle": "Sillogisms"
+      },
+      "subitizing": {
+        "title": "Kunyenyekea",
+        "range": "Masafa"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Kukamilisha Sentensi (Funga)",
+        "highCloze": "Kufunga kwa juu",
+        "lowCloze": "Kufungwa kwa chini"
+      },
+      "grid": "Gridi",
+      "pinballRecall": {
+        "title": "Pinball Kumbuka",
+        "byBounces": "Kwa kurukaruka",
+        "whereDoesItLand": "Inatua wapi?"
+      },
+      "mean": "Maana",
+      "speedup": "Kuongeza kasi",
+      "memorize": "Kukariri",
+      "time": "Muda",
+      "surfaceDevelopment": {
+        "title": "Maendeleo ya uso",
+        "whichEdgeMatches": "Ni makali gani yanalingana?"
+      },
+      "crowding": {
+        "heroTitle": "Msongamano wa Kuonekana",
+        "spacing": "Nafasi"
+      },
+      "patternRecognition": {
+        "heroTitle": "Utambuzi wa muundo"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Jaribio",
+        "position": "Nafasi",
+        "audio": "Sauti"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Mvamizi wa Eneo",
+        "detect": "Tambua"
+      },
+      "eyesTest": {
+        "heroTitle": "Kusoma Akili kwa Macho"
+      }
+    },
+    "gridlock": {
+      "undone": "Hatua ya mwisho imetenguliwa.",
+      "resetMessage": "Rudisha fumbo.",
+      "hintMessage": "Kidokezo: slaidi {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Jifunze ubao. Huanza baada ya {{seconds}}s.",
+      "challenge": "Changamoto",
+      "optimal": "Mojawapo",
+      "moves": "Inasonga",
+      "piece": "Kipande {{id}}",
+      "targetPiece": "Kipande {{id}} (lengwa - gari jekundu)",
+      "challengeClassic": "Classic",
+      "challengePrecision": "Usahihi",
+      "challengeMemory": "Kumbukumbu",
+      "challengeTimed": "Imepitwa na wakati",
+      "hint": "Kidokezo",
+      "reset": "Weka upya",
+      "undo": "Tendua",
+      "nextPuzzle": "Fumbo linalofuata →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Zuia Vipigo 1",
+      "block2Hits": "Zuia Vipigo 2",
+      "goPositive": "Nenda = Chanya",
+      "goNegative": "Nenda = Hasi",
+      "title": "Affective Go/No-Go",
+      "block1CommissionErrors": "Zuia hitilafu 1 za tume",
+      "block2CommissionErrors": "Zuia makosa 2 ya tume",
+      "block": "Zuia",
+      "go": "Nenda"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Kiwango cha ubadilishaji wastani",
+      "meanSwitchesfigure": "Maana swichi/takwimu",
+      "totalSwitches": "Jumla ya swichi",
+      "title": "Takwimu Zisizoeleweka",
+      "meanSwitches": "Maana Swichi",
+      "switchRate": "Kiwango cha ubadilishaji",
+      "figures": "Takwimu",
+      "totalSwitchesLabel": "Jumla ya Swichi",
+      "duration": "Muda",
+      "switchesCount": "s | Swichi:",
+      "switchButton": "Badili!"
+    },
+    "analogies": {
+      "verbalCorrect": "Sahihi ya maneno",
+      "timeout": "Muda umekwisha",
+      "title": "Analogia"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Ulinganisho wa ANS",
+      "ratio": "Uwiano",
+      "leftMore": "Kushoto zaidi",
+      "rightMore": "Haki zaidi"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Kiwango cha kengele cha uwongo",
+      "grammatical": "Kisarufi",
+      "memorizeTheseStrings": "Kariri mifuatano hii",
+      "testPhase": "Awamu ya Mtihani",
+      "ungrammatical": "Isiyo na kisarufi",
+      "learning": "Kujifunza",
+      "test": "Mtihani",
+      "title": "Sarufi Bandia",
+      "learningPhase": "Kujifunza",
+      "testIntroText": "Sasa utaona mifuatano mipya. Amua ikiwa kila moja itafuata sheria sawa na mifuatano uliyojifunza hivi punde.",
+      "startTest": "Anza Mtihani",
+      "followsRules": "Hufuata sheria",
+      "breaksRules": "Huvunja sheria"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Ukuu wa Blink",
+      "title": "Kupepesa kwa Makini",
+      "blink": "Blink",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "Barua ya 1 ya kijani?",
+      "secondGreenLetter": "Barua ya 2 ya kijani?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Gharama ya Kukamata",
+      "singletonPresent": "Singleton Present",
+      "noSingleton": "Hakuna Singleton",
+      "title": "Kukamata kwa Makini",
+      "capture": "Nasa",
+      "horizontal": "Mlalo",
+      "vertical": "Wima"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Dirisha la Kufunga",
+      "title": "Kufunga kwa Sauti na Kutazama",
+      "window": "Dirisha",
+      "pssLabel": "PSS (Pointi ya Sambamba ya Mada)",
+      "simultaneousOrNot": "Sambamba au la?",
+      "simultaneous": "Sambamba",
+      "notSimultaneous": "Sio kwa wakati mmoja"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Kizingiti cha Muda",
+      "reference": "Rejea",
+      "weberFraction": "Sehemu ya Weber",
+      "title": "Muda wa Kusikiza",
+      "threshold": "Kizingiti",
+      "weber": "Weber",
+      "whichLonger": "Ambayo ni ndefu zaidi?",
+      "firstLonger": "Kwanza tena",
+      "secondLonger": "Pili tena"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Pampu za wastani zilizorekebishwa",
+      "avgTimeballoon": "Wastani wa muda/puto",
+      "banked": "Zilizowekwa benki!",
+      "lostEarnings": "Mapato yaliyopotea!",
+      "overallAvgPumps": "Jumla ya pampu za wastani",
+      "popRate": "Kiwango cha pop",
+      "totalEarned": "Jumla ya Pesa",
+      "balloons": "Puto",
+      "cashed": "Pesa",
+      "popped": "Imepigwa",
+      "adjPumps": "Adj. pampu",
+      "pop": "Pop",
+      "pump": "Pampu",
+      "cashIn": "Pesa Ndani"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Wastani wa Muda wa Uamuzi",
+      "drawBeadsToGatherEvidence": "Chora shanga kukusanya ushahidi",
+      "jtc": "JTC",
+      "title": "Kazi ya Shanga",
+      "meanDraws": "Wastani. huchota",
+      "rounds": "Mizunguko",
+      "jtcRate": "Kiwango cha biashara cha JTC",
+      "meanDrawsToDecision": "Maana Huleta Uamuzi",
+      "jtcRateThreshold": "Kiwango cha JTC (<{{threshold}} michoro)",
+      "round": "Mzunguko",
+      "jarDescription": "Jar A: 85% ya kijani / Jar B: 85% nyekundu",
+      "itWasJar": "Ilikuwa Jar",
+      "drawABead": "Chora Shanga",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Nyekundu"
+    },
+    "binding": {
+      "changedTrials": "Majaribio yaliyobadilishwa",
+      "sameAccuracy": "Usahihi sawa",
+      "sameTrials": "Majaribio sawa",
+      "title": "Kufunga Kipengele",
+      "binding": "Kufunga",
+      "bindingAccuracyChanged": "Badilisha usahihi",
+      "same": "Sawa",
+      "different": "Tofauti"
+    },
+    "blockDesign": {
+      "cells": "Seli",
+      "target": "Lengo",
+      "yourAnswer": "Jibu lako",
+      "tapHint": "Gusa ili kuzungusha rangi",
+      "check": "Angalia"
+    },
+    "brixton": {
+      "adapt": "Kurekebisha",
+      "adaptationCost": "Gharama ya urekebishaji",
+      "nonswitchTrials": "Majaribio yasiyo ya kubadili",
+      "switchTrials": "Badilisha majaribio"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Kumbuka barua hizi",
+      "selectThe3Letters": "Chagua herufi 3",
+      "title": "Kazi ya Brown-Peterson",
+      "forgetting": "Kusahau",
+      "sDelay": "S Kuchelewa",
+      "minus3": "Minus3",
+      "delay": "Kuchelewa"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Ubora wa uamuzi",
+      "finalPoints": "Pointi za mwisho",
+      "meanBet": "Maana dau",
+      "winRate": "Kiwango cha kushinda",
+      "wins": "Mafanikio",
+      "title": "Kazi ya Kamari ya Cambridge",
+      "totalPoints": "Jumla ya pointi",
+      "quality": "Ubora",
+      "rational": "Ya busara",
+      "avgBet": "Wastani. dau",
+      "trial": "Jaribio",
+      "whichColorHidesToken": "Ni rangi gani inayoficha ishara?",
+      "youChose": "Ulichagua",
+      "howMuchToBet": "Bet ngapi?"
+    },
+    "cancellation": {
+      "false": "Uongo",
+      "target": "Lengo:",
+      "total": "Jumla",
+      "title": "Kazi ya Kughairi (d2)",
+      "misses": "Amekosa",
+      "targetDescription": "d na alama 2"
+    },
+    "changeBlindness": {
+      "detectionRate": "Kiwango cha Ugunduzi",
+      "found": "Imepatikana",
+      "meanDetectionTime": "Wakati wa Kugundua Maana",
+      "title": "Badilisha Upofu",
+      "missed": "Umekosa",
+      "avgTime": "Wastani. wakati",
+      "instructions": "Maagizo"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Makadirio Bora",
+      "meanScore": "Alama ya Maana",
+      "worstEstimate": "Makadirio Mbaya Zaidi",
+      "inRange": "Makadirio mazuri!",
+      "title": "Ukadiriaji wa Utambuzi",
+      "meanScoreLabel": "Alama ya Maana",
+      "inRangeLabel": "Katika Masafa",
+      "extreme": "Uliokithiri",
+      "scoreLabel": "alama",
+      "submit": "Wasilisha"
+    },
+    "common": {
+      "accuracy": "Usahihi",
+      "bias": "Upendeleo",
+      "falseAlarmRate": "Kiwango cha Kengele ya Uongo",
+      "hitRate": "Piga Kiwango",
+      "hits": "Vipigo",
+      "listening": "Inasikiliza...",
+      "meanRt": "Maana ya RT",
+      "timedOut": "Muda Umeisha",
+      "timedOut2": "Muda umekwisha",
+      "faRate": "Taux ya FA",
+      "paused": "Imesitishwa"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Je, unajiamini kiasi gani?",
+      "rateYourConfidence": "Kadiria imani yako",
+      "title": "Urekebishaji wa Kujiamini",
+      "calError": "Hitilafu ya urekebishaji",
+      "confidence": "Kujiamini"
+    },
+    "consequences": {
+      "best": "Bora zaidi",
+      "nextRound": "Raundi inayofuata...",
+      "time": "Muda",
+      "placeholder": "Andika matokeo...",
+      "title": "Matokeo",
+      "totalIdeas": "Jumla ya Mawazo",
+      "avgPerRound": "Wastani. kwa mzunguko",
+      "rounds": "Mizunguko",
+      "noConsequencesListed": "Hakuna matokeo yaliyoorodheshwa",
+      "roundProgress": "Mzunguko {{current}} {{total}}",
+      "typeAndPressAdd": "Andika na ubonyeze Ongeza"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Athari ya Kuvutia",
+      "newConfigRt": "Usanidi Mpya wa RT",
+      "oldConfigRt": "Old Config RT",
+      "title": "Utunzaji wa Muktadha",
+      "cueing": "Cueing",
+      "oldRt": "RT ya zamani",
+      "newRt": "RT mpya",
+      "prompt": "Haraka",
+      "left": "Kushoto",
+      "right": "Sawa"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Kizingiti jitter",
+      "title": "Ushirikiano wa Contour",
+      "pipeJitter": "| jita"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Tofauti ya kizingiti",
+      "title": "Unyeti wa Tofauti",
+      "threshold": "Kizingiti",
+      "left": "Kushoto",
+      "right": "Sawa"
+    },
+    "cpt": {
+      "nontargets": "Wasiolengwa",
+      "target": "Lengo",
+      "nonTarget": "Isiyolengwa",
+      "dPrime": "d'",
+      "targetsLetter": "Barua ya lengo",
+      "tapForLetterOnly": "Gusa kwa herufi lengwa pekee"
+    },
+    "crowding": {
+      "criticalSpacing": "Nafasi muhimu",
+      "leftAccuracy": "Usahihi wa kushoto",
+      "rightAccuracy": "Usahihi sahihi"
+    },
+    "cryptogram": {
+      "hints": "Vidokezo",
+      "title": "Cryptogram",
+      "solved": "Imetatuliwa",
+      "time": "Muda",
+      "puzzles": "Mafumbo",
+      "puzzle": "Fumbo",
+      "hint": "Kidokezo",
+      "clear": "Wazi"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Eneo chini ya Curve",
+      "discountRateK": "Kiwango cha punguzo (k)",
+      "impulsivityIndex": "Kiashiria cha msukumo",
+      "title": "Kuchelewesha Punguzo",
+      "aucPatience": "AUC uvumilivu",
+      "patient": "Mgonjwa",
+      "kRate": "Kiwango cha K",
+      "impuls": "Misukumo",
+      "indifferencePoints": "Pointi za Kutojali",
+      "whichPrefer": "Je, unapendelea lipi?",
+      "today": "Leo"
+    },
+    "delayedMatching": {
+      "long": "Muda mrefu",
+      "longDelay68s": "Kuchelewa kwa muda mrefu (sekunde 6-8)",
+      "med": "Med",
+      "mediumDelay46s": "Kuchelewa kwa wastani (sek 4-6)",
+      "short": "Mfupi",
+      "shortDelay34s": "Kuchelewa kwa muda mfupi (sekunde 3-4)",
+      "title": "Imechelewa Kulingana",
+      "delay": "Kuchelewa",
+      "rememberThisPattern": "Kumbuka muundo huu",
+      "whichWasIt": "Ilikuwa ni ipi?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Utambuzi wa Tahadhari",
+      "attendToTheLeftColumn": "Hudhuria safu ya KUSHOTO",
+      "attendedAccuracy": "Usahihi (chaneli lengwa)",
+      "ignoreTheRightColumn": "Puuza safu wima ya kulia",
+      "right": "KULIA",
+      "title": "Usikilizaji wa Dichotic",
+      "attendedAcc": "Usahihi wa kuhudhuria",
+      "alertDet": "Utambuzi wa tahadhari",
+      "alerts": "Tahadhari",
+      "selectLeftColumnWords": "Chagua maneno ya safu wima ya kushoto",
+      "submit": "Wasilisha",
+      "alertQuestion": "Swali la tahadhari"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Kusahau usahihi",
+      "forgettingEffect": "Kusahau athari",
+      "newRejection": "Kukataliwa mpya",
+      "rememberAccuracy": "Kumbuka usahihi",
+      "title": "Imeelekezwa Kusahau",
+      "remember": "Kumbuka",
+      "forget": "Sahau",
+      "round": "Mzunguko",
+      "word": "Neno",
+      "wasThisWordShown": "Neno hili lilionyeshwa?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias Score",
+      "congruentAcc": "Acc Sambamba",
+      "congruentRt": "Sambamba RT",
+      "incongruentAcc": "Acc isiyo sahihi",
+      "incongruentRt": "RT isiyolingana"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Gari au Lori?",
+      "minDisplayReached": "Onyesho la Kidogo Limefikiwa",
+      "positionAccuracy": "Usahihi wa Nafasi",
+      "thresholdDisplay": "Onyesho la Kizingiti",
+      "vehicleAccuracy": "Usahihi wa Gari",
+      "whereWasTheDiamond": "Almasi ilikuwa wapi?",
+      "title": "Uamuzi Mbili",
+      "threshold": "Kizingiti",
+      "bothOk": "Zote mbili ni sahihi",
+      "vehicle": "Gari",
+      "position": "Nafasi",
+      "car": "Gari",
+      "truck": "Lori"
+    },
+    "dsst": {
+      "items": "Vipengee",
+      "itemsCompleted": "Vipengee vimekamilika",
+      "speedItemsmin": "Kasi (vitu/dakika)",
+      "attempts": "Majaribio",
+      "itemsPerMin": "Vipengee / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Gharama ya Kazi mbili",
+      "taskANumber": "Kazi A (Nambari)",
+      "taskBSymbol": "Kazi B (Alama)",
+      "title": "Kazi Mbili",
+      "taskA": "Kazi A",
+      "taskB": "Kazi B",
+      "number": "Nambari",
+      "symbol": "Alama",
+      "up": "Juu",
+      "down": "Chini"
+    },
+    "dualTime": {
+      "sessionEnPause": "Kipindi kimesitishwa",
+      "votreEstimationSecondes": "Kadirio lako (sekunde)",
+      "sessionInterrupted": "Kikao kimekatizwa",
+      "target": "Lengo",
+      "estimation": "Makadirio",
+      "avgTime": "Wastani. wakati",
+      "avgError": "Wastani. kosa",
+      "trials": "Majaribio",
+      "resumeToContinue": "Endelea ili kuendelea",
+      "aimFor": "Lengo kwa",
+      "second": "Pili",
+      "howLongDidYouTake": "Ulichukua muda gani?"
+    },
+    "dualTrack": {
+      "confirmer": "Thibitisha",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Endelea ili kuendelea.",
+      "sessionEnPause": "Kipindi kimesitishwa",
+      "tapezLesCibles": "Gonga malengo",
+      "tapezLaCible": "Gonga lengo",
+      "appuyezConfirmer": "Bonyeza Thibitisha",
+      "targetsCountLabel": "{{count}} lengwa",
+      "distractorsCountLabel": "{{count}} vipotoshi",
+      "roundsCountLabel": "{{count}} raundi",
+      "calibrationRoundsLabel": "{{count}} mizunguko ya urekebishaji",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = daraja la ugumu wa safari ya ndani.",
+      "tierHelpCurrentWithPhase": "Kwa sasa uko T{{current}} kati ya {{total}} kwa shabaha {{targets}}. Awamu ya sasa: {{phase}}. Kuna {{remaining}} viwango vilivyosalia kabla ya kiwango kinachofuata kinacholengwa.",
+      "phaseTracking": "Kufuatilia",
+      "phaseAudio": "Kufuatilia + sauti",
+      "phaseColor": "Ufuatiliaji + rangi",
+      "phaseCombined": "Kufuatilia + sauti + rangi",
+      "passLetters": "Barua",
+      "passColors": "Rangi",
+      "moveInstruction": "Hoja maagizo",
+      "moveConfirmBtn": "Sogeza kitufe cha uthibitisho",
+      "preparingSession": "Inatayarisha kipindi...",
+      "preparing3dScene": "Inatayarisha onyesho la 3D...",
+      "startJourney": "Anza safari",
+      "calibrationDescription": "Kabla ya hatua ya kwanza, urekebishaji mrefu zaidi utakadiria kiwango chako cha kuanzia.",
+      "defaultDescription": "Mipira itawaka. Wafuate wakati wanasonga, kisha watambue.",
+      "startCalibration": "Anza urekebishaji",
+      "calibrationTitle": "Urekebishaji",
+      "estimatedStart": "Est. kuanza",
+      "roundsAnalyzed": "Mizunguko imechanganuliwa",
+      "willStartAt": "Itaanza saa",
+      "targetsCount": "Malengo",
+      "thenProgress": "kisha maendeleo"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Maana ya Hitilafu Kabisa",
+      "ratio": "Uwiano",
+      "slope": "Mteremko",
+      "vierordtSlope": "Mteremko wa Vierordt",
+      "wait": "Subiri...",
+      "title": "Uzazi wa Muda",
+      "meanError": "Maana ya Hitilafu",
+      "meanRatio": "Wastani wa uwiano (hutolewa/lengwa)",
+      "holdNow": "SHIKA SASA",
+      "target": "Lengo",
+      "error": "Hitilafu"
+    },
+    "embeddedFigures": {
+      "fastest": "Haraka zaidi",
+      "found": "Imepatikana",
+      "meanDetectionTime": "Maana wakati wa kugundua",
+      "slowest": "Polepole zaidi",
+      "title": "Takwimu Zilizopachikwa",
+      "missed": "Umekosa",
+      "fastestLabel": "Haraka zaidi",
+      "findThisShape": "Tafuta sura hii",
+      "memorizeShape": "Kariri sura...",
+      "foundIt": "Imepata!",
+      "giveUp": "Kata tamaa"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Kengele za Uongo",
+      "misses": "Amekosa",
+      "title": "N-Back ya Kihisia",
+      "match": "Mechi"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT isiyo na upande",
+      "positiveRt": "RT chanya",
+      "threatRt": "Tishio RT",
+      "title": "Stroop ya Kihisia",
+      "interference": "Kuingilia kati",
+      "interferenceThreatNeutral": "Kuingilia (Tishio − Kuegemea upande wowote)"
+    },
+    "eyesTest": {
+      "totalTime": "Jumla ya Muda"
+    },
+    "faceName": {
+      "gain": "Faida",
+      "learningImprovement": "Uboreshaji wa Kujifunza",
+      "round1Accuracy": "Mzunguko wa 1 Usahihi",
+      "round2Accuracy": "Mzunguko wa 2 Usahihi",
+      "whoIsThis": "Huyu ni nani?",
+      "title": "Chama cha Majina ya Uso",
+      "round": "Mzunguko",
+      "testPhase": "Awamu ya mtihani"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "Kwa nini?",
+      "title": "Utambuzi wa Faux Pas",
+      "detection": "Ugunduzi",
+      "scenarios": "Matukio",
+      "fpFound": "Faux pas kupatikana",
+      "control": "Udhibiti",
+      "readyToAnswer": "Tayari kujibu",
+      "didSomeoneSay": "Kuna mtu alisema kitu ambacho hakupaswa kuwa nacho?",
+      "whoSaidIt": "Nani alisema?",
+      "whyInappropriate": "Kwa nini haikufaa?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Kumbuka Usahihi",
+      "recognitionAccuracy": "Usahihi wa Utambuzi",
+      "recallPlaceholder": "Andika jibu lako...",
+      "unlikely": "Haiwezekani",
+      "certain": "Hakika",
+      "title": "Hisia ya Kujua",
+      "recall": "Kumbuka",
+      "recognition": "Utambuzi",
+      "fokR": "Fok R",
+      "questions": "Maswali",
+      "recalled": "Imekumbukwa",
+      "recognized": "Inatambulika",
+      "fokSensitivity": "Unyeti wa FOK",
+      "submit": "Wasilisha",
+      "dontKnow": "Sijui",
+      "fokPrompt": "Je, utaitambua?",
+      "selectCorrectAnswer": "Chagua jibu sahihi",
+      "answer": "Jibu"
+    },
+    "fingerTapping": {
+      "firstTrial": "Jaribio la Kwanza",
+      "lastTrial": "Jaribio la Mwisho",
+      "sequence": "Mfuatano",
+      "speedupT1VsT12": "Kuongeza kasi (T1 dhidi ya T12)",
+      "title": "Kugonga Kidole"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Wastani wa Muda wa Kusonga",
+      "avgThroughput": "Wastani wa Upitishaji",
+      "title": "Fitts Tapping",
+      "throughput": "Upitishaji",
+      "tapTarget": "Gusa lengo lililoangaziwa"
+    },
+    "foreperiod": {
+      "early": "Mapema",
+      "slope": "Mteremko",
+      "title": "Maandalizi ya Muda",
+      "fpEffectSlope": "Mteremko wa Athari ya FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Mageuzi",
+      "threshold": "Kizingiti",
+      "tone1": "Toni 1",
+      "tone2": "Toni 2",
+      "weber": "Weber",
+      "weberFraction": "Sehemu ya Weber",
+      "hz": "Hz",
+      "title": "Ubaguzi wa Mara kwa Mara",
+      "thresholdLabel": "Kizingiti",
+      "hzDiff": "Hz tofauti",
+      "whichWasHigher": "Ambayo ilikuwa ya juu zaidi?",
+      "firstHigher": "Kwanza juu",
+      "secondHigher": "Ya pili juu"
+    },
+    "gabor": {
+      "gaborPatch": "Kipande cha Gabor",
+      "leftAccuracy": "Usahihi wa kushoto",
+      "leftTrials": "Majaribio ya kushoto",
+      "noiseMask": "Mask ya kelele",
+      "rightAccuracy": "Usahihi sahihi",
+      "rightTrials": "Majaribio sahihi",
+      "thresholdAngle": "Pembe ya kizingiti",
+      "title": "Gabor",
+      "threshold": "Kizingiti",
+      "reversals": "Mageuzi",
+      "timedOut": "Muda umekwisha",
+      "left": "Kushoto",
+      "right": "Sawa"
+    },
+    "gameOfDice": {
+      "finalPoints": "Pointi za mwisho",
+      "risky": "Hatari",
+      "riskyChoices": "Chaguzi za hatari",
+      "safe": "Salama",
+      "winRate": "Kiwango cha kushinda",
+      "wins": "Mafanikio",
+      "title": "Mchezo wa Kazi ya Kete",
+      "totalPoints": "Jumla ya pointi",
+      "riskyLabel": "Hatari",
+      "roll": "Roll",
+      "chooseYourBet": "Chagua dau lako",
+      "pickNumbers": "Chagua nambari zako"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Pengo au hakuna pengo?",
+      "gapThreshold": "Kizingiti cha Pengo",
+      "title": "Ugunduzi wa Kimya",
+      "noGap": "Hakuna Pengo"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Mtazamo ulikuwa wapi?",
+      "direct": "Moja kwa moja",
+      "left": "Kushoto",
+      "right": "Sawa",
+      "title": "Mwelekeo wa Macho",
+      "dPrimeDirectGaze": "D Mtazamo Mkuu wa moja kwa moja"
+    },
+    "hayling": {
+      "part1Initiation": "Sehemu ya 1 (Kuanzishwa)",
+      "part2": "Sehemu ya 2",
+      "part2Suppression": "Sehemu ya 2 (Ukandamizaji)",
+      "suppressionCost": "Gharama ya Ukandamizaji",
+      "title": "Hayling",
+      "part1": "Sehemu ya 1",
+      "part2Label": "Sehemu ya 2",
+      "suppression": "Ukandamizaji",
+      "obvious": "Dhahiri",
+      "obviousPicksPart2": "Chaguo dhahiri (Sehemu ya 2)",
+      "chooseUnrelated": "Chagua neno lisilohusiana",
+      "completelyUnrelated": "Haihusiani kabisa",
+      "doNotPickObvious": "Usichague neno dhahiri!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Kusonga mbele kwa hatua inayofuata...",
+      "stageComplete": "Hatua imekamilika!",
+      "title": "IED Weka Shift",
+      "stages": "Hatua",
+      "edsCost": "Gharama ya EDS",
+      "stage": "Jukwaa",
+      "correctNeeded": "Sahihi inahitajika ili kuendeleza"
+    },
+    "informationSampling": {
+      "cost": "Gharama",
+      "free": "Bure",
+      "meanTilesCost": "Matofali ya wastani (gharama)",
+      "meanTilesFree": "Vigae vya maana (bure)",
+      "totalCost": "Jumla ya Gharama",
+      "title": "Sampuli za Taarifa",
+      "tiles": "Vigae",
+      "tapToReveal": "Gusa ili kufichua"
+    },
+    "inspectionTime": {
+      "final": "Mwisho",
+      "finalDisplayTime": "Muda wa mwisho wa kuonyesha",
+      "minCorrectIt": "Sahihi kidogo IT",
+      "threshold": "Kizingiti",
+      "title": "Muda wa Ukaguzi",
+      "thresholdLabel": "Kizingiti",
+      "minIt": "Kiwango cha chini cha IT"
+    },
+    "iowaGambling": {
+      "balance": "Salio:",
+      "chooseADeck": "Chagua staha",
+      "deckADraws": "Sitaha A huchora",
+      "deckBDraws": "Sitaha B huchora",
+      "deckCDraws": "Sitaha C huchora",
+      "deckDDraws": "Sitaha D huchora",
+      "first40Advantageous": "Kwanza 40 faida",
+      "last40Advantageous": "Mwisho 40 faida",
+      "learn": "Jifunze",
+      "learningIndex": "Kujifunza index",
+      "title": "Kamari ya Iowa",
+      "advantageousPct": "% yenye faida",
+      "earnings": "Mapato",
+      "last40": "Mwisho40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Upendeleo wa Calibration",
+      "meanJol": "Inamaanisha JOL",
+      "nowTestYourRecall": "Sasa jaribu kukumbuka kwako",
+      "studyComplete": "Utafiti umekamilika",
+      "whatWasPairedWith": "Ni nini kiliunganishwa na…?",
+      "title": "Hukumu ya Kujifunza",
+      "recallAccuracy": "Kumbuka Usahihi",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Usahihi wa JOL (Gamma)",
+      "howLikelyRemember": "Je, utakumbuka uwezekano gani?",
+      "hiddenAnswer": "Jibu lililofichwa"
+    },
+    "judgmentOfRecency": {
+      "close": "Funga",
+      "closeGap13": "Funga pengo (1-3)",
+      "far": "Mbali",
+      "farGap9": "Pengo la mbali (9+)",
+      "mediumGap48": "Pengo la wastani (4-8)",
+      "title": "Hukumu ya Hivi karibuni",
+      "medium": "Kati",
+      "studyPhaseMemorizeOrder": "Awamu ya Utafiti - Kariri agizo",
+      "whichMoreRecently": "Ambayo ilionekana hivi karibuni zaidi?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "RT ya maana (isiyo ya maneno)",
+      "meanRtWords": "Maana ya RT (maneno)",
+      "nonwordsAccuracy": "Usahihi wa maneno yasiyo ya maneno",
+      "wordsAccuracy": "Usahihi wa maneno",
+      "word": "Neno",
+      "nonword": "Isiyo ya neno"
+    },
+    "maze": {
+      "duration": "Muda",
+      "optimalSteps": "Hatua Bora",
+      "pathEfficiency": "Ufanisi wa Njia",
+      "totalSteps": "Jumla ya Hatua",
+      "wallHits": "Vibao vya Ukuta",
+      "title": "Maze",
+      "completed": "Imekamilika",
+      "efficiency": "Ufanisi",
+      "wallHitsLabel": "Vibao vya Ukuta",
+      "steps": "Hatua"
+    },
+    "memobox": {
+      "easy": "Rahisi",
+      "easy2Boxes": "Rahisi (sanduku 2)",
+      "hard": "Ngumu",
+      "hard4Boxes": "Ngumu (sanduku 4)",
+      "medium3Boxes": "Wastani (sanduku 3)",
+      "title": "Memobox",
+      "rounds": "Mizunguko",
+      "medium": "Kati",
+      "watchMovements": "Tazama mienendo...",
+      "howManyBalls": "Ni mipira mingapi katika kila sanduku?",
+      "submit": "Wasilisha",
+      "roundOf": "Mzunguko {{current}} kati ya {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Sehemu ya msalaba ni nini?",
+      "title": "Kukata Akili"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Ya zamani, sawa, au mpya?",
+      "patternSeparation": "Mgawanyiko wa Muundo",
+      "sep": "Sep.",
+      "old": "Mzee",
+      "similar": "Sawa",
+      "new": "Mpya",
+      "ldi": "LDI",
+      "title": "Ubaguzi wa Mnemonic",
+      "hitRateOldDetected": "Kiwango cha Kupiga (Mzee kimetambuliwa)",
+      "lureDiscrimination": "Ubaguzi wa Lure (LDI)",
+      "memorize": "Kukariri",
+      "testPhase": "Awamu ya mtihani"
+    },
+    "multiArmedBandit": {
+      "earnings": "Mapato:",
+      "pickMachine": "Chagua mashine",
+      "title": "Jambazi mwenye Silaha nyingi",
+      "totalReward": "Jumla ya zawadi",
+      "optimal": "Mojawapo",
+      "regret": "Majuto",
+      "exploit": "Tumia",
+      "machine": "Mashine",
+      "armsExplored": "Silaha zilizochunguzwa"
+    },
+    "navon": {
+      "globalBigLetter": "Global (herufi kubwa)",
+      "localSmallLetter": "Mitaa (barua ndogo)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Barua gani KUBWA?",
+      "whatSmallLetter": "Barua gani NDOGO?"
+    },
+    "negativePriming": {
+      "controlRt": "Udhibiti wa RT",
+      "nameTheRedShape": "Taja umbo nyekundu",
+      "negativePrimingRt": "Kuweka hasi RT",
+      "positivePrimingRt": "Chanya Priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "Athari ya NP",
+      "title": "Utoaji hasi",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Upendeleo wa makadirio",
+      "linearityRsup2": "Linearity (R²)",
+      "meanAbsoluteError": "Inamaanisha kosa kabisa",
+      "tapTheLineToPlaceTheNumber": "Gonga mstari ili kuweka nambari",
+      "title": "Mstari wa Nambari",
+      "meanError": "Maana ya Hitilafu",
+      "yourEstimate": "Makadirio yako",
+      "correct": "Sahihi"
+    },
+    "oddOneOut": {
+      "colorTrials": "Majaribio ya rangi",
+      "shapeTrials": "Majaribio ya sura",
+      "shape": "Umbo",
+      "color": "Rangi",
+      "timeout": "Muda umekwisha",
+      "shapeDiffAccuracy": "Tofauti ya sura. usahihi",
+      "colorDiffAccuracy": "Tofauti ya rangi. usahihi",
+      "shapeDiffAvgRt": "Tofauti ya sura. wastani wa RT",
+      "colorDiffAvgRt": "Tofauti ya rangi. wastani. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Njia gani?",
+      "thresholdAngle": "Pembe ya kizingiti",
+      "title": "Ubaguzi Mwelekeo",
+      "threshold": "Kizingiti",
+      "counterCw": "CCW",
+      "clockwise": "Saa"
+    },
+    "patternComparison": {
+      "differentTrials": "Majaribio tofauti",
+      "sameTrials": "Majaribio sawa",
+      "same": "Sawa",
+      "different": "Tofauti"
+    },
+    "patternRecognition": {
+      "newPatterns": "Mitindo mipya",
+      "oldPatterns": "Mitindo ya zamani",
+      "old": "MZEE",
+      "new": "MPYA",
+      "studyPatterns": "Jifunze mifumo kwa uangalifu",
+      "memorize": "Kariri ({{current}}/{{total}})",
+      "getReady": "Jiandae...",
+      "testPhaseStarting": "Awamu ya mtihani inaanza..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Sahihi Sahihi",
+      "meanAngularError": "Maana ya kosa la angular",
+      "withinTolerance": "Ndani ya uvumilivu",
+      "title": "Kuchukua Mtazamo",
+      "avgErr": "Wastani. kosa",
+      "youAreAt": "Upo",
+      "facing": "Inakabiliwa",
+      "pointTo": "Elekeza kwa"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Mara kwa mara. Kizingiti",
+      "seq1": "Sek 1",
+      "seq2": "Sehemu ya 2",
+      "title": "Ubaguzi wa Fonimu",
+      "thresh": "Puta",
+      "sameOrDifferent": "Sawa au tofauti?",
+      "same": "Sawa",
+      "different": "Tofauti"
+    },
+    "predictionMotion": {
+      "biasLate": "Upendeleo (+ = marehemu)",
+      "meanAbsoluteError": "Maana ya Hitilafu Kabisa",
+      "precisionSd": "Usahihi (SD)",
+      "title": "Mwendo wa Utabiri",
+      "absError": "Abs. kosa",
+      "precision": "Usahihi",
+      "responded": "Alijibu",
+      "tapWhenReachesTarget": "GONGA inapofikia lengo"
+    },
+    "promem": {
+      "ongoingAccuracy": "Usahihi unaoendelea",
+      "ongoingRt": "RT inayoendelea",
+      "pmHitRate": "Kiwango cha hit cha PM",
+      "pmRt": "PM RT",
+      "pmTargets": "Malengo ya PM",
+      "title": "Kumbukumbu inayotarajiwa",
+      "ongoing": "Inaendelea",
+      "pmHits": "PM Hits",
+      "pmMisses": "PM Amekosa",
+      "living": "Kuishi",
+      "nonLiving": "Wasio hai",
+      "redWordInstruction": "Neno nyekundu = bonyeza"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Makosa ya Kipotoshi",
+      "literalErrorRate": "Kiwango cha Hitilafu Halisi",
+      "literalErrors": "Makosa Halisi",
+      "title": "Tafsiri ya Methali",
+      "literal": "halisi",
+      "litRate": "Mwangaza. Kiwango",
+      "whatDoesThisMean": "Je, hii ina maana gani?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Jitayarishe kufuata",
+      "meanTimeOnTarget": "Wakati wa Maana kwenye Lengo",
+      "meanTrackingError": "Hitilafu ya maana ya kufuatilia",
+      "placeYourFingerOnTheScreen": "Weka kidole chako kwenye skrini",
+      "title": "Ufuatiliaji wa Kutafuta",
+      "timeOnTarget": "Muda kwenye lengo",
+      "error": "Hitilafu",
+      "onTarget": "Kwenye Lengo",
+      "avgError": "Wastani. kosa",
+      "improve": "Boresha",
+      "improvementT1VsT": "Uboreshaji wa T1 dhidi ya T",
+      "errorLabel": "Hitilafu",
+      "followGreenTarget": "Fuata lengo la kijani"
+    },
+    "rapidNaming": {
+      "roundComplete": "Mzunguko umekamilika",
+      "totalErrors": "Jumla ya Makosa",
+      "title": "Kutaja Haraka",
+      "avgSpeed": "Wastani. kasi",
+      "totalTime": "Jumla ya Muda",
+      "round": "Mzunguko",
+      "getReady": "Jitayarishe!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Wastani wa Tatua Muda",
+      "solved": "Imetatuliwa",
+      "wrong": "Si sahihi",
+      "placeholder": "Jibu lako...",
+      "title": "Rebus Mafumbo",
+      "puzzles": "Mafumbo",
+      "timeout": "Muda umekwisha",
+      "submit": "Wasilisha",
+      "answer": "Jibu"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Wastani wa Tatua Muda",
+      "solved": "Imetatuliwa",
+      "placeholder": "Jibu lako...",
+      "title": "Washirika wa Mbali",
+      "timeout": "Muda umekwisha",
+      "submit": "Wasilisha",
+      "answer": "Jibu"
+    },
+    "reversalLearning": {
+      "adapt": "Kurekebisha",
+      "loseshiftRate": "Kiwango cha Kupoteza-Shift",
+      "score": "Alama:",
+      "winstayRate": "Kiwango cha Kushinda-Kukaa",
+      "title": "Kujifunza kwa Kugeuza",
+      "rewards": "Zawadi",
+      "reversals": "Mageuzi",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Wastani. majaribio kwa kigezo",
+      "pickACard": "Chagua kadi"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Hesabu kwenda nyuma kwa 7",
+      "reproduceThePatternFromMemory": "Tengeneza muundo kutoka kwa kumbukumbu",
+      "title": "Kielelezo cha Rey Complex",
+      "copy": "Nakili",
+      "recall": "Kumbuka",
+      "retention": "Uhifadhi",
+      "trial": "Jaribio",
+      "target": "Lengo",
+      "yourCopy": "Nakala yako",
+      "submit": "Wasilisha"
+    },
+    "rhythm": {
+      "avgTimingError": "Hitilafu ya wastani ya muda",
+      "bestTrialError": "Hitilafu bora ya majaribio",
+      "correctTrials": "Majaribio sahihi",
+      "worstTrialError": "Hitilafu mbaya zaidi ya majaribio",
+      "watchRhythm": "Tazama mdundo",
+      "getReady": "Jiandae...",
+      "tapTheRhythm": "Gonga mdundo!",
+      "tooFarOff": "Mbali sana!",
+      "tapToReproduce": "Gusa ili kuzalisha tena",
+      "beats": "{{count}} mipigo",
+      "bestTrial": "Jaribio bora zaidi",
+      "worstTrial": "Jaribio baya zaidi",
+      "title": "Mdundo",
+      "msErr": "ms makosa"
+    },
+    "routePlanning": {
+      "time": "Muda",
+      "title": "Upangaji wa Njia",
+      "levels": "Viwango",
+      "completed": "Imekamilika",
+      "avgMoves": "Wastani. hatua",
+      "clear": "Wazi",
+      "submit": "Wasilisha",
+      "instructions": "Maagizo"
+    },
+    "rvp": {
+      "detect357246468": "Tambua: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Mifuatano Lengwa",
+      "fa": "FA",
+      "hitRate": "Kiwango cha hit",
+      "misses": "Amekosa",
+      "sequences": "Mifuatano"
+    },
+    "sart": {
+      "commissionErrors": "Makosa ya Tume",
+      "omissionErrors": "Makosa ya kuachwa",
+      "tapAllDigits": "Gusa tarakimu zote isipokuwa 3",
+      "except3": "Isipokuwa3"
+    },
+    "sceneCrasher": {
+      "adds": "Anaongeza",
+      "studyTheScene": "Jifunze eneo",
+      "swaps": "Hubadilishana",
+      "tapTheNewchangedObject": "Gusa kipengee kipya/kilichobadilishwa"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Sentensi za uwongo",
+      "trueSentences": "Sentensi za kweli",
+      "byCategory": "Kwa Jamii",
+      "title": "Uthibitishaji wa Sentensi",
+      "trueRt": "RT ya kweli",
+      "true": "Kweli",
+      "false": "Uongo",
+      "pressKey": "Bonyeza"
+    },
+    "soundSweeps": {
+      "down": "Chini",
+      "downAccuracy": "Usahihi wa chini",
+      "durationThreshold": "Kizingiti cha Muda",
+      "up": "Juu",
+      "upAccuracy": "Juu usahihi",
+      "title": "Ufagiaji wa Sauti",
+      "threshold": "Kizingiti",
+      "upOrDown": "Juu au chini?"
+    },
+    "sourceMemory": {
+      "color": "Rangi",
+      "colorRecall": "Kukumbuka rangi",
+      "frame": "Fremu",
+      "frameRecall": "Kukumbuka kwa sura",
+      "getReadyForTheTest": "Jitayarishe kwa mtihani!",
+      "itemRecognition": "Utambuzi wa bidhaa",
+      "positionRecall": "Nafasi kukumbuka",
+      "sourceAccuracy": "Usahihi wa chanzo",
+      "title": "Kumbukumbu ya Chanzo",
+      "source": "Chanzo",
+      "position": "Nafasi",
+      "word": "Neno",
+      "wasThisWordShown": "Neno hili lilionyeshwa?",
+      "bottom": "Chini",
+      "blue": "Bluu",
+      "orange": "Chungwa",
+      "circle": "Mduara",
+      "square": "Mraba"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Kizingiti cha Kelele",
+      "title": "Hotuba-katika-Kelele",
+      "noise": "Kelele",
+      "whichWordWasIt": "Neno lipi lilikuwa?"
+    },
+    "srtt": {
+      "learningEffect": "Athari ya kujifunza",
+      "learning": "Kujifunza",
+      "block": "Zuia"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Kiwango cha Nafasi",
+      "learningDetected": "Kujifunza Kumegunduliwa",
+      "testPhase": "Awamu ya Mtihani",
+      "whichPairLooksMoreFamiliar": "Je, ni jozi gani inayoonekana kufahamika zaidi?",
+      "title": "Kujifunza kwa Takwimu",
+      "learning": "Kujifunza",
+      "watchTheShapes": "Tazama maumbo"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Athari ya Upendeleo wa Imani",
+      "conclusion": "Hitimisho",
+      "premise1": "Nguzo 1",
+      "premise2": "Nguzo 2",
+      "logicalValidityQuestion": "Je, hii ni halali kimantiki?",
+      "valid": "Halali",
+      "invalid": "Batili"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Usahihi usiopo",
+      "presentAccuracy": "Wasilisha usahihi",
+      "title": "Utafutaji wa Alama",
+      "present": "Wasilisha",
+      "absent": "Haipo",
+      "targets": "Malengo",
+      "searchGroup": "Tafuta kikundi"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "Asynchrony",
+      "drift": "Drift",
+      "cv": "CV",
+      "title": "Kusawazisha-Kuendelea",
+      "meanCv": "CV ya maana",
+      "tempos": "Tempos",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Jitayarishe...",
+      "nextTempo": "Muda unaofuata..."
+    },
+    "taskJuggling": {
+      "correctResets": "Uwekaji Upya Sahihi",
+      "duration": "Muda",
+      "missedCounters": "Vihesabu Vilivyokosa",
+      "prematureResets": "Kuweka upya mapema",
+      "totalEvents": "Jumla ya Matukio",
+      "tooEarly": "Mapema sana!",
+      "missed": "Umekosa!",
+      "title": "Juggling Kazi",
+      "premature": "Kabla ya wakati",
+      "counter": "Kaunta",
+      "tapCounterInstruction": "Gusa kila kaunta inapofika kizingiti chake. Usiruhusu yoyote kufurika!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Sehemu ya sehemu mbili (PSE)",
+      "curveSteepness": "Mwinuko wa Curve",
+      "idealMidpoint": "Bora katikati",
+      "pse": "PSE",
+      "title": "Mgawanyiko wa Muda",
+      "steepness": "Mwinuko",
+      "shortOrLong": "Mfupi au Mrefu?",
+      "trainingPhase": "Awamu ya Mafunzo",
+      "short": "Mfupi",
+      "long": "Muda mrefu"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Upana wa Gradient",
+      "rememberThisDuration": "Kumbuka muda huu",
+      "width": "Upana",
+      "standard": "KIWANGO",
+      "title": "Ujumla wa Muda",
+      "hitRate": "Kiwango cha hit",
+      "faRate": "Taux ya FA",
+      "hitRateDetectStandard": "Kiwango cha Kugonga (gundua kiwango)",
+      "sameDuration": "Muda sawa?",
+      "trainingPhase": "Awamu ya Mafunzo",
+      "same": "Sawa",
+      "different": "Tofauti"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Kiwango cha juu cha SOA",
+      "title": "Ubaguzi wa Umbile",
+      "threshold": "Kizingiti"
+    },
+    "timePromem": {
+      "avgTimingError": "Hitilafu ya wastani ya muda",
+      "clockChecks": "Ukaguzi wa saa",
+      "ongoingAccuracy": "Usahihi unaoendelea",
+      "ongoingTrials": "Majaribio yanayoendelea",
+      "totalPmPresses": "Jumla ya Waandishi wa Habari wa PM",
+      "pmAccuracy": "Usahihi wa PM",
+      "pmMisses": "PM anakosa",
+      "title": "Wakati Matarajio",
+      "ongoing": "Inaendelea",
+      "pmHitsLabel": "PM hits",
+      "timingErr": "Hitilafu ya Muda",
+      "pmHitsExpected": "Vibao vya PM / Inatarajiwa",
+      "pmPresses": "Vyombo vya habari vya PM",
+      "checkClock": "Angalia saa",
+      "thirtySecMark": "30s Mark"
+    },
+    "toj": {
+      "meanResponseTime": "Maana Muda wa Kujibu",
+      "temporalResolution": "Azimio la Muda",
+      "title": "Hukumu ya Amri ya Muda",
+      "threshold": "Kizingiti",
+      "whichCameFirst": "Ambayo alikuja kwanza?",
+      "leftFirst": "Kushoto Kwanza",
+      "rightFirst": "Haki Kwanza"
+    },
+    "tower": {
+      "budget": "Bajeti",
+      "challenge": "Changamoto",
+      "challengeClassic": "Classic",
+      "challengeExpert": "Mtaalamu",
+      "challengeMemory": "Kumbukumbu",
+      "challengePrecision": "Usahihi",
+      "dragDiscAriaLabel": "Buruta diski ya juu kutoka kwa kigingi {{peg}}",
+      "goal": "Lengo",
+      "goalHiddenStatus": "Lengo limefichwa. Tumia Ufunuo ili kuionyesha kwa ufupi.",
+      "goalRevealedMessage": "Lengo limefichuliwa kwa sekunde 3.",
+      "hint": "Kidokezo",
+      "hintDescription": "Onyesha hatua inayofuata bora zaidi",
+      "hintMessage": "Kidokezo: sogeza diski ya juu kutoka kwa kigingi {{fromPeg}} hadi kigingi {{toPeg}}.",
+      "hiddenGoalDescription": "Lengo limefichwa wakati wa kucheza. Tumia Fichua unapohitaji uonyeshaji upya mfupi.",
+      "hiddenGoalTitle": "Changamoto ya kumbukumbu",
+      "invalid": "Batili",
+      "moves": "Inasonga",
+      "optimal": "Mojawapo",
+      "pegFullMessage": "Kigingi hicho kimejaa.",
+      "previewMemoryCountdown": "Kariri lengo. Huanza baada ya {{seconds}}s.",
+      "previewPlanCountdown": "Panga {{moves}}-sogeza suluhisho. Huanza baada ya {{seconds}}s.",
+      "reset": "Weka upya",
+      "resetDescription": "Anzisha tena fumbo hili",
+      "resetMessage": "Rudisha fumbo.",
+      "reveal": "Fichua",
+      "revealDescription": "Fichua lengo lililofichwa",
+      "statusOptimalSolve": "Suluhisho mojawapo. Alama {{score}}.",
+      "statusSolvedScore": "Imetatuliwa katika {{moves}} hatua (+{{extraMoves}}). Alama {{score}}.",
+      "undo": "Tendua",
+      "undoDescription": "Badilisha hatua ya mwisho",
+      "undoneMessage": "Hatua ya mwisho imetenguliwa.",
+      "yourPegs": "Vigingi vyako"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Uwasilishaji Sahihi",
+      "trainsLost": "Treni zimepotea",
+      "wrongStation": "Kituo kibaya",
+      "title": "Treni ya Mawazo",
+      "trains": "Treni",
+      "missed": "Umekosa",
+      "scoreLabel": "Alama",
+      "instructions": "Maagizo"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Wastani wa Maswali Yanayotumika",
+      "title": "Maswali Ishirini",
+      "avgQuestions": "Wastani. maswali",
+      "rounds": "Mizunguko",
+      "efficiency": "Ufanisi",
+      "avgQuestionsCorrectOnly": "Wastani. maswali (sahihi tu)",
+      "questionsLabel": "Maswali",
+      "remaining": "Iliyosalia",
+      "readyToGuess": "Niko tayari kukisia!",
+      "tapTheTarget": "Gonga kitu unachofikiri ndicho kinacholengwa!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Sehemu Muhimu ya Maoni",
+      "visualNoiseMask": "Mask ya kelele inayoonekana",
+      "whatWasInTheCenter": "Nini kilikuwa katikati?",
+      "whereWasTheTarget": "Lengo lilikuwa wapi?",
+      "avgThreshold": "Wastani. kizingiti",
+      "speed": "Kasi",
+      "accuracy": "Usahihi",
+      "central": "Kati",
+      "peripheral": "Pembeni",
+      "overall": "Kwa ujumla",
+      "block": "Zuia",
+      "trials": "Majaribio",
+      "start": "Anza",
+      "focus": "Kuzingatia",
+      "threshold": "Kizingiti",
+      "stimulus": "Kichocheo",
+      "respondFromMemory": "Jibu kutoka kwa kumbukumbu",
+      "truck": "Lori",
+      "choosePeripheralLocation": "Chagua eneo la pembeni",
+      "currentBlock": "Zuia {{n}}",
+      "exposure": "Kuwemo hatarini"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Maneno yanayoanza na {{letter}}",
+      "title": "Ufasaha wa Maneno",
+      "totalWords": "Jumla ya maneno",
+      "duplicates": "Nakala",
+      "letter": "Barua",
+      "round": "Mzunguko",
+      "roundComplete": "Mzunguko umekamilika",
+      "nextRound": "Raundi inayofuata",
+      "middotRound": "· Mzunguko"
+    },
+    "vernierAcuity": {
+      "whichSide": "Upande gani?",
+      "title": "Vernier Acuity",
+      "leftOffset": "Kushoto kukabiliana",
+      "rightOffset": "Kukabiliana kulia",
+      "offset": "Kukabiliana"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Mkakati Bora",
+      "correct": "Sahihi!",
+      "wrong": "Si sahihi",
+      "title": "Utabiri wa hali ya hewa",
+      "optimal": "Mojawapo",
+      "learningCurve": "Curve ya Kujifunza",
+      "predictTheWeather": "Tabiri hali ya hewa",
+      "rain": "Mvua"
+    },
+    "wordChain": {
+      "avgResponseTime": "Wastani wa Muda wa Kujibu",
+      "chain": "Mnyororo",
+      "longestChain": "Mlolongo mrefu zaidi",
+      "totalCorrect": "Sahihi Jumla",
+      "totalWords": "Jumla ya Maneno",
+      "words": "Maneno",
+      "title": "Msururu wa Maneno",
+      "longest": "Mrefu zaidi",
+      "avgRt": "Wastani. RT",
+      "endsWith": "inaisha na",
+      "chainLabel": "Mnyororo",
+      "bestLabel": "Bora zaidi"
+    },
+    "wordFlow": {
+      "avgWordLength": "Wastani wa urefu wa neno",
+      "correct": "Sahihi",
+      "invalidWords": "Maneno batili",
+      "totalWordsSelected": "Jumla ya Maneno Yaliyochaguliwa",
+      "validWords": "Maneno halali",
+      "wordsPerMinute": "Maneno kwa dakika",
+      "wrong": "Si sahihi",
+      "seeResults": "Tazama matokeo",
+      "nextRound": "Raundi inayofuata ({{current}}/{{total}})",
+      "title": "Ufasaha wa Maneno",
+      "validWordsLabel": "Maneno halali",
+      "wordsPerMinLabel": "Maneno/dak",
+      "avgLengthLabel": "Wastani. urefu",
+      "invalidLabel": "Batili",
+      "round": "Mzunguko",
+      "selectWordsBelongTo": "Chagua maneno ambayo ni ya",
+      "selected": "Imechaguliwa"
+    },
+    "wordList": {
+      "avgRtCorrect": "Wastani wa RT (sahihi)",
+      "primacyEffect": "Athari kuu",
+      "recencyEffect": "Athari ya Hivi Punde",
+      "studyPhaseRememberEachWord": "Awamu ya kusoma - kumbuka kila neno",
+      "wordsRecalled": "Maneno Yanakumbukwa",
+      "title": "Orodha ya Maneno",
+      "serialPositionCurve": "Mzingo wa Nafasi ya Serial",
+      "wasWordInList": "Je, neno hili lilikuwa kwenye orodha?",
+      "seenBefore": "Imeonekana hapo awali",
+      "newWord": "Mpya"
+    },
+    "speedSort": {
+      "switchAccuracy": "Usahihi wa kubadili",
+      "switchTrials": "Badilisha majaribio",
+      "sortByColor": "Panga kwa COLOR",
+      "sortByShape": "Panga kwa SHAPE",
+      "sortByNumber": "Panga kwa NUMBER",
+      "ruleChanged": "Kanuni imebadilishwa!",
+      "binRed": "Nyekundu",
+      "binBlue": "Bluu",
+      "binGreen": "Kijani",
+      "binYellow": "Njano",
+      "binCircle": "Mduara",
+      "binSquare": "Mraba",
+      "binTriangle": "Pembetatu",
+      "binStar": "Nyota",
+      "title": "Aina ya Kasi",
+      "switch": "Swichi"
+    },
+    "reflex": {
+      "target": "Lengo",
+      "lure": "Kuvutia",
+      "tooSlow": "Polepole sana!",
+      "wrongTarget": "Lengo lisilo sahihi!",
+      "tapTargets": "Gonga miduara ya kijani!",
+      "hits": "Vipigo",
+      "misses": "Amekosa",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Kumbuka jumla ya kukimbia ...",
+      "title": "Hesabu ya mnyororo",
+      "stepChains": "{{len}}-minyororo ya hatua",
+      "start": "Anza",
+      "step": "Hatua",
+      "whatIsTheResult": "Matokeo ni nini?"
+    },
+    "alternateUses": {
+      "placeholder": "Andika matumizi...",
+      "title": "Matumizi Mbadala",
+      "totalUses": "Jumla ya matumizi",
+      "perObject": "Kwa kila kitu",
+      "rounds": "Mizunguko",
+      "bestObject": "Kitu bora",
+      "bestCount": "Hesabu bora",
+      "noUsesSubmitted": "Hakuna matumizi yaliyowasilishwa",
+      "timesUp": "Muda umekwisha!",
+      "nextObject": "Kitu Kinachofuata ({{object}})",
+      "listCreativeUses": "Orodhesha matumizi ya ubunifu ya kitu hiki"
+    },
+    "anagram": {
+      "placeholder": "Andika neno...",
+      "title": "Anagramu",
+      "avgSolve": "Wastani. kutatua",
+      "letterWords": "{{len}}-maneno ya herufi",
+      "submit": "Wasilisha"
+    },
+    "facialEmotion": {
+      "happy": "Furaha",
+      "sad": "Inasikitisha",
+      "angry": "Mwenye hasira",
+      "fearful": "Wa kuogopa",
+      "disgusted": "Kuchukizwa",
+      "surprised": "Kushangaa",
+      "lc": "LC",
+      "title": "Utambuzi wa Hisia za Usoni",
+      "topConfusions": "Machafuko ya juu"
+    },
+    "numberSeries": {
+      "easy": "Rahisi",
+      "hard": "Ngumu"
+    },
+    "chainRecall": {
+      "round": "Mzunguko",
+      "title": "Kukumbuka kwa Chain",
+      "chain": "Mnyororo",
+      "placeholder": "Kishika nafasi"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotional Go/No-Go",
+      "block1CommissionErrors": "Zuia hitilafu 1 za tume",
+      "block2CommissionErrors": "Zuia makosa 2 ya tume",
+      "goHappy": "Nenda = Furaha",
+      "goSad": "Nenda = Inasikitisha",
+      "block": "Zuia",
+      "go": "Nenda"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Athari ya Stroop",
+      "title": "Kukimbilia Rangi",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Usahihi wa sanjari",
+      "incongruentAccuracy": "Usahihi usiofaa"
+    },
+    "mirror": {
+      "avgCorrectCells": "Seli sahihi (wastani.)",
+      "symmetryType": "Aina ya ulinganifu",
+      "title": "Kioo"
+    },
+    "rhythmTap": {
+      "correctTrials": "Majaribio sahihi",
+      "avgRhythmScore": "Alama ya wastani ya mdundo",
+      "bestTrialScore": "Alama bora ya majaribio",
+      "worstTrialScore": "Alama mbaya zaidi ya majaribio",
+      "level": "Kiwango",
+      "rhythm": "Mdundo",
+      "bestTrial": "Jaribio bora zaidi",
+      "worstTrial": "Jaribio baya zaidi"
+    },
+    "vocalProsody": {
+      "questioning": "Kuhoji"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Zidisha",
+      "add": "Ongeza",
+      "subtract": "Ondoa",
+      "title": "Kasi ya Hesabu",
+      "score": "Alama",
+      "solved": "Imetatuliwa",
+      "missed": "Umekosa"
+    },
+    "puzzle": {
+      "avgSolveTime": "Wastani wa muda wa kutatua",
+      "totalMoves": "Jumla ya hatua",
+      "totalErrors": "Jumla ya makosa",
+      "gridSize": "Ukubwa wa gridi",
+      "maxGridReached": "Upeo wa gridi umefikiwa",
+      "maxLevelReached": "Kiwango cha juu kimefikiwa",
+      "maxNodesReached": "Vifundo vya juu vimefikiwa",
+      "puzzleDetails": "Maelezo ya fumbo",
+      "roundDetails": "Maelezo ya pande zote",
+      "solved": "Imetatuliwa!",
+      "undo": "Tendua",
+      "reset": "Weka upya",
+      "check": "Angalia",
+      "moves": "Inasonga",
+      "time": "Muda",
+      "level": "Kiwango",
+      "errors": "Makosa",
+      "score": "Alama",
+      "grid": "Gridi",
+      "crossings": "Vivuko",
+      "pearls": "Lulu",
+      "clues": "Vidokezo",
+      "region": "Mkoa",
+      "filled": "Imejazwa",
+      "cells": "Seli",
+      "undosLeft": "Tendua zilizosalia",
+      "gems": "Vito",
+      "connected": "Imeunganishwa",
+      "slides": "Slaidi",
+      "progress": "Maendeleo",
+      "rotations": "Mizunguko",
+      "puzzle": "Fumbo",
+      "uncovered": "Imefichuliwa",
+      "colored": "Rangi",
+      "violations": "Ukiukaji",
+      "blacked": "Weusi",
+      "empty": "Tupu",
+      "remaining": "Iliyosalia",
+      "pairs": "Jozi",
+      "flips": "Inageuza",
+      "found": "Imepatikana",
+      "balls": "Mipira",
+      "guesses": "Nadhani",
+      "original": "Asili",
+      "findDifferences": "Tafuta tofauti",
+      "totalDrags": "Jumla ya buruta",
+      "totalUndos": "Jumla ya kutendua",
+      "totalEdgesDrawn": "Jumla ya kingo zilizochorwa",
+      "totalLasers": "Jumla ya lasers",
+      "totalSlides": "Jumla ya slaidi",
+      "totalRotations": "Jumla ya mizunguko",
+      "totalRectangles": "Jumla ya mistatili",
+      "totalScore": "Jumla ya alama",
+      "avgTime": "Muda wa wastani",
+      "cellsCleared": "Visanduku vimefutwa",
+      "totalDiffsFound": "Jumla ya tofauti zilizopatikana",
+      "gemsCollected": "Vito vilivyokusanywa",
+      "pushBoxesOntoTargets": "Sukuma visanduku vyote kwenye malengo",
+      "fireLasersMarkBalls": "Laser za moto kutoka kingo, kisha uweke alama nafasi za mpira",
+      "revealingAnswer": "Jibu linalofichua...",
+      "checkAnswer": "Angalia Jibu",
+      "pickNumberBelow": "Chagua nambari hapa chini",
+      "tapCellToAssign": "Gonga kisanduku ili kukabidhi nambari",
+      "tapEdgesToPlaceWalls": "Gonga kingo ili kuweka kuta. Gawanya katika mikoa ya K.",
+      "ghosts": "Mizimu",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "Domino",
+      "islands": "Visiwa",
+      "pegsLeft": "Vigingi Kushoto",
+      "bestRemaining": "Bora iliyobaki",
+      "puzzlesSolved": "Mafumbo yametatuliwa",
+      "flooded": "Iliyofurika",
+      "edges": "Kingo",
+      "totalPlacements": "Jumla ya nafasi zilizowekwa",
+      "totalRemovals": "Jumla ya kuondolewa",
+      "maxTileReached": "Upeo wa kigae umefikiwa",
+      "target": "Lengo",
+      "placed": "Imewekwa",
+      "totalGuesses": "Jumla ya makadirio",
+      "guessesLeft": "Nadhani kushoto",
+      "difficulty": "Ugumu"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Mafumbo",
+      "maxLevel": "Kiwango cha juu"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "errors": "Makosa",
+      "avgTime": "Wastani. wakati",
+      "erase": "Futa"
+    },
+    "blackbox": {
+      "title": "Sanduku Nyeusi",
+      "puzzles": "Mafumbo",
+      "lasers": "Laser",
+      "avgTime": "Wastani. wakati"
+    },
+    "designFluency": {
+      "title": "Ufasaha wa Kubuni",
+      "uniqueDesigns": "Miundo ya kipekee",
+      "duplicates": "Nakala",
+      "round": "Mzunguko",
+      "roundComplete": "Mzunguko umekamilika",
+      "youCreatedDesigns": "Uliunda miundo {{count}}",
+      "startRound": "Anza mzunguko",
+      "instructions": "Maagizo",
+      "designs": "Miundo",
+      "clear": "Wazi",
+      "addDesign": "Ongeza"
+    },
+    "signpost": {
+      "title": "Alama",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "avgTime": "Wastani. wakati",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Kiwango",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "undos": "Tendua",
+      "puzzle": "Fumbo"
+    },
+    "numericalStroop": {
+      "left": "Kushoto",
+      "right": "Sawa"
+    },
+    "biologicalMotion": {
+      "title": "Mwendo wa Kibiolojia",
+      "noiseDots": "dots za kelele",
+      "whichDirection": "Uelekeo gani?",
+      "left": "Kushoto",
+      "right": "Sawa"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "gems": "Vito",
+      "moves": "Inasonga"
+    },
+    "waterLevel": {
+      "title": "Kiwango cha Maji",
+      "error": "Hitilafu",
+      "tilt": "Tilt",
+      "waterLine": "Njia ya maji?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "errors": "Makosa",
+      "avgTime": "Wastani. wakati",
+      "erase": "Futa"
+    },
+    "rectangles": {
+      "title": "Mistatili",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "rectanglesCount": "Mistatili",
+      "maxGrid": "Upeo wa gridi ya taifa",
+      "cancelSelection": "Ghairi uteuzi"
+    },
+    "filling": {
+      "title": "Kujaza",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "avgTime": "Wastani. wakati",
+      "grid": "Gridi"
+    },
+    "spacedRetrieval": {
+      "title": "Urejeshaji wa Nafasi",
+      "studyPair": "Jifunze jozi hii",
+      "waitAndSolve": "Subiri… kisha suluhisha",
+      "equalsQuestion": "=?",
+      "intervalWhatPairs": "Muda: jozi gani?"
+    },
+    "prototypeDistortion": {
+      "title": "Upotoshaji wa Mfano",
+      "studyPhase": "Awamu ya masomo",
+      "testPhase": "Awamu ya mtihani",
+      "yesBelongs": "Ndiyo - Mali",
+      "noRandom": "Hapana - bila mpangilio"
+    },
+    "motionCoherence": {
+      "title": "Mshikamano wa Mwendo",
+      "threshold": "Kizingiti",
+      "coherence": "Mshikamano",
+      "whichDirection": "Uelekeo gani?"
+    },
+    "cube": {
+      "title": "Mchemraba",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxLevel": "Kiwango cha juu",
+      "cubeFaces": "Nyuso za mchemraba",
+      "moveUp": "Juu",
+      "moveLeft": "Kushoto",
+      "moveDown": "Chini",
+      "moveRight": "Sawa"
+    },
+    "sameGame": {
+      "title": "Mchezo Uleule",
+      "score": "Alama",
+      "cleared": "Imefutwa",
+      "cells": "Seli",
+      "accuracy": "Usahihi"
+    },
+    "crossModalMatching": {
+      "title": "Kulinganisha kwa Njia Mtambuka",
+      "chance": "Nafasi",
+      "whichPatternMatchesRhythm": "Ni muundo gani unaolingana na mdundo?"
+    },
+    "mosaic": {
+      "title": "Musa",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "spotDiff": {
+      "title": "Doa Tofauti",
+      "level": "Kiwango",
+      "grid": "Gridi",
+      "accuracy": "Usahihi",
+      "perfect": "Kamilifu",
+      "avgTime": "Wastani. wakati",
+      "found": "Imepatikana"
+    },
+    "lightsOut": {
+      "title": "Taa Zima",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "pipeline": {
+      "title": "Bomba",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "rotations": "Mizunguko",
+      "avgTime": "Wastani. wakati"
+    },
+    "tracks": {
+      "title": "Nyimbo",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "errors": "Makosa",
+      "avgTime": "Wastani. wakati"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "slides": "Slaidi",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "cognitiveBias": {
+      "title": "Mafunzo ya Upendeleo wa Utambuzi",
+      "biasResistance": "Upinzani wa upendeleo",
+      "biased": "Upendeleo",
+      "continue": "Endelea"
+    },
+    "empathicAccuracy": {
+      "title": "Usahihi wa Uelewa",
+      "emotionId": "Hisia",
+      "avgRatingError": "Wastani. hitilafu ya ukadiriaji",
+      "scenarios": "Matukio",
+      "perfect": "Kamilifu",
+      "rating": "Ukadiriaji",
+      "howDoesCharacterFeel": "Je, mhusika anahisije?",
+      "rateIntensity": "Kadiria ukubwa",
+      "whatEmotion": "Ni hisia gani?",
+      "yourRating": "Ukadiriaji wako",
+      "correct": "Sahihi",
+      "emotion": "Hisia"
+    },
+    "guess": {
+      "title": "Mwenye akili",
+      "solved": "Imetatuliwa",
+      "guesses": "Nadhani"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxLevel": "Kiwango cha juu"
+    },
+    "magnets": {
+      "title": "Sumaku",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxLevel": "Kiwango cha juu"
+    },
+    "tangram": {
+      "placeAll": "Weka vipande vyote",
+      "solved": "Imetatuliwa!",
+      "notRight": "Sio sawa kabisa",
+      "title": "Tangram",
+      "level": "Kiwango",
+      "puzzles": "Mafumbo",
+      "placements": "Nafasi",
+      "removals": "Uondoaji",
+      "puzzleNumber": "Fumbo {{n}}",
+      "pieces": "Vipande",
+      "targetCells": "Cible",
+      "dragHint": "Buruta au weka kipande kwenye gridi ya taifa",
+      "selectHint": "Chagua kipande",
+      "rotate": "Mtalii",
+      "undo": "Annuler",
+      "check": "Angalia"
+    },
+    "galaxies": {
+      "title": "Magalaksi"
+    },
+    "flood": {
+      "title": "Mafuriko"
+    },
+    "pegs": {
+      "title": "Vigingi",
+      "bestPegs": "Vigingi bora"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditory Kielelezo-Ground",
+      "patternPresent": "Mchoro upo?",
+      "pattern": "Muundo",
+      "noPattern": "Hakuna muundo"
+    },
+    "selfOrderedPointing": {
+      "title": "Agizo la Kuashiria Mwenyewe",
+      "maxSpan": "Muda wa juu zaidi",
+      "errors": "Makosa",
+      "round": "Mzunguko",
+      "setOf": "Seti ya {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Ufuatiliaji wa Kioo",
+      "totalErrors": "Jumla ya makosa",
+      "avgTime": "Wastani. wakati",
+      "shapes": "Maumbo",
+      "perfect": "Kamilifu",
+      "improvement": "Uboreshaji",
+      "errorsMiddot": "makosa ·",
+      "shape": "Umbo",
+      "errors": "Makosa",
+      "xIsMirrored": "X ni kioo!"
+    },
+    "clockDrawing": {
+      "title": "Mchoro wa Saa",
+      "avgError": "Wastani. kosa",
+      "setTo": "Weka kwa",
+      "submit": "Wasilisha"
+    },
+    "cognitiveMap": {
+      "title": "Ramani ya Utambuzi",
+      "explore": "Chunguza",
+      "sRemaining": "S Iliyobaki",
+      "from": "Kutoka",
+      "whichDirectionIs": "Ni mwelekeo gani"
+    },
+    "sixteen": {
+      "title": "Kumi na sita"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Nuru juu"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Tile ya Max",
+      "moves": "Inasonga",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Madaraja",
+      "puzzles": "Mafumbo",
+      "maxLevel": "Kiwango cha juu",
+      "level": "Kiwango"
+    },
+    "net": {
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxGrid": "Upeo wa gridi ya taifa"
+    },
+    "flip": {
+      "title": "Geuza"
+    },
+    "range": {
+      "title": "Masafa"
+    },
+    "slant": {
+      "title": "Mshale"
+    },
+    "towers": {
+      "title": "Minara",
+      "puzzles": "Mafumbo",
+      "avgTime": "Wastani. wakati",
+      "erase": "Futa"
+    },
+    "pearl": {
+      "title": "Lulu",
+      "edges": "Kingo"
+    },
+    "mapColoring": {
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "moves": "Inasonga",
+      "maxLevel": "Kiwango cha juu"
+    },
+    "singles": {
+      "title": "Wasio na wapenzi"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Haijafa",
+      "accuracy": "Usahihi",
+      "puzzles": "Mafumbo",
+      "avgTime": "Wastani. wakati"
+    },
+    "untangle": {
+      "title": "Tengua",
+      "drags": "Kuburuta",
+      "maxNodes": "Nodi za Max"
+    },
+    "unruly": {
+      "title": "Asiyetawaliwa"
+    },
+    "fifteen": {
+      "title": "Kumi na tano"
+    },
+    "tents": {
+      "title": "Mahema"
+    },
+    "mesker": {
+      "pen": "Kalamu",
+      "stroke": "Kiharusi",
+      "penPressureHint": "Andika kwa shinikizo thabiti la kalamu"
+    },
+    "modality": {
+      "position": "Nafasi",
+      "audio": "Sauti"
+    },
+    "validate": "Thibitisha"
+  },
+  "trace": {
+    "instructions": "Telezesha kidole hadi kwenye nafasi ya N-nyuma. Gusa mara mbili ikiwa nafasi sawa.",
+    "hint": {
+      "validated": "Imethibitishwa",
+      "draw": "Chora herufi • Gusa ili kuthibitisha",
+      "drawWithColor": "Chora herufi • Chagua rangi • Gusa ili kuthibitisha",
+      "type": "Andika herufi • Ingiza ili kuthibitisha",
+      "typeWithColor": "Andika herufi • Chagua rangi • Ingiza ili kuthibitisha",
+      "typeResult": "Andika tokeo • Ingiza ili kuthibitisha",
+      "writeResult": "Andika matokeo • Gusa ili kuthibitisha"
+    },
+    "keyboard": {
+      "letterInput": "Barua",
+      "numberInput": "Nambari"
+    },
+    "arithmetic": {
+      "cueHint": "Kariri tarakimu 2",
+      "refresh": "Mpya"
+    },
+    "hintPosition": "Je, kichocheo {{n}} kiligeuka wapi zilizopita?",
+    "hintN0": "Onyesha kichocheo cha sasa",
+    "warmupHint": "Kariri nafasi. Hakuna jibu linalohitajika.",
+    "hintDraw": "Chora herufi • Gusa ili kuthibitisha",
+    "hintDrawWithColor": "Chora herufi • Chagua rangi • Gusa ili kuthibitisha",
+    "hintWriteResult": "Andika matokeo • Gusa ili kuthibitisha",
+    "guide": {
+      "swipeNormal": "Telezesha kidole kutoka nafasi ya mwisho (N-0) hadi kwenye nafasi kutoka {{n}} hatua zilizopita (N-{{n}}). Gusa mara mbili ikiwa nafasi sawa.",
+      "swipeSequential": "Telezesha kidole hatua kwa hatua kutoka N-0 hadi N-{{n}}, ukipitia kila nafasi ya kati. Gusa mara mbili ikiwa nafasi sawa.",
+      "swipeDynamic": "Telezesha kidole kwa kufuata kanuni iliyoonyeshwa. Gusa mara mbili ikiwa nafasi sawa.",
+      "tapN0": "Gonga kwenye nafasi ya sasa.",
+      "warmup": "Kariri nafasi - hakuna jibu linalohitajika.",
+      "writeDraw": "Chora herufi iliyosikika {{n}} hatua zilizopita • Gusa ili kuthibitisha",
+      "writeDrawColor": "Chora herufi iliyosikika {{n}} hatua zilizopita • Chagua rangi yake • Gusa ili kuthibitisha",
+      "writeType": "Andika herufi iliyosikika {{n}} hatua zilizopita • Ingiza ili kuthibitisha",
+      "writeTypeColor": "Andika herufi iliyosikika {{n}} hatua zilizopita • Chagua rangi yake • Ingiza ili kuthibitisha",
+      "writeDrawN0": "Chora herufi ambayo umesikia hivi punde • Gusa ili kuthibitisha",
+      "writeDrawColorN0": "Chora herufi ambayo umesikia hivi punde • Chagua rangi yake • Gusa ili kuthibitisha",
+      "writeTypeN0": "Andika barua ambayo umesikia hivi punde • Ingiza ili kuthibitisha",
+      "writeTypeColorN0": "Andika herufi uliyoisikia hivi punde • Chagua rangi yake • Ingiza ili kuthibitisha",
+      "writeResult": "Andika matokeo • Gusa ili kuthibitisha",
+      "validated": "Imethibitishwa",
+      "holdMindful": "Shikilia kisanduku kwa {{seconds}}s",
+      "swipeMindful": "Telezesha kidole kwenye {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Muda unaobadilika",
+      "inputKeyboard": "Kibodi",
+      "inputHandwriting": "Kuandika kwa mkono",
+      "writingInput": "Barua/nambari",
+      "section": {
+        "grid": "Gridi",
+        "input": "Ingizo",
+        "rhythm": "Mdundo",
+        "interface": "Kiolesura",
+        "interfaceNone": "Kawaida",
+        "sound": "Sauti"
+      },
+      "isi": "Muda (ISI)",
+      "stimulusDuration": "Muda wa kichocheo",
+      "feedbackDuration": "Muda wa maoni",
+      "ruleDisplay": "Muda wa utawala",
+      "blankInterval": "Muda tupu",
+      "showProgressBar": "Upau wa maendeleo",
+      "showInstructions": "Maagizo ya ndani ya mchezo",
+      "arithmeticInterference": "Kuingiliwa kwa hesabu",
+      "fullMenu": "Menyu kamili",
+      "gridStyle": "Mtindo wa gridi ya taifa",
+      "gridStyleClassic": "Classic",
+      "gridStyleTrace": "Fuatilia",
+      "guide": {
+        "swipeMindful": "Telezesha kidole kwenye {{seconds}}s",
+        "holdMindful": "Shikilia kisanduku kwa {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Ishara",
+        "holdDuration": "Shikilia",
+        "writingDuration": "Kuandika"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Shikilia",
+      "gestureDuration": "Ishara",
+      "writingDuration": "Kuandika"
+    },
+    "image": "Umbo",
+    "digits": "Nambari",
+    "emotions": "Hisia",
+    "words": "Neno",
+    "tones": "Toni",
+    "spatial": "Mwelekeo"
+  },
+  "replay": {
+    "title": "Mchezo wa marudio wa kipindi",
+    "play": "Cheza",
+    "pause": "Sitisha",
+    "restart": "Anzisha upya",
+    "speed": "Kasi",
+    "loading": "Inapakia kipindi...",
+    "unavailable": "Kucheza tena hakupatikani kwa kipindi hiki",
+    "backToStats": "Rudi kwa takwimu",
+    "runStack": {
+      "original": "Asili",
+      "correction": "Marekebisho",
+      "delta": "Δ d'",
+      "inProgress": "Inaendelea",
+      "completed": "Imekamilika"
+    },
+    "abandon": "Achana",
+    "badge": "Cheza tena",
+    "completionReport": {
+      "backToHome": "Nyuma",
+      "correctAgain": "Sahihi tena",
+      "deltaVsOriginal": "dhidi ya Asili",
+      "deltaVsParent": "dhidi ya kukimbia hapo awali",
+      "falseAlarmsSkipped": "Hitilafu zimeepukwa",
+      "missesCorrections": "Masahihisho",
+      "newFalseAlarms": "Makosa mapya",
+      "replayAgain": "Cheza tena",
+      "scoreLabel": "d' alama",
+      "title": "Urekebishaji umekamilika"
+    },
+    "controls": "Vidhibiti",
+    "correction": "Marekebisho",
+    "finished": "Mwisho wa kucheza tena",
+    "home": "Nyumbani",
+    "parseError": "Imeshindwa kusoma kipindi",
+    "tapSlotToPlace": "Gusa nafasi ili kuweka",
+    "timeline": "Rekodi ya matukio",
+    "focusTimeline": {
+      "open": "Onyesha kalenda ya matukio",
+      "close": "Funga kalenda ya matukio",
+      "title": "Rekodi ya Maeneo Uliyotembelea ya N-Nyuma",
+      "fillAll": "Jaza zote",
+      "fillCard": "Jaza kadi"
+    },
+    "hud": {
+      "counterDisplay": "Onyesho la kaunta",
+      "toggleCounterDisplay": "Geuza onyesho la kaunta"
+    },
+    "validate": "Thibitisha"
+  },
+  "recovery": {
+    "title": "Kikao kimekatizwa",
+    "description": "Kikao kilikuwa kikiendelea. Je, ungependa kuendelea?",
+    "mode": "Hali",
+    "level": "Kiwango",
+    "progress": "Maendeleo",
+    "timeAgo": "Muda",
+    "resume": "Endelea na kipindi",
+    "startFresh": "Anza upya",
+    "staleWarning": "Kipindi hiki ni cha zamani, huenda kukawa na changamoto kuanza kuanza tena.",
+    "modes": {
+      "game": "Mafunzo",
+      "activeTraining": "Mafunzo hai",
+      "flowTraining": "Mafunzo ya Mahali Pawili",
+      "dualPickTraining": "Chaguo mbili",
+      "traceTraining": "Ufuatiliaji Mbili"
+    }
+  },
+  "rewards": {
+    "congratulations": "Hongera!",
+    "duration": "Siku {{days}} Premium",
+    "lifetimeLabel": "Ufikiaji wa maisha yote",
+    "expiresAt": "Halali hadi {{date}}",
+    "neverExpires": "Muda wake haujaisha",
+    "continue": "Endelea",
+    "discovery": {
+      "name": "Pasi ya ugunduzi",
+      "description": "Premium ya siku 7 - Gundua vipengele vyote"
+    },
+    "engagement": {
+      "name": "Pasi ya Uchumba",
+      "description": "Malipo ya mwezi 1 — Nidhamu yako italipa"
+    },
+    "expert": {
+      "name": "Mtaalam kupita",
+      "description": "Premium ya miezi 3 - Wewe ni daktari wa kweli"
+    },
+    "lifetime": {
+      "name": "Ufikiaji wa maisha yote",
+      "description": "Premium milele — Umebobea kwenye Neurodual"
+    },
+    "xpRemaining": "XP iliyobaki",
+    "permanentAccessUnlocked": "Ufikiaji wa kudumu umefunguliwa",
+    "reachedTheTop": "Umefika kileleni!"
+  },
+  "progression": {
+    "level": "Kiwango {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Kiwango kinachofuata",
+    "reached": "Imefikiwa",
+    "inProgress": "Inaendelea"
+  },
+  "gridlock": {
+    "nextPuzzle": "Fumbo linalofuata →"
+  }
+}

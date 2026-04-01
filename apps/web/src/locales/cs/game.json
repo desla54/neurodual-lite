@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "jak se cítíš?",
+      "tired": "Unavený",
+      "normal": "Normální",
+      "energized": "Nabitý energií"
+    },
+    "aria": {
+      "trialTimer": "Zkušební časovač",
+      "positionMatch": "Shoda pozice",
+      "audioMatch": "Zvuková shoda",
+      "audioLetter": "Zvukový dopis:",
+      "traceGrid": "Trasovací mřížka"
+    },
+    "syncHud": {
+      "shortLabel": "SYNCHRONIZOVAT",
+      "toggleTitle": "Přepnout monitor synchronizace",
+      "start": "začít",
+      "end": "konec",
+      "pinLabel": "pin",
+      "pinTitle": "Připnout na obrazovku",
+      "inputLabel": "vstup",
+      "inputTitle": "Přepnout profilování vstupní latence (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "na",
+      "off": "vypnuto",
+      "hideLabel": "schovat se",
+      "hideTitle": "Skrýt (pokud syncHud=1 nebo ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "audio",
+        "expected": "očekáváno"
+      },
+      "labels": {
+        "trial": "soud",
+        "lagShow": "Prodleva zobrazení",
+        "lagHide": "Retardní maska",
+        "winErr": "vyhrát chyba",
+        "endRef": "end ref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "vstup->odeslání p95",
+        "inputToCommitP95": "vstup->potvrdit p95",
+        "inputToPaintP95": "vstup->barva p95",
+        "inputPending": "zadání čeká na vyřízení",
+        "inputSamples": "vstupní vzorky",
+        "touchSamples": "dotykové vzorky",
+        "mouseSamples": "vzorky myší",
+        "keyboardSamples": "ukázky klávesnice",
+        "latestMethod": "nejnovější (metoda)",
+        "latestModality": "nejnovější modalita",
+        "audioCueMode": "zvukové podněty",
+        "audioCodec": "kodek"
+      },
+      "resetInputProfiler": "resetovat vstupní profiler"
+    },
+    "hud": {
+      "resume": "Pokračovat",
+      "pause": "Pauza",
+      "quit": "Konec",
+      "restart": "Restartujte",
+      "spaceToStart": "Prostor pro začátek",
+      "settings": "Nastavení",
+      "enterToAdvance": "Vstupte pro postup",
+      "trial": "zkušební",
+      "muteTexture": "Ztlumit zvuk na pozadí"
+    },
+    "status": {
+      "paused": "Pozastaveno"
+    },
+    "completed": "Dokončeno",
+    "starting": {
+      "getReady": "Připravte se..."
+    },
+    "quitModal": {
+      "title": "Ukončit relaci?",
+      "message": "Váš postup nebude uložen.",
+      "confirm": "Konec",
+      "cancel": "Pokračovat",
+      "close": "Zavřít"
+    },
+    "controls": {
+      "position": "Pozice",
+      "position2": "Poz. 2",
+      "position3": "Poz. 3",
+      "position4": "Poz. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Audio a n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Zvuk",
+      "audio2": "Zvuk 2",
+      "color": "Barva",
+      "arithmetic": "Aritmetika",
+      "image": "Tvar"
+    },
+    "arithmetic": {
+      "answer": "Odpověď",
+      "clear": "Jasný",
+      "hint": "Klávesnice: 0–9 · '-' pro znak · '.' pro desetinná místa · Backspace pro vymazání"
+    },
+    "navigation": {
+      "back": "Zpět"
+    },
+    "xp": {
+      "title": "Získané XP",
+      "base": "Základna (N-{{level}})",
+      "performance": "Výkon",
+      "accuracy": "Přesnost",
+      "streakBonus": "Streak bonus",
+      "dailyBonus": "První den",
+      "badgeBonus": "Odznaky",
+      "flowBonus": "Bonus za dvě místa",
+      "confidenceMultiplier": "důvěra",
+      "dailyCapReached": "Dosažen denní limit XP",
+      "levelReached": "Dosaženo úrovně {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "Odemčeny nové odznaky"
+    },
+    "getReady": "Připravte se...",
+    "layoutEdit": {
+      "done": "Hotovo",
+      "reset": "Resetovat",
+      "instructions": "Přetažením zón změníte pořadí. Změňte velikost pomocí úchytů.",
+      "title": "Režim úprav",
+      "cancel": "Zrušit",
+      "save": "Zámek",
+      "editLayout": "Upravit rozložení"
+    },
+    "paused": "Pozastaveno",
+    "pressEscapeToResume": "Stiskněte Escape pro pokračování",
+    "settings": {
+      "editLayout": "Upravit rozložení",
+      "gridAndButtons": "Mřížka a tlačítka",
+      "swapPositionAudio": "Vyměnit pozici / zvuk",
+      "title": "Nastavení",
+      "quickHint": "Upravte několik nastavení, aniž byste opustili hru.",
+      "quickUnavailable": "Pro tento režim zatím není k dispozici žádné rychlé nastavení."
+    },
+    "pinkNoiseInfo": "Každý podnět doprovází tón pozadí. Můžete jej přizpůsobit nebo zakázat v nastavení zvuku.",
+    "pinkNoiseDismiss": "Pokračovat",
+    "audioMode": "Režim zvuku",
+    "cogTask": {
+      "precision": "Přesnost",
+      "avgRt": "Prům. RT",
+      "avgRtShort": "Prům. RT",
+      "trials": "Zkoušky",
+      "correct": "Správně",
+      "errors": "Chyby",
+      "effect": "Efekt",
+      "restart": "Restartujte",
+      "home": "Domů",
+      "performance": "Výkon",
+      "trialDetail": "Detail pokusu",
+      "setDetail": "Nastavit detail",
+      "roundDetail": "Kulatý detail",
+      "problemDetail": "Detail problému",
+      "phaseDetail": "Detail fáze",
+      "feedbackCorrect": "Správně",
+      "feedbackIncorrect": "Špatně",
+      "feedbackTimeout": "Příliš pomalé!",
+      "preparing": "Připravte se...",
+      "loading": "Načítání...",
+      "left": "Vlevo",
+      "right": "Správně",
+      "up": "Nahoru",
+      "down": "Dolů",
+      "congruent": "Kongruentní",
+      "incongruent": "Nesourodé",
+      "congruencyEffect": "Efekt kongruence",
+      "maxSpan": "Maximální rozpětí",
+      "startingSpan": "Počáteční rozpětí",
+      "maxSpanReached": "Bylo dosaženo maximálního rozpětí",
+      "longestStreak": "Nejdelší správná řada",
+      "series": "Pruh",
+      "avgResponseTime": "Průměrná doba odezvy",
+      "recall": "Odvolání",
+      "expected": "Očekávané",
+      "submit": "Odeslat",
+      "cancel": "Zrušit",
+      "clear": "Jasný",
+      "delete": "DEL",
+      "true": "Pravda",
+      "false": "Falešný",
+      "target": "Cíl",
+      "nonTarget": "Necílový",
+      "distractor": "Distraktor",
+      "same": "Totéž",
+      "different": "Různé",
+      "identical": "Identické",
+      "mirror": "Zrcadlo",
+      "symmetric": "Symetrické",
+      "asymmetric": "Asymetrický",
+      "symShort": "Sym.",
+      "present": "Přítomný",
+      "absent": "Chybí",
+      "noTrials": "Nebyly dokončeny žádné zkoušky.",
+      "noSets": "Nebyly dokončeny žádné sady.",
+      "noRounds": "Nebyla dokončena žádná kola.",
+      "noProblems": "Žádné problémy dokončeny.",
+      "noPhases": "Nebyly dokončeny žádné fáze.",
+      "sets": "Sady",
+      "rounds": "kola",
+      "equations": "Rovnice",
+      "sentences": "Věty",
+      "equationAccuracy": "Přesnost rovnic",
+      "forward": "Vpřed",
+      "backward": "Pozadu",
+      "forwardMaxSpan": "Maximální rozpětí vpřed",
+      "backwardMaxSpan": "Zpětné max. rozpětí",
+      "odd": "Odd",
+      "even": "dokonce",
+      "score": "skóre",
+      "easy": "Snadno",
+      "hard": "Těžko",
+      "totalTrials": "Totální zkoušky",
+      "totalErrors": "Celkem chyb",
+      "totalErrShort": "Celková chyba",
+      "hits": "Hity",
+      "misses": "slečny",
+      "falseAlarms": "Falešný Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Ano",
+      "no": "Ne",
+      "sessionInterrupted": "Relace přerušena",
+      "reverseOrder": "v opačném pořadí",
+      "normalOrder": "v pořádku",
+      "lnsInstruction": "Čísla vzestupně, pak písmena A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simonův efekt",
+        "blue": "Modrá",
+        "red": "Červená",
+        "heroTitle": "Simone"
+      },
+      "soroban": {
+        "target": "Představte toto číslo",
+        "submit": "Odeslat",
+        "rodLabel": "Tyč {{n}}",
+        "heavenBead": "Nebeský korálek (hodnota 5)",
+        "earthBead": "Zemní korálek (hodnota 1)",
+        "instrBeadTitle": "Jak korálky fungují",
+        "instrBeadDesc": "Každá tyč představuje číslici. Horní korálek (nebe) má hodnotu 5. Spodní korálky (země) mají hodnotu 1 každý. Posuňte korálky směrem ke středové liště, abyste je aktivovali.",
+        "instrExampleTitle": "Příklad: 7",
+        "instrExampleDesc": "7 = korálek nebe dolů (5) + 2 korálky země nahoru (2). Klepnutím nebo přetažením korálků je přesunete.",
+        "instrGoalTitle": "Váš cíl",
+        "instrGoalDesc": "Objeví se číslo. Nastavte korálky tak, aby je reprezentovaly, a potom klepněte na Odeslat. Buďte přesní a rychlí!",
+        "startButton": "Začněte",
+        "settings": "Nastavení",
+        "closeSettings": "Zavřete nastavení",
+        "settingsRods": "Počet tyčí",
+        "settingsRodsHint": "Nastavte přes N-Level v nastavení hry",
+        "settingsTrials": "Zkoušky na relaci",
+        "settingsTrialsHint": "Nastavit přes Trials v nastavení hry",
+        "settingsRange": "Rozsah čísel"
+      },
+      "stroop": {
+        "pressInkColorButton": "Stiskněte tlačítko odpovídající barvě inkoustu",
+        "redWord": "ČERVENÁ",
+        "redLabel": "Červená",
+        "blueWord": "MODRÁ",
+        "blueLabel": "Modrá",
+        "greenWord": "ZELENÁ",
+        "greenLabel": "Zelená",
+        "yellowWord": "ŽLUTÁ",
+        "yellowLabel": "Žlutá"
+      },
+      "stroopFlex": {
+        "followRule": "Pravidlo",
+        "ruleInk": "Barva inkoustu",
+        "ruleWord": "Psané slovo",
+        "pressMatchingRuleButton": "Stiskněte tlačítko odpovídající aktuálnímu pravidlu"
+      },
+      "goNogo": {
+        "goTrials": "Jděte na zkoušky",
+        "nogoTrials": "No-Go zkoušky",
+        "hitRate": "Míra návštěvnosti (Přejít)",
+        "faRate": "Frekvence falešných poplachů (No-Go)",
+        "meanRt": "Průměrná reakční doba",
+        "sensitivity": "citlivost",
+        "press": "Stiskněte",
+        "withhold": "Zadržet"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Průměrný SSD (úspěšná zastavení)",
+        "ssd": "SSD",
+        "goRt": "Přejít na RT",
+        "successfulInhibition": "Úspěšná inhibice",
+        "stop": "Přestaň",
+        "meanGoRt": "Střední reakční doba GO",
+        "ssrtInvalid": "nedostatečná data",
+        "ssrtNegativeNote": "SSRT je negativní (průměr SSD > střední GO RT) — výsledek nespolehlivý s aktuálním počtem pokusů."
+      },
+      "pvt": {
+        "rtMedian": "Střední RT",
+        "rtMean": "Průměrná RT",
+        "fastest": "Nejrychlejší",
+        "slowest": "Nejpomalejší",
+        "falseStarts": "Falešné starty",
+        "falseStartsShort": "Falešná sv.",
+        "lapses": "Výpadky",
+        "mean": "Střední",
+        "reaction": "Reakce",
+        "wait": "počkej...",
+        "pressStimulus": "Počkejte na podnět...",
+        "pressAnywhere": "Stiskněte kdekoli, když se objeví počítadlo",
+        "press": "Stiskněte!",
+        "tooEarly": "Příliš brzy!",
+        "lapsesLabel": "Výpadky"
+      },
+      "posner": {
+        "cueingEffect": "Cueing efekt",
+        "validMeanRt": "Průměrná platná RT",
+        "invalidMeanRt": "Střední neplatná RT",
+        "validAccuracy": "Platná přesnost",
+        "invalidAccuracy": "Neplatná přesnost",
+        "validTrials": "Platné zkoušky",
+        "invalidTrials": "Neplatné zkoušky",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Platné",
+        "invalid": "Neplatné"
+      },
+      "antisaccade": {
+        "cost": "Cena antisaccade",
+        "proAccuracy": "Profi přesnost",
+        "antiAccuracy": "Anti přesnost",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Střední pro-saccade RT",
+        "antiMeanRt": "Střední anti-saccade RT",
+        "costLabel": "náklady",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-kontext",
+        "axAccuracy": "Přesnost AX",
+        "bxFa": "BX planý poplach",
+        "ayError": "Chyba AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY chyba",
+        "cogControl": "Kognitivní kontrola",
+        "target": "Cíl",
+        "nonTarget": "Necílový"
+      },
+      "ant": {
+        "scores": "ANT skóre",
+        "alerting": "Upozornění (bez narážky – dvojitá narážka)",
+        "orienting": "Orientační (střed − prostorový)",
+        "executive": "Jednatel (nesouhlasný – shodný)"
+      },
+      "changeDet": {
+        "kCowan": "Kapacita K (Cowan)",
+        "sameShort": "Totéž",
+        "diffShort": "Dif."
+      },
+      "swm": {
+        "withinErrors": "Chyby v rámci vyhledávání",
+        "betweenErrors": "Chyby mezi hledáním",
+        "totalErrors": "Celkem chyb",
+        "errorFree": "Bez chyb",
+        "foundErrorFree": "Nalezeno bez chyb!",
+        "errorCount": "Chyby {{count}}",
+        "tapsLabel": "Kohoutky"
+      },
+      "taskSwitch": {
+        "switchCost": "Cena přechodu",
+        "rtRepeat": "Průměrná RT (opakování)",
+        "rtSwitch": "Průměrná RT (přepínač)",
+        "oddEven": "Lichá / Sudá",
+        "highLow": "Vysoká / Nízká",
+        "title": "Přepínání úkolů"
+      },
+      "trailMaking": {
+        "tmtATime": "Čas TMT-A",
+        "tmtBTime": "čas TMT-B",
+        "executiveCost": "Náklady na vedení (B – A)",
+        "executiveCostShort": "Náklady na vedení (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Příprava TMT-B...",
+        "tmtADone": "TMT-A hotovo!",
+        "totalErrors": "Celkem chyb",
+        "tmtALabel": "TMT-A: Čísla",
+        "tmtBLabel": "TMT-B: Čísla a písmena",
+        "next": "Další",
+        "heroTitle": "Vytváření stezek",
+        "alternateHint": "Alternativní čísla a písmena: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Nejrychlejší ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referenční karty",
+        "testCard": "Testovací karta",
+        "categories": "Kategorie",
+        "categoriesCompleted": "Kategorie dokončeny",
+        "perseverativeErrors": "Vytrvalé chyby",
+        "persevShort": "Peršev.",
+        "avgRt": "Prům. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT podle úhlu",
+        "findMatch": "Najděte odpovídající tvar",
+        "reference": "Referenční tvar",
+        "referenceLabel": "Ref.",
+        "candidate": "Kandidát",
+        "distractor": "Jiné",
+        "mirrorErrors": "Zrcadla",
+        "title": "Mentální rotace"
+      },
+      "sternberg": {
+        "rtBySize": "RT podle nastavené velikosti",
+        "title": "Šternberka",
+        "avgRt": "Prům. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT podle nastavené velikosti",
+        "title": "Vizuální vyhledávání"
+      },
+      "ospan": {
+        "typeLetters": "Pište písmena v pořadí",
+        "trueOrFalse": "Pravda nebo lež?",
+        "processingWarning": "Přesnost rovnic pod 85 % — výsledky nemusí odrážet skutečnou kapacitu pracovní paměti"
+      },
+      "readingSpan": {
+        "s0": "Slunce vychází na východě.",
+        "s1": "Ryby žijí na stromech.",
+        "s2": "Paříž je hlavním městem Francie.",
+        "s3": "Trojúhelník má čtyři strany.",
+        "s4": "Voda se vaří při 100 stupních.",
+        "s5": "Kočky jsou plazi.",
+        "s6": "Země obíhá kolem Slunce.",
+        "s7": "Čokoláda roste na kamenech.",
+        "s8": "Rok má dvanáct měsíců.",
+        "s9": "Ptáci dýchají pod vodou.",
+        "s10": "Mléko je bílé.",
+        "s11": "Auta jezdí po kolejích.",
+        "s12": "Včely produkují med.",
+        "s13": "Sníh je horký.",
+        "s14": "Srdce pumpuje krev.",
+        "s15": "Kameny plavou na vodě.",
+        "s16": "Měsíc svítí v noci.",
+        "s17": "Hadi mají nohy.",
+        "s18": "Dřevo plave na vodě.",
+        "s19": "Oheň je studený.",
+        "s20": "Lidé mají pět smyslů.",
+        "s21": "Pavouci mají šest nohou.",
+        "s22": "Chléb se vyrábí z mouky.",
+        "s23": "Velryby jsou ryby.",
+        "w0": "DŮM",
+        "w1": "PES",
+        "w2": "KNIHA",
+        "w3": "KVĚTINA",
+        "w4": "DVEŘE",
+        "w5": "TABULKA",
+        "w6": "STROM",
+        "w7": "SILNICE",
+        "w8": "CLOUD",
+        "w9": "HVĚZDA",
+        "w10": "PLÁŽ",
+        "w11": "SNÍH",
+        "w12": "LAMPA",
+        "w13": "DÉŠŤ",
+        "w14": "SKLO",
+        "w15": "TRÁVA",
+        "w16": "VLAKOVAT",
+        "w17": "SVĚT",
+        "w18": "SUN",
+        "w19": "LES",
+        "w20": "ICE",
+        "w21": "ZEMĚ",
+        "w22": "NEBE",
+        "w23": "KÁMEN",
+        "d0": "RÁNO",
+        "d1": "SRDCE",
+        "d2": "LÁTKA",
+        "d3": "LIST",
+        "d4": "HLUK",
+        "d5": "ZAHRADA",
+        "d6": "STÍN",
+        "d7": "ZVON",
+        "d8": "MOST",
+        "d9": "SMOKE",
+        "d10": "PÍSEK",
+        "d11": "POLÉVKA",
+        "heroTitle": "Rozpětí čtení"
+      },
+      "memorizeSequence": "Zapamatujte si sekvenci...",
+      "reproduce": "Reprodukovat",
+      "span": "Span",
+      "size": "Velikost",
+      "fixateCenter": "Fixujte na střed...",
+      "identicalOrMirror": "Identický nebo zrcadlový?",
+      "wellInhibited": "Dobře inhibovaný!",
+      "badDirection": "Špatný směr!",
+      "stopMissed": "Přestaň chybět!",
+      "falseAlarm": "Falešný poplach!",
+      "pressNow": "Stiskněte!",
+      "hitBang": "Hit!",
+      "miss": "slečno!",
+      "doNotTouch": "Nedotýkejte se!",
+      "whichDirection": "kterým směrem?",
+      "stopBang": "STOP!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Zapamatujte si tato písmena",
+      "memorizeLetter": "Zapamatujte si toto písmeno",
+      "memorizeSequenceLetters": "Zapamatujte si sekvenci...",
+      "memorizeDigits": "Zapamatujte si číslice...",
+      "memorizeColors": "Zapamatujte si barvy!",
+      "memorizePosition": "Zapamatujte si tuto pozici...",
+      "retainWord": "Pamatujte si toto slovo",
+      "retainNumber": "Toto číslo si zapamatujte",
+      "addWithPrevious": "Přidejte s předchozím",
+      "sentenceTrueOrFalse": "Je tato věta pravdivá?",
+      "findRedCircle": "Najděte červený kruh!",
+      "findHiddenToken": "Najděte skrytý token!",
+      "chooseMatchingCard": "Vyberte odpovídající kartu",
+      "arrowDirection": "Směr středové šipky?",
+      "attention": "Pozor...",
+      "preparation": "Příprava...",
+      "recallLettersInOrder": "Vybavte si písmena {{count}} v daném pořadí",
+      "recallWordsInOrder": "Vybavte si slova {{count}} v daném pořadí",
+      "recallLastLetters": "Vybavte si poslední písmena {{count}}",
+      "typeLastLetters": "Zadejte poslední písmena {{count}}",
+      "recallPositionsInOrder": "Vyvolání: klepněte na pozice v pořadí",
+      "pressEnterToValidate": "Potvrďte stisknutím klávesy Enter",
+      "pressAnywhereToContinue": "Pokračujte stisknutím libovolného místa",
+      "temporalPrecision": "Časová přesnost",
+      "estimationPrecision": "Přesnost odhadu",
+      "touchStartClockwise": "Dotkněte se počátečního bodu a poté přejeďte po směru hodinových ručiček",
+      "touchAtoB": "Dotkněte se bodu A a poté přejeďte prstem na B",
+      "cue": "Tágo",
+      "retainCue": "Pamatuj si narážku...",
+      "targetOrNot": "Cílové nebo necílové?",
+      "whereIsTarget": "Kde je cíl?",
+      "wasLetterInSet": "Byl tento dopis v sadě?",
+      "regular": "pravidelné",
+      "regularity": "Pravidelnost",
+      "msDeviation": "ms odchylka",
+      "boxes": "krabice",
+      "found": "{{count}} nalezeno",
+      "past": "Minulost",
+      "tooSlow": "příliš pomalé",
+      "tooFast": "příliš rychle",
+      "timeout": "Příliš pomalé!",
+      "answer": "Odpověď",
+      "dontPress": "Netlačte!",
+      "feedbackWrong": "Špatně!",
+      "level": "úroveň",
+      "wrong": "Špatně",
+      "you": "vy",
+      "paused": "Pauza",
+      "instructions": "Instrukce",
+      "selectAnswer": "Vyberte odpověď",
+      "tapTheOddOne": "Klepněte na lichý",
+      "pal": {
+        "subtitle": "Párové učení spolupracovníků",
+        "pairsLearned": "Páry se naučily",
+        "maxSetSize": "Maximální velikost sady",
+        "totalErrors": "Celkový počet chyb",
+        "round": "Kulaté",
+        "pairs": "páry",
+        "meanRt": "Průměrná RT (správná)",
+        "studyPhase": "Studujte – zapamatujte si pozice",
+        "testPhase": "Kde byl tento tvar?",
+        "studying": "Studium",
+        "tapBox": "Klepněte na pole, kde byl tento tvar zobrazen"
+      },
+      "visualLogic": {
+        "easy": "Snadno",
+        "hard": "Těžko",
+        "oneRule": "1 pravidlo",
+        "twoRules": "2 pravidla",
+        "findMissing": "Najděte chybějící kousek",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Finále Lvl",
+        "nextMode": "Režim další relace",
+        "adaptive": "Adaptivní",
+        "fixed": "Opraveno",
+        "spm": "SPM 60",
+        "level": "úroveň",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Který kus pasuje do otvoru?",
+        "target": "Cíl"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Zaujatost nadhodnocení",
+        "underestimationBias": "Zaujatost podcenění",
+        "noBias": "Žádné výrazné zkreslení",
+        "avgError": "Prům. chyba",
+        "overestimations": "Nadhodnocování",
+        "underestimations": "Podcenění",
+        "avgAbsoluteError": "Prům. absolutní chyba",
+        "avgRelativeError": "Průměrná relativní chyba",
+        "cv": "Variační koeficient",
+        "watchDemo": "Sledujte dobu trvání",
+        "getReady": "Připravte se...",
+        "holdToReproduce": "Podržte pro reprodukci!",
+        "tooLong": "Příliš dlouho!",
+        "tooShort": "Příliš krátké!",
+        "target": "Cíl",
+        "demoLabel": "Reference",
+        "yourTurn": "Jste na řadě",
+        "watchInstruction": "Sledujte",
+        "holdInstruction": "Podržte pro reprodukci",
+        "heroTitle": "Časový odhad"
+      },
+      "puzzleDetails": "Detaily puzzle",
+      "roundDetails": "Kulaté detaily",
+      "stageResults": "Výsledky etapy",
+      "recognized": "Uznáno",
+      "missed": "Zmeškaný",
+      "win": "Vyhrát",
+      "lose": "prohrát",
+      "winBang": "Vyhrajte!",
+      "loseBang": "prohrát!",
+      "correctBang": "Správně!",
+      "wrongBang": "Špatně!",
+      "completeBang": "Hotovo!",
+      "repeatedBang": "Opakované!",
+      "incompleteBang": "Nekompletní!",
+      "levelCompleteBang": "Úroveň dokončena!",
+      "timesUp": "Čas vypršel",
+      "seeResults": "Zobrazit výsledky",
+      "nextRound": "Další kolo",
+      "startBlock": "Startovní blok",
+      "continue": "Pokračovat",
+      "patientChoice": "Volba pacienta",
+      "immediateChoice": "Okamžitá volba",
+      "immediate": "Okamžitě",
+      "digitSpan": {
+        "heroTitle": "Rozpětí číslic"
+      },
+      "resume": "Pokračovat",
+      "numericalStroop": {
+        "heroTitle": "Číselný Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Posouzení orientace čáry"
+      },
+      "chain": "řetěz",
+      "undo": "Vrátit zpět",
+      "vocalProsody": {
+        "heroTitle": "Vokální prozódie"
+      },
+      "letterNumber": {
+        "title": "Písmeno-číslo Seq.",
+        "expectedAnswer": "Očekávaná odpověď"
+      },
+      "patternComparison": {
+        "heroTitle": "Porovnání vzorů"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "Které čtverce se ve složeném stavu dotýkají?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Vizuální organizace Hooper",
+        "whatIsThisObject": "Co je to za objekt?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blokový design"
+      },
+      "accuracy": "Přesnost",
+      "avgTime": "Prům. čas",
+      "check": "Zkontrolujte",
+      "dualTrace": {
+        "playArea": "Hrací plocha"
+      },
+      "paperFolding": {
+        "title": "Skládání papíru",
+        "foldSequenceHolePunch": "Sekvence skládání a děrování",
+        "whichPatternWhenUnfolded": "Který vzor při rozbalení?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Lexikální rozhodnutí"
+      },
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxGrid": "Max mřížka",
+      "symmetry": "Symetrie",
+      "threshold": "Práh",
+      "hitRate": "Úspěšnost",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Detekce změn"
+      },
+      "syllogisms": {
+        "heroTitle": "Sylogismy"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Rozsah"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Dokončení věty (Cloze)",
+        "highCloze": "Vysoká clona",
+        "lowCloze": "Nízká clona"
+      },
+      "grid": "Mřížka",
+      "pinballRecall": {
+        "title": "Pinball Recall",
+        "byBounces": "Odskoky",
+        "whereDoesItLand": "Kde to přistane?"
+      },
+      "mean": "Střední",
+      "speedup": "Zrychlení",
+      "memorize": "Zapamatujte si",
+      "time": "Čas",
+      "surfaceDevelopment": {
+        "title": "Vývoj povrchu",
+        "whichEdgeMatches": "Která hrana se shoduje?"
+      },
+      "crowding": {
+        "heroTitle": "Vizuální shlukování",
+        "spacing": "Mezery"
+      },
+      "patternRecognition": {
+        "heroTitle": "Rozpoznávání vzorů"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "zkušební",
+        "position": "Pozice",
+        "audio": "Zvuk"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Vetřelec ze scény",
+        "detect": "Zjistit"
+      },
+      "eyesTest": {
+        "heroTitle": "Čtení mysli v očích"
+      }
+    },
+    "gridlock": {
+      "undone": "Poslední tah zrušen.",
+      "resetMessage": "Puzzle reset.",
+      "hintMessage": "Nápověda: snímek {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Prostudujte si tabuli. Začíná v {{seconds}}s.",
+      "challenge": "Výzva",
+      "optimal": "Optimální",
+      "moves": "Pohyby",
+      "piece": "Kus {{id}}",
+      "targetPiece": "Kus {{id}} (cíl - červené auto)",
+      "challengeClassic": "klasické",
+      "challengePrecision": "Přesnost",
+      "challengeMemory": "Paměť",
+      "challengeTimed": "Časované",
+      "hint": "Nápověda",
+      "reset": "Resetovat",
+      "undo": "Vrátit zpět",
+      "nextPuzzle": "Další hádanka →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Blok 1 hity",
+      "block2Hits": "Blok 2 zásahy",
+      "goPositive": "Go = pozitivní",
+      "goNegative": "Go = negativní",
+      "title": "Afektivní Go/No-Go",
+      "block1CommissionErrors": "Chyby provize bloku 1",
+      "block2CommissionErrors": "Chyby provize bloku 2",
+      "block": "Blokovat",
+      "go": "Jdi"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Střední rychlost spínání",
+      "meanSwitchesfigure": "Střední přepínače/číslo",
+      "totalSwitches": "Totální přepínače",
+      "title": "Nejednoznačné postavy",
+      "meanSwitches": "Střední spínače",
+      "switchRate": "Přepnout rychlost",
+      "figures": "Postavy",
+      "totalSwitchesLabel": "Celkové spínače",
+      "duration": "Doba trvání",
+      "switchesCount": "s | Přepínače:",
+      "switchButton": "Přepnout!"
+    },
+    "analogies": {
+      "verbalCorrect": "Slovně správně",
+      "timeout": "Časový limit",
+      "title": "Analogie"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Porovnání ANS",
+      "ratio": "Poměr",
+      "leftMore": "Zbylo více",
+      "rightMore": "Přesně víc"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Frekvence falešných poplachů",
+      "grammatical": "Gramatické",
+      "memorizeTheseStrings": "Zapamatujte si tyto řetězce",
+      "testPhase": "Testovací fáze",
+      "ungrammatical": "Negramatické",
+      "learning": "Učení",
+      "test": "Test",
+      "title": "Umělá gramatika",
+      "learningPhase": "Učení",
+      "testIntroText": "Nyní uvidíte nové řetězce. Rozhodněte, zda se každý řídí stejnými pravidly jako struny, které jste právě studovali.",
+      "startTest": "Spustit test",
+      "followsRules": "Dodržuje pravidla",
+      "breaksRules": "Porušuje pravidla"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Velikost mrknutí",
+      "title": "Pozorné blikání",
+      "blink": "Mrkni",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1. zelené písmeno?",
+      "secondGreenLetter": "2. zelené písmeno?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Cena zachycení",
+      "singletonPresent": "Singleton dárek",
+      "noSingleton": "Žádný Singleton",
+      "title": "Pozorné zachycení",
+      "capture": "Zachyťte",
+      "horizontal": "Horizontální",
+      "vertical": "Vertikální"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Vazební okno",
+      "title": "Audiovizuální vazba",
+      "window": "okno",
+      "pssLabel": "PSS (Point of Subjective Simultaneity)",
+      "simultaneousOrNot": "Simultánně nebo ne?",
+      "simultaneous": "Simultánní",
+      "notSimultaneous": "Ne simultánně"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Práh trvání",
+      "reference": "Reference",
+      "weberFraction": "Weberův zlomek",
+      "title": "Sluchové trvání",
+      "threshold": "Práh",
+      "weber": "Weber",
+      "whichLonger": "Která je delší?",
+      "firstLonger": "Nejdřív déle",
+      "secondLonger": "O sekundu déle"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Upravená průměrná čerpadla",
+      "avgTimeballoon": "Průměrný čas/balón",
+      "banked": "Bankováno!",
+      "lostEarnings": "Ušlý výdělek!",
+      "overallAvgPumps": "Celková průměrná čerpadla",
+      "popRate": "Pop sazba",
+      "totalEarned": "Celkem vydělané",
+      "balloons": "Balónky",
+      "cashed": "Proplaceno",
+      "popped": "Prasklo",
+      "adjPumps": "Adj. čerpadla",
+      "pop": "Pop",
+      "pump": "Pumpa",
+      "cashIn": "Cash In"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Prům. doba rozhodování",
+      "drawBeadsToGatherEvidence": "Nakreslete korálky, abyste získali důkazy",
+      "jtc": "JTC",
+      "title": "Korálky úkol",
+      "meanDraws": "Prům. kreslí",
+      "rounds": "kola",
+      "jtcRate": "Sazba JTC",
+      "meanDrawsToDecision": "Střední tahy k rozhodnutí",
+      "jtcRateThreshold": "Sazba JTC (<{{threshold}} losování)",
+      "round": "Kulaté",
+      "jarDescription": "Sklenice A: 85 % zelená / Sklenice B: 85 % červená",
+      "itWasJar": "Byl to Jar",
+      "drawABead": "Nakreslete korálek",
+      "jarAGreen": "Jar A Zelená",
+      "jarBRed": "Sklenice B červená"
+    },
+    "binding": {
+      "changedTrials": "Změněné pokusy",
+      "sameAccuracy": "Stejná přesnost",
+      "sameTrials": "Stejné zkoušky",
+      "title": "Funkce Vazba",
+      "binding": "Vazba",
+      "bindingAccuracyChanged": "Změňte přesnost",
+      "same": "Totéž",
+      "different": "Různé"
+    },
+    "blockDesign": {
+      "cells": "Buňky",
+      "target": "Cíl",
+      "yourAnswer": "Vaše odpověď",
+      "tapHint": "Klepnutím přepnete barvy",
+      "check": "Zkontrolujte"
+    },
+    "brixton": {
+      "adapt": "Přizpůsobte se",
+      "adaptationCost": "Náklady na adaptaci",
+      "nonswitchTrials": "Nepřepínací zkoušky",
+      "switchTrials": "Přepnout zkoušky"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Zapamatujte si tato písmena",
+      "selectThe3Letters": "Vyberte 3 písmena",
+      "title": "Brown-Petersonův úkol",
+      "forgetting": "Zapomínání",
+      "sDelay": "S Zpoždění",
+      "minus3": "Mínus3",
+      "delay": "Zpoždění"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Kvalita rozhodování",
+      "finalPoints": "Konečné body",
+      "meanBet": "Průměrná sázka",
+      "winRate": "Míra výhry",
+      "wins": "Vyhrává",
+      "title": "Cambridge Gambling Task",
+      "totalPoints": "Celkový počet bodů",
+      "quality": "Kvalita",
+      "rational": "Racionální",
+      "avgBet": "Prům. vsadit",
+      "trial": "zkušební",
+      "whichColorHidesToken": "Která barva skrývá žeton?",
+      "youChose": "Vybral sis",
+      "howMuchToBet": "Kolik vsadit?"
+    },
+    "cancellation": {
+      "false": "Falešný",
+      "target": "cíl:",
+      "total": "Celkem",
+      "title": "Úkol zrušení (d2)",
+      "misses": "slečny",
+      "targetDescription": "d se 2 značkami"
+    },
+    "changeBlindness": {
+      "detectionRate": "Míra detekce",
+      "found": "Nalezeno",
+      "meanDetectionTime": "Průměrná doba detekce",
+      "title": "Změňte slepotu",
+      "missed": "Zmeškaný",
+      "avgTime": "Prům. čas",
+      "instructions": "Instrukce"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Nejlepší odhad",
+      "meanScore": "Střední skóre",
+      "worstEstimate": "Nejhorší odhad",
+      "inRange": "Dobrý odhad!",
+      "title": "Kognitivní odhad",
+      "meanScoreLabel": "Střední skóre",
+      "inRangeLabel": "V dosahu",
+      "extreme": "Extrémní",
+      "scoreLabel": "skóre",
+      "submit": "Odeslat"
+    },
+    "common": {
+      "accuracy": "Přesnost",
+      "bias": "Zaujatost",
+      "falseAlarmRate": "Frekvence falešných poplachů",
+      "hitRate": "Úspěšnost",
+      "hits": "Hity",
+      "listening": "Poslouchám...",
+      "meanRt": "Průměrná RT",
+      "timedOut": "Vypršel časový limit",
+      "timedOut2": "Vypršel časový limit",
+      "faRate": "Taux de FA",
+      "paused": "Pozastaveno"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "jak moc jste si jistý?",
+      "rateYourConfidence": "Ohodnoťte svou důvěru",
+      "title": "Kalibrace spolehlivosti",
+      "calError": "Chyba kalibrace",
+      "confidence": "důvěra"
+    },
+    "consequences": {
+      "best": "Nejlepší",
+      "nextRound": "Další kolo...",
+      "time": "Čas",
+      "placeholder": "Napište důsledek...",
+      "title": "Důsledky",
+      "totalIdeas": "Totální nápady",
+      "avgPerRound": "Prům. za kolo",
+      "rounds": "kola",
+      "noConsequencesListed": "Nejsou uvedeny žádné následky",
+      "roundProgress": "Kulaté {{current}} / {{total}}",
+      "typeAndPressAdd": "Napište a stiskněte Přidat"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Cueing efekt",
+      "newConfigRt": "Nová konfigurace RT",
+      "oldConfigRt": "Starý Config RT",
+      "title": "Kontextové cueing",
+      "cueing": "Cueing",
+      "oldRt": "Starý RT",
+      "newRt": "Nový RT",
+      "prompt": "Výzva",
+      "left": "Vlevo",
+      "right": "Správně"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Jitter prahu",
+      "title": "Integrace kontur",
+      "pipeJitter": "| nervozita"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Prahový kontrast",
+      "title": "Kontrastní citlivost",
+      "threshold": "Práh",
+      "left": "Vlevo",
+      "right": "Správně"
+    },
+    "cpt": {
+      "nontargets": "Necíle",
+      "target": "Cíl",
+      "nonTarget": "Necílový",
+      "dPrime": "d'",
+      "targetsLetter": "Cílové písmeno",
+      "tapForLetterOnly": "Klepněte pouze pro cílové písmeno"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritické rozestupy",
+      "leftAccuracy": "Levá přesnost",
+      "rightAccuracy": "Správná přesnost"
+    },
+    "cryptogram": {
+      "hints": "Rady",
+      "title": "kryptogram",
+      "solved": "Vyřešeno",
+      "time": "Čas",
+      "puzzles": "Hádanky",
+      "puzzle": "Puzzle",
+      "hint": "Nápověda",
+      "clear": "Jasný"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Oblast pod křivkou",
+      "discountRateK": "Diskontní sazba (k)",
+      "impulsivityIndex": "Index impulzivity",
+      "title": "Zpožděné slevy",
+      "aucPatience": "AUC trpělivost",
+      "patient": "Pacient",
+      "kRate": "K sazba",
+      "impuls": "Impuls",
+      "indifferencePoints": "Indiferenční body",
+      "whichPrefer": "Kterému dáváte přednost?",
+      "today": "dnes"
+    },
+    "delayedMatching": {
+      "long": "Dlouhé",
+      "longDelay68s": "Dlouhé zpoždění (6–8 s)",
+      "med": "Med",
+      "mediumDelay46s": "Střední zpoždění (4–6 s)",
+      "short": "Krátký",
+      "shortDelay34s": "Krátké zpoždění (3–4 s)",
+      "title": "Zpožděná shoda",
+      "delay": "Zpoždění",
+      "rememberThisPattern": "Pamatujte si tento vzorec",
+      "whichWasIt": "Které to bylo?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Detekce výstrahy",
+      "attendToTheLeftColumn": "Věnujte se LEVÉMU sloupci",
+      "attendedAccuracy": "Absolvoval Accuracy",
+      "ignoreTheRightColumn": "Pravý sloupec ignorujte",
+      "right": "SPRÁVNĚ",
+      "title": "Dichotický poslech",
+      "attendedAcc": "Navštěvovaná přesnost",
+      "alertDet": "Detekce výstrahy",
+      "alerts": "Upozornění",
+      "selectLeftColumnWords": "Vyberte slova v levém sloupci",
+      "submit": "Odeslat",
+      "alertQuestion": "Výstražná otázka"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Zapomeňte na přesnost",
+      "forgettingEffect": "Efekt zapomínání",
+      "newRejection": "Nové odmítnutí",
+      "rememberAccuracy": "Pamatujte na přesnost",
+      "title": "Řízené zapomínání",
+      "remember": "Pamatujte si",
+      "forget": "Zapomeňte",
+      "round": "Kulaté",
+      "word": "Slovo",
+      "wasThisWordShown": "Bylo toto slovo zobrazeno?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Pozornost skóre zkreslení",
+      "congruentAcc": "Kongruentní přísl",
+      "congruentRt": "Kongruentní RT",
+      "incongruentAcc": "Inkongruentní přísl",
+      "incongruentRt": "Nesouhlasná RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Auto nebo kamion?",
+      "minDisplayReached": "Bylo dosaženo minimálního zobrazení",
+      "positionAccuracy": "Přesnost polohy",
+      "thresholdDisplay": "Zobrazení prahu",
+      "vehicleAccuracy": "Přesnost vozidla",
+      "whereWasTheDiamond": "Kde byl diamant?",
+      "title": "Dvojité rozhodnutí",
+      "threshold": "Práh",
+      "bothOk": "Oba správně",
+      "vehicle": "Vozidlo",
+      "position": "Pozice",
+      "car": "Auto",
+      "truck": "Náklaďák"
+    },
+    "dsst": {
+      "items": "Položky",
+      "itemsCompleted": "Položky dokončeny",
+      "speedItemsmin": "Rychlost (položky/min)",
+      "attempts": "Pokusy",
+      "itemsPerMin": "Položky / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Cena dvou úloh",
+      "taskANumber": "Úkol A (číslo)",
+      "taskBSymbol": "Úkol B (symbol)",
+      "title": "Dvojitý úkol",
+      "taskA": "Úkol A",
+      "taskB": "Úkol B",
+      "number": "Číslo",
+      "symbol": "Symbol",
+      "up": "Nahoru",
+      "down": "Dolů"
+    },
+    "dualTime": {
+      "sessionEnPause": "Relace pozastavena",
+      "votreEstimationSecondes": "Váš odhad (v sekundách)",
+      "sessionInterrupted": "Relace přerušena",
+      "target": "Cíl",
+      "estimation": "Odhad",
+      "avgTime": "Prům. čas",
+      "avgError": "Prům. chyba",
+      "trials": "Zkoušky",
+      "resumeToContinue": "Chcete-li pokračovat, pokračujte",
+      "aimFor": "Mířit na",
+      "second": "Za druhé",
+      "howLongDidYouTake": "jak dlouho ti to trvalo?"
+    },
+    "dualTrack": {
+      "confirmer": "Potvrďte",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Chcete-li pokračovat, pokračujte.",
+      "sessionEnPause": "Relace pozastavena",
+      "tapezLesCibles": "Klepněte na cíle",
+      "tapezLaCible": "Klepněte na cíl",
+      "appuyezConfirmer": "Stiskněte Potvrdit",
+      "targetsCountLabel": "Cíle {{count}}",
+      "distractorsCountLabel": "Distraktory {{count}}",
+      "roundsCountLabel": "{{count}} náboje",
+      "calibrationRoundsLabel": "Kalibrační náboje {{count}}",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = vnitřní úroveň obtížnosti cesty.",
+      "tierHelpCurrentWithPhase": "Momentálně jste na T{{current}} z {{total}} pro cíle {{targets}}. Aktuální fáze: {{phase}}. Před další cílovou úrovní zbývají úrovně {{remaining}}.",
+      "phaseTracking": "Sledování",
+      "phaseAudio": "Sledování + zvuk",
+      "phaseColor": "Sledování + barva",
+      "phaseCombined": "Sledování + zvuk + barva",
+      "passLetters": "Dopisy",
+      "passColors": "Barvy",
+      "moveInstruction": "Instrukce pro přesun",
+      "moveConfirmBtn": "Posuňte potvrzovací tlačítko",
+      "preparingSession": "Příprava zasedání...",
+      "preparing3dScene": "Příprava 3D scény...",
+      "startJourney": "Začněte cestu",
+      "calibrationDescription": "Před prvním stupněm delší kalibrace odhadne vaši počáteční úroveň.",
+      "defaultDescription": "Kuličky se rozsvítí. Sledujte je, když se pohybují, a pak je identifikujte.",
+      "startCalibration": "Spusťte kalibraci",
+      "calibrationTitle": "Kalibrace",
+      "estimatedStart": "Odhad. začít",
+      "roundsAnalyzed": "Analyzovaná kola",
+      "willStartAt": "Začne v",
+      "targetsCount": "Cíle",
+      "thenProgress": "pak pokrok"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Střední absolutní chyba",
+      "ratio": "Poměr",
+      "slope": "Svah",
+      "vierordtSlope": "Vierordt Slope",
+      "wait": "počkej...",
+      "title": "Doba trvání Reprodukce",
+      "meanError": "Střední chyba",
+      "meanRatio": "Střední poměr (vyrobené/cílové)",
+      "holdNow": "VYDRŽTE TEĎ",
+      "target": "Cíl",
+      "error": "Chyba"
+    },
+    "embeddedFigures": {
+      "fastest": "Nejrychlejší",
+      "found": "Nalezeno",
+      "meanDetectionTime": "Průměrná doba detekce",
+      "slowest": "Nejpomalejší",
+      "title": "Vložené obrázky",
+      "missed": "Zmeškaný",
+      "fastestLabel": "Nejrychlejší",
+      "findThisShape": "Najděte tento tvar",
+      "memorizeShape": "Zapamatujte si tvar...",
+      "foundIt": "Našel jsem to!",
+      "giveUp": "vzdát se"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Falešné poplachy",
+      "misses": "slečny",
+      "title": "Emocionální N-Back",
+      "match": "Shoda"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutrální RT",
+      "positiveRt": "Pozitivní RT",
+      "threatRt": "Hrozba RT",
+      "title": "Emocionální Stroop",
+      "interference": "Rušení",
+      "interferenceThreatNeutral": "Rušení (hrozba – neutrální)"
+    },
+    "eyesTest": {
+      "totalTime": "Celkový čas"
+    },
+    "faceName": {
+      "gain": "zisk",
+      "learningImprovement": "Zlepšení učení",
+      "round1Accuracy": "Kolo 1 Přesnost",
+      "round2Accuracy": "Přesnost kola 2",
+      "whoIsThis": "kdo to je?",
+      "title": "Asociace jmen tváře",
+      "round": "Kulaté",
+      "testPhase": "Testovací fáze"
+    },
+    "fauxPas": {
+      "who": "kdo?",
+      "why": "proč?",
+      "title": "Uznání faux pas",
+      "detection": "Detekce",
+      "scenarios": "Scénáře",
+      "fpFound": "Faux pas nalezeno",
+      "control": "Ovládání",
+      "readyToAnswer": "Připraveni odpovědět",
+      "didSomeoneSay": "Řekl někdo něco, co neměl?",
+      "whoSaidIt": "kdo to řekl?",
+      "whyInappropriate": "Proč to bylo nevhodné?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Připomeňte si přesnost",
+      "recognitionAccuracy": "Přesnost rozpoznávání",
+      "recallPlaceholder": "Napište svou odpověď...",
+      "unlikely": "Nepravděpodobné",
+      "certain": "Jisté",
+      "title": "Pocit poznání",
+      "recall": "Odvolání",
+      "recognition": "Uznání",
+      "fokR": "Fok R",
+      "questions": "Otázky",
+      "recalled": "Odvoláno",
+      "recognized": "Uznáno",
+      "fokSensitivity": "Citlivost FOK",
+      "submit": "Odeslat",
+      "dontKnow": "nevím",
+      "fokPrompt": "Poznáte to?",
+      "selectCorrectAnswer": "Vyberte správnou odpověď",
+      "answer": "Odpověď"
+    },
+    "fingerTapping": {
+      "firstTrial": "První soud",
+      "lastTrial": "Poslední soud",
+      "sequence": "Sekvence",
+      "speedupT1VsT12": "Zrychlení (T1 vs T12)",
+      "title": "Klepání prstem"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Prům. doba pohybu",
+      "avgThroughput": "Prům. propustnost",
+      "title": "Klepání fitts",
+      "throughput": "Propustnost",
+      "tapTarget": "Klepněte na zvýrazněný cíl"
+    },
+    "foreperiod": {
+      "early": "Brzy",
+      "slope": "Svah",
+      "title": "Časová příprava",
+      "fpEffectSlope": "Sklon FP efektu"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Zvraty",
+      "threshold": "Práh",
+      "tone1": "Tón 1",
+      "tone2": "Tón 2",
+      "weber": "Weber",
+      "weberFraction": "Weberův zlomek",
+      "hz": "Hz",
+      "title": "Frekvenční diskriminace",
+      "thresholdLabel": "Práh",
+      "hzDiff": "Hz dif",
+      "whichWasHigher": "Která byla vyšší?",
+      "firstHigher": "Nejprve vyšší",
+      "secondHigher": "Druhá vyšší"
+    },
+    "gabor": {
+      "gaborPatch": "Náplast Gabor",
+      "leftAccuracy": "Levá přesnost",
+      "leftTrials": "Levé zkoušky",
+      "noiseMask": "Maska proti hluku",
+      "rightAccuracy": "Správná přesnost",
+      "rightTrials": "Správné zkoušky",
+      "thresholdAngle": "Prahový úhel",
+      "title": "Gabor",
+      "threshold": "Práh",
+      "reversals": "Zvraty",
+      "timedOut": "Vypršel časový limit",
+      "left": "Vlevo",
+      "right": "Správně"
+    },
+    "gameOfDice": {
+      "finalPoints": "Konečné body",
+      "risky": "riskantní",
+      "riskyChoices": "Riskantní volby",
+      "safe": "Bezpečný",
+      "winRate": "Míra výhry",
+      "wins": "Vyhrává",
+      "title": "Úkol Hra s kostkami",
+      "totalPoints": "Celkový počet bodů",
+      "riskyLabel": "riskantní",
+      "roll": "Roll",
+      "chooseYourBet": "Vyberte si svou sázku",
+      "pickNumbers": "Vyberte si čísla"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Mezera nebo žádná mezera?",
+      "gapThreshold": "Mezera Threshold",
+      "title": "Detekce ticha",
+      "noGap": "Žádná mezera"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Kde byl ten pohled?",
+      "direct": "Přímý",
+      "left": "Vlevo",
+      "right": "Správně",
+      "title": "Směr pohledu",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Část 1 (Zasvěcení)",
+      "part2": "Část 2",
+      "part2Suppression": "Část 2 (potlačení)",
+      "suppressionCost": "Náklady na potlačení",
+      "title": "Hayling",
+      "part1": "Část 1",
+      "part2Label": "Část 2",
+      "suppression": "Potlačení",
+      "obvious": "Je zřejmé",
+      "obviousPicksPart2": "Jasné tipy (část 2)",
+      "chooseUnrelated": "Vyberte nesouvisející slovo",
+      "completelyUnrelated": "Naprosto nesouvisející",
+      "doNotPickObvious": "NEVYBEREJTE jasné slovo!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Postup do další fáze...",
+      "stageComplete": "Etapa dokončena!",
+      "title": "IED Set Shift",
+      "stages": "Etapy",
+      "edsCost": "Náklady na EDS",
+      "stage": "Jeviště",
+      "correctNeeded": "K postupu je potřeba správná"
+    },
+    "informationSampling": {
+      "cost": "náklady",
+      "free": "Zdarma",
+      "meanTilesCost": "Průměrné dlaždice (cena)",
+      "meanTilesFree": "Střední dlaždice (zdarma)",
+      "totalCost": "Celkové náklady",
+      "title": "Vzorkování informací",
+      "tiles": "Dlaždice",
+      "tapToReveal": "Klepnutím zobrazíte"
+    },
+    "inspectionTime": {
+      "final": "Konečná",
+      "finalDisplayTime": "Konečný čas zobrazení",
+      "minCorrectIt": "Min správné IT",
+      "threshold": "Práh",
+      "title": "Doba kontroly",
+      "thresholdLabel": "Práh",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Zůstatek:",
+      "chooseADeck": "Vyberte palubu",
+      "deckADraws": "Balíček A losuje",
+      "deckBDraws": "Balíček B losuje",
+      "deckCDraws": "Deck C kreslí",
+      "deckDDraws": "Balíček D kreslí",
+      "first40Advantageous": "Prvních 40 výhodných",
+      "last40Advantageous": "Posledních 40 výhodně",
+      "learn": "Učte se",
+      "learningIndex": "Index učení",
+      "title": "Hazardní hry v Iowě",
+      "advantageousPct": "výhodná %",
+      "earnings": "Výdělky",
+      "last40": "Posledních 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibrační odchylka",
+      "meanJol": "Znamená JOL",
+      "nowTestYourRecall": "Nyní otestujte svou paměť",
+      "studyComplete": "Studium dokončeno",
+      "whatWasPairedWith": "Co bylo spárováno s…?",
+      "title": "Posouzení učení",
+      "recallAccuracy": "Připomeňte si přesnost",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Přesnost JOL (gama)",
+      "howLikelyRemember": "S jakou pravděpodobností si budete pamatovat?",
+      "hiddenAnswer": "Skrytá odpověď"
+    },
+    "judgmentOfRecency": {
+      "close": "Zavřít",
+      "closeGap13": "Zavřít mezeru (1-3)",
+      "far": "Daleko",
+      "farGap9": "Daleká mezera (9+)",
+      "mediumGap48": "Střední mezera (4-8)",
+      "title": "Posouzení aktuálnosti",
+      "medium": "Střední",
+      "studyPhaseMemorizeOrder": "Fáze studia — Zapamatujte si pořadí",
+      "whichMoreRecently": "Které se objevily nedávno?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Průměrná RT (bez slov)",
+      "meanRtWords": "Průměr RT (slova)",
+      "nonwordsAccuracy": "Přesnost bez slov",
+      "wordsAccuracy": "Přesnost slov",
+      "word": "Slovo",
+      "nonword": "Neslovní"
+    },
+    "maze": {
+      "duration": "Doba trvání",
+      "optimalSteps": "Optimální kroky",
+      "pathEfficiency": "Efektivita cesty",
+      "totalSteps": "Celkový počet kroků",
+      "wallHits": "Nástěnné hity",
+      "title": "Bludiště",
+      "completed": "Dokončeno",
+      "efficiency": "Účinnost",
+      "wallHitsLabel": "Nástěnné hity",
+      "steps": "Kroky"
+    },
+    "memobox": {
+      "easy": "Snadno",
+      "easy2Boxes": "Snadné (2 krabice)",
+      "hard": "Těžko",
+      "hard4Boxes": "Tvrdé (4 krabice)",
+      "medium3Boxes": "Střední (3 krabice)",
+      "title": "Memobox",
+      "rounds": "kola",
+      "medium": "Střední",
+      "watchMovements": "Sledujte pohyby...",
+      "howManyBalls": "Kolik míčků v každé krabici?",
+      "submit": "Odeslat",
+      "roundOf": "Kolo {{current}} ze {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Jaký je průřez?",
+      "title": "Mentální řezání"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Starý, podobný nebo nový?",
+      "patternSeparation": "Oddělení vzoru",
+      "sep": "září",
+      "old": "Starý",
+      "similar": "Podobné",
+      "new": "Nové",
+      "ldi": "LDI",
+      "title": "Mnemotechnická diskriminace",
+      "hitRateOldDetected": "Míra návštěvnosti (staré zjištěno)",
+      "lureDiscrimination": "Diskriminace návnad (LDI)",
+      "memorize": "Zapamatujte si",
+      "testPhase": "Testovací fáze"
+    },
+    "multiArmedBandit": {
+      "earnings": "výdělky:",
+      "pickMachine": "Vyberte si stroj",
+      "title": "Víceruký bandita",
+      "totalReward": "Celková odměna",
+      "optimal": "Optimální",
+      "regret": "litovat",
+      "exploit": "Využití",
+      "machine": "Stroj",
+      "armsExplored": "Zbraně prozkoumány"
+    },
+    "navon": {
+      "globalBigLetter": "Globální (velké písmeno)",
+      "localSmallLetter": "Místní (malé písmeno)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Jaké VELKÉ písmeno?",
+      "whatSmallLetter": "Jaké MALÉ písmeno?"
+    },
+    "negativePriming": {
+      "controlRt": "Ovládání RT",
+      "nameTheRedShape": "Pojmenujte červený tvar",
+      "negativePrimingRt": "Negativní priming RT",
+      "positivePrimingRt": "Pozitivní priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP efekt",
+      "title": "Negativní priming",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Zkreslení odhadů",
+      "linearityRsup2": "Linearita (R²)",
+      "meanAbsoluteError": "Průměrná absolutní chyba",
+      "tapTheLineToPlaceTheNumber": "Klepnutím na řádek umístěte číslo",
+      "title": "Číselná řada",
+      "meanError": "Střední chyba",
+      "yourEstimate": "Váš odhad",
+      "correct": "Správně"
+    },
+    "oddOneOut": {
+      "colorTrials": "Barevné zkoušky",
+      "shapeTrials": "Tvarové zkoušky",
+      "shape": "Tvar",
+      "color": "Barva",
+      "timeout": "Časový limit",
+      "shapeDiffAccuracy": "Tvarový rozdíl. přesnost",
+      "colorDiffAccuracy": "Barevný rozdíl. přesnost",
+      "shapeDiffAvgRt": "Tvarový rozdíl. průměrná RT",
+      "colorDiffAvgRt": "Barevný rozdíl. prům. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Jakým způsobem?",
+      "thresholdAngle": "Prahový úhel",
+      "title": "Orientační diskriminace",
+      "threshold": "Práh",
+      "counterCw": "CCW",
+      "clockwise": "Po směru hodinových ručiček"
+    },
+    "patternComparison": {
+      "differentTrials": "Různé zkoušky",
+      "sameTrials": "Stejné zkoušky",
+      "same": "Totéž",
+      "different": "Různé"
+    },
+    "patternRecognition": {
+      "newPatterns": "Nové vzory",
+      "oldPatterns": "Staré vzory",
+      "old": "STARÝ",
+      "new": "NOVÉ",
+      "studyPatterns": "Pečlivě si prostudujte vzory",
+      "memorize": "Zapamatovat ({{current}}/{{total}})",
+      "getReady": "Připravte se...",
+      "testPhaseStarting": "Začíná testovací fáze..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Přesně Správně",
+      "meanAngularError": "Střední úhlová chyba",
+      "withinTolerance": "V rámci tolerance",
+      "title": "Přebírání perspektivy",
+      "avgErr": "Prům. chyba",
+      "youAreAt": "Jste v",
+      "facing": "Tváří v tvář",
+      "pointTo": "Ukažte na"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frekv. Práh",
+      "seq1": "Seq 1",
+      "seq2": "Seq 2",
+      "title": "Diskriminace fonémů",
+      "thresh": "mlátit",
+      "sameOrDifferent": "Stejné nebo jiné?",
+      "same": "Totéž",
+      "different": "Různé"
+    },
+    "predictionMotion": {
+      "biasLate": "Zaujatost (+ = pozdě)",
+      "meanAbsoluteError": "Střední absolutní chyba",
+      "precisionSd": "Přesnost (SD)",
+      "title": "Predikce pohybu",
+      "absError": "Abs. chyba",
+      "precision": "Přesnost",
+      "responded": "Odpověděli",
+      "tapWhenReachesTarget": "TAP, když dosáhne cíle"
+    },
+    "promem": {
+      "ongoingAccuracy": "Průběžná přesnost",
+      "ongoingRt": "Probíhající RT",
+      "pmHitRate": "Úspěšnost PM",
+      "pmRt": "PM RT",
+      "pmTargets": "PM cíle",
+      "title": "Perspektivní paměť",
+      "ongoing": "Probíhá",
+      "pmHits": "PM hity",
+      "pmMisses": "PM slečny",
+      "living": "Žijící",
+      "nonLiving": "Neživotní",
+      "redWordInstruction": "Červené slovo = stiskněte"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Chyby distraktoru",
+      "literalErrorRate": "Doslovná chybovost",
+      "literalErrors": "Doslovné chyby",
+      "title": "Výklad přísloví",
+      "literal": "Doslovný",
+      "litRate": "Lit. sazba",
+      "whatDoesThisMean": "co to znamená?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Připravte se na následování",
+      "meanTimeOnTarget": "Průměrný čas na cíl",
+      "meanTrackingError": "Střední chyba sledování",
+      "placeYourFingerOnTheScreen": "Položte prst na obrazovku",
+      "title": "Sledování pronásledování",
+      "timeOnTarget": "Čas na cíl",
+      "error": "Chyba",
+      "onTarget": "Na Cíl",
+      "avgError": "Prům. chyba",
+      "improve": "zlepšit",
+      "improvementT1VsT": "Zlepšení T1 vs T",
+      "errorLabel": "Chyba",
+      "followGreenTarget": "Sledujte zelený cíl"
+    },
+    "rapidNaming": {
+      "roundComplete": "Kolo dokončeno",
+      "totalErrors": "Celkový počet chyb",
+      "title": "Rychlé pojmenování",
+      "avgSpeed": "Prům. rychlost",
+      "totalTime": "Celkový čas",
+      "round": "Kulaté",
+      "getReady": "Připravte se!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Prům. doba řešení",
+      "solved": "Vyřešeno",
+      "wrong": "Špatně",
+      "placeholder": "Vaše odpověď...",
+      "title": "Hádanky Rebus",
+      "puzzles": "Hádanky",
+      "timeout": "Časový limit",
+      "submit": "Odeslat",
+      "answer": "Odpověď"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Prům. doba řešení",
+      "solved": "Vyřešeno",
+      "placeholder": "Vaše odpověď...",
+      "title": "Vzdálení spolupracovníci",
+      "timeout": "Časový limit",
+      "submit": "Odeslat",
+      "answer": "Odpověď"
+    },
+    "reversalLearning": {
+      "adapt": "Přizpůsobte se",
+      "loseshiftRate": "Rychlost ztráty-Shift",
+      "score": "skóre:",
+      "winstayRate": "Sazba Win-Stay",
+      "title": "Reverzní učení",
+      "rewards": "Odměny",
+      "reversals": "Zvraty",
+      "persev": "Peršev",
+      "avgTrialsToCriterion": "Prům. pokusy na kritérium",
+      "pickACard": "Vyberte kartu"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Počítejte zpětně o 7",
+      "reproduceThePatternFromMemory": "Reprodukujte vzor z paměti",
+      "title": "Složitá postava Rey",
+      "copy": "Kopírovat",
+      "recall": "Odvolání",
+      "retention": "Udržení",
+      "trial": "zkušební",
+      "target": "Cíl",
+      "yourCopy": "Vaše kopie",
+      "submit": "Odeslat"
+    },
+    "rhythm": {
+      "avgTimingError": "Prům. chyba časování",
+      "bestTrialError": "Nejlepší zkušební chyba",
+      "correctTrials": "Správné zkoušky",
+      "worstTrialError": "Nejhorší zkušební chyba",
+      "watchRhythm": "Sledujte rytmus",
+      "getReady": "Připravte se...",
+      "tapTheRhythm": "Klepněte na rytmus!",
+      "tooFarOff": "Příliš daleko!",
+      "tapToReproduce": "Klepnutím spustíte reprodukci",
+      "beats": "{{count}} bije",
+      "bestTrial": "Nejlepší pokus",
+      "worstTrial": "Nejhorší zkouška",
+      "title": "Rytmus",
+      "msErr": "paní chyba"
+    },
+    "routePlanning": {
+      "time": "Čas",
+      "title": "Plánování trasy",
+      "levels": "úrovně",
+      "completed": "Dokončeno",
+      "avgMoves": "Prům. se pohybuje",
+      "clear": "Jasný",
+      "submit": "Odeslat",
+      "instructions": "Instrukce"
+    },
+    "rvp": {
+      "detect357246468": "Detekce: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Cílové sekvence",
+      "fa": "FA",
+      "hitRate": "Úspěšnost",
+      "misses": "slečny",
+      "sequences": "Sekvence"
+    },
+    "sart": {
+      "commissionErrors": "Chyby komise",
+      "omissionErrors": "Chyby vynechání",
+      "tapAllDigits": "Klepněte na všechny číslice kromě 3",
+      "except3": "Kromě 3"
+    },
+    "sceneCrasher": {
+      "adds": "Přidá",
+      "studyTheScene": "Prostudujte si scénu",
+      "swaps": "Swapy",
+      "tapTheNewchangedObject": "Klepněte na nový/změněný objekt"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Nepravdivé věty",
+      "trueSentences": "Pravdivé věty",
+      "byCategory": "Podle kategorie",
+      "title": "Ověření věty",
+      "trueRt": "Skutečná RT",
+      "true": "Pravda",
+      "false": "Falešný",
+      "pressKey": "Stiskněte"
+    },
+    "soundSweeps": {
+      "down": "Dolů",
+      "downAccuracy": "Přesnost dolů",
+      "durationThreshold": "Práh trvání",
+      "up": "Nahoru",
+      "upAccuracy": "Až přesnost",
+      "title": "Sound Sweeps",
+      "threshold": "Práh",
+      "upOrDown": "Nahoru nebo dolů?"
+    },
+    "sourceMemory": {
+      "color": "Barva",
+      "colorRecall": "Připomenutí barvy",
+      "frame": "Rám",
+      "frameRecall": "Přivolání snímku",
+      "getReadyForTheTest": "Připravte se na test!",
+      "itemRecognition": "Rozpoznávání položek",
+      "positionRecall": "Vyvolání pozice",
+      "sourceAccuracy": "Přesnost zdroje",
+      "title": "Zdrojová paměť",
+      "source": "Zdroj",
+      "position": "Pozice",
+      "word": "Slovo",
+      "wasThisWordShown": "Bylo toto slovo zobrazeno?",
+      "bottom": "Spodní",
+      "blue": "Modrá",
+      "orange": "Oranžová",
+      "circle": "Kruh",
+      "square": "náměstí"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Práh hluku",
+      "title": "Speech-in-Noise",
+      "noise": "Hluk",
+      "whichWordWasIt": "Které slovo to bylo?"
+    },
+    "srtt": {
+      "learningEffect": "Efekt učení",
+      "learning": "Učení",
+      "block": "Blokovat"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Úroveň šance",
+      "learningDetected": "Učení zjištěno",
+      "testPhase": "Testovací fáze",
+      "whichPairLooksMoreFamiliar": "Který pár je známější?",
+      "title": "Statistické učení",
+      "learning": "Učení",
+      "watchTheShapes": "Sledujte tvary"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Efekt zkreslení víry",
+      "conclusion": "Závěr",
+      "premise1": "Předpoklad 1",
+      "premise2": "Předpoklad 2",
+      "logicalValidityQuestion": "Je to logicky platné?",
+      "valid": "Platné",
+      "invalid": "Neplatné"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Chybí přesnost",
+      "presentAccuracy": "Současná přesnost",
+      "title": "Hledání symbolů",
+      "present": "Přítomný",
+      "absent": "Chybí",
+      "targets": "Cíle",
+      "searchGroup": "Hledat skupinu"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "Asynchronie",
+      "drift": "Unášení",
+      "cv": "CV",
+      "title": "Sync-Continuation",
+      "meanCv": "Průměr CV",
+      "tempos": "Tempo",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Připravte se...",
+      "nextTempo": "Další tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Správné resety",
+      "duration": "Doba trvání",
+      "missedCounters": "Zmeškané počítadla",
+      "prematureResets": "Předčasné resety",
+      "totalEvents": "Celkem událostí",
+      "tooEarly": "Příliš brzy!",
+      "missed": "Zmeškaný!",
+      "title": "Žonglování s úkoly",
+      "premature": "Předčasné",
+      "counter": "Počítadlo",
+      "tapCounterInstruction": "Klepněte na každé počítadlo, když dosáhne svého prahu. Nenechte přetéct!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Bod půlení (PSE)",
+      "curveSteepness": "Strmost křivky",
+      "idealMidpoint": "Ideální střed",
+      "pse": "PSE",
+      "title": "Temporal Bisection",
+      "steepness": "Strmost",
+      "shortOrLong": "Krátké nebo dlouhé?",
+      "trainingPhase": "Tréninková fáze",
+      "short": "Krátký",
+      "long": "Dlouhé"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Šířka přechodu",
+      "rememberThisDuration": "Pamatujte na toto trvání",
+      "width": "Šířka",
+      "standard": "STANDARDNÍ",
+      "title": "Časová generalizace",
+      "hitRate": "Úspěšnost",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Míra přístupu (standardní zjištění)",
+      "sameDuration": "Stejné trvání?",
+      "trainingPhase": "Tréninková fáze",
+      "same": "Totéž",
+      "different": "Různé"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Prahová SOA",
+      "title": "Diskriminace textur",
+      "threshold": "Práh"
+    },
+    "timePromem": {
+      "avgTimingError": "Prům. chyba časování",
+      "clockChecks": "Kontroly hodin",
+      "ongoingAccuracy": "Průběžná přesnost",
+      "ongoingTrials": "Probíhající zkoušky",
+      "totalPmPresses": "Celkový počet lisů PM",
+      "pmAccuracy": "Přesnost PM",
+      "pmMisses": "PM chybí",
+      "title": "Časově perspektivní",
+      "ongoing": "Probíhá",
+      "pmHitsLabel": "PM hity",
+      "timingErr": "Chyba časování",
+      "pmHitsExpected": "PM hity / očekávané",
+      "pmPresses": "PM lisy",
+      "checkClock": "Zkontrolujte hodiny",
+      "thirtySecMark": "Mark 30. léta"
+    },
+    "toj": {
+      "meanResponseTime": "Průměrná doba odezvy",
+      "temporalResolution": "Časové rozlišení",
+      "title": "Rozsudek časového řádu",
+      "threshold": "Práh",
+      "whichCameFirst": "Která byla první?",
+      "leftFirst": "Nejprve vlevo",
+      "rightFirst": "Nejprve správně"
+    },
+    "tower": {
+      "budget": "Rozpočet",
+      "challenge": "Výzva",
+      "challengeClassic": "klasické",
+      "challengeExpert": "Expert",
+      "challengeMemory": "Paměť",
+      "challengePrecision": "Přesnost",
+      "dragDiscAriaLabel": "Přetáhněte horní disk z kolíku {{peg}}",
+      "goal": "Cíl",
+      "goalHiddenStatus": "Cíl skrytý. Pomocí funkce Odhalit ji krátce zobrazíte.",
+      "goalRevealedMessage": "Gól odhalen na 3 sekundy.",
+      "hint": "Nápověda",
+      "hintDescription": "Zobrazit nejlepší další tah",
+      "hintMessage": "Tip: přesuňte horní disk z kolíku {{fromPeg}} na kolík {{toPeg}}.",
+      "hiddenGoalDescription": "Cíl je během hry skrytý. Pokud potřebujete krátké osvěžení, použijte funkci Reveal.",
+      "hiddenGoalTitle": "Paměťová výzva",
+      "invalid": "Neplatné",
+      "moves": "Pohyby",
+      "optimal": "Optimální",
+      "pegFullMessage": "Ten kolíček je plný.",
+      "previewMemoryCountdown": "Zapamatujte si cíl. Začíná v {{seconds}}s.",
+      "previewPlanCountdown": "Naplánujte řešení {{moves}}-move. Začíná v {{seconds}}s.",
+      "reset": "Resetovat",
+      "resetDescription": "Restartujte tuto hádanku",
+      "resetMessage": "Puzzle reset.",
+      "reveal": "Odhalit",
+      "revealDescription": "Odhalte skrytý cíl",
+      "statusOptimalSolve": "Optimální řešení. Skóre {{score}}.",
+      "statusSolvedScore": "Vyřešeno v tahech {{moves}} (+{{extraMoves}}). Skóre {{score}}.",
+      "undo": "Vrátit zpět",
+      "undoDescription": "Obrátit poslední tah",
+      "undoneMessage": "Poslední tah zrušen.",
+      "yourPegs": "Vaše kolíčky"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Správné dodávky",
+      "trainsLost": "Vlaky ztracené",
+      "wrongStation": "Špatná stanice",
+      "title": "Vlak myšlení",
+      "trains": "Vlaky",
+      "missed": "Zmeškaný",
+      "scoreLabel": "skóre",
+      "instructions": "Instrukce"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Prům. počet použitých otázek",
+      "title": "Dvacet otázek",
+      "avgQuestions": "Prům. otázky",
+      "rounds": "kola",
+      "efficiency": "Účinnost",
+      "avgQuestionsCorrectOnly": "Prům. otázky (pouze správně)",
+      "questionsLabel": "Otázky",
+      "remaining": "Zbývající",
+      "readyToGuess": "Jsem připraven hádat!",
+      "tapTheTarget": "Klepněte na objekt, o kterém si myslíte, že je cílem!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Užitečné zorné pole",
+      "visualNoiseMask": "Maska vizuálního šumu",
+      "whatWasInTheCenter": "Co bylo v centru?",
+      "whereWasTheTarget": "Kde byl cíl?",
+      "avgThreshold": "Prům. práh",
+      "speed": "Rychlost",
+      "accuracy": "Přesnost",
+      "central": "Centrální",
+      "peripheral": "Periferní",
+      "overall": "Celkově vzato",
+      "block": "Blokovat",
+      "trials": "Zkoušky",
+      "start": "Začněte",
+      "focus": "Zaměřte se",
+      "threshold": "Práh",
+      "stimulus": "Stimul",
+      "respondFromMemory": "Odpovězte z paměti",
+      "truck": "Náklaďák",
+      "choosePeripheralLocation": "Vyberte periferní umístění",
+      "currentBlock": "Blok {{n}}",
+      "exposure": "Expozice"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Slova začínající na {{letter}}",
+      "title": "Slovní plynulost",
+      "totalWords": "Celkem slov",
+      "duplicates": "Duplikáty",
+      "letter": "Dopis",
+      "round": "Kulaté",
+      "roundComplete": "Kolo dokončeno",
+      "nextRound": "Další kolo",
+      "middotRound": "· Kulaté"
+    },
+    "vernierAcuity": {
+      "whichSide": "Na kterou stranu?",
+      "title": "Vernierova ostrost",
+      "leftOffset": "Odsazení vlevo",
+      "rightOffset": "Pravý offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimální strategie",
+      "correct": "Správně!",
+      "wrong": "Špatně",
+      "title": "Předpověď počasí",
+      "optimal": "Optimální",
+      "learningCurve": "Křivka učení",
+      "predictTheWeather": "Předvídat počasí",
+      "rain": "déšť"
+    },
+    "wordChain": {
+      "avgResponseTime": "Prům. doba odezvy",
+      "chain": "řetěz",
+      "longestChain": "Nejdelší řetěz",
+      "totalCorrect": "Celkem správně",
+      "totalWords": "Celkem slov",
+      "words": "Slova",
+      "title": "Řetězec slov",
+      "longest": "Nejdelší",
+      "avgRt": "Prům. RT",
+      "endsWith": "končí s",
+      "chainLabel": "řetěz",
+      "bestLabel": "Nejlepší"
+    },
+    "wordFlow": {
+      "avgWordLength": "Průměrná délka slova",
+      "correct": "Správně",
+      "invalidWords": "Neplatná slova",
+      "totalWordsSelected": "Celkový počet vybraných slov",
+      "validWords": "Platná slova",
+      "wordsPerMinute": "Slova za minutu",
+      "wrong": "Špatně",
+      "seeResults": "Zobrazit výsledky",
+      "nextRound": "Další kolo ({{current}}/{{total}})",
+      "title": "Slovní plynulost",
+      "validWordsLabel": "Platná slova",
+      "wordsPerMinLabel": "Slova/min",
+      "avgLengthLabel": "Prům. délka",
+      "invalidLabel": "Neplatné",
+      "round": "Kulaté",
+      "selectWordsBelongTo": "Vyberte slova, která k nim patří",
+      "selected": "Vybráno"
+    },
+    "wordList": {
+      "avgRtCorrect": "Prům. RT (správně)",
+      "primacyEffect": "Efekt prvenství",
+      "recencyEffect": "Efekt aktuálnosti",
+      "studyPhaseRememberEachWord": "Fáze studia — zapamatujte si každé slovo",
+      "wordsRecalled": "Připomenutá slova",
+      "title": "Seznam slov",
+      "serialPositionCurve": "Sériová křivka polohy",
+      "wasWordInList": "Bylo toto slovo v seznamu?",
+      "seenBefore": "Viděno dříve",
+      "newWord": "Nové"
+    },
+    "speedSort": {
+      "switchAccuracy": "Přesnost spínače",
+      "switchTrials": "Přepnout zkoušky",
+      "sortByColor": "Seřadit podle COLOR",
+      "sortByShape": "Řadit podle SHAPE",
+      "sortByNumber": "Seřadit podle NUMBER",
+      "ruleChanged": "Pravidlo změněno!",
+      "binRed": "Červená",
+      "binBlue": "Modrá",
+      "binGreen": "Zelená",
+      "binYellow": "Žlutá",
+      "binCircle": "Kruh",
+      "binSquare": "náměstí",
+      "binTriangle": "Trojúhelník",
+      "binStar": "hvězda",
+      "title": "Rychlost řazení",
+      "switch": "Přepínače"
+    },
+    "reflex": {
+      "target": "Cíl",
+      "lure": "Lure",
+      "tooSlow": "Příliš pomalé!",
+      "wrongTarget": "Špatný cíl!",
+      "tapTargets": "Klepněte na zelené kroužky!",
+      "hits": "Hity",
+      "misses": "slečny",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Vzpomeňte si na průběžný součet...",
+      "title": "Výpočet řetězu",
+      "stepChains": "{{len}} stupňovité řetězy",
+      "start": "Začněte",
+      "step": "Krok",
+      "whatIsTheResult": "jaký je výsledek?"
+    },
+    "alternateUses": {
+      "placeholder": "Zadejte použití...",
+      "title": "Alternativní použití",
+      "totalUses": "Celkové využití",
+      "perObject": "Na objekt",
+      "rounds": "kola",
+      "bestObject": "Nejlepší objekt",
+      "bestCount": "Nejlepší počet",
+      "noUsesSubmitted": "Nebyla předložena žádná použití",
+      "timesUp": "Čas vypršel!",
+      "nextObject": "Další objekt ({{object}})",
+      "listCreativeUses": "Vyjmenujte použití kreativ pro tento objekt"
+    },
+    "anagram": {
+      "placeholder": "Napište slovo...",
+      "title": "Anagram",
+      "avgSolve": "Prům. řešit",
+      "letterWords": "{{len}}-slova písmen",
+      "submit": "Odeslat"
+    },
+    "facialEmotion": {
+      "happy": "Šťastný",
+      "sad": "Smutný",
+      "angry": "Rozzlobený",
+      "fearful": "Bojácný",
+      "disgusted": "Znechucený",
+      "surprised": "Překvapený",
+      "lc": "LC",
+      "title": "Rozpoznávání emocí obličeje",
+      "topConfusions": "Top zmatky"
+    },
+    "numberSeries": {
+      "easy": "Snadno",
+      "hard": "Těžko"
+    },
+    "chainRecall": {
+      "round": "Kulaté",
+      "title": "Chain Recall",
+      "chain": "řetěz",
+      "placeholder": "Zástupný symbol"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emocionální Go/No-Go",
+      "block1CommissionErrors": "Chyby provize bloku 1",
+      "block2CommissionErrors": "Chyby provize bloku 2",
+      "goHappy": "Jdi = šťastný",
+      "goSad": "Jdi = Smutný",
+      "block": "Blokovat",
+      "go": "Jdi"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroopův efekt",
+      "title": "Color Rush",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Kongruentní přesnost",
+      "incongruentAccuracy": "Nesouhlasná přesnost"
+    },
+    "mirror": {
+      "avgCorrectCells": "Správné buňky (prům.)",
+      "symmetryType": "Typ symetrie",
+      "title": "Zrcadlo"
+    },
+    "rhythmTap": {
+      "correctTrials": "Správné zkoušky",
+      "avgRhythmScore": "Prům. skóre rytmu",
+      "bestTrialScore": "Nejlepší zkušební skóre",
+      "worstTrialScore": "Nejhorší výsledek pokusu",
+      "level": "úroveň",
+      "rhythm": "Rytmus",
+      "bestTrial": "Nejlepší pokus",
+      "worstTrial": "Nejhorší zkouška"
+    },
+    "vocalProsody": {
+      "questioning": "Dotazování"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Vynásobte",
+      "add": "Přidat",
+      "subtract": "Odečíst",
+      "title": "Aritmetická rychlost",
+      "score": "skóre",
+      "solved": "Vyřešeno",
+      "missed": "Zmeškaný"
+    },
+    "puzzle": {
+      "avgSolveTime": "Prům. doba řešení",
+      "totalMoves": "Celkový počet pohybů",
+      "totalErrors": "Celkem chyb",
+      "gridSize": "Velikost mřížky",
+      "maxGridReached": "Bylo dosaženo maximální mřížky",
+      "maxLevelReached": "Maximální dosažená úroveň",
+      "maxNodesReached": "Bylo dosaženo maximálního počtu uzlů",
+      "puzzleDetails": "Detaily puzzle",
+      "roundDetails": "Kulaté detaily",
+      "solved": "Vyřešeno!",
+      "undo": "Vrátit zpět",
+      "reset": "Resetovat",
+      "check": "Zkontrolujte",
+      "moves": "Pohyby",
+      "time": "Čas",
+      "level": "úroveň",
+      "errors": "Chyby",
+      "score": "skóre",
+      "grid": "Mřížka",
+      "crossings": "Přejezdy",
+      "pearls": "perly",
+      "clues": "Vodítka",
+      "region": "Region",
+      "filled": "Naplněno",
+      "cells": "Buňky",
+      "undosLeft": "Zbývá zpět",
+      "gems": "Drahokamy",
+      "connected": "Připojeno",
+      "slides": "Snímky",
+      "progress": "Pokrok",
+      "rotations": "Rotace",
+      "puzzle": "Puzzle",
+      "uncovered": "Odkryté",
+      "colored": "Barevné",
+      "violations": "Porušení",
+      "blacked": "Začerněný",
+      "empty": "Prázdný",
+      "remaining": "Zbývající",
+      "pairs": "Páry",
+      "flips": "Flips",
+      "found": "Nalezeno",
+      "balls": "Kuličky",
+      "guesses": "Odhady",
+      "original": "Původní",
+      "findDifferences": "Najděte rozdíly",
+      "totalDrags": "Totální tahy",
+      "totalUndos": "Celkem zpět",
+      "totalEdgesDrawn": "Celkem tažené hrany",
+      "totalLasers": "Totální lasery",
+      "totalSlides": "Celkem slidů",
+      "totalRotations": "Totální rotace",
+      "totalRectangles": "Celkem obdélníky",
+      "totalScore": "Celkové skóre",
+      "avgTime": "Prům. čas",
+      "cellsCleared": "Buňky vyčištěny",
+      "totalDiffsFound": "Celkem nalezeny rozdíly",
+      "gemsCollected": "Sbírány drahokamy",
+      "pushBoxesOntoTargets": "Zatlačte všechny krabice na cíle",
+      "fireLasersMarkBalls": "Vystřelte lasery z okrajů a poté označte pozice koulí",
+      "revealingAnswer": "Odhalující odpověď...",
+      "checkAnswer": "Zkontrolujte odpověď",
+      "pickNumberBelow": "Níže vyberte číslo",
+      "tapCellToAssign": "Klepnutím na buňku přiřadíte číslo",
+      "tapEdgesToPlaceWalls": "Klepnutím na okraje umístěte stěny. Rozdělit do oblastí K.",
+      "ghosts": "duchové",
+      "vampires": "Upíři",
+      "zombies": "Zombie",
+      "dominoes": "Domino",
+      "islands": "ostrovy",
+      "pegsLeft": "Kolíky vlevo",
+      "bestRemaining": "Nejlepší zbývající",
+      "puzzlesSolved": "Hádanky vyřešeny",
+      "flooded": "Zatopeno",
+      "edges": "Hrany",
+      "totalPlacements": "Celkový počet umístění",
+      "totalRemovals": "Celkové odstranění",
+      "maxTileReached": "Bylo dosaženo maximálního počtu dlaždic",
+      "target": "Cíl",
+      "placed": "Umístěno",
+      "totalGuesses": "Totální odhady",
+      "guessesLeft": "Odhady odešel",
+      "difficulty": "Obtížnost"
+    },
+    "palisade": {
+      "title": "Palisáda",
+      "puzzles": "Hádanky",
+      "maxLevel": "Maximální úroveň"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "errors": "Chyby",
+      "avgTime": "Prům. čas",
+      "erase": "Vymazat"
+    },
+    "blackbox": {
+      "title": "Černá skříňka",
+      "puzzles": "Hádanky",
+      "lasers": "Lasery",
+      "avgTime": "Prům. čas"
+    },
+    "designFluency": {
+      "title": "Plynulost designu",
+      "uniqueDesigns": "Jedinečné designy",
+      "duplicates": "Duplikáty",
+      "round": "Kulaté",
+      "roundComplete": "Kolo dokončeno",
+      "youCreatedDesigns": "Vytvořili jste návrhy {{count}}",
+      "startRound": "Začněte kolo",
+      "instructions": "Instrukce",
+      "designs": "Designy",
+      "clear": "Jasný",
+      "addDesign": "Přidat"
+    },
+    "signpost": {
+      "title": "Rozcestník",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "avgTime": "Prům. čas",
+      "maxGrid": "Max mřížka"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "úroveň",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "undos": "Zpět",
+      "puzzle": "Puzzle"
+    },
+    "numericalStroop": {
+      "left": "Vlevo",
+      "right": "Správně"
+    },
+    "biologicalMotion": {
+      "title": "Biologický pohyb",
+      "noiseDots": "šumové tečky",
+      "whichDirection": "kterým směrem?",
+      "left": "Vlevo",
+      "right": "Správně"
+    },
+    "inertia": {
+      "title": "Setrvačnost",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "gems": "Drahokamy",
+      "moves": "Pohyby"
+    },
+    "waterLevel": {
+      "title": "Hladina vody",
+      "error": "Chyba",
+      "tilt": "Naklonit",
+      "waterLine": "Vodovod?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxGrid": "Max mřížka"
+    },
+    "sudoku": {
+      "title": "sudoku",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "errors": "Chyby",
+      "avgTime": "Prům. čas",
+      "erase": "Vymazat"
+    },
+    "rectangles": {
+      "title": "Obdélníky",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "rectanglesCount": "Obdélníky",
+      "maxGrid": "Max mřížka",
+      "cancelSelection": "Zrušit výběr"
+    },
+    "filling": {
+      "title": "Plnění",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "avgTime": "Prům. čas",
+      "grid": "Mřížka"
+    },
+    "spacedRetrieval": {
+      "title": "Rozložené vyhledávání",
+      "studyPair": "Prostudujte si tento pár",
+      "waitAndSolve": "Počkejte… a pak vyřešte",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Interval: jaké páry?"
+    },
+    "prototypeDistortion": {
+      "title": "Zkreslení prototypu",
+      "studyPhase": "Fáze studie",
+      "testPhase": "Testovací fáze",
+      "yesBelongs": "Ano – patří",
+      "noRandom": "Ne – náhodně"
+    },
+    "motionCoherence": {
+      "title": "Pohybová koherence",
+      "threshold": "Práh",
+      "coherence": "Soudržnost",
+      "whichDirection": "kterým směrem?"
+    },
+    "cube": {
+      "title": "Kostka",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxLevel": "Maximální úroveň",
+      "cubeFaces": "Kostky tváře",
+      "moveUp": "Nahoru",
+      "moveLeft": "Vlevo",
+      "moveDown": "Dolů",
+      "moveRight": "Správně"
+    },
+    "sameGame": {
+      "title": "Stejná hra",
+      "score": "skóre",
+      "cleared": "Vymazáno",
+      "cells": "Buňky",
+      "accuracy": "Přesnost"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal Matching",
+      "chance": "Šance",
+      "whichPatternMatchesRhythm": "Který vzor odpovídá rytmu?"
+    },
+    "mosaic": {
+      "title": "Mozaika",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxGrid": "Max mřížka"
+    },
+    "spotDiff": {
+      "title": "Spot the Diff",
+      "level": "úroveň",
+      "grid": "Mřížka",
+      "accuracy": "Přesnost",
+      "perfect": "Perfektní",
+      "avgTime": "Prům. čas",
+      "found": "Nalezeno"
+    },
+    "lightsOut": {
+      "title": "Zhasnutá světla",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxGrid": "Max mřížka"
+    },
+    "pipeline": {
+      "title": "Potrubí",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "rotations": "Rotace",
+      "avgTime": "Prům. čas"
+    },
+    "tracks": {
+      "title": "Skladby",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "errors": "Chyby",
+      "avgTime": "Prům. čas"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "slides": "Snímky",
+      "maxGrid": "Max mřížka"
+    },
+    "cognitiveBias": {
+      "title": "Trénink kognitivní zaujatosti",
+      "biasResistance": "Odolnost proti zkreslení",
+      "biased": "Zaujatý",
+      "continue": "Pokračovat"
+    },
+    "empathicAccuracy": {
+      "title": "Empatická přesnost",
+      "emotionId": "Emoce",
+      "avgRatingError": "Prům. chyba hodnocení",
+      "scenarios": "Scénáře",
+      "perfect": "Perfektní",
+      "rating": "Hodnocení",
+      "howDoesCharacterFeel": "Jak se postava cítí?",
+      "rateIntensity": "Ohodnoťte intenzitu",
+      "whatEmotion": "Jaké emoce?",
+      "yourRating": "Vaše hodnocení",
+      "correct": "Správně",
+      "emotion": "Emoce"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Vyřešeno",
+      "guesses": "Odhady"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxLevel": "Maximální úroveň"
+    },
+    "magnets": {
+      "title": "Magnety",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxLevel": "Maximální úroveň"
+    },
+    "tangram": {
+      "placeAll": "Umístěte všechny kusy",
+      "solved": "Vyřešeno!",
+      "notRight": "Ne tak docela správně",
+      "title": "Tangram",
+      "level": "úroveň",
+      "puzzles": "Hádanky",
+      "placements": "Umístění",
+      "removals": "Odstranění",
+      "puzzleNumber": "Puzzle {{n}}",
+      "pieces": "Kusy",
+      "targetCells": "Cible",
+      "dragHint": "Přetáhněte nebo umístěte dílek na mřížku",
+      "selectHint": "Vyberte kus",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Zkontrolujte"
+    },
+    "galaxies": {
+      "title": "Galaxie"
+    },
+    "flood": {
+      "title": "Povodeň"
+    },
+    "pegs": {
+      "title": "Kolíčky",
+      "bestPegs": "Nejlepší kolíčky"
+    },
+    "auditoryFigureGround": {
+      "title": "Sluchová postava-zem",
+      "patternPresent": "Je přítomen vzor?",
+      "pattern": "Vzor",
+      "noPattern": "Žádný vzor"
+    },
+    "selfOrderedPointing": {
+      "title": "Samoobslužné ukazování",
+      "maxSpan": "Maximální rozpětí",
+      "errors": "Chyby",
+      "round": "Kulaté",
+      "setOf": "Sada {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Zrcadlové sledování",
+      "totalErrors": "Celkem chyb",
+      "avgTime": "Prům. čas",
+      "shapes": "Tvary",
+      "perfect": "Perfektní",
+      "improvement": "Zlepšení",
+      "errorsMiddot": "chyby ·",
+      "shape": "Tvar",
+      "errors": "Chyby",
+      "xIsMirrored": "X se zrcadlí!"
+    },
+    "clockDrawing": {
+      "title": "Kreslení hodin",
+      "avgError": "Prům. chyba",
+      "setTo": "Nastavit na",
+      "submit": "Odeslat"
+    },
+    "cognitiveMap": {
+      "title": "Kognitivní mapa",
+      "explore": "Prozkoumat",
+      "sRemaining": "S Zbývající",
+      "from": "Od",
+      "whichDirectionIs": "Který směr je"
+    },
+    "sixteen": {
+      "title": "šestnáct"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Rozsviťte se"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max Tile",
+      "moves": "Pohyby",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Mosty",
+      "puzzles": "Hádanky",
+      "maxLevel": "Maximální úroveň",
+      "level": "úroveň"
+    },
+    "net": {
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxGrid": "Max mřížka"
+    },
+    "flip": {
+      "title": "Překlopit"
+    },
+    "range": {
+      "title": "Rozsah"
+    },
+    "slant": {
+      "title": "Slant"
+    },
+    "towers": {
+      "title": "Věže",
+      "puzzles": "Hádanky",
+      "avgTime": "Prům. čas",
+      "erase": "Vymazat"
+    },
+    "pearl": {
+      "title": "perla",
+      "edges": "Hrany"
+    },
+    "mapColoring": {
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "moves": "Pohyby",
+      "maxLevel": "Maximální úroveň"
+    },
+    "singles": {
+      "title": "Svobodní"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Nemrtvý",
+      "accuracy": "Přesnost",
+      "puzzles": "Hádanky",
+      "avgTime": "Prům. čas"
+    },
+    "untangle": {
+      "title": "Rozmotat",
+      "drags": "Táhne",
+      "maxNodes": "Maximální počet uzlů"
+    },
+    "unruly": {
+      "title": "Neukázněný"
+    },
+    "fifteen": {
+      "title": "Patnáct"
+    },
+    "tents": {
+      "title": "Stany"
+    },
+    "mesker": {
+      "pen": "Pero",
+      "stroke": "Mrtvice",
+      "penPressureHint": "Pište stálým tlakem pera"
+    },
+    "modality": {
+      "position": "Pozice",
+      "audio": "Zvuk"
+    },
+    "validate": "Ověřit"
+  },
+  "trace": {
+    "instructions": "Přejeďte prstem do polohy N-back. Dvakrát klepněte na stejnou pozici.",
+    "hint": {
+      "validated": "Ověřeno",
+      "draw": "Nakreslete písmeno • Klepnutím potvrďte",
+      "drawWithColor": "Nakreslete písmeno • Vyberte barvu • Klepnutím potvrďte",
+      "type": "Zadejte písmeno • Enter pro potvrzení",
+      "typeWithColor": "Zadejte písmeno • Vyberte barvu • Potvrďte Enter",
+      "typeResult": "Napište výsledek • Enter pro potvrzení",
+      "writeResult": "Napište výsledek • Klepnutím potvrďte"
+    },
+    "keyboard": {
+      "letterInput": "Dopis",
+      "numberInput": "Číslo"
+    },
+    "arithmetic": {
+      "cueHint": "Zapamatujte si 2 číslice",
+      "refresh": "Nové"
+    },
+    "hintPosition": "Kde byl podnět {{n}} otočen před?",
+    "hintN0": "Uveďte aktuální podnět",
+    "warmupHint": "Zapamatujte si pozice. Není potřeba žádná odpověď.",
+    "hintDraw": "Nakreslete písmeno • Klepnutím potvrďte",
+    "hintDrawWithColor": "Nakreslete písmeno • Vyberte barvu • Klepnutím potvrďte",
+    "hintWriteResult": "Napište výsledek • Klepnutím potvrďte",
+    "guide": {
+      "swipeNormal": "Přejeďte prstem z poslední pozice (N-0) do pozice před {{n}} kroky (N-{{n}}). Dvakrát klepněte na stejnou pozici.",
+      "swipeSequential": "Přejeďte prstem krok za krokem z N-0 na N-{{n}} a projděte každou mezipolohou. Dvakrát klepněte na stejnou pozici.",
+      "swipeDynamic": "Přejeďte prstem podle zobrazeného pravidla. Dvakrát klepněte na stejnou pozici.",
+      "tapN0": "Klepněte na aktuální pozici.",
+      "warmup": "Zapamatujte si pozice – není nutná žádná reakce.",
+      "writeDraw": "Nakreslete písmeno, které jste slyšeli před kroky {{n}} • Klepnutím potvrďte",
+      "writeDrawColor": "Nakreslete písmeno, které jste slyšeli před kroky {{n}} • Vyberte jeho barvu • Klepnutím potvrďte",
+      "writeType": "Zadejte písmeno, které jste slyšeli před kroky {{n}} • Enter pro potvrzení",
+      "writeTypeColor": "Zadejte písmeno, které jste slyšeli před kroky {{n}} • Vyberte jeho barvu • Potvrďte zadáním",
+      "writeDrawN0": "Nakreslete písmeno, které jste právě slyšeli • Klepnutím potvrďte",
+      "writeDrawColorN0": "Nakreslete písmeno, které jste právě slyšeli • Vyberte jeho barvu • Klepnutím potvrďte",
+      "writeTypeN0": "Zadejte písmeno, které jste právě slyšeli • Enter pro potvrzení",
+      "writeTypeColorN0": "Zadejte písmeno, které jste právě slyšeli • Vyberte jeho barvu • Potvrďte zadáním",
+      "writeResult": "Napište výsledek • Klepnutím potvrďte",
+      "validated": "Ověřeno",
+      "holdMindful": "Podržte buňku pro {{seconds}}s",
+      "swipeMindful": "Přejeďte prstem po {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptivní načasování",
+      "inputKeyboard": "klávesnice",
+      "inputHandwriting": "Rukopis",
+      "writingInput": "Písmena/čísla",
+      "section": {
+        "grid": "Mřížka",
+        "input": "Vstup",
+        "rhythm": "Rytmus",
+        "interface": "Rozhraní",
+        "interfaceNone": "Standardní",
+        "sound": "Zvuk"
+      },
+      "isi": "Interval (ISI)",
+      "stimulusDuration": "Trvání stimulu",
+      "feedbackDuration": "Doba trvání zpětné vazby",
+      "ruleDisplay": "Doba trvání pravidla",
+      "blankInterval": "Prázdný interval",
+      "showProgressBar": "Progress bar",
+      "showInstructions": "In-game instrukce",
+      "arithmeticInterference": "Aritmetické interference",
+      "fullMenu": "Kompletní menu",
+      "gridStyle": "Styl mřížky",
+      "gridStyleClassic": "klasické",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "Přejeďte prstem po {{seconds}}s",
+        "holdMindful": "Podržte buňku pro {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Gesto",
+        "holdDuration": "Počkejte",
+        "writingDuration": "Psaní"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Počkejte",
+      "gestureDuration": "Gesto",
+      "writingDuration": "Psaní"
+    },
+    "image": "Tvar",
+    "digits": "Číslice",
+    "emotions": "Emoce",
+    "words": "Slovo",
+    "tones": "Tón",
+    "spatial": "Směr"
+  },
+  "replay": {
+    "title": "Přehrání relace",
+    "play": "hrát",
+    "pause": "Pauza",
+    "restart": "Restartujte",
+    "speed": "Rychlost",
+    "loading": "Načítání relace...",
+    "unavailable": "Opakované přehrávání pro tuto relaci není k dispozici",
+    "backToStats": "Zpět ke statistikám",
+    "runStack": {
+      "original": "Původní",
+      "correction": "Oprava",
+      "delta": "d'",
+      "inProgress": "Probíhá",
+      "completed": "Dokončeno"
+    },
+    "abandon": "Opustit",
+    "badge": "Přehrát znovu",
+    "completionReport": {
+      "backToHome": "Zpět",
+      "correctAgain": "Znovu opravit",
+      "deltaVsOriginal": "vs originál",
+      "deltaVsParent": "oproti předchozímu běhu",
+      "falseAlarmsSkipped": "Vyvarováno chyb",
+      "missesCorrections": "Opravy",
+      "newFalseAlarms": "Nové chyby",
+      "replayAgain": "Přehrát znovu",
+      "scoreLabel": "skóre",
+      "title": "Oprava dokončena"
+    },
+    "controls": "Ovládací prvky",
+    "correction": "Oprava",
+    "finished": "Konec přehrávání",
+    "home": "Domů",
+    "parseError": "Nelze číst relaci",
+    "tapSlotToPlace": "Klepněte na slot, který chcete umístit",
+    "timeline": "Časová osa",
+    "focusTimeline": {
+      "open": "Zobrazit časovou osu",
+      "close": "Zavřít časovou osu",
+      "title": "Časová osa N-Back",
+      "fillAll": "Vyplňte vše",
+      "fillCard": "Vyplňte kartu"
+    },
+    "hud": {
+      "counterDisplay": "Displej počítadla",
+      "toggleCounterDisplay": "Přepnout zobrazení počítadla"
+    },
+    "validate": "Ověřit"
+  },
+  "recovery": {
+    "title": "Relace přerušena",
+    "description": "Probíhala relace. Chcete pokračovat?",
+    "mode": "Režim",
+    "level": "úroveň",
+    "progress": "Pokrok",
+    "timeAgo": "Čas",
+    "resume": "Obnovit relaci",
+    "startFresh": "Začněte znovu",
+    "staleWarning": "Tato relace je stará, její obnovení může být náročné.",
+    "modes": {
+      "game": "Školení",
+      "activeTraining": "Aktivní trénink",
+      "flowTraining": "Trénink na dvou místech",
+      "dualPickTraining": "Duální výběr",
+      "traceTraining": "Duální trasování"
+    }
+  },
+  "rewards": {
+    "congratulations": "Gratuluji!",
+    "duration": "{{days}} dní Premium",
+    "lifetimeLabel": "Doživotní přístup",
+    "expiresAt": "Platí do {{date}}",
+    "neverExpires": "Nikdy nevyprší",
+    "continue": "Pokračovat",
+    "discovery": {
+      "name": "Discovery pass",
+      "description": "7 dní Premium — Prozkoumejte všechny funkce"
+    },
+    "engagement": {
+      "name": "Zásnubní průkaz",
+      "description": "1 měsíc Premium — Vaše disciplína se vyplácí"
+    },
+    "expert": {
+      "name": "Expertní průkaz",
+      "description": "3 měsíce Premium — Jste opravdový praktik"
+    },
+    "lifetime": {
+      "name": "Doživotní přístup",
+      "description": "Premium forever — Zvládli jste Neurodual"
+    },
+    "xpRemaining": "Zbývající XP",
+    "permanentAccessUnlocked": "Trvalý přístup odblokován",
+    "reachedTheTop": "Dosáhli jste vrcholu!"
+  },
+  "progression": {
+    "level": "Úroveň {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Další úroveň",
+    "reached": "Dosaženo",
+    "inProgress": "Probíhá"
+  },
+  "gridlock": {
+    "nextPuzzle": "Další hádanka →"
+  }
+}

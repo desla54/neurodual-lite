@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "习惯",
+      "performance": "表现",
+      "resilience": "韧性",
+      "exploration": "探索",
+      "milestone": "里程碑",
+      "cognitive": "认知"
+    },
+    "first_session": {
+      "name": "觉醒神经元",
+      "description": "完成首次训练。"
+    },
+    "sessions_10": {
+      "name": "支柱（铜）",
+      "description": "完成10次训练。"
+    },
+    "sessions_25": {
+      "name": "支柱（银）",
+      "description": "完成25次训练。"
+    },
+    "marathoner": {
+      "name": "支柱（金）",
+      "description": "完成50次训练。"
+    },
+    "streak_3": {
+      "name": "萌芽仪式",
+      "description": "连续3天。"
+    },
+    "streak_7": {
+      "name": "日常仪式",
+      "description": "连续7天。"
+    },
+    "streak_14": {
+      "name": "根深蒂固",
+      "description": "连续14天。"
+    },
+    "streak_30": {
+      "name": "钢铁纪律",
+      "description": "连续30天。"
+    },
+    "early_bird": {
+      "name": "早起鸟",
+      "description": "5个不同日期在早上8点前完成训练。"
+    },
+    "night_owl": {
+      "name": "夜猫子",
+      "description": "5 个不同日期在晚 10 点后完成训练。"
+    },
+    "brain_n3": {
+      "name": "敏锐大脑",
+      "description": "达到N-3级。"
+    },
+    "brain_n4": {
+      "name": "强壮大脑",
+      "description": "达到N-4级。"
+    },
+    "brain_n5": {
+      "name": "奥运大脑",
+      "description": "达到N-5级。"
+    },
+    "brain_n7": {
+      "name": "认知精英",
+      "description": "达到N-7级。"
+    },
+    "brain_n10": {
+      "name": "超人",
+      "description": "达到N-10级。"
+    },
+    "sniper": {
+      "name": "狙击手",
+      "description": "N ≥ 2时准确率 > 90%。"
+    },
+    "accuracy_95": {
+      "name": "外科精准",
+      "description": "N ≥ 2时准确率 > 95%。"
+    },
+    "accuracy_98": {
+      "name": "激光",
+      "description": "N ≥ 2时准确率 > 98%。"
+    },
+    "untouchable": {
+      "name": "无懈可击",
+      "description": "N ≥ 2时完美训练（0错误）。"
+    },
+    "rt_500": {
+      "name": "快速反应",
+      "description": "平均反应时间 < 500ms，准确率≥70%。"
+    },
+    "flash": {
+      "name": "闪电侠",
+      "description": "平均反应时间 < 400ms，准确率≥70%。"
+    },
+    "rt_300": {
+      "name": "雷霆",
+      "description": "平均反应时间 < 300ms，准确率≥70%。"
+    },
+    "consistent": {
+      "name": "稳如磐石",
+      "description": "RT标准差 < 100ms（需≥10次响应）。"
+    },
+    "dprime_master": {
+      "name": "d'大师",
+      "description": "单次训练d-prime > 3.0。"
+    },
+    "dprime_4": {
+      "name": "SDT专家",
+      "description": "单次训练d-prime > 4.0。"
+    },
+    "no_pause": {
+      "name": "不间断",
+      "description": "连续5次训练无暂停，准确率≥75%。"
+    },
+    "steady_hands": {
+      "name": "稳健之手",
+      "description": "训练中无误触（准确率≥80%）。"
+    },
+    "zen_master": {
+      "name": "禅宗大师",
+      "description": "连续10次训练无退出。"
+    },
+    "comeback_kid": {
+      "name": "绝地反击",
+      "description": "降级后重新升回。"
+    },
+    "persistent": {
+      "name": "坚持不懈",
+      "description": "失败后同一天完成3次训练。"
+    },
+    "second_wind": {
+      "name": "再获新力",
+      "description": "前半段与后半段之间提升d-prime（需d′ ≥ 2.0）。"
+    },
+    "plateau_breaker": {
+      "name": "突破瓶颈",
+      "description": "在同一级别停留10+次训练后取得进展。"
+    },
+    "no_surrender": {
+      "name": "永不放弃",
+      "description": "25次训练无退出。"
+    },
+    "ironwill": {
+      "name": "钢铁意志",
+      "description": "50次训练无退出。"
+    },
+    "audiophile": {
+      "name": "听觉达人",
+      "description": "听觉 > 80% 但视觉 < 70%。"
+    },
+    "eagle_eye": {
+      "name": "鹰眼",
+      "description": "视觉 > 80% 但听觉 < 70%。"
+    },
+    "synchronized": {
+      "name": "同步",
+      "description": "听觉和视觉分数相差在5%以内（需≥60%）。"
+    },
+    "dual_master": {
+      "name": "Dual大师",
+      "description": "同一训练中听觉和视觉均 > 85%（≥6个诱饵/模态）。"
+    },
+    "dual_elite": {
+      "name": "Dual精英",
+      "description": "N ≥ 3时同一训练中听觉和视觉均 > 90%（≥6个诱饵/模态）。"
+    },
+    "centurion": {
+      "name": "百夫长",
+      "description": "完成100次训练。"
+    },
+    "sessions_250": {
+      "name": "传奇（翡翠）",
+      "description": "完成250次训练。"
+    },
+    "sessions_500": {
+      "name": "不朽（钻石）",
+      "description": "完成500次训练。"
+    },
+    "trials_500": {
+      "name": "修行者",
+      "description": "累计500次试验。"
+    },
+    "trials_1000": {
+      "name": "训练有素",
+      "description": "累计1,000次试验。"
+    },
+    "trials_5000": {
+      "name": "久经沙场",
+      "description": "累计5,000次试验。"
+    },
+    "trials_10k": {
+      "name": "万次试验",
+      "description": "累计10,000次试验。"
+    },
+    "trials_50k": {
+      "name": "泰坦",
+      "description": "累计50,000次试验。"
+    },
+    "streak_90": {
+      "name": "完美季度",
+      "description": "连续90天。"
+    },
+    "streak_365": {
+      "name": "完美一年",
+      "description": "连续365天。"
+    },
+    "veteran": {
+      "name": "老兵",
+      "description": "使用满1年。"
+    },
+    "metronome": {
+      "name": "节拍器",
+      "description": "≥20次试验中RT方差 < 50ms（需主动响应）。"
+    },
+    "flow_state": {
+      "name": "心流境界",
+      "description": "整次训练中检测到心流状态。"
+    },
+    "sang_froid": {
+      "name": "冷静沉着",
+      "description": "错误后无连锁错误（准确率≥70%）。"
+    },
+    "imperturbable": {
+      "name": "岿然不动",
+      "description": "全程训练不失专注（准确率≥60%）。"
+    },
+    "comeback_strong": {
+      "name": "强势回归",
+      "description": "离开3天以上后打破d-prime纪录（d′ ≥ 2.5）。"
+    }
+  }
+}

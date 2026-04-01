@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Nasıl hissediyorsun?",
+      "tired": "Yorgun",
+      "normal": "normal",
+      "energized": "Enerji verilmiş"
+    },
+    "aria": {
+      "trialTimer": "Deneme zamanlayıcısı",
+      "positionMatch": "Pozisyon eşleşmesi",
+      "audioMatch": "Ses eşleşmesi",
+      "audioLetter": "Sesli mektup:",
+      "traceGrid": "Izgarayı izle"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Senkronizasyon monitörünü değiştir",
+      "start": "başlangıç",
+      "end": "son",
+      "pinLabel": "pin",
+      "pinTitle": "Ekrana sabitle",
+      "inputLabel": "giriş",
+      "inputTitle": "Giriş gecikme profilini değiştir (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "açık",
+      "off": "kapalı",
+      "hideLabel": "saklamak",
+      "hideTitle": "Gizle (syncHud=1 veya ND_AUDIO_DEBUG_TIMING=1 olmadığı sürece)",
+      "endRef": {
+        "audio": "ses",
+        "expected": "beklenen"
+      },
+      "labels": {
+        "trial": "deneme",
+        "lagShow": "Ekran gecikmesi",
+        "lagHide": "Geciktirici maske",
+        "winErr": "hata kazan",
+        "endRef": "son referans",
+        "visualPreP95": "görsel_ön p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "görsel_post s.95",
+        "inputToDispatchP95": "giriş->gönder p95",
+        "inputToCommitP95": "giriş-> p95'i kabul et",
+        "inputToPaintP95": "giriş->p95'i boya",
+        "inputPending": "giriş bekleniyor",
+        "inputSamples": "giriş örnekleri",
+        "touchSamples": "dokunma örnekleri",
+        "mouseSamples": "fare örnekleri",
+        "keyboardSamples": "klavye örnekleri",
+        "latestMethod": "en son (yöntem)",
+        "latestModality": "son modalite",
+        "audioCueMode": "ses ipuçları",
+        "audioCodec": "kodlayıcı"
+      },
+      "resetInputProfiler": "giriş profili oluşturucuyu sıfırla"
+    },
+    "hud": {
+      "resume": "Devam et",
+      "pause": "Duraklat",
+      "quit": "Çık",
+      "restart": "Yeniden başlat",
+      "spaceToStart": "Başlamak için boşluk",
+      "settings": "Ayarlar",
+      "enterToAdvance": "İlerlemek için girin",
+      "trial": "Deneme",
+      "muteTexture": "Arka plan sesini kapat"
+    },
+    "status": {
+      "paused": "Duraklatıldı"
+    },
+    "completed": "Tamamlandı",
+    "starting": {
+      "getReady": "Hazır olun..."
+    },
+    "quitModal": {
+      "title": "Oturumdan çıkılsın mı?",
+      "message": "İlerlemeniz kaydedilmeyecek.",
+      "confirm": "Çık",
+      "cancel": "Devam et",
+      "close": "Kapat"
+    },
+    "controls": {
+      "position": "Pozisyon",
+      "position2": "Poz. 2",
+      "position3": "Poz. 3",
+      "position4": "Poz. 4",
+      "visvis": "Görünür ve n-vis",
+      "visaudio": "Görünür ve n-ses",
+      "audiovis": "Ses ve görsel olmayan",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Ses",
+      "audio2": "Ses 2",
+      "color": "Renk",
+      "arithmetic": "Aritmetik",
+      "image": "Şekil"
+    },
+    "arithmetic": {
+      "answer": "Cevap",
+      "clear": "Temizle",
+      "hint": "Klavye: 0–9 · '-' işareti için · '.' ondalık sayılar için · Temizlemek için geri tuşu"
+    },
+    "navigation": {
+      "back": "Geri"
+    },
+    "xp": {
+      "title": "Kazanılan XP",
+      "base": "Baz (N-{{level}})",
+      "performance": "Performans",
+      "accuracy": "doğruluk",
+      "streakBonus": "Seri bonusu",
+      "dailyBonus": "Günün ilki",
+      "badgeBonus": "Rozetler",
+      "flowBonus": "Çift Sıra Bonusu",
+      "confidenceMultiplier": "Güven",
+      "dailyCapReached": "Günlük XP sınırına ulaşıldı",
+      "levelReached": "{{level}} düzeyine ulaşıldı!"
+    },
+    "badges": {
+      "newUnlocked": "Yeni rozetlerin kilidi açıldı"
+    },
+    "getReady": "Hazır olun...",
+    "layoutEdit": {
+      "done": "Bitti",
+      "reset": "Sıfırla",
+      "instructions": "Yeniden sıralamak için bölgeleri sürükleyin. Tutamaçları kullanarak yeniden boyutlandırın.",
+      "title": "Düzenleme modu",
+      "cancel": "İptal",
+      "save": "Kilit",
+      "editLayout": "Düzeni düzenle"
+    },
+    "paused": "Duraklatıldı",
+    "pressEscapeToResume": "Devam etmek için Escape tuşuna basın",
+    "settings": {
+      "editLayout": "Düzeni düzenle",
+      "gridAndButtons": "Izgara ve düğmeler",
+      "swapPositionAudio": "Konumu / Sesi Değiştir",
+      "title": "Ayarlar",
+      "quickHint": "Oyundan çıkmadan birkaç ayarı yapın.",
+      "quickUnavailable": "Bu mod için henüz hızlı ayar mevcut değil."
+    },
+    "pinkNoiseInfo": "Her uyarana bir arka plan tonu eşlik eder. Ses ayarlarında özelleştirebilir veya devre dışı bırakabilirsiniz.",
+    "pinkNoiseDismiss": "Devam et",
+    "audioMode": "Ses modu",
+    "cogTask": {
+      "precision": "doğruluk",
+      "avgRt": "Ort. RT",
+      "avgRtShort": "Ort. RT",
+      "trials": "Denemeler",
+      "correct": "Doğru",
+      "errors": "Hatalar",
+      "effect": "Etki",
+      "restart": "Yeniden başlat",
+      "home": "Ana sayfa",
+      "performance": "Performans",
+      "trialDetail": "Deneme ayrıntısı",
+      "setDetail": "Ayrıntıyı ayarla",
+      "roundDetail": "Yuvarlak detay",
+      "problemDetail": "Sorun ayrıntısı",
+      "phaseDetail": "Faz detayı",
+      "feedbackCorrect": "Doğru",
+      "feedbackIncorrect": "Yanlış",
+      "feedbackTimeout": "Çok yavaş!",
+      "preparing": "Hazır olun...",
+      "loading": "Yükleniyor...",
+      "left": "Sol",
+      "right": "Sağ",
+      "up": "Yukarı",
+      "down": "Aşağı",
+      "congruent": "Uyumlu",
+      "incongruent": "uyumsuz",
+      "congruencyEffect": "Uyumluluk etkisi",
+      "maxSpan": "Maksimum açıklık",
+      "startingSpan": "Başlangıç aralığı",
+      "maxSpanReached": "Maksimum aralığa ulaşıldı",
+      "longestStreak": "En uzun doğru seri",
+      "series": "Çizgi",
+      "avgResponseTime": "Ortalama yanıt süresi",
+      "recall": "Geri çağırma",
+      "expected": "Beklenen",
+      "submit": "Gönder",
+      "cancel": "İptal",
+      "clear": "Temizle",
+      "delete": "DEL",
+      "true": "Doğru",
+      "false": "Yanlış",
+      "target": "Hedef",
+      "nonTarget": "Hedef dışı",
+      "distractor": "Dikkat dağıtıcı",
+      "same": "Aynı",
+      "different": "Farklı",
+      "identical": "Aynı",
+      "mirror": "Ayna",
+      "symmetric": "Simetrik",
+      "asymmetric": "Asimetrik",
+      "symShort": "Sym.",
+      "present": "Mevcut",
+      "absent": "yok",
+      "noTrials": "Hiçbir deneme tamamlanmadı.",
+      "noSets": "Hiçbir set tamamlanmadı.",
+      "noRounds": "Hiçbir tur tamamlanmadı.",
+      "noProblems": "Hiçbir sorun tamamlanmadı.",
+      "noPhases": "Hiçbir aşama tamamlanmadı.",
+      "sets": "Setler",
+      "rounds": "Turlar",
+      "equations": "Denklemler",
+      "sentences": "Cümleler",
+      "equationAccuracy": "Denklem doğruluğu",
+      "forward": "İleri",
+      "backward": "Geri",
+      "forwardMaxSpan": "İleri maksimum aralık",
+      "backwardMaxSpan": "Geriye doğru maksimum aralık",
+      "odd": "Tek",
+      "even": "Hatta",
+      "score": "Puan",
+      "easy": "Kolay",
+      "hard": "Sert",
+      "totalTrials": "Toplam denemeler",
+      "totalErrors": "Toplam hatalar",
+      "totalErrShort": "Toplam Hata.",
+      "hits": "İsabetler",
+      "misses": "Kaçırılanlar",
+      "falseAlarms": "Yanlış Al.",
+      "correctRejections": "Düzelt. Red.",
+      "yes": "Evet",
+      "no": "Hayır",
+      "sessionInterrupted": "Oturum kesintiye uğradı",
+      "reverseOrder": "ters sırada",
+      "normalOrder": "sırayla",
+      "lnsInstruction": "Artan sayılar, ardından A'dan Z'ye harfler",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simon etkisi",
+        "blue": "Mavi",
+        "red": "Kırmızı",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Bu numarayı temsil et",
+        "submit": "Gönder",
+        "rodLabel": "Çubuk {{n}}",
+        "heavenBead": "Cennet boncuğu (değer 5)",
+        "earthBead": "Toprak boncuğu (değer 1)",
+        "instrBeadTitle": "Boncuklar nasıl çalışır?",
+        "instrBeadDesc": "Her çubuk bir rakamı temsil eder. Üstteki boncuk (cennet) 5 değerindedir. Alttaki boncukların (toprak) her biri 1 değerindedir. Boncukları etkinleştirmek için orta çubuğa doğru hareket ettirin.",
+        "instrExampleTitle": "Örnek: 7",
+        "instrExampleDesc": "7 = gök boncuğu aşağı (5) + 2 toprak boncuğu yukarı (2). Boncukları taşımak için dokunun veya sürükleyin.",
+        "instrGoalTitle": "Amacınız",
+        "instrGoalDesc": "Bir sayı görünecektir. Boncukları onu temsil edecek şekilde ayarlayın ve ardından Gönder'e dokunun. Doğru ve hızlı olun!",
+        "startButton": "Başlat",
+        "settings": "Ayarlar",
+        "closeSettings": "Ayarları kapat",
+        "settingsRods": "Çubuk sayısı",
+        "settingsRodsHint": "Oyun ayarlarında N-Seviyesi aracılığıyla ayarlayın",
+        "settingsTrials": "Oturum başına deneme sayısı",
+        "settingsTrialsHint": "Oyun ayarlarında Denemeler aracılığıyla ayarlayın",
+        "settingsRange": "Sayı aralığı"
+      },
+      "stroop": {
+        "pressInkColorButton": "Mürekkep rengiyle eşleşen düğmeye basın",
+        "redWord": "RED",
+        "redLabel": "Kırmızı",
+        "blueWord": "BLUE",
+        "blueLabel": "Mavi",
+        "greenWord": "GREEN",
+        "greenLabel": "Yeşil",
+        "yellowWord": "SARI",
+        "yellowLabel": "Sarı"
+      },
+      "stroopFlex": {
+        "followRule": "Kural",
+        "ruleInk": "Mürekkep rengi",
+        "ruleWord": "Yazılı kelime",
+        "pressMatchingRuleButton": "Geçerli kuralla eşleşen düğmeye basın"
+      },
+      "goNogo": {
+        "goTrials": "Denemelere git",
+        "nogoTrials": "Geçilmez denemeler",
+        "hitRate": "İsabet oranı (Git)",
+        "faRate": "Yanlış alarm oranı (Gitmez)",
+        "meanRt": "Ortalama reaksiyon süresi",
+        "sensitivity": "hassasiyet",
+        "press": "Basın",
+        "withhold": "Stopaj"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Sinyal RT'yi Durdur)",
+        "ssdMean": "Ortalama SSD (başarılı duruşlar)",
+        "ssd": "SSD",
+        "goRt": "RT'ye git",
+        "successfulInhibition": "Başarılı engelleme",
+        "stop": "Durdur",
+        "meanGoRt": "Ortalama GO reaksiyon süresi",
+        "ssrtInvalid": "yetersiz veri",
+        "ssrtNegativeNote": "SSRT negatiftir (ortalama SSD > ortalama GO RT) — geçerli deneme sayımına göre sonuç güvenilmezdir."
+      },
+      "pvt": {
+        "rtMedian": "Medyan RT",
+        "rtMean": "Ortalama RT",
+        "fastest": "En hızlı",
+        "slowest": "En yavaş",
+        "falseStarts": "Yanlış başlangıçlar",
+        "falseStartsShort": "Yanlış st.",
+        "lapses": "Gecikmeler",
+        "mean": "ortalama",
+        "reaction": "Tepki",
+        "wait": "Bekle...",
+        "pressStimulus": "Heyecanı bekleyin...",
+        "pressAnywhere": "Sayaç göründüğünde herhangi bir yere basın",
+        "press": "Basmak!",
+        "tooEarly": "Çok erken!",
+        "lapsesLabel": "Gecikmeler"
+      },
+      "posner": {
+        "cueingEffect": "İşaret efekti",
+        "validMeanRt": "Ortalama geçerli RT",
+        "invalidMeanRt": "Geçersiz RT demek",
+        "validAccuracy": "Geçerli doğruluk",
+        "invalidAccuracy": "Geçersiz doğruluk",
+        "validTrials": "Geçerli denemeler",
+        "invalidTrials": "Geçersiz denemeler",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Env.",
+        "valid": "Geçerli",
+        "invalid": "Geçersiz"
+      },
+      "antisaccade": {
+        "cost": "Antisakkad maliyeti",
+        "proAccuracy": "Profesyonel doğruluk",
+        "antiAccuracy": "Anti doğruluk",
+        "pro": "Profesyonel",
+        "anti": "Anti",
+        "proRt": "Profesyonel RT",
+        "antiRt": "RT Karşıtı",
+        "proMeanRt": "Seğirme yanlısı RT demek",
+        "antiMeanRt": "Ortalama seğirme önleyici RT",
+        "costLabel": "Maliyet",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-bağlam",
+        "axAccuracy": "AX Doğruluğu",
+        "bxFa": "BX yanlış alarmı",
+        "ayError": "AY hatası",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "evet hata",
+        "cogControl": "Bilişsel kontrol",
+        "target": "Hedef",
+        "nonTarget": "Hedef dışı"
+      },
+      "ant": {
+        "scores": "ANT Skorları",
+        "alerting": "Uyarı (işaret yok – çift işaret)",
+        "orienting": "Yönlendirme (merkez – uzaysal)",
+        "executive": "Yönetici (uyumsuz - uyumlu)"
+      },
+      "changeDet": {
+        "kCowan": "K Kapasitesi (Cowan)",
+        "sameShort": "Aynı",
+        "diffShort": "Fark"
+      },
+      "swm": {
+        "withinErrors": "Arama içi hatalar",
+        "betweenErrors": "Arama arası hatalar",
+        "totalErrors": "Toplam hatalar",
+        "errorFree": "Hatasız",
+        "foundErrorFree": "Hatasız bulundu!",
+        "errorCount": "{{count}} hata(lar)",
+        "tapsLabel": "Musluklar"
+      },
+      "taskSwitch": {
+        "switchCost": "Geçiş maliyeti",
+        "rtRepeat": "Ortalama RT (Tekrar)",
+        "rtSwitch": "Ortalama RT (Anahtar)",
+        "oddEven": "Tek / Çift",
+        "highLow": "Yüksek / Düşük",
+        "title": "Görev Değiştirme"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A zamanı",
+        "tmtBTime": "TMT-B zamanı",
+        "executiveCost": "Yönetici maliyeti (B – A)",
+        "executiveCostShort": "Yönetici maliyeti (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Hata. bir",
+        "errB": "Hata. B",
+        "preparingB": "TMT-B hazırlanıyor...",
+        "tmtADone": "TMT-A bitti!",
+        "totalErrors": "Toplam hatalar",
+        "tmtALabel": "TMT-A: Sayılar",
+        "tmtBLabel": "TMT-B: Sayılar ve Harfler",
+        "next": "Sonraki",
+        "heroTitle": "Yol Yapımı",
+        "alternateHint": "Alternatif sayılar ve harfler: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI dk.",
+        "fastestIsi": "En hızlı ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referans kartları",
+        "testCard": "Test kartı",
+        "categories": "Kategoriler",
+        "categoriesCompleted": "Tamamlanan kategoriler",
+        "perseverativeErrors": "Perseveratif hatalar",
+        "persevShort": "Persev.",
+        "avgRt": "Ortalama RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "Açıya göre RT",
+        "findMatch": "Eşleşen şekli bulun",
+        "reference": "Referans şekli",
+        "referenceLabel": "Ref.",
+        "candidate": "aday",
+        "distractor": "Diğer",
+        "mirrorErrors": "Aynalar",
+        "title": "Zihinsel Rotasyon"
+      },
+      "sternberg": {
+        "rtBySize": "Belirlenen boyuta göre RT",
+        "title": "Sternberg",
+        "avgRt": "Ortalama RT"
+      },
+      "visualSearch": {
+        "rtBySize": "Belirlenen boyuta göre RT",
+        "title": "Görsel Arama"
+      },
+      "ospan": {
+        "typeLetters": "Harfleri sırayla yazın",
+        "trueOrFalse": "Doğru mu yanlış mı?",
+        "processingWarning": "Denklem doğruluğu %85'in altında — sonuçlar gerçek çalışan bellek kapasitesini yansıtmayabilir"
+      },
+      "readingSpan": {
+        "s0": "Güneş doğudan doğar.",
+        "s1": "Balıklar ağaçlarda yaşar.",
+        "s2": "Paris Fransa'nın başkentidir.",
+        "s3": "Bir üçgenin dört kenarı vardır.",
+        "s4": "Su 100 derecede kaynar.",
+        "s5": "Kediler sürüngenlerdir.",
+        "s6": "Dünya Güneş'in etrafında dönüyor.",
+        "s7": "Çikolata kayaların üzerinde yetişir.",
+        "s8": "Bir yıl on iki aydan oluşur.",
+        "s9": "Kuşlar su altında nefes alır.",
+        "s10": "Süt beyazdır.",
+        "s11": "Arabalar raylar üzerinde ilerliyor.",
+        "s12": "Arılar bal üretir.",
+        "s13": "Kar sıcak.",
+        "s14": "Kalp kanı pompalar.",
+        "s15": "Taşlar suyun üzerinde yüzer.",
+        "s16": "Ay geceyi aydınlatır.",
+        "s17": "Yılanların bacakları vardır.",
+        "s18": "Ahşap su üzerinde yüzer.",
+        "s19": "Ateş soğuk.",
+        "s20": "İnsanların beş duyusu vardır.",
+        "s21": "Örümceklerin altı bacağı vardır.",
+        "s22": "Ekmek unla yapılır.",
+        "s23": "Balinalar balıktır.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "ÇİÇEK",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "ORMAN",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "SABAH",
+        "d1": "HEART",
+        "d2": "KUMAŞ",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "BAHÇE",
+        "d6": "GÖLGE",
+        "d7": "BELL",
+        "d8": "KÖPRÜ",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Okuma Aralığı"
+      },
+      "memorizeSequence": "Sırayı ezberleyin...",
+      "reproduce": "Çoğalt",
+      "span": "Açıklık",
+      "size": "Boyut",
+      "fixateCenter": "Merkeze sabitle...",
+      "identicalOrMirror": "Aynı mı yoksa Ayna mı?",
+      "wellInhibited": "Peki engellendi!",
+      "badDirection": "Yanlış yön!",
+      "stopMissed": "Kaçırmayı bırak!",
+      "falseAlarm": "Yanlış alarm!",
+      "pressNow": "Basmak!",
+      "hitBang": "Vurmak!",
+      "miss": "Kayıp!",
+      "doNotTouch": "Dokunma!",
+      "whichDirection": "Hangi yöne?",
+      "stopBang": "DURMAK!",
+      "cueBang": "İşaret!",
+      "memorizeLetters": "Bu harfleri ezberleyin",
+      "memorizeLetter": "Bu mektubu ezberleyin",
+      "memorizeSequenceLetters": "Sırayı ezberleyin...",
+      "memorizeDigits": "Rakamları ezberleyin...",
+      "memorizeColors": "Renkleri ezberleyin!",
+      "memorizePosition": "Bu pozisyonu ezberleyin...",
+      "retainWord": "Bu kelimeyi hatırla",
+      "retainNumber": "Bu numarayı hatırla",
+      "addWithPrevious": "Öncekiyle ekle",
+      "sentenceTrueOrFalse": "Bu cümle doğru mu?",
+      "findRedCircle": "Kırmızı daireyi bulun!",
+      "findHiddenToken": "Gizli jetonu bulun!",
+      "chooseMatchingCard": "Eşleşen kartı seçin",
+      "arrowDirection": "Merkezi okun yönü?",
+      "attention": "Dikkat...",
+      "preparation": "Hazırlık...",
+      "recallLettersInOrder": "{{count}} harflerini sırayla hatırlayın",
+      "recallWordsInOrder": "{{count}} kelimelerini sırayla hatırlayın",
+      "recallLastLetters": "Son {{count}} harflerini hatırla",
+      "typeLastLetters": "Son {{count}} harflerini yazın",
+      "recallPositionsInOrder": "Geri çağırma: konumlara sırayla dokunun",
+      "pressEnterToValidate": "Doğrulamak için Enter'a basın",
+      "pressAnywhereToContinue": "Devam etmek için herhangi bir yere basın",
+      "temporalPrecision": "Zamansal hassasiyet",
+      "estimationPrecision": "Tahmin kesinliği",
+      "touchStartClockwise": "Başlangıç noktasına dokunun ve saat yönünde kaydırın",
+      "touchAtoB": "A noktasına dokunun, ardından B'ye kaydırın",
+      "cue": "İşaret",
+      "retainCue": "İşareti hatırla...",
+      "targetOrNot": "Hedef mi yoksa Hedef Dışı mı?",
+      "whereIsTarget": "Hedef nerede?",
+      "wasLetterInSet": "Bu mektup setin içinde miydi?",
+      "regular": "düzenli",
+      "regularity": "Düzenlilik",
+      "msDeviation": "MS sapması",
+      "boxes": "kutular",
+      "found": "{{count}} bulundu",
+      "past": "Geçmiş",
+      "tooSlow": "çok yavaş",
+      "tooFast": "çok hızlı",
+      "timeout": "Çok yavaş!",
+      "answer": "Cevap",
+      "dontPress": "Basmayın!",
+      "feedbackWrong": "Yanlış!",
+      "level": "Seviye",
+      "wrong": "Yanlış",
+      "you": "sen",
+      "paused": "Duraklat",
+      "instructions": "Talimatlar",
+      "selectAnswer": "Bir yanıt seçin",
+      "tapTheOddOne": "Tuhaf olana dokunun",
+      "pal": {
+        "subtitle": "Eşleştirilmiş Associates Öğrenimi",
+        "pairsLearned": "Öğrenilen çiftler",
+        "maxSetSize": "Maksimum Ayar Boyutu",
+        "totalErrors": "Toplam Hatalar",
+        "round": "Yuvarlak",
+        "pairs": "çiftler",
+        "meanRt": "Ortalama RT (doğru)",
+        "studyPhase": "Çalışın - pozisyonları ezberleyin",
+        "testPhase": "Bu şekil neredeydi?",
+        "studying": "ders çalışıyor",
+        "tapBox": "Bu şeklin gösterildiği kutuya dokunun"
+      },
+      "visualLogic": {
+        "easy": "Kolay",
+        "hard": "Sert",
+        "oneRule": "1 kural",
+        "twoRules": "2 kural",
+        "findMissing": "Eksik parçayı bulun",
+        "maxLevel": "Maksimum Seviye",
+        "finalLevel": "Son Seviye",
+        "nextMode": "Sonraki oturum modu",
+        "adaptive": "Uyarlanabilir",
+        "fixed": "Sabit",
+        "spm": "SPM 60",
+        "level": "Seviye",
+        "confirm": "Doğrulayıcı"
+      },
+      "tetrisMind": {
+        "findPiece": "Deliğe hangi parça uyuyor?",
+        "target": "Hedef"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Aşırı tahmin önyargısı",
+        "underestimationBias": "Hafife alma önyargısı",
+        "noBias": "Önemli bir önyargı yok",
+        "avgError": "Ortalama Hata",
+        "overestimations": "Fazla tahminler",
+        "underestimations": "Hafife almalar",
+        "avgAbsoluteError": "Ort. Mutlak Hata",
+        "avgRelativeError": "Ort. Göreli Hata",
+        "cv": "Değişim Katsayısı",
+        "watchDemo": "Süreyi izle",
+        "getReady": "Hazır olun...",
+        "holdToReproduce": "Çoğaltmak için basılı tutun!",
+        "tooLong": "Çok uzun!",
+        "tooShort": "Çok kısa!",
+        "target": "Hedef",
+        "demoLabel": "Referans",
+        "yourTurn": "Sıra sende",
+        "watchInstruction": "İzle",
+        "holdInstruction": "Çoğaltmak için basılı tutun",
+        "heroTitle": "Zaman Tahmini"
+      },
+      "puzzleDetails": "Bulmaca ayrıntıları",
+      "roundDetails": "Yuvarlak ayrıntılar",
+      "stageResults": "Aşama Sonuçları",
+      "recognized": "Tanındı",
+      "missed": "Cevapsız",
+      "win": "Kazan",
+      "lose": "Kaybetmek",
+      "winBang": "Kazanç!",
+      "loseBang": "Kaybetmek!",
+      "correctBang": "Doğru!",
+      "wrongBang": "Yanlış!",
+      "completeBang": "Tamamlamak!",
+      "repeatedBang": "Tekrarlandı!",
+      "incompleteBang": "Tamamlanmamış!",
+      "levelCompleteBang": "Seviye Tamamlandı!",
+      "timesUp": "Süre doldu",
+      "seeResults": "Sonuçları görün",
+      "nextRound": "Sonraki tur",
+      "startBlock": "Bloğu başlat",
+      "continue": "Devam et",
+      "patientChoice": "Hasta seçimi",
+      "immediateChoice": "Hemen seçim",
+      "immediate": "hemen",
+      "digitSpan": {
+        "heroTitle": "Rakam Aralığı"
+      },
+      "resume": "Devam et",
+      "numericalStroop": {
+        "heroTitle": "Sayısal Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Hat Yönü Kararı"
+      },
+      "chain": "Zincir",
+      "undo": "Geri al",
+      "vocalProsody": {
+        "heroTitle": "Vokal Prozodi"
+      },
+      "letterNumber": {
+        "title": "Harf-Numara Sırası",
+        "expectedAnswer": "Beklenen cevap"
+      },
+      "patternComparison": {
+        "heroTitle": "Desen Karşılaştırması"
+      },
+      "speedPack": {
+        "title": "Hız Paketi",
+        "whenFoldedWhichTouch": "Katlandığında hangi kareler birbirine değiyor?"
+      },
+      "dotProbe": {
+        "heroTitle": "Nokta Probu"
+      },
+      "reflex": {
+        "heroTitle": "Refleks"
+      },
+      "hooperVisual": {
+        "title": "Hooper Görsel Organizasyonu",
+        "whatIsThisObject": "Bu nesne nedir?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blok Tasarımı"
+      },
+      "accuracy": "doğruluk",
+      "avgTime": "Ortalama zaman",
+      "check": "Kontrol et",
+      "dualTrace": {
+        "playArea": "Oyun alanı"
+      },
+      "paperFolding": {
+        "title": "Kağıt Katlama",
+        "foldSequenceHolePunch": "Katlama sırası ve delik açma",
+        "whichPatternWhenUnfolded": "Açıldığında hangi desen?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Sözcüksel Karar"
+      },
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxGrid": "Maksimum ızgara",
+      "symmetry": "Simetri",
+      "threshold": "Eşik",
+      "hitRate": "İsabet oranı",
+      "faRate": "FA'nın Taux'u",
+      "changeDetection": {
+        "heroTitle": "Algılamayı Değiştir"
+      },
+      "syllogisms": {
+        "heroTitle": "Kıyaslamalar"
+      },
+      "subitizing": {
+        "title": "Sübvansiyon",
+        "range": "Aralık"
+      },
+      "jitter": "Titreşim",
+      "sentenceCompletion": {
+        "title": "Cümle Tamamlama (Kapanış)",
+        "highCloze": "Yüksek kapatma",
+        "lowCloze": "Düşük kapatma"
+      },
+      "grid": "Izgara",
+      "pinballRecall": {
+        "title": "Langırt Hatırlama",
+        "byBounces": "Sıçrayarak",
+        "whereDoesItLand": "Nereye iniyor?"
+      },
+      "mean": "ortalama",
+      "speedup": "Hızlandırma",
+      "memorize": "Ezberle",
+      "time": "Zaman",
+      "surfaceDevelopment": {
+        "title": "Yüzey Geliştirme",
+        "whichEdgeMatches": "Hangi kenar eşleşiyor?"
+      },
+      "crowding": {
+        "heroTitle": "Görsel Kalabalıklık",
+        "spacing": "Aralık"
+      },
+      "patternRecognition": {
+        "heroTitle": "Desen Tanıma"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Deneme",
+        "position": "Pozisyon",
+        "audio": "Ses"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Sahne Davetsiz Misafiri",
+        "detect": "Algıla"
+      },
+      "eyesTest": {
+        "heroTitle": "Gözlerdeki Zihni Okumak"
+      }
+    },
+    "gridlock": {
+      "undone": "Son hamle geri alındı.",
+      "resetMessage": "Bulmaca sıfırlama.",
+      "hintMessage": "İpucu: {{pieceId}} {{dir}} {{delta}}'yi kaydırın.",
+      "previewCountdown": "Tahtayı inceleyin. {{seconds}}s içinde başlar.",
+      "challenge": "Mücadele",
+      "optimal": "Optimum",
+      "moves": "Hareketler",
+      "piece": "Parça {{id}}",
+      "targetPiece": "Parça {{id}} (hedef - kırmızı araba)",
+      "challengeClassic": "Klasik",
+      "challengePrecision": "Hassasiyet",
+      "challengeMemory": "Bellek",
+      "challengeTimed": "Zamanlanmış",
+      "hint": "İpucu",
+      "reset": "Sıfırla",
+      "undo": "Geri al",
+      "nextPuzzle": "Sonraki bulmaca →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "1 İsabeti Engelle",
+      "block2Hits": "2 Darbeyi Engelle",
+      "goPositive": "Git = Olumlu",
+      "goNegative": "Git = Negatif",
+      "title": "Duygusal Gitme/Gitmeme",
+      "block1CommissionErrors": "1 komisyon hatalarını engelle",
+      "block2CommissionErrors": "2 komisyon hatasını engelle",
+      "block": "Blok",
+      "go": "Git"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Ortalama geçiş oranı",
+      "meanSwitchesfigure": "Ortalama anahtarlar/şekil",
+      "totalSwitches": "Toplam anahtarlar",
+      "title": "Belirsiz Rakamlar",
+      "meanSwitches": "Ortalama Anahtarlar",
+      "switchRate": "Geçiş Hızı",
+      "figures": "Rakamlar",
+      "totalSwitchesLabel": "Toplam Anahtarlar",
+      "duration": "Süre",
+      "switchesCount": "s | Anahtarlar:",
+      "switchButton": "Anahtar!"
+    },
+    "analogies": {
+      "verbalCorrect": "Sözlü doğru",
+      "timeout": "Zaman aşımı",
+      "title": "Analojiler"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS Karşılaştırması",
+      "ratio": "Oran",
+      "leftMore": "Daha fazla kaldı",
+      "rightMore": "Daha fazlası"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Yanlış alarm oranı",
+      "grammatical": "Dilbilgisi",
+      "memorizeTheseStrings": "Bu dizeleri ezberleyin",
+      "testPhase": "Test Aşaması",
+      "ungrammatical": "Dilbilgisi dışı",
+      "learning": "Öğrenme",
+      "test": "testi",
+      "title": "Yapay Dilbilgisi",
+      "learningPhase": "Öğrenme",
+      "testIntroText": "Artık yeni dizeler göreceksiniz. Her birinin az önce incelediğiniz dizelerle aynı kurallara uyup uymadığına karar verin.",
+      "startTest": "Testi Başlat",
+      "followsRules": "Kurallara uyar",
+      "breaksRules": "Kuralları çiğniyor"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Yanıp Sönme Büyüklüğü",
+      "title": "Dikkat Göz Kırpması",
+      "blink": "Yanıp sönüyor",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1. yeşil harf?",
+      "secondGreenLetter": "2. yeşil harf?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Maliyeti Yakala",
+      "singletonPresent": "Singleton Mevcut",
+      "noSingleton": "Tekil Yok",
+      "title": "Dikkatli Yakalama",
+      "capture": "Yakala",
+      "horizontal": "Yatay",
+      "vertical": "Dikey"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Ciltleme Penceresi",
+      "title": "Görsel-İşitsel Ciltleme",
+      "window": "Pencere",
+      "pssLabel": "PSS (Öznel Eşzamanlılık Noktası)",
+      "simultaneousOrNot": "Eş zamanlı mı değil mi?",
+      "simultaneous": "Eş zamanlı",
+      "notSimultaneous": "Eş zamanlı değil"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Süre Eşiği",
+      "reference": "Referans",
+      "weberFraction": "Weber Kesri",
+      "title": "İşitme Süresi",
+      "threshold": "Eşik",
+      "weber": "Weber",
+      "whichLonger": "Hangisi daha uzun?",
+      "firstLonger": "İlk önce daha uzun",
+      "secondLonger": "İkinci daha uzun"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Ayarlanmış ortalama pompalar",
+      "avgTimeballoon": "Ortalama süre/balon",
+      "banked": "bankada!",
+      "lostEarnings": "Kazanç kaybı!",
+      "overallAvgPumps": "Genel ortalama pompalar",
+      "popRate": "Nüfus oranı",
+      "totalEarned": "Toplam Kazanılan",
+      "balloons": "Balonlar",
+      "cashed": "Nakde çevrildi",
+      "popped": "patladı",
+      "adjPumps": "Adj. pompalar",
+      "pop": "Pop",
+      "pump": "Pompa",
+      "cashIn": "Nakit Girişi"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Ortalama Karar Süresi",
+      "drawBeadsToGatherEvidence": "Kanıt toplamak için boncuk çizin",
+      "jtc": "JTC",
+      "title": "Boncuk Görevi",
+      "meanDraws": "Ortalama berabere",
+      "rounds": "Turlar",
+      "jtcRate": "JTC Oranı",
+      "meanDrawsToDecision": "Karara Giden Ortalama Beraberlik",
+      "jtcRateThreshold": "JTC Oranı (<{{threshold}} çekiliş)",
+      "round": "Yuvarlak",
+      "jarDescription": "Kavanoz A: %85 yeşil / Kavanoz B: %85 kırmızı",
+      "itWasJar": "Jar'dı",
+      "drawABead": "Bir Boncuk Çiz",
+      "jarAGreen": "Kavanoz A Yeşil",
+      "jarBRed": "Kavanoz B Kırmızı"
+    },
+    "binding": {
+      "changedTrials": "Değiştirilen denemeler",
+      "sameAccuracy": "Aynı doğruluk",
+      "sameTrials": "Aynı denemeler",
+      "title": "Özellik Bağlama",
+      "binding": "bağlayıcı",
+      "bindingAccuracyChanged": "Doğruluğu değiştir",
+      "same": "Aynı",
+      "different": "Farklı"
+    },
+    "blockDesign": {
+      "cells": "Hücreler",
+      "target": "Hedef",
+      "yourAnswer": "Cevabınız",
+      "tapHint": "Renkleri değiştirmek için dokunun",
+      "check": "Kontrol et"
+    },
+    "brixton": {
+      "adapt": "Uyarla",
+      "adaptationCost": "Adaptasyon maliyeti",
+      "nonswitchTrials": "Geçişsiz denemeler",
+      "switchTrials": "Denemeleri değiştir"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Bu harfleri hatırla",
+      "selectThe3Letters": "3 harfi seçin",
+      "title": "Brown-Peterson Görevi",
+      "forgetting": "unutmak",
+      "sDelay": "S Gecikmesi",
+      "minus3": "Eksi3",
+      "delay": "Gecikme"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Karar kalitesi",
+      "finalPoints": "Son noktalar",
+      "meanBet": "Ortalama bahis",
+      "winRate": "Kazanma oranı",
+      "wins": "galibiyet",
+      "title": "Cambridge Kumar Görevi",
+      "totalPoints": "Toplam puan",
+      "quality": "Kalite",
+      "rational": "rasyonel",
+      "avgBet": "Ortalama bahis",
+      "trial": "Deneme",
+      "whichColorHidesToken": "Simgeyi hangi renk gizler?",
+      "youChose": "Sen seçtin",
+      "howMuchToBet": "Ne kadar bahis oynanır?"
+    },
+    "cancellation": {
+      "false": "Yanlış",
+      "target": "Hedef:",
+      "total": "Toplam",
+      "title": "İptal Görevi (d2)",
+      "misses": "Kaçırılanlar",
+      "targetDescription": "2 puanla d"
+    },
+    "changeBlindness": {
+      "detectionRate": "Tespit Oranı",
+      "found": "Bulundu",
+      "meanDetectionTime": "Ortalama Tespit Süresi",
+      "title": "Körlüğü Değiştir",
+      "missed": "Cevapsız",
+      "avgTime": "Ortalama zaman",
+      "instructions": "Talimatlar"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "En İyi Tahmin",
+      "meanScore": "Ortalama Puan",
+      "worstEstimate": "En Kötü Tahmin",
+      "inRange": "İyi tahmin!",
+      "title": "Bilişsel Tahmin",
+      "meanScoreLabel": "Ortalama Puan",
+      "inRangeLabel": "Menzilde",
+      "extreme": "Aşırı",
+      "scoreLabel": "puan",
+      "submit": "Gönder"
+    },
+    "common": {
+      "accuracy": "doğruluk",
+      "bias": "Önyargı",
+      "falseAlarmRate": "Yanlış Alarm Oranı",
+      "hitRate": "İsabet Oranı",
+      "hits": "İsabetler",
+      "listening": "Dinleniyor...",
+      "meanRt": "Ortalama RT",
+      "timedOut": "Zaman aşımına uğradı",
+      "timedOut2": "Zaman aşımına uğradı",
+      "faRate": "FA'nın Taux'u",
+      "paused": "Duraklatıldı"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Kendine ne kadar güveniyorsun?",
+      "rateYourConfidence": "Güveninizi derecelendirin",
+      "title": "Güven Kalibrasyonu",
+      "calError": "Kalibrasyon hatası",
+      "confidence": "Güven"
+    },
+    "consequences": {
+      "best": "En iyi",
+      "nextRound": "Sonraki tur...",
+      "time": "Zaman",
+      "placeholder": "Bir sonuç yazın...",
+      "title": "Sonuçlar",
+      "totalIdeas": "Toplam Fikirler",
+      "avgPerRound": "Ortalama tur başına",
+      "rounds": "Turlar",
+      "noConsequencesListed": "Listelenen sonuç yok",
+      "roundProgress": "Tur {{current}} / {{total}}",
+      "typeAndPressAdd": "Yazıp Ekle'ye basın"
+    },
+    "contextualCueing": {
+      "cueingEffect": "İşaret Efekti",
+      "newConfigRt": "Yeni Yapılandırma RT",
+      "oldConfigRt": "Eski Yapılandırma RT",
+      "title": "Bağlamsal İşaretleme",
+      "cueing": "İşaretleme",
+      "oldRt": "Eski RT",
+      "newRt": "Yeni RT",
+      "prompt": "İstemi",
+      "left": "Sol",
+      "right": "Sağ"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Eşik titremesi",
+      "title": "Kontur Entegrasyonu",
+      "pipeJitter": "| titreme"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Eşik kontrastı",
+      "title": "Kontrast Hassasiyeti",
+      "threshold": "Eşik",
+      "left": "Sol",
+      "right": "Sağ"
+    },
+    "cpt": {
+      "nontargets": "Hedef olmayanlar",
+      "target": "Hedef",
+      "nonTarget": "Hedef dışı",
+      "dPrime": "d'",
+      "targetsLetter": "Hedef mektubu",
+      "tapForLetterOnly": "Yalnızca hedef harf için dokunun"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritik aralık",
+      "leftAccuracy": "Sol doğruluk",
+      "rightAccuracy": "Doğru doğruluk"
+    },
+    "cryptogram": {
+      "hints": "İpuçları",
+      "title": "Kriptogram",
+      "solved": "Çözüldü",
+      "time": "Zaman",
+      "puzzles": "Bulmacalar",
+      "puzzle": "Bulmaca",
+      "hint": "İpucu",
+      "clear": "Temizle"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Eğri Altındaki Alan",
+      "discountRateK": "İndirim oranı (k)",
+      "impulsivityIndex": "Dürtüsellik indeksi",
+      "title": "Gecikme İndirimi",
+      "aucPatience": "AUC sabrı",
+      "patient": "Hasta",
+      "kRate": "K Oranı",
+      "impuls": "Dürtü",
+      "indifferencePoints": "Kayıtsızlık Noktaları",
+      "whichPrefer": "Hangisini tercih edersiniz?",
+      "today": "Bugün"
+    },
+    "delayedMatching": {
+      "long": "Uzun",
+      "longDelay68s": "Uzun gecikme (6-8s)",
+      "med": "Orta",
+      "mediumDelay46s": "Orta gecikme (4-6s)",
+      "short": "Kısa",
+      "shortDelay34s": "Kısa gecikme (3-4s)",
+      "title": "Gecikmeli Eşleştirme",
+      "delay": "Gecikme",
+      "rememberThisPattern": "Bu modeli hatırla",
+      "whichWasIt": "Hangisiydi?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Uyarı Algılama",
+      "attendToTheLeftColumn": "SOL sütuna katılın",
+      "attendedAccuracy": "Katılan Doğruluk",
+      "ignoreTheRightColumn": "Sağ sütunu yoksay",
+      "right": "RIGHT",
+      "title": "Dikotik Dinleme",
+      "attendedAcc": "Katılan doğruluk",
+      "alertDet": "Uyarı tespiti",
+      "alerts": "Uyarılar",
+      "selectLeftColumnWords": "Sol sütundaki kelimeleri seç",
+      "submit": "Gönder",
+      "alertQuestion": "Uyarı sorusu"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Doğruluğu unutun",
+      "forgettingEffect": "Unutma etkisi",
+      "newRejection": "Yeni ret",
+      "rememberAccuracy": "Doğruluğu hatırla",
+      "title": "Yönlendirilmiş Unutma",
+      "remember": "Hatırla",
+      "forget": "Unut",
+      "round": "Yuvarlak",
+      "word": "kelime",
+      "wasThisWordShown": "Bu kelime gösterildi mi?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Dikkat Önyargı Puanı",
+      "congruentAcc": "Uyumlu Acc",
+      "congruentRt": "Uyumlu RT",
+      "incongruentAcc": "Uyumsuz Acc",
+      "incongruentRt": "Uyumsuz RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Araba mı, Kamyon mu?",
+      "minDisplayReached": "Minimum Görüntülemeye Ulaşıldı",
+      "positionAccuracy": "Pozisyon Doğruluğu",
+      "thresholdDisplay": "Eşik Göstergesi",
+      "vehicleAccuracy": "Araç Doğruluğu",
+      "whereWasTheDiamond": "Elmas neredeydi?",
+      "title": "Çifte Karar",
+      "threshold": "Eşik",
+      "bothOk": "Her ikisi de doğru",
+      "vehicle": "Araç",
+      "position": "Pozisyon",
+      "car": "Araba",
+      "truck": "Kamyon"
+    },
+    "dsst": {
+      "items": "Öğeler",
+      "itemsCompleted": "Tamamlanan öğeler",
+      "speedItemsmin": "Hız (adet/dak)",
+      "attempts": "denemeler",
+      "itemsPerMin": "Öğe / dk"
+    },
+    "dualTask": {
+      "dualtaskCost": "Çift Görev Maliyeti",
+      "taskANumber": "Görev A (Sayı)",
+      "taskBSymbol": "Görev B (Sembol)",
+      "title": "Çift Görev",
+      "taskA": "Görev A",
+      "taskB": "Görev B",
+      "number": "Sayı",
+      "symbol": "Sembol",
+      "up": "Yukarı",
+      "down": "Aşağı"
+    },
+    "dualTime": {
+      "sessionEnPause": "Oturum duraklatıldı",
+      "votreEstimationSecondes": "Tahmininiz (saniye)",
+      "sessionInterrupted": "Oturum kesintiye uğradı",
+      "target": "Hedef",
+      "estimation": "Tahmin",
+      "avgTime": "Ortalama zaman",
+      "avgError": "Ortalama hata",
+      "trials": "Denemeler",
+      "resumeToContinue": "Devam etmek için devam et",
+      "aimFor": "Hedefle",
+      "second": "İkinci",
+      "howLongDidYouTake": "Ne kadar sürdün?"
+    },
+    "dualTrack": {
+      "confirmer": "Onayla",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Devam etmek için devam edin.",
+      "sessionEnPause": "Oturum duraklatıldı",
+      "tapezLesCibles": "Hedeflere dokunun",
+      "tapezLaCible": "Hedefe dokunun",
+      "appuyezConfirmer": "Onayla'ya basın",
+      "targetsCountLabel": "{{count}} hedefler",
+      "distractorsCountLabel": "{{count}} dikkat dağıtıcılar",
+      "roundsCountLabel": "{{count}} tur",
+      "calibrationRoundsLabel": "{{count}} kalibrasyon turları",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = dahili yolculuk zorluk seviyesi.",
+      "tierHelpCurrentWithPhase": "Şu anda {{targets}} hedefleri için {{total}} üzerinden T{{current}} konumundasınız. Mevcut aşama: {{phase}}. Bir sonraki hedef seviyeden önce {{remaining}} seviye kaldı.",
+      "phaseTracking": "Takip",
+      "phaseAudio": "İzleme + ses",
+      "phaseColor": "İzleme + renk",
+      "phaseCombined": "İzleme + ses + renk",
+      "passLetters": "Mektuplar",
+      "passColors": "Renkler",
+      "moveInstruction": "Talimatı taşı",
+      "moveConfirmBtn": "Onaylama düğmesini taşıyın",
+      "preparingSession": "Oturum hazırlanıyor...",
+      "preparing3dScene": "3D sahne hazırlanıyor...",
+      "startJourney": "Yolculuğu başlat",
+      "calibrationDescription": "İlk aşamadan önce daha uzun bir kalibrasyon başlangıç ​​seviyenizi tahmin edecektir.",
+      "defaultDescription": "Toplar yanacak. Hareket ederken onları takip edin ve ardından onları tanımlayın.",
+      "startCalibration": "Kalibrasyonu başlat",
+      "calibrationTitle": "Kalibrasyon",
+      "estimatedStart": "Avustralya, Brezilya ve Kuzey Amerika ülkelerinin kullandığı saat uygulaması. başlangıç",
+      "roundsAnalyzed": "Analiz edilen turlar",
+      "willStartAt": "Şu tarihte başlayacak:",
+      "targetsCount": "Hedefler",
+      "thenProgress": "sonra ilerleyin"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Ortalama Mutlak Hata",
+      "ratio": "Oran",
+      "slope": "Eğim",
+      "vierordtSlope": "Vierordt Eğimi",
+      "wait": "Bekle...",
+      "title": "Süre Çoğaltma",
+      "meanError": "Ortalama Hata",
+      "meanRatio": "Ortalama Oran (üretilen/hedef)",
+      "holdNow": "ŞİMDİ BEKLEYİN",
+      "target": "Hedef",
+      "error": "Hata"
+    },
+    "embeddedFigures": {
+      "fastest": "En hızlı",
+      "found": "Bulundu",
+      "meanDetectionTime": "Ortalama algılama süresi",
+      "slowest": "En yavaş",
+      "title": "Gömülü Şekiller",
+      "missed": "Cevapsız",
+      "fastestLabel": "En hızlı",
+      "findThisShape": "Bu şekli bul",
+      "memorizeShape": "Şekli ezberleyin...",
+      "foundIt": "Buldum!",
+      "giveUp": "Vazgeç"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Yanlış Alarmlar",
+      "misses": "Kaçırılanlar",
+      "title": "Duygusal N-Geri",
+      "match": "Maç"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Nötr RT",
+      "positiveRt": "Pozitif RT",
+      "threatRt": "Tehdit RT'si",
+      "title": "Duygusal Stroop",
+      "interference": "Girişim",
+      "interferenceThreatNeutral": "Girişim (Tehdit – Nötr)"
+    },
+    "eyesTest": {
+      "totalTime": "Toplam Süre"
+    },
+    "faceName": {
+      "gain": "Kazanç",
+      "learningImprovement": "Öğrenme Geliştirme",
+      "round1Accuracy": "1. Tur Doğruluğu",
+      "round2Accuracy": "2. Turun Doğruluğu",
+      "whoIsThis": "Bu kim?",
+      "title": "Yüz Adı Derneği",
+      "round": "Yuvarlak",
+      "testPhase": "Test aşaması"
+    },
+    "fauxPas": {
+      "who": "DSÖ?",
+      "why": "Neden?",
+      "title": "Sahte Pas Tanıma",
+      "detection": "Algılama",
+      "scenarios": "Senaryolar",
+      "fpFound": "Sahte pas bulundu",
+      "control": "Kontrol",
+      "readyToAnswer": "Cevaplamaya hazır",
+      "didSomeoneSay": "Birisi söylememesi gereken bir şey mi söyledi?",
+      "whoSaidIt": "Bunu kim söyledi?",
+      "whyInappropriate": "Neden uygunsuzdu?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Doğruluğu Geri Çağırma",
+      "recognitionAccuracy": "Tanıma Doğruluğu",
+      "recallPlaceholder": "Cevabınızı yazın...",
+      "unlikely": "Olası değil",
+      "certain": "kesin",
+      "title": "Bilme hissi",
+      "recall": "Geri çağırma",
+      "recognition": "Tanıma",
+      "fokR": "Fok R",
+      "questions": "Sorular",
+      "recalled": "Geri çağrıldı",
+      "recognized": "Tanındı",
+      "fokSensitivity": "FOK Hassasiyeti",
+      "submit": "Gönder",
+      "dontKnow": "Bilmiyorum",
+      "fokPrompt": "Tanıyacak mısın?",
+      "selectCorrectAnswer": "Doğru cevabı seçin",
+      "answer": "Cevap"
+    },
+    "fingerTapping": {
+      "firstTrial": "İlk Deneme",
+      "lastTrial": "Son Deneme",
+      "sequence": "Sıra",
+      "speedupT1VsT12": "Hızlandırma (T1 ve T12)",
+      "title": "Parmak Vurma"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Ortalama Hareket Süresi",
+      "avgThroughput": "Ortalama Verim",
+      "title": "Dokunarak uyar",
+      "throughput": "Verim",
+      "tapTarget": "Vurgulanan hedefe dokunun"
+    },
+    "foreperiod": {
+      "early": "Erken",
+      "slope": "Eğim",
+      "title": "Geçici Hazırlık",
+      "fpEffectSlope": "FP Etkisi Eğimi"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Geri alma",
+      "threshold": "Eşik",
+      "tone1": "Ton 1",
+      "tone2": "Ton 2",
+      "weber": "Weber",
+      "weberFraction": "Weber Kesri",
+      "hz": "Hz.",
+      "title": "Frekans Ayrımı",
+      "thresholdLabel": "Eşik",
+      "hzDiff": "Hz farkı",
+      "whichWasHigher": "Hangisi daha yüksekti?",
+      "firstHigher": "İlk önce daha yüksek",
+      "secondHigher": "İkinci daha yüksek"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor yaması",
+      "leftAccuracy": "Sol doğruluk",
+      "leftTrials": "Sol denemeler",
+      "noiseMask": "Gürültü maskesi",
+      "rightAccuracy": "Doğru doğruluk",
+      "rightTrials": "Doğru denemeler",
+      "thresholdAngle": "Eşik açısı",
+      "title": "Gabor",
+      "threshold": "Eşik",
+      "reversals": "Geri alma",
+      "timedOut": "Zaman aşımına uğradı",
+      "left": "Sol",
+      "right": "Sağ"
+    },
+    "gameOfDice": {
+      "finalPoints": "Son noktalar",
+      "risky": "Riskli",
+      "riskyChoices": "Riskli seçimler",
+      "safe": "Güvenli",
+      "winRate": "Kazanma oranı",
+      "wins": "galibiyet",
+      "title": "Zar Oyunu Görevi",
+      "totalPoints": "Toplam puan",
+      "riskyLabel": "Riskli",
+      "roll": "Rulo",
+      "chooseYourBet": "Bahsinizi seçin",
+      "pickNumbers": "Numaralarınızı seçin"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Boşluk mu, boşluk yok mu?",
+      "gapThreshold": "Boşluk Eşiği",
+      "title": "Sessizlik Algılama",
+      "noGap": "Boşluk Yok"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Bakışlar neredeydi?",
+      "direct": "Doğrudan",
+      "left": "Sol",
+      "right": "Sağ",
+      "title": "Bakış Yönü",
+      "dPrimeDirectGaze": "D Prime Doğrudan Bakış"
+    },
+    "hayling": {
+      "part1Initiation": "Bölüm 1 (Başlatma)",
+      "part2": "Bölüm 2",
+      "part2Suppression": "Bölüm 2 (Bastırma)",
+      "suppressionCost": "Bastırma Maliyeti",
+      "title": "Hayling",
+      "part1": "Bölüm 1",
+      "part2Label": "Bölüm 2",
+      "suppression": "Bastırma",
+      "obvious": "Açık",
+      "obviousPicksPart2": "Açık seçikler (Bölüm 2)",
+      "chooseUnrelated": "İlgisiz bir kelime seçin",
+      "completelyUnrelated": "Tamamen ilgisiz",
+      "doNotPickObvious": "Açık kelimeyi seçmeyin!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Bir sonraki aşamaya geçiyoruz...",
+      "stageComplete": "Aşama tamamlandı!",
+      "title": "IED Ayar Kaydırma",
+      "stages": "Aşamalar",
+      "edsCost": "EDS Maliyeti",
+      "stage": "Sahne",
+      "correctNeeded": "İlerlemek için doğruya ihtiyaç var"
+    },
+    "informationSampling": {
+      "cost": "Maliyet",
+      "free": "Ücretsiz",
+      "meanTilesCost": "Ortalama fayans (maliyet)",
+      "meanTilesFree": "Ortalama fayans (ücretsiz)",
+      "totalCost": "Toplam Maliyet",
+      "title": "Bilgi Örnekleme",
+      "tiles": "Fayans",
+      "tapToReveal": "Ortaya çıkarmak için dokunun"
+    },
+    "inspectionTime": {
+      "final": "Final",
+      "finalDisplayTime": "Son gösterim süresi",
+      "minCorrectIt": "Minimum doğru BT",
+      "threshold": "Eşik",
+      "title": "Muayene Süresi",
+      "thresholdLabel": "Eşik",
+      "minIt": "Min BT"
+    },
+    "iowaGambling": {
+      "balance": "Bakiye:",
+      "chooseADeck": "Bir güverte seçin",
+      "deckADraws": "Güverte A berabere",
+      "deckBDraws": "B güvertesi berabere",
+      "deckCDraws": "Güverte C çekilişi",
+      "deckDDraws": "Güverte D çekilişi",
+      "first40Advantageous": "İlk 40 avantajlı",
+      "last40Advantageous": "Son 40 avantajlı",
+      "learn": "Öğren",
+      "learningIndex": "Öğrenme endeksi",
+      "title": "Iowa Kumar",
+      "advantageousPct": "Avantajlı %",
+      "earnings": "Kazanç",
+      "last40": "Son40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibrasyon Sapması",
+      "meanJol": "Ortalama JOL",
+      "nowTestYourRecall": "Şimdi hatırlama yeteneğinizi test edin",
+      "studyComplete": "Çalışma tamamlandı",
+      "whatWasPairedWith": "Neyle eşleştirildi…?",
+      "title": "Öğrenme Yargısı",
+      "recallAccuracy": "Doğruluğu Geri Çağırma",
+      "jolGamma": "JOL Gama",
+      "jolAccuracyGamma": "JOL Doğruluğu (Gama)",
+      "howLikelyRemember": "Ne kadar olasılıkla hatırlayacaksınız?",
+      "hiddenAnswer": "Gizli cevap"
+    },
+    "judgmentOfRecency": {
+      "close": "Kapat",
+      "closeGap13": "Aralığı kapat (1-3)",
+      "far": "Uzak",
+      "farGap9": "Uzak boşluk (9+)",
+      "mediumGap48": "Orta boşluk (4-8)",
+      "title": "Yakın Zamanın Kararı",
+      "medium": "Orta",
+      "studyPhaseMemorizeOrder": "Çalışma Aşaması — Sırayı ezberleyin",
+      "whichMoreRecently": "Hangisi daha yakın zamanda ortaya çıktı?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Ortalama RT (kelime olmayan)",
+      "meanRtWords": "Ortalama RT (kelimeler)",
+      "nonwordsAccuracy": "Kelime dışı doğruluk",
+      "wordsAccuracy": "Kelimelerin doğruluğu",
+      "word": "kelime",
+      "nonword": "Kelime dışı"
+    },
+    "maze": {
+      "duration": "Süre",
+      "optimalSteps": "Optimum Adımlar",
+      "pathEfficiency": "Yol Verimliliği",
+      "totalSteps": "Toplam Adımlar",
+      "wallHits": "Duvar Vuruşları",
+      "title": "Labirent",
+      "completed": "Tamamlandı",
+      "efficiency": "Verimlilik",
+      "wallHitsLabel": "Duvar Vuruşları",
+      "steps": "Adımlar"
+    },
+    "memobox": {
+      "easy": "Kolay",
+      "easy2Boxes": "Kolay (2 kutu)",
+      "hard": "Sert",
+      "hard4Boxes": "Sert (4 kutu)",
+      "medium3Boxes": "Orta (3 kutu)",
+      "title": "Not kutusu",
+      "rounds": "Turlar",
+      "medium": "Orta",
+      "watchMovements": "Hareketleri izleyin...",
+      "howManyBalls": "Her kutuda kaç top var?",
+      "submit": "Gönder",
+      "roundOf": "{{total}} turu {{current}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Kesit nedir?",
+      "title": "Zihinsel Kesme"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Eski mi, benzer mi, yoksa yeni mi?",
+      "patternSeparation": "Desen Ayırma",
+      "sep": "Eylül.",
+      "old": "Eski",
+      "similar": "benzer",
+      "new": "Yeni",
+      "ldi": "LDI",
+      "title": "Anımsatıcı Ayrımcılık",
+      "hitRateOldDetected": "İsabet Oranı (Eski tespit edildi)",
+      "lureDiscrimination": "Yem Ayrımcılığı (LDI)",
+      "memorize": "Ezberle",
+      "testPhase": "Test aşaması"
+    },
+    "multiArmedBandit": {
+      "earnings": "Kazanç:",
+      "pickMachine": "Bir makine seç",
+      "title": "Çok Silahlı Haydut",
+      "totalReward": "Toplam ödül",
+      "optimal": "Optimum",
+      "regret": "pişmanlık",
+      "exploit": "istismar",
+      "machine": "Makine",
+      "armsExplored": "Silahlar keşfedildi"
+    },
+    "navon": {
+      "globalBigLetter": "Küresel (büyük harf)",
+      "localSmallLetter": "Yerel (küçük harf)",
+      "title": "Navon",
+      "globalAdv": "Küresel Adv.",
+      "whatBigLetter": "Hangi BÜYÜK mektup?",
+      "whatSmallLetter": "Hangi KÜÇÜK harf?"
+    },
+    "negativePriming": {
+      "controlRt": "Kontrol RT",
+      "nameTheRedShape": "Kırmızı şekli adlandırın",
+      "negativePrimingRt": "Negatif Hazırlama RT",
+      "positivePrimingRt": "Pozitif Hazırlama RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP Etkisi",
+      "title": "Negatif Hazırlama",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Tahmin önyargısı",
+      "linearityRsup2": "Doğrusallık (R&sup2;)",
+      "meanAbsoluteError": "Ortalama mutlak hata",
+      "tapTheLineToPlaceTheNumber": "Numarayı yerleştirmek için çizgiye dokunun",
+      "title": "Sayı Doğrusu",
+      "meanError": "Ortalama Hata",
+      "yourEstimate": "Tahmininiz",
+      "correct": "Doğru"
+    },
+    "oddOneOut": {
+      "colorTrials": "Renk denemeleri",
+      "shapeTrials": "Şekil denemeleri",
+      "shape": "Şekil",
+      "color": "Renk",
+      "timeout": "Zaman aşımı",
+      "shapeDiffAccuracy": "Şekil farkı. doğruluk",
+      "colorDiffAccuracy": "Renk farkı doğruluk",
+      "shapeDiffAvgRt": "Şekil farkı. ortalama RT",
+      "colorDiffAvgRt": "Renk farkı ortalama RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Hangi yöne?",
+      "thresholdAngle": "Eşik açısı",
+      "title": "Oryantasyon Ayrımcılığı",
+      "threshold": "Eşik",
+      "counterCw": "CCW",
+      "clockwise": "Saat yönünde"
+    },
+    "patternComparison": {
+      "differentTrials": "Farklı denemeler",
+      "sameTrials": "Aynı denemeler",
+      "same": "Aynı",
+      "different": "Farklı"
+    },
+    "patternRecognition": {
+      "newPatterns": "Yeni desenler",
+      "oldPatterns": "Eski desenler",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Desenleri dikkatlice inceleyin",
+      "memorize": "Ezberle ({{current}}/{{total}})",
+      "getReady": "Hazır olun...",
+      "testPhaseStarting": "Test aşaması başlıyor..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Tam Doğru",
+      "meanAngularError": "Ortalama açısal hata",
+      "withinTolerance": "Tolerans dahilinde",
+      "title": "Perspektif Alma",
+      "avgErr": "Ortalama hata",
+      "youAreAt": "Şuradasın:",
+      "facing": "bakan",
+      "pointTo": "İşaret et"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frekans Eşik",
+      "seq1": "Sıra 1",
+      "seq2": "Sıra 2",
+      "title": "Fonem Ayrımcılığı",
+      "thresh": "Harman",
+      "sameOrDifferent": "Aynı mı yoksa farklı mı?",
+      "same": "Aynı",
+      "different": "Farklı"
+    },
+    "predictionMotion": {
+      "biasLate": "Önyargı (+ = geç)",
+      "meanAbsoluteError": "Ortalama Mutlak Hata",
+      "precisionSd": "Hassasiyet (SD)",
+      "title": "Tahmin Hareketi",
+      "absError": "Abs. hata",
+      "precision": "Hassasiyet",
+      "responded": "Yanıtlandı",
+      "tapWhenReachesTarget": "Hedefe ulaştığında TAP"
+    },
+    "promem": {
+      "ongoingAccuracy": "Devam eden doğruluk",
+      "ongoingRt": "Devam eden RT",
+      "pmHitRate": "PM isabet oranı",
+      "pmRt": "PM RT",
+      "pmTargets": "PM hedefleri",
+      "title": "Potansiyel Bellek",
+      "ongoing": "devam ediyor",
+      "pmHits": "PM İsabetleri",
+      "pmMisses": "PM Kaçırıldı",
+      "living": "Yaşamak",
+      "nonLiving": "Cansız",
+      "redWordInstruction": "Kırmızı kelime = basın"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Dikkat dağıtıcı hataları",
+      "literalErrorRate": "Yazılı Hata Oranı",
+      "literalErrors": "Değişmez Hatalar",
+      "title": "Atasözü Yorumu",
+      "literal": "Değişmez",
+      "litRate": "Yaktı. Oran",
+      "whatDoesThisMean": "Bu ne anlama gelir?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Takip etmeye hazır olun",
+      "meanTimeOnTarget": "Hedefe Ulaşılan Ortalama Süre",
+      "meanTrackingError": "Ortalama izleme hatası",
+      "placeYourFingerOnTheScreen": "Parmağınızı ekrana yerleştirin",
+      "title": "Takip Takibi",
+      "timeOnTarget": "Hedefteki süre",
+      "error": "Hata",
+      "onTarget": "Hedefte",
+      "avgError": "Ortalama hata",
+      "improve": "İyileştir",
+      "improvementT1VsT": "İyileştirme T1 ve T",
+      "errorLabel": "Hata",
+      "followGreenTarget": "Yeşil hedefi takip edin"
+    },
+    "rapidNaming": {
+      "roundComplete": "Tur tamamlandı",
+      "totalErrors": "Toplam Hatalar",
+      "title": "Hızlı Adlandırma",
+      "avgSpeed": "Ortalama hız",
+      "totalTime": "Toplam Süre",
+      "round": "Yuvarlak",
+      "getReady": "Hazır olun!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Ortalama Çözme Süresi",
+      "solved": "Çözüldü",
+      "wrong": "Yanlış",
+      "placeholder": "Cevabınız...",
+      "title": "Bulmaca Bulmacaları",
+      "puzzles": "Bulmacalar",
+      "timeout": "Zaman aşımı",
+      "submit": "Gönder",
+      "answer": "Cevap"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Ortalama Çözme Süresi",
+      "solved": "Çözüldü",
+      "placeholder": "Cevabınız...",
+      "title": "Uzak Ortaklar",
+      "timeout": "Zaman aşımı",
+      "submit": "Gönder",
+      "answer": "Cevap"
+    },
+    "reversalLearning": {
+      "adapt": "Uyarla",
+      "loseshiftRate": "Kaybetme-Kayma Oranı",
+      "score": "Puan:",
+      "winstayRate": "Kazanma-Kalma Oranı",
+      "title": "Ters Öğrenme",
+      "rewards": "Ödüller",
+      "reversals": "Geri alma",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Ortalama Kriter denemeleri",
+      "pickACard": "Bir kart seç"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7'ye kadar geriye doğru sayın",
+      "reproduceThePatternFromMemory": "Deseni bellekten yeniden oluştur",
+      "title": "Rey Kompleksi Figürü",
+      "copy": "Kopyala",
+      "recall": "Geri çağırma",
+      "retention": "Saklama",
+      "trial": "Deneme",
+      "target": "Hedef",
+      "yourCopy": "Kopyanız",
+      "submit": "Gönder"
+    },
+    "rhythm": {
+      "avgTimingError": "Ortalama zamanlama hatası",
+      "bestTrialError": "En iyi deneme hatası",
+      "correctTrials": "Doğru denemeler",
+      "worstTrialError": "En kötü deneme hatası",
+      "watchRhythm": "Ritmi izle",
+      "getReady": "Hazır olun...",
+      "tapTheRhythm": "Ritme dokunun!",
+      "tooFarOff": "Çok uzakta!",
+      "tapToReproduce": "Çoğaltmak için dokunun",
+      "beats": "{{count}} atım",
+      "bestTrial": "En iyi deneme",
+      "worstTrial": "En kötü deneme",
+      "title": "Ritim",
+      "msErr": "Bayan hata"
+    },
+    "routePlanning": {
+      "time": "Zaman",
+      "title": "Rota Planlama",
+      "levels": "Seviyeler",
+      "completed": "Tamamlandı",
+      "avgMoves": "Ortalama hamle",
+      "clear": "Temizle",
+      "submit": "Gönder",
+      "instructions": "Talimatlar"
+    },
+    "rvp": {
+      "detect357246468": "Algıla: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Hedef Dizileri",
+      "fa": "FA",
+      "hitRate": "İsabet oranı",
+      "misses": "Kaçırılanlar",
+      "sequences": "Diziler"
+    },
+    "sart": {
+      "commissionErrors": "Komisyon hataları",
+      "omissionErrors": "İhmal hataları",
+      "tapAllDigits": "3 hariç tüm rakamlara dokunun",
+      "except3": "İstisna3"
+    },
+    "sceneCrasher": {
+      "adds": "ekler",
+      "studyTheScene": "Sahneyi inceleyin",
+      "swaps": "Takaslar",
+      "tapTheNewchangedObject": "Yeni/değiştirilen nesneye dokunun"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Yanlış cümleler",
+      "trueSentences": "Doğru cümleler",
+      "byCategory": "Kategoriye Göre",
+      "title": "Cümle Doğrulaması",
+      "trueRt": "Gerçek RT",
+      "true": "Doğru",
+      "false": "Yanlış",
+      "pressKey": "Basın"
+    },
+    "soundSweeps": {
+      "down": "Aşağı",
+      "downAccuracy": "Aşağı doğruluk",
+      "durationThreshold": "Süre Eşiği",
+      "up": "Yukarı",
+      "upAccuracy": "Yukarı doğruluk",
+      "title": "Ses Taramaları",
+      "threshold": "Eşik",
+      "upOrDown": "Yukarı mı aşağı mı?"
+    },
+    "sourceMemory": {
+      "color": "Renk",
+      "colorRecall": "Renk hatırlama",
+      "frame": "Çerçeve",
+      "frameRecall": "Çerçeve hatırlama",
+      "getReadyForTheTest": "Teste hazır olun!",
+      "itemRecognition": "Öğe tanıma",
+      "positionRecall": "Pozisyon geri çağırma",
+      "sourceAccuracy": "Kaynak doğruluğu",
+      "title": "Kaynak Belleği",
+      "source": "Kaynak",
+      "position": "Pozisyon",
+      "word": "kelime",
+      "wasThisWordShown": "Bu kelime gösterildi mi?",
+      "bottom": "Alt",
+      "blue": "Mavi",
+      "orange": "Turuncu",
+      "circle": "daire",
+      "square": "Kare"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Gürültü Eşiği",
+      "title": "Gürültüde Konuşma",
+      "noise": "Gürültü",
+      "whichWordWasIt": "Hangi kelimeydi?"
+    },
+    "srtt": {
+      "learningEffect": "Öğrenme etkisi",
+      "learning": "Öğrenme",
+      "block": "Blok"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Şans Seviyesi",
+      "learningDetected": "Öğrenme Algılandı",
+      "testPhase": "Test Aşaması",
+      "whichPairLooksMoreFamiliar": "Hangi çift daha tanıdık geliyor?",
+      "title": "İstatistiksel Öğrenme",
+      "learning": "Öğrenme",
+      "watchTheShapes": "Şekilleri izleyin"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "İnanç Önyargı Etkisi",
+      "conclusion": "Sonuç",
+      "premise1": "Öncül 1",
+      "premise2": "Öncül 2",
+      "logicalValidityQuestion": "Bu mantıksal olarak geçerli mi?",
+      "valid": "Geçerli",
+      "invalid": "Geçersiz"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Eksik doğruluk",
+      "presentAccuracy": "Mevcut doğruluk",
+      "title": "Sembol Arama",
+      "present": "Mevcut",
+      "absent": "yok",
+      "targets": "Hedefler",
+      "searchGroup": "Arama grubu"
+    },
+    "syncContinuation": {
+      "async": "Eşzamansız",
+      "asynchrony": "Eşzamansızlık",
+      "drift": "Sürüklenme",
+      "cv": "CV",
+      "title": "Senkronizasyon-Devam",
+      "meanCv": "Ortalama CV",
+      "tempos": "Tempolar",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Hazır Olun...",
+      "nextTempo": "Sonraki tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Doğru Sıfırlamalar",
+      "duration": "Süre",
+      "missedCounters": "Kaçırılan Sayaçlar",
+      "prematureResets": "Erken sıfırlamalar",
+      "totalEvents": "Toplam Olaylar",
+      "tooEarly": "Çok erken!",
+      "missed": "Kaçırıldı!",
+      "title": "Görev Hokkabazlığı",
+      "premature": "Prematüre",
+      "counter": "Sayaç",
+      "tapCounterInstruction": "Eşiğine ulaştığında her bir sayaca dokunun. Hiçbir taşmaya izin vermeyin!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "İkiye Ayrılma Noktası (PSE)",
+      "curveSteepness": "Eğri Dikliği",
+      "idealMidpoint": "İdeal Orta Nokta",
+      "pse": "PSE",
+      "title": "Zamansal İkiye Ayrılma",
+      "steepness": "Diklik",
+      "shortOrLong": "Kısa mı Uzun mu?",
+      "trainingPhase": "Eğitim Aşaması",
+      "short": "Kısa",
+      "long": "Uzun"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Degrade Genişliği",
+      "rememberThisDuration": "Bu süreyi hatırla",
+      "width": "Genişlik",
+      "standard": "STANDART",
+      "title": "Zamansal Genelleme",
+      "hitRate": "İsabet oranı",
+      "faRate": "FA'nın Taux'u",
+      "hitRateDetectStandard": "İsabet Oranı (standart tespit)",
+      "sameDuration": "Aynı süre mi?",
+      "trainingPhase": "Eğitim Aşaması",
+      "same": "Aynı",
+      "different": "Farklı"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Eşik SOA'sı",
+      "title": "Doku Ayrımcılığı",
+      "threshold": "Eşik"
+    },
+    "timePromem": {
+      "avgTimingError": "Ortalama zamanlama hatası",
+      "clockChecks": "Saat kontrolleri",
+      "ongoingAccuracy": "Devam eden doğruluk",
+      "ongoingTrials": "Devam eden denemeler",
+      "totalPmPresses": "Toplam PM Pres Sayısı",
+      "pmAccuracy": "PM doğruluğu",
+      "pmMisses": "Başbakan özlüyor",
+      "title": "Zaman Prospektifi",
+      "ongoing": "devam ediyor",
+      "pmHitsLabel": "Başbakan isabetleri",
+      "timingErr": "Zamanlama Hatası",
+      "pmHitsExpected": "PM İsabetleri / Beklenen",
+      "pmPresses": "PM Presler",
+      "checkClock": "Saati kontrol et",
+      "thirtySecMark": "30'lu Yıllar İşareti"
+    },
+    "toj": {
+      "meanResponseTime": "Ortalama Tepki Süresi",
+      "temporalResolution": "Zamansal Çözünürlük",
+      "title": "Geçici Karar Kararı",
+      "threshold": "Eşik",
+      "whichCameFirst": "Hangisi önce geldi?",
+      "leftFirst": "Önce Sol",
+      "rightFirst": "Önce Sağ"
+    },
+    "tower": {
+      "budget": "Bütçe",
+      "challenge": "Mücadele",
+      "challengeClassic": "Klasik",
+      "challengeExpert": "Uzman",
+      "challengeMemory": "Bellek",
+      "challengePrecision": "Hassasiyet",
+      "dragDiscAriaLabel": "Üst diski {{peg}} mandalından sürükleyin",
+      "goal": "Gol",
+      "goalHiddenStatus": "Hedef gizlendi. Kısaca göstermek için Göster'i kullanın.",
+      "goalRevealedMessage": "Gol 3 saniyeliğine açıklandı.",
+      "hint": "İpucu",
+      "hintDescription": "En iyi sonraki hamleyi göster",
+      "hintMessage": "İpucu: üst diski {{fromPeg}} çivisinden {{toPeg}} çivisine taşıyın.",
+      "hiddenGoalDescription": "Hedef oyun sırasında gizlidir. Kısa bir yenilemeye ihtiyaç duyduğunuzda Reveal'ı kullanın.",
+      "hiddenGoalTitle": "Hafıza mücadelesi",
+      "invalid": "Geçersiz",
+      "moves": "Hareketler",
+      "optimal": "Optimum",
+      "pegFullMessage": "O mandal dolu.",
+      "previewMemoryCountdown": "Hedefi ezberleyin. {{seconds}}s içinde başlar.",
+      "previewPlanCountdown": "{{moves}}-move çözümünü planlayın. {{seconds}}s içinde başlar.",
+      "reset": "Sıfırla",
+      "resetDescription": "Bu bulmacayı yeniden başlat",
+      "resetMessage": "Bulmaca sıfırlama.",
+      "reveal": "Açıkla",
+      "revealDescription": "Gizli hedefi ortaya çıkarın",
+      "statusOptimalSolve": "Optimum çözüm. Puan {{score}}.",
+      "statusSolvedScore": "{{moves}} hamlede çözüldü (+{{extraMoves}}). Puan {{score}}.",
+      "undo": "Geri al",
+      "undoDescription": "Son hamleyi tersine çevir",
+      "undoneMessage": "Son hamle geri alındı.",
+      "yourPegs": "Mandallarınız"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Doğru Teslimatlar",
+      "trainsLost": "Kayıp trenler",
+      "wrongStation": "Yanlış istasyon",
+      "title": "Düşünce Treni",
+      "trains": "Trenler",
+      "missed": "Cevapsız",
+      "scoreLabel": "Puan",
+      "instructions": "Talimatlar"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Kullanılan Ortalama Sorular",
+      "title": "Yirmi Soru",
+      "avgQuestions": "Ortalama sorular",
+      "rounds": "Turlar",
+      "efficiency": "Verimlilik",
+      "avgQuestionsCorrectOnly": "Ortalama sorular (yalnızca doğru)",
+      "questionsLabel": "Sorular",
+      "remaining": "Kalan",
+      "readyToGuess": "Tahmin etmeye hazırım!",
+      "tapTheTarget": "Hedef olduğunu düşündüğünüz nesneye dokunun!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Faydalı Görüş Alanı",
+      "visualNoiseMask": "Görsel gürültü maskesi",
+      "whatWasInTheCenter": "Merkezde ne vardı?",
+      "whereWasTheTarget": "Hedef neredeydi?",
+      "avgThreshold": "Ortalama eşik",
+      "speed": "Hız",
+      "accuracy": "doğruluk",
+      "central": "Merkezi",
+      "peripheral": "Çevresel",
+      "overall": "Genel",
+      "block": "Blok",
+      "trials": "Denemeler",
+      "start": "Başlat",
+      "focus": "Odaklanma",
+      "threshold": "Eşik",
+      "stimulus": "Uyarıcı",
+      "respondFromMemory": "Bellekten yanıt ver",
+      "truck": "Kamyon",
+      "choosePeripheralLocation": "Çevre birimi konumunu seçin",
+      "currentBlock": "{{n}}'ı engelle",
+      "exposure": "Pozlama"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} ile başlayan kelimeler",
+      "title": "Sözel Akıcılık",
+      "totalWords": "Toplam kelime",
+      "duplicates": "Kopyalar",
+      "letter": "Mektup",
+      "round": "Yuvarlak",
+      "roundComplete": "Tur tamamlandı",
+      "nextRound": "Sonraki tur",
+      "middotRound": "· Yuvarlak"
+    },
+    "vernierAcuity": {
+      "whichSide": "Hangi taraf?",
+      "title": "Vernier Keskinliği",
+      "leftOffset": "Sol ofset",
+      "rightOffset": "Sağ ofset",
+      "offset": "Ofset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimal Strateji",
+      "correct": "Doğru!",
+      "wrong": "Yanlış",
+      "title": "Hava Tahmini",
+      "optimal": "Optimum",
+      "learningCurve": "Öğrenme Eğrisi",
+      "predictTheWeather": "Hava durumunu tahmin edin",
+      "rain": "Yağmur"
+    },
+    "wordChain": {
+      "avgResponseTime": "Ortalama Yanıt Süresi",
+      "chain": "Zincir",
+      "longestChain": "En Uzun Zincir",
+      "totalCorrect": "Toplam Doğru",
+      "totalWords": "Toplam Kelime",
+      "words": "kelimeler",
+      "title": "Kelime Zinciri",
+      "longest": "En uzun",
+      "avgRt": "Ortalama RT",
+      "endsWith": "ile biter",
+      "chainLabel": "Zincir",
+      "bestLabel": "En iyi"
+    },
+    "wordFlow": {
+      "avgWordLength": "Ortalama kelime uzunluğu",
+      "correct": "Doğru",
+      "invalidWords": "Geçersiz kelimeler",
+      "totalWordsSelected": "Seçilen Toplam Kelime",
+      "validWords": "Geçerli kelimeler",
+      "wordsPerMinute": "Dakika başına kelime",
+      "wrong": "Yanlış",
+      "seeResults": "Sonuçları görün",
+      "nextRound": "Sonraki tur ({{current}}/{{total}})",
+      "title": "Sözel Akıcılık",
+      "validWordsLabel": "Geçerli kelimeler",
+      "wordsPerMinLabel": "Kelime/dakika",
+      "avgLengthLabel": "Ortalama uzunluk",
+      "invalidLabel": "Geçersiz",
+      "round": "Yuvarlak",
+      "selectWordsBelongTo": "Ait olan kelimeleri seçin",
+      "selected": "Seçildi"
+    },
+    "wordList": {
+      "avgRtCorrect": "Ort. RT (doğru)",
+      "primacyEffect": "Öncelik Etkisi",
+      "recencyEffect": "Yenilik Etkisi",
+      "studyPhaseRememberEachWord": "Çalışma aşaması – her kelimeyi hatırlayın",
+      "wordsRecalled": "Hatırlanan Kelimeler",
+      "title": "Kelime Listesi",
+      "serialPositionCurve": "Seri Pozisyon Eğrisi",
+      "wasWordInList": "Bu kelime listede miydi?",
+      "seenBefore": "Daha önce görüldü",
+      "newWord": "Yeni"
+    },
+    "speedSort": {
+      "switchAccuracy": "Anahtar doğruluğu",
+      "switchTrials": "Denemeleri değiştir",
+      "sortByColor": "RENK'e göre sırala",
+      "sortByShape": "ŞEKİL'e göre sırala",
+      "sortByNumber": "NUMBER'a göre sırala",
+      "ruleChanged": "Kural değişti!",
+      "binRed": "Kırmızı",
+      "binBlue": "Mavi",
+      "binGreen": "Yeşil",
+      "binYellow": "Sarı",
+      "binCircle": "daire",
+      "binSquare": "Kare",
+      "binTriangle": "Üçgen",
+      "binStar": "Yıldız",
+      "title": "Hız Sıralaması",
+      "switch": "Anahtarlar"
+    },
+    "reflex": {
+      "target": "Hedef",
+      "lure": "Cazibesi",
+      "tooSlow": "Çok yavaş!",
+      "wrongTarget": "Yanlış hedef!",
+      "tapTargets": "Yeşil dairelere dokunun!",
+      "hits": "İsabetler",
+      "misses": "Kaçırılanlar",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Toplamı hatırla...",
+      "title": "Zincir Hesaplaması",
+      "stepChains": "{{len}}-adım zincirleri",
+      "start": "Başlat",
+      "step": "Adım",
+      "whatIsTheResult": "Sonuç nedir?"
+    },
+    "alternateUses": {
+      "placeholder": "Bir kullanım yazın...",
+      "title": "Alternatif Kullanımlar",
+      "totalUses": "Toplam kullanım",
+      "perObject": "Nesne başına",
+      "rounds": "Turlar",
+      "bestObject": "En iyi nesne",
+      "bestCount": "En iyi sayım",
+      "noUsesSubmitted": "Hiçbir kullanım gönderilmedi",
+      "timesUp": "Zaman doldu!",
+      "nextObject": "Sonraki Nesne ({{object}})",
+      "listCreativeUses": "Bu nesnenin yaratıcı kullanımlarını listeleyin"
+    },
+    "anagram": {
+      "placeholder": "Kelimeyi yazın...",
+      "title": "anagram",
+      "avgSolve": "Ortalama çözmek",
+      "letterWords": "{{len}}-harfli kelimeler",
+      "submit": "Gönder"
+    },
+    "facialEmotion": {
+      "happy": "Mutlu",
+      "sad": "Üzgün",
+      "angry": "kızgın",
+      "fearful": "Korkunç",
+      "disgusted": "Tiksindim",
+      "surprised": "şaşırdım",
+      "lc": "LC",
+      "title": "Yüz Duygu Tanıma",
+      "topConfusions": "En çok karıştırılanlar"
+    },
+    "numberSeries": {
+      "easy": "Kolay",
+      "hard": "Sert"
+    },
+    "chainRecall": {
+      "round": "Yuvarlak",
+      "title": "Zincir Geri Çağırma",
+      "chain": "Zincir",
+      "placeholder": "Yer tutucu"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Duygusal Git/Gitmeme",
+      "block1CommissionErrors": "1 komisyon hatalarını engelle",
+      "block2CommissionErrors": "2 komisyon hatasını engelle",
+      "goHappy": "Git = Mutlu",
+      "goSad": "Git = Üzgün",
+      "block": "Blok",
+      "go": "Git"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop etkisi",
+      "title": "Renk Hızı",
+      "congShort": "Kong.",
+      "incongShort": "Inong.",
+      "congruentAccuracy": "Uyumlu doğruluk",
+      "incongruentAccuracy": "Uyumsuz doğruluk"
+    },
+    "mirror": {
+      "avgCorrectCells": "Doğru hücreler (ortalama)",
+      "symmetryType": "Simetri türü",
+      "title": "Ayna"
+    },
+    "rhythmTap": {
+      "correctTrials": "Doğru denemeler",
+      "avgRhythmScore": "Ortalama ritim puanı",
+      "bestTrialScore": "En iyi deneme puanı",
+      "worstTrialScore": "En kötü deneme puanı",
+      "level": "Seviye",
+      "rhythm": "Ritim",
+      "bestTrial": "En iyi deneme",
+      "worstTrial": "En kötü deneme"
+    },
+    "vocalProsody": {
+      "questioning": "Sorgulama"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Çarp",
+      "add": "Ekle",
+      "subtract": "Çıkar",
+      "title": "Aritmetik Hız",
+      "score": "Puan",
+      "solved": "Çözüldü",
+      "missed": "Cevapsız"
+    },
+    "puzzle": {
+      "avgSolveTime": "Ortalama çözüm süresi",
+      "totalMoves": "Toplam hamle",
+      "totalErrors": "Toplam hatalar",
+      "gridSize": "Izgara boyutu",
+      "maxGridReached": "Maksimum ızgaraya ulaşıldı",
+      "maxLevelReached": "Maksimum seviyeye ulaşıldı",
+      "maxNodesReached": "Maksimum düğüme ulaşıldı",
+      "puzzleDetails": "Bulmaca ayrıntıları",
+      "roundDetails": "Yuvarlak ayrıntılar",
+      "solved": "Çözüldü!",
+      "undo": "Geri al",
+      "reset": "Sıfırla",
+      "check": "Kontrol et",
+      "moves": "Hareketler",
+      "time": "Zaman",
+      "level": "Seviye",
+      "errors": "Hatalar",
+      "score": "Puan",
+      "grid": "Izgara",
+      "crossings": "Geçişler",
+      "pearls": "İnciler",
+      "clues": "İpuçları",
+      "region": "Bölge",
+      "filled": "Dolu",
+      "cells": "Hücreler",
+      "undosLeft": "Kalan geri alma işlemleri",
+      "gems": "Taşlar",
+      "connected": "Bağlı",
+      "slides": "Slaytlar",
+      "progress": "İlerleme",
+      "rotations": "Rotasyonlar",
+      "puzzle": "Bulmaca",
+      "uncovered": "Açık",
+      "colored": "Renkli",
+      "violations": "İhlaller",
+      "blacked": "Karartılmış",
+      "empty": "Boş",
+      "remaining": "Kalan",
+      "pairs": "Çiftler",
+      "flips": "Çevirmeler",
+      "found": "Bulundu",
+      "balls": "Toplar",
+      "guesses": "Tahminler",
+      "original": "Orijinal",
+      "findDifferences": "Farklılıkları bulun",
+      "totalDrags": "Toplam sürükleme",
+      "totalUndos": "Toplam geri alma",
+      "totalEdgesDrawn": "Çizilen toplam kenarlar",
+      "totalLasers": "Toplam lazerler",
+      "totalSlides": "Toplam slaytlar",
+      "totalRotations": "Toplam rotasyon",
+      "totalRectangles": "Toplam dikdörtgenler",
+      "totalScore": "Toplam puan",
+      "avgTime": "Ortalama süre",
+      "cellsCleared": "Hücreler temizlendi",
+      "totalDiffsFound": "Bulunan toplam farklar",
+      "gemsCollected": "Toplanan mücevherler",
+      "pushBoxesOntoTargets": "Tüm kutuları hedeflere itin",
+      "fireLasersMarkBalls": "Lazerleri kenarlardan ateşleyin, ardından top konumlarını işaretleyin",
+      "revealingAnswer": "Cevap açıklanıyor...",
+      "checkAnswer": "Cevabı Kontrol Et",
+      "pickNumberBelow": "Aşağıdan bir numara seçin",
+      "tapCellToAssign": "Numara atamak için bir hücreye dokunun",
+      "tapEdgesToPlaceWalls": "Duvarları yerleştirmek için kenarlara dokunun. K bölgelerine bölün.",
+      "ghosts": "Hayaletler",
+      "vampires": "Vampirler",
+      "zombies": "zombiler",
+      "dominoes": "Domino",
+      "islands": "Adalar",
+      "pegsLeft": "Mandal Sol",
+      "bestRemaining": "En iyi kalan",
+      "puzzlesSolved": "Bulmacalar çözüldü",
+      "flooded": "Su basmış",
+      "edges": "Kenarlar",
+      "totalPlacements": "Toplam yerleşimler",
+      "totalRemovals": "Toplam kaldırma işlemleri",
+      "maxTileReached": "Maksimum kareye ulaşıldı",
+      "target": "Hedef",
+      "placed": "Yerleştirildi",
+      "totalGuesses": "Toplam tahminler",
+      "guessesLeft": "Tahminler kaldı",
+      "difficulty": "Zorluk"
+    },
+    "palisade": {
+      "title": "Çit",
+      "puzzles": "Bulmacalar",
+      "maxLevel": "Maksimum seviye"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "errors": "Hatalar",
+      "avgTime": "Ortalama zaman",
+      "erase": "Sil"
+    },
+    "blackbox": {
+      "title": "Kara Kutu",
+      "puzzles": "Bulmacalar",
+      "lasers": "Lazerler",
+      "avgTime": "Ortalama zaman"
+    },
+    "designFluency": {
+      "title": "Tasarım Akıcılığı",
+      "uniqueDesigns": "Benzersiz tasarımlar",
+      "duplicates": "Kopyalar",
+      "round": "Yuvarlak",
+      "roundComplete": "Tur tamamlandı",
+      "youCreatedDesigns": "{{count}} tasarımları oluşturdunuz",
+      "startRound": "Turu başlat",
+      "instructions": "Talimatlar",
+      "designs": "Tasarımlar",
+      "clear": "Temizle",
+      "addDesign": "Ekle"
+    },
+    "signpost": {
+      "title": "Yön tabelası",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "avgTime": "Ortalama zaman",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Seviye",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "undos": "Geri al",
+      "puzzle": "Bulmaca"
+    },
+    "numericalStroop": {
+      "left": "Sol",
+      "right": "Sağ"
+    },
+    "biologicalMotion": {
+      "title": "Biyolojik Hareket",
+      "noiseDots": "gürültü noktaları",
+      "whichDirection": "Hangi yöne?",
+      "left": "Sol",
+      "right": "Sağ"
+    },
+    "inertia": {
+      "title": "Atalet",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "gems": "Taşlar",
+      "moves": "Hareketler"
+    },
+    "waterLevel": {
+      "title": "Su Seviyesi",
+      "error": "Hata",
+      "tilt": "Eğim",
+      "waterLine": "Su hattı mı?"
+    },
+    "twiddle": {
+      "title": "Twit",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "errors": "Hatalar",
+      "avgTime": "Ortalama zaman",
+      "erase": "Sil"
+    },
+    "rectangles": {
+      "title": "Dikdörtgenler",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "rectanglesCount": "Dikdörtgenler",
+      "maxGrid": "Maksimum ızgara",
+      "cancelSelection": "Seçimi iptal et"
+    },
+    "filling": {
+      "title": "Doldurma",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "avgTime": "Ortalama zaman",
+      "grid": "Izgara"
+    },
+    "spacedRetrieval": {
+      "title": "Aralıklı Alma",
+      "studyPair": "Bu çifti inceleyin",
+      "waitAndSolve": "Bekle… sonra çöz",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Aralık: Hangi çiftler?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototip Bozulması",
+      "studyPhase": "Çalışma aşaması",
+      "testPhase": "Test aşaması",
+      "yesBelongs": "Evet - Aittir",
+      "noRandom": "Hayır — Rastgele"
+    },
+    "motionCoherence": {
+      "title": "Hareket Tutarlılığı",
+      "threshold": "Eşik",
+      "coherence": "Tutarlılık",
+      "whichDirection": "Hangi yöne?"
+    },
+    "cube": {
+      "title": "Küp",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxLevel": "Maksimum seviye",
+      "cubeFaces": "Küp yüzleri",
+      "moveUp": "Yukarı",
+      "moveLeft": "Sol",
+      "moveDown": "Aşağı",
+      "moveRight": "Sağ"
+    },
+    "sameGame": {
+      "title": "Aynı Oyun",
+      "score": "Puan",
+      "cleared": "Temizlendi",
+      "cells": "Hücreler",
+      "accuracy": "doğruluk"
+    },
+    "crossModalMatching": {
+      "title": "Modeller Arası Eşleştirme",
+      "chance": "Şans",
+      "whichPatternMatchesRhythm": "Hangi desen ritimle eşleşiyor?"
+    },
+    "mosaic": {
+      "title": "Mozaik",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "spotDiff": {
+      "title": "Farkı Bul",
+      "level": "Seviye",
+      "grid": "Izgara",
+      "accuracy": "doğruluk",
+      "perfect": "Mükemmel",
+      "avgTime": "Ortalama zaman",
+      "found": "Bulundu"
+    },
+    "lightsOut": {
+      "title": "Işıklar Kapalı",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "pipeline": {
+      "title": "Boru hattı",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "rotations": "Rotasyonlar",
+      "avgTime": "Ortalama zaman"
+    },
+    "tracks": {
+      "title": "Parçalar",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "errors": "Hatalar",
+      "avgTime": "Ortalama zaman"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "slides": "Slaytlar",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "cognitiveBias": {
+      "title": "Bilişsel Önyargı Eğitimi",
+      "biasResistance": "Önyargı direnci",
+      "biased": "Önyargılı",
+      "continue": "Devam et"
+    },
+    "empathicAccuracy": {
+      "title": "Empatik Doğruluk",
+      "emotionId": "Duygu",
+      "avgRatingError": "Ortalama derecelendirme hatası",
+      "scenarios": "Senaryolar",
+      "perfect": "Mükemmel",
+      "rating": "Derecelendirme",
+      "howDoesCharacterFeel": "Karakter nasıl hissediyor?",
+      "rateIntensity": "Yoğunluğu derecelendirin",
+      "whatEmotion": "Hangi duygu?",
+      "yourRating": "Derecelendirmeniz",
+      "correct": "Doğru",
+      "emotion": "Duygu"
+    },
+    "guess": {
+      "title": "Beyni",
+      "solved": "Çözüldü",
+      "guesses": "Tahminler"
+    },
+    "dominosa": {
+      "title": "Dominoza",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxLevel": "Maksimum seviye"
+    },
+    "magnets": {
+      "title": "Mıknatıslar",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxLevel": "Maksimum seviye"
+    },
+    "tangram": {
+      "placeAll": "Tüm parçaları yerleştirin",
+      "solved": "Çözüldü!",
+      "notRight": "Pek doğru değil",
+      "title": "Tangram",
+      "level": "Seviye",
+      "puzzles": "Bulmacalar",
+      "placements": "Yerleşimler",
+      "removals": "Kaldırmalar",
+      "puzzleNumber": "Bulmaca {{n}}",
+      "pieces": "adet",
+      "targetCells": "Cible",
+      "dragHint": "Parçayı ızgaraya sürükleyin veya yerleştirin",
+      "selectHint": "Bir parça seç",
+      "rotate": "Turnuvacı",
+      "undo": "Halkalayıcı",
+      "check": "Kontrol et"
+    },
+    "galaxies": {
+      "title": "Galaksiler"
+    },
+    "flood": {
+      "title": "Sel"
+    },
+    "pegs": {
+      "title": "Mandallar",
+      "bestPegs": "En iyi mandallar"
+    },
+    "auditoryFigureGround": {
+      "title": "İşitsel Şekil-Zemin",
+      "patternPresent": "Desen mevcut mu?",
+      "pattern": "Desen",
+      "noPattern": "Desen yok"
+    },
+    "selfOrderedPointing": {
+      "title": "Kendi Kendine Sıralanan İşaretleme",
+      "maxSpan": "Maksimum açıklık",
+      "errors": "Hatalar",
+      "round": "Yuvarlak",
+      "setOf": "{{count}} kümesi"
+    },
+    "mirrorTracing": {
+      "title": "Ayna İzleme",
+      "totalErrors": "Toplam hatalar",
+      "avgTime": "Ortalama zaman",
+      "shapes": "Şekiller",
+      "perfect": "Mükemmel",
+      "improvement": "İyileştirme",
+      "errorsMiddot": "hatalar ·",
+      "shape": "Şekil",
+      "errors": "Hatalar",
+      "xIsMirrored": "X yansıtılmıştır!"
+    },
+    "clockDrawing": {
+      "title": "Saat Çizimi",
+      "avgError": "Ortalama hata",
+      "setTo": "Şuna ayarla:",
+      "submit": "Gönder"
+    },
+    "cognitiveMap": {
+      "title": "Bilişsel Harita",
+      "explore": "Keşfet",
+      "sRemaining": "S Kalan",
+      "from": "Gönderen",
+      "whichDirectionIs": "Hangi yön"
+    },
+    "sixteen": {
+      "title": "On altı"
+    },
+    "loopy": {
+      "title": "Çılgın"
+    },
+    "lightup": {
+      "title": "Aydınlat"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Maksimum Döşeme",
+      "moves": "Hareketler",
+      "max": "Maksimum"
+    },
+    "bridges": {
+      "title": "Köprüler",
+      "puzzles": "Bulmacalar",
+      "maxLevel": "Maksimum seviye",
+      "level": "Seviye"
+    },
+    "net": {
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxGrid": "Maksimum ızgara"
+    },
+    "flip": {
+      "title": "Çevir"
+    },
+    "range": {
+      "title": "Aralık"
+    },
+    "slant": {
+      "title": "Eğimli"
+    },
+    "towers": {
+      "title": "Kuleler",
+      "puzzles": "Bulmacalar",
+      "avgTime": "Ortalama zaman",
+      "erase": "Sil"
+    },
+    "pearl": {
+      "title": "İnci",
+      "edges": "Kenarlar"
+    },
+    "mapColoring": {
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "moves": "Hareketler",
+      "maxLevel": "Maksimum seviye"
+    },
+    "singles": {
+      "title": "Bekarlar"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "ölümsüz",
+      "accuracy": "doğruluk",
+      "puzzles": "Bulmacalar",
+      "avgTime": "Ortalama zaman"
+    },
+    "untangle": {
+      "title": "Çözmek",
+      "drags": "Sürükler",
+      "maxNodes": "Maksimum Düğüm Sayısı"
+    },
+    "unruly": {
+      "title": "asi"
+    },
+    "fifteen": {
+      "title": "On beş"
+    },
+    "tents": {
+      "title": "Çadırlar"
+    },
+    "mesker": {
+      "pen": "Kalem",
+      "stroke": "İnme",
+      "penPressureHint": "Tutarlı kalem basıncıyla yazın"
+    },
+    "modality": {
+      "position": "Pozisyon",
+      "audio": "Ses"
+    },
+    "validate": "Doğrula"
+  },
+  "trace": {
+    "instructions": "N-geri konumuna kaydırın. Aynı konumdaysa iki kez hafifçe vurun.",
+    "hint": {
+      "validated": "Doğrulandı",
+      "draw": "Harfi çizin • Doğrulamak için dokunun",
+      "drawWithColor": "Harfi çizin • Rengi seçin • Doğrulamak için dokunun",
+      "type": "Harfi yazın • Doğrulamak için Enter'a basın",
+      "typeWithColor": "Harfi yazın • Rengi seçin • Doğrulamak için girin",
+      "typeResult": "Sonucu yazın • Doğrulamak için Enter'a basın",
+      "writeResult": "Sonucu yazın • Doğrulamak için dokunun"
+    },
+    "keyboard": {
+      "letterInput": "Mektup",
+      "numberInput": "Sayı"
+    },
+    "arithmetic": {
+      "cueHint": "2 rakamı ezberleyin",
+      "refresh": "Yeni"
+    },
+    "hintPosition": "{{n}} tur önce uyarıcı neredeydi?",
+    "hintN0": "Mevcut uyaranı belirtin",
+    "warmupHint": "Pozisyonları ezberleyin. Yanıta gerek yok.",
+    "hintDraw": "Harfi çizin • Doğrulamak için dokunun",
+    "hintDrawWithColor": "Harfi çizin • Rengi seçin • Doğrulamak için dokunun",
+    "hintWriteResult": "Sonucu yazın • Doğrulamak için dokunun",
+    "guide": {
+      "swipeNormal": "Son konumdan (N-0) {{n}} adım önceki konuma (N-{{n}}) doğru kaydırın. Aynı konumdaysa iki kez hafifçe vurun.",
+      "swipeSequential": "Her ara konumdan geçerek N-0'dan N-{{n}}'ye adım adım kaydırın. Aynı konumdaysa iki kez hafifçe vurun.",
+      "swipeDynamic": "Görüntülenen kuralı takip ederek kaydırın. Aynı konumdaysa iki kez hafifçe vurun.",
+      "tapN0": "Geçerli konuma dokunun.",
+      "warmup": "Pozisyonları ezberleyin; yanıt vermenize gerek yok.",
+      "writeDraw": "{{n}} adım önce duyulan harfi çizin • Doğrulamak için dokunun",
+      "writeDrawColor": "{{n}} adım önce duyulan harfi çizin • Rengini seçin • Doğrulamak için dokunun",
+      "writeType": "{{n}} adım önce duyulan harfi yazın • Doğrulamak için Enter'a basın",
+      "writeTypeColor": "{{n}} adım önce duyulan harfi yazın • Rengini seçin • Doğrulamak için girin",
+      "writeDrawN0": "Az önce duyduğunuz harfi çizin • Doğrulamak için dokunun",
+      "writeDrawColorN0": "Az önce duyduğunuz harfi çizin • Rengini seçin • Doğrulamak için dokunun",
+      "writeTypeN0": "Az önce duyduğunuz harfi yazın • Doğrulamak için Enter'a basın",
+      "writeTypeColorN0": "Az önce duyduğunuz harfi yazın • Rengini seçin • Doğrulamak için girin",
+      "writeResult": "Sonucu yazın • Doğrulamak için dokunun",
+      "validated": "Doğrulandı",
+      "holdMindful": "Hücreyi {{seconds}}sn süreyle basılı tutun",
+      "swipeMindful": "{{seconds}}sn içinde kaydır"
+    },
+    "settings": {
+      "adaptiveTiming": "Uyarlanabilir zamanlama",
+      "inputKeyboard": "Klavye",
+      "inputHandwriting": "El yazısı",
+      "writingInput": "Harfler/sayılar",
+      "section": {
+        "grid": "Izgara",
+        "input": "Giriş",
+        "rhythm": "Ritim",
+        "interface": "Arayüz",
+        "interfaceNone": "Standart",
+        "sound": "Ses"
+      },
+      "isi": "Aralık (ISI)",
+      "stimulusDuration": "Uyaran süresi",
+      "feedbackDuration": "Geri bildirim süresi",
+      "ruleDisplay": "Kural süresi",
+      "blankInterval": "Boş aralık",
+      "showProgressBar": "İlerleme çubuğu",
+      "showInstructions": "Oyun içi talimatlar",
+      "arithmeticInterference": "Aritmetik girişim",
+      "fullMenu": "Tam menü",
+      "gridStyle": "Izgara stili",
+      "gridStyleClassic": "Klasik",
+      "gridStyleTrace": "İz",
+      "guide": {
+        "swipeMindful": "{{seconds}}sn içinde kaydır",
+        "holdMindful": "Hücreyi {{seconds}}sn süreyle basılı tutun"
+      },
+      "feedback": {
+        "gestureDuration": "Jest",
+        "holdDuration": "Basılı tutun",
+        "writingDuration": "Yazma"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Basılı tutun",
+      "gestureDuration": "Jest",
+      "writingDuration": "Yazma"
+    },
+    "image": "Şekil",
+    "digits": "Rakamlar",
+    "emotions": "Duygu",
+    "words": "kelime",
+    "tones": "Ton",
+    "spatial": "Yön"
+  },
+  "replay": {
+    "title": "Oturum tekrarı",
+    "play": "Oyna",
+    "pause": "Duraklat",
+    "restart": "Yeniden başlat",
+    "speed": "Hız",
+    "loading": "Oturum yükleniyor...",
+    "unavailable": "Bu oturumun tekrarı kullanılamıyor",
+    "backToStats": "İstatistiklere geri dön",
+    "runStack": {
+      "original": "Orijinal",
+      "correction": "Düzeltme",
+      "delta": "Δ d'",
+      "inProgress": "Devam ediyor",
+      "completed": "Tamamlandı"
+    },
+    "abandon": "Terk et",
+    "badge": "Tekrar oynat",
+    "completionReport": {
+      "backToHome": "Geri",
+      "correctAgain": "Tekrar düzelt",
+      "deltaVsOriginal": "Orijinale Karşı",
+      "deltaVsParent": "vs Önceki çalıştırma",
+      "falseAlarmsSkipped": "Hatalardan kaçınıldı",
+      "missesCorrections": "Düzeltmeler",
+      "newFalseAlarms": "Yeni hatalar",
+      "replayAgain": "Tekrar oynat",
+      "scoreLabel": "d'puan",
+      "title": "Düzeltme tamamlandı"
+    },
+    "controls": "Kontroller",
+    "correction": "Düzeltme",
+    "finished": "Tekrarın sonu",
+    "home": "Ana sayfa",
+    "parseError": "Oturum okunamıyor",
+    "tapSlotToPlace": "Yerleştirmek için bir yuvaya dokunun",
+    "timeline": "Zaman çizelgesi",
+    "focusTimeline": {
+      "open": "Zaman çizelgesini göster",
+      "close": "Zaman çizelgesini kapat",
+      "title": "N-Geri Zaman Çizelgesi",
+      "fillAll": "Hepsini doldur",
+      "fillCard": "Kartı doldur"
+    },
+    "hud": {
+      "counterDisplay": "Sayaç ekranı",
+      "toggleCounterDisplay": "Sayaç görünümünü değiştir"
+    },
+    "validate": "Doğrula"
+  },
+  "recovery": {
+    "title": "Oturum kesintiye uğradı",
+    "description": "Bir oturum sürüyordu. Devam etmek ister misiniz?",
+    "mode": "Mod",
+    "level": "Seviye",
+    "progress": "İlerleme",
+    "timeAgo": "Zaman",
+    "resume": "Oturumu devam ettir",
+    "startFresh": "Yeni başla",
+    "staleWarning": "Bu oturum eski olduğundan devam etmek zor olabilir.",
+    "modes": {
+      "game": "Eğitim",
+      "activeTraining": "Aktif eğitim",
+      "flowTraining": "İkili Yer eğitimi",
+      "dualPickTraining": "İkili Seçim",
+      "traceTraining": "Çift İzleme"
+    }
+  },
+  "rewards": {
+    "congratulations": "Tebrikler!",
+    "duration": "{{days}} gün Premium",
+    "lifetimeLabel": "Ömür boyu erişim",
+    "expiresAt": "{{date}} tarihine kadar geçerlidir",
+    "neverExpires": "Hiçbir zaman süresi dolmaz",
+    "continue": "Devam et",
+    "discovery": {
+      "name": "Keşif kartı",
+      "description": "7 günlük Premium — Tüm özellikleri keşfedin"
+    },
+    "engagement": {
+      "name": "Nişan Kartı",
+      "description": "1 aylık Premium — Disiplininiz karşılığını veriyor"
+    },
+    "expert": {
+      "name": "Uzman geçişi",
+      "description": "3 aylık Premium — Siz gerçek bir uygulayıcısınız"
+    },
+    "lifetime": {
+      "name": "Ömür boyu erişim",
+      "description": "Sonsuza kadar premium — Neurodual'da ustalaştınız"
+    },
+    "xpRemaining": "Kalan XP",
+    "permanentAccessUnlocked": "Kalıcı erişimin kilidi açıldı",
+    "reachedTheTop": "Zirveye ulaştınız!"
+  },
+  "progression": {
+    "level": "Düzey {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Sonraki seviye",
+    "reached": "Ulaşıldı",
+    "inProgress": "Devam ediyor"
+  },
+  "gridlock": {
+    "nextPuzzle": "Sonraki bulmaca →"
+  }
+}

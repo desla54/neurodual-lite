@@ -266,41 +266,6 @@
         "slotAccuracy": "Accuracy by slot",
         "recentAccuracies": "Recent accuracies"
       },
-      "specDriven": {
-        "modeScore": {
-          "dprime": "Global d'",
-          "dprimeTooltip": "Signal Detection Theory: d' of 2.0 or above = good discrimination",
-          "bwScore": "BW Score",
-          "bwScoreTooltip": "Every false alarm cancels a correct answer. Precision beats speed.",
-          "jaeggiErrors": "Error rate",
-          "jaeggiErrorsTooltip": "Error percentage (misses + false alarms). Fewer than 3 errors per modality to progress.",
-          "placementAccuracy": "Placement accuracy",
-          "placementAccuracyTooltip": "Percentage of correct placements",
-          "recallAccuracy": "Recall accuracy",
-          "recallAccuracyTooltip": "Percentage of cells correctly recalled",
-          "traceAccuracy": "Trace accuracy",
-          "traceAccuracyTooltip": "Percentage of correct position responses"
-        },
-        "speed": {
-          "reactionTime": "Average reaction time",
-          "placementTime": "Average placement time",
-          "recallTime": "Average recall time",
-          "responseTime": "Average response time",
-          "writingTime": "Average writing time"
-        },
-        "insights": {
-          "confidence": "Confidence score",
-          "directness": "Directness ratio",
-          "placementTime": "Placement time",
-          "wrongSlotDwell": "Wrong-slot dwell time",
-          "fluency": "Fluency score",
-          "corrections": "Corrections",
-          "slotAccuracy": "Slot accuracy",
-          "recentAccuracies": "Recent accuracies",
-          "responseTime": "Response time",
-          "writingAccuracy": "Writing accuracy"
-        }
-      },
       "confidence": {
         "title": "Confidence analysis",
         "noActionOnTargets": "No action on target trials",
@@ -376,6 +341,10 @@
       "corsiBlockDesc": "Spatial span memory",
       "ospan": "Operation Span",
       "ospanDesc": "Complex span: equations + letter recall",
+      "gridlock": "Gridlock",
+      "gridlockDesc": "Spatial sliding puzzle",
+      "strobeFlex": "Strobe Flex",
+      "strobeFlexDesc": "Cognitive flexibility and rule switching",
       "runningSpan": "Running Span",
       "runningSpanDesc": "Recall last N items from unpredictable stream",
       "pasat": "PASAT",
@@ -1081,12 +1050,6 @@
       "rounds": "Rounds",
       "flawless": "Flawless",
       "perfectRounds": "Flawless",
-      "band": {
-        "mastery": "Excellent",
-        "solid": "Solid",
-        "building": "Progressing",
-        "struggling": "Struggling"
-      },
       "perfect": "Perfect",
       "partial": "Partial",
       "error": "Error",
@@ -1144,13 +1107,6 @@
       "replayPhaseLabel": "Phase",
       "response": "Response",
       "trackingTimeShort": "Tracking",
-      "replayPhase": {
-        "idle": "Idle",
-        "highlight": "Highlight",
-        "tracking": "Tracking",
-        "selection": "Selection",
-        "finished": "Finished"
-      },
       "targets": "Targets",
       "stageUnlocked": "New target stage unlocked for the next session."
     },

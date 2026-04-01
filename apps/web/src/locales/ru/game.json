@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Как вы себя чувствуете?",
+      "tired": "Устал",
+      "normal": "Нормально",
+      "energized": "Бодрый"
+    },
+    "aria": {
+      "trialTimer": "Таймер пробы",
+      "positionMatch": "Совпадение позиции",
+      "audioMatch": "Совпадение аудио",
+      "audioLetter": "Аудио буква:",
+      "traceGrid": "Сетка трассировки"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Переключить монитор синхронизации",
+      "start": "начало",
+      "end": "конец",
+      "pinLabel": "pin",
+      "pinTitle": "Закрепить на экране",
+      "inputLabel": "input",
+      "inputTitle": "Переключить профилирование задержки ввода (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "вкл",
+      "off": "выкл",
+      "hideLabel": "скрыть",
+      "hideTitle": "Скрыть (кроме syncHud=1 или ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "аудио",
+        "expected": "ожидаемый"
+      },
+      "labels": {
+        "trial": "проба",
+        "lagShow": "задержка показа",
+        "lagHide": "задержка скрытия",
+        "winErr": "ошибка окна",
+        "endRef": "реф конец",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "input в ожидании",
+        "inputSamples": "образцы input",
+        "touchSamples": "образцы touch",
+        "mouseSamples": "образцы мыши",
+        "keyboardSamples": "образцы клавиатуры",
+        "latestMethod": "последний (метод)",
+        "latestModality": "последняя модальность",
+        "audioCueMode": "звуковые сигналы",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "Сбросить профилировщик ввода"
+    },
+    "hud": {
+      "resume": "Продолжить",
+      "pause": "Пауза",
+      "quit": "Выход",
+      "restart": "Перезапуск",
+      "spaceToStart": "Нажмите пробел для начала",
+      "settings": "Настройки",
+      "enterToAdvance": "Enter для продолжения",
+      "trial": "Попытка",
+      "muteTexture": "Выключить фоновый звук"
+    },
+    "status": {
+      "paused": "Пауза"
+    },
+    "completed": "Завершено",
+    "starting": {
+      "getReady": "Приготовьтесь..."
+    },
+    "quitModal": {
+      "title": "Выйти из сессии?",
+      "message": "Ваш прогресс не будет сохранён.",
+      "confirm": "Выйти",
+      "cancel": "Продолжить",
+      "close": "Закрыть"
+    },
+    "controls": {
+      "position": "Позиция",
+      "position2": "Позиция 2",
+      "position3": "Позиция 3",
+      "position4": "Позиция 4",
+      "visvis": "Визуальный & n-визуальный",
+      "visaudio": "Визуальный & n-аудио",
+      "audiovis": "Аудио & n-визуальный",
+      "vis1": "Визуальный 1",
+      "vis2": "Визуальный 2",
+      "vis3": "Визуальный 3",
+      "vis4": "Визуальный 4",
+      "audio": "Аудио",
+      "audio2": "Аудио 2",
+      "color": "Цвет",
+      "arithmetic": "Арифметика",
+      "image": "Форма"
+    },
+    "arithmetic": {
+      "answer": "Ответ",
+      "clear": "Очистить",
+      "hint": "Клавиатура: 0-9 · '-' для знака · '.' для десятичной · Backspace для очистки"
+    },
+    "navigation": {
+      "back": "Назад"
+    },
+    "xp": {
+      "title": "Заработано XP",
+      "base": "Базово (N-{{level}})",
+      "performance": "Производительность",
+      "accuracy": "Точность",
+      "streakBonus": "Бонус за серию",
+      "dailyBonus": "Первый за день",
+      "badgeBonus": "Значки",
+      "flowBonus": "Бонус Dual Place",
+      "confidenceMultiplier": "Уверенность",
+      "dailyCapReached": "Достигнут дневной лимит XP",
+      "levelReached": "Достигнут уровень {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "Новые значки разблокированы"
+    },
+    "getReady": "Приготовьтесь...",
+    "layoutEdit": {
+      "done": "Готово",
+      "reset": "Сбросить",
+      "instructions": "Перетаскивайте зоны для изменения порядка. Изменяйте размер с помощью ручек.",
+      "title": "Режим редактирования",
+      "cancel": "Отмена",
+      "save": "Заблокировать",
+      "editLayout": "Редактировать раскладку"
+    },
+    "paused": "На паузе",
+    "pressEscapeToResume": "Нажмите Escape для продолжения",
+    "settings": {
+      "editLayout": "Изменить расположение",
+      "gridAndButtons": "Сетка и кнопки",
+      "swapPositionAudio": "Поменять Позиция / Аудио",
+      "title": "Настройки",
+      "quickHint": "Измените несколько настроек, не покидая игру.",
+      "quickUnavailable": "Нет быстрых настроек для этого режима."
+    },
+    "pinkNoiseInfo": "Каждый стимул сопровождается фоновым звуком. Вы можете настроить или отключить его в параметрах звука.",
+    "pinkNoiseDismiss": "Продолжить",
+    "audioMode": "Аудиорежим",
+    "cogTask": {
+      "precision": "Точность",
+      "avgRt": "Ср. ВР",
+      "avgRtShort": "Ср. ВР",
+      "trials": "Пробы",
+      "correct": "Правильных",
+      "errors": "Ошибок",
+      "effect": "Эффект",
+      "restart": "Заново",
+      "home": "Главная",
+      "performance": "Результаты",
+      "trialDetail": "Детали по пробам",
+      "setDetail": "Детали по сериям",
+      "roundDetail": "Детали по раундам",
+      "problemDetail": "Подробности по задачам",
+      "phaseDetail": "Детали по фазам",
+      "feedbackCorrect": "Правильно",
+      "feedbackIncorrect": "Неправильно",
+      "feedbackTimeout": "Слишком медленно!",
+      "preparing": "Приготовьтесь...",
+      "loading": "Загрузка...",
+      "left": "Лево",
+      "right": "Право",
+      "up": "Вверх",
+      "down": "Вниз",
+      "congruent": "Конгруэнтный",
+      "incongruent": "Инконгруэнтный",
+      "congruencyEffect": "Эффект конгруэнтности",
+      "maxSpan": "Макс. объём",
+      "startingSpan": "Начальный эмпан",
+      "maxSpanReached": "Достигнут макс. эмпан",
+      "longestStreak": "Самая длинная верная серия",
+      "series": "Серия",
+      "avgResponseTime": "Среднее время отклика",
+      "recall": "Воспроизведение",
+      "expected": "Ожидалось",
+      "submit": "Подтвердить",
+      "cancel": "Отмена",
+      "clear": "Очистить",
+      "delete": "УД",
+      "true": "Верно",
+      "false": "Неверно",
+      "target": "Цель",
+      "nonTarget": "Не цель",
+      "distractor": "Дистрактор",
+      "same": "Одинаковый",
+      "different": "Различный",
+      "identical": "Идентичный",
+      "mirror": "Зеркальный",
+      "symmetric": "Симметричный",
+      "asymmetric": "Асимметричный",
+      "symShort": "Сим.",
+      "present": "Присутствует",
+      "absent": "Отсутствует",
+      "noTrials": "Пробы не завершены.",
+      "noSets": "Ни один набор не завершён.",
+      "noRounds": "Раунды не завершены.",
+      "noProblems": "Ни одна задача не завершена.",
+      "noPhases": "Фазы не завершены.",
+      "sets": "Серии",
+      "rounds": "Раунды",
+      "equations": "Уравнения",
+      "sentences": "Предложения",
+      "equationAccuracy": "Точность уравнений",
+      "forward": "Прямой",
+      "backward": "Обратный",
+      "forwardMaxSpan": "Макс. прямой эмпан",
+      "backwardMaxSpan": "Макс. обратный эмпан",
+      "odd": "Нечётное",
+      "even": "Чётное",
+      "score": "Счёт",
+      "easy": "Легко",
+      "hard": "Сложно",
+      "totalTrials": "Всего проб",
+      "totalErrors": "Всего ошибок",
+      "totalErrShort": "Ошибок всего",
+      "hits": "Попадания",
+      "misses": "Пропуски",
+      "falseAlarms": "Лож. тр.",
+      "correctRejections": "Прав. отк.",
+      "yes": "Да",
+      "no": "Нет",
+      "sessionInterrupted": "Сессия прервана",
+      "reverseOrder": "в обратном порядке",
+      "normalOrder": "по порядку",
+      "lnsInstruction": "Цифры по возрастанию, затем буквы А-Я",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Эффект Саймона",
+        "blue": "Синий",
+        "red": "Красный",
+        "heroTitle": "Саймон"
+      },
+      "soroban": {
+        "target": "Представьте это число",
+        "submit": "Подтвердить",
+        "rodLabel": "Стержень {{n}}",
+        "heavenBead": "Небесная костяшка (значение 5)",
+        "earthBead": "Земная костяшка (значение 1)",
+        "instrBeadTitle": "Как работают костяшки",
+        "instrBeadDesc": "Каждый стержень представляет одну цифру. Верхняя костяшка (небесная) равна 5. Нижние костяшки (земные) равны 1 каждая. Переместите костяшки к центральной перекладине, чтобы активировать их.",
+        "instrExampleTitle": "Пример: 7",
+        "instrExampleDesc": "7 = небесная костяшка опущена (5) + 2 земные костяшки подняты (2). Нажмите или проведите пальцем, чтобы двигать костяшки.",
+        "instrGoalTitle": "Ваша цель",
+        "instrGoalDesc": "Появится число. Расставьте костяшки, чтобы его представить, и нажмите Подтвердить. Будьте точны и быстры!",
+        "startButton": "Начать",
+        "settings": "Настройки",
+        "closeSettings": "Закрыть настройки",
+        "settingsRods": "Количество стержней",
+        "settingsRodsHint": "Регулируется через Уровень N в настройках",
+        "settingsTrials": "Проб за сессию",
+        "settingsTrialsHint": "Регулируется через Попытки в настройках",
+        "settingsRange": "Диапазон чисел"
+      },
+      "stroop": {
+        "pressInkColorButton": "Нажмите кнопку цвета чернил",
+        "redWord": "КРАСНЫЙ",
+        "redLabel": "Красный",
+        "blueWord": "СИНИЙ",
+        "blueLabel": "Синий",
+        "greenWord": "ЗЕЛЁНЫЙ",
+        "greenLabel": "Зелёный",
+        "yellowWord": "ЖЁЛТЫЙ",
+        "yellowLabel": "Жёлтый"
+      },
+      "stroopFlex": {
+        "followRule": "Правило",
+        "ruleInk": "Цвет чернил",
+        "ruleWord": "Написанное слово",
+        "pressMatchingRuleButton": "Нажмите кнопку, соответствующую текущему правилу"
+      },
+      "goNogo": {
+        "goTrials": "Go-пробы",
+        "nogoTrials": "No-Go-пробы",
+        "hitRate": "Доля попаданий (Go)",
+        "faRate": "Доля ложных тревог (No-Go)",
+        "meanRt": "Среднее время реакции",
+        "sensitivity": "чувствительность",
+        "press": "Нажмите",
+        "withhold": "Не нажимайте"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Среднее SSD (успешные стопы)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "Успешное торможение",
+        "stop": "Стоп",
+        "meanGoRt": "Среднее время реакции GO",
+        "ssrtInvalid": "недостаточно данных",
+        "ssrtNegativeNote": "SSRT отрицательный (среднее SSD > среднее GO RT) — результат ненадёжен при текущем количестве проб."
+      },
+      "pvt": {
+        "rtMedian": "Медиана ВР",
+        "rtMean": "Среднее ВР",
+        "fastest": "Самый быстрый",
+        "slowest": "Самый медленный",
+        "falseStarts": "Фальстарты",
+        "falseStartsShort": "Фальст.",
+        "lapses": "Пропуски",
+        "mean": "Среднее",
+        "reaction": "Реакция",
+        "wait": "Ждите...",
+        "pressStimulus": "Ждите стимул...",
+        "pressAnywhere": "Нажмите куда угодно, когда появится счётчик",
+        "press": "Жмите!",
+        "tooEarly": "Слишком рано!",
+        "lapsesLabel": "Пропуски"
+      },
+      "posner": {
+        "cueingEffect": "Эффект подсказки",
+        "validMeanRt": "Среднее ВР (валидные)",
+        "invalidMeanRt": "Среднее ВР (невалидные)",
+        "validAccuracy": "Точность (валидные)",
+        "invalidAccuracy": "Точность (невалидные)",
+        "validTrials": "Валидные пробы",
+        "invalidTrials": "Невалидные пробы",
+        "validRtShort": "ВР вал.",
+        "invalidRtShort": "ВР инв.",
+        "valid": "Валидная",
+        "invalid": "Невалидная"
+      },
+      "antisaccade": {
+        "cost": "Стоимость антисаккады",
+        "proAccuracy": "Точность про",
+        "antiAccuracy": "Точность анти",
+        "pro": "Про",
+        "anti": "Анти",
+        "proRt": "Про ВР",
+        "antiRt": "Анти ВР",
+        "proMeanRt": "Средний ВР про-саккады",
+        "antiMeanRt": "Среднее ВР антисаккады",
+        "costLabel": "Стоимость",
+        "antiLabel": "Анти"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "Точность AX",
+        "bxFa": "Ложная тревога BX",
+        "ayError": "Ошибка AY",
+        "bxFaShort": "BX ЛТ",
+        "ayErrShort": "AY ош",
+        "cogControl": "Когнитивный контроль",
+        "target": "Цель",
+        "nonTarget": "Нецелевой"
+      },
+      "ant": {
+        "scores": "Показатели ANT",
+        "alerting": "Бдительность (без подсказки − двойная подсказка)",
+        "orienting": "Ориентирование (центральная − пространственная)",
+        "executive": "Исполнительный (инконгруэнтный − конгруэнтный)"
+      },
+      "changeDet": {
+        "kCowan": "Ёмкость K (Cowan)",
+        "sameShort": "Одинак.",
+        "diffShort": "Различ."
+      },
+      "swm": {
+        "withinErrors": "Ошибки внутри поиска",
+        "betweenErrors": "Ошибки между поисками",
+        "totalErrors": "Всего ошибок",
+        "errorFree": "Без ошибок",
+        "foundErrorFree": "Найдено без ошибок!",
+        "errorCount": "{{count}} ошибка(ок)",
+        "tapsLabel": "Касания"
+      },
+      "taskSwitch": {
+        "switchCost": "Стоимость переключения",
+        "rtRepeat": "Среднее ВР (повтор)",
+        "rtSwitch": "Среднее ВР (переключение)",
+        "oddEven": "Нечётное / Чётное",
+        "highLow": "Большое / Малое",
+        "title": "Переключение задач"
+      },
+      "trailMaking": {
+        "tmtATime": "Время TMT-A",
+        "tmtBTime": "Время TMT-B",
+        "executiveCost": "Исполнительная стоимость (B − A)",
+        "executiveCostShort": "Исполн. стоимость (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Ош. A",
+        "errB": "Ош. B",
+        "preparingB": "Подготовка TMT-B...",
+        "tmtADone": "TMT-A завершён!",
+        "totalErrors": "Всего ошибок",
+        "tmtALabel": "TMT-A: Числа",
+        "tmtBLabel": "TMT-B: Числа и буквы",
+        "next": "Далее",
+        "heroTitle": "Trail Making",
+        "alternateHint": "Чередуйте цифры и буквы: 1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI мин.",
+        "fastestIsi": "Самый быстрый ISI"
+      },
+      "wcst": {
+        "referenceCards": "Карты-образцы",
+        "testCard": "Тестовая карта",
+        "categories": "Категории",
+        "categoriesCompleted": "Категорий завершено",
+        "perseverativeErrors": "Персеверативные ошибки",
+        "persevShort": "Персев.",
+        "avgRt": "Среднее ВР"
+      },
+      "mentalRot": {
+        "rtByAngle": "ВР по углу",
+        "findMatch": "Найдите одинаковую фигуру",
+        "reference": "Эталонная фигура",
+        "referenceLabel": "Реф.",
+        "candidate": "Кандидат",
+        "distractor": "Другой",
+        "mirrorErrors": "Зеркала",
+        "title": "Мысленное вращение"
+      },
+      "sternberg": {
+        "rtBySize": "ВР по размеру набора",
+        "title": "Sternberg",
+        "avgRt": "Среднее ВР"
+      },
+      "visualSearch": {
+        "rtBySize": "ВР по размеру набора",
+        "title": "Зрительный поиск"
+      },
+      "ospan": {
+        "typeLetters": "Введите буквы по порядку",
+        "trueOrFalse": "Правда или ложь?",
+        "processingWarning": "Точность уравнений < 85% — результаты могут не отражать реальную ёмкость рабочей памяти"
+      },
+      "readingSpan": {
+        "s0": "Солнце встаёт на востоке.",
+        "s1": "Рыбы живут на деревьях.",
+        "s2": "Париж — столица Франции.",
+        "s3": "У треугольника четыре стороны.",
+        "s4": "Вода кипит при 100 градусах.",
+        "s5": "Кошки — это рептилии.",
+        "s6": "Земля вращается вокруг Солнца.",
+        "s7": "Шоколад растёт на камнях.",
+        "s8": "В году двенадцать месяцев.",
+        "s9": "Птицы дышат под водой.",
+        "s10": "Молоко белого цвета.",
+        "s11": "Автомобили ездят по рельсам.",
+        "s12": "Пчёлы производят мёд.",
+        "s13": "Снег горячий.",
+        "s14": "Сердце качает кровь.",
+        "s15": "Камни плавают на воде.",
+        "s16": "Луна освещает ночь.",
+        "s17": "У змей есть ноги.",
+        "s18": "Дерево плавает на воде.",
+        "s19": "Огонь холодный.",
+        "s20": "У человека пять чувств.",
+        "s21": "У пауков шесть ног.",
+        "s22": "Хлеб делают из муки.",
+        "s23": "Киты — это рыбы.",
+        "w0": "ДОМ",
+        "w1": "СОБАКА",
+        "w2": "КНИГА",
+        "w3": "ЦВЕТОК",
+        "w4": "ДВЕРЬ",
+        "w5": "СТОЛ",
+        "w6": "ДЕРЕВО",
+        "w7": "ДОРОГА",
+        "w8": "ОБЛАКО",
+        "w9": "ЗВЕЗДА",
+        "w10": "ПЛЯЖ",
+        "w11": "СНЕГ",
+        "w12": "ЛАМПА",
+        "w13": "ДОЖДЬ",
+        "w14": "СТАКАН",
+        "w15": "ТРАВА",
+        "w16": "ПОЕЗД",
+        "w17": "МИР",
+        "w18": "СОЛНЦЕ",
+        "w19": "ЛЕС",
+        "w20": "ЛЁД",
+        "w21": "ЗЕМЛЯ",
+        "w22": "НЕБО",
+        "w23": "КАМЕНЬ",
+        "d0": "УТРО",
+        "d1": "СЕРДЦЕ",
+        "d2": "ТКАНЬ",
+        "d3": "ЛИСТ",
+        "d4": "ШУМ",
+        "d5": "САД",
+        "d6": "ТЕНЬ",
+        "d7": "КОЛОКОЛ",
+        "d8": "МОСТ",
+        "d9": "ДЫМ",
+        "d10": "ПЕСОК",
+        "d11": "СУП",
+        "heroTitle": "Объём чтения"
+      },
+      "memorizeSequence": "Запомните последовательность...",
+      "reproduce": "Воспроизведите",
+      "span": "Объём",
+      "size": "Размер",
+      "fixateCenter": "Смотрите в центр…",
+      "identicalOrMirror": "Идентичный или Зеркальный?",
+      "wellInhibited": "Отлично заторможено!",
+      "badDirection": "Неверное направление!",
+      "stopMissed": "Стоп пропущен!",
+      "falseAlarm": "Ложная тревога!",
+      "pressNow": "Жмите!",
+      "hitBang": "Попадание!",
+      "miss": "Промах!",
+      "doNotTouch": "Не трогайте!",
+      "whichDirection": "Какое направление?",
+      "stopBang": "СТОП!",
+      "cueBang": "Подсказка!",
+      "memorizeLetters": "Запомните эти буквы",
+      "memorizeLetter": "Запомните эту букву",
+      "memorizeSequenceLetters": "Запомните последовательность...",
+      "memorizeDigits": "Запомните цифры...",
+      "memorizeColors": "Запомните цвета!",
+      "memorizePosition": "Запомните эту позицию...",
+      "retainWord": "Запомните это слово",
+      "retainNumber": "Запомните это число",
+      "addWithPrevious": "Сложите с предыдущим",
+      "sentenceTrueOrFalse": "Это предложение верно?",
+      "findRedCircle": "Найдите красный круг!",
+      "findHiddenToken": "Найдите скрытый жетон!",
+      "chooseMatchingCard": "Выберите подходящую карту",
+      "arrowDirection": "Направление центральной стрелки?",
+      "attention": "Внимание...",
+      "preparation": "Подготовка...",
+      "recallLettersInOrder": "Вспомните {{count}} букв по порядку",
+      "recallWordsInOrder": "Вспомните {{count}} слов по порядку",
+      "recallLastLetters": "Вспомните последние {{count}} букв",
+      "typeLastLetters": "Введите последние {{count}} букв",
+      "recallPositionsInOrder": "Вспомните: нажмите позиции по порядку",
+      "pressEnterToValidate": "Нажмите Enter для подтверждения",
+      "pressAnywhereToContinue": "Нажмите куда угодно для продолжения",
+      "temporalPrecision": "Временна́я точность",
+      "estimationPrecision": "Точность оценки",
+      "touchStartClockwise": "Коснитесь начальной точки, затем проведите по часовой",
+      "touchAtoB": "Коснитесь точки A, затем проведите к B",
+      "cue": "Подсказка",
+      "retainCue": "Запомните подсказку...",
+      "targetOrNot": "Цель или Не цель?",
+      "whereIsTarget": "Где цель?",
+      "wasLetterInSet": "Была ли эта буква в наборе?",
+      "regular": "регулярный",
+      "regularity": "Регулярность",
+      "msDeviation": "мс отклонение",
+      "boxes": "ячейки",
+      "found": "{{count}} найдено",
+      "past": "Прошлое",
+      "tooSlow": "слишком медленно",
+      "tooFast": "слишком быстро",
+      "timeout": "Слишком медленно!",
+      "answer": "Ответ",
+      "dontPress": "Не нажимайте!",
+      "feedbackWrong": "Неправильно!",
+      "level": "Уровень",
+      "wrong": "Неправильно",
+      "you": "Вы",
+      "paused": "Pause",
+      "instructions": "Instructions",
+      "selectAnswer": "Выберите ответ",
+      "tapTheOddOne": "Нажмите на лишний элемент",
+      "pal": {
+        "subtitle": "Обучение через ассоциации",
+        "pairsLearned": "Пары изучены",
+        "maxSetSize": "Макс. размер набора",
+        "totalErrors": "Всего ошибок",
+        "round": "Раунд",
+        "pairs": "пары",
+        "meanRt": "Ср. ВР (правильные)",
+        "studyPhase": "Изучите – запомните позиции",
+        "testPhase": "Где была эта фигура?",
+        "studying": "Изучение",
+        "tapBox": "Нажмите на ячейку, где была показана эта фигура"
+      },
+      "visualLogic": {
+        "easy": "Лёгкий",
+        "hard": "Трудный",
+        "oneRule": "1 правило",
+        "twoRules": "2 правила",
+        "findMissing": "Найдите недостающий элемент",
+        "maxLevel": "Макс. ур.",
+        "finalLevel": "Итог. ур.",
+        "nextMode": "Режим следующей сессии",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Какой фрагмент подходит к отверстию?",
+        "target": "Цель"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Смещение переоценки",
+        "underestimationBias": "Смещение недооценки",
+        "noBias": "Нет значимого смещения",
+        "avgError": "Ср. ошибка",
+        "overestimations": "Переоценки",
+        "underestimations": "Недооценки",
+        "avgAbsoluteError": "Ср. абсолютная ошибка",
+        "avgRelativeError": "Ср. относительная ошибка",
+        "cv": "Коэффициент вариации",
+        "watchDemo": "Наблюдайте за длительностью",
+        "getReady": "Приготовьтесь...",
+        "holdToReproduce": "Удерживайте для воспроизведения!",
+        "tooLong": "Слишком долго!",
+        "tooShort": "Слишком коротко!",
+        "target": "Цель",
+        "demoLabel": "Эталон",
+        "yourTurn": "Ваш ход",
+        "watchInstruction": "Наблюдайте",
+        "holdInstruction": "Удерживайте для воспроизведения",
+        "heroTitle": "Оценка времени"
+      },
+      "puzzleDetails": "Детали головоломки",
+      "roundDetails": "Детали раунда",
+      "stageResults": "Результаты этапа",
+      "recognized": "Распознано",
+      "missed": "Пропущено",
+      "win": "Выигрыш",
+      "lose": "Проигрыш",
+      "winBang": "Выигрыш!",
+      "loseBang": "Проигрыш!",
+      "correctBang": "Правильно!",
+      "wrongBang": "Неправильно!",
+      "completeBang": "Готово!",
+      "repeatedBang": "Повторено!",
+      "incompleteBang": "Не завершено!",
+      "levelCompleteBang": "Уровень пройден!",
+      "timesUp": "Время вышло",
+      "seeResults": "Посмотреть результаты",
+      "nextRound": "Следующий раунд",
+      "startBlock": "Начать блок",
+      "continue": "Продолжить",
+      "patientChoice": "Терпеливый выбор",
+      "immediateChoice": "Немедленный выбор",
+      "immediate": "Немедленно",
+      "digitSpan": {
+        "heroTitle": "Объём цифр"
+      },
+      "resume": "Возобновить",
+      "numericalStroop": {
+        "heroTitle": "Числовой Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Оценка ориентации линий"
+      },
+      "chain": "Цепочка",
+      "undo": "Отменить",
+      "vocalProsody": {
+        "heroTitle": "Голосовая просодия"
+      },
+      "letterNumber": {
+        "title": "Буквы-Цифры",
+        "expectedAnswer": "Ожидаемый ответ"
+      },
+      "patternComparison": {
+        "heroTitle": "Сравнение паттернов"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "При складывании какие квадраты соприкасаются?"
+      },
+      "dotProbe": {
+        "heroTitle": "Зонд внимания"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Зрительная организация Хупера",
+        "whatIsThisObject": "Что это за объект?"
+      },
+      "blockDesign": {
+        "heroTitle": "Дизайн блоков"
+      },
+      "accuracy": "Точность",
+      "avgTime": "Среднее время",
+      "check": "Проверить",
+      "dualTrace": {
+        "playArea": "Игровая зона"
+      },
+      "paperFolding": {
+        "title": "Складывание бумаги",
+        "foldSequenceHolePunch": "Последовательность складывания и пробивка",
+        "whichPatternWhenUnfolded": "Какой узор при развёртывании?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Лексическое решение"
+      },
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxGrid": "Макс. сетка",
+      "symmetry": "Симметрия",
+      "threshold": "Порог",
+      "hitRate": "Доля попаданий",
+      "faRate": "Доля ЛТ",
+      "changeDetection": {
+        "heroTitle": "Обнаружение изменений"
+      },
+      "syllogisms": {
+        "heroTitle": "Силлогизмы"
+      },
+      "subitizing": {
+        "title": "Субитизация",
+        "range": "Range"
+      },
+      "jitter": "Джиттер",
+      "sentenceCompletion": {
+        "title": "Завершение предложений (Cloze)",
+        "highCloze": "Высокая предсказуемость",
+        "lowCloze": "Низкая предсказуемость"
+      },
+      "grid": "Сетка",
+      "pinballRecall": {
+        "title": "Припоминание в пинболе",
+        "byBounces": "По отскокам",
+        "whereDoesItLand": "Куда она попадёт?"
+      },
+      "mean": "Среднее",
+      "speedup": "Ускорение",
+      "memorize": "Запомните",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "Развёртка поверхности",
+        "whichEdgeMatches": "Какое ребро совпадает?"
+      },
+      "crowding": {
+        "heroTitle": "Визуальная скученность",
+        "spacing": "Интервал"
+      },
+      "patternRecognition": {
+        "heroTitle": "Распознавание паттернов"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Проба",
+        "position": "Позиция",
+        "audio": "Аудио"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Интрус в сцене",
+        "detect": "Обнаружить"
+      },
+      "eyesTest": {
+        "heroTitle": "Чтение по глазам"
+      }
+    },
+    "gridlock": {
+      "undone": "Последний ход отменён.",
+      "resetMessage": "Головоломка сброшена.",
+      "hintMessage": "Подсказка: сдвинуть {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Изучите доску. Начало через {{seconds}} с.",
+      "challenge": "Испытание",
+      "optimal": "Оптимально",
+      "moves": "Ходы",
+      "piece": "Фигура {{id}}",
+      "targetPiece": "Фигура {{id}} (цель - красная машина)",
+      "challengeClassic": "Классический",
+      "challengePrecision": "Точность",
+      "challengeMemory": "Память",
+      "challengeTimed": "На время",
+      "hint": "Подсказка",
+      "reset": "Сброс",
+      "undo": "Отменить",
+      "nextPuzzle": "Следующая головоломка →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Блок 1 — Попадания",
+      "block2Hits": "Блок 2 — Попадания",
+      "goPositive": "Go = Позитивный",
+      "goNegative": "Go = Негативный",
+      "title": "Аффективный Go/No-Go",
+      "block1CommissionErrors": "Ошибки действия блок 1",
+      "block2CommissionErrors": "Ошибки действия блок 2",
+      "block": "Блок",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Средняя частота переключений",
+      "meanSwitchesfigure": "Сред. переключений/фигуру",
+      "totalSwitches": "Всего переключений",
+      "title": "Двусмысленные фигуры",
+      "meanSwitches": "Среднее переключений",
+      "switchRate": "Частота переключений",
+      "figures": "Фигуры",
+      "totalSwitchesLabel": "Всего переключений",
+      "duration": "Длительность",
+      "switchesCount": "с | Переключений:",
+      "switchButton": "Переключить!"
+    },
+    "analogies": {
+      "verbalCorrect": "Вербально верно",
+      "timeout": "Время истекло",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "Вебер",
+      "title": "Сравнение ANS",
+      "ratio": "Соотношение",
+      "leftMore": "Слева больше",
+      "rightMore": "Справа больше"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Доля ложных тревог",
+      "grammatical": "Грамматично",
+      "memorizeTheseStrings": "Запомните эти строки",
+      "testPhase": "Фаза теста",
+      "ungrammatical": "Неграмматично",
+      "learning": "Обучение",
+      "test": "Test",
+      "title": "Искусственная грамматика",
+      "learningPhase": "Обучение",
+      "testIntroText": "Сейчас вы увидите новые строки. Решите, подчиняются ли они тем же правилам.",
+      "startTest": "Начать тест",
+      "followsRules": "Следует правилам",
+      "breaksRules": "Нарушает правила"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Величина мигания",
+      "title": "Мигание внимания",
+      "blink": "Мигание",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1-я зелёная буква?",
+      "secondGreenLetter": "2-я зелёная буква?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Стоимость захвата",
+      "singletonPresent": "Синглтон присутствует",
+      "noSingleton": "Нет синглтона",
+      "title": "Захват внимания",
+      "capture": "Захват",
+      "horizontal": "Горизонтально",
+      "vertical": "Вертикально"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Окно связывания",
+      "title": "Аудиовизуальная связь",
+      "window": "Window",
+      "pssLabel": "PSS (точка субъективной одновременности)",
+      "simultaneousOrNot": "Одновременно или нет?",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "Не одновременно"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Порог длительности",
+      "reference": "Эталон",
+      "weberFraction": "Фракция Вебера",
+      "title": "Слуховая длительность",
+      "threshold": "Порог",
+      "weber": "Weber",
+      "whichLonger": "Какой длиннее?",
+      "firstLonger": "Первый длиннее",
+      "secondLonger": "Второй длиннее"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Скорректировано среднее значение насосов.",
+      "avgTimeballoon": "Сред. время/шарик",
+      "banked": "Сохранено!",
+      "lostEarnings": "Выигрыш потерян!",
+      "overallAvgPumps": "Общее среднее количество насосов",
+      "popRate": "Частота взрывов",
+      "totalEarned": "Всего заработано",
+      "balloons": "Шары",
+      "cashed": "Обналичено",
+      "popped": "Лопнуло",
+      "adjPumps": "Скорр. накачки",
+      "pop": "Лопнуть",
+      "pump": "Pump",
+      "cashIn": "Забрать"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Ср. время решения",
+      "drawBeadsToGatherEvidence": "Вытягивайте бусины, чтобы собрать улики",
+      "jtc": "JTC",
+      "title": "Задача с бусинами",
+      "meanDraws": "Средн. вытягиваний",
+      "rounds": "Раунды",
+      "jtcRate": "Доля JTC",
+      "meanDrawsToDecision": "Ср. вытягиваний до решения",
+      "jtcRateThreshold": "Доля JTC (<{{threshold}} вытягиваний)",
+      "round": "Раунд",
+      "jarDescription": "Банка A: 85 % зелёных / Банка B: 85 % красных",
+      "itWasJar": "Это была банка",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "Изменённые попытки",
+      "sameAccuracy": "Точность одинаковых",
+      "sameTrials": "Одинаковые попытки",
+      "title": "Связывание признаков",
+      "binding": "Связывание",
+      "bindingAccuracyChanged": "Точность изменения",
+      "same": "Одинаково",
+      "different": "Различно"
+    },
+    "blockDesign": {
+      "cells": "Ячейки",
+      "target": "Цель",
+      "yourAnswer": "Ваш ответ",
+      "tapHint": "Нажмите для смены цвета",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "Адаптация",
+      "adaptationCost": "Стоимость адаптации",
+      "nonswitchTrials": "Пробы без смены",
+      "switchTrials": "Попытки с переключением"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Запомните эти буквы",
+      "selectThe3Letters": "Выберите 3 буквы",
+      "title": "Brown-Peterson Task",
+      "forgetting": "Забывание",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "Задержка"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Качество решений",
+      "finalPoints": "Итоговые очки",
+      "meanBet": "Средняя ставка",
+      "winRate": "Процент побед",
+      "wins": "Победы",
+      "title": "Кембриджская задача на риск",
+      "totalPoints": "Всего очков",
+      "quality": "Качество",
+      "rational": "Рациональный",
+      "avgBet": "Средняя ставка",
+      "trial": "Проба",
+      "whichColorHidesToken": "Какой цвет скрывает жетон?",
+      "youChose": "Вы выбрали",
+      "howMuchToBet": "Сколько ставить?"
+    },
+    "cancellation": {
+      "false": "Ложно",
+      "target": "Цель:",
+      "total": "Всего",
+      "title": "Задача на зачёркивание (d2)",
+      "misses": "Промахи",
+      "targetDescription": "d с 2 чёрточками"
+    },
+    "changeBlindness": {
+      "detectionRate": "Доля обнаружения",
+      "found": "Найдено",
+      "meanDetectionTime": "Ср. время обнаружения",
+      "title": "Слепота к изменениям",
+      "missed": "Пропущено",
+      "avgTime": "Среднее время",
+      "instructions": "Инструкция"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Лучшая оценка",
+      "meanScore": "Средний балл",
+      "worstEstimate": "Худшая оценка",
+      "inRange": "Хорошая оценка!",
+      "title": "Когнитивная оценка",
+      "meanScoreLabel": "Средний балл",
+      "inRangeLabel": "В допустимом диапазоне",
+      "extreme": "Экстремальный",
+      "scoreLabel": "балл",
+      "submit": "Отправить"
+    },
+    "common": {
+      "accuracy": "Точность",
+      "bias": "Смещение",
+      "falseAlarmRate": "Частота ложных тревог",
+      "hitRate": "Частота обнаружения",
+      "hits": "Обнаружения",
+      "listening": "Слушаем...",
+      "meanRt": "Среднее ВР",
+      "timedOut": "Время вышло",
+      "timedOut2": "Время вышло",
+      "faRate": "Доля ЛТ",
+      "paused": "Пауза"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Насколько вы уверены?",
+      "rateYourConfidence": "Оцените свою уверенность",
+      "title": "Калибровка уверенности",
+      "calError": "Ошибка калибровки",
+      "confidence": "Уверенность"
+    },
+    "consequences": {
+      "best": "Лучший",
+      "nextRound": "Следующий раунд...",
+      "time": "Время",
+      "placeholder": "Введите последствие...",
+      "title": "Последствия",
+      "totalIdeas": "Всего идей",
+      "avgPerRound": "Среднее за раунд",
+      "rounds": "Раунды",
+      "noConsequencesListed": "Последствий не указано",
+      "roundProgress": "Раунд {{current}} / {{total}}",
+      "typeAndPressAdd": "Введите и нажмите «Добавить»"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Эффект подсказки",
+      "newConfigRt": "ВР новая конфиг.",
+      "oldConfigRt": "ВР старая конфиг.",
+      "title": "Контекстная подсказка",
+      "cueing": "Подсказка",
+      "oldRt": "Старое ВР",
+      "newRt": "Новое ВР",
+      "prompt": "Подсказка",
+      "left": "Влево",
+      "right": "Вправо"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Дрожание порога",
+      "title": "Интеграция контуров",
+      "pipeJitter": "| дрожание"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Пороговый контраст",
+      "title": "Контрастная чувствительность",
+      "threshold": "Порог",
+      "left": "Влево",
+      "right": "Вправо"
+    },
+    "cpt": {
+      "nontargets": "Не-цели",
+      "target": "Цель",
+      "nonTarget": "Нецелевой",
+      "dPrime": "d'",
+      "targetsLetter": "Целевая буква",
+      "tapForLetterOnly": "Нажимайте только на целевую букву"
+    },
+    "crowding": {
+      "criticalSpacing": "Критический интервал",
+      "leftAccuracy": "Точность слева",
+      "rightAccuracy": "Точность справа"
+    },
+    "cryptogram": {
+      "hints": "Подсказки",
+      "title": "Криптограмма",
+      "solved": "Решено",
+      "time": "Time",
+      "puzzles": "Головоломки",
+      "puzzle": "Головоломка",
+      "hint": "Подсказка",
+      "clear": "Очистить"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Площадь под кривой",
+      "discountRateK": "Коэффициент дисконтирования (k)",
+      "impulsivityIndex": "Индекс импульсивности",
+      "title": "Временное дисконтирование",
+      "aucPatience": "AUC терпение",
+      "patient": "Терпеливый",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "Точки безразличия",
+      "whichPrefer": "Что вы предпочитаете?",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "Длинный",
+      "longDelay68s": "Длинная задержка (6–8 с)",
+      "med": "Средний",
+      "mediumDelay46s": "Средняя задержка (4-6с)",
+      "short": "Короткий",
+      "shortDelay34s": "Короткая задержка (3-4с)",
+      "title": "Отложенное сопоставление",
+      "delay": "Задержка",
+      "rememberThisPattern": "Запомните этот узор",
+      "whichWasIt": "Какой это был?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Обнаружение сигнала",
+      "attendToTheLeftColumn": "Внимание на ЛЕВЫЙ столбец",
+      "attendedAccuracy": "Точность (отслеживаемый)",
+      "ignoreTheRightColumn": "Игнорируйте правый столбец",
+      "right": "ПРАВО",
+      "title": "Дихотическое прослушивание",
+      "attendedAcc": "Точность внимания",
+      "alertDet": "Обнаружение сигнала",
+      "alerts": "Сигналы",
+      "selectLeftColumnWords": "Выберите слова из левого столбца",
+      "submit": "Отправить",
+      "alertQuestion": "Вопрос по сигналу"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Точность забывания",
+      "forgettingEffect": "Эффект забывания",
+      "newRejection": "Отклонение нового",
+      "rememberAccuracy": "Точность запоминания",
+      "title": "Направленное забывание",
+      "remember": "Запомнить",
+      "forget": "Забыть",
+      "round": "Раунд",
+      "word": "Слово",
+      "wasThisWordShown": "Было ли это слово показано?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Балл смещения внимания",
+      "congruentAcc": "Конгруэнтная точн.",
+      "congruentRt": "ВР конгруэнтн.",
+      "incongruentAcc": "Инконгруэнтная точн.",
+      "incongruentRt": "ВР инконгруэнтн."
+    },
+    "doubleDecision": {
+      "carOrTruck": "Машина или грузовик?",
+      "minDisplayReached": "Мин. время отображения достигнуто",
+      "positionAccuracy": "Точность позиции",
+      "thresholdDisplay": "Порог отображения",
+      "vehicleAccuracy": "Точность по транспорту",
+      "whereWasTheDiamond": "Где был ромб?",
+      "title": "Двойное решение",
+      "threshold": "Порог",
+      "bothOk": "Оба верны",
+      "vehicle": "Транспорт",
+      "position": "Позиция",
+      "car": "Машина",
+      "truck": "Грузовик"
+    },
+    "dsst": {
+      "items": "Элементы",
+      "itemsCompleted": "Элементов выполнено",
+      "speedItemsmin": "Скорость (элементов/мин)",
+      "attempts": "Попытки",
+      "itemsPerMin": "Элементов / мин"
+    },
+    "dualTask": {
+      "dualtaskCost": "Стоимость двойной задачи",
+      "taskANumber": "Задача A (Число)",
+      "taskBSymbol": "Задача B (Символ)",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "Число",
+      "symbol": "Символ",
+      "up": "Вверх",
+      "down": "Вниз"
+    },
+    "dualTime": {
+      "sessionEnPause": "Сессия на паузе",
+      "votreEstimationSecondes": "Ваша оценка (секунды)",
+      "sessionInterrupted": "Сеанс прерван",
+      "target": "Цель",
+      "estimation": "Оценка",
+      "avgTime": "Среднее время",
+      "avgError": "Средняя ошибка",
+      "trials": "Trials",
+      "resumeToContinue": "Продолжить",
+      "aimFor": "Целься на",
+      "second": "Second",
+      "howLongDidYouTake": "Сколько времени вы потратили?"
+    },
+    "dualTrack": {
+      "confirmer": "Подтвердить",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Возобновите, чтобы продолжить.",
+      "sessionEnPause": "Сессия на паузе",
+      "tapezLesCibles": "Нажимайте на цели",
+      "tapezLaCible": "Нажмите на цель",
+      "appuyezConfirmer": "Нажмите «Подтвердить»",
+      "targetsCountLabel": "{{count}} целей",
+      "distractorsCountLabel": "{{count}} отвлекающих объектов",
+      "roundsCountLabel": "{{count}} раундов",
+      "calibrationRoundsLabel": "{{count}} калибровочных раундов",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = внутренний уровень сложности маршрута.",
+      "tierHelpCurrentWithPhase": "Вы сейчас на T{{current}} из {{total}} для {{targets}} целей. Текущая фаза: {{phase}}. До следующего уровня целей осталось {{remaining}} ступеней.",
+      "phaseTracking": "Отслеживание",
+      "phaseAudio": "Слежение + звук",
+      "phaseColor": "Слежение + цвет",
+      "phaseCombined": "Слежение + звук + цвет",
+      "passLetters": "Буквы",
+      "passColors": "Цвета",
+      "moveInstruction": "Переместить инструкцию",
+      "moveConfirmBtn": "Переместить кнопку подтверждения",
+      "preparingSession": "Подготовка сессии...",
+      "preparing3dScene": "Подготовка 3D-сцены...",
+      "startJourney": "Начать путь",
+      "calibrationDescription": "Перед первым этапом длительная калибровка оценит ваш начальный уровень.",
+      "defaultDescription": "Шары засветятся. Следите за ними во время движения, затем определите их.",
+      "startCalibration": "Начать калибровку",
+      "calibrationTitle": "Калибровка",
+      "estimatedStart": "Ориент. начало",
+      "roundsAnalyzed": "Раунды проанализированы",
+      "willStartAt": "Начнётся с",
+      "targetsCount": "Целей",
+      "thenProgress": "затем прогресс"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Средняя абсолютная ошибка",
+      "ratio": "Соотношение",
+      "slope": "Наклон",
+      "vierordtSlope": "Наклон Виерордта",
+      "wait": "Ждите...",
+      "title": "Воспроизведение длительности",
+      "meanError": "Средняя ошибка",
+      "meanRatio": "Среднее соотношение (факт/цель)",
+      "holdNow": "ДЕРЖИТЕ",
+      "target": "Цель",
+      "error": "Ошибка"
+    },
+    "embeddedFigures": {
+      "fastest": "Самый быстрый",
+      "found": "Найдено",
+      "meanDetectionTime": "Среднее время обнаружения",
+      "slowest": "Самый медленный",
+      "title": "Скрытые фигуры",
+      "missed": "Пропущено",
+      "fastestLabel": "Самый быстрый",
+      "findThisShape": "Найдите эту фигуру",
+      "memorizeShape": "Запомните фигуру…",
+      "foundIt": "Нашёл!",
+      "giveUp": "Сдаться"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Ложные тревоги",
+      "misses": "Пропуски",
+      "title": "Эмоциональный N-back",
+      "match": "Совпадение"
+    },
+    "emotionalStroop": {
+      "neutralRt": "ВР нейтральн.",
+      "positiveRt": "ВР положит.",
+      "threatRt": "ВР угрозы",
+      "title": "Эмоциональный Stroop",
+      "interference": "Интерференция",
+      "interferenceThreatNeutral": "Интерференция (Угроза − Нейтральный)"
+    },
+    "eyesTest": {
+      "totalTime": "Общее время"
+    },
+    "faceName": {
+      "gain": "Прирост",
+      "learningImprovement": "Улучшение обучения",
+      "round1Accuracy": "Точность раунд 1",
+      "round2Accuracy": "Точность раунд 2",
+      "whoIsThis": "Кто это?",
+      "title": "Ассоциация лицо-имя",
+      "round": "Раунд",
+      "testPhase": "Фаза теста"
+    },
+    "fauxPas": {
+      "who": "Кто?",
+      "why": "Почему?",
+      "title": "Распознавание промахов",
+      "detection": "Обнаружение",
+      "scenarios": "Сценарии",
+      "fpFound": "Обнаружены оплошности",
+      "control": "Контроль",
+      "readyToAnswer": "Готов ответить",
+      "didSomeoneSay": "Кто-то сказал что-то неуместное?",
+      "whoSaidIt": "Кто это сказал?",
+      "whyInappropriate": "Почему это было неуместно?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Точность припоминания",
+      "recognitionAccuracy": "Точность распознавания",
+      "recallPlaceholder": "Введите ваш ответ...",
+      "unlikely": "Маловероятно",
+      "certain": "Certain",
+      "title": "Ощущение знания",
+      "recall": "Воспроизведение",
+      "recognition": "Узнавание",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "Чувствительность FOK",
+      "submit": "Отправить",
+      "dontKnow": "Не знаю",
+      "fokPrompt": "Узнаете ли вы это?",
+      "selectCorrectAnswer": "Выберите правильный ответ",
+      "answer": "Ответ"
+    },
+    "fingerTapping": {
+      "firstTrial": "Первая попытка",
+      "lastTrial": "Последняя попытка",
+      "sequence": "Последовательность",
+      "speedupT1VsT12": "Ускорение (T1 vs T12)",
+      "title": "Постукивание пальцами"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Ср. время движения",
+      "avgThroughput": "Ср. пропускная способность",
+      "title": "Таппинг Фиттса",
+      "throughput": "Пропускная способность",
+      "tapTarget": "Нажмите на выделенную цель"
+    },
+    "foreperiod": {
+      "early": "Ранний",
+      "slope": "Наклон",
+      "title": "Временная подготовка",
+      "fpEffectSlope": "Наклон эффекта FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Реверсии",
+      "threshold": "Порог",
+      "tone1": "Тон 1",
+      "tone2": "Тон 2",
+      "weber": "Вебер",
+      "weberFraction": "Фракция Вебера",
+      "hz": "Hz",
+      "title": "Частотная дискриминация",
+      "thresholdLabel": "Порог",
+      "hzDiff": " Гц разн.",
+      "whichWasHigher": "Какой был выше?",
+      "firstHigher": "Первый выше",
+      "secondHigher": "Второй выше"
+    },
+    "gabor": {
+      "gaborPatch": "Пятно Габора",
+      "leftAccuracy": "Точность слева",
+      "leftTrials": "Попытки слева",
+      "noiseMask": "Шумовая маска",
+      "rightAccuracy": "Точность справа",
+      "rightTrials": "Попытки справа",
+      "thresholdAngle": "Пороговый угол",
+      "title": "Gabor",
+      "threshold": "Порог",
+      "reversals": "Реверсии",
+      "timedOut": "Время вышло",
+      "left": "Влево",
+      "right": "Вправо"
+    },
+    "gameOfDice": {
+      "finalPoints": "Итоговые очки",
+      "risky": "Рискованно",
+      "riskyChoices": "Рискованные выборы",
+      "safe": "Безопасно",
+      "winRate": "Процент побед",
+      "wins": "Победы",
+      "title": "Задача с игральными костями",
+      "totalPoints": "Всего очков",
+      "riskyLabel": "Рискованно",
+      "roll": "Бросить",
+      "chooseYourBet": "Выберите вашу ставку",
+      "pickNumbers": "Выберите числа"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Пауза есть или нет?",
+      "gapThreshold": "Порог обнаружения",
+      "title": "Обнаружение тишины",
+      "noGap": "Нет паузы"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Куда был направлен взгляд?",
+      "direct": "Direct",
+      "left": "Лево",
+      "right": "Право",
+      "title": "Направление взгляда",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Часть 1 (Инициация)",
+      "part2": "Часть 2",
+      "part2Suppression": "Часть 2 (Подавление)",
+      "suppressionCost": "Стоимость подавления",
+      "title": "Hayling",
+      "part1": "Часть 1",
+      "part2Label": "Часть 2",
+      "suppression": "Подавление",
+      "obvious": "Очевидный",
+      "obviousPicksPart2": "Очевидные выборы (часть 2)",
+      "chooseUnrelated": "Выберите не связанное слово ",
+      "completelyUnrelated": "Совершенно не связано",
+      "doNotPickObvious": "НЕ выбирайте очевидное слово!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Переход к следующему этапу…",
+      "stageComplete": "Этап завершён!",
+      "title": "IED Set Shift",
+      "stages": "Этапы",
+      "edsCost": "Стоимость EDS",
+      "stage": "Этап",
+      "correctNeeded": "Правильных для перехода"
+    },
+    "informationSampling": {
+      "cost": "Стоимость",
+      "free": "Бесплатно",
+      "meanTilesCost": "Среднее плиток (платно)",
+      "meanTilesFree": "Среднее плиток (бесплатно)",
+      "totalCost": "Общая стоимость",
+      "title": "Выборка информации",
+      "tiles": "Плитки",
+      "tapToReveal": "Нажмите для раскрытия"
+    },
+    "inspectionTime": {
+      "final": "Итоговый",
+      "finalDisplayTime": "Итоговое время отображения",
+      "minCorrectIt": "Мин. верное ВО",
+      "threshold": "Порог",
+      "title": "Время осмотра",
+      "thresholdLabel": "Порог",
+      "minIt": "Мин. ВО"
+    },
+    "iowaGambling": {
+      "balance": "Баланс:",
+      "chooseADeck": "Выберите колоду",
+      "deckADraws": "Вытяжки колоды A",
+      "deckBDraws": "Вытяжки колоды B",
+      "deckCDraws": "Вытяжки колоды C",
+      "deckDDraws": "Вытяжки колоды D",
+      "first40Advantageous": "Первые 40 выгодных",
+      "last40Advantageous": "Последние 40 выгодных",
+      "learn": "Обучение",
+      "learningIndex": "Индекс обучения",
+      "title": "Айова гемблинг",
+      "advantageousPct": "% выгодных",
+      "earnings": "Заработок",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Смещение калибровки",
+      "meanJol": "Средний JOL",
+      "nowTestYourRecall": "Теперь проверьте свою память",
+      "studyComplete": "Изучение завершено",
+      "whatWasPairedWith": "Что было в паре с…?",
+      "title": "Суждение об обучении",
+      "recallAccuracy": "Точность припоминания",
+      "jolGamma": "JOL Гамма",
+      "jolAccuracyGamma": "Точность JOL (Гамма)",
+      "howLikelyRemember": "Насколько вероятно, что вспомните?",
+      "hiddenAnswer": "Скрытый ответ"
+    },
+    "judgmentOfRecency": {
+      "close": "Близкий",
+      "closeGap13": "Малый разрыв (1-3)",
+      "far": "Далёкий",
+      "farGap9": "Большой разрыв (9+)",
+      "mediumGap48": "Средний разрыв (4-8)",
+      "title": "Суждение о давности",
+      "medium": "Средний",
+      "studyPhaseMemorizeOrder": "Фаза изучения — запомните порядок",
+      "whichMoreRecently": "Что появилось позже?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Среднее ВР (не-слова)",
+      "meanRtWords": "Среднее ВР (слова)",
+      "nonwordsAccuracy": "Точность не-слов",
+      "wordsAccuracy": "Точность слов",
+      "word": "Слово",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "Длительность",
+      "optimalSteps": "Оптимальных шагов",
+      "pathEfficiency": "Эффективность пути",
+      "totalSteps": "Шагов всего",
+      "wallHits": "Столкновений со стеной",
+      "title": "Maze",
+      "completed": "Завершено",
+      "efficiency": "Эффективность",
+      "wallHitsLabel": "Столкновений со стеной",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "Легко",
+      "easy2Boxes": "Легко (2 ячейки)",
+      "hard": "Сложно",
+      "hard4Boxes": "Сложно (4 ячейки)",
+      "medium3Boxes": "Средне (3 ячейки)",
+      "title": "Memobox",
+      "rounds": "Раунды",
+      "medium": "Средний",
+      "watchMovements": "Наблюдайте за движениями…",
+      "howManyBalls": "Сколько шаров в каждой коробке?",
+      "submit": "Отправить",
+      "roundOf": "Раунд {{current}} из {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Каково сечение?",
+      "title": "Мысленный разрез"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Старое, похожее или новое?",
+      "patternSeparation": "Разделение паттернов",
+      "sep": "Разд.",
+      "old": "Старый",
+      "similar": "Похожий",
+      "new": "Новый",
+      "ldi": "LDI",
+      "title": "Мнестическая дискриминация",
+      "hitRateOldDetected": "Доля попаданий (старые обнаружены)",
+      "lureDiscrimination": "Различение приманок (LDI)",
+      "memorize": "Запомните",
+      "testPhase": "Фаза теста"
+    },
+    "multiArmedBandit": {
+      "earnings": "Заработок:",
+      "pickMachine": "Выберите машину",
+      "title": "Многорукий бандит",
+      "totalReward": "Общая награда",
+      "optimal": "Оптимальный",
+      "regret": "Сожаление",
+      "exploit": "Использовать",
+      "machine": "Машина",
+      "armsExplored": "Изученные рычаги"
+    },
+    "navon": {
+      "globalBigLetter": "Глобальный (большая буква)",
+      "localSmallLetter": "Локальный (маленькая буква)",
+      "title": "Навон",
+      "globalAdv": "Глобальное преим.",
+      "whatBigLetter": "Какая БОЛЬШАЯ буква?",
+      "whatSmallLetter": "Какая МАЛЕНЬКАЯ буква?"
+    },
+    "negativePriming": {
+      "controlRt": "ВР контрольн.",
+      "nameTheRedShape": "Назовите красную фигуру",
+      "negativePrimingRt": "ВР негативного прайминга",
+      "positivePrimingRt": "ВР позитивного прайминга",
+      "npRt": "ВР NP",
+      "ppRt": "ВР ПП",
+      "npEffect": "Эффект NP",
+      "title": "Негативный прайминг",
+      "ctrlRt": "Контр. ВР"
+    },
+    "numberLine": {
+      "estimationBias": "Смещение оценки",
+      "linearityRsup2": "Линейность (R²)",
+      "meanAbsoluteError": "Средняя абсолютная ошибка",
+      "tapTheLineToPlaceTheNumber": "Нажмите на линию, чтобы разместить число",
+      "title": "Числовая прямая",
+      "meanError": "Средняя ошибка",
+      "yourEstimate": "Ваша оценка",
+      "correct": "Верно"
+    },
+    "oddOneOut": {
+      "colorTrials": "Цветовые попытки",
+      "shapeTrials": "Формовые попытки",
+      "shape": "Фигура",
+      "color": "Цвет",
+      "timeout": "Время вышло",
+      "shapeDiffAccuracy": "Точн. различия формы",
+      "colorDiffAccuracy": "Точность разл. цвета",
+      "shapeDiffAvgRt": "Ø ВР различия формы",
+      "colorDiffAvgRt": "Среднее ВР разл. цвета"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "В каком направлении?",
+      "thresholdAngle": "Пороговый угол",
+      "title": "Дискриминация ориентации",
+      "threshold": "Порог",
+      "counterCw": "Против ЧС",
+      "clockwise": "По часовой"
+    },
+    "patternComparison": {
+      "differentTrials": "Различные попытки",
+      "sameTrials": "Одинаковые попытки",
+      "same": "Одинаковые",
+      "different": "Различные"
+    },
+    "patternRecognition": {
+      "newPatterns": "Новые паттерны",
+      "oldPatterns": "Старые паттерны",
+      "old": "СТАРЫЙ",
+      "new": "НОВЫЙ",
+      "studyPatterns": "Внимательно изучите паттерны",
+      "memorize": "Запоминайте ({{current}}/{{total}})",
+      "getReady": "Приготовьтесь...",
+      "testPhaseStarting": "Тестовая фаза начинается..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Точно верно",
+      "meanAngularError": "Средняя угловая ошибка",
+      "withinTolerance": "В пределах допуска",
+      "title": "Принятие перспективы",
+      "avgErr": "Средняя ошибка",
+      "youAreAt": "Вы находитесь у ",
+      "facing": "Facing",
+      "pointTo": "Укажите на "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Порог частоты",
+      "seq1": "Посл. 1",
+      "seq2": "Посл. 2",
+      "title": "Фонемная дискриминация",
+      "thresh": "Thresh",
+      "sameOrDifferent": "Одинаковые или разные?",
+      "same": "Одинаково",
+      "different": "Различно"
+    },
+    "predictionMotion": {
+      "biasLate": "Смещение (+ = запоздало)",
+      "meanAbsoluteError": "Средняя абсолютная ошибка",
+      "precisionSd": "Точность (СО)",
+      "title": "Предсказание движения",
+      "absError": "Абс. ошибка",
+      "precision": "Точность",
+      "responded": "Ответил",
+      "tapWhenReachesTarget": "НАЖМИТЕ, когда достигнет цели"
+    },
+    "promem": {
+      "ongoingAccuracy": "Точность текущей задачи",
+      "ongoingRt": "Текущее ВР",
+      "pmHitRate": "Частота попаданий ПП",
+      "pmRt": "ВР ПП",
+      "pmTargets": "Цели ПП",
+      "title": "Проспективная память",
+      "ongoing": "В процессе",
+      "pmHits": "Попадания PM",
+      "pmMisses": "Промахи PM",
+      "living": "Living",
+      "nonLiving": "Неживое",
+      "redWordInstruction": "Красное слово = нажмите"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Ошибки на отвлекающие",
+      "literalErrorRate": "Доля буквальных ошибок",
+      "literalErrors": "Буквальные ошибки",
+      "title": "Интерпретация пословиц",
+      "literal": "Буквальный",
+      "litRate": "Букв. доля",
+      "whatDoesThisMean": "Что это значит?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Приготовьтесь следить",
+      "meanTimeOnTarget": "Ср. время на цели",
+      "meanTrackingError": "Средняя ошибка слежения",
+      "placeYourFingerOnTheScreen": "Положите палец на экран",
+      "title": "Зрительное преследование",
+      "timeOnTarget": "Время на цели",
+      "error": "Ошибка",
+      "onTarget": "На цели",
+      "avgError": "Средняя ошибка",
+      "improve": "Improve",
+      "improvementT1VsT": "Улучшение T1 против T",
+      "errorLabel": "Ошибка",
+      "followGreenTarget": "Следите за зелёной целью"
+    },
+    "rapidNaming": {
+      "roundComplete": "Раунд завершён",
+      "totalErrors": "Ошибок всего",
+      "title": "Быстрое называние",
+      "avgSpeed": "Средняя скорость",
+      "totalTime": "Общее время",
+      "round": "Раунд",
+      "getReady": "Приготовьтесь!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Ср. время решения",
+      "solved": "Решено",
+      "wrong": "Неверно",
+      "placeholder": "Ваш ответ...",
+      "title": "Ребусы",
+      "puzzles": "Головоломки",
+      "timeout": "Время вышло",
+      "submit": "Отправить",
+      "answer": "Ответ"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Ср. время решения",
+      "solved": "Решено",
+      "placeholder": "Ваш ответ...",
+      "title": "Отдалённые ассоциации",
+      "timeout": "Время вышло",
+      "submit": "Отправить",
+      "answer": "Ответ"
+    },
+    "reversalLearning": {
+      "adapt": "Адаптация",
+      "loseshiftRate": "Частота смены после проигрыша",
+      "score": "Счёт:",
+      "winstayRate": "Частота Выигрыш-Остаться",
+      "title": "Реверсивное обучение",
+      "rewards": "Награды",
+      "reversals": "Реверсии",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Средн. проб до критерия",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Считайте в обратном порядке по 7",
+      "reproduceThePatternFromMemory": "Воспроизведите узор по памяти",
+      "title": "Фигура Рея",
+      "copy": "Копия",
+      "recall": "Воспроизведение",
+      "retention": "Удержание",
+      "trial": "Проба",
+      "target": "Цель",
+      "yourCopy": "Ваша копия",
+      "submit": "Отправить"
+    },
+    "rhythm": {
+      "avgTimingError": "Ср. ошибка тайминга",
+      "bestTrialError": "Лучшая ошибка попытки",
+      "correctTrials": "Верные попытки",
+      "worstTrialError": "Худшая ошибка попытки",
+      "watchRhythm": "Наблюдайте за ритмом",
+      "getReady": "Приготовьтесь...",
+      "tapTheRhythm": "Воспроизведите ритм!",
+      "tooFarOff": "Слишком неточно!",
+      "tapToReproduce": "Нажмите для воспроизведения",
+      "beats": "{{count}} долей",
+      "bestTrial": "Лучшая попытка",
+      "worstTrial": "Худшая попытка",
+      "title": "Rhythm",
+      "msErr": "мс ошиб."
+    },
+    "routePlanning": {
+      "time": "Время",
+      "title": "Планирование маршрута",
+      "levels": "Уровни",
+      "completed": "Завершено",
+      "avgMoves": "Средн. ходов",
+      "clear": "Очистить",
+      "submit": "Отправить",
+      "instructions": "Инструкция"
+    },
+    "rvp": {
+      "detect357246468": "Обнаружить: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Целевые последовательности",
+      "fa": "FA",
+      "hitRate": "Доля попаданий",
+      "misses": "Misses",
+      "sequences": "Последовательности"
+    },
+    "sart": {
+      "commissionErrors": "Ошибки действия",
+      "omissionErrors": "Ошибки пропуска",
+      "tapAllDigits": "Нажимайте все цифры, кроме 3",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "Добавлено",
+      "studyTheScene": "Изучите сцену",
+      "swaps": "Замены",
+      "tapTheNewchangedObject": "Нажмите на новый/изменённый объект"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Ложные предложения",
+      "trueSentences": "Истинные предложения",
+      "byCategory": "По категории",
+      "title": "Проверка предложений",
+      "trueRt": "ВР истинных",
+      "true": "True",
+      "false": "False",
+      "pressKey": "Нажмите "
+    },
+    "soundSweeps": {
+      "down": "Вниз",
+      "downAccuracy": "Точность нисходящих",
+      "durationThreshold": "Порог длительности",
+      "up": "Вверх",
+      "upAccuracy": "Точность (восходящие)",
+      "title": "Звуковые развёртки",
+      "threshold": "Порог",
+      "upOrDown": "Вверх или вниз?"
+    },
+    "sourceMemory": {
+      "color": "Цвет",
+      "colorRecall": "Вспоминание цвета",
+      "frame": "Рамка",
+      "frameRecall": "Вспоминание рамки",
+      "getReadyForTheTest": "Приготовьтесь к тесту!",
+      "itemRecognition": "Узнавание предметов",
+      "positionRecall": "Воспоминание позиции",
+      "sourceAccuracy": "Точность источника",
+      "title": "Память источника",
+      "source": "Источник",
+      "position": "Позиция",
+      "word": "Слово",
+      "wasThisWordShown": "Было ли это слово показано?",
+      "bottom": "Внизу",
+      "blue": "Синий",
+      "orange": "Оранжевый",
+      "circle": "Круг",
+      "square": "Квадрат"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Порог шума",
+      "title": "Речь в шуме",
+      "noise": "Шум",
+      "whichWordWasIt": "Какое это было слово?"
+    },
+    "srtt": {
+      "learningEffect": "Эффект обучения",
+      "learning": "Обучение",
+      "block": "Блок"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Уровень случайности",
+      "learningDetected": "Обучение обнаружено",
+      "testPhase": "Фаза теста",
+      "whichPairLooksMoreFamiliar": "Какая пара кажется более знакомой?",
+      "title": "Статистическое обучение",
+      "learning": "Обучение",
+      "watchTheShapes": "Наблюдайте за фигурами"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Эффект предубеждения",
+      "conclusion": "Заключение",
+      "premise1": "Посылка 1",
+      "premise2": "Посылка 2",
+      "logicalValidityQuestion": "Это логически верно?",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Точность отсутствует",
+      "presentAccuracy": "Точность присутствует",
+      "title": "Поиск символов",
+      "present": "Присутствует",
+      "absent": "Отсутствует",
+      "targets": "Targets",
+      "searchGroup": "Группа поиска"
+    },
+    "syncContinuation": {
+      "async": "Асинхронный",
+      "asynchrony": "Асинхронность",
+      "drift": "Дрейф",
+      "cv": "CV",
+      "title": "Синхронизация-продолжение",
+      "meanCv": "Средний CV",
+      "tempos": "Темпы",
+      "tempo": "Темп",
+      "ioi": "Ioi",
+      "getReady": "Приготовьтесь…",
+      "nextTempo": "Следующий темп…"
+    },
+    "taskJuggling": {
+      "correctResets": "Верных сбросов",
+      "duration": "Длительность",
+      "missedCounters": "Пропущенных счётчиков",
+      "prematureResets": "Преждевременные сбросы",
+      "totalEvents": "Событий всего",
+      "tooEarly": "Слишком рано!",
+      "missed": "Пропущено!",
+      "title": "Жонглирование задачами",
+      "premature": "Преждевременный",
+      "counter": "Счётчик",
+      "tapCounterInstruction": "Нажимайте на счётчик при достижении порога. Не допустите переполнения!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Точка деления (PSE)",
+      "curveSteepness": "Крутизна кривой",
+      "idealMidpoint": "Идеальная середина",
+      "pse": "PSE",
+      "title": "Временная бисекция",
+      "steepness": "Крутизна",
+      "shortOrLong": "Короткий или длинный?",
+      "trainingPhase": "Фаза тренировки",
+      "short": "Короткий",
+      "long": "Длинный"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Ширина градиента",
+      "rememberThisDuration": "Запомните эту длительность",
+      "width": "Ширина",
+      "standard": "STANDARD",
+      "title": "Временная генерализация",
+      "hitRate": "Доля попаданий",
+      "faRate": "Доля ЛТ",
+      "hitRateDetectStandard": "Доля попаданий (стандарт обнаружен)",
+      "sameDuration": "Такая же длительность?",
+      "trainingPhase": "Фаза тренировки",
+      "same": "Одинаково",
+      "different": "Различно"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Порог SOA",
+      "title": "Текстурная дискриминация",
+      "threshold": "Порог"
+    },
+    "timePromem": {
+      "avgTimingError": "Средняя ошибка хронометража",
+      "clockChecks": "Проверки часов",
+      "ongoingAccuracy": "Точность текущей задачи",
+      "ongoingTrials": "Текущие попытки",
+      "totalPmPresses": "Всего проспективных нажатий",
+      "pmAccuracy": "Точность ПП",
+      "pmMisses": "Промахи ПП",
+      "title": "Временная проспективная память",
+      "ongoing": "В процессе",
+      "pmHitsLabel": "Проспективные попадания",
+      "timingErr": "Ошибка тайминга",
+      "pmHitsExpected": "Попадания PM / Ожидаемые",
+      "pmPresses": "Нажатий PM",
+      "checkClock": "Проверить часы",
+      "thirtySecMark": "Отметка 30 с"
+    },
+    "toj": {
+      "meanResponseTime": "Ср. время ответа",
+      "temporalResolution": "Временное разрешение",
+      "title": "Суждение о временном порядке",
+      "threshold": "Порог",
+      "whichCameFirst": "Что появилось первым?",
+      "leftFirst": "Левый первый",
+      "rightFirst": "Правый первый"
+    },
+    "tower": {
+      "budget": "Бюджет",
+      "challenge": "Испытание",
+      "challengeClassic": "Классический",
+      "challengeExpert": "Эксперт",
+      "challengeMemory": "Память",
+      "challengePrecision": "Точность",
+      "dragDiscAriaLabel": "Перетащить верхний диск со стержня {{peg}}",
+      "goal": "Цель",
+      "goalHiddenStatus": "Цель скрыта. Используйте Показать, чтобы кратко отобразить.",
+      "goalRevealedMessage": "Цель показана на 3 секунды.",
+      "hint": "Подсказка",
+      "hintDescription": "Показать лучший следующий ход",
+      "hintMessage": "Подсказка: переместить верхний диск со стержня {{fromPeg}} на стержень {{toPeg}}.",
+      "hiddenGoalDescription": "Цель скрыта во время игры. Используйте Показать, если нужно краткое напоминание.",
+      "hiddenGoalTitle": "Испытание памяти",
+      "invalid": "Недопустимые",
+      "moves": "Ходы",
+      "optimal": "Оптимально",
+      "pegFullMessage": "Этот штырь заполнен.",
+      "previewMemoryCountdown": "Запомните цель. Начало через {{seconds}}с.",
+      "previewPlanCountdown": "Спланируйте решение за {{moves}} ходов. Начало через {{seconds}}с.",
+      "reset": "Сброс",
+      "resetDescription": "Начать эту головоломку заново",
+      "resetMessage": "Головоломка сброшена.",
+      "reveal": "Показать",
+      "revealDescription": "Показать скрытую цель",
+      "statusOptimalSolve": "Оптимальное решение. Счёт {{score}}.",
+      "statusSolvedScore": "Решено за {{moves}} ходов (+{{extraMoves}}). Счёт {{score}}.",
+      "undo": "Отменить",
+      "undoDescription": "Отменить последний ход",
+      "undoneMessage": "Последний ход отменён.",
+      "yourPegs": "Ваши стержни"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Верных доставок",
+      "trainsLost": "Потерянные поезда",
+      "wrongStation": "Неправильная станция",
+      "title": "Ход мыслей",
+      "trains": "Поезда",
+      "missed": "Пропущено",
+      "scoreLabel": "Счёт",
+      "instructions": "Инструкция"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Ср. вопросов использовано",
+      "title": "Двадцать вопросов",
+      "avgQuestions": "Средн. вопросов",
+      "rounds": "Раунды",
+      "efficiency": "Эффективность",
+      "avgQuestionsCorrectOnly": "Средн. вопросов (верные)",
+      "questionsLabel": "Вопросов",
+      "remaining": "Осталось",
+      "readyToGuess": "Я готов угадать!",
+      "tapTheTarget": "Нажмите на объект, который считаете целью!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Полезное поле зрения",
+      "visualNoiseMask": "Маска визуального шума",
+      "whatWasInTheCenter": "Что было в центре?",
+      "whereWasTheTarget": "Где была цель?",
+      "avgThreshold": "Средний порог",
+      "speed": "Скорость",
+      "accuracy": "Точность",
+      "central": "Центральный",
+      "peripheral": "Периферический",
+      "overall": "Общий",
+      "block": "Блок",
+      "trials": "Trials",
+      "start": "Старт",
+      "focus": "Фокус",
+      "threshold": "Порог",
+      "stimulus": "Стимул",
+      "respondFromMemory": "Отвечайте по памяти",
+      "truck": "Грузовик",
+      "choosePeripheralLocation": "Выберите периферическое положение",
+      "currentBlock": "Блок {{n}}",
+      "exposure": "Экспозиция"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Слова на {{letter}}",
+      "title": "Вербальная беглость",
+      "totalWords": "Всего слов",
+      "duplicates": "Дубликаты",
+      "letter": "Буква",
+      "round": "Раунд",
+      "roundComplete": "Раунд завершён",
+      "nextRound": "Следующий раунд",
+      "middotRound": " · Раунд"
+    },
+    "vernierAcuity": {
+      "whichSide": "Какая сторона?",
+      "title": "Острота Вернье",
+      "leftOffset": "Смещение влево",
+      "rightOffset": "Смещение вправо",
+      "offset": "Смещение"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Оптимальная стратегия",
+      "correct": "Правильно!",
+      "wrong": "Неправильно",
+      "title": "Прогнозирование погоды",
+      "optimal": "Оптимальный",
+      "learningCurve": "Кривая обучения",
+      "predictTheWeather": "Предскажите погоду",
+      "rain": "Дождь"
+    },
+    "wordChain": {
+      "avgResponseTime": "Ср. время ответа",
+      "chain": "Цепочка",
+      "longestChain": "Самая длинная цепь",
+      "totalCorrect": "Верных всего",
+      "totalWords": "Слов всего",
+      "words": "Слова",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "Среднее ВР",
+      "endsWith": "заканчивается на ",
+      "chainLabel": "Цепочка",
+      "bestLabel": "Рекорд"
+    },
+    "wordFlow": {
+      "avgWordLength": "Средняя длина слова",
+      "correct": "Верно",
+      "invalidWords": "Недопустимые слова",
+      "totalWordsSelected": "Выбрано слов всего",
+      "validWords": "Допустимые слова",
+      "wordsPerMinute": "Слов в минуту",
+      "wrong": "Неверно",
+      "seeResults": "Посмотреть результаты",
+      "nextRound": "Следующий раунд ({{current}}/{{total}})",
+      "title": "Вербальная беглость",
+      "validWordsLabel": "Верные слова",
+      "wordsPerMinLabel": "Слов/мин",
+      "avgLengthLabel": "Средняя длина",
+      "invalidLabel": "Недействительно",
+      "round": "Раунд",
+      "selectWordsBelongTo": "Выберите слова, принадлежащие к",
+      "selected": "Выбрано"
+    },
+    "wordList": {
+      "avgRtCorrect": "Ср. ВР (верно)",
+      "primacyEffect": "Эффект первичности",
+      "recencyEffect": "Эффект новизны",
+      "studyPhaseRememberEachWord": "Фаза изучения — запомните каждое слово",
+      "wordsRecalled": "Слов вспомнено",
+      "title": "Word List",
+      "serialPositionCurve": "Кривая серийной позиции",
+      "wasWordInList": "Было ли это слово в списке?",
+      "seenBefore": "Видели ранее",
+      "newWord": "Новое"
+    },
+    "speedSort": {
+      "switchAccuracy": "Точность переключения",
+      "switchTrials": "Пробы переключения",
+      "sortByColor": "Сортировать по ЦВЕТУ",
+      "sortByShape": "Сортировать по ФОРМЕ",
+      "sortByNumber": "Сортировать по ЧИСЛУ",
+      "ruleChanged": "Правило изменилось!",
+      "binRed": "Красный",
+      "binBlue": "Синий",
+      "binGreen": "Зелёный",
+      "binYellow": "Жёлтый",
+      "binCircle": "Круг",
+      "binSquare": "Квадрат",
+      "binTriangle": "Треугольник",
+      "binStar": "Звезда",
+      "title": "Быстрая сортировка",
+      "switch": "Переключения"
+    },
+    "reflex": {
+      "target": "Цель",
+      "lure": "Приманка",
+      "tooSlow": "Слишком медленно!",
+      "wrongTarget": "Неправильная цель!",
+      "tapTargets": "Нажмите на зелёные круги!",
+      "hits": "Попадания",
+      "misses": "Промахи",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Запомните текущую сумму...",
+      "title": "Цепной подсчёт",
+      "stepChains": "Цепочки из {{len}} шагов",
+      "start": "Старт",
+      "step": "Шаг",
+      "whatIsTheResult": "Каков результат?"
+    },
+    "alternateUses": {
+      "placeholder": "Введите применение...",
+      "title": "Альтернативные применения",
+      "totalUses": "Всего применений",
+      "perObject": "На объект",
+      "rounds": "Раунды",
+      "bestObject": "Лучший объект",
+      "bestCount": "Лучший результат",
+      "noUsesSubmitted": "Использований не отправлено",
+      "timesUp": "Время вышло!",
+      "nextObject": "Следующий предмет ({{object}})",
+      "listCreativeUses": "Перечислите креативные применения этого предмета"
+    },
+    "anagram": {
+      "placeholder": "Введите слово...",
+      "title": "Анаграмма",
+      "avgSolve": "Средн. решение",
+      "letterWords": "Слова из {{len}} букв",
+      "submit": "Отправить"
+    },
+    "facialEmotion": {
+      "happy": "Счастливый",
+      "sad": "Грустный",
+      "angry": "Злой",
+      "fearful": "Испуганный",
+      "disgusted": "Отвращение",
+      "surprised": "Удивлённый",
+      "lc": "LC",
+      "title": "Распознавание лицевых эмоций",
+      "topConfusions": "Частые путаницы"
+    },
+    "numberSeries": {
+      "easy": "Лёгкий",
+      "hard": "Трудный"
+    },
+    "chainRecall": {
+      "round": "Раунд",
+      "title": "Цепное припоминание",
+      "chain": "Цепочка",
+      "placeholder": "Заполнитель"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Эмоциональный Go/No-Go",
+      "block1CommissionErrors": "Ошибки действия блок 1",
+      "block2CommissionErrors": "Ошибки действия блок 2",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "Блок",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Эффект Струпа",
+      "title": "Color Rush",
+      "congShort": "Согл.",
+      "incongShort": "Инконгр.",
+      "congruentAccuracy": "Точность конгр.",
+      "incongruentAccuracy": "Инконгруэнтная точность"
+    },
+    "mirror": {
+      "avgCorrectCells": "Верных клеток (ср.)",
+      "symmetryType": "Тип симметрии",
+      "title": "Зеркало"
+    },
+    "rhythmTap": {
+      "correctTrials": "Верные попытки",
+      "avgRhythmScore": "Ср. оценка ритма",
+      "bestTrialScore": "Лучшая попытка",
+      "worstTrialScore": "Худшая попытка",
+      "level": "Уровень",
+      "rhythm": "Ритм",
+      "bestTrial": "Лучшая проба",
+      "worstTrial": "Худшая попытка"
+    },
+    "vocalProsody": {
+      "questioning": "Вопрошающий"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Умножить",
+      "add": "Сложить",
+      "subtract": "Вычесть",
+      "title": "Быстрый счёт",
+      "score": "Счёт",
+      "solved": "Решено",
+      "missed": "Пропущено"
+    },
+    "puzzle": {
+      "avgSolveTime": "Ср. время решения",
+      "totalMoves": "Всего ходов",
+      "totalErrors": "Всего ошибок",
+      "gridSize": "Размер сетки",
+      "maxGridReached": "Достигнута макс. сетка",
+      "maxLevelReached": "Макс. уровень достигнут",
+      "maxNodesReached": "Макс. узлы достигнуты",
+      "puzzleDetails": "Детали головоломки",
+      "roundDetails": "Детали раунда",
+      "solved": "Решено!",
+      "undo": "Отменить",
+      "reset": "Сброс",
+      "check": "Проверить",
+      "moves": "Ходы",
+      "time": "Время",
+      "level": "Уровень",
+      "errors": "Ошибки",
+      "score": "Score",
+      "grid": "Сетка",
+      "crossings": "Пересечения",
+      "pearls": "Жемчужины",
+      "clues": "Подсказки",
+      "region": "Регион",
+      "filled": "Заполнено",
+      "cells": "Ячейки",
+      "undosLeft": "Отмен осталось",
+      "gems": "Камни",
+      "connected": "Соединено",
+      "slides": "Сдвиги",
+      "progress": "Прогресс",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "Раскрыто",
+      "colored": "Цветной",
+      "violations": "Violations",
+      "blacked": "Затемнено",
+      "empty": "Пусто",
+      "remaining": "Осталось",
+      "pairs": "Пары",
+      "flips": "Переворачивания",
+      "found": "Найдено",
+      "balls": "Шары",
+      "guesses": "Попытки",
+      "original": "Original",
+      "findDifferences": "Найдите различия",
+      "totalDrags": "Всего перетаскиваний",
+      "totalUndos": "Всего отмен",
+      "totalEdgesDrawn": "Всего нарисовано рёбер",
+      "totalLasers": "Всего лазеров",
+      "totalSlides": "Всего сдвигов",
+      "totalRotations": "Всего вращений",
+      "totalRectangles": "Всего прямоугольников",
+      "totalScore": "Общий счёт",
+      "avgTime": "Ср. время",
+      "cellsCleared": "Ячейки очищены",
+      "totalDiffsFound": "Всего найдено различий",
+      "gemsCollected": "Камней собрано",
+      "pushBoxesOntoTargets": "Столкните все ящики на цели",
+      "fireLasersMarkBalls": "Стреляйте лазерами с краёв, затем отметьте позиции шаров",
+      "revealingAnswer": "Открываем ответ...",
+      "checkAnswer": "Проверить ответ",
+      "pickNumberBelow": "Выберите число ниже",
+      "tapCellToAssign": "Нажмите на ячейку, чтобы назначить число",
+      "tapEdgesToPlaceWalls": "Нажимайте на рёбра, чтобы ставить стены. Разделите на области по K.",
+      "ghosts": "Призраки",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "Домино",
+      "islands": "Острова",
+      "pegsLeft": "Колышков осталось",
+      "bestRemaining": "Лучший остаток",
+      "puzzlesSolved": "Головоломок решено",
+      "flooded": "Залито",
+      "edges": "Рёбра",
+      "totalPlacements": "Всего размещений",
+      "totalRemovals": "Всего удалений",
+      "maxTileReached": "Достигнута макс. плитка",
+      "target": "Цель",
+      "placed": "Размещено",
+      "totalGuesses": "Всего попыток",
+      "guessesLeft": "Попыток осталось",
+      "difficulty": "Сложность"
+    },
+    "palisade": {
+      "title": "Частокол",
+      "puzzles": "Головоломки",
+      "maxLevel": "Макс. уровень"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "errors": "Ошибки",
+      "avgTime": "Среднее время",
+      "erase": "Стереть"
+    },
+    "blackbox": {
+      "title": "Чёрный ящик",
+      "puzzles": "Головоломки",
+      "lasers": "Лазеры",
+      "avgTime": "Среднее время"
+    },
+    "designFluency": {
+      "title": "Дизайнерская беглость",
+      "uniqueDesigns": "Уникальные рисунки",
+      "duplicates": "Дубликаты",
+      "round": "Раунд",
+      "roundComplete": "Раунд завершён",
+      "youCreatedDesigns": "Вы создали {{count}} дизайнов",
+      "startRound": "Начать раунд",
+      "instructions": "Инструкция",
+      "designs": "Рисунки",
+      "clear": "Очистить",
+      "addDesign": "Добавить"
+    },
+    "signpost": {
+      "title": "Указатели",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "avgTime": "Среднее время",
+      "maxGrid": "Макс. сетка"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Уровень",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "undos": "Отмены",
+      "puzzle": "Головоломка"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "Биологическое движение",
+      "noiseDots": "шумовых точек",
+      "whichDirection": "В каком направлении?",
+      "left": "Влево",
+      "right": "Вправо"
+    },
+    "inertia": {
+      "title": "Инерция",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "gems": "Самоцветы",
+      "moves": "Ходы"
+    },
+    "waterLevel": {
+      "title": "Уровень воды",
+      "error": "Ошибка",
+      "tilt": "Наклон",
+      "waterLine": "Линия воды?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxGrid": "Макс. сетка"
+    },
+    "sudoku": {
+      "title": "Судоку",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "errors": "Ошибки",
+      "avgTime": "Среднее время",
+      "erase": "Стереть"
+    },
+    "rectangles": {
+      "title": "Прямоугольники",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "rectanglesCount": "Прямоугольников",
+      "maxGrid": "Макс. сетка",
+      "cancelSelection": "Отменить выбор"
+    },
+    "filling": {
+      "title": "Заполнение",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "avgTime": "Среднее время",
+      "grid": "Сетка"
+    },
+    "spacedRetrieval": {
+      "title": "Интервальное припоминание",
+      "studyPair": "Изучите эту пару",
+      "waitAndSolve": "Подождите… затем решите",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Интервал: какие пары?"
+    },
+    "prototypeDistortion": {
+      "title": "Искажение прототипа",
+      "studyPhase": "Фаза изучения",
+      "testPhase": "Фаза теста",
+      "yesBelongs": "Да — Принадлежит",
+      "noRandom": "Нет — Случайный"
+    },
+    "motionCoherence": {
+      "title": "Когерентность движения",
+      "threshold": "Порог",
+      "coherence": "Когерентность",
+      "whichDirection": "В каком направлении?"
+    },
+    "cube": {
+      "title": "Куб",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxLevel": "Макс. уровень",
+      "cubeFaces": "Грани куба",
+      "moveUp": "Вверх",
+      "moveLeft": "Влево",
+      "moveDown": "Вниз",
+      "moveRight": "Вправо"
+    },
+    "sameGame": {
+      "title": "Same Game",
+      "score": "Счёт",
+      "cleared": "Очищено",
+      "cells": "Ячейки",
+      "accuracy": "Точность"
+    },
+    "crossModalMatching": {
+      "title": "Кросс-модальное сопоставление",
+      "chance": "Случай",
+      "whichPatternMatchesRhythm": "Какой паттерн соответствует ритму?"
+    },
+    "mosaic": {
+      "title": "Мозаика",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxGrid": "Макс. сетка"
+    },
+    "spotDiff": {
+      "title": "Найди отличия",
+      "level": "Уровень",
+      "grid": "Сетка",
+      "accuracy": "Точность",
+      "perfect": "Идеально",
+      "avgTime": "Среднее время",
+      "found": "Найдено"
+    },
+    "lightsOut": {
+      "title": "Потуши свет",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxGrid": "Макс. сетка"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "rotations": "Вращения",
+      "avgTime": "Среднее время"
+    },
+    "tracks": {
+      "title": "Рельсы",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "errors": "Ошибки",
+      "avgTime": "Среднее время"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "slides": "Сдвиги",
+      "maxGrid": "Макс. сетка"
+    },
+    "cognitiveBias": {
+      "title": "Тренировка когнитивных искажений",
+      "biasResistance": "Устойчивость к искажению",
+      "biased": "Искажённый",
+      "continue": "Продолжить"
+    },
+    "empathicAccuracy": {
+      "title": "Эмпатическая точность",
+      "emotionId": "Эмоция",
+      "avgRatingError": "Средняя ошибка оценки",
+      "scenarios": "Сценарии",
+      "perfect": "Идеально",
+      "rating": "Оценка",
+      "howDoesCharacterFeel": "Что чувствует персонаж?",
+      "rateIntensity": "Оцените интенсивность",
+      "whatEmotion": "Какая эмоция?",
+      "yourRating": "Ваша оценка",
+      "correct": "Верно",
+      "emotion": "Эмоция"
+    },
+    "guess": {
+      "title": "Мастермайнд",
+      "solved": "Решено",
+      "guesses": "Попытки"
+    },
+    "dominosa": {
+      "title": "Доминоса",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxLevel": "Макс. уровень"
+    },
+    "magnets": {
+      "title": "Магниты",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxLevel": "Макс. уровень"
+    },
+    "tangram": {
+      "placeAll": "Разместите все фигуры",
+      "solved": "Решено!",
+      "notRight": "Не совсем верно",
+      "title": "Tangram",
+      "level": "Уровень",
+      "puzzles": "Головоломки",
+      "placements": "Размещения",
+      "removals": "Удаления",
+      "puzzleNumber": "Головоломка {{n}}",
+      "pieces": "Фигуры",
+      "targetCells": "Cible",
+      "dragHint": "Перетащите или разместите фигуру на сетке",
+      "selectHint": "Выберите фигуру",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Проверить"
+    },
+    "galaxies": {
+      "title": "Галактики"
+    },
+    "flood": {
+      "title": "Наводнение"
+    },
+    "pegs": {
+      "title": "Солитер",
+      "bestPegs": "Лучшие фишки"
+    },
+    "auditoryFigureGround": {
+      "title": "Слуховая фигура-фон",
+      "patternPresent": "Паттерн присутствует?",
+      "pattern": "Паттерн",
+      "noPattern": "Нет паттерна"
+    },
+    "selfOrderedPointing": {
+      "title": "Самоупорядоченное указывание",
+      "maxSpan": "Макс. объём",
+      "errors": "Ошибки",
+      "round": "Раунд",
+      "setOf": "Набор из {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Зеркальная трассировка",
+      "totalErrors": "Всего ошибок",
+      "avgTime": "Среднее время",
+      "shapes": "Фигуры",
+      "perfect": "Идеально",
+      "improvement": "Улучшение",
+      "errorsMiddot": "ошибок ·",
+      "shape": "Фигура",
+      "errors": "Ошибки",
+      "xIsMirrored": "X отзеркален!"
+    },
+    "clockDrawing": {
+      "title": "Рисование часов",
+      "avgError": "Средняя ошибка",
+      "setTo": "Установить на ",
+      "submit": "Отправить"
+    },
+    "cognitiveMap": {
+      "title": "Когнитивная карта",
+      "explore": "Исследовать",
+      "sRemaining": "S Remaining",
+      "from": "От",
+      "whichDirectionIs": "В каком направлении находится "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "Петля"
+    },
+    "lightup": {
+      "title": "Акари"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Макс. плитка",
+      "moves": "Ходы",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Мосты",
+      "puzzles": "Головоломки",
+      "maxLevel": "Макс. уровень",
+      "level": "Уровень"
+    },
+    "net": {
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxGrid": "Макс. сетка"
+    },
+    "flip": {
+      "title": "Переворот"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "Слант"
+    },
+    "towers": {
+      "title": "Башни",
+      "puzzles": "Головоломки",
+      "avgTime": "Среднее время",
+      "erase": "Стереть"
+    },
+    "pearl": {
+      "title": "Жемчуг",
+      "edges": "Рёбра"
+    },
+    "mapColoring": {
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "moves": "Ходы",
+      "maxLevel": "Макс. уровень"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Нежить",
+      "accuracy": "Точность",
+      "puzzles": "Головоломки",
+      "avgTime": "Среднее время"
+    },
+    "untangle": {
+      "title": "Распутать",
+      "drags": "Перетаскивания",
+      "maxNodes": "Макс. узлов"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "Пятнашки"
+    },
+    "tents": {
+      "title": "Палатки"
+    },
+    "mesker": {
+      "pen": "Перо",
+      "stroke": "Штрих",
+      "penPressureHint": "Пишите с постоянным нажимом"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "Проведите к позиции N-back. Если это та же позиция, нажмите дважды.",
+    "hint": {
+      "validated": "Подтверждено",
+      "draw": "Нарисуйте букву · Нажмите для подтверждения",
+      "drawWithColor": "Нарисуйте букву · Выберите цвет · Нажмите для подтверждения",
+      "type": "Введите букву • Enter для подтверждения",
+      "typeWithColor": "Введите букву • Выберите цвет • Enter для подтверждения",
+      "typeResult": "Введите результат • Enter для подтверждения",
+      "writeResult": "Напишите результат · Нажмите для подтверждения"
+    },
+    "keyboard": {
+      "letterInput": "Буква",
+      "numberInput": "Число"
+    },
+    "arithmetic": {
+      "cueHint": "Запомните 2 цифры",
+      "refresh": "Новое"
+    },
+    "hintPosition": "Где был стимул {{n}} ходов назад?",
+    "hintN0": "Укажите текущий стимул",
+    "warmupHint": "Запомните позиции. Ответ не требуется.",
+    "hintDraw": "Нарисуйте букву · Нажмите для подтверждения",
+    "hintDrawWithColor": "Нарисуйте букву · Выберите цвет · Нажмите для подтверждения",
+    "hintWriteResult": "Напишите результат · Нажмите для подтверждения",
+    "guide": {
+      "swipeNormal": "Проведите от последней ячейки к N-{{n}}. Двойное нажатие, если та же позиция.",
+      "swipeSequential": "Проведите от N-0 к N-{{n}}, по одному шагу. Двойное нажатие, если та же позиция.",
+      "swipeDynamic": "Проведите, следуя показанному правилу. Двойное нажатие, если та же позиция.",
+      "tapN0": "Нажмите на текущую позицию.",
+      "warmup": "Запомните позиции — ответ не требуется.",
+      "writeDraw": "Нарисуйте букву, услышанную {{n}} шагов назад • Нажмите для подтверждения",
+      "writeDrawColor": "Нарисуйте букву, услышанную {{n}} шагов назад • Выберите её цвет • Нажмите для подтверждения",
+      "writeType": "Введите букву, услышанную {{n}} шагов назад • Enter для подтверждения",
+      "writeTypeColor": "Введите букву, услышанную {{n}} шагов назад • Выберите её цвет • Enter для подтверждения",
+      "writeDrawN0": "Нарисуйте только что услышанную букву • Нажмите для подтверждения",
+      "writeDrawColorN0": "Нарисуйте только что услышанную букву • Выберите её цвет • Нажмите для подтверждения",
+      "writeTypeN0": "Введите только что услышанную букву • Enter для подтверждения",
+      "writeTypeColorN0": "Введите только что услышанную букву • Выберите её цвет • Enter для подтверждения",
+      "writeResult": "Напишите результат • Нажмите для подтверждения",
+      "validated": "Подтверждено",
+      "holdMindful": "Удерживайте ячейку {{seconds}} с",
+      "swipeMindful": "Проведите за {{seconds}} с"
+    },
+    "settings": {
+      "adaptiveTiming": "Адаптивный ритм",
+      "inputKeyboard": "Клавиатура",
+      "inputHandwriting": "Рукописный ввод",
+      "writingInput": "Буквы/цифры",
+      "section": {
+        "grid": "Сетка",
+        "input": "Ввод",
+        "rhythm": "Ритм",
+        "interface": "Интерфейс",
+        "interfaceNone": "Стандартный",
+        "sound": "Звук"
+      },
+      "isi": "Интервал (ISI)",
+      "stimulusDuration": "Длительность стимула",
+      "feedbackDuration": "Длительность обратной связи",
+      "ruleDisplay": "Показ правила",
+      "blankInterval": "Пустой интервал",
+      "showProgressBar": "Индикатор прогресса",
+      "showInstructions": "Инструкции в игре",
+      "arithmeticInterference": "Арифметическое вмешательство",
+      "fullMenu": "Полное меню",
+      "gridStyle": "Стиль сетки",
+      "gridStyleClassic": "Классический",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "Проведите за {{seconds}} с",
+        "holdMindful": "Удерживайте ячейку {{seconds}} с"
+      },
+      "feedback": {
+        "gestureDuration": "Жест",
+        "holdDuration": "Удержание",
+        "writingDuration": "Письмо"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Удержание",
+      "gestureDuration": "Жест",
+      "writingDuration": "Письмо"
+    },
+    "image": "Фигура",
+    "digits": "Digits",
+    "emotions": "Эмоция",
+    "words": "Слово",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "Воспроизведение сессии",
+    "play": "Воспроизвести",
+    "pause": "Пауза",
+    "restart": "Начать сначала",
+    "speed": "Скорость",
+    "loading": "Загрузка сессии...",
+    "unavailable": "Воспроизведение недоступно для этой сессии",
+    "backToStats": "Вернуться к статистике",
+    "runStack": {
+      "original": "Оригинал",
+      "correction": "Исправление",
+      "delta": "Δ d'",
+      "inProgress": "В процессе",
+      "completed": "Завершено"
+    },
+    "abandon": "Выйти",
+    "badge": "Повтор",
+    "completionReport": {
+      "backToHome": "Назад",
+      "correctAgain": "Исправить снова",
+      "deltaVsOriginal": "vs Оригинал",
+      "deltaVsParent": "vs Предыдущий",
+      "falseAlarmsSkipped": "Избежанные ошибки",
+      "missesCorrections": "Исправленные пропуски",
+      "newFalseAlarms": "Новые ошибки",
+      "replayAgain": "Просмотреть",
+      "scoreLabel": "Оценка исправления",
+      "title": "Исправление завершено"
+    },
+    "controls": "Управление",
+    "correction": "Исправление",
+    "finished": "Воспроизведение завершено",
+    "home": "Главная",
+    "parseError": "Не удалось прочитать сессию",
+    "tapSlotToPlace": "Нажмите на слот для размещения",
+    "timeline": "Шкала времени",
+    "focusTimeline": {
+      "open": "Показать временную шкалу",
+      "close": "Закрыть временную шкалу",
+      "title": "Хронология N-back",
+      "fillAll": "Заполнить все",
+      "fillCard": "Заполнить карточку"
+    },
+    "hud": {
+      "counterDisplay": "Отображение счётчика",
+      "toggleCounterDisplay": "Переключить отображение счётчика"
+    },
+    "validate": "Подтвердить исправление"
+  },
+  "recovery": {
+    "title": "Прерванная сессия",
+    "description": "Сессия была в процессе. Хотите продолжить?",
+    "mode": "Режим",
+    "level": "Уровень",
+    "progress": "Прогресс",
+    "timeAgo": "назад",
+    "resume": "Продолжить сессию",
+    "startFresh": "Начать заново",
+    "staleWarning": "Эта сессия устарела, продолжение может быть затруднено.",
+    "modes": {
+      "game": "Тренировка",
+      "activeTraining": "Активная тренировка",
+      "flowTraining": "Тренировка Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Двойной след"
+    }
+  },
+  "rewards": {
+    "congratulations": "Поздравляем!",
+    "duration": "{{days}} дней Premium",
+    "lifetimeLabel": "Постоянный доступ",
+    "expiresAt": "Действует до {{date}}",
+    "neverExpires": "Никогда не истекает",
+    "continue": "Продолжить",
+    "discovery": {
+      "name": "Пропуск «Открытие»",
+      "description": "7 дней Premium — исследуйте все функции"
+    },
+    "engagement": {
+      "name": "Пропуск «Приверженность»",
+      "description": "1 месяц Premium — ваша дисциплина вознаграждена"
+    },
+    "expert": {
+      "name": "Пропуск эксперта",
+      "description": "3 месяца Premium — вы настоящий практик"
+    },
+    "lifetime": {
+      "name": "Постоянный доступ",
+      "description": "Пожизненный Premium — вы освоили Neurodual"
+    },
+    "xpRemaining": "Осталось XP",
+    "permanentAccessUnlocked": "Постоянный доступ разблокирован",
+    "reachedTheTop": "Вы достигли вершины!"
+  },
+  "progression": {
+    "level": "Уровень {{level}}",
+    "levelShort": "Ур. {{level}}",
+    "nextLevel": "Следующий уровень",
+    "reached": "Достигнут",
+    "inProgress": "В процессе"
+  },
+  "gridlock": {
+    "nextPuzzle": "Следующая головоломка →"
+  }
+}

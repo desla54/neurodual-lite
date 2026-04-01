@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "प्रशिक्षण पथ",
+    "pageSubtitle": "अपने कोर्स चुनें, व्यवस्थित करें और बनाएं",
+    "enabled": "पथ सक्षम करें",
+    "description": "N-1 से N-10 तक 30 क्रमिक चरण",
+    "progress": "प्रगति",
+    "locked": "लॉक",
+    "createJourney": "पथ बनाएं",
+    "viewJourneys": "पथ देखें",
+    "current": "वर्तमान पथ",
+    "myJourneys": "मेरे पथ",
+    "stage": "चरण",
+    "stages": "चरण",
+    "stagesShort": "च.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "नाम",
+    "namePlaceholder": "उदा: N-5 चुनौती",
+    "levels": "लेवल",
+    "levelRange": "लेवल रेंज",
+    "levelTo": "to",
+    "createNew": "नया पथ",
+    "new": "नया",
+    "defaultCustomName": "मेरा पथ",
+    "created": "पथ बनाया गया!",
+    "deleted": "पथ हटाया गया",
+    "sessionSettings": "सत्र सेटिंग्स",
+    "savedStatus": "सहेजा गया",
+    "preset": {
+      "easy": "Easy",
+      "medium": "अनुशंसित",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "पथ और प्रोफाइल",
+      "journey": "पथ",
+      "journeyNone": "चुनें…",
+      "profile": "प्रोफाइल",
+      "profileNone": "चुनें…",
+      "configure": "कॉन्फ़िगर करें",
+      "configureNone": "एक पथ चुनें",
+      "create": "नया पथ",
+      "createDesc": "एक नया पथ बनाएं"
+    },
+    "deleteConfirmTitle": "यह पथ हटाएं?",
+    "deleteConfirmMessage": "यात्रा \"{{name}}\" स्थायी रूप से हटा दी जाएगी।",
+    "renameTitle": "पथ का नाम बदलें",
+    "renameMessage": "\"{{name}}\" का नाम संपादित करें।",
+    "renamed": "पथ का नाम बदला गया।",
+    "badge": {
+      "simulator": "सिम्युलेटर",
+      "beta": "बीटा",
+      "default": "डिफ़ॉल्ट"
+    },
+    "mode": "मोड",
+    "modeStandard": "पथ (4 मोड)",
+    "modeDnb": "Dual N-Back Classic",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "सिम्युलेटर",
+      "jaeggi": "क्लासिक",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} योग्यता सत्र",
+      "needed": "{{count}} और सत्र शेष",
+      "excellent": "उत्कृष्ट!",
+      "good": "अच्छा!",
+      "passing": "उत्तीर्ण"
+    },
+    "progression": {
+      "title": "प्रगति",
+      "description": "अगले स्तर पर जाने के लिए, एक अच्छा स्कोर प्राप्त करें:",
+      "excellent": "≥95% → 1 सत्र",
+      "good": "≥85% → 2 सत्र",
+      "passing": "≥80% → 3 सत्र",
+      "rules": "प्रगति नियम",
+      "jaeggi": {
+        "description": "सबसे कमजोर मोडैलिटी पर आधारित:",
+        "up": "< 3 त्रुटियां → ऊपर",
+        "stay": "3 से 5 त्रुटियाँ → इस स्तर पर बने रहें",
+        "down": "> 5 त्रुटियां → नीचे"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop प्रोटोकॉल (BW स्कोर):",
+        "up": "≥80% → एक लेवल ऊपर",
+        "stay": "50-79% → बना रहे",
+        "strike": "लगातार 3 स्कोर <50% → नीचे"
+      },
+      "hybrid": {
+        "description": "यह कोर्स {{trackCount}} Dual Track सत्र, फिर उसी स्तर पर {{dnbCount}} Dual N-Back सत्र जोड़ता है।",
+        "alternation": "निर्णय लेने के बाद चक्र हमेशा Dual Track से पुनः शुरू होता है।",
+        "authority": "केवल Dual N-Back सत्र ही स्तर बढ़ने, बने रहने या घटने का निर्णय लेते हैं।",
+        "up": "0-1 गलती → स्तर ऊपर",
+        "stay": "2-3 गलतियाँ → यथास्थिति",
+        "down": "4+ गलतियाँ → स्तर नीचे",
+        "streakRule": "एक ही ज़ोन में लगातार दो सत्र निर्णय को सक्रिय करते हैं।",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "सत्यापित {{current}}/{{required}}",
+        "stayProgress": "बनाए रखना {{current}}/{{required}}",
+        "downProgress": "विफल {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track प्रत्येक लक्ष्य स्तर के लिए एक निरंतर दक्षता बार का उपयोग करता है:",
+        "calibration": "एक प्रारंभिक कैलिब्रेशन आपके शुरुआती स्तर का अनुमान लगाता है",
+        "goodSession": "हर अच्छा सत्र वर्तमान स्तर को थोड़ा भरता है",
+        "mastery": "लगभग परफेक्ट सत्र तेज़ी से भरते हैं, सामान्य सत्र मामूली प्रगति करते हैं",
+        "regression": "कमज़ोर सत्र वर्तमान दक्षता बार को नीचे भी ला सकते हैं",
+        "unlock": "अगला लक्ष्य स्तर केवल 100% पर ही अनलॉक होता है"
+      }
+    },
+    "switcher": {
+      "open": "मार्ग चयनकर्ता खोलें",
+      "current": "वर्तमान",
+      "showAll": "सभी मार्ग",
+      "settings": "मार्ग सेटिंग्स"
+    },
+    "previous": "पिछला कोर्स",
+    "next": "अगला कोर्स",
+    "calibration": {
+      "title": "पहला सत्र",
+      "subtitle": "एक संक्षिप्त कैलिब्रेशन आपका प्रारंभिक स्तर निर्धारित करेगा, या आप सीधे स्तर 2 से शुरू कर सकते हैं।",
+      "skipToN2": "या N-2 से शुरू करें",
+      "continueAt": "या N-{{level}} पर जारी रखें",
+      "start": "कैलिब्रेशन शुरू करें",
+      "redo": "कैलिब्रेशन दोबारा करें",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "वर्तमान सेटिंग्स",
+      "currentSlotView": "वर्तमान सेटिंग्स",
+      "lockedTitle": "कुछ विकल्प लॉक हैं",
+      "lockedDesc": "प्रगति की तुलनीयता बनाए रखने के लिए, पथ शुरू होने के बाद मोडैलिटी (और कुछ विकल्प) नहीं बदल सकते।"
+    },
+    "completed": {
+      "title": "पथ पूर्ण!",
+      "subtitle": "सभी चरण मान्य। शाबाश!",
+      "continueFree": "प्रशिक्षण जारी रखें"
+    },
+    "report": {
+      "stage": "चरण",
+      "level": "स्तर",
+      "score": "स्कोर",
+      "sessionValidated": "सत्र सत्यापित",
+      "sessionNotValidated": "सत्र सत्यापित नहीं",
+      "minScore": "न्यूनतम स्कोर आवश्यक:",
+      "stageCompleted": "चरण पूर्ण!",
+      "stageUnlocked": "चरण {{stage}} अनलॉक",
+      "replay": "रीप्ले",
+      "nextStage": "अगला चरण",
+      "home": "होम",
+      "hits": "सही",
+      "misses": "छूटे",
+      "falseAlarms": "फॉल्स अलार्म",
+      "correctRejections": "सही अस्वीकृति"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "ផ្លូវហ្វឹកហ្វឺន",
+    "pageSubtitle": "ជ្រើសរើស រៀបចំ និងបង្កើត journey របស់អ្នក",
+    "enabled": "បើកផ្លូវហ្វឹកហ្វឺន",
+    "description": "៣០ ដំណាក់កាលរីកចម្រើនពី N-1 ដល់ N-10",
+    "progress": "វឌ្ឍនភាព",
+    "locked": "ចាក់សោ",
+    "createJourney": "បង្កើត journey",
+    "viewJourneys": "មើល journey",
+    "current": "Journey បច្ចុប្បន្ន",
+    "myJourneys": "Journey របស់ខ្ញុំ",
+    "stage": "ដំណាក់កាល",
+    "stages": "ដំណាក់កាល",
+    "stagesShort": "ដក.",
+    "stageLabels": {
+      "pick": "រើស",
+      "catch": "ចាប់",
+      "place": "កន្លែង",
+      "memo": "អនុស្សរណៈ"
+    },
+    "name": "ឈ្មោះ",
+    "namePlaceholder": "ឧ. N-5 Challenge",
+    "levels": "Level",
+    "levelRange": "ជួរ level",
+    "levelTo": "ដល់",
+    "createNew": "Journey ថ្មី",
+    "new": "ថ្មី",
+    "defaultCustomName": "Journey របស់ខ្ញុំ",
+    "created": "បានបង្កើត journey!",
+    "deleted": "បានលុប journey",
+    "sessionSettings": "ការកំណត់ session",
+    "savedStatus": "បានរក្សាទុកការកំណត់",
+    "preset": {
+      "easy": "ងាយស្រួល",
+      "medium": "សមរម្យ",
+      "hard": "លំបាក"
+    },
+    "setup": {
+      "title": "Journey និង profile",
+      "journey": "ដំណើរ",
+      "journeyNone": "ជ្រើសរើស...",
+      "profile": "ប្រវត្តិរូប",
+      "profileNone": "ជ្រើសរើស...",
+      "configure": "កំណត់រចនាសម្ព័ន្ធ",
+      "configureNone": "ជ្រើសរើស journey មួយ",
+      "create": "Journey ថ្មី",
+      "createDesc": "បង្កើត journey ថ្មី"
+    },
+    "deleteConfirmTitle": "លុប journey នេះ?",
+    "deleteConfirmMessage": "Journey \"{{name}}\" នឹងត្រូវលុបជាអចិន្ត្រៃយ៍។",
+    "renameTitle": "ប្តូរឈ្មោះ journey នេះ",
+    "renameMessage": "កែប្រែឈ្មោះ \"{{name}}\"។",
+    "renamed": "បានប្តូរឈ្មោះ journey។",
+    "badge": {
+      "simulator": "ក្លែងធ្វើ",
+      "beta": "បេតា",
+      "default": "លំនាំដើម"
+    },
+    "mode": "របៀប",
+    "modeStandard": "Journey (៤ mode)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "ការចាប់ទ្វេ",
+      "dualPlace": "កន្លែងពីរ",
+      "dualMemo": "អនុស្សរណៈទ្វេ",
+      "dualPick": "ការជ្រើសរើសពីរ",
+      "simulator": "ក្លែងធ្វើ",
+      "jaeggi": "បុរាណ",
+      "brainWorkshop": "សិក្ខាសាលាខួរក្បាល"
+    },
+    "validation": {
+      "sessions": "{{count}} session កំពុងផ្ទៀងផ្ទាត់",
+      "needed": "{{count}} session នៅសល់",
+      "excellent": "ល្អឥតខ្ចោះ!",
+      "good": "ល្អ!",
+      "passing": "ជាប់"
+    },
+    "progression": {
+      "title": "វឌ្ឍនភាព",
+      "description": "ដើម្បីឡើង level បន្ទាប់ សូមសម្រេចបានពិន្ទុល្អ:",
+      "excellent": "≥95% → ១ session",
+      "good": "≥85% → ២ session",
+      "passing": "≥80% → ៣ session",
+      "rules": "ច្បាប់នៃវឌ្ឍនភាព",
+      "jaeggi": {
+        "description": "ផ្អែកលើ modality ខ្សោយបំផុត:",
+        "up": "< ៣ កំហុស → ឡើង level",
+        "stay": "៣ ដល់ ៥ កំហុស → នៅ level នេះ",
+        "down": "> ៥ កំហុស → ចុះ level"
+      },
+      "brainworkshop": {
+        "description": "ពិធីការសិក្ខាសាលាខួរក្បាល (ពិន្ទុ BW)៖",
+        "up": "≥80% → ឡើង level",
+        "stay": "50-79% → នៅ level ដដែល",
+        "strike": "៣ ពិន្ទុជាប់គ្នា <50% → ចុះ level"
+      },
+      "hybrid": {
+        "description": "Journey នេះដំណើរការ {{trackCount}} Dual Track session បន្ទាប់មក {{dnbCount}} Dual N-Back session នៅ level ដូចគ្នា។",
+        "alternation": "រង្វិលជុំតែងតែចាប់ផ្តើមឡើងវិញជាមួយ Dual Track នៅពេលដែលការសម្រេចចិត្តត្រូវបានធ្វើ។",
+        "authority": "មានតែ Dual N-Back session ប៉ុណ្ណោះដែលសម្រេចចិត្ត ឡើង នៅដដែល ឬ ចុះ។",
+        "up": "កំហុស ០-១ → ឡើង level",
+        "stay": "កំហុស ២-៣ → នៅដដែល",
+        "down": "កំហុស ៤+ → ចុះ level",
+        "streakRule": "ពីរ session ជាប់គ្នាក្នុង zone ដូចគ្នាធ្វើឱ្យការសម្រេចចិត្ត។",
+        "trackProgress": "បទ {{current}}/{{required}}",
+        "cleanProgress": "បានផ្ទៀងផ្ទាត់ {{current}}/{{required}}",
+        "stayProgress": "កាន់ {{current}}/{{required}}",
+        "downProgress": "បរាជ័យ {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track ប្រើរបារ mastery ជាបន្តបន្ទាប់សម្រាប់ដំណាក់កាល target-count នីមួយៗ:",
+        "calibration": "Calibration ដំបូងប៉ាន់ស្មាន target count ចាប់ផ្តើមរបស់អ្នក",
+        "goodSession": "Session ល្អនីមួយៗបំពេញដំណាក់កាលបច្ចុប្បន្នបន្តិច",
+        "mastery": "Session ស្ទើរតែល្អឥតខ្ចោះបំពេញវាលឿនជាង ប៉ុន្តែ session ធម្មតានៅតែមធ្យម",
+        "regression": "Session ខ្សោយអាចធ្វើឱ្យរបារ mastery បច្ចុប្បន្នចុះថយ",
+        "unlock": "Target count បន្ទាប់ unlock តែនៅពេលដំណាក់កាលបច្ចុប្បន្នឈានដល់ 100%"
+      }
+    },
+    "switcher": {
+      "open": "បើក journey switcher",
+      "current": "បច្ចុប្បន្ន",
+      "showAll": "Journey ទាំងអស់",
+      "settings": "ការកំណត់ journey"
+    },
+    "previous": "Journey មុន",
+    "next": "Journey បន្ទាប់",
+    "calibration": {
+      "title": "Session ដំបូង",
+      "subtitle": "Calibration ខ្លីនឹងកំណត់ level ចាប់ផ្តើមរបស់អ្នក ឬអ្នកអាចចាប់ផ្តើមដោយផ្ទាល់នៅ level 2។",
+      "skipToN2": "ឬចាប់ផ្តើមនៅ N-2",
+      "continueAt": "ឬបន្តនៅ N-{{level}}",
+      "start": "ចាប់ផ្តើម calibration",
+      "redo": "ធ្វើ calibration ឡើងវិញ",
+      "badge": "ការក្រិតតាមខ្នាត"
+    },
+    "presets": {
+      "currentSlot": "ផ្ទាល់ខ្លួន",
+      "currentSlotView": "ផ្ទាល់ខ្លួន",
+      "lockedTitle": "ជម្រើសមួយចំនួនត្រូវបានចាក់សោ",
+      "lockedDesc": "ដើម្បីរក្សាការប្រៀបធៀបវឌ្ឍនភាព modality (និងជម្រើសមួយចំនួន) មិនអាចផ្លាស់ប្តូរបានទេបន្ទាប់ពី journey បានចាប់ផ្តើម។"
+    },
+    "completed": {
+      "title": "Journey បានបញ្ចប់!",
+      "subtitle": "ដំណាក់កាលទាំងអស់បានផ្ទៀងផ្ទាត់។ ពូកែណាស់!",
+      "continueFree": "បន្តហ្វឹកហ្វឺន"
+    },
+    "report": {
+      "stage": "ដំណាក់កាល",
+      "level": "កម្រិត",
+      "score": "ពិន្ទុ",
+      "sessionValidated": "Session បានផ្ទៀងផ្ទាត់!",
+      "sessionNotValidated": "Session មិនបានផ្ទៀងផ្ទាត់",
+      "minScore": "អប្បបរមាតម្រូវ:",
+      "stageCompleted": "ដំណាក់កាលបានបញ្ចប់!",
+      "stageUnlocked": "ដំណាក់កាល {{stage}} បាន unlock!",
+      "replay": "ចាក់ឡើងវិញ",
+      "nextStage": "ដំណាក់កាលបន្ទាប់",
+      "home": "ទំព័រដើម",
+      "hits": "ត្រូវ",
+      "misses": "ខុស",
+      "falseAlarms": "ការជូនដំណឹងមិនពិត",
+      "correctRejections": "ការបដិសេធត្រឹមត្រូវ"
+    }
+  }
+}

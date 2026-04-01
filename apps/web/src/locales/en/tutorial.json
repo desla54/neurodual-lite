@@ -86,14 +86,6 @@
       "comingSoon": "Place tutorial is under development",
       "cardPool": "Available cards",
       "slot": "Slot",
-      "spotlight": {
-        "intro": "Welcome to Dual Place! Learn to place stimuli in temporal order.",
-        "hud": "Top: trial counter and N-back level.",
-        "grid": "The 3×3 grid displays stimulus positions.",
-        "timeline": "The timeline shows temporal order: N-2 (oldest) → N (present).",
-        "cardPool": "Cards represent stimuli. Place them on the timeline!",
-        "outro": "Ready to begin? Let's go!"
-      },
       "observe": "Observe: a position on the grid and an audio letter.",
       "buffer": "Second stimulus. The N-back buffer is filling up.",
       "cardsAppear": "Cards appear! They represent the last 3 stimuli.",
@@ -122,14 +114,6 @@
       "selectAudio": "Select the letter",
       "clickToRecall": "Click a slot to recall the value",
       "validate": "Validate",
-      "spotlight": {
-        "intro": "Welcome to Dual Memo! Active recall training.",
-        "hud": "Top: counter and N-back level.",
-        "grid": "The grid displays stimuli. Memorize them well!",
-        "recallZone": "After each stimulus, recall the N-back window from memory.",
-        "validateButton": "When you've filled everything, click Validate.",
-        "outro": "Ready for the memory challenge? Let's go!"
-      },
       "observeFirst": "First stimulus. Memorize both the position AND the letter!",
       "observeSecond": "Second stimulus. Keep memorizing.",
       "observeThird": "Third stimulus. Buffer complete. Get ready!",
@@ -151,12 +135,7 @@
       "wrongAnswer": "That's not it. Think, which stimulus was at that moment?",
       "tryAgain": "Try again! You can still correct.",
       "maxCorrections": "3 corrections reached. This slot is locked.",
-      "validateHint": "All slots are filled. Click Validate!",
-      "picker": {
-        "positionTitle": "Which position?",
-        "audioTitle": "Which letter?",
-        "cancel": "Cancel"
-      }
+      "validateHint": "All slots are filled. Click Validate!"
     },
     "pick": {
       "spotlight": {
@@ -211,44 +190,7 @@
       "swipe5": "Excellent! You've mastered the recall gesture.",
       "complete": "Tutorial complete. You're ready for Dual Trace training.",
       "tapTarget": "Tap the previous turn's position",
-      "tapTargetAndAudio": "Tap the target position, then Audio",
-      "feedback": {
-        "wrongDirection": "Not that direction. The previous position was here.",
-        "forgotAudio": "Don't forget the double-tap for the audio match!",
-        "tooShort": "Swipe further to validate."
-      },
-      "spotlight": {
-        "intro": "Dual Trace uses gestures instead of buttons. Let's discover the interface.",
-        "hud": "Your dashboard: N-Back level and progress.",
-        "grid": "The grid: a position appears each turn. You'll need to swipe towards the previous position (N-1).",
-        "outro": "Let's practice. First observe, then swipe when it's your turn."
-      }
-    },
-    "steps": {
-      "workingMemory": {
-        "title": "Working memory",
-        "desc": "Dual N-Back trains your working memory. You must remember stimuli N steps ago and detect matches."
-      },
-      "positionMode": {
-        "title": "Position mode",
-        "desc": "Watch the square position. When it appears in the same spot as 2 steps ago, press Position."
-      },
-      "yourTurn": {
-        "title": "Your turn",
-        "desc": "Press Position when the square is in the same position as 2 steps ago."
-      },
-      "audioMode": {
-        "title": "Audio mode",
-        "desc": "Listen to the letters. When you hear the same letter as 2 steps ago, press Audio."
-      },
-      "audioPractice": {
-        "title": "Audio practice",
-        "desc": "Press Audio when you hear the same letter as 2 steps ago."
-      },
-      "dualMode": {
-        "title": "Dual mode",
-        "desc": "Combine position AND audio. Press the corresponding button when a repetition occurs."
-      }
+      "tapTargetAndAudio": "Tap the target position, then Audio"
     },
     "ui": {
       "startExercise": "Start exercise",

@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Minden jog fenntartva.",
+    "terms": {
+      "title": "Felhasználási feltételek",
+      "version": "3.0 verzió — Utolsó frissítés: 2026-03-04",
+      "healthWarning": {
+        "title": "FONTOS EGÉSZSÉGÜGYI FIGYELMEZTETÉS",
+        "content": "A NeuroDual egy kognitív edzés és wellness alkalmazás. <strong>Nem orvosi eszköz.</strong> Nem diagnosztizál, kezel, gyógyít vagy megelőz semmilyen betegséget. Ha bármilyen aggálya merül fel, vagy kellemetlen érzést tapasztal, hagyja abba az alkalmazás használatát és forduljon orvoshoz."
+      },
+      "section1": {
+        "title": "1. Cél és elfogadás",
+        "content": "A NeuroDual letöltésével, telepítésével vagy használatával feltétel nélkül elfogadod ezeket a Felhasználási feltételeket. Ha nem fogadod el ezeket a feltételeket, kérjük, ne használd az alkalmazást."
+      },
+      "section2": {
+        "title": "2. Szolgáltatás leírása",
+        "content": "A NeuroDual Dual N-Back munkamemória edzést biztosít, helyi adatkezeléssel és szinkronizálási lehetőségekkel fiók segítségével. A szolgáltatás jelenlegi állapotában nyújtott, és változhat.",
+        "item1": "Kompatibilitás: webes és mobil alkalmazások (elérhetőség függvényében).",
+        "item2": "Hozzáférés: egyes funkciók internetkapcsolatot és/vagy fióklétrehozást igényelnek.",
+        "item3": "Frissítések: biztonsági vagy teljesítménybeli okokból előzetes értesítés nélkül telepíthetünk javításokat vagy frissítéseket.",
+        "item4": "Hirdetések: az ingyenes mobilváltozat közbeiktatott hirdetéseket jeleníthet meg (Google AdMob). A prémium felhasználók nem látnak hirdetéseket."
+      },
+      "section3": {
+        "title": "3. Fiókok és biztonság",
+        "item1": "Opcionális fióklétrehozás e-maillel vagy identitásszolgáltatóval (Google, Apple).",
+        "item2": "Te vagy felelős a hitelesítési adataid bizalmas kezeléséért és a fiókoddal végzett minden műveletért.",
+        "item3": "A fiók és a kapcsolódó adatok törlése elérhető a Beállításokból.",
+        "item4": "Felfüggeszthetjük vagy megszüntethetjük a fiókot ezen Feltételek megsértése, csalási kísérlet vagy biztonsági incidens esetén."
+      },
+      "section4": {
+        "title": "4. Használati szabályok és korlátozások",
+        "item1": "Ne kerüld meg a biztonsági intézkedéseket vagy technikai korlátozásokat.",
+        "item2": "Ne használd az alkalmazást illegális vagy káros célokra.",
+        "item3": "Ne kíséreld meg a visszafejtést vagy az engedély nélküli tartalomkinyerést.",
+        "item4": "Tartsd tiszteletben az alkalmazás és tartalmainak szellemi tulajdonjogait."
+      },
+      "section5": {
+        "title": "5. Szellemi tulajdon",
+        "content": "Minden elem (szöveg, grafika, hangok, forráskód, logók) szerzői jogvédelem alatt áll és a kiadó vagy licencadói tulajdonát képezi. Semmilyen licenc nem kerül megadásra, kivéve a személyes, nem kizárólagos és nem átruházható jogot az alkalmazás használatára ezen Feltételeknek megfelelően."
+      },
+      "section6": {
+        "title": "6. Elérhetőség és támogatás",
+        "content": "A szolgáltatás 24/7 elérhető karbantartás vagy vis major kivételével. Nem garantáljuk a folyamatos elérhetőséget vagy teljesítményt. Támogatás: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Alkalmazáson belüli vásárlások / Előfizetések",
+        "content": "Prémium előfizetések elérhetők: éves és élethosszig tartó (10 év). A fizetéseket a RevenueCat (mobil) vagy a Lemon Squeezy (web) kezeli. Az <strong>Értékesítési feltételek</strong> vonatkoznak rá (árazás, elállás, megújítás, lemondás, visszatérítés), és a vásárlás előtt elérhetők."
+      },
+      "section8": {
+        "title": "8. Felelősség",
+        "item1": "A szolgáltatás jelenlegi állapotában nyújtott, eredménygarancia nélkül.",
+        "item2": "Nem vagyunk felelősek a használattal, a nem mentett helyi adatok elvesztésével vagy a statisztikák értelmezésével kapcsolatos közvetlen vagy közvetett károkért.",
+        "item3": "Ha kellemetlen érzést, mellékhatásokat tapasztalsz, vagy aggódsz az egészségedért, hagyd abba a használatot."
+      },
+      "section9": {
+        "title": "9. Személyes adatok",
+        "content": "A személyes adatok kezelését az <a>Adatvédelmi szabályzat</a> ismerteti. A Feltételek és az Adatvédelmi szabályzat közötti ellentmondás esetén az adatkezelési kérdésekben az Adatvédelmi szabályzat az irányadó."
+      },
+      "section10": {
+        "title": "10. A Feltételek módosítása",
+        "content": "Jogi, technikai vagy szolgáltatási okokból módosíthatjuk ezeket a Feltételeket. A frissítés dátuma a dokumentum tetején jelenik meg. Lényeges változások esetén értesítés jelenik meg az alkalmazásban."
+      },
+      "section11": {
+        "title": "11. Alkalmazandó jog és viták",
+        "content": "Ezekre a Feltételekre a francia jog vonatkozik. Vita esetén és békés rendezési kísérletek után a fogyasztó felhasználók igénybe vehetik a fogyasztói közvetítést vagy az Európai Online Vitarendezési (ODR) platformot. Egyébként a francia bíróságok rendelkeznek kizárólagos joghatósággal."
+      },
+      "section12": {
+        "title": "12. Kapcsolat",
+        "content": "A Feltételekkel kapcsolatos kérdésekért:"
+      }
+    },
+    "privacy": {
+      "title": "Adatvédelmi szabályzat",
+      "version": "3.0 verzió — Utolsó frissítés: 2026-03-04",
+      "intro": {
+        "p1": "Ez az Adatvédelmi szabályzat leírja, hogyan kezeli a NeuroDual (\"mi\") a személyes adataidat a mobilalkalmazásunk és weboldalunk használata során.",
+        "p2": "Alkalmazzuk az Általános Adatvédelmi Rendelet (GDPR) és a francia adatvédelmi törvény elveit. Előnyben részesítjük a helyi-első architektúrát, nem adjuk el és nem adjuk bérbe az adataidat, és közönségmérést használunk a termék javítására."
+      },
+      "section1": {
+        "title": "1. Adatkezelő",
+        "responsible": "Adatkezelő:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Székhely:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Franciaország",
+        "siret": "SZIRÉNA:",
+        "siretValue": "818 474 082",
+        "email": "E-mail:",
+        "dpo": "DPO: AGUILAL Abdeslam (azonos elérhetőség). Az adataiddal kapcsolatos bármilyen kérdésért a fenti címen érhetsz el minket."
+      },
+      "section2": {
+        "title": "2. Gyűjtött adatok",
+        "sub1": {
+          "title": "2.1 Felhasználó által generált adatok (Helyi mód)",
+          "content": "Csak az eszközödön tárolva SQLite-on keresztül, amíg kijelentkezve maradsz:",
+          "item1": "Pontszámok és N-Back munkamenet előzmények.",
+          "item2": "Játékkonfigurációs beállítások.",
+          "item3": "Helyi profil (becenév, választott avatar).",
+          "note": "Ezek az adatok nem jutnak el a szervereinkre, amíg nem hozol létre fiókot. Az alkalmazás eltávolításakor ezek az adatok elvesznek."
+        },
+        "sub2": {
+          "title": "2.2 Fiókadatok (Opcionális)",
+          "content": "Ha fiókot hozol létre az adataid szinkronizálásához:",
+          "item1": "E-mail cím (egyedi azonosító).",
+          "item2": "Az identitásszolgáltató (Google, Apple) által biztosított felhasználói azonosító.",
+          "note": "Ezeket az adatokat a hitelesítési szolgáltatónk (Supabase) kezeli."
+        },
+        "sub3": {
+          "title": "2.3 Technikai naplók",
+          "content": "Pszeudonimizált naplók (hibák, szinkronizálási állapot, teljesítmény) biztonsági és támogatási célokból."
+        },
+        "sub4": {
+          "title": "2.4 Támogatási adatok",
+          "content": "A támogatással folytatott e-mail levelezés tartalmazhatja az elérhetőségeidet és a kérésed tartalmát a válaszadás érdekében."
+        },
+        "sub5": {
+          "title": "2.5 Felügyelet és hibakövető",
+          "content": "Technikai adatok (hibák, teljesítmény, rendellenes viselkedés) gyűjtése a Sentry segítségével az alkalmazás stabilitásának javítása érdekében. Pszeudonimizált adatok, nincs hirdetési célzás."
+        },
+        "sub6": {
+          "title": "2.6 Közönségmérés és termékelemzés",
+          "content": "Anonimizált használati adatok gyűjtése a PostHog segítségével (meglátogatott oldalak, alkalmazáson belüli műveletek, eszköztípus) a termék javítása érdekében. Nem kerül átadásra személyazonosításra alkalmas adat. Nincs hirdetési célzás."
+        },
+        "sub7": {
+          "title": "2.7 Hirdetések (Ingyenes mobilváltozat)",
+          "content": "Az ingyenes Android verzió közbeiktatott hirdetéseket jelenít meg a Google AdMob segítségével. A Google hirdetési azonosítót és technikai adatokat gyűjthet (eszköztípus, nyelv, hirdetési interakciók). A prémium felhasználókat nem érintik hirdetések. További információ: Google hirdetések adatvédelmi szabályzata."
+        }
+      },
+      "section3": {
+        "title": "3. Célok és jogalapok",
+        "content": "Adataidat csak a következőkre használjuk:",
+        "item1": "<strong>Szolgáltatás működtetése</strong> (helyi mentés, statisztikák, többeszközös szinkronizálás) — Jogalap: szerződés teljesítése (GDPR 6.1.b cikk).",
+        "item2": "<strong>Biztonság és csalásmegelőzés</strong> (technikai naplózás, hozzáférés-szabályozás) — Jogalap: jogos érdek (GDPR 6.1.f cikk).",
+        "item3": "<strong>Felhasználói támogatás</strong> — Jogalap: jogos érdek (kérések megválaszolása).",
+        "item4": "<strong>Jogi kötelezettségek</strong> — Jogalap: jogi kötelezettség (GDPR 6.1.c cikk).",
+        "item5": "<strong>Felügyelet és hibakövető</strong> — Jogalap: jogos érdek (stabilitás javítása); pszeudonimizált adatok, nincs személyre szabott hirdetés.",
+        "item6": "<strong>Közönségmérés</strong> (anonimizált termékelemzés PostHog segítségével) — Jogalap: jogos érdek (GDPR 6.1.f cikk); anonimizált adatok.",
+        "note": "A célok bármilyen változása ezen szabályzat frissítésében kerül dokumentálásra.",
+        "item7": "<strong>Hirdetések</strong> (közbeiktatott hirdetések megjelenítése az ingyenes mobilfelhasználók számára) — Jogalap: jogos érdek (GDPR 6.1.f cikk).",
+        "item8": "<strong>Marketing és hírlevelek</strong> — Jogalap: kifejezett hozzájárulás (GDPR 6.1.a cikk)."
+      },
+      "section4": {
+        "title": "4. Megőrzési időszakok",
+        "item1": "<strong>Helyi adatok:</strong> az eszközödön tárolva, és az eltávolításkor vagy visszaállításkor törölve.",
+        "item2": "<strong>Fiók- és szinkronizált adatok:</strong> a fiók aktív állapotáig megőrizve. A fióktörlési kérelem után 30 napon belül törölve.",
+        "item3": "<strong>Technikai naplók:</strong> legfeljebb 12 hónapig megőrizve, majd automatikusan törölve.",
+        "item4": "<strong>Felügyelet:</strong> pszeudonimizált technikai adatok 90 napig megőrizve hibakövetés és termékfejlesztés céljából.",
+        "item5": "<strong>Támogatási kérelmek:</strong> a jegy lezárása után 24 hónapig megőrizve, majd törölve.",
+        "item6": "<strong>Közönségadatok (PostHog):</strong> anonimizált, 12 hónapig megőrizve."
+      },
+      "section5": {
+        "title": "5. Címzettek, adatfeldolgozók és továbbítás",
+        "content": "Adataidat a következő szolgáltatók kezelhetik:",
+        "item1": "Supabase Inc. (hitelesítés és felhőadatbázis, EU hosting).",
+        "item2": "Amazon Web Services (Supabase infrastruktúra, EU régiók).",
+        "item3": "Cloudflare Inc. (webalkalmazás hosting, CDN és biztonság).",
+        "item4": "Sentry (hiba- és teljesítményfigyelés; EU-n kívüli továbbítás Standard Szerződéses Záradékok alapján).",
+        "item5": "RevenueCat Inc. (mobil előfizetés és alkalmazáson belüli fizetéskezelés; nem tárolja a bankkártya adatokat).",
+        "note": "Új szolgáltató hozzáadása esetén ez a szakasz frissítésre kerül.",
+        "transfers": "<strong>EU-n kívüli továbbítások:</strong> ha EU-n kívüli szolgáltatók vesznek részt (pl. Cloudflare, Supabase US entitás, Sentry, RevenueCat, Google AdMob), a továbbítást az Európai Bizottság Standard Szerződéses Záradékai (SCC) vagy egyenértékű mechanizmus szabályozza.",
+        "item6": "PostHog Inc. (közönségmérés és termékelemzés; anonimizált adatok; EU hosting).",
+        "item7": "Lemon Squeezy (webes fizetéskezelés; nem tárolja a bankkártya adatokat).",
+        "item8": "Google AdMob (hirdetésmegjelenítés az ingyenes mobilváltozatban; EU-n kívüli továbbítás Standard Szerződéses Záradékok alapján)."
+      },
+      "section6": {
+        "title": "6. Jogaid",
+        "content": "A GDPR alapján a következő jogokkal rendelkezel:",
+        "item1": "Hozzáférés, helyesbítés, törlés.",
+        "item2": "Korlátozás és tiltakozás (jogalaptól függően).",
+        "item3": "Hordozhatóság (adataid exportálása JSON vagy CSV formátumban).",
+        "item4": "Hozzájárulás visszavonása (ahol alkalmazandó).",
+        "item5": "Panasz a felügyeleti hatóságnál (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Fióktörlés:</strong> a fiókodat és az összes kapcsolódó adatot közvetlenül az alkalmazás Beállításaiból törölheted. Ez a művelet visszavonhatatlan.",
+        "exercise": "Egyéb jogaid gyakorlásához fordulj a <strong>support@neurodual.fr</strong> címhez. Észszerű kétség esetén személyazonosítás kérhető. Válaszidő: 1 hónap (összetett esetekben 3 hónapra meghosszabbítható)."
+      },
+      "section7": {
+        "title": "7. Biztonság",
+        "content": "Titkosított kommunikáció (HTTPS/TLS), korlátozott rendszergazdai hozzáférés, jogosultsági ellenőrzések. Kockázatot jelentő adatvédelmi incidens esetén megtörténnek a jogszabályi értesítések (CNIL és érintett személyek)."
+      },
+      "section8": {
+        "title": "8. Sütik és helyi tárolás",
+        "content": "Az alkalmazás SQLite-ot használ a haladásod tárolására közvetlenül az eszközödön. Csak alapvető technikai sütiket használunk (hitelesítés, munkamenet). Az ingyenes mobilváltozat a Google AdMob-ot használja, amely sütiket vagy hirdetési azonosítókat állíthat be."
+      },
+      "section9": {
+        "title": "9. Kiskorúak",
+        "content": "A NeuroDual 16 évnél idősebb felhasználóknak szól. Kiskorúak az alkalmazást törvényes gondviselő felelőssége mellett használhatják."
+      },
+      "section10": {
+        "title": "10. Változtatások",
+        "content": "Minden frissített verzió itt kerül közzétételre az utolsó frissítés dátumával. Lényeges változások esetén értesítés jelenik meg az alkalmazásban."
+      },
+      "section11": {
+        "title": "11. Kapcsolat",
+        "content": "Bármilyen kérdéssel vagy jogaid gyakorlásához:",
+        "email": "E-mail: support@neurodual.fr",
+        "responsible": "Adatkezelő: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Értékesítési feltételek",
+      "version": "Éves és élethosszig tartó előfizetések — Utolsó frissítés: 2026-03-04",
+      "section1": {
+        "title": "1. Cél",
+        "content": "Ezek az Értékesítési feltételek a NeuroDual prémium csomagokra (éves és élethosszig tartó) való előfizetést szabályozzák. Kiegészítik a <a1>Felhasználási feltételeket</a1> és az <a2>Adatvédelmi szabályzatot</a2>."
+      },
+      "section2": {
+        "title": "2. Ajánlat és árazás",
+        "item1": "<strong>Éves előfizetés</strong>: a fizetés előtt megjelenített ár (adóval, ha alkalmazandó), évente automatikusan megújul.",
+        "item2": "<strong>Élethosszig tartó előfizetés (10 év)</strong>: egyszeri fizetés, amely 10 évre hozzáférést biztosít a prémium funkciókhoz automatikus megújítás nélkül.",
+        "item3": "Prémium hozzáférés: többeszközös felhőszinkronizálás, távoli mentések, hozzáférés az összes N-szinthez, fejlett exportálás, hirdetésmentes élmény, elsőbbségi támogatás.",
+        "item4": "Az aktuális árak az alkalmazáson belüli előfizetési oldalon és az áruházakban (App Store, Google Play) érhetők el.",
+        "item5": "Az árak változhatnak; bármely módosítást a megújítás előtt közlünk a lemondás lehetőségével (nem vonatkozik az élethosszig tartóra)."
+      },
+      "section3": {
+        "title": "3. Időtartam, megújítás és lemondás",
+        "item1": "<strong>Éves előfizetés</strong>: 12 hónap időtartam az előfizetés dátumától.",
+        "item2": "<strong>Élethosszig tartó előfizetés</strong>: 10 év időtartam az előfizetés dátumától, nincs megújítás.",
+        "item3": "Megújítás (éves): automatikus megújítás minden lejáratkor, kivéve ha előzetesen lemondják.",
+        "item4": "Lemondás (éves): bármikor lehetséges az alkalmazás vagy az áruház beállításaiból (App Store, Google Play). Az aktuális időszak végén lép hatályba.",
+        "item5": "Az élethosszig tartó nem mondható le, de a törvényes elállási jog vonatkozik rá (lásd 5. szakasz)."
+      },
+      "section4": {
+        "title": "4. Fizetés",
+        "item1": "A fizetéseket a RevenueCat kezeli az áruházakon (App Store, Google Play) vagy a Lemon Squeezy a weben. Nem tároljuk a bankkártya adataidat.",
+        "item2": "Fizetési hiba esetén (ismétlődő előfizetések) a prémium hozzáférés felfüggeszthető a rendezésig.",
+        "item3": "Az App Store vagy Google Play áruházon keresztüli vásárlások visszatérítését az adott áruháznál kell kérni."
+      },
+      "section5": {
+        "title": "5. Elállási jog",
+        "content": "Digitális szolgáltatás vásárlás után nyújtva. Ha a 14 napos törvényes határidő lejárta előtt kéred az azonnali végrehajtást, tudomásul veszed, hogy a szolgáltatás teljes nyújtásakor lemondasz az elállási jogodról. Kifejezett lemondás nélkül az elállási jogodat a vásárlástól számított 14 napon belül gyakorolhatod a support@neurodual.fr címre írt levéllel."
+      },
+      "section6": {
+        "title": "6. Visszatérítés",
+        "content": "A törvényes elállási jogon kívül a már megkezdett előfizetések nem téríthetők vissza, kivéve kötelező rendelkezések vagy a szolgáltatásnak felróható súlyos hibák esetén."
+      },
+      "section7": {
+        "title": "7. Ajánlat változtatások",
+        "content": "A prémium funkciók fejlődhetnek. Egy lényeges funkció eltávolítását előzetesen közöljük és, ha alkalmazandó, a lejárat előtti díjmentes lemondás lehetőségével."
+      },
+      "section8": {
+        "title": "8. Személyes adatok",
+        "content": "A számlázási és fiókadatok kezelése az <a>Adatvédelmi szabályzatban</a> van részletezve."
+      },
+      "section9": {
+        "title": "9. Ügyfélszolgálat",
+        "content": "Bármilyen kérdéssel, elállási joggal kapcsolatos visszatérítéssel vagy panasszal:"
+      }
+    },
+    "mentions": {
+      "title": "Jogi közlemény",
+      "version": "Utolsó frissítés:",
+      "section1": {
+        "title": "1. Kiadó",
+        "company": "Cégnév:",
+        "companyValue": "AGUILAL Abdeslam (Egyéni vállalkozás)",
+        "address": "Cím:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Franciaország",
+        "siren": "SZIRÉNA:",
+        "sirenValue": "818 474 082",
+        "email": "E-mail:"
+      },
+      "section2": {
+        "title": "2. Kiadási igazgató",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-mail:"
+      },
+      "section3": {
+        "title": "3. Tárhely",
+        "content": "A NeuroDual alkalmazás hostingját biztosítja:",
+        "webapp": "Webalkalmazás",
+        "database": "Adatbázis és hitelesítés",
+        "databaseInfra": "Infrastruktúra: Amazon Web Services (EU régió - eu-central-1)",
+        "monitoring": "Felügyelet és hibakövető",
+        "subscriptions": "Előfizetés-kezelés",
+        "analytics": "Közönségmérés",
+        "analyticsInfra": "EU-s fogadás",
+        "advertising": "Hirdetések (ingyenes mobilváltozat)",
+        "payments": "Webes fizetések",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Szellemi tulajdon",
+        "p1": "A NeuroDual alkalmazás minden eleme (szöveg, grafika, hangok, forráskód, logók, védjegyek) szerzői jog és védjegyjog védelme alatt áll. Bármilyen jogosulatlan reprodukció, megjelenítés vagy felhasználás tilos.",
+        "p2": "Egyes funkciók forráskódja nyílt forráskódú könyvtárakat használ, amelyek vonatkozó licenceit tiszteletben tartjuk."
+      },
+      "section5": {
+        "title": "5. Személyes adatok",
+        "content": "A személyes adatok kezelését az <a>Adatvédelmi szabályzatunk</a> ismerteti.",
+        "responsible": "Adatkezelő:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "adatvédelmi tisztviselő:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Közvetítés és vitarendezés",
+        "p1": "A francia Fogyasztóvédelmi Kódex L.611-1 és azt követő cikkei értelmében a fogyasztó felhasználók, az ügyfélszolgálatunknak küldött előzetes panasz után nem rendezett vita esetén, díjmentesen igénybe vehetnek fogyasztói közvetítőt.",
+        "odr": "Európai Online Vitarendezési (ODR) platform:"
+      },
+      "section7": {
+        "title": "7. Jogi dokumentumok",
+        "privacy": "Adatvédelmi szabályzat",
+        "privacyNote": "(GDPR)",
+        "terms": "Felhasználási feltételek",
+        "termsNote": "(ÁFF)",
+        "cgv": "Értékesítési feltételek",
+        "cgvNote": "(ÉF)"
+      },
+      "section8": {
+        "title": "8. Kapcsolat",
+        "content": "A jogi közleménnyel kapcsolatos bármilyen kérdésért:",
+        "email": "E-mail:"
+      }
+    }
+  }
+}

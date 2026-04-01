@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutorial",
+    "exitConfirm": "Ieși din tutorial?",
+    "exitWarning": "Progresul tău nu va fi salvat.",
+    "continue": "Continuă",
+    "quit": "Ieși",
+    "stepLabel": "Pasul {{step}}",
+    "previous": "Anterior",
+    "restart": "Repornește",
+    "next": "Următorul",
+    "startGame": "Începe",
+    "progress": "Contor",
+    "tapToContinue": "Apasă pentru a continua",
+    "controls": {
+      "position": "Poziție",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Instrucțiune"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Foarte bine. Ai trecut tutorialul.",
+        "stay": "Aproape. Mai exersează puțin și vei reuși.",
+        "down": "Nu e validat încă. Reia tutorialul pentru a consolida bazele."
+      },
+      "header": {
+        "up": "Tutorial finalizat!",
+        "down": "Recapitulare",
+        "stay": "Aproape!"
+      },
+      "noteMinAssessment": "Notă: pentru o evaluare mai precisă, tutorialele evaluează cel puțin 8 răspunsuri.",
+      "guidance": {
+        "passed": "Ești pregătit pentru antrenamentul liber.",
+        "failed": "Recomandăm reluarea tutorialului înainte de a trece la antrenament."
+      },
+      "correctAnswers": "{{correct}}/{{total}} răspunsuri corecte",
+      "actions": {
+        "backToHome": "Înapoi acasă",
+        "retryTutorial": "Reia tutorialul",
+        "explainLevels": "Înțelege nivelurile N (N)",
+        "goToTraining": "Mergi la antrenament",
+        "continueToTraining": "Continuă la antrenament"
+      }
+    },
+    "welcome": {
+      "title": "Introducere în antrenament",
+      "description": "Dual N-Back îți provoacă memoria de lucru cerându-ți să urmărești simultan două fluxuri de informație: o poziție vizuală și un sunet. Acest tutorial te ghidează pas cu pas.",
+      "button": "Începe tutorialul"
+    },
+    "timeline": {
+      "legend": "Cronologia ajută la comparare — este ascunsă în timpul jocului",
+      "past": "Trecut",
+      "present": "Prezent"
+    },
+    "hub": {
+      "title": "Tutoriale",
+      "subtitle": "Alege un mod pentru a învăța",
+      "basics": {
+        "title": "Bazele",
+        "description": "Învață reflexul și ritmul clasic Dual N-Back."
+      },
+      "place": {
+        "title": "Loc dublu",
+        "description": "Stăpânește plasarea temporală pe cronologie."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Etichetează fiecare stimul cu referința sa temporală (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Urmă dublă",
+        "description": "Învață gesturile de reamintire activă prin trasare."
+      },
+      "memo": {
+        "title": "Notă dublă",
+        "description": "Reconstruiește secvența completă din memorie."
+      },
+      "soroban": {
+        "title": "Măiestria Soroban",
+        "description": "Învață abacul japonez pas cu pas prin 8 etape progresive."
+      }
+    },
+    "place": {
+      "comingSoon": "Tutorialul Place este în dezvoltare",
+      "cardPool": "Cărți disponibile",
+      "slot": "Slot",
+      "observe": "Observă: o poziție pe grilă și o literă audio.",
+      "buffer": "Al doilea stimul. Buffer-ul N-back se umple.",
+      "cardsAppear": "Cărțile apar! Ele reprezintă ultimii 3 stimuli.",
+      "firstDrag": "Apasă cartea marcată, apoi slot-ul N-2 (cel mai vechi).",
+      "timelineExplain": "Cronologia arată timpul: N-2 = cel mai vechi, N = prezent.",
+      "positionN1": "Plasează poziția din mijloc în slot-ul N-1.",
+      "positionN": "Foarte bine! Termină cu cea mai recentă poziție (slot-ul N).",
+      "audioIntro": "Acum cărțile audio! Același principiu.",
+      "audioN2": "Plasează prima literă auzită în slot-ul N-2.",
+      "audioN1": "Continuă cu litera din mijloc (slot-ul N-1).",
+      "audioN": "Termină cu cea mai recentă literă (slot-ul N).",
+      "dualIntro": "Încercare nouă! Plasează pozițiile ȘI literele.",
+      "dualPractice": "Plasează toate cele 6 cărți în slot-urile corecte. Ia-ți timp!",
+      "rhythmExplain": "În jocul real, vei avea timp limitat.",
+      "autonomy": "Rândul tău! Plasează corect toate cărțile.",
+      "conclusion": "Bravo! Ai stăpânit bazele Dual Place.",
+      "selectCard": "Selectează o carte, apoi apasă slot-ul ei",
+      "clickSlot": "Apasă slot-ul corect pentru a plasa cartea",
+      "wrongSlot": "Nu acel slot! Privește ordinea temporală.",
+      "wrongCard": "Nu acea carte. Găsește-o pe cea care corespunde slot-ului.",
+      "tryAgain": "Încearcă din nou! Slot-ul corect este evidențiat."
+    },
+    "memo": {
+      "comingSoon": "Tutorialul Memo este în dezvoltare",
+      "selectPosition": "Selectează poziția",
+      "selectAudio": "Selectează litera",
+      "clickToRecall": "Apasă un slot pentru a reaminiti valoarea",
+      "validate": "Validează",
+      "observeFirst": "Primul stimul. Memorează atât poziția CÂT ȘI litera!",
+      "observeSecond": "Al doilea stimul. Continuă să memorezi.",
+      "observeThird": "Al treilea stimul. Buffer complet. Pregătește-te!",
+      "recallIntro": "Grila dispare! Reamintește din memorie. Apasă slot-ul N-2.",
+      "firstRecall": "Apasă slot-ul N-2. Care a fost prima poziție?",
+      "feedbackExplain": "Verde = corect. Roșu = eroare. Poți corecta de până la 3 ori!",
+      "multiSlot": "Continuă! Reamintește pozițiile N-1 și N.",
+      "newStimulus": "Stimul nou! Fereastra N-back se deplasează cu una.",
+      "windowShift": "Fereastra s-a deplasat. Vechiul N-2 iese, noul N intră.",
+      "fullPosition": "Reamintește toate cele 3 poziții. Concentrează-te!",
+      "audioIntro": "Stimul nou. Acum adăugăm reamintirea audio!",
+      "firstAudioRecall": "Apasă slot-ul audio N-2. Care literă?",
+      "fullAudio": "Continuă cu literele N-1 și N.",
+      "dualIntro": "În jocul real, reamintești pozițiile ȘI literele împreună.",
+      "dualPractice": "Reamintește toate cele 6 celule apoi apasă Validează.",
+      "correctionExplain": "Dacă greșești, apasă din nou pentru a corecta. Maximum 3 ori.",
+      "withCorrection": "Încearcă! Dacă greșești, corectează apăsând din nou.",
+      "conclusion": "Excelent! Ai stăpânit reamintirea activă. Începe o sesiune!",
+      "wrongAnswer": "Nu asta. Gândește-te, care stimul era în acel moment?",
+      "tryAgain": "Încearcă din nou! Încă poți corecta.",
+      "maxCorrections": "3 corecții atinse. Acest slot este blocat.",
+      "validateHint": "Toate slot-urile sunt completate. Apasă Validează!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Bine ai venit la Dual Pick! Învață să clasifici fiecare stimul.",
+        "hud": "Sus: progresul tău în tutorial.",
+        "grid": "Grila este împărțită în 3 zone: SUS, MIJLOC, JOS.",
+        "controls": "Aceste butoane clasifică. Poziția în stânga, Sunetul în dreapta.",
+        "outro": "Pregătit? Să începem cu clasificarea pozițiilor!"
+      },
+      "intro": "În Dual Pick, clasifici fiecare stimul după două criterii: zona grilei și tipul de sunet.",
+      "gridExplain": "Grila are 3 zone: SUS (rândul de sus), MIJLOC (centru), JOS (rândul de jos).",
+      "positionHaut": "Pătratul este sus. Apasă SUS.",
+      "positionMilieu": "Pătratul este la mijloc. Apasă MIJLOC.",
+      "positionBas": "Pătratul este jos. Apasă JOS.",
+      "positionRecap": "Perfect! SUS = rândul de sus, MIJLOC = centru, JOS = rândul de jos.",
+      "positionPractice": "Rândul tău! Clasifică această poziție.",
+      "soundIntro": "Acum sunetele. Sunt două tipuri: VOCALĂ (A, E, I, O, U) și CONSOANĂ (toate celelalte).",
+      "soundVoyelle": "Auzi A. Este o vocală. Apasă VOCALĂ.",
+      "soundConsonne": "Auzi T. Este o consoană. Apasă CONSOANĂ.",
+      "soundRecap": "Reține: A, E, I, O, U = VOCALĂ. Restul = CONSOANĂ.",
+      "soundPractice": "Rândul tău! Clasifică acest sunet.",
+      "dualIntro": "În jocul real, clasifici AMBELE simultan: poziția ȘI sunetul.",
+      "dualFirst": "Clasifică poziția ȘI sunetul. Ia-ți timp.",
+      "dualSecond": "Continuă. Poziție + Sunet.",
+      "dualThird": "Excelent! Încă una pentru exersare.",
+      "rhythm": "În sesiune, menține un ritm regulat. Fluiditatea vine cu practica.",
+      "conclusion": "Bravo! Ai stăpânit clasificarea. Începe o sesiune Dual Pick!",
+      "buttons": {
+        "top": "SUS",
+        "middle": "MIJLOC",
+        "bottom": "JOS",
+        "vowel": "VOCALĂ",
+        "consonant": "CONSOANĂ"
+      },
+      "feedback": {
+        "correctPosition": "Zonă bună!",
+        "correctSound": "Tip de sunet bun!",
+        "wrongPosition": "Nu acea zonă. Privește unde este pătratul.",
+        "wrongSound": "Nu asta. A, E, I, O, U = vocale."
+      }
+    },
+    "trace": {
+      "intro": "Bine ai venit la Dual Trace. Fără butoane aici: vei reaminti activ poziția anterioară printr-un gest de glisare.",
+      "observe": "Memorează această poziție. La următoarea tură, va trebui să glisezi spre ea.",
+      "firstSwipe": "Prima glisare! Glisează degetul spre poziția turei anterioare. Săgeata te ghidează.",
+      "firstAudioMatch": "Aceeași literă ca la tura anterioară! Glisează spre poziție ȘI apasă dublu pentru a semnala potrivirea audio.",
+      "audioMatch": "Potrivire audio detectată! Glisare + dublu apăsare.",
+      "swipe1": "Glisează spre poziția N-1. Amintește-ți unde era pătratul.",
+      "swipe2": "Continuă. Fiecare glisare îți întărește memoria activă.",
+      "swipe3": "Reamintirea activă este mai exigentă decât simpla recunoaștere.",
+      "swipe4": "Rămâi concentrat. Vizualizează poziția înainte de a glisa.",
+      "swipe5": "Excelent! Ai stăpânit gestul de reamintire.",
+      "complete": "Tutorial finalizat. Ești pregătit pentru antrenamentul Dual Trace.",
+      "tapTarget": "Apasă pe poziția turei anterioare",
+      "tapTargetAndAudio": "Apasă poziția țintă, apoi Audio"
+    },
+    "ui": {
+      "startExercise": "Începe exercițiul",
+      "score": "Scor: {{current}}/{{total}}",
+      "complete": "Complet",
+      "correct": "✓ Corect!",
+      "expectedMatch": "✗ Așteptat: Potrivire",
+      "expectedNoMatch": "✗ Așteptat: Fără potrivire",
+      "memorize": "Memorează poziția...",
+      "memorizeLetter": "Memorează litera...",
+      "matchDetected": "✓ Potrivire detectată!",
+      "noMatch": "✗ Fără potrivire",
+      "matchExplanation": "Potrivire! Pasul {{current}} = Pasul {{previous}}",
+      "exerciseComplete": "Exercițiu finalizat!",
+      "match": "Potrivire",
+      "noMatchButton": "Fără potrivire",
+      "none": "Niciunul",
+      "both": "Ambele",
+      "position": "Poziție",
+      "audio": "Audio",
+      "posShort": "Poz"
+    },
+    "spotlight": {
+      "hud": "Tabloul tău: nivelul N-back, contorul de ture și comenzile sesiunii.",
+      "timeline": "Cronologia păstrează ultimii 3 stimuli pentru a ajuta la comparare. În jocul real, acest ajutor este ascuns.",
+      "grid": "Grila: la fiecare tură, o celulă se aprinde într-una din cele 8 poziții. Simultan, o literă este pronunțată.",
+      "controls": "Butoanele tale de răspuns. Apasă când detectezi o repetiție.",
+      "intro": "Bine ai venit! Să descoperim împreună interfața jocului.",
+      "continue": "Continuă",
+      "outro": "Acum să trecem la o sesiune ghidată. Urmărește animațiile și urmează instrucțiunile.",
+      "start": "Începe",
+      "tapToContinue": "Apasă oriunde pentru a continua"
+    },
+    "speed": {
+      "label": "Viteză: {{speed}}",
+      "pauseToChange": "Pauză pentru a schimba viteza"
+    },
+    "assessment": {
+      "title": "Fază evaluată",
+      "subtitle": "De acum încolo, este o scurtă sesiune clasică.",
+      "body": "Ritmul este continuu și nu vei mai primi indicii. Joacă ca într-o sesiune reală.",
+      "goal": "Obiectiv: cel puțin {{min}}% precizie pe {{count}} încercări.",
+      "cta": "Să mergem"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Înțelegerea nivelurilor N",
+        "desc": "Ai învățat N=2. Iată cum se generalizează de la N=1 la N=4.",
+        "start": "Începe",
+        "done": "Finalizează",
+        "skip": "Sări",
+        "hud": "N = câte ture înapoi.",
+        "present": "N = stimulul curent (prezent).",
+        "past": "Compară cu N-{{n}}.",
+        "pressPosition": "Dacă poziția se repetă, apasă Poziție.",
+        "pressAudio": "Dacă sunetul se repetă, apasă Audio.",
+        "annotation": {
+          "n1": "N=1: compară stimulul curent (N) cu tura anterioară (N-1).",
+          "n2": "N=2: compară stimulul curent (N) cu două ture înapoi (N-2).",
+          "n3": "N=3: compară stimulul curent (N) cu trei ture înapoi (N-3)."
+        },
+        "outroTitle": "Și tot așa…",
+        "outroBody": "Dacă treci la N=5, vei compara cu N-5. Regula rămâne aceeași; doar distanța crește."
+      }
+    },
+    "annotations": {
+      "intro": "Observă: o celulă se aprinde pe grilă și o literă este pronunțată simultan.",
+      "observe": "Memorează. Cronologia ține evidența stimulilor.",
+      "firstComparison": "Acum ai suficient istoric pentru a compara.",
+      "firstPositionMatch": "Aceeași poziție ca acum 2 ture! Compară N și N-2 pe cronologie, apoi apasă Poziție.",
+      "firstAudioMatch": "Aceeași literă ca acum 2 ture! Compară N și N-2 pe cronologie, apoi apasă Audio.",
+      "firstDualMatch": "Potrivire dublă! Atât poziția CÂT ȘI sunetul se repetă. Apasă ambele butoane.",
+      "positionMatch": "Aceeași poziție. Apasă Poziție.",
+      "audioMatch": "Același sunet. Apasă Audio.",
+      "dualMatch": "Ambele se potrivesc. Apasă Poziție și Audio.",
+      "noMatch": "Fără potrivire în această tură. Continuă să memorezi.",
+      "noMatch1": "Nicio repetiție de data asta. Apasă pentru a continua.",
+      "noMatch2": "Încă fără potrivire. Rămâi concentrat pe fluxul de poziție + sunet.",
+      "noMatch3": "Nimic de raportat. Compară întotdeauna cu N-2 pe cronologie.",
+      "noMatch4": "Fără potrivire. Ritmul se accelerează acum.",
+      "noMatch5": "Continuă. Potrivirile vin imprevizibil.",
+      "noMatch6": "Fără potrivire. Continuă, ai prins ritmul.",
+      "noMatch7": "Ultima parte. Rămâi concentrat.",
+      "noMatch8": "Aproape gata. Încă câțiva stimuli.",
+      "complete": "Felicitări! Ai stăpânit bazele Dual N-Back. Pregătit pentru antrenament?"
+    },
+    "exit": {
+      "confirm": "Ieși",
+      "title": "Ieși din tutorial?",
+      "message": "Progresul tău va fi salvat. Poți relua mai târziu."
+    },
+    "recovery": {
+      "message": "S-a găsit o sesiune întreruptă.",
+      "staleMessage": "S-a găsit o sesiune întreruptă de acum mai mult de 30 de minute.",
+      "resume": "Reia",
+      "startFresh": "Începe de la zero",
+      "title": "Reiei tutorialul?"
+    }
+  }
+}

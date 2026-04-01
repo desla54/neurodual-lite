@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Landas ng pagsasanay",
+    "pageSubtitle": "Pumili, ayusin at gumawa ng iyong mga journey",
+    "enabled": "I-enable ang training path",
+    "description": "30 progresibong yugto mula N-1 hanggang N-10",
+    "progress": "Progreso",
+    "locked": "Naka-lock",
+    "createJourney": "Gumawa ng journey",
+    "viewJourneys": "Tingnan ang mga journey",
+    "current": "Kasalukuyang journey",
+    "myJourneys": "Mga journey ko",
+    "stage": "Yugto",
+    "stages": "mga yugto",
+    "stagesShort": "yg.",
+    "stageLabels": {
+      "pick": "Pumili",
+      "catch": "Mahuli",
+      "place": "Lugar",
+      "memo": "Memo"
+    },
+    "name": "Pangalan",
+    "namePlaceholder": "Hal. N-5 Challenge",
+    "levels": "Mga level",
+    "levelRange": "Saklaw ng level",
+    "levelTo": "hanggang",
+    "createNew": "Bagong journey",
+    "new": "Bago",
+    "defaultCustomName": "Aking journey",
+    "created": "Nagawa na ang journey!",
+    "deleted": "Na-delete na ang journey",
+    "sessionSettings": "Mga setting ng session",
+    "savedStatus": "Na-save na ang mga setting",
+    "preset": {
+      "easy": "Madali",
+      "medium": "Inirerekomenda",
+      "hard": "Mahirap"
+    },
+    "setup": {
+      "title": "Journey at mga profile",
+      "journey": "Paglalakbay",
+      "journeyNone": "Pumili...",
+      "profile": "Profile",
+      "profileNone": "Pumili...",
+      "configure": "I-configure",
+      "configureNone": "Pumili ng journey",
+      "create": "Bagong journey",
+      "createDesc": "Gumawa ng bagong journey"
+    },
+    "deleteConfirmTitle": "I-delete ang journey na ito?",
+    "deleteConfirmMessage": "Ang journey na \"{{name}}\" ay permanenteng ide-delete.",
+    "renameTitle": "Palitan ang pangalan ng journey na ito",
+    "renameMessage": "I-edit ang pangalan ng \"{{name}}\".",
+    "renamed": "Pinalitan ang pangalan ng journey.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Default"
+    },
+    "mode": "Mode",
+    "modeStandard": "Journey (4 mode)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dalawahang Lugar",
+      "dualMemo": "Dalawahang Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Classic",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} pagpapatunay ng (mga) session",
+      "needed": "{{count}} session(s) na natitira",
+      "excellent": "Napakahusay!",
+      "good": "Magaling!",
+      "passing": "Pumasa"
+    },
+    "progression": {
+      "title": "Progresyon",
+      "description": "Para umakyat sa susunod na level, makamit ang magandang score:",
+      "excellent": "≥95% → 1 session",
+      "good": "≥85% → 2 session",
+      "passing": "≥80% → 3 session",
+      "rules": "Mga patakaran ng progresyon",
+      "jaeggi": {
+        "description": "Batay sa pinakamahinang modality:",
+        "up": "< 3 error → Umakyat ng level",
+        "stay": "3 hanggang 5 error → Manatili sa level na ito",
+        "down": "> 5 error → Bumaba ng level"
+      },
+      "brainworkshop": {
+        "description": "Protocol ng Brain Workshop (BW score):",
+        "up": "≥80% → Umakyat ng level",
+        "stay": "50-79% → Manatili sa level",
+        "strike": "3 magkakasunod na score <50% → Bumaba ng level"
+      },
+      "hybrid": {
+        "description": "Ang journey na ito ay nagpapatakbo ng {{trackCount}} Dual Track session(s), pagkatapos {{dnbCount}} Dual N-Back session(s) sa parehong level.",
+        "alternation": "Ang loop ay palaging nagre-restart sa Dual Track kapag naabot ang desisyon.",
+        "authority": "Tanging mga Dual N-Back session lang ang nagde-decide ng up, stay, o down.",
+        "up": "0-1 error → Umakyat ng level",
+        "stay": "2-3 error → Manatili",
+        "down": "4+ error → Bumaba ng level",
+        "streakRule": "Dalawang magkasunod na session sa parehong zone ang nagti-trigger ng desisyon.",
+        "trackProgress": "Subaybayan ang {{current}}/{{required}}",
+        "cleanProgress": "Na-validate {{current}}/{{required}}",
+        "stayProgress": "Hawak {{current}}/{{required}}",
+        "downProgress": "Nabigo {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Gumagamit ang Dual Track ng tuloy-tuloy na mastery bar para sa bawat target-count stage:",
+        "calibration": "Isang unang calibration ang nagtatantya ng iyong panimulang target count",
+        "goodSession": "Bawat magandang session ay nagpupuno ng kasalukuyang stage nang kaunti",
+        "mastery": "Halos perpektong session ay nagpupuno nito nang mas mabilis, pero ordinaryong session ay nananatiling katamtaman",
+        "regression": "Ang mahinang session ay maaari ring magpababa ng kasalukuyang mastery bar",
+        "unlock": "Ang susunod na target count ay mag-u-unlock lamang kapag ang kasalukuyang stage ay umabot sa 100%"
+      }
+    },
+    "switcher": {
+      "open": "Buksan ang journey switcher",
+      "current": "Kasalukuyan",
+      "showAll": "Lahat ng journey",
+      "settings": "Mga setting ng journey"
+    },
+    "previous": "Nakaraang journey",
+    "next": "Susunod na journey",
+    "calibration": {
+      "title": "Unang session",
+      "subtitle": "Isang maikling calibration ang magde-determine ng iyong panimulang level, o maaari kang magsimula sa level 2.",
+      "skipToN2": "o magsimula sa N-2",
+      "continueAt": "o magpatuloy sa N-{{level}}",
+      "start": "Simulan ang calibration",
+      "redo": "Ulitin ang calibration",
+      "badge": "Pag-calibrate"
+    },
+    "presets": {
+      "currentSlot": "Custom",
+      "currentSlotView": "Custom",
+      "lockedTitle": "Naka-lock ang ilang opsyon",
+      "lockedDesc": "Para mapanatili ang paghahambing ng progresyon, ang mga modality (at ilang opsyon) ay hindi maaaring baguhin matapos magsimula ang journey."
+    },
+    "completed": {
+      "title": "Natapos na ang journey!",
+      "subtitle": "Lahat ng yugto ay na-validate. Magaling!",
+      "continueFree": "Magpatuloy sa training"
+    },
+    "report": {
+      "stage": "Yugto",
+      "level": "Antas",
+      "score": "Puntos",
+      "sessionValidated": "Na-validate ang session!",
+      "sessionNotValidated": "Hindi na-validate ang session",
+      "minScore": "Minimum na kailangan:",
+      "stageCompleted": "Natapos ang yugto!",
+      "stageUnlocked": "Na-unlock ang yugto {{stage}}!",
+      "replay": "I-replay",
+      "nextStage": "Susunod na yugto",
+      "home": "Bahay",
+      "hits": "Tama",
+      "misses": "Mali",
+      "falseAlarms": "Mga false alarm",
+      "correctRejections": "Tamang rejection"
+    }
+  }
+}

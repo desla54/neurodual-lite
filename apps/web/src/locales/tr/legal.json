@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Tüm hakları saklıdır.",
+    "terms": {
+      "title": "Hizmet şartları",
+      "version": "Sürüm 3.0 — Son güncelleme: 2026-03-04",
+      "healthWarning": {
+        "title": "ÖNEMLİ SAĞLIK UYARISI",
+        "content": "NeuroDual bir bilişsel eğitim ve sağlıklı yaşam uygulamasıdır. <strong>Tıbbi bir cihaz değildir.</strong> Herhangi bir hastalığı teşhis etmez, tedavi etmez, iyileştirmez veya önlemez. Herhangi bir endişen varsa ya da rahatsızlık hissedersen uygulamayı kullanmayı bırak ve bir sağlık uzmanına danış."
+      },
+      "section1": {
+        "title": "1. Amaç ve Kabul",
+        "content": "NeuroDual'ı indirerek, kurarak veya kullanarak bu Hizmet Şartlarını koşulsuz olarak kabul edersin. Bu şartları kabul etmiyorsan lütfen uygulamayı kullanma."
+      },
+      "section2": {
+        "title": "2. Hizmet Açıklaması",
+        "content": "NeuroDual, yerel veri yönetimi ve hesap aracılığıyla senkronizasyon seçenekleriyle birlikte Dual N-Back çalışma belleği eğitimi sunar. Hizmet olduğu gibi sağlanır ve gelişebilir.",
+        "item1": "Uyumluluk: web ve mobil uygulamalar (kullanılabilirliğe bağlıdır).",
+        "item2": "Erişim: bazı özellikler internet bağlantısı ve/veya hesap oluşturma gerektirir.",
+        "item3": "Güncellemeler: güvenlik veya performans nedenleriyle önceden bildirimde bulunmadan düzeltmeler veya güncellemeler yayınlayabiliriz.",
+        "item4": "Reklamlar: ücretsiz mobil sürüm geçiş reklamları (Google AdMob) gösterebilir. Premium kullanıcılar reklam görmez."
+      },
+      "section3": {
+        "title": "3. Hesaplar ve Güvenlik",
+        "item1": "E-posta veya kimlik sağlayıcısı (Google, Apple) aracılığıyla isteğe bağlı hesap oluşturma.",
+        "item2": "Kimlik bilgilerinin gizliliğini korumak ve hesabınla gerçekleştirilen tüm işlemlerden sen sorumlusun.",
+        "item3": "Hesap ve ilişkili veri silme işlemi Ayarlar'dan yapılabilir.",
+        "item4": "Bu Şartların ihlali, dolandırıcılık girişimleri veya güvenlik ihlalleri durumunda bir hesabı askıya alabilir veya sonlandırabiliriz."
+      },
+      "section4": {
+        "title": "4. Kullanım Kuralları ve Kısıtlamalar",
+        "item1": "Güvenlik önlemlerini veya teknik sınırlamaları atlatma.",
+        "item2": "Uygulamayı yasadışı veya zararlı amaçlarla kullanma.",
+        "item3": "Tersine mühendislik veya yetkisiz içerik çıkarma girişiminde bulunma.",
+        "item4": "Uygulama ve içerikleri üzerindeki fikri mülkiyet haklarına saygı göster."
+      },
+      "section5": {
+        "title": "5. Fikri Mülkiyet",
+        "content": "Tüm öğeler (metin, grafik, sesler, kaynak kodu, logolar) telif hakkıyla korunmaktadır ve yayıncının veya lisans verenlerinin mülkiyetinde kalır. Bu Şartlara uygun olarak uygulamayı kullanma hakkı dışında kişisel, münhasır olmayan ve devredilemez hiçbir lisans verilmez."
+      },
+      "section6": {
+        "title": "6. Kullanılabilirlik ve Destek",
+        "content": "Hizmet, bakım veya mücbir sebep durumları dışında 7/24 erişilebilirdir. Sürekli kullanılabilirlik veya performans garanti edilmez. Destek: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Uygulama İçi Satın Almalar / Abonelikler",
+        "content": "Premium abonelikler mevcuttur: yıllık ve ömür boyu (10 yıl). Ödemeler RevenueCat (mobil) veya Lemon Squeezy (web) tarafından yönetilir. <strong>Satış Şartları</strong> geçerlidir (fiyatlandırma, cayma, yenileme, iptal, iade) ve satın alma öncesinde mevcuttur."
+      },
+      "section8": {
+        "title": "8. Sorumluluk",
+        "item1": "Hizmet sonuç garantisi olmaksızın \"olduğu gibi\" sağlanır.",
+        "item2": "Kullanım, kaydedilmemiş yerel verilerin kaybı veya istatistiklerin yorumlanmasıyla ilgili doğrudan veya dolaylı zararlardan sorumlu değiliz.",
+        "item3": "Rahatsızlık, olumsuz etkiler veya sağlığınla ilgili endişeler yaşarsan kullanımı durdur."
+      },
+      "section9": {
+        "title": "9. Kişisel Veriler",
+        "content": "Kişisel verilerin işlenmesi <a>Gizlilik politikası</a>'nda açıklanmıştır. Veri konularında Şartlar ile Gizlilik politikası arasında çelişki olması durumunda Gizlilik politikası geçerlidir."
+      },
+      "section10": {
+        "title": "10. Şart Değişiklikleri",
+        "content": "Hukuki, teknik veya hizmet nedenlerinden dolayı bu Şartları değiştirebiliriz. Güncelleme tarihi belgenin üstünde görünecektir. Önemli değişiklikler söz konusu olduğunda uygulamada bir bildirim görüntülenir."
+      },
+      "section11": {
+        "title": "11. Uygulanacak Hukuk ve Uyuşmazlıklar",
+        "content": "Bu Şartlar Fransız hukukuna tabidir. Uyuşmazlık durumunda ve dostane girişimlerden sonra tüketici kullanıcılar tüketici arabuluculuğunu veya Avrupa Çevrimiçi Uyuşmazlık Çözümü (ODR) platformunu kullanabilir. Aksi takdirde Fransız mahkemeleri münhasır yargı yetkisine sahiptir."
+      },
+      "section12": {
+        "title": "12. İletişim",
+        "content": "Bu Şartlarla ilgili herhangi bir soru için:"
+      }
+    },
+    "privacy": {
+      "title": "Gizlilik politikası",
+      "version": "Sürüm 3.0 — Son güncelleme: 2026-03-04",
+      "intro": {
+        "p1": "Bu Gizlilik Politikası, mobil uygulamamızı ve web sitemizi kullandığında NeuroDual'ın (\"biz\", \"bizim\") kişisel verilerini nasıl işlediğini açıklar.",
+        "p2": "Genel Veri Koruma Yönetmeliği (GDPR) ve Fransız Veri Koruma Kanunu ilkelerini uyguluyoruz. \"Yerel öncelikli\" mimariyi tercih ediyoruz, verilerini satmıyor veya kiralamıyoruz ve ürünü geliştirmek için kitle ölçümü kullanıyoruz."
+      },
+      "section1": {
+        "title": "1. Veri Sorumlusu",
+        "responsible": "Sorumlu:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Kayıtlı adres:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Fransa",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "E-posta:",
+        "dpo": "DPO: AGUILAL Abdeslam (aynı iletişim bilgileri). Verilerin hakkında herhangi bir sorun için yukarıdaki adresle iletişime geç."
+      },
+      "section2": {
+        "title": "2. Topladığımız Veriler",
+        "sub1": {
+          "title": "2.1 Kullanıcı Tarafından Oluşturulan Veriler (Yerel Mod)",
+          "content": "Oturumun kapalıyken yalnızca cihazında SQLite aracılığıyla depolanır:",
+          "item1": "Puanlar ve N-Back oturum geçmişi.",
+          "item2": "Oyun yapılandırma ayarları.",
+          "item3": "Yerel profil (takma ad, seçilen avatar).",
+          "note": "Bu veriler, bir hesap oluşturana kadar sunucularımızdan geçmez. Uygulamayı kaldırırsan bu veriler kaybolur."
+        },
+        "sub2": {
+          "title": "2.2 Hesap Verileri (İsteğe Bağlı)",
+          "content": "Verilerini senkronize etmek için bir hesap oluşturursan:",
+          "item1": "E-posta adresi (benzersiz tanımlayıcı).",
+          "item2": "Kimlik sağlayıcısı (Google, Apple) tarafından sağlanan kullanıcı kimliği.",
+          "note": "Bu veriler kimlik doğrulama sağlayıcımız (Supabase) aracılığıyla yönetilir."
+        },
+        "sub3": {
+          "title": "2.3 Teknik Günlükler",
+          "content": "Güvenlik ve destek için takma adlı günlükler (hatalar, senkronizasyon durumu, performans)."
+        },
+        "sub4": {
+          "title": "2.4 Destek Verileri",
+          "content": "Destekle e-posta yazışmaları, yanıt vermek için iletişim bilgilerini ve talep içeriğini içerebilir."
+        },
+        "sub5": {
+          "title": "2.5 İzleme ve Hata Takibi",
+          "content": "Uygulama kararlılığını artırmak için Sentry aracılığıyla toplanan teknik veriler (hatalar, performans, anormal davranış). Takma adlı veriler, reklam hedeflemesi yok."
+        },
+        "sub6": {
+          "title": "2.6 Kitle Ölçümü ve Ürün Analitiği",
+          "content": "Ürünü geliştirmek için PostHog aracılığıyla toplanan anonimleştirilmiş kullanım verileri (ziyaret edilen sayfalar, uygulama içi eylemler, cihaz türü). Kişisel tanımlanabilir veri iletilmez. Reklam hedeflemesi yok."
+        },
+        "sub7": {
+          "title": "2.7 Reklamlar (Ücretsiz Mobil Sürüm)",
+          "content": "Ücretsiz Android sürümü Google AdMob aracılığıyla geçiş reklamları gösterir. Google bir reklam tanımlayıcısı ve teknik veriler (cihaz türü, dil, reklam etkileşimleri) toplayabilir. Premium kullanıcılar reklama maruz kalmaz. Daha fazla bilgi: Google Ads gizlilik politikası."
+        }
+      },
+      "section3": {
+        "title": "3. Amaçlar ve Hukuki Dayanaklar",
+        "content": "Verilerini yalnızca şu amaçlarla kullanıyoruz:",
+        "item1": "<strong>Hizmet işletimi</strong> (yerel yedekleme, istatistikler, çoklu cihaz senkronizasyonu) — Hukuki dayanak: sözleşmenin ifası (GDPR Md. 6.1.b).",
+        "item2": "<strong>Güvenlik ve dolandırıcılık önleme</strong> (teknik günlükleme, erişim kontrolü) — Hukuki dayanak: meşru menfaat (GDPR Md. 6.1.f).",
+        "item3": "<strong>Kullanıcı desteği</strong> — Hukuki dayanak: meşru menfaat (taleplere yanıt verme).",
+        "item4": "<strong>Yasal yükümlülükler</strong> — Hukuki dayanak: yasal yükümlülük (GDPR Md. 6.1.c).",
+        "item5": "<strong>İzleme ve hata takibi</strong> — Hukuki dayanak: meşru menfaat (kararlılık iyileştirme); takma adlı veriler, kişiselleştirilmiş reklam yok.",
+        "item6": "<strong>Kitle ölçümü</strong> (PostHog aracılığıyla anonimleştirilmiş ürün analitiği) — Hukuki dayanak: meşru menfaat (GDPR Md. 6.1.f); anonimleştirilmiş veriler.",
+        "note": "Amaçtaki herhangi bir değişiklik bu politikanın güncellenmesiyle belgelenecektir.",
+        "item7": "<strong>Reklamcılık</strong> (ücretsiz mobil kullanıcılar için geçiş reklamlarının gösterimi) — Hukuki dayanak: meşru menfaat (GDPR Md. 6.1.f).",
+        "item8": "<strong>Pazarlama ve bültenler</strong> — Hukuki dayanak: açık rıza (GDPR Md. 6.1.a)."
+      },
+      "section4": {
+        "title": "4. Saklama Süreleri",
+        "item1": "<strong>Yerel veriler:</strong> cihazında depolanır ve kaldırma veya sıfırlama üzerine silinir.",
+        "item2": "<strong>Hesap ve senkronize veriler:</strong> hesap aktif olduğu sürece saklanır. Hesap silme talebinden itibaren 30 gün içinde silinir.",
+        "item3": "<strong>Teknik günlükler:</strong> en fazla 12 ay saklanır, ardından otomatik olarak silinir.",
+        "item4": "<strong>İzleme:</strong> hata takibi ve ürün iyileştirme için takma adlı teknik veriler 90 gün saklanır.",
+        "item5": "<strong>Destek talepleri:</strong> bilet kapatıldıktan sonra 24 ay saklanır, ardından silinir.",
+        "item6": "<strong>Kitle verileri (PostHog):</strong> anonimleştirilmiş, 12 ay saklanır."
+      },
+      "section5": {
+        "title": "5. Alıcılar, İşleyiciler ve Aktarımlar",
+        "content": "Verilerin aşağıdaki sağlayıcılar tarafından işlenebilir:",
+        "item1": "Supabase Inc. (kimlik doğrulama ve bulut veritabanı, AB barındırma).",
+        "item2": "Amazon Web Services (Supabase altyapısı, AB bölgeleri).",
+        "item3": "Cloudflare Inc. (web uygulama barındırma, CDN ve güvenlik).",
+        "item4": "Sentry (hata ve performans izleme; AB dışı aktarımlar Standart Sözleşme Maddeleri tarafından yönetilir).",
+        "item5": "RevenueCat Inc. (mobil abonelik ve uygulama içi ödeme yönetimi; kredi kartı verilerini depolamaz).",
+        "note": "Yeni bir sağlayıcı eklenirse bu bölüm güncellenecektir.",
+        "transfers": "<strong>AB dışı aktarımlar:</strong> AB dışındaki sağlayıcılar söz konusu olduğunda (ör. Cloudflare, Supabase ABD kuruluşu, Sentry, RevenueCat, Google AdMob), aktarımlar Avrupa Komisyonu'nun Standart Sözleşme Maddeleri (SCC) veya eşdeğer bir mekanizma tarafından yönetilir.",
+        "item6": "PostHog Inc. (kitle ölçümü ve ürün analitiği; anonimleştirilmiş veriler; AB barındırma).",
+        "item7": "Lemon Squeezy (web ödeme yönetimi; kredi kartı verilerini depolamaz).",
+        "item8": "Google AdMob (ücretsiz mobil sürümde reklam gösterimi; AB dışı aktarımlar Standart Sözleşme Maddeleri tarafından yönetilir)."
+      },
+      "section6": {
+        "title": "6. Hakların",
+        "content": "GDPR kapsamında aşağıdaki haklara sahipsin:",
+        "item1": "Erişim, düzeltme, silme.",
+        "item2": "Kısıtlama ve itiraz (hukuki dayanağa bağlı olarak).",
+        "item3": "Taşınabilirlik (verilerini JSON veya CSV olarak dışa aktarma).",
+        "item4": "Rıza geri çekme (uygulanabilir olduğunda).",
+        "item5": "Denetim makamına şikâyet (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Hesap silme:</strong> hesabını ve tüm ilişkili verileri doğrudan uygulama Ayarlarından silebilirsin. Bu işlem geri alınamaz.",
+        "exercise": "Diğer haklarını kullanmak için <strong>support@neurodual.fr</strong> ile iletişime geç. Makul şüphe durumunda kimlik kanıtı istenebilir. Yanıt süresi: 1 ay (karmaşık durumlarda 3 aya uzatılabilir)."
+      },
+      "section7": {
+        "title": "7. Güvenlik",
+        "content": "Şifreli iletişim (HTTPS/TLS), kısıtlı yönetici erişimi, izin kontrolleri. Risk oluşturabilecek bir veri ihlali durumunda yasal bildirimler yapılacaktır (CNIL ve etkilenen bireyler)."
+      },
+      "section8": {
+        "title": "8. Çerezler ve Yerel Depolama",
+        "content": "Uygulama, ilerleme durumunu doğrudan cihazında depolamak için SQLite kullanır. Yalnızca temel teknik çerezler (kimlik doğrulama, oturum) kullanılır. Ücretsiz mobil sürüm çerez veya reklam tanımlayıcıları ayarlayabilen Google AdMob kullanır."
+      },
+      "section9": {
+        "title": "9. Küçükler",
+        "content": "NeuroDual 16 yaş üstü kullanıcılara yöneliktir. Küçükler uygulamayı bir yasal vasinin sorumluluğu altında kullanmalıdır."
+      },
+      "section10": {
+        "title": "10. Değişiklikler",
+        "content": "Güncellenmiş herhangi bir sürüm son güncelleme tarihiyle birlikte burada yayınlanacaktır. Önemli değişiklikler söz konusu olduğunda uygulamada bir bildirim sağlanacaktır."
+      },
+      "section11": {
+        "title": "11. İletişim",
+        "content": "Herhangi bir soru veya haklarını kullanmak için:",
+        "email": "E-posta: support@neurodual.fr",
+        "responsible": "Veri Sorumlusu: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Satış şartları",
+      "version": "Yıllık ve ömür boyu abonelikler — Son güncelleme: 2026-03-04",
+      "section1": {
+        "title": "1. Amaç",
+        "content": "Bu Satış Şartları, NeuroDual premium planlarına (yıllık ve ömür boyu) aboneliği düzenler. <a1>Hizmet Şartları</a1>'nı ve <a2>Gizlilik Politikası</a2>'nı tamamlar."
+      },
+      "section2": {
+        "title": "2. Teklif ve Fiyatlandırma",
+        "item1": "<strong>Yıllık abonelik</strong>: ödeme öncesinde gösterilen fiyat (varsa vergi dahil), her yıl otomatik olarak yenilenir.",
+        "item2": "<strong>Ömür boyu abonelik (10 yıl)</strong>: otomatik yenileme olmaksızın 10 yıl boyunca premium özelliklere erişim sağlayan tek seferlik ödeme.",
+        "item3": "Premium erişim: çoklu cihaz bulut senkronizasyonu, uzak yedeklemeler, tüm N seviyelerine erişim, gelişmiş dışa aktarmalar, reklamsız deneyim, öncelikli destek.",
+        "item4": "Güncel fiyatlar uygulama içi abonelik sayfasında ve mağazalarda (App Store, Google Play) mevcuttur.",
+        "item5": "Fiyatlar değişebilir; herhangi bir değişiklik iptale izin vermek için yenilemeden önce bildirilir (ömür boyu için geçerli değildir)."
+      },
+      "section3": {
+        "title": "3. Süre, Yenileme ve İptal",
+        "item1": "<strong>Yıllık abonelik</strong>: abonelik tarihinden itibaren 12 ay süreli.",
+        "item2": "<strong>Ömür boyu abonelik</strong>: abonelik tarihinden itibaren 10 yıl süreli, yenileme yok.",
+        "item3": "Yenileme (yıllık): her dönem sonunda iptal edilmedikçe otomatik yenileme.",
+        "item4": "İptal (yıllık): uygulama veya mağaza ayarlarından (App Store, Google Play) her zaman mümkün. Mevcut dönemin sonunda geçerli olur.",
+        "item5": "Ömür boyu iptal edilemez ancak yasal cayma hakkına tabidir (bölüm 5'e bakın)."
+      },
+      "section4": {
+        "title": "4. Ödeme",
+        "item1": "Ödemeler RevenueCat aracılığıyla mağazalar (App Store, Google Play) veya web için Lemon Squeezy tarafından yönetilir. Kredi kartı verilerini depolamıyoruz.",
+        "item2": "Ödeme başarısızlığı durumunda (yinelenen abonelikler), çözülene kadar premium erişim askıya alınabilir.",
+        "item3": "App Store veya Google Play üzerinden yapılan satın almalar için iadeler ilgili mağazadan talep edilmelidir."
+      },
+      "section5": {
+        "title": "5. Cayma Hakkı",
+        "content": "Satın alma sonrasında sağlanan dijital hizmet. 14 günlük yasal süre bitmeden derhal uygulama talep edersen, hizmetin tam olarak sağlanması üzerine cayma hakkından feragat ettiğini kabul edersin. Açık feragat olmaksızın, satın alma tarihinden itibaren 14 gün içinde support@neurodual.fr adresine yazarak cayma hakkını kullanabilirsin."
+      },
+      "section6": {
+        "title": "6. İade",
+        "content": "Yasal cayma hakkı dışında, başlamış abonelikler zorunlu hükümler veya hizmete atfedilebilen büyük kusurlar dışında iade edilmez."
+      },
+      "section7": {
+        "title": "7. Teklif Değişiklikleri",
+        "content": "Premium özellikler gelişebilir. Temel bir özelliğin kaldırılması önceden bildirilecek ve uygulanabilir olduğunda dönem bitmeden ücretsiz iptal seçeneği sunulacaktır."
+      },
+      "section8": {
+        "title": "8. Kişisel Veriler",
+        "content": "Fatura ve hesap verilerinin işlenmesi <a>Gizlilik Politikası</a>'nda ayrıntılandırılmıştır."
+      },
+      "section9": {
+        "title": "9. Müşteri Hizmetleri",
+        "content": "Herhangi bir soru, cayma hakkı kapsamında iade veya şikâyetler için:"
+      }
+    },
+    "mentions": {
+      "title": "Yasal bildirim",
+      "version": "Son güncelleme:",
+      "section1": {
+        "title": "1. Yayıncı",
+        "company": "Şirket adı:",
+        "companyValue": "AGUILAL Abdeslam (Bireysel girişim)",
+        "address": "Adres:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Fransa",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "E-posta:"
+      },
+      "section2": {
+        "title": "2. Yayın Direktörü",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-posta:"
+      },
+      "section3": {
+        "title": "3. Barındırma",
+        "content": "NeuroDual uygulaması şu kuruluşlar tarafından barındırılmaktadır:",
+        "webapp": "Web Uygulaması",
+        "database": "Veritabanı ve Kimlik Doğrulama",
+        "databaseInfra": "Altyapı: Amazon Web Services (AB bölgesi - eu-central-1)",
+        "monitoring": "İzleme ve Hata Takibi",
+        "subscriptions": "Abonelik yönetimi",
+        "analytics": "Kitle ölçümü",
+        "analyticsInfra": "AB barındırma",
+        "advertising": "Reklamcılık (ücretsiz mobil sürüm)",
+        "payments": "Web ödemeleri",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Fikri Mülkiyet",
+        "p1": "NeuroDual uygulamasının tüm öğeleri (metin, grafik, sesler, kaynak kodu, logolar, ticari markalar) telif hakkı ve ticari marka hukuku tarafından korunmaktadır. Yetkisiz çoğaltma, temsil veya kullanım yasaktır.",
+        "p2": "Bazı özelliklerin kaynak kodu, ilgili lisanslarına uyulan açık kaynak kütüphaneleri kullanır."
+      },
+      "section5": {
+        "title": "5. Kişisel Veriler",
+        "content": "Kişisel verilerin işlenmesi <a>Gizlilik politikası</a>'mızda açıklanmıştır.",
+        "responsible": "Veri Sorumlusu:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Arabuluculuk ve Uyuşmazlık Çözümü",
+        "p1": "Fransız Tüketici Kanunu'nun L.611-1 ve devamı maddeleri uyarınca, tüketici kullanıcılar müşteri hizmetlerimize yapılan önceki şikâyetten sonra çözülemeyen uyuşmazlık durumunda ücretsiz olarak tüketici arabulucusuna başvurabilir.",
+        "odr": "Avrupa Çevrimiçi Uyuşmazlık Çözümü (ODR) platformu:"
+      },
+      "section7": {
+        "title": "7. Yasal Belgeler",
+        "privacy": "Gizlilik politikası",
+        "privacyNote": "(GDPR)",
+        "terms": "Hizmet şartları",
+        "termsNote": "(HŞ)",
+        "cgv": "Satış şartları",
+        "cgvNote": "(Satış)"
+      },
+      "section8": {
+        "title": "8. İletişim",
+        "content": "Bu yasal bildirimle ilgili herhangi bir soru için:",
+        "email": "E-posta:"
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "المواظبة",
+      "performance": "الأداء",
+      "resilience": "المرونة",
+      "exploration": "الاستكشاف",
+      "milestone": "الإنجازات",
+      "cognitive": "الإدراكي"
+    },
+    "first_session": {
+      "name": "خلية عصبية مستيقظة",
+      "description": "أول جلسة مكتملة."
+    },
+    "sessions_10": {
+      "name": "ركيزة (برونزية)",
+      "description": "10 جلسات مكتملة."
+    },
+    "sessions_25": {
+      "name": "ركيزة (فضية)",
+      "description": "25 جلسة مكتملة."
+    },
+    "marathoner": {
+      "name": "ركيزة (ذهبية)",
+      "description": "50 جلسة مكتملة."
+    },
+    "streak_3": {
+      "name": "طقوس الوليدة",
+      "description": "سلسلة 3 أيام."
+    },
+    "streak_7": {
+      "name": "طقس يومي",
+      "description": "سلسلة 7 أيام."
+    },
+    "streak_14": {
+      "name": "عادة راسخة",
+      "description": "سلسلة 14 يوماً."
+    },
+    "streak_30": {
+      "name": "انضباط حديدي",
+      "description": "سلسلة 30 يوماً."
+    },
+    "early_bird": {
+      "name": "طائر الفجر",
+      "description": "5 أيام مختلفة بجلسة قبل الساعة 8 صباحاً."
+    },
+    "night_owl": {
+      "name": "بومة الليل",
+      "description": "5 أيام مختلفة بجلسة بعد الساعة 10 مساءً."
+    },
+    "brain_n3": {
+      "name": "عقل حاد",
+      "description": "الوصول إلى المستوى N-3."
+    },
+    "brain_n4": {
+      "name": "دماغ قوي",
+      "description": "الوصول إلى المستوى N-4."
+    },
+    "brain_n5": {
+      "name": "دماغ أولمبي",
+      "description": "الوصول إلى المستوى N-5."
+    },
+    "brain_n7": {
+      "name": "النخبة الإدراكية",
+      "description": "الوصول إلى المستوى N-7."
+    },
+    "brain_n10": {
+      "name": "خارق",
+      "description": "الوصول إلى المستوى N-10."
+    },
+    "sniper": {
+      "name": "قنّاص",
+      "description": "> 90% دقة عند N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "دقة جراحية",
+      "description": "> 95% دقة عند N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "ليزر",
+      "description": "> 98% دقة عند N ≥ 2."
+    },
+    "untouchable": {
+      "name": "لا يُمَس",
+      "description": "جلسة مثالية (0 أخطاء) عند N ≥ 2."
+    },
+    "rt_500": {
+      "name": "ردة فعل سريعة",
+      "description": "متوسط زمن الاستجابة < 500 مللي ثانية بدقة ≥70%."
+    },
+    "flash": {
+      "name": "وميض",
+      "description": "متوسط زمن الاستجابة < 400 مللي ثانية بدقة ≥70%."
+    },
+    "rt_300": {
+      "name": "برق",
+      "description": "متوسط زمن الاستجابة < 300 مللي ثانية بدقة ≥70%."
+    },
+    "consistent": {
+      "name": "ثابت",
+      "description": "الانحراف المعياري لـ RT < 100 مللي ثانية (≥10 استجابات مطلوبة)."
+    },
+    "dprime_master": {
+      "name": "سيّد d'",
+      "description": "d-prime > 3.0 في جلسة واحدة."
+    },
+    "dprime_4": {
+      "name": "خبير SDT",
+      "description": "d-prime > 4.0 في جلسة واحدة."
+    },
+    "no_pause": {
+      "name": "بلا توقف",
+      "description": "5 جلسات متتالية بدون توقف بدقة ≥75%."
+    },
+    "steady_hands": {
+      "name": "يد ثابتة",
+      "description": "بدون مدخلات خاطئة أثناء الجلسة (≥80% دقة)."
+    },
+    "zen_master": {
+      "name": "سيّد زِن",
+      "description": "10 جلسات بدون انسحاب."
+    },
+    "comeback_kid": {
+      "name": "العودة القوية",
+      "description": "الصعود مستوى بعد هبوط."
+    },
+    "persistent": {
+      "name": "مثابر",
+      "description": "3 جلسات في نفس اليوم بعد إخفاق."
+    },
+    "second_wind": {
+      "name": "النفس الثاني",
+      "description": "تحسين d-prime بين النصف 1 و 2 (d′ ≥ 2.0 مطلوب)."
+    },
+    "plateau_breaker": {
+      "name": "كاسر الثبات",
+      "description": "تقدّم بعد 10+ جلسات في نفس المستوى."
+    },
+    "no_surrender": {
+      "name": "بلا استسلام",
+      "description": "25 جلسة بدون انسحاب."
+    },
+    "ironwill": {
+      "name": "إرادة حديدية",
+      "description": "50 جلسة بدون انسحاب."
+    },
+    "audiophile": {
+      "name": "عاشق الصوت",
+      "description": "سمعي > 80% لكن بصري < 70%."
+    },
+    "eagle_eye": {
+      "name": "عين النسر",
+      "description": "بصري > 80% لكن سمعي < 70%."
+    },
+    "synchronized": {
+      "name": "متزامن",
+      "description": "نتيجتا السمعي والبصري متقاربتان ضمن 5% (يُشترط ≥60%)."
+    },
+    "dual_master": {
+      "name": "سيّد Dual",
+      "description": "سمعي وبصري > 85% في نفس الجلسة (≥6 طُعوم/وضع)."
+    },
+    "dual_elite": {
+      "name": "نخبة Dual",
+      "description": "سمعي وبصري > 90% في نفس الجلسة عند N ≥ 3 (≥6 طُعوم/وضع)."
+    },
+    "centurion": {
+      "name": "قائد المئة",
+      "description": "100 جلسة مكتملة."
+    },
+    "sessions_250": {
+      "name": "أسطورة (زمرّد)",
+      "description": "250 جلسة مكتملة."
+    },
+    "sessions_500": {
+      "name": "خالد (ألماسي)",
+      "description": "500 جلسة مكتملة."
+    },
+    "trials_500": {
+      "name": "ممارس",
+      "description": "500 محاولة تمّ لعبها."
+    },
+    "trials_1000": {
+      "name": "مُدرَّب",
+      "description": "1,000 محاولة تمّ لعبها."
+    },
+    "trials_5000": {
+      "name": "مُحنَّك",
+      "description": "5,000 محاولة تمّ لعبها."
+    },
+    "trials_10k": {
+      "name": "10,000 محاولة",
+      "description": "10,000 محاولة تمّ لعبها."
+    },
+    "trials_50k": {
+      "name": "جبّار",
+      "description": "50,000 محاولة تمّ لعبها."
+    },
+    "streak_90": {
+      "name": "ربع سنة بلا انقطاع",
+      "description": "سلسلة 90 يوماً."
+    },
+    "streak_365": {
+      "name": "سنة مثالية",
+      "description": "سلسلة 365 يوماً."
+    },
+    "veteran": {
+      "name": "محارب قديم",
+      "description": "سنة واحدة من الاستخدام."
+    },
+    "metronome": {
+      "name": "المِيقاع",
+      "description": "تباين RT < 50 مللي ثانية في ≥20 محاولة (استجابات فعّالة مطلوبة)."
+    },
+    "flow_state": {
+      "name": "حالة النعمة",
+      "description": "اكتشاف حالة التدفق خلال جلسة كاملة."
+    },
+    "sang_froid": {
+      "name": "رباطة جأش",
+      "description": "بدون تتابع أخطاء بعد خطأ (≥70% دقة)."
+    },
+    "imperturbable": {
+      "name": "لا يتزعزع",
+      "description": "جلسة كاملة بدون فقدان التركيز (≥60% دقة)."
+    },
+    "comeback_strong": {
+      "name": "عودة بقوة",
+      "description": "تحطيم رقمك القياسي في d-prime بعد 3+ أيام غياب (d′ ≥ 2.5)."
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Kiên trì",
+      "performance": "Hiệu suất",
+      "resilience": "Bền bỉ",
+      "exploration": "Khám phá",
+      "milestone": "Cột mốc",
+      "cognitive": "Nhận thức"
+    },
+    "first_session": {
+      "name": "Nơ-ron Thức tỉnh",
+      "description": "Hoàn thành phiên đầu tiên."
+    },
+    "sessions_10": {
+      "name": "Trụ cột (Đồng)",
+      "description": "Hoàn thành 10 phiên."
+    },
+    "sessions_25": {
+      "name": "Trụ cột (Bạc)",
+      "description": "Hoàn thành 25 phiên."
+    },
+    "marathoner": {
+      "name": "Trụ cột (Vàng)",
+      "description": "Hoàn thành 50 phiên."
+    },
+    "streak_3": {
+      "name": "Nghi thức Mầm non",
+      "description": "Chuỗi 3 ngày."
+    },
+    "streak_7": {
+      "name": "Nghi thức Hằng ngày",
+      "description": "Chuỗi 7 ngày."
+    },
+    "streak_14": {
+      "name": "Thói quen Vững chắc",
+      "description": "Chuỗi 14 ngày."
+    },
+    "streak_30": {
+      "name": "Kỷ luật Thép",
+      "description": "Chuỗi 30 ngày."
+    },
+    "early_bird": {
+      "name": "Chim sớm",
+      "description": "5 ngày khác nhau có phiên trước 8 giờ sáng."
+    },
+    "night_owl": {
+      "name": "Cú đêm",
+      "description": "5 ngày khác nhau có phiên sau 10 giờ tối."
+    },
+    "brain_n3": {
+      "name": "Não sắc bén",
+      "description": "Đạt cấp N-3."
+    },
+    "brain_n4": {
+      "name": "Não cường tráng",
+      "description": "Đạt cấp N-4."
+    },
+    "brain_n5": {
+      "name": "Não Olympic",
+      "description": "Đạt cấp N-5."
+    },
+    "brain_n7": {
+      "name": "Tinh hoa Nhận thức",
+      "description": "Đạt cấp N-7."
+    },
+    "brain_n10": {
+      "name": "Siêu nhân",
+      "description": "Đạt cấp N-10."
+    },
+    "sniper": {
+      "name": "Bắn tỉa",
+      "description": "> 90% chính xác ở N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Chính xác Phẫu thuật",
+      "description": "> 95% chính xác ở N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Tia Laser",
+      "description": "> 98% chính xác ở N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Bất khả xâm phạm",
+      "description": "Phiên hoàn hảo (0 lỗi) ở N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Phản xạ Nhanh",
+      "description": "Thời gian phản ứng trung bình < 500ms với ≥70% chính xác."
+    },
+    "flash": {
+      "name": "Tia chớp",
+      "description": "Thời gian phản ứng trung bình < 400ms với ≥70% chính xác."
+    },
+    "rt_300": {
+      "name": "Sấm sét",
+      "description": "Thời gian phản ứng trung bình < 300ms với ≥70% chính xác."
+    },
+    "consistent": {
+      "name": "Nhất quán",
+      "description": "Độ lệch chuẩn RT < 100ms (≥10 phản hồi yêu cầu)."
+    },
+    "dprime_master": {
+      "name": "Bậc thầy d'",
+      "description": "d-prime > 3.0 trong một phiên."
+    },
+    "dprime_4": {
+      "name": "Chuyên gia SDT",
+      "description": "d-prime > 4.0 trong một phiên."
+    },
+    "no_pause": {
+      "name": "Không gián đoạn",
+      "description": "5 phiên liên tiếp không tạm dừng với ≥75% chính xác."
+    },
+    "steady_hands": {
+      "name": "Tay vững",
+      "description": "Không nhập sai trong phiên (≥80% chính xác)."
+    },
+    "zen_master": {
+      "name": "Thiền sư",
+      "description": "10 phiên không bỏ cuộc."
+    },
+    "comeback_kid": {
+      "name": "Trở lại Mạnh mẽ",
+      "description": "Lên cấp sau khi xuống cấp."
+    },
+    "persistent": {
+      "name": "Kiên trì",
+      "description": "3 phiên cùng ngày sau một thất bại."
+    },
+    "second_wind": {
+      "name": "Hơi thở Thứ hai",
+      "description": "Cải thiện d-prime giữa nửa 1 và 2 (d′ ≥ 2.0 yêu cầu)."
+    },
+    "plateau_breaker": {
+      "name": "Phá vỡ Bình nguyên",
+      "description": "Tiến bộ sau 10+ phiên ở cùng cấp."
+    },
+    "no_surrender": {
+      "name": "Không Đầu hàng",
+      "description": "25 phiên không bỏ cuộc."
+    },
+    "ironwill": {
+      "name": "Ý chí Thép",
+      "description": "50 phiên không bỏ cuộc."
+    },
+    "audiophile": {
+      "name": "Mê âm thanh",
+      "description": "Âm thanh > 80% nhưng Thị giác < 70%."
+    },
+    "eagle_eye": {
+      "name": "Mắt đại bàng",
+      "description": "Thị giác > 80% nhưng Âm thanh < 70%."
+    },
+    "synchronized": {
+      "name": "Đồng bộ",
+      "description": "Điểm Âm thanh và Thị giác cách nhau 5% (≥60% yêu cầu)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Âm thanh VÀ Thị giác > 85% trong cùng phiên (≥6 bẫy/kênh)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Âm thanh VÀ Thị giác > 90% trong cùng phiên ở N ≥ 3 (≥6 bẫy/kênh)."
+    },
+    "centurion": {
+      "name": "Bách phu trưởng",
+      "description": "Hoàn thành 100 phiên."
+    },
+    "sessions_250": {
+      "name": "Huyền thoại (Ngọc lục bảo)",
+      "description": "Hoàn thành 250 phiên."
+    },
+    "sessions_500": {
+      "name": "Bất tử (Kim cương)",
+      "description": "Hoàn thành 500 phiên."
+    },
+    "trials_500": {
+      "name": "Người thực hành",
+      "description": "Tổng 500 lượt chơi."
+    },
+    "trials_1000": {
+      "name": "Đã rèn luyện",
+      "description": "Tổng 1.000 lượt chơi."
+    },
+    "trials_5000": {
+      "name": "Dày dạn",
+      "description": "Tổng 5.000 lượt chơi."
+    },
+    "trials_10k": {
+      "name": "10.000 Lượt chơi",
+      "description": "Tổng 10.000 lượt chơi."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Tổng 50.000 lượt chơi."
+    },
+    "streak_90": {
+      "name": "Quý hoàn hảo",
+      "description": "Chuỗi 90 ngày."
+    },
+    "streak_365": {
+      "name": "Năm hoàn hảo",
+      "description": "Chuỗi 365 ngày."
+    },
+    "veteran": {
+      "name": "Cựu binh",
+      "description": "1 năm sử dụng."
+    },
+    "metronome": {
+      "name": "Máy nhịp",
+      "description": "Phương sai RT < 50ms trên ≥20 lượt (yêu cầu phản hồi chủ động)."
+    },
+    "flow_state": {
+      "name": "Trạng thái Ân sủng",
+      "description": "Phát hiện dòng chảy trong toàn bộ phiên."
+    },
+    "sang_froid": {
+      "name": "Đầu lạnh",
+      "description": "Không chuỗi lỗi sau một lỗi (≥70% chính xác)."
+    },
+    "imperturbable": {
+      "name": "Không lay chuyển",
+      "description": "Phiên đầy đủ không mất tập trung (≥60% chính xác)."
+    },
+    "comeback_strong": {
+      "name": "Trở lại Mạnh mẽ",
+      "description": "Phá kỷ lục d-prime sau 3+ ngày nghỉ (d′ ≥ 2.5)."
+    }
+  }
+}

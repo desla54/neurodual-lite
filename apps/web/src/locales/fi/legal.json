@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Kaikki oikeudet pidätetään.",
+    "terms": {
+      "title": "Käyttöehdot",
+      "version": "Versio 3.0 — Viimeksi päivitetty: 2026-03-04",
+      "healthWarning": {
+        "title": "TÄRKEÄ TERVEYSVAROITUS",
+        "content": "NeuroDual on kognitiivisen harjoittelun ja hyvinvoinnin sovellus. <strong>Se ei ole lääkinnällinen laite.</strong> Se ei diagnosoi, hoida, paranna tai ehkäise mitään sairautta. Jos sinulla on huolenaiheita tai koet epämukavuutta, lopeta sovelluksen käyttö ja ota yhteyttä terveydenhuollon ammattilaiseen."
+      },
+      "section1": {
+        "title": "1. Tarkoitus ja hyväksyminen",
+        "content": "Lataamalla, asentamalla tai käyttämällä NeuroDualia hyväksyt ehdoitta nämä käyttöehdot. Jos et hyväksy näitä ehtoja, älä käytä sovellusta."
+      },
+      "section2": {
+        "title": "2. Palvelukuvaus",
+        "content": "NeuroDual tarjoaa Dual N-Back -työmuistiharjoittelua paikallisen tiedonhallinnan ja tilin kautta tapahtuvan synkronoinnin kanssa. Palvelu tarjotaan sellaisenaan ja voi kehittyä.",
+        "item1": "Yhteensopivuus: verkko- ja mobiilisovellukset (saatavuudesta riippuen).",
+        "item2": "Pääsy: jotkin ominaisuudet vaativat internet-yhteyden ja/tai tilin luomisen.",
+        "item3": "Päivitykset: saatamme ottaa käyttöön korjauksia tai päivityksiä ilman ennakkoilmoitusta tietoturva- tai suorituskykysyistä.",
+        "item4": "Mainokset: ilmainen mobiiliversio voi näyttää väliainesmainoksia (Google AdMob). Premium-käyttäjät eivät näe mainoksia."
+      },
+      "section3": {
+        "title": "3. Tilit ja turvallisuus",
+        "item1": "Valinnainen tilin luominen sähköpostilla tai identiteetintarjoajalla (Google, Apple).",
+        "item2": "Sinä olet vastuussa tunnisteidesi luottamuksellisuuden ylläpitämisestä ja kaikista tililläsi suoritetuista toimista.",
+        "item3": "Tilin ja siihen liittyvien tietojen poistaminen on käytettävissä Asetuksista.",
+        "item4": "Voimme keskeyttää tai sulkea tilin näiden ehtojen rikkomisen, petosyritysten tai tietoturvaloukkausten tapauksessa."
+      },
+      "section4": {
+        "title": "4. Käyttösäännöt ja rajoitukset",
+        "item1": "Älä ohita turvatoimia tai teknisiä rajoituksia.",
+        "item2": "Älä käytä sovellusta laittomiin tai haitallisiin tarkoituksiin.",
+        "item3": "Älä yritä käänteistä suunnittelua tai luvatonta sisällön poimimista.",
+        "item4": "Kunnioita sovelluksen ja sen sisällön immateriaalioikeuksia."
+      },
+      "section5": {
+        "title": "5. Immateriaalioikeudet",
+        "content": "Kaikki elementit (teksti, grafiikka, äänet, lähdekoodi, logot) ovat tekijänoikeudella suojattuja ja pysyvät julkaisijan tai sen lisenssinantajien omaisuutena. Mitään lisenssiä ei myönnetä paitsi henkilökohtainen, ei-yksinomainen ja ei-siirrettävä oikeus käyttää sovellusta näiden ehtojen mukaisesti."
+      },
+      "section6": {
+        "title": "6. Saatavuus ja tuki",
+        "content": "Palvelu on käytettävissä 24/7 huolto- tai ylivoimaisen esteen tilanteita lukuun ottamatta. Emme takaa jatkuvaa saatavuutta tai suorituskykyä. Tuki: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Sovelluksen sisäiset ostot / tilaukset",
+        "content": "Premium-tilaukset ovat saatavilla: vuosittainen ja elinikäinen (10 vuotta). Maksuja hallitsee RevenueCat (mobiili) tai Lemon Squeezy (verkko). <strong>Myyntiehdot</strong> ovat voimassa (hinnoittelu, peruuttaminen, uusiminen, irtisanominen, palautus) ja ovat saatavilla ennen ostoa."
+      },
+      "section8": {
+        "title": "8. Vastuu",
+        "item1": "Palvelu tarjotaan \"sellaisenaan\" ilman tulostelutakuuta.",
+        "item2": "Emme ole vastuussa suorista tai epäsuorista vahingoista, jotka liittyvät käyttöön, tallentamattomien paikallisten tietojen menetykseen tai tilastojen tulkintaan.",
+        "item3": "Jos koet epämukavuutta, haittavaikutuksia tai huolta terveydestäsi, lopeta käyttö."
+      },
+      "section9": {
+        "title": "9. Henkilötiedot",
+        "content": "Henkilötietojen käsittely kuvataan <a>Tietosuojakäytännössä</a>. Jos Ehdot ja Tietosuojakäytäntö ovat ristiriidassa tietoasioissa, Tietosuojakäytäntö on ensisijainen."
+      },
+      "section10": {
+        "title": "10. Ehtojen muutokset",
+        "content": "Voimme muuttaa näitä ehtoja oikeudellisista, teknisistä tai palvelusyistä. Päivityspäivämäärä näkyy asiakirjan yläosassa. Oleellisten muutosten yhteydessä sovelluksessa näytetään ilmoitus."
+      },
+      "section11": {
+        "title": "11. Sovellettava laki ja riidat",
+        "content": "Näihin Ehtoihin sovelletaan Ranskan lakia. Riitatilanteissa ja sovinnollisten yritysten jälkeen kuluttajakäyttäjät voivat käyttää kuluttajasovittelua tai Euroopan verkkovälitteistä riidanratkaisualustaa (ODR). Muussa tapauksessa Ranskan tuomioistuimilla on yksinomainen toimivalta."
+      },
+      "section12": {
+        "title": "12. Yhteystiedot",
+        "content": "Näitä ehtoja koskeviin kysymyksiin:"
+      }
+    },
+    "privacy": {
+      "title": "Tietosuojakäytäntö",
+      "version": "Versio 3.0 — Viimeksi päivitetty: 2026-03-04",
+      "intro": {
+        "p1": "Tämä Tietosuojakäytäntö kuvaa, miten NeuroDual (\"me\") käsittelee henkilötietojasi, kun käytät mobiilisovellustamme ja verkkosivustoamme.",
+        "p2": "Noudatamme yleisen tietosuoja-asetuksen (GDPR) ja Ranskan tietosuojalain periaatteita. Suosimme \"paikallinen ensin\" -arkkitehtuuria, emme myy tai vuokraa tietojasi ja käytämme yleisömittausta tuotteen parantamiseksi."
+      },
+      "section1": {
+        "title": "1. Rekisterinpitäjä",
+        "responsible": "Rekisterinpitäjä:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Rekisteröity osoite:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Ranska",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Sähköposti:",
+        "dpo": "DPO: AGUILAL Abdeslam (samat yhteystiedot). Tietojasi koskeviin kysymyksiin ota yhteyttä yllä olevaan osoitteeseen."
+      },
+      "section2": {
+        "title": "2. Kerättävät tiedot",
+        "sub1": {
+          "title": "2.1 Käyttäjän luomat tiedot (paikallinen tila)",
+          "content": "Tallennetaan vain laitteellesi SQLite:n kautta, kun et ole kirjautunut:",
+          "item1": "Pistemäärät ja N-Back-istuntohistoria.",
+          "item2": "Pelin kokoonpanoasetukset.",
+          "item3": "Paikallinen profiili (lempinimi, valittu avatar).",
+          "note": "Nämä tiedot eivät kulje palvelimillamme, ennen kuin luot tilin. Jos poistat sovelluksen, nämä tiedot menetetään."
+        },
+        "sub2": {
+          "title": "2.2 Tilitiedot (valinnainen)",
+          "content": "Jos luot tilin synkronoidaksesi tietosi:",
+          "item1": "Sähköpostiosoite (yksilöllinen tunniste).",
+          "item2": "Identiteetintarjoajan (Google, Apple) tarjoama käyttäjätunnus.",
+          "note": "Näitä tietoja hallitaan todennuspalveluntarjoajamme (Supabase) kautta."
+        },
+        "sub3": {
+          "title": "2.3 Tekniset lokit",
+          "content": "Pseudonymisoidut lokit (virheet, synkronointitila, suorituskyky) turvallisuutta ja tukea varten."
+        },
+        "sub4": {
+          "title": "2.4 Tukitiedot",
+          "content": "Sähköpostikeskustelut tuen kanssa voivat sisältää yhteystietosi ja pyyntösi sisällön vastausta varten."
+        },
+        "sub5": {
+          "title": "2.5 Valvonta ja virheseuranta",
+          "content": "Tekniset tiedot (virheet, suorituskyky, poikkeava käyttäytyminen) kerätään Sentryn kautta sovelluksen vakauden parantamiseksi. Pseudonymisoitu data, ei mainoskohdentamista."
+        },
+        "sub6": {
+          "title": "2.6 Yleisömittaus ja tuoteanalyysi",
+          "content": "Anonyymiä käyttötietoa kerätään PostHogin kautta (vieraillut sivut, sovelluksen sisäiset toiminnot, laitteen tyyppi) tuotteen parantamiseksi. Henkilökohtaisesti tunnistettavaa tietoa ei lähetetä. Ei mainoskohdentamista."
+        },
+        "sub7": {
+          "title": "2.7 Mainonta (ilmainen mobiiliversio)",
+          "content": "Ilmainen Android-versio näyttää väliainesmainoksia Google AdMobin kautta. Google voi kerätä mainostunnisteen ja teknisiä tietoja (laitteen tyyppi, kieli, mainosvuorovaikutukset). Premium-käyttäjät eivät altistu mainonnalle. Lisätietoja: Google Ads -tietosuojakäytäntö."
+        }
+      },
+      "section3": {
+        "title": "3. Tarkoitukset ja oikeusperusteet",
+        "content": "Käytämme tietojasi vain seuraaviin tarkoituksiin:",
+        "item1": "<strong>Palvelun toiminta</strong> (paikallinen varmuuskopio, tilastot, usean laitteen synkronointi) — Oikeusperuste: sopimuksen täytäntöönpano (GDPR art. 6.1.b).",
+        "item2": "<strong>Turvallisuus ja petoksen esto</strong> (tekniset lokit, pääsynhallinta) — Oikeusperuste: oikeutettu etu (GDPR art. 6.1.f).",
+        "item3": "<strong>Käyttäjätuki</strong> — Oikeusperuste: oikeutettu etu (pyyntöihin vastaaminen).",
+        "item4": "<strong>Lakisääteiset velvoitteet</strong> — Oikeusperuste: lakisääteinen velvoite (GDPR art. 6.1.c).",
+        "item5": "<strong>Valvonta ja virheseuranta</strong> — Oikeusperuste: oikeutettu etu (vakauden parantaminen); pseudonymisoitu data, ei personoitua mainontaa.",
+        "item6": "<strong>Yleisömittaus</strong> (anonyymi tuoteanalyysi PostHogin kautta) — Oikeusperuste: oikeutettu etu (GDPR art. 6.1.f); anonyymi data.",
+        "note": "Tarkoituksen muutokset dokumentoidaan tämän käytännön päivityksessä.",
+        "item7": "<strong>Mainonta</strong> (väliainesmainosten näyttäminen ilmaisille mobiili­käyttäjille) — Oikeusperuste: oikeutettu etu (GDPR art. 6.1.f).",
+        "item8": "<strong>Markkinointi ja uutiskirjeet</strong> — Oikeusperuste: nimenomainen suostumus (GDPR art. 6.1.a)."
+      },
+      "section4": {
+        "title": "4. Säilytysajat",
+        "item1": "<strong>Paikalliset tiedot:</strong> tallennetaan laitteellesi ja poistetaan asennuksen poiston tai nollauksen yhteydessä.",
+        "item2": "<strong>Tili- ja synkronoidut tiedot:</strong> säilytetään niin kauan kuin tili on aktiivinen. Poistetaan 30 päivän kuluessa tilin poistopyynnöstä.",
+        "item3": "<strong>Tekniset lokit:</strong> säilytetään enintään 12 kuukautta, sitten poistetaan automaattisesti.",
+        "item4": "<strong>Valvonta:</strong> pseudonymisoidut tekniset tiedot säilytetään 90 päivää virheseurantaa ja tuoteparannusta varten.",
+        "item5": "<strong>Tukipyynnöt:</strong> säilytetään 24 kuukautta tiketin sulkemisen jälkeen, sitten poistetaan.",
+        "item6": "<strong>Yleisötiedot (PostHog):</strong> anonyymi, säilytetään 12 kuukautta."
+      },
+      "section5": {
+        "title": "5. Vastaanottajat, käsittelijät ja siirrot",
+        "content": "Tietojasi voivat käsitellä seuraavat palveluntarjoajat:",
+        "item1": "Supabase Inc. (todennus ja pilvi­tietokanta, EU-isännöinti).",
+        "item2": "Amazon Web Services (Supabase-infrastruktuuri, EU-alueet).",
+        "item3": "Cloudflare Inc. (verkko­sovelluksen isännöinti, CDN ja turvallisuus).",
+        "item4": "Sentry (virhe- ja suorituskyvyn valvonta; EU:n ulkopuoliset siirrot perustuvat vakiosopimuslausekkeisiin).",
+        "item5": "RevenueCat Inc. (mobiilitilausten ja sovelluksen sisäisten maksujen hallinta; ei tallenna luottokorttitietoja).",
+        "note": "Jos uusi palveluntarjoaja lisätään, tämä osio päivitetään.",
+        "transfers": "<strong>EU:n ulkopuoliset siirrot:</strong> kun EU:n ulkopuoliset palveluntarjoajat ovat mukana (esim. Cloudflare, Supabase US-yksikkö, Sentry, RevenueCat, Google AdMob), siirtoja säätelevät Euroopan komission vakiosopimuslausekkeet (SCC) tai vastaava mekanismi.",
+        "item6": "PostHog Inc. (yleisömittaus ja tuoteanalyysi; anonyymi data; EU-isännöinti).",
+        "item7": "Lemon Squeezy (verkkomaksujen hallinta; ei tallenna luottokorttitietoja).",
+        "item8": "Google AdMob (mainosten näyttö ilmaisessa mobiiliversiossa; EU:n ulkopuoliset siirrot perustuvat vakiosopimuslausekkeisiin)."
+      },
+      "section6": {
+        "title": "6. Sinun oikeutesi",
+        "content": "GDPR:n nojalla sinulla on seuraavat oikeudet:",
+        "item1": "Pääsy, oikaiseminen, poistaminen.",
+        "item2": "Rajoittaminen ja vastustaminen (oikeusperusteesta riippuen).",
+        "item3": "Siirrettävyys (vie tietosi JSON- tai CSV-muodossa).",
+        "item4": "Suostumuksen peruuttaminen (soveltuvin osin).",
+        "item5": "Valitus valvontaviranomaiselle (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Tilin poistaminen:</strong> voit poistaa tilisi ja kaikki siihen liittyvät tiedot suoraan sovelluksen Asetuksista. Tämä toiminto on peruuttamaton.",
+        "exercise": "Muiden oikeuksiesi käyttämiseksi ota yhteyttä osoitteeseen <strong>support@neurodual.fr</strong>. Henkilöllisyyden todistamista voidaan pyytää perustellun epäilyksen tapauksessa. Vastausaika: 1 kuukausi (voidaan pidentää 3 kuukauteen monimutkaisissa tapauksissa)."
+      },
+      "section7": {
+        "title": "7. Turvallisuus",
+        "content": "Salattu viestintä (HTTPS/TLS), rajoitettu ylläpitäjän pääsy, käyttöoikeuksien hallinta. Tietomurron sattuessa, joka todennäköisesti aiheuttaa riskin, tehdään lakisääteiset ilmoitukset (CNIL ja asianomaiset henkilöt)."
+      },
+      "section8": {
+        "title": "8. Evästeet ja paikallinen tallennus",
+        "content": "Sovellus käyttää SQLitea edistymisesi tallentamiseen suoraan laitteellesi. Vain välttämättömiä teknisiä evästeitä (todennus, istunto) käytetään. Ilmainen mobiiliversio käyttää Google AdMobia, joka voi asettaa evästeitä tai mainostunnisteita."
+      },
+      "section9": {
+        "title": "9. Alaikäiset",
+        "content": "NeuroDual on tarkoitettu yli 16-vuotiaille käyttäjille. Alaikäisten on käytettävä sovellusta laillisen huoltajan vastuulla."
+      },
+      "section10": {
+        "title": "10. Muutokset",
+        "content": "Päivitetty versio julkaistaan täällä viimeisimmän päivityspäivämäärän kanssa. Oleellisten muutosten yhteydessä sovelluksessa annetaan ilmoitus."
+      },
+      "section11": {
+        "title": "11. Yhteystiedot",
+        "content": "Kysymyksiin tai oikeuksiesi käyttämiseen:",
+        "email": "Sähköposti: support@neurodual.fr",
+        "responsible": "Rekisterinpitäjä: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Myyntiehdot",
+      "version": "Vuosi- ja elinikäiset tilaukset — Viimeksi päivitetty: 2026-03-04",
+      "section1": {
+        "title": "1. Tarkoitus",
+        "content": "Nämä Myyntiehdot koskevat NeuroDual Premium -suunnitelmien (vuosittainen ja elinikäinen) tilaamista. Ne täydentävät <a1>Käyttöehtoja</a1> ja <a2>Tietosuojakäytäntöä</a2>."
+      },
+      "section2": {
+        "title": "2. Tarjous ja hinnoittelu",
+        "item1": "<strong>Vuositilaus</strong>: hinta näytetään ennen maksua (sisältäen verot soveltuvin osin), uusitaan automaattisesti vuosittain.",
+        "item2": "<strong>Elinikäinen tilaus (10 vuotta)</strong>: kertamaksu, joka antaa pääsyn premium-ominaisuuksiin 10 vuodeksi ilman automaattista uusimista.",
+        "item3": "Premium-pääsy: usean laitteen pilvisynkronointi, etävarmuuskopiot, pääsy kaikkiin N-tasoihin, edistyneet viennit, mainokseton kokemus, priorisoitu tuki.",
+        "item4": "Voimassa olevat hinnat ovat saatavilla sovelluksen tilaussivulla ja kaupoissa (App Store, Google Play).",
+        "item5": "Hinnat voivat muuttua; muutokset ilmoitetaan ennen uusimista, jotta peruuttaminen on mahdollista (ei koske elinikäistä)."
+      },
+      "section3": {
+        "title": "3. Kesto, uusiminen ja irtisanominen",
+        "item1": "<strong>Vuositilaus</strong>: 12 kuukauden kesto tilauksen päivämäärästä.",
+        "item2": "<strong>Elinikäinen tilaus</strong>: 10 vuoden kesto tilauksen päivämäärästä, ei uusimista.",
+        "item3": "Uusiminen (vuosittainen): automaattinen uusiminen jokaisella kaudella, ellei irtisanota etukäteen.",
+        "item4": "Irtisanominen (vuosittainen): mahdollista milloin tahansa sovelluksen tai kaupan asetuksista (App Store, Google Play). Tulee voimaan nykyisen kauden lopussa.",
+        "item5": "Elinikäistä ei voi irtisanoa, mutta se on lakisääteisen peruuttamisoikeuden alainen (katso kohta 5)."
+      },
+      "section4": {
+        "title": "4. Maksaminen",
+        "item1": "Maksuja hallitsee RevenueCat kauppojen (App Store, Google Play) tai Lemon Squeezyn (verkko) kautta. Emme tallenna luottokorttitietojasi.",
+        "item2": "Maksun epäonnistuessa (toistuvat tilaukset), premium-pääsy voidaan keskeyttää, kunnes asia on ratkaistu.",
+        "item3": "App Store- tai Google Play -ostojen palautukset on pyydettävä kyseisestä kaupasta."
+      },
+      "section5": {
+        "title": "5. Peruuttamisoikeus",
+        "content": "Oston jälkeen toimitettu digitaalinen palvelu. Jos pyydät välitöntä suorittamista ennen 14 päivän lakisääteisen määräajan päättymistä, tunnustat luopuvasi peruuttamisoikeudestasi palvelun täydellisen toimituksen yhteydessä. Ilman nimenomaista luopumista voit käyttää peruuttamisoikeutta 14 päivän kuluessa ostosta kirjoittamalla osoitteeseen support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Palautus",
+        "content": "Lakisääteisen peruuttamisoikeuden ulkopuolella aloitettuja tilauksia ei palauteta, paitsi pakottavien säännösten tai palveluun kohdistuvien merkittävien vikojen tapauksessa."
+      },
+      "section7": {
+        "title": "7. Tarjouksen muutokset",
+        "content": "Premium-ominaisuudet voivat kehittyä. Olennaisen ominaisuuden poistamisesta ilmoitetaan etukäteen ja tarvittaessa tarjotaan mahdollisuus irtisanoa maksutta ennen kauden päättymistä."
+      },
+      "section8": {
+        "title": "8. Henkilötiedot",
+        "content": "Laskutus- ja tilitietojen käsittely kuvataan <a>Tietosuojakäytännössä</a>."
+      },
+      "section9": {
+        "title": "9. Asiakaspalvelu",
+        "content": "Kysymyksiin, peruuttamisoikeuden alaisiin palautuksiin tai valituksiin:"
+      }
+    },
+    "mentions": {
+      "title": "Oikeudellinen ilmoitus",
+      "version": "Viimeksi päivitetty:",
+      "section1": {
+        "title": "1. Julkaisija",
+        "company": "Yrityksen nimi:",
+        "companyValue": "AGUILAL Abdeslam (Yksityinen elinkeinonharjoittaja)",
+        "address": "Osoite:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Ranska",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Sähköposti:"
+      },
+      "section2": {
+        "title": "2. Julkaisupäällikkö",
+        "name": "AGUILAL Abdeslam",
+        "email": "Sähköposti:"
+      },
+      "section3": {
+        "title": "3. Isännöinti",
+        "content": "NeuroDual-sovellusta isännöivät:",
+        "webapp": "Verkkosovellus",
+        "database": "Tietokanta ja todennus",
+        "databaseInfra": "Infrastruktuuri: Amazon Web Services (EU-alue - eu-central-1)",
+        "monitoring": "Valvonta ja virheseuranta",
+        "subscriptions": "Tilausten hallinta",
+        "analytics": "Yleisömittaus",
+        "analyticsInfra": "EU-isännöinti",
+        "advertising": "Mainonta (ilmainen mobiiliversio)",
+        "payments": "Verkkomaksut",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Immateriaalioikeudet",
+        "p1": "Kaikki NeuroDual-sovelluksen elementit (teksti, grafiikka, äänet, lähdekoodi, logot, tavaramerkit) ovat tekijänoikeus- ja tavaramerkkilainsäädännöllä suojattuja. Luvaton kopiointi, esittäminen tai hyödyntäminen on kielletty.",
+        "p2": "Joidenkin ominaisuuksien lähdekoodi käyttää avoimen lähdekoodin kirjastoja, joiden vastaavia lisenssejä noudatetaan."
+      },
+      "section5": {
+        "title": "5. Henkilötiedot",
+        "content": "Henkilötietojen käsittely kuvataan <a>Tietosuojakäytännössämme</a>.",
+        "responsible": "Rekisterinpitäjä:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Sovittelu ja riitojenratkaisu",
+        "p1": "Ranskan kuluttajalain artiklojen L.611-1 ja sitä seuraavien mukaisesti kuluttaja­käyttäjät voivat ratkaisemattoman riidan tapauksessa edeltävän asiakaspalvelun valituksen jälkeen turvautua maksuttomaan kuluttajasovittelijaan.",
+        "odr": "Euroopan verkkovälitteinen riidanratkaisualusta (ODR):"
+      },
+      "section7": {
+        "title": "7. Oikeudelliset asiakirjat",
+        "privacy": "Tietosuojakäytäntö",
+        "privacyNote": "(GDPR)",
+        "terms": "Käyttöehdot",
+        "termsNote": "(KE)",
+        "cgv": "Myyntiehdot",
+        "cgvNote": "(Myynti)"
+      },
+      "section8": {
+        "title": "8. Yhteystiedot",
+        "content": "Tätä oikeudellista ilmoitusta koskeviin kysymyksiin:",
+        "email": "Sähköposti:"
+      }
+    }
+  }
+}

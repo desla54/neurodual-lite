@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Opplæring",
+    "exitConfirm": "Vil du avslutte opplæringen?",
+    "exitWarning": "Fremgangen din vil ikke bli lagret.",
+    "continue": "Fortsett",
+    "quit": "Avslutt",
+    "stepLabel": "Trinn {{step}}",
+    "previous": "Forrige",
+    "restart": "Start på nytt",
+    "next": "Neste",
+    "startGame": "Start",
+    "progress": "Teller",
+    "tapToContinue": "Trykk for å fortsette",
+    "controls": {
+      "position": "Posisjon",
+      "audio": "Lyd"
+    },
+    "annotation": {
+      "label": "Instruksjon"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Fint arbeid. Du besto veiledningen.",
+        "stay": "Nesten der. Litt mer trening så får du det.",
+        "down": "Ikke validert ennå. Prøv veiledningen på nytt for å styrke det grunnleggende."
+      },
+      "header": {
+        "up": "Opplæringen fullført!",
+        "down": "Gjennomgå",
+        "stay": "Nesten!"
+      },
+      "noteMinAssessment": "Merk: For en mer nøyaktig evaluering vurderer veiledningene minst 8 svar.",
+      "guidance": {
+        "passed": "Du er klar for gratis trening.",
+        "failed": "Vi anbefaler at du prøver denne opplæringen på nytt før du går videre til trening."
+      },
+      "correctAnswers": "{{correct}}/{{total}} riktige svar",
+      "actions": {
+        "backToHome": "Tilbake til hjemmet",
+        "retryTutorial": "Prøv veiledningen på nytt",
+        "explainLevels": "Forstå N nivåer (N)",
+        "goToTraining": "Gå på trening",
+        "continueToTraining": "Fortsett å trene"
+      }
+    },
+    "welcome": {
+      "title": "Introduksjon til trening",
+      "description": "Dual N-Back utfordrer arbeidsminnet ditt ved å kreve at du sporer to strømmer med informasjon samtidig: en visuell posisjon og en lyd. Denne opplæringen guider deg trinn for trinn.",
+      "button": "Start opplæringen"
+    },
+    "timeline": {
+      "legend": "Tidslinjen hjelper sammenligning - den er skjult under spillet",
+      "past": "Fortid",
+      "present": "Tilstede"
+    },
+    "hub": {
+      "title": "Veiledninger",
+      "subtitle": "Velg en modus for å lære",
+      "basics": {
+        "title": "Det grunnleggende",
+        "description": "Lær refleksen og rytmen til klassisk Dual N-Back."
+      },
+      "place": {
+        "title": "Dobbelt plass",
+        "description": "Mestre tidsmessig plassering på tidslinjen."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Merk hver stimulus med sin tidsreferanse (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Lær aktive gjenkallingsbevegelser gjennom sporing."
+      },
+      "memo": {
+        "title": "Dobbelt notat",
+        "description": "Gjenoppbygg hele sekvensen fra minnet."
+      },
+      "soroban": {
+        "title": "Soroban Mestring",
+        "description": "Lær den japanske kulerammen trinn for trinn gjennom 8 progressive stadier."
+      }
+    },
+    "place": {
+      "comingSoon": "Stedsopplæringen er under utvikling",
+      "cardPool": "Tilgjengelige kort",
+      "slot": "Spor",
+      "observe": "Observer: en posisjon på rutenettet og en lydbokstav.",
+      "buffer": "Andre stimulans. N-back bufferen fylles opp.",
+      "cardsAppear": "Kortene dukker opp! De representerer de siste 3 stimuli.",
+      "firstDrag": "Klikk på det merkede kortet og deretter på N-2-sporet (det eldste).",
+      "timelineExplain": "Tidslinjen viser tid: N-2 = eldst, N = tilstede.",
+      "positionN1": "Plasser midtposisjonen i N-1-sporet.",
+      "positionN": "Flott! Avslutt med den nyeste posisjonen (N-spor).",
+      "audioIntro": "Nå er lydkortene! Samme prinsipp.",
+      "audioN2": "Plasser den første bokstaven du hører i N-2-sporet.",
+      "audioN1": "Fortsett med den midterste bokstaven (N-1 spor).",
+      "audioN": "Avslutt med den siste bokstaven (N-spor).",
+      "dualIntro": "Ny prøveversjon! Plasser posisjoner OG bokstaver.",
+      "dualPractice": "Plasser alle 6 kortene i de riktige sporene. Ta deg god tid!",
+      "rhythmExplain": "I ekte spilling har du begrenset tid.",
+      "autonomy": "Din tur! Plasser alle kortene riktig.",
+      "conclusion": "Godt gjort! Du har mestret det grunnleggende om Dual Place.",
+      "selectCard": "Velg et kort, og klikk deretter på sporet",
+      "clickSlot": "Klikk på høyre spor for å plassere kortet",
+      "wrongSlot": "Ikke det sporet! Se på den tidsmessige rekkefølgen.",
+      "wrongCard": "Ikke det kortet. Finn den som passer til sporet.",
+      "tryAgain": "Prøv igjen! Riktig spor er uthevet."
+    },
+    "memo": {
+      "comingSoon": "Memo-opplæringen er under utvikling",
+      "selectPosition": "Velg posisjonen",
+      "selectAudio": "Velg bokstaven",
+      "clickToRecall": "Klikk på et spor for å hente verdien",
+      "validate": "Bekreft",
+      "observeFirst": "Første stimulans. Husk både posisjonen OG bokstaven!",
+      "observeSecond": "Andre stimulans. Fortsett å huske.",
+      "observeThird": "Tredje stimulans. Buffer komplett. Gjør deg klar!",
+      "recallIntro": "Rutenettet forsvinner! Hent fra minnet. Klikk på N-2-sporet.",
+      "firstRecall": "Klikk på N-2-sporet. Hva var den første stillingen?",
+      "feedbackExplain": "Grønn = riktig. Rød = feil. Du kan korrigere opptil 3 ganger!",
+      "multiSlot": "Fortsett! Tilbakekall posisjoner N-1 og N.",
+      "newStimulus": "Ny stimulans! N-bakvinduet forskyves med én.",
+      "windowShift": "Vinduet har forskjøvet seg. Gammel N-2 går ut, ny N kommer inn.",
+      "fullPosition": "Husk alle 3 posisjonene. Fokus!",
+      "audioIntro": "Ny stimulans. Nå legger vi til lydgjenkalling!",
+      "firstAudioRecall": "Klikk på audio N-2-sporet. Hvilken bokstav?",
+      "fullAudio": "Fortsett med bokstavene N-1 og N.",
+      "dualIntro": "I ekte spilling husker du posisjoner OG bokstaver sammen.",
+      "dualPractice": "Tilbakekall alle 6 cellene og klikk deretter på Valider.",
+      "correctionExplain": "Hvis du gjør en feil, klikk på nytt for å rette. Maks 3 ganger.",
+      "withCorrection": "Prøv det! Hvis du tar feil, korriger ved å klikke på nytt.",
+      "conclusion": "Utmerket! Du har mestret aktiv tilbakekalling. Start en økt!",
+      "wrongAnswer": "Det er ikke det. Tenk, hvilken stimulans var i det øyeblikket?",
+      "tryAgain": "Prøv igjen! Du kan fortsatt korrigere.",
+      "maxCorrections": "3 rettelser nådd. Dette sporet er låst.",
+      "validateHint": "Alle plasser er fylt. Klikk Valider!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Velkommen til Dual Pick! Lær å klassifisere hver stimulus.",
+        "hud": "Øverst: fremgangen din i opplæringen.",
+        "grid": "Gitteret er delt inn i 3 soner: TOP, MIDT, BOTTOM.",
+        "controls": "Disse knappene klassifiserer. Plassering til venstre, lyd til høyre.",
+        "outro": "Klar? La oss starte med stillingsklassifisering!"
+      },
+      "intro": "I Dual Pick klassifiserer du hver stimulus etter to kriterier: rutenettsone og lydtype.",
+      "gridExplain": "Rutenettet har 3 soner: TOP (øverste rad), MIDT (midt), NEDERST (nederste rad).",
+      "positionHaut": "Torget er på toppen. Klikk TOPP.",
+      "positionMilieu": "Torget er i midten. Klikk MIDT.",
+      "positionBas": "Torget er nederst. Klikk NEDEN.",
+      "positionRecap": "Perfekt! TOP = øverste rad, MIDT = midten, NEDERST = nederste rad.",
+      "positionPractice": "Din tur! Klassifiser denne stillingen.",
+      "soundIntro": "Nå lyder. Det er to typer: VOKAL (A, E, I, O, U) og KONSONANT (alle andre).",
+      "soundVoyelle": "Du hører A. Det er en vokal. Klikk VOKEL.",
+      "soundConsonne": "Du hører T. Det er en konsonant. Klikk KONSONANT.",
+      "soundRecap": "Husk: A, E, I, O, U = VOKAL. Alt annet = KONSONANT.",
+      "soundPractice": "Din tur! Klassifiser denne lyden.",
+      "dualIntro": "I ekte spilling klassifiserer du BÅDE samtidig: posisjon OG lyd.",
+      "dualFirst": "Klassifiser posisjon OG lyd. Ta deg god tid.",
+      "dualSecond": "Fortsett. Posisjon + Lyd.",
+      "dualThird": "Utmerket! En til for trening.",
+      "rhythm": "Hold en vanlig rytme i økten. Fluiditet kommer med øvelse.",
+      "conclusion": "Godt gjort! Du har mestret klassifisering. Start en Dual Pick-økt!",
+      "buttons": {
+        "top": "TOPP",
+        "middle": "MIDT",
+        "bottom": "BUN",
+        "vowel": "VOKAL",
+        "consonant": "KONSONANT"
+      },
+      "feedback": {
+        "correctPosition": "Bra sone!",
+        "correctSound": "Bra lydtype!",
+        "wrongPosition": "Ikke den sonen. Se hvor torget er.",
+        "wrongSound": "Det er ikke det. A, E, I, O, U = vokaler."
+      }
+    },
+    "trace": {
+      "intro": "Velkommen til Dual Trace. Ingen knapper her: du vil aktivt huske den forrige posisjonen gjennom en sveipebevegelse.",
+      "observe": "Husk denne posisjonen. Neste sving må du sveipe mot den.",
+      "firstSwipe": "Første sveip! Skyv fingeren mot forrige svings posisjon. Pilen veileder deg.",
+      "firstAudioMatch": "Samme bokstav som forrige sving! Sveip til posisjonen OG dobbelttrykk for å signalisere lyden.",
+      "audioMatch": "Lydtreff oppdaget! Sveip + dobbelttrykk.",
+      "swipe1": "Sveip mot N-1-posisjonen. Husk hvor torget var.",
+      "swipe2": "Fortsett. Hvert sveip styrker det aktive minnet ditt.",
+      "swipe3": "Aktiv tilbakekalling er mer krevende enn enkel gjenkjennelse.",
+      "swipe4": "Hold deg fokusert. Visualiser posisjonen før du sveiper.",
+      "swipe5": "Utmerket! Du har mestret tilbakekallingsbevegelsen.",
+      "complete": "Opplæringen er fullført. Du er klar for Dual Trace-trening.",
+      "tapTarget": "Trykk på forrige svings posisjon",
+      "tapTargetAndAudio": "Trykk på målposisjonen og deretter på Audio"
+    },
+    "ui": {
+      "startExercise": "Start treningen",
+      "score": "Poengsum: {{current}}/{{total}}",
+      "complete": "Komplett",
+      "correct": "✓ Riktig!",
+      "expectedMatch": "✗ Forventet: Kamp",
+      "expectedNoMatch": "✗ Forventet: Ingen treff",
+      "memorize": "Husk stillingen...",
+      "memorizeLetter": "Husk brevet...",
+      "matchDetected": "✓ Match oppdaget!",
+      "noMatch": "✗ Ingen match",
+      "matchExplanation": "Match! Trinn {{current}} = Trinn {{previous}}",
+      "exerciseComplete": "Trening fullført!",
+      "match": "Match",
+      "noMatchButton": "Ingen kamp",
+      "none": "Ingen",
+      "both": "Begge deler",
+      "position": "Posisjon",
+      "audio": "Lyd",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Dashbordet ditt: N-baknivå, svingteller og øktkontroller.",
+      "timeline": "Tidslinjen beholder de siste 3 stimuli for å hjelpe til med sammenligning. I ekte spill er denne hjelpen skjult.",
+      "grid": "Rutenettet: hver tur lyser en celle i en av 8 posisjoner. Samtidig blir det sagt et brev.",
+      "controls": "Dine svarknapper. Trykk når du oppdager en repetisjon.",
+      "intro": "Velkommen! La oss oppdage spillgrensesnittet sammen.",
+      "continue": "Fortsett",
+      "outro": "La oss nå gå til en guidet økt. Se animasjonene og følg instruksjonene.",
+      "start": "Start",
+      "tapToContinue": "Trykk hvor som helst for å fortsette"
+    },
+    "speed": {
+      "label": "Hastighet: {{speed}}",
+      "pauseToChange": "Pause for å endre hastighet"
+    },
+    "assessment": {
+      "title": "Vurdert fase",
+      "subtitle": "Fra nå av er det et kort klassisk løp.",
+      "body": "Tempoet er kontinuerlig og du vil ikke få flere hint. Spill som i en ekte økt.",
+      "goal": "Mål: minst {{min}} % nøyaktighet over {{count}}-prøver.",
+      "cta": "La oss gå"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Forstå N-nivåer",
+        "desc": "Du lærte N=2. Slik generaliserer det fra N=1 til N=4.",
+        "start": "Start",
+        "done": "Fullfør",
+        "skip": "Hopp over",
+        "hud": "N = hvor mange omdreininger tilbake.",
+        "present": "N = gjeldende stimulus (nåværende).",
+        "past": "Sammenlign med N-{{n}}.",
+        "pressPosition": "Hvis posisjon gjentas, trykk Posisjon.",
+        "pressAudio": "Hvis lyden gjentar seg, trykk på Audio.",
+        "annotation": {
+          "n1": "N=1: sammenlign gjeldende stimulus (N) med forrige sving (N-1).",
+          "n2": "N=2: sammenlign gjeldende stimulus (N) med to svinger tilbake (N-2).",
+          "n3": "N=3: sammenlign gjeldende stimulus (N) med tre omdreininger tilbake (N-3)."
+        },
+        "outroTitle": "Og så videre…",
+        "outroBody": "Hvis du flytter til N=5, vil du sammenligne med N-5. Regelen forblir den samme; bare avstanden øker."
+      }
+    },
+    "annotations": {
+      "intro": "Legg merke til: en celle lyser opp på rutenettet og en bokstav blir lest opp samtidig.",
+      "observe": "Husk. Tidslinjen holder styr på stimuli.",
+      "firstComparison": "Du har nå nok historie til å sammenligne.",
+      "firstPositionMatch": "Samme posisjon som for 2 svinger siden! Sammenlign N og N-2 på tidslinjen, og trykk deretter på Posisjon.",
+      "firstAudioMatch": "Samme bokstav som for 2 omganger siden! Sammenlign N og N-2 på tidslinjen, og trykk deretter på Audio.",
+      "firstDualMatch": "Dobbel kamp! Både posisjon OG lyd gjentas. Trykk på begge knappene.",
+      "positionMatch": "Samme posisjon. Trykk på Posisjon.",
+      "audioMatch": "Samme lyd. Trykk på Audio.",
+      "dualMatch": "Begge matcher. Trykk på Posisjon og Lyd.",
+      "noMatch": "Ingen match denne svingen. Fortsett å huske.",
+      "noMatch1": "Ingen repetisjon denne gangen. Trykk for å fortsette.",
+      "noMatch2": "Fortsatt ingen match. Hold fokus på posisjonen + lydflyt.",
+      "noMatch3": "Ingenting å rapportere. Sammenlign alltid med N-2 på tidslinjen.",
+      "noMatch4": "Ingen kamp. Tempoet øker nå.",
+      "noMatch5": "Fortsett. Kamper kommer uforutsigbart.",
+      "noMatch6": "Ingen kamp. Fortsett, du har rytmen.",
+      "noMatch7": "Siste strekning. Hold deg fokusert.",
+      "noMatch8": "Nesten ferdig. Noen flere stimuli.",
+      "complete": "Gratulerer! Du har mestret det grunnleggende om Dual N-Back. Klar for trening?"
+    },
+    "exit": {
+      "confirm": "Avslutt",
+      "title": "Vil du avslutte opplæringen?",
+      "message": "Fremgangen din vil bli lagret. Du kan fortsette senere."
+    },
+    "recovery": {
+      "message": "En avbrutt økt ble funnet.",
+      "staleMessage": "En avbrutt økt for mer enn 30 minutter siden ble funnet.",
+      "resume": "Fortsett",
+      "startFresh": "Start på nytt",
+      "title": "Vil du gjenoppta opplæringen?"
+    }
+  }
+}

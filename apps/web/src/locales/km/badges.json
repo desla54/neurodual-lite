@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "ភាពស្មើភាព",
+      "performance": "ប្រតិបត្តិការ",
+      "resilience": "ភាពធន់",
+      "exploration": "ការស្វែងរក",
+      "milestone": "ព្រឹត្តិការណ៍សំខាន់",
+      "cognitive": "សតិបញ្ញា"
+    },
+    "first_session": {
+      "name": "Neuron ដែលភ្ញាក់ដឹង",
+      "description": "បានបញ្ចប់ session ដំបូង។"
+    },
+    "sessions_10": {
+      "name": "ស្តម្ភ (សំរិទ្ធ)",
+      "description": "បានបញ្ចប់ ១០ session។"
+    },
+    "sessions_25": {
+      "name": "ស្តម្ភ (ប្រាក់)",
+      "description": "បានបញ្ចប់ ២៥ session។"
+    },
+    "marathoner": {
+      "name": "ស្តម្ភ (មាស)",
+      "description": "បានបញ្ចប់ ៥០ session។"
+    },
+    "streak_3": {
+      "name": "ទម្លាប់ទើបកើត",
+      "description": "Streak ៣ ថ្ងៃ។"
+    },
+    "streak_7": {
+      "name": "ទម្លាប់ប្រចាំថ្ងៃ",
+      "description": "Streak ៧ ថ្ងៃ។"
+    },
+    "streak_14": {
+      "name": "ទម្លាប់ដែលចាក់ឫស",
+      "description": "Streak ១៤ ថ្ងៃ។"
+    },
+    "streak_30": {
+      "name": "វិន័យដែក",
+      "description": "Streak ៣០ ថ្ងៃ។"
+    },
+    "early_bird": {
+      "name": "បក្សីដំបូង",
+      "description": "៥ ថ្ងៃផ្សេងគ្នាដែលមាន session មុនម៉ោង ៨ ព្រឹក។"
+    },
+    "night_owl": {
+      "name": "សត្វទីទុយរាត្រី",
+      "description": "៥ ថ្ងៃផ្សេងគ្នាដែលមាន session ក្រោយម៉ោង ១០ យប់។"
+    },
+    "brain_n3": {
+      "name": "ខួរក្បាលមុតស្រួច",
+      "description": "ឈានដល់ level N-3។"
+    },
+    "brain_n4": {
+      "name": "ខួរក្បាលខ្លាំង",
+      "description": "ឈានដល់ level N-4។"
+    },
+    "brain_n5": {
+      "name": "ខួរក្បាល Olympic",
+      "description": "ឈានដល់ level N-5។"
+    },
+    "brain_n7": {
+      "name": "វរជននៃការយល់ដឹង",
+      "description": "ឈានដល់ level N-7។"
+    },
+    "brain_n10": {
+      "name": "កំពូលមនុស្ស",
+      "description": "ឈានដល់ level N-10។"
+    },
+    "sniper": {
+      "name": "អ្នកលបបាញ់",
+      "description": "> 90% accuracy នៅ N ≥ 2។"
+    },
+    "accuracy_95": {
+      "name": "ភាពជាក់លាក់នៃការវះកាត់",
+      "description": "> 95% accuracy នៅ N ≥ 2។"
+    },
+    "accuracy_98": {
+      "name": "ឡាស៊ែរ",
+      "description": "> 98% accuracy នៅ N ≥ 2។"
+    },
+    "untouchable": {
+      "name": "មិនអាចប៉ះបាន។",
+      "description": "Session ល្អឥតខ្ចោះ (កំហុស ០) នៅ N ≥ 2។"
+    },
+    "rt_500": {
+      "name": "ប្រតិកម្មរហ័ស",
+      "description": "ពេលវេលាប្រតិកម្មជាមធ្យម < 500ms ជាមួយ ≥70% accuracy។"
+    },
+    "flash": {
+      "name": "ពន្លឺ",
+      "description": "ពេលវេលាប្រតិកម្មជាមធ្យម < 400ms ជាមួយ ≥70% accuracy។"
+    },
+    "rt_300": {
+      "name": "រន្ទះ",
+      "description": "ពេលវេលាប្រតិកម្មជាមធ្យម < 300ms ជាមួយ ≥70% accuracy។"
+    },
+    "consistent": {
+      "name": "ស្រប",
+      "description": "RT standard deviation < 100ms (ត្រូវការចម្លើយ ≥10)។"
+    },
+    "dprime_master": {
+      "name": "d' គ្រូ",
+      "description": "d-prime > 3.0 ក្នុង session មួយ។"
+    },
+    "dprime_4": {
+      "name": "អ្នកជំនាញ SDT",
+      "description": "d-prime > 4.0 ក្នុង session មួយ។"
+    },
+    "no_pause": {
+      "name": "មិនឈប់សម្រាក",
+      "description": "៥ session ជាប់គ្នាដោយមិនផ្អាក ជាមួយ ≥75% accuracy។"
+    },
+    "steady_hands": {
+      "name": "ដៃថេរ",
+      "description": "គ្មានការបញ្ចូលខុសក្នុង session (≥80% accuracy)។"
+    },
+    "zen_master": {
+      "name": "គ្រូ Zen",
+      "description": "១០ session ដោយមិនចាកចេញ។"
+    },
+    "comeback_kid": {
+      "name": "ត្រលប់មកវិញកូន",
+      "description": "ឡើង level បន្ទាប់ពីចុះ level។"
+    },
+    "persistent": {
+      "name": "តស៊ូ",
+      "description": "៣ session ក្នុងថ្ងៃតែមួយបន្ទាប់ពីបរាជ័យ។"
+    },
+    "second_wind": {
+      "name": "ខ្យល់ទីពីរ",
+      "description": "d-prime ប្រសើរឡើងរវាងពាក់កណ្តាល ១ និង ២ (ត្រូវការ d′ ≥ 2.0)។"
+    },
+    "plateau_breaker": {
+      "name": "អ្នកបំបែកខ្ពង់រាប",
+      "description": "រីកចម្រើនបន្ទាប់ពី 10+ session នៅ level ដូចគ្នា។"
+    },
+    "no_surrender": {
+      "name": "គ្មានការចុះចាញ់",
+      "description": "២៥ session ដោយមិនចាកចេញ។"
+    },
+    "ironwill": {
+      "name": "ឆន្ទៈដែក",
+      "description": "៥០ session ដោយមិនចាកចេញ។"
+    },
+    "audiophile": {
+      "name": "អូឌីយ៉ូហ្វីល",
+      "description": "Audio > 80% ប៉ុន្តែ Visual < 70%។"
+    },
+    "eagle_eye": {
+      "name": "ភ្នែកឥន្ទ្រី",
+      "description": "Visual > 80% ប៉ុន្តែ Audio < 70%។"
+    },
+    "synchronized": {
+      "name": "ធ្វើសមកាលកម្ម",
+      "description": "ពិន្ទុ Audio និង Visual ក្នុង 5% (ត្រូវការ ≥60%)។"
+    },
+    "dual_master": {
+      "name": "មេទ្វេ",
+      "description": "Audio និង Visual > 85% ក្នុង session តែមួយ (≥6 lure/modality)។"
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio និង Visual > 90% ក្នុង session តែមួយ នៅ N ≥ 3 (≥6 lure/modality)។"
+    },
+    "centurion": {
+      "name": "នាយទាហាន",
+      "description": "បានបញ្ចប់ ១០០ session។"
+    },
+    "sessions_250": {
+      "name": "រឿងព្រេងនិទាន (ត្បូងមរកត)",
+      "description": "បានបញ្ចប់ ២៥០ session។"
+    },
+    "sessions_500": {
+      "name": "អមតៈ (ពេជ្រ)",
+      "description": "បានបញ្ចប់ ៥០០ session។"
+    },
+    "trials_500": {
+      "name": "អ្នកអនុវត្ត",
+      "description": "បានលេង ៥០០ trial សរុប។"
+    },
+    "trials_1000": {
+      "name": "បានបណ្តុះបណ្តាល",
+      "description": "បានលេង ១,០០០ trial សរុប។"
+    },
+    "trials_5000": {
+      "name": "ច្បាស់ជំនាញ",
+      "description": "បានលេង ៥,០០០ trial សរុប។"
+    },
+    "trials_10k": {
+      "name": "១០,០០០ Trial",
+      "description": "បានលេង ១០,០០០ trial សរុប។"
+    },
+    "trials_50k": {
+      "name": "ទីតាន",
+      "description": "បានលេង ៥០,០០០ trial សរុប។"
+    },
+    "streak_90": {
+      "name": "Quarter ល្អឥតខ្ចោះ",
+      "description": "Streak ៩០ ថ្ងៃ។"
+    },
+    "streak_365": {
+      "name": "ឆ្នាំល្អឥតខ្ចោះ",
+      "description": "Streak ៣៦៥ ថ្ងៃ។"
+    },
+    "veteran": {
+      "name": "ជើងចាស់",
+      "description": "ប្រើប្រាស់ ១ ឆ្នាំ។"
+    },
+    "metronome": {
+      "name": "Metronome",
+      "description": "RT variance < 50ms លើ ≥20 trial (ត្រូវការចម្លើយសកម្ម)។"
+    },
+    "flow_state": {
+      "name": "ស្ថានភាពនៃព្រះគុណ",
+      "description": "រកឃើញ flow ពេញ session មួយ។"
+    },
+    "sang_froid": {
+      "name": "ក្បាលត្រជាក់",
+      "description": "គ្មានកំហុសជាប់គ្នាបន្ទាប់ពីកំហុសមួយ (≥70% accuracy)។"
+    },
+    "imperturbable": {
+      "name": "មិនច្រឡំ",
+      "description": "Session ពេញដោយមិនបាត់ការផ្ចង់អារម្មណ៍ (≥60% accuracy)។"
+    },
+    "comeback_strong": {
+      "name": "Comeback ខ្លាំង",
+      "description": "ឈ្នះកំណត់ត្រា d-prime បន្ទាប់ពី 3+ ថ្ងៃឆ្ងាយ (d′ ≥ 2.5)។"
+    }
+  }
+}

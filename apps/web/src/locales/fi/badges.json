@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Johdonmukaisuus",
+      "performance": "Suorituskyky",
+      "resilience": "Sinnikkyys",
+      "exploration": "Tutkimus",
+      "milestone": "Virstanpylväät",
+      "cognitive": "Kognitiivinen"
+    },
+    "first_session": {
+      "name": "Herännyt Neuroni",
+      "description": "Ensimmäinen istunto suoritettu."
+    },
+    "sessions_10": {
+      "name": "Pilari (Pronssi)",
+      "description": "10 istuntoa suoritettu."
+    },
+    "sessions_25": {
+      "name": "Pilari (Hopea)",
+      "description": "25 istuntoa suoritettu."
+    },
+    "marathoner": {
+      "name": "Pilari (Kulta)",
+      "description": "50 istuntoa suoritettu."
+    },
+    "streak_3": {
+      "name": "Alkava Rituaali",
+      "description": "3 päivän putki."
+    },
+    "streak_7": {
+      "name": "Päivittäinen Rituaali",
+      "description": "7 päivän putki."
+    },
+    "streak_14": {
+      "name": "Juurtunut Tapa",
+      "description": "14 päivän putki."
+    },
+    "streak_30": {
+      "name": "Rautakuri",
+      "description": "30 päivän putki."
+    },
+    "early_bird": {
+      "name": "Aamuvirkku",
+      "description": "5 eri päivää, joissa istunto ennen klo 8."
+    },
+    "night_owl": {
+      "name": "Yökyöpeli",
+      "description": "5 eri päivää, joissa istunto klo 22 jälkeen."
+    },
+    "brain_n3": {
+      "name": "Terävä Aivot",
+      "description": "Saavuta taso N-3."
+    },
+    "brain_n4": {
+      "name": "Vahvat Aivot",
+      "description": "Saavuta taso N-4."
+    },
+    "brain_n5": {
+      "name": "Olympia-Aivot",
+      "description": "Saavuta taso N-5."
+    },
+    "brain_n7": {
+      "name": "Kognitiivinen Eliitti",
+      "description": "Saavuta taso N-7."
+    },
+    "brain_n10": {
+      "name": "Yli-ihminen",
+      "description": "Saavuta taso N-10."
+    },
+    "sniper": {
+      "name": "Tarkka-ampuja",
+      "description": "> 90% tarkkuus tasolla N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Kirurginen Tarkkuus",
+      "description": "> 95% tarkkuus tasolla N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% tarkkuus tasolla N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Koskematon",
+      "description": "Täydellinen istunto (0 virhettä) tasolla N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Nopea Refleksi",
+      "description": "Keskimääräinen reaktioaika < 500ms ja ≥70% tarkkuus."
+    },
+    "flash": {
+      "name": "Salama",
+      "description": "Keskimääräinen reaktioaika < 400ms ja ≥70% tarkkuus."
+    },
+    "rt_300": {
+      "name": "Ukkonen",
+      "description": "Keskimääräinen reaktioaika < 300ms ja ≥70% tarkkuus."
+    },
+    "consistent": {
+      "name": "Johdonmukainen",
+      "description": "RT keskihajonta < 100ms (≥10 vastausta vaaditaan)."
+    },
+    "dprime_master": {
+      "name": "d'-Mestari",
+      "description": "d-prime > 3.0 istunnossa."
+    },
+    "dprime_4": {
+      "name": "SDT-Asiantuntija",
+      "description": "d-prime > 4.0 istunnossa."
+    },
+    "no_pause": {
+      "name": "Keskeytymätön",
+      "description": "5 peräkkäistä istuntoa ilman taukoa ja ≥75% tarkkuus."
+    },
+    "steady_hands": {
+      "name": "Vakaat Kädet",
+      "description": "Ei vääriä syötteitä istunnon aikana (≥80% tarkkuus)."
+    },
+    "zen_master": {
+      "name": "Zen-Mestari",
+      "description": "10 istuntoa keskeyttämättä."
+    },
+    "comeback_kid": {
+      "name": "Palautuja",
+      "description": "Taso ylös tason laskun jälkeen."
+    },
+    "persistent": {
+      "name": "Sinnikäs",
+      "description": "3 istuntoa samana päivänä epäonnistumisen jälkeen."
+    },
+    "second_wind": {
+      "name": "Toinen Tuuli",
+      "description": "Paranna d-prime puoliskojen 1 ja 2 välillä (d′ ≥ 2.0 vaaditaan)."
+    },
+    "plateau_breaker": {
+      "name": "Tasangon Murtaja",
+      "description": "Edistystä 10+ istunnon jälkeen samalla tasolla."
+    },
+    "no_surrender": {
+      "name": "Ei Antautumista",
+      "description": "25 istuntoa keskeyttämättä."
+    },
+    "ironwill": {
+      "name": "Rautainen Tahto",
+      "description": "50 istuntoa keskeyttämättä."
+    },
+    "audiophile": {
+      "name": "Audiofiili",
+      "description": "Ääni > 80% mutta Visuaalinen < 70%."
+    },
+    "eagle_eye": {
+      "name": "Kotkansilmä",
+      "description": "Visuaalinen > 80% mutta Ääni < 70%."
+    },
+    "synchronized": {
+      "name": "Synkronoitu",
+      "description": "Ääni- ja Visuaalipisteet 5%:n sisällä (≥60% vaaditaan)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Ääni JA Visuaalinen > 85% samassa istunnossa (≥6 ansaa/modaliteetti)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Ääni JA Visuaalinen > 90% samassa istunnossa tasolla N ≥ 3 (≥6 ansaa/modaliteetti)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 istuntoa suoritettu."
+    },
+    "sessions_250": {
+      "name": "Legenda (Smaragdi)",
+      "description": "250 istuntoa suoritettu."
+    },
+    "sessions_500": {
+      "name": "Kuolematon (Timantti)",
+      "description": "500 istuntoa suoritettu."
+    },
+    "trials_500": {
+      "name": "Harjoittelija",
+      "description": "Yhteensä 500 koetta pelattu."
+    },
+    "trials_1000": {
+      "name": "Koulutettu",
+      "description": "Yhteensä 1 000 koetta pelattu."
+    },
+    "trials_5000": {
+      "name": "Kokenut",
+      "description": "Yhteensä 5 000 koetta pelattu."
+    },
+    "trials_10k": {
+      "name": "10 000 Koetta",
+      "description": "Yhteensä 10 000 koetta pelattu."
+    },
+    "trials_50k": {
+      "name": "Titaani",
+      "description": "Yhteensä 50 000 koetta pelattu."
+    },
+    "streak_90": {
+      "name": "Moitteeton Neljännes",
+      "description": "90 päivän putki."
+    },
+    "streak_365": {
+      "name": "Täydellinen Vuosi",
+      "description": "365 päivän putki."
+    },
+    "veteran": {
+      "name": "Veteraani",
+      "description": "1 vuosi käyttöä."
+    },
+    "metronome": {
+      "name": "Metronomi",
+      "description": "RT-varianssi < 50ms ≥20 kokeella (aktiiviset vastaukset vaaditaan)."
+    },
+    "flow_state": {
+      "name": "Armon Tila",
+      "description": "Flow havaittu koko istunnon ajan."
+    },
+    "sang_froid": {
+      "name": "Kylmäpäisyys",
+      "description": "Ei virhekaskadia virheen jälkeen (≥70% tarkkuus)."
+    },
+    "imperturbable": {
+      "name": "Järkkymätön",
+      "description": "Täysi istunto ilman keskittymisen menetystä (≥60% tarkkuus)."
+    },
+    "comeback_strong": {
+      "name": "Vahva Paluu",
+      "description": "Voita d-prime-ennätyksesi 3+ päivän tauon jälkeen (d′ ≥ 2.5)."
+    }
+  }
+}

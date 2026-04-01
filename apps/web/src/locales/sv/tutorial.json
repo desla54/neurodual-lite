@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Handledning",
+    "exitConfirm": "Avsluta handledningen?",
+    "exitWarning": "Dina framsteg sparas inte.",
+    "continue": "Fortsätt",
+    "quit": "Avsluta",
+    "stepLabel": "Steg {{step}}",
+    "previous": "Föregående",
+    "restart": "Starta om",
+    "next": "Nästa",
+    "startGame": "Starta",
+    "progress": "Räknare",
+    "tapToContinue": "Tryck för att fortsätta",
+    "controls": {
+      "position": "Position",
+      "audio": "Ljud"
+    },
+    "annotation": {
+      "label": "Instruktion"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Bra jobbat. Du klarade handledningen.",
+        "stay": "Nästan där. Lite mer övning så fixar du det.",
+        "down": "Inte validerad ännu. Försök handledningen igen för att förstärka grunderna."
+      },
+      "header": {
+        "up": "Handledning avklarad!",
+        "down": "Granska",
+        "stay": "Nästan!"
+      },
+      "noteMinAssessment": "Obs: För en mer exakt bedömning utvärderar handledningar minst 8 svar.",
+      "guidance": {
+        "passed": "Du är redo för fri träning.",
+        "failed": "Vi rekommenderar att du provar handledningen igen innan du går vidare till träning."
+      },
+      "correctAnswers": "{{correct}}/{{total}} rätta svar",
+      "actions": {
+        "backToHome": "Tillbaka till start",
+        "retryTutorial": "Försök handledningen igen",
+        "explainLevels": "Förstå N-nivåer (N)",
+        "goToTraining": "Till träning",
+        "continueToTraining": "Fortsätt till träning"
+      }
+    },
+    "welcome": {
+      "title": "Introduktion till träning",
+      "description": "Dual N-Back utmanar ditt arbetsminne genom att kräva att du följer två informationsströmmar samtidigt: en visuell position och ett ljud. Denna handledning guidar dig steg för steg.",
+      "button": "Starta handledning"
+    },
+    "timeline": {
+      "legend": "Tidslinjen hjälper jämförelse — den döljs under spelet",
+      "past": "Förfluten",
+      "present": "Nuvarande"
+    },
+    "hub": {
+      "title": "Handledningar",
+      "subtitle": "Välj ett läge att lära dig",
+      "basics": {
+        "title": "Grunderna",
+        "description": "Lär dig reflexen och rytmen i klassisk Dual N-Back."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Behärska temporal placering på tidslinjen."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Märk varje stimulus med dess temporala referens (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Lär dig aktiva återkallningsgester genom att rita."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Bygg upp hela sekvensen från minnet."
+      },
+      "soroban": {
+        "title": "Soroban-mästerskap",
+        "description": "Lär dig den japanska kulramen steg för steg genom 8 progressiva stadier."
+      }
+    },
+    "place": {
+      "comingSoon": "Place-handledningen är under utveckling",
+      "cardPool": "Tillgängliga kort",
+      "slot": "Plats",
+      "observe": "Observera: en position på rutnätet och en ljudbokstav.",
+      "buffer": "Andra stimulusen. N-back-bufferten fylls.",
+      "cardsAppear": "Kort dyker upp! De representerar de 3 senaste stimuli.",
+      "firstDrag": "Klicka på det markerade kortet, sedan N-2-platsen (den äldsta).",
+      "timelineExplain": "Tidslinjen visar tid: N-2 = äldst, N = nu.",
+      "positionN1": "Placera mittenpositionen i N-1-platsen.",
+      "positionN": "Bra! Avsluta med den senaste positionen (N-platsen).",
+      "audioIntro": "Nu ljudkorten! Samma princip.",
+      "audioN2": "Placera den första hörda bokstaven i N-2-platsen.",
+      "audioN1": "Fortsätt med mittenbokstaven (N-1-platsen).",
+      "audioN": "Avsluta med den senaste bokstaven (N-platsen).",
+      "dualIntro": "Nytt försök! Placera positioner OCH bokstäver.",
+      "dualPractice": "Placera alla 6 kort i rätt platser. Ta det lugnt!",
+      "rhythmExplain": "I riktigt spel har du begränsad tid.",
+      "autonomy": "Din tur! Placera alla kort korrekt.",
+      "conclusion": "Bra gjort! Du behärskar grunderna i Dual Place.",
+      "selectCard": "Välj ett kort, klicka sedan på dess plats",
+      "clickSlot": "Klicka på rätt plats för att placera kortet",
+      "wrongSlot": "Inte den platsen! Titta på den temporala ordningen.",
+      "wrongCard": "Inte det kortet. Hitta det som matchar platsen.",
+      "tryAgain": "Försök igen! Rätt plats är markerad."
+    },
+    "memo": {
+      "comingSoon": "Memo-handledningen är under utveckling",
+      "selectPosition": "Välj position",
+      "selectAudio": "Välj bokstav",
+      "clickToRecall": "Klicka på en plats för att återkalla värdet",
+      "validate": "Validera",
+      "observeFirst": "Första stimulusen. Memorera BÅDE positionen OCH bokstaven!",
+      "observeSecond": "Andra stimulusen. Fortsätt memorera.",
+      "observeThird": "Tredje stimulusen. Buffert komplett. Gör dig redo!",
+      "recallIntro": "Rutnätet försvinner! Återkalla från minnet. Klicka på N-2-platsen.",
+      "firstRecall": "Klicka på N-2-platsen. Vad var den första positionen?",
+      "feedbackExplain": "Grönt = rätt. Rött = fel. Du kan korrigera upp till 3 gånger!",
+      "multiSlot": "Fortsätt! Återkalla positioner N-1 och N.",
+      "newStimulus": "Ny stimulus! N-back-fönstret skiftar ett steg.",
+      "windowShift": "Fönstret har skiftat. Gamla N-2 lämnar, nya N kommer in.",
+      "fullPosition": "Återkalla alla 3 positioner. Fokus!",
+      "audioIntro": "Ny stimulus. Nu lägger vi till ljudåterkallning!",
+      "firstAudioRecall": "Klicka på ljud N-2-platsen. Vilken bokstav?",
+      "fullAudio": "Fortsätt med bokstäver N-1 och N.",
+      "dualIntro": "I riktigt spel återkallar du positioner OCH bokstäver tillsammans.",
+      "dualPractice": "Återkalla alla 6 celler och klicka på Validera.",
+      "correctionExplain": "Om du gör fel, klicka igen för att korrigera. Max 3 gånger.",
+      "withCorrection": "Prova! Om du har fel, korrigera genom att klicka igen.",
+      "conclusion": "Utmärkt! Du behärskar aktiv återkallning. Starta en session!",
+      "wrongAnswer": "Det är inte rätt. Tänk efter, vilken stimulus var det vid det tillfället?",
+      "tryAgain": "Försök igen! Du kan fortfarande korrigera.",
+      "maxCorrections": "3 korrigeringar uppnådda. Denna plats är låst.",
+      "validateHint": "Alla platser är fyllda. Klicka på Validera!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Välkommen till Dual Pick! Lär dig klassificera varje stimulus.",
+        "hud": "Överst: dina framsteg i handledningen.",
+        "grid": "Rutnätet är uppdelat i 3 zoner: TOPP, MITTEN, BOTTEN.",
+        "controls": "Dessa knappar klassificerar. Position till vänster, Ljud till höger.",
+        "outro": "Redo? Låt oss börja med positionsklassificering!"
+      },
+      "intro": "I Dual Pick klassificerar du varje stimulus efter två kriterier: rutnätszon och ljudtyp.",
+      "gridExplain": "Rutnätet har 3 zoner: TOPP (översta raden), MITTEN (center), BOTTEN (nedersta raden).",
+      "positionHaut": "Rutan är högst upp. Klicka TOPP.",
+      "positionMilieu": "Rutan är i mitten. Klicka MITTEN.",
+      "positionBas": "Rutan är längst ner. Klicka BOTTEN.",
+      "positionRecap": "Perfekt! TOPP = översta raden, MITTEN = center, BOTTEN = nedersta raden.",
+      "positionPractice": "Din tur! Klassificera denna position.",
+      "soundIntro": "Nu ljud. Det finns två typer: VOKAL (A, E, I, O, U) och KONSONANT (alla andra).",
+      "soundVoyelle": "Du hör A. Det är en vokal. Klicka VOKAL.",
+      "soundConsonne": "Du hör T. Det är en konsonant. Klicka KONSONANT.",
+      "soundRecap": "Kom ihåg: A, E, I, O, U = VOKAL. Allt annat = KONSONANT.",
+      "soundPractice": "Din tur! Klassificera detta ljud.",
+      "dualIntro": "I riktigt spel klassificerar du BÅDA samtidigt: position OCH ljud.",
+      "dualFirst": "Klassificera position OCH ljud. Ta det lugnt.",
+      "dualSecond": "Fortsätt. Position + Ljud.",
+      "dualThird": "Utmärkt! En till för övning.",
+      "rhythm": "I sessionen, håll en regelbunden rytm. Flyt kommer med övning.",
+      "conclusion": "Bra gjort! Du behärskar klassificering. Starta en Dual Pick-session!",
+      "buttons": {
+        "top": "TOPP",
+        "middle": "MITTEN",
+        "bottom": "BOTTEN",
+        "vowel": "VOKAL",
+        "consonant": "KONSONANT"
+      },
+      "feedback": {
+        "correctPosition": "Rätt zon!",
+        "correctSound": "Rätt ljudtyp!",
+        "wrongPosition": "Inte den zonen. Titta var rutan är.",
+        "wrongSound": "Det är inte rätt. A, E, I, O, U = vokaler."
+      }
+    },
+    "trace": {
+      "intro": "Välkommen till Dual Trace. Inga knappar här: du återkallar den föregående positionen aktivt genom en svepgest.",
+      "observe": "Memorera denna position. Nästa omgång behöver du svepa mot den.",
+      "firstSwipe": "Första svepet! Svep med fingret mot den föregående omgångens position. Pilen guidar dig.",
+      "firstAudioMatch": "Samma bokstav som föregående omgång! Svep till positionen OCH dubbeltryck för att signalera ljudmatchningen.",
+      "audioMatch": "Ljudmatch upptäckt! Svep + dubbeltryck.",
+      "swipe1": "Svep mot N-1-positionen. Kom ihåg var rutan var.",
+      "swipe2": "Fortsätt. Varje svep stärker ditt aktiva minne.",
+      "swipe3": "Aktiv återkallning är mer krävande än enkel igenkänning.",
+      "swipe4": "Håll fokus. Visualisera positionen innan du sveper.",
+      "swipe5": "Utmärkt! Du behärskar återkallningsgesten.",
+      "complete": "Handledning avklarad. Du är redo för Dual Trace-träning.",
+      "tapTarget": "Tryck på den föregående omgångens position",
+      "tapTargetAndAudio": "Tryck på målpositionen, sedan Ljud"
+    },
+    "ui": {
+      "startExercise": "Starta övning",
+      "score": "Poäng: {{current}}/{{total}}",
+      "complete": "Klart",
+      "correct": "✓ Rätt!",
+      "expectedMatch": "✗ Förväntat: Match",
+      "expectedNoMatch": "✗ Förväntat: Ingen match",
+      "memorize": "Memorera positionen...",
+      "memorizeLetter": "Memorera bokstaven...",
+      "matchDetected": "✓ Match upptäckt!",
+      "noMatch": "✗ Ingen match",
+      "matchExplanation": "Match! Steg {{current}} = Steg {{previous}}",
+      "exerciseComplete": "Övning klar!",
+      "match": "Match",
+      "noMatchButton": "Ingen match",
+      "none": "Ingen",
+      "both": "Båda",
+      "position": "Position",
+      "audio": "Ljud",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Din instrumentpanel: N-back-nivå, omgångsräknare och sessionskontroller.",
+      "timeline": "Tidslinjen sparar de 3 senaste stimuli för jämförelse. I riktigt spel döljs denna hjälp.",
+      "grid": "Rutnätet: varje omgång tänds en cell i en av 8 positioner. Samtidigt uttalas en bokstav.",
+      "controls": "Dina svarsknappar. Tryck när du upptäcker en upprepning.",
+      "intro": "Välkommen! Låt oss utforska spelgränssnittet tillsammans.",
+      "continue": "Fortsätt",
+      "outro": "Nu går vi vidare till en guidad session. Titta på animationerna och följ instruktionerna.",
+      "start": "Starta",
+      "tapToContinue": "Tryck var som helst för att fortsätta"
+    },
+    "speed": {
+      "label": "Hastighet: {{speed}}",
+      "pauseToChange": "Pausa för att ändra hastighet"
+    },
+    "assessment": {
+      "title": "Bedömningsfas",
+      "subtitle": "Från och med nu är det en kort klassisk körning.",
+      "body": "Tempot är kontinuerligt och du får inga fler ledtrådar. Spela som i en riktig session.",
+      "goal": "Mål: minst {{min}}% noggrannhet över {{count}} försök.",
+      "cta": "Kör igång"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Förstå N-nivåer",
+        "desc": "Du lärde dig N=2. Här ser du hur det generaliseras från N=1 till N=4.",
+        "start": "Starta",
+        "done": "Klart",
+        "skip": "Hoppa över",
+        "hud": "N = hur många omgångar tillbaka.",
+        "present": "N = den aktuella stimulusen (nu).",
+        "past": "Jämför med N-{{n}}.",
+        "pressPosition": "Om positionen upprepas, tryck Position.",
+        "pressAudio": "Om ljudet upprepas, tryck Ljud.",
+        "annotation": {
+          "n1": "N=1: jämför aktuell stimulus (N) med föregående omgång (N-1).",
+          "n2": "N=2: jämför aktuell stimulus (N) med två omgångar tillbaka (N-2).",
+          "n3": "N=3: jämför aktuell stimulus (N) med tre omgångar tillbaka (N-3)."
+        },
+        "outroTitle": "Och så vidare…",
+        "outroBody": "Om du går till N=5 jämför du med N-5. Regeln förblir densamma; bara avståndet ökar."
+      }
+    },
+    "annotations": {
+      "intro": "Observera: en cell tänds i rutnätet och en bokstav uttalas samtidigt.",
+      "observe": "Memorera. Tidslinjen följer stimuli.",
+      "firstComparison": "Du har nu tillräckligt med historik för att jämföra.",
+      "firstPositionMatch": "Samma position som 2 omgångar sedan! Jämför N och N-2 på tidslinjen, tryck sedan Position.",
+      "firstAudioMatch": "Samma bokstav som 2 omgångar sedan! Jämför N och N-2 på tidslinjen, tryck sedan Ljud.",
+      "firstDualMatch": "Dubbelmatch! Både position OCH ljud upprepas. Tryck på båda knapparna.",
+      "positionMatch": "Samma position. Tryck Position.",
+      "audioMatch": "Samma ljud. Tryck Ljud.",
+      "dualMatch": "Båda matchar. Tryck Position och Ljud.",
+      "noMatch": "Ingen match denna omgång. Fortsätt memorera.",
+      "noMatch1": "Ingen upprepning denna gång. Tryck för att fortsätta.",
+      "noMatch2": "Fortfarande ingen match. Håll fokus på position + ljudflödet.",
+      "noMatch3": "Inget att rapportera. Jämför alltid med N-2 på tidslinjen.",
+      "noMatch4": "Ingen match. Tempot ökar nu.",
+      "noMatch5": "Fortsätt. Matchningar kommer oförutsägbart.",
+      "noMatch6": "Ingen match. Fortsätt, du har hittat rytmen.",
+      "noMatch7": "Sista sträckan. Håll fokus.",
+      "noMatch8": "Nästan klar. Några stimuli till.",
+      "complete": "Grattis! Du behärskar grunderna i Dual N-Back. Redo för träning?"
+    },
+    "exit": {
+      "confirm": "Avsluta",
+      "title": "Avsluta handledningen?",
+      "message": "Dina framsteg sparas. Du kan fortsätta senare."
+    },
+    "recovery": {
+      "message": "En avbruten session hittades.",
+      "staleMessage": "En avbruten session från mer än 30 minuter sedan hittades.",
+      "resume": "Återuppta",
+      "startFresh": "Börja om",
+      "title": "Återuppta handledningen?"
+    }
+  }
+}

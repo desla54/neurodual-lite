@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "كيف تشعر؟",
+      "tired": "متعب",
+      "normal": "عادي",
+      "energized": "نشيط"
+    },
+    "aria": {
+      "trialTimer": "مؤقت المحاولة",
+      "positionMatch": "تطابق الموقع",
+      "audioMatch": "تطابق الصوت",
+      "audioLetter": "حرف الصوت:",
+      "traceGrid": "شبكة التتبع"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "إظهار/إخفاء شاشة المزامنة",
+      "start": "بدء",
+      "end": "نهاية",
+      "pinLabel": "pin",
+      "pinTitle": "تثبيت على الشاشة",
+      "inputLabel": "input",
+      "inputTitle": "تبديل تتبع زمن استجابة الإدخال (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "تشغيل",
+      "off": "إيقاف",
+      "hideLabel": "إخفاء",
+      "hideTitle": "إخفاء (ما لم يكن syncHud=1 أو ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "صوت",
+        "expected": "متوقع"
+      },
+      "labels": {
+        "trial": "محاولة",
+        "lagShow": "تأخير العرض",
+        "lagHide": "تأخير الإخفاء",
+        "winErr": "خطأ النافذة",
+        "endRef": "مرجع النهاية",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "إدخال معلق",
+        "inputSamples": "عينات الإدخال",
+        "touchSamples": "عينات اللمس",
+        "mouseSamples": "عينات الفأرة",
+        "keyboardSamples": "عينات لوحة المفاتيح",
+        "latestMethod": "الأخير (الطريقة)",
+        "latestModality": "آخر طريقة",
+        "audioCueMode": "إشارات صوتية",
+        "audioCodec": "ترميز"
+      },
+      "resetInputProfiler": "إعادة تعيين ملف تعريف الإدخال"
+    },
+    "hud": {
+      "resume": "استئناف",
+      "pause": "إيقاف مؤقت",
+      "quit": "خروج",
+      "restart": "إعادة التشغيل",
+      "spaceToStart": "اضغط مسافة للبدء",
+      "settings": "الإعدادات",
+      "enterToAdvance": "اضغط Enter للتقدم",
+      "trial": "المحاولة",
+      "muteTexture": "كتم الصوت الخلفي"
+    },
+    "status": {
+      "paused": "متوقف مؤقتاً"
+    },
+    "completed": "مكتمل",
+    "starting": {
+      "getReady": "استعد..."
+    },
+    "quitModal": {
+      "title": "هل تريد الخروج من الجلسة؟",
+      "message": "لن يتم حفظ تقدمك.",
+      "confirm": "خروج",
+      "cancel": "متابعة",
+      "close": "إغلاق"
+    },
+    "controls": {
+      "position": "الموقع",
+      "position2": "الموقع 2",
+      "position3": "الموقع 3",
+      "position4": "الموقع 4",
+      "visvis": "بصري & n-بصري",
+      "visaudio": "بصري & n-صوتي",
+      "audiovis": "صوتي & n-بصري",
+      "vis1": "بصري 1",
+      "vis2": "بصري 2",
+      "vis3": "بصري 3",
+      "vis4": "بصري 4",
+      "audio": "الصوت",
+      "audio2": "الصوت 2",
+      "color": "اللون",
+      "arithmetic": "الحساب",
+      "image": "شكل"
+    },
+    "arithmetic": {
+      "answer": "الإجابة",
+      "clear": "مسح",
+      "hint": "لوحة المفاتيح: 0-9 · '-' للإشارة · '.' للفاصلة · Backspace للمسح"
+    },
+    "navigation": {
+      "back": "رجوع"
+    },
+    "xp": {
+      "title": "XP مكتسبة",
+      "base": "الأساس (N-{{level}})",
+      "performance": "الأداء",
+      "accuracy": "الدقة",
+      "streakBonus": "مكافأة التتابع",
+      "dailyBonus": "أول يوم",
+      "badgeBonus": "الشارات",
+      "flowBonus": "مكافأة Dual Place",
+      "confidenceMultiplier": "الثقة",
+      "dailyCapReached": "تم الوصول للحد اليومي من XP",
+      "levelReached": "وصلت للمستوى {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "شارات جديدة مُفتَّحة"
+    },
+    "getReady": "استعد...",
+    "layoutEdit": {
+      "done": "تم",
+      "reset": "إعادة تعيين",
+      "instructions": "اسحب المناطق لإعادة الترتيب. غيّر الحجم باستخدام المقابض.",
+      "title": "وضع التعديل",
+      "cancel": "إلغاء",
+      "save": "قفل",
+      "editLayout": "تعديل التخطيط"
+    },
+    "paused": "متوقف مؤقتاً",
+    "pressEscapeToResume": "اضغط Escape للاستئناف",
+    "settings": {
+      "editLayout": "تعديل التخطيط",
+      "gridAndButtons": "الشبكة والأزرار",
+      "swapPositionAudio": "تبديل الموقع / الصوت",
+      "title": "الإعدادات",
+      "quickHint": "اضبط بعض الإعدادات دون مغادرة اللعبة.",
+      "quickUnavailable": "لا توجد إعدادات سريعة متاحة لهذا الوضع."
+    },
+    "pinkNoiseInfo": "يرافق كل محفز صوت خلفي. يمكنك تخصيصه أو تعطيله من إعدادات الصوت.",
+    "pinkNoiseDismiss": "متابعة",
+    "audioMode": "وضع صوتي",
+    "cogTask": {
+      "precision": "الدقة",
+      "avgRt": "متوسط زمن الاستجابة",
+      "avgRtShort": "مت. ز.إ.",
+      "trials": "المحاولات",
+      "correct": "صحيحة",
+      "errors": "أخطاء",
+      "effect": "التأثير",
+      "restart": "إعادة",
+      "home": "الرئيسية",
+      "performance": "الأداء",
+      "trialDetail": "تفصيل المحاولات",
+      "setDetail": "تفاصيل السلاسل",
+      "roundDetail": "تفاصيل الجولات",
+      "problemDetail": "تفاصيل كل مسألة",
+      "phaseDetail": "تفاصيل المراحل",
+      "feedbackCorrect": "صحيح",
+      "feedbackIncorrect": "خطأ",
+      "feedbackTimeout": "بطيء جداً!",
+      "preparing": "استعد...",
+      "loading": "جارٍ التحميل...",
+      "left": "يسار",
+      "right": "يمين",
+      "up": "أعلى",
+      "down": "أسفل",
+      "congruent": "متوافق",
+      "incongruent": "غير متوافق",
+      "congruencyEffect": "تأثير التوافق",
+      "maxSpan": "أقصى مدى",
+      "startingSpan": "المدى الابتدائي",
+      "maxSpanReached": "تم بلوغ أقصى مدى",
+      "longestStreak": "أطول سلسلة صحيحة",
+      "series": "سلسلة",
+      "avgResponseTime": "متوسط زمن الاستجابة",
+      "recall": "الاسترجاع",
+      "expected": "المتوقع",
+      "submit": "تأكيد",
+      "cancel": "إلغاء",
+      "clear": "مسح",
+      "delete": "حذف",
+      "true": "صحيح",
+      "false": "خطأ",
+      "target": "هدف",
+      "nonTarget": "غير هدف",
+      "distractor": "مشتّت",
+      "same": "متماثل",
+      "different": "مختلف",
+      "identical": "مطابق",
+      "mirror": "معكوس",
+      "symmetric": "متماثل",
+      "asymmetric": "غير متماثل",
+      "symShort": "تماثل",
+      "present": "موجود",
+      "absent": "غائب",
+      "noTrials": "لم تُكمل أي محاولة.",
+      "noSets": "لم تُكمل أي مجموعة.",
+      "noRounds": "لم تُكمل أي جولة.",
+      "noProblems": "لم تُكمل أي مسألة.",
+      "noPhases": "لم تُكمل أي مرحلة.",
+      "sets": "السلاسل",
+      "rounds": "الجولات",
+      "equations": "المعادلات",
+      "sentences": "الجمل",
+      "equationAccuracy": "دقة المعادلات",
+      "forward": "أمامي",
+      "backward": "عكسي",
+      "forwardMaxSpan": "أقصى مدى أمامي",
+      "backwardMaxSpan": "أقصى مدى عكسي",
+      "odd": "فردي",
+      "even": "زوجي",
+      "score": "النتيجة",
+      "easy": "سهل",
+      "hard": "صعب",
+      "totalTrials": "إجمالي المحاولات",
+      "totalErrors": "إجمالي الأخطاء",
+      "totalErrShort": "إجمالي الأخطاء",
+      "hits": "إصابات",
+      "misses": "إخفاقات",
+      "falseAlarms": "إنذ. كاذبة",
+      "correctRejections": "رفض صحيح",
+      "yes": "نعم",
+      "no": "لا",
+      "sessionInterrupted": "الجلسة متوقفة",
+      "reverseOrder": "بترتيب عكسي",
+      "normalOrder": "بالترتيب",
+      "lnsInstruction": "الأرقام تصاعدياً، ثم الحروف أ-ي",
+      "vs": "ضد",
+      "simon": {
+        "simonEffect": "تأثير سايمون",
+        "blue": "أزرق",
+        "red": "أحمر",
+        "heroTitle": "سايمون"
+      },
+      "soroban": {
+        "target": "مثّل هذا العدد",
+        "submit": "تأكيد",
+        "rodLabel": "العمود {{n}}",
+        "heavenBead": "خرزة علوية (القيمة 5)",
+        "earthBead": "خرزة أرضية (القيمة 1)",
+        "instrBeadTitle": "كيف تعمل الخرزات",
+        "instrBeadDesc": "كل عمود يمثل رقمًا. الخرزة العلوية (السماوية) قيمتها 5. الخرزات السفلية (الأرضية) قيمة كل منها 1. حرّك الخرزات نحو العارضة الوسطى لتفعيلها.",
+        "instrExampleTitle": "مثال: 7",
+        "instrExampleDesc": "7 = خرزة علوية منزلة (5) + خرزتان سفليتان مرفوعتان (2). انقر أو اسحب الخرزات لتحريكها.",
+        "instrGoalTitle": "هدفك",
+        "instrGoalDesc": "سيظهر عدد. ضع الخرزات لتمثيله ثم اضغط تأكيد. كن دقيقًا وسريعًا!",
+        "startButton": "ابدأ",
+        "settings": "الإعدادات",
+        "closeSettings": "إغلاق الإعدادات",
+        "settingsRods": "عدد الأعمدة",
+        "settingsRodsHint": "قابل للتعديل عبر المستوى N في الإعدادات",
+        "settingsTrials": "المحاولات لكل جلسة",
+        "settingsTrialsHint": "قابل للتعديل عبر المحاولات في الإعدادات",
+        "settingsRange": "نطاق الأعداد"
+      },
+      "stroop": {
+        "pressInkColorButton": "اضغط زر لون الحبر",
+        "redWord": "أحمر",
+        "redLabel": "أحمر",
+        "blueWord": "أزرق",
+        "blueLabel": "أزرق",
+        "greenWord": "أخضر",
+        "greenLabel": "أخضر",
+        "yellowWord": "أصفر",
+        "yellowLabel": "أصفر"
+      },
+      "stroopFlex": {
+        "followRule": "القاعدة",
+        "ruleInk": "لون الحبر",
+        "ruleWord": "الكلمة المكتوبة",
+        "pressMatchingRuleButton": "اضغط الزر المطابق للقاعدة الحالية"
+      },
+      "goNogo": {
+        "goTrials": "محاولات Go",
+        "nogoTrials": "محاولات No-Go",
+        "hitRate": "معدل الإصابة (Go)",
+        "faRate": "معدل الإنذار الكاذب (No-Go)",
+        "meanRt": "متوسط زمن الاستجابة",
+        "sensitivity": "حساسية",
+        "press": "اضغط",
+        "withhold": "امتنع"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "متوسط SSD (التوقفات الناجحة)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "تثبيط ناجح",
+        "stop": "توقف",
+        "meanGoRt": "متوسط زمن استجابة GO",
+        "ssrtInvalid": "بيانات غير كافية",
+        "ssrtNegativeNote": "SSRT سالب (متوسط SSD > متوسط GO RT) — النتيجة غير موثوقة مع عدد التجارب الحالي."
+      },
+      "pvt": {
+        "rtMedian": "الوسيط ز.إ.",
+        "rtMean": "المتوسط ز.إ.",
+        "fastest": "الأسرع",
+        "slowest": "الأبطأ",
+        "falseStarts": "بدايات خاطئة",
+        "falseStartsShort": "بداية خاطئة",
+        "lapses": "هفوات",
+        "mean": "المتوسط",
+        "reaction": "الاستجابة",
+        "wait": "انتظر...",
+        "pressStimulus": "انتظر المحفز...",
+        "pressAnywhere": "اضغط في أي مكان عند ظهور العداد",
+        "press": "اضغط!",
+        "tooEarly": "مبكر جداً!",
+        "lapsesLabel": "هفوات"
+      },
+      "posner": {
+        "cueingEffect": "تأثير التلميح",
+        "validMeanRt": "متوسط زمن الاستجابة الصالح",
+        "invalidMeanRt": "متوسط زمن الاستجابة غير الصالح",
+        "validAccuracy": "دقة صالحة",
+        "invalidAccuracy": "دقة غير صالحة",
+        "validTrials": "محاولات صالحة",
+        "invalidTrials": "محاولات غير صالحة",
+        "validRtShort": "ز.إ. صالح",
+        "invalidRtShort": "ز.إ. غ.صالح",
+        "valid": "صالح",
+        "invalid": "غير صالح"
+      },
+      "antisaccade": {
+        "cost": "تكلفة مضاد الحركة الإرادية",
+        "proAccuracy": "دقة مع الحركة",
+        "antiAccuracy": "دقة ضد الحركة",
+        "pro": "مع",
+        "anti": "ضد",
+        "proRt": "ز.إ. مع",
+        "antiRt": "ز.إ. ضد",
+        "proMeanRt": "متوسط زمن استجابة Pro-saccade",
+        "antiMeanRt": "متوسط زمن استجابة Anti-saccade",
+        "costLabel": "التكلفة",
+        "antiLabel": "مضاد"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "دقة AX",
+        "bxFa": "إنذار كاذب BX",
+        "ayError": "خطأ AY",
+        "bxFaShort": "BX إ.ك.",
+        "ayErrShort": "AY خطأ",
+        "cogControl": "التحكم المعرفي",
+        "target": "الهدف",
+        "nonTarget": "غير مستهدف"
+      },
+      "ant": {
+        "scores": "نتائج ANT",
+        "alerting": "التنبيه (بدون تلميح − تلميح مزدوج)",
+        "orienting": "التوجيه (مركزي − مكاني)",
+        "executive": "التنفيذي (غير متوافق − متوافق)"
+      },
+      "changeDet": {
+        "kCowan": "سعة K (Cowan)",
+        "sameShort": "متماثل",
+        "diffShort": "مختلف"
+      },
+      "swm": {
+        "withinErrors": "أخطاء داخل البحث",
+        "betweenErrors": "أخطاء بين عمليات البحث",
+        "totalErrors": "إجمالي الأخطاء",
+        "errorFree": "بدون أخطاء",
+        "foundErrorFree": "وُجد بدون أخطاء!",
+        "errorCount": "{{count}} خطأ (أخطاء)",
+        "tapsLabel": "اللمسات"
+      },
+      "taskSwitch": {
+        "switchCost": "تكلفة التبديل",
+        "rtRepeat": "متوسط ز.إ. (تكرار)",
+        "rtSwitch": "متوسط ز.إ. (تبديل)",
+        "oddEven": "فردي / زوجي",
+        "highLow": "عالٍ / منخفض",
+        "title": "تبديل المهام"
+      },
+      "trailMaking": {
+        "tmtATime": "زمن TMT-A",
+        "tmtBTime": "زمن TMT-B",
+        "executiveCost": "التكلفة التنفيذية (B − A)",
+        "executiveCostShort": "التكلفة التنفيذية (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "أخطاء A",
+        "errB": "أخطاء B",
+        "preparingB": "تحضير TMT-B...",
+        "tmtADone": "اكتمل TMT-A!",
+        "totalErrors": "إجمالي الأخطاء",
+        "tmtALabel": "TMT-A: أرقام",
+        "tmtBLabel": "TMT-B: أرقام وحروف",
+        "next": "التالي",
+        "heroTitle": "اختبار ربط المسار",
+        "alternateHint": "بدّل بين الأرقام والحروف: 1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI أدنى",
+        "fastestIsi": "أسرع فاصل بين المحفزات (ISI)"
+      },
+      "wcst": {
+        "referenceCards": "البطاقات المرجعية",
+        "testCard": "بطاقة الاختبار",
+        "categories": "الفئات",
+        "categoriesCompleted": "الفئات المكتملة",
+        "perseverativeErrors": "أخطاء المثابرة",
+        "persevShort": "مثابرة",
+        "avgRt": "متوسط وقت الرد"
+      },
+      "mentalRot": {
+        "rtByAngle": "ز.إ. حسب الزاوية",
+        "findMatch": "اعثر على الشكل المطابق",
+        "reference": "الشكل المرجعي",
+        "referenceLabel": "مرجع",
+        "candidate": "مرشح",
+        "distractor": "آخر",
+        "mirrorErrors": "انعكاسات",
+        "title": "الدوران الذهني"
+      },
+      "sternberg": {
+        "rtBySize": "ز.إ. حسب حجم المجموعة",
+        "title": "Sternberg",
+        "avgRt": "متوسط وقت الرد"
+      },
+      "visualSearch": {
+        "rtBySize": "ز.إ. حسب حجم المجموعة",
+        "title": "البحث البصري"
+      },
+      "ospan": {
+        "typeLetters": "اكتب الحروف بالترتيب",
+        "trueOrFalse": "صح أم خطأ؟",
+        "processingWarning": "دقة المعادلات < 85% — قد لا تعكس النتائج القدرة الحقيقية للذاكرة العاملة"
+      },
+      "readingSpan": {
+        "s0": "تشرق الشمس من الشرق.",
+        "s1": "تعيش الأسماك على الأشجار.",
+        "s2": "باريس عاصمة فرنسا.",
+        "s3": "للمثلث أربعة أضلاع.",
+        "s4": "يغلي الماء عند 100 درجة.",
+        "s5": "القطط زواحف.",
+        "s6": "تدور الأرض حول الشمس.",
+        "s7": "ينمو الشوكولاتة على الصخور.",
+        "s8": "في السنة اثنا عشر شهراً.",
+        "s9": "تتنفس الطيور تحت الماء.",
+        "s10": "الحليب أبيض اللون.",
+        "s11": "تسير السيارات على القضبان.",
+        "s12": "ينتج النحل العسل.",
+        "s13": "الثلج حار.",
+        "s14": "يضخ القلب الدم.",
+        "s15": "تطفو الحجارة على الماء.",
+        "s16": "يضيء القمر الليل.",
+        "s17": "للأفاعي أرجل.",
+        "s18": "يطفو الخشب على الماء.",
+        "s19": "النار باردة.",
+        "s20": "للإنسان خمس حواس.",
+        "s21": "للعناكب ست أرجل.",
+        "s22": "يُصنع الخبز من الدقيق.",
+        "s23": "الحيتان أسماك.",
+        "w0": "بَيْت",
+        "w1": "كَلْب",
+        "w2": "كِتَاب",
+        "w3": "زَهْرَة",
+        "w4": "بَاب",
+        "w5": "طَاوِلَة",
+        "w6": "شَجَرَة",
+        "w7": "طَرِيق",
+        "w8": "سَحَابَة",
+        "w9": "نَجْمَة",
+        "w10": "شَاطِئ",
+        "w11": "ثَلْج",
+        "w12": "مِصْبَاح",
+        "w13": "مَطَر",
+        "w14": "كَأْس",
+        "w15": "عُشْب",
+        "w16": "قِطَار",
+        "w17": "عَالَم",
+        "w18": "شَمْس",
+        "w19": "غَابَة",
+        "w20": "جَلِيد",
+        "w21": "أَرْض",
+        "w22": "سَمَاء",
+        "w23": "حَجَر",
+        "d0": "صَبَاح",
+        "d1": "قَلْب",
+        "d2": "قُمَاش",
+        "d3": "وَرَقَة",
+        "d4": "ضَجِيج",
+        "d5": "حَدِيقَة",
+        "d6": "ظِلّ",
+        "d7": "جَرَس",
+        "d8": "جِسْر",
+        "d9": "دُخَان",
+        "d10": "رَمْل",
+        "d11": "حَسَاء",
+        "heroTitle": "مدى القراءة"
+      },
+      "memorizeSequence": "احفظ التسلسل...",
+      "reproduce": "أعِد إنتاجه",
+      "span": "المدى",
+      "size": "الحجم",
+      "fixateCenter": "ثبّت نظرك على المركز...",
+      "identicalOrMirror": "مطابق أم معكوس؟",
+      "wellInhibited": "تثبيط ممتاز!",
+      "badDirection": "اتجاه خاطئ!",
+      "stopMissed": "فاتتك إشارة التوقف!",
+      "falseAlarm": "إنذار كاذب!",
+      "pressNow": "اضغط!",
+      "hitBang": "إصابة!",
+      "miss": "فائت!",
+      "doNotTouch": "لا تلمس!",
+      "whichDirection": "أي اتجاه؟",
+      "stopBang": "توقف!",
+      "cueBang": "تلميح!",
+      "memorizeLetters": "احفظ هذه الحروف",
+      "memorizeLetter": "احفظ هذا الحرف",
+      "memorizeSequenceLetters": "احفظ التسلسل...",
+      "memorizeDigits": "احفظ الأرقام...",
+      "memorizeColors": "احفظ الألوان!",
+      "memorizePosition": "احفظ هذا الموقع...",
+      "retainWord": "تذكّر هذه الكلمة",
+      "retainNumber": "تذكّر هذا الرقم",
+      "addWithPrevious": "أضف مع السابق",
+      "sentenceTrueOrFalse": "هل هذه الجملة صحيحة؟",
+      "findRedCircle": "ابحث عن الدائرة الحمراء!",
+      "findHiddenToken": "ابحث عن الرمز المخفي!",
+      "chooseMatchingCard": "اختر البطاقة المطابقة",
+      "arrowDirection": "ما اتجاه السهم المركزي؟",
+      "attention": "انتباه...",
+      "preparation": "تحضير...",
+      "recallLettersInOrder": "تذكّر الحروف الـ {{count}} بالترتيب",
+      "recallWordsInOrder": "تذكّر الكلمات الـ {{count}} بالترتيب",
+      "recallLastLetters": "تذكّر آخر {{count}} حروف",
+      "typeLastLetters": "اكتب آخر {{count}} حروف",
+      "recallPositionsInOrder": "تذكّر: انقر على المواقع بالترتيب",
+      "pressEnterToValidate": "اضغط Enter للتأكيد",
+      "pressAnywhereToContinue": "اضغط في أي مكان للمتابعة",
+      "temporalPrecision": "الدقة الزمنية",
+      "estimationPrecision": "دقة التقدير",
+      "touchStartClockwise": "المس نقطة البداية ثم اسحب في اتجاه عقارب الساعة",
+      "touchAtoB": "المس النقطة A ثم اسحب إلى B",
+      "cue": "تلميح",
+      "retainCue": "احتفظ بالإشارة...",
+      "targetOrNot": "هدف أم غير هدف؟",
+      "whereIsTarget": "أين الهدف؟",
+      "wasLetterInSet": "هل كان هذا الحرف ضمن المجموعة؟",
+      "regular": "منتظم",
+      "regularity": "الانتظام",
+      "msDeviation": "مللي ثانية انحراف",
+      "boxes": "صناديق",
+      "found": "{{count}} وُجد",
+      "past": "ماضٍ",
+      "tooSlow": "بطيء جداً",
+      "tooFast": "سريع جداً",
+      "timeout": "بطيء جداً!",
+      "answer": "إجابة",
+      "dontPress": "لا تضغط!",
+      "feedbackWrong": "خطأ!",
+      "level": "مستوى",
+      "wrong": "خطأ",
+      "you": "أنت",
+      "paused": "إيقاف مؤقت",
+      "instructions": "تعليمات",
+      "selectAnswer": "اختر إجابة",
+      "tapTheOddOne": "اضغط على العنصر المختلف",
+      "pal": {
+        "subtitle": "التعلم بالترابط الزوجي",
+        "pairsLearned": "الأزواج المُتعلَّمة",
+        "maxSetSize": "الحجم الأقصى",
+        "totalErrors": "إجمالي الأخطاء",
+        "round": "جولة",
+        "pairs": "أزواج",
+        "meanRt": "زمن رد الفعل (صحيح)",
+        "studyPhase": "مرحلة الدراسة – احفظ المواقع",
+        "testPhase": "أين كان هذا الشكل؟",
+        "studying": "حفظ",
+        "tapBox": "اضغط على المربع الذي ظهر فيه هذا الشكل"
+      },
+      "visualLogic": {
+        "easy": "سهل",
+        "hard": "صعب",
+        "oneRule": "قاعدة واحدة",
+        "twoRules": "قاعدتان",
+        "findMissing": "أوجد القطعة المفقودة",
+        "maxLevel": "أعلى مستوى",
+        "finalLevel": "المستوى النهائي",
+        "nextMode": "وضع الجلسة التالية",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "أي قطعة تملأ الفراغ؟",
+        "target": "هدف"
+      },
+      "timeEstimation": {
+        "overestimationBias": "ميل للمبالغة",
+        "underestimationBias": "ميل للتقليل",
+        "noBias": "لا يوجد ميل ملحوظ",
+        "avgError": "متوسط الخطأ",
+        "overestimations": "مبالغات",
+        "underestimations": "تقديرات أقل من الفعلي",
+        "avgAbsoluteError": "متوسط الخطأ المطلق",
+        "avgRelativeError": "متوسط الخطأ النسبي",
+        "cv": "معامل التباين",
+        "watchDemo": "شاهد المدة",
+        "getReady": "استعد…",
+        "holdToReproduce": "اضغط مطولاً للتكرار!",
+        "tooLong": "طويل جداً!",
+        "tooShort": "قصير جداً!",
+        "target": "هدف",
+        "demoLabel": "مرجع",
+        "yourTurn": "دورك",
+        "watchInstruction": "شاهد",
+        "holdInstruction": "اضغط مطولاً للتكرار",
+        "heroTitle": "تقدير الوقت"
+      },
+      "puzzleDetails": "تفاصيل اللغز",
+      "roundDetails": "تفاصيل الجولة",
+      "stageResults": "نتائج المرحلة",
+      "recognized": "معترف به",
+      "missed": "فائت",
+      "win": "فوز",
+      "lose": "خسارة",
+      "winBang": "فوز!",
+      "loseBang": "خسارة!",
+      "correctBang": "صحيح!",
+      "wrongBang": "خطأ!",
+      "completeBang": "مكتمل!",
+      "repeatedBang": "مكرر!",
+      "incompleteBang": "غير مكتمل!",
+      "levelCompleteBang": "اكتمل المستوى!",
+      "timesUp": "انتهى الوقت",
+      "seeResults": "عرض النتائج",
+      "nextRound": "الجولة التالية",
+      "startBlock": "ابدأ الكتلة",
+      "continue": "متابعة",
+      "patientChoice": "اختيار صبور",
+      "immediateChoice": "اختيار فوري",
+      "immediate": "فوري",
+      "digitSpan": {
+        "heroTitle": "مدى الأرقام"
+      },
+      "resume": "استئناف",
+      "numericalStroop": {
+        "heroTitle": "ستروب عددي"
+      },
+      "lineOrientation": {
+        "heroTitle": "حكم توجه الخطوط"
+      },
+      "chain": "السلسلة",
+      "undo": "تراجع",
+      "vocalProsody": {
+        "heroTitle": "التنغيم الصوتي"
+      },
+      "letterNumber": {
+        "title": "حروف-أرقام",
+        "expectedAnswer": "الإجابة المتوقعة"
+      },
+      "patternComparison": {
+        "heroTitle": "مقارنة الأنماط"
+      },
+      "speedPack": {
+        "title": "حزمة السرعة",
+        "whenFoldedWhichTouch": "عند الطي، أي مربعات تتلامس؟"
+      },
+      "dotProbe": {
+        "heroTitle": "المسبار الانتباهي"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "تنظيم هوبر البصري",
+        "whatIsThisObject": "ما هذا الشيء؟"
+      },
+      "blockDesign": {
+        "heroTitle": "تصميم المكعبات"
+      },
+      "accuracy": "الدقة",
+      "avgTime": "متوسط الوقت",
+      "check": "تحقق",
+      "dualTrace": {
+        "playArea": "منطقة اللعب"
+      },
+      "paperFolding": {
+        "title": "طيّ الورق",
+        "foldSequenceHolePunch": "تسلسل الطي والثقب",
+        "whichPatternWhenUnfolded": "ما النمط عند الفتح؟"
+      },
+      "lexicalDecision": {
+        "heroTitle": "القرار المعجمي"
+      },
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxGrid": "أكبر شبكة",
+      "symmetry": "التماثل",
+      "threshold": "العتبة",
+      "hitRate": "معدل الإصابة",
+      "faRate": "معدل الإنذار الكاذب",
+      "changeDetection": {
+        "heroTitle": "كشف التغيير"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogisms"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Range"
+      },
+      "jitter": "الارتعاش",
+      "sentenceCompletion": {
+        "title": "إكمال الجمل (كلوز)",
+        "highCloze": "إتمام عالي",
+        "lowCloze": "إتمام منخفض"
+      },
+      "grid": "شبكة",
+      "pinballRecall": {
+        "title": "استدعاء الفليبر",
+        "byBounces": "حسب الارتدادات",
+        "whereDoesItLand": "أين تسقط؟"
+      },
+      "mean": "المتوسط",
+      "speedup": "التسارع",
+      "memorize": "احفظ",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "تطوير السطح",
+        "whichEdgeMatches": "أي حافة تطابق؟"
+      },
+      "crowding": {
+        "heroTitle": "الازدحام البصري",
+        "spacing": "التباعد"
+      },
+      "patternRecognition": {
+        "heroTitle": "التعرّف على الأنماط"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "محاولة",
+        "position": "الموضع",
+        "audio": "صوت"
+      },
+      "sceneCrasher": {
+        "heroTitle": "الدخيل في المشهد",
+        "detect": "اكشف"
+      },
+      "eyesTest": {
+        "heroTitle": "القراءة في العيون"
+      }
+    },
+    "gridlock": {
+      "undone": "تم التراجع عن آخر حركة.",
+      "resetMessage": "تمت إعادة تعيين اللغز.",
+      "hintMessage": "تلميح: حرّك {{pieceId}} باتجاه {{dir}} بمقدار {{delta}}.",
+      "previewCountdown": "ادرس اللوحة. البدء خلال {{seconds}} ثانية.",
+      "challenge": "تحدٍّ",
+      "optimal": "مثالي",
+      "moves": "حركات",
+      "piece": "قطعة {{id}}",
+      "targetPiece": "قطعة {{id}} (الهدف - السيارة الحمراء)",
+      "challengeClassic": "كلاسيكي",
+      "challengePrecision": "دقة",
+      "challengeMemory": "ذاكرة",
+      "challengeTimed": "موقوت",
+      "hint": "تلميح",
+      "reset": "إعادة تعيين",
+      "undo": "تراجع",
+      "nextPuzzle": "اللغز التالي ←"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "الكتلة 1 — إصابات",
+      "block2Hits": "الكتلة 2 — إصابات",
+      "goPositive": "Go = إيجابي",
+      "goNegative": "Go = سلبي",
+      "title": "Go/No-Go وجداني",
+      "block1CommissionErrors": "أخطاء الأداء مجموعة 1",
+      "block2CommissionErrors": "أخطاء الأداء مجموعة 2",
+      "block": "مجموعة",
+      "go": "اذهب"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "متوسط معدل التبديل",
+      "meanSwitchesfigure": "متوسط التبديلات/شكل",
+      "totalSwitches": "إجمالي التبديلات",
+      "title": "الأشكال الملتبسة",
+      "meanSwitches": "متوسط التبديلات",
+      "switchRate": "معدل التبديل",
+      "figures": "الأشكال",
+      "totalSwitchesLabel": "إجمالي التبديلات",
+      "duration": "المدة",
+      "switchesCount": "ث | التبديلات:",
+      "switchButton": "بدّل!"
+    },
+    "analogies": {
+      "verbalCorrect": "لفظي صحيح",
+      "timeout": "انتهى الوقت",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "ويبر",
+      "title": "مقارنة ANS",
+      "ratio": "النسبة",
+      "leftMore": "اليسار أكثر",
+      "rightMore": "اليمين أكثر"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "معدل الإنذارات الكاذبة",
+      "grammatical": "نحوي",
+      "memorizeTheseStrings": "احفظ هذه السلاسل",
+      "testPhase": "مرحلة الاختبار",
+      "ungrammatical": "غير نحوي",
+      "learning": "تعلم",
+      "test": "Test",
+      "title": "القواعد الاصطناعية",
+      "learningPhase": "التعلم",
+      "testIntroText": "سترى الآن سلاسل جديدة. قرّر إذا كانت تتبع نفس القواعد.",
+      "startTest": "ابدأ الاختبار",
+      "followsRules": "يتبع القواعد",
+      "breaksRules": "يكسر القواعد"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "حجم الرمش",
+      "title": "الرمش الانتباهي",
+      "blink": "الومضة",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "الحرف الأخضر الأول؟",
+      "secondGreenLetter": "الحرف الأخضر الثاني؟"
+    },
+    "attentionalCapture": {
+      "captureCost": "تكلفة الالتقاط",
+      "singletonPresent": "عنصر فردي موجود",
+      "noSingleton": "بدون عنصر منفرد",
+      "title": "الاستحواذ الانتباهي",
+      "capture": "الالتقاط",
+      "horizontal": "أفقي",
+      "vertical": "عمودي"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "نافذة الربط",
+      "title": "الربط السمعي البصري",
+      "window": "Window",
+      "pssLabel": "PSS (نقطة التزامن الذاتي)",
+      "simultaneousOrNot": "متزامن أم لا؟",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "غير متزامن"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "عتبة المدة",
+      "reference": "مرجع",
+      "weberFraction": "كسر ويبر",
+      "title": "المدة السمعية",
+      "threshold": "العتبة",
+      "weber": "Weber",
+      "whichLonger": "أيهما أطول؟",
+      "firstLonger": "الأول أطول",
+      "secondLonger": "الثاني أطول"
+    },
+    "bart": {
+      "adjustedAvgPumps": "تعديل متوسط ​​المضخات",
+      "avgTimeballoon": "متوسط الوقت/بالون",
+      "banked": "تم الادخار!",
+      "lostEarnings": "خسارة الأرباح!",
+      "overallAvgPumps": "متوسط النفخ الإجمالي",
+      "popRate": "معدل الانفجار",
+      "totalEarned": "إجمالي الأرباح",
+      "balloons": "البالونات",
+      "cashed": "محصّل",
+      "popped": "انفجر",
+      "adjPumps": "ضخات معدلة",
+      "pop": "فرقعة",
+      "pump": "Pump",
+      "cashIn": "اسحب"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "متوسط وقت القرار",
+      "drawBeadsToGatherEvidence": "اسحب الخرز لجمع الأدلة",
+      "jtc": "JTC",
+      "title": "مهمة الخرز",
+      "meanDraws": "متوسط السحب",
+      "rounds": "الجولات",
+      "jtcRate": "معدل JTC",
+      "meanDrawsToDecision": "متوسط السحوبات حتى القرار",
+      "jtcRateThreshold": "معدل JTC (<{{threshold}} سحوبات)",
+      "round": "الجولة",
+      "jarDescription": "الجرة أ: 85% أخضر / الجرة ب: 85% أحمر",
+      "itWasJar": "كانت الجرة",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "المحاولات المتغيرة",
+      "sameAccuracy": "دقة المتشابه",
+      "sameTrials": "المحاولات المتشابهة",
+      "title": "ربط السمات",
+      "binding": "الربط",
+      "bindingAccuracyChanged": "دقة التغيير",
+      "same": "متطابق",
+      "different": "مختلف"
+    },
+    "blockDesign": {
+      "cells": "خلايا",
+      "target": "الهدف",
+      "yourAnswer": "إجابتك",
+      "tapHint": "اضغط لتغيير الألوان",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "تكيّف",
+      "adaptationCost": "تكلفة التكيّف",
+      "nonswitchTrials": "محاولات بدون تبديل",
+      "switchTrials": "محاولات مع تبديل"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "تذكّر هذه الحروف",
+      "selectThe3Letters": "اختر الأحرف الثلاثة",
+      "title": "Brown-Peterson Task",
+      "forgetting": "النسيان",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "تأخير"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "جودة القرارات",
+      "finalPoints": "النقاط النهائية",
+      "meanBet": "متوسط الرهان",
+      "winRate": "معدل الفوز",
+      "wins": "فوز",
+      "title": "مهمة القمار كامبريدج",
+      "totalPoints": "إجمالي النقاط",
+      "quality": "الجودة",
+      "rational": "عقلاني",
+      "avgBet": "متوسط الرهان",
+      "trial": "محاولة",
+      "whichColorHidesToken": "أي لون يخفي الرمز؟",
+      "youChose": "اخترت",
+      "howMuchToBet": "كم تراهن؟"
+    },
+    "cancellation": {
+      "false": "خطأ",
+      "target": "الهدف:",
+      "total": "الإجمالي",
+      "title": "مهمة الإلغاء (d2)",
+      "misses": "إخفاقات",
+      "targetDescription": "d مع علامتين"
+    },
+    "changeBlindness": {
+      "detectionRate": "معدل الكشف",
+      "found": "تم العثور عليه",
+      "meanDetectionTime": "متوسط وقت الكشف",
+      "title": "العمى عن التغيير",
+      "missed": "فائتة",
+      "avgTime": "متوسط الوقت",
+      "instructions": "التعليمات"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "أفضل تقدير",
+      "meanScore": "متوسط الدرجات",
+      "worstEstimate": "أسوأ تقدير",
+      "inRange": "تقدير جيد!",
+      "title": "التقدير المعرفي",
+      "meanScoreLabel": "متوسط الدرجات",
+      "inRangeLabel": "في النطاق",
+      "extreme": "متطرف",
+      "scoreLabel": "درجة",
+      "submit": "إرسال"
+    },
+    "common": {
+      "accuracy": "الدقة",
+      "bias": "انحياز",
+      "falseAlarmRate": "معدل الإنذارات الكاذبة",
+      "hitRate": "معدل الكشف",
+      "hits": "إصابات",
+      "listening": "جارٍ الاستماع...",
+      "meanRt": "زمن الاستجابة المتوسط",
+      "timedOut": "انتهى الوقت",
+      "timedOut2": "انتهى الوقت",
+      "faRate": "معدل الإنذار الكاذب",
+      "paused": "متوقف مؤقتاً"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "ما مدى ثقتك؟",
+      "rateYourConfidence": "قيّم ثقتك",
+      "title": "معايرة الثقة",
+      "calError": "خطأ المعايرة",
+      "confidence": "الثقة"
+    },
+    "consequences": {
+      "best": "الأفضل",
+      "nextRound": "الجولة التالية...",
+      "time": "الوقت",
+      "placeholder": "اكتب نتيجة...",
+      "title": "العواقب",
+      "totalIdeas": "إجمالي الأفكار",
+      "avgPerRound": "المعدل لكل جولة",
+      "rounds": "الجولات",
+      "noConsequencesListed": "لا عواقب مدرجة",
+      "roundProgress": "الجولة {{current}} / {{total}}",
+      "typeAndPressAdd": "اكتب واضغط إضافة"
+    },
+    "contextualCueing": {
+      "cueingEffect": "تأثير التلميح",
+      "newConfigRt": "زمن الاستجابة تكوين جديد",
+      "oldConfigRt": "زمن الاستجابة تكوين قديم",
+      "title": "التلميح السياقي",
+      "cueing": "التلميح",
+      "oldRt": "زمن استجابة قديم",
+      "newRt": "زمن استجابة جديد",
+      "prompt": "التعليمة",
+      "left": "يسار",
+      "right": "يمين"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "ارتعاش العتبة",
+      "title": "تكامل الخطوط المحيطية",
+      "pipeJitter": "| اهتزاز"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "عتبة التباين",
+      "title": "حساسية التباين",
+      "threshold": "العتبة",
+      "left": "يسار",
+      "right": "يمين"
+    },
+    "cpt": {
+      "nontargets": "غير أهداف",
+      "target": "هدف",
+      "nonTarget": "غير مستهدف",
+      "dPrime": "d'",
+      "targetsLetter": "الحرف المستهدف",
+      "tapForLetterOnly": "اضغط فقط على الحرف المستهدف"
+    },
+    "crowding": {
+      "criticalSpacing": "التباعد الحرج",
+      "leftAccuracy": "دقة اليسار",
+      "rightAccuracy": "دقة اليمين"
+    },
+    "cryptogram": {
+      "hints": "تلميحات",
+      "title": "كريبتوغرام",
+      "solved": "تم الحل",
+      "time": "Time",
+      "puzzles": "الألغاز",
+      "puzzle": "لغز",
+      "hint": "تلميح",
+      "clear": "مسح"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "المساحة تحت المنحنى",
+      "discountRateK": "معدل الخصم (k)",
+      "impulsivityIndex": "مؤشر الاندفاعية",
+      "title": "الخصم الزمني",
+      "aucPatience": "AUC الصبر",
+      "patient": "صبور",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "نقاط اللامبالاة",
+      "whichPrefer": "أيهما تفضّل؟",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "طويل",
+      "longDelay68s": "تأخير طويل (6-8 ثانية)",
+      "med": "متوسط",
+      "mediumDelay46s": "تأخير متوسط (4-6 ثوانٍ)",
+      "short": "قصير",
+      "shortDelay34s": "تأخير قصير (3-4 ثوانٍ)",
+      "title": "المطابقة المؤجلة",
+      "delay": "تأخير",
+      "rememberThisPattern": "تذكر هذا النمط",
+      "whichWasIt": "أيهما كان؟"
+    },
+    "dichoticListening": {
+      "alertDetection": "كشف التنبيه",
+      "attendToTheLeftColumn": "انتبه للعمود الأيسر",
+      "attendedAccuracy": "دقة القناة المنتبه إليها",
+      "ignoreTheRightColumn": "تجاهل العمود الأيمن",
+      "right": "يمين",
+      "title": "الاستماع الثنائي",
+      "attendedAcc": "دقة الانتباه",
+      "alertDet": "كشف التنبيه",
+      "alerts": "التنبيهات",
+      "selectLeftColumnWords": "اختر كلمات العمود الأيسر",
+      "submit": "إرسال",
+      "alertQuestion": "سؤال التنبيه"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "دقة النسيان",
+      "forgettingEffect": "تأثير النسيان",
+      "newRejection": "رفض الجديد",
+      "rememberAccuracy": "دقة التذكر",
+      "title": "النسيان الموجّه",
+      "remember": "تذكّر",
+      "forget": "انسَ",
+      "round": "الجولة",
+      "word": "الكلمة",
+      "wasThisWordShown": "هل ظهرت هذه الكلمة؟"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "درجة انحياز الانتباه",
+      "congruentAcc": "دقة متوافقة",
+      "congruentRt": "زمن استجابة المتوافق",
+      "incongruentAcc": "دقة غير متوافقة",
+      "incongruentRt": "زمن استجابة غير المتوافق"
+    },
+    "doubleDecision": {
+      "carOrTruck": "سيارة أم شاحنة؟",
+      "minDisplayReached": "تم بلوغ الحد الأدنى للعرض",
+      "positionAccuracy": "دقة الموقع",
+      "thresholdDisplay": "عتبة العرض",
+      "vehicleAccuracy": "دقة المركبة",
+      "whereWasTheDiamond": "أين كان الماس؟",
+      "title": "قرار مزدوج",
+      "threshold": "العتبة",
+      "bothOk": "كلاهما صحيح",
+      "vehicle": "مركبة",
+      "position": "الموضع",
+      "car": "سيارة",
+      "truck": "شاحنة"
+    },
+    "dsst": {
+      "items": "عناصر",
+      "itemsCompleted": "عناصر مكتملة",
+      "speedItemsmin": "السرعة (عناصر/دقيقة)",
+      "attempts": "المحاولات",
+      "itemsPerMin": "عناصر / دقيقة"
+    },
+    "dualTask": {
+      "dualtaskCost": "تكلفة المهمة المزدوجة",
+      "taskANumber": "المهمة أ (أرقام)",
+      "taskBSymbol": "المهمة ب (رمز)",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "الرقم",
+      "symbol": "الرمز",
+      "up": "أعلى",
+      "down": "أسفل"
+    },
+    "dualTime": {
+      "sessionEnPause": "الجلسة متوقفة مؤقتًا",
+      "votreEstimationSecondes": "تقديرك (بالثواني)",
+      "sessionInterrupted": "الجلسة توقفت",
+      "target": "الهدف",
+      "estimation": "التقدير",
+      "avgTime": "متوسط الوقت",
+      "avgError": "متوسط الخطأ",
+      "trials": "Trials",
+      "resumeToContinue": "استأنف للمتابعة",
+      "aimFor": "استهدف",
+      "second": "Second",
+      "howLongDidYouTake": "كم استغرقت من الوقت؟"
+    },
+    "dualTrack": {
+      "confirmer": "تأكيد",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "استأنف للمتابعة.",
+      "sessionEnPause": "الجلسة متوقفة مؤقتًا",
+      "tapezLesCibles": "انقر على الأهداف",
+      "tapezLaCible": "انقر على الهدف",
+      "appuyezConfirmer": "اضغط على تأكيد",
+      "targetsCountLabel": "{{count}} أهداف",
+      "distractorsCountLabel": "{{count}} عناصر تشتيت",
+      "roundsCountLabel": "{{count}} جولات",
+      "calibrationRoundsLabel": "{{count}} جولة معايرة",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = مستوى الصعوبة الداخلي للمسار.",
+      "tierHelpCurrentWithPhase": "أنت حالياً في T{{current}} من أصل {{total}} لـ {{targets}} أهداف. المرحلة الحالية: {{phase}}. يتبقى {{remaining}} مستوى(مستويات) قبل عدد الأهداف التالي.",
+      "phaseTracking": "تتبع",
+      "phaseAudio": "تتبّع + صوت",
+      "phaseColor": "تتبّع + لون",
+      "phaseCombined": "تتبّع + صوت + لون",
+      "passLetters": "أحرف",
+      "passColors": "ألوان",
+      "moveInstruction": "تعليمة التحريك",
+      "moveConfirmBtn": "حرّك زر التأكيد",
+      "preparingSession": "جارٍ تحضير الجلسة...",
+      "preparing3dScene": "جارٍ تحضير المشهد ثلاثي الأبعاد...",
+      "startJourney": "بدء الرحلة",
+      "calibrationDescription": "قبل المرحلة الأولى، ستقدر معايرة أطول مستوى البداية.",
+      "defaultDescription": "ستضيء الكرات. تتبعها أثناء حركتها، ثم حددها.",
+      "startCalibration": "بدء المعايرة",
+      "calibrationTitle": "المعايرة",
+      "estimatedStart": "البدء المقدّر",
+      "roundsAnalyzed": "جولات تم تحليلها",
+      "willStartAt": "سيبدأ عند",
+      "targetsCount": "أهداف",
+      "thenProgress": "ثم التقدم"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "متوسط الخطأ المطلق",
+      "ratio": "النسبة",
+      "slope": "الميل",
+      "vierordtSlope": "ميل فيروردت",
+      "wait": "انتظر...",
+      "title": "إعادة إنتاج المدة الزمنية",
+      "meanError": "متوسط الخطأ",
+      "meanRatio": "النسبة المتوسطة (منتج/هدف)",
+      "holdNow": "اضغط الآن",
+      "target": "الهدف",
+      "error": "خطأ"
+    },
+    "embeddedFigures": {
+      "fastest": "الأسرع",
+      "found": "تم العثور عليه",
+      "meanDetectionTime": "متوسط وقت الاكتشاف",
+      "slowest": "الأبطأ",
+      "title": "الأشكال المخفية",
+      "missed": "فائتة",
+      "fastestLabel": "الأسرع",
+      "findThisShape": "اعثر على هذا الشكل",
+      "memorizeShape": "احفظ الشكل…",
+      "foundIt": "وجدته!",
+      "giveUp": "استسلم"
+    },
+    "emotionalNback": {
+      "falseAlarms": "إنذارات كاذبة",
+      "misses": "فائتة",
+      "title": "N-Back انفعالي",
+      "match": "تطابق"
+    },
+    "emotionalStroop": {
+      "neutralRt": "زمن استجابة محايد",
+      "positiveRt": "زمن استجابة إيجابي",
+      "threatRt": "زمن استجابة التهديد",
+      "title": "ستروب عاطفي",
+      "interference": "التداخل",
+      "interferenceThreatNeutral": "التداخل (تهديد − محايد)"
+    },
+    "eyesTest": {
+      "totalTime": "الوقت الكلي"
+    },
+    "faceName": {
+      "gain": "مكسب",
+      "learningImprovement": "تحسن التعلم",
+      "round1Accuracy": "دقة الجولة 1",
+      "round2Accuracy": "دقة الجولة 2",
+      "whoIsThis": "من هذا؟",
+      "title": "ربط الوجه بالاسم",
+      "round": "الجولة",
+      "testPhase": "مرحلة الاختبار"
+    },
+    "fauxPas": {
+      "who": "من؟",
+      "why": "لماذا؟",
+      "title": "التعرف على الزلّات الاجتماعية",
+      "detection": "الكشف",
+      "scenarios": "السيناريوهات",
+      "fpFound": "تم اكتشاف زلّات",
+      "control": "التحكم",
+      "readyToAnswer": "جاهز للإجابة",
+      "didSomeoneSay": "هل قال أحد شيئًا غير لائق؟",
+      "whoSaidIt": "من قالها؟",
+      "whyInappropriate": "لماذا كان غير لائق؟"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "دقة الاسترجاع",
+      "recognitionAccuracy": "دقة التعرف",
+      "recallPlaceholder": "اكتب إجابتك...",
+      "unlikely": "غير محتمل",
+      "certain": "Certain",
+      "title": "الشعور بالمعرفة",
+      "recall": "التذكر",
+      "recognition": "التعرف",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "حساسية FOK",
+      "submit": "إرسال",
+      "dontKnow": "لا أعرف",
+      "fokPrompt": "هل ستتعرف عليه؟",
+      "selectCorrectAnswer": "اختر الإجابة الصحيحة",
+      "answer": "الإجابة"
+    },
+    "fingerTapping": {
+      "firstTrial": "المحاولة الأولى",
+      "lastTrial": "المحاولة الأخيرة",
+      "sequence": "تسلسل",
+      "speedupT1VsT12": "التسارع (T1 مقابل T12)",
+      "title": "نقر الأصابع"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "متوسط وقت الحركة",
+      "avgThroughput": "متوسط الإنتاجية",
+      "title": "نقر Fitts",
+      "throughput": "الإنتاجية",
+      "tapTarget": "اضغط على الهدف المميّز"
+    },
+    "foreperiod": {
+      "early": "مبكر",
+      "slope": "الميل",
+      "title": "التحضير الزمني",
+      "fpEffectSlope": "ميل تأثير الفترة التحضيرية"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "انعكاسات",
+      "threshold": "العتبة",
+      "tone1": "النغمة 1",
+      "tone2": "النغمة 2",
+      "weber": "ويبر",
+      "weberFraction": "كسر ويبر",
+      "hz": "Hz",
+      "title": "تمييز التردد",
+      "thresholdLabel": "العتبة",
+      "hzDiff": " هرتز فرق",
+      "whichWasHigher": "أيهما كان أعلى؟",
+      "firstHigher": "الأول أعلى",
+      "secondHigher": "الثاني أعلى"
+    },
+    "gabor": {
+      "gaborPatch": "رقعة غابور",
+      "leftAccuracy": "دقة اليسار",
+      "leftTrials": "محاولات اليسار",
+      "noiseMask": "قناع الضوضاء",
+      "rightAccuracy": "دقة اليمين",
+      "rightTrials": "محاولات اليمين",
+      "thresholdAngle": "الزاوية العتبة",
+      "title": "Gabor",
+      "threshold": "العتبة",
+      "reversals": "الانعكاسات",
+      "timedOut": "انتهى الوقت",
+      "left": "يسار",
+      "right": "يمين"
+    },
+    "gameOfDice": {
+      "finalPoints": "النقاط النهائية",
+      "risky": "محفوف بالمخاطر",
+      "riskyChoices": "خيارات محفوفة بالمخاطر",
+      "safe": "آمن",
+      "winRate": "معدل الفوز",
+      "wins": "فوز",
+      "title": "مهمة لعبة النرد",
+      "totalPoints": "إجمالي النقاط",
+      "riskyLabel": "مخاطر",
+      "roll": "ارمِ",
+      "chooseYourBet": "اختر رهانك",
+      "pickNumbers": "اختر أرقامك"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "فجوة أم لا؟",
+      "gapThreshold": "عتبة الفجوة",
+      "title": "كشف الصمت",
+      "noGap": "لا فجوة"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "أين كانت النظرة؟",
+      "direct": "Direct",
+      "left": "يسار",
+      "right": "يمين",
+      "title": "اتجاه النظر",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "الجزء 1 (البدء)",
+      "part2": "الجزء 2",
+      "part2Suppression": "الجزء 2 (الكبت)",
+      "suppressionCost": "تكلفة الكبت",
+      "title": "Hayling",
+      "part1": "الجزء 1",
+      "part2Label": "الجزء 2",
+      "suppression": "الكبت",
+      "obvious": "واضح",
+      "obviousPicksPart2": "اختيارات واضحة (الجزء 2)",
+      "chooseUnrelated": "اختر كلمة غير مرتبطة ",
+      "completelyUnrelated": "غير مرتبط تمامًا",
+      "doNotPickObvious": "لا تختر الكلمة الواضحة!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "الانتقال إلى المرحلة التالية…",
+      "stageComplete": "اكتملت المرحلة!",
+      "title": "IED Set Shift",
+      "stages": "المراحل",
+      "edsCost": "تكلفة EDS",
+      "stage": "المرحلة",
+      "correctNeeded": "الصحيحة المطلوبة للتقدم"
+    },
+    "informationSampling": {
+      "cost": "التكلفة",
+      "free": "مجاني",
+      "meanTilesCost": "متوسط المربعات (مدفوع)",
+      "meanTilesFree": "متوسط المربعات (مجاني)",
+      "totalCost": "التكلفة الكلية",
+      "title": "أخذ عينات المعلومات",
+      "tiles": "البلاطات",
+      "tapToReveal": "اضغط للكشف"
+    },
+    "inspectionTime": {
+      "final": "نهائي",
+      "finalDisplayTime": "وقت العرض النهائي",
+      "minCorrectIt": "أقل وقت فحص صحيح",
+      "threshold": "العتبة",
+      "title": "زمن الفحص",
+      "thresholdLabel": "العتبة",
+      "minIt": "أقل وقت فحص"
+    },
+    "iowaGambling": {
+      "balance": "الرصيد:",
+      "chooseADeck": "اختر مجموعة بطاقات",
+      "deckADraws": "سحوبات المجموعة أ",
+      "deckBDraws": "سحوبات المجموعة ب",
+      "deckCDraws": "سحوبات المجموعة ج",
+      "deckDDraws": "سحوبات المجموعة د",
+      "first40Advantageous": "أول 40 مفيدة",
+      "last40Advantageous": "آخر 40 مفيدة",
+      "learn": "التعلّم",
+      "learningIndex": "مؤشر التعلّم",
+      "title": "مقامرة أيوا",
+      "advantageousPct": "النسبة المفيدة",
+      "earnings": "الأرباح",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "انحياز المعايرة",
+      "meanJol": "متوسط JOL",
+      "nowTestYourRecall": "اختبر ذاكرتك الآن",
+      "studyComplete": "الدراسة مكتملة",
+      "whatWasPairedWith": "ماذا كان مقترنًا بـ…؟",
+      "title": "الحكم على التعلم",
+      "recallAccuracy": "دقة الاسترجاع",
+      "jolGamma": "JOL غاما",
+      "jolAccuracyGamma": "دقة JOL (غاما)",
+      "howLikelyRemember": "ما احتمالية أن تتذكر؟",
+      "hiddenAnswer": "الإجابة المخفية"
+    },
+    "judgmentOfRecency": {
+      "close": "قريب",
+      "closeGap13": "فجوة قصيرة (1-3)",
+      "far": "بعيد",
+      "farGap9": "فجوة طويلة (9+)",
+      "mediumGap48": "فجوة متوسطة (4-8)",
+      "title": "حكم الأحدثية",
+      "medium": "متوسط",
+      "studyPhaseMemorizeOrder": "مرحلة الدراسة — احفظ الترتيب",
+      "whichMoreRecently": "أيهما ظهر مؤخرًا أكثر؟"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "متوسط زمن الاستجابة (لا-كلمات)",
+      "meanRtWords": "متوسط زمن الاستجابة (كلمات)",
+      "nonwordsAccuracy": "دقة اللا-كلمات",
+      "wordsAccuracy": "دقة الكلمات",
+      "word": "الكلمة",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "المدة",
+      "optimalSteps": "الخطوات المثلى",
+      "pathEfficiency": "كفاءة المسار",
+      "totalSteps": "إجمالي الخطوات",
+      "wallHits": "اصطدامات بالجدار",
+      "title": "Maze",
+      "completed": "مكتمل",
+      "efficiency": "الكفاءة",
+      "wallHitsLabel": "اصطدامات بالجدار",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "سهل",
+      "easy2Boxes": "سهل (صندوقان)",
+      "hard": "صعب",
+      "hard4Boxes": "صعب (4 صناديق)",
+      "medium3Boxes": "متوسط (3 صناديق)",
+      "title": "Memobox",
+      "rounds": "الجولات",
+      "medium": "متوسط",
+      "watchMovements": "شاهد الحركات…",
+      "howManyBalls": "كم كرة في كل صندوق؟",
+      "submit": "إرسال",
+      "roundOf": "الجولة {{current}} من {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "ما هو المقطع العرضي؟",
+      "title": "القطع الذهني"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "قديم أم مشابه أم جديد؟",
+      "patternSeparation": "فصل الأنماط",
+      "sep": "فصل",
+      "old": "قديم",
+      "similar": "مشابه",
+      "new": "جديد",
+      "ldi": "LDI",
+      "title": "التمييز الذاكري",
+      "hitRateOldDetected": "معدل الإصابة (القديم المكتشف)",
+      "lureDiscrimination": "تمييز الطُعم (LDI)",
+      "memorize": "احفظ",
+      "testPhase": "مرحلة الاختبار"
+    },
+    "multiArmedBandit": {
+      "earnings": "الأرباح:",
+      "pickMachine": "اختر آلة",
+      "title": "قاطع الطريق متعدد الأذرع",
+      "totalReward": "إجمالي المكافأة",
+      "optimal": "الأمثل",
+      "regret": "الندم",
+      "exploit": "الاستغلال",
+      "machine": "الآلة",
+      "armsExplored": "الأذرع المستكشفة"
+    },
+    "navon": {
+      "globalBigLetter": "عام (حرف كبير)",
+      "localSmallLetter": "محلي (حرف صغير)",
+      "title": "نافون",
+      "globalAdv": "ميزة شاملة",
+      "whatBigLetter": "ما الحرف الكبير؟",
+      "whatSmallLetter": "ما الحرف الصغير؟"
+    },
+    "negativePriming": {
+      "controlRt": "زمن استجابة التحكم",
+      "nameTheRedShape": "سمّ الشكل الأحمر",
+      "negativePrimingRt": "زمن الاستجابة للتمهيد السلبي",
+      "positivePrimingRt": "زمن الاستجابة للتمهيد الإيجابي",
+      "npRt": "TR NP",
+      "ppRt": "زمن رد فعل PP",
+      "npEffect": "تأثير NP",
+      "title": "التمهيد السلبي",
+      "ctrlRt": "زمن استجابة مرجعي"
+    },
+    "numberLine": {
+      "estimationBias": "انحياز التقدير",
+      "linearityRsup2": "الخطية (R²)",
+      "meanAbsoluteError": "متوسط الخطأ المطلق",
+      "tapTheLineToPlaceTheNumber": "اضغط على الخط لوضع الرقم",
+      "title": "خط الأعداد",
+      "meanError": "متوسط الخطأ",
+      "yourEstimate": "تقديرك",
+      "correct": "صحيح"
+    },
+    "oddOneOut": {
+      "colorTrials": "محاولات اللون",
+      "shapeTrials": "محاولات الشكل",
+      "shape": "شكل",
+      "color": "لون",
+      "timeout": "انتهى الوقت",
+      "shapeDiffAccuracy": "دقة اختلاف الشكل",
+      "colorDiffAccuracy": "دقة فرق اللون",
+      "shapeDiffAvgRt": "متوسط زمن الاستجابة لاختلاف الشكل",
+      "colorDiffAvgRt": "فرق اللون متوسط ر.ت"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "أي اتجاه؟",
+      "thresholdAngle": "زاوية العتبة",
+      "title": "تمييز الاتجاه",
+      "threshold": "العتبة",
+      "counterCw": "عكس عقارب الساعة",
+      "clockwise": "باتجاه عقارب الساعة"
+    },
+    "patternComparison": {
+      "differentTrials": "محاولات مختلفة",
+      "sameTrials": "محاولات متشابهة",
+      "same": "متشابه",
+      "different": "مختلف"
+    },
+    "patternRecognition": {
+      "newPatterns": "أنماط جديدة",
+      "oldPatterns": "أنماط قديمة",
+      "old": "قديم",
+      "new": "جديد",
+      "studyPatterns": "ادرس الأنماط بعناية",
+      "memorize": "احفظ ({{current}}/{{total}})",
+      "getReady": "استعد...",
+      "testPhaseStarting": "مرحلة الاختبار تبدأ..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "صحيح تمامًا",
+      "meanAngularError": "متوسط الخطأ الزاوي",
+      "withinTolerance": "ضمن المسموح",
+      "title": "أخذ المنظور",
+      "avgErr": "متوسط الخطأ",
+      "youAreAt": "أنت عند ",
+      "facing": "Facing",
+      "pointTo": "أشر إلى "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "عتبة التردد",
+      "seq1": "التسلسل 1",
+      "seq2": "التسلسل 2",
+      "title": "تمييز الفونيمات",
+      "thresh": "Thresh",
+      "sameOrDifferent": "متشابه أم مختلف؟",
+      "same": "متطابق",
+      "different": "مختلف"
+    },
+    "predictionMotion": {
+      "biasLate": "انحياز (+ = متأخر)",
+      "meanAbsoluteError": "متوسط الخطأ المطلق",
+      "precisionSd": "الدقة (الانحراف المعياري)",
+      "title": "توقع الحركة",
+      "absError": "الخطأ المطلق",
+      "precision": "الدقة",
+      "responded": "تمت الاستجابة",
+      "tapWhenReachesTarget": "اضغط عند وصوله للهدف"
+    },
+    "promem": {
+      "ongoingAccuracy": "دقة المهمة المستمرة",
+      "ongoingRt": "زمن استجابة المهمة الجارية",
+      "pmHitRate": "معدل إصابة PM",
+      "pmRt": "زمن رد فعل PM",
+      "pmTargets": "أهداف PM",
+      "title": "الذاكرة الاستشرافية",
+      "ongoing": "جاري",
+      "pmHits": "إصابات PM",
+      "pmMisses": "إخفاقات PM",
+      "living": "Living",
+      "nonLiving": "غير حي",
+      "redWordInstruction": "كلمة حمراء = اضغط"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "أخطاء المشتتات",
+      "literalErrorRate": "معدل الأخطاء الحرفية",
+      "literalErrors": "أخطاء حرفية",
+      "title": "تفسير الأمثال",
+      "literal": "حرفي",
+      "litRate": "معدل حرفي",
+      "whatDoesThisMean": "ماذا يعني هذا؟"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "استعد للمتابعة",
+      "meanTimeOnTarget": "متوسط الوقت على الهدف",
+      "meanTrackingError": "متوسط خطأ التتبع",
+      "placeYourFingerOnTheScreen": "ضع إصبعك على الشاشة",
+      "title": "التتبع البصري",
+      "timeOnTarget": "الوقت على الهدف",
+      "error": "خطأ",
+      "onTarget": "على الهدف",
+      "avgError": "متوسط الخطأ",
+      "improve": "Improve",
+      "improvementT1VsT": "التحسن T1 مقابل T",
+      "errorLabel": "خطأ",
+      "followGreenTarget": "اتبع الهدف الأخضر"
+    },
+    "rapidNaming": {
+      "roundComplete": "الجولة مكتملة",
+      "totalErrors": "إجمالي الأخطاء",
+      "title": "التسمية السريعة",
+      "avgSpeed": "متوسط السرعة",
+      "totalTime": "الوقت الكلي",
+      "round": "الجولة",
+      "getReady": "استعد!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "متوسط وقت الحل",
+      "solved": "تم الحل",
+      "wrong": "خطأ",
+      "placeholder": "إجابتك...",
+      "title": "Rebus",
+      "puzzles": "الألغاز",
+      "timeout": "انتهى الوقت",
+      "submit": "إرسال",
+      "answer": "الإجابة"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "متوسط وقت الحل",
+      "solved": "تم الحل",
+      "placeholder": "إجابتك...",
+      "title": "الترابطات البعيدة",
+      "timeout": "انتهى الوقت",
+      "submit": "إرسال",
+      "answer": "الإجابة"
+    },
+    "reversalLearning": {
+      "adapt": "تكيّف",
+      "loseshiftRate": "معدل التبديل بعد الخسارة",
+      "score": "النتيجة:",
+      "winstayRate": "معدل الفوز-البقاء",
+      "title": "التعلم بالانعكاس",
+      "rewards": "المكافآت",
+      "reversals": "الانعكاسات",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "متوسط المحاولات للمعيار",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "عُدّ تنازلياً بمقدار 7",
+      "reproduceThePatternFromMemory": "أعد رسم النمط من الذاكرة",
+      "title": "شكل ري",
+      "copy": "نسخ",
+      "recall": "التذكر",
+      "retention": "الاحتفاظ",
+      "trial": "محاولة",
+      "target": "الهدف",
+      "yourCopy": "نسختك",
+      "submit": "إرسال"
+    },
+    "rhythm": {
+      "avgTimingError": "متوسط خطأ التوقيت",
+      "bestTrialError": "أفضل خطأ محاولة",
+      "correctTrials": "المحاولات الصحيحة",
+      "worstTrialError": "أسوأ خطأ محاولة",
+      "watchRhythm": "راقب الإيقاع",
+      "getReady": "استعد...",
+      "tapTheRhythm": "أعد الإيقاع!",
+      "tooFarOff": "غير دقيق جدًا!",
+      "tapToReproduce": "انقر لإعادة الإنتاج",
+      "beats": "{{count}} نبضة زمنية",
+      "bestTrial": "أفضل محاولة",
+      "worstTrial": "أسوأ محاولة",
+      "title": "Rhythm",
+      "msErr": "خطأ مللي ثانية"
+    },
+    "routePlanning": {
+      "time": "الوقت",
+      "title": "تخطيط المسار",
+      "levels": "المستويات",
+      "completed": "مكتمل",
+      "avgMoves": "متوسط الحركات",
+      "clear": "مسح",
+      "submit": "إرسال",
+      "instructions": "التعليمات"
+    },
+    "rvp": {
+      "detect357246468": "اكتشف: 3-5-7، 2-4-6، 4-6-8",
+      "targetSequences": "التسلسلات المستهدفة",
+      "fa": "FA",
+      "hitRate": "معدل الإصابة",
+      "misses": "Misses",
+      "sequences": "التسلسلات"
+    },
+    "sart": {
+      "commissionErrors": "أخطاء الإقدام",
+      "omissionErrors": "أخطاء الإغفال",
+      "tapAllDigits": "اضغط على جميع الأرقام ما عدا 3",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "مضاف",
+      "studyTheScene": "ادرس المشهد",
+      "swaps": "مبادلات",
+      "tapTheNewchangedObject": "اضغط على الشيء الجديد/المتغير"
+    },
+    "sentenceVerification": {
+      "falseSentences": "جمل خاطئة",
+      "trueSentences": "جمل صحيحة",
+      "byCategory": "حسب الفئة",
+      "title": "التحقق من الجمل",
+      "trueRt": "زمن استجابة صحيح",
+      "true": "True",
+      "false": "False",
+      "pressKey": "اضغط "
+    },
+    "soundSweeps": {
+      "down": "تنازلي",
+      "downAccuracy": "دقة التنازلي",
+      "durationThreshold": "عتبة المدة",
+      "up": "صعود",
+      "upAccuracy": "دقة الأصوات الصاعدة",
+      "title": "مسح صوتي",
+      "threshold": "العتبة",
+      "upOrDown": "صعودًا أم نزولًا؟"
+    },
+    "sourceMemory": {
+      "color": "اللون",
+      "colorRecall": "استذكار اللون",
+      "frame": "الإطار",
+      "frameRecall": "استذكار الإطار",
+      "getReadyForTheTest": "استعد للاختبار!",
+      "itemRecognition": "التعرّف على العناصر",
+      "positionRecall": "استدعاء الموقع",
+      "sourceAccuracy": "دقة المصدر",
+      "title": "ذاكرة المصدر",
+      "source": "المصدر",
+      "position": "الموضع",
+      "word": "الكلمة",
+      "wasThisWordShown": "هل ظهرت هذه الكلمة؟",
+      "bottom": "أسفل",
+      "blue": "أزرق",
+      "orange": "برتقالي",
+      "circle": "دائرة",
+      "square": "مربع"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "عتبة الضوضاء",
+      "title": "الكلام في الضوضاء",
+      "noise": "ضوضاء",
+      "whichWordWasIt": "ما الكلمة؟"
+    },
+    "srtt": {
+      "learningEffect": "تأثير التعلم",
+      "learning": "التعلم",
+      "block": "مجموعة"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "مستوى الصدفة",
+      "learningDetected": "تم كشف التعلم",
+      "testPhase": "مرحلة الاختبار",
+      "whichPairLooksMoreFamiliar": "أي زوج يبدو أكثر ألفة؟",
+      "title": "التعلم الإحصائي",
+      "learning": "التعلم",
+      "watchTheShapes": "شاهد الأشكال"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "تأثير انحياز المعتقد",
+      "conclusion": "الاستنتاج",
+      "premise1": "المقدمة 1",
+      "premise2": "المقدمة 2",
+      "logicalValidityQuestion": "هل هذا صحيح منطقيًا؟",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "دقة الغياب",
+      "presentAccuracy": "دقة الحضور",
+      "title": "البحث عن الرموز",
+      "present": "موجود",
+      "absent": "غائب",
+      "targets": "Targets",
+      "searchGroup": "مجموعة البحث"
+    },
+    "syncContinuation": {
+      "async": "غير متزامن",
+      "asynchrony": "عدم التزامن",
+      "drift": "انجراف",
+      "cv": "CV",
+      "title": "Synchronisation-Continuation",
+      "meanCv": "متوسط CV",
+      "tempos": "الإيقاعات",
+      "tempo": "الإيقاع",
+      "ioi": "Ioi",
+      "getReady": "استعد…",
+      "nextTempo": "الإيقاع التالي…"
+    },
+    "taskJuggling": {
+      "correctResets": "إعادات تعيين صحيحة",
+      "duration": "المدة",
+      "missedCounters": "عدّادات مفقودة",
+      "prematureResets": "إعادات تعيين مبكرة",
+      "totalEvents": "إجمالي الأحداث",
+      "tooEarly": "مبكر جداً!",
+      "missed": "فائت!",
+      "title": "التوفيق بين المهام",
+      "premature": "سابق لأوانه",
+      "counter": "العداد",
+      "tapCounterInstruction": "اضغط على كل عداد عند وصوله للحد. لا تدعه يفيض!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "نقطة التنصيف (PSE)",
+      "curveSteepness": "حدة المنحنى",
+      "idealMidpoint": "نقطة الوسط المثالية",
+      "pse": "PSE",
+      "title": "التنصيف الزمني",
+      "steepness": "الانحدار",
+      "shortOrLong": "قصير أم طويل؟",
+      "trainingPhase": "مرحلة التدريب",
+      "short": "قصير",
+      "long": "طويل"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "عرض التدرج",
+      "rememberThisDuration": "تذكّر هذه المدة",
+      "width": "العرض",
+      "standard": "STANDARD",
+      "title": "التعميم الزمني",
+      "hitRate": "معدل الإصابة",
+      "faRate": "معدل الإنذار الكاذب",
+      "hitRateDetectStandard": "معدل الإصابة (كشف المعيار)",
+      "sameDuration": "نفس المدة؟",
+      "trainingPhase": "مرحلة التدريب",
+      "same": "متطابق",
+      "different": "مختلف"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "عتبة SOA",
+      "title": "تمييز الملمس",
+      "threshold": "العتبة"
+    },
+    "timePromem": {
+      "avgTimingError": "متوسط خطأ التوقيت",
+      "clockChecks": "مراجعات الساعة",
+      "ongoingAccuracy": "دقة المهمة المستمرة",
+      "ongoingTrials": "المحاولات الجارية",
+      "totalPmPresses": "إجمالي ضغطات الذاكرة المستقبلية",
+      "pmAccuracy": "دقة PM",
+      "pmMisses": "أخطاء PM",
+      "title": "الاستشراف الزمني",
+      "ongoing": "جاري",
+      "pmHitsLabel": "نجاحات الذاكرة المستقبلية",
+      "timingErr": "خطأ التوقيت",
+      "pmHitsExpected": "إصابات PM / المتوقعة",
+      "pmPresses": "ضغطات PM",
+      "checkClock": "تحقق من الساعة",
+      "thirtySecMark": "علامة 30 ثانية"
+    },
+    "toj": {
+      "meanResponseTime": "متوسط وقت الاستجابة",
+      "temporalResolution": "الدقة الزمنية",
+      "title": "الحكم على الترتيب الزمني",
+      "threshold": "العتبة",
+      "whichCameFirst": "أيهما ظهر أولاً؟",
+      "leftFirst": "اليسار أولاً",
+      "rightFirst": "اليمين أولاً"
+    },
+    "tower": {
+      "budget": "الميزانية",
+      "challenge": "تحدٍّ",
+      "challengeClassic": "كلاسيكي",
+      "challengeExpert": "خبير",
+      "challengeMemory": "ذاكرة",
+      "challengePrecision": "دقة",
+      "dragDiscAriaLabel": "اسحب القرص العلوي من الوتد {{peg}}",
+      "goal": "الهدف",
+      "goalHiddenStatus": "الهدف مخفي. استخدم كشف لعرضه لفترة وجيزة.",
+      "goalRevealedMessage": "تم كشف الهدف لمدة 3 ثوانٍ.",
+      "hint": "تلميح",
+      "hintDescription": "عرض أفضل حركة تالية",
+      "hintMessage": "تلميح: حرّك القرص العلوي من الوتد {{fromPeg}} إلى الوتد {{toPeg}}.",
+      "hiddenGoalDescription": "الهدف مخفي أثناء اللعب. استخدم كشف إذا احتجت تذكيراً موجزاً.",
+      "hiddenGoalTitle": "تحدي الذاكرة",
+      "invalid": "غير صالحة",
+      "moves": "حركات",
+      "optimal": "مثالي",
+      "pegFullMessage": "هذا العمود ممتلئ.",
+      "previewMemoryCountdown": "احفظ الهدف. البدء خلال {{seconds}} ثانية.",
+      "previewPlanCountdown": "خطّط للحل في {{moves}} حركة. البدء خلال {{seconds}} ثانية.",
+      "reset": "إعادة تعيين",
+      "resetDescription": "إعادة بدء هذا اللغز",
+      "resetMessage": "تمت إعادة تعيين اللغز.",
+      "reveal": "كشف",
+      "revealDescription": "كشف الهدف المخفي",
+      "statusOptimalSolve": "حل مثالي. النتيجة {{score}}.",
+      "statusSolvedScore": "تم الحل في {{moves}} حركات (+{{extraMoves}}). النتيجة {{score}}.",
+      "undo": "تراجع",
+      "undoDescription": "التراجع عن آخر حركة",
+      "undoneMessage": "تم التراجع عن آخر حركة.",
+      "yourPegs": "أوتادك"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "عمليات تسليم صحيحة",
+      "trainsLost": "قطارات مفقودة",
+      "wrongStation": "محطة خاطئة",
+      "title": "تسلسل الأفكار",
+      "trains": "القطارات",
+      "missed": "فائتة",
+      "scoreLabel": "الدرجة",
+      "instructions": "التعليمات"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "متوسط الأسئلة المستخدمة",
+      "title": "عشرون سؤالاً",
+      "avgQuestions": "متوسط الأسئلة",
+      "rounds": "الجولات",
+      "efficiency": "الكفاءة",
+      "avgQuestionsCorrectOnly": "متوسط الأسئلة (الصحيحة فقط)",
+      "questionsLabel": "أسئلة",
+      "remaining": "المتبقي",
+      "readyToGuess": "أنا مستعد للتخمين!",
+      "tapTheTarget": "اضغط على الشيء الذي تظنه الهدف!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "مجال الرؤية المفيد",
+      "visualNoiseMask": "قناع الضوضاء البصرية",
+      "whatWasInTheCenter": "ماذا كان في المركز؟",
+      "whereWasTheTarget": "أين كان الهدف؟",
+      "avgThreshold": "متوسط العتبة",
+      "speed": "السرعة",
+      "accuracy": "الدقة",
+      "central": "مركزي",
+      "peripheral": "المحيطي",
+      "overall": "الإجمالي",
+      "block": "مجموعة",
+      "trials": "Trials",
+      "start": "بدء",
+      "focus": "التركيز",
+      "threshold": "العتبة",
+      "stimulus": "المنبه",
+      "respondFromMemory": "أجب من الذاكرة",
+      "truck": "شاحنة",
+      "choosePeripheralLocation": "اختر الموقع المحيطي",
+      "currentBlock": "الكتلة {{n}}",
+      "exposure": "التعرض"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "كلمات تبدأ بـ {{letter}}",
+      "title": "الطلاقة اللفظية",
+      "totalWords": "إجمالي الكلمات",
+      "duplicates": "مكررات",
+      "letter": "الحرف",
+      "round": "الجولة",
+      "roundComplete": "اكتملت الجولة",
+      "nextRound": "الجولة التالية",
+      "middotRound": " · الجولة"
+    },
+    "vernierAcuity": {
+      "whichSide": "أي جانب؟",
+      "title": "حدة فيرنييه",
+      "leftOffset": "إزاحة يسار",
+      "rightOffset": "إزاحة يمين",
+      "offset": "الإزاحة"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "الاستراتيجية المثلى",
+      "correct": "صحيح!",
+      "wrong": "خطأ",
+      "title": "التنبؤ بالطقس",
+      "optimal": "الأمثل",
+      "learningCurve": "منحنى التعلم",
+      "predictTheWeather": "توقع الطقس",
+      "rain": "المطر"
+    },
+    "wordChain": {
+      "avgResponseTime": "متوسط وقت الاستجابة",
+      "chain": "سلسلة",
+      "longestChain": "أطول سلسلة",
+      "totalCorrect": "إجمالي الصحيحة",
+      "totalWords": "إجمالي الكلمات",
+      "words": "كلمات",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "متوسط وقت الرد",
+      "endsWith": "ينتهي بـ ",
+      "chainLabel": "السلسلة",
+      "bestLabel": "الأفضل"
+    },
+    "wordFlow": {
+      "avgWordLength": "متوسط طول الكلمة",
+      "correct": "صحيح",
+      "invalidWords": "كلمات غير صالحة",
+      "totalWordsSelected": "إجمالي الكلمات المختارة",
+      "validWords": "كلمات صالحة",
+      "wordsPerMinute": "كلمات في الدقيقة",
+      "wrong": "خطأ",
+      "seeResults": "عرض النتائج",
+      "nextRound": "الجولة التالية ({{current}}/{{total}})",
+      "title": "الطلاقة اللفظية",
+      "validWordsLabel": "كلمات صالحة",
+      "wordsPerMinLabel": "كلمات/دقيقة",
+      "avgLengthLabel": "متوسط الطول",
+      "invalidLabel": "غير صالح",
+      "round": "الجولة",
+      "selectWordsBelongTo": "اختر الكلمات التي تنتمي إلى",
+      "selected": "محدد"
+    },
+    "wordList": {
+      "avgRtCorrect": "متوسط زمن الاستجابة (صحيح)",
+      "primacyEffect": "تأثير الأولوية",
+      "recencyEffect": "تأثير الحداثة",
+      "studyPhaseRememberEachWord": "مرحلة الدراسة — تذكّر كل كلمة",
+      "wordsRecalled": "كلمات مسترجعة",
+      "title": "Word List",
+      "serialPositionCurve": "منحنى الموقع التسلسلي",
+      "wasWordInList": "هل كانت هذه الكلمة في القائمة؟",
+      "seenBefore": "شوهد سابقًا",
+      "newWord": "جديد"
+    },
+    "speedSort": {
+      "switchAccuracy": "دقة التبديل",
+      "switchTrials": "محاولات التبديل",
+      "sortByColor": "رتّب حسب اللون",
+      "sortByShape": "رتّب حسب الشكل",
+      "sortByNumber": "رتّب حسب الرقم",
+      "ruleChanged": "تغيرت القاعدة!",
+      "binRed": "أحمر",
+      "binBlue": "أزرق",
+      "binGreen": "أخضر",
+      "binYellow": "أصفر",
+      "binCircle": "دائرة",
+      "binSquare": "مربع",
+      "binTriangle": "مثلث",
+      "binStar": "نجمة",
+      "title": "فرز سريع",
+      "switch": "التبديلات"
+    },
+    "reflex": {
+      "target": "هدف",
+      "lure": "طُعم",
+      "tooSlow": "بطيء جداً!",
+      "wrongTarget": "هدف خاطئ!",
+      "tapTargets": "اضغط على الدوائر الخضراء!",
+      "hits": "إصابات",
+      "misses": "أخطاء",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "تذكّر المجموع الحالي...",
+      "title": "الحساب المتسلسل",
+      "stepChains": "سلاسل من {{len}} خطوات",
+      "start": "بدء",
+      "step": "الخطوة",
+      "whatIsTheResult": "ما النتيجة؟"
+    },
+    "alternateUses": {
+      "placeholder": "اكتب استخداماً...",
+      "title": "الاستخدامات البديلة",
+      "totalUses": "إجمالي الاستخدامات",
+      "perObject": "لكل كائن",
+      "rounds": "الجولات",
+      "bestObject": "أفضل كائن",
+      "bestCount": "أفضل عدد",
+      "noUsesSubmitted": "لم يتم تقديم استخدامات",
+      "timesUp": "انتهى الوقت!",
+      "nextObject": "الشيء التالي ({{object}})",
+      "listCreativeUses": "اذكر استخدامات إبداعية لهذا الشيء"
+    },
+    "anagram": {
+      "placeholder": "اكتب الكلمة...",
+      "title": "أناغرام",
+      "avgSolve": "متوسط الحل",
+      "letterWords": "كلمات من {{len}} أحرف",
+      "submit": "إرسال"
+    },
+    "facialEmotion": {
+      "happy": "سعيد",
+      "sad": "حزين",
+      "angry": "غاضب",
+      "fearful": "خائف",
+      "disgusted": "مشمئز",
+      "surprised": "متفاجئ",
+      "lc": "LC",
+      "title": "التعرف على المشاعر الوجهية",
+      "topConfusions": "أكثر الخلطات"
+    },
+    "numberSeries": {
+      "easy": "سهل",
+      "hard": "صعب"
+    },
+    "chainRecall": {
+      "round": "جولة",
+      "title": "استرجاع متسلسل",
+      "chain": "السلسلة",
+      "placeholder": "عنصر نائب"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Go/No-Go انفعالي",
+      "block1CommissionErrors": "أخطاء الأداء مجموعة 1",
+      "block2CommissionErrors": "أخطاء الأداء مجموعة 2",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "مجموعة",
+      "go": "اذهب"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "تأثير Stroop",
+      "title": "اندفاع الألوان",
+      "congShort": "متوافق",
+      "incongShort": "غير متوافق",
+      "congruentAccuracy": "دقة المتوافق",
+      "incongruentAccuracy": "دقة غير متوافقة"
+    },
+    "mirror": {
+      "avgCorrectCells": "خلايا صحيحة (متوسط)",
+      "symmetryType": "نوع التناظر",
+      "title": "مرآة"
+    },
+    "rhythmTap": {
+      "correctTrials": "محاولات صحيحة",
+      "avgRhythmScore": "متوسط درجة الإيقاع",
+      "bestTrialScore": "أفضل محاولة",
+      "worstTrialScore": "أسوأ محاولة",
+      "level": "المستوى",
+      "rhythm": "الإيقاع",
+      "bestTrial": "أفضل محاولة",
+      "worstTrial": "أسوأ محاولة"
+    },
+    "vocalProsody": {
+      "questioning": "استفهام"
+    },
+    "arithmeticSpeed": {
+      "multiply": "ضرب",
+      "add": "إضافة",
+      "subtract": "طرح",
+      "title": "الحساب السريع",
+      "score": "النتيجة",
+      "solved": "تم الحل",
+      "missed": "فائتة"
+    },
+    "puzzle": {
+      "avgSolveTime": "متوسط وقت الحل",
+      "totalMoves": "إجمالي الحركات",
+      "totalErrors": "أخطاء إجمالية",
+      "gridSize": "حجم الشبكة",
+      "maxGridReached": "تم بلوغ أقصى حجم للشبكة",
+      "maxLevelReached": "المستوى الأقصى بلغ",
+      "maxNodesReached": "وصلت للحد الأقصى من العقد",
+      "puzzleDetails": "تفاصيل اللغز",
+      "roundDetails": "تفاصيل الجولة",
+      "solved": "محلول!",
+      "undo": "تراجع",
+      "reset": "إعادة تعيين",
+      "check": "تحقق",
+      "moves": "حركات",
+      "time": "الوقت",
+      "level": "المستوى",
+      "errors": "أخطاء",
+      "score": "Score",
+      "grid": "شبكة",
+      "crossings": "تقاطعات",
+      "pearls": "لآلئ",
+      "clues": "أدلة",
+      "region": "منطقة",
+      "filled": "مملوء",
+      "cells": "خلايا",
+      "undosLeft": "تراجعات متبقية",
+      "gems": "جواهر",
+      "connected": "متصل",
+      "slides": "انزلاقات",
+      "progress": "تقدم",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "مكشوف",
+      "colored": "ملون",
+      "violations": "Violations",
+      "blacked": "مسوّد",
+      "empty": "فارغ",
+      "remaining": "متبقي",
+      "pairs": "أزواج",
+      "flips": "تقليبات",
+      "found": "وجد",
+      "balls": "كرات",
+      "guesses": "تخمينات",
+      "original": "Original",
+      "findDifferences": "ابحث عن الاختلافات",
+      "totalDrags": "إجمالي عمليات السحب",
+      "totalUndos": "تراجعات إجمالية",
+      "totalEdgesDrawn": "حواف مرسومة",
+      "totalLasers": "ليزر إجمالي",
+      "totalSlides": "إجمالي الانزلاقات",
+      "totalRotations": "دورات إجمالية",
+      "totalRectangles": "مستطيلات إجمالية",
+      "totalScore": "مجموع النقاط",
+      "avgTime": "متوسط الوقت",
+      "cellsCleared": "خلايا محذوفة",
+      "totalDiffsFound": "اختلافات إجمالية",
+      "gemsCollected": "جواهر مجمعة",
+      "pushBoxesOntoTargets": "ادفع جميع الصناديق نحو الأهداف",
+      "fireLasersMarkBalls": "أطلق الليزر من الحواف، ثم حدد مواقع الكرات",
+      "revealingAnswer": "كشف الإجابة...",
+      "checkAnswer": "تحقق من الإجابة",
+      "pickNumberBelow": "اختر رقماً أدناه",
+      "tapCellToAssign": "المس خلية لتعيين رقم",
+      "tapEdgesToPlaceWalls": "انقر على الحواف لوضع الجدران. قسّم إلى مناطق من K.",
+      "ghosts": "أشباح",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "دومينو",
+      "islands": "جزر",
+      "pegsLeft": "أوتاد متبقية",
+      "bestRemaining": "أفضل نتيجة متبقية",
+      "puzzlesSolved": "ألغاز محلولة",
+      "flooded": "مغمور",
+      "edges": "حواف",
+      "totalPlacements": "تنسيب إجمالي",
+      "totalRemovals": "إزالات إجمالية",
+      "maxTileReached": "تم بلوغ أقصى بلاطة",
+      "target": "هدف",
+      "placed": "وُضع",
+      "totalGuesses": "إجمالي المحاولات",
+      "guessesLeft": "تخمينات متبقية",
+      "difficulty": "صعوبة"
+    },
+    "palisade": {
+      "title": "سياج",
+      "puzzles": "الألغاز",
+      "maxLevel": "أعلى مستوى"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "errors": "الأخطاء",
+      "avgTime": "متوسط الوقت",
+      "erase": "مسح"
+    },
+    "blackbox": {
+      "title": "الصندوق الأسود",
+      "puzzles": "الألغاز",
+      "lasers": "الليزر",
+      "avgTime": "متوسط الوقت"
+    },
+    "designFluency": {
+      "title": "طلاقة التصميم",
+      "uniqueDesigns": "تصاميم فريدة",
+      "duplicates": "مكررات",
+      "round": "الجولة",
+      "roundComplete": "اكتملت الجولة",
+      "youCreatedDesigns": "أنشأت {{count}} تصميمات",
+      "startRound": "ابدأ الجولة",
+      "instructions": "التعليمات",
+      "designs": "التصاميم",
+      "clear": "مسح",
+      "addDesign": "إضافة"
+    },
+    "signpost": {
+      "title": "لافتات",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "avgTime": "متوسط الوقت",
+      "maxGrid": "أكبر شبكة"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "المستوى",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "undos": "التراجعات",
+      "puzzle": "لغز"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "الحركة البيولوجية",
+      "noiseDots": "نقاط ضوضاء",
+      "whichDirection": "أي اتجاه؟",
+      "left": "يسار",
+      "right": "يمين"
+    },
+    "inertia": {
+      "title": "قصور",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "gems": "الأحجار الكريمة",
+      "moves": "الحركات"
+    },
+    "waterLevel": {
+      "title": "مستوى الماء",
+      "error": "خطأ",
+      "tilt": "الميل",
+      "waterLine": "خط الماء؟"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxGrid": "أكبر شبكة"
+    },
+    "sudoku": {
+      "title": "سودوكو",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "errors": "الأخطاء",
+      "avgTime": "متوسط الوقت",
+      "erase": "مسح"
+    },
+    "rectangles": {
+      "title": "مستطيلات",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "rectanglesCount": "مستطيلات",
+      "maxGrid": "أكبر شبكة",
+      "cancelSelection": "إلغاء التحديد"
+    },
+    "filling": {
+      "title": "ملء",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "avgTime": "متوسط الوقت",
+      "grid": "شبكة"
+    },
+    "spacedRetrieval": {
+      "title": "الاسترجاع المتباعد",
+      "studyPair": "ادرس هذا الزوج",
+      "waitAndSolve": "انتظر… ثم أجب",
+      "equalsQuestion": "= ؟",
+      "intervalWhatPairs": "الفاصل: أي أزواج؟"
+    },
+    "prototypeDistortion": {
+      "title": "تشويه النموذج الأولي",
+      "studyPhase": "مرحلة الدراسة",
+      "testPhase": "مرحلة الاختبار",
+      "yesBelongs": "نعم — ينتمي",
+      "noRandom": "لا — عشوائي"
+    },
+    "motionCoherence": {
+      "title": "تماسك الحركة",
+      "threshold": "العتبة",
+      "coherence": "التماسك",
+      "whichDirection": "أي اتجاه؟"
+    },
+    "cube": {
+      "title": "مكعب",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxLevel": "أعلى مستوى",
+      "cubeFaces": "أوجه المكعب",
+      "moveUp": "أعلى",
+      "moveLeft": "يسار",
+      "moveDown": "أسفل",
+      "moveRight": "يمين"
+    },
+    "sameGame": {
+      "title": "نفس اللعبة",
+      "score": "النتيجة",
+      "cleared": "تم المسح",
+      "cells": "الخلايا",
+      "accuracy": "الدقة"
+    },
+    "crossModalMatching": {
+      "title": "المطابقة عبر الحواس",
+      "chance": "فرصة",
+      "whichPatternMatchesRhythm": "أي نمط يطابق الإيقاع؟"
+    },
+    "mosaic": {
+      "title": "فسيفساء",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxGrid": "أكبر شبكة"
+    },
+    "spotDiff": {
+      "title": "اكتشف الفرق",
+      "level": "المستوى",
+      "grid": "شبكة",
+      "accuracy": "الدقة",
+      "perfect": "مثالي",
+      "avgTime": "متوسط الوقت",
+      "found": "وجد"
+    },
+    "lightsOut": {
+      "title": "أطفئ الأنوار",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxGrid": "أكبر شبكة"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "rotations": "الدورانات",
+      "avgTime": "متوسط الوقت"
+    },
+    "tracks": {
+      "title": "سكك",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "errors": "الأخطاء",
+      "avgTime": "متوسط الوقت"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "slides": "الشرائح",
+      "maxGrid": "أكبر شبكة"
+    },
+    "cognitiveBias": {
+      "title": "تدريب التحيزات المعرفية",
+      "biasResistance": "مقاومة التحيز",
+      "biased": "متحيز",
+      "continue": "متابعة"
+    },
+    "empathicAccuracy": {
+      "title": "الدقة التعاطفية",
+      "emotionId": "العاطفة",
+      "avgRatingError": "متوسط خطأ التقييم",
+      "scenarios": "السيناريوهات",
+      "perfect": "مثالي",
+      "rating": "التقييم",
+      "howDoesCharacterFeel": "ما شعور الشخصية؟",
+      "rateIntensity": "قيّم الشدة",
+      "whatEmotion": "ما المشاعر؟",
+      "yourRating": "تقييمك",
+      "correct": "صحيح",
+      "emotion": "العاطفة"
+    },
+    "guess": {
+      "title": "ماسترمايند",
+      "solved": "تم الحل",
+      "guesses": "التخمينات"
+    },
+    "dominosa": {
+      "title": "دومينوسا",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxLevel": "أعلى مستوى"
+    },
+    "magnets": {
+      "title": "مغناطيس",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxLevel": "أعلى مستوى"
+    },
+    "tangram": {
+      "placeAll": "ضع جميع القطع",
+      "solved": "تم الحل!",
+      "notRight": "ليس صحيحاً تماماً",
+      "title": "Tangram",
+      "level": "المستوى",
+      "puzzles": "الألغاز",
+      "placements": "التوضيعات",
+      "removals": "الإزالات",
+      "puzzleNumber": "لغز {{n}}",
+      "pieces": "القطع",
+      "targetCells": "Cible",
+      "dragHint": "اسحب أو ضع القطعة على الشبكة",
+      "selectHint": "اختر قطعة",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "تحقق"
+    },
+    "galaxies": {
+      "title": "مجرات"
+    },
+    "flood": {
+      "title": "فيضان"
+    },
+    "pegs": {
+      "title": "سوليتير",
+      "bestPegs": "أفضل أوتاد"
+    },
+    "auditoryFigureGround": {
+      "title": "الشكل والخلفية السمعية",
+      "patternPresent": "هل يوجد نمط؟",
+      "pattern": "النمط",
+      "noPattern": "لا نمط"
+    },
+    "selfOrderedPointing": {
+      "title": "الإشارة الذاتية الترتيب",
+      "maxSpan": "أقصى مدى",
+      "errors": "الأخطاء",
+      "round": "الجولة",
+      "setOf": "مجموعة من {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "الرسم بالمرآة",
+      "totalErrors": "إجمالي الأخطاء",
+      "avgTime": "متوسط الوقت",
+      "shapes": "الأشكال",
+      "perfect": "مثالي",
+      "improvement": "التحسن",
+      "errorsMiddot": "أخطاء ·",
+      "shape": "الشكل",
+      "errors": "الأخطاء",
+      "xIsMirrored": "محور X معكوس!"
+    },
+    "clockDrawing": {
+      "title": "رسم الساعة",
+      "avgError": "متوسط الخطأ",
+      "setTo": "ضبط على ",
+      "submit": "إرسال"
+    },
+    "cognitiveMap": {
+      "title": "الخريطة المعرفية",
+      "explore": "استكشف",
+      "sRemaining": "S Remaining",
+      "from": "من",
+      "whichDirectionIs": "في أي اتجاه "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "حلقة"
+    },
+    "lightup": {
+      "title": "أكاري"
+    },
+    "twentyFortyEight": {
+      "maxTile": "أعلى بلاطة",
+      "moves": "الحركات",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "جسور",
+      "puzzles": "الألغاز",
+      "maxLevel": "أعلى مستوى",
+      "level": "المستوى"
+    },
+    "net": {
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxGrid": "أكبر شبكة"
+    },
+    "flip": {
+      "title": "قلب"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "مائل"
+    },
+    "towers": {
+      "title": "أبراج",
+      "puzzles": "الألغاز",
+      "avgTime": "متوسط الوقت",
+      "erase": "مسح"
+    },
+    "pearl": {
+      "title": "لؤلؤ",
+      "edges": "الحواف"
+    },
+    "mapColoring": {
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "moves": "الحركات",
+      "maxLevel": "أعلى مستوى"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "أموات أحياء",
+      "accuracy": "الدقة",
+      "puzzles": "الألغاز",
+      "avgTime": "متوسط الوقت"
+    },
+    "untangle": {
+      "title": "فك التشابك",
+      "drags": "السحب",
+      "maxNodes": "أقصى عقد"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "لعبة 15"
+    },
+    "tents": {
+      "title": "خيام"
+    },
+    "mesker": {
+      "pen": "القلم",
+      "stroke": "الخط",
+      "penPressureHint": "اكتب بضغط قلم ثابت"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "اسحب إلى موقع N-back. إذا كان نفس الموقع، انقر مرتين.",
+    "hint": {
+      "validated": "تم التأكيد",
+      "draw": "ارسم الحرف • انقر للتأكيد",
+      "drawWithColor": "ارسم الحرف • اختر اللون • انقر للتأكيد",
+      "type": "اكتب الحرف • Enter للتأكيد",
+      "typeWithColor": "اكتب الحرف • اختر اللون • Enter للتأكيد",
+      "typeResult": "اكتب النتيجة • Enter للتأكيد",
+      "writeResult": "اكتب النتيجة • انقر للتأكيد"
+    },
+    "keyboard": {
+      "letterInput": "حرف",
+      "numberInput": "رقم"
+    },
+    "arithmetic": {
+      "cueHint": "احفظ الرقمين",
+      "refresh": "جديد"
+    },
+    "hintPosition": "أين كان المحفز قبل {{n}} جولات؟",
+    "hintN0": "أشر إلى المحفز الحالي",
+    "warmupHint": "احفظ المواقع. لا حاجة للاستجابة.",
+    "hintDraw": "ارسم الحرف • انقر للتأكيد",
+    "hintDrawWithColor": "ارسم الحرف • اختر اللون • انقر للتأكيد",
+    "hintWriteResult": "اكتب النتيجة • انقر للتأكيد",
+    "guide": {
+      "swipeNormal": "اسحب من الخلية الأخيرة إلى N-{{n}}. انقر مرتين إذا كان الموضع نفسه.",
+      "swipeSequential": "اسحب من N-0 إلى N-{{n}} خطوة بخطوة. انقر مرتين إذا كان الموضع نفسه.",
+      "swipeDynamic": "اسحب وفقًا للقاعدة المعروضة. انقر مرتين إذا كان الموضع نفسه.",
+      "tapN0": "انقر على الموضع الحالي.",
+      "warmup": "احفظ المواضع — لا حاجة للإجابة.",
+      "writeDraw": "ارسم الحرف الذي سمعته قبل {{n}} خطوات • انقر للتأكيد",
+      "writeDrawColor": "ارسم الحرف الذي سمعته قبل {{n}} خطوات • اختر لونه • انقر للتأكيد",
+      "writeType": "اكتب الحرف الذي سمعته قبل {{n}} خطوات • Enter للتأكيد",
+      "writeTypeColor": "اكتب الحرف الذي سمعته قبل {{n}} خطوات • اختر لونه • Enter للتأكيد",
+      "writeDrawN0": "ارسم الحرف الذي سمعته للتو • انقر للتأكيد",
+      "writeDrawColorN0": "ارسم الحرف الذي سمعته للتو • اختر لونه • انقر للتأكيد",
+      "writeTypeN0": "اكتب الحرف الذي سمعته للتو • Enter للتأكيد",
+      "writeTypeColorN0": "اكتب الحرف الذي سمعته للتو • اختر لونه • Enter للتأكيد",
+      "writeResult": "اكتب النتيجة • انقر للتأكيد",
+      "validated": "تم التأكيد",
+      "holdMindful": "اضغط مع الاستمرار على الخلية لمدة {{seconds}} ثانية",
+      "swipeMindful": "اسحب خلال {{seconds}} ثانية"
+    },
+    "settings": {
+      "adaptiveTiming": "توقيت تكيفي",
+      "inputKeyboard": "لوحة المفاتيح",
+      "inputHandwriting": "الكتابة اليدوية",
+      "writingInput": "حروف/أرقام",
+      "section": {
+        "grid": "الشبكة",
+        "input": "الإدخال",
+        "rhythm": "الإيقاع",
+        "interface": "الواجهة",
+        "interfaceNone": "قياسي",
+        "sound": "الصوت"
+      },
+      "isi": "الفاصل الزمني (ISI)",
+      "stimulusDuration": "مدة المحفز",
+      "feedbackDuration": "مدة التغذية الراجعة",
+      "ruleDisplay": "عرض القاعدة",
+      "blankInterval": "فاصل فارغ",
+      "showProgressBar": "شريط التقدم",
+      "showInstructions": "تعليمات اللعب",
+      "arithmeticInterference": "تداخل حسابي",
+      "fullMenu": "القائمة الكاملة",
+      "gridStyle": "نمط الشبكة",
+      "gridStyleClassic": "كلاسيكي",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "اسحب خلال {{seconds}} ثانية",
+        "holdMindful": "اضغط مع الاستمرار على الخلية لمدة {{seconds}} ثانية"
+      },
+      "feedback": {
+        "gestureDuration": "الإيماءة",
+        "holdDuration": "الضغط المستمر",
+        "writingDuration": "الكتابة"
+      }
+    },
+    "feedback": {
+      "holdDuration": "ضغط",
+      "gestureDuration": "إيماءة",
+      "writingDuration": "كتابة"
+    },
+    "image": "الشكل",
+    "digits": "Digits",
+    "emotions": "العاطفة",
+    "words": "الكلمة",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "إعادة عرض الجلسة",
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "restart": "إعادة البدء",
+    "speed": "السرعة",
+    "loading": "جاري تحميل الجلسة...",
+    "unavailable": "إعادة العرض غير متاحة لهذه الجلسة",
+    "backToStats": "العودة للإحصائيات",
+    "runStack": {
+      "original": "الأصلي",
+      "correction": "التصحيح",
+      "delta": "Δ d'",
+      "inProgress": "قيد التقدم",
+      "completed": "مكتمل"
+    },
+    "abandon": "الخروج",
+    "badge": "إعادة",
+    "completionReport": {
+      "backToHome": "العودة",
+      "correctAgain": "صحح مرة أخرى",
+      "deltaVsOriginal": "مقابل الأصلي",
+      "deltaVsParent": "مقابل المحاولة السابقة",
+      "falseAlarmsSkipped": "أخطاء تم تجنبها",
+      "missesCorrections": "تصحيحات الأخطاء",
+      "newFalseAlarms": "أخطاء جديدة",
+      "replayAgain": "مراجعة",
+      "scoreLabel": "نتيجة التصحيح",
+      "title": "اكتمل التصحيح"
+    },
+    "controls": "التحكم",
+    "correction": "تصحيح",
+    "finished": "انتهت المراجعة",
+    "home": "الرئيسية",
+    "parseError": "تعذر قراءة الجلسة",
+    "tapSlotToPlace": "انقر على خانة للتوضيع",
+    "timeline": "الخط الزمني",
+    "focusTimeline": {
+      "open": "عرض الخط الزمني",
+      "close": "إغلاق الخط الزمني",
+      "title": "خط زمني N-back",
+      "fillAll": "ملء الكل",
+      "fillCard": "ملء البطاقة"
+    },
+    "hud": {
+      "counterDisplay": "عرض العداد",
+      "toggleCounterDisplay": "تبديل عرض العداد"
+    },
+    "validate": "تأكيد التصحيح"
+  },
+  "recovery": {
+    "title": "جلسة متوقفة",
+    "description": "كانت هناك جلسة قيد التقدم. هل تريد استئنافها؟",
+    "mode": "الوضع",
+    "level": "المستوى",
+    "progress": "التقدم",
+    "timeAgo": "منذ",
+    "resume": "استئناف الجلسة",
+    "startFresh": "البدء من جديد",
+    "staleWarning": "هذه الجلسة قديمة، قد يكون الاستئناف صعباً.",
+    "modes": {
+      "game": "التدريب",
+      "activeTraining": "التدريب النشط",
+      "flowTraining": "تدريب Dual Place",
+      "dualPickTraining": "اختيار مزدوج",
+      "traceTraining": "تتبع مزدوج"
+    }
+  },
+  "rewards": {
+    "congratulations": "تهانينا!",
+    "duration": "{{days}} يوم Premium",
+    "lifetimeLabel": "وصول دائم",
+    "expiresAt": "صالح حتى {{date}}",
+    "neverExpires": "لا ينتهي أبداً",
+    "continue": "متابعة",
+    "discovery": {
+      "name": "تصريح الاكتشاف",
+      "description": "7 أيام Premium — استكشف جميع الميزات"
+    },
+    "engagement": {
+      "name": "تصريح الالتزام",
+      "description": "شهر واحد Premium — انضباطك يُكافأ"
+    },
+    "expert": {
+      "name": "تصريح الخبير",
+      "description": "3 أشهر Premium — أنت ممارس حقيقي"
+    },
+    "lifetime": {
+      "name": "وصول دائم",
+      "description": "Premium مدى الحياة — أتقنت Neurodual"
+    },
+    "xpRemaining": "XP المتبقية",
+    "permanentAccessUnlocked": "تم فتح الوصول الدائم",
+    "reachedTheTop": "وصلت إلى القمة!"
+  },
+  "progression": {
+    "level": "المستوى {{level}}",
+    "levelShort": "مس. {{level}}",
+    "nextLevel": "المستوى التالي",
+    "reached": "تم الوصول",
+    "inProgress": "قيد التقدم"
+  },
+  "gridlock": {
+    "nextPuzzle": "اللغز التالي ←"
+  }
+}

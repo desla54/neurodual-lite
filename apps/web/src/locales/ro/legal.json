@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Toate drepturile rezervate.",
+    "terms": {
+      "title": "Condiții de utilizare",
+      "version": "Versiunea 3.0 — Ultima actualizare: 2026-03-04",
+      "healthWarning": {
+        "title": "AVERTISMENT IMPORTANT PRIVIND SĂNĂTATEA",
+        "content": "NeuroDual este o aplicație de antrenament cognitiv și bunăstare. <strong>Nu este un dispozitiv medical.</strong> Nu diagnostichează, nu tratează, nu vindecă și nu previne nicio boală. Dacă ai nelămuriri sau resimți disconfort, oprește utilizarea aplicației și consultă un profesionist din domeniul sănătății."
+      },
+      "section1": {
+        "title": "1. Scop și acceptare",
+        "content": "Prin descărcarea, instalarea sau utilizarea NeuroDual, accepți necondiționat aceste Condiții de utilizare. Dacă nu accepți acești termeni, te rugăm să nu folosești aplicația."
+      },
+      "section2": {
+        "title": "2. Descrierea serviciului",
+        "content": "NeuroDual oferă antrenament Dual N-Back pentru memoria de lucru, cu gestionarea datelor la nivel local și opțiuni de sincronizare prin cont. Serviciul este furnizat ca atare și poate evolua.",
+        "item1": "Compatibilitate: aplicații web și mobile (sub rezerva disponibilității).",
+        "item2": "Acces: unele funcționalități necesită conexiune la internet și/sau crearea unui cont.",
+        "item3": "Actualizări: putem implementa corecții sau actualizări fără notificare prealabilă, din motive de securitate sau performanță.",
+        "item4": "Publicitate: versiunea mobilă gratuită poate afișa reclame interstițiale (Google AdMob). Utilizatorii Premium nu văd publicitate."
+      },
+      "section3": {
+        "title": "3. Conturi și securitate",
+        "item1": "Crearea opțională a contului prin e-mail sau furnizor de identitate (Google, Apple).",
+        "item2": "Ești responsabil pentru menținerea confidențialității acreditărilor tale și a tuturor acțiunilor efectuate cu contul tău.",
+        "item3": "Ștergerea contului și a datelor asociate este disponibilă din Setări.",
+        "item4": "Putem suspenda sau închide un cont în caz de încălcare a acestor Condiții, tentative de fraudă sau breșe de securitate."
+      },
+      "section4": {
+        "title": "4. Reguli și restricții de utilizare",
+        "item1": "Nu ocoliți măsurile de securitate sau limitările tehnice.",
+        "item2": "Nu utilizați aplicația în scopuri ilegale sau dăunătoare.",
+        "item3": "Nu încercați ingineria inversă sau extragerea neautorizată a conținutului.",
+        "item4": "Respectați drepturile de proprietate intelectuală asupra aplicației și conținutului acesteia."
+      },
+      "section5": {
+        "title": "5. Proprietate intelectuală",
+        "content": "Toate elementele (text, grafică, sunete, cod sursă, logo-uri) sunt protejate de dreptul de autor și rămân proprietatea editorului sau licențiatorilor săi. Nicio licență nu este acordată, cu excepția dreptului personal, neexclusiv și netransferabil de a utiliza aplicația în conformitate cu aceste Condiții."
+      },
+      "section6": {
+        "title": "6. Disponibilitate și suport",
+        "content": "Serviciul este accesibil 24/7, sub rezerva întreținerii sau a forței majore. Nu garantăm disponibilitatea sau performanța continuă. Suport: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Achiziții din aplicație / Abonamente",
+        "content": "Sunt disponibile abonamente Premium: anual și pe viață (10 ani). Plățile sunt gestionate de RevenueCat (mobil) sau Lemon Squeezy (web). Se aplică <strong>Condițiile de vânzare</strong> (prețuri, retragere, reînnoire, anulare, rambursare), disponibile înainte de achiziție."
+      },
+      "section8": {
+        "title": "8. Responsabilitate",
+        "item1": "Serviciul este furnizat „ca atare”, fără garanție de rezultate.",
+        "item2": "Nu suntem responsabili pentru daunele directe sau indirecte legate de utilizare, pierderea datelor locale nesalvate sau interpretarea statisticilor.",
+        "item3": "Dacă resimți disconfort, efecte adverse sau nelămuriri cu privire la sănătate, oprește utilizarea."
+      },
+      "section9": {
+        "title": "9. Date personale",
+        "content": "Prelucrarea datelor cu caracter personal este descrisă în <a>Politica de confidențialitate</a>. În caz de conflict între Condiții și Politica de confidențialitate în materie de date, Politica de confidențialitate prevalează."
+      },
+      "section10": {
+        "title": "10. Modificări ale condițiilor",
+        "content": "Putem modifica aceste Condiții din motive legale, tehnice sau de serviciu. Data actualizării va apărea în partea de sus a documentului. În cazul unor modificări substanțiale, o notificare va fi afișată în aplicație."
+      },
+      "section11": {
+        "title": "11. Legislație aplicabilă și litigii",
+        "content": "Aceste Condiții sunt reglementate de legislația franceză. În caz de litigiu și după încercări amiabile, utilizatorii consumatori pot recurge la medierea consumatorilor sau la platforma europeană de soluționare online a litigiilor (ODR). În caz contrar, instanțele franceze vor avea competență exclusivă."
+      },
+      "section12": {
+        "title": "12. Contact",
+        "content": "Pentru orice întrebări privind aceste Condiții:"
+      }
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "version": "Versiunea 3.0 — Ultima actualizare: 2026-03-04",
+      "intro": {
+        "p1": "Această Politică de confidențialitate descrie modul în care NeuroDual (\"noi\") prelucrează datele tale cu caracter personal când folosești aplicația noastră mobilă și site-ul web.",
+        "p2": "Aplicăm principiile Regulamentului General privind Protecția Datelor (GDPR) și ale Legii franceze privind protecția datelor. Favorizăm o arhitectură „local-first”, nu vindem și nu închiriem datele tale și folosim măsurarea audienței pentru a îmbunătăți produsul."
+      },
+      "section1": {
+        "title": "1. Operatorul de date",
+        "responsible": "Operator:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Sediul social:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Franța",
+        "siret": "SIRENA:",
+        "siretValue": "818 474 082",
+        "email": "E-mail:",
+        "dpo": "DPO: AGUILAL Abdeslam (același contact). Pentru orice întrebări despre datele tale, contactează adresa de mai sus."
+      },
+      "section2": {
+        "title": "2. Datele pe care le colectăm",
+        "sub1": {
+          "title": "2.1 Date generate de utilizator (Mod local)",
+          "content": "Stocate doar pe dispozitivul tău prin SQLite atâta timp cât rămâi deconectat:",
+          "item1": "Scoruri și istoricul sesiunilor N-Back.",
+          "item2": "Setări de configurare a jocului.",
+          "item3": "Profil local (pseudonim, avatar ales).",
+          "note": "Aceste date nu trec prin serverele noastre până nu creezi un cont. Dacă dezinstalezi aplicația, aceste date se pierd."
+        },
+        "sub2": {
+          "title": "2.2 Date de cont (Opțional)",
+          "content": "Dacă creezi un cont pentru a-ți sincroniza datele:",
+          "item1": "Adresa de e-mail (identificator unic).",
+          "item2": "ID utilizator furnizat de furnizorul de identitate (Google, Apple).",
+          "note": "Aceste date sunt gestionate prin furnizorul nostru de autentificare (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Jurnale tehnice",
+          "content": "Jurnale pseudonimizate (erori, starea sincronizării, performanță) pentru securitate și suport."
+        },
+        "sub4": {
+          "title": "2.4 Date de suport",
+          "content": "Schimburile de e-mail cu suportul pot conține datele tale de contact și conținutul solicitării pentru a răspunde."
+        },
+        "sub5": {
+          "title": "2.5 Monitorizare și urmărirea erorilor",
+          "content": "Date tehnice (erori, performanță, comportament anormal) colectate prin Sentry pentru a îmbunătăți stabilitatea aplicației. Date pseudonimizate, fără direcționare publicitară."
+        },
+        "sub6": {
+          "title": "2.6 Măsurarea audienței și analiză de produs",
+          "content": "Date de utilizare anonimizate colectate prin PostHog (pagini vizitate, acțiuni în aplicație, tip de dispozitiv) pentru a îmbunătăți produsul. Niciun fel de date cu caracter personal nu sunt transmise. Fără direcționare publicitară."
+        },
+        "sub7": {
+          "title": "2.7 Publicitate (Versiunea mobilă gratuită)",
+          "content": "Versiunea gratuită Android afișează reclame interstițiale prin Google AdMob. Google poate colecta un identificator publicitar și date tehnice (tip de dispozitiv, limbă, interacțiuni cu reclame). Utilizatorii Premium nu sunt expuși la publicitate. Mai multe informații: politica de confidențialitate Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Scopuri și baze legale",
+        "content": "Folosim datele tale doar pentru:",
+        "item1": "<strong>Funcționarea serviciului</strong> (backup local, statistici, sincronizare multi-dispozitiv) — Bază legală: executarea contractului (Art. 6.1.b GDPR).",
+        "item2": "<strong>Securitate și prevenirea fraudei</strong> (jurnalizare tehnică, controlul accesului) — Bază legală: interes legitim (Art. 6.1.f GDPR).",
+        "item3": "<strong>Suport pentru utilizatori</strong> — Bază legală: interes legitim (răspuns la solicitări).",
+        "item4": "<strong>Obligații legale</strong> — Bază legală: obligație legală (Art. 6.1.c GDPR).",
+        "item5": "<strong>Monitorizare și urmărirea erorilor</strong> — Bază legală: interes legitim (îmbunătățirea stabilității); date pseudonimizate, fără publicitate personalizată.",
+        "item6": "<strong>Măsurarea audienței</strong> (analiză de produs anonimizată prin PostHog) — Bază legală: interes legitim (Art. 6.1.f GDPR); date anonimizate.",
+        "note": "Orice schimbare de scop va fi documentată într-o actualizare a acestei politici.",
+        "item7": "<strong>Publicitate</strong> (afișarea reclamelor interstițiale pentru utilizatorii mobili gratuiți) — Bază legală: interes legitim (Art. 6.1.f GDPR).",
+        "item8": "<strong>Marketing și buletine informative</strong> — Bază legală: consimțământ explicit (Art. 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Perioade de păstrare",
+        "item1": "<strong>Date locale:</strong> stocate pe dispozitivul tău și șterse la dezinstalare sau resetare.",
+        "item2": "<strong>Cont și date sincronizate:</strong> păstrate cât contul este activ. Șterse în 30 de zile de la solicitarea de ștergere a contului.",
+        "item3": "<strong>Jurnale tehnice:</strong> păstrate maximum 12 luni, apoi șterse automat.",
+        "item4": "<strong>Monitorizare:</strong> date tehnice pseudonimizate păstrate 90 de zile pentru urmărirea erorilor și îmbunătățirea produsului.",
+        "item5": "<strong>Solicitări de suport:</strong> păstrate 24 de luni după închiderea tichetului, apoi șterse.",
+        "item6": "<strong>Date de audiență (PostHog):</strong> anonimizate, păstrate 12 luni."
+      },
+      "section5": {
+        "title": "5. Destinatari, procesatori și transferuri",
+        "content": "Datele tale pot fi prelucrate de următorii furnizori:",
+        "item1": "Supabase Inc. (autentificare și bază de date cloud, găzduire UE).",
+        "item2": "Amazon Web Services (infrastructura Supabase, regiuni UE).",
+        "item3": "Cloudflare Inc. (găzduirea aplicației web, CDN și securitate).",
+        "item4": "Sentry (monitorizarea erorilor și performanței; transferuri în afara UE reglementate de Clauzele Contractuale Standard).",
+        "item5": "RevenueCat Inc. (gestionarea abonamentelor și plăților mobile; nu stochează date de card de credit).",
+        "note": "Dacă se adaugă un nou furnizor, această secțiune va fi actualizată.",
+        "transfers": "<strong>Transferuri în afara UE:</strong> când sunt implicați furnizori din afara UE (ex. Cloudflare, Supabase entitate US, Sentry, RevenueCat, Google AdMob), transferurile sunt reglementate de Clauzele Contractuale Standard (SCC) ale Comisiei Europene sau un mecanism echivalent.",
+        "item6": "PostHog Inc. (măsurarea audienței și analiză de produs; date anonimizate; găzduire UE).",
+        "item7": "Lemon Squeezy (gestionarea plăților web; nu stochează date de card de credit).",
+        "item8": "Google AdMob (afișarea publicității în versiunea mobilă gratuită; transferuri în afara UE reglementate de Clauzele Contractuale Standard)."
+      },
+      "section6": {
+        "title": "6. Drepturile tale",
+        "content": "Conform GDPR, ai următoarele drepturi:",
+        "item1": "Acces, rectificare, ștergere.",
+        "item2": "Restricționare și opoziție (în funcție de baza legală).",
+        "item3": "Portabilitate (exportă-ți datele în JSON sau CSV).",
+        "item4": "Retragerea consimțământului (unde este cazul).",
+        "item5": "Plângere la autoritatea de supraveghere (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Ștergerea contului:</strong> poți șterge contul și toate datele asociate direct din Setările aplicației. Această acțiune este ireversibilă.",
+        "exercise": "Pentru a-ți exercita celelalte drepturi, contactează <strong>support@neurodual.fr</strong>. Dovada identității poate fi solicitată în caz de dubiu rezonabil. Timp de răspuns: 1 lună (extensibil la 3 luni în cazuri complexe)."
+      },
+      "section7": {
+        "title": "7. Securitate",
+        "content": "Comunicații criptate (HTTPS/TLS), acces restricționat la administratori, controale de permisiuni. În cazul unei breșe de date susceptibilă de a prezenta un risc, notificările legale vor fi efectuate (CNIL și persoanele afectate)."
+      },
+      "section8": {
+        "title": "8. Cookie-uri și stocare locală",
+        "content": "Aplicația folosește SQLite pentru a stoca progresul tău direct pe dispozitiv. Se utilizează doar cookie-uri tehnice esențiale (autentificare, sesiune). Versiunea mobilă gratuită folosește Google AdMob, care poate seta cookie-uri sau identificatori publicitari."
+      },
+      "section9": {
+        "title": "9. Minori",
+        "content": "NeuroDual este destinată utilizatorilor de peste 16 ani. Minorii trebuie să folosească aplicația sub responsabilitatea unui tutore legal."
+      },
+      "section10": {
+        "title": "10. Modificări",
+        "content": "Orice versiune actualizată va fi publicată aici cu data ultimei actualizări. În cazul unor modificări substanțiale, o notificare va fi furnizată în aplicație."
+      },
+      "section11": {
+        "title": "11. Contact",
+        "content": "Pentru orice întrebări sau pentru a-ți exercita drepturile:",
+        "email": "E-mail: support@neurodual.fr",
+        "responsible": "Operator de date: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Condiții de vânzare",
+      "version": "Abonamente anuale și pe viață — Ultima actualizare: 2026-03-04",
+      "section1": {
+        "title": "1. Scop",
+        "content": "Aceste Condiții de vânzare reglementează abonarea la planurile premium NeuroDual (anual și pe viață). Ele completează <a1>Condițiile de utilizare</a1> și <a2>Politica de confidențialitate</a2>."
+      },
+      "section2": {
+        "title": "2. Ofertă și prețuri",
+        "item1": "<strong>Abonament anual</strong>: preț afișat înainte de plată (inclusiv TVA dacă este cazul), reînnoit automat în fiecare an.",
+        "item2": "<strong>Abonament pe viață (10 ani)</strong>: plată unică ce oferă acces la funcțiile premium timp de 10 ani fără reînnoire automată.",
+        "item3": "Acces Premium: sincronizare cloud multi-dispozitiv, backup-uri la distanță, acces la toate nivelurile N, exporturi avansate, experiență fără reclame, suport prioritar.",
+        "item4": "Prețurile curente sunt disponibile pe pagina de abonament din aplicație și în magazine (App Store, Google Play).",
+        "item5": "Prețurile pot fi modificate; orice modificare este comunicată înainte de reînnoire pentru a permite anularea (nu se aplică la abonamentul pe viață)."
+      },
+      "section3": {
+        "title": "3. Durată, reînnoire și anulare",
+        "item1": "<strong>Abonament anual</strong>: durată de 12 luni de la data abonării.",
+        "item2": "<strong>Abonament pe viață</strong>: durată de 10 ani de la data abonării, fără reînnoire.",
+        "item3": "Reînnoire (anual): reînnoire automată la fiecare termen, cu excepția cazului în care este anulat în avans.",
+        "item4": "Anulare (anual): posibilă oricând din setările aplicației sau magazinului (App Store, Google Play). Intră în vigoare la sfârșitul perioadei curente.",
+        "item5": "Abonamentul pe viață nu poate fi anulat, dar rămâne supus dreptului legal de retragere (vezi secțiunea 5)."
+      },
+      "section4": {
+        "title": "4. Plată",
+        "item1": "Plățile sunt gestionate de RevenueCat prin magazine (App Store, Google Play) sau Lemon Squeezy pentru web. Nu stocăm datele cardului tău de credit.",
+        "item2": "În cazul eșecului plății (abonamente recurente), accesul premium poate fi suspendat până la rezolvare.",
+        "item3": "Rambursările pentru achizițiile prin App Store sau Google Play trebuie solicitate magazinului respectiv."
+      },
+      "section5": {
+        "title": "5. Dreptul de retragere",
+        "content": "Serviciu digital furnizat după achiziție. Dacă soliciți executarea imediată înainte de sfârșitul perioadei legale de 14 zile, recunoști că renunți la dreptul de retragere la livrarea completă a serviciului. Fără renunțare expresă, poți exercita dreptul de retragere în 14 zile de la achiziție scriind la support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Rambursare",
+        "content": "În afara dreptului legal de retragere, abonamentele deja începute nu sunt rambursabile, cu excepția dispozițiilor obligatorii sau a defectelor majore atribuibile serviciului."
+      },
+      "section7": {
+        "title": "7. Modificări ale ofertei",
+        "content": "Funcțiile premium pot evolua. Orice eliminare a unei funcții esențiale va fi comunicată în avans și, dacă este cazul, cu opțiunea de a anula fără costuri înainte de termen."
+      },
+      "section8": {
+        "title": "8. Date personale",
+        "content": "Prelucrarea datelor de facturare și cont este detaliată în <a>Politica de confidențialitate</a>."
+      },
+      "section9": {
+        "title": "9. Serviciu clienți",
+        "content": "Pentru orice întrebări, rambursări în temeiul dreptului de retragere sau reclamații:"
+      }
+    },
+    "mentions": {
+      "title": "Mențiuni legale",
+      "version": "Ultima actualizare:",
+      "section1": {
+        "title": "1. Editor",
+        "company": "Denumirea companiei:",
+        "companyValue": "AGUILAL Abdeslam (Întreprindere individuală)",
+        "address": "Adresă:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Franța",
+        "siren": "SIRENA:",
+        "sirenValue": "818 474 082",
+        "email": "E-mail:"
+      },
+      "section2": {
+        "title": "2. Director de publicație",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-mail:"
+      },
+      "section3": {
+        "title": "3. Găzduire",
+        "content": "Aplicația NeuroDual este găzduită de:",
+        "webapp": "Aplicația web",
+        "database": "Baza de date și autentificarea",
+        "databaseInfra": "Infrastructură: Amazon Web Services (regiune UE - eu-central-1)",
+        "monitoring": "Monitorizare și urmărirea erorilor",
+        "subscriptions": "Gestionarea abonamentelor",
+        "analytics": "Măsurarea audienței",
+        "analyticsInfra": "Găzduire UE",
+        "advertising": "Publicitate (versiunea mobilă gratuită)",
+        "payments": "Plăți web",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, SUA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, SUA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, SUA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, SUA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, SUA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, SUA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, SUA"
+      },
+      "section4": {
+        "title": "4. Proprietate intelectuală",
+        "p1": "Toate elementele aplicației NeuroDual (text, grafică, sunete, cod sursă, logo-uri, mărci) sunt protejate de dreptul de autor și de legea mărcilor comerciale. Orice reproducere, reprezentare sau exploatare neautorizată este interzisă.",
+        "p2": "Codul sursă al anumitor funcționalități utilizează biblioteci open source ale căror licențe respective sunt respectate."
+      },
+      "section5": {
+        "title": "5. Date personale",
+        "content": "Prelucrarea datelor cu caracter personal este descrisă în <a>Politica noastră de confidențialitate</a>.",
+        "responsible": "Operator de date:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediere și soluționarea litigiilor",
+        "p1": "În conformitate cu articolele L.611-1 și următoarele din Codul francez al consumatorului, utilizatorii consumatori pot, în caz de litigiu nesoluționat după o plângere prealabilă la serviciul nostru de clienți, recurge gratuit la un mediator al consumatorilor.",
+        "odr": "Platforma europeană de soluționare online a litigiilor (ODR):"
+      },
+      "section7": {
+        "title": "7. Documente legale",
+        "privacy": "Politica de confidențialitate",
+        "privacyNote": "(GDPR)",
+        "terms": "Condiții de utilizare",
+        "termsNote": "(ToS)",
+        "cgv": "Condiții de vânzare",
+        "cgvNote": "(Vânzări)"
+      },
+      "section8": {
+        "title": "8. Contact",
+        "content": "Pentru orice întrebări privind aceste mențiuni legale:",
+        "email": "E-mail:"
+      }
+    }
+  }
+}

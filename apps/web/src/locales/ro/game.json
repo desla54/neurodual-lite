@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Cum te simți?",
+      "tired": "Obosit",
+      "normal": "Normal",
+      "energized": "Energic"
+    },
+    "aria": {
+      "trialTimer": "Cronometru încercare",
+      "positionMatch": "Potrivire poziție",
+      "audioMatch": "Potrivire audio",
+      "audioLetter": "Literă audio:",
+      "traceGrid": "Grilă de trasare"
+    },
+    "syncHud": {
+      "shortLabel": "SINCRONIZARE",
+      "toggleTitle": "Comută monitorul de sincronizare",
+      "start": "începe",
+      "end": "sfârşitul",
+      "pinLabel": "fixare",
+      "pinTitle": "Fixați pe ecran",
+      "inputLabel": "intrare",
+      "inputTitle": "Comutați profilarea latenței de intrare (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "pe",
+      "off": "oprit",
+      "hideLabel": "ascunde",
+      "hideTitle": "Ascunde (cu excepția cazului în care syncHud=1 sau ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "audio",
+        "expected": "aşteptat"
+      },
+      "labels": {
+        "trial": "proces",
+        "lagShow": "Întârziere de afișare",
+        "lagHide": "Masajul retardat",
+        "winErr": "castiga greseala",
+        "endRef": "sfârşit ref",
+        "visualPreP95": "vizual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "vizual_post p95",
+        "inputToDispatchP95": "intrare->dispecerare p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "intrare->vopseaua p95",
+        "inputPending": "intrare în așteptare",
+        "inputSamples": "mostre de intrare",
+        "touchSamples": "mostre de atingere",
+        "mouseSamples": "mostre de șoarece",
+        "keyboardSamples": "mostre de tastatură",
+        "latestMethod": "ultima (metoda)",
+        "latestModality": "ultima modalitate",
+        "audioCueMode": "indicii audio",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "resetează profilerul de intrare"
+    },
+    "hud": {
+      "resume": "Reia",
+      "pause": "Pauză",
+      "quit": "Ieși",
+      "restart": "Repornește",
+      "spaceToStart": "Spațiu pentru a începe",
+      "settings": "Setări",
+      "enterToAdvance": "Enter pentru a avansa",
+      "trial": "Încercare",
+      "muteTexture": "Dezactivează sunetul de fundal"
+    },
+    "status": {
+      "paused": "În pauză"
+    },
+    "completed": "Finalizat",
+    "starting": {
+      "getReady": "Pregătește-te..."
+    },
+    "quitModal": {
+      "title": "Ieși din sesiune?",
+      "message": "Progresul tău nu va fi salvat.",
+      "confirm": "Ieși",
+      "cancel": "Continuă",
+      "close": "Închide"
+    },
+    "controls": {
+      "position": "Poziție",
+      "position2": "Poz. 2",
+      "position3": "Poz. 3",
+      "position4": "Poz. 4",
+      "visvis": "Vis și n-vis",
+      "visaudio": "Vis și n-audio",
+      "audiovis": "Audio și n-vis",
+      "vis1": "Viz. 1",
+      "vis2": "Viz. 2",
+      "vis3": "Viz. 3",
+      "vis4": "Viz. 4",
+      "audio": "Audio",
+      "audio2": "Audio 2",
+      "color": "Culoare",
+      "arithmetic": "Aritmetică",
+      "image": "Formă"
+    },
+    "arithmetic": {
+      "answer": "Răspuns",
+      "clear": "Șterge",
+      "hint": "Tastatură: 0–9 · „-” pentru semn · „.” pentru zecimale · Backspace pentru a șterge"
+    },
+    "navigation": {
+      "back": "Înapoi"
+    },
+    "xp": {
+      "title": "XP câștigat",
+      "base": "Baza (N-{{level}})",
+      "performance": "Performanță",
+      "accuracy": "Precizie",
+      "streakBonus": "Bonus serie",
+      "dailyBonus": "Primul din zi",
+      "badgeBonus": "Insigne",
+      "flowBonus": "Bonus pentru două locuri",
+      "confidenceMultiplier": "Încredere",
+      "dailyCapReached": "Limita zilnică de XP atinsă",
+      "levelReached": "Nivelul {{level}} atins!"
+    },
+    "badges": {
+      "newUnlocked": "Insigne noi deblocate"
+    },
+    "getReady": "Pregătește-te...",
+    "layoutEdit": {
+      "done": "Gata",
+      "reset": "Resetează",
+      "instructions": "Trage zonele pentru reordonare. Redimensionează folosind mânerele.",
+      "title": "Mod editare",
+      "cancel": "Anulează",
+      "save": "Blochează",
+      "editLayout": "Editează aspectul"
+    },
+    "paused": "În pauză",
+    "pressEscapeToResume": "Apasă Escape pentru a relua",
+    "settings": {
+      "editLayout": "Editează aspectul",
+      "gridAndButtons": "Grilă și butoane",
+      "swapPositionAudio": "Schimbă Poziție / Audio",
+      "title": "Setări",
+      "quickHint": "Ajustează câteva setări fără a părăsi jocul.",
+      "quickUnavailable": "Nicio setare rapidă disponibilă pentru acest mod încă."
+    },
+    "pinkNoiseInfo": "Un ton de fundal însoțește fiecare stimul. Îl poți personaliza sau dezactiva din setările audio.",
+    "pinkNoiseDismiss": "Continuă",
+    "audioMode": "Mod audio",
+    "cogTask": {
+      "precision": "Precizie",
+      "avgRt": "TM mediu",
+      "avgRtShort": "TM mediu",
+      "trials": "Încercări",
+      "correct": "Corect",
+      "errors": "Erori",
+      "effect": "Efect",
+      "restart": "Repornește",
+      "home": "Acasă",
+      "performance": "Performanță",
+      "trialDetail": "Detaliu încercare",
+      "setDetail": "Detaliu set",
+      "roundDetail": "Detaliu rundă",
+      "problemDetail": "Detaliu problemă",
+      "phaseDetail": "Detaliu fază",
+      "feedbackCorrect": "Corect",
+      "feedbackIncorrect": "Incorect",
+      "feedbackTimeout": "Prea lent!",
+      "preparing": "Pregătește-te...",
+      "loading": "Se încarcă...",
+      "left": "Stânga",
+      "right": "Dreapta",
+      "up": "Sus",
+      "down": "Jos",
+      "congruent": "congruente",
+      "incongruent": "incongruente",
+      "congruencyEffect": "Efect de congruență",
+      "maxSpan": "Amplitudine maximă",
+      "startingSpan": "Amplitudine inițială",
+      "maxSpanReached": "Amplitudine maximă atinsă",
+      "longestStreak": "Cea mai lungă serie corectă",
+      "series": "Serie",
+      "avgResponseTime": "Timp mediu de răspuns",
+      "recall": "Reamintire",
+      "expected": "Așteptat",
+      "submit": "Trimite",
+      "cancel": "Anulează",
+      "clear": "Șterge",
+      "delete": "ȘTERGE",
+      "true": "Adevărat",
+      "false": "Fals",
+      "target": "Țintă",
+      "nonTarget": "Non-țintă",
+      "distractor": "Distractor",
+      "same": "La fel",
+      "different": "Diferit",
+      "identical": "Identic",
+      "mirror": "Oglindă",
+      "symmetric": "Simetric",
+      "asymmetric": "Asimetric",
+      "symShort": "Sim.",
+      "present": "Prezent",
+      "absent": "absent",
+      "noTrials": "Nicio încercare finalizată.",
+      "noSets": "Niciun set finalizat.",
+      "noRounds": "Nicio rundă finalizată.",
+      "noProblems": "Nicio problemă finalizată.",
+      "noPhases": "Nicio etapă finalizată.",
+      "sets": "Seturi",
+      "rounds": "Runde",
+      "equations": "Ecuații",
+      "sentences": "Propoziții",
+      "equationAccuracy": "Precizia ecuației",
+      "forward": "Înainte",
+      "backward": "Înapoi",
+      "forwardMaxSpan": "Interval maxim înainte",
+      "backwardMaxSpan": "Spațiu maxim înapoi",
+      "odd": "Impar",
+      "even": "Par",
+      "score": "Scor",
+      "easy": "Ușor",
+      "hard": "Dificil",
+      "totalTrials": "Total încercări",
+      "totalErrors": "Total erori",
+      "totalErrShort": "Eroare totală.",
+      "hits": "Răspunsuri corecte",
+      "misses": "Omisiuni",
+      "falseAlarms": "Alarme F.",
+      "correctRejections": "Resp. C.",
+      "yes": "Da",
+      "no": "Nu",
+      "sessionInterrupted": "Sesiune întreruptă",
+      "reverseOrder": "în ordine inversă",
+      "normalOrder": "în ordine",
+      "lnsInstruction": "Numere crescătoare, apoi litere A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "efectul Simon",
+        "blue": "Albastru",
+        "red": "roșu",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Reprezentați acest număr",
+        "submit": "Trimite",
+        "rodLabel": "Bară {{n}}",
+        "heavenBead": "Mărgele raiului (valoare 5)",
+        "earthBead": "mărgele de pământ (valoarea 1)",
+        "instrBeadTitle": "Cum funcționează mărgelele",
+        "instrBeadDesc": "Fiecare tijă reprezintă o cifră. Margele de sus (cerul) valorează 5. Mărgele de jos (pământul) valorează 1 fiecare. Mutați margelele spre bara centrală pentru a le activa.",
+        "instrExampleTitle": "Exemplu: 7",
+        "instrExampleDesc": "7 = mărgele cerului în jos (5) + 2 mărgele pământului în sus (2). Atingeți sau trageți margele pentru a le muta.",
+        "instrGoalTitle": "Scopul tău",
+        "instrGoalDesc": "Va apărea un număr. Setează mărgelele să-l reprezinte, apoi atinge Trimite. Fii precis și rapid!",
+        "startButton": "Începe",
+        "settings": "Setări",
+        "closeSettings": "Închideți setările",
+        "settingsRods": "Numărul de tije",
+        "settingsRodsHint": "Setați prin N-Level în setările jocului",
+        "settingsTrials": "Probe pe sesiune",
+        "settingsTrialsHint": "Setați prin Trials în setările jocului",
+        "settingsRange": "Interval de numere"
+      },
+      "stroop": {
+        "pressInkColorButton": "Apăsați butonul care se potrivește cu culoarea cernelii",
+        "redWord": "ROȘU",
+        "redLabel": "roșu",
+        "blueWord": "ALBASTRU",
+        "blueLabel": "Albastru",
+        "greenWord": "VERDE",
+        "greenLabel": "Verde",
+        "yellowWord": "GALBEN",
+        "yellowLabel": "Galben"
+      },
+      "stroopFlex": {
+        "followRule": "Regula",
+        "ruleInk": "Culoare cerneală",
+        "ruleWord": "Cuvânt scris",
+        "pressMatchingRuleButton": "Apăsați butonul care se potrivește cu regula curentă"
+      },
+      "goNogo": {
+        "goTrials": "Du-te la încercări",
+        "nogoTrials": "Încercări fără acces",
+        "hitRate": "Rata de rezultate (Go)",
+        "faRate": "Rata de alarmă falsă (Nu merge)",
+        "meanRt": "Timp mediu de reacție",
+        "sensitivity": "sensibilitate",
+        "press": "Apăsați",
+        "withhold": "Reține"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Semnal de oprire RT)",
+        "ssdMean": "SSD mediu (opriri reușite)",
+        "ssd": "SSD",
+        "goRt": "Du-te RT",
+        "successfulInhibition": "Inhibare reușită",
+        "stop": "Oprește",
+        "meanGoRt": "Timp mediu de reacție GO",
+        "ssrtInvalid": "date insuficiente",
+        "ssrtNegativeNote": "SSRT este negativ (SSD mediu > GO RT mediu) - rezultat nefiabil cu numărul de încercări curent."
+      },
+      "pvt": {
+        "rtMedian": "RT mediană",
+        "rtMean": "RT mediu",
+        "fastest": "Cel mai rapid",
+        "slowest": "Cel mai lent",
+        "falseStarts": "Începuturile false",
+        "falseStartsShort": "fals st.",
+        "lapses": "Lapsele",
+        "mean": "Medică",
+        "reaction": "Reacție",
+        "wait": "Așteaptă...",
+        "pressStimulus": "Așteptați un stimul...",
+        "pressAnywhere": "Apăsați oriunde când apare contorul",
+        "press": "Apăsați!",
+        "tooEarly": "Prea devreme!",
+        "lapsesLabel": "Lapsele"
+      },
+      "posner": {
+        "cueingEffect": "Efect cueing",
+        "validMeanRt": "RT mediu valid",
+        "invalidMeanRt": "RT înseamnă invalid",
+        "validAccuracy": "Precizie valabilă",
+        "invalidAccuracy": "Acuratețe nevalidă",
+        "validTrials": "Încercări valabile",
+        "invalidTrials": "Încercări nevalide",
+        "validRtShort": "TR Val.",
+        "invalidRtShort": "TR Inv.",
+        "valid": "Valabil",
+        "invalid": "Invalid"
+      },
+      "antisaccade": {
+        "cost": "Costul antisaccader",
+        "proAccuracy": "Acuratețe profesională",
+        "antiAccuracy": "Anti acuratețe",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "TR Pro",
+        "antiRt": "TR Anti",
+        "proMeanRt": "RT mediu pro-saccade",
+        "antiMeanRt": "Mediu anti-saccade RT",
+        "costLabel": "Cost",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "Precizie AX",
+        "bxFa": "BX alarmă falsă",
+        "ayError": "eroare AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY greș",
+        "cogControl": "Controlul cognitiv",
+        "target": "Țintă",
+        "nonTarget": "Non-țintă"
+      },
+      "ant": {
+        "scores": "Scoruri ANT",
+        "alerting": "Alertare (no-cue − double-cue)",
+        "orienting": "Orientare (centru − spațial)",
+        "executive": "Executiv (incongruent - congruent)"
+      },
+      "changeDet": {
+        "kCowan": "Capacitate K (Cowan)",
+        "sameShort": "La fel",
+        "diffShort": "Dif."
+      },
+      "swm": {
+        "withinErrors": "Erori în interiorul căutării",
+        "betweenErrors": "Erori între căutare",
+        "totalErrors": "Total erori",
+        "errorFree": "Fără erori",
+        "foundErrorFree": "Găsit fără erori!",
+        "errorCount": "{{count}} eroare(e)",
+        "tapsLabel": "Apăsări"
+      },
+      "taskSwitch": {
+        "switchCost": "Costul comutării",
+        "rtRepeat": "RT mediu (repetare)",
+        "rtSwitch": "RT mediu (comutator)",
+        "oddEven": "Impar / Par",
+        "highLow": "Ridicat/Scăzut",
+        "title": "Schimbarea sarcinilor"
+      },
+      "trailMaking": {
+        "tmtATime": "Ora TMT-A",
+        "tmtBTime": "Ora TMT-B",
+        "executiveCost": "Cost executiv (B - A)",
+        "executiveCostShort": "Cost executiv (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Se pregătește TMT-B...",
+        "tmtADone": "TMT-A gata!",
+        "totalErrors": "Total erori",
+        "tmtALabel": "TMT-A: Numere",
+        "tmtBLabel": "TMT-B: Cifre și litere",
+        "next": "Următorul",
+        "heroTitle": "Realizarea de trasee",
+        "alternateHint": "Numere și litere alternative: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Cel mai rapid ISI"
+      },
+      "wcst": {
+        "referenceCards": "Carduri de referință",
+        "testCard": "Card de testare",
+        "categories": "Categorii",
+        "categoriesCompleted": "Categoriile finalizate",
+        "perseverativeErrors": "Erori perseverente",
+        "persevShort": "Persev.",
+        "avgRt": "Mediu RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT după unghi",
+        "findMatch": "Găsiți forma potrivită",
+        "reference": "Forma de referință",
+        "referenceLabel": "Ref.",
+        "candidate": "Candidat",
+        "distractor": "Altele",
+        "mirrorErrors": "Oglinzi",
+        "title": "Rotația mentală"
+      },
+      "sternberg": {
+        "rtBySize": "RT după dimensiunea setată",
+        "title": "Sternberg",
+        "avgRt": "Mediu RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT după dimensiunea setată",
+        "title": "Căutare vizuală"
+      },
+      "ospan": {
+        "typeLetters": "Introduceți literele în ordine",
+        "trueOrFalse": "Adevărat sau fals?",
+        "processingWarning": "Precizia ecuației sub 85% — este posibil ca rezultatele să nu reflecte capacitatea reală a memoriei de lucru"
+      },
+      "readingSpan": {
+        "s0": "Soarele răsare în est.",
+        "s1": "Peștii trăiesc în copaci.",
+        "s2": "Parisul este capitala Franței.",
+        "s3": "Un triunghi are patru laturi.",
+        "s4": "Apa fierbe la 100 de grade.",
+        "s5": "Pisicile sunt reptile.",
+        "s6": "Pământul orbitează în jurul Soarelui.",
+        "s7": "Ciocolata crește pe pietre.",
+        "s8": "Un an are douăsprezece luni.",
+        "s9": "Păsările respiră sub apă.",
+        "s10": "Laptele este alb.",
+        "s11": "Mașinile circulă pe șine.",
+        "s12": "Albinele produc miere.",
+        "s13": "Zăpada este fierbinte.",
+        "s14": "Inima pompează sânge.",
+        "s15": "Pietrele plutesc pe apă.",
+        "s16": "Luna luminează noaptea.",
+        "s17": "Șerpii au picioare.",
+        "s18": "Lemnul plutește pe apă.",
+        "s19": "Focul este rece.",
+        "s20": "Oamenii au cinci simțuri.",
+        "s21": "Păianjenii au șase picioare.",
+        "s22": "Pâinea se face cu făină.",
+        "s23": "Balenele sunt pești.",
+        "w0": "CASĂ",
+        "w1": "CAINELE",
+        "w2": "CARTE",
+        "w3": "FLOARE",
+        "w4": "UȘĂ",
+        "w5": "TABEL",
+        "w6": "COPACUL",
+        "w7": "Drum",
+        "w8": "NOR",
+        "w9": "STEAUA",
+        "w10": "PLAJĂ",
+        "w11": "ZĂpadă",
+        "w12": "LAMPĂ",
+        "w13": "PLOAIA",
+        "w14": "STICLA",
+        "w15": "IRBĂ",
+        "w16": "TRENU",
+        "w17": "LUME",
+        "w18": "SOARE",
+        "w19": "PĂDURA",
+        "w20": "gheață",
+        "w21": "PĂMÂNT",
+        "w22": "CER",
+        "w23": "PIATRA",
+        "d0": "dimineata",
+        "d1": "INIMA",
+        "d2": "TESTURĂ",
+        "d3": "FRUNZĂ",
+        "d4": "ZGOMOT",
+        "d5": "GRADINA",
+        "d6": "UMBRA",
+        "d7": "Clopotel",
+        "d8": "PODUL",
+        "d9": "FUM",
+        "d10": "NIsip",
+        "d11": "SUPA",
+        "heroTitle": "Durata de lectură"
+      },
+      "memorizeSequence": "Memorează secvența...",
+      "reproduce": "Reproduce",
+      "span": "Amplitudine",
+      "size": "Dimensiune",
+      "fixateCenter": "Fixeaza-te pe centru...",
+      "identicalOrMirror": "Identic sau oglindă?",
+      "wellInhibited": "Bine inhibat!",
+      "badDirection": "Direcție greșită!",
+      "stopMissed": "Stop ratat!",
+      "falseAlarm": "Alarmă falsă!",
+      "pressNow": "Presa!",
+      "hitBang": "Lovit!",
+      "miss": "domnisoara!",
+      "doNotTouch": "Nu atinge!",
+      "whichDirection": "În ce direcție?",
+      "stopBang": "STOP!",
+      "cueBang": "Tac!",
+      "memorizeLetters": "Memorează aceste litere",
+      "memorizeLetter": "Memorează această scrisoare",
+      "memorizeSequenceLetters": "Memorează secvența...",
+      "memorizeDigits": "Memorează cifrele...",
+      "memorizeColors": "Memorează culorile!",
+      "memorizePosition": "Memorează această poziție...",
+      "retainWord": "Amintește-ți acest cuvânt",
+      "retainNumber": "Ține minte acest număr",
+      "addWithPrevious": "Adăugați cu precedentul",
+      "sentenceTrueOrFalse": "Este adevărată această propoziție?",
+      "findRedCircle": "Găsiți cercul roșu!",
+      "findHiddenToken": "Găsiți jetonul ascuns!",
+      "chooseMatchingCard": "Alegeți cardul potrivit",
+      "arrowDirection": "Direcția săgeții centrale?",
+      "attention": "Atentie...",
+      "preparation": "Pregatirea...",
+      "recallLettersInOrder": "Amintește-ți literele {{count}} în ordine",
+      "recallWordsInOrder": "Amintiți-vă cuvintele {{count}} în ordine",
+      "recallLastLetters": "Amintește-ți ultimele {{count}} litere",
+      "typeLastLetters": "Tastați ultimele {{count}} litere",
+      "recallPositionsInOrder": "Recall: atingeți pozițiile în ordine",
+      "pressEnterToValidate": "Apăsați Enter pentru a valida",
+      "pressAnywhereToContinue": "Apăsați oriunde pentru a continua",
+      "temporalPrecision": "Precizie temporală",
+      "estimationPrecision": "Precizia estimării",
+      "touchStartClockwise": "Atingeți punctul de pornire, apoi glisați în sensul acelor de ceasornic",
+      "touchAtoB": "Atingeți punctul A, apoi glisați spre B",
+      "cue": "Tac",
+      "retainCue": "Ține minte indicația...",
+      "targetOrNot": "Țintă sau non-țintă?",
+      "whereIsTarget": "Unde este ținta?",
+      "wasLetterInSet": "Această scrisoare era în set?",
+      "regular": "regulat",
+      "regularity": "Regularitate",
+      "msDeviation": "ms abatere",
+      "boxes": "cutii",
+      "found": "{{count}} găsit",
+      "past": "Trecut",
+      "tooSlow": "prea lent",
+      "tooFast": "prea repede",
+      "timeout": "Prea lent!",
+      "answer": "Răspuns",
+      "dontPress": "Nu apăsa!",
+      "feedbackWrong": "Greşit!",
+      "level": "Nivel",
+      "wrong": "Greșit",
+      "you": "tu",
+      "paused": "Pauză",
+      "instructions": "Instrucțiuni",
+      "selectAnswer": "Selectați un răspuns",
+      "tapTheOddOne": "Atingeți pe cel ciudat",
+      "pal": {
+        "subtitle": "Asociații perechi de învățare",
+        "pairsLearned": "Perechile învățate",
+        "maxSetSize": "Dimensiune maximă a setului",
+        "totalErrors": "Total erori",
+        "round": "Rotund",
+        "pairs": "perechi",
+        "meanRt": "RT mediu (corect)",
+        "studyPhase": "Studiază - memorează pozițiile",
+        "testPhase": "Unde era această formă?",
+        "studying": "Studiind",
+        "tapBox": "Atingeți caseta în care a fost afișată această formă"
+      },
+      "visualLogic": {
+        "easy": "Ușor",
+        "hard": "Dificil",
+        "oneRule": "1 regula",
+        "twoRules": "2 reguli",
+        "findMissing": "Găsiți piesa lipsă",
+        "maxLevel": "Niv. max",
+        "finalLevel": "Nivel final",
+        "nextMode": "Următorul mod de sesiune",
+        "adaptive": "Adaptiv",
+        "fixed": "Fix",
+        "spm": "SPM 60",
+        "level": "Nivel",
+        "confirm": "Confirmă"
+      },
+      "tetrisMind": {
+        "findPiece": "Care piesă se potrivește cu gaura?",
+        "target": "Țintă"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Prejudecata de supraestimare",
+        "underestimationBias": "Prejudecata de subestimare",
+        "noBias": "Fără părtinire semnificativă",
+        "avgError": "Eroare medie",
+        "overestimations": "Supraestimări",
+        "underestimations": "Subestimări",
+        "avgAbsoluteError": "Eroare absolută medie",
+        "avgRelativeError": "Eroare relativă medie",
+        "cv": "Coeficientul de variație",
+        "watchDemo": "Urmăriți durata",
+        "getReady": "Pregătește-te...",
+        "holdToReproduce": "Țineți pentru a reproduce!",
+        "tooLong": "Prea lung!",
+        "tooShort": "Prea scurt!",
+        "target": "Țintă",
+        "demoLabel": "Referință",
+        "yourTurn": "Rândul tău",
+        "watchInstruction": "Privește",
+        "holdInstruction": "Țineți apăsat pentru a reproduce",
+        "heroTitle": "Estimarea timpului"
+      },
+      "puzzleDetails": "Detalii puzzle",
+      "roundDetails": "Detalii rotunde",
+      "stageResults": "Rezultatele etapei",
+      "recognized": "Recunoscut",
+      "missed": "ratat",
+      "win": "Câștigă",
+      "lose": "Pierde",
+      "winBang": "Câștigă!",
+      "loseBang": "Pierde!",
+      "correctBang": "Corecta!",
+      "wrongBang": "Greşit!",
+      "completeBang": "Complet!",
+      "repeatedBang": "Repetat!",
+      "incompleteBang": "Incomplet!",
+      "levelCompleteBang": "Nivel complet!",
+      "timesUp": "Timpul a trecut",
+      "seeResults": "Vezi rezultatele",
+      "nextRound": "Următoarea rundă",
+      "startBlock": "Bloc de pornire",
+      "continue": "Continuă",
+      "patientChoice": "Alegerea pacientului",
+      "immediateChoice": "Alegere imediată",
+      "immediate": "Imediat",
+      "digitSpan": {
+        "heroTitle": "Intervalul cifrelor"
+      },
+      "resume": "Reia",
+      "numericalStroop": {
+        "heroTitle": "Stroop numeric"
+      },
+      "lineOrientation": {
+        "heroTitle": "Judecarea orientării liniei"
+      },
+      "chain": "Lanț",
+      "undo": "Anulați",
+      "vocalProsody": {
+        "heroTitle": "Prozodie vocală"
+      },
+      "letterNumber": {
+        "title": "Literă-Număr Seq.",
+        "expectedAnswer": "Răspuns așteptat"
+      },
+      "patternComparison": {
+        "heroTitle": "Comparație de modele"
+      },
+      "speedPack": {
+        "title": "Pachetul de viteză",
+        "whenFoldedWhichTouch": "Când sunt pliate, ce pătrate se ating?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Organizația vizuală Hooper",
+        "whatIsThisObject": "Ce este acest obiect?"
+      },
+      "blockDesign": {
+        "heroTitle": "Proiectare bloc"
+      },
+      "accuracy": "Precizie",
+      "avgTime": "Mediu timp",
+      "check": "Verificați",
+      "dualTrace": {
+        "playArea": "Zona de joaca"
+      },
+      "paperFolding": {
+        "title": "Plierea hârtiei",
+        "foldSequenceHolePunch": "Secvență de pliere și perforare",
+        "whichPatternWhenUnfolded": "Ce model când este desfășurat?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Decizie lexicală"
+      },
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxGrid": "Grila maximă",
+      "symmetry": "Simetrie",
+      "threshold": "Prag",
+      "hitRate": "Rata de lovituri",
+      "faRate": "Rată FA",
+      "changeDetection": {
+        "heroTitle": "Detectarea schimbărilor"
+      },
+      "syllogisms": {
+        "heroTitle": "Silogisme"
+      },
+      "subitizing": {
+        "title": "Subitizarea",
+        "range": "Gama"
+      },
+      "jitter": "Variabilitate",
+      "sentenceCompletion": {
+        "title": "Completarea propoziției (Cloze)",
+        "highCloze": "Predictibilitate ridicată",
+        "lowCloze": "Cloze scăzut"
+      },
+      "grid": "Grilă",
+      "pinballRecall": {
+        "title": "Rechemare Pinball",
+        "byBounces": "Prin sărituri",
+        "whereDoesItLand": "Unde aterizează?"
+      },
+      "mean": "Medică",
+      "speedup": "Accelerare",
+      "memorize": "Memorează",
+      "time": "Timp",
+      "surfaceDevelopment": {
+        "title": "Dezvoltarea suprafeței",
+        "whichEdgeMatches": "Care margine se potrivește?"
+      },
+      "crowding": {
+        "heroTitle": "Aglomerare vizuală",
+        "spacing": "Spațiere"
+      },
+      "patternRecognition": {
+        "heroTitle": "Recunoașterea modelelor"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Încercare",
+        "position": "Poziție",
+        "audio": "Audio"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scenă Intrus",
+        "detect": "Detectează"
+      },
+      "eyesTest": {
+        "heroTitle": "Citirea minții în ochi"
+      }
+    },
+    "gridlock": {
+      "undone": "Ultima mișcare anulată.",
+      "resetMessage": "Resetarea puzzle-ului.",
+      "hintMessage": "Sugestie: slide {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Studiază tabla. Începe în {{seconds}}s.",
+      "challenge": "Provocare",
+      "optimal": "Optim",
+      "moves": "Mișcări",
+      "piece": "Piesa {{id}}",
+      "targetPiece": "Piesa {{id}} (țintă - mașină roșie)",
+      "challengeClassic": "Clasic",
+      "challengePrecision": "Precizie",
+      "challengeMemory": "Memorie",
+      "challengeTimed": "Cronometrat",
+      "hint": "Sugestie",
+      "reset": "Resetează",
+      "undo": "Anulați",
+      "nextPuzzle": "Următorul puzzle →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Blocul 1 Hits",
+      "block2Hits": "Blocul 2 Hits",
+      "goPositive": "Du-te = pozitiv",
+      "goNegative": "Go = Negativ",
+      "title": "Afectiv Go/No-Go",
+      "block1CommissionErrors": "Erori de comision bloc 1",
+      "block2CommissionErrors": "Bloc 2 erori de comision",
+      "block": "Blocați",
+      "go": "Du-te"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Rata medie de schimbare",
+      "meanSwitchesfigure": "Întrerupătoare medii/figura",
+      "totalSwitches": "Total comutatoare",
+      "title": "Cifre ambigue",
+      "meanSwitches": "Comutatoare medii",
+      "switchRate": "Rata de comutare",
+      "figures": "Cifre",
+      "totalSwitchesLabel": "Comutatoare totale",
+      "duration": "Durată",
+      "switchesCount": "s | Comutatoare:",
+      "switchButton": "Comutați!"
+    },
+    "analogies": {
+      "verbalCorrect": "Corect verbal",
+      "timeout": "Timp expirat",
+      "title": "Analogii"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Comparație ANS",
+      "ratio": "Raport",
+      "leftMore": "A mai lăsat",
+      "rightMore": "Chiar mai mult"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Rata alarmelor false",
+      "grammatical": "Gramaticale",
+      "memorizeTheseStrings": "Memorați aceste șiruri",
+      "testPhase": "Faza de testare",
+      "ungrammatical": "Agramatical",
+      "learning": "Învățare",
+      "test": "Testează",
+      "title": "Gramatică artificială",
+      "learningPhase": "Învățare",
+      "testIntroText": "Veți vedea acum șiruri noi. Decideți dacă fiecare urmează aceleași reguli ca și corzile pe care tocmai le-ați studiat.",
+      "startTest": "Începeți testul",
+      "followsRules": "Respectă regulile",
+      "breaksRules": "Încalcă regulile"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Magnitudinea clipirii",
+      "title": "Clipire atentă",
+      "blink": "Clipi",
+      "t1Acc": "Prec. Ț1",
+      "t2Acc": "Prec. Ț2",
+      "firstGreenLetter": "Prima literă verde?",
+      "secondGreenLetter": "a doua literă verde?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Captură cost",
+      "singletonPresent": "Singleton Prezent",
+      "noSingleton": "Fără Singleton",
+      "title": "Captură atentă",
+      "capture": "Captură",
+      "horizontal": "Orizontal",
+      "vertical": "Pe verticală"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Fereastra de legare",
+      "title": "Legatură audiovizuală",
+      "window": "Fereastra",
+      "pssLabel": "PSS (Punctul de Simultaneitate Subiectivă)",
+      "simultaneousOrNot": "Simultan sau nu?",
+      "simultaneous": "Simultan",
+      "notSimultaneous": "Nu simultan"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Pragul de durată",
+      "reference": "Referință",
+      "weberFraction": "Fracția Weber",
+      "title": "Durata auditivă",
+      "threshold": "Prag",
+      "weber": "Weber",
+      "whichLonger": "Care este mai lung?",
+      "firstLonger": "Mai întâi mai mult",
+      "secondLonger": "Al doilea mai mult"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Pompe medii ajustate",
+      "avgTimeballoon": "Timp mediu/balon",
+      "banked": "Bancar!",
+      "lostEarnings": "Câștiguri pierdute!",
+      "overallAvgPumps": "Pompe medii generale",
+      "popRate": "Rata pop",
+      "totalEarned": "Total câștigat",
+      "balloons": "baloane",
+      "cashed": "Încasat",
+      "popped": "A spart",
+      "adjPumps": "Adj. pompe",
+      "pop": "Explozie",
+      "pump": "Pompă",
+      "cashIn": "Încasează"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Timp mediu de decizie",
+      "drawBeadsToGatherEvidence": "Desenați margele pentru a aduna dovezi",
+      "jtc": "JTC",
+      "title": "Sarcină de margele",
+      "meanDraws": "Mediu remiză",
+      "rounds": "Runde",
+      "jtcRate": "Rata JTC",
+      "meanDrawsToDecision": "Remiză medie la decizie",
+      "jtcRateThreshold": "Rata JTC (<{{threshold}} extrageri)",
+      "round": "Rotund",
+      "jarDescription": "Borcanul A: 85% verde / Borcanul B: 85% roșu",
+      "itWasJar": "Era Jar",
+      "drawABead": "Desenați o mărgele",
+      "jarAGreen": "Borcan A Verde",
+      "jarBRed": "Borcanul B Roșu"
+    },
+    "binding": {
+      "changedTrials": "Încercări schimbate",
+      "sameAccuracy": "Aceeași precizie",
+      "sameTrials": "Aceleași încercări",
+      "title": "Legarea caracteristicilor",
+      "binding": "Legare",
+      "bindingAccuracyChanged": "Schimbați precizia",
+      "same": "La fel",
+      "different": "Diferit"
+    },
+    "blockDesign": {
+      "cells": "Celulele",
+      "target": "Țintă",
+      "yourAnswer": "Răspunsul tău",
+      "tapHint": "Atingeți pentru a schimba culorile",
+      "check": "Verificați"
+    },
+    "brixton": {
+      "adapt": "Adaptați",
+      "adaptationCost": "Costul de adaptare",
+      "nonswitchTrials": "Încercări fără comutare",
+      "switchTrials": "Schimbă încercările"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Amintiți-vă aceste scrisori",
+      "selectThe3Letters": "Selectați cele 3 litere",
+      "title": "Sarcina Brown-Peterson",
+      "forgetting": "uitarea",
+      "sDelay": "S Întârziere",
+      "minus3": "Minus 3",
+      "delay": "Întârziere"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Calitatea deciziei",
+      "finalPoints": "Puncte finale",
+      "meanBet": "Pariu rău",
+      "winRate": "Rata de câștig",
+      "wins": "Câștigă",
+      "title": "Sarcina de jocuri de noroc Cambridge",
+      "totalPoints": "Total puncte",
+      "quality": "Calitate",
+      "rational": "Rațional",
+      "avgBet": "Mediu pariu",
+      "trial": "Încercare",
+      "whichColorHidesToken": "Ce culoare ascunde jetonul?",
+      "youChose": "Tu ai ales",
+      "howMuchToBet": "Cât de mult să pariezi?"
+    },
+    "cancellation": {
+      "false": "Fals",
+      "target": "Ţintă:",
+      "total": "Total",
+      "title": "Sarcină de anulare (d2)",
+      "misses": "Omisiuni",
+      "targetDescription": "d cu 2 puncte"
+    },
+    "changeBlindness": {
+      "detectionRate": "Rata de detectare",
+      "found": "Găsit",
+      "meanDetectionTime": "Timp mediu de detectare",
+      "title": "Schimba orbirea",
+      "missed": "ratat",
+      "avgTime": "Mediu timp",
+      "instructions": "Instrucțiuni"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Cea mai bună estimare",
+      "meanScore": "Scorul mediu",
+      "worstEstimate": "Cea mai proasta estimare",
+      "inRange": "Bună estimare!",
+      "title": "Estimarea cognitivă",
+      "meanScoreLabel": "Scorul mediu",
+      "inRangeLabel": "În rază",
+      "extreme": "Extremă",
+      "scoreLabel": "scor",
+      "submit": "Trimite"
+    },
+    "common": {
+      "accuracy": "Precizie",
+      "bias": "părtinire",
+      "falseAlarmRate": "Rata alarmei false",
+      "hitRate": "Rata de lovituri",
+      "hits": "Răspunsuri corecte",
+      "listening": "Ascultând...",
+      "meanRt": "RT mediu",
+      "timedOut": "Timp expirat",
+      "timedOut2": "Timp expirat",
+      "faRate": "Rată FA",
+      "paused": "În pauză"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Cât de încrezător ești?",
+      "rateYourConfidence": "Evaluează-ți încrederea",
+      "title": "Calibrarea încrederii",
+      "calError": "Eroare de calibrare",
+      "confidence": "Încredere"
+    },
+    "consequences": {
+      "best": "Cel mai bun",
+      "nextRound": "Următoarea rundă...",
+      "time": "Timp",
+      "placeholder": "Introduceți o consecință...",
+      "title": "Consecințele",
+      "totalIdeas": "Total Idei",
+      "avgPerRound": "Mediu pe rundă",
+      "rounds": "Runde",
+      "noConsequencesListed": "Nu sunt enumerate consecințe",
+      "roundProgress": "Runda {{current}} / {{total}}",
+      "typeAndPressAdd": "Tastați și apăsați Adăugare"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Efect de semnalizare",
+      "newConfigRt": "Noua configurație RT",
+      "oldConfigRt": "Vechea configurație RT",
+      "title": "Cueing contextual",
+      "cueing": "Indiciu",
+      "oldRt": "RT vechi",
+      "newRt": "RT nou",
+      "prompt": "Instrucțiune",
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Trecere la prag",
+      "title": "Integrarea conturului",
+      "pipeJitter": "| frământare"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Contrastul de prag",
+      "title": "Sensibilitate la contrast",
+      "threshold": "Prag",
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "cpt": {
+      "nontargets": "Non-ținte",
+      "target": "Țintă",
+      "nonTarget": "Non-țintă",
+      "dPrime": "d'",
+      "targetsLetter": "Scrisoarea țintă",
+      "tapForLetterOnly": "Atingeți numai pentru litera țintă"
+    },
+    "crowding": {
+      "criticalSpacing": "Spațiere critică",
+      "leftAccuracy": "Precizia stângă",
+      "rightAccuracy": "Acuratețe corectă"
+    },
+    "cryptogram": {
+      "hints": "Sugestii",
+      "title": "Criptograma",
+      "solved": "Rezolvat",
+      "time": "Timp",
+      "puzzles": "Puzzle-uri",
+      "puzzle": "Puzzle",
+      "hint": "Sugestie",
+      "clear": "Șterge"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Zona sub curbă",
+      "discountRateK": "Rata de reducere (k)",
+      "impulsivityIndex": "Indicele de impulsivitate",
+      "title": "Întârzierea reducerii",
+      "aucPatience": "AUC rabdare",
+      "patient": "Pacient",
+      "kRate": "Rata K",
+      "impuls": "Impulsuri",
+      "indifferencePoints": "Puncte de indiferență",
+      "whichPrefer": "Pe care o preferi?",
+      "today": "Astăzi"
+    },
+    "delayedMatching": {
+      "long": "Lung",
+      "longDelay68s": "Întârziere lungă (6-8s)",
+      "med": "Med.",
+      "mediumDelay46s": "Întârziere medie (4-6s)",
+      "short": "Scurt",
+      "shortDelay34s": "Întârziere scurtă (3-4s)",
+      "title": "Potrivire întârziată",
+      "delay": "Întârziere",
+      "rememberThisPattern": "Amintiți-vă de acest model",
+      "whichWasIt": "Care a fost?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Detectare alertă",
+      "attendToTheLeftColumn": "Accesați coloana STÂNGA",
+      "attendedAccuracy": "Precizie (canal țintă)",
+      "ignoreTheRightColumn": "Ignorați coloana din dreapta",
+      "right": "DREAPTA",
+      "title": "Ascultarea dihotică",
+      "attendedAcc": "Precizie atentă",
+      "alertDet": "Detectare alertă",
+      "alerts": "Alerte",
+      "selectLeftColumnWords": "Selectați cuvintele din coloana din stânga",
+      "submit": "Trimite",
+      "alertQuestion": "Întrebare de alertă"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Uită de precizie",
+      "forgettingEffect": "Efect de uitare",
+      "newRejection": "Noua respingere",
+      "rememberAccuracy": "Amintiți-vă acuratețea",
+      "title": "Uitarea Dirijată",
+      "remember": "Ține minte",
+      "forget": "uita",
+      "round": "Rotund",
+      "word": "Cuvânt",
+      "wasThisWordShown": "A fost arătat acest cuvânt?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Scorul de părtinire a atenției",
+      "congruentAcc": "Prec. Congr.",
+      "congruentRt": "RT congruent",
+      "incongruentAcc": "Prec. Incongr.",
+      "incongruentRt": "RT incongruent"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Mașină sau camion?",
+      "minDisplayReached": "Afișare minimă atinsă",
+      "positionAccuracy": "Precizia poziției",
+      "thresholdDisplay": "Afișare prag",
+      "vehicleAccuracy": "Precizia vehiculului",
+      "whereWasTheDiamond": "Unde era diamantul?",
+      "title": "Dubla decizie",
+      "threshold": "Prag",
+      "bothOk": "Ambele corecte",
+      "vehicle": "Vehicul",
+      "position": "Poziție",
+      "car": "masina",
+      "truck": "Camion"
+    },
+    "dsst": {
+      "items": "Articole",
+      "itemsCompleted": "Articole finalizate",
+      "speedItemsmin": "Viteza (articole/min)",
+      "attempts": "Încercări",
+      "itemsPerMin": "Articole / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Costul sarcinii duble",
+      "taskANumber": "Sarcina A (număr)",
+      "taskBSymbol": "Sarcina B (Simbol)",
+      "title": "Sarcină dublă",
+      "taskA": "Sarcina A",
+      "taskB": "Sarcina B",
+      "number": "Număr",
+      "symbol": "Simbol",
+      "up": "Sus",
+      "down": "Jos"
+    },
+    "dualTime": {
+      "sessionEnPause": "Sesiune întreruptă",
+      "votreEstimationSecondes": "Estimarea dvs. (secunde)",
+      "sessionInterrupted": "Sesiune întreruptă",
+      "target": "Țintă",
+      "estimation": "Estimare",
+      "avgTime": "Mediu timp",
+      "avgError": "Mediu eroare",
+      "trials": "Încercări",
+      "resumeToContinue": "Reluați pentru a continua",
+      "aimFor": "Țintește pentru",
+      "second": "În al doilea rând",
+      "howLongDidYouTake": "Cât timp ai luat?"
+    },
+    "dualTrack": {
+      "confirmer": "Confirmă",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Reluați pentru a continua.",
+      "sessionEnPause": "Sesiune întreruptă",
+      "tapezLesCibles": "Atingeți țintele",
+      "tapezLaCible": "Atingeți ținta",
+      "appuyezConfirmer": "Apăsați Confirmare",
+      "targetsCountLabel": "{{count}} ținte",
+      "distractorsCountLabel": "{{count}} distractoare",
+      "roundsCountLabel": "{{count}} runde",
+      "calibrationRoundsLabel": "{{count}} runde de calibrare",
+      "tierValue": "N{{current}}/{{total}}",
+      "tierHelp": "T = nivelul de dificultate internă a călătoriei.",
+      "tierHelpCurrentWithPhase": "În prezent vă aflați la T{{current}} din {{total}} pentru {{targets}} ținte. Faza curentă: {{phase}}. Au mai rămas {{remaining}} nivel(e) înainte de următorul nivel țintă.",
+      "phaseTracking": "Urmărire",
+      "phaseAudio": "Urmărire + audio",
+      "phaseColor": "Urmărire + culoare",
+      "phaseCombined": "Urmărire + audio + culoare",
+      "passLetters": "Scrisori",
+      "passColors": "Culori",
+      "moveInstruction": "Mutați instrucțiunea",
+      "moveConfirmBtn": "Mutați butonul de confirmare",
+      "preparingSession": "Sesiune de pregatire...",
+      "preparing3dScene": "Se pregătește scena 3D...",
+      "startJourney": "Începe călătoria",
+      "calibrationDescription": "Înainte de prima etapă, o calibrare mai lungă va estima nivelul de pornire.",
+      "defaultDescription": "Bilele se vor aprinde. Urmărește-i în timp ce se mișcă, apoi identifică-i.",
+      "startCalibration": "Începeți calibrarea",
+      "calibrationTitle": "Calibrare",
+      "estimatedStart": "Est. începe",
+      "roundsAnalyzed": "Runde analizate",
+      "willStartAt": "Va începe la",
+      "targetsCount": "Ținte",
+      "thenProgress": "apoi progres"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Eroare absolută medie",
+      "ratio": "Raport",
+      "slope": "Pantă",
+      "vierordtSlope": "Pârtia Vierordt",
+      "wait": "Așteaptă...",
+      "title": "Durata Reproducere",
+      "meanError": "Eroare medie",
+      "meanRatio": "Raportul mediu (produs/țintă)",
+      "holdNow": "ȚINE ACUM",
+      "target": "Țintă",
+      "error": "Eroare"
+    },
+    "embeddedFigures": {
+      "fastest": "Cel mai rapid",
+      "found": "Găsit",
+      "meanDetectionTime": "Timp mediu de detectare",
+      "slowest": "Cel mai lent",
+      "title": "Figuri încorporate",
+      "missed": "ratat",
+      "fastestLabel": "Cel mai rapid",
+      "findThisShape": "Găsiți această formă",
+      "memorizeShape": "Memorează forma...",
+      "foundIt": "L-am găsit!",
+      "giveUp": "Renunță"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Alarme false",
+      "misses": "Omisiuni",
+      "title": "N-Back emoțional",
+      "match": "Se potrivește"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT neutru",
+      "positiveRt": "RT pozitiv",
+      "threatRt": "Amenințare RT",
+      "title": "Stroop emoțional",
+      "interference": "Interferență",
+      "interferenceThreatNeutral": "Interferență (amenințare - neutru)"
+    },
+    "eyesTest": {
+      "totalTime": "Timp total"
+    },
+    "faceName": {
+      "gain": "Câștigă",
+      "learningImprovement": "Îmbunătățirea învățării",
+      "round1Accuracy": "Precizia rundei 1",
+      "round2Accuracy": "Precizia rundei 2",
+      "whoIsThis": "Cine este acesta?",
+      "title": "Asociația Face-Nume",
+      "round": "Rotund",
+      "testPhase": "Faza de testare"
+    },
+    "fauxPas": {
+      "who": "Cine?",
+      "why": "De ce?",
+      "title": "Recunoaștere Faux Pas",
+      "detection": "Detectare",
+      "scenarios": "Scenarii",
+      "fpFound": "Faux pas găsite",
+      "control": "Control",
+      "readyToAnswer": "Gata să răspundă",
+      "didSomeoneSay": "A spus cineva ceva ce nu ar trebui să facă?",
+      "whoSaidIt": "Cine a spus-o?",
+      "whyInappropriate": "De ce a fost nepotrivit?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Precizie de reamintire",
+      "recognitionAccuracy": "Precizia recunoașterii",
+      "recallPlaceholder": "Introduceți răspunsul...",
+      "unlikely": "Puțin probabil",
+      "certain": "Sigur",
+      "title": "Sentimentul de a cunoaște",
+      "recall": "Reamintire",
+      "recognition": "Recunoaștere",
+      "fokR": "FOK R",
+      "questions": "Întrebări",
+      "recalled": "Rechemat",
+      "recognized": "Recunoscut",
+      "fokSensitivity": "Sensibilitate FOK",
+      "submit": "Trimite",
+      "dontKnow": "Nu stiu",
+      "fokPrompt": "Îl vei recunoaște?",
+      "selectCorrectAnswer": "Selectați răspunsul corect",
+      "answer": "Răspuns"
+    },
+    "fingerTapping": {
+      "firstTrial": "Primul proces",
+      "lastTrial": "Ultimul proces",
+      "sequence": "Secvență",
+      "speedupT1VsT12": "Accelerare (T1 vs T12)",
+      "title": "Atingerea cu degetul"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Timp mediu de mișcare",
+      "avgThroughput": "Debit mediu",
+      "title": "Fitts Tapping",
+      "throughput": "Debit",
+      "tapTarget": "Atingeți ținta evidențiată"
+    },
+    "foreperiod": {
+      "early": "Devreme",
+      "slope": "Pantă",
+      "title": "Pregătirea temporală",
+      "fpEffectSlope": "Efectul FP Pantă"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Reversări",
+      "threshold": "Prag",
+      "tone1": "Tonul 1",
+      "tone2": "Tonul 2",
+      "weber": "Weber",
+      "weberFraction": "Fracția Weber",
+      "hz": "Hz",
+      "title": "Discriminarea de frecvență",
+      "thresholdLabel": "Prag",
+      "hzDiff": "Diff. Hz",
+      "whichWasHigher": "Care era mai mare?",
+      "firstHigher": "Mai întâi mai sus",
+      "secondHigher": "A doua mai sus"
+    },
+    "gabor": {
+      "gaborPatch": "plasture Gabor",
+      "leftAccuracy": "Precizia stângă",
+      "leftTrials": "A lăsat procese",
+      "noiseMask": "Masca de zgomot",
+      "rightAccuracy": "Acuratețe corectă",
+      "rightTrials": "Încercări corecte",
+      "thresholdAngle": "Unghiul de prag",
+      "title": "Gabor",
+      "threshold": "Prag",
+      "reversals": "Reversări",
+      "timedOut": "Timp expirat",
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "gameOfDice": {
+      "finalPoints": "Puncte finale",
+      "risky": "Riscătoare",
+      "riskyChoices": "Alegeri riscante",
+      "safe": "În siguranță",
+      "winRate": "Rata de câștig",
+      "wins": "Câștigă",
+      "title": "Sarcina jocului de zaruri",
+      "totalPoints": "Total puncte",
+      "riskyLabel": "Riscătoare",
+      "roll": "Aruncă",
+      "chooseYourBet": "Alege-ți pariul",
+      "pickNumbers": "Alege-ți numerele"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Decalaj sau fără gol?",
+      "gapThreshold": "Pragul Gap",
+      "title": "Detectarea tăcerii",
+      "noGap": "Niciun Gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Unde era privirea?",
+      "direct": "Direct",
+      "left": "Stânga",
+      "right": "Dreapta",
+      "title": "Direcția privirii",
+      "dPrimeDirectGaze": "D Prime privire directă"
+    },
+    "hayling": {
+      "part1Initiation": "Partea 1 (Inițiere)",
+      "part2": "Partea 2",
+      "part2Suppression": "Partea 2 (Suprimare)",
+      "suppressionCost": "Costul de suprimare",
+      "title": "Hayling",
+      "part1": "Partea 1",
+      "part2Label": "Partea 2",
+      "suppression": "Suprimarea",
+      "obvious": "Evident",
+      "obviousPicksPart2": "Alegeri evidente (Partea 2)",
+      "chooseUnrelated": "Alegeți un cuvânt care nu are legătură",
+      "completelyUnrelated": "Complet fără legătură",
+      "doNotPickObvious": "NU alegeți cuvântul evident!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Se trece la etapa următoare...",
+      "stageComplete": "Etapa finalizată!",
+      "title": "IED Set Shift",
+      "stages": "Etape",
+      "edsCost": "Costul EDS",
+      "stage": "Etapă",
+      "correctNeeded": "Corect necesar pentru a avansa"
+    },
+    "informationSampling": {
+      "cost": "Cost",
+      "free": "Gratuit",
+      "meanTilesCost": "Placi medii (cost)",
+      "meanTilesFree": "Placi medii (gratuit)",
+      "totalCost": "Costul total",
+      "title": "Eșantionarea informațiilor",
+      "tiles": "Placi",
+      "tapToReveal": "Atingeți pentru a dezvălui"
+    },
+    "inspectionTime": {
+      "final": "Final",
+      "finalDisplayTime": "Ora finală de afișare",
+      "minCorrectIt": "Min corectă IT",
+      "threshold": "Prag",
+      "title": "Timp de inspecție",
+      "thresholdLabel": "Prag",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Sold:",
+      "chooseADeck": "Alegeți o punte",
+      "deckADraws": "Puntea A remiză",
+      "deckBDraws": "Puntea B retrage",
+      "deckCDraws": "Puntea C trage",
+      "deckDDraws": "Puntea D trage",
+      "first40Advantageous": "Primele 40 avantajoase",
+      "last40Advantageous": "Ultimele 40 avantajoase",
+      "learn": "Învață",
+      "learningIndex": "Indicele de învățare",
+      "title": "Jocurile de noroc din Iowa",
+      "advantageousPct": "% avantajos",
+      "earnings": "Câștiguri",
+      "last40": "Ultimul40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Bias de calibrare",
+      "meanJol": "JOL înseamnă",
+      "nowTestYourRecall": "Acum testați-vă reamintirea",
+      "studyComplete": "Studiu finalizat",
+      "whatWasPairedWith": "Ce a fost asociat cu...?",
+      "title": "Judecata de invatare",
+      "recallAccuracy": "Precizie de reamintire",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Precizie JOL (gama)",
+      "howLikelyRemember": "Cât de probabil îți vei aminti?",
+      "hiddenAnswer": "Răspuns ascuns"
+    },
+    "judgmentOfRecency": {
+      "close": "Închide",
+      "closeGap13": "Închideți decalajul (1-3)",
+      "far": "Departe",
+      "farGap9": "Decalaj îndepărtat (9+)",
+      "mediumGap48": "Interval mediu (4-8)",
+      "title": "Hotărârea de recentă",
+      "medium": "Mediu",
+      "studyPhaseMemorizeOrder": "Faza de studiu — Memorați ordinea",
+      "whichMoreRecently": "Care a apărut mai recent?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "RT mediu (non-cuvinte)",
+      "meanRtWords": "RT mediu (cuvinte)",
+      "nonwordsAccuracy": "Acuratețea non-cuvintelor",
+      "wordsAccuracy": "Acuratețea cuvintelor",
+      "word": "Cuvânt",
+      "nonword": "Non-cuvânt"
+    },
+    "maze": {
+      "duration": "Durată",
+      "optimalSteps": "Pași optimi",
+      "pathEfficiency": "Eficiența căii",
+      "totalSteps": "Total Pași",
+      "wallHits": "Lovituri de perete",
+      "title": "Labirint",
+      "completed": "Finalizat",
+      "efficiency": "Eficiență",
+      "wallHitsLabel": "Lovituri de perete",
+      "steps": "Pași"
+    },
+    "memobox": {
+      "easy": "Ușor",
+      "easy2Boxes": "Ușor (2 cutii)",
+      "hard": "Dificil",
+      "hard4Boxes": "Hard (4 cutii)",
+      "medium3Boxes": "Mediu (3 cutii)",
+      "title": "Memobox",
+      "rounds": "Runde",
+      "medium": "Mediu",
+      "watchMovements": "Urmăriți mișcările...",
+      "howManyBalls": "Câte bile în fiecare cutie?",
+      "submit": "Trimite",
+      "roundOf": "Runda {{current}} din {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Care este secțiunea transversală?",
+      "title": "Tăierea mentală"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Vechi, asemanator sau nou?",
+      "patternSeparation": "Separarea modelelor",
+      "sep": "sept.",
+      "old": "vechi",
+      "similar": "Similar",
+      "new": "Nou",
+      "ldi": "LDI",
+      "title": "Discriminarea mnemonică",
+      "hitRateOldDetected": "Rata de lovituri (vechi detectat)",
+      "lureDiscrimination": "Discriminarea cu momeala (LDI)",
+      "memorize": "Memorează",
+      "testPhase": "Faza de testare"
+    },
+    "multiArmedBandit": {
+      "earnings": "Câștiguri:",
+      "pickMachine": "Alegeți o mașină",
+      "title": "Bandit cu mai multe armate",
+      "totalReward": "Recompensa totala",
+      "optimal": "Optim",
+      "regret": "Regret",
+      "exploit": "Exploatați",
+      "machine": "Masina",
+      "armsExplored": "Brațele explorate"
+    },
+    "navon": {
+      "globalBigLetter": "Global (litera mare)",
+      "localSmallLetter": "Local (litere mici)",
+      "title": "Navon",
+      "globalAdv": "Av. Global",
+      "whatBigLetter": "Ce scrisoare MARE?",
+      "whatSmallLetter": "Ce literă mică?"
+    },
+    "negativePriming": {
+      "controlRt": "TR Control",
+      "nameTheRedShape": "Denumiți forma roșie",
+      "negativePrimingRt": "Amorsare negativă RT",
+      "positivePrimingRt": "Amorsare pozitivă RT",
+      "npRt": "TR NP",
+      "ppRt": "TR PP",
+      "npEffect": "Efectul NP",
+      "title": "Amorsare negativă",
+      "ctrlRt": "TR Ctrl"
+    },
+    "numberLine": {
+      "estimationBias": "Bias de estimare",
+      "linearityRsup2": "Linearitate (R²)",
+      "meanAbsoluteError": "Eroare absolută medie",
+      "tapTheLineToPlaceTheNumber": "Atingeți linia pentru a plasa numărul",
+      "title": "Linia numerică",
+      "meanError": "Eroare medie",
+      "yourEstimate": "Estimarea dvs",
+      "correct": "Corect"
+    },
+    "oddOneOut": {
+      "colorTrials": "Încercări de culoare",
+      "shapeTrials": "Încercări de formă",
+      "shape": "Formă",
+      "color": "Culoare",
+      "timeout": "Timp expirat",
+      "shapeDiffAccuracy": "Diferența de formă. precizie",
+      "colorDiffAccuracy": "Diferență de culoare precizie",
+      "shapeDiffAvgRt": "Diferența de formă. RT mediu",
+      "colorDiffAvgRt": "Diferență de culoare medie RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "În ce sens?",
+      "thresholdAngle": "Unghiul de prag",
+      "title": "Orientare Discriminare",
+      "threshold": "Prag",
+      "counterCw": "ASO",
+      "clockwise": "În sensul acelor de ceasornic"
+    },
+    "patternComparison": {
+      "differentTrials": "Diferite încercări",
+      "sameTrials": "Aceleași încercări",
+      "same": "La fel",
+      "different": "Diferit"
+    },
+    "patternRecognition": {
+      "newPatterns": "Modele noi",
+      "oldPatterns": "Modele vechi",
+      "old": "VECHI",
+      "new": "NOU",
+      "studyPatterns": "Studiați cu atenție tiparele",
+      "memorize": "Memorează ({{current}}/{{total}})",
+      "getReady": "Pregătește-te...",
+      "testPhaseStarting": "Începe faza de testare..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Exact Corect",
+      "meanAngularError": "Eroare unghiulară medie",
+      "withinTolerance": "În limitele toleranței",
+      "title": "Luarea de Perspectivă",
+      "avgErr": "Mediu eroare",
+      "youAreAt": "esti la",
+      "facing": "Confruntare",
+      "pointTo": "Arata spre"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frec. Prag",
+      "seq1": "Secv 1",
+      "seq2": "Secv 2",
+      "title": "Discriminarea fonemelor",
+      "thresh": "Treiera",
+      "sameOrDifferent": "La fel sau diferit?",
+      "same": "La fel",
+      "different": "Diferit"
+    },
+    "predictionMotion": {
+      "biasLate": "Prejudecăți (+ = târziu)",
+      "meanAbsoluteError": "Eroare absolută medie",
+      "precisionSd": "Precizie (SD)",
+      "title": "Mișcarea de predicție",
+      "absError": "Abs. eroare",
+      "precision": "Precizie",
+      "responded": "A răspuns",
+      "tapWhenReachesTarget": "Atingeți când ajunge la țintă"
+    },
+    "promem": {
+      "ongoingAccuracy": "Precizie continuă",
+      "ongoingRt": "RT în curs",
+      "pmHitRate": "Rata de lovituri PM",
+      "pmRt": "TR PM",
+      "pmTargets": "ținte PM",
+      "title": "Memoria prospectivă",
+      "ongoing": "În curs de desfășurare",
+      "pmHits": "Reușite PM",
+      "pmMisses": "PM Miss",
+      "living": "traiesc",
+      "nonLiving": "Neviu",
+      "redWordInstruction": "Cuvânt roșu = apăsare"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Erori de distracție",
+      "literalErrorRate": "Rata de eroare literală",
+      "literalErrors": "Erori literale",
+      "title": "Interpretarea proverbului",
+      "literal": "Literal",
+      "litRate": "Lit. Rata",
+      "whatDoesThisMean": "Ce înseamnă asta?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Pregătește-te să urmărești",
+      "meanTimeOnTarget": "Timpul mediu pe țintă",
+      "meanTrackingError": "Eroare de urmărire medie",
+      "placeYourFingerOnTheScreen": "Puneți degetul pe ecran",
+      "title": "Urmărire urmărire",
+      "timeOnTarget": "Timp la țintă",
+      "error": "Eroare",
+      "onTarget": "La țintă",
+      "avgError": "Mediu eroare",
+      "improve": "Îmbunătățiți",
+      "improvementT1VsT": "Îmbunătățire T1 vs T",
+      "errorLabel": "Eroare",
+      "followGreenTarget": "Urmați ținta verde"
+    },
+    "rapidNaming": {
+      "roundComplete": "Runda completă",
+      "totalErrors": "Total erori",
+      "title": "Denumirea rapidă",
+      "avgSpeed": "Mediu viteza",
+      "totalTime": "Timp total",
+      "round": "Rotund",
+      "getReady": "Pregătește-te!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Timp mediu de rezolvare",
+      "solved": "Rezolvat",
+      "wrong": "Greșit",
+      "placeholder": "Raspunsul tau...",
+      "title": "Puzzle-uri Rebus",
+      "puzzles": "Puzzle-uri",
+      "timeout": "Timp expirat",
+      "submit": "Trimite",
+      "answer": "Răspuns"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Timp mediu de rezolvare",
+      "solved": "Rezolvat",
+      "placeholder": "Raspunsul tau...",
+      "title": "Asociații de la distanță",
+      "timeout": "Timp expirat",
+      "submit": "Trimite",
+      "answer": "Răspuns"
+    },
+    "reversalLearning": {
+      "adapt": "Adaptați",
+      "loseshiftRate": "Rata de pierdere a schimburilor",
+      "score": "Scor:",
+      "winstayRate": "Rata Win-Stay",
+      "title": "Învățare inversă",
+      "rewards": "Recompense",
+      "reversals": "Reversări",
+      "persev": "Persev.",
+      "avgTrialsToCriterion": "Mediu încercări la criteriu",
+      "pickACard": "Alegeți un card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Numără înapoi cu 7",
+      "reproduceThePatternFromMemory": "Reproduce modelul din memorie",
+      "title": "Figura complexă Rey",
+      "copy": "Copiere",
+      "recall": "Reamintire",
+      "retention": "Retentie",
+      "trial": "Încercare",
+      "target": "Țintă",
+      "yourCopy": "Copia ta",
+      "submit": "Trimite"
+    },
+    "rhythm": {
+      "avgTimingError": "Eroare medie de sincronizare",
+      "bestTrialError": "Cea mai bună eroare de încercare",
+      "correctTrials": "Încercări corecte",
+      "worstTrialError": "Cea mai gravă eroare de încercare",
+      "watchRhythm": "Urmăriți ritmul",
+      "getReady": "Pregătește-te...",
+      "tapTheRhythm": "Atingeți ritmul!",
+      "tooFarOff": "Prea departe!",
+      "tapToReproduce": "Atingeți pentru a reproduce",
+      "beats": "{{count}} bate",
+      "bestTrial": "Cel mai bun proces",
+      "worstTrial": "Cel mai rău proces",
+      "title": "Ritm",
+      "msErr": "doamna greseste"
+    },
+    "routePlanning": {
+      "time": "Timp",
+      "title": "Planificarea traseului",
+      "levels": "Niveluri",
+      "completed": "Finalizat",
+      "avgMoves": "Mediu miscari",
+      "clear": "Șterge",
+      "submit": "Trimite",
+      "instructions": "Instrucțiuni"
+    },
+    "rvp": {
+      "detect357246468": "Detectare: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Secvențe țintă",
+      "fa": "FA",
+      "hitRate": "Rata de lovituri",
+      "misses": "Omisiuni",
+      "sequences": "Secvențe"
+    },
+    "sart": {
+      "commissionErrors": "Erori comisioane",
+      "omissionErrors": "Erori de omisiune",
+      "tapAllDigits": "Atingeți toate cifrele, cu excepția 3",
+      "except3": "Cu excepția 3"
+    },
+    "sceneCrasher": {
+      "adds": "Adaugă",
+      "studyTheScene": "Studiază scena",
+      "swaps": "Schimbări",
+      "tapTheNewchangedObject": "Atingeți obiectul nou/modificat"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Propoziții false",
+      "trueSentences": "Propoziții adevărate",
+      "byCategory": "Pe categorie",
+      "title": "Verificarea sentinței",
+      "trueRt": "RT adevărat",
+      "true": "Adevărat",
+      "false": "Fals",
+      "pressKey": "Apăsați"
+    },
+    "soundSweeps": {
+      "down": "Jos",
+      "downAccuracy": "Precizie în jos",
+      "durationThreshold": "Pragul de durată",
+      "up": "Sus",
+      "upAccuracy": "Precizie sus",
+      "title": "Mături de sunet",
+      "threshold": "Prag",
+      "upOrDown": "Sus sau jos?"
+    },
+    "sourceMemory": {
+      "color": "Culoare",
+      "colorRecall": "Rechemarea culorilor",
+      "frame": "cadru",
+      "frameRecall": "Rechemare a cadrelor",
+      "getReadyForTheTest": "Pregătește-te pentru test!",
+      "itemRecognition": "Recunoașterea articolului",
+      "positionRecall": "Rechemarea poziției",
+      "sourceAccuracy": "Precizia sursei",
+      "title": "Memorie sursă",
+      "source": "Sursa",
+      "position": "Poziție",
+      "word": "Cuvânt",
+      "wasThisWordShown": "A fost arătat acest cuvânt?",
+      "bottom": "De jos",
+      "blue": "Albastru",
+      "orange": "Portocaliu",
+      "circle": "Cercul",
+      "square": "pătrat"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Pragul de zgomot",
+      "title": "Vorbire în zgomot",
+      "noise": "Zgomot",
+      "whichWordWasIt": "Ce cuvânt era?"
+    },
+    "srtt": {
+      "learningEffect": "Efect de învățare",
+      "learning": "Învățare",
+      "block": "Blocați"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Nivelul șanselor",
+      "learningDetected": "Învățare detectată",
+      "testPhase": "Faza de testare",
+      "whichPairLooksMoreFamiliar": "Care pereche pare mai familiară?",
+      "title": "Învățare statistică",
+      "learning": "Învățare",
+      "watchTheShapes": "Urmăriți formele"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Efect de părtinire a credinței",
+      "conclusion": "Concluzie",
+      "premise1": "Premisa 1",
+      "premise2": "Premisa 2",
+      "logicalValidityQuestion": "Este acest lucru valabil din punct de vedere logic?",
+      "valid": "Valabil",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Acuratețe absentă",
+      "presentAccuracy": "Acuratețea prezentă",
+      "title": "Căutare simbol",
+      "present": "Prezent",
+      "absent": "absent",
+      "targets": "Ținte",
+      "searchGroup": "Grup de căutare"
+    },
+    "syncContinuation": {
+      "async": "Asincr.",
+      "asynchrony": "Asincronie",
+      "drift": "Derivă",
+      "cv": "CV",
+      "title": "Sincronizare-Continuare",
+      "meanCv": "CV mediu",
+      "tempos": "Tempouri",
+      "tempo": "Tempo",
+      "ioi": "IOI",
+      "getReady": "Pregătește-te...",
+      "nextTempo": "Următorul tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Resetări corecte",
+      "duration": "Durată",
+      "missedCounters": "Contoare ratate",
+      "prematureResets": "Resetări premature",
+      "totalEvents": "Total evenimente",
+      "tooEarly": "Prea devreme!",
+      "missed": "ratat!",
+      "title": "Jonglerie cu sarcini",
+      "premature": "prematur",
+      "counter": "Contor",
+      "tapCounterInstruction": "Atingeți fiecare contor când își atinge pragul. Nu lăsați niciun devers!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Punct de bisectie (PSE)",
+      "curveSteepness": "Abruptul curbei",
+      "idealMidpoint": "Punctul de mijloc ideal",
+      "pse": "PSE",
+      "title": "Bisectia temporala",
+      "steepness": "Abrupte",
+      "shortOrLong": "Scurt sau Lung?",
+      "trainingPhase": "Faza de antrenament",
+      "short": "Scurt",
+      "long": "Lung"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Lățimea gradientului",
+      "rememberThisDuration": "Amintiți-vă această durată",
+      "width": "lățimea",
+      "standard": "STANDARD",
+      "title": "Generalizare temporală",
+      "hitRate": "Rata de lovituri",
+      "faRate": "Rată FA",
+      "hitRateDetectStandard": "Rata de lovituri (detectare standard)",
+      "sameDuration": "Aceeași durată?",
+      "trainingPhase": "Faza de antrenament",
+      "same": "La fel",
+      "different": "Diferit"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Pragul SOA",
+      "title": "Discriminarea texturii",
+      "threshold": "Prag"
+    },
+    "timePromem": {
+      "avgTimingError": "Eroare medie de sincronizare",
+      "clockChecks": "Verificări ale ceasului",
+      "ongoingAccuracy": "Precizie continuă",
+      "ongoingTrials": "Procese în desfășurare",
+      "totalPmPresses": "Total de prese PM",
+      "pmAccuracy": "Precizie PM",
+      "pmMisses": "PM ratează",
+      "title": "Perspectivă de timp",
+      "ongoing": "În curs de desfășurare",
+      "pmHitsLabel": "PM hit-uri",
+      "timingErr": "Eroare de sincronizare",
+      "pmHitsExpected": "Afișări PM / așteptate",
+      "pmPresses": "Prese PM",
+      "checkClock": "Verifica ceasul",
+      "thirtySecMark": "Mark anilor 30"
+    },
+    "toj": {
+      "meanResponseTime": "Timp mediu de răspuns",
+      "temporalResolution": "Rezoluție temporală",
+      "title": "Hotărârea de ordine temporală",
+      "threshold": "Prag",
+      "whichCameFirst": "Care a venit primul?",
+      "leftFirst": "Stânga Mai întâi",
+      "rightFirst": "Dreptul Întâi"
+    },
+    "tower": {
+      "budget": "Buget",
+      "challenge": "Provocare",
+      "challengeClassic": "Clasic",
+      "challengeExpert": "Expert",
+      "challengeMemory": "Memorie",
+      "challengePrecision": "Precizie",
+      "dragDiscAriaLabel": "Trageți discul de sus din peg {{peg}}",
+      "goal": "Scop",
+      "goalHiddenStatus": "Scopul ascuns. Folosiți Reveal pentru a o afișa pe scurt.",
+      "goalRevealedMessage": "Gol dezvăluit timp de 3 secunde.",
+      "hint": "Sugestie",
+      "hintDescription": "Arată cea mai bună mișcare următoare",
+      "hintMessage": "Sugestie: mutați discul de sus de la chela {{fromPeg}} la chela {{toPeg}}.",
+      "hiddenGoalDescription": "Scopul este ascuns în timpul jocului. Utilizați Reveal când aveți nevoie de o scurtă reîmprospătare.",
+      "hiddenGoalTitle": "Provocarea memoriei",
+      "invalid": "Invalid",
+      "moves": "Mișcări",
+      "optimal": "Optim",
+      "pegFullMessage": "Cugetul este plin.",
+      "previewMemoryCountdown": "Memorează scopul. Începe în {{seconds}}s.",
+      "previewPlanCountdown": "Planificați soluția {{moves}}-mutare. Începe în {{seconds}}s.",
+      "reset": "Resetează",
+      "resetDescription": "Reporniți acest puzzle",
+      "resetMessage": "Resetarea puzzle-ului.",
+      "reveal": "Dezvăluie",
+      "revealDescription": "Dezvăluie obiectivul ascuns",
+      "statusOptimalSolve": "Rezolvare optimă. Scor {{score}}.",
+      "statusSolvedScore": "Rezolvat în {{moves}} mișcări (+{{extraMoves}}). Scor {{score}}.",
+      "undo": "Anulați",
+      "undoDescription": "Întoarceți ultima mișcare",
+      "undoneMessage": "Ultima mișcare anulată.",
+      "yourPegs": "Cuietele tale"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Livrări corecte",
+      "trainsLost": "Trenuri pierdute",
+      "wrongStation": "Stație greșită",
+      "title": "Trenul Gândirii",
+      "trains": "Trenuri",
+      "missed": "ratat",
+      "scoreLabel": "Scor",
+      "instructions": "Instrucțiuni"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Întrebări medii utilizate",
+      "title": "Douăzeci de întrebări",
+      "avgQuestions": "Mediu întrebări",
+      "rounds": "Runde",
+      "efficiency": "Eficiență",
+      "avgQuestionsCorrectOnly": "Mediu intrebari (doar corecte)",
+      "questionsLabel": "Întrebări",
+      "remaining": "Rămânând",
+      "readyToGuess": "Sunt gata să ghicesc!",
+      "tapTheTarget": "Atingeți obiectul pe care credeți că este ținta!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Câmp vizual util",
+      "visualNoiseMask": "Mască vizuală de zgomot",
+      "whatWasInTheCenter": "Ce era în centru?",
+      "whereWasTheTarget": "Unde era ținta?",
+      "avgThreshold": "Mediu prag",
+      "speed": "Viteză",
+      "accuracy": "Precizie",
+      "central": "Centrală",
+      "peripheral": "Periferic",
+      "overall": "În general",
+      "block": "Blocați",
+      "trials": "Încercări",
+      "start": "Începe",
+      "focus": "Concentrare",
+      "threshold": "Prag",
+      "stimulus": "Stimul",
+      "respondFromMemory": "Răspunde din memorie",
+      "truck": "Camion",
+      "choosePeripheralLocation": "Alegeți locația periferică",
+      "currentBlock": "Blocați {{n}}",
+      "exposure": "Expunerea"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Cuvinte începând cu {{letter}}",
+      "title": "Fluență verbală",
+      "totalWords": "Cuvinte în total",
+      "duplicates": "Duplicate",
+      "letter": "Scrisoare",
+      "round": "Rotund",
+      "roundComplete": "Runda completă",
+      "nextRound": "Următoarea rundă",
+      "middotRound": "· Rotund"
+    },
+    "vernierAcuity": {
+      "whichSide": "Care parte?",
+      "title": "Acuitate Vernier",
+      "leftOffset": "Offset la stânga",
+      "rightOffset": "Offset dreapta",
+      "offset": "Deplasare"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Strategia optimă",
+      "correct": "Corect!",
+      "wrong": "Greșit",
+      "title": "Prognoza meteo",
+      "optimal": "Optim",
+      "learningCurve": "Curba de învățare",
+      "predictTheWeather": "Prezice vremea",
+      "rain": "ploaie"
+    },
+    "wordChain": {
+      "avgResponseTime": "Timp mediu de răspuns",
+      "chain": "Lanț",
+      "longestChain": "Cel mai lung lanț",
+      "totalCorrect": "Corect total",
+      "totalWords": "Cuvinte totale",
+      "words": "Cuvinte",
+      "title": "Lanț de cuvinte",
+      "longest": "Cel mai lung",
+      "avgRt": "Mediu RT",
+      "endsWith": "se termină cu",
+      "chainLabel": "Lanț",
+      "bestLabel": "Cel mai bun"
+    },
+    "wordFlow": {
+      "avgWordLength": "Lungimea medie a cuvântului",
+      "correct": "Corect",
+      "invalidWords": "Cuvinte nevalide",
+      "totalWordsSelected": "Total cuvinte selectate",
+      "validWords": "Cuvinte valide",
+      "wordsPerMinute": "Cuvinte pe minut",
+      "wrong": "Greșit",
+      "seeResults": "Vezi rezultatele",
+      "nextRound": "Următoarea rundă ({{current}}/{{total}})",
+      "title": "Fluență verbală",
+      "validWordsLabel": "Cuvinte valide",
+      "wordsPerMinLabel": "Cuvinte/min",
+      "avgLengthLabel": "Mediu lungime",
+      "invalidLabel": "Invalid",
+      "round": "Rotund",
+      "selectWordsBelongTo": "Selectați cuvintele care îi aparțin",
+      "selected": "Selectat"
+    },
+    "wordList": {
+      "avgRtCorrect": "RT mediu (corect)",
+      "primacyEffect": "Efectul de primație",
+      "recencyEffect": "Efectul recent",
+      "studyPhaseRememberEachWord": "Faza de studiu - amintiți-vă fiecare cuvânt",
+      "wordsRecalled": "Cuvinte amintite",
+      "title": "Lista de cuvinte",
+      "serialPositionCurve": "Curba de poziție în serie",
+      "wasWordInList": "A fost acest cuvânt în listă?",
+      "seenBefore": "Văzut înainte",
+      "newWord": "Nou"
+    },
+    "speedSort": {
+      "switchAccuracy": "Precizia comutatorului",
+      "switchTrials": "Schimbă încercările",
+      "sortByColor": "Sortați după CULOARE",
+      "sortByShape": "Sortați după FORMA",
+      "sortByNumber": "Sortați după NUMBER",
+      "ruleChanged": "Regula schimbată!",
+      "binRed": "roșu",
+      "binBlue": "Albastru",
+      "binGreen": "Verde",
+      "binYellow": "Galben",
+      "binCircle": "Cercul",
+      "binSquare": "pătrat",
+      "binTriangle": "Triunghi",
+      "binStar": "Steaua",
+      "title": "Sortare viteză",
+      "switch": "Comutatoare"
+    },
+    "reflex": {
+      "target": "Țintă",
+      "lure": "Momeala",
+      "tooSlow": "Prea lent!",
+      "wrongTarget": "Țintă greșită!",
+      "tapTargets": "Atingeți cercurile verzi!",
+      "hits": "Răspunsuri corecte",
+      "misses": "Omisiuni",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Amintiți-vă de totalul curent...",
+      "title": "Calcul în lanț",
+      "stepChains": "{{len}}-lanțuri de trepte",
+      "start": "Începe",
+      "step": "Pasul",
+      "whatIsTheResult": "Care este rezultatul?"
+    },
+    "alternateUses": {
+      "placeholder": "Introduceți o utilizare...",
+      "title": "Utilizări alternative",
+      "totalUses": "Total utilizări",
+      "perObject": "Pe obiect",
+      "rounds": "Runde",
+      "bestObject": "Cel mai bun obiect",
+      "bestCount": "Cel mai bun număr",
+      "noUsesSubmitted": "Nu au fost trimise utilizări",
+      "timesUp": "Timpul a trecut!",
+      "nextObject": "Următorul obiect ({{object}})",
+      "listCreativeUses": "Enumerați utilizările creative pentru acest obiect"
+    },
+    "anagram": {
+      "placeholder": "Tastați cuvântul...",
+      "title": "Anagrama",
+      "avgSolve": "Mediu rezolva",
+      "letterWords": "{{len}}-cuvinte cu litere",
+      "submit": "Trimite"
+    },
+    "facialEmotion": {
+      "happy": "Fericit",
+      "sad": "Trist",
+      "angry": "Furios",
+      "fearful": "Înfricoșător",
+      "disgusted": "Dezgustat",
+      "surprised": "surprins",
+      "lc": "LC",
+      "title": "Recunoașterea emoțiilor faciale",
+      "topConfusions": "Top confuzii"
+    },
+    "numberSeries": {
+      "easy": "Ușor",
+      "hard": "Dificil"
+    },
+    "chainRecall": {
+      "round": "Rotund",
+      "title": "Rechemare în lanț",
+      "chain": "Lanț",
+      "placeholder": "Substituent"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emoțional Go/No-Go",
+      "block1CommissionErrors": "Erori de comision bloc 1",
+      "block2CommissionErrors": "Bloc 2 erori de comision",
+      "goHappy": "Du-te = Fericit",
+      "goSad": "Du-te = Trist",
+      "block": "Blocați",
+      "go": "Du-te"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Efectul Stroop",
+      "title": "Color Rush",
+      "congShort": "Congr.",
+      "incongShort": "Incongr.",
+      "congruentAccuracy": "Acuratețe congruentă",
+      "incongruentAccuracy": "Acuratețe incongruentă"
+    },
+    "mirror": {
+      "avgCorrectCells": "Celulele corecte (medie)",
+      "symmetryType": "Tipul de simetrie",
+      "title": "Oglindă"
+    },
+    "rhythmTap": {
+      "correctTrials": "Încercări corecte",
+      "avgRhythmScore": "Scorul mediu de ritm",
+      "bestTrialScore": "Cel mai bun scor de probă",
+      "worstTrialScore": "Cel mai prost scor de probă",
+      "level": "Nivel",
+      "rhythm": "Ritm",
+      "bestTrial": "Cel mai bun proces",
+      "worstTrial": "Cel mai rău proces"
+    },
+    "vocalProsody": {
+      "questioning": "Întrebarea"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Înmulțiți",
+      "add": "Adăugați",
+      "subtract": "Scăderea",
+      "title": "Viteza aritmetică",
+      "score": "Scor",
+      "solved": "Rezolvat",
+      "missed": "ratat"
+    },
+    "puzzle": {
+      "avgSolveTime": "Timp mediu de rezolvare",
+      "totalMoves": "Mișcări totale",
+      "totalErrors": "Total erori",
+      "gridSize": "Dimensiunea grilei",
+      "maxGridReached": "Grila maximă atinsă",
+      "maxLevelReached": "Nivelul maxim atins",
+      "maxNodesReached": "Numărul maxim de noduri atins",
+      "puzzleDetails": "Detalii puzzle",
+      "roundDetails": "Detalii rotunde",
+      "solved": "Rezolvat!",
+      "undo": "Anulați",
+      "reset": "Resetează",
+      "check": "Verificați",
+      "moves": "Mișcări",
+      "time": "Timp",
+      "level": "Nivel",
+      "errors": "Erori",
+      "score": "Scor",
+      "grid": "Grilă",
+      "crossings": "Traversări",
+      "pearls": "Perle",
+      "clues": "Indicii",
+      "region": "Regiunea",
+      "filled": "Umplut",
+      "cells": "Celulele",
+      "undosLeft": "Anulați rămase",
+      "gems": "Pietre prețioase",
+      "connected": "Conectat",
+      "slides": "Diapozitive",
+      "progress": "Progres",
+      "rotations": "Rotații",
+      "puzzle": "Puzzle",
+      "uncovered": "Descoperită",
+      "colored": "Colorate",
+      "violations": "Încălcări",
+      "blacked": "Înnegrit",
+      "empty": "Gol",
+      "remaining": "Rămânând",
+      "pairs": "Perechi",
+      "flips": "Întoarceri",
+      "found": "Găsit",
+      "balls": "mingi",
+      "guesses": "ghici",
+      "original": "Original",
+      "findDifferences": "Găsiți diferențe",
+      "totalDrags": "Târături totale",
+      "totalUndos": "Anulare totală",
+      "totalEdgesDrawn": "Total margini desenate",
+      "totalLasers": "Total lasere",
+      "totalSlides": "Total diapozitive",
+      "totalRotations": "Rotații totale",
+      "totalRectangles": "Total dreptunghiuri",
+      "totalScore": "Scorul total",
+      "avgTime": "Timp mediu",
+      "cellsCleared": "Celulele s-au curățat",
+      "totalDiffsFound": "Diferențele totale găsite",
+      "gemsCollected": "Pietre prețioase colectate",
+      "pushBoxesOntoTargets": "Împingeți toate cutiile pe ținte",
+      "fireLasersMarkBalls": "Trage cu lasere de pe margini, apoi marchează pozițiile bilelor",
+      "revealingAnswer": "Răspuns revelator...",
+      "checkAnswer": "Verificați răspunsul",
+      "pickNumberBelow": "Alegeți un număr de mai jos",
+      "tapCellToAssign": "Atingeți o celulă pentru a atribui un număr",
+      "tapEdgesToPlaceWalls": "Atingeți marginile pentru a plasa pereții. Împărțiți în regiuni ale lui K.",
+      "ghosts": "Fantome",
+      "vampires": "Vampirii",
+      "zombies": "Zombi",
+      "dominoes": "Dominouri",
+      "islands": "Insulele",
+      "pegsLeft": "Pegs Stânga",
+      "bestRemaining": "Cel mai bun rămas",
+      "puzzlesSolved": "Puzzle-uri rezolvate",
+      "flooded": "Inundat",
+      "edges": "Margini",
+      "totalPlacements": "Total de plasări",
+      "totalRemovals": "Îndepărtări totale",
+      "maxTileReached": "Tigla maximă atinsă",
+      "target": "Țintă",
+      "placed": "Plasat",
+      "totalGuesses": "Total ipoteze",
+      "guessesLeft": "Ghicirile au plecat",
+      "difficulty": "Dificultate"
+    },
+    "palisade": {
+      "title": "Palisadă",
+      "puzzles": "Puzzle-uri",
+      "maxLevel": "Nivel maxim"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "errors": "Erori",
+      "avgTime": "Mediu timp",
+      "erase": "Ștergeți"
+    },
+    "blackbox": {
+      "title": "Cutia Neagră",
+      "puzzles": "Puzzle-uri",
+      "lasers": "Lasere",
+      "avgTime": "Mediu timp"
+    },
+    "designFluency": {
+      "title": "Fluență de proiectare",
+      "uniqueDesigns": "Modele unice",
+      "duplicates": "Duplicate",
+      "round": "Rotund",
+      "roundComplete": "Runda completă",
+      "youCreatedDesigns": "Ați creat {{count}} modele",
+      "startRound": "Începe runda",
+      "instructions": "Instrucțiuni",
+      "designs": "Modele",
+      "clear": "Șterge",
+      "addDesign": "Adăugați"
+    },
+    "signpost": {
+      "title": "Stâlp indicator",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "avgTime": "Mediu timp",
+      "maxGrid": "Grila maximă"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Nivel",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "undos": "Anulați",
+      "puzzle": "Puzzle"
+    },
+    "numericalStroop": {
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "biologicalMotion": {
+      "title": "Mișcarea biologică",
+      "noiseDots": "puncte de zgomot",
+      "whichDirection": "În ce direcție?",
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "inertia": {
+      "title": "Inerție",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "gems": "Pietre prețioase",
+      "moves": "Mișcări"
+    },
+    "waterLevel": {
+      "title": "Nivelul apei",
+      "error": "Eroare",
+      "tilt": "Înclină",
+      "waterLine": "Linie de apă?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxGrid": "Grila maximă"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "errors": "Erori",
+      "avgTime": "Mediu timp",
+      "erase": "Ștergeți"
+    },
+    "rectangles": {
+      "title": "dreptunghiuri",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "rectanglesCount": "dreptunghiuri",
+      "maxGrid": "Grila maximă",
+      "cancelSelection": "Anulează selecția"
+    },
+    "filling": {
+      "title": "Umplere",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "avgTime": "Mediu timp",
+      "grid": "Grilă"
+    },
+    "spacedRetrieval": {
+      "title": "Recuperare distanțată",
+      "studyPair": "Studiază această pereche",
+      "waitAndSolve": "Așteaptă... apoi rezolvă",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Interval: ce perechi?"
+    },
+    "prototypeDistortion": {
+      "title": "Distorsiunea prototipului",
+      "studyPhase": "Faza de studiu",
+      "testPhase": "Faza de testare",
+      "yesBelongs": "Da — Aparține",
+      "noRandom": "Nu — Aleatoriu"
+    },
+    "motionCoherence": {
+      "title": "Coerența mișcării",
+      "threshold": "Prag",
+      "coherence": "Coerență",
+      "whichDirection": "În ce direcție?"
+    },
+    "cube": {
+      "title": "Cub",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxLevel": "Nivel maxim",
+      "cubeFaces": "Fețe de cub",
+      "moveUp": "Sus",
+      "moveLeft": "Stânga",
+      "moveDown": "Jos",
+      "moveRight": "Dreapta"
+    },
+    "sameGame": {
+      "title": "Același Joc",
+      "score": "Scor",
+      "cleared": "Eliberat",
+      "cells": "Celulele",
+      "accuracy": "Precizie"
+    },
+    "crossModalMatching": {
+      "title": "Potrivirea intermodală",
+      "chance": "Șansă",
+      "whichPatternMatchesRhythm": "Care model se potrivește cu ritmul?"
+    },
+    "mosaic": {
+      "title": "Mozaic",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxGrid": "Grila maximă"
+    },
+    "spotDiff": {
+      "title": "Localizați diferența",
+      "level": "Nivel",
+      "grid": "Grilă",
+      "accuracy": "Precizie",
+      "perfect": "Perfect",
+      "avgTime": "Mediu timp",
+      "found": "Găsit"
+    },
+    "lightsOut": {
+      "title": "Luminile Stinse",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxGrid": "Grila maximă"
+    },
+    "pipeline": {
+      "title": "Conductă",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "rotations": "Rotații",
+      "avgTime": "Mediu timp"
+    },
+    "tracks": {
+      "title": "Urme",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "errors": "Erori",
+      "avgTime": "Mediu timp"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "slides": "Diapozitive",
+      "maxGrid": "Grila maximă"
+    },
+    "cognitiveBias": {
+      "title": "Antrenamentul pentru prejudecăți cognitive",
+      "biasResistance": "Rezistență la polarizare",
+      "biased": "părtinitoare",
+      "continue": "Continuă"
+    },
+    "empathicAccuracy": {
+      "title": "Precizie empatică",
+      "emotionId": "Emoție",
+      "avgRatingError": "Mediu eroare de evaluare",
+      "scenarios": "Scenarii",
+      "perfect": "Perfect",
+      "rating": "Evaluare",
+      "howDoesCharacterFeel": "Cum se simte personajul?",
+      "rateIntensity": "Evaluați intensitatea",
+      "whatEmotion": "Ce emoție?",
+      "yourRating": "Evaluarea dvs",
+      "correct": "Corect",
+      "emotion": "Emoție"
+    },
+    "guess": {
+      "title": "Minte",
+      "solved": "Rezolvat",
+      "guesses": "ghici"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxLevel": "Nivel maxim"
+    },
+    "magnets": {
+      "title": "Magneți",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxLevel": "Nivel maxim"
+    },
+    "tangram": {
+      "placeAll": "Așezați toate piesele",
+      "solved": "Rezolvat!",
+      "notRight": "Nu tocmai corect",
+      "title": "Tangram",
+      "level": "Nivel",
+      "puzzles": "Puzzle-uri",
+      "placements": "Plasări",
+      "removals": "Îndepărtări",
+      "puzzleNumber": "Puzzle {{n}}",
+      "pieces": "Bucăți",
+      "targetCells": "Țintă",
+      "dragHint": "Trageți sau plasați piesa pe grilă",
+      "selectHint": "Selectați o piesă",
+      "rotate": "Rotește",
+      "undo": "Anulator",
+      "check": "Verificați"
+    },
+    "galaxies": {
+      "title": "Galaxii"
+    },
+    "flood": {
+      "title": "Inundaţie"
+    },
+    "pegs": {
+      "title": "cuie",
+      "bestPegs": "Cele mai bune cuie"
+    },
+    "auditoryFigureGround": {
+      "title": "Figura auditivă-Teren",
+      "patternPresent": "Model prezent?",
+      "pattern": "Model",
+      "noPattern": "Nici un model"
+    },
+    "selfOrderedPointing": {
+      "title": "Indicarea auto-comandată",
+      "maxSpan": "Amplitudine maximă",
+      "errors": "Erori",
+      "round": "Rotund",
+      "setOf": "Set de {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Urmărirea în oglindă",
+      "totalErrors": "Total erori",
+      "avgTime": "Mediu timp",
+      "shapes": "Forme",
+      "perfect": "Perfect",
+      "improvement": "Îmbunătățire",
+      "errorsMiddot": "erori ·",
+      "shape": "Formă",
+      "errors": "Erori",
+      "xIsMirrored": "X este oglindit!"
+    },
+    "clockDrawing": {
+      "title": "Desenul Ceasului",
+      "avgError": "Mediu eroare",
+      "setTo": "Setați la",
+      "submit": "Trimite"
+    },
+    "cognitiveMap": {
+      "title": "Harta Cognitiva",
+      "explore": "Explorează",
+      "sRemaining": "S rămas",
+      "from": "De la",
+      "whichDirectionIs": "Care este direcția"
+    },
+    "sixteen": {
+      "title": "Şaisprezece"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Luminează"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Piesă Max",
+      "moves": "Mișcări",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Poduri",
+      "puzzles": "Puzzle-uri",
+      "maxLevel": "Nivel maxim",
+      "level": "Nivel"
+    },
+    "net": {
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxGrid": "Grila maximă"
+    },
+    "flip": {
+      "title": "Flip"
+    },
+    "range": {
+      "title": "Gama"
+    },
+    "slant": {
+      "title": "Slant"
+    },
+    "towers": {
+      "title": "Turnuri",
+      "puzzles": "Puzzle-uri",
+      "avgTime": "Mediu timp",
+      "erase": "Ștergeți"
+    },
+    "pearl": {
+      "title": "Perla",
+      "edges": "Margini"
+    },
+    "mapColoring": {
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "moves": "Mișcări",
+      "maxLevel": "Nivel maxim"
+    },
+    "singles": {
+      "title": "Single"
+    },
+    "nonogram": {
+      "title": "Nonogramă"
+    },
+    "undead": {
+      "title": "Strigoi",
+      "accuracy": "Precizie",
+      "puzzles": "Puzzle-uri",
+      "avgTime": "Mediu timp"
+    },
+    "untangle": {
+      "title": "Descurca",
+      "drags": "Trageri",
+      "maxNodes": "Noduri maxime"
+    },
+    "unruly": {
+      "title": "Indisciplinat"
+    },
+    "fifteen": {
+      "title": "Cincisprezece"
+    },
+    "tents": {
+      "title": "corturi"
+    },
+    "mesker": {
+      "pen": "Pix",
+      "stroke": "Accident vascular cerebral",
+      "penPressureHint": "Scrieți cu o presiune constantă a stiloului"
+    },
+    "modality": {
+      "position": "Poziție",
+      "audio": "Audio"
+    },
+    "validate": "Validează"
+  },
+  "trace": {
+    "instructions": "Glisați în poziția N-spate. Atingeți de două ori dacă aceeași poziție.",
+    "hint": {
+      "validated": "Validat",
+      "draw": "Desenați litera • Atingeți pentru a valida",
+      "drawWithColor": "Desenați litera • Selectați culoarea • Atingeți pentru a valida",
+      "type": "Introdu litera • Enter pentru a valida",
+      "typeWithColor": "Tastați litera • Selectați culoarea • Enter pentru a valida",
+      "typeResult": "Introduceți rezultatul • Enter pentru a valida",
+      "writeResult": "Scrieți rezultatul • Atingeți pentru a valida"
+    },
+    "keyboard": {
+      "letterInput": "Scrisoare",
+      "numberInput": "Număr"
+    },
+    "arithmetic": {
+      "cueHint": "Memorează cele 2 cifre",
+      "refresh": "Nou"
+    },
+    "hintPosition": "Unde a fost stimulul cu {{n}} viraje în urmă?",
+    "hintN0": "Indicați stimulul curent",
+    "warmupHint": "Memorează pozițiile. Nu este nevoie de răspuns.",
+    "hintDraw": "Desenați litera • Atingeți pentru a valida",
+    "hintDrawWithColor": "Desenați litera • Selectați culoarea • Atingeți pentru a valida",
+    "hintWriteResult": "Scrieți rezultatul • Atingeți pentru a valida",
+    "guide": {
+      "swipeNormal": "Glisați de la ultima poziție (N-0) la poziția de acum {{n}} pași (N-{{n}}). Atingeți de două ori dacă aceeași poziție.",
+      "swipeSequential": "Glisați pas cu pas de la N-0 la N-{{n}}, trecând prin fiecare poziție intermediară. Atingeți de două ori dacă aceeași poziție.",
+      "swipeDynamic": "Glisați urmând regula afișată. Atingeți de două ori dacă aceeași poziție.",
+      "tapN0": "Atingeți poziția curentă.",
+      "warmup": "Memorați pozițiile - nu este necesar niciun răspuns.",
+      "writeDraw": "Desenați litera auzită cu {{n}} pași în urmă • Atingeți pentru a valida",
+      "writeDrawColor": "Desenați litera auzită cu {{n}} pași în urmă • Selectați-i culoarea • Atingeți pentru a valida",
+      "writeType": "Introdu litera auzită cu {{n}} pași în urmă • Introduceți pentru a valida",
+      "writeTypeColor": "Tastați litera auzită cu {{n}} pași în urmă • Selectați-i culoarea • Enter pentru a valida",
+      "writeDrawN0": "Desenați litera pe care tocmai ați auzit-o • Atingeți pentru a valida",
+      "writeDrawColorN0": "Desenați litera pe care tocmai ați auzit-o • Selectați-i culoarea • Atingeți pentru a valida",
+      "writeTypeN0": "Introdu litera pe care tocmai ai auzit-o • Enter pentru a valida",
+      "writeTypeColorN0": "Tastați litera pe care tocmai ați auzit-o • Selectați-i culoarea • Enter pentru a valida",
+      "writeResult": "Scrieți rezultatul • Atingeți pentru a valida",
+      "validated": "Validat",
+      "holdMindful": "Țineți celula timp de {{seconds}}s",
+      "swipeMindful": "Glisați în {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Cronometrare adaptivă",
+      "inputKeyboard": "Tastatura",
+      "inputHandwriting": "Scrisul de mână",
+      "writingInput": "Litere/cifre",
+      "section": {
+        "grid": "Grilă",
+        "input": "Intrare",
+        "rhythm": "Ritm",
+        "interface": "Interfață",
+        "interfaceNone": "Standard",
+        "sound": "Sunetul"
+      },
+      "isi": "Interval (ISI)",
+      "stimulusDuration": "Durata stimulului",
+      "feedbackDuration": "Durata feedback-ului",
+      "ruleDisplay": "Durata regulii",
+      "blankInterval": "Interval gol",
+      "showProgressBar": "Bară de progres",
+      "showInstructions": "Instrucțiuni în joc",
+      "arithmeticInterference": "Interferență aritmetică",
+      "fullMenu": "Meniu complet",
+      "gridStyle": "Stilul grilă",
+      "gridStyleClassic": "Clasic",
+      "gridStyleTrace": "Urme",
+      "guide": {
+        "swipeMindful": "Glisați în {{seconds}}s",
+        "holdMindful": "Țineți celula timp de {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Gestul",
+        "holdDuration": "Ține",
+        "writingDuration": "Scrierea"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Ține",
+      "gestureDuration": "Gestul",
+      "writingDuration": "Scrierea"
+    },
+    "image": "Formă",
+    "digits": "Cifre",
+    "emotions": "Emoție",
+    "words": "Cuvânt",
+    "tones": "Ton",
+    "spatial": "Direcția"
+  },
+  "replay": {
+    "title": "Reluarea sesiunii",
+    "play": "Joacă",
+    "pause": "Pauză",
+    "restart": "Repornește",
+    "speed": "Viteză",
+    "loading": "Se încarcă sesiunea...",
+    "unavailable": "Reluarea nu este disponibilă pentru această sesiune",
+    "backToStats": "Înapoi la statistici",
+    "runStack": {
+      "original": "Original",
+      "correction": "Corectare",
+      "delta": "Δ d'",
+      "inProgress": "În curs",
+      "completed": "Finalizat"
+    },
+    "abandon": "Abandonează",
+    "badge": "Rejoacă",
+    "completionReport": {
+      "backToHome": "Înapoi",
+      "correctAgain": "Corectează din nou",
+      "deltaVsOriginal": "vs original",
+      "deltaVsParent": "vs Runda anterioară",
+      "falseAlarmsSkipped": "Erori evitate",
+      "missesCorrections": "Corecții",
+      "newFalseAlarms": "Noi erori",
+      "replayAgain": "Rejoacă",
+      "scoreLabel": "d' scor",
+      "title": "Corectare finalizată"
+    },
+    "controls": "Controale",
+    "correction": "Corectare",
+    "finished": "Sfârșitul reluării",
+    "home": "Acasă",
+    "parseError": "Nu se poate citi sesiunea",
+    "tapSlotToPlace": "Atingeți un slot pentru a-l plasa",
+    "timeline": "Cronologie",
+    "focusTimeline": {
+      "open": "Arată cronologia",
+      "close": "Închide cronologia",
+      "title": "Cronologie N-Back",
+      "fillAll": "Umpleți totul",
+      "fillCard": "Umpleți cardul"
+    },
+    "hud": {
+      "counterDisplay": "Display de contor",
+      "toggleCounterDisplay": "Comutați afișajul contorului"
+    },
+    "validate": "Validează"
+  },
+  "recovery": {
+    "title": "Sesiune întreruptă",
+    "description": "O sesiune era în desfășurare. Doriți să reluați?",
+    "mode": "Mod",
+    "level": "Nivel",
+    "progress": "Progres",
+    "timeAgo": "Timp",
+    "resume": "Reluați sesiunea",
+    "startFresh": "Începe proaspăt",
+    "staleWarning": "Această sesiune este veche, reluarea ar putea fi o provocare.",
+    "modes": {
+      "game": "Antrenament",
+      "activeTraining": "Antrenament activ",
+      "flowTraining": "Antrenament Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Urmă dublă"
+    }
+  },
+  "rewards": {
+    "congratulations": "Felicitări!",
+    "duration": "{{days}} zile Premium",
+    "lifetimeLabel": "Acces pe viață",
+    "expiresAt": "Valabil până la {{date}}",
+    "neverExpires": "Nu expiră niciodată",
+    "continue": "Continuă",
+    "discovery": {
+      "name": "Pass de descoperire",
+      "description": "7 zile Premium — Explorați toate funcțiile"
+    },
+    "engagement": {
+      "name": "Permis de logodnă",
+      "description": "1 lună Premium — disciplina dvs. dă roade"
+    },
+    "expert": {
+      "name": "Abonament de expert",
+      "description": "3 luni Premium — Sunteți un adevărat practicant"
+    },
+    "lifetime": {
+      "name": "Acces pe viață",
+      "description": "Premium pentru totdeauna — Ai stăpânit Neurodual"
+    },
+    "xpRemaining": "XP rămas",
+    "permanentAccessUnlocked": "Acces permanent deblocat",
+    "reachedTheTop": "Ai ajuns sus!"
+  },
+  "progression": {
+    "level": "Nivel {{level}}",
+    "levelShort": "Nv. {{level}}",
+    "nextLevel": "Următorul nivel",
+    "reached": "Atins",
+    "inProgress": "În curs"
+  },
+  "gridlock": {
+    "nextPuzzle": "Următorul puzzle →"
+  }
+}

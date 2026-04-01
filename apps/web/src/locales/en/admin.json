@@ -38,68 +38,7 @@
       "refresh": "Refresh",
       "resetVfsPreference": "Reset VFS preference",
       "healthError": "Health error",
-      "sync": {
-        "title": "Sync",
-        "status": "Status",
-        "available": "Available",
-        "pending": "Pending",
-        "lastSync": "Last sync",
-        "error": "Error",
-        "blockedReason": "Blocked reason"
-      },
-      "runtime": {
-        "title": "Runtime",
-        "stage": "Stage",
-        "vfsSelected": "VFS (selected)",
-        "vfsPreferred": "VFS (preferred)",
-        "browser": "Browser",
-        "platform": "Platform",
-        "opfsSupported": "OPFS available",
-        "opfsChecks": "Checks OPFS",
-        "activeWatches": "Active watches"
-      },
-      "projections": {
-        "title": "Projections",
-        "endedSessions": "Ended sessions (emt_messages)",
-        "sessionSummaries": "Session summaries",
-        "missingSummaries": "Missing summaries",
-        "lastChecked": "Last checked",
-        "mismatchDetected": "Mismatch detected: projections are behind raw events.",
-        "status": "Projection status",
-        "source": "Projection source",
-        "orphanSummaries": "Orphan summaries",
-        "error": "Projection error"
-      },
-      "runtimeEventsLatest": "Runtime events (latest)",
-      "lifecycle": {
-        "title": "Sleep / wake lifecycle",
-        "hiddenVisible": "Hidden / visible",
-        "pagehidePageshow": "Pagehide / pageshow",
-        "online": "Online events",
-        "lastBackground": "Last background",
-        "maxBackground": "Max background",
-        "lastHiddenAt": "Last hidden",
-        "lastVisibleAt": "Last visible"
-      },
-      "reconnect": {
-        "title": "Reconnect diagnostics",
-        "attempts": "Attempts / ok / failed",
-        "reason": "Last reason",
-        "duration": "Last duration",
-        "startedAt": "Last started",
-        "completedAt": "Last completed",
-        "error": "Last error"
-      },
-      "memory": {
-        "title": "Runtime memory / storage",
-        "sampledAt": "Sampled at",
-        "reason": "Sample reason",
-        "jsHeapUsed": "JS heap used",
-        "jsHeapLimit": "JS heap limit",
-        "storageUsage": "Storage usage",
-        "storageQuota": "Storage quota",
-        "deviceMemory": "Device memory"
-      }
+      "runtimeEventsLatest": "Runtime events (latest)"
     },
     "devPanel": {
       "titleBot": "Dev bot",
@@ -165,13 +104,6 @@
       },
       "test": {
         "title": "AV sync test (500ms)",
-        "params": {
-          "bufferMs": "buffer (ms)",
-          "visualOffsetMs": "visualOffset (ms)",
-          "durationMs": "duration (ms)",
-          "interTrialMs": "interTrial (ms)",
-          "trials": "trials"
-        },
         "stimulusZone": "Stimulus zone",
         "running": "Running...",
         "start": "Start",
@@ -198,25 +130,9 @@
       "nLevel": "N level",
       "quality": "Quality",
       "score": "Score",
-      "statLabels": {
-        "min": "min",
-        "avg": "avg",
-        "max": "max",
-        "p95": "p95"
-      },
       "details": "Details",
       "alerts": "Degraded session alerts",
       "noAlerts": "No alerts — all sessions have good quality.",
-      "metrics": {
-        "processingLag": "Processing lag",
-        "eventLoopLag": "Event loop lag at start",
-        "rtStability": "RT stability (CV)",
-        "focusLoss": "Focus losses",
-        "focusLostTime": "Total focus lost",
-        "freezes": "Freezes",
-        "longTasks": "Long tasks",
-        "reliabilityScore": "Reliability score"
-      },
       "quality_high": "High",
       "quality_medium": "Medium",
       "quality_degraded": "Degraded"
@@ -247,17 +163,7 @@
       "noEventsInSession": "No events in this session",
       "eventsTitle": "Events",
       "eventsTotal": "({{count}} total)",
-      "inspectPayload": "Inspect raw payload",
-      "integrity": {
-        "title": "Event payload integrity",
-        "envelopeOnly": "Envelope-only events: {{count}} / {{total}}",
-        "hasTrial": "Events with trial data: {{count}} / {{total}}",
-        "hint": "If events look empty in the grid/modal, click the bug icon to inspect the raw stored payload string."
-      },
-      "rawPayload": {
-        "title": "Raw payload sample",
-        "empty": "No rows found for this session."
-      }
+      "inspectPayload": "Inspect raw payload"
     },
     "bot": {
       "title": "Gameplay test bot",
@@ -302,19 +208,7 @@
       "sessionsAvailable_one": "{{count}} session available",
       "sessionsAvailable_other": "{{count}} sessions available",
       "events_one": "{{count}} event",
-      "events_other": "{{count}} events",
-      "reasons": {
-        "completed": "completed",
-        "abandoned": "abandoned",
-        "error": "error"
-      },
-      "modes": {
-        "tempo": "Tempo",
-        "flow": "Dual Place",
-        "recall": "Dual Memo",
-        "dualPick": "Dual Pick",
-        "trace": "Dual Trace"
-      }
+      "events_other": "{{count}} events"
     },
     "analytics": {
       "title": "Session analytics",

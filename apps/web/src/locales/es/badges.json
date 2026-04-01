@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Constancia",
+      "performance": "Rendimiento",
+      "resilience": "Resiliencia",
+      "exploration": "Exploración",
+      "milestone": "Hitos",
+      "cognitive": "Cognitivo"
+    },
+    "first_session": {
+      "name": "Neurona Despierta",
+      "description": "Primera sesión completada."
+    },
+    "sessions_10": {
+      "name": "Pilar (Bronce)",
+      "description": "10 sesiones completadas."
+    },
+    "sessions_25": {
+      "name": "Pilar (Plata)",
+      "description": "25 sesiones completadas."
+    },
+    "marathoner": {
+      "name": "Pilar (Oro)",
+      "description": "50 sesiones completadas."
+    },
+    "streak_3": {
+      "name": "Ritual Naciente",
+      "description": "Racha de 3 días."
+    },
+    "streak_7": {
+      "name": "Ritual Diario",
+      "description": "Racha de 7 días."
+    },
+    "streak_14": {
+      "name": "Hábito Arraigado",
+      "description": "Racha de 14 días."
+    },
+    "streak_30": {
+      "name": "Disciplina de Hierro",
+      "description": "Racha de 30 días."
+    },
+    "early_bird": {
+      "name": "Madrugador",
+      "description": "5 días diferentes con sesión antes de las 8:00."
+    },
+    "night_owl": {
+      "name": "Ave Nocturna",
+      "description": "5 días diferentes con sesión después de las 22:00."
+    },
+    "brain_n3": {
+      "name": "Cerebro Afilado",
+      "description": "Alcanzar el nivel N-3."
+    },
+    "brain_n4": {
+      "name": "Cerebro Musculoso",
+      "description": "Alcanzar el nivel N-4."
+    },
+    "brain_n5": {
+      "name": "Cerebro Olímpico",
+      "description": "Alcanzar el nivel N-5."
+    },
+    "brain_n7": {
+      "name": "Élite Cognitiva",
+      "description": "Alcanzar el nivel N-7."
+    },
+    "brain_n10": {
+      "name": "Sobrehumano",
+      "description": "Alcanzar el nivel N-10."
+    },
+    "sniper": {
+      "name": "Francotirador",
+      "description": "> 90% de precisión con N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Precisión Quirúrgica",
+      "description": "> 95% de precisión con N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Láser",
+      "description": "> 98% de precisión con N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Intocable",
+      "description": "Sesión perfecta (0 errores) con N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Reflejo Rápido",
+      "description": "Tiempo de reacción promedio < 500ms con ≥70% de precisión."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Tiempo de reacción promedio < 400ms con ≥70% de precisión."
+    },
+    "rt_300": {
+      "name": "Relámpago",
+      "description": "Tiempo de reacción promedio < 300ms con ≥70% de precisión."
+    },
+    "consistent": {
+      "name": "Constante",
+      "description": "Desviación estándar de RT < 100ms (≥10 respuestas requeridas)."
+    },
+    "dprime_master": {
+      "name": "Maestro d'",
+      "description": "d-prime > 3.0 en una sesión."
+    },
+    "dprime_4": {
+      "name": "Experto SDT",
+      "description": "d-prime > 4.0 en una sesión."
+    },
+    "no_pause": {
+      "name": "Sin Interrupción",
+      "description": "5 sesiones consecutivas sin pausa con ≥75% de precisión."
+    },
+    "steady_hands": {
+      "name": "Mano Firme",
+      "description": "Sin entradas falsas durante la sesión (≥80% de precisión)."
+    },
+    "zen_master": {
+      "name": "Maestro Zen",
+      "description": "10 sesiones sin abandonar."
+    },
+    "comeback_kid": {
+      "name": "Remontada",
+      "description": "Subir de nivel tras un descenso."
+    },
+    "persistent": {
+      "name": "Persistente",
+      "description": "3 sesiones el mismo día tras un fracaso."
+    },
+    "second_wind": {
+      "name": "Segundo Aliento",
+      "description": "Mejorar el d-prime entre la mitad 1 y 2 (d′ ≥ 2.0 requerido)."
+    },
+    "plateau_breaker": {
+      "name": "Rompe Mesetas",
+      "description": "Progresar tras 10+ sesiones en el mismo nivel."
+    },
+    "no_surrender": {
+      "name": "Sin Rendición",
+      "description": "25 sesiones sin abandonar."
+    },
+    "ironwill": {
+      "name": "Voluntad de Hierro",
+      "description": "50 sesiones sin abandonar."
+    },
+    "audiophile": {
+      "name": "Audiófilo",
+      "description": "Audio > 80% pero Visual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Ojo de Águila",
+      "description": "Visual > 80% pero Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Sincronizado",
+      "description": "Puntuaciones Audio y Visual dentro del 5% (≥60% requerido)."
+    },
+    "dual_master": {
+      "name": "Maestro Dual",
+      "description": "Audio Y Visual > 85% en la misma sesión (≥6 señuelos/modalidad)."
+    },
+    "dual_elite": {
+      "name": "Élite Dual",
+      "description": "Audio Y Visual > 90% en la misma sesión con N ≥ 3 (≥6 señuelos/modalidad)."
+    },
+    "centurion": {
+      "name": "Centurión",
+      "description": "100 sesiones completadas."
+    },
+    "sessions_250": {
+      "name": "Leyenda (Esmeralda)",
+      "description": "250 sesiones completadas."
+    },
+    "sessions_500": {
+      "name": "Inmortal (Diamante)",
+      "description": "500 sesiones completadas."
+    },
+    "trials_500": {
+      "name": "Practicante",
+      "description": "500 ensayos jugados en total."
+    },
+    "trials_1000": {
+      "name": "Entrenado",
+      "description": "1.000 ensayos jugados en total."
+    },
+    "trials_5000": {
+      "name": "Curtido",
+      "description": "5.000 ensayos jugados en total."
+    },
+    "trials_10k": {
+      "name": "10.000 Ensayos",
+      "description": "10.000 ensayos jugados en total."
+    },
+    "trials_50k": {
+      "name": "Titán",
+      "description": "50.000 ensayos jugados en total."
+    },
+    "streak_90": {
+      "name": "Trimestre Impecable",
+      "description": "Racha de 90 días."
+    },
+    "streak_365": {
+      "name": "Año Perfecto",
+      "description": "Racha de 365 días."
+    },
+    "veteran": {
+      "name": "Veterano",
+      "description": "1 año de uso."
+    },
+    "metronome": {
+      "name": "El Metrónomo",
+      "description": "Varianza de RT < 50ms en ≥20 ensayos (respuestas activas requeridas)."
+    },
+    "flow_state": {
+      "name": "Estado de Gracia",
+      "description": "Flow detectado durante toda una sesión."
+    },
+    "sang_froid": {
+      "name": "Sangre Fría",
+      "description": "Sin cascada de errores tras un error (≥70% de precisión)."
+    },
+    "imperturbable": {
+      "name": "Imperturbable",
+      "description": "Sesión completa sin perder la concentración (≥60% de precisión)."
+    },
+    "comeback_strong": {
+      "name": "Regreso Triunfal",
+      "description": "Superar tu récord de d-prime tras 3+ días de ausencia (d′ ≥ 2.5)."
+    }
+  }
+}

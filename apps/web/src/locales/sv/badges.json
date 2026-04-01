@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Konsistens",
+      "performance": "Prestation",
+      "resilience": "Motståndskraft",
+      "exploration": "Utforskning",
+      "milestone": "Milstolpar",
+      "cognitive": "Kognitiv"
+    },
+    "first_session": {
+      "name": "Uppvaknat Neuron",
+      "description": "Första sessionen avklarad."
+    },
+    "sessions_10": {
+      "name": "Pelare (Brons)",
+      "description": "10 sessioner avklarade."
+    },
+    "sessions_25": {
+      "name": "Pelare (Silver)",
+      "description": "25 sessioner avklarade."
+    },
+    "marathoner": {
+      "name": "Pelare (Guld)",
+      "description": "50 sessioner avklarade."
+    },
+    "streak_3": {
+      "name": "Spirande Ritual",
+      "description": "3-dagars svit."
+    },
+    "streak_7": {
+      "name": "Daglig Ritual",
+      "description": "7-dagars svit."
+    },
+    "streak_14": {
+      "name": "Förankrad Vana",
+      "description": "14-dagars svit."
+    },
+    "streak_30": {
+      "name": "Järndisciplin",
+      "description": "30-dagars svit."
+    },
+    "early_bird": {
+      "name": "Morgonfågel",
+      "description": "5 olika dagar med session före kl. 08."
+    },
+    "night_owl": {
+      "name": "Nattuggla",
+      "description": "5 olika dagar med session efter kl. 22."
+    },
+    "brain_n3": {
+      "name": "Skarp Hjärna",
+      "description": "Nå nivå N-3."
+    },
+    "brain_n4": {
+      "name": "Stark Hjärna",
+      "description": "Nå nivå N-4."
+    },
+    "brain_n5": {
+      "name": "Olympisk Hjärna",
+      "description": "Nå nivå N-5."
+    },
+    "brain_n7": {
+      "name": "Kognitiv Elit",
+      "description": "Nå nivå N-7."
+    },
+    "brain_n10": {
+      "name": "Övermänniska",
+      "description": "Nå nivå N-10."
+    },
+    "sniper": {
+      "name": "Prickskytt",
+      "description": "> 90% träffsäkerhet vid N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Kirurgisk Precision",
+      "description": "> 95% träffsäkerhet vid N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% träffsäkerhet vid N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Oantastlig",
+      "description": "Perfekt session (0 fel) vid N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Snabb Reflex",
+      "description": "Genomsnittlig reaktionstid < 500ms med ≥70% träffsäkerhet."
+    },
+    "flash": {
+      "name": "Blixt",
+      "description": "Genomsnittlig reaktionstid < 400ms med ≥70% träffsäkerhet."
+    },
+    "rt_300": {
+      "name": "Åska",
+      "description": "Genomsnittlig reaktionstid < 300ms med ≥70% träffsäkerhet."
+    },
+    "consistent": {
+      "name": "Konsekvent",
+      "description": "RT standardavvikelse < 100ms (≥10 svar krävs)."
+    },
+    "dprime_master": {
+      "name": "d'-Mästare",
+      "description": "d-prime > 3.0 i en session."
+    },
+    "dprime_4": {
+      "name": "SDT-Expert",
+      "description": "d-prime > 4.0 i en session."
+    },
+    "no_pause": {
+      "name": "Oavbruten",
+      "description": "5 sessioner i rad utan paus med ≥75% träffsäkerhet."
+    },
+    "steady_hands": {
+      "name": "Stadiga Händer",
+      "description": "Inga felaktiga tryck under session (≥80% träffsäkerhet)."
+    },
+    "zen_master": {
+      "name": "Zen-Mästare",
+      "description": "10 sessioner utan att avbryta."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "Nivå upp efter en nivå ner."
+    },
+    "persistent": {
+      "name": "Envis",
+      "description": "3 sessioner samma dag efter ett misslyckande."
+    },
+    "second_wind": {
+      "name": "Andra Andningen",
+      "description": "Förbättra d-prime mellan halvlek 1 och 2 (d′ ≥ 2.0 krävs)."
+    },
+    "plateau_breaker": {
+      "name": "Platåbrytare",
+      "description": "Framsteg efter 10+ sessioner på samma nivå."
+    },
+    "no_surrender": {
+      "name": "Ingen Kapitulation",
+      "description": "25 sessioner utan att avbryta."
+    },
+    "ironwill": {
+      "name": "Järnvilja",
+      "description": "50 sessioner utan att avbryta."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Ljud > 80% men Visuell < 70%."
+    },
+    "eagle_eye": {
+      "name": "Örnöga",
+      "description": "Visuell > 80% men Ljud < 70%."
+    },
+    "synchronized": {
+      "name": "Synkroniserad",
+      "description": "Ljud- och Visuellpoäng inom 5% (≥60% krävs)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Ljud OCH Visuell > 85% i samma session (≥6 fällor/modalitet)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Ljud OCH Visuell > 90% i samma session vid N ≥ 3 (≥6 fällor/modalitet)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 sessioner avklarade."
+    },
+    "sessions_250": {
+      "name": "Legend (Smaragd)",
+      "description": "250 sessioner avklarade."
+    },
+    "sessions_500": {
+      "name": "Odödlig (Diamant)",
+      "description": "500 sessioner avklarade."
+    },
+    "trials_500": {
+      "name": "Utövare",
+      "description": "500 totala försök spelade."
+    },
+    "trials_1000": {
+      "name": "Tränad",
+      "description": "1 000 totala försök spelade."
+    },
+    "trials_5000": {
+      "name": "Erfaren",
+      "description": "5 000 totala försök spelade."
+    },
+    "trials_10k": {
+      "name": "10 000 Försök",
+      "description": "10 000 totala försök spelade."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "50 000 totala försök spelade."
+    },
+    "streak_90": {
+      "name": "Felfritt Kvartal",
+      "description": "90-dagars svit."
+    },
+    "streak_365": {
+      "name": "Perfekt År",
+      "description": "365-dagars svit."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 års användning."
+    },
+    "metronome": {
+      "name": "Metronomen",
+      "description": "RT-varians < 50ms på ≥20 försök (aktiva svar krävs)."
+    },
+    "flow_state": {
+      "name": "Nådens Tillstånd",
+      "description": "Flow detekterat genom en hel session."
+    },
+    "sang_froid": {
+      "name": "Kallt Huvud",
+      "description": "Ingen felkaskad efter ett fel (≥70% träffsäkerhet)."
+    },
+    "imperturbable": {
+      "name": "Orubblig",
+      "description": "Hel session utan fokusförlust (≥60% träffsäkerhet)."
+    },
+    "comeback_strong": {
+      "name": "Stark Comeback",
+      "description": "Slå ditt d-prime-rekord efter 3+ dagars uppehåll (d′ ≥ 2.5)."
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "トレーニングコース",
+    "pageSubtitle": "コースを選択、整理、作成しましょう",
+    "enabled": "コースを有効にする",
+    "description": "N-1からN-10までの30の段階的ステージ",
+    "progress": "進捗",
+    "locked": "ロック中",
+    "createJourney": "コースを作成",
+    "viewJourneys": "コース一覧",
+    "current": "現在のコース",
+    "myJourneys": "マイパス",
+    "stage": "ステージ",
+    "stages": "ステージ",
+    "stagesShort": "ステ.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "名前",
+    "namePlaceholder": "例：N-5チャレンジ",
+    "levels": "レベル",
+    "levelRange": "レベル範囲",
+    "levelTo": "to",
+    "createNew": "新しいコース",
+    "new": "新規",
+    "defaultCustomName": "マイパス",
+    "created": "コースを作成しました！",
+    "deleted": "コースを削除しました",
+    "sessionSettings": "セッションの設定",
+    "savedStatus": "設定を保存しました",
+    "preset": {
+      "easy": "Easy",
+      "medium": "おすすめ",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "コースとプロフィール",
+      "journey": "パス",
+      "journeyNone": "選択…",
+      "profile": "プロフィール",
+      "profileNone": "選択…",
+      "configure": "設定",
+      "configureNone": "コースを選択してください",
+      "create": "新しいコース",
+      "createDesc": "新しいコースを作成"
+    },
+    "deleteConfirmTitle": "このコースを削除しますか？",
+    "deleteConfirmMessage": "コース「{{name}}」は完全に削除されます。",
+    "renameTitle": "このコースの名前を変更",
+    "renameMessage": "「{{name}}」の名前を編集します。",
+    "renamed": "コースの名前を変更しました！",
+    "badge": {
+      "simulator": "シミュレーター",
+      "beta": "ベータ",
+      "default": "デフォルト"
+    },
+    "mode": "モード",
+    "modeStandard": "コース（4モード）",
+    "modeDnb": "Dual N-Back Classic",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "シミュレーター",
+      "jaeggi": "クラシック",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} 件の検証セッション",
+      "needed": "あと {{count}} セッション必要",
+      "excellent": "素晴らしい！",
+      "good": "良い！",
+      "passing": "合格"
+    },
+    "progression": {
+      "title": "進行",
+      "description": "次のレベルに進むには良いスコアを取得してください：",
+      "excellent": "≥95% → 1セッション",
+      "good": "≥85% → 2セッション",
+      "passing": "≥80% → 3セッション",
+      "rules": "進行ルール",
+      "jaeggi": {
+        "description": "最も弱いモダリティに基づく：",
+        "up": "< 3エラー → レベルアップ",
+        "stay": "3～5エラー → このレベルを維持",
+        "down": "> 5エラー → レベルダウン"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshopプロトコル（BWスコア）：",
+        "up": "≥80% → 1レベルアップ",
+        "stay": "50-79% → 維持",
+        "strike": "連続3回<50% → レベルダウン"
+      },
+      "hybrid": {
+        "description": "このコースは {{trackCount}} 回の Dual Track セッション、続いて同じレベルで {{dnbCount}} 回の Dual N-Back セッションを行います。",
+        "alternation": "判定が下されるたびに、サイクルは常に Dual Track から再開します。",
+        "authority": "レベルの上昇・維持・下降を決定するのは Dual N-Back セッションのみです。",
+        "up": "0〜1回のミス → レベルアップ",
+        "stay": "2〜3回のミス → 現状維持",
+        "down": "4回以上のミス → レベルダウン",
+        "streakRule": "同じゾーンで2セッション連続すると判定が発動します。",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "合格 {{current}}/{{required}}",
+        "stayProgress": "維持 {{current}}/{{required}}",
+        "downProgress": "失敗 {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track は各ターゲットレベルに連続的なマスタリーバーを使用します：",
+        "calibration": "初期キャリブレーションで開始レベルを推定します",
+        "goodSession": "良いセッションごとに現在のレベルが少し進みます",
+        "mastery": "ほぼ完璧なセッションはより速く進み、通常のセッションは控えめに進みます",
+        "regression": "弱いセッションは現在のマスタリーバーを下げることもあります",
+        "unlock": "次のターゲットレベルは 100% に達した時のみ解放されます"
+      }
+    },
+    "switcher": {
+      "open": "コース選択を開く",
+      "current": "現在",
+      "showAll": "すべてのコース",
+      "settings": "コース設定"
+    },
+    "previous": "前のコース",
+    "next": "次のコース",
+    "calibration": {
+      "title": "初回セッション",
+      "subtitle": "短いキャリブレーションで開始レベルを決定します。レベル2から直接始めることもできます。",
+      "skipToN2": "または N-2 から始める",
+      "continueAt": "または N-{{level}} で続ける",
+      "start": "キャリブレーションを開始",
+      "redo": "キャリブレーションをやり直す",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "現在の設定",
+      "currentSlotView": "現在の設定",
+      "lockedTitle": "一部のオプションがロックされています",
+      "lockedDesc": "進行の比較を維持するため、パス開始後はモダリティ（および一部のオプション）を変更できません。"
+    },
+    "completed": {
+      "title": "コース完了！",
+      "subtitle": "すべてのステージをクリア。お見事！",
+      "continueFree": "トレーニングを続ける"
+    },
+    "report": {
+      "stage": "ステージ",
+      "level": "レベル",
+      "score": "スコア",
+      "sessionValidated": "セッション検証済み",
+      "sessionNotValidated": "セッション未検証",
+      "minScore": "最低スコア要件：",
+      "stageCompleted": "ステージ完了！",
+      "stageUnlocked": "ステージ {{stage}} がアンロックされました",
+      "replay": "リプレイ",
+      "nextStage": "次のステージ",
+      "home": "ホーム",
+      "hits": "ヒット",
+      "misses": "ミス",
+      "falseAlarms": "誤報",
+      "correctRejections": "正しい拒否"
+    }
+  }
+}

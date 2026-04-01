@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "训练路径",
+    "pageSubtitle": "选择、组织和创建你的训练路线",
+    "enabled": "启用旅程",
+    "description": "从N-1到N-10的30个渐进阶段",
+    "progress": "进度",
+    "locked": "已锁定",
+    "createJourney": "创建路径",
+    "viewJourneys": "查看路径",
+    "current": "当前路径",
+    "myJourneys": "我的路径",
+    "stage": "阶段",
+    "stages": "阶段",
+    "stagesShort": "阶段",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "名称",
+    "namePlaceholder": "例如：N-5挑战",
+    "levels": "等级",
+    "levelRange": "等级范围",
+    "levelTo": "to",
+    "createNew": "新路径",
+    "new": "新",
+    "defaultCustomName": "我的路径",
+    "created": "路径已创建！",
+    "deleted": "路径已删除",
+    "sessionSettings": "训练设置",
+    "savedStatus": "设置已保存",
+    "preset": {
+      "easy": "Easy",
+      "medium": "推荐",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "旅程与配置",
+      "journey": "路径",
+      "journeyNone": "选择…",
+      "profile": "配置",
+      "profileNone": "选择…",
+      "configure": "配置",
+      "configureNone": "选择一个路径",
+      "create": "新路径",
+      "createDesc": "创建新路径"
+    },
+    "deleteConfirmTitle": "删除此路径？",
+    "deleteConfirmMessage": "旅程\"{{name}}\"将被永久删除。",
+    "renameTitle": "重命名此路线",
+    "renameMessage": "编辑\"{{name}}\"的名称。",
+    "renamed": "旅程已重命名！",
+    "badge": {
+      "simulator": "模拟器",
+      "beta": "测试版",
+      "default": "默认"
+    },
+    "mode": "模式",
+    "modeStandard": "路径（4种模式）",
+    "modeDnb": "经典Dual N-Back",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "模拟器",
+      "jaeggi": "经典",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} 个验证会话",
+      "needed": "还需 {{count}} 次训练",
+      "excellent": "优秀！",
+      "good": "很好！",
+      "passing": "通过"
+    },
+    "progression": {
+      "title": "进度",
+      "description": "获得良好分数以进入下一级别：",
+      "excellent": "≥95% → 1个会话",
+      "good": "≥85% → 2个会话",
+      "passing": "≥80% → 3个会话",
+      "rules": "进度规则",
+      "jaeggi": {
+        "description": "基于最弱模态：",
+        "up": "< 3个错误 → 升级",
+        "stay": "3-5个错误 → 保持",
+        "down": "> 5个错误 → 降级"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop协议（BW分数）：",
+        "up": "≥80% → 升一级",
+        "stay": "50-79% → 保持",
+        "strike": "连续3次<50%分数 → 降级"
+      },
+      "hybrid": {
+        "description": "此路线先进行 {{trackCount}} 次 Dual Track 训练，然后在相同级别进行 {{dnbCount}} 次 Dual N-Back 训练。",
+        "alternation": "每当做出决定后，循环总是从 Dual Track 重新开始。",
+        "authority": "只有 Dual N-Back 训练决定升级、保持或降级。",
+        "up": "0-1次错误 → 升级",
+        "stay": "2-3次错误 → 保持",
+        "down": "4次以上错误 → 降级",
+        "streakRule": "连续两次训练处于同一区间时触发判定。",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "已通过 {{current}}/{{required}}",
+        "stayProgress": "保持 {{current}}/{{required}}",
+        "downProgress": "失败 {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track 为每个目标级别使用连续的掌握度进度条：",
+        "calibration": "初始校准会估算你的起始级别",
+        "goodSession": "每次良好的训练都会推进当前层级",
+        "mastery": "接近完美的训练推进更快，普通训练进展适中",
+        "regression": "较差的训练也可能使当前掌握度进度条下降",
+        "unlock": "下一个目标级别仅在达到 100% 时解锁"
+      }
+    },
+    "switcher": {
+      "open": "打开路线选择器",
+      "current": "当前",
+      "showAll": "所有路线",
+      "settings": "路线设置"
+    },
+    "previous": "上一个旅程",
+    "next": "下一个路线",
+    "calibration": {
+      "title": "首次训练",
+      "subtitle": "通过简短校准确定你的起始等级，也可以直接从等级2开始。",
+      "skipToN2": "或从 N-2 开始",
+      "continueAt": "或从 N-{{level}} 继续",
+      "start": "开始校准",
+      "redo": "重新校准",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "当前设置",
+      "currentSlotView": "当前设置",
+      "lockedTitle": "部分选项已锁定",
+      "lockedDesc": "为保持进度的可比性，路径开始后不能更改模态（及部分选项）。"
+    },
+    "completed": {
+      "title": "旅程已完成！",
+      "subtitle": "所有阶段已通过。做得好！",
+      "continueFree": "继续训练"
+    },
+    "report": {
+      "stage": "阶段",
+      "level": "等级",
+      "score": "分数",
+      "sessionValidated": "会话已验证",
+      "sessionNotValidated": "会话未验证",
+      "minScore": "最低分数要求：",
+      "stageCompleted": "阶段完成！",
+      "stageUnlocked": "阶段 {{stage}} 已解锁",
+      "replay": "重玩",
+      "nextStage": "下一阶段",
+      "home": "首页",
+      "hits": "命中",
+      "misses": "错过",
+      "falseAlarms": "虚报",
+      "correctRejections": "正确拒绝"
+    }
+  }
+}

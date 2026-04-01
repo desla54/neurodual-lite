@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Lahat ng karapatan ay nakalaan.",
+    "terms": {
+      "title": "Mga tuntunin ng serbisyo",
+      "version": "Bersyon 3.0 — Huling na-update: 2026-03-04",
+      "healthWarning": {
+        "title": "MAHALAGANG BABALA SA KALUSUGAN",
+        "content": "Ang NeuroDual ay isang cognitive training at wellness app. <strong>Hindi ito isang medikal na device.</strong> Hindi ito nagdi-diagnose, nagga-gamot, nagpapagaling, o pumipigil ng anumang sakit. Kung may mga alalahanin ka o nakakaramdam ng hindi komportable, ihinto ang paggamit ng app at kumonsulta sa isang healthcare professional."
+      },
+      "section1": {
+        "title": "1. Layunin at Pagtanggap",
+        "content": "Sa pag-download, pag-install, o paggamit ng NeuroDual, walang kondisyong tinatanggap mo ang mga Tuntunin ng Serbisyong ito. Kung hindi mo tinatanggap ang mga tuntuning ito, huwag gamitin ang application."
+      },
+      "section2": {
+        "title": "2. Paglalarawan ng Serbisyo",
+        "content": "Nagbibigay ang NeuroDual ng Dual N-Back working memory training, na may lokal na data management at mga opsyon sa synchronization sa pamamagitan ng account. Ibinibigay ang serbisyo nang as-is at maaaring magbago.",
+        "item1": "Compatibility: web at mobile application (depende sa availability).",
+        "item2": "Access: ang ilang feature ay nangangailangan ng koneksyon sa internet at/o paglikha ng account.",
+        "item3": "Updates: maaari kaming mag-deploy ng mga fix o update nang walang abiso para sa mga kadahilanang seguridad o performance.",
+        "item4": "Advertising: ang libreng mobile version ay maaaring magpakita ng interstitial ads (Google AdMob). Walang makikitang advertising ang mga premium user."
+      },
+      "section3": {
+        "title": "3. Mga Account at Seguridad",
+        "item1": "Opsyonal na paglikha ng account sa pamamagitan ng email o identity provider (Google, Apple).",
+        "item2": "Ikaw ang responsable sa pagpapanatili ng confidentiality ng iyong credentials at lahat ng aksyon na ginawa gamit ang iyong account.",
+        "item3": "Available ang pag-delete ng account at nauugnay na data mula sa Settings.",
+        "item4": "Maaari naming i-suspend o i-terminate ang isang account sakaling lumabag sa mga Tuntuning ito, tangkang pandaraya, o paglabag sa seguridad."
+      },
+      "section4": {
+        "title": "4. Mga Patakaran at Paghihigpit sa Paggamit",
+        "item1": "Huwag i-bypass ang mga hakbang sa seguridad o teknikal na limitasyon.",
+        "item2": "Huwag gamitin ang application para sa mga ilegal o mapaminsalang layunin.",
+        "item3": "Huwag subukang mag-reverse engineer o mag-extract ng hindi awtorisadong content.",
+        "item4": "Igalang ang mga karapatan sa intellectual property ng application at mga nilalaman nito."
+      },
+      "section5": {
+        "title": "5. Intelektwal na Ari-arian",
+        "content": "Lahat ng elemento (teksto, graphics, tunog, source code, logo) ay protektado ng copyright at nananatiling pag-aari ng publisher o ng mga licensor nito. Walang ibinibigay na lisensya maliban sa personal, hindi eksklusibo, at hindi matransfer na karapatan na gamitin ang application alinsunod sa mga Tuntuning ito."
+      },
+      "section6": {
+        "title": "6. Availability at Suporta",
+        "content": "Ang serbisyo ay accessible 24/7 depende sa maintenance o force majeure. Hindi namin ginagarantiya ang tuloy-tuloy na availability o performance. Suporta: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Mga In-App Purchase / Subscription",
+        "content": "Available ang mga premium subscription: taunang at lifetime (10 taon). Pinamamahalaan ang mga pagbabayad ng RevenueCat (mobile) o Lemon Squeezy (web). Naaangkop ang <strong>Mga Tuntunin ng Pagbebenta</strong> (pagpepresyo, pag-withdraw, pag-renew, pagkansela, refund) at available bago ang pagbili."
+      },
+      "section8": {
+        "title": "8. Pananagutan",
+        "item1": "Ibinibigay ang serbisyo nang \"as-is\" na walang warranty ng mga resulta.",
+        "item2": "Hindi kami responsable para sa direkta o hindi direktang pinsala na may kaugnayan sa paggamit, pagkawala ng hindi na-save na lokal na data, o interpretasyon ng mga estadistika.",
+        "item3": "Kung nakakaramdam ka ng hindi komportable, masamang epekto, o mga alalahanin tungkol sa iyong kalusugan, ihinto ang paggamit."
+      },
+      "section9": {
+        "title": "9. Personal na Data",
+        "content": "Ang pag-process ng personal na data ay inilalarawan sa <a>Patakaran sa privacy</a>. Sakaling magkasalungatan ang mga Tuntunin at ang Patakaran sa privacy tungkol sa mga usaping data, ang Patakaran sa privacy ang mangingibabaw."
+      },
+      "section10": {
+        "title": "10. Mga Pagbabago sa mga Tuntunin",
+        "content": "Maaari naming baguhin ang mga Tuntuning ito para sa mga kadahilanang legal, teknikal, o serbisyo. Ang petsa ng pag-update ay lalabas sa itaas ng dokumento. Sakaling may malaking pagbabago, may ipapakitang notipikasyon sa application."
+      },
+      "section11": {
+        "title": "11. Naaangkop na Batas at mga Dispute",
+        "content": "Ang mga Tuntuning ito ay pinamumunuan ng batas ng France. Sakaling magkadispute at pagkatapos ng mga amicable na pagtatangka, ang mga consumer user ay maaaring gumamit ng consumer mediation o ng European Online Dispute Resolution (ODR) platform. Kung hindi, ang mga hukuman ng France ang magkakaroon ng eksklusibong hurisdiksyon."
+      },
+      "section12": {
+        "title": "12. Makipag-ugnayan",
+        "content": "Para sa anumang katanungan tungkol sa mga Tuntuning ito:"
+      }
+    },
+    "privacy": {
+      "title": "Patakaran sa privacy",
+      "version": "Bersyon 3.0 — Huling na-update: 2026-03-04",
+      "intro": {
+        "p1": "Ang Patakaran sa Privacy na ito ay naglalarawan kung paano pinoproseso ng NeuroDual (\"kami\", \"amin\", \"namin\") ang iyong personal na data kapag ginagamit mo ang aming mobile application at website.",
+        "p2": "Inilalapat namin ang mga prinsipyo ng General Data Protection Regulation (GDPR) at ng French Data Protection Act. Pinapaboran namin ang \"local-first\" architecture, hindi nagbebenta o nagpapaupa ng iyong data, at gumagamit ng audience measurement para mapabuti ang produkto."
+      },
+      "section1": {
+        "title": "1. Tagapamahala ng Data",
+        "responsible": "Tagapamahala:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Tirahan ng opisina:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, France",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Email:",
+        "dpo": "DPO: AGUILAL Abdeslam (parehong contact). Para sa anumang katanungan tungkol sa iyong data, makipag-ugnayan sa address sa itaas."
+      },
+      "section2": {
+        "title": "2. Data na Kinokolekta Namin",
+        "sub1": {
+          "title": "2.1 Data na Ginawa ng User (Lokal na Mode)",
+          "content": "Iniimbak lamang sa iyong device sa pamamagitan ng SQLite habang naka-log out ka:",
+          "item1": "Mga score at N-Back session history.",
+          "item2": "Mga setting ng configuration ng laro.",
+          "item3": "Lokal na profile (palayaw, napiling avatar).",
+          "note": "Ang data na ito ay hindi dumadaan sa aming mga server hanggang sa gumawa ka ng account. Kung i-uninstall mo ang app, mawawala ang data na ito."
+        },
+        "sub2": {
+          "title": "2.2 Data ng Account (Opsyonal)",
+          "content": "Kung gumawa ka ng account para i-sync ang iyong data:",
+          "item1": "Email address (natatanging identifier).",
+          "item2": "User ID na ibinigay ng identity provider (Google, Apple).",
+          "note": "Pinamamahalaan ang data na ito sa pamamagitan ng aming authentication provider (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Mga Teknikal na Log",
+          "content": "Pseudonymized log (mga error, sync status, performance) para sa seguridad at suporta."
+        },
+        "sub4": {
+          "title": "2.4 Data ng Suporta",
+          "content": "Ang mga email exchange sa suporta ay maaaring maglaman ng iyong contact details at nilalaman ng request para makatugon."
+        },
+        "sub5": {
+          "title": "2.5 Monitoring at Error Tracking",
+          "content": "Teknikal na data (mga error, performance, abnormal na gawi) na kinokolekta sa pamamagitan ng Sentry para mapabuti ang stability ng application. Pseudonymized data, walang advertising targeting."
+        },
+        "sub6": {
+          "title": "2.6 Audience Measurement at Product Analytics",
+          "content": "Anonymized usage data na kinokolekta sa pamamagitan ng PostHog (mga binisitang page, mga aksyon sa app, uri ng device) para mapabuti ang produkto. Walang ipinapadala na personally identifiable data. Walang advertising targeting."
+        },
+        "sub7": {
+          "title": "2.7 Advertising (Libreng Mobile Version)",
+          "content": "Ang libreng Android version ay nagpapakita ng interstitial ads sa pamamagitan ng Google AdMob. Maaaring mangolekta ang Google ng advertising identifier at teknikal na data (uri ng device, wika, mga interaksyon sa ad). Ang mga premium user ay hindi exposed sa advertising. Para sa karagdagang impormasyon: Google Ads privacy policy."
+        }
+      },
+      "section3": {
+        "title": "3. Mga Layunin at Legal na Batayan",
+        "content": "Ginagamit lang namin ang iyong data para sa:",
+        "item1": "<strong>Operasyon ng serbisyo</strong> (lokal na backup, estadistika, multi-device sync) — Legal na batayan: pagganap ng kontrata (Art. 6.1.b GDPR).",
+        "item2": "<strong>Seguridad at pag-iwas sa pandaraya</strong> (teknikal na logging, access control) — Legal na batayan: lehitimong interes (Art. 6.1.f GDPR).",
+        "item3": "<strong>Suporta sa user</strong> — Legal na batayan: lehitimong interes (pagtugon sa mga request).",
+        "item4": "<strong>Mga legal na obligasyon</strong> — Legal na batayan: legal na obligasyon (Art. 6.1.c GDPR).",
+        "item5": "<strong>Monitoring at error tracking</strong> — Legal na batayan: lehitimong interes (pagpapabuti ng stability); pseudonymized data, walang personalized na advertising.",
+        "item6": "<strong>Audience measurement</strong> (anonymized product analytics sa pamamagitan ng PostHog) — Legal na batayan: lehitimong interes (Art. 6.1.f GDPR); anonymized data.",
+        "note": "Ang anumang pagbabago sa layunin ay idodokumento sa isang update ng patakarang ito.",
+        "item7": "<strong>Advertising</strong> (pagpapakita ng interstitial ads para sa mga libreng mobile user) — Legal na batayan: lehitimong interes (Art. 6.1.f GDPR).",
+        "item8": "<strong>Marketing at mga newsletter</strong> — Legal na batayan: malinaw na pahintulot (Art. 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Mga Panahon ng Pagpapanatili",
+        "item1": "<strong>Lokal na data:</strong> iniimbak sa iyong device at dine-delete kapag nag-uninstall o nag-reset.",
+        "item2": "<strong>Account at naka-sync na data:</strong> pinapanatili habang aktibo ang account. Dine-delete sa loob ng 30 araw pagkatapos ng request na i-delete ang account.",
+        "item3": "<strong>Mga teknikal na log:</strong> pinapanatili nang maximum na 12 buwan, pagkatapos ay awtomatikong dine-delete.",
+        "item4": "<strong>Monitoring:</strong> pseudonymized na teknikal na data na pinapanatili nang 90 araw para sa error tracking at pagpapabuti ng produkto.",
+        "item5": "<strong>Mga request sa suporta:</strong> pinapanatili nang 24 buwan pagkatapos magsara ang ticket, pagkatapos ay dine-delete.",
+        "item6": "<strong>Data ng audience (PostHog):</strong> anonymized, pinapanatili nang 12 buwan."
+      },
+      "section5": {
+        "title": "5. Mga Tatanggap, Processor, at Transfer",
+        "content": "Ang iyong data ay maaaring iproseso ng mga sumusunod na provider:",
+        "item1": "Supabase Inc. (authentication at cloud database, EU hosting).",
+        "item2": "Amazon Web Services (imprastraktura ng Supabase, mga rehiyon ng EU).",
+        "item3": "Cloudflare Inc. (web application hosting, CDN, at seguridad).",
+        "item4": "Sentry (error at performance monitoring; non-EU transfer na pinamumunuan ng Standard Contractual Clauses).",
+        "item5": "RevenueCat Inc. (mobile subscription at in-app payment management; hindi nag-iimbak ng credit card data).",
+        "note": "Kung may bagong provider na idaragdag, ia-update ang seksyong ito.",
+        "transfers": "<strong>Non-EU transfer:</strong> kapag kasangkot ang mga provider sa labas ng EU (hal., Cloudflare, Supabase US entity, Sentry, RevenueCat, Google AdMob), ang mga transfer ay pinamumunuan ng Standard Contractual Clauses (SCC) ng European Commission o katumbas na mekanismo.",
+        "item6": "PostHog Inc. (audience measurement at product analytics; anonymized data; EU hosting).",
+        "item7": "Lemon Squeezy (web payment management; hindi nag-iimbak ng credit card data).",
+        "item8": "Google AdMob (pagpapakita ng advertising sa libreng mobile version; non-EU transfer na pinamumunuan ng Standard Contractual Clauses)."
+      },
+      "section6": {
+        "title": "6. Ang Iyong mga Karapatan",
+        "content": "Sa ilalim ng GDPR, mayroon kang mga sumusunod na karapatan:",
+        "item1": "Pag-access, pagwawasto, pagbura.",
+        "item2": "Restriction at objection (depende sa legal na batayan).",
+        "item3": "Portability (i-export ang iyong data sa JSON o CSV).",
+        "item4": "Pag-withdraw ng pahintulot (kung naaangkop).",
+        "item5": "Reklamo sa supervisory authority (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Pag-delete ng account:</strong> maaari mong i-delete ang iyong account at lahat ng nauugnay na data nang direkta mula sa application Settings. Ang aksyon na ito ay hindi na mababawi.",
+        "exercise": "Para gamitin ang iba pang mga karapatan, makipag-ugnayan sa <strong>support@neurodual.fr</strong>. Maaaring hingin ang patunay ng pagkakakilanlan sakaling may makatwirang pagdududa. Oras ng pagtugon: 1 buwan (maaaring palawigin hanggang 3 buwan sa mga kumplikadong kaso)."
+      },
+      "section7": {
+        "title": "7. Seguridad",
+        "content": "Encrypted communications (HTTPS/TLS), restricted administrator access, permission controls. Sakaling magkaroon ng data breach na maaaring magdulot ng panganib, gagawin ang mga legal na notipikasyon (CNIL at mga apektadong indibidwal)."
+      },
+      "section8": {
+        "title": "8. Cookies at Lokal na Storage",
+        "content": "Gumagamit ang application ng SQLite para iimbak ang iyong progreso nang direkta sa iyong device. Mga essential na teknikal na cookies lamang (authentication, session) ang ginagamit. Ang libreng mobile version ay gumagamit ng Google AdMob na maaaring mag-set ng cookies o advertising identifier."
+      },
+      "section9": {
+        "title": "9. Mga Minor",
+        "content": "Ang NeuroDual ay para sa mga user na higit sa 16 taong gulang. Dapat gamitin ng mga minor ang application sa ilalim ng responsibilidad ng isang legal guardian."
+      },
+      "section10": {
+        "title": "10. Mga Pagbabago",
+        "content": "Ang anumang na-update na bersyon ay ipo-publish dito kasama ang petsa ng huling pag-update. Sakaling may malaking pagbabago, magbibigay ng notipikasyon sa application."
+      },
+      "section11": {
+        "title": "11. Makipag-ugnayan",
+        "content": "Para sa anumang katanungan o para gamitin ang iyong mga karapatan:",
+        "email": "Email: support@neurodual.fr",
+        "responsible": "Tagapamahala ng Data: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Mga tuntunin ng pagbebenta",
+      "version": "Taunang at lifetime subscription — Huling na-update: 2026-03-04",
+      "section1": {
+        "title": "1. Layunin",
+        "content": "Ang mga Tuntunin ng Pagbebenta na ito ay namamahala sa subscription sa NeuroDual premium plan (taunang at lifetime). Kumukumpleto ang mga ito sa <a1>Mga Tuntunin ng Serbisyo</a1> at sa <a2>Patakaran sa Privacy</a2>."
+      },
+      "section2": {
+        "title": "2. Alok at Pagpepresyo",
+        "item1": "<strong>Taunang subscription</strong>: presyong ipinapakita bago ang pagbabayad (kasama ang buwis kung naaangkop), awtomatikong nire-renew bawat taon.",
+        "item2": "<strong>Lifetime subscription (10 taon)</strong>: isang beses na pagbabayad na nagbibigay ng access sa premium features nang 10 taon nang walang awtomatikong pag-renew.",
+        "item3": "Premium access: multi-device cloud sync, remote backup, access sa lahat ng N-level, advanced export, walang ad, priority support.",
+        "item4": "Ang mga kasalukuyang presyo ay available sa in-app subscription page at sa mga store (App Store, Google Play).",
+        "item5": "Maaaring magbago ang mga presyo; ang anumang pagbabago ay iko-communicate bago ang pag-renew para payagan ang pagkansela (hindi naaangkop sa lifetime)."
+      },
+      "section3": {
+        "title": "3. Tagal, Pag-renew, at Pagkansela",
+        "item1": "<strong>Taunang subscription</strong>: 12 buwang tagal mula sa petsa ng subscription.",
+        "item2": "<strong>Lifetime subscription</strong>: 10 taong tagal mula sa petsa ng subscription, walang pag-renew.",
+        "item3": "Pag-renew (taunang): awtomatikong pag-renew sa bawat termino maliban kung kinansela nang maaga.",
+        "item4": "Pagkansela (taunang): posible sa anumang oras mula sa app o store settings (App Store, Google Play). Magkakabisa sa dulo ng kasalukuyang panahon.",
+        "item5": "Hindi makakanselang ang lifetime pero nananatiling saklaw ng legal na karapatan sa pag-withdraw (tingnan ang seksyon 5)."
+      },
+      "section4": {
+        "title": "4. Pagbabayad",
+        "item1": "Pinamamahalaan ang mga pagbabayad ng RevenueCat sa pamamagitan ng mga store (App Store, Google Play) o Lemon Squeezy para sa web. Hindi namin iniimbak ang iyong credit card data.",
+        "item2": "Sakaling mabigo ang pagbabayad (recurring subscription), maaaring masuspinde ang premium access hanggang sa maayos.",
+        "item3": "Ang mga refund para sa mga binili sa pamamagitan ng App Store o Google Play ay dapat i-request mula sa kaukulang store."
+      },
+      "section5": {
+        "title": "5. Karapatan sa Pag-withdraw",
+        "content": "Digital na serbisyo na ibinibigay pagkatapos ng pagbili. Kung hiling mo ang agarang pagpapatupad bago matapos ang 14 na araw na legal na panahon, kinikilala mong isinusuko mo ang iyong karapatan sa pag-withdraw sa ganap na paghahatid ng serbisyo. Kung walang malinaw na pagwawaksi, maaari mong gamitin ang karapatan sa pag-withdraw sa loob ng 14 na araw mula sa pagbili sa pamamagitan ng pagsulat sa support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Refund",
+        "content": "Sa labas ng legal na karapatan sa pag-withdraw, ang mga subscription na nagsimula na ay hindi nare-refund maliban sa mandatoryong probisyon o malalaking depekto na maiuugnay sa serbisyo."
+      },
+      "section7": {
+        "title": "7. Mga Pagbabago sa Alok",
+        "content": "Maaaring magbago ang mga premium feature. Ang anumang pag-alis ng isang mahalagang feature ay iko-communicate nang maaga at, kung naaangkop, may opsyong magkansela nang walang bayad bago ang termino."
+      },
+      "section8": {
+        "title": "8. Personal na Data",
+        "content": "Ang pagpoproseso ng billing at account data ay inilalarawan sa <a>Patakaran sa Privacy</a>."
+      },
+      "section9": {
+        "title": "9. Serbisyo sa Customer",
+        "content": "Para sa anumang katanungan, refund sa ilalim ng karapatan sa pag-withdraw, o mga reklamo:"
+      }
+    },
+    "mentions": {
+      "title": "Legal na paunawa",
+      "version": "Huling na-update:",
+      "section1": {
+        "title": "1. Publisher",
+        "company": "Pangalan ng kumpanya:",
+        "companyValue": "AGUILAL Abdeslam (Sole proprietorship)",
+        "address": "Address:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, France",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Email:"
+      },
+      "section2": {
+        "title": "2. Direktor ng Publikasyon",
+        "name": "AGUILAL Abdeslam",
+        "email": "Email:"
+      },
+      "section3": {
+        "title": "3. Pagho-host",
+        "content": "Ang NeuroDual application ay naka-host sa:",
+        "webapp": "Web Application",
+        "database": "Database at Authentication",
+        "databaseInfra": "Imprastraktura: Amazon Web Services (rehiyon ng EU - eu-central-1)",
+        "monitoring": "Monitoring at Error Tracking",
+        "subscriptions": "Pamamahala ng subscription",
+        "analytics": "Pagsukat ng audience",
+        "analyticsInfra": "Pagho-host ng EU",
+        "advertising": "Advertising (libreng mobile version)",
+        "payments": "Mga pagbabayad sa web",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Intelektwal na Ari-arian",
+        "p1": "Lahat ng elemento ng NeuroDual application (teksto, graphics, tunog, source code, logo, trademark) ay protektado ng copyright at trademark law. Ang anumang hindi awtorisadong reproduksyon, representasyon, o pagsasamantala ay ipinagbabawal.",
+        "p2": "Ang source code ng ilang feature ay gumagamit ng open source library na ang mga kaukulang lisensya ay iginagalang."
+      },
+      "section5": {
+        "title": "5. Personal na Data",
+        "content": "Ang pag-process ng personal na data ay inilalarawan sa aming <a>Patakaran sa privacy</a>.",
+        "responsible": "Tagapamahala ng Data:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediation at Resolusyon ng Dispute",
+        "p1": "Alinsunod sa Articles L.611-1 et seq. ng French Consumer Code, ang mga consumer user ay maaaring, sakaling may hindi nalutas na dispute pagkatapos ng naunang reklamo sa aming customer service, gumamit nang libre ng consumer mediator.",
+        "odr": "Platform ng European Online Dispute Resolution (ODR):"
+      },
+      "section7": {
+        "title": "7. Mga Legal na Dokumento",
+        "privacy": "Patakaran sa privacy",
+        "privacyNote": "(GDPR)",
+        "terms": "Mga tuntunin ng serbisyo",
+        "termsNote": "(ToS)",
+        "cgv": "Mga tuntunin ng pagbebenta",
+        "cgvNote": "(Benta)"
+      },
+      "section8": {
+        "title": "8. Makipag-ugnayan",
+        "content": "Para sa anumang katanungan tungkol sa legal notice na ito:",
+        "email": "Email:"
+      }
+    }
+  }
+}

@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "நீங்கள் எப்படி உணர்கிறீர்கள்?",
+      "tired": "சோர்வாக",
+      "normal": "இயல்பானது",
+      "energized": "உற்சாகமூட்டியது"
+    },
+    "aria": {
+      "trialTimer": "சோதனை டைமர்",
+      "positionMatch": "நிலைப் போட்டி",
+      "audioMatch": "ஆடியோ பொருத்தம்",
+      "audioLetter": "ஆடியோ கடிதம்:",
+      "traceGrid": "ட்ரேஸ் கட்டம்"
+    },
+    "syncHud": {
+      "shortLabel": "ஒத்திசைவு",
+      "toggleTitle": "ஒத்திசைவு மானிட்டரை நிலைமாற்று",
+      "start": "தொடங்கு",
+      "end": "முடிவு",
+      "pinLabel": "முள்",
+      "pinTitle": "திரையில் பின்",
+      "inputLabel": "உள்ளீடு",
+      "inputTitle": "உள்ளீட்டு தாமத விவரக்குறிப்பை நிலைமாற்று (உள்ளூர் சேமிப்பகம் ND_INPUT_DEBUG_TIMING)",
+      "on": "அன்று",
+      "off": "ஆஃப்",
+      "hideLabel": "மறைக்க",
+      "hideTitle": "மறை (syncHud=1 அல்லது ND_AUDIO_DEBUG_TIMING=1 வரை)",
+      "endRef": {
+        "audio": "ஆடியோ",
+        "expected": "எதிர்பார்க்கப்படுகிறது"
+      },
+      "labels": {
+        "trial": "விசாரணை",
+        "lagShow": "காட்சி தாமதம்",
+        "lagHide": "ரிடார்ட் மஸ்கேஜ்",
+        "winErr": "தவறு வெற்றி",
+        "endRef": "முடிவு குறிப்பு",
+        "visualPreP95": "காட்சி_முன் p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "காட்சி_போஸ்ட் p95",
+        "inputToDispatchP95": "உள்ளீடு->அனுப்புதல் p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "உள்ளீடு->பெயிண்ட் p95",
+        "inputPending": "உள்ளீடு நிலுவையில் உள்ளது",
+        "inputSamples": "உள்ளீட்டு மாதிரிகள்",
+        "touchSamples": "தொடு மாதிரிகள்",
+        "mouseSamples": "சுட்டி மாதிரிகள்",
+        "keyboardSamples": "விசைப்பலகை மாதிரிகள்",
+        "latestMethod": "சமீபத்திய (முறை)",
+        "latestModality": "சமீபத்திய முறை",
+        "audioCueMode": "ஆடியோ குறிப்புகள்",
+        "audioCodec": "கோடெக்"
+      },
+      "resetInputProfiler": "உள்ளீட்டு சுயவிவரத்தை மீட்டமைக்கவும்"
+    },
+    "hud": {
+      "resume": "ரெஸ்யூம்",
+      "pause": "இடைநிறுத்தம்",
+      "quit": "வெளியேறு",
+      "restart": "மறுதொடக்கம்",
+      "spaceToStart": "தொடங்குவதற்கான இடம்",
+      "settings": "அமைப்புகள்",
+      "enterToAdvance": "முன்னேற நுழையவும்",
+      "trial": "விசாரணை",
+      "muteTexture": "பின்னணி ஒலியை முடக்கு"
+    },
+    "status": {
+      "paused": "இடைநிறுத்தப்பட்டது"
+    },
+    "completed": "முடிக்கப்பட்டது",
+    "starting": {
+      "getReady": "தயாராகுங்கள்..."
+    },
+    "quitModal": {
+      "title": "அமர்விலிருந்து வெளியேறவா?",
+      "message": "உங்கள் முன்னேற்றம் சேமிக்கப்படாது.",
+      "confirm": "வெளியேறு",
+      "cancel": "தொடரவும்",
+      "close": "மூடு"
+    },
+    "controls": {
+      "position": "பதவி",
+      "position2": "போஸ். 2",
+      "position3": "போஸ். 3",
+      "position4": "போஸ். 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "விஸ் & என்-ஆடியோ",
+      "audiovis": "ஆடியோ & என்-விஸ்",
+      "vis1": "விஸ். 1",
+      "vis2": "விஸ். 2",
+      "vis3": "விஸ். 3",
+      "vis4": "விஸ். 4",
+      "audio": "ஆடியோ",
+      "audio2": "ஆடியோ 2",
+      "color": "நிறம்",
+      "arithmetic": "எண்கணிதம்",
+      "image": "வடிவம்"
+    },
+    "arithmetic": {
+      "answer": "பதில்",
+      "clear": "தெளிவு",
+      "hint": "விசைப்பலகை: 0–9 · '-' குறிக்கு · '.' தசமங்களுக்கு · அழிக்க பேக்ஸ்பேஸ்"
+    },
+    "navigation": {
+      "back": "மீண்டும்"
+    },
+    "xp": {
+      "title": "எக்ஸ்பி சம்பாதித்தது",
+      "base": "அடிப்படை (N-{{level}})",
+      "performance": "செயல்திறன்",
+      "accuracy": "துல்லியம்",
+      "streakBonus": "ஸ்ட்ரீக் போனஸ்",
+      "dailyBonus": "முதல் நாள்",
+      "badgeBonus": "பேட்ஜ்கள்",
+      "flowBonus": "இரட்டை இட போனஸ்",
+      "confidenceMultiplier": "நம்பிக்கை",
+      "dailyCapReached": "தினசரி XP வரம்பை அடைந்தது",
+      "levelReached": "{{level}} நிலையை அடைந்தது!"
+    },
+    "badges": {
+      "newUnlocked": "புதிய பேட்ஜ்கள் திறக்கப்பட்டன"
+    },
+    "getReady": "தயாராகுங்கள்...",
+    "layoutEdit": {
+      "done": "முடிந்தது",
+      "reset": "மீட்டமை",
+      "instructions": "மறுவரிசைப்படுத்த மண்டலங்களை இழுக்கவும். கைப்பிடிகளைப் பயன்படுத்தி அளவை மாற்றவும்.",
+      "title": "திருத்தும் முறை",
+      "cancel": "ரத்து செய்",
+      "save": "பூட்டு",
+      "editLayout": "அமைப்பைத் திருத்தவும்"
+    },
+    "paused": "இடைநிறுத்தப்பட்டது",
+    "pressEscapeToResume": "மீண்டும் தொடங்க Escape ஐ அழுத்தவும்",
+    "settings": {
+      "editLayout": "அமைப்பைத் திருத்தவும்",
+      "gridAndButtons": "கட்டம் & பொத்தான்கள்",
+      "swapPositionAudio": "இடமாற்று நிலை / ஆடியோ",
+      "title": "அமைப்புகள்",
+      "quickHint": "விளையாட்டை விட்டு வெளியேறாமல் சில அமைப்புகளைச் சரிசெய்யவும்.",
+      "quickUnavailable": "இந்த பயன்முறைக்கு இன்னும் விரைவான அமைப்புகள் இல்லை."
+    },
+    "pinkNoiseInfo": "ஒவ்வொரு தூண்டுதலுக்கும் பின்னணி தொனி வருகிறது. ஆடியோ அமைப்புகளில் நீங்கள் தனிப்பயனாக்கலாம் அல்லது முடக்கலாம்.",
+    "pinkNoiseDismiss": "தொடரவும்",
+    "audioMode": "ஆடியோ பயன்முறை",
+    "cogTask": {
+      "precision": "துல்லியம்",
+      "avgRt": "சராசரி ஆர்டி",
+      "avgRtShort": "சராசரி ஆர்டி",
+      "trials": "சோதனைகள்",
+      "correct": "சரி",
+      "errors": "பிழைகள்",
+      "effect": "விளைவு",
+      "restart": "மறுதொடக்கம்",
+      "home": "வீடு",
+      "performance": "செயல்திறன்",
+      "trialDetail": "சோதனை விவரம்",
+      "setDetail": "விவரம் அமைக்கவும்",
+      "roundDetail": "சுற்று விவரம்",
+      "problemDetail": "பிரச்சனை விவரம்",
+      "phaseDetail": "கட்ட விவரம்",
+      "feedbackCorrect": "சரி",
+      "feedbackIncorrect": "தவறானது",
+      "feedbackTimeout": "மிகவும் மெதுவாக!",
+      "preparing": "தயாராகுங்கள்...",
+      "loading": "ஏற்றுகிறது...",
+      "left": "விட்டு",
+      "right": "சரி",
+      "up": "மேலே",
+      "down": "கீழே",
+      "congruent": "இணக்கமான",
+      "incongruent": "பொருத்தமற்றது",
+      "congruencyEffect": "ஒற்றுமை விளைவு",
+      "maxSpan": "அதிகபட்ச இடைவெளி",
+      "startingSpan": "தொடக்க இடைவெளி",
+      "maxSpanReached": "அதிகபட்ச இடைவெளியை எட்டியது",
+      "longestStreak": "மிக நீளமான சரியான கோடு",
+      "series": "ஸ்ட்ரீக்",
+      "avgResponseTime": "சராசரி மறுமொழி நேரம்",
+      "recall": "நினைவு கூருங்கள்",
+      "expected": "எதிர்பார்க்கப்படுகிறது",
+      "submit": "சமர்ப்பிக்கவும்",
+      "cancel": "ரத்து செய்",
+      "clear": "தெளிவு",
+      "delete": "DEL",
+      "true": "உண்மை",
+      "false": "பொய்",
+      "target": "இலக்கு",
+      "nonTarget": "இலக்கு இல்லாதது",
+      "distractor": "திசை திருப்புபவர்",
+      "same": "அதே",
+      "different": "வித்தியாசமானது",
+      "identical": "ஒரே மாதிரியான",
+      "mirror": "கண்ணாடி",
+      "symmetric": "சமச்சீர்",
+      "asymmetric": "சமச்சீரற்ற",
+      "symShort": "சிம்.",
+      "present": "தற்போது",
+      "absent": "இல்லாதது",
+      "noTrials": "சோதனைகள் எதுவும் முடிக்கப்படவில்லை.",
+      "noSets": "தொகுப்புகள் எதுவும் முடிக்கப்படவில்லை.",
+      "noRounds": "சுற்றுகள் எதுவும் முடிக்கப்படவில்லை.",
+      "noProblems": "எந்த பிரச்சனையும் முடிக்கப்படவில்லை.",
+      "noPhases": "கட்டங்கள் எதுவும் முடிக்கப்படவில்லை.",
+      "sets": "அமைக்கிறது",
+      "rounds": "சுற்றுகள்",
+      "equations": "சமன்பாடுகள்",
+      "sentences": "வாக்கியங்கள்",
+      "equationAccuracy": "சமன்பாடு துல்லியம்",
+      "forward": "முன்னோக்கி",
+      "backward": "பின்னோக்கி",
+      "forwardMaxSpan": "முன்னோக்கி அதிகபட்ச இடைவெளி",
+      "backwardMaxSpan": "பின்னோக்கி அதிகபட்ச இடைவெளி",
+      "odd": "ஒற்றைப்படை",
+      "even": "கூட",
+      "score": "மதிப்பெண்",
+      "easy": "எளிதானது",
+      "hard": "கடினமான",
+      "totalTrials": "மொத்த சோதனைகள்",
+      "totalErrors": "மொத்த பிழைகள்",
+      "totalErrShort": "மொத்த பிழை.",
+      "hits": "ஹிட்ஸ்",
+      "misses": "மிஸ்கள்",
+      "falseAlarms": "தவறான அல்.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "ஆம்",
+      "no": "இல்லை",
+      "sessionInterrupted": "அமர்வு தடைபட்டது",
+      "reverseOrder": "தலைகீழ் வரிசையில்",
+      "normalOrder": "வரிசையில்",
+      "lnsInstruction": "எண்கள் ஏறுமுகம், பின்னர் A-Z எழுத்துக்கள்",
+      "vs": "எதிராக",
+      "simon": {
+        "simonEffect": "சைமன் விளைவு",
+        "blue": "நீலம்",
+        "red": "சிவப்பு",
+        "heroTitle": "சைமன்"
+      },
+      "soroban": {
+        "target": "இந்த எண்ணைக் குறிக்கவும்",
+        "submit": "சமர்ப்பிக்கவும்",
+        "rodLabel": "ராட் {{n}}",
+        "heavenBead": "ஹெவன் பீட் (மதிப்பு 5)",
+        "earthBead": "பூமி மணி (மதிப்பு 1)",
+        "instrBeadTitle": "மணிகள் எவ்வாறு வேலை செய்கின்றன",
+        "instrBeadDesc": "ஒவ்வொரு தடியும் ஒரு இலக்கத்தைக் குறிக்கிறது. மேல் மணிகள் (சொர்க்கம்) மதிப்பு 5. கீழே உள்ள மணிகள் (பூமி) ஒவ்வொன்றும் 1 மதிப்புடையது. அவற்றைச் செயல்படுத்த, மணிகளை மையப் பட்டியை நோக்கி நகர்த்தவும்.",
+        "instrExampleTitle": "எடுத்துக்காட்டு: 7",
+        "instrExampleDesc": "7 = சொர்க்க மணிகள் கீழே (5) + 2 பூமி மணிகள் மேலே (2). மணிகளை நகர்த்த, தட்டவும் அல்லது இழுக்கவும்.",
+        "instrGoalTitle": "உங்கள் இலக்கு",
+        "instrGoalDesc": "ஒரு எண் தோன்றும். அதைக் குறிக்க மணிகளை அமைத்து, சமர்ப்பி என்பதைத் தட்டவும். துல்லியமாகவும் வேகமாகவும் இருங்கள்!",
+        "startButton": "தொடங்கு",
+        "settings": "அமைப்புகள்",
+        "closeSettings": "அமைப்புகளை மூடு",
+        "settingsRods": "தண்டுகளின் எண்ணிக்கை",
+        "settingsRodsHint": "கேம் அமைப்புகளில் என்-லெவல் வழியாக அமைக்கவும்",
+        "settingsTrials": "ஒரு அமர்வுக்கு சோதனைகள்",
+        "settingsTrialsHint": "கேம் அமைப்புகளில் சோதனைகள் மூலம் அமைக்கவும்",
+        "settingsRange": "எண் வரம்பு"
+      },
+      "stroop": {
+        "pressInkColorButton": "மை நிறத்துடன் பொருந்தும் பொத்தானை அழுத்தவும்",
+        "redWord": "சிவப்பு",
+        "redLabel": "சிவப்பு",
+        "blueWord": "நீலம்",
+        "blueLabel": "நீலம்",
+        "greenWord": "பச்சை",
+        "greenLabel": "பச்சை",
+        "yellowWord": "மஞ்சள்",
+        "yellowLabel": "மஞ்சள்"
+      },
+      "stroopFlex": {
+        "followRule": "விதி",
+        "ruleInk": "மை நிறம்",
+        "ruleWord": "எழுதப்பட்ட வார்த்தை",
+        "pressMatchingRuleButton": "தற்போதைய விதிக்கு பொருந்தும் பொத்தானை அழுத்தவும்"
+      },
+      "goNogo": {
+        "goTrials": "சோதனைகளுக்குச் செல்லுங்கள்",
+        "nogoTrials": "நோ-கோ சோதனைகள்",
+        "hitRate": "வெற்றி விகிதம் (செல்)",
+        "faRate": "தவறான அலாரம் வீதம் (நோ-கோ)",
+        "meanRt": "சராசரி எதிர்வினை நேரம்",
+        "sensitivity": "உணர்திறன்",
+        "press": "அழுத்தவும்",
+        "withhold": "நிறுத்து"
+      },
+      "stopSignal": {
+        "ssrt": "எஸ்எஸ்ஆர்டி",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "சராசரி SSD (வெற்றிகரமான நிறுத்தங்கள்)",
+        "ssd": "SSD",
+        "goRt": "RT செல்க",
+        "successfulInhibition": "வெற்றிகரமான தடுப்பு",
+        "stop": "நிறுத்து",
+        "meanGoRt": "சராசரி GO எதிர்வினை நேரம்",
+        "ssrtInvalid": "போதுமான தரவு இல்லை",
+        "ssrtNegativeNote": "SSRT எதிர்மறையானது (அதாவது SSD > சராசரி GO RT) — தற்போதைய சோதனை எண்ணிக்கையில் நம்பகத்தன்மையற்றது."
+      },
+      "pvt": {
+        "rtMedian": "சராசரி RT",
+        "rtMean": "சராசரி RT",
+        "fastest": "வேகமான",
+        "slowest": "மெதுவான",
+        "falseStarts": "பொய் தொடங்குகிறது",
+        "falseStartsShort": "தவறான செயின்ட்.",
+        "lapses": "குறைபாடுகள்",
+        "mean": "சராசரி",
+        "reaction": "எதிர்வினை",
+        "wait": "காத்திருங்கள்...",
+        "pressStimulus": "தூண்டுதலுக்காக காத்திருங்கள்...",
+        "pressAnywhere": "கவுண்டர் தோன்றும் போது எங்கு வேண்டுமானாலும் அழுத்தவும்",
+        "press": "அழுத்தவும்!",
+        "tooEarly": "மிக விரைவில்!",
+        "lapsesLabel": "குறைபாடுகள்"
+      },
+      "posner": {
+        "cueingEffect": "க்யூயிங் விளைவு",
+        "validMeanRt": "சராசரி செல்லுபடியாகும் RT",
+        "invalidMeanRt": "சராசரி தவறான RT",
+        "validAccuracy": "சரியான துல்லியம்",
+        "invalidAccuracy": "தவறான துல்லியம்",
+        "validTrials": "செல்லுபடியாகும் சோதனைகள்",
+        "invalidTrials": "தவறான சோதனைகள்",
+        "validRtShort": "ஆர்டி வால்.",
+        "invalidRtShort": "RT இன்வி.",
+        "valid": "செல்லுபடியாகும்",
+        "invalid": "செல்லாதது"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade செலவு",
+        "proAccuracy": "ப்ரோ துல்லியம்",
+        "antiAccuracy": "துல்லியம் எதிர்ப்பு",
+        "pro": "ப்ரோ",
+        "anti": "எதிர்ப்பு",
+        "proRt": "ப்ரோ ஆர்டி",
+        "antiRt": "எதிர்ப்பு ஆர்டி",
+        "proMeanRt": "சராசரி சார்பு சாகேட் RT",
+        "antiMeanRt": "சராசரி ஆன்டி-சாகேட் ஆர்டி",
+        "costLabel": "செலவு",
+        "antiLabel": "எதிர்ப்பு"
+      },
+      "axCpt": {
+        "dPrime": "d'-சூழல்",
+        "axAccuracy": "AX துல்லியம்",
+        "bxFa": "BX தவறான எச்சரிக்கை",
+        "ayError": "AY பிழை",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "ஏய் தவறு",
+        "cogControl": "அறிவாற்றல் கட்டுப்பாடு",
+        "target": "இலக்கு",
+        "nonTarget": "இலக்கு இல்லாதது"
+      },
+      "ant": {
+        "scores": "ANT மதிப்பெண்கள்",
+        "alerting": "எச்சரிக்கை (நோ-கியூ - டபுள்-கியூ)",
+        "orienting": "நோக்குநிலை (மையம் - இடஞ்சார்ந்த)",
+        "executive": "நிறைவேற்று"
+      },
+      "changeDet": {
+        "kCowan": "கே திறன் (கோவன்)",
+        "sameShort": "அதே",
+        "diffShort": "வேறுபாடு."
+      },
+      "swm": {
+        "withinErrors": "தேடலுக்குள் பிழைகள்",
+        "betweenErrors": "இடை-தேடல் பிழைகள்",
+        "totalErrors": "மொத்த பிழைகள்",
+        "errorFree": "பிழையற்றது",
+        "foundErrorFree": "பிழையின்றி கண்டறியப்பட்டது!",
+        "errorCount": "{{count}} பிழை(கள்)",
+        "tapsLabel": "தட்டுகிறது"
+      },
+      "taskSwitch": {
+        "switchCost": "மாற்று செலவு",
+        "rtRepeat": "சராசரி RT (மீண்டும்)",
+        "rtSwitch": "சராசரி RT (சுவிட்ச்)",
+        "oddEven": "ஒற்றைப்படை / இரட்டை",
+        "highLow": "உயர் / குறைந்த",
+        "title": "பணி மாறுதல்"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A நேரம்",
+        "tmtBTime": "TMT-B நேரம்",
+        "executiveCost": "நிர்வாக செலவு (பி - ஏ)",
+        "executiveCostShort": "நிர்வாக செலவு (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "பிழை. ஏ",
+        "errB": "பிழை. பி",
+        "preparingB": "TMT-B தயாராகிறது...",
+        "tmtADone": "TMT-A முடிந்தது!",
+        "totalErrors": "மொத்த பிழைகள்",
+        "tmtALabel": "TMT-A: எண்கள்",
+        "tmtBLabel": "TMT-B: எண்கள் & கடிதங்கள்",
+        "next": "அடுத்து",
+        "heroTitle": "பாதை தயாரித்தல்",
+        "alternateHint": "மாற்று எண்கள் மற்றும் எழுத்துக்கள்: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ஐஎஸ்ஐ நிமிடம்",
+        "fastestIsi": "வேகமான ஐ.எஸ்.ஐ"
+      },
+      "wcst": {
+        "referenceCards": "குறிப்பு அட்டைகள்",
+        "testCard": "சோதனை அட்டை",
+        "categories": "வகைகள்",
+        "categoriesCompleted": "வகைகள் நிறைவடைந்தன",
+        "perseverativeErrors": "விடாப்பிடியான பிழைகள்",
+        "persevShort": "பெர்செவ்.",
+        "avgRt": "சராசரி RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "கோணம் மூலம் RT",
+        "findMatch": "பொருந்தக்கூடிய வடிவத்தைக் கண்டறியவும்",
+        "reference": "குறிப்பு வடிவம்",
+        "referenceLabel": "Ref.",
+        "candidate": "வேட்பாளர்",
+        "distractor": "மற்றவை",
+        "mirrorErrors": "கண்ணாடிகள்",
+        "title": "மன சுழற்சி"
+      },
+      "sternberg": {
+        "rtBySize": "செட் அளவு மூலம் RT",
+        "title": "ஸ்டெர்ன்பெர்க்",
+        "avgRt": "சராசரி RT"
+      },
+      "visualSearch": {
+        "rtBySize": "செட் அளவு மூலம் RT",
+        "title": "காட்சி தேடல்"
+      },
+      "ospan": {
+        "typeLetters": "எழுத்துக்களை வரிசையாக தட்டச்சு செய்யவும்",
+        "trueOrFalse": "உண்மையா பொய்யா?",
+        "processingWarning": "85% க்கும் குறைவான சமன்பாடு துல்லியம் - முடிவுகள் உண்மையான வேலை நினைவக திறனை பிரதிபலிக்காது"
+      },
+      "readingSpan": {
+        "s0": "சூரியன் கிழக்கில் உதிக்கிறான்.",
+        "s1": "மீன்கள் மரங்களில் வாழ்கின்றன.",
+        "s2": "பிரான்சின் தலைநகரம் பாரிஸ்.",
+        "s3": "ஒரு முக்கோணம் நான்கு பக்கங்களைக் கொண்டது.",
+        "s4": "தண்ணீர் 100 டிகிரியில் கொதிக்கிறது.",
+        "s5": "பூனைகள் ஊர்வன.",
+        "s6": "பூமி சூரியனைச் சுற்றி வருகிறது.",
+        "s7": "சாக்லேட் பாறைகளில் வளரும்.",
+        "s8": "ஒரு வருடம் என்பது பன்னிரண்டு மாதங்கள்.",
+        "s9": "பறவைகள் நீருக்கடியில் சுவாசிக்கின்றன.",
+        "s10": "பால் வெண்மையானது.",
+        "s11": "கார்கள் தண்டவாளத்தில் ஓடுகின்றன.",
+        "s12": "தேனீக்கள் தேனை உற்பத்தி செய்கின்றன.",
+        "s13": "பனி சூடாக இருக்கிறது.",
+        "s14": "இதயம் இரத்தத்தை பம்ப் செய்கிறது.",
+        "s15": "கற்கள் தண்ணீரில் மிதக்கின்றன.",
+        "s16": "சந்திரன் இரவை ஒளிரச் செய்கிறது.",
+        "s17": "பாம்புகளுக்கு கால்கள் உண்டு.",
+        "s18": "மரம் தண்ணீரில் மிதக்கிறது.",
+        "s19": "நெருப்பு குளிர்ச்சியானது.",
+        "s20": "மனிதர்களுக்கு ஐந்து புலன்கள் உள்ளன.",
+        "s21": "சிலந்திகளுக்கு ஆறு கால்கள் உள்ளன.",
+        "s22": "ரொட்டி மாவுடன் தயாரிக்கப்படுகிறது.",
+        "s23": "திமிங்கலங்கள் மீன்.",
+        "w0": "வீடு",
+        "w1": "நாய்",
+        "w2": "புத்தகம்",
+        "w3": "மலர்",
+        "w4": "கதவு",
+        "w5": "அட்டவணை",
+        "w6": "மரம்",
+        "w7": "சாலை",
+        "w8": "மேகம்",
+        "w9": "நட்சத்திரம்",
+        "w10": "கடற்கரை",
+        "w11": "பனி",
+        "w12": "விளக்கு",
+        "w13": "மழை",
+        "w14": "கண்ணாடி",
+        "w15": "புல்",
+        "w16": "ரயில்",
+        "w17": "உலகம்",
+        "w18": "சூரியன்",
+        "w19": "காடு",
+        "w20": "ICE",
+        "w21": "பூமி",
+        "w22": "ஸ்கை",
+        "w23": "கல்",
+        "d0": "காலை",
+        "d1": "இதயம்",
+        "d2": "துணி",
+        "d3": "இலை",
+        "d4": "சத்தம்",
+        "d5": "தோட்டம்",
+        "d6": "நிழல்",
+        "d7": "மணி",
+        "d8": "பாலம்",
+        "d9": "புகை",
+        "d10": "மணல்",
+        "d11": "சூப்",
+        "heroTitle": "வாசிப்பு இடைவெளி"
+      },
+      "memorizeSequence": "வரிசையை நினைவில் வையுங்கள்...",
+      "reproduce": "இனப்பெருக்கம்",
+      "span": "இடைவெளி",
+      "size": "அளவு",
+      "fixateCenter": "மையத்தில் பொருத்து...",
+      "identicalOrMirror": "ஒரே மாதிரியா அல்லது கண்ணாடியா?",
+      "wellInhibited": "நன்கு தடுக்கப்பட்டது!",
+      "badDirection": "தவறான திசை!",
+      "stopMissed": "ஸ்டாப் மிஸ்!",
+      "falseAlarm": "தவறான எச்சரிக்கை!",
+      "pressNow": "அழுத்தவும்!",
+      "hitBang": "ஹிட்!",
+      "miss": "மிஸ்!",
+      "doNotTouch": "தொடாதே!",
+      "whichDirection": "எந்த திசையில்?",
+      "stopBang": "நிறுத்து!",
+      "cueBang": "கியூ!",
+      "memorizeLetters": "இந்த எழுத்துக்களை மனப்பாடம் செய்யுங்கள்",
+      "memorizeLetter": "இந்த கடிதத்தை மனப்பாடம் செய்யுங்கள்",
+      "memorizeSequenceLetters": "வரிசையை நினைவில் வையுங்கள்...",
+      "memorizeDigits": "இலக்கங்களை நினைவில் வையுங்கள்...",
+      "memorizeColors": "வண்ணங்களை நினைவில் வையுங்கள்!",
+      "memorizePosition": "இந்த நிலையை மனப்பாடம் செய்யுங்கள்...",
+      "retainWord": "இந்த வார்த்தையை நினைவில் கொள்ளுங்கள்",
+      "retainNumber": "இந்த எண்ணை நினைவில் கொள்ளுங்கள்",
+      "addWithPrevious": "முந்தையவற்றுடன் சேர்க்கவும்",
+      "sentenceTrueOrFalse": "இந்த வாக்கியம் உண்மையா?",
+      "findRedCircle": "சிவப்பு வட்டத்தைக் கண்டுபிடி!",
+      "findHiddenToken": "மறைக்கப்பட்ட டோக்கனைக் கண்டுபிடி!",
+      "chooseMatchingCard": "பொருந்தக்கூடிய அட்டையைத் தேர்ந்தெடுக்கவும்",
+      "arrowDirection": "மைய அம்புக்குறியின் திசை?",
+      "attention": "கவனம்...",
+      "preparation": "தயாரிப்பு...",
+      "recallLettersInOrder": "{{count}} எழுத்துக்களை வரிசையாக நினைவுபடுத்தவும்",
+      "recallWordsInOrder": "{{count}} வார்த்தைகளை வரிசையாக நினைவுபடுத்தவும்",
+      "recallLastLetters": "கடைசி {{count}} எழுத்துக்களை நினைவுகூருங்கள்",
+      "typeLastLetters": "கடைசி {{count}} எழுத்துக்களைத் தட்டச்சு செய்யவும்",
+      "recallPositionsInOrder": "நினைவு: வரிசையாக நிலைகளைத் தட்டவும்",
+      "pressEnterToValidate": "சரிபார்க்க Enter ஐ அழுத்தவும்",
+      "pressAnywhereToContinue": "தொடர எங்கு வேண்டுமானாலும் அழுத்தவும்",
+      "temporalPrecision": "தற்காலிக துல்லியம்",
+      "estimationPrecision": "கணிப்பு துல்லியம்",
+      "touchStartClockwise": "தொடக்கப் புள்ளியைத் தொட்டு கடிகார திசையில் ஸ்வைப் செய்யவும்",
+      "touchAtoB": "தொடு புள்ளி A பின்னர் B க்கு ஸ்வைப் செய்யவும்",
+      "cue": "குறி",
+      "retainCue": "குறிப்பை நினைவில் கொள்...",
+      "targetOrNot": "இலக்கு அல்லது இலக்கு அல்லாத?",
+      "whereIsTarget": "இலக்கு எங்கே?",
+      "wasLetterInSet": "இந்தக் கடிதம் தொகுப்பில் இருந்ததா?",
+      "regular": "வழக்கமான",
+      "regularity": "ஒழுங்குமுறை",
+      "msDeviation": "ms விலகல்",
+      "boxes": "பெட்டிகள்",
+      "found": "{{count}} கண்டறியப்பட்டது",
+      "past": "கடந்த",
+      "tooSlow": "மிகவும் மெதுவாக",
+      "tooFast": "மிக வேகமாக",
+      "timeout": "மிகவும் மெதுவாக!",
+      "answer": "பதில்",
+      "dontPress": "அழுத்த வேண்டாம்!",
+      "feedbackWrong": "தவறு!",
+      "level": "நிலை",
+      "wrong": "தவறு",
+      "you": "நீங்கள்",
+      "paused": "இடைநிறுத்தம்",
+      "instructions": "வழிமுறைகள்",
+      "selectAnswer": "பதிலைத் தேர்ந்தெடுக்கவும்",
+      "tapTheOddOne": "ஒற்றைப்படை ஒன்றைத் தட்டவும்",
+      "pal": {
+        "subtitle": "இணைந்த அசோசியேட்ஸ் கற்றல்",
+        "pairsLearned": "ஜோடிகள் கற்றுக்கொண்டன",
+        "maxSetSize": "அதிகபட்ச செட் அளவு",
+        "totalErrors": "மொத்த பிழைகள்",
+        "round": "சுற்று",
+        "pairs": "ஜோடிகள்",
+        "meanRt": "சராசரி RT (சரியானது)",
+        "studyPhase": "படிப்பு - நிலைகளை மனப்பாடம் செய்யுங்கள்",
+        "testPhase": "இந்த வடிவம் எங்கே இருந்தது?",
+        "studying": "படிக்கிறது",
+        "tapBox": "இந்த வடிவம் காட்டப்பட்ட பெட்டியைத் தட்டவும்"
+      },
+      "visualLogic": {
+        "easy": "எளிதானது",
+        "hard": "கடினமான",
+        "oneRule": "1 விதி",
+        "twoRules": "2 விதிகள்",
+        "findMissing": "காணாமல் போன பகுதியைக் கண்டுபிடி",
+        "maxLevel": "அதிகபட்ச எல்விஎல்",
+        "finalLevel": "இறுதி Lvl",
+        "nextMode": "அடுத்த அமர்வு முறை",
+        "adaptive": "தழுவல்",
+        "fixed": "சரி செய்யப்பட்டது",
+        "spm": "SPM 60",
+        "level": "நிலை",
+        "confirm": "வேலிடர்"
+      },
+      "tetrisMind": {
+        "findPiece": "எந்த துண்டு துளைக்கு பொருந்தும்?",
+        "target": "இலக்கு"
+      },
+      "timeEstimation": {
+        "overestimationBias": "மிகை மதிப்பீடு சார்பு",
+        "underestimationBias": "குறைத்து மதிப்பிடும் சார்பு",
+        "noBias": "குறிப்பிடத்தக்க சார்பு இல்லை",
+        "avgError": "சராசரி பிழை",
+        "overestimations": "மிகை மதிப்பீடுகள்",
+        "underestimations": "குறைமதிப்பீடுகள்",
+        "avgAbsoluteError": "சராசரி முழுமையான பிழை",
+        "avgRelativeError": "சராசரி உறவினர் பிழை",
+        "cv": "மாறுபாட்டின் குணகம்",
+        "watchDemo": "கால அளவைக் கவனியுங்கள்",
+        "getReady": "தயாராகுங்கள்...",
+        "holdToReproduce": "இனப்பெருக்கம் செய்ய பிடி!",
+        "tooLong": "மிக நீண்டது!",
+        "tooShort": "மிகவும் குறுகியது!",
+        "target": "இலக்கு",
+        "demoLabel": "குறிப்பு",
+        "yourTurn": "உங்கள் முறை",
+        "watchInstruction": "பார்க்கவும்",
+        "holdInstruction": "இனப்பெருக்கம் செய்ய பிடி",
+        "heroTitle": "நேர மதிப்பீடு"
+      },
+      "puzzleDetails": "புதிர் விவரங்கள்",
+      "roundDetails": "சுற்று விவரங்கள்",
+      "stageResults": "நிலை முடிவுகள்",
+      "recognized": "அங்கீகரிக்கப்பட்டது",
+      "missed": "தவறவிட்டது",
+      "win": "வெற்றி",
+      "lose": "இழக்க",
+      "winBang": "வெற்றி!",
+      "loseBang": "இழக்க!",
+      "correctBang": "சரி!",
+      "wrongBang": "தவறு!",
+      "completeBang": "நிறைவு!",
+      "repeatedBang": "மீண்டும் மீண்டும்!",
+      "incompleteBang": "முழுமையற்றது!",
+      "levelCompleteBang": "நிலை முடிந்தது!",
+      "timesUp": "நேரம் முடிந்துவிட்டது",
+      "seeResults": "முடிவுகளைப் பார்க்கவும்",
+      "nextRound": "அடுத்த சுற்று",
+      "startBlock": "தொடக்கத் தொகுதி",
+      "continue": "தொடரவும்",
+      "patientChoice": "நோயாளியின் தேர்வு",
+      "immediateChoice": "உடனடி தேர்வு",
+      "immediate": "உடனடியாக",
+      "digitSpan": {
+        "heroTitle": "இலக்க இடைவெளி"
+      },
+      "resume": "ரெஸ்யூம்",
+      "numericalStroop": {
+        "heroTitle": "எண் Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "வரி நோக்குநிலையின் தீர்ப்பு"
+      },
+      "chain": "சங்கிலி",
+      "undo": "செயல்தவிர்",
+      "vocalProsody": {
+        "heroTitle": "குரல் உரைநடை"
+      },
+      "letterNumber": {
+        "title": "கடிதம்-எண் Seq.",
+        "expectedAnswer": "எதிர்பார்த்த பதில்"
+      },
+      "patternComparison": {
+        "heroTitle": "வடிவ ஒப்பீடு"
+      },
+      "speedPack": {
+        "title": "வேக பேக்",
+        "whenFoldedWhichTouch": "மடிந்தால், எந்த சதுரங்கள் தொடும்?"
+      },
+      "dotProbe": {
+        "heroTitle": "புள்ளி ஆய்வு"
+      },
+      "reflex": {
+        "heroTitle": "பிரதிபலிப்பு"
+      },
+      "hooperVisual": {
+        "title": "ஹூப்பர் விஷுவல் அமைப்பு",
+        "whatIsThisObject": "இந்த பொருள் என்ன?"
+      },
+      "blockDesign": {
+        "heroTitle": "தொகுதி வடிவமைப்பு"
+      },
+      "accuracy": "துல்லியம்",
+      "avgTime": "சராசரி நேரம்",
+      "check": "சரிபார்க்கவும்",
+      "dualTrace": {
+        "playArea": "விளையாட்டு பகுதி"
+      },
+      "paperFolding": {
+        "title": "காகித மடிப்பு",
+        "foldSequenceHolePunch": "மடிப்பு வரிசை & துளை பஞ்ச்",
+        "whichPatternWhenUnfolded": "விரிக்கும்போது எந்த மாதிரி?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "லெக்சிக்கல் முடிவு"
+      },
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxGrid": "அதிகபட்ச கட்டம்",
+      "symmetry": "சமச்சீர்",
+      "threshold": "வாசல்",
+      "hitRate": "வெற்றி விகிதம்",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "கண்டறிதலை மாற்றவும்"
+      },
+      "syllogisms": {
+        "heroTitle": "சிலாக்கியங்கள்"
+      },
+      "subitizing": {
+        "title": "துணைபுரிதல்",
+        "range": "வரம்பு"
+      },
+      "jitter": "நடுக்கம்",
+      "sentenceCompletion": {
+        "title": "வாக்கியத்தை முடித்தல் (மூடுதல்)",
+        "highCloze": "உயர் மூடை",
+        "lowCloze": "குறைந்த மூடை"
+      },
+      "grid": "கட்டம்",
+      "pinballRecall": {
+        "title": "பின்பால் ரீகால்",
+        "byBounces": "துள்ளல் மூலம்",
+        "whereDoesItLand": "அது எங்கே இறங்குகிறது?"
+      },
+      "mean": "சராசரி",
+      "speedup": "வேகம்",
+      "memorize": "மனப்பாடம் செய்யுங்கள்",
+      "time": "நேரம்",
+      "surfaceDevelopment": {
+        "title": "மேற்பரப்பு வளர்ச்சி",
+        "whichEdgeMatches": "எந்த விளிம்பு பொருந்தும்?"
+      },
+      "crowding": {
+        "heroTitle": "காட்சி கூட்டம்",
+        "spacing": "இடைவெளி"
+      },
+      "patternRecognition": {
+        "heroTitle": "வடிவ அங்கீகாரம்"
+      },
+      "brixton": {
+        "heroTitle": "பிரிக்ஸ்டன்"
+      },
+      "dualMemo": {
+        "trial": "விசாரணை",
+        "position": "பதவி",
+        "audio": "ஆடியோ"
+      },
+      "sceneCrasher": {
+        "heroTitle": "காட்சி ஊடுருவல்",
+        "detect": "கண்டறியவும்"
+      },
+      "eyesTest": {
+        "heroTitle": "கண்களில் மனதைப் படித்தல்"
+      }
+    },
+    "gridlock": {
+      "undone": "கடைசி நகர்வு செயல்தவிர்க்கப்பட்டது.",
+      "resetMessage": "புதிர் மீட்டமைப்பு.",
+      "hintMessage": "குறிப்பு: ஸ்லைடு {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "பலகையைப் படிக்கவும். {{seconds}}களில் தொடங்குகிறது.",
+      "challenge": "சவால்",
+      "optimal": "உகந்தது",
+      "moves": "நகர்கிறது",
+      "piece": "{{id}} துண்டு",
+      "targetPiece": "துண்டு {{id}} (இலக்கு - சிவப்பு கார்)",
+      "challengeClassic": "கிளாசிக்",
+      "challengePrecision": "துல்லியம்",
+      "challengeMemory": "நினைவகம்",
+      "challengeTimed": "நேரம் முடிந்தது",
+      "hint": "குறிப்பு",
+      "reset": "மீட்டமை",
+      "undo": "செயல்தவிர்",
+      "nextPuzzle": "அடுத்த புதிர் →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "1 வெற்றிகளைத் தடு",
+      "block2Hits": "2 வெற்றிகளைத் தடு",
+      "goPositive": "கோ = நேர்மறை",
+      "goNegative": "கோ = எதிர்மறை",
+      "title": "Go/No-Go",
+      "block1CommissionErrors": "1 கமிஷன் பிழைகளைத் தடு",
+      "block2CommissionErrors": "2 கமிஷன் பிழைகளைத் தடு",
+      "block": "தடு",
+      "go": "போ"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "சராசரி மாறுதல் விகிதம்",
+      "meanSwitchesfigure": "சராசரி சுவிட்சுகள்/உருவம்",
+      "totalSwitches": "மொத்த சுவிட்சுகள்",
+      "title": "தெளிவற்ற உருவங்கள்",
+      "meanSwitches": "சராசரி சுவிட்சுகள்",
+      "switchRate": "மாற்று விகிதம்",
+      "figures": "புள்ளிவிவரங்கள்",
+      "totalSwitchesLabel": "மொத்த சுவிட்சுகள்",
+      "duration": "கால அளவு",
+      "switchesCount": "கள் | சுவிட்சுகள்:",
+      "switchButton": "மாறு!"
+    },
+    "analogies": {
+      "verbalCorrect": "வாய்மொழி சரி",
+      "timeout": "நேரம் முடிந்தது",
+      "title": "ஒப்புமைகள்"
+    },
+    "ansComparison": {
+      "weber": "வெபர்",
+      "title": "ANS ஒப்பீடு",
+      "ratio": "விகிதம்",
+      "leftMore": "மேலும் விட்டு",
+      "rightMore": "இன்னும் சரி"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "தவறான அலாரம் வீதம்",
+      "grammatical": "இலக்கணவியல்",
+      "memorizeTheseStrings": "இந்த வரிகளை மனப்பாடம் செய்யுங்கள்",
+      "testPhase": "சோதனை கட்டம்",
+      "ungrammatical": "இலக்கணமற்ற",
+      "learning": "கற்றல்",
+      "test": "சோதனை",
+      "title": "செயற்கை இலக்கணம்",
+      "learningPhase": "கற்றல்",
+      "testIntroText": "இப்போது நீங்கள் புதிய வரிகளைக் காண்பீர்கள். நீங்கள் படித்த வரிகளைப் போலவே ஒவ்வொருவரும் அதே விதிகளைப் பின்பற்றுகிறார்களா என்பதைத் தீர்மானிக்கவும்.",
+      "startTest": "சோதனையைத் தொடங்கவும்",
+      "followsRules": "விதிகளை பின்பற்றுகிறது",
+      "breaksRules": "விதிகளை மீறுகிறது"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "சிமிட்டும் அளவு",
+      "title": "கவனத்திற்குரிய சிமிட்டல்",
+      "blink": "கண் சிமிட்டவும்",
+      "t1Acc": "டி1 ஏசி",
+      "t2Acc": "டி2 ஏசி",
+      "firstGreenLetter": "1வது பச்சை எழுத்து?",
+      "secondGreenLetter": "2வது பச்சை எழுத்து?"
+    },
+    "attentionalCapture": {
+      "captureCost": "பிடிப்பு செலவு",
+      "singletonPresent": "சிங்கிள்டன் தற்போது",
+      "noSingleton": "சிங்கிள்டன் இல்லை",
+      "title": "கவனத்திற்குரிய பிடிப்பு",
+      "capture": "பிடிப்பு",
+      "horizontal": "கிடைமட்ட",
+      "vertical": "செங்குத்து"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "பிணைப்பு சாளரம்",
+      "title": "ஆடியோவிஷுவல் பைண்டிங்",
+      "window": "ஜன்னல்",
+      "pssLabel": "பி.எஸ்.எஸ்.",
+      "simultaneousOrNot": "ஒரே நேரத்தில் அல்லது இல்லையா?",
+      "simultaneous": "ஒரே நேரத்தில்",
+      "notSimultaneous": "ஒரே நேரத்தில் அல்ல"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "கால அளவு",
+      "reference": "குறிப்பு",
+      "weberFraction": "வெபர் பின்னம்",
+      "title": "ஆடிட்டரி காலம்",
+      "threshold": "வாசல்",
+      "weber": "வெபர்",
+      "whichLonger": "எது நீளமானது?",
+      "firstLonger": "முதலில் நீண்டது",
+      "secondLonger": "இரண்டாவது நீண்டது"
+    },
+    "bart": {
+      "adjustedAvgPumps": "சரிசெய்யப்பட்ட சராசரி குழாய்கள்",
+      "avgTimeballoon": "சராசரி நேரம்/பலூன்",
+      "banked": "வங்கி!",
+      "lostEarnings": "இழந்த வருமானம்!",
+      "overallAvgPumps": "ஒட்டுமொத்த சராசரி குழாய்கள்",
+      "popRate": "பாப் விகிதம்",
+      "totalEarned": "மொத்தம் சம்பாதித்தது",
+      "balloons": "பலூன்கள்",
+      "cashed": "பணமாக்கப்பட்டது",
+      "popped": "உறுத்தியது",
+      "adjPumps": "Adj. குழாய்கள்",
+      "pop": "பாப்",
+      "pump": "பம்ப்",
+      "cashIn": "பணம்"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "சராசரி முடிவு நேரம்",
+      "drawBeadsToGatherEvidence": "ஆதாரங்களை சேகரிக்க மணிகளை வரையவும்",
+      "jtc": "JTC",
+      "title": "மணிகள் பணி",
+      "meanDraws": "சராசரி வரைகிறது",
+      "rounds": "சுற்றுகள்",
+      "jtcRate": "JTC விகிதம்",
+      "meanDrawsToDecision": "முடிவெடுப்பதற்கான சராசரி வரைவுகள்",
+      "jtcRateThreshold": "JTC விகிதம் (<{{threshold}} டிராக்கள்)",
+      "round": "சுற்று",
+      "jarDescription": "ஜாடி ஏ: 85% பச்சை / ஜார் பி: 85% சிவப்பு",
+      "itWasJar": "அது ஜார்",
+      "drawABead": "ஒரு மணியை வரையவும்",
+      "jarAGreen": "ஜார் ஒரு பச்சை",
+      "jarBRed": "ஜார் பி சிவப்பு"
+    },
+    "binding": {
+      "changedTrials": "மாற்றப்பட்ட சோதனைகள்",
+      "sameAccuracy": "அதே துல்லியம்",
+      "sameTrials": "அதே சோதனைகள்",
+      "title": "அம்சம் பிணைப்பு",
+      "binding": "பிணைத்தல்",
+      "bindingAccuracyChanged": "துல்லியத்தை மாற்றவும்",
+      "same": "அதே",
+      "different": "வித்தியாசமானது"
+    },
+    "blockDesign": {
+      "cells": "செல்கள்",
+      "target": "இலக்கு",
+      "yourAnswer": "உங்கள் பதில்",
+      "tapHint": "வண்ணங்களைச் சுழற்ற தட்டவும்",
+      "check": "சரிபார்க்கவும்"
+    },
+    "brixton": {
+      "adapt": "தழுவி",
+      "adaptationCost": "தழுவல் செலவு",
+      "nonswitchTrials": "மாறாத சோதனைகள்",
+      "switchTrials": "சோதனைகளை மாற்றவும்"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "இந்த கடிதங்களை நினைவில் கொள்ளுங்கள்",
+      "selectThe3Letters": "3 எழுத்துக்களைத் தேர்ந்தெடுக்கவும்",
+      "title": "பிரவுன்-பீட்டர்சன் பணி",
+      "forgetting": "மறத்தல்",
+      "sDelay": "எஸ் தாமதம்",
+      "minus3": "மைனஸ்3",
+      "delay": "தாமதம்"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "முடிவின் தரம்",
+      "finalPoints": "இறுதி புள்ளிகள்",
+      "meanBet": "சராசரி பந்தயம்",
+      "winRate": "வெற்றி விகிதம்",
+      "wins": "வெற்றி பெறுகிறது",
+      "title": "கேம்பிரிட்ஜ் சூதாட்டப் பணி",
+      "totalPoints": "மொத்த புள்ளிகள்",
+      "quality": "தரம்",
+      "rational": "பகுத்தறிவு",
+      "avgBet": "சராசரி பந்தயம்",
+      "trial": "விசாரணை",
+      "whichColorHidesToken": "எந்த நிறம் டோக்கனை மறைக்கிறது?",
+      "youChose": "நீங்கள் தேர்ந்தெடுத்தீர்கள்",
+      "howMuchToBet": "எவ்வளவு பந்தயம் கட்ட வேண்டும்?"
+    },
+    "cancellation": {
+      "false": "பொய்",
+      "target": "இலக்கு:",
+      "total": "மொத்தம்",
+      "title": "ரத்துசெய்யும் பணி (d2)",
+      "misses": "மிஸ்கள்",
+      "targetDescription": "d 2 மதிப்பெண்களுடன்"
+    },
+    "changeBlindness": {
+      "detectionRate": "கண்டறிதல் விகிதம்",
+      "found": "கண்டுபிடிக்கப்பட்டது",
+      "meanDetectionTime": "சராசரி கண்டறிதல் நேரம்",
+      "title": "குருட்டுத்தன்மையை மாற்றவும்",
+      "missed": "தவறவிட்டது",
+      "avgTime": "சராசரி நேரம்",
+      "instructions": "வழிமுறைகள்"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "சிறந்த மதிப்பீடு",
+      "meanScore": "சராசரி மதிப்பெண்",
+      "worstEstimate": "மோசமான மதிப்பீடு",
+      "inRange": "நல்ல கணிப்பு!",
+      "title": "அறிவாற்றல் மதிப்பீடு",
+      "meanScoreLabel": "சராசரி மதிப்பெண்",
+      "inRangeLabel": "வரம்பில்",
+      "extreme": "தீவிர",
+      "scoreLabel": "மதிப்பெண்",
+      "submit": "சமர்ப்பிக்கவும்"
+    },
+    "common": {
+      "accuracy": "துல்லியம்",
+      "bias": "சார்பு",
+      "falseAlarmRate": "தவறான அலாரம் வீதம்",
+      "hitRate": "வெற்றி விகிதம்",
+      "hits": "ஹிட்ஸ்",
+      "listening": "கேட்கிறது...",
+      "meanRt": "சராசரி RT",
+      "timedOut": "நேரம் முடிந்தது",
+      "timedOut2": "நேரம் முடிந்தது",
+      "faRate": "Taux de FA",
+      "paused": "இடைநிறுத்தப்பட்டது"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "நீங்கள் எவ்வளவு நம்பிக்கையுடன் இருக்கிறீர்கள்?",
+      "rateYourConfidence": "உங்கள் நம்பிக்கையை மதிப்பிடுங்கள்",
+      "title": "நம்பிக்கை அளவுத்திருத்தம்",
+      "calError": "அளவுத்திருத்தப் பிழை",
+      "confidence": "நம்பிக்கை"
+    },
+    "consequences": {
+      "best": "சிறந்த",
+      "nextRound": "அடுத்த சுற்று...",
+      "time": "நேரம்",
+      "placeholder": "ஒரு விளைவை உள்ளிடவும்...",
+      "title": "விளைவுகள்",
+      "totalIdeas": "மொத்த யோசனைகள்",
+      "avgPerRound": "சராசரி ஒரு சுற்றுக்கு",
+      "rounds": "சுற்றுகள்",
+      "noConsequencesListed": "எந்த விளைவுகளும் பட்டியலிடப்படவில்லை",
+      "roundProgress": "சுற்று {{current}} / {{total}}",
+      "typeAndPressAdd": "தட்டச்சு செய்து சேர் என்பதை அழுத்தவும்"
+    },
+    "contextualCueing": {
+      "cueingEffect": "க்யூயிங் விளைவு",
+      "newConfigRt": "புதிய கட்டமைப்பு RT",
+      "oldConfigRt": "பழைய கட்டமைப்பு RT",
+      "title": "சூழ்நிலைக் குறிப்பு",
+      "cueing": "க்யூயிங்",
+      "oldRt": "பழைய ஆர்டி",
+      "newRt": "புதிய RT",
+      "prompt": "உடனடியாக",
+      "left": "விட்டு",
+      "right": "சரி"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "வாசல் நடுக்கம்",
+      "title": "விளிம்பு ஒருங்கிணைப்பு",
+      "pipeJitter": "| நடுக்கம்"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "வாசல் மாறுபாடு",
+      "title": "மாறுபட்ட உணர்திறன்",
+      "threshold": "வாசல்",
+      "left": "விட்டு",
+      "right": "சரி"
+    },
+    "cpt": {
+      "nontargets": "இலக்குகள் அல்லாதவை",
+      "target": "இலக்கு",
+      "nonTarget": "இலக்கு இல்லாதது",
+      "dPrime": "d'",
+      "targetsLetter": "இலக்கு கடிதம்",
+      "tapForLetterOnly": "இலக்கு கடிதத்திற்கு மட்டும் தட்டவும்"
+    },
+    "crowding": {
+      "criticalSpacing": "முக்கியமான இடைவெளி",
+      "leftAccuracy": "இடது துல்லியம்",
+      "rightAccuracy": "சரியான துல்லியம்"
+    },
+    "cryptogram": {
+      "hints": "குறிப்புகள்",
+      "title": "கிரிப்டோகிராம்",
+      "solved": "தீர்க்கப்பட்டது",
+      "time": "நேரம்",
+      "puzzles": "புதிர்கள்",
+      "puzzle": "புதிர்",
+      "hint": "குறிப்பு",
+      "clear": "தெளிவு"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "வளைவின் கீழ் பகுதி",
+      "discountRateK": "தள்ளுபடி விகிதம் (கே)",
+      "impulsivityIndex": "உந்துவிசை குறியீடு",
+      "title": "தாமதம் தள்ளுபடி",
+      "aucPatience": "AUC பொறுமை",
+      "patient": "நோயாளி",
+      "kRate": "கே விகிதம்",
+      "impuls": "தூண்டுதல்கள்",
+      "indifferencePoints": "அலட்சிய புள்ளிகள்",
+      "whichPrefer": "நீங்கள் எதை விரும்புகிறீர்கள்?",
+      "today": "இன்று"
+    },
+    "delayedMatching": {
+      "long": "நீளமானது",
+      "longDelay68s": "நீண்ட தாமதம் (6-8வி)",
+      "med": "மருத்துவம்",
+      "mediumDelay46s": "நடுத்தர தாமதம் (4-6வி)",
+      "short": "குறுகிய",
+      "shortDelay34s": "குறுகிய தாமதம் (3-4வி)",
+      "title": "தாமதமான பொருத்தம்",
+      "delay": "தாமதம்",
+      "rememberThisPattern": "இந்த மாதிரியை நினைவில் கொள்ளுங்கள்",
+      "whichWasIt": "அது எது?"
+    },
+    "dichoticListening": {
+      "alertDetection": "எச்சரிக்கை கண்டறிதல்",
+      "attendToTheLeftColumn": "இடது நெடுவரிசையில் கலந்துகொள்ளவும்",
+      "attendedAccuracy": "துல்லியம் கலந்துகொண்டார்",
+      "ignoreTheRightColumn": "வலது நெடுவரிசையை புறக்கணிக்கவும்",
+      "right": "வலது",
+      "title": "டிகோடிக் கேட்பது",
+      "attendedAcc": "துல்லியம் கலந்து கொண்டது",
+      "alertDet": "எச்சரிக்கை கண்டறிதல்",
+      "alerts": "எச்சரிக்கைகள்",
+      "selectLeftColumnWords": "இடது நெடுவரிசை வார்த்தைகளைத் தேர்ந்தெடுக்கவும்",
+      "submit": "சமர்ப்பிக்கவும்",
+      "alertQuestion": "எச்சரிக்கை கேள்வி"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "துல்லியத்தை மறந்து விடுங்கள்",
+      "forgettingEffect": "மறதி விளைவு",
+      "newRejection": "புதிய நிராகரிப்பு",
+      "rememberAccuracy": "துல்லியத்தை நினைவில் கொள்ளுங்கள்",
+      "title": "மறத்தல் இயக்கியது",
+      "remember": "நினைவில் கொள்ளுங்கள்",
+      "forget": "மறந்துவிடு",
+      "round": "சுற்று",
+      "word": "வார்த்தை",
+      "wasThisWordShown": "இந்த வார்த்தை காட்டப்பட்டதா?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "கவனம் சார்பு மதிப்பெண்",
+      "congruentAcc": "இணக்கமான ஏசி",
+      "congruentRt": "ஒத்த RT",
+      "incongruentAcc": "பொருத்தமற்ற ஏசி",
+      "incongruentRt": "பொருத்தமற்ற RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "கார் அல்லது டிரக்?",
+      "minDisplayReached": "குறைந்தபட்ச காட்சியை அடைந்தது",
+      "positionAccuracy": "நிலை துல்லியம்",
+      "thresholdDisplay": "வாசல் காட்சி",
+      "vehicleAccuracy": "வாகன துல்லியம்",
+      "whereWasTheDiamond": "வைரம் எங்கே இருந்தது?",
+      "title": "இரட்டை முடிவு",
+      "threshold": "வாசல்",
+      "bothOk": "இரண்டும் சரி",
+      "vehicle": "வாகனம்",
+      "position": "பதவி",
+      "car": "கார்",
+      "truck": "டிரக்"
+    },
+    "dsst": {
+      "items": "பொருட்கள்",
+      "itemsCompleted": "பொருட்கள் முடிந்தது",
+      "speedItemsmin": "வேகம் (பொருட்கள்/நிமிடம்)",
+      "attempts": "முயற்சிகள்",
+      "itemsPerMin": "பொருட்கள் / நிமிடம்"
+    },
+    "dualTask": {
+      "dualtaskCost": "இரட்டை பணி செலவு",
+      "taskANumber": "பணி A (எண்)",
+      "taskBSymbol": "பணி B (சின்னம்)",
+      "title": "இரட்டை பணி",
+      "taskA": "பணி ஏ",
+      "taskB": "பணி பி",
+      "number": "எண்",
+      "symbol": "சின்னம்",
+      "up": "மேலே",
+      "down": "கீழே"
+    },
+    "dualTime": {
+      "sessionEnPause": "அமர்வு இடைநிறுத்தப்பட்டது",
+      "votreEstimationSecondes": "உங்கள் மதிப்பீடு (வினாடிகள்)",
+      "sessionInterrupted": "அமர்வு தடைபட்டது",
+      "target": "இலக்கு",
+      "estimation": "மதிப்பீடு",
+      "avgTime": "சராசரி நேரம்",
+      "avgError": "சராசரி பிழை",
+      "trials": "சோதனைகள்",
+      "resumeToContinue": "தொடர தொடரவும்",
+      "aimFor": "இலக்கு",
+      "second": "இரண்டாவது",
+      "howLongDidYouTake": "நீங்கள் எவ்வளவு நேரம் எடுத்தீர்கள்?"
+    },
+    "dualTrack": {
+      "confirmer": "உறுதிப்படுத்தவும்",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "தொடர தொடரவும்.",
+      "sessionEnPause": "அமர்வு இடைநிறுத்தப்பட்டது",
+      "tapezLesCibles": "இலக்குகளைத் தட்டவும்",
+      "tapezLaCible": "இலக்கைத் தட்டவும்",
+      "appuyezConfirmer": "உறுதிப்படுத்து என்பதை அழுத்தவும்",
+      "targetsCountLabel": "{{count}} இலக்குகள்",
+      "distractorsCountLabel": "{{count}} திசைதிருப்பிகள்",
+      "roundsCountLabel": "{{count}} சுற்றுகள்",
+      "calibrationRoundsLabel": "{{count}} அளவுத்திருத்த சுற்றுகள்",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "டி = உள் பயண சிரமம் அடுக்கு.",
+      "tierHelpCurrentWithPhase": "நீங்கள் தற்போது {{targets}} இலக்குகளுக்கு {{total}} இல் T{{current}} இல் உள்ளீர்கள். தற்போதைய கட்டம்: {{phase}}. அடுத்த இலக்கு நிலைக்கு முன் {{remaining}} அடுக்கு(கள்) மீதமுள்ளன.",
+      "phaseTracking": "கண்காணிப்பு",
+      "phaseAudio": "கண்காணிப்பு + ஆடியோ",
+      "phaseColor": "கண்காணிப்பு + நிறம்",
+      "phaseCombined": "கண்காணிப்பு + ஆடியோ + நிறம்",
+      "passLetters": "கடிதங்கள்",
+      "passColors": "நிறங்கள்",
+      "moveInstruction": "அறிவுறுத்தலை நகர்த்தவும்",
+      "moveConfirmBtn": "உறுதிப்படுத்தல் பொத்தானை நகர்த்தவும்",
+      "preparingSession": "அமர்வு தயாராகிறது...",
+      "preparing3dScene": "3டி காட்சி தயாராகிறது...",
+      "startJourney": "பயணத்தைத் தொடங்குங்கள்",
+      "calibrationDescription": "முதல் கட்டத்திற்கு முன், நீண்ட அளவுத்திருத்தம் உங்கள் தொடக்க நிலையை மதிப்பிடும்.",
+      "defaultDescription": "பந்துகள் ஒளிரும். அவர்கள் நகரும் போது அவர்களைப் பின்தொடரவும், பின்னர் அவர்களை அடையாளம் காணவும்.",
+      "startCalibration": "அளவுத்திருத்தத்தைத் தொடங்கவும்",
+      "calibrationTitle": "அளவுத்திருத்தம்",
+      "estimatedStart": "Est. தொடங்கு",
+      "roundsAnalyzed": "சுற்றுகள் பகுப்பாய்வு செய்யப்பட்டன",
+      "willStartAt": "இல் தொடங்கும்",
+      "targetsCount": "இலக்குகள்",
+      "thenProgress": "பின்னர் முன்னேற்றம்"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "முழுமையான பிழை என்று பொருள்",
+      "ratio": "விகிதம்",
+      "slope": "சாய்வு",
+      "vierordtSlope": "Vierordt சாய்வு",
+      "wait": "காத்திருங்கள்...",
+      "title": "கால இனப்பெருக்கம்",
+      "meanError": "சராசரி பிழை",
+      "meanRatio": "சராசரி விகிதம் (உற்பத்தி/இலக்கு)",
+      "holdNow": "இப்போது பிடி",
+      "target": "இலக்கு",
+      "error": "பிழை"
+    },
+    "embeddedFigures": {
+      "fastest": "வேகமான",
+      "found": "கண்டுபிடிக்கப்பட்டது",
+      "meanDetectionTime": "சராசரி கண்டறிதல் நேரம்",
+      "slowest": "மெதுவான",
+      "title": "உட்பொதிக்கப்பட்ட புள்ளிவிவரங்கள்",
+      "missed": "தவறவிட்டது",
+      "fastestLabel": "வேகமான",
+      "findThisShape": "இந்த வடிவத்தைக் கண்டுபிடி",
+      "memorizeShape": "வடிவத்தை நினைவில் வையுங்கள்...",
+      "foundIt": "கண்டுபிடித்தேன்!",
+      "giveUp": "விட்டுக்கொடுங்கள்"
+    },
+    "emotionalNback": {
+      "falseAlarms": "தவறான அலாரங்கள்",
+      "misses": "மிஸ்கள்",
+      "title": "உணர்ச்சிகரமான N-Back",
+      "match": "போட்டி"
+    },
+    "emotionalStroop": {
+      "neutralRt": "நடுநிலை RT",
+      "positiveRt": "நேர்மறை RT",
+      "threatRt": "அச்சுறுத்தல் RT",
+      "title": "உணர்ச்சிகரமான Stroop",
+      "interference": "குறுக்கீடு",
+      "interferenceThreatNeutral": "குறுக்கீடு (அச்சுறுத்தல் - நடுநிலை)"
+    },
+    "eyesTest": {
+      "totalTime": "மொத்த நேரம்"
+    },
+    "faceName": {
+      "gain": "ஆதாயம்",
+      "learningImprovement": "கற்றல் மேம்பாடு",
+      "round1Accuracy": "சுற்று 1 துல்லியம்",
+      "round2Accuracy": "சுற்று 2 துல்லியம்",
+      "whoIsThis": "இவர் யார்?",
+      "title": "முகம்-பெயர் சங்கம்",
+      "round": "சுற்று",
+      "testPhase": "சோதனை கட்டம்"
+    },
+    "fauxPas": {
+      "who": "யார்?",
+      "why": "ஏன்?",
+      "title": "ஃபாக்ஸ் பாஸ் அங்கீகாரம்",
+      "detection": "கண்டறிதல்",
+      "scenarios": "காட்சிகள்",
+      "fpFound": "ஃபாக்ஸ் பாஸ் கண்டுபிடிக்கப்பட்டது",
+      "control": "கட்டுப்பாடு",
+      "readyToAnswer": "பதில் சொல்ல தயார்",
+      "didSomeoneSay": "இருக்கக்கூடாத ஒன்றை யாராவது சொல்லிவிட்டார்களா?",
+      "whoSaidIt": "யார் சொன்னது?",
+      "whyInappropriate": "அது ஏன் பொருத்தமற்றதாக இருந்தது?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "துல்லியத்தை நினைவுபடுத்துங்கள்",
+      "recognitionAccuracy": "அங்கீகாரம் துல்லியம்",
+      "recallPlaceholder": "உங்கள் பதிலை உள்ளிடவும்...",
+      "unlikely": "வாய்ப்பில்லை",
+      "certain": "நிச்சயமாக",
+      "title": "அறிந்த உணர்வு",
+      "recall": "நினைவு கூருங்கள்",
+      "recognition": "அங்கீகாரம்",
+      "fokR": "ஃபோக் ஆர்",
+      "questions": "கேள்விகள்",
+      "recalled": "நினைவு கூர்ந்தார்",
+      "recognized": "அங்கீகரிக்கப்பட்டது",
+      "fokSensitivity": "FOK உணர்திறன்",
+      "submit": "சமர்ப்பிக்கவும்",
+      "dontKnow": "தெரியாது",
+      "fokPrompt": "நீங்கள் அதை அடையாளம் காண்பீர்களா?",
+      "selectCorrectAnswer": "சரியான பதிலைத் தேர்ந்தெடுக்கவும்",
+      "answer": "பதில்"
+    },
+    "fingerTapping": {
+      "firstTrial": "முதல் சோதனை",
+      "lastTrial": "கடைசி சோதனை",
+      "sequence": "வரிசை",
+      "speedupT1VsT12": "வேகம் (T1 vs T12)",
+      "title": "விரல் தட்டுதல்"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "சராசரி இயக்க நேரம்",
+      "avgThroughput": "சராசரி செயல்திறன்",
+      "title": "ஃபிட்ஸ் டேப்பிங்",
+      "throughput": "செயல்திறன்",
+      "tapTarget": "முன்னிலைப்படுத்தப்பட்ட இலக்கைத் தட்டவும்"
+    },
+    "foreperiod": {
+      "early": "ஆரம்ப",
+      "slope": "சாய்வு",
+      "title": "தற்காலிக தயாரிப்பு",
+      "fpEffectSlope": "FP விளைவு சாய்வு"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "திருப்பங்கள்",
+      "threshold": "வாசல்",
+      "tone1": "தொனி 1",
+      "tone2": "தொனி 2",
+      "weber": "வெபர்",
+      "weberFraction": "வெபர் பின்னம்",
+      "hz": "ஹெர்ட்ஸ்",
+      "title": "அதிர்வெண் பாகுபாடு",
+      "thresholdLabel": "வாசல்",
+      "hzDiff": "ஹெர்ட்ஸ் வேறுபாடு",
+      "whichWasHigher": "எது உயர்ந்தது?",
+      "firstHigher": "முதலில் உயர்ந்தது",
+      "secondHigher": "இரண்டாவது உயர்ந்தது"
+    },
+    "gabor": {
+      "gaborPatch": "கபோர் இணைப்பு",
+      "leftAccuracy": "இடது துல்லியம்",
+      "leftTrials": "இடது சோதனைகள்",
+      "noiseMask": "இரைச்சல் முகமூடி",
+      "rightAccuracy": "சரியான துல்லியம்",
+      "rightTrials": "சரியான சோதனைகள்",
+      "thresholdAngle": "வாசல் கோணம்",
+      "title": "கபோர்",
+      "threshold": "வாசல்",
+      "reversals": "திருப்பங்கள்",
+      "timedOut": "நேரம் முடிந்தது",
+      "left": "விட்டு",
+      "right": "சரி"
+    },
+    "gameOfDice": {
+      "finalPoints": "இறுதி புள்ளிகள்",
+      "risky": "அபாயகரமானது",
+      "riskyChoices": "ஆபத்தான தேர்வுகள்",
+      "safe": "பாதுகாப்பானது",
+      "winRate": "வெற்றி விகிதம்",
+      "wins": "வெற்றி பெறுகிறது",
+      "title": "கேம் ஆஃப் டைஸ் டாஸ்க்",
+      "totalPoints": "மொத்த புள்ளிகள்",
+      "riskyLabel": "அபாயகரமானது",
+      "roll": "உருட்டவும்",
+      "chooseYourBet": "உங்கள் பந்தயத்தைத் தேர்ந்தெடுங்கள்",
+      "pickNumbers": "உங்கள் எண்களைத் தேர்ந்தெடுங்கள்"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "இடைவெளி அல்லது இடைவெளி இல்லையா?",
+      "gapThreshold": "இடைவெளி வாசல்",
+      "title": "அமைதி கண்டறிதல்",
+      "noGap": "இடைவெளி இல்லை"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "பார்வை எங்கே இருந்தது?",
+      "direct": "நேரடி",
+      "left": "விட்டு",
+      "right": "சரி",
+      "title": "பார்வை திசை",
+      "dPrimeDirectGaze": "டி பிரைம் நேரடி பார்வை"
+    },
+    "hayling": {
+      "part1Initiation": "பகுதி 1 (தொடக்கம்)",
+      "part2": "பகுதி 2",
+      "part2Suppression": "பகுதி 2 (அடக்குமுறை)",
+      "suppressionCost": "அடக்குமுறை செலவு",
+      "title": "ஹேலிங்",
+      "part1": "பகுதி 1",
+      "part2Label": "பகுதி 2",
+      "suppression": "அடக்குதல்",
+      "obvious": "வெளிப்படையானது",
+      "obviousPicksPart2": "வெளிப்படையான தேர்வுகள் (பகுதி 2)",
+      "chooseUnrelated": "தொடர்பில்லாத வார்த்தையைத் தேர்ந்தெடுக்கவும்",
+      "completelyUnrelated": "முற்றிலும் தொடர்பில்லாதது",
+      "doNotPickObvious": "தெளிவான வார்த்தையை எடுக்காதே!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "அடுத்த கட்டத்திற்கு முன்னேறும்...",
+      "stageComplete": "மேடை முடிந்தது!",
+      "title": "IED செட் ஷிப்ட்",
+      "stages": "நிலைகள்",
+      "edsCost": "EDS செலவு",
+      "stage": "மேடை",
+      "correctNeeded": "முன்னேறுவதற்கு சரியானது தேவை"
+    },
+    "informationSampling": {
+      "cost": "செலவு",
+      "free": "இலவசம்",
+      "meanTilesCost": "சராசரி ஓடுகள் (செலவு)",
+      "meanTilesFree": "சராசரி ஓடுகள் (இலவசம்)",
+      "totalCost": "மொத்த செலவு",
+      "title": "தகவல் மாதிரி",
+      "tiles": "ஓடுகள்",
+      "tapToReveal": "வெளிப்படுத்த தட்டவும்"
+    },
+    "inspectionTime": {
+      "final": "இறுதி",
+      "finalDisplayTime": "இறுதி காட்சி நேரம்",
+      "minCorrectIt": "குறைந்தபட்சம் சரியான ஐ.டி",
+      "threshold": "வாசல்",
+      "title": "ஆய்வு நேரம்",
+      "thresholdLabel": "வாசல்",
+      "minIt": "குறைந்தபட்ச ஐ.டி"
+    },
+    "iowaGambling": {
+      "balance": "இருப்பு:",
+      "chooseADeck": "ஒரு தளத்தைத் தேர்வுசெய்க",
+      "deckADraws": "டெக் A வரைகிறது",
+      "deckBDraws": "டெக் பி வரைகிறது",
+      "deckCDraws": "டெக் சி வரைகிறது",
+      "deckDDraws": "டெக் டி வரைகிறது",
+      "first40Advantageous": "முதல் 40 சாதகமானது",
+      "last40Advantageous": "கடைசி 40 சாதகமானது",
+      "learn": "கற்றுக்கொள்ளுங்கள்",
+      "learningIndex": "கற்றல் குறியீடு",
+      "title": "அயோவா சூதாட்டம்",
+      "advantageousPct": "அனுகூலமான%",
+      "earnings": "வருவாய்",
+      "last40": "கடந்த 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "அளவுத்திருத்த சார்பு",
+      "meanJol": "சராசரி JOL",
+      "nowTestYourRecall": "இப்போது உங்கள் ரீகால் சோதிக்கவும்",
+      "studyComplete": "படிப்பு முடிந்தது",
+      "whatWasPairedWith": "என்ன ஜோடியாக இருந்தது...?",
+      "title": "கற்றல் தீர்ப்பு",
+      "recallAccuracy": "துல்லியத்தை நினைவுபடுத்துங்கள்",
+      "jolGamma": "JOL காமா",
+      "jolAccuracyGamma": "JOL துல்லியம் (காமா)",
+      "howLikelyRemember": "நீங்கள் எந்தளவுக்கு நினைவில் இருப்பீர்கள்?",
+      "hiddenAnswer": "மறைக்கப்பட்ட பதில்"
+    },
+    "judgmentOfRecency": {
+      "close": "மூடு",
+      "closeGap13": "நெருக்கமான இடைவெளி (1-3)",
+      "far": "தூரம்",
+      "farGap9": "தூர இடைவெளி (9+)",
+      "mediumGap48": "நடுத்தர இடைவெளி (4-8)",
+      "title": "சமீபத்திய தீர்ப்பு",
+      "medium": "நடுத்தர",
+      "studyPhaseMemorizeOrder": "படிப்பு கட்டம் - வரிசையை மனப்பாடம் செய்யுங்கள்",
+      "whichMoreRecently": "எது சமீபத்தில் தோன்றியது?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "சராசரி RT (சொற்கள் அல்லாதவை)",
+      "meanRtWords": "சராசரி RT (வார்த்தைகள்)",
+      "nonwordsAccuracy": "சொற்கள் அல்லாத துல்லியம்",
+      "wordsAccuracy": "வார்த்தைகளின் துல்லியம்",
+      "word": "வார்த்தை",
+      "nonword": "சொல் அல்லாத"
+    },
+    "maze": {
+      "duration": "கால அளவு",
+      "optimalSteps": "உகந்த படிகள்",
+      "pathEfficiency": "பாதை திறன்",
+      "totalSteps": "மொத்த படிகள்",
+      "wallHits": "வால் ஹிட்ஸ்",
+      "title": "பிரமை",
+      "completed": "முடிக்கப்பட்டது",
+      "efficiency": "திறன்",
+      "wallHitsLabel": "வால் ஹிட்ஸ்",
+      "steps": "படிகள்"
+    },
+    "memobox": {
+      "easy": "எளிதானது",
+      "easy2Boxes": "எளிதானது (2 பெட்டிகள்)",
+      "hard": "கடினமான",
+      "hard4Boxes": "கடினமான (4 பெட்டிகள்)",
+      "medium3Boxes": "நடுத்தர (3 பெட்டிகள்)",
+      "title": "மெமோபாக்ஸ்",
+      "rounds": "சுற்றுகள்",
+      "medium": "நடுத்தர",
+      "watchMovements": "அசைவுகளைக் கவனியுங்கள்...",
+      "howManyBalls": "ஒவ்வொரு பெட்டியிலும் எத்தனை பந்துகள்?",
+      "submit": "சமர்ப்பிக்கவும்",
+      "roundOf": "{{total}} இன் {{current}} சுற்று"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "குறுக்குவெட்டு என்றால் என்ன?",
+      "title": "மன கட்டிங்"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "பழையதா, ஒத்ததா அல்லது புதியதா?",
+      "patternSeparation": "பேட்டர்ன் பிரிப்பு",
+      "sep": "செப்.",
+      "old": "பழையது",
+      "similar": "ஒத்த",
+      "new": "புதியது",
+      "ldi": "LDI",
+      "title": "நினைவாற்றல் பாகுபாடு",
+      "hitRateOldDetected": "வெற்றி விகிதம் (பழையது கண்டறியப்பட்டது)",
+      "lureDiscrimination": "கவரும் பாகுபாடு (LDI)",
+      "memorize": "மனப்பாடம் செய்யுங்கள்",
+      "testPhase": "சோதனை கட்டம்"
+    },
+    "multiArmedBandit": {
+      "earnings": "வருவாய்:",
+      "pickMachine": "ஒரு இயந்திரத்தைத் தேர்ந்தெடுங்கள்",
+      "title": "பல ஆயுத கொள்ளைக்காரன்",
+      "totalReward": "மொத்த வெகுமதி",
+      "optimal": "உகந்தது",
+      "regret": "வருத்தம்",
+      "exploit": "சுரண்டவும்",
+      "machine": "இயந்திரம்",
+      "armsExplored": "ஆயுதங்கள் ஆராயப்பட்டன"
+    },
+    "navon": {
+      "globalBigLetter": "உலகளாவிய (பெரிய எழுத்து)",
+      "localSmallLetter": "உள்ளூர் (சிறிய எழுத்து)",
+      "title": "நவோன்",
+      "globalAdv": "குளோபல் அட்வ.",
+      "whatBigLetter": "என்ன பெரிய கடிதம்?",
+      "whatSmallLetter": "என்ன சிறிய எழுத்து?"
+    },
+    "negativePriming": {
+      "controlRt": "கட்டுப்பாடு RT",
+      "nameTheRedShape": "சிவப்பு வடிவத்திற்கு பெயரிடுங்கள்",
+      "negativePrimingRt": "நெகடிவ் ப்ரைமிங் ஆர்டி",
+      "positivePrimingRt": "நேர்மறை ப்ரைமிங் ஆர்டி",
+      "npRt": "NP RT",
+      "ppRt": "பிபி ஆர்டி",
+      "npEffect": "NP விளைவு",
+      "title": "எதிர்மறை ப்ரைமிங்",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "கணிப்பு சார்பு",
+      "linearityRsup2": "நேரியல் (R²)",
+      "meanAbsoluteError": "முழுமையான பிழை என்று பொருள்",
+      "tapTheLineToPlaceTheNumber": "எண்ணை வைக்க வரியைத் தட்டவும்",
+      "title": "எண் வரி",
+      "meanError": "சராசரி பிழை",
+      "yourEstimate": "உங்கள் கணிப்பு",
+      "correct": "சரி"
+    },
+    "oddOneOut": {
+      "colorTrials": "வண்ண சோதனைகள்",
+      "shapeTrials": "வடிவ சோதனைகள்",
+      "shape": "வடிவம்",
+      "color": "நிறம்",
+      "timeout": "நேரம் முடிந்தது",
+      "shapeDiffAccuracy": "வடிவ வேறுபாடு. துல்லியம்",
+      "colorDiffAccuracy": "வண்ண வேறுபாடு. துல்லியம்",
+      "shapeDiffAvgRt": "வடிவ வேறுபாடு. சராசரி RT",
+      "colorDiffAvgRt": "வண்ண வேறுபாடு. சராசரி RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "எந்த வழி?",
+      "thresholdAngle": "வாசல் கோணம்",
+      "title": "நோக்குநிலை பாகுபாடு",
+      "threshold": "வாசல்",
+      "counterCw": "CCW",
+      "clockwise": "கடிகார திசையில்"
+    },
+    "patternComparison": {
+      "differentTrials": "வெவ்வேறு சோதனைகள்",
+      "sameTrials": "அதே சோதனைகள்",
+      "same": "அதே",
+      "different": "வித்தியாசமானது"
+    },
+    "patternRecognition": {
+      "newPatterns": "புதிய வடிவங்கள்",
+      "oldPatterns": "பழைய வடிவங்கள்",
+      "old": "பழையது",
+      "new": "புதியது",
+      "studyPatterns": "வடிவங்களை கவனமாக படிக்கவும்",
+      "memorize": "மனப்பாடம் ({{current}}/{{total}})",
+      "getReady": "தயாராகுங்கள்...",
+      "testPhaseStarting": "சோதனைக் கட்டம் ஆரம்பம்..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "சரியானது",
+      "meanAngularError": "சராசரி கோணப் பிழை",
+      "withinTolerance": "சகிப்புத்தன்மைக்குள்",
+      "title": "முன்னோக்கு எடுத்தல்",
+      "avgErr": "சராசரி பிழை",
+      "youAreAt": "நீங்கள் இருக்கிறீர்கள்",
+      "facing": "எதிர்கொள்ளும்",
+      "pointTo": "சுட்டி"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "அடிக்கடி வாசல்",
+      "seq1": "பகுதி 1",
+      "seq2": "பகுதி 2",
+      "title": "ஃபோன்மே பாகுபாடு",
+      "thresh": "கதிரடி",
+      "sameOrDifferent": "அதே அல்லது வேறு?",
+      "same": "அதே",
+      "different": "வித்தியாசமானது"
+    },
+    "predictionMotion": {
+      "biasLate": "சார்பு (+ = தாமதம்)",
+      "meanAbsoluteError": "முழுமையான பிழை என்று பொருள்",
+      "precisionSd": "துல்லியம் (SD)",
+      "title": "கணிப்பு இயக்கம்",
+      "absError": "ஏபிஎஸ். பிழை",
+      "precision": "துல்லியம்",
+      "responded": "பதிலளித்தார்",
+      "tapWhenReachesTarget": "இலக்கை அடையும் போது தட்டவும்"
+    },
+    "promem": {
+      "ongoingAccuracy": "நடந்துகொண்டிருக்கும் துல்லியம்",
+      "ongoingRt": "நடந்துகொண்டிருக்கும் RT",
+      "pmHitRate": "PM வெற்றி விகிதம்",
+      "pmRt": "PM RT",
+      "pmTargets": "பிரதமர் இலக்கு",
+      "title": "வருங்கால நினைவகம்",
+      "ongoing": "நடந்து கொண்டிருக்கிறது",
+      "pmHits": "PM ஹிட்ஸ்",
+      "pmMisses": "PM மிஸ்",
+      "living": "வாழும்",
+      "nonLiving": "உயிரற்ற",
+      "redWordInstruction": "சிவப்பு வார்த்தை = அழுத்தவும்"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "திசைதிருப்பல் பிழைகள்",
+      "literalErrorRate": "எழுத்துப் பிழை விகிதம்",
+      "literalErrors": "எழுத்துப் பிழைகள்",
+      "title": "பழமொழி விளக்கம்",
+      "literal": "இலக்கியம்",
+      "litRate": "லிட். மதிப்பிடவும்",
+      "whatDoesThisMean": "இதன் பொருள் என்ன?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "பின்பற்ற தயாராகுங்கள்",
+      "meanTimeOnTarget": "இலக்கின் சராசரி நேரம்",
+      "meanTrackingError": "சராசரி கண்காணிப்பு பிழை",
+      "placeYourFingerOnTheScreen": "உங்கள் விரலை திரையில் வைக்கவும்",
+      "title": "பர்சூட் டிராக்கிங்",
+      "timeOnTarget": "இலக்கில் நேரம்",
+      "error": "பிழை",
+      "onTarget": "இலக்கில்",
+      "avgError": "சராசரி பிழை",
+      "improve": "மேம்படுத்து",
+      "improvementT1VsT": "முன்னேற்றம் T1 Vs T",
+      "errorLabel": "பிழை",
+      "followGreenTarget": "பச்சை இலக்கைப் பின்பற்றவும்"
+    },
+    "rapidNaming": {
+      "roundComplete": "சுற்று முடிந்தது",
+      "totalErrors": "மொத்த பிழைகள்",
+      "title": "விரைவான பெயரிடுதல்",
+      "avgSpeed": "சராசரி வேகம்",
+      "totalTime": "மொத்த நேரம்",
+      "round": "சுற்று",
+      "getReady": "தயாராகுங்கள்!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "சராசரி தீர்வு நேரம்",
+      "solved": "தீர்க்கப்பட்டது",
+      "wrong": "தவறு",
+      "placeholder": "உங்கள் பதில்...",
+      "title": "ரீபஸ் புதிர்கள்",
+      "puzzles": "புதிர்கள்",
+      "timeout": "நேரம் முடிந்தது",
+      "submit": "சமர்ப்பிக்கவும்",
+      "answer": "பதில்"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "சராசரி தீர்வு நேரம்",
+      "solved": "தீர்க்கப்பட்டது",
+      "placeholder": "உங்கள் பதில்...",
+      "title": "ரிமோட் அசோசியேட்ஸ்",
+      "timeout": "நேரம் முடிந்தது",
+      "submit": "சமர்ப்பிக்கவும்",
+      "answer": "பதில்"
+    },
+    "reversalLearning": {
+      "adapt": "தழுவி",
+      "loseshiftRate": "இழப்பு-மாற்ற விகிதம்",
+      "score": "மதிப்பெண்:",
+      "winstayRate": "வெற்றி-தங்கும் விகிதம்",
+      "title": "தலைகீழ் கற்றல்",
+      "rewards": "வெகுமதிகள்",
+      "reversals": "திருப்பங்கள்",
+      "persev": "பெர்செவ்",
+      "avgTrialsToCriterion": "சராசரி அளவுகோலுக்கு சோதனைகள்",
+      "pickACard": "ஒரு அட்டையைத் தேர்ந்தெடுங்கள்"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7 ஆல் பின்னோக்கி எண்ணவும்",
+      "reproduceThePatternFromMemory": "நினைவகத்திலிருந்து வடிவத்தை மீண்டும் உருவாக்கவும்",
+      "title": "ரெய் காம்ப்ளக்ஸ் படம்",
+      "copy": "நகலெடுக்கவும்",
+      "recall": "நினைவு கூருங்கள்",
+      "retention": "தக்கவைத்தல்",
+      "trial": "விசாரணை",
+      "target": "இலக்கு",
+      "yourCopy": "உங்கள் நகல்",
+      "submit": "சமர்ப்பிக்கவும்"
+    },
+    "rhythm": {
+      "avgTimingError": "சராசரி நேரப் பிழை",
+      "bestTrialError": "சிறந்த சோதனை பிழை",
+      "correctTrials": "சரியான சோதனைகள்",
+      "worstTrialError": "மோசமான சோதனை பிழை",
+      "watchRhythm": "தாளத்தைப் பாருங்கள்",
+      "getReady": "தயாராகுங்கள்...",
+      "tapTheRhythm": "தாளத்தைத் தட்டவும்!",
+      "tooFarOff": "வெகு தொலைவில்!",
+      "tapToReproduce": "இனப்பெருக்கம் செய்ய தட்டவும்",
+      "beats": "{{count}} அடிக்கிறது",
+      "bestTrial": "சிறந்த சோதனை",
+      "worstTrial": "மோசமான சோதனை",
+      "title": "தாளம்",
+      "msErr": "தவறு"
+    },
+    "routePlanning": {
+      "time": "நேரம்",
+      "title": "பாதை திட்டமிடல்",
+      "levels": "நிலைகள்",
+      "completed": "முடிக்கப்பட்டது",
+      "avgMoves": "சராசரி நகர்கிறது",
+      "clear": "தெளிவு",
+      "submit": "சமர்ப்பிக்கவும்",
+      "instructions": "வழிமுறைகள்"
+    },
+    "rvp": {
+      "detect357246468": "கண்டறிதல்: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "இலக்கு வரிசைகள்",
+      "fa": "FA",
+      "hitRate": "வெற்றி விகிதம்",
+      "misses": "மிஸ்கள்",
+      "sequences": "தொடர்கள்"
+    },
+    "sart": {
+      "commissionErrors": "கமிஷன் பிழைகள்",
+      "omissionErrors": "விடுபட்ட பிழைகள்",
+      "tapAllDigits": "3 ஐத் தவிர அனைத்து இலக்கங்களையும் தட்டவும்",
+      "except3": "தவிர 3"
+    },
+    "sceneCrasher": {
+      "adds": "சேர்க்கிறது",
+      "studyTheScene": "காட்சியைப் படிக்கவும்",
+      "swaps": "இடமாற்றங்கள்",
+      "tapTheNewchangedObject": "புதிய/மாற்றப்பட்ட பொருளைத் தட்டவும்"
+    },
+    "sentenceVerification": {
+      "falseSentences": "தவறான வாக்கியங்கள்",
+      "trueSentences": "உண்மையான வாக்கியங்கள்",
+      "byCategory": "வகை மூலம்",
+      "title": "வாக்கிய சரிபார்ப்பு",
+      "trueRt": "உண்மை RT",
+      "true": "உண்மை",
+      "false": "பொய்",
+      "pressKey": "அழுத்தவும்"
+    },
+    "soundSweeps": {
+      "down": "கீழே",
+      "downAccuracy": "கீழே துல்லியம்",
+      "durationThreshold": "கால அளவு",
+      "up": "மேலே",
+      "upAccuracy": "துல்லியம்",
+      "title": "ஒலி ஸ்வீப்ஸ்",
+      "threshold": "வாசல்",
+      "upOrDown": "மேலே அல்லது கீழே?"
+    },
+    "sourceMemory": {
+      "color": "நிறம்",
+      "colorRecall": "வண்ண நினைவு",
+      "frame": "சட்டகம்",
+      "frameRecall": "ஃபிரேம் ரீகால்",
+      "getReadyForTheTest": "சோதனைக்கு தயாராகுங்கள்!",
+      "itemRecognition": "பொருள் அங்கீகாரம்",
+      "positionRecall": "நிலை நினைவு",
+      "sourceAccuracy": "மூல துல்லியம்",
+      "title": "மூல நினைவகம்",
+      "source": "ஆதாரம்",
+      "position": "பதவி",
+      "word": "வார்த்தை",
+      "wasThisWordShown": "இந்த வார்த்தை காட்டப்பட்டதா?",
+      "bottom": "கீழே",
+      "blue": "நீலம்",
+      "orange": "ஆரஞ்சு",
+      "circle": "வட்டம்",
+      "square": "சதுரம்"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "இரைச்சல் வாசல்",
+      "title": "சத்தத்தில் பேச்சு",
+      "noise": "சத்தம்",
+      "whichWordWasIt": "அது எந்த வார்த்தை?"
+    },
+    "srtt": {
+      "learningEffect": "கற்றல் விளைவு",
+      "learning": "கற்றல்",
+      "block": "தடு"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "வாய்ப்பு நிலை",
+      "learningDetected": "கற்றல் கண்டறியப்பட்டது",
+      "testPhase": "சோதனை கட்டம்",
+      "whichPairLooksMoreFamiliar": "எந்த ஜோடி மிகவும் பரிச்சயமானது?",
+      "title": "புள்ளியியல் கற்றல்",
+      "learning": "கற்றல்",
+      "watchTheShapes": "வடிவங்களைப் பாருங்கள்"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "நம்பிக்கை சார்பு விளைவு",
+      "conclusion": "முடிவுரை",
+      "premise1": "வளாகம் 1",
+      "premise2": "வளாகம் 2",
+      "logicalValidityQuestion": "இது தர்க்கரீதியாக சரியானதா?",
+      "valid": "செல்லுபடியாகும்",
+      "invalid": "செல்லாதது"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "துல்லியம் இல்லாதது",
+      "presentAccuracy": "தற்போதைய துல்லியம்",
+      "title": "சின்னத் தேடல்",
+      "present": "தற்போது",
+      "absent": "இல்லாதது",
+      "targets": "இலக்குகள்",
+      "searchGroup": "தேடல் குழு"
+    },
+    "syncContinuation": {
+      "async": "ஒத்திசைவு",
+      "asynchrony": "ஒத்திசைவு",
+      "drift": "சறுக்கல்",
+      "cv": "சி.வி",
+      "title": "ஒத்திசைவு-தொடர்ச்சி",
+      "meanCv": "சராசரி சி.வி",
+      "tempos": "டெம்போஸ்",
+      "tempo": "டெம்போ",
+      "ioi": "ஐயோய்",
+      "getReady": "தயாராகுங்கள்...",
+      "nextTempo": "அடுத்த டெம்போ..."
+    },
+    "taskJuggling": {
+      "correctResets": "சரியான மீட்டமைப்புகள்",
+      "duration": "கால அளவு",
+      "missedCounters": "தவறவிட்ட கவுண்டர்கள்",
+      "prematureResets": "முன்கூட்டிய மீட்டமைப்புகள்",
+      "totalEvents": "மொத்த நிகழ்வுகள்",
+      "tooEarly": "மிக விரைவில்!",
+      "missed": "தவறவிட்டது!",
+      "title": "பணி வித்தை",
+      "premature": "முன்கூட்டியே",
+      "counter": "கவுண்டர்",
+      "tapCounterInstruction": "ஒவ்வொரு கவுண்டரையும் அதன் வாசலை அடையும் போது தட்டவும். நிரம்பி வழிய விடாதே!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "பைசெக்ஷன் பாயிண்ட் (பிஎஸ்இ)",
+      "curveSteepness": "வளைவு செங்குத்தானது",
+      "idealMidpoint": "ஐடியல் மிட்பாயிண்ட்",
+      "pse": "PSE",
+      "title": "டெம்போரல் பைசெக்ஷன்",
+      "steepness": "செங்குத்தான தன்மை",
+      "shortOrLong": "குறுகிய அல்லது நீண்ட?",
+      "trainingPhase": "பயிற்சி கட்டம்",
+      "short": "குறுகிய",
+      "long": "நீளமானது"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "சாய்வு அகலம்",
+      "rememberThisDuration": "இந்த காலத்தை நினைவில் கொள்ளுங்கள்",
+      "width": "அகலம்",
+      "standard": "தரநிலை",
+      "title": "தற்காலிக பொதுமைப்படுத்தல்",
+      "hitRate": "வெற்றி விகிதம்",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "வெற்றி விகிதம் (தரநிலையைக் கண்டறிதல்)",
+      "sameDuration": "அதே கால அளவு?",
+      "trainingPhase": "பயிற்சி கட்டம்",
+      "same": "அதே",
+      "different": "வித்தியாசமானது"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "வாசல் SOA",
+      "title": "அமைப்பு பாகுபாடு",
+      "threshold": "வாசல்"
+    },
+    "timePromem": {
+      "avgTimingError": "சராசரி நேரப் பிழை",
+      "clockChecks": "கடிகார சோதனைகள்",
+      "ongoingAccuracy": "நடந்துகொண்டிருக்கும் துல்லியம்",
+      "ongoingTrials": "தொடர்ந்து சோதனைகள்",
+      "totalPmPresses": "மொத்த PM அச்சகங்கள்",
+      "pmAccuracy": "PM துல்லியம்",
+      "pmMisses": "PM தவறவிட்டார்",
+      "title": "நேர வருங்கால",
+      "ongoing": "நடந்து கொண்டிருக்கிறது",
+      "pmHitsLabel": "PM அடிக்கிறது",
+      "timingErr": "நேர பிழை",
+      "pmHitsExpected": "PM ஹிட்ஸ் / எதிர்பார்க்கப்படுகிறது",
+      "pmPresses": "PM அழுத்தங்கள்",
+      "checkClock": "கடிகாரத்தை சரிபார்க்கவும்",
+      "thirtySecMark": "30s மார்க்"
+    },
+    "toj": {
+      "meanResponseTime": "சராசரி பதில் நேரம்",
+      "temporalResolution": "தற்காலிகத் தீர்மானம்",
+      "title": "தற்காலிக உத்தரவு தீர்ப்பு",
+      "threshold": "வாசல்",
+      "whichCameFirst": "எது முதலில் வந்தது?",
+      "leftFirst": "முதலில் இடது",
+      "rightFirst": "சரி முதலில்"
+    },
+    "tower": {
+      "budget": "பட்ஜெட்",
+      "challenge": "சவால்",
+      "challengeClassic": "கிளாசிக்",
+      "challengeExpert": "நிபுணர்",
+      "challengeMemory": "நினைவகம்",
+      "challengePrecision": "துல்லியம்",
+      "dragDiscAriaLabel": "பெக் {{peg}} இலிருந்து மேல் வட்டை இழுக்கவும்",
+      "goal": "இலக்கு",
+      "goalHiddenStatus": "இலக்கு மறைக்கப்பட்டுள்ளது. அதைச் சுருக்கமாகக் காட்ட, Reveal ஐப் பயன்படுத்தவும்.",
+      "goalRevealedMessage": "3 வினாடிகளுக்கு கோல் வெளிப்படுத்தப்பட்டது.",
+      "hint": "குறிப்பு",
+      "hintDescription": "சிறந்த அடுத்த நகர்வைக் காட்டு",
+      "hintMessage": "குறிப்பு: மேல் வட்டை பெக் {{fromPeg}} இலிருந்து பெக் {{toPeg}} க்கு நகர்த்தவும்.",
+      "hiddenGoalDescription": "விளையாட்டின் போது இலக்கு மறைக்கப்படுகிறது. உங்களுக்கு ஒரு குறுகிய புதுப்பிப்பு தேவைப்படும்போது Reveal ஐப் பயன்படுத்தவும்.",
+      "hiddenGoalTitle": "நினைவக சவால்",
+      "invalid": "செல்லாதது",
+      "moves": "நகர்கிறது",
+      "optimal": "உகந்தது",
+      "pegFullMessage": "அந்த ஆப்பு நிரம்பிவிட்டது.",
+      "previewMemoryCountdown": "இலக்கை மனப்பாடம் செய்யுங்கள். {{seconds}}களில் தொடங்குகிறது.",
+      "previewPlanCountdown": "{{moves}}-மூவ் தீர்வைத் திட்டமிடுங்கள். {{seconds}}s இல் தொடங்குகிறது.",
+      "reset": "மீட்டமை",
+      "resetDescription": "இந்த புதிரை மீண்டும் தொடங்கவும்",
+      "resetMessage": "புதிர் மீட்டமைப்பு.",
+      "reveal": "வெளிப்படுத்து",
+      "revealDescription": "மறைக்கப்பட்ட இலக்கை வெளிப்படுத்துங்கள்",
+      "statusOptimalSolve": "உகந்த தீர்வு. ஸ்கோர் {{score}}.",
+      "statusSolvedScore": "{{moves}} நகர்வுகளில் (+{{extraMoves}}) தீர்க்கப்பட்டது. ஸ்கோர் {{score}}.",
+      "undo": "செயல்தவிர்",
+      "undoDescription": "தலைகீழ் கடைசி நகர்வு",
+      "undoneMessage": "கடைசி நகர்வு செயல்தவிர்க்கப்பட்டது.",
+      "yourPegs": "உங்கள் ஆப்புகள்"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "சரியான விநியோகங்கள்",
+      "trainsLost": "ரயில்கள் இழந்தன",
+      "wrongStation": "தவறான நிலையம்",
+      "title": "சிந்தனையின் ரயில்",
+      "trains": "ரயில்கள்",
+      "missed": "தவறவிட்டது",
+      "scoreLabel": "மதிப்பெண்",
+      "instructions": "வழிமுறைகள்"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "சராசரி கேள்விகள் பயன்படுத்தப்பட்டன",
+      "title": "இருபது கேள்விகள்",
+      "avgQuestions": "சராசரி கேள்விகள்",
+      "rounds": "சுற்றுகள்",
+      "efficiency": "திறன்",
+      "avgQuestionsCorrectOnly": "சராசரி கேள்விகள் (சரியானவை மட்டும்)",
+      "questionsLabel": "கேள்விகள்",
+      "remaining": "மீதமுள்ளவை",
+      "readyToGuess": "நான் யூகிக்க தயாராக இருக்கிறேன்!",
+      "tapTheTarget": "இலக்கு என்று நீங்கள் நினைக்கும் பொருளைத் தட்டவும்!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "பயனுள்ள பார்வைக் களம்",
+      "visualNoiseMask": "காட்சி இரைச்சல் முகமூடி",
+      "whatWasInTheCenter": "மையத்தில் என்ன இருந்தது?",
+      "whereWasTheTarget": "இலக்கு எங்கே இருந்தது?",
+      "avgThreshold": "சராசரி வாசல்",
+      "speed": "வேகம்",
+      "accuracy": "துல்லியம்",
+      "central": "மத்திய",
+      "peripheral": "புறத்தோற்றம்",
+      "overall": "ஒட்டுமொத்த",
+      "block": "தடு",
+      "trials": "சோதனைகள்",
+      "start": "தொடங்கு",
+      "focus": "கவனம்",
+      "threshold": "வாசல்",
+      "stimulus": "தூண்டுதல்",
+      "respondFromMemory": "நினைவகத்திலிருந்து பதிலளிக்கவும்",
+      "truck": "டிரக்",
+      "choosePeripheralLocation": "புற இடத்தை தேர்வு செய்யவும்",
+      "currentBlock": "{{n}}ஐத் தடு",
+      "exposure": "வெளிப்பாடு"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} இல் தொடங்கும் வார்த்தைகள்",
+      "title": "வாய்மொழி சரளம்",
+      "totalWords": "மொத்த வார்த்தைகள்",
+      "duplicates": "பிரதிகள்",
+      "letter": "கடிதம்",
+      "round": "சுற்று",
+      "roundComplete": "சுற்று முடிந்தது",
+      "nextRound": "அடுத்த சுற்று",
+      "middotRound": "· சுற்று"
+    },
+    "vernierAcuity": {
+      "whichSide": "எந்தப் பக்கம்?",
+      "title": "வெர்னியர் அக்யூட்டி",
+      "leftOffset": "இடது ஆஃப்செட்",
+      "rightOffset": "சரியான ஆஃப்செட்",
+      "offset": "ஆஃப்செட்"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "உகந்த உத்தி",
+      "correct": "சரி!",
+      "wrong": "தவறு",
+      "title": "வானிலை முன்னறிவிப்பு",
+      "optimal": "உகந்தது",
+      "learningCurve": "கற்றல் வளைவு",
+      "predictTheWeather": "வானிலையை கணிக்கவும்",
+      "rain": "மழை"
+    },
+    "wordChain": {
+      "avgResponseTime": "சராசரி பதில் நேரம்",
+      "chain": "சங்கிலி",
+      "longestChain": "நீளமான சங்கிலி",
+      "totalCorrect": "மொத்தத்தில் சரி",
+      "totalWords": "மொத்த வார்த்தைகள்",
+      "words": "வார்த்தைகள்",
+      "title": "வார்த்தை சங்கிலி",
+      "longest": "நீளமானது",
+      "avgRt": "சராசரி RT",
+      "endsWith": "உடன் முடிகிறது",
+      "chainLabel": "சங்கிலி",
+      "bestLabel": "சிறந்த"
+    },
+    "wordFlow": {
+      "avgWordLength": "சராசரி வார்த்தை நீளம்",
+      "correct": "சரி",
+      "invalidWords": "தவறான வார்த்தைகள்",
+      "totalWordsSelected": "தேர்ந்தெடுக்கப்பட்ட மொத்த வார்த்தைகள்",
+      "validWords": "சரியான வார்த்தைகள்",
+      "wordsPerMinute": "நிமிடத்திற்கு வார்த்தைகள்",
+      "wrong": "தவறு",
+      "seeResults": "முடிவுகளைப் பார்க்கவும்",
+      "nextRound": "அடுத்த சுற்று ({{current}}/{{total}})",
+      "title": "வாய்மொழி சரளம்",
+      "validWordsLabel": "சரியான வார்த்தைகள்",
+      "wordsPerMinLabel": "வார்த்தைகள்/நிமிடம்",
+      "avgLengthLabel": "சராசரி நீளம்",
+      "invalidLabel": "செல்லாதது",
+      "round": "சுற்று",
+      "selectWordsBelongTo": "சேர்ந்த சொற்களைத் தேர்ந்தெடுக்கவும்",
+      "selected": "தேர்ந்தெடுக்கப்பட்டது"
+    },
+    "wordList": {
+      "avgRtCorrect": "சராசரி RT (சரியானது)",
+      "primacyEffect": "முதன்மை விளைவு",
+      "recencyEffect": "சமீபத்திய விளைவு",
+      "studyPhaseRememberEachWord": "படிப்பு கட்டம் - ஒவ்வொரு வார்த்தையையும் நினைவில் வைத்துக் கொள்ளுங்கள்",
+      "wordsRecalled": "வார்த்தைகள் நினைவுக்கு வந்தன",
+      "title": "வார்த்தை பட்டியல்",
+      "serialPositionCurve": "தொடர் நிலை வளைவு",
+      "wasWordInList": "இந்த வார்த்தை பட்டியலில் இருந்ததா?",
+      "seenBefore": "முன்பு பார்த்தது",
+      "newWord": "புதியது"
+    },
+    "speedSort": {
+      "switchAccuracy": "ஸ்விட்ச் துல்லியம்",
+      "switchTrials": "சோதனைகளை மாற்றவும்",
+      "sortByColor": "COLOR மூலம் வரிசைப்படுத்தவும்",
+      "sortByShape": "SHAPE மூலம் வரிசைப்படுத்தவும்",
+      "sortByNumber": "NUMBER ஆல் வரிசைப்படுத்தவும்",
+      "ruleChanged": "விதி மாறியது!",
+      "binRed": "சிவப்பு",
+      "binBlue": "நீலம்",
+      "binGreen": "பச்சை",
+      "binYellow": "மஞ்சள்",
+      "binCircle": "வட்டம்",
+      "binSquare": "சதுரம்",
+      "binTriangle": "முக்கோணம்",
+      "binStar": "நட்சத்திரம்",
+      "title": "வேக வரிசை",
+      "switch": "மாறுகிறது"
+    },
+    "reflex": {
+      "target": "இலக்கு",
+      "lure": "கவர்ச்சி",
+      "tooSlow": "மிகவும் மெதுவாக!",
+      "wrongTarget": "தவறான இலக்கு!",
+      "tapTargets": "பச்சை வட்டங்களைத் தட்டவும்!",
+      "hits": "ஹிட்ஸ்",
+      "misses": "மிஸ்கள்",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "இயங்கும் மொத்தத்தை நினைவில் கொள்க...",
+      "title": "சங்கிலி கணக்கீடு",
+      "stepChains": "{{len}}-படி சங்கிலிகள்",
+      "start": "தொடங்கு",
+      "step": "படி",
+      "whatIsTheResult": "விளைவு என்ன?"
+    },
+    "alternateUses": {
+      "placeholder": "உபயோகத்தை உள்ளிடவும்...",
+      "title": "மாற்று பயன்பாடுகள்",
+      "totalUses": "மொத்த பயன்பாடுகள்",
+      "perObject": "ஒரு பொருளுக்கு",
+      "rounds": "சுற்றுகள்",
+      "bestObject": "சிறந்த பொருள்",
+      "bestCount": "சிறந்த எண்ணிக்கை",
+      "noUsesSubmitted": "எந்தப் பயன்பாடுகளும் சமர்ப்பிக்கப்படவில்லை",
+      "timesUp": "நேரம் முடிந்தது!",
+      "nextObject": "அடுத்த பொருள் ({{object}})",
+      "listCreativeUses": "இந்தப் பொருளுக்கான ஆக்கப்பூர்வமான பயன்பாடுகளைப் பட்டியலிடுங்கள்"
+    },
+    "anagram": {
+      "placeholder": "வார்த்தையை தட்டச்சு செய்யவும்...",
+      "title": "அனகிராம்",
+      "avgSolve": "சராசரி தீர்க்க",
+      "letterWords": "{{len}}-எழுத்து வார்த்தைகள்",
+      "submit": "சமர்ப்பிக்கவும்"
+    },
+    "facialEmotion": {
+      "happy": "மகிழ்ச்சி",
+      "sad": "வருத்தம்",
+      "angry": "கோபம்",
+      "fearful": "பயந்தவர்",
+      "disgusted": "அருவருப்பானது",
+      "surprised": "ஆச்சரியம்",
+      "lc": "LC",
+      "title": "முக உணர்ச்சி அங்கீகாரம்",
+      "topConfusions": "மேல் குழப்பங்கள்"
+    },
+    "numberSeries": {
+      "easy": "எளிதானது",
+      "hard": "கடினமான"
+    },
+    "chainRecall": {
+      "round": "சுற்று",
+      "title": "செயின் ரீகால்",
+      "chain": "சங்கிலி",
+      "placeholder": "ப்ளாஸ்ஹோல்டர்"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "உணர்ச்சிகரமான Go/No-Go",
+      "block1CommissionErrors": "1 கமிஷன் பிழைகளைத் தடு",
+      "block2CommissionErrors": "2 கமிஷன் பிழைகளைத் தடு",
+      "goHappy": "போ = மகிழ்ச்சி",
+      "goSad": "போ = சோகம்",
+      "block": "தடு",
+      "go": "போ"
+    },
+    "timeEstimation": {
+      "cv": "சி.வி"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop விளைவு",
+      "title": "கலர் ரஷ்",
+      "congShort": "காங்.",
+      "incongShort": "இன்காங்.",
+      "congruentAccuracy": "ஒத்த துல்லியம்",
+      "incongruentAccuracy": "பொருத்தமற்ற துல்லியம்"
+    },
+    "mirror": {
+      "avgCorrectCells": "சரியான செல்கள் (சராசரி)",
+      "symmetryType": "சமச்சீர் வகை",
+      "title": "கண்ணாடி"
+    },
+    "rhythmTap": {
+      "correctTrials": "சரியான சோதனைகள்",
+      "avgRhythmScore": "சராசரி ரிதம் ஸ்கோர்",
+      "bestTrialScore": "சிறந்த சோதனை மதிப்பெண்",
+      "worstTrialScore": "மோசமான சோதனை மதிப்பெண்",
+      "level": "நிலை",
+      "rhythm": "தாளம்",
+      "bestTrial": "சிறந்த சோதனை",
+      "worstTrial": "மோசமான சோதனை"
+    },
+    "vocalProsody": {
+      "questioning": "கேள்வி எழுப்புதல்"
+    },
+    "arithmeticSpeed": {
+      "multiply": "பெருக்கவும்",
+      "add": "சேர்",
+      "subtract": "கழிக்கவும்",
+      "title": "எண்கணித வேகம்",
+      "score": "மதிப்பெண்",
+      "solved": "தீர்க்கப்பட்டது",
+      "missed": "தவறவிட்டது"
+    },
+    "puzzle": {
+      "avgSolveTime": "சராசரி தீர்வு நேரம்",
+      "totalMoves": "மொத்த நகர்வுகள்",
+      "totalErrors": "மொத்த பிழைகள்",
+      "gridSize": "கட்ட அளவு",
+      "maxGridReached": "அதிகபட்ச கட்டத்தை அடைந்துள்ளது",
+      "maxLevelReached": "அதிகபட்ச நிலையை அடைந்தது",
+      "maxNodesReached": "அதிகபட்ச முனைகளை அடைந்தது",
+      "puzzleDetails": "புதிர் விவரங்கள்",
+      "roundDetails": "சுற்று விவரங்கள்",
+      "solved": "தீர்க்கப்பட்டது!",
+      "undo": "செயல்தவிர்",
+      "reset": "மீட்டமை",
+      "check": "சரிபார்க்கவும்",
+      "moves": "நகர்கிறது",
+      "time": "நேரம்",
+      "level": "நிலை",
+      "errors": "பிழைகள்",
+      "score": "மதிப்பெண்",
+      "grid": "கட்டம்",
+      "crossings": "கிராசிங்ஸ்",
+      "pearls": "முத்துக்கள்",
+      "clues": "தடயங்கள்",
+      "region": "பிராந்தியம்",
+      "filled": "நிரப்பப்பட்டது",
+      "cells": "செல்கள்",
+      "undosLeft": "செயல்தவிர்க்க மீதமுள்ளவை",
+      "gems": "ரத்தினங்கள்",
+      "connected": "இணைக்கப்பட்டது",
+      "slides": "ஸ்லைடுகள்",
+      "progress": "முன்னேற்றம்",
+      "rotations": "சுழற்சிகள்",
+      "puzzle": "புதிர்",
+      "uncovered": "மூடிமறைக்கப்பட்டது",
+      "colored": "நிறமுடையது",
+      "violations": "மீறல்கள்",
+      "blacked": "கருப்பானது",
+      "empty": "காலி",
+      "remaining": "மீதமுள்ளவை",
+      "pairs": "ஜோடிகள்",
+      "flips": "புரட்டுகிறது",
+      "found": "கண்டுபிடிக்கப்பட்டது",
+      "balls": "பந்துகள்",
+      "guesses": "யூகங்கள்",
+      "original": "அசல்",
+      "findDifferences": "வேறுபாடுகளைக் கண்டறியவும்",
+      "totalDrags": "மொத்த இழுவைகள்",
+      "totalUndos": "மொத்த செயல்தவிர்ப்பு",
+      "totalEdgesDrawn": "வரையப்பட்ட மொத்த விளிம்புகள்",
+      "totalLasers": "மொத்த லேசர்கள்",
+      "totalSlides": "மொத்த ஸ்லைடுகள்",
+      "totalRotations": "மொத்த சுழற்சிகள்",
+      "totalRectangles": "மொத்த செவ்வகங்கள்",
+      "totalScore": "மொத்த மதிப்பெண்",
+      "avgTime": "சராசரி நேரம்",
+      "cellsCleared": "செல்கள் அழிக்கப்பட்டன",
+      "totalDiffsFound": "மொத்த வேறுபாடுகள் கண்டறியப்பட்டன",
+      "gemsCollected": "ரத்தினங்கள் சேகரிக்கப்பட்டன",
+      "pushBoxesOntoTargets": "அனைத்து பெட்டிகளையும் இலக்குகளில் தள்ளுங்கள்",
+      "fireLasersMarkBalls": "விளிம்புகளிலிருந்து ஒளிக்கதிர்களை சுடவும், பின்னர் பந்து நிலைகளைக் குறிக்கவும்",
+      "revealingAnswer": "பதிலை வெளிப்படுத்துகிறது...",
+      "checkAnswer": "பதிலைச் சரிபார்க்கவும்",
+      "pickNumberBelow": "கீழே ஒரு எண்ணைத் தேர்ந்தெடுக்கவும்",
+      "tapCellToAssign": "எண்ணை ஒதுக்க, கலத்தைத் தட்டவும்",
+      "tapEdgesToPlaceWalls": "சுவர்களை வைக்க விளிம்புகளைத் தட்டவும். K இன் பகுதிகளாகப் பிரிக்கவும்.",
+      "ghosts": "பேய்கள்",
+      "vampires": "காட்டேரிகள்",
+      "zombies": "ஜோம்பிஸ்",
+      "dominoes": "டோமினோஸ்",
+      "islands": "தீவுகள்",
+      "pegsLeft": "ஆப்புகள் இடது",
+      "bestRemaining": "சிறந்தது மீதமுள்ளது",
+      "puzzlesSolved": "புதிர்கள் தீர்க்கப்பட்டன",
+      "flooded": "வெள்ளம்",
+      "edges": "விளிம்புகள்",
+      "totalPlacements": "மொத்த இடங்கள்",
+      "totalRemovals": "மொத்த நீக்கம்",
+      "maxTileReached": "அதிகபட்ச அடுக்கை எட்டியது",
+      "target": "இலக்கு",
+      "placed": "வைக்கப்பட்டது",
+      "totalGuesses": "மொத்த யூகங்கள்",
+      "guessesLeft": "யூகங்கள் விட்டுவிட்டன",
+      "difficulty": "சிரமம்"
+    },
+    "palisade": {
+      "title": "பாலிசேட்",
+      "puzzles": "புதிர்கள்",
+      "maxLevel": "அதிகபட்ச நிலை"
+    },
+    "keen": {
+      "title": "கென்கென்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "errors": "பிழைகள்",
+      "avgTime": "சராசரி நேரம்",
+      "erase": "அழிக்கவும்"
+    },
+    "blackbox": {
+      "title": "கருப்பு பெட்டி",
+      "puzzles": "புதிர்கள்",
+      "lasers": "லேசர்கள்",
+      "avgTime": "சராசரி நேரம்"
+    },
+    "designFluency": {
+      "title": "வடிவமைப்பு சரளமாக",
+      "uniqueDesigns": "தனித்துவமான வடிவமைப்புகள்",
+      "duplicates": "பிரதிகள்",
+      "round": "சுற்று",
+      "roundComplete": "சுற்று முடிந்தது",
+      "youCreatedDesigns": "நீங்கள் {{count}} வடிவமைப்புகளை உருவாக்கியுள்ளீர்கள்",
+      "startRound": "சுற்று தொடங்கவும்",
+      "instructions": "வழிமுறைகள்",
+      "designs": "வடிவமைப்புகள்",
+      "clear": "தெளிவு",
+      "addDesign": "சேர்"
+    },
+    "signpost": {
+      "title": "வழிகாட்டி பலகை",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "avgTime": "சராசரி நேரம்",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "sokoban": {
+      "title": "சோகோபன்",
+      "level": "நிலை",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "undos": "செயல்தவிர்",
+      "puzzle": "புதிர்"
+    },
+    "numericalStroop": {
+      "left": "விட்டு",
+      "right": "சரி"
+    },
+    "biologicalMotion": {
+      "title": "உயிரியல் இயக்கம்",
+      "noiseDots": "இரைச்சல் புள்ளிகள்",
+      "whichDirection": "எந்த திசையில்?",
+      "left": "விட்டு",
+      "right": "சரி"
+    },
+    "inertia": {
+      "title": "மந்தநிலை",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "gems": "ரத்தினங்கள்",
+      "moves": "நகர்கிறது"
+    },
+    "waterLevel": {
+      "title": "நீர் நிலை",
+      "error": "பிழை",
+      "tilt": "சாய்வு",
+      "waterLine": "தண்ணீர் வரி?"
+    },
+    "twiddle": {
+      "title": "ட்விடில்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "sudoku": {
+      "title": "சுடோகு",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "errors": "பிழைகள்",
+      "avgTime": "சராசரி நேரம்",
+      "erase": "அழிக்கவும்"
+    },
+    "rectangles": {
+      "title": "செவ்வகங்கள்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "rectanglesCount": "செவ்வகங்கள்",
+      "maxGrid": "அதிகபட்ச கட்டம்",
+      "cancelSelection": "தேர்வை ரத்து செய்"
+    },
+    "filling": {
+      "title": "நிரப்புதல்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "avgTime": "சராசரி நேரம்",
+      "grid": "கட்டம்"
+    },
+    "spacedRetrieval": {
+      "title": "இடைவெளி மீட்டெடுப்பு",
+      "studyPair": "இந்த ஜோடியைப் படிக்கவும்",
+      "waitAndSolve": "காத்திருங்கள்… பிறகு தீர்க்கவும்",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "இடைவெளி: என்ன ஜோடிகள்?"
+    },
+    "prototypeDistortion": {
+      "title": "முன்மாதிரி சிதைவு",
+      "studyPhase": "படிப்பு கட்டம்",
+      "testPhase": "சோதனை கட்டம்",
+      "yesBelongs": "ஆம் - சொந்தமானது",
+      "noRandom": "இல்லை - சீரற்ற"
+    },
+    "motionCoherence": {
+      "title": "இயக்க ஒருங்கிணைப்பு",
+      "threshold": "வாசல்",
+      "coherence": "ஒத்திசைவு",
+      "whichDirection": "எந்த திசையில்?"
+    },
+    "cube": {
+      "title": "கன சதுரம்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxLevel": "அதிகபட்ச நிலை",
+      "cubeFaces": "கனசதுர முகங்கள்",
+      "moveUp": "மேலே",
+      "moveLeft": "விட்டு",
+      "moveDown": "கீழே",
+      "moveRight": "சரி"
+    },
+    "sameGame": {
+      "title": "அதே விளையாட்டு",
+      "score": "மதிப்பெண்",
+      "cleared": "அழிக்கப்பட்டது",
+      "cells": "செல்கள்",
+      "accuracy": "துல்லியம்"
+    },
+    "crossModalMatching": {
+      "title": "குறுக்கு மாதிரி பொருத்தம்",
+      "chance": "வாய்ப்பு",
+      "whichPatternMatchesRhythm": "எந்த மாதிரி தாளத்துடன் பொருந்துகிறது?"
+    },
+    "mosaic": {
+      "title": "மொசைக்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "spotDiff": {
+      "title": "வித்தியாசத்தைக் கண்டறியவும்",
+      "level": "நிலை",
+      "grid": "கட்டம்",
+      "accuracy": "துல்லியம்",
+      "perfect": "சரியானது",
+      "avgTime": "சராசரி நேரம்",
+      "found": "கண்டுபிடிக்கப்பட்டது"
+    },
+    "lightsOut": {
+      "title": "விளக்குகள் அவுட்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "pipeline": {
+      "title": "பைப்லைன்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "rotations": "சுழற்சிகள்",
+      "avgTime": "சராசரி நேரம்"
+    },
+    "tracks": {
+      "title": "தடங்கள்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "errors": "பிழைகள்",
+      "avgTime": "சராசரி நேரம்"
+    },
+    "netslide": {
+      "title": "நெட்ஸ்லைடு",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "slides": "ஸ்லைடுகள்",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "cognitiveBias": {
+      "title": "அறிவாற்றல் சார்பு பயிற்சி",
+      "biasResistance": "சார்பு எதிர்ப்பு",
+      "biased": "பாரபட்சமான",
+      "continue": "தொடரவும்"
+    },
+    "empathicAccuracy": {
+      "title": "பச்சாதாப துல்லியம்",
+      "emotionId": "உணர்ச்சி",
+      "avgRatingError": "சராசரி மதிப்பீடு பிழை",
+      "scenarios": "காட்சிகள்",
+      "perfect": "சரியானது",
+      "rating": "மதிப்பீடு",
+      "howDoesCharacterFeel": "கதாபாத்திரம் எப்படி உணர்கிறது?",
+      "rateIntensity": "தீவிரத்தை மதிப்பிடவும்",
+      "whatEmotion": "என்ன உணர்ச்சி?",
+      "yourRating": "உங்கள் மதிப்பீடு",
+      "correct": "சரி",
+      "emotion": "உணர்ச்சி"
+    },
+    "guess": {
+      "title": "மாஸ்டர் மைண்ட்",
+      "solved": "தீர்க்கப்பட்டது",
+      "guesses": "யூகங்கள்"
+    },
+    "dominosa": {
+      "title": "டோமினோசா",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxLevel": "அதிகபட்ச நிலை"
+    },
+    "magnets": {
+      "title": "காந்தங்கள்",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxLevel": "அதிகபட்ச நிலை"
+    },
+    "tangram": {
+      "placeAll": "அனைத்து துண்டுகளையும் வைக்கவும்",
+      "solved": "தீர்க்கப்பட்டது!",
+      "notRight": "சரியாக இல்லை",
+      "title": "டாங்க்ராம்",
+      "level": "நிலை",
+      "puzzles": "புதிர்கள்",
+      "placements": "இடங்கள்",
+      "removals": "அகற்றுதல்கள்",
+      "puzzleNumber": "புதிர் {{n}}",
+      "pieces": "துண்டுகள்",
+      "targetCells": "Cible",
+      "dragHint": "துண்டை இழுக்கவும் அல்லது கட்டத்தின் மீது வைக்கவும்",
+      "selectHint": "ஒரு பகுதியைத் தேர்ந்தெடுக்கவும்",
+      "rotate": "டூர்னர்",
+      "undo": "வருடாந்திரம்",
+      "check": "சரிபார்க்கவும்"
+    },
+    "galaxies": {
+      "title": "கேலக்ஸிகள்"
+    },
+    "flood": {
+      "title": "வெள்ளம்"
+    },
+    "pegs": {
+      "title": "ஆப்புகள்",
+      "bestPegs": "சிறந்த ஆப்பு"
+    },
+    "auditoryFigureGround": {
+      "title": "ஆடிட்டரி படம்-கிரவுண்ட்",
+      "patternPresent": "தற்போதுள்ள வடிவமா?",
+      "pattern": "முறை",
+      "noPattern": "முறை இல்லை"
+    },
+    "selfOrderedPointing": {
+      "title": "சுய-வரிசைப்படுத்தப்பட்ட சுட்டி",
+      "maxSpan": "அதிகபட்ச இடைவெளி",
+      "errors": "பிழைகள்",
+      "round": "சுற்று",
+      "setOf": "{{count}} இன் தொகுப்பு"
+    },
+    "mirrorTracing": {
+      "title": "மிரர் டிரேசிங்",
+      "totalErrors": "மொத்த பிழைகள்",
+      "avgTime": "சராசரி நேரம்",
+      "shapes": "வடிவங்கள்",
+      "perfect": "சரியானது",
+      "improvement": "முன்னேற்றம்",
+      "errorsMiddot": "பிழைகள் ·",
+      "shape": "வடிவம்",
+      "errors": "பிழைகள்",
+      "xIsMirrored": "X பிரதிபலித்தது!"
+    },
+    "clockDrawing": {
+      "title": "கடிகார வரைதல்",
+      "avgError": "சராசரி பிழை",
+      "setTo": "என அமைக்கவும்",
+      "submit": "சமர்ப்பிக்கவும்"
+    },
+    "cognitiveMap": {
+      "title": "அறிவாற்றல் வரைபடம்",
+      "explore": "ஆராயுங்கள்",
+      "sRemaining": "எஸ் மீதமுள்ளது",
+      "from": "இருந்து",
+      "whichDirectionIs": "எந்த திசை"
+    },
+    "sixteen": {
+      "title": "பதினாறு"
+    },
+    "loopy": {
+      "title": "லூப்பி"
+    },
+    "lightup": {
+      "title": "விளக்கு"
+    },
+    "twentyFortyEight": {
+      "maxTile": "அதிகபட்ச ஓடு",
+      "moves": "நகர்கிறது",
+      "max": "அதிகபட்சம்"
+    },
+    "bridges": {
+      "title": "பாலங்கள்",
+      "puzzles": "புதிர்கள்",
+      "maxLevel": "அதிகபட்ச நிலை",
+      "level": "நிலை"
+    },
+    "net": {
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxGrid": "அதிகபட்ச கட்டம்"
+    },
+    "flip": {
+      "title": "புரட்டவும்"
+    },
+    "range": {
+      "title": "வரம்பு"
+    },
+    "slant": {
+      "title": "சாய்வு"
+    },
+    "towers": {
+      "title": "கோபுரங்கள்",
+      "puzzles": "புதிர்கள்",
+      "avgTime": "சராசரி நேரம்",
+      "erase": "அழிக்கவும்"
+    },
+    "pearl": {
+      "title": "முத்து",
+      "edges": "விளிம்புகள்"
+    },
+    "mapColoring": {
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "moves": "நகர்கிறது",
+      "maxLevel": "அதிகபட்ச நிலை"
+    },
+    "singles": {
+      "title": "ஒற்றையர்"
+    },
+    "nonogram": {
+      "title": "நோனோகிராம்"
+    },
+    "undead": {
+      "title": "இறக்காத",
+      "accuracy": "துல்லியம்",
+      "puzzles": "புதிர்கள்",
+      "avgTime": "சராசரி நேரம்"
+    },
+    "untangle": {
+      "title": "சிக்கலை அவிழ்",
+      "drags": "இழுக்கிறது",
+      "maxNodes": "அதிகபட்ச முனைகள்"
+    },
+    "unruly": {
+      "title": "கட்டுக்கடங்காத"
+    },
+    "fifteen": {
+      "title": "பதினைந்து"
+    },
+    "tents": {
+      "title": "கூடாரங்கள்"
+    },
+    "mesker": {
+      "pen": "பேனா",
+      "stroke": "பக்கவாதம்",
+      "penPressureHint": "நிலையான பேனா அழுத்தத்துடன் எழுதுங்கள்"
+    },
+    "modality": {
+      "position": "பதவி",
+      "audio": "ஆடியோ"
+    },
+    "validate": "சரிபார்க்கவும்"
+  },
+  "trace": {
+    "instructions": "N-பின் நிலைக்கு ஸ்வைப் செய்யவும். அதே நிலையில் இருந்தால் இருமுறை தட்டவும்.",
+    "hint": {
+      "validated": "சரிபார்க்கப்பட்டது",
+      "draw": "எழுத்தை வரையவும் • சரிபார்க்க தட்டவும்",
+      "drawWithColor": "எழுத்தை வரையவும் • நிறத்தைத் தேர்ந்தெடு • சரிபார்க்க தட்டவும்",
+      "type": "கடிதத்தை தட்டச்சு செய்யவும் • சரிபார்க்க, உள்ளிடவும்",
+      "typeWithColor": "எழுத்தைத் தட்டச்சு செய்யவும் • நிறத்தைத் தேர்ந்தெடு • சரிபார்க்கவும்",
+      "typeResult": "முடிவை உள்ளிடவும் • சரிபார்ப்பதற்கு உள்ளிடவும்",
+      "writeResult": "முடிவை எழுதவும் • சரிபார்க்க தட்டவும்"
+    },
+    "keyboard": {
+      "letterInput": "கடிதம்",
+      "numberInput": "எண்"
+    },
+    "arithmetic": {
+      "cueHint": "2 இலக்கங்களை மனப்பாடம் செய்யுங்கள்",
+      "refresh": "புதியது"
+    },
+    "hintPosition": "தூண்டுதல் {{n}} எங்கு திரும்பியது?",
+    "hintN0": "தற்போதைய தூண்டுதலைக் குறிக்கவும்",
+    "warmupHint": "நிலைகளை மனப்பாடம் செய்யுங்கள். பதில் தேவையில்லை.",
+    "hintDraw": "எழுத்தை வரையவும் • சரிபார்க்க தட்டவும்",
+    "hintDrawWithColor": "எழுத்தை வரையவும் • நிறத்தைத் தேர்ந்தெடு • சரிபார்க்க தட்டவும்",
+    "hintWriteResult": "முடிவை எழுதவும் • சரிபார்க்க தட்டவும்",
+    "guide": {
+      "swipeNormal": "கடைசி நிலையில் (N-0) இருந்து {{n}} படிகளுக்கு முந்தைய நிலைக்கு (N-{{n}}) ஸ்வைப் செய்யவும். அதே நிலையில் இருந்தால் இருமுறை தட்டவும்.",
+      "swipeSequential": "N-0 இலிருந்து N-{{n}} க்கு படிப்படியாக ஸ்வைப் செய்யவும், ஒவ்வொரு இடைநிலை நிலையைக் கடந்து செல்லவும். அதே நிலையில் இருந்தால் இருமுறை தட்டவும்.",
+      "swipeDynamic": "காட்டப்படும் விதியைப் பின்பற்றி ஸ்வைப் செய்யவும். அதே நிலையில் இருந்தால் இருமுறை தட்டவும்.",
+      "tapN0": "தற்போதைய நிலையில் தட்டவும்.",
+      "warmup": "நிலைகளை மனப்பாடம் செய்யுங்கள் - பதில் தேவையில்லை.",
+      "writeDraw": "{{n}} படிகளுக்கு முன்பு கேட்ட எழுத்தை வரையவும் • சரிபார்க்க தட்டவும்",
+      "writeDrawColor": "{{n}} படிகளுக்கு முன்பு கேட்ட எழுத்தை வரையவும் • அதன் நிறத்தைத் தேர்ந்தெடுக்கவும் • சரிபார்க்க தட்டவும்",
+      "writeType": "{{n}} படிகளுக்கு முன்பு கேட்ட எழுத்தைத் தட்டச்சு செய்யவும் • சரிபார்க்க, உள்ளிடவும்",
+      "writeTypeColor": "{{n}} படிகளுக்கு முன்பு கேட்ட எழுத்தைத் தட்டச்சு செய்யவும் • அதன் நிறத்தைத் தேர்ந்தெடுக்கவும் • சரிபார்க்க உள்ளிடவும்",
+      "writeDrawN0": "நீங்கள் கேட்ட எழுத்தை வரையவும் • சரிபார்க்க தட்டவும்",
+      "writeDrawColorN0": "நீங்கள் இப்போது கேட்ட எழுத்தை வரையவும் • அதன் நிறத்தைத் தேர்ந்தெடுக்கவும் • சரிபார்க்க தட்டவும்",
+      "writeTypeN0": "நீங்கள் இப்போது கேட்ட கடிதத்தைத் தட்டச்சு செய்யவும் • சரிபார்க்க, உள்ளிடவும்",
+      "writeTypeColorN0": "நீங்கள் இப்போது கேட்ட எழுத்தைத் தட்டச்சு செய்யவும் • அதன் நிறத்தைத் தேர்ந்தெடுக்கவும் • சரிபார்க்கவும்",
+      "writeResult": "முடிவை எழுதவும் • சரிபார்க்க தட்டவும்",
+      "validated": "சரிபார்க்கப்பட்டது",
+      "holdMindful": "{{seconds}}களுக்கான கலத்தை அழுத்திப் பிடிக்கவும்",
+      "swipeMindful": "{{seconds}}களில் ஸ்வைப் செய்யவும்"
+    },
+    "settings": {
+      "adaptiveTiming": "அடாப்டிவ் டைமிங்",
+      "inputKeyboard": "விசைப்பலகை",
+      "inputHandwriting": "கையெழுத்து",
+      "writingInput": "கடிதங்கள்/எண்கள்",
+      "section": {
+        "grid": "கட்டம்",
+        "input": "உள்ளீடு",
+        "rhythm": "தாளம்",
+        "interface": "இடைமுகம்",
+        "interfaceNone": "தரநிலை",
+        "sound": "ஒலி"
+      },
+      "isi": "இடைவெளி (ISI)",
+      "stimulusDuration": "தூண்டுதலின் காலம்",
+      "feedbackDuration": "பின்னூட்ட காலம்",
+      "ruleDisplay": "விதி காலம்",
+      "blankInterval": "வெற்று இடைவெளி",
+      "showProgressBar": "முன்னேற்றப் பட்டி",
+      "showInstructions": "விளையாட்டு வழிமுறைகள்",
+      "arithmeticInterference": "எண்கணித குறுக்கீடு",
+      "fullMenu": "முழு மெனு",
+      "gridStyle": "கட்டம் பாணி",
+      "gridStyleClassic": "கிளாசிக்",
+      "gridStyleTrace": "சுவடு",
+      "guide": {
+        "swipeMindful": "{{seconds}}களில் ஸ்வைப் செய்யவும்",
+        "holdMindful": "{{seconds}}களுக்கான கலத்தை அழுத்திப் பிடிக்கவும்"
+      },
+      "feedback": {
+        "gestureDuration": "சைகை",
+        "holdDuration": "பிடி",
+        "writingDuration": "எழுதுதல்"
+      }
+    },
+    "feedback": {
+      "holdDuration": "பிடி",
+      "gestureDuration": "சைகை",
+      "writingDuration": "எழுதுதல்"
+    },
+    "image": "வடிவம்",
+    "digits": "இலக்கங்கள்",
+    "emotions": "உணர்ச்சி",
+    "words": "வார்த்தை",
+    "tones": "தொனி",
+    "spatial": "திசை"
+  },
+  "replay": {
+    "title": "அமர்வு மீண்டும்",
+    "play": "விளையாடு",
+    "pause": "இடைநிறுத்தம்",
+    "restart": "மறுதொடக்கம்",
+    "speed": "வேகம்",
+    "loading": "அமர்வை ஏற்றுகிறது...",
+    "unavailable": "இந்த அமர்வுக்கு மீண்டும் விளையாட முடியாது",
+    "backToStats": "புள்ளிவிவரங்களுக்குத் திரும்பு",
+    "runStack": {
+      "original": "அசல்",
+      "correction": "திருத்தம்",
+      "delta": "Δ d'",
+      "inProgress": "நடந்து கொண்டிருக்கிறது",
+      "completed": "முடிக்கப்பட்டது"
+    },
+    "abandon": "கைவிடு",
+    "badge": "மீண்டும் விளையாடு",
+    "completionReport": {
+      "backToHome": "மீண்டும்",
+      "correctAgain": "மீண்டும் சரி",
+      "deltaVsOriginal": "vs அசல்",
+      "deltaVsParent": "vs முந்தைய ஓட்டம்",
+      "falseAlarmsSkipped": "பிழைகள் தவிர்க்கப்பட்டன",
+      "missesCorrections": "திருத்தங்கள்",
+      "newFalseAlarms": "புதிய பிழைகள்",
+      "replayAgain": "மீண்டும் விளையாடு",
+      "scoreLabel": "டி' மதிப்பெண்",
+      "title": "திருத்தம் முடிந்தது"
+    },
+    "controls": "கட்டுப்பாடுகள்",
+    "correction": "திருத்தம்",
+    "finished": "ரீப்ளே முடிவு",
+    "home": "வீடு",
+    "parseError": "அமர்வைப் படிக்க முடியவில்லை",
+    "tapSlotToPlace": "வைக்க ஒரு ஸ்லாட்டைத் தட்டவும்",
+    "timeline": "காலவரிசை",
+    "focusTimeline": {
+      "open": "காலவரிசையைக் காட்டு",
+      "close": "காலவரிசையை மூடு",
+      "title": "N-Back காலவரிசை",
+      "fillAll": "அனைத்தையும் நிரப்பவும்",
+      "fillCard": "அட்டையை நிரப்பவும்"
+    },
+    "hud": {
+      "counterDisplay": "எதிர் காட்சி",
+      "toggleCounterDisplay": "எதிர் காட்சியை நிலைமாற்று"
+    },
+    "validate": "சரிபார்க்கவும்"
+  },
+  "recovery": {
+    "title": "அமர்வு தடைபட்டது",
+    "description": "ஒரு அமர்வு நடந்து கொண்டிருந்தது. நீங்கள் மீண்டும் தொடங்க விரும்புகிறீர்களா?",
+    "mode": "பயன்முறை",
+    "level": "நிலை",
+    "progress": "முன்னேற்றம்",
+    "timeAgo": "நேரம்",
+    "resume": "அமர்வை மீண்டும் தொடங்கவும்",
+    "startFresh": "புதிதாக தொடங்குங்கள்",
+    "staleWarning": "இந்த அமர்வு பழையது, மீண்டும் தொடங்குவது சவாலானதாக இருக்கலாம்.",
+    "modes": {
+      "game": "பயிற்சி",
+      "activeTraining": "செயலில் பயிற்சி",
+      "flowTraining": "இரட்டை இடப் பயிற்சி",
+      "dualPickTraining": "இரட்டை தேர்வு",
+      "traceTraining": "இரட்டை சுவடு"
+    }
+  },
+  "rewards": {
+    "congratulations": "வாழ்த்துகள்!",
+    "duration": "{{days}} நாட்கள் பிரீமியம்",
+    "lifetimeLabel": "வாழ்நாள் அணுகல்",
+    "expiresAt": "{{date}} வரை செல்லுபடியாகும்",
+    "neverExpires": "காலாவதியாகாது",
+    "continue": "தொடரவும்",
+    "discovery": {
+      "name": "டிஸ்கவரி பாஸ்",
+      "description": "7 நாட்கள் பிரீமியம் - அனைத்து அம்சங்களையும் ஆராயுங்கள்"
+    },
+    "engagement": {
+      "name": "நிச்சயதார்த்த பாஸ்",
+      "description": "1 மாத பிரீமியம் - உங்கள் ஒழுக்கம் பலனளிக்கும்"
+    },
+    "expert": {
+      "name": "நிபுணர் பாஸ்",
+      "description": "3 மாத பிரீமியம் - நீங்கள் ஒரு உண்மையான பயிற்சியாளர்"
+    },
+    "lifetime": {
+      "name": "வாழ்நாள் அணுகல்",
+      "description": "எப்போதும் பிரீமியம் - நீங்கள் நியூரோடுவல் தேர்ச்சி பெற்றுள்ளீர்கள்"
+    },
+    "xpRemaining": "XP மீதமுள்ளது",
+    "permanentAccessUnlocked": "நிரந்தர அணுகல் திறக்கப்பட்டது",
+    "reachedTheTop": "நீங்கள் உச்சத்தை அடைந்துவிட்டீர்கள்!"
+  },
+  "progression": {
+    "level": "நிலை {{level}}",
+    "levelShort": "எல்வி. {{level}}",
+    "nextLevel": "அடுத்த நிலை",
+    "reached": "அடைந்தது",
+    "inProgress": "நடந்து கொண்டிருக்கிறது"
+  },
+  "gridlock": {
+    "nextPuzzle": "அடுத்த புதிர் →"
+  }
+}

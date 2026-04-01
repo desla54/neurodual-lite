@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Hướng dẫn",
+    "exitConfirm": "Thoát hướng dẫn?",
+    "exitWarning": "Tiến trình của bạn sẽ không được lưu.",
+    "continue": "Tiếp tục",
+    "quit": "Thoát",
+    "stepLabel": "Bước {{step}}",
+    "previous": "Trước",
+    "restart": "Bắt đầu lại",
+    "next": "Tiếp",
+    "startGame": "Bắt đầu",
+    "progress": "Bộ đếm",
+    "tapToContinue": "Chạm để tiếp tục",
+    "controls": {
+      "position": "Vị trí",
+      "audio": "Âm thanh"
+    },
+    "annotation": {
+      "label": "Hướng dẫn"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Tốt lắm. Bạn đã vượt qua hướng dẫn.",
+        "stay": "Gần được rồi. Cần luyện tập thêm một chút.",
+        "down": "Chưa đạt. Hãy thử lại hướng dẫn để củng cố kiến thức cơ bản."
+      },
+      "header": {
+        "up": "Hoàn thành hướng dẫn!",
+        "down": "Ôn tập",
+        "stay": "Gần được!"
+      },
+      "noteMinAssessment": "Lưu ý: Để đánh giá chính xác hơn, hướng dẫn đánh giá ít nhất 8 câu trả lời.",
+      "guidance": {
+        "passed": "Bạn đã sẵn sàng cho luyện tập tự do.",
+        "failed": "Chúng tôi khuyên bạn nên thử lại hướng dẫn trước khi chuyển sang luyện tập."
+      },
+      "correctAnswers": "{{correct}}/{{total}} câu trả lời đúng",
+      "actions": {
+        "backToHome": "Về trang chủ",
+        "retryTutorial": "Thử lại hướng dẫn",
+        "explainLevels": "Hiểu cấp độ N (N)",
+        "goToTraining": "Đến luyện tập",
+        "continueToTraining": "Tiếp tục luyện tập"
+      }
+    },
+    "welcome": {
+      "title": "Giới thiệu luyện tập",
+      "description": "Dual N-Back thách thức trí nhớ làm việc của bạn bằng cách yêu cầu theo dõi đồng thời hai luồng thông tin: vị trí hình ảnh và âm thanh. Hướng dẫn này sẽ dẫn bạn từng bước.",
+      "button": "Bắt đầu hướng dẫn"
+    },
+    "timeline": {
+      "legend": "Dòng thời gian giúp so sánh — nó ẩn trong lúc chơi",
+      "past": "Quá khứ",
+      "present": "Hiện tại"
+    },
+    "hub": {
+      "title": "Hướng dẫn",
+      "subtitle": "Chọn chế độ để học",
+      "basics": {
+        "title": "Cơ bản",
+        "description": "Học phản xạ và nhịp điệu của Dual N-Back cổ điển."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Làm chủ vị trí thời gian trên dòng thời gian."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Gắn nhãn mỗi kích thích với tham chiếu thời gian (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Học cử chỉ nhớ lại chủ động qua vẽ."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Xây dựng lại toàn bộ chuỗi từ trí nhớ."
+      },
+      "soroban": {
+        "title": "Thành thạo Soroban",
+        "description": "Học bàn tính Nhật Bản từng bước qua 8 giai đoạn tiến bộ."
+      }
+    },
+    "place": {
+      "comingSoon": "Hướng dẫn Place đang được phát triển",
+      "cardPool": "Thẻ có sẵn",
+      "slot": "Ô",
+      "observe": "Quan sát: một vị trí trên lưới và một chữ cái âm thanh.",
+      "buffer": "Kích thích thứ hai. Bộ đệm N-back đang lấp đầy.",
+      "cardsAppear": "Thẻ xuất hiện! Chúng đại diện cho 3 kích thích gần nhất.",
+      "firstDrag": "Nhấp vào thẻ được đánh dấu, sau đó ô N-2 (cũ nhất).",
+      "timelineExplain": "Dòng thời gian hiển thị thời gian: N-2 = cũ nhất, N = hiện tại.",
+      "positionN1": "Đặt vị trí giữa vào ô N-1.",
+      "positionN": "Tuyệt! Hoàn thành với vị trí gần nhất (ô N).",
+      "audioIntro": "Giờ đến thẻ âm thanh! Cùng nguyên tắc.",
+      "audioN2": "Đặt chữ cái đầu tiên nghe được vào ô N-2.",
+      "audioN1": "Tiếp tục với chữ cái giữa (ô N-1).",
+      "audioN": "Hoàn thành với chữ cái gần nhất (ô N).",
+      "dualIntro": "Thử mới! Đặt cả vị trí VÀ chữ cái.",
+      "dualPractice": "Đặt tất cả 6 thẻ vào đúng ô. Từ từ thôi!",
+      "rhythmExplain": "Trong trò chơi thực, bạn sẽ có thời gian hạn chế.",
+      "autonomy": "Đến lượt bạn! Đặt tất cả thẻ đúng chỗ.",
+      "conclusion": "Tuyệt vời! Bạn đã nắm vững cơ bản của Dual Place.",
+      "selectCard": "Chọn một thẻ, sau đó nhấp vào ô của nó",
+      "clickSlot": "Nhấp vào ô đúng để đặt thẻ",
+      "wrongSlot": "Không phải ô đó! Hãy nhìn thứ tự thời gian.",
+      "wrongCard": "Không phải thẻ đó. Tìm thẻ phù hợp với ô.",
+      "tryAgain": "Thử lại! Ô đúng đang được đánh dấu."
+    },
+    "memo": {
+      "comingSoon": "Hướng dẫn Memo đang được phát triển",
+      "selectPosition": "Chọn vị trí",
+      "selectAudio": "Chọn chữ cái",
+      "clickToRecall": "Nhấp vào ô để nhớ lại giá trị",
+      "validate": "Xác nhận",
+      "observeFirst": "Kích thích đầu tiên. Ghi nhớ cả vị trí VÀ chữ cái!",
+      "observeSecond": "Kích thích thứ hai. Tiếp tục ghi nhớ.",
+      "observeThird": "Kích thích thứ ba. Bộ đệm đầy. Sẵn sàng!",
+      "recallIntro": "Lưới biến mất! Nhớ lại từ trí nhớ. Nhấp ô N-2.",
+      "firstRecall": "Nhấp ô N-2. Vị trí đầu tiên là gì?",
+      "feedbackExplain": "Xanh = đúng. Đỏ = sai. Bạn có thể sửa đến 3 lần!",
+      "multiSlot": "Tiếp tục! Nhớ lại vị trí N-1 và N.",
+      "newStimulus": "Kích thích mới! Cửa sổ N-back dịch chuyển một bước.",
+      "windowShift": "Cửa sổ đã dịch. N-2 cũ ra, N mới vào.",
+      "fullPosition": "Nhớ lại cả 3 vị trí. Tập trung!",
+      "audioIntro": "Kích thích mới. Giờ thêm nhớ lại âm thanh!",
+      "firstAudioRecall": "Nhấp ô âm thanh N-2. Chữ cái nào?",
+      "fullAudio": "Tiếp tục với chữ cái N-1 và N.",
+      "dualIntro": "Trong trò chơi thực, bạn nhớ lại cả vị trí VÀ chữ cái cùng lúc.",
+      "dualPractice": "Nhớ lại cả 6 ô rồi nhấp Xác nhận.",
+      "correctionExplain": "Nếu sai, nhấp lại để sửa. Tối đa 3 lần.",
+      "withCorrection": "Thử đi! Nếu sai, sửa bằng cách nhấp lại.",
+      "conclusion": "Xuất sắc! Bạn đã thành thạo nhớ lại chủ động. Bắt đầu phiên!",
+      "wrongAnswer": "Không phải. Nghĩ xem, kích thích nào ở thời điểm đó?",
+      "tryAgain": "Thử lại! Bạn vẫn có thể sửa.",
+      "maxCorrections": "Đã sửa 3 lần. Ô này bị khóa.",
+      "validateHint": "Tất cả ô đã điền. Nhấp Xác nhận!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Chào mừng đến Dual Pick! Học phân loại từng kích thích.",
+        "hud": "Trên: tiến trình trong hướng dẫn.",
+        "grid": "Lưới chia thành 3 vùng: TRÊN, GIỮA, DƯỚI.",
+        "controls": "Các nút phân loại. Vị trí bên trái, Âm thanh bên phải.",
+        "outro": "Sẵn sàng? Bắt đầu phân loại vị trí!"
+      },
+      "intro": "Trong Dual Pick, bạn phân loại mỗi kích thích theo hai tiêu chí: vùng lưới và loại âm thanh.",
+      "gridExplain": "Lưới có 3 vùng: TRÊN (hàng trên), GIỮA (trung tâm), DƯỚI (hàng dưới).",
+      "positionHaut": "Ô vuông ở trên. Nhấp TRÊN.",
+      "positionMilieu": "Ô vuông ở giữa. Nhấp GIỮA.",
+      "positionBas": "Ô vuông ở dưới. Nhấp DƯỚI.",
+      "positionRecap": "Hoàn hảo! TRÊN = hàng trên, GIỮA = trung tâm, DƯỚI = hàng dưới.",
+      "positionPractice": "Đến lượt bạn! Phân loại vị trí này.",
+      "soundIntro": "Giờ đến âm thanh. Có hai loại: NGUYÊN ÂM (A, E, I, O, U) và PHỤ ÂM (còn lại).",
+      "soundVoyelle": "Bạn nghe A. Đó là nguyên âm. Nhấp NGUYÊN ÂM.",
+      "soundConsonne": "Bạn nghe T. Đó là phụ âm. Nhấp PHỤ ÂM.",
+      "soundRecap": "Nhớ nhé: A, E, I, O, U = NGUYÊN ÂM. Còn lại = PHỤ ÂM.",
+      "soundPractice": "Đến lượt bạn! Phân loại âm thanh này.",
+      "dualIntro": "Trong trò chơi thực, bạn phân loại CẢ HAI cùng lúc: vị trí VÀ âm thanh.",
+      "dualFirst": "Phân loại vị trí VÀ âm thanh. Từ từ thôi.",
+      "dualSecond": "Tiếp tục. Vị trí + Âm thanh.",
+      "dualThird": "Tuyệt vời! Thêm một lần nữa để luyện tập.",
+      "rhythm": "Trong phiên, giữ nhịp đều. Sự trôi chảy đến từ luyện tập.",
+      "conclusion": "Giỏi lắm! Bạn đã thành thạo phân loại. Bắt đầu phiên Dual Pick!",
+      "buttons": {
+        "top": "TRÊN",
+        "middle": "GIỮA",
+        "bottom": "DƯỚI",
+        "vowel": "NGUYÊN ÂM",
+        "consonant": "PHỤ ÂM"
+      },
+      "feedback": {
+        "correctPosition": "Đúng vùng!",
+        "correctSound": "Đúng loại âm thanh!",
+        "wrongPosition": "Không phải vùng đó. Nhìn xem ô vuông ở đâu.",
+        "wrongSound": "Không phải. A, E, I, O, U = nguyên âm."
+      }
+    },
+    "trace": {
+      "intro": "Chào mừng đến Dual Trace. Không có nút ở đây: bạn sẽ nhớ lại vị trí trước đó qua cử chỉ vuốt.",
+      "observe": "Ghi nhớ vị trí này. Lượt sau, bạn cần vuốt về phía nó.",
+      "firstSwipe": "Vuốt đầu tiên! Trượt ngón tay về phía vị trí lượt trước. Mũi tên hướng dẫn bạn.",
+      "firstAudioMatch": "Cùng chữ cái với lượt trước! Vuốt đến vị trí VÀ chạm đôi để báo hiệu trùng âm thanh.",
+      "audioMatch": "Phát hiện trùng âm thanh! Vuốt + chạm đôi.",
+      "swipe1": "Vuốt về phía vị trí N-1. Nhớ ô vuông ở đâu.",
+      "swipe2": "Tiếp tục. Mỗi lần vuốt củng cố trí nhớ chủ động.",
+      "swipe3": "Nhớ lại chủ động đòi hỏi hơn nhận dạng đơn giản.",
+      "swipe4": "Tập trung. Hình dung vị trí trước khi vuốt.",
+      "swipe5": "Tuyệt vời! Bạn đã thành thạo cử chỉ nhớ lại.",
+      "complete": "Hoàn thành hướng dẫn. Bạn đã sẵn sàng cho luyện tập Dual Trace.",
+      "tapTarget": "Chạm vào vị trí lượt trước",
+      "tapTargetAndAudio": "Chạm vị trí mục tiêu, sau đó Âm thanh"
+    },
+    "ui": {
+      "startExercise": "Bắt đầu bài tập",
+      "score": "Điểm: {{current}}/{{total}}",
+      "complete": "Hoàn thành",
+      "correct": "✓ Đúng!",
+      "expectedMatch": "✗ Dự kiến: Trùng",
+      "expectedNoMatch": "✗ Dự kiến: Không trùng",
+      "memorize": "Ghi nhớ vị trí...",
+      "memorizeLetter": "Ghi nhớ chữ cái...",
+      "matchDetected": "✓ Phát hiện trùng!",
+      "noMatch": "✗ Không trùng",
+      "matchExplanation": "Trùng! Bước {{current}} = Bước {{previous}}",
+      "exerciseComplete": "Hoàn thành bài tập!",
+      "match": "Trùng",
+      "noMatchButton": "Không trùng",
+      "none": "Không",
+      "both": "Cả hai",
+      "position": "Vị trí",
+      "audio": "Âm thanh",
+      "posShort": "VT"
+    },
+    "spotlight": {
+      "hud": "Bảng điều khiển: cấp N-back, bộ đếm lượt, và điều khiển phiên.",
+      "timeline": "Dòng thời gian giữ 3 kích thích gần nhất để so sánh. Trong trò chơi thực, trợ giúp này ẩn.",
+      "grid": "Lưới: mỗi lượt, một ô sáng lên ở 1 trong 8 vị trí. Đồng thời, một chữ cái được đọc.",
+      "controls": "Các nút trả lời. Nhấn khi bạn phát hiện lặp lại.",
+      "intro": "Chào mừng! Hãy cùng khám phá giao diện trò chơi.",
+      "continue": "Tiếp tục",
+      "outro": "Giờ hãy chuyển sang phiên hướng dẫn. Xem hoạt hình và làm theo hướng dẫn.",
+      "start": "Bắt đầu",
+      "tapToContinue": "Chạm vào bất kỳ đâu để tiếp tục"
+    },
+    "speed": {
+      "label": "Tốc độ: {{speed}}",
+      "pauseToChange": "Tạm dừng để đổi tốc độ"
+    },
+    "assessment": {
+      "title": "Giai đoạn đánh giá",
+      "subtitle": "Từ giờ trở đi, đây là bài chạy cổ điển ngắn.",
+      "body": "Nhịp liên tục và bạn sẽ không nhận thêm gợi ý. Chơi như phiên thực.",
+      "goal": "Mục tiêu: ít nhất {{min}}% chính xác qua {{count}} thử.",
+      "cta": "Bắt đầu thôi"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Hiểu cấp độ N",
+        "desc": "Bạn đã học N=2. Đây là cách nó tổng quát hóa từ N=1 đến N=4.",
+        "start": "Bắt đầu",
+        "done": "Hoàn thành",
+        "skip": "Bỏ qua",
+        "hud": "N = bao nhiêu lượt trước.",
+        "present": "N = kích thích hiện tại (hiện tại).",
+        "past": "So sánh với N-{{n}}.",
+        "pressPosition": "Nếu vị trí lặp lại, nhấn Vị trí.",
+        "pressAudio": "Nếu âm thanh lặp lại, nhấn Âm thanh.",
+        "annotation": {
+          "n1": "N=1: so sánh kích thích hiện tại (N) với lượt trước (N-1).",
+          "n2": "N=2: so sánh kích thích hiện tại (N) với hai lượt trước (N-2).",
+          "n3": "N=3: so sánh kích thích hiện tại (N) với ba lượt trước (N-3)."
+        },
+        "outroTitle": "Và cứ thế tiếp…",
+        "outroBody": "Nếu bạn lên N=5, bạn sẽ so sánh với N-5. Quy tắc giữ nguyên; chỉ khoảng cách tăng."
+      }
+    },
+    "annotations": {
+      "intro": "Quan sát: một ô sáng lên trên lưới và một chữ cái được đọc cùng lúc.",
+      "observe": "Ghi nhớ. Dòng thời gian theo dõi các kích thích.",
+      "firstComparison": "Bạn đã có đủ lịch sử để so sánh.",
+      "firstPositionMatch": "Cùng vị trí 2 lượt trước! So sánh N và N-2 trên dòng thời gian, rồi nhấn Vị trí.",
+      "firstAudioMatch": "Cùng chữ cái 2 lượt trước! So sánh N và N-2 trên dòng thời gian, rồi nhấn Âm thanh.",
+      "firstDualMatch": "Trùng kép! Cả vị trí VÀ âm thanh đều lặp. Nhấn cả hai nút.",
+      "positionMatch": "Cùng vị trí. Nhấn Vị trí.",
+      "audioMatch": "Cùng âm thanh. Nhấn Âm thanh.",
+      "dualMatch": "Cả hai trùng. Nhấn Vị trí và Âm thanh.",
+      "noMatch": "Không trùng lượt này. Tiếp tục ghi nhớ.",
+      "noMatch1": "Lần này không lặp. Chạm để tiếp tục.",
+      "noMatch2": "Vẫn không trùng. Tập trung vào dòng vị trí + âm thanh.",
+      "noMatch3": "Không có gì để báo cáo. Luôn so sánh với N-2 trên dòng thời gian.",
+      "noMatch4": "Không trùng. Nhịp đang tăng.",
+      "noMatch5": "Tiếp tục. Các trùng lặp đến bất ngờ.",
+      "noMatch6": "Không trùng. Tiếp tục, bạn đã bắt được nhịp.",
+      "noMatch7": "Chặng cuối. Tập trung.",
+      "noMatch8": "Sắp xong. Vài kích thích nữa thôi.",
+      "complete": "Chúc mừng! Bạn đã nắm vững cơ bản Dual N-Back. Sẵn sàng luyện tập?"
+    },
+    "exit": {
+      "confirm": "Thoát",
+      "title": "Thoát hướng dẫn?",
+      "message": "Tiến trình của bạn sẽ được lưu. Bạn có thể tiếp tục sau."
+    },
+    "recovery": {
+      "message": "Phát hiện phiên bị gián đoạn.",
+      "staleMessage": "Phát hiện phiên bị gián đoạn từ hơn 30 phút trước.",
+      "resume": "Tiếp tục",
+      "startFresh": "Bắt đầu mới",
+      "title": "Tiếp tục hướng dẫn?"
+    }
+  }
+}

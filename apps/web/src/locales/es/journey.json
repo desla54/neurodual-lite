@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Recorrido de entrenamiento",
+    "pageSubtitle": "Elige, organiza y crea tus recorridos",
+    "enabled": "Activar el recorrido",
+    "description": "30 etapas progresivas de N-1 a N-10",
+    "progress": "Progresión",
+    "locked": "Bloqueado",
+    "createJourney": "Crear un recorrido",
+    "viewJourneys": "Ver los recorridos",
+    "current": "Recorrido actual",
+    "myJourneys": "Mis recorridos",
+    "stage": "Etapa",
+    "stages": "etapas",
+    "stagesShort": "et.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "Nombre",
+    "namePlaceholder": "Ej: Desafío N-5",
+    "levels": "Niveles",
+    "levelRange": "Rango de nivel",
+    "levelTo": "to",
+    "createNew": "Nuevo recorrido",
+    "new": "Nuevo",
+    "defaultCustomName": "Mi recorrido",
+    "created": "¡Recorrido creado!",
+    "deleted": "Recorrido eliminado",
+    "sessionSettings": "Ajustes de las partidas",
+    "savedStatus": "Ajustes guardados",
+    "preset": {
+      "easy": "Easy",
+      "medium": "Recomendado",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "Recorridos y perfiles",
+      "journey": "Recorrido",
+      "journeyNone": "Seleccionar…",
+      "profile": "Perfil",
+      "profileNone": "Seleccionar…",
+      "configure": "Configurar",
+      "configureNone": "Selecciona un recorrido",
+      "create": "Nuevo recorrido",
+      "createDesc": "Crea un nuevo recorrido"
+    },
+    "deleteConfirmTitle": "¿Eliminar este recorrido?",
+    "deleteConfirmMessage": "El recorrido \"{{name}}\" se eliminará permanentemente.",
+    "renameTitle": "Renombrar este recorrido",
+    "renameMessage": "Edita el nombre de \"{{name}}\".",
+    "renamed": "¡Recorrido renombrado!",
+    "badge": {
+      "simulator": "Simulador",
+      "beta": "Beta",
+      "default": "Predeterminado"
+    },
+    "mode": "Modo",
+    "modeStandard": "Recorrido (4 modos)",
+    "modeDnb": "Dual N-Back Clásico",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulador",
+      "jaeggi": "Clásico",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} sesión(es) validante(s)",
+      "needed": "{{count}} sesión(es) restante(s)",
+      "excellent": "¡Excelente!",
+      "good": "¡Bien!",
+      "passing": "Aprobado"
+    },
+    "progression": {
+      "title": "Progresión",
+      "description": "Para pasar al siguiente nivel, obtén una buena puntuación:",
+      "excellent": "≥95% → 1 sesión",
+      "good": "≥85% → 2 sesiones",
+      "passing": "≥80% → 3 sesiones",
+      "rules": "Reglas de progresión",
+      "jaeggi": {
+        "description": "Basado en la modalidad más débil:",
+        "up": "< 3 errores → Subir",
+        "stay": "3-5 errores → Mantener",
+        "down": "> 5 errores → Bajar"
+      },
+      "brainworkshop": {
+        "description": "Protocolo Brain Workshop:",
+        "up": "≥80% → Subir un nivel",
+        "stay": "50-79% → Mantener",
+        "strike": "3 puntuaciones seguidas <50% → Bajar"
+      },
+      "hybrid": {
+        "description": "Este recorrido encadena {{trackCount}} sesión(es) Dual Track, luego {{dnbCount}} sesión(es) Dual N-Back al mismo nivel.",
+        "alternation": "El ciclo siempre vuelve a empezar por Dual Track en cuanto se toma una decisión.",
+        "authority": "Solo las sesiones Dual N-Back deciden el ascenso, el mantenimiento o el descenso.",
+        "up": "0-1 error → Ascenso",
+        "stay": "2-3 errores → Mantener",
+        "down": "4+ errores → Descenso",
+        "streakRule": "Dos sesiones consecutivas en la misma zona activan la decisión.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Validado {{current}}/{{required}}",
+        "stayProgress": "Mantenimiento {{current}}/{{required}}",
+        "downProgress": "Fallo {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track utiliza una barra de dominio continua para cada nivel de objetivos:",
+        "calibration": "Una calibración inicial estima tu nivel de partida",
+        "goodSession": "Cada buena sesión rellena un poco el escalón actual",
+        "mastery": "Las sesiones casi perfectas llenan más rápido, las sesiones normales avanzan modestamente",
+        "regression": "Las sesiones débiles también pueden hacer descender la barra de dominio actual",
+        "unlock": "El siguiente nivel de objetivos se desbloquea solo al 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Abrir selector de recorrido",
+      "current": "Actual",
+      "showAll": "Todos los recorridos",
+      "settings": "Ajustes del recorrido"
+    },
+    "previous": "Recorrido anterior",
+    "next": "Recorrido siguiente",
+    "calibration": {
+      "title": "Primera sesión",
+      "subtitle": "Una breve calibración determinará tu nivel de inicio, o puedes empezar directamente en el nivel 2.",
+      "skipToN2": "o empezar en N-2",
+      "continueAt": "o continuar en N-{{level}}",
+      "start": "Iniciar la calibración",
+      "redo": "Rehacer la calibración",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "Ajustes actuales",
+      "currentSlotView": "Ajustes actuales",
+      "lockedTitle": "Algunas opciones están bloqueadas",
+      "lockedDesc": "Para mantener la progresión comparable, las modalidades (y algunas opciones) no pueden cambiar después de iniciar el recorrido."
+    },
+    "completed": {
+      "title": "¡Recorrido completado!",
+      "subtitle": "Todas las etapas validadas. ¡Bien hecho!",
+      "continueFree": "Seguir entrenando"
+    },
+    "report": {
+      "stage": "Etapa",
+      "level": "Nivel",
+      "score": "Puntuación",
+      "sessionValidated": "Sesión Validada",
+      "sessionNotValidated": "Sesión No Validada",
+      "minScore": "Puntuación mínima requerida:",
+      "stageCompleted": "¡Etapa Completada!",
+      "stageUnlocked": "Etapa {{stage}} desbloqueada",
+      "replay": "Rejugar",
+      "nextStage": "Siguiente etapa",
+      "home": "Inicio",
+      "hits": "Aciertos",
+      "misses": "Fallos",
+      "falseAlarms": "Falsas alarmas",
+      "correctRejections": "Rechazos correctos"
+    }
+  }
+}

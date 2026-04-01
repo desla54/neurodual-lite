@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Kitartás",
+      "performance": "Teljesítmény",
+      "resilience": "Ellenálló képesség",
+      "exploration": "Felfedezés",
+      "milestone": "Mérföldkövek",
+      "cognitive": "Kognitív"
+    },
+    "first_session": {
+      "name": "Felébredt neuron",
+      "description": "Első munkamenet befejezve."
+    },
+    "sessions_10": {
+      "name": "Pillér (Bronz)",
+      "description": "10 munkamenet befejezve."
+    },
+    "sessions_25": {
+      "name": "Pillér (Ezüst)",
+      "description": "25 munkamenet befejezve."
+    },
+    "marathoner": {
+      "name": "Pillér (Arany)",
+      "description": "50 munkamenet befejezve."
+    },
+    "streak_3": {
+      "name": "Születő rituálé",
+      "description": "3 napos sorozat."
+    },
+    "streak_7": {
+      "name": "Napi rituálé",
+      "description": "7 napos sorozat."
+    },
+    "streak_14": {
+      "name": "Rögzült szokás",
+      "description": "14 napos sorozat."
+    },
+    "streak_30": {
+      "name": "Vasfegyelem",
+      "description": "30 napos sorozat."
+    },
+    "early_bird": {
+      "name": "Korán kelő",
+      "description": "5 különböző napon munkamenet reggel 8 előtt."
+    },
+    "night_owl": {
+      "name": "Éjjeli bagoly",
+      "description": "5 különböző napon munkamenet este 10 után."
+    },
+    "brain_n3": {
+      "name": "Éles elme",
+      "description": "Érj el N-3 szintet."
+    },
+    "brain_n4": {
+      "name": "Izmos agy",
+      "description": "Érj el N-4 szintet."
+    },
+    "brain_n5": {
+      "name": "Olimpiai agy",
+      "description": "Érj el N-5 szintet."
+    },
+    "brain_n7": {
+      "name": "Kognitív elit",
+      "description": "Érj el N-7 szintet."
+    },
+    "brain_n10": {
+      "name": "Szuperember",
+      "description": "Érj el N-10 szintet."
+    },
+    "sniper": {
+      "name": "Mesterlövész",
+      "description": "> 90% pontosság N ≥ 2 szinten."
+    },
+    "accuracy_95": {
+      "name": "Sebészi pontosság",
+      "description": "> 95% pontosság N ≥ 2 szinten."
+    },
+    "accuracy_98": {
+      "name": "Lézer",
+      "description": "> 98% pontosság N ≥ 2 szinten."
+    },
+    "untouchable": {
+      "name": "Érinthetetlen",
+      "description": "Tökéletes munkamenet (0 hiba) N ≥ 2 szinten."
+    },
+    "rt_500": {
+      "name": "Gyors reflex",
+      "description": "Átlagos reakcióidő < 500ms ≥70% pontossággal."
+    },
+    "flash": {
+      "name": "Villám",
+      "description": "Átlagos reakcióidő < 400ms ≥70% pontossággal."
+    },
+    "rt_300": {
+      "name": "Villámlás",
+      "description": "Átlagos reakcióidő < 300ms ≥70% pontossággal."
+    },
+    "consistent": {
+      "name": "Következetes",
+      "description": "RT szórás < 100ms (≥10 válasz szükséges)."
+    },
+    "dprime_master": {
+      "name": "d' mester",
+      "description": "d-prime > 3.0 egy munkamenetben."
+    },
+    "dprime_4": {
+      "name": "SDT szakértő",
+      "description": "d-prime > 4.0 egy munkamenetben."
+    },
+    "no_pause": {
+      "name": "Megszakítás nélkül",
+      "description": "5 egymást követő munkamenet szünet nélkül ≥75% pontossággal."
+    },
+    "steady_hands": {
+      "name": "Biztos kezek",
+      "description": "Nincs téves bemenet a munkamenet során (≥80% pontosság)."
+    },
+    "zen_master": {
+      "name": "Zen mester",
+      "description": "10 munkamenet kilépés nélkül."
+    },
+    "comeback_kid": {
+      "name": "Visszatérő",
+      "description": "Szintlépés szintcsökkenés után."
+    },
+    "persistent": {
+      "name": "Kitartó",
+      "description": "3 munkamenet ugyanazon a napon egy kudarc után."
+    },
+    "second_wind": {
+      "name": "Második szél",
+      "description": "d-prime javulás az 1. és 2. félidő között (d′ ≥ 2.0 szükséges)."
+    },
+    "plateau_breaker": {
+      "name": "Plató áttörő",
+      "description": "Fejlődés 10+ munkamenet után ugyanazon a szinten."
+    },
+    "no_surrender": {
+      "name": "Nem adom fel",
+      "description": "25 munkamenet kilépés nélkül."
+    },
+    "ironwill": {
+      "name": "Vasaakarat",
+      "description": "50 munkamenet kilépés nélkül."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Hang > 80% de Vizuális < 70%."
+    },
+    "eagle_eye": {
+      "name": "Sassszem",
+      "description": "Vizuális > 80% de Hang < 70%."
+    },
+    "synchronized": {
+      "name": "Szinkronizált",
+      "description": "Hang és Vizuális pontszám 5%-on belül (≥60% szükséges)."
+    },
+    "dual_master": {
+      "name": "Dual mester",
+      "description": "Hang ÉS Vizuális > 85% ugyanabban a munkamenetben (≥6 csali/modalitás)."
+    },
+    "dual_elite": {
+      "name": "Dual elit",
+      "description": "Hang ÉS Vizuális > 90% ugyanabban a munkamenetben N ≥ 3 szinten (≥6 csali/modalitás)."
+    },
+    "centurion": {
+      "name": "százados",
+      "description": "100 munkamenet befejezve."
+    },
+    "sessions_250": {
+      "name": "Legenda (Smaragd)",
+      "description": "250 munkamenet befejezve."
+    },
+    "sessions_500": {
+      "name": "Halhatatlan (Gyémánt)",
+      "description": "500 munkamenet befejezve."
+    },
+    "trials_500": {
+      "name": "Gyakorló",
+      "description": "500 összes próba lejátszva."
+    },
+    "trials_1000": {
+      "name": "Edzett",
+      "description": "1 000 összes próba lejátszva."
+    },
+    "trials_5000": {
+      "name": "Tapasztalt",
+      "description": "5 000 összes próba lejátszva."
+    },
+    "trials_10k": {
+      "name": "10 000 próba",
+      "description": "10 000 összes próba lejátszva."
+    },
+    "trials_50k": {
+      "name": "Titán",
+      "description": "50 000 összes próba lejátszva."
+    },
+    "streak_90": {
+      "name": "Tökéletes negyedév",
+      "description": "90 napos sorozat."
+    },
+    "streak_365": {
+      "name": "Tökéletes év",
+      "description": "365 napos sorozat."
+    },
+    "veteran": {
+      "name": "Veterán",
+      "description": "1 év használat."
+    },
+    "metronome": {
+      "name": "A metronóm",
+      "description": "RT variancia < 50ms ≥20 próbán (aktív válaszok szükségesek)."
+    },
+    "flow_state": {
+      "name": "A kegyelem állapota",
+      "description": "Flow állapot észlelve egy teljes munkamenet során."
+    },
+    "sang_froid": {
+      "name": "Hideg fej",
+      "description": "Nincs hibakaszkád egy hiba után (≥70% pontosság)."
+    },
+    "imperturbable": {
+      "name": "Rendíthetetlen",
+      "description": "Teljes munkamenet fókuszvesztés nélkül (≥60% pontosság)."
+    },
+    "comeback_strong": {
+      "name": "Erős visszatérés",
+      "description": "Döntsd meg a d-prime rekordodat 3+ nap szünet után (d′ ≥ 2.5)."
+    }
+  }
+}

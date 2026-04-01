@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "як ти себе почуваєш",
+      "tired": "Втомилася",
+      "normal": "нормальний",
+      "energized": "Під напругою"
+    },
+    "aria": {
+      "trialTimer": "Пробний таймер",
+      "positionMatch": "Збіг позицій",
+      "audioMatch": "Аудіо збіг",
+      "audioLetter": "Аудіо лист:",
+      "traceGrid": "Сітка трасування"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Перемкнути монітор синхронізації",
+      "start": "почати",
+      "end": "кінець",
+      "pinLabel": "шпилька",
+      "pinTitle": "Закріпити на екрані",
+      "inputLabel": "введення",
+      "inputTitle": "Перемкнути профіль затримки введення (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "на",
+      "off": "вимкнено",
+      "hideLabel": "приховати",
+      "hideTitle": "Приховати (якщо syncHud=1 або ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "аудіо",
+        "expected": "очікуваний"
+      },
+      "labels": {
+        "trial": "суд",
+        "lagShow": "Затримка відображення",
+        "lagHide": "Ретард маскаж",
+        "winErr": "виграти err",
+        "endRef": "кінець посилання",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "вхід->відправка p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "вхід->paint p95",
+        "inputPending": "вхід очікує на розгляд",
+        "inputSamples": "вхідні зразки",
+        "touchSamples": "сенсорні зразки",
+        "mouseSamples": "зразки мишей",
+        "keyboardSamples": "зразки клавіатури",
+        "latestMethod": "останній (метод)",
+        "latestModality": "остання модальність",
+        "audioCueMode": "звукові сигнали",
+        "audioCodec": "кодек"
+      },
+      "resetInputProfiler": "скинути вхідний профайлер"
+    },
+    "hud": {
+      "resume": "Продовжити",
+      "pause": "Пауза",
+      "quit": "Вийти",
+      "restart": "Перезапустіть",
+      "spaceToStart": "Місце для початку",
+      "settings": "Налаштування",
+      "enterToAdvance": "Введіть для просування",
+      "trial": "суд",
+      "muteTexture": "Вимкнути фоновий звук"
+    },
+    "status": {
+      "paused": "Призупинено"
+    },
+    "completed": "Виконано",
+    "starting": {
+      "getReady": "Будьте готові..."
+    },
+    "quitModal": {
+      "title": "Вийти з сесії?",
+      "message": "Ваш прогрес не буде збережено.",
+      "confirm": "Вийти",
+      "cancel": "Продовжити",
+      "close": "Закрити"
+    },
+    "controls": {
+      "position": "Позиція",
+      "position2": "поз. 2",
+      "position3": "поз. 3",
+      "position4": "поз. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Аудіо та n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Аудіо",
+      "audio2": "Аудіо 2",
+      "color": "Колір",
+      "arithmetic": "Арифметика",
+      "image": "Форма"
+    },
+    "arithmetic": {
+      "answer": "Відповідь",
+      "clear": "ясно",
+      "hint": "Клавіатура: 0–9 · '-' для знака · '.' для десяткових дробів · Backspace, щоб очистити"
+    },
+    "navigation": {
+      "back": "Назад"
+    },
+    "xp": {
+      "title": "Отримано XP",
+      "base": "База (N-{{level}})",
+      "performance": "Продуктивність",
+      "accuracy": "Точність",
+      "streakBonus": "Бонус серії",
+      "dailyBonus": "Перший день",
+      "badgeBonus": "Значки",
+      "flowBonus": "Бонус за подвійне місце",
+      "confidenceMultiplier": "впевненість",
+      "dailyCapReached": "Досягнуто денного ліміту XP",
+      "levelReached": "Досягнуто рівня {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "Розблоковано нові значки"
+    },
+    "getReady": "Будьте готові...",
+    "layoutEdit": {
+      "done": "Готово",
+      "reset": "Скинути",
+      "instructions": "Перетягніть зони, щоб змінити порядок. Змініть розмір за допомогою ручок.",
+      "title": "Режим редагування",
+      "cancel": "Скасувати",
+      "save": "Замок",
+      "editLayout": "Редагувати макет"
+    },
+    "paused": "Призупинено",
+    "pressEscapeToResume": "Натисніть Escape, щоб продовжити",
+    "settings": {
+      "editLayout": "Редагувати макет",
+      "gridAndButtons": "Сітка та кнопки",
+      "swapPositionAudio": "Поміняти позицію / аудіо",
+      "title": "Налаштування",
+      "quickHint": "Налаштуйте кілька параметрів, не виходячи з гри.",
+      "quickUnavailable": "Для цього режиму ще немає швидких налаштувань."
+    },
+    "pinkNoiseInfo": "Фоновий тон супроводжує кожен стимул. Ви можете налаштувати або вимкнути його в налаштуваннях звуку.",
+    "pinkNoiseDismiss": "Продовжити",
+    "audioMode": "Режим звуку",
+    "cogTask": {
+      "precision": "Точність",
+      "avgRt": "Середнє RT",
+      "avgRtShort": "Середнє RT",
+      "trials": "Випробування",
+      "correct": "Правильно",
+      "errors": "Помилки",
+      "effect": "Ефект",
+      "restart": "Перезапустіть",
+      "home": "додому",
+      "performance": "Продуктивність",
+      "trialDetail": "Деталь випробування",
+      "setDetail": "Набір деталей",
+      "roundDetail": "Кругла деталь",
+      "problemDetail": "Деталі проблеми",
+      "phaseDetail": "Фазова деталь",
+      "feedbackCorrect": "Правильно",
+      "feedbackIncorrect": "Невірно",
+      "feedbackTimeout": "Занадто повільно!",
+      "preparing": "Будьте готові...",
+      "loading": "Завантаження...",
+      "left": "Ліворуч",
+      "right": "правильно",
+      "up": "вгору",
+      "down": "вниз",
+      "congruent": "Конгруентний",
+      "incongruent": "Неконгруентні",
+      "congruencyEffect": "Ефект конгруентності",
+      "maxSpan": "Максимальний проліт",
+      "startingSpan": "Стартовий проміжок",
+      "maxSpanReached": "Досягнуто максимального діапазону",
+      "longestStreak": "Найдовша правильна серія",
+      "series": "Смуга",
+      "avgResponseTime": "Середній час відповіді",
+      "recall": "Відкликати",
+      "expected": "Очікуваний",
+      "submit": "Надіслати",
+      "cancel": "Скасувати",
+      "clear": "ясно",
+      "delete": "DEL",
+      "true": "правда",
+      "false": "Неправда",
+      "target": "Цільова",
+      "nonTarget": "Нецільовий",
+      "distractor": "Дистрактор",
+      "same": "Те саме",
+      "different": "Різні",
+      "identical": "Ідентичний",
+      "mirror": "Дзеркало",
+      "symmetric": "Симетричний",
+      "asymmetric": "Асиметричний",
+      "symShort": "Sym.",
+      "present": "присутній",
+      "absent": "Відсутній",
+      "noTrials": "Немає завершених випробувань.",
+      "noSets": "Немає завершених наборів.",
+      "noRounds": "Немає завершених раундів.",
+      "noProblems": "Проблеми не вирішено.",
+      "noPhases": "Немає завершених етапів.",
+      "sets": "Набори",
+      "rounds": "раунди",
+      "equations": "Рівняння",
+      "sentences": "Речення",
+      "equationAccuracy": "Точність рівняння",
+      "forward": "вперед",
+      "backward": "Назад",
+      "forwardMaxSpan": "Максимальний розмах вперед",
+      "backwardMaxSpan": "Максимальний проміжок назад",
+      "odd": "Непарний",
+      "even": "Навіть",
+      "score": "Оцінка",
+      "easy": "легко",
+      "hard": "важко",
+      "totalTrials": "Тотальні випробування",
+      "totalErrors": "Загальна кількість помилок",
+      "totalErrShort": "Загальна помилка",
+      "hits": "Хіти",
+      "misses": "Промахи",
+      "falseAlarms": "Помилковий Ал.",
+      "correctRejections": "Кор. Rej.",
+      "yes": "так",
+      "no": "немає",
+      "sessionInterrupted": "Сеанс перервано",
+      "reverseOrder": "у зворотному порядку",
+      "normalOrder": "в порядку",
+      "lnsInstruction": "Цифри в порядку зростання, потім літери A-Z",
+      "vs": "проти",
+      "simon": {
+        "simonEffect": "Ефект Саймона",
+        "blue": "Синій",
+        "red": "Червоний",
+        "heroTitle": "Саймон"
+      },
+      "soroban": {
+        "target": "Уявіть це число",
+        "submit": "Надіслати",
+        "rodLabel": "Стрижень {{n}}",
+        "heavenBead": "Небесна намистина (значення 5)",
+        "earthBead": "Земляна намистина (значення 1)",
+        "instrBeadTitle": "Як працюють намистини",
+        "instrBeadDesc": "Кожен стрижень позначає цифру. Верхня намистина (небо) коштує 5. Нижня намистина (земля) коштує 1 кожна. Перемістіть намистини до центральної панелі, щоб активувати їх.",
+        "instrExampleTitle": "Приклад: 7",
+        "instrExampleDesc": "7 = небесна намистина вниз (5) + 2 земні намистини вгору (2). Торкніться або перетягніть намистини, щоб перемістити їх.",
+        "instrGoalTitle": "Ваша мета",
+        "instrGoalDesc": "З'явиться число. Встановіть намистини, щоб це представляти, а потім натисніть «Надіслати». Будьте точними та швидкими!",
+        "startButton": "старт",
+        "settings": "Налаштування",
+        "closeSettings": "Закрити налаштування",
+        "settingsRods": "Кількість стрижнів",
+        "settingsRodsHint": "Встановіть через N-Level у налаштуваннях гри",
+        "settingsTrials": "Випробування за сеанс",
+        "settingsTrialsHint": "Встановіть через Trials у налаштуваннях гри",
+        "settingsRange": "Діапазон номерів"
+      },
+      "stroop": {
+        "pressInkColorButton": "Натисніть кнопку, що відповідає кольору чорнила",
+        "redWord": "RED",
+        "redLabel": "Червоний",
+        "blueWord": "BLUE",
+        "blueLabel": "Синій",
+        "greenWord": "GREEN",
+        "greenLabel": "Зелений",
+        "yellowWord": "ЖОВТИЙ",
+        "yellowLabel": "Жовтий"
+      },
+      "stroopFlex": {
+        "followRule": "правило",
+        "ruleInk": "Колір чорнила",
+        "ruleWord": "Написане слово",
+        "pressMatchingRuleButton": "Натисніть кнопку, що відповідає поточному правилу"
+      },
+      "goNogo": {
+        "goTrials": "Йти на випробування",
+        "nogoTrials": "Заборонені випробування",
+        "hitRate": "Частота попадань (Go)",
+        "faRate": "Частота помилкових тривог (No-Go)",
+        "meanRt": "Середній час реакції",
+        "sensitivity": "чутливість",
+        "press": "Прес",
+        "withhold": "Утримуватися"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Стоп-сигнал RT)",
+        "ssdMean": "Середнє значення SSD (успішні зупинки)",
+        "ssd": "SSD",
+        "goRt": "Йти RT",
+        "successfulInhibition": "Вдале гальмування",
+        "stop": "Стоп",
+        "meanGoRt": "Середній час реакції GO",
+        "ssrtInvalid": "недостатньо даних",
+        "ssrtNegativeNote": "SSRT є негативним (середнє SSD > середнє GO RT) — результат ненадійний із поточним підрахунком проб."
+      },
+      "pvt": {
+        "rtMedian": "Медіана RT",
+        "rtMean": "Середня RT",
+        "fastest": "Найшвидший",
+        "slowest": "Найповільніший",
+        "falseStarts": "Фальстарти",
+        "falseStartsShort": "Фальшива вул.",
+        "lapses": "промахи",
+        "mean": "Середній",
+        "reaction": "Реакція",
+        "wait": "Зачекайте...",
+        "pressStimulus": "Чекайте стимулу...",
+        "pressAnywhere": "Натисніть будь-де, коли з’явиться лічильник",
+        "press": "Натисніть!",
+        "tooEarly": "Занадто рано!",
+        "lapsesLabel": "промахи"
+      },
+      "posner": {
+        "cueingEffect": "Ефект підказки",
+        "validMeanRt": "Середній дійсний RT",
+        "invalidMeanRt": "Середній недійсний RT",
+        "validAccuracy": "Допустима точність",
+        "invalidAccuracy": "Недійсна точність",
+        "validTrials": "Дійсні випробування",
+        "invalidTrials": "Недійсні випробування",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Інв.",
+        "valid": "Дійсний",
+        "invalid": "Недійсний"
+      },
+      "antisaccade": {
+        "cost": "Антисакадна вартість",
+        "proAccuracy": "Професійна точність",
+        "antiAccuracy": "Анти точність",
+        "pro": "Pro",
+        "anti": "Анти",
+        "proRt": "Pro RT",
+        "antiRt": "Анти RT",
+        "proMeanRt": "Середній просаккадний RT",
+        "antiMeanRt": "Середня антисакадна RT",
+        "costLabel": "Вартість",
+        "antiLabel": "Анти"
+      },
+      "axCpt": {
+        "dPrime": "d'-контекст",
+        "axAccuracy": "Точність AX",
+        "bxFa": "BX помилкова тривога",
+        "ayError": "помилка AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY помилка",
+        "cogControl": "Когнітивний контроль",
+        "target": "Цільова",
+        "nonTarget": "Нецільовий"
+      },
+      "ant": {
+        "scores": "Оцінки ANT",
+        "alerting": "Попередження (без підказки − подвійна підказка)",
+        "orienting": "Орієнтування (центр − просторове)",
+        "executive": "Виконавчий (неконгруентний − конгруентний)"
+      },
+      "changeDet": {
+        "kCowan": "Ємність K (Cowan)",
+        "sameShort": "Те саме",
+        "diffShort": "різниця"
+      },
+      "swm": {
+        "withinErrors": "Помилки всередині пошуку",
+        "betweenErrors": "Помилки між пошуковими запитами",
+        "totalErrors": "Загальна кількість помилок",
+        "errorFree": "Без помилок",
+        "foundErrorFree": "Знайдено без помилок!",
+        "errorCount": "{{count}} помилка(и)",
+        "tapsLabel": "Крани"
+      },
+      "taskSwitch": {
+        "switchCost": "Вартість перемикача",
+        "rtRepeat": "Середня RT (повторити)",
+        "rtSwitch": "Середнє RT (перемикач)",
+        "oddEven": "Парний/непарний",
+        "highLow": "Високий / Низький",
+        "title": "Перемикання завдань"
+      },
+      "trailMaking": {
+        "tmtATime": "Час TMT-A",
+        "tmtBTime": "час TMT-B",
+        "executiveCost": "Виконавчі витрати (B − A)",
+        "executiveCostShort": "Адміністративна вартість (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. А",
+        "errB": "Err. Б",
+        "preparingB": "Підготовка TMT-B...",
+        "tmtADone": "TMT-A зроблено!",
+        "totalErrors": "Загальна кількість помилок",
+        "tmtALabel": "TMT-A: Цифри",
+        "tmtBLabel": "TMT-B: Цифри та літери",
+        "next": "Далі",
+        "heroTitle": "Складання стежки",
+        "alternateHint": "Альтернативні цифри та букви: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI мін",
+        "fastestIsi": "Найшвидший ISI"
+      },
+      "wcst": {
+        "referenceCards": "Довідкові картки",
+        "testCard": "Тестова картка",
+        "categories": "Категорії",
+        "categoriesCompleted": "Категорії завершено",
+        "perseverativeErrors": "Персеверативні помилки",
+        "persevShort": "Персев.",
+        "avgRt": "Середнє RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT за кутом",
+        "findMatch": "Знайдіть відповідну форму",
+        "reference": "Еталонна форма",
+        "referenceLabel": "посилання",
+        "candidate": "Кандидат",
+        "distractor": "інше",
+        "mirrorErrors": "Дзеркала",
+        "title": "Ментальна ротація"
+      },
+      "sternberg": {
+        "rtBySize": "RT за встановленим розміром",
+        "title": "Штернберг",
+        "avgRt": "Середнє RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT за встановленим розміром",
+        "title": "Візуальний пошук"
+      },
+      "ospan": {
+        "typeLetters": "Введіть літери по порядку",
+        "trueOrFalse": "Правда чи брехня?",
+        "processingWarning": "Точність рівняння нижче 85% — результати можуть не відображати справжній обсяг робочої пам’яті"
+      },
+      "readingSpan": {
+        "s0": "Сонце сходить на сході.",
+        "s1": "Риби живуть на деревах.",
+        "s2": "Париж — столиця Франції.",
+        "s3": "Трикутник має чотири сторони.",
+        "s4": "Вода кипить при 100 градусах.",
+        "s5": "Кішки - рептилії.",
+        "s6": "Земля обертається навколо Сонця.",
+        "s7": "Шоколад росте на каменях.",
+        "s8": "Рік має дванадцять місяців.",
+        "s9": "Птахи дихають під водою.",
+        "s10": "Молоко біле.",
+        "s11": "Вагони їздять по рейках.",
+        "s12": "Бджоли виробляють мед.",
+        "s13": "Сніг гарячий.",
+        "s14": "Серце качає кров.",
+        "s15": "Каміння плаває на воді.",
+        "s16": "Місяць освітлює ніч.",
+        "s17": "У змій є ноги.",
+        "s18": "Дерево плаває на воді.",
+        "s19": "Вогонь холодний.",
+        "s20": "Людина має п’ять почуттів.",
+        "s21": "У павуків шість ніг.",
+        "s22": "Хліб готують з борошна.",
+        "s23": "Кити - це риби.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "КВІТКА",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "ЛІС",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "РАНОК",
+        "d1": "HEART",
+        "d2": "ТКАНИНА",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "САД",
+        "d6": "ТІНЬ",
+        "d7": "BELL",
+        "d8": "МІСТ",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Розмах читання"
+      },
+      "memorizeSequence": "Запам'ятайте послідовність...",
+      "reproduce": "Відтворити",
+      "span": "Проліт",
+      "size": "Розмір",
+      "fixateCenter": "Сконцентруйтеся на центрі...",
+      "identicalOrMirror": "Ідентичний чи дзеркальний?",
+      "wellInhibited": "Добре загальмований!",
+      "badDirection": "Неправильний напрямок!",
+      "stopMissed": "Зупинка пропущена!",
+      "falseAlarm": "Помилкова тривога!",
+      "pressNow": "Натисніть!",
+      "hitBang": "удар!",
+      "miss": "Міс!",
+      "doNotTouch": "Не чіпай!",
+      "whichDirection": "Який напрямок?",
+      "stopBang": "СТІЙ!",
+      "cueBang": "репліка!",
+      "memorizeLetters": "Запам'ятайте ці букви",
+      "memorizeLetter": "Запам'ятайте цю букву",
+      "memorizeSequenceLetters": "Запам'ятайте послідовність...",
+      "memorizeDigits": "Запам'ятайте цифри...",
+      "memorizeColors": "Запам'ятайте кольори!",
+      "memorizePosition": "Запам'ятайте цю позицію...",
+      "retainWord": "Запам'ятайте це слово",
+      "retainNumber": "Запам'ятайте це число",
+      "addWithPrevious": "Додайте з попереднім",
+      "sentenceTrueOrFalse": "Чи правдиве це речення?",
+      "findRedCircle": "Знайди червоне коло!",
+      "findHiddenToken": "Знайди прихований жетон!",
+      "chooseMatchingCard": "Виберіть відповідну картку",
+      "arrowDirection": "Напрямок центральної стрілки?",
+      "attention": "Увага...",
+      "preparation": "Підготовка...",
+      "recallLettersInOrder": "Згадайте літери {{count}} по порядку",
+      "recallWordsInOrder": "Пригадайте слова {{count}} по порядку",
+      "recallLastLetters": "Згадайте останні літери {{count}}",
+      "typeLastLetters": "Введіть останні {{count}} літери",
+      "recallPositionsInOrder": "Пам'ятайте: натискайте позиції по порядку",
+      "pressEnterToValidate": "Натисніть Enter для підтвердження",
+      "pressAnywhereToContinue": "Натисніть будь-де, щоб продовжити",
+      "temporalPrecision": "Часова точність",
+      "estimationPrecision": "Точність оцінки",
+      "touchStartClockwise": "Торкніться початкової точки, а потім проведіть пальцем за годинниковою стрілкою",
+      "touchAtoB": "Торкніться точки A, а потім проведіть до B",
+      "cue": "репліка",
+      "retainCue": "Запам'ятайте репліку...",
+      "targetOrNot": "Цільовий чи нецільовий?",
+      "whereIsTarget": "Де ціль?",
+      "wasLetterInSet": "Цей лист був у наборі?",
+      "regular": "регулярний",
+      "regularity": "Регулярність",
+      "msDeviation": "мс відхилення",
+      "boxes": "ящики",
+      "found": "{{count}} знайдено",
+      "past": "минуле",
+      "tooSlow": "занадто повільно",
+      "tooFast": "занадто швидко",
+      "timeout": "Занадто повільно!",
+      "answer": "Відповідь",
+      "dontPress": "Не тисніть!",
+      "feedbackWrong": "неправильно!",
+      "level": "Рівень",
+      "wrong": "неправильно",
+      "you": "Ви",
+      "paused": "Пауза",
+      "instructions": "Інструкції",
+      "selectAnswer": "Виберіть відповідь",
+      "tapTheOddOne": "Виберіть непарний",
+      "pal": {
+        "subtitle": "Парні товариші навчаються",
+        "pairsLearned": "Пари вивчені",
+        "maxSetSize": "Максимальний розмір набору",
+        "totalErrors": "Загальна кількість помилок",
+        "round": "Круглий",
+        "pairs": "пари",
+        "meanRt": "Середня RT (правильна)",
+        "studyPhase": "Вивчайте - запам'ятовуйте позиції",
+        "testPhase": "Де була ця форма?",
+        "studying": "навчання",
+        "tapBox": "Торкніться поля, де була показана ця фігура"
+      },
+      "visualLogic": {
+        "easy": "легко",
+        "hard": "важко",
+        "oneRule": "1 правило",
+        "twoRules": "2 правила",
+        "findMissing": "Знайдіть відсутню частину",
+        "maxLevel": "Максимальний рівень",
+        "finalLevel": "Фінальний рівень",
+        "nextMode": "Режим наступного сеансу",
+        "adaptive": "Адаптивний",
+        "fixed": "Виправлено",
+        "spm": "SPM 60",
+        "level": "Рівень",
+        "confirm": "Валідер"
+      },
+      "tetrisMind": {
+        "findPiece": "Який шматок підходить до отвору?",
+        "target": "Цільова"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Упередження переоцінки",
+        "underestimationBias": "Упередження недооцінки",
+        "noBias": "Немає значного упередження",
+        "avgError": "Середня помилка",
+        "overestimations": "Переоцінки",
+        "underestimations": "Занижені оцінки",
+        "avgAbsoluteError": "Середня абсолютна помилка",
+        "avgRelativeError": "Середня відносна помилка",
+        "cv": "Коефіцієнт варіації",
+        "watchDemo": "Слідкуйте за тривалістю",
+        "getReady": "Будьте готові...",
+        "holdToReproduce": "Тримайте, щоб відтворити!",
+        "tooLong": "Занадто довго!",
+        "tooShort": "Занадто короткий!",
+        "target": "Цільова",
+        "demoLabel": "довідка",
+        "yourTurn": "Ваша черга",
+        "watchInstruction": "Дивитися",
+        "holdInstruction": "Тримайте для відтворення",
+        "heroTitle": "Оцінка часу"
+      },
+      "puzzleDetails": "Деталі пазла",
+      "roundDetails": "Круглі деталі",
+      "stageResults": "Підсумки етапу",
+      "recognized": "Визнали",
+      "missed": "Пропущений",
+      "win": "перемога",
+      "lose": "Програти",
+      "winBang": "перемога!",
+      "loseBang": "програти!",
+      "correctBang": "Правильно!",
+      "wrongBang": "неправильно!",
+      "completeBang": "Готово!",
+      "repeatedBang": "Повторюється!",
+      "incompleteBang": "Неповний!",
+      "levelCompleteBang": "Рівень завершено!",
+      "timesUp": "Час минув",
+      "seeResults": "Перегляньте результати",
+      "nextRound": "Наступний раунд",
+      "startBlock": "Стартовий блок",
+      "continue": "Продовжити",
+      "patientChoice": "Вибір пацієнта",
+      "immediateChoice": "Негайний вибір",
+      "immediate": "негайно",
+      "digitSpan": {
+        "heroTitle": "Розряд цифр"
+      },
+      "resume": "Продовжити",
+      "numericalStroop": {
+        "heroTitle": "Числовий Строп"
+      },
+      "lineOrientation": {
+        "heroTitle": "Судження про орієнтацію лінії"
+      },
+      "chain": "ланцюг",
+      "undo": "Скасувати",
+      "vocalProsody": {
+        "heroTitle": "Вокальна просодія"
+      },
+      "letterNumber": {
+        "title": "Літера-номер Seq.",
+        "expectedAnswer": "Очікувана відповідь"
+      },
+      "patternComparison": {
+        "heroTitle": "Порівняння шаблонів"
+      },
+      "speedPack": {
+        "title": "Пакет швидкості",
+        "whenFoldedWhichTouch": "Які квадрати стикаються в складеному стані?"
+      },
+      "dotProbe": {
+        "heroTitle": "Точковий зонд"
+      },
+      "reflex": {
+        "heroTitle": "рефлекс"
+      },
+      "hooperVisual": {
+        "title": "Візуальна організація Хупера",
+        "whatIsThisObject": "Що це за об'єкт?"
+      },
+      "blockDesign": {
+        "heroTitle": "Блоковий дизайн"
+      },
+      "accuracy": "Точність",
+      "avgTime": "Середнє час",
+      "check": "Перевірте",
+      "dualTrace": {
+        "playArea": "Ігрова зона"
+      },
+      "paperFolding": {
+        "title": "Складання паперу",
+        "foldSequenceHolePunch": "Послідовність складання та пробивання отворів",
+        "whichPatternWhenUnfolded": "Який візерунок у розгорнутому вигляді?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Лексичне рішення"
+      },
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxGrid": "Максимальна сітка",
+      "symmetry": "Симетрія",
+      "threshold": "Поріг",
+      "hitRate": "Коефіцієнт попадання",
+      "faRate": "То де ФА",
+      "changeDetection": {
+        "heroTitle": "Виявлення змін"
+      },
+      "syllogisms": {
+        "heroTitle": "Силогізми"
+      },
+      "subitizing": {
+        "title": "Субітизація",
+        "range": "Діапазон"
+      },
+      "jitter": "джиттер",
+      "sentenceCompletion": {
+        "title": "Завершення речення (Cloze)",
+        "highCloze": "Високий закриття",
+        "lowCloze": "Низький закриття"
+      },
+      "grid": "Сітка",
+      "pinballRecall": {
+        "title": "Pinball Recall",
+        "byBounces": "Відскоками",
+        "whereDoesItLand": "Де він приземляється?"
+      },
+      "mean": "Середній",
+      "speedup": "Прискорення",
+      "memorize": "Запам'ятати",
+      "time": "час",
+      "surfaceDevelopment": {
+        "title": "Розробка поверхні",
+        "whichEdgeMatches": "Яке ребро відповідає?"
+      },
+      "crowding": {
+        "heroTitle": "Візуальне скупчення",
+        "spacing": "Інтервал"
+      },
+      "patternRecognition": {
+        "heroTitle": "Розпізнавання образів"
+      },
+      "brixton": {
+        "heroTitle": "Брікстон"
+      },
+      "dualMemo": {
+        "trial": "суд",
+        "position": "Позиція",
+        "audio": "Аудіо"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scene Intruder",
+        "detect": "Виявляти"
+      },
+      "eyesTest": {
+        "heroTitle": "Читання думок в очах"
+      }
+    },
+    "gridlock": {
+      "undone": "Останній хід скасовано.",
+      "resetMessage": "Скидання головоломки.",
+      "hintMessage": "Підказка: слайд {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Вивчіть дошку. Починається через {{seconds}}с.",
+      "challenge": "Виклик",
+      "optimal": "Оптимальний",
+      "moves": "рухається",
+      "piece": "Твір {{id}}",
+      "targetPiece": "Частина {{id}} (мішень - червоний автомобіль)",
+      "challengeClassic": "класичний",
+      "challengePrecision": "Точність",
+      "challengeMemory": "Пам'ять",
+      "challengeTimed": "Часовий",
+      "hint": "Підказка",
+      "reset": "Скинути",
+      "undo": "Скасувати",
+      "nextPuzzle": "Наступна загадка →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Блок 1 Хіти",
+      "block2Hits": "Блок 2 Хіти",
+      "goPositive": "Іти = позитивно",
+      "goNegative": "Go = негативний",
+      "title": "Афективний Go/No-Go",
+      "block1CommissionErrors": "Блок 1 помилки комісії",
+      "block2CommissionErrors": "Блок 2 помилки комісії",
+      "block": "Блокувати",
+      "go": "Іди"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Середня швидкість перемикання",
+      "meanSwitchesfigure": "Середні перемикачі/рис",
+      "totalSwitches": "Всього перемикачів",
+      "title": "Неоднозначні фігури",
+      "meanSwitches": "Середні перемикачі",
+      "switchRate": "Швидкість перемикання",
+      "figures": "Цифри",
+      "totalSwitchesLabel": "Всього комутаторів",
+      "duration": "Тривалість",
+      "switchesCount": "s | Перемикачі:",
+      "switchButton": "Перемикач!"
+    },
+    "analogies": {
+      "verbalCorrect": "Словесно правильно",
+      "timeout": "Час очікування",
+      "title": "аналогії"
+    },
+    "ansComparison": {
+      "weber": "Вебер",
+      "title": "Порівняння ANS",
+      "ratio": "співвідношення",
+      "leftMore": "Залишилося більше",
+      "rightMore": "Точно більше"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Частота помилкових тривог",
+      "grammatical": "Граматичний",
+      "memorizeTheseStrings": "Запам'ятайте ці рядки",
+      "testPhase": "Тестовий етап",
+      "ungrammatical": "Неграматичний",
+      "learning": "навчання",
+      "test": "Тест",
+      "title": "Штучна граматика",
+      "learningPhase": "навчання",
+      "testIntroText": "Тепер ви побачите нові рядки. Вирішіть, чи кожен із них відповідає тим самим правилам, що й рядки, які ви щойно вивчали.",
+      "startTest": "Розпочати тест",
+      "followsRules": "Дотримується правил",
+      "breaksRules": "Порушує правила"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Величина моргання",
+      "title": "Уважне моргання",
+      "blink": "Поморгайте",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1-ша зелена літера?",
+      "secondGreenLetter": "2-а зелена літера?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Вартість захоплення",
+      "singletonPresent": "Одинокий подарунок",
+      "noSingleton": "Без Сінглтона",
+      "title": "Уважне захоплення",
+      "capture": "захоплення",
+      "horizontal": "Горизонтальний",
+      "vertical": "Вертикальний"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Переплетне вікно",
+      "title": "Аудіовізуальна палітурка",
+      "window": "Вікно",
+      "pssLabel": "PSS (точка суб'єктивної одночасності)",
+      "simultaneousOrNot": "Одночасно чи ні?",
+      "simultaneous": "Одночасний",
+      "notSimultaneous": "Не одночасно"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Поріг тривалості",
+      "reference": "довідка",
+      "weberFraction": "Дріб Вебера",
+      "title": "Тривалість слухання",
+      "threshold": "Поріг",
+      "weber": "Вебер",
+      "whichLonger": "Який довший?",
+      "firstLonger": "Спочатку довше",
+      "secondLonger": "На секунду довше"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Скориговані середні насоси",
+      "avgTimeballoon": "Середній час/повітряна куля",
+      "banked": "Банківський!",
+      "lostEarnings": "Втрачений заробіток!",
+      "overallAvgPumps": "Загальні середні насоси",
+      "popRate": "Популярність",
+      "totalEarned": "Всього зароблено",
+      "balloons": "Повітряні кулі",
+      "cashed": "Переведено в готівку",
+      "popped": "Вискочив",
+      "adjPumps": "присл. насоси",
+      "pop": "Поп",
+      "pump": "Насос",
+      "cashIn": "готівка"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Середній час прийняття рішення",
+      "drawBeadsToGatherEvidence": "Намалюйте намистини, щоб зібрати докази",
+      "jtc": "JTC",
+      "title": "Бісер Завдання",
+      "meanDraws": "Середнє малює",
+      "rounds": "раунди",
+      "jtcRate": "Ставка JTC",
+      "meanDrawsToDecision": "Середня нічия до рішення",
+      "jtcRateThreshold": "Ставка JTC (<{{threshold}} розіграші)",
+      "round": "Круглий",
+      "jarDescription": "Банка A: 85% зеленого кольору / Банка B: 85% червоного",
+      "itWasJar": "Це був Джар",
+      "drawABead": "Намалюйте намистину",
+      "jarAGreen": "Банка А Зелена",
+      "jarBRed": "Банка Б Червона"
+    },
+    "binding": {
+      "changedTrials": "Змінені випробування",
+      "sameAccuracy": "Така ж точність",
+      "sameTrials": "Ті самі випробування",
+      "title": "Прив'язка функцій",
+      "binding": "Палітурка",
+      "bindingAccuracyChanged": "Змінити точність",
+      "same": "Те саме",
+      "different": "Різні"
+    },
+    "blockDesign": {
+      "cells": "Клітини",
+      "target": "Цільова",
+      "yourAnswer": "Ваша відповідь",
+      "tapHint": "Торкніться, щоб змінити кольори",
+      "check": "Перевірте"
+    },
+    "brixton": {
+      "adapt": "адаптуватися",
+      "adaptationCost": "Вартість адаптації",
+      "nonswitchTrials": "Випробування без перемикання",
+      "switchTrials": "Переключити випробування"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Запам'ятайте ці букви",
+      "selectThe3Letters": "Виберіть 3 літери",
+      "title": "Задача Брауна-Пітерсона",
+      "forgetting": "Забуття",
+      "sDelay": "S Затримка",
+      "minus3": "Мінус3",
+      "delay": "Затримка"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Якість рішення",
+      "finalPoints": "Підсумкові пункти",
+      "meanBet": "Підла ставка",
+      "winRate": "Коефіцієнт виграшу",
+      "wins": "Перемоги",
+      "title": "Кембриджське азартне завдання",
+      "totalPoints": "Всього балів",
+      "quality": "якість",
+      "rational": "Раціональний",
+      "avgBet": "Середнє ставка",
+      "trial": "суд",
+      "whichColorHidesToken": "Який колір приховує жетон?",
+      "youChose": "Ви вибрали",
+      "howMuchToBet": "Скільки поставити?"
+    },
+    "cancellation": {
+      "false": "Неправда",
+      "target": "Мета:",
+      "total": "Всього",
+      "title": "Завдання на скасування (d2)",
+      "misses": "Промахи",
+      "targetDescription": "д з 2 балами"
+    },
+    "changeBlindness": {
+      "detectionRate": "Швидкість виявлення",
+      "found": "знайдено",
+      "meanDetectionTime": "Середній час виявлення",
+      "title": "Зміна сліпоти",
+      "missed": "Пропущений",
+      "avgTime": "Середнє час",
+      "instructions": "Інструкції"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Найкраща оцінка",
+      "meanScore": "Середній бал",
+      "worstEstimate": "Найгірша оцінка",
+      "inRange": "Гарна оцінка!",
+      "title": "Когнітивна оцінка",
+      "meanScoreLabel": "Середній бал",
+      "inRangeLabel": "В діапазоні",
+      "extreme": "Екстрім",
+      "scoreLabel": "рахунок",
+      "submit": "Надіслати"
+    },
+    "common": {
+      "accuracy": "Точність",
+      "bias": "Упередженість",
+      "falseAlarmRate": "Частота помилкових тривог",
+      "hitRate": "Рейтинг попадань",
+      "hits": "Хіти",
+      "listening": "Слухання...",
+      "meanRt": "Середня RT",
+      "timedOut": "Час минув",
+      "timedOut2": "Час очікування минув",
+      "faRate": "То де ФА",
+      "paused": "Призупинено"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Наскільки ви впевнені?",
+      "rateYourConfidence": "Оцініть свою впевненість",
+      "title": "Калібрування впевненості",
+      "calError": "Помилка калібрування",
+      "confidence": "впевненість"
+    },
+    "consequences": {
+      "best": "Найкращий",
+      "nextRound": "Наступний раунд...",
+      "time": "час",
+      "placeholder": "Введіть наслідок...",
+      "title": "Наслідки",
+      "totalIdeas": "Всього ідей",
+      "avgPerRound": "Середнє за раунд",
+      "rounds": "раунди",
+      "noConsequencesListed": "Наслідки не вказані",
+      "roundProgress": "Раунд {{current}} / {{total}}",
+      "typeAndPressAdd": "Введіть і натисніть Додати"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Ефект підказки",
+      "newConfigRt": "Нова конфігурація RT",
+      "oldConfigRt": "Стара конфігурація RT",
+      "title": "Контекстна підказка",
+      "cueing": "кидання",
+      "oldRt": "Старий RT",
+      "newRt": "Новий RT",
+      "prompt": "Підкажіть",
+      "left": "Ліворуч",
+      "right": "правильно"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Пороговий джиттер",
+      "title": "Контурна інтеграція",
+      "pipeJitter": "| тремтіння"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Пороговий контраст",
+      "title": "Контрастна чутливість",
+      "threshold": "Поріг",
+      "left": "Ліворуч",
+      "right": "правильно"
+    },
+    "cpt": {
+      "nontargets": "Нецільові",
+      "target": "Цільова",
+      "nonTarget": "Нецільовий",
+      "dPrime": "d'",
+      "targetsLetter": "Цільовий лист",
+      "tapForLetterOnly": "Торкніться лише для цільової літери"
+    },
+    "crowding": {
+      "criticalSpacing": "Критичний інтервал",
+      "leftAccuracy": "Ліва точність",
+      "rightAccuracy": "Правильна точність"
+    },
+    "cryptogram": {
+      "hints": "Підказки",
+      "title": "Криптограма",
+      "solved": "Вирішено",
+      "time": "час",
+      "puzzles": "Головоломки",
+      "puzzle": "Головоломка",
+      "hint": "Підказка",
+      "clear": "ясно"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Площа під кривою",
+      "discountRateK": "Ставка дисконту (k)",
+      "impulsivityIndex": "Індекс імпульсивності",
+      "title": "Дисконтування затримки",
+      "aucPatience": "AUC терпіння",
+      "patient": "пацієнт",
+      "kRate": "K Ставка",
+      "impuls": "Імпульс",
+      "indifferencePoints": "Точки байдужості",
+      "whichPrefer": "Якій ви віддаєте перевагу?",
+      "today": "Сьогодні"
+    },
+    "delayedMatching": {
+      "long": "довгий",
+      "longDelay68s": "Довга затримка (6-8 с)",
+      "med": "Мед",
+      "mediumDelay46s": "Середня затримка (4-6 с)",
+      "short": "Короткий",
+      "shortDelay34s": "Коротка затримка (3-4 с)",
+      "title": "Відкладене зіставлення",
+      "delay": "Затримка",
+      "rememberThisPattern": "Запам'ятайте цю схему",
+      "whichWasIt": "Що це було?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Виявлення сповіщень",
+      "attendToTheLeftColumn": "Зверніть увагу на ЛІВУ колонку",
+      "attendedAccuracy": "Догляд за точністю",
+      "ignoreTheRightColumn": "Ігноруйте праву колонку",
+      "right": "RIGHT",
+      "title": "Дихотичне слухання",
+      "attendedAcc": "Доглянута точність",
+      "alertDet": "Виявлення попередження",
+      "alerts": "Оповіщення",
+      "selectLeftColumnWords": "Виберіть слова лівого стовпчика",
+      "submit": "Надіслати",
+      "alertQuestion": "Тривожне запитання"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Забудьте про точність",
+      "forgettingEffect": "Ефект забування",
+      "newRejection": "Нова відмова",
+      "rememberAccuracy": "Пам'ятайте про точність",
+      "title": "Режисерське забування",
+      "remember": "Пам'ятайте",
+      "forget": "Забути",
+      "round": "Круглий",
+      "word": "Слово",
+      "wasThisWordShown": "Було показано це слово?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Оцінка відхилення уваги",
+      "congruentAcc": "Конгруентний Acc",
+      "congruentRt": "Конгруентний RT",
+      "incongruentAcc": "Неконгруентний Acc",
+      "incongruentRt": "Неконгруентний РТ"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Автомобіль чи вантажівка?",
+      "minDisplayReached": "Досягнуто мінімального відображення",
+      "positionAccuracy": "Точність позиції",
+      "thresholdDisplay": "Відображення порогового значення",
+      "vehicleAccuracy": "Точність автомобіля",
+      "whereWasTheDiamond": "Де був діамант?",
+      "title": "Подвійне рішення",
+      "threshold": "Поріг",
+      "bothOk": "Обидва правильні",
+      "vehicle": "транспортний засіб",
+      "position": "Позиція",
+      "car": "автомобіль",
+      "truck": "Вантажівка"
+    },
+    "dsst": {
+      "items": "Предмети",
+      "itemsCompleted": "Пункти виконані",
+      "speedItemsmin": "Швидкість (шт./хв)",
+      "attempts": "Спроби",
+      "itemsPerMin": "Пунктів / хв"
+    },
+    "dualTask": {
+      "dualtaskCost": "Вартість подвійного завдання",
+      "taskANumber": "Завдання А (число)",
+      "taskBSymbol": "Завдання Б (Символ)",
+      "title": "Подвійне завдання",
+      "taskA": "Завдання А",
+      "taskB": "Завдання Б",
+      "number": "Номер",
+      "symbol": "символ",
+      "up": "вгору",
+      "down": "вниз"
+    },
+    "dualTime": {
+      "sessionEnPause": "Сеанс призупинено",
+      "votreEstimationSecondes": "Ваша оцінка (секунди)",
+      "sessionInterrupted": "Сеанс перервано",
+      "target": "Цільова",
+      "estimation": "Оцінка",
+      "avgTime": "Середнє час",
+      "avgError": "Середнє помилка",
+      "trials": "Випробування",
+      "resumeToContinue": "Відновіть, щоб продовжити",
+      "aimFor": "Прагніть до",
+      "second": "друге",
+      "howLongDidYouTake": "Скільки вам знадобилося?"
+    },
+    "dualTrack": {
+      "confirmer": "Підтвердити",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Відновіть, щоб продовжити.",
+      "sessionEnPause": "Сеанс призупинено",
+      "tapezLesCibles": "Натисніть на цілі",
+      "tapezLaCible": "Торкніться цілі",
+      "appuyezConfirmer": "Натисніть Підтвердити",
+      "targetsCountLabel": "{{count}} цілі",
+      "distractorsCountLabel": "{{count}} відволікаючі засоби",
+      "roundsCountLabel": "{{count}} раундів",
+      "calibrationRoundsLabel": "{{count}} раундів калібрування",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = внутрішній рівень складності подорожі.",
+      "tierHelpCurrentWithPhase": "Зараз ви перебуваєте на T{{current}} з {{total}} для цілей {{targets}}. Поточна фаза: {{phase}}. До наступного цільового рівня залишилося {{remaining}}.",
+      "phaseTracking": "Відстеження",
+      "phaseAudio": "Відстеження + аудіо",
+      "phaseColor": "Відстеження + колір",
+      "phaseCombined": "Відстеження + аудіо + колір",
+      "passLetters": "Листи",
+      "passColors": "Кольори",
+      "moveInstruction": "Інструкція з переміщення",
+      "moveConfirmBtn": "Кнопка підтвердження переміщення",
+      "preparingSession": "Підготовка сесії...",
+      "preparing3dScene": "Підготовка 3D сцени...",
+      "startJourney": "Почати подорож",
+      "calibrationDescription": "Перед першим етапом довше калібрування оцінить ваш початковий рівень.",
+      "defaultDescription": "Засвітяться кульки. Слідкуйте за ними, поки вони рухаються, а потім ідентифікуйте їх.",
+      "startCalibration": "Почніть калібрування",
+      "calibrationTitle": "Калібрування",
+      "estimatedStart": "Приблизно почати",
+      "roundsAnalyzed": "Проаналізовано раунди",
+      "willStartAt": "Почнеться о",
+      "targetsCount": "Цілі",
+      "thenProgress": "потім прогрес"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Середня абсолютна похибка",
+      "ratio": "співвідношення",
+      "slope": "Схил",
+      "vierordtSlope": "Схил Вієрордт",
+      "wait": "Зачекайте...",
+      "title": "Тривалість Відтворення",
+      "meanError": "Середня помилка",
+      "meanRatio": "Середнє співвідношення (вироблений/цільовий)",
+      "holdNow": "ТРИМАЙТЕ ЗАРАЗ",
+      "target": "Цільова",
+      "error": "Помилка"
+    },
+    "embeddedFigures": {
+      "fastest": "Найшвидший",
+      "found": "знайдено",
+      "meanDetectionTime": "Середній час виявлення",
+      "slowest": "Найповільніший",
+      "title": "Вбудовані фігури",
+      "missed": "Пропущений",
+      "fastestLabel": "Найшвидший",
+      "findThisShape": "Знайдіть цю форму",
+      "memorizeShape": "Запам'ятайте форму...",
+      "foundIt": "Знайшов!",
+      "giveUp": "здаватися"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Помилкові тривоги",
+      "misses": "Промахи",
+      "title": "Емоційна N-Back",
+      "match": "Матч"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Нейтральний RT",
+      "positiveRt": "Позитивний РТ",
+      "threatRt": "Загроза RT",
+      "title": "Емоційний Струп",
+      "interference": "Втручання",
+      "interferenceThreatNeutral": "Втручання (загроза – нейтраль)"
+    },
+    "eyesTest": {
+      "totalTime": "Загальний час"
+    },
+    "faceName": {
+      "gain": "посилення",
+      "learningImprovement": "Поліпшення навчання",
+      "round1Accuracy": "Точність 1 раунду",
+      "round2Accuracy": "Точність 2 раунду",
+      "whoIsThis": "хто це",
+      "title": "Асоціація Face-Name",
+      "round": "Круглий",
+      "testPhase": "Тестовий етап"
+    },
+    "fauxPas": {
+      "who": "ВООЗ?",
+      "why": "чому",
+      "title": "Розпізнавання помилок",
+      "detection": "виявлення",
+      "scenarios": "Сценарії",
+      "fpFound": "Знайдено помилку",
+      "control": "контроль",
+      "readyToAnswer": "Готовий відповісти",
+      "didSomeoneSay": "Хтось сказав те, чого не повинен був?",
+      "whoSaidIt": "Хто це сказав?",
+      "whyInappropriate": "Чому це було недоречно?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Точність відкликання",
+      "recognitionAccuracy": "Точність розпізнавання",
+      "recallPlaceholder": "Введіть відповідь...",
+      "unlikely": "Малоймовірно",
+      "certain": "Певний",
+      "title": "Відчуття знання",
+      "recall": "Відкликати",
+      "recognition": "визнання",
+      "fokR": "Фок Р",
+      "questions": "Питання",
+      "recalled": "Відкликано",
+      "recognized": "Визнали",
+      "fokSensitivity": "Чутливість ФОК",
+      "submit": "Надіслати",
+      "dontKnow": "не знаю",
+      "fokPrompt": "Ви впізнаєте це?",
+      "selectCorrectAnswer": "Виберіть правильну відповідь",
+      "answer": "Відповідь"
+    },
+    "fingerTapping": {
+      "firstTrial": "Перший суд",
+      "lastTrial": "Останній суд",
+      "sequence": "Послідовність",
+      "speedupT1VsT12": "Прискорення (T1 проти T12)",
+      "title": "Постукування пальцями"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Середній час руху",
+      "avgThroughput": "Середня пропускна здатність",
+      "title": "Фіттс",
+      "throughput": "Пропускна здатність",
+      "tapTarget": "Торкніться виділеної цілі"
+    },
+    "foreperiod": {
+      "early": "Рано",
+      "slope": "Схил",
+      "title": "Тимчасова підготовка",
+      "fpEffectSlope": "Нахил ефекту FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Розвороти",
+      "threshold": "Поріг",
+      "tone1": "Тон 1",
+      "tone2": "Тон 2",
+      "weber": "Вебер",
+      "weberFraction": "Дріб Вебера",
+      "hz": "Гц",
+      "title": "Частотна дискримінація",
+      "thresholdLabel": "Поріг",
+      "hzDiff": "Гц диф",
+      "whichWasHigher": "Що було вище?",
+      "firstHigher": "Спочатку вище",
+      "secondHigher": "Друга вища"
+    },
+    "gabor": {
+      "gaborPatch": "Пластир Габора",
+      "leftAccuracy": "Ліва точність",
+      "leftTrials": "Ліві випробування",
+      "noiseMask": "Шумова маска",
+      "rightAccuracy": "Правильна точність",
+      "rightTrials": "Правильні випробування",
+      "thresholdAngle": "Пороговий кут",
+      "title": "Габор",
+      "threshold": "Поріг",
+      "reversals": "Розвороти",
+      "timedOut": "Час очікування минув",
+      "left": "Ліворуч",
+      "right": "правильно"
+    },
+    "gameOfDice": {
+      "finalPoints": "Підсумкові пункти",
+      "risky": "Ризикований",
+      "riskyChoices": "Ризикований вибір",
+      "safe": "Безпечний",
+      "winRate": "Коефіцієнт виграшу",
+      "wins": "Перемоги",
+      "title": "Гра в кубики Завдання",
+      "totalPoints": "Всього балів",
+      "riskyLabel": "Ризикований",
+      "roll": "рулет",
+      "chooseYourBet": "Виберіть свою ставку",
+      "pickNumbers": "Виберіть свої номери"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Розрив чи відсутність розриву?",
+      "gapThreshold": "Поріг розриву",
+      "title": "Виявлення тиші",
+      "noGap": "Без розриву"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Де був погляд?",
+      "direct": "Прямий",
+      "left": "Ліворуч",
+      "right": "правильно",
+      "title": "Напрямок погляду",
+      "dPrimeDirectGaze": "D Прямий погляд"
+    },
+    "hayling": {
+      "part1Initiation": "Частина 1 (Посвячення)",
+      "part2": "Частина 2",
+      "part2Suppression": "Частина 2 (Придушення)",
+      "suppressionCost": "Вартість придушення",
+      "title": "Хейлінг",
+      "part1": "Частина 1",
+      "part2Label": "Частина 2",
+      "suppression": "Придушення",
+      "obvious": "Очевидний",
+      "obviousPicksPart2": "Очевидні вибірки (частина 2)",
+      "chooseUnrelated": "Виберіть незв’язане слово",
+      "completelyUnrelated": "Зовсім не пов'язані",
+      "doNotPickObvious": "НЕ вибирайте очевидне слово!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Перехід до наступного етапу...",
+      "stageComplete": "Етап завершено!",
+      "title": "IED Set Shift",
+      "stages": "Етапи",
+      "edsCost": "Вартість ЕЦП",
+      "stage": "етап",
+      "correctNeeded": "Для просування потрібно виправити"
+    },
+    "informationSampling": {
+      "cost": "Вартість",
+      "free": "безкоштовно",
+      "meanTilesCost": "Середня плитка (вартість)",
+      "meanTilesFree": "Середні плитки (безкоштовно)",
+      "totalCost": "Загальна вартість",
+      "title": "Вибірка інформації",
+      "tiles": "Плитка",
+      "tapToReveal": "Торкніться, щоб відкрити"
+    },
+    "inspectionTime": {
+      "final": "Остаточний",
+      "finalDisplayTime": "Остаточний час відображення",
+      "minCorrectIt": "Мінімальний правильний ІТ",
+      "threshold": "Поріг",
+      "title": "Час перевірки",
+      "thresholdLabel": "Поріг",
+      "minIt": "Мін IT"
+    },
+    "iowaGambling": {
+      "balance": "Баланс:",
+      "chooseADeck": "Виберіть колоду",
+      "deckADraws": "Колода А нічия",
+      "deckBDraws": "Колода Б нічия",
+      "deckCDraws": "Колода С нічия",
+      "deckDDraws": "Колода D нічия",
+      "first40Advantageous": "Перші 40 вигідні",
+      "last40Advantageous": "Останні 40 вигідні",
+      "learn": "вчитися",
+      "learningIndex": "Індекс навчання",
+      "title": "Азартні ігри в Айові",
+      "advantageousPct": "Вигідний %",
+      "earnings": "Заробіток",
+      "last40": "Останні 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Зсув калібрування",
+      "meanJol": "Середній JOL",
+      "nowTestYourRecall": "Тепер перевірте своє запам'ятовування",
+      "studyComplete": "Дослідження завершено",
+      "whatWasPairedWith": "Що було в парі з…?",
+      "title": "Судження про навчання",
+      "recallAccuracy": "Точність відкликання",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Точність JOL (гама)",
+      "howLikelyRemember": "Наскільки ймовірно, що ви запам'ятаєте?",
+      "hiddenAnswer": "Прихована відповідь"
+    },
+    "judgmentOfRecency": {
+      "close": "Закрити",
+      "closeGap13": "Закрити розрив (1-3)",
+      "far": "далеко",
+      "farGap9": "Далекий розрив (9+)",
+      "mediumGap48": "Середній розрив (4-8)",
+      "title": "Судження недавнього часу",
+      "medium": "Середній",
+      "studyPhaseMemorizeOrder": "Етап вивчення — запам’ятайте порядок",
+      "whichMoreRecently": "Які з'явилися зовсім недавно?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Середній RT (не слова)",
+      "meanRtWords": "Середній RT (слова)",
+      "nonwordsAccuracy": "Неслівна точність",
+      "wordsAccuracy": "Точність слів",
+      "word": "Слово",
+      "nonword": "Неслово"
+    },
+    "maze": {
+      "duration": "Тривалість",
+      "optimalSteps": "Оптимальні кроки",
+      "pathEfficiency": "Ефективність шляху",
+      "totalSteps": "Загальна кількість кроків",
+      "wallHits": "Настінні хіти",
+      "title": "Лабіринт",
+      "completed": "Виконано",
+      "efficiency": "Ефективність",
+      "wallHitsLabel": "Настінні хіти",
+      "steps": "Кроки"
+    },
+    "memobox": {
+      "easy": "легко",
+      "easy2Boxes": "Легко (2 коробки)",
+      "hard": "важко",
+      "hard4Boxes": "Жорсткий (4 коробки)",
+      "medium3Boxes": "Середній (3 коробки)",
+      "title": "Memobox",
+      "rounds": "раунди",
+      "medium": "Середній",
+      "watchMovements": "Слідкуйте за рухами...",
+      "howManyBalls": "Скільки кульок у кожній коробці?",
+      "submit": "Надіслати",
+      "roundOf": "Раунд {{current}} з {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Що таке поперечний переріз?",
+      "title": "Ментальне різання"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Старий, схожий чи новий?",
+      "patternSeparation": "Поділ візерунків",
+      "sep": "вер.",
+      "old": "Старий",
+      "similar": "Схожі",
+      "new": "новий",
+      "ldi": "LDI",
+      "title": "Мнемонічне розрізнення",
+      "hitRateOldDetected": "Частота звернень (виявлено старі)",
+      "lureDiscrimination": "Розпізнавання приманки (LDI)",
+      "memorize": "Запам'ятати",
+      "testPhase": "Тестовий етап"
+    },
+    "multiArmedBandit": {
+      "earnings": "Прибуток:",
+      "pickMachine": "Виберіть машину",
+      "title": "Багаторукий бандит",
+      "totalReward": "Загальна винагорода",
+      "optimal": "Оптимальний",
+      "regret": "жаль",
+      "exploit": "Експлойт",
+      "machine": "машина",
+      "armsExplored": "Озброєння досліджено"
+    },
+    "navon": {
+      "globalBigLetter": "Глобально (велика літера)",
+      "localSmallLetter": "Місцевий (маленька літера)",
+      "title": "Навон",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Яка ВЕЛИКА буква?",
+      "whatSmallLetter": "Яка МАЛЕНЬКА буква?"
+    },
+    "negativePriming": {
+      "controlRt": "Контроль RT",
+      "nameTheRedShape": "Назвіть червону фігуру",
+      "negativePrimingRt": "Негативний праймінг RT",
+      "positivePrimingRt": "Позитивна праймінг RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "Ефект NP",
+      "title": "Негативне грунтування",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Зміщення оцінки",
+      "linearityRsup2": "Лінійність (R&sup2;)",
+      "meanAbsoluteError": "Середня абсолютна похибка",
+      "tapTheLineToPlaceTheNumber": "Торкніться лінії, щоб розмістити число",
+      "title": "Числовий рядок",
+      "meanError": "Середня помилка",
+      "yourEstimate": "Ваша оцінка",
+      "correct": "Правильно"
+    },
+    "oddOneOut": {
+      "colorTrials": "Випробування кольорів",
+      "shapeTrials": "Випробування на форму",
+      "shape": "Форма",
+      "color": "Колір",
+      "timeout": "Час очікування",
+      "shapeDiffAccuracy": "Різниця форми точність",
+      "colorDiffAccuracy": "Різниця кольорів точність",
+      "shapeDiffAvgRt": "Різниця форми середнє RT",
+      "colorDiffAvgRt": "Різниця кольорів середнє RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "в який бік?",
+      "thresholdAngle": "Пороговий кут",
+      "title": "Дискримінація за орієнтацією",
+      "threshold": "Поріг",
+      "counterCw": "CCW",
+      "clockwise": "За годинниковою стрілкою"
+    },
+    "patternComparison": {
+      "differentTrials": "Різні випробування",
+      "sameTrials": "Ті самі випробування",
+      "same": "Те саме",
+      "different": "Різні"
+    },
+    "patternRecognition": {
+      "newPatterns": "Нові візерунки",
+      "oldPatterns": "Старі візерунки",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Уважно вивчіть викрійки",
+      "memorize": "Запам'ятати ({{current}}/{{total}})",
+      "getReady": "Будьте готові...",
+      "testPhaseStarting": "Початок тестової фази..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Точно Правильно",
+      "meanAngularError": "Середня кутова похибка",
+      "withinTolerance": "У межах толерантності",
+      "title": "Беручи перспективу",
+      "avgErr": "Середнє помилка",
+      "youAreAt": "Ви в",
+      "facing": "Облицювання",
+      "pointTo": "Вкажіть на"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "частота Поріг",
+      "seq1": "Послідовність 1",
+      "seq2": "Послідовність 2",
+      "title": "Розрізнення фонем",
+      "thresh": "Обмолотити",
+      "sameOrDifferent": "Однакові чи різні?",
+      "same": "Те саме",
+      "different": "Різні"
+    },
+    "predictionMotion": {
+      "biasLate": "Упередженість (+ = пізно)",
+      "meanAbsoluteError": "Середня абсолютна похибка",
+      "precisionSd": "Точність (SD)",
+      "title": "Прогноз руху",
+      "absError": "Абс. помилка",
+      "precision": "Точність",
+      "responded": "Відповів",
+      "tapWhenReachesTarget": "ТОП, коли він досягає мети"
+    },
+    "promem": {
+      "ongoingAccuracy": "Постійна точність",
+      "ongoingRt": "Триває RT",
+      "pmHitRate": "Коефіцієнт попадання PM",
+      "pmRt": "PM RT",
+      "pmTargets": "PM цілі",
+      "title": "Проспективна пам'ять",
+      "ongoing": "Триває",
+      "pmHits": "PM Хіти",
+      "pmMisses": "PM Misses",
+      "living": "Життя",
+      "nonLiving": "Неживий",
+      "redWordInstruction": "Червоне слово = преса"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Помилки дистрактора",
+      "literalErrorRate": "Рівень літеральних помилок",
+      "literalErrors": "Літеральні помилки",
+      "title": "Прислів'я Тлумачення",
+      "literal": "Буквальний",
+      "litRate": "Літ. Оцінка",
+      "whatDoesThisMean": "Що це означає?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Будьте готові слідувати",
+      "meanTimeOnTarget": "Середній час досягнення мети",
+      "meanTrackingError": "Середня помилка відстеження",
+      "placeYourFingerOnTheScreen": "Покладіть палець на екран",
+      "title": "Відстеження погоні",
+      "timeOnTarget": "Час до мети",
+      "error": "Помилка",
+      "onTarget": "В ціль",
+      "avgError": "Середнє помилка",
+      "improve": "Поліпшити",
+      "improvementT1VsT": "Покращення T1 проти T",
+      "errorLabel": "Помилка",
+      "followGreenTarget": "Дотримуйтесь зеленої мішені"
+    },
+    "rapidNaming": {
+      "roundComplete": "Круглий завершений",
+      "totalErrors": "Загальна кількість помилок",
+      "title": "Швидке іменування",
+      "avgSpeed": "Середнє швидкість",
+      "totalTime": "Загальний час",
+      "round": "Круглий",
+      "getReady": "Готуйтеся!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Середній час вирішення",
+      "solved": "Вирішено",
+      "wrong": "неправильно",
+      "placeholder": "Ваша відповідь...",
+      "title": "Головоломки ребуси",
+      "puzzles": "Головоломки",
+      "timeout": "Час очікування",
+      "submit": "Надіслати",
+      "answer": "Відповідь"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Середній час вирішення",
+      "solved": "Вирішено",
+      "placeholder": "Ваша відповідь...",
+      "title": "Віддалені партнери",
+      "timeout": "Час очікування",
+      "submit": "Надіслати",
+      "answer": "Відповідь"
+    },
+    "reversalLearning": {
+      "adapt": "адаптуватися",
+      "loseshiftRate": "Коефіцієнт втрати зміни",
+      "score": "Оцінка:",
+      "winstayRate": "Коефіцієнт виграш-залишення",
+      "title": "Реверсивне навчання",
+      "rewards": "Нагороди",
+      "reversals": "Розвороти",
+      "persev": "Персев",
+      "avgTrialsToCriterion": "Середнє випробувань на критерій",
+      "pickACard": "Виберіть картку"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Полічіть назад до 7",
+      "reproduceThePatternFromMemory": "Відтворити візерунок по пам’яті",
+      "title": "Складна фігура Рея",
+      "copy": "Копія",
+      "recall": "Відкликати",
+      "retention": "Збереження",
+      "trial": "суд",
+      "target": "Цільова",
+      "yourCopy": "Ваша копія",
+      "submit": "Надіслати"
+    },
+    "rhythm": {
+      "avgTimingError": "Середня помилка часу",
+      "bestTrialError": "Найкраща пробна помилка",
+      "correctTrials": "Правильні випробування",
+      "worstTrialError": "Найгірша пробна помилка",
+      "watchRhythm": "Слідкуйте за ритмом",
+      "getReady": "Будьте готові...",
+      "tapTheRhythm": "Натискайте на ритм!",
+      "tooFarOff": "Надто далеко!",
+      "tapToReproduce": "Торкніться, щоб відтворити",
+      "beats": "{{count}} ударів",
+      "bestTrial": "Найкраще випробування",
+      "worstTrial": "Найгірший суд",
+      "title": "Ритм",
+      "msErr": "помилка мс"
+    },
+    "routePlanning": {
+      "time": "час",
+      "title": "Планування маршруту",
+      "levels": "Рівні",
+      "completed": "Виконано",
+      "avgMoves": "Середнє рухається",
+      "clear": "ясно",
+      "submit": "Надіслати",
+      "instructions": "Інструкції"
+    },
+    "rvp": {
+      "detect357246468": "Виявлення: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Цільові послідовності",
+      "fa": "FA",
+      "hitRate": "Коефіцієнт попадання",
+      "misses": "Промахи",
+      "sequences": "Послідовності"
+    },
+    "sart": {
+      "commissionErrors": "Помилки комісії",
+      "omissionErrors": "Помилки пропусків",
+      "tapAllDigits": "Торкніться всіх цифр, крім 3",
+      "except3": "Крім3"
+    },
+    "sceneCrasher": {
+      "adds": "Додає",
+      "studyTheScene": "Вивчіть сцену",
+      "swaps": "Свопи",
+      "tapTheNewchangedObject": "Торкніться нового/зміненого об’єкта"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Неправдиві речення",
+      "trueSentences": "Справжні речення",
+      "byCategory": "За категорією",
+      "title": "Перевірка речення",
+      "trueRt": "Справжній RT",
+      "true": "правда",
+      "false": "Неправда",
+      "pressKey": "Прес"
+    },
+    "soundSweeps": {
+      "down": "вниз",
+      "downAccuracy": "Точність вниз",
+      "durationThreshold": "Поріг тривалості",
+      "up": "вгору",
+      "upAccuracy": "Підвищена точність",
+      "title": "Звукові розгортки",
+      "threshold": "Поріг",
+      "upOrDown": "Вгору чи вниз?"
+    },
+    "sourceMemory": {
+      "color": "Колір",
+      "colorRecall": "Відкликання кольору",
+      "frame": "рамка",
+      "frameRecall": "Відкликання кадру",
+      "getReadyForTheTest": "Готуйтеся до тесту!",
+      "itemRecognition": "Розпізнавання предметів",
+      "positionRecall": "Відкликання позиції",
+      "sourceAccuracy": "Точність джерела",
+      "title": "Пам'ять джерела",
+      "source": "Джерело",
+      "position": "Позиція",
+      "word": "Слово",
+      "wasThisWordShown": "Було показано це слово?",
+      "bottom": "Дно",
+      "blue": "Синій",
+      "orange": "Помаранчевий",
+      "circle": "Коло",
+      "square": "Квадратний"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Поріг шуму",
+      "title": "Мова в шумі",
+      "noise": "Шум",
+      "whichWordWasIt": "Яке це було слово?"
+    },
+    "srtt": {
+      "learningEffect": "Ефект навчання",
+      "learning": "навчання",
+      "block": "Блокувати"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Рівень шансу",
+      "learningDetected": "Виявлено навчання",
+      "testPhase": "Тестовий етап",
+      "whichPairLooksMoreFamiliar": "Яка пара виглядає більш знайомою?",
+      "title": "Статистичне навчання",
+      "learning": "навчання",
+      "watchTheShapes": "Слідкуйте за формами"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Ефект упередження віри",
+      "conclusion": "Висновок",
+      "premise1": "Приміщення 1",
+      "premise2": "Приміщення 2",
+      "logicalValidityQuestion": "Це логічно справедливо?",
+      "valid": "Дійсний",
+      "invalid": "Недійсний"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Відсутня точність",
+      "presentAccuracy": "Присутня точність",
+      "title": "Пошук символів",
+      "present": "присутній",
+      "absent": "Відсутній",
+      "targets": "Цілі",
+      "searchGroup": "Пошукова група"
+    },
+    "syncContinuation": {
+      "async": "асинхронний",
+      "asynchrony": "Асинхронність",
+      "drift": "Дрейф",
+      "cv": "CV",
+      "title": "Синхронізація-Продовження",
+      "meanCv": "Середнє резюме",
+      "tempos": "Tempos",
+      "tempo": "Темп",
+      "ioi": "Ioi",
+      "getReady": "Будьте готові...",
+      "nextTempo": "Наступний темп..."
+    },
+    "taskJuggling": {
+      "correctResets": "Правильні скидання",
+      "duration": "Тривалість",
+      "missedCounters": "Пропущені лічильники",
+      "prematureResets": "Передчасне скидання",
+      "totalEvents": "Загальна кількість подій",
+      "tooEarly": "Занадто рано!",
+      "missed": "Пропустив!",
+      "title": "Завдання Жонглювання",
+      "premature": "Передчасно",
+      "counter": "Лічильник",
+      "tapCounterInstruction": "Торкайтеся кожного лічильника, коли він досягає порогового значення. Не допускайте переливу!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Точка бісекції (PSE)",
+      "curveSteepness": "Крутизна кривої",
+      "idealMidpoint": "Ідеальна середина",
+      "pse": "PSE",
+      "title": "Скронева бісекція",
+      "steepness": "Крутизна",
+      "shortOrLong": "Короткий чи довгий?",
+      "trainingPhase": "Фаза навчання",
+      "short": "Короткий",
+      "long": "довгий"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Ширина градієнта",
+      "rememberThisDuration": "Запам'ятайте цю тривалість",
+      "width": "Ширина",
+      "standard": "СТАНДАРТ",
+      "title": "Тимчасове узагальнення",
+      "hitRate": "Коефіцієнт попадання",
+      "faRate": "То де ФА",
+      "hitRateDetectStandard": "Частота звернень (виявлення стандарту)",
+      "sameDuration": "Така сама тривалість?",
+      "trainingPhase": "Фаза навчання",
+      "same": "Те саме",
+      "different": "Різні"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Порогове значення SOA",
+      "title": "Дискримінація текстури",
+      "threshold": "Поріг"
+    },
+    "timePromem": {
+      "avgTimingError": "Середня помилка часу",
+      "clockChecks": "Перевірки годинника",
+      "ongoingAccuracy": "Постійна точність",
+      "ongoingTrials": "Тривають судові процеси",
+      "totalPmPresses": "Загальна кількість пресів PM",
+      "pmAccuracy": "Точність PM",
+      "pmMisses": "PM пропускає",
+      "title": "Перспектива часу",
+      "ongoing": "Триває",
+      "pmHitsLabel": "PM хіти",
+      "timingErr": "Помилка часу",
+      "pmHitsExpected": "PM Hits / Очікується",
+      "pmPresses": "Преси ПМ",
+      "checkClock": "Перевірити годинник",
+      "thirtySecMark": "Марк 30-х років"
+    },
+    "toj": {
+      "meanResponseTime": "Середній час відгуку",
+      "temporalResolution": "Тимчасова роздільна здатність",
+      "title": "Часовий суд",
+      "threshold": "Поріг",
+      "whichCameFirst": "Що було першим?",
+      "leftFirst": "Перший ліворуч",
+      "rightFirst": "Перше право"
+    },
+    "tower": {
+      "budget": "Бюджет",
+      "challenge": "Виклик",
+      "challengeClassic": "класичний",
+      "challengeExpert": "Експерт",
+      "challengeMemory": "Пам'ять",
+      "challengePrecision": "Точність",
+      "dragDiscAriaLabel": "Перетягніть верхній диск із кілочка {{peg}}",
+      "goal": "Мета",
+      "goalHiddenStatus": "Мета прихована. Використовуйте Reveal, щоб коротко показати це.",
+      "goalRevealedMessage": "Гол відкритий на 3 секунди.",
+      "hint": "Підказка",
+      "hintDescription": "Покажіть найкращий наступний хід",
+      "hintMessage": "Підказка: перемістіть верхній диск від кілочка {{fromPeg}} до кілочка {{toPeg}}.",
+      "hiddenGoalDescription": "Під час гри ворота приховані. Використовуйте Reveal, коли вам потрібно короткочасне оновлення.",
+      "hiddenGoalTitle": "Проблема пам'яті",
+      "invalid": "Недійсний",
+      "moves": "рухається",
+      "optimal": "Оптимальний",
+      "pegFullMessage": "Той кілок повний.",
+      "previewMemoryCountdown": "Запам'ятайте ціль. Починається через {{seconds}}с.",
+      "previewPlanCountdown": "Сплануйте рішення {{moves}}-move. Починається через {{seconds}}с.",
+      "reset": "Скинути",
+      "resetDescription": "Перезапустіть цю головоломку",
+      "resetMessage": "Скидання головоломки.",
+      "reveal": "Розкрити",
+      "revealDescription": "Розкрийте приховану мету",
+      "statusOptimalSolve": "Оптимальне рішення. Оцінка {{score}}.",
+      "statusSolvedScore": "Вирішено за {{moves}} ходів (+{{extraMoves}}). Оцінка {{score}}.",
+      "undo": "Скасувати",
+      "undoDescription": "Зворотний останній хід",
+      "undoneMessage": "Останній хід скасовано.",
+      "yourPegs": "Ваші кілочки"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Правильні поставки",
+      "trainsLost": "Загублені поїзди",
+      "wrongStation": "Неправильна станція",
+      "title": "Поїзд думок",
+      "trains": "Потяги",
+      "missed": "Пропущений",
+      "scoreLabel": "Оцінка",
+      "instructions": "Інструкції"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Середня кількість використаних запитань",
+      "title": "Двадцять запитань",
+      "avgQuestions": "Середнє запитання",
+      "rounds": "раунди",
+      "efficiency": "Ефективність",
+      "avgQuestionsCorrectOnly": "Середнє запитання (лише правильні)",
+      "questionsLabel": "Питання",
+      "remaining": "Залишилося",
+      "readyToGuess": "Я готовий вгадати!",
+      "tapTheTarget": "Торкніться предмета, який ви вважаєте цільовим!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Корисне поле зору",
+      "visualNoiseMask": "Візуальна шумова маска",
+      "whatWasInTheCenter": "Що було в центрі?",
+      "whereWasTheTarget": "Де була ціль?",
+      "avgThreshold": "Середнє поріг",
+      "speed": "швидкість",
+      "accuracy": "Точність",
+      "central": "Центральний",
+      "peripheral": "периферійний",
+      "overall": "Загалом",
+      "block": "Блокувати",
+      "trials": "Випробування",
+      "start": "старт",
+      "focus": "Фокус",
+      "threshold": "Поріг",
+      "stimulus": "стимул",
+      "respondFromMemory": "Відповідайте по пам'яті",
+      "truck": "Вантажівка",
+      "choosePeripheralLocation": "Виберіть периферійне розташування",
+      "currentBlock": "Заблокувати {{n}}",
+      "exposure": "Експозиція"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Слова, що починаються з {{letter}}",
+      "title": "Вербальна плавність",
+      "totalWords": "Всього слів",
+      "duplicates": "Дублікати",
+      "letter": "лист",
+      "round": "Круглий",
+      "roundComplete": "Круглий завершений",
+      "nextRound": "Наступний раунд",
+      "middotRound": "· Круглий"
+    },
+    "vernierAcuity": {
+      "whichSide": "з якого боку?",
+      "title": "Ноніус гостроти",
+      "leftOffset": "Зміщення вліво",
+      "rightOffset": "Праве зміщення",
+      "offset": "Зсув"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Оптимальна стратегія",
+      "correct": "Правильно!",
+      "wrong": "неправильно",
+      "title": "Прогноз погоди",
+      "optimal": "Оптимальний",
+      "learningCurve": "Крива навчання",
+      "predictTheWeather": "Передбачити погоду",
+      "rain": "Дощ"
+    },
+    "wordChain": {
+      "avgResponseTime": "Середній час відповіді",
+      "chain": "ланцюг",
+      "longestChain": "Найдовший ланцюг",
+      "totalCorrect": "Цілком правильно",
+      "totalWords": "Всього слів",
+      "words": "Слова",
+      "title": "Ланцюжок слів",
+      "longest": "Найдовший",
+      "avgRt": "Середнє RT",
+      "endsWith": "закінчується на",
+      "chainLabel": "ланцюг",
+      "bestLabel": "Найкращий"
+    },
+    "wordFlow": {
+      "avgWordLength": "Середня довжина слова",
+      "correct": "Правильно",
+      "invalidWords": "Недійсні слова",
+      "totalWordsSelected": "Загальна кількість вибраних слів",
+      "validWords": "Дійсні слова",
+      "wordsPerMinute": "Слів за хвилину",
+      "wrong": "неправильно",
+      "seeResults": "Перегляньте результати",
+      "nextRound": "Наступний раунд ({{current}}/{{total}})",
+      "title": "Вербальна плавність",
+      "validWordsLabel": "Дійсні слова",
+      "wordsPerMinLabel": "Слова/хв",
+      "avgLengthLabel": "Середнє довжина",
+      "invalidLabel": "Недійсний",
+      "round": "Круглий",
+      "selectWordsBelongTo": "Виберіть слова, до яких належать",
+      "selected": "Вибране"
+    },
+    "wordList": {
+      "avgRtCorrect": "Середнє RT (правильно)",
+      "primacyEffect": "Ефект первинності",
+      "recencyEffect": "Ефект недавнього часу",
+      "studyPhaseRememberEachWord": "Фаза вивчення — запам’ятайте кожне слово",
+      "wordsRecalled": "Згадані слова",
+      "title": "Список слів",
+      "serialPositionCurve": "Серійна крива позиції",
+      "wasWordInList": "Це слово було в списку?",
+      "seenBefore": "Бачив раніше",
+      "newWord": "новий"
+    },
+    "speedSort": {
+      "switchAccuracy": "Точність перемикання",
+      "switchTrials": "Переключити випробування",
+      "sortByColor": "Сортувати за КОЛЬОРОМ",
+      "sortByShape": "Сортувати за ФОРМОЮ",
+      "sortByNumber": "Сортувати за NUMBER",
+      "ruleChanged": "Правило змінено!",
+      "binRed": "Червоний",
+      "binBlue": "Синій",
+      "binGreen": "Зелений",
+      "binYellow": "Жовтий",
+      "binCircle": "Коло",
+      "binSquare": "Квадратний",
+      "binTriangle": "Трикутник",
+      "binStar": "зірка",
+      "title": "Швидкість сортування",
+      "switch": "Перемикачі"
+    },
+    "reflex": {
+      "target": "Цільова",
+      "lure": "Приманка",
+      "tooSlow": "Занадто повільно!",
+      "wrongTarget": "Неправильна ціль!",
+      "tapTargets": "Натисніть на зелені кола!",
+      "hits": "Хіти",
+      "misses": "Промахи",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Запам'ятайте поточну суму...",
+      "title": "Ланцюговий розрахунок",
+      "stepChains": "{{len}}-крокові ланцюжки",
+      "start": "старт",
+      "step": "Крок",
+      "whatIsTheResult": "Який результат?"
+    },
+    "alternateUses": {
+      "placeholder": "Введіть використання...",
+      "title": "Альтернативне використання",
+      "totalUses": "Загальне використання",
+      "perObject": "За об'єкт",
+      "rounds": "раунди",
+      "bestObject": "Найкращий об'єкт",
+      "bestCount": "Найкращий рахунок",
+      "noUsesSubmitted": "Немає поданих варіантів використання",
+      "timesUp": "Час минув!",
+      "nextObject": "Наступний об'єкт ({{object}})",
+      "listCreativeUses": "Перелічіть творче використання цього об’єкта"
+    },
+    "anagram": {
+      "placeholder": "Введіть слово...",
+      "title": "Анаграма",
+      "avgSolve": "Середнє вирішити",
+      "letterWords": "{{len}}-буквені слова",
+      "submit": "Надіслати"
+    },
+    "facialEmotion": {
+      "happy": "Щаслива",
+      "sad": "Сумно",
+      "angry": "Злий",
+      "fearful": "Страшний",
+      "disgusted": "Огидно",
+      "surprised": "Здивований",
+      "lc": "LC",
+      "title": "Розпізнавання емоцій на обличчі",
+      "topConfusions": "Головні плутанини"
+    },
+    "numberSeries": {
+      "easy": "легко",
+      "hard": "важко"
+    },
+    "chainRecall": {
+      "round": "Круглий",
+      "title": "Відкликання ланцюга",
+      "chain": "ланцюг",
+      "placeholder": "Заповнювач"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Емоційний Go/No-Go",
+      "block1CommissionErrors": "Блок 1 помилки комісії",
+      "block2CommissionErrors": "Блок 2 помилки комісії",
+      "goHappy": "Йти = щасливий",
+      "goSad": "Йти = Сумно",
+      "block": "Блокувати",
+      "go": "Іди"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Ефект Струпа",
+      "title": "Кольоровий пік",
+      "congShort": "Конг.",
+      "incongShort": "Інконг.",
+      "congruentAccuracy": "Конгруентна точність",
+      "incongruentAccuracy": "Неконгруентна точність"
+    },
+    "mirror": {
+      "avgCorrectCells": "Правильні клітинки (середнє)",
+      "symmetryType": "Тип симетрії",
+      "title": "Дзеркало"
+    },
+    "rhythmTap": {
+      "correctTrials": "Правильні випробування",
+      "avgRhythmScore": "Середній бал ритму",
+      "bestTrialScore": "Найкращий результат випробування",
+      "worstTrialScore": "Найгірший результат випробування",
+      "level": "Рівень",
+      "rhythm": "Ритм",
+      "bestTrial": "Найкраще випробування",
+      "worstTrial": "Найгірший суд"
+    },
+    "vocalProsody": {
+      "questioning": "Розпитування"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Помножити",
+      "add": "додати",
+      "subtract": "Відняти",
+      "title": "Арифметична швидкість",
+      "score": "Оцінка",
+      "solved": "Вирішено",
+      "missed": "Пропущений"
+    },
+    "puzzle": {
+      "avgSolveTime": "Середній час вирішення",
+      "totalMoves": "Загальна кількість ходів",
+      "totalErrors": "Загальна кількість помилок",
+      "gridSize": "Розмір сітки",
+      "maxGridReached": "Досягнуто максимальної сітки",
+      "maxLevelReached": "Досягнуто максимального рівня",
+      "maxNodesReached": "Досягнуто максимальну кількість вузлів",
+      "puzzleDetails": "Деталі пазла",
+      "roundDetails": "Круглі деталі",
+      "solved": "Вирішено!",
+      "undo": "Скасувати",
+      "reset": "Скинути",
+      "check": "Перевірте",
+      "moves": "рухається",
+      "time": "час",
+      "level": "Рівень",
+      "errors": "Помилки",
+      "score": "Оцінка",
+      "grid": "Сітка",
+      "crossings": "Переходи",
+      "pearls": "Перли",
+      "clues": "Підказки",
+      "region": "Регіон",
+      "filled": "Заповнений",
+      "cells": "Клітини",
+      "undosLeft": "Залишилося скасування",
+      "gems": "дорогоцінні камені",
+      "connected": "Підключено",
+      "slides": "Слайди",
+      "progress": "Прогрес",
+      "rotations": "Ротації",
+      "puzzle": "Головоломка",
+      "uncovered": "Розкритий",
+      "colored": "Кольоровий",
+      "violations": "Порушення",
+      "blacked": "Почорніла",
+      "empty": "Порожній",
+      "remaining": "Залишилося",
+      "pairs": "Пари",
+      "flips": "Перевертає",
+      "found": "знайдено",
+      "balls": "М'ячі",
+      "guesses": "Відгадки",
+      "original": "Оригінал",
+      "findDifferences": "Знайди відмінності",
+      "totalDrags": "Загальне перетягування",
+      "totalUndos": "Повні скасування",
+      "totalEdgesDrawn": "Намальовані загальні ребра",
+      "totalLasers": "Тотальні лазери",
+      "totalSlides": "Всього слайдів",
+      "totalRotations": "Загальна кількість обертів",
+      "totalRectangles": "Всього прямокутників",
+      "totalScore": "Загальний бал",
+      "avgTime": "Середній час",
+      "cellsCleared": "Клітини очищені",
+      "totalDiffsFound": "Загальна кількість знайдених відмінностей",
+      "gemsCollected": "Зібрані дорогоцінні камені",
+      "pushBoxesOntoTargets": "Поставте всі ящики на цілі",
+      "fireLasersMarkBalls": "Стріляйте лазерами з країв, а потім позначте положення м’яча",
+      "revealingAnswer": "Розкриття відповіді...",
+      "checkAnswer": "Перевірте відповідь",
+      "pickNumberBelow": "Виберіть номер нижче",
+      "tapCellToAssign": "Торкніться клітинки, щоб призначити номер",
+      "tapEdgesToPlaceWalls": "Торкніться країв, щоб розмістити стіни. Розділіть на області К.",
+      "ghosts": "Привиди",
+      "vampires": "Вампіри",
+      "zombies": "зомбі",
+      "dominoes": "Доміно",
+      "islands": "острови",
+      "pegsLeft": "Кілочки зліва",
+      "bestRemaining": "Найкраще, що залишилося",
+      "puzzlesSolved": "Розгадані головоломки",
+      "flooded": "Затоплені",
+      "edges": "Краї",
+      "totalPlacements": "Всього розміщень",
+      "totalRemovals": "Повне видалення",
+      "maxTileReached": "Досягнуто максимальної плитки",
+      "target": "Цільова",
+      "placed": "Розміщено",
+      "totalGuesses": "Всього здогадок",
+      "guessesLeft": "Здогадки залишилися",
+      "difficulty": "Складність"
+    },
+    "palisade": {
+      "title": "частокіл",
+      "puzzles": "Головоломки",
+      "maxLevel": "Максимальний рівень"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "errors": "Помилки",
+      "avgTime": "Середнє час",
+      "erase": "Стерти"
+    },
+    "blackbox": {
+      "title": "Чорний ящик",
+      "puzzles": "Головоломки",
+      "lasers": "Лазери",
+      "avgTime": "Середнє час"
+    },
+    "designFluency": {
+      "title": "Вільне володіння дизайном",
+      "uniqueDesigns": "Унікальні дизайни",
+      "duplicates": "Дублікати",
+      "round": "Круглий",
+      "roundComplete": "Круглий завершений",
+      "youCreatedDesigns": "Ви створили дизайни {{count}}",
+      "startRound": "Почніть раунд",
+      "instructions": "Інструкції",
+      "designs": "Конструкції",
+      "clear": "ясно",
+      "addDesign": "додати"
+    },
+    "signpost": {
+      "title": "Покажчик",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "avgTime": "Середнє час",
+      "maxGrid": "Максимальна сітка"
+    },
+    "sokoban": {
+      "title": "Сокобан",
+      "level": "Рівень",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "undos": "Скасування",
+      "puzzle": "Головоломка"
+    },
+    "numericalStroop": {
+      "left": "Ліворуч",
+      "right": "правильно"
+    },
+    "biologicalMotion": {
+      "title": "Біологічний рух",
+      "noiseDots": "шумові точки",
+      "whichDirection": "Який напрямок?",
+      "left": "Ліворуч",
+      "right": "правильно"
+    },
+    "inertia": {
+      "title": "Інертність",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "gems": "дорогоцінні камені",
+      "moves": "рухається"
+    },
+    "waterLevel": {
+      "title": "Рівень води",
+      "error": "Помилка",
+      "tilt": "Нахил",
+      "waterLine": "Водопровід?"
+    },
+    "twiddle": {
+      "title": "вертіти",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxGrid": "Максимальна сітка"
+    },
+    "sudoku": {
+      "title": "Судоку",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "errors": "Помилки",
+      "avgTime": "Середнє час",
+      "erase": "Стерти"
+    },
+    "rectangles": {
+      "title": "Прямокутники",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "rectanglesCount": "Прямокутники",
+      "maxGrid": "Максимальна сітка",
+      "cancelSelection": "Скасувати вибір"
+    },
+    "filling": {
+      "title": "Наповнення",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "avgTime": "Середнє час",
+      "grid": "Сітка"
+    },
+    "spacedRetrieval": {
+      "title": "Просторовий пошук",
+      "studyPair": "Вивчіть цю пару",
+      "waitAndSolve": "Зачекайте… потім розв’яжіть",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Інтервал: які пари?"
+    },
+    "prototypeDistortion": {
+      "title": "Спотворення прототипу",
+      "studyPhase": "Фаза дослідження",
+      "testPhase": "Тестовий етап",
+      "yesBelongs": "Так — належить",
+      "noRandom": "Ні — випадково"
+    },
+    "motionCoherence": {
+      "title": "Когерентність руху",
+      "threshold": "Поріг",
+      "coherence": "Когерентність",
+      "whichDirection": "Який напрямок?"
+    },
+    "cube": {
+      "title": "куб",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxLevel": "Максимальний рівень",
+      "cubeFaces": "Грані куба",
+      "moveUp": "вгору",
+      "moveLeft": "Ліворуч",
+      "moveDown": "вниз",
+      "moveRight": "правильно"
+    },
+    "sameGame": {
+      "title": "Та сама гра",
+      "score": "Оцінка",
+      "cleared": "Очищено",
+      "cells": "Клітини",
+      "accuracy": "Точність"
+    },
+    "crossModalMatching": {
+      "title": "Крос-модальне зіставлення",
+      "chance": "Шанс",
+      "whichPatternMatchesRhythm": "Який малюнок відповідає ритму?"
+    },
+    "mosaic": {
+      "title": "Мозаїка",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxGrid": "Максимальна сітка"
+    },
+    "spotDiff": {
+      "title": "Знайди відмінності",
+      "level": "Рівень",
+      "grid": "Сітка",
+      "accuracy": "Точність",
+      "perfect": "ідеально",
+      "avgTime": "Середнє час",
+      "found": "знайдено"
+    },
+    "lightsOut": {
+      "title": "Lights Out",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxGrid": "Максимальна сітка"
+    },
+    "pipeline": {
+      "title": "Трубопровід",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "rotations": "Ротації",
+      "avgTime": "Середнє час"
+    },
+    "tracks": {
+      "title": "Доріжки",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "errors": "Помилки",
+      "avgTime": "Середнє час"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "slides": "Слайди",
+      "maxGrid": "Максимальна сітка"
+    },
+    "cognitiveBias": {
+      "title": "Тренування когнітивних упереджень",
+      "biasResistance": "Стійкість до зміщення",
+      "biased": "Упереджений",
+      "continue": "Продовжити"
+    },
+    "empathicAccuracy": {
+      "title": "Емпатична точність",
+      "emotionId": "Емоція",
+      "avgRatingError": "Середнє помилка рейтингу",
+      "scenarios": "Сценарії",
+      "perfect": "ідеально",
+      "rating": "Рейтинг",
+      "howDoesCharacterFeel": "Що відчуває персонаж?",
+      "rateIntensity": "Оцініть інтенсивність",
+      "whatEmotion": "Яка емоція?",
+      "yourRating": "Ваша оцінка",
+      "correct": "Правильно",
+      "emotion": "Емоція"
+    },
+    "guess": {
+      "title": "Натхненник",
+      "solved": "Вирішено",
+      "guesses": "Відгадки"
+    },
+    "dominosa": {
+      "title": "Доміноза",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxLevel": "Максимальний рівень"
+    },
+    "magnets": {
+      "title": "магніти",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxLevel": "Максимальний рівень"
+    },
+    "tangram": {
+      "placeAll": "Розмістіть усі частини",
+      "solved": "Вирішено!",
+      "notRight": "Не зовсім правильно",
+      "title": "Танграм",
+      "level": "Рівень",
+      "puzzles": "Головоломки",
+      "placements": "Розміщення",
+      "removals": "Видалення",
+      "puzzleNumber": "Головоломка {{n}}",
+      "pieces": "штук",
+      "targetCells": "Кабель",
+      "dragHint": "Перетягніть або розмістіть фрагмент на сітці",
+      "selectHint": "Виберіть фрагмент",
+      "rotate": "Турнер",
+      "undo": "Кільцева установка",
+      "check": "Перевірте"
+    },
+    "galaxies": {
+      "title": "Галактики"
+    },
+    "flood": {
+      "title": "Повінь"
+    },
+    "pegs": {
+      "title": "Кілочки",
+      "bestPegs": "Найкращі кілочки"
+    },
+    "auditoryFigureGround": {
+      "title": "Слухова фігура-грунт",
+      "patternPresent": "Є візерунок?",
+      "pattern": "Візерунок",
+      "noPattern": "Без шаблону"
+    },
+    "selfOrderedPointing": {
+      "title": "Самовпорядковане вказування",
+      "maxSpan": "Максимальний проліт",
+      "errors": "Помилки",
+      "round": "Круглий",
+      "setOf": "Набір {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Трасування дзеркала",
+      "totalErrors": "Загальна кількість помилок",
+      "avgTime": "Середнє час",
+      "shapes": "Фігури",
+      "perfect": "ідеально",
+      "improvement": "Поліпшення",
+      "errorsMiddot": "помилки ·",
+      "shape": "Форма",
+      "errors": "Помилки",
+      "xIsMirrored": "Х дзеркально!"
+    },
+    "clockDrawing": {
+      "title": "Креслення годинника",
+      "avgError": "Середнє помилка",
+      "setTo": "Установити на",
+      "submit": "Надіслати"
+    },
+    "cognitiveMap": {
+      "title": "Когнітивна карта",
+      "explore": "Досліджуйте",
+      "sRemaining": "S Залишилося",
+      "from": "Від",
+      "whichDirectionIs": "Який напрямок"
+    },
+    "sixteen": {
+      "title": "Шістнадцять"
+    },
+    "loopy": {
+      "title": "Петля"
+    },
+    "lightup": {
+      "title": "Світиться"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Макс Тайл",
+      "moves": "рухається",
+      "max": "Макс"
+    },
+    "bridges": {
+      "title": "Мости",
+      "puzzles": "Головоломки",
+      "maxLevel": "Максимальний рівень",
+      "level": "Рівень"
+    },
+    "net": {
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxGrid": "Максимальна сітка"
+    },
+    "flip": {
+      "title": "Перевернути"
+    },
+    "range": {
+      "title": "Діапазон"
+    },
+    "slant": {
+      "title": "Коса"
+    },
+    "towers": {
+      "title": "Вежі",
+      "puzzles": "Головоломки",
+      "avgTime": "Середнє час",
+      "erase": "Стерти"
+    },
+    "pearl": {
+      "title": "Перлина",
+      "edges": "Краї"
+    },
+    "mapColoring": {
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "moves": "рухається",
+      "maxLevel": "Максимальний рівень"
+    },
+    "singles": {
+      "title": "одинаки"
+    },
+    "nonogram": {
+      "title": "Нонограма"
+    },
+    "undead": {
+      "title": "Нежить",
+      "accuracy": "Точність",
+      "puzzles": "Головоломки",
+      "avgTime": "Середнє час"
+    },
+    "untangle": {
+      "title": "Розплутати",
+      "drags": "Перетягує",
+      "maxNodes": "Максимальна кількість вузлів"
+    },
+    "unruly": {
+      "title": "Некерований"
+    },
+    "fifteen": {
+      "title": "П'ятнадцять"
+    },
+    "tents": {
+      "title": "Намети"
+    },
+    "mesker": {
+      "pen": "Перо",
+      "stroke": "інсульт",
+      "penPressureHint": "Пишіть, постійно натискаючи перо"
+    },
+    "modality": {
+      "position": "Позиція",
+      "audio": "Аудіо"
+    },
+    "validate": "Перевірити"
+  },
+  "trace": {
+    "instructions": "Проведіть пальцем у положення N-назад. Двічі торкніться, якщо положення однакове.",
+    "hint": {
+      "validated": "Перевірено",
+      "draw": "Намалюйте букву • Натисніть, щоб підтвердити",
+      "drawWithColor": "Намалюйте букву • Виберіть колір • Натисніть, щоб підтвердити",
+      "type": "Введіть літеру • Введіть для підтвердження",
+      "typeWithColor": "Введіть літеру • Виберіть колір • Введіть для підтвердження",
+      "typeResult": "Введіть результат • Введіть для підтвердження",
+      "writeResult": "Напишіть результат • Натисніть, щоб підтвердити"
+    },
+    "keyboard": {
+      "letterInput": "лист",
+      "numberInput": "Номер"
+    },
+    "arithmetic": {
+      "cueHint": "Запам'ятайте 2 цифри",
+      "refresh": "новий"
+    },
+    "hintPosition": "Де був стимул {{n}} обертів тому?",
+    "hintN0": "Вкажіть діючий подразник",
+    "warmupHint": "Запам'ятайте положення. Відповідь не потрібна.",
+    "hintDraw": "Намалюйте букву • Натисніть, щоб підтвердити",
+    "hintDrawWithColor": "Намалюйте букву • Виберіть колір • Натисніть, щоб підтвердити",
+    "hintWriteResult": "Напишіть результат • Натисніть, щоб підтвердити",
+    "guide": {
+      "swipeNormal": "Проведіть пальцем з останньої позиції (N-0) до позиції з {{n}} кроків тому (N-{{n}}). Двічі торкніться, якщо положення однакове.",
+      "swipeSequential": "Проведіть крок за кроком від N-0 до N-{{n}}, проходячи через кожне проміжне положення. Двічі торкніться, якщо положення однакове.",
+      "swipeDynamic": "Проведіть пальцем за відображеним правилом. Двічі торкніться, якщо положення однакове.",
+      "tapN0": "Торкніться поточної позиції.",
+      "warmup": "Запам'ятайте позиції - відповіді не потрібні.",
+      "writeDraw": "Намалюйте букву, почуту {{n}} кроків тому • Торкніться, щоб підтвердити",
+      "writeDrawColor": "Намалюйте букву, почуту {{n}} кроків тому • Виберіть її колір • Торкніться, щоб підтвердити",
+      "writeType": "Введіть букву, почуту {{n}} кроків тому • Введіть, щоб підтвердити",
+      "writeTypeColor": "Введіть літеру, почуту {{n}} кроків тому • Виберіть її колір • Введіть, щоб підтвердити",
+      "writeDrawN0": "Намалюйте літеру, яку ви щойно почули • Натисніть, щоб підтвердити",
+      "writeDrawColorN0": "Намалюйте букву, яку ви щойно почули • Виберіть її колір • Натисніть, щоб підтвердити",
+      "writeTypeN0": "Введіть літеру, яку ви щойно почули • Введіть, щоб підтвердити",
+      "writeTypeColorN0": "Введіть букву, яку ви щойно почули • Виберіть її колір • Введіть для підтвердження",
+      "writeResult": "Напишіть результат • Натисніть, щоб підтвердити",
+      "validated": "Перевірено",
+      "holdMindful": "Утримуйте клітинку протягом {{seconds}}с",
+      "swipeMindful": "Проведіть пальцем через {{seconds}}с"
+    },
+    "settings": {
+      "adaptiveTiming": "Адаптивний таймінг",
+      "inputKeyboard": "Клавіатура",
+      "inputHandwriting": "Почерк",
+      "writingInput": "Букви/цифри",
+      "section": {
+        "grid": "Сітка",
+        "input": "Введення",
+        "rhythm": "Ритм",
+        "interface": "Інтерфейс",
+        "interfaceNone": "Стандартний",
+        "sound": "Звук"
+      },
+      "isi": "Інтервал (ISI)",
+      "stimulusDuration": "Тривалість стимулу",
+      "feedbackDuration": "Тривалість зворотного зв'язку",
+      "ruleDisplay": "Тривалість правила",
+      "blankInterval": "Порожній інтервал",
+      "showProgressBar": "Індикатор прогресу",
+      "showInstructions": "Інструкції в грі",
+      "arithmeticInterference": "Арифметична інтерференція",
+      "fullMenu": "Повне меню",
+      "gridStyle": "Стиль сітки",
+      "gridStyleClassic": "класичний",
+      "gridStyleTrace": "Слід",
+      "guide": {
+        "swipeMindful": "Проведіть пальцем через {{seconds}}с",
+        "holdMindful": "Утримуйте клітинку протягом {{seconds}}с"
+      },
+      "feedback": {
+        "gestureDuration": "Жест",
+        "holdDuration": "Тримайте",
+        "writingDuration": "Написання"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Тримайте",
+      "gestureDuration": "Жест",
+      "writingDuration": "Написання"
+    },
+    "image": "Форма",
+    "digits": "Цифри",
+    "emotions": "Емоція",
+    "words": "Слово",
+    "tones": "Тон",
+    "spatial": "Напрямок"
+  },
+  "replay": {
+    "title": "Повтор сеансу",
+    "play": "грати",
+    "pause": "Пауза",
+    "restart": "Перезапустіть",
+    "speed": "швидкість",
+    "loading": "Завантаження сеансу...",
+    "unavailable": "Повтор недоступний для цього сеансу",
+    "backToStats": "Назад до статистики",
+    "runStack": {
+      "original": "Оригінал",
+      "correction": "Виправлення",
+      "delta": "Δ d'",
+      "inProgress": "В роботі",
+      "completed": "Виконано"
+    },
+    "abandon": "Відмовитися",
+    "badge": "Повтор",
+    "completionReport": {
+      "backToHome": "Назад",
+      "correctAgain": "Ще раз правильно",
+      "deltaVsOriginal": "проти оригіналу",
+      "deltaVsParent": "проти попереднього запуску",
+      "falseAlarmsSkipped": "Уникнення помилок",
+      "missesCorrections": "Виправлення",
+      "newFalseAlarms": "Нові помилки",
+      "replayAgain": "Повтор",
+      "scoreLabel": "d' забити",
+      "title": "Виправлення завершено"
+    },
+    "controls": "Елементи керування",
+    "correction": "Виправлення",
+    "finished": "Кінець повтору",
+    "home": "додому",
+    "parseError": "Неможливо прочитати сеанс",
+    "tapSlotToPlace": "Натисніть на слот, щоб розмістити",
+    "timeline": "Хронологія",
+    "focusTimeline": {
+      "open": "Показати часову шкалу",
+      "close": "Закрити шкалу часу",
+      "title": "Хронологія N-Back",
+      "fillAll": "Заповнити все",
+      "fillCard": "Заповнити картку"
+    },
+    "hud": {
+      "counterDisplay": "Дисплей лічильника",
+      "toggleCounterDisplay": "Перемкнути відображення лічильника"
+    },
+    "validate": "Перевірити"
+  },
+  "recovery": {
+    "title": "Сеанс перервано",
+    "description": "Тривала сесія. Хочете відновити?",
+    "mode": "Режим",
+    "level": "Рівень",
+    "progress": "Прогрес",
+    "timeAgo": "час",
+    "resume": "Відновити сеанс",
+    "startFresh": "Почніть заново",
+    "staleWarning": "Цей сеанс старий, його відновлення може бути складним.",
+    "modes": {
+      "game": "Навчання",
+      "activeTraining": "Активне навчання",
+      "flowTraining": "Подвійне навчання",
+      "dualPickTraining": "Подвійний вибір",
+      "traceTraining": "Подвійне трасування"
+    }
+  },
+  "rewards": {
+    "congratulations": "Щиро вітаю!",
+    "duration": "{{days}} днів Преміум",
+    "lifetimeLabel": "Довічний доступ",
+    "expiresAt": "Дійсний до {{date}}",
+    "neverExpires": "Ніколи не закінчується",
+    "continue": "Продовжити",
+    "discovery": {
+      "name": "Перепустка Discovery",
+      "description": "7 днів Premium — ознайомтеся з усіма функціями"
+    },
+    "engagement": {
+      "name": "Перепустка на заручини",
+      "description": "1 місяць преміум — ваша дисциплінованість окупається"
+    },
+    "expert": {
+      "name": "Перепустка експерта",
+      "description": "3 місяці Premium — Ви справжній практик"
+    },
+    "lifetime": {
+      "name": "Довічний доступ",
+      "description": "Преміум назавжди — ви опанували Neurodual"
+    },
+    "xpRemaining": "XP залишається",
+    "permanentAccessUnlocked": "Постійний доступ розблоковано",
+    "reachedTheTop": "Ви досягли вершини!"
+  },
+  "progression": {
+    "level": "Рівень {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Наступний рівень",
+    "reached": "Досягнуто",
+    "inProgress": "В роботі"
+  },
+  "gridlock": {
+    "nextPuzzle": "Наступна загадка →"
+  }
+}

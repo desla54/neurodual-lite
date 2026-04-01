@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Costanza",
+      "performance": "Prestazione",
+      "resilience": "Resilienza",
+      "exploration": "Esplorazione",
+      "milestone": "Traguardi",
+      "cognitive": "Cognitivo"
+    },
+    "first_session": {
+      "name": "Neurone Risvegliato",
+      "description": "Prima sessione completata."
+    },
+    "sessions_10": {
+      "name": "Pilastro (Bronzo)",
+      "description": "10 sessioni completate."
+    },
+    "sessions_25": {
+      "name": "Pilastro (Argento)",
+      "description": "25 sessioni completate."
+    },
+    "marathoner": {
+      "name": "Pilastro (Oro)",
+      "description": "50 sessioni completate."
+    },
+    "streak_3": {
+      "name": "Rituale Nascente",
+      "description": "Serie di 3 giorni."
+    },
+    "streak_7": {
+      "name": "Rituale Quotidiano",
+      "description": "Serie di 7 giorni."
+    },
+    "streak_14": {
+      "name": "Abitudine Radicata",
+      "description": "Serie di 14 giorni."
+    },
+    "streak_30": {
+      "name": "Disciplina di Ferro",
+      "description": "Serie di 30 giorni."
+    },
+    "early_bird": {
+      "name": "Mattiniero",
+      "description": "5 giorni diversi con sessione prima delle 8:00."
+    },
+    "night_owl": {
+      "name": "Nottambulo",
+      "description": "5 giorni diversi con sessione dopo le 22:00."
+    },
+    "brain_n3": {
+      "name": "Mente Acuta",
+      "description": "Raggiungere il livello N-3."
+    },
+    "brain_n4": {
+      "name": "Cervello Muscoloso",
+      "description": "Raggiungere il livello N-4."
+    },
+    "brain_n5": {
+      "name": "Cervello Olimpico",
+      "description": "Raggiungere il livello N-5."
+    },
+    "brain_n7": {
+      "name": "Élite Cognitiva",
+      "description": "Raggiungere il livello N-7."
+    },
+    "brain_n10": {
+      "name": "Sovrumano",
+      "description": "Raggiungere il livello N-10."
+    },
+    "sniper": {
+      "name": "Cecchino",
+      "description": "> 90% di precisione a N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Precisione Chirurgica",
+      "description": "> 95% di precisione a N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% di precisione a N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Intoccabile",
+      "description": "Sessione perfetta (0 errori) a N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Riflesso Rapido",
+      "description": "Tempo di reazione medio < 500ms con ≥70% di precisione."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Tempo di reazione medio < 400ms con ≥70% di precisione."
+    },
+    "rt_300": {
+      "name": "Fulmine",
+      "description": "Tempo di reazione medio < 300ms con ≥70% di precisione."
+    },
+    "consistent": {
+      "name": "Regolare",
+      "description": "Deviazione standard RT < 100ms (≥10 risposte richieste)."
+    },
+    "dprime_master": {
+      "name": "Maestro d'",
+      "description": "d-prime > 3.0 in una sessione."
+    },
+    "dprime_4": {
+      "name": "Esperto SDT",
+      "description": "d-prime > 4.0 in una sessione."
+    },
+    "no_pause": {
+      "name": "Senza Interruzione",
+      "description": "5 sessioni consecutive senza pausa con ≥75% di precisione."
+    },
+    "steady_hands": {
+      "name": "Mano Ferma",
+      "description": "Nessun input falso durante la sessione (≥80% di precisione)."
+    },
+    "zen_master": {
+      "name": "Maestro Zen",
+      "description": "10 sessioni senza mai abbandonare."
+    },
+    "comeback_kid": {
+      "name": "Rimonta",
+      "description": "Salire di livello dopo una retrocessione."
+    },
+    "persistent": {
+      "name": "Persistente",
+      "description": "3 sessioni nello stesso giorno dopo un fallimento."
+    },
+    "second_wind": {
+      "name": "Secondo Fiato",
+      "description": "Migliorare il d-prime tra la metà 1 e 2 (d′ ≥ 2.0 richiesto)."
+    },
+    "plateau_breaker": {
+      "name": "Sfonda Plateau",
+      "description": "Progredire dopo 10+ sessioni allo stesso livello."
+    },
+    "no_surrender": {
+      "name": "Nessuna Resa",
+      "description": "25 sessioni senza abbandonare."
+    },
+    "ironwill": {
+      "name": "Volontà di Ferro",
+      "description": "50 sessioni senza abbandonare."
+    },
+    "audiophile": {
+      "name": "Audiofilo",
+      "description": "Audio > 80% ma Visivo < 70%."
+    },
+    "eagle_eye": {
+      "name": "Occhio di Falco",
+      "description": "Visivo > 80% ma Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Sincronizzato",
+      "description": "Punteggi Audio e Visivo entro il 5% (≥60% richiesto)."
+    },
+    "dual_master": {
+      "name": "Maestro Dual",
+      "description": "Audio E Visivo > 85% nella stessa sessione (≥6 esche/modalità)."
+    },
+    "dual_elite": {
+      "name": "Élite Dual",
+      "description": "Audio E Visivo > 90% nella stessa sessione a N ≥ 3 (≥6 esche/modalità)."
+    },
+    "centurion": {
+      "name": "Centurione",
+      "description": "100 sessioni completate."
+    },
+    "sessions_250": {
+      "name": "Leggenda (Smeraldo)",
+      "description": "250 sessioni completate."
+    },
+    "sessions_500": {
+      "name": "Immortale (Diamante)",
+      "description": "500 sessioni completate."
+    },
+    "trials_500": {
+      "name": "Praticante",
+      "description": "500 prove giocate in totale."
+    },
+    "trials_1000": {
+      "name": "Allenato",
+      "description": "1.000 prove giocate in totale."
+    },
+    "trials_5000": {
+      "name": "Navigato",
+      "description": "5.000 prove giocate in totale."
+    },
+    "trials_10k": {
+      "name": "10.000 Prove",
+      "description": "10.000 prove giocate in totale."
+    },
+    "trials_50k": {
+      "name": "Titano",
+      "description": "50.000 prove giocate in totale."
+    },
+    "streak_90": {
+      "name": "Trimestre Impeccabile",
+      "description": "Serie di 90 giorni."
+    },
+    "streak_365": {
+      "name": "Anno Perfetto",
+      "description": "Serie di 365 giorni."
+    },
+    "veteran": {
+      "name": "Veterano",
+      "description": "1 anno di utilizzo."
+    },
+    "metronome": {
+      "name": "Il Metronomo",
+      "description": "Varianza RT < 50ms su ≥20 prove (risposte attive richieste)."
+    },
+    "flow_state": {
+      "name": "Stato di Grazia",
+      "description": "Flow rilevato durante un'intera sessione."
+    },
+    "sang_froid": {
+      "name": "Sangue Freddo",
+      "description": "Nessuna cascata di errori dopo un errore (≥70% di precisione)."
+    },
+    "imperturbable": {
+      "name": "Imperturbabile",
+      "description": "Sessione completa senza perdere la concentrazione (≥60% di precisione)."
+    },
+    "comeback_strong": {
+      "name": "Ritorno in Forza",
+      "description": "Battere il proprio record di d-prime dopo 3+ giorni di assenza (d′ ≥ 2.5)."
+    }
+  }
+}

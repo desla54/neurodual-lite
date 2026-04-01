@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Tréninková dráha",
+    "pageSubtitle": "Vybírejte, organizujte a vytvářejte své cesty",
+    "enabled": "Povolit tréninkovou cestu",
+    "description": "30 progresivních stupňů od N-1 do N-10",
+    "progress": "Pokrok",
+    "locked": "Zamčeno",
+    "createJourney": "Vytvořte cestu",
+    "viewJourneys": "Zobrazit cesty",
+    "current": "Aktuální cesta",
+    "myJourneys": "Moje cesty",
+    "stage": "Jeviště",
+    "stages": "etapy",
+    "stagesShort": "st.",
+    "stageLabels": {
+      "pick": "Vybrat",
+      "catch": "Chytit",
+      "place": "místo",
+      "memo": "Memo"
+    },
+    "name": "Jméno",
+    "namePlaceholder": "Např. Výzva N-5",
+    "levels": "úrovně",
+    "levelRange": "Rozsah úrovní",
+    "levelTo": "do",
+    "createNew": "Nová cesta",
+    "new": "Nové",
+    "defaultCustomName": "Moje cesta",
+    "created": "Cesta vytvořena!",
+    "deleted": "Cesta byla smazána",
+    "sessionSettings": "Nastavení relace",
+    "savedStatus": "Nastavení uloženo",
+    "preset": {
+      "easy": "Snadno",
+      "medium": "Doporučeno",
+      "hard": "Těžko"
+    },
+    "setup": {
+      "title": "Cesta a profily",
+      "journey": "Cesta",
+      "journeyNone": "Vyberte…",
+      "profile": "Profil",
+      "profileNone": "Vyberte…",
+      "configure": "Konfigurovat",
+      "configureNone": "Vyberte cestu",
+      "create": "Nová cesta",
+      "createDesc": "Vytvořte novou cestu"
+    },
+    "deleteConfirmTitle": "Smazat tuto cestu?",
+    "deleteConfirmMessage": "Cesta „{{name}}“ bude trvale smazána.",
+    "renameTitle": "Přejmenujte tuto cestu",
+    "renameMessage": "Upravte název \"{{name}}\".",
+    "renamed": "Cesta přejmenována.",
+    "badge": {
+      "simulator": "Simulátor",
+      "beta": "Beta",
+      "default": "Výchozí"
+    },
+    "mode": "Režim",
+    "modeStandard": "Cesta (4 režimy)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dvojitý záchyt",
+      "dualPlace": "Dvojité místo",
+      "dualMemo": "Duální Memo",
+      "dualPick": "Duální výběr",
+      "simulator": "Simulátor",
+      "jaeggi": "klasické",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} ověřující relace",
+      "needed": "{{count}} zbývající relace",
+      "excellent": "Výborně!",
+      "good": "Dobře!",
+      "passing": "Prošel"
+    },
+    "progression": {
+      "title": "Progrese",
+      "description": "Chcete-li postoupit na další úroveň, dosáhněte dobrého skóre:",
+      "excellent": "≥95 % → 1 sezení",
+      "good": "≥85 % → 2 sezení",
+      "passing": "≥80 % → 3 sezení",
+      "rules": "Pravidla postupu",
+      "jaeggi": {
+        "description": "Na základě nejslabší modality:",
+        "up": "< 3 chyby → O úroveň výš",
+        "stay": "3 až 5 chyb → Zůstaňte na této úrovni",
+        "down": "> 5 chyb → O úroveň níže"
+      },
+      "brainworkshop": {
+        "description": "Protokol Brain Workshop (BW skóre):",
+        "up": "≥80 % → O úroveň výš",
+        "stay": "50-79 % → Zůstaňte na úrovni",
+        "strike": "3 po sobě jdoucí skóre <50% → O úroveň níže"
+      },
+      "hybrid": {
+        "description": "Tato cesta probíhá relace {{trackCount}} Dual Track a poté relace {{dnbCount}} Dual N-Back na stejné úrovni.",
+        "alternation": "Smyčka se vždy restartuje pomocí funkce Dual Track, kdykoli je dosaženo rozhodnutí.",
+        "authority": "Pouze relace Dual N-Back rozhodují o vzestupu, setrvání nebo sestupu.",
+        "up": "Chyba 0-1 → O úroveň výš",
+        "stay": "2-3 chyby → Zůstat",
+        "down": "4+ chyby → O úroveň níže",
+        "streakRule": "Dvě sezení v řadě ve stejné zóně spouštějí rozhodnutí.",
+        "trackProgress": "Dráha {{current}}/{{required}}",
+        "cleanProgress": "Ověřeno {{current}}/{{required}}",
+        "stayProgress": "Držte {{current}}/{{required}}",
+        "downProgress": "Selhání {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track používá souvislý pruh ovládání pro každou fázi počítání cílů:",
+        "calibration": "První kalibrace odhadne váš počáteční cílový počet",
+        "goodSession": "Každá dobrá session trochu naplňuje aktuální fázi",
+        "mastery": "Téměř dokonalé relace jej zaplní rychleji, ale běžné relace zůstávají skromné",
+        "regression": "Slabé relace mohou také způsobit pokles aktuálního mistrovského baru",
+        "unlock": "Další cílový počet se odemkne pouze tehdy, když aktuální fáze dosáhne 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Otevřete přepínač jízdy",
+      "current": "Aktuální",
+      "showAll": "Všechny cesty",
+      "settings": "Nastavení cesty"
+    },
+    "previous": "Předchozí cesta",
+    "next": "Další cesta",
+    "calibration": {
+      "title": "První sezení",
+      "subtitle": "Krátká kalibrace určí vaši počáteční úroveň, nebo můžete začít přímo na úrovni 2.",
+      "skipToN2": "nebo začněte na N-2",
+      "continueAt": "nebo pokračujte na N-{{level}}",
+      "start": "Spusťte kalibraci",
+      "redo": "Znovu proveďte kalibraci",
+      "badge": "Kalibrace"
+    },
+    "presets": {
+      "currentSlot": "Vlastní",
+      "currentSlotView": "Vlastní",
+      "lockedTitle": "Některé možnosti jsou uzamčeny",
+      "lockedDesc": "Aby byl postup srovnatelný, modality (a několik možností) se po zahájení cesty nemohou změnit."
+    },
+    "completed": {
+      "title": "Cesta dokončena!",
+      "subtitle": "Všechny fáze ověřeny. Dobrá práce!",
+      "continueFree": "Pokračujte v tréninku"
+    },
+    "report": {
+      "stage": "Jeviště",
+      "level": "úroveň",
+      "score": "skóre",
+      "sessionValidated": "Relace ověřena!",
+      "sessionNotValidated": "Relace není ověřena",
+      "minScore": "Požadované minimum:",
+      "stageCompleted": "Etapa dokončena!",
+      "stageUnlocked": "Stage {{stage}} odemčen!",
+      "replay": "Přehrát znovu",
+      "nextStage": "Další fáze",
+      "home": "Domů",
+      "hits": "Hity",
+      "misses": "slečny",
+      "falseAlarms": "Falešné poplachy",
+      "correctRejections": "Správná odmítnutí"
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutorial",
+    "exitConfirm": "Tutorial afsluiten?",
+    "exitWarning": "Je voortgang wordt niet opgeslagen.",
+    "continue": "Doorgaan",
+    "quit": "Afsluiten",
+    "stepLabel": "Stap {{step}}",
+    "previous": "Vorige",
+    "restart": "Opnieuw starten",
+    "next": "Volgende",
+    "startGame": "Start",
+    "progress": "Teller",
+    "tapToContinue": "Tik om door te gaan",
+    "controls": {
+      "position": "Positie",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Instructie"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Goed gedaan. Je hebt de tutorial gehaald.",
+        "stay": "Bijna. Nog een beetje oefenen en je hebt het.",
+        "down": "Nog niet gevalideerd. Probeer de tutorial opnieuw om de basis te versterken."
+      },
+      "header": {
+        "up": "Tutorial voltooid!",
+        "down": "Herhalen",
+        "stay": "Bijna!"
+      },
+      "noteMinAssessment": "Opmerking: Voor een nauwkeurigere evaluatie beoordelen tutorials minimaal 8 antwoorden.",
+      "guidance": {
+        "passed": "Je bent klaar voor vrije training.",
+        "failed": "We raden aan deze tutorial opnieuw te proberen voordat je verdergaat met training."
+      },
+      "correctAnswers": "{{correct}}/{{total}} juiste antwoorden",
+      "actions": {
+        "backToHome": "Terug naar startpagina",
+        "retryTutorial": "Tutorial opnieuw proberen",
+        "explainLevels": "N-niveaus begrijpen (N)",
+        "goToTraining": "Naar training",
+        "continueToTraining": "Doorgaan naar training"
+      }
+    },
+    "welcome": {
+      "title": "Introductie tot training",
+      "description": "Dual N-Back daagt je werkgeheugen uit door je twee informatiestromen tegelijk te laten volgen: een visuele positie en een geluid. Deze tutorial begeleidt je stap voor stap.",
+      "button": "Tutorial starten"
+    },
+    "timeline": {
+      "legend": "De tijdlijn helpt bij vergelijken — wordt verborgen tijdens het spel",
+      "past": "Verleden",
+      "present": "Heden"
+    },
+    "hub": {
+      "title": "Tutorials",
+      "subtitle": "Kies een modus om te leren",
+      "basics": {
+        "title": "De basis",
+        "description": "Leer de reflex en het ritme van klassiek Dual N-Back."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Beheers temporele plaatsing op de tijdlijn."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Label elke stimulus met de temporele referentie (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Leer actieve recall-gebaren door traceren."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Bouw de volledige reeks op vanuit je geheugen."
+      },
+      "soroban": {
+        "title": "Soroban Meesterschap",
+        "description": "Leer de Japanse telraam stap voor stap in 8 progressieve fasen."
+      }
+    },
+    "place": {
+      "comingSoon": "Place-tutorial is in ontwikkeling",
+      "cardPool": "Beschikbare kaarten",
+      "slot": "Slot",
+      "observe": "Observeer: een positie op het raster en een audiobrief.",
+      "buffer": "Tweede stimulus. De N-back-buffer wordt gevuld.",
+      "cardsAppear": "Kaarten verschijnen! Ze vertegenwoordigen de laatste 3 stimuli.",
+      "firstDrag": "Klik op de gemarkeerde kaart, dan op het N-2 slot (de oudste).",
+      "timelineExplain": "De tijdlijn toont tijd: N-2 = oudste, N = heden.",
+      "positionN1": "Plaats de middelste positie in het N-1 slot.",
+      "positionN": "Geweldig! Eindig met de meest recente positie (N-slot).",
+      "audioIntro": "Nu de audiokaarten! Hetzelfde principe.",
+      "audioN2": "Plaats de eerste gehoorde letter in het N-2 slot.",
+      "audioN1": "Ga verder met de middelste letter (N-1 slot).",
+      "audioN": "Eindig met de meest recente letter (N-slot).",
+      "dualIntro": "Nieuwe proef! Plaats posities EN letters.",
+      "dualPractice": "Plaats alle 6 kaarten in de juiste slots. Neem je tijd!",
+      "rhythmExplain": "In het echte spel heb je beperkte tijd.",
+      "autonomy": "Jouw beurt! Plaats alle kaarten correct.",
+      "conclusion": "Goed gedaan! Je beheerst de basis van Dual Place.",
+      "selectCard": "Selecteer een kaart, klik dan op het slot",
+      "clickSlot": "Klik op het juiste slot om de kaart te plaatsen",
+      "wrongSlot": "Niet dat slot! Kijk naar de temporele volgorde.",
+      "wrongCard": "Niet die kaart. Zoek de kaart die bij het slot past.",
+      "tryAgain": "Probeer opnieuw! Het juiste slot is gemarkeerd."
+    },
+    "memo": {
+      "comingSoon": "Memo-tutorial is in ontwikkeling",
+      "selectPosition": "Selecteer de positie",
+      "selectAudio": "Selecteer de letter",
+      "clickToRecall": "Klik op een slot om de waarde te herinneren",
+      "validate": "Valideren",
+      "observeFirst": "Eerste stimulus. Onthoud zowel de positie ALS de letter!",
+      "observeSecond": "Tweede stimulus. Blijf onthouden.",
+      "observeThird": "Derde stimulus. Buffer compleet. Bereid je voor!",
+      "recallIntro": "Het raster verdwijnt! Herinner vanuit je geheugen. Klik op het N-2 slot.",
+      "firstRecall": "Klik op het N-2 slot. Wat was de eerste positie?",
+      "feedbackExplain": "Groen = correct. Rood = fout. Je kunt tot 3 keer corrigeren!",
+      "multiSlot": "Ga verder! Herinner posities N-1 en N.",
+      "newStimulus": "Nieuwe stimulus! Het N-back-venster verschuift met één.",
+      "windowShift": "Het venster is verschoven. Oude N-2 verdwijnt, nieuwe N komt erbij.",
+      "fullPosition": "Herinner alle 3 posities. Focus!",
+      "audioIntro": "Nieuwe stimulus. Nu voegen we audio-recall toe!",
+      "firstAudioRecall": "Klik op het audio N-2 slot. Welke letter?",
+      "fullAudio": "Ga verder met letters N-1 en N.",
+      "dualIntro": "In het echte spel herinner je posities EN letters tegelijk.",
+      "dualPractice": "Herinner alle 6 cellen en klik op Valideren.",
+      "correctionExplain": "Als je een fout maakt, klik opnieuw om te corrigeren. Max 3 keer.",
+      "withCorrection": "Probeer het! Als je fout zit, corrigeer door opnieuw te klikken.",
+      "conclusion": "Uitstekend! Je beheerst actieve recall. Start een sessie!",
+      "wrongAnswer": "Dat is het niet. Denk na, welke stimulus was er op dat moment?",
+      "tryAgain": "Probeer opnieuw! Je kunt nog corrigeren.",
+      "maxCorrections": "3 correcties bereikt. Dit slot is vergrendeld.",
+      "validateHint": "Alle slots zijn gevuld. Klik op Valideren!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Welkom bij Dual Pick! Leer elke stimulus te classificeren.",
+        "hud": "Bovenaan: je voortgang in de tutorial.",
+        "grid": "Het raster is verdeeld in 3 zones: BOVEN, MIDDEN, ONDER.",
+        "controls": "Deze knoppen classificeren. Positie links, Geluid rechts.",
+        "outro": "Klaar? Laten we beginnen met positieclassificatie!"
+      },
+      "intro": "In Dual Pick classificeer je elke stimulus op twee criteria: rasterzone en geluidstype.",
+      "gridExplain": "Het raster heeft 3 zones: BOVEN (bovenste rij), MIDDEN (midden), ONDER (onderste rij).",
+      "positionHaut": "Het vierkant staat bovenaan. Klik BOVEN.",
+      "positionMilieu": "Het vierkant staat in het midden. Klik MIDDEN.",
+      "positionBas": "Het vierkant staat onderaan. Klik ONDER.",
+      "positionRecap": "Perfect! BOVEN = bovenste rij, MIDDEN = midden, ONDER = onderste rij.",
+      "positionPractice": "Jouw beurt! Classificeer deze positie.",
+      "soundIntro": "Nu geluiden. Er zijn twee types: KLINKER (A, E, I, O, U) en MEDEKLINKER (alle andere).",
+      "soundVoyelle": "Je hoort A. Het is een klinker. Klik KLINKER.",
+      "soundConsonne": "Je hoort T. Het is een medeklinker. Klik MEDEKLINKER.",
+      "soundRecap": "Onthoud: A, E, I, O, U = KLINKER. Al het andere = MEDEKLINKER.",
+      "soundPractice": "Jouw beurt! Classificeer dit geluid.",
+      "dualIntro": "In het echte spel classificeer je BEIDE tegelijk: positie EN geluid.",
+      "dualFirst": "Classificeer positie EN geluid. Neem je tijd.",
+      "dualSecond": "Ga verder. Positie + Geluid.",
+      "dualThird": "Uitstekend! Nog eentje om te oefenen.",
+      "rhythm": "In een sessie, houd een regelmatig ritme aan. Vloeiendheid komt met oefening.",
+      "conclusion": "Goed gedaan! Je beheerst classificatie. Start een Dual Pick-sessie!",
+      "buttons": {
+        "top": "BOVEN",
+        "middle": "MIDDEN",
+        "bottom": "ONDER",
+        "vowel": "KLINKER",
+        "consonant": "MEDEKLINKER"
+      },
+      "feedback": {
+        "correctPosition": "Goede zone!",
+        "correctSound": "Goed geluidstype!",
+        "wrongPosition": "Niet die zone. Kijk waar het vierkant staat.",
+        "wrongSound": "Dat is het niet. A, E, I, O, U = klinkers."
+      }
+    },
+    "trace": {
+      "intro": "Welkom bij Dual Trace. Geen knoppen hier: je herinnert de vorige positie actief door een veegbeweging.",
+      "observe": "Onthoud deze positie. Volgende beurt moet je er naartoe vegen.",
+      "firstSwipe": "Eerste veeg! Veeg met je vinger naar de positie van de vorige beurt. De pijl begeleidt je.",
+      "firstAudioMatch": "Dezelfde letter als de vorige beurt! Veeg naar de positie EN dubbeltik om de audiomatch te signaleren.",
+      "audioMatch": "Audiomatch gedetecteerd! Vegen + dubbeltikken.",
+      "swipe1": "Veeg naar de N-1 positie. Herinner waar het vierkant was.",
+      "swipe2": "Ga verder. Elke veeg versterkt je actieve geheugen.",
+      "swipe3": "Actieve recall is veeleisender dan eenvoudige herkenning.",
+      "swipe4": "Blijf gefocust. Visualiseer de positie voor je veegt.",
+      "swipe5": "Uitstekend! Je beheerst het recall-gebaar.",
+      "complete": "Tutorial voltooid. Je bent klaar voor Dual Trace-training.",
+      "tapTarget": "Tik op de positie van de vorige beurt",
+      "tapTargetAndAudio": "Tik op de doelpositie, dan Audio"
+    },
+    "ui": {
+      "startExercise": "Oefening starten",
+      "score": "Score: {{current}}/{{total}}",
+      "complete": "Voltooid",
+      "correct": "✓ Correct!",
+      "expectedMatch": "✗ Verwacht: Match",
+      "expectedNoMatch": "✗ Verwacht: Geen match",
+      "memorize": "Onthoud de positie...",
+      "memorizeLetter": "Onthoud de letter...",
+      "matchDetected": "✓ Match gedetecteerd!",
+      "noMatch": "✗ Geen match",
+      "matchExplanation": "Match! Stap {{current}} = Stap {{previous}}",
+      "exerciseComplete": "Oefening voltooid!",
+      "match": "Match",
+      "noMatchButton": "Geen match",
+      "none": "Geen",
+      "both": "Beide",
+      "position": "Positie",
+      "audio": "Audio",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Je dashboard: N-back-niveau, beurtteller en sessiebesturing.",
+      "timeline": "De tijdlijn bewaart de laatste 3 stimuli ter vergelijking. In het echte spel is deze hulp verborgen.",
+      "grid": "Het raster: elke beurt licht een cel op in een van 8 posities. Tegelijk wordt een letter gesproken.",
+      "controls": "Je antwoordknoppen. Druk wanneer je een herhaling detecteert.",
+      "intro": "Welkom! Laten we samen de spelinterface ontdekken.",
+      "continue": "Doorgaan",
+      "outro": "Nu gaan we over naar een begeleide sessie. Bekijk de animaties en volg de instructies.",
+      "start": "Start",
+      "tapToContinue": "Tik ergens om door te gaan"
+    },
+    "speed": {
+      "label": "Snelheid: {{speed}}",
+      "pauseToChange": "Pauzeer om snelheid te wijzigen"
+    },
+    "assessment": {
+      "title": "Beoordelingsfase",
+      "subtitle": "Vanaf nu is het een korte klassieke run.",
+      "body": "Het tempo is doorlopend en je krijgt geen hints meer. Speel als in een echte sessie.",
+      "goal": "Doel: minimaal {{min}}% nauwkeurigheid over {{count}} proeven.",
+      "cta": "Laten we gaan"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N-niveaus begrijpen",
+        "desc": "Je hebt N=2 geleerd. Hier zie je hoe het generaliseert van N=1 tot N=4.",
+        "start": "Start",
+        "done": "Klaar",
+        "skip": "Overslaan",
+        "hud": "N = hoeveel beurten terug.",
+        "present": "N = de huidige stimulus (heden).",
+        "past": "Vergelijk met N-{{n}}.",
+        "pressPosition": "Als de positie herhaalt, druk op Positie.",
+        "pressAudio": "Als het geluid herhaalt, druk op Audio.",
+        "annotation": {
+          "n1": "N=1: vergelijk de huidige stimulus (N) met de vorige beurt (N-1).",
+          "n2": "N=2: vergelijk de huidige stimulus (N) met twee beurten terug (N-2).",
+          "n3": "N=3: vergelijk de huidige stimulus (N) met drie beurten terug (N-3)."
+        },
+        "outroTitle": "En zo verder…",
+        "outroBody": "Als je naar N=5 gaat, vergelijk je met N-5. De regel blijft hetzelfde; alleen de afstand neemt toe."
+      }
+    },
+    "annotations": {
+      "intro": "Observeer: een cel licht op in het raster en een letter wordt tegelijk gesproken.",
+      "observe": "Onthoud. De tijdlijn houdt stimuli bij.",
+      "firstComparison": "Je hebt nu genoeg geschiedenis om te vergelijken.",
+      "firstPositionMatch": "Dezelfde positie als 2 beurten geleden! Vergelijk N en N-2 op de tijdlijn, druk dan op Positie.",
+      "firstAudioMatch": "Dezelfde letter als 2 beurten geleden! Vergelijk N en N-2 op de tijdlijn, druk dan op Audio.",
+      "firstDualMatch": "Dubbele match! Zowel positie ALS geluid herhalen. Druk op beide knoppen.",
+      "positionMatch": "Dezelfde positie. Druk op Positie.",
+      "audioMatch": "Hetzelfde geluid. Druk op Audio.",
+      "dualMatch": "Beide matchen. Druk op Positie en Audio.",
+      "noMatch": "Geen match deze beurt. Blijf onthouden.",
+      "noMatch1": "Geen herhaling dit keer. Tik om door te gaan.",
+      "noMatch2": "Nog geen match. Blijf gefocust op de positie + geluidsstroom.",
+      "noMatch3": "Niets te melden. Vergelijk altijd met N-2 op de tijdlijn.",
+      "noMatch4": "Geen match. Het tempo neemt toe.",
+      "noMatch5": "Ga verder. Matches komen onvoorspelbaar.",
+      "noMatch6": "Geen match. Ga door, je hebt het ritme.",
+      "noMatch7": "Laatste sprint. Blijf gefocust.",
+      "noMatch8": "Bijna klaar. Nog een paar stimuli.",
+      "complete": "Gefeliciteerd! Je beheerst de basis van Dual N-Back. Klaar voor training?"
+    },
+    "exit": {
+      "confirm": "Afsluiten",
+      "title": "Tutorial afsluiten?",
+      "message": "Je voortgang wordt opgeslagen. Je kunt later verdergaan."
+    },
+    "recovery": {
+      "message": "Een onderbroken sessie gevonden.",
+      "staleMessage": "Een onderbroken sessie van meer dan 30 minuten geleden gevonden.",
+      "resume": "Hervatten",
+      "startFresh": "Opnieuw beginnen",
+      "title": "Tutorial hervatten?"
+    }
+  }
+}

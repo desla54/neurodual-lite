@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutorial",
+    "exitConfirm": "Keluar dari tutorial?",
+    "exitWarning": "Progresmu tidak akan disimpan.",
+    "continue": "Lanjut",
+    "quit": "Keluar",
+    "stepLabel": "Langkah {{step}}",
+    "previous": "Sebelumnya",
+    "restart": "Mulai ulang",
+    "next": "Selanjutnya",
+    "startGame": "Mulai",
+    "progress": "Penghitung",
+    "tapToContinue": "Ketuk untuk lanjut",
+    "controls": {
+      "position": "Posisi",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Instruksi"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Kerja bagus. Kamu lulus tutorial.",
+        "stay": "Hampir. Sedikit latihan lagi dan kamu akan bisa.",
+        "down": "Belum tervalidasi. Coba tutorial lagi untuk memperkuat dasar."
+      },
+      "header": {
+        "up": "Tutorial selesai!",
+        "down": "Tinjau",
+        "stay": "Hampir!"
+      },
+      "noteMinAssessment": "Catatan: Untuk evaluasi lebih akurat, tutorial menilai minimal 8 jawaban.",
+      "guidance": {
+        "passed": "Kamu siap untuk latihan bebas.",
+        "failed": "Kami sarankan untuk mengulang tutorial ini sebelum lanjut ke latihan."
+      },
+      "correctAnswers": "{{correct}}/{{total}} jawaban benar",
+      "actions": {
+        "backToHome": "Kembali ke beranda",
+        "retryTutorial": "Coba ulang tutorial",
+        "explainLevels": "Pahami level N (N)",
+        "goToTraining": "Ke latihan",
+        "continueToTraining": "Lanjut ke latihan"
+      }
+    },
+    "welcome": {
+      "title": "Pengantar latihan",
+      "description": "Dual N-Back menantang memori kerjamu dengan mengharuskan melacak dua aliran informasi secara bersamaan: posisi visual dan suara. Tutorial ini membimbingmu langkah demi langkah.",
+      "button": "Mulai tutorial"
+    },
+    "timeline": {
+      "legend": "Timeline membantu perbandingan — disembunyikan saat bermain",
+      "past": "Masa lalu",
+      "present": "Sekarang"
+    },
+    "hub": {
+      "title": "Tutorial",
+      "subtitle": "Pilih mode untuk dipelajari",
+      "basics": {
+        "title": "Dasar-dasar",
+        "description": "Pelajari refleks dan ritme Dual N-Back klasik."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Kuasai penempatan temporal pada timeline."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Labeli setiap stimulus dengan referensi temporal (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Pelajari gerakan recall aktif melalui tracing."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Bangun ulang urutan lengkap dari ingatan."
+      },
+      "soroban": {
+        "title": "Penguasaan Soroban",
+        "description": "Pelajari sempoa Jepang langkah demi langkah melalui 8 tahap progresif."
+      }
+    },
+    "place": {
+      "comingSoon": "Tutorial Place sedang dikembangkan",
+      "cardPool": "Kartu tersedia",
+      "slot": "Slot",
+      "observe": "Amati: posisi di grid dan huruf audio.",
+      "buffer": "Stimulus kedua. Buffer N-back sedang terisi.",
+      "cardsAppear": "Kartu muncul! Mewakili 3 stimulus terakhir.",
+      "firstDrag": "Klik kartu yang ditandai, lalu slot N-2 (terlama).",
+      "timelineExplain": "Timeline menunjukkan waktu: N-2 = terlama, N = sekarang.",
+      "positionN1": "Tempatkan posisi tengah di slot N-1.",
+      "positionN": "Bagus! Akhiri dengan posisi terbaru (slot N).",
+      "audioIntro": "Sekarang kartu audio! Prinsip yang sama.",
+      "audioN2": "Tempatkan huruf pertama yang didengar di slot N-2.",
+      "audioN1": "Lanjut dengan huruf tengah (slot N-1).",
+      "audioN": "Akhiri dengan huruf terbaru (slot N).",
+      "dualIntro": "Percobaan baru! Tempatkan posisi DAN huruf.",
+      "dualPractice": "Tempatkan semua 6 kartu di slot yang benar. Pelan-pelan!",
+      "rhythmExplain": "Dalam permainan nyata, waktumu terbatas.",
+      "autonomy": "Giliranmu! Tempatkan semua kartu dengan benar.",
+      "conclusion": "Hebat! Kamu sudah menguasai dasar Dual Place.",
+      "selectCard": "Pilih kartu, lalu klik slotnya",
+      "clickSlot": "Klik slot yang benar untuk menempatkan kartu",
+      "wrongSlot": "Bukan slot itu! Lihat urutan temporal.",
+      "wrongCard": "Bukan kartu itu. Temukan yang cocok dengan slot.",
+      "tryAgain": "Coba lagi! Slot yang benar disorot."
+    },
+    "memo": {
+      "comingSoon": "Tutorial Memo sedang dikembangkan",
+      "selectPosition": "Pilih posisi",
+      "selectAudio": "Pilih huruf",
+      "clickToRecall": "Klik slot untuk mengingat nilai",
+      "validate": "Validasi",
+      "observeFirst": "Stimulus pertama. Hafalkan posisi DAN huruf!",
+      "observeSecond": "Stimulus kedua. Terus menghafal.",
+      "observeThird": "Stimulus ketiga. Buffer lengkap. Bersiap!",
+      "recallIntro": "Grid menghilang! Ingat dari memori. Klik slot N-2.",
+      "firstRecall": "Klik slot N-2. Apa posisi pertama?",
+      "feedbackExplain": "Hijau = benar. Merah = salah. Bisa diperbaiki sampai 3 kali!",
+      "multiSlot": "Lanjut! Ingat posisi N-1 dan N.",
+      "newStimulus": "Stimulus baru! Jendela N-back bergeser satu.",
+      "windowShift": "Jendela sudah bergeser. N-2 lama keluar, N baru masuk.",
+      "fullPosition": "Ingat semua 3 posisi. Fokus!",
+      "audioIntro": "Stimulus baru. Sekarang tambah recall audio!",
+      "firstAudioRecall": "Klik slot audio N-2. Huruf apa?",
+      "fullAudio": "Lanjut dengan huruf N-1 dan N.",
+      "dualIntro": "Dalam permainan nyata, kamu mengingat posisi DAN huruf bersamaan.",
+      "dualPractice": "Ingat semua 6 sel lalu klik Validasi.",
+      "correctionExplain": "Jika salah, klik lagi untuk memperbaiki. Maks 3 kali.",
+      "withCorrection": "Coba! Jika salah, perbaiki dengan klik lagi.",
+      "conclusion": "Luar biasa! Kamu sudah menguasai recall aktif. Mulai sesi!",
+      "wrongAnswer": "Bukan itu. Pikirkan, stimulus mana yang ada pada saat itu?",
+      "tryAgain": "Coba lagi! Masih bisa diperbaiki.",
+      "maxCorrections": "3 koreksi tercapai. Slot ini terkunci.",
+      "validateHint": "Semua slot terisi. Klik Validasi!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Selamat datang di Dual Pick! Pelajari cara mengklasifikasi setiap stimulus.",
+        "hud": "Atas: progresmu dalam tutorial.",
+        "grid": "Grid dibagi menjadi 3 zona: ATAS, TENGAH, BAWAH.",
+        "controls": "Tombol-tombol ini mengklasifikasi. Posisi di kiri, Suara di kanan.",
+        "outro": "Siap? Mulai dengan klasifikasi posisi!"
+      },
+      "intro": "Di Dual Pick, kamu mengklasifikasi setiap stimulus berdasarkan dua kriteria: zona grid dan tipe suara.",
+      "gridExplain": "Grid punya 3 zona: ATAS (baris atas), TENGAH (tengah), BAWAH (baris bawah).",
+      "positionHaut": "Kotak ada di atas. Klik ATAS.",
+      "positionMilieu": "Kotak ada di tengah. Klik TENGAH.",
+      "positionBas": "Kotak ada di bawah. Klik BAWAH.",
+      "positionRecap": "Sempurna! ATAS = baris atas, TENGAH = tengah, BAWAH = baris bawah.",
+      "positionPractice": "Giliranmu! Klasifikasi posisi ini.",
+      "soundIntro": "Sekarang suara. Ada dua tipe: VOKAL (A, E, I, O, U) dan KONSONAN (lainnya).",
+      "soundVoyelle": "Kamu mendengar A. Itu vokal. Klik VOKAL.",
+      "soundConsonne": "Kamu mendengar T. Itu konsonan. Klik KONSONAN.",
+      "soundRecap": "Ingat: A, E, I, O, U = VOKAL. Lainnya = KONSONAN.",
+      "soundPractice": "Giliranmu! Klasifikasi suara ini.",
+      "dualIntro": "Dalam permainan nyata, kamu mengklasifikasi KEDUANYA bersamaan: posisi DAN suara.",
+      "dualFirst": "Klasifikasi posisi DAN suara. Pelan-pelan.",
+      "dualSecond": "Lanjut. Posisi + Suara.",
+      "dualThird": "Hebat! Satu lagi untuk latihan.",
+      "rhythm": "Dalam sesi, jaga ritme teratur. Kelancaran datang dengan latihan.",
+      "conclusion": "Kerja bagus! Kamu sudah menguasai klasifikasi. Mulai sesi Dual Pick!",
+      "buttons": {
+        "top": "ATAS",
+        "middle": "TENGAH",
+        "bottom": "BAWAH",
+        "vowel": "VOKAL",
+        "consonant": "KONSONAN"
+      },
+      "feedback": {
+        "correctPosition": "Zona benar!",
+        "correctSound": "Tipe suara benar!",
+        "wrongPosition": "Bukan zona itu. Lihat di mana kotaknya.",
+        "wrongSound": "Bukan itu. A, E, I, O, U = vokal."
+      }
+    },
+    "trace": {
+      "intro": "Selamat datang di Dual Trace. Tidak ada tombol di sini: kamu akan mengingat posisi sebelumnya melalui gerakan geser.",
+      "observe": "Hafalkan posisi ini. Giliran berikutnya, kamu perlu menggeser ke arahnya.",
+      "firstSwipe": "Geseran pertama! Geser jarimu ke arah posisi giliran sebelumnya. Panah membimbingmu.",
+      "firstAudioMatch": "Huruf sama dengan giliran sebelumnya! Geser ke posisi DAN ketuk dua kali untuk menandai kecocokan audio.",
+      "audioMatch": "Kecocokan audio terdeteksi! Geser + ketuk dua kali.",
+      "swipe1": "Geser ke arah posisi N-1. Ingat di mana kotaknya.",
+      "swipe2": "Lanjut. Setiap geseran memperkuat memori aktifmu.",
+      "swipe3": "Recall aktif lebih menuntut dari pengenalan sederhana.",
+      "swipe4": "Tetap fokus. Visualisasikan posisi sebelum menggeser.",
+      "swipe5": "Luar biasa! Kamu sudah menguasai gerakan recall.",
+      "complete": "Tutorial selesai. Kamu siap untuk latihan Dual Trace.",
+      "tapTarget": "Ketuk posisi giliran sebelumnya",
+      "tapTargetAndAudio": "Ketuk posisi target, lalu Audio"
+    },
+    "ui": {
+      "startExercise": "Mulai latihan",
+      "score": "Skor: {{current}}/{{total}}",
+      "complete": "Selesai",
+      "correct": "✓ Benar!",
+      "expectedMatch": "✗ Diharapkan: Cocok",
+      "expectedNoMatch": "✗ Diharapkan: Tidak cocok",
+      "memorize": "Hafalkan posisi...",
+      "memorizeLetter": "Hafalkan huruf...",
+      "matchDetected": "✓ Kecocokan terdeteksi!",
+      "noMatch": "✗ Tidak cocok",
+      "matchExplanation": "Cocok! Langkah {{current}} = Langkah {{previous}}",
+      "exerciseComplete": "Latihan selesai!",
+      "match": "Cocok",
+      "noMatchButton": "Tidak cocok",
+      "none": "Tidak ada",
+      "both": "Keduanya",
+      "position": "Posisi",
+      "audio": "Audio",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Dasbormu: level N-back, penghitung giliran, dan kontrol sesi.",
+      "timeline": "Timeline menyimpan 3 stimulus terakhir untuk perbandingan. Dalam permainan nyata, bantuan ini disembunyikan.",
+      "grid": "Grid: setiap giliran, sel menyala di 1 dari 8 posisi. Bersamaan, huruf diucapkan.",
+      "controls": "Tombol responsmu. Tekan saat mendeteksi pengulangan.",
+      "intro": "Selamat datang! Mari jelajahi antarmuka permainan bersama.",
+      "continue": "Lanjut",
+      "outro": "Sekarang mari beralih ke sesi terbimbing. Perhatikan animasi dan ikuti instruksi.",
+      "start": "Mulai",
+      "tapToContinue": "Ketuk di mana saja untuk lanjut"
+    },
+    "speed": {
+      "label": "Kecepatan: {{speed}}",
+      "pauseToChange": "Jeda untuk mengubah kecepatan"
+    },
+    "assessment": {
+      "title": "Fase penilaian",
+      "subtitle": "Mulai sekarang, ini adalah sesi klasik singkat.",
+      "body": "Tempo terus-menerus dan kamu tidak akan mendapat petunjuk lagi. Mainkan seperti sesi nyata.",
+      "goal": "Tujuan: minimal {{min}}% akurasi dari {{count}} percobaan.",
+      "cta": "Ayo mulai"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Memahami level N",
+        "desc": "Kamu sudah belajar N=2. Begini cara generalisasinya dari N=1 ke N=4.",
+        "start": "Mulai",
+        "done": "Selesai",
+        "skip": "Lewati",
+        "hud": "N = berapa giliran ke belakang.",
+        "present": "N = stimulus saat ini (sekarang).",
+        "past": "Bandingkan dengan N-{{n}}.",
+        "pressPosition": "Jika posisi berulang, tekan Posisi.",
+        "pressAudio": "Jika suara berulang, tekan Audio.",
+        "annotation": {
+          "n1": "N=1: bandingkan stimulus saat ini (N) dengan giliran sebelumnya (N-1).",
+          "n2": "N=2: bandingkan stimulus saat ini (N) dengan dua giliran lalu (N-2).",
+          "n3": "N=3: bandingkan stimulus saat ini (N) dengan tiga giliran lalu (N-3)."
+        },
+        "outroTitle": "Dan seterusnya…",
+        "outroBody": "Jika kamu naik ke N=5, kamu akan membandingkan dengan N-5. Aturannya tetap sama; hanya jaraknya yang bertambah."
+      }
+    },
+    "annotations": {
+      "intro": "Amati: sel menyala di grid dan huruf diucapkan bersamaan.",
+      "observe": "Hafalkan. Timeline melacak stimulus.",
+      "firstComparison": "Sekarang kamu punya cukup riwayat untuk membandingkan.",
+      "firstPositionMatch": "Posisi sama dengan 2 giliran lalu! Bandingkan N dan N-2 di timeline, lalu tekan Posisi.",
+      "firstAudioMatch": "Huruf sama dengan 2 giliran lalu! Bandingkan N dan N-2 di timeline, lalu tekan Audio.",
+      "firstDualMatch": "Kecocokan ganda! Posisi DAN suara berulang. Tekan kedua tombol.",
+      "positionMatch": "Posisi sama. Tekan Posisi.",
+      "audioMatch": "Suara sama. Tekan Audio.",
+      "dualMatch": "Keduanya cocok. Tekan Posisi dan Audio.",
+      "noMatch": "Tidak ada kecocokan giliran ini. Terus menghafal.",
+      "noMatch1": "Tidak ada pengulangan kali ini. Ketuk untuk lanjut.",
+      "noMatch2": "Masih belum cocok. Fokus pada aliran posisi + suara.",
+      "noMatch3": "Tidak ada yang perlu dilaporkan. Selalu bandingkan dengan N-2 di timeline.",
+      "noMatch4": "Tidak cocok. Temponya meningkat.",
+      "noMatch5": "Lanjut. Kecocokan datang tak terduga.",
+      "noMatch6": "Tidak cocok. Terus, kamu sudah dapat ritmenya.",
+      "noMatch7": "Tahap akhir. Tetap fokus.",
+      "noMatch8": "Hampir selesai. Beberapa stimulus lagi.",
+      "complete": "Selamat! Kamu sudah menguasai dasar Dual N-Back. Siap berlatih?"
+    },
+    "exit": {
+      "confirm": "Keluar",
+      "title": "Keluar dari tutorial?",
+      "message": "Progresmu akan disimpan. Kamu bisa melanjutkan nanti."
+    },
+    "recovery": {
+      "message": "Ditemukan sesi yang terputus.",
+      "staleMessage": "Ditemukan sesi terputus dari lebih dari 30 menit lalu.",
+      "resume": "Lanjutkan",
+      "startFresh": "Mulai baru",
+      "title": "Lanjutkan tutorial?"
+    }
+  }
+}

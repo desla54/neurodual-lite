@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutorial",
+    "exitConfirm": "Umalis sa tutorial?",
+    "exitWarning": "Hindi mase-save ang iyong progreso.",
+    "continue": "Magpatuloy",
+    "quit": "Umalis",
+    "stepLabel": "Hakbang {{step}}",
+    "previous": "Nakaraan",
+    "restart": "I-restart",
+    "next": "Susunod",
+    "startGame": "Simulan",
+    "progress": "Kontra",
+    "tapToContinue": "I-tap para magpatuloy",
+    "controls": {
+      "position": "Posisyon",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Instruksyon"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Magaling. Naipasa mo ang tutorial.",
+        "stay": "Konti na lang. Kaunti pang practice at makukuha mo.",
+        "down": "Hindi pa na-validate. Ulitin ang tutorial para palakasin ang mga basics."
+      },
+      "header": {
+        "up": "Natapos na ang tutorial!",
+        "down": "Balik-aral",
+        "stay": "Konti na lang!"
+      },
+      "noteMinAssessment": "Tandaan: Para sa mas tumpak na pagsusuri, sinusuri ng tutorial ang hindi bababa sa 8 sagot.",
+      "guidance": {
+        "passed": "Handa ka na sa free training.",
+        "failed": "Inirerekomenda naming ulitin ang tutorial bago lumipat sa training."
+      },
+      "correctAnswers": "{{correct}}/{{total}} tamang sagot",
+      "actions": {
+        "backToHome": "Bumalik sa home",
+        "retryTutorial": "Ulitin ang tutorial",
+        "explainLevels": "Unawain ang N level (N)",
+        "goToTraining": "Pumunta sa training",
+        "continueToTraining": "Magpatuloy sa training"
+      }
+    },
+    "welcome": {
+      "title": "Panimula sa training",
+      "description": "Hinahamon ng Dual N-Back ang iyong working memory sa pamamagitan ng pagsubaybay sa dalawang stream ng impormasyon nang sabay-sabay: isang visual na posisyon at isang tunog. Ginagabayan ka ng tutorial na ito nang hakbang-hakbang.",
+      "button": "Simulan ang tutorial"
+    },
+    "timeline": {
+      "legend": "Ang timeline ay tumutulong sa paghahambing — nakatago ito sa tunay na laro",
+      "past": "Nakaraan",
+      "present": "Kasalukuyan"
+    },
+    "hub": {
+      "title": "Mga tutorial",
+      "subtitle": "Pumili ng mode na gusto mong matutunan",
+      "basics": {
+        "title": "Ang mga basics",
+        "description": "Matutunan ang reflex at ritmo ng classic Dual N-Back."
+      },
+      "place": {
+        "title": "Dalawahang Lugar",
+        "description": "Master ang temporal placement sa timeline."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "I-label ang bawat stimulus gamit ang temporal reference nito (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dalawahang Bakas",
+        "description": "Matutunan ang active recall gesture sa pamamagitan ng tracing."
+      },
+      "memo": {
+        "title": "Dalawahang Memo",
+        "description": "Buuin ulit ang kumpletong sequence mula sa memorya."
+      },
+      "soroban": {
+        "title": "Soroban Mastery",
+        "description": "Matutunan ang Japanese abacus nang hakbang-hakbang sa 8 progresibong yugto."
+      }
+    },
+    "place": {
+      "comingSoon": "Ginagawa pa ang Place tutorial",
+      "cardPool": "Mga available na card",
+      "slot": "Puwang",
+      "observe": "Obserbahan: isang posisyon sa grid at isang audio letter.",
+      "buffer": "Pangalawang stimulus. Napupuno na ang N-back buffer.",
+      "cardsAppear": "Lumitaw ang mga card! Kinakatawan nila ang huling 3 stimulus.",
+      "firstDrag": "I-click ang minarkahang card, pagkatapos ang N-2 slot (ang pinakaluma).",
+      "timelineExplain": "Ipinapakita ng timeline ang oras: N-2 = pinakaluma, N = kasalukuyan.",
+      "positionN1": "Ilagay ang gitnang posisyon sa N-1 slot.",
+      "positionN": "Mahusay! Tapusin mo sa pinakakamakailan na posisyon (N slot).",
+      "audioIntro": "Ngayon ang mga audio card! Parehong prinsipyo.",
+      "audioN2": "Ilagay ang unang letra na narinig sa N-2 slot.",
+      "audioN1": "Ipagpatuloy sa gitnang letra (N-1 slot).",
+      "audioN": "Tapusin sa pinakakamakailan na letra (N slot).",
+      "dualIntro": "Bagong trial! Maglagay ng mga posisyon AT mga letra.",
+      "dualPractice": "Ilagay ang lahat ng 6 na card sa tamang slot. Dahan-dahan lang!",
+      "rhythmExplain": "Sa tunay na laro, limitado ang oras mo.",
+      "autonomy": "Ikaw naman! Ilagay nang tama ang lahat ng card.",
+      "conclusion": "Magaling! Na-master mo ang mga basics ng Dual Place.",
+      "selectCard": "Pumili ng card, pagkatapos i-click ang slot nito",
+      "clickSlot": "I-click ang tamang slot para ilagay ang card",
+      "wrongSlot": "Hindi yan ang tamang slot! Tingnan ang temporal order.",
+      "wrongCard": "Hindi yan ang tamang card. Hanapin ang tugma sa slot.",
+      "tryAgain": "Subukan ulit! Naka-highlight ang tamang slot."
+    },
+    "memo": {
+      "comingSoon": "Ginagawa pa ang Memo tutorial",
+      "selectPosition": "Piliin ang posisyon",
+      "selectAudio": "Piliin ang letra",
+      "clickToRecall": "I-click ang slot para alalahanin ang value",
+      "validate": "I-validate",
+      "observeFirst": "Unang stimulus. Tandaan ang posisyon AT ang letra!",
+      "observeSecond": "Pangalawang stimulus. Patuloy na tandaan.",
+      "observeThird": "Pangatlong stimulus. Kumpleto na ang buffer. Maghanda!",
+      "recallIntro": "Nawala ang grid! Alalahanin mula sa memorya. I-click ang N-2 slot.",
+      "firstRecall": "I-click ang N-2 slot. Ano ang unang posisyon?",
+      "feedbackExplain": "Berde = tama. Pula = mali. Maaari kang magwasto hanggang 3 beses!",
+      "multiSlot": "Ipagpatuloy! Alalahanin ang posisyon N-1 at N.",
+      "newStimulus": "Bagong stimulus! Lumilipat ang N-back window ng isa.",
+      "windowShift": "Lumipat na ang window. Lumabas ang lumang N-2, pumasok ang bagong N.",
+      "fullPosition": "Alalahanin ang lahat ng 3 posisyon. Mag-focus!",
+      "audioIntro": "Bagong stimulus. Ngayon ay magdadagdag tayo ng audio recall!",
+      "firstAudioRecall": "I-click ang audio N-2 slot. Anong letra?",
+      "fullAudio": "Ipagpatuloy sa mga letra N-1 at N.",
+      "dualIntro": "Sa tunay na laro, aalalahanin mo ang mga posisyon AT mga letra nang sabay.",
+      "dualPractice": "Alalahanin ang lahat ng 6 na cell pagkatapos i-click ang I-validate.",
+      "correctionExplain": "Kung nagkamali ka, i-click ulit para iwasto. Maximum 3 beses.",
+      "withCorrection": "Subukan mo! Kung mali, iwasto sa pamamagitan ng pag-click ulit.",
+      "conclusion": "Napakahusay! Na-master mo ang active recall. Magsimula ng session!",
+      "wrongAnswer": "Hindi yan. Isipin, anong stimulus ang nasa sandaling iyon?",
+      "tryAgain": "Subukan ulit! Maaari ka pa ring magwasto.",
+      "maxCorrections": "3 pagwawasto na. Naka-lock na ang slot na ito.",
+      "validateHint": "Napunan na ang lahat ng slot. I-click ang I-validate!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Maligayang pagdating sa Dual Pick! Matutunan mong i-classify ang bawat stimulus.",
+        "hud": "Itaas: ang progreso mo sa tutorial.",
+        "grid": "Nahahati ang grid sa 3 zone: ITAAS, GITNA, IBABA.",
+        "controls": "Ang mga button na ito ay nag-classify. Posisyon sa kaliwa, Tunog sa kanan.",
+        "outro": "Handa na? Magsimula tayo sa classification ng posisyon!"
+      },
+      "intro": "Sa Dual Pick, ini-classify mo ang bawat stimulus sa dalawang criteria: grid zone at uri ng tunog.",
+      "gridExplain": "Ang grid ay may 3 zone: ITAAS (itaas na hilera), GITNA (sentro), IBABA (ibabang hilera).",
+      "positionHaut": "Ang parisukat ay nasa itaas. I-click ang ITAAS.",
+      "positionMilieu": "Ang parisukat ay nasa gitna. I-click ang GITNA.",
+      "positionBas": "Ang parisukat ay nasa ibaba. I-click ang IBABA.",
+      "positionRecap": "Perpekto! ITAAS = itaas na hilera, GITNA = sentro, IBABA = ibabang hilera.",
+      "positionPractice": "Ikaw naman! I-classify ang posisyon na ito.",
+      "soundIntro": "Ngayon ang mga tunog. May dalawang uri: PATINIG (A, E, I, O, U) at KATINIG (lahat ng iba pa).",
+      "soundVoyelle": "Narinig mo ang A. Patinig ito. I-click ang PATINIG.",
+      "soundConsonne": "Narinig mo ang T. Katinig ito. I-click ang KATINIG.",
+      "soundRecap": "Tandaan: A, E, I, O, U = PATINIG. Lahat ng iba pa = KATINIG.",
+      "soundPractice": "Ikaw naman! I-classify ang tunog na ito.",
+      "dualIntro": "Sa tunay na laro, ini-classify mo PAREHO nang sabay: posisyon AT tunog.",
+      "dualFirst": "I-classify ang posisyon AT tunog. Dahan-dahan lang.",
+      "dualSecond": "Ipagpatuloy. Posisyon + Tunog.",
+      "dualThird": "Magaling! Isa pa para sa practice.",
+      "rhythm": "Sa session, panatilihin ang regular na ritmo. Dadating ang fluidity sa practice.",
+      "conclusion": "Magaling! Na-master mo ang classification. Magsimula ng Dual Pick session!",
+      "buttons": {
+        "top": "ITAAS",
+        "middle": "GITNA",
+        "bottom": "IBABA",
+        "vowel": "PATINIG",
+        "consonant": "KATINIG"
+      },
+      "feedback": {
+        "correctPosition": "Tamang zone!",
+        "correctSound": "Tamang uri ng tunog!",
+        "wrongPosition": "Hindi yan ang zone. Tingnan kung nasaan ang parisukat.",
+        "wrongSound": "Hindi yan. A, E, I, O, U = mga patinig."
+      }
+    },
+    "trace": {
+      "intro": "Maligayang pagdating sa Dual Trace. Walang button dito: aktibo mong aalalahanin ang nakaraang posisyon sa pamamagitan ng swipe gesture.",
+      "observe": "Tandaan ang posisyon na ito. Sa susunod na turn, kailangan mong mag-swipe patungo dito.",
+      "firstSwipe": "Unang swipe! I-slide ang iyong daliri patungo sa posisyon ng nakaraang turn. Ginagabayan ka ng arrow.",
+      "firstAudioMatch": "Parehong letra gaya ng nakaraang turn! Mag-swipe sa posisyon AT mag-double-tap para isignal ang audio match.",
+      "audioMatch": "Na-detect ang audio match! Swipe + double-tap.",
+      "swipe1": "Mag-swipe patungo sa N-1 na posisyon. Tandaan kung nasaan ang parisukat.",
+      "swipe2": "Ipagpatuloy. Ang bawat swipe ay nagpapalakas ng iyong active memory.",
+      "swipe3": "Ang active recall ay mas mahirap kaysa simpleng recognition.",
+      "swipe4": "Mag-focus. Isipin ang posisyon bago mag-swipe.",
+      "swipe5": "Magaling! Na-master mo ang recall gesture.",
+      "complete": "Tapos na ang tutorial. Handa ka na sa Dual Trace training.",
+      "tapTarget": "I-tap ang posisyon ng nakaraang turn",
+      "tapTargetAndAudio": "I-tap ang target na posisyon, pagkatapos Audio"
+    },
+    "ui": {
+      "startExercise": "Simulan ang ehersisyo",
+      "score": "Iskor: {{current}}/{{total}}",
+      "complete": "Kumpleto",
+      "correct": "✓ Tama!",
+      "expectedMatch": "✗ Inaasahan: Tugma",
+      "expectedNoMatch": "✗ Inaasahan: Walang tugma",
+      "memorize": "Tandaan ang posisyon...",
+      "memorizeLetter": "Tandaan ang letra...",
+      "matchDetected": "✓ Na-detect ang tugma!",
+      "noMatch": "✗ Walang tugma",
+      "matchExplanation": "Tugma! Hakbang {{current}} = Hakbang {{previous}}",
+      "exerciseComplete": "Tapos na ang ehersisyo!",
+      "match": "Tugma",
+      "noMatchButton": "Walang tugma",
+      "none": "Wala",
+      "both": "Pareho",
+      "position": "Posisyon",
+      "audio": "Audio",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Ang iyong dashboard: N-back level, turn counter, at mga kontrol ng session.",
+      "timeline": "Pinapanatili ng timeline ang huling 3 stimulus para tumulong sa paghahambing. Sa tunay na laro, nakatago ang tulong na ito.",
+      "grid": "Ang grid: bawat turn, may ilaw na cell sa isa sa 8 posisyon. Kasabay nito, may binibigkas na letra.",
+      "controls": "Ang iyong mga sagot na button. Pindutin kapag may na-detect na pag-uulit.",
+      "intro": "Maligayang pagdating! Tuklasin natin ang game interface.",
+      "continue": "Magpatuloy",
+      "outro": "Ngayon ay lumipat tayo sa guided session. Panoorin ang mga animation at sundin ang mga instruksyon.",
+      "start": "Simulan",
+      "tapToContinue": "I-tap kahit saan para magpatuloy"
+    },
+    "speed": {
+      "label": "Bilis: {{speed}}",
+      "pauseToChange": "I-pause para baguhin ang bilis"
+    },
+    "assessment": {
+      "title": "Nasuri na yugto",
+      "subtitle": "Mula ngayon, maikling classic run na ito.",
+      "body": "Tuloy-tuloy na ang ritmo at hindi ka na makakakuha ng mga hint. Maglaro na parang tunay na session.",
+      "goal": "Layunin: hindi bababa sa {{min}}% accuracy sa {{count}} trial.",
+      "cta": "Tara na"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Pag-unawa sa N level",
+        "desc": "Natutunan mo ang N=2. Narito kung paano ito nag-generalize mula N=1 hanggang N=4.",
+        "start": "Simulan",
+        "done": "Tapusin",
+        "skip": "Laktawan",
+        "hud": "N = ilang turn ang balikan.",
+        "present": "N = ang kasalukuyang stimulus (kasalukuyan).",
+        "past": "Ihambing sa N-{{n}}.",
+        "pressPosition": "Kung inuulit ang posisyon, pindutin ang Posisyon.",
+        "pressAudio": "Kung inuulit ang tunog, pindutin ang Audio.",
+        "annotation": {
+          "n1": "N=1: ihambing ang kasalukuyang stimulus (N) sa nakaraang turn (N-1).",
+          "n2": "N=2: ihambing ang kasalukuyang stimulus (N) sa dalawang turn nakaraan (N-2).",
+          "n3": "N=3: ihambing ang kasalukuyang stimulus (N) sa tatlong turn nakaraan (N-3)."
+        },
+        "outroTitle": "At iba pa...",
+        "outroBody": "Kung lumipat ka sa N=5, ihahambing mo sa N-5. Pareho ang patakaran; ang distansya lang ang tumataas."
+      }
+    },
+    "annotations": {
+      "intro": "Obserbahan: may ilaw na cell sa grid at may binibigkas na letra nang sabay.",
+      "observe": "Tandaan. Sinusubaybayan ng timeline ang mga stimulus.",
+      "firstComparison": "Mayroon ka nang sapat na history para ihambing.",
+      "firstPositionMatch": "Parehong posisyon gaya ng 2 turn nakaraan! Ihambing ang N at N-2 sa timeline, pagkatapos pindutin ang Posisyon.",
+      "firstAudioMatch": "Parehong letra gaya ng 2 turn nakaraan! Ihambing ang N at N-2 sa timeline, pagkatapos pindutin ang Audio.",
+      "firstDualMatch": "Doble tugma! Pareho ang posisyon AT tunog na inuulit. Pindutin ang dalawang button.",
+      "positionMatch": "Parehong posisyon. Pindutin ang Posisyon.",
+      "audioMatch": "Parehong tunog. Pindutin ang Audio.",
+      "dualMatch": "Parehong tugma. Pindutin ang Posisyon at Audio.",
+      "noMatch": "Walang tugma sa turn na ito. Patuloy na tandaan.",
+      "noMatch1": "Walang pag-uulit sa pagkakataong ito. I-tap para magpatuloy.",
+      "noMatch2": "Wala pa ring tugma. Manatiling focused sa posisyon + tunog na daloy.",
+      "noMatch3": "Walang nai-report. Laging ihambing sa N-2 sa timeline.",
+      "noMatch4": "Walang tugma. Bumibilis na ang ritmo.",
+      "noMatch5": "Ipagpatuloy. Hindi hulaan kung kailan lalabas ang mga tugma.",
+      "noMatch6": "Walang tugma. Sige lang, nakuha mo na ang ritmo.",
+      "noMatch7": "Huling bahagi na. Manatiling focused.",
+      "noMatch8": "Halos tapos na. Kaunti na lang na stimulus.",
+      "complete": "Binabati kita! Na-master mo ang mga basics ng Dual N-Back. Handa ka na ba sa training?"
+    },
+    "exit": {
+      "confirm": "Umalis",
+      "title": "Umalis sa tutorial?",
+      "message": "Mase-save ang iyong progreso. Maaari kang bumalik mamaya."
+    },
+    "recovery": {
+      "message": "May nakitang interrupted na session.",
+      "staleMessage": "May nakitang interrupted na session mula mahigit 30 minuto na ang nakaraan.",
+      "resume": "Ipagpatuloy",
+      "startFresh": "Magsimulang bago",
+      "title": "Ipagpatuloy ang tutorial?"
+    }
+  }
+}

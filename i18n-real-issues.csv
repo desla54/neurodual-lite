@@ -1,0 +1,200 @@
+lang,key,labse_score,cometkiwi_score,avg_score,fr,en,translation,back_translate,overlap
+ms,game:game.gapDetection.gapThreshold,0.14,0.358,0.249,Seuil de détection,Gap Threshold,Ambang Jurang,brink of the abyss,0.00
+te,home:home.onboarding.introTitle,0.128,0.371,0.2495,Bienvenue sur NeuroDual,Welcome to NeuroDual,తయారీలో అభిజ్ఞా శిక్షణ అట్లాస్,atlas of cognitive training in manufacturing,0.00
+fa,game:game.cogTask.tapTheOddOne,0.257,0.281,0.269,Touchez l'intrus,Tap the odd one out,موردی که فرق داره رو بزن,click the item that is different,0.20
+sw,game:game.beadsTask.title,0.207,0.35,0.27849999999999997,Tâche des perles,Beads Task,Kazi ya Shanga,beadwork,0.00
+sw,settings:settings.gameMode.beadsTask,0.207,0.35,0.27849999999999997,Tâche des perles,Beads Task,Kazi ya Shanga,beadwork,0.00
+ur,game:game.beadsTask.title,0.286,0.279,0.2825,Tâche des perles,Beads Task,مهمة دانے,important data,0.00
+ur,settings:settings.gameMode.beadsTask,0.286,0.279,0.2825,Tâche des perles,Beads Task,مهمة دانے,important data,0.00
+uk,home:home.onboarding.introTitle,0.125,0.441,0.28300000000000003,Bienvenue sur NeuroDual,Welcome to NeuroDual,Когнітивний тренувальний атлас у процесі створення,cognitive training atlas in the process of creation,0.00
+ur,settings:settings.modeSections.corsi.base.subtitle,0.223,0.347,0.285,Empan et direction,Span and direction,مدت وسمت,duration and duration,0.33
+ur,settings:settings.modeSections.digitSpan.base.subtitle,0.244,0.326,0.28500000000000003,Empan et essais,Span and trials,مدت وٹرائلز,period vitriols,0.00
+cs,settings:settings.gameMode.tierIncontournable,0.234,0.356,0.295,Incontournables,Must-haves,Musíte mít,you must have,0.00
+ur,game:game.soundSweeps.upAccuracy,0.288,0.303,0.2955,Précision montant,Up accuracy,درستگی الأصوات الصاعدة,correctness of sound,0.00
+no,settings:settings.gameMode.judgmentOfRecency,0.207,0.392,0.2995,Jugement de récence,Judgment of Recency,Nylig dom,recent judgment,0.33
+no,game:game.judgmentOfRecency.title,0.207,0.392,0.2995,Jugement de récence,Judgment of Recency,Nylig dom,recent judgment,0.33
+ur,settings:settings.gameMode.categoryWorkingMemory,0.23,0.372,0.301,Mémoire de travail,Working Memory,الیادداشت العاملة الفئوية,al-yadadash al-fawiya,0.00
+ru,game:game.bart.overallAvgPumps,0.294,0.31,0.302,Pompes moy. globales,Overall avg pumps,Среднее всех нажатий,average of all clicks,0.00
+ms,game:game.ambiguousFigures.meanSwitches,0.291,0.315,0.303,Basculements moyens,Mean Switches,Suis Min,switch min,0.00
+id,game:game.anagram.avgSolve,0.313,0.295,0.304,Résolution moy.,Avg. solve,Rata-rata memecahkan,average solves,0.00
+ru,game:game.bart.adjustedAvgPumps,0.305,0.305,0.305,Pompes moy. ajustées,Adjusted avg pumps,Корр. среднее нажатий,corr. average clicks,0.00
+ur,game:game.bart.overallAvgPumps,0.341,0.269,0.30500000000000005,Pompes moy. globales,Overall avg pumps,اوسط النفخ الکل,average breathability,0.00
+ur,game:game.bart.adjustedAvgPumps,0.289,0.324,0.3065,Pompes moy. ajustées,Adjusted avg pumps,اوسط ضخات مُعدل,average pumping rate,0.00
+vi,home:home.onboarding.introTitle,0.244,0.369,0.3065,Bienvenue sur NeuroDual,Welcome to NeuroDual,Một tập bản đồ rèn luyện nhận thức đang hình thành,a cognitive training atlas is emerging,0.00
+ar,home:home.onboarding.introTitle,0.257,0.359,0.308,Bienvenue sur NeuroDual,Welcome to NeuroDual,أطلس تدريب معرفي قيد الإنشاء,a cognitive training atlas under construction,0.00
+zh,home:home.onboarding.introTitle,0.255,0.362,0.3085,Bienvenue sur NeuroDual,Welcome to NeuroDual,正在构建的认知训练图谱,cognitive training map under construction,0.00
+th,game:game.puzzle.guessesLeft,0.227,0.392,0.3095,Tentatives restantes,Guesses left,เดาออกไป,guess it.,0.00
+ms,game:game.bart.adjustedAvgPumps,0.267,0.352,0.3095,Pompes moy. ajustées,Adjusted avg pumps,Purata pam dilaraskan,the average pump is adjusted,0.33
+ko,settings:settings.gameMode.numberSeries,0.226,0.397,0.3115,Suites numériques,Number Series,수열 과제,sequence task,0.00
+fi,game:game.auditoryFigureGround.title,0.295,0.329,0.312,Figure-fond auditif,Auditory Figure-Ground,Kuulohahmo-maa,audio character country,0.00
+vi,settings:settings.gameMode.tierIncontournable,0.257,0.371,0.314,Incontournables,Must-haves,Phải có,must have,0.00
+sw,home:home.journeyQuickSettingsUnavailable,0.246,0.383,0.3145,Pas de réglages rapides disponibles pour ce parcours.,No quick settings available for this journey yet.,"Njia isiyolipishwa - tayari unafahamu N-Back Mbili, Ufuatiliaji wa Vitu Vingi, au mazoezi mengine? Nenda moja kwa moja kwenye kichupo cha Mafunzo na uchunguze maktaba.","free method - already familiar with double n-back, multi-object tracking, or other exercises? go directly to the tutorials tab and explore the library.",0.00
+ur,game:game.chainRecall.title,0.289,0.34,0.3145,Rappel en chaîne,Chain Recall,واپسی مترتیب,back order,0.00
+my,game:game.beadsTask.title,0.208,0.424,0.316,Tâche des perles,Beads Task,အလုံးစမ်းသပ်မှု,the lump test,0.00
+pl,home:home.onboarding.introTitle,0.262,0.372,0.317,Bienvenue sur NeuroDual,Welcome to NeuroDual,Atlas treningu kognitywnego w budowie,cognitive training atlas under construction,0.00
+th,game:game.ambiguousFigures.meanSwitches,0.309,0.325,0.317,Basculements moyens,Mean Switches,สวิตช์หมายถึง,switch means,0.00
+pl,game:game.temporalGeneralization.hitRate,0.218,0.418,0.318,Taux de réussite,Hit rate,Trafienia,hits,0.00
+pl,game:game.rvp.hitRate,0.218,0.418,0.318,Taux de réussite,Hit rate,Trafienia,hits,0.00
+pl,game:game.cogTask.hitRate,0.218,0.418,0.318,Taux de réussite,Hit rate,Trafienia,hits,0.00
+tr,home:home.onboarding.introTitle,0.198,0.442,0.32,Bienvenue sur NeuroDual,Welcome to NeuroDual,Yapım aşamasında bir bilişsel antrenman atlası,a cognitive training atlas in the making,0.00
+ur,stats:stats.advanced.durationPercentiles,0.281,0.36,0.3205,Percentiles durée,Duration percentiles,شرائح مئوية للدورانیہ,স্ট্টিক্লিক্যাল ল্র্র্যান,0.00
+id,game:game.cogTask.tapTheOddOne,0.342,0.299,0.3205,Touchez l'intrus,Tap the odd one out,Ketuk yang aneh,weird tap,0.20
+sw,settings:settings.dyslatéralisation.title,0.243,0.4,0.3215,Dyslatéralisation,Dyslateralization,Uhamisho wa Pande,side transfer,0.00
+sw,settings:settings.nav.dyslatéralisation,0.243,0.4,0.3215,Dyslatéralisation,Dyslateralization,Uhamisho wa Pande,side transfer,0.00
+id,home:home.onboarding.introTitle,0.286,0.36,0.32299999999999995,Bienvenue sur NeuroDual,Welcome to NeuroDual,Atlas pelatihan kognitif yang sedang dibuat,a cognitive training atlas in the making,0.00
+th,home:home.onboarding.introTitle,0.28,0.367,0.3235,Bienvenue sur NeuroDual,Welcome to NeuroDual,แผนที่การฝึกทางปัญญาที่กำลังสร้าง,a map of intellectual training being created.,0.00
+ar,game:game.oddOneOut.colorDiffAvgRt,0.284,0.366,0.32499999999999996,TR moy. couleur,Color diff. avg. RT,متوسط وقت الرد للون,average response time for color,0.25
+bn,home:home.onboarding.introTitle,0.212,0.438,0.325,Bienvenue sur NeuroDual,Welcome to NeuroDual,তৈরিতে একটি জ্ঞানীয় প্রশিক্ষণ এটলাস,a cognitive training atlas in the making,0.00
+vi,game:game.pursuitTracking.title,0.29,0.361,0.3255,Poursuite visuelle,Pursuit Tracking,Theo dõi truy đuổi,follow the chase,0.00
+hu,game:game.oddOneOut.shapeDiffAccuracy,0.286,0.368,0.32699999999999996,Préc. diff. de forme,Shape diff. accuracy,Alak kül. pontosság,figure out. accuracy,0.33
+ur,settings:settings.gameMode.patternRecognition,0.272,0.383,0.3275,Reconnaissance de motifs,Pattern Recognition,التعرّف على النمونے,introduction,0.00
+ur,game:game.cogTask.patternRecognition.heroTitle,0.272,0.383,0.3275,Reconnaissance de motifs,Pattern Recognition,التعرّف على النمونے,introduction,0.00
+sw,settings:settings.gameMode.contextualCueing,0.232,0.424,0.328,Indicage contextuel,Contextual Cueing,Utunzaji wa Muktadha,context maintenance,0.00
+sw,game:game.contextualCueing.title,0.232,0.424,0.328,Indicage contextuel,Contextual Cueing,Utunzaji wa Muktadha,context maintenance,0.00
+ur,settings:settings.gameMode.orientationDiscrimination,0.335,0.322,0.3285,Discrimination d'orientation,Orientation Discrimination,تمیز سمت,distinct direction,0.00
+ur,game:game.orientationDiscrimination.title,0.335,0.322,0.3285,Discrimination d'orientation,Orientation Discrimination,تمیز سمت,distinct direction,0.00
+de,game:game.ambiguousFigures.meanSwitches,0.295,0.364,0.3295,Basculements moyens,Mean Switches,Ø Wechsel,ø change,0.00
+ms,home:home.onboarding.introTitle,0.293,0.368,0.3305,Bienvenue sur NeuroDual,Welcome to NeuroDual,Atlas latihan kognitif yang sedang dibina,cognitive training atlas under construction,0.00
+ur,game:game.mnemonicDiscrimination.patternSeparation,0.322,0.34,0.331,Séparation de motifs,Pattern Separation,فصل النمونے,crops,0.00
+el,badges:badges.streak_90.name,0.325,0.338,0.3315,Trimestre Sans Faille,Flawless Quarter,Άψογη συνοικία,perfect neighborhood,0.00
+ms,game:game.anagram.avgSolve,0.3,0.365,0.3325,Résolution moy.,Avg. solve,Purata selesaikan,average finish,0.00
+ja,game:game.beadsTask.meanDrawsToDecision,0.346,0.322,0.33399999999999996,Tirages moyens avant décision,Mean Draws to Decision,平均引き数,average argument,0.00
+vi,game:game.beadsTask.title,0.383,0.288,0.3355,Tâche des perles,Beads Task,Nhiệm vụ hạt,particle mission,0.00
+vi,stats:stats.contextual.sublines.simpleVariableRt,0.319,0.355,0.33699999999999997,TR irréguliers.,Variable response times.,Thời gian phản hồi biến động.,response times fluctuate.,0.33
+my,settings:settings.about.alphaDesc,0.256,0.418,0.33699999999999997,Fonctionnalités expérimentales,Experimental features,သမ္ဘာ လက္ခဏာ,sign of the world,0.00
+ur,settings:settings.nav.dyslatéralisation,0.261,0.414,0.3375,Dyslatéralisation,Dyslateralization,تدرست الجانبية,correct lateral,0.00
+ur,settings:settings.dyslatéralisation.title,0.261,0.414,0.3375,Dyslatéralisation,Dyslateralization,تدرست الجانبية,correct lateral,0.00
+hu,game:game.cogTask.blockDesign.heroTitle,0.326,0.349,0.3375,Design de blocs,Block Design,Kockaminta,checkered pattern,0.00
+ko,home:home.onboarding.introTitle,0.216,0.459,0.3375,Bienvenue sur NeuroDual,Welcome to NeuroDual,구축 중인 인지 훈련 아틀라스,building a cognitive training atlas,0.00
+zh,game:game.bart.adjustedAvgPumps,0.412,0.263,0.3375,Pompes moy. ajustées,Adjusted avg pumps,校正平均打气次数,corrected average number of pumps,0.33
+km,stats:stats.advanced.passThreshold,0.27,0.406,0.338,Seuil de réussite,Pass threshold,ឆ្លងកាត់កម្រិត,cross level,0.00
+bn,settings:settings.gameMode.tierIncontournable,0.25,0.429,0.3395,Incontournables,Must-haves,থাকতে হবে,have to stay,0.00
+vi,game:game.attentionalCapture.singletonPresent,0.367,0.312,0.3395,Singleton présent,Singleton Present,Món quà đơn,single gift,0.00
+km,game:game.contourIntegration.thresholdJitter,0.318,0.362,0.33999999999999997,Jitter au seuil,Threshold jitter,កម្រិតការប្រែប្រួល,variation level,0.00
+km,settings:settings.gameMode.temporalBisection,0.25,0.433,0.3415,Bisection temporelle,Temporal Bisection,វគ្គបណ្ដុះបណ្ដាល,training,0.00
+da,game:game.puzzle.guessesLeft,0.301,0.382,0.3415,Tentatives restantes,Guesses left,Gæt tilbage,guess back,0.00
+ar,game:game.bart.adjustedAvgPumps,0.318,0.366,0.34199999999999997,Pompes moy. ajustées,Adjusted avg pumps,متوسط ضخات مُعدل,average average pumps,0.33
+zh,game:game.cogTask.tapTheOddOne,0.415,0.27,0.3425,Touchez l'intrus,Tap the odd one out,点击异类,click on heterogeneous,0.00
+ms,game:game.delayDiscounting.title,0.379,0.308,0.3435,Escompte temporel,Delay Discounting,Penangguhan Diskaun,suspension of discounts,0.00
+ms,game:game.beadsTask.title,0.351,0.337,0.344,Tâche des perles,Beads Task,Tugasan Manik,bead assignment,0.00
+ur,settings:settings.gameMode.categoryMemory,0.268,0.422,0.345,Mémoire épisodique,Episodic Memory,الیادداشت العرضية,a reminder,0.00
+tl,settings:settings.gameMode.tierIncontournable,0.274,0.418,0.346,Incontournables,Must-haves,Dapat subukan,must try,0.00
+hi,home:home.onboarding.introTitle,0.3,0.396,0.348,Bienvenue sur NeuroDual,Welcome to NeuroDual,निर्माणाधीन एक संज्ञानात्मक प्रशिक्षण एटलस,a cognitive training atlas under construction,0.00
+my,stats:stats.advanced.passThreshold,0.218,0.48,0.349,Seuil de réussite,Pass threshold,ကျော်သွားတတ်သည်။,tend to skip.,0.00
+ms,game:game.puzzle.undosLeft,0.374,0.324,0.349,Annulations restantes,Undos remaining,Buat asal yang tinggal,undo the rest,0.00
+el,game:game.navon.globalAdv,0.15,0.548,0.34900000000000003,Avantage global,Global Adv.,Πλεον. Ολ.,most. all,0.00
+nl,game:game.pursuitTracking.title,0.275,0.426,0.35050000000000003,Poursuite visuelle,Pursuit Tracking,Achtervolging volgen,follow chase,0.00
+el,settings:settings.gameMode.fittsTapping,0.392,0.31,0.351,Tapping de Fitts,Fitts Tapping,Ταιριάζει με το χτύπημα,it matches the beat,0.00
+el,game:game.fittsTapping.title,0.392,0.31,0.351,Tapping de Fitts,Fitts Tapping,Ταιριάζει με το χτύπημα,it matches the beat,0.00
+zh,game:game.bart.overallAvgPumps,0.462,0.241,0.35150000000000003,Pompes moy. globales,Overall avg pumps,总平均打气次数,total average number of pumps,0.33
+ta,settings:settings.dyslatéralisation.mirrorAxisLabel,0.352,0.354,0.353,Axe de symétrie,Mirror axis,கண்ணாடி அச்சு,glass mold,0.00
+it,home:home.onboarding.introTitle,0.302,0.407,0.3545,Bienvenue sur NeuroDual,Welcome to NeuroDual,Un atlante di allenamento cognitivo in costruzione,an atlas of cognitive training under construction,0.00
+ur,game:game.oddOneOut.colorDiffAvgRt,0.373,0.336,0.35450000000000004,TR moy. couleur,Color diff. avg. RT,اوسط وقت الرد لرنگ,average response time,0.00
+sw,game:game.ambiguousFigures.meanSwitches,0.319,0.39,0.35450000000000004,Basculements moyens,Mean Switches,Maana Swichi,meaning switch,0.00
+ar,settings:settings.visual.gridScale,0.369,0.34,0.35450000000000004,Échelle de la grille,Grid scale,حجم الشبكة,network size,0.00
+hu,game:game.oddOneOut.shapeDiffAvgRt,0.364,0.348,0.356,TR moy. diff. de forme,Shape diff. avg RT,Alak kül. átl. RV,figure out. avg. rv,0.00
+ta,home:home.onboarding.introTitle,0.286,0.426,0.356,Bienvenue sur NeuroDual,Welcome to NeuroDual,உருவாக்கத்தில் ஒரு அறிவாற்றல் பயிற்சி அட்லஸ்,a cognitive training atlas in the making,0.00
+mr,home:home.onboarding.introTitle,0.327,0.385,0.356,Bienvenue sur NeuroDual,Welcome to NeuroDual,एक संज्ञानात्मक प्रशिक्षण ॲटलस तयार करण्यात आले आहे,a cognitive training atlas has been prepared,0.00
+nl,home:home.onboarding.introTitle,0.204,0.509,0.3565,Bienvenue sur NeuroDual,Welcome to NeuroDual,Een cognitieve trainingsatlas in wording,a cognitive training atlas in the making,0.00
+pl,settings:settings.accessibility.hapticEnabled,0.214,0.5,0.357,Retour haptique,Haptic feedback,Wibracje,vibrations,0.00
+sw,settings:settings.trace.mindfulTiming,0.192,0.522,0.357,Pleine conscience,Mindfulness,Umakini,attention,0.00
+pl,settings:settings.accessibility.hapticFeedback,0.214,0.5,0.357,Retour haptique,Haptic feedback,Wibracje,vibrations,0.00
+ur,game:game.judgmentOfLearning.title,0.342,0.373,0.35750000000000004,Jugement d'apprentissage,Judgment of Learning,الحكم على السیکھنا,al-hakam ali al-sikhna,0.00
+ur,settings:settings.gameMode.judgmentOfLearning,0.342,0.373,0.35750000000000004,Jugement d'apprentissage,Judgment of Learning,الحكم على السیکھنا,al-hakam ali al-sikhna,0.00
+sv,game:game.fittsTapping.title,0.416,0.301,0.3585,Tapping de Fitts,Fitts Tapping,Passar Tappning,fits vintage,0.00
+ko,game:game.beadsTask.meanDrawsToDecision,0.36,0.358,0.359,Tirages moyens avant décision,Mean Draws to Decision,평균 뽑기 수,average number of draws,0.25
+fi,home:home.onboarding.introTitle,0.285,0.436,0.3605,Bienvenue sur NeuroDual,Welcome to NeuroDual,Rakenteilla oleva kognitiivisen harjoittelun atlas,an atlas of cognitive training under construction,0.00
+ar,badges:badges.streak_3.name,0.239,0.484,0.3615,Rituel Naissant,Nascent Ritual,طقس ناشئ,emerging weather,0.00
+sw,home:ospan.measure.firstTestTitle,0.343,0.386,0.36450000000000005,Mesurez votre mémoire de travail,Measure your working memory,__VAR0__ hatua halali,__var0__ valid action,0.00
+ru,home:home.onboarding.introTitle,0.304,0.426,0.365,Bienvenue sur NeuroDual,Welcome to NeuroDual,Атлас когнитивных тренировок в разработке,atlas of cognitive training in development,0.00
+id,settings:settings.gameMode.tierIncontournable,0.337,0.396,0.36650000000000005,Incontournables,Must-haves,Harus dimiliki,must have,0.00
+sv,game:game.judgmentOfRecency.title,0.322,0.412,0.367,Jugement de récence,Judgment of Recency,Nyhetsdom,news judgment,0.33
+ur,game:game.cogTask.lineOrientation.heroTitle,0.381,0.356,0.3685,Jugement d'orientation de lignes,Judgment of Line Orientation,حكم تچہرہ الخطوط,rule of the lines,0.25
+ur,settings:settings.gameMode.lineOrientation,0.381,0.356,0.3685,Jugement d'orientation de lignes,Judgment of Line Orientation,حكم تچہرہ الخطوط,rule of the lines,0.25
+da,game:game.judgmentOfRecency.title,0.332,0.405,0.36850000000000005,Jugement de récence,Judgment of Recency,Nyhedsdom,news judgment,0.33
+da,settings:settings.gameMode.judgmentOfRecency,0.332,0.405,0.36850000000000005,Jugement de récence,Judgment of Recency,Nyhedsdom,news judgment,0.33
+ur,game:game.negativePriming.nameTheRedShape,0.379,0.359,0.369,Nommez la forme rouge,Name the red shape,سمّ الشکل السرخ,simm al-shakal al-sarkh,0.00
+my,settings:settings.account.cloudActive,0.258,0.48,0.369,Synchronisation en ligne active,Cloud sync active,Cloud စင့်ခ်လုပ်ထားသည်။,cloud synced.,0.33
+sw,game:game.cogTask.sceneCrasher.heroTitle,0.404,0.336,0.37,Intrus dans la scène,Scene Intruder,Mvamizi wa Eneo,area invader,0.00
+sw,settings:settings.gameMode.sceneCrasher,0.404,0.336,0.37,Intrus dans la scène,Scene Intruder,Mvamizi wa Eneo,area invader,0.00
+ko,game:game.reversalLearning.avgTrialsToCriterion,0.382,0.36,0.371,Essais moy. au critère,Avg. trials to criterion,기준까지 평균 시행,average implementation to baseline,0.25
+pt,home:home.onboarding.introTitle,0.339,0.403,0.371,Bienvenue sur NeuroDual,Welcome to NeuroDual,Um atlas de treino cognitivo em construção,a cognitive training atlas in the making,0.00
+id,game:game.beadsTask.meanDrawsToDecision,0.423,0.32,0.3715,Tirages moyens avant décision,Mean Draws to Decision,Berarti Menarik Keputusan,means withdrawing decision,0.25
+ms,stats:stats.contextual.sublines.simpleVariableRt,0.328,0.415,0.3715,TR irréguliers.,Variable response times.,Waktu respons bervariasi.,response times vary.,0.33
+id,stats:stats.contextual.sublines.simpleVariableRt,0.328,0.415,0.3715,TR irréguliers.,Variable response times.,Waktu respons bervariasi.,response times vary.,0.33
+th,game:game.aria.traceGrid,0.362,0.381,0.3715,Grille de tracé,Trace grid,ติดตามตาราง,track schedule,0.00
+it,game:game.fauxPas.fpFound,0.39,0.355,0.3725,Faux pas détectés,Faux pas found,Gaffe individuate,gaffes detected,0.00
+ur,game:game.attentionalBlink.secondGreenLetter,0.371,0.374,0.3725,2ᵉ lettre verte ?,2nd green letter?,الحرف السبز الثاني؟,al-sabz al-thani?,0.00
+ur,game:game.tower.undoDescription,0.361,0.385,0.373,Annuler le dernier coup,Reverse last move,الواپس عن آخر حركة,back to the end of the movement,0.00
+ar,settings:settings.dyslatéralisation.title,0.3,0.446,0.373,Dyslatéralisation,Dyslateralization,تصحيح الجانبية,lateral correction,0.00
+ar,settings:settings.nav.dyslatéralisation,0.3,0.446,0.373,Dyslatéralisation,Dyslateralization,تصحيح الجانبية,lateral correction,0.00
+ro,game:game.puzzle.guessesLeft,0.422,0.324,0.373,Tentatives restantes,Guesses left,Ghicirile au plecat,the guesswork is gone,0.00
+km,game:game.anagram.avgSolve,0.379,0.367,0.373,Résolution moy.,Avg. solve,មធ្យម ដោះស្រាយ,medium resolution,0.00
+no,game:game.cogTask.digitSpan.heroTitle,0.331,0.416,0.3735,Empan de chiffres,Digit Span,Tallspenn,numerical range,0.00
+ur,game:game.foreperiod.fpEffectSlope,0.446,0.302,0.374,Pente de l'effet FP,FP Effect Slope,جھکاؤ تأثير الفترة التحضيرية,tilt effect,0.33
+th,game:game.cogTask.sentenceCompletion.highCloze,0.34,0.408,0.374,Forte prédictibilité,High cloze,เสื้อคลุมสูง,tall cloak,0.00
+tl,game:game.predictionMotion.title,0.388,0.361,0.3745,Prediction de mouvement,Prediction Motion,Paggalaw ng Paghuhula,movement of divination,0.00
+tl,settings:settings.gameMode.predictionMotion,0.388,0.361,0.3745,Prediction de mouvement,Prediction Motion,Paggalaw ng Paghuhula,movement of divination,0.00
+my,game:game.consequences.avgPerRound,0.278,0.471,0.3745,Moy. par manche,Avg. per round,ပျမ်းမျှ ပတ်ပတ်လည်,average round,0.33
+ur,game:game.ufov.respondFromMemory,0.32,0.43,0.375,Répondez de mémoire,Respond from memory,أجب من الیادداشت,remember,0.00
+zh,game:game.beadsTask.meanDrawsToDecision,0.383,0.367,0.375,Tirages moyens avant décision,Mean Draws to Decision,平均抽取次数,average number of draws,0.25
+ro,stats:report.dualTrack.replayReady,0.49,0.26,0.375,Essai rejouable,Replay-ready trial,Probă gata de redare,sample ready to play,0.00
+my,settings:settings.gameMode.beadsTask,0.366,0.384,0.375,Tâche des perles,Beads Task,ပုတီးစေ့အလုပ်,bead work,0.00
+zh,game:game.negativePriming.positivePrimingRt,0.454,0.297,0.3755,TR d'amorçage positif,Positive Priming RT,正启动反应时,when starting reaction,0.00
+ur,stats:stats.unifiedReport.hybridJourneyMessages.upDecisionTitle,0.465,0.287,0.376,Niveau superieur debloque,Next level unlocked,فُتح لیول الاوپر,conquest level up,0.33
+sv,journey:journey.renamed,0.365,0.388,0.3765,Parcours renommé !,Journey renamed.,Resan har bytt namn.,the trip has changed its name.,0.00
+my,stats:stats.contextual.insights.missTendencyV2,0.287,0.466,0.3765,Tendance aux omissions,Tendency to miss,လွမ်းဆွတ်ဖွယ်,nostalgia,0.00
+ro,home:ospan.measure.retestLabel,0.31,0.443,0.3765,Mesure suivante,Next measure,Remăsurare {{label}},resize {{label}},0.00
+ar,stats:stats.advanced.rtByModality,0.303,0.451,0.377,TR par modalité,RT by modality,زمن الاستجابة حسب القناة الحسية,response time according to sensory channel,0.00
+fa,stats:stats.advanced.rtByModality,0.303,0.451,0.377,TR par modalité,RT by modality,زمن الاستجابة حسب القناة الحسية,response time according to the sensory channel,0.00
+es,home:home.onboarding.introTitle,0.32,0.435,0.3775,Bienvenue sur NeuroDual,Welcome to NeuroDual,Un atlas de entrenamiento cognitivo en construcción,a cognitive training atlas in the making,0.00
+el,home:cognitive.repartitionSubLabel,0.381,0.374,0.3775,Forces par modalité,Strengths by modality,Δυνατά σημεία ανά αισθητηριακή οδό,strengths per sensory pathway,0.33
+id,game:game.attentionalCapture.singletonPresent,0.405,0.35,0.3775,Singleton présent,Singleton Present,Hadiah Tunggal,single gift,0.00
+fi,stats:stats.mode.journeyDesc,0.382,0.376,0.379,Sessions du parcours d'entraînement,Training journey sessions,Matkaistunnot,travel sessions,0.33
+ur,game:game.cogTask.timeEstimation.underestimationBias,0.324,0.434,0.379,Biais de sous-estimation,Underestimation bias,جھکاؤ للتقليل,to reduce tilt,0.00
+fi,game:game.pursuitTracking.title,0.323,0.438,0.3805,Poursuite visuelle,Pursuit Tracking,Takaa-ajan seuranta,follow up time,0.00
+th,game:game.fittsTapping.title,0.394,0.368,0.381,Tapping de Fitts,Fitts Tapping,ฟิตส์ กรีด,fitz greed,0.00
+id,journey:journey.report.sessionValidated,0.298,0.465,0.3815,Session Validée,Session validated!,Sesi tervalidasi!,validated session!,0.00
+zh,stats:stats.advanced.rtByModality,0.417,0.347,0.382,TR par modalité,RT by modality,各模态反应时,response time of each mode,0.00
+sv,stats:stats.mode.journeyDesc,0.398,0.369,0.3835,Sessions du parcours d'entraînement,Training journey sessions,Resesessioner,travel sessions,0.33
+ms,game:game.selfOrderedPointing.title,0.421,0.347,0.384,Pointage auto-ordonné,Self-Ordered Pointing,Tunjuk Tertib Sendiri,show yourself discipline,0.00
+ur,stats:stats.unifiedReport.accordionTrend,0.394,0.375,0.3845,Évolution récente,Recent trends,سمتات آخریة,the directions are final,0.00
+th,stats:stats.mode.dualMemoDesc,0.395,0.374,0.3845,Rappel actif et exhaustif,"Active, exhaustive recall",การเรียกคืนเชิงรุกแบบครบถ้วน,full proactive recall,0.33
+ur,stats:stats.unifiedReport.accordions.trend,0.394,0.375,0.3845,Évolution récente,Recent trends,سمتات آخریة,the directions are final,0.00
+ur,stats:stats.unifiedReport.insights.slotAccuracy,0.475,0.295,0.385,Précision par slot,Accuracy by slot,درستگی حسب الخانة,accuracy is optional,0.33
+my,game:game.cogTask.tapTheOddOne,0.335,0.435,0.385,Touchez l'intrus,Tap the odd one out,ထူးထူးခြားခြား တစ်ချက်နှိပ်လိုက်ပါ။,just one click.,0.20
+sw,settings:settings.modeSections.pasat.base.subtitle,0.337,0.434,0.3855,Essais et rythme,Trials and pace,Majaribio na kasi,experiment with speed,0.00
+km,game:game.cogTask.tapTheOddOne,0.453,0.318,0.3855,Touchez l'intrus,Tap the odd one out,ចុចអ្វីដែលខុសគ្នា,click something different,0.00
+my,game:game.cogTask.antisaccade.antiMeanRt,0.328,0.444,0.386,Anti-saccade RT moyen,Mean anti-saccade RT,ဆိုလိုတာက ဆန့်ကျင်ဘက် saccade ထားတာကို,"that is, the opposite saccade",0.00
+cs,game:game.ambiguousFigures.meanSwitchesfigure,0.382,0.39,0.386,Basculements moy./figure,Mean switches/figure,Střední přepínače/číslo,medium switches/number,0.00
+th,game:game.dichoticListening.attendedAccuracy,0.372,0.4,0.386,Précision (canal cible),Attended Accuracy,เข้าร่วมความแม่นยำ,join precision,0.00
+ur,game:game.doubleDecision.thresholdDisplay,0.401,0.373,0.387,Seuil d'affichage,Threshold Display,حد العرض,width,0.00
+ja,home:home.onboarding.introTitle,0.293,0.483,0.388,Bienvenue sur NeuroDual,Welcome to NeuroDual,構築中の認知トレーニングアトラス,cognitive training atlas under construction,0.00
+nl,game:game.remoteAssociates.title,0.387,0.393,0.39,Associations lointaines,Remote Associates,Externe medewerkers,external employees,0.00
+ko,stats:stats.unifiedReport.bwDown,0.229,0.551,0.39,Retour en arrière,Step back,기본기 재강화 필요,need to re-strengthen basic skills,0.00
+vi,game:game.beadsTask.meanDrawsToDecision,0.438,0.342,0.39,Tirages moyens avant décision,Mean Draws to Decision,Có nghĩa là rút ra quyết định,it means making a decision,0.25
+de,home:home.onboarding.introTitle,0.312,0.469,0.39049999999999996,Bienvenue sur NeuroDual,Welcome to NeuroDual,Ein Atlas für kognitives Training im Aufbau,an atlas for cognitive training under construction,0.00
+km,settings:settings.progression.jitterAdaptive,0.379,0.403,0.391,Jitter adaptatif,Adaptive jitter,ភាពរំជើបរំជួលអាដាប់ធ័រ,adapter excitation,0.00
+ur,game:game.fauxPas.fpFound,0.43,0.352,0.391,Faux pas détectés,Faux pas found,تم دریافت زلّات,you find out,0.00
+my,badges:badges.sessions_250.name,0.358,0.425,0.39149999999999996,Légende (Émeraude),Legend (Emerald),ကျော်ကျော် (မြ),kyaw kyaw (mya),0.00
+ja,stats:stats.unifiedReport.bwDown,0.415,0.368,0.39149999999999996,Retour en arrière,Step back,レベルダウン,level down,0.00
+vi,game:game.cogTask.antisaccade.proMeanRt,0.46,0.323,0.3915,Pro-saccade RT moyen,Mean pro-saccade RT,Có nghĩa là ủng hộ RT,which means supporting rt,0.33
+fa,game:game.dichoticListening.attendedAccuracy,0.407,0.378,0.39249999999999996,Précision (canal cible),Attended Accuracy,دقت توجه شده,attention to detail,0.00
+ur,settings:settings.corsi.startSpan,0.433,0.355,0.394,Empan de départ,Starting span,مدت الابتدائي,initial period,0.00
+ur,game:game.cogTask.startingSpan,0.433,0.355,0.394,Empan de départ,Starting span,مدت الابتدائي,initial period,0.00
+sw,home:home.simulators.brainWorkshopShort,0.433,0.356,0.39449999999999996,Application open source de référence,Reference open-source app,Rejelea programu huria,refer to open source software,0.00
+fi,game:game.cogTask.longestStreak,0.429,0.361,0.395,Plus longue série correcte,Longest correct streak,Pisin oikea putki,the longest right pipe,0.33
+de,settings:settings.gameMode.judgmentOfRecency,0.42,0.372,0.396,Jugement de récence,Judgment of Recency,Aktualitätsbeurteilung,currentness assessment,0.00
+el,game:game.syncHud.labels.lagHide,0.35,0.442,0.396,retard masquage,Retard masquage,Καθυστέρηση μασάζ,massage delay,0.00
+ta,game:replay.hud.counterDisplay,0.439,0.353,0.396,Affichage compteur,Counter display,எதிர் காட்சி,the opposite scenario,0.00
+km,game:game.dichoticListening.attendedAccuracy,0.414,0.379,0.39649999999999996,Précision (canal cible),Attended Accuracy,ភាពត្រឹមត្រូវដែលយកចិត្ត,accurate mindfulness,0.00
+my,game:game.dichoticListening.attendedAcc,0.322,0.471,0.39649999999999996,Précision attention,Attended accuracy,တက်ပြီး တိကျတယ်။,up and accurate.,0.00
+pl,settings:settings.gameMode.judgmentOfRecency,0.461,0.332,0.3965,Jugement de récence,Judgment of Recency,Ocena kolejności,sequence rating,0.00
+mr,settings:settings.gameMode.tierIncontournable,0.323,0.471,0.397,Incontournables,Must-haves,असणे आवश्यक आहे,must be,0.00
+id,game:game.aria.traceGrid,0.457,0.338,0.3975,Grille de tracé,Trace grid,Lacak jaringan,track network,0.00
+zh,game:game.anagram.avgSolve,0.471,0.326,0.39849999999999997,Résolution moy.,Avg. solve,平均解题,average problem solving,0.00
+cs,game:game.consequences.avgPerRound,0.483,0.315,0.399,Moy. par manche,Avg. per round,Prům. za kolo,avg. for the bike,0.33
+ta,game:game.beadsTask.title,0.447,0.352,0.39949999999999997,Tâche des perles,Beads Task,மணிகள் பணி,bells work,0.00
+hu,settings:settings.legal.title,0.372,0.427,0.39949999999999997,Informations légales,Legal information,Jogi,yogi,0.00
+ta,settings:settings.gameMode.beadsTask,0.447,0.352,0.39949999999999997,Tâche des perles,Beads Task,மணிகள் பணி,bells work,0.00
+zh,stats:report.corsi.performanceBySpan,0.403,0.396,0.3995,Performance par empan,Performance by span,各广度表现,performance in each breadth,0.33

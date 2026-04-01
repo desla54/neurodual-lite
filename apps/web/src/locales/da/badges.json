@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Konsistens",
+      "performance": "Ydeevne",
+      "resilience": "Modstandsdygtighed",
+      "exploration": "Udforskning",
+      "milestone": "Milepæle",
+      "cognitive": "Kognitiv"
+    },
+    "first_session": {
+      "name": "Vækket neuron",
+      "description": "Første session afsluttet."
+    },
+    "sessions_10": {
+      "name": "Søjle (bronze)",
+      "description": "10 sessioner gennemført."
+    },
+    "sessions_25": {
+      "name": "Søjle (sølv)",
+      "description": "25 sessioner gennemført."
+    },
+    "marathoner": {
+      "name": "Søjle (guld)",
+      "description": "50 sessioner gennemført."
+    },
+    "streak_3": {
+      "name": "Et begyndende ritual",
+      "description": "3-dages streak."
+    },
+    "streak_7": {
+      "name": "Daglig ritual",
+      "description": "7-dages streak."
+    },
+    "streak_14": {
+      "name": "Forankret vane",
+      "description": "14-dages streak."
+    },
+    "streak_30": {
+      "name": "Jerndisciplin",
+      "description": "30-dages streak."
+    },
+    "early_bird": {
+      "name": "Early Bird",
+      "description": "5 forskellige dage med session før kl."
+    },
+    "night_owl": {
+      "name": "Natugle",
+      "description": "5 forskellige dage med session efter kl."
+    },
+    "brain_n3": {
+      "name": "Skarp hjerne",
+      "description": "Nå niveau N-3."
+    },
+    "brain_n4": {
+      "name": "Muskuløs hjerne",
+      "description": "Nå niveau N-4."
+    },
+    "brain_n5": {
+      "name": "Olympisk hjerne",
+      "description": "Nå niveau N-5."
+    },
+    "brain_n7": {
+      "name": "Kognitiv Elite",
+      "description": "Nå niveau N-7."
+    },
+    "brain_n10": {
+      "name": "Overmenneskelig",
+      "description": "Nå niveau N-10."
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "> 90 % nøjagtighed ved N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Kirurgisk præcision",
+      "description": "> 95 % nøjagtighed ved N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98 % nøjagtighed ved N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Urørligt",
+      "description": "Perfekt session (0 fejl) ved N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Hurtig refleks",
+      "description": "Gennemsnitlig reaktionstid < 500ms med ≥70 % nøjagtighed."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Gennemsnitlig reaktionstid < 400ms med ≥70 % nøjagtighed."
+    },
+    "rt_300": {
+      "name": "Lyn",
+      "description": "Gennemsnitlig reaktionstid < 300ms med ≥70 % nøjagtighed."
+    },
+    "consistent": {
+      "name": "Konsekvent",
+      "description": "RT-standardafvigelse < 100ms (≥10 svar påkrævet)."
+    },
+    "dprime_master": {
+      "name": "d' Mester",
+      "description": "d-prime > 3,0 i en session."
+    },
+    "dprime_4": {
+      "name": "SDT ekspert",
+      "description": "d-prime > 4.0 i en session."
+    },
+    "no_pause": {
+      "name": "Uafbrudt",
+      "description": "5 på hinanden følgende sessioner uden pause med ≥75 % nøjagtighed."
+    },
+    "steady_hands": {
+      "name": "Faste hænder",
+      "description": "Ingen falske input under session (≥80 % nøjagtighed)."
+    },
+    "zen_master": {
+      "name": "Zen mester",
+      "description": "10 sessioner uden nogensinde at holde op."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "Niveau op efter et niveau ned."
+    },
+    "persistent": {
+      "name": "Vedholdende",
+      "description": "3 sessioner samme dag efter en fiasko."
+    },
+    "second_wind": {
+      "name": "Anden Vind",
+      "description": "Forbedre d-prime mellem halv 1 og 2 (d′ ≥ 2,0 påkrævet)."
+    },
+    "plateau_breaker": {
+      "name": "Plateau Breaker",
+      "description": "Fremskridt efter 10+ sessioner på samme niveau."
+    },
+    "no_surrender": {
+      "name": "Ingen overgivelse",
+      "description": "25 sessioner uden at stoppe."
+    },
+    "ironwill": {
+      "name": "Jernvilje",
+      "description": "50 sessioner uden at stoppe."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Lyd > 80 %, men visuelt < 70 %."
+    },
+    "eagle_eye": {
+      "name": "Eagle Eye",
+      "description": "Visuelt > 80 %, men lyd < 70 %."
+    },
+    "synchronized": {
+      "name": "Synkroniseret",
+      "description": "Lyd- og billedresultater inden for 5 % (≥60 % påkrævet)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio OG Visual > 85 % i samme session (≥6 lokker/modalitet)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio OG Visual > 90 % i samme session ved N ≥ 3 (≥6 lokker/modalitet)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 sessioner gennemført."
+    },
+    "sessions_250": {
+      "name": "Legend (Smaragd)",
+      "description": "250 sessioner gennemført."
+    },
+    "sessions_500": {
+      "name": "Udødelig (diamant)",
+      "description": "500 sessioner gennemført."
+    },
+    "trials_500": {
+      "name": "Udøver",
+      "description": "Der blev spillet 500 forsøg i alt."
+    },
+    "trials_1000": {
+      "name": "Uddannet",
+      "description": "1.000 i alt spillet forsøg."
+    },
+    "trials_5000": {
+      "name": "Krydret",
+      "description": "5.000 i alt spillet forsøg."
+    },
+    "trials_10k": {
+      "name": "10.000 forsøg",
+      "description": "I alt spillede 10.000 forsøg."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Der blev spillet 50.000 forsøg i alt."
+    },
+    "streak_90": {
+      "name": "Fejlfrit kvartal",
+      "description": "90-dages streak."
+    },
+    "streak_365": {
+      "name": "Perfekt år",
+      "description": "365-dages streak."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 års brug."
+    },
+    "metronome": {
+      "name": "Metronomen",
+      "description": "RT-varians < 50ms på ≥20 forsøg (aktive svar påkrævet)."
+    },
+    "flow_state": {
+      "name": "Nådens tilstand",
+      "description": "Flow registreret over en hel session."
+    },
+    "sang_froid": {
+      "name": "Køligt hoved",
+      "description": "Ingen fejlkaskade efter en fejl (≥70 % nøjagtighed)."
+    },
+    "imperturbable": {
+      "name": "Urokkelig",
+      "description": "Fuld session uden at miste fokus (≥60 % nøjagtighed)."
+    },
+    "comeback_strong": {
+      "name": "Stærkt comeback",
+      "description": "Slå din d-prime rekord efter 3+ dage væk (d≥ 2,5)."
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Training path",
+    "pageSubtitle": "Velg, organiser og lag reisene dine",
+    "enabled": "Enable training path",
+    "description": "30 progressive etapper fra N-1 til N-10",
+    "progress": "Fremgang",
+    "locked": "Låst",
+    "createJourney": "Create a journey",
+    "viewJourneys": "View journeys",
+    "current": "Current journey",
+    "myJourneys": "My journeys",
+    "stage": "Scene",
+    "stages": "stages",
+    "stagesShort": "st.",
+    "stageLabels": {
+      "pick": "Velg",
+      "catch": "Fangst",
+      "place": "Sted",
+      "memo": "Memo"
+    },
+    "name": "Navn",
+    "namePlaceholder": "f.eks. N-5 Challenge",
+    "levels": "Nivåer",
+    "levelRange": "Nivåområde",
+    "levelTo": "til",
+    "createNew": "Ny reise",
+    "new": "Nytt",
+    "defaultCustomName": "My journey",
+    "created": "Reise opprettet!",
+    "deleted": "Reisen slettet",
+    "sessionSettings": "Session settings",
+    "savedStatus": "Settings saved",
+    "preset": {
+      "easy": "Enkelt",
+      "medium": "Anbefalt",
+      "hard": "Hardt"
+    },
+    "setup": {
+      "title": "Journey & profiles",
+      "journey": "Reise",
+      "journeyNone": "Velg...",
+      "profile": "Profil",
+      "profileNone": "Velg...",
+      "configure": "Konfigurer",
+      "configureNone": "Velg en reise",
+      "create": "New journey",
+      "createDesc": "Skap en ny reise"
+    },
+    "deleteConfirmTitle": "Vil du slette denne reisen?",
+    "deleteConfirmMessage": "Reisen \"{{name}}\" vil bli permanent slettet.",
+    "renameTitle": "Gi nytt navn til denne reisen",
+    "renameMessage": "Rediger navnet på \"{{name}}\".",
+    "renamed": "Journey renamed.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Standard"
+    },
+    "mode": "Modus",
+    "modeStandard": "Reise (4 moduser)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dobbel fangst",
+      "dualPlace": "Dobbelt plass",
+      "dualMemo": "Dobbelt notat",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klassisk",
+      "brainWorkshop": "Hjerneverksted"
+    },
+    "validation": {
+      "sessions": "{{count}} validerer økt(er)",
+      "needed": "{{count}} økt(er) gjenstår",
+      "excellent": "Utmerket!",
+      "good": "Bra!",
+      "passing": "Bestått"
+    },
+    "progression": {
+      "title": "Progresjon",
+      "description": "For å gå videre til neste nivå, oppnå en god poengsum:",
+      "excellent": "≥95 % → 1 økt",
+      "good": "≥85 % → 2 økter",
+      "passing": "≥80 % → 3 økter",
+      "rules": "Progresjonsregler",
+      "jaeggi": {
+        "description": "Basert på den svakeste modaliteten:",
+        "up": "< 3 feil → Nivå opp",
+        "stay": "3 til 5 feil → Hold deg på dette nivået",
+        "down": "> 5 feil → Nivå ned"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop-protokoll (BW-poengsum):",
+        "up": "≥80 % → Nivå opp",
+        "stay": "50-79 % → Hold deg på nivå",
+        "strike": "3 påfølgende skårer <50 % → Nivå ned"
+      },
+      "hybrid": {
+        "description": "Denne reisen kjører {{trackCount}} Dual Track økt(er), deretter {{dnbCount}} Dual N-Back økt(er) på samme nivå.",
+        "alternation": "Sløyfen starter alltid på nytt med Dual Track når en avgjørelse tas.",
+        "authority": "Bare Dual N-Back-økter bestemmer opp, forbli eller ned.",
+        "up": "0-1 feil → Nivå opp",
+        "stay": "2-3 feil → Bli",
+        "down": "4+ feil → Nivå ned",
+        "streakRule": "To økter på rad i samme sone utløser avgjørelsen.",
+        "trackProgress": "Spor {{current}}/{{required}}",
+        "cleanProgress": "Validert {{current}}/{{required}}",
+        "stayProgress": "Hold {{current}}/{{required}}",
+        "downProgress": "Feil {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track bruker en kontinuerlig mestringslinje for hvert måltelletrinn:",
+        "calibration": "En første kalibrering anslår startmåltellingen din",
+        "goodSession": "Hver god økt fyller det nåværende stadiet litt",
+        "mastery": "Nesten perfekte økter fyller det raskere, men vanlige økter forblir beskjedne",
+        "regression": "Svake økter kan også få den nåværende mestringslinjen til å gå ned",
+        "unlock": "Den neste måltellingen låses opp bare når det nåværende stadiet når 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Open journey switcher",
+      "current": "Gjeldende",
+      "showAll": "All journeys",
+      "settings": "Reiseinnstillinger"
+    },
+    "previous": "Previous journey",
+    "next": "Neste reise",
+    "calibration": {
+      "title": "First session",
+      "subtitle": "En kort kalibrering vil bestemme startnivået ditt, eller du kan starte direkte på nivå 2.",
+      "skipToN2": "or start at N-2",
+      "continueAt": "eller fortsett på N-{{level}}",
+      "start": "Start kalibrering",
+      "redo": "Redo calibration",
+      "badge": "Kalibrering"
+    },
+    "presets": {
+      "currentSlot": "Egendefinert",
+      "currentSlotView": "Egendefinert",
+      "lockedTitle": "Some options are locked",
+      "lockedDesc": "For å holde progresjonen sammenlignbar, kan ikke modaliteter (og noen få alternativer) endres etter at reisen har startet."
+    },
+    "completed": {
+      "title": "Reisen fullført!",
+      "subtitle": "All stages validated. Godt gjort!",
+      "continueFree": "Continue training"
+    },
+    "report": {
+      "stage": "Scene",
+      "level": "Nivå",
+      "score": "Score",
+      "sessionValidated": "Session validated!",
+      "sessionNotValidated": "Session not validated",
+      "minScore": "Minimum required:",
+      "stageCompleted": "Etappe fullført!",
+      "stageUnlocked": "Stage {{stage}} unlocked!",
+      "replay": "Replay",
+      "nextStage": "Neste trinn",
+      "home": "Hjem",
+      "hits": "Treffer",
+      "misses": "Savner",
+      "falseAlarms": "False alarms",
+      "correctRejections": "Correct rejections"
+    }
+  }
+}

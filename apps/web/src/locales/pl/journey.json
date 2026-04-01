@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Ścieżka treningowa",
+    "pageSubtitle": "Wybieraj, organizuj i twórz swoje trasy",
+    "enabled": "Włącz ścieżkę treningową",
+    "description": "30 progresywnych etapów od N-1 do N-10",
+    "progress": "Postęp",
+    "locked": "Zablokowane",
+    "createJourney": "Utwórz ścieżkę",
+    "viewJourneys": "Wyświetl ścieżki",
+    "current": "Aktualna ścieżka",
+    "myJourneys": "Moje ścieżki",
+    "stage": "Etap",
+    "stages": "etapy",
+    "stagesShort": "et.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "Nazwa",
+    "namePlaceholder": "Np. Wyzwanie N-5",
+    "levels": "Poziomy",
+    "levelRange": "Zakres poziomów",
+    "levelTo": "do",
+    "createNew": "Nowa ścieżka",
+    "new": "Nowa",
+    "defaultCustomName": "Moja ścieżka",
+    "created": "Ścieżka utworzona!",
+    "deleted": "Ścieżka usunięta",
+    "sessionSettings": "Ustawienia sesji",
+    "savedStatus": "Ustawienia zapisane",
+    "preset": {
+      "easy": "Easy",
+      "medium": "Zalecane",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "Ścieżki i profile",
+      "journey": "Ścieżka",
+      "journeyNone": "Wybierz…",
+      "profile": "Profil",
+      "profileNone": "Wybierz…",
+      "configure": "Konfiguruj",
+      "configureNone": "Wybierz ścieżkę",
+      "create": "Nowa ścieżka",
+      "createDesc": "Utwórz nową ścieżkę"
+    },
+    "deleteConfirmTitle": "Usunąć tę ścieżkę?",
+    "deleteConfirmMessage": "Ścieżka „{{name}}” zostanie trwale usunięta.",
+    "renameTitle": "Zmień nazwę ścieżki",
+    "renameMessage": "Edytuj nazwę „{{name}}”.",
+    "renamed": "Ścieżkę przemianowano!",
+    "badge": {
+      "simulator": "Symulator",
+      "beta": "Beta",
+      "default": "Domyślny"
+    },
+    "mode": "Tryb",
+    "modeStandard": "Ścieżka (4 tryby)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Symulator",
+      "jaeggi": "Klasyczny",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} sesji zaliczających",
+      "needed": "Pozostało {{count}} sesji",
+      "excellent": "Świetnie!",
+      "good": "Dobrze!",
+      "passing": "Zaliczone"
+    },
+    "progression": {
+      "title": "Progres",
+      "description": "Aby przejść na następny poziom, uzyskaj dobry wynik:",
+      "excellent": "≥95% → 1 sesja",
+      "good": "≥85% → 2 sesje",
+      "passing": "≥80% → 3 sesje",
+      "rules": "Zasady progresu",
+      "jaeggi": {
+        "description": "W oparciu o najsłabszą modalność:",
+        "up": "Mniej niż 3 błędy → Awans",
+        "stay": "3–5 błędów → pozostań na poziomie",
+        "down": "> 5 błędów → poziom w dół"
+      },
+      "brainworkshop": {
+        "description": "Protokół Brain Workshop (wynik BW):",
+        "up": "≥80% → poziom w górę",
+        "stay": "50–79% → pozostań na poziomie",
+        "strike": "3 kolejne wyniki <50% → poziom w dół"
+      },
+      "hybrid": {
+        "description": "Ta trasa łączy {{trackCount}} sesję/sesji Dual Track, a następnie {{dnbCount}} sesję/sesji Dual N-Back na tym samym poziomie.",
+        "alternation": "Cykl zawsze zaczyna się od nowa od Dual Track, gdy tylko zostanie podjęta decyzja.",
+        "authority": "Tylko sesje Dual N-Back decydują o awansie, utrzymaniu lub spadku.",
+        "up": "0-1 błąd → Awans",
+        "stay": "2-3 błędy → Utrzymanie",
+        "down": "4+ błędów → Spadek",
+        "streakRule": "Dwie sesje z rzędu w tej samej strefie uruchamiają decyzję.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Zaliczone {{current}}/{{required}}",
+        "stayProgress": "Utrzymanie {{current}}/{{required}}",
+        "downProgress": "Niepowodzenie {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track wykorzystuje ciągły pasek mistrzostwa dla każdego poziomu celów:",
+        "calibration": "Początkowa kalibracja szacuje twój poziom startowy",
+        "goodSession": "Każda dobra sesja trochę wypełnia bieżący poziom",
+        "mastery": "Prawie idealne sesje wypełniają szybciej, zwykłe sesje postępują skromnie",
+        "regression": "Słabe sesje mogą obniżyć bieżący pasek mistrzostwa",
+        "unlock": "Następny poziom celów odblokowuje się dopiero przy 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Otwórz wybór ścieżki",
+      "current": "Bieżąca",
+      "showAll": "Wszystkie ścieżki",
+      "settings": "Ustawienia ścieżki"
+    },
+    "previous": "Poprzednia trasa",
+    "next": "Następna trasa",
+    "calibration": {
+      "title": "Pierwsza sesja",
+      "subtitle": "Krótka kalibracja określi Twój poziom startowy, lub możesz zacząć bezpośrednio od poziomu 2.",
+      "skipToN2": "lub zacznij od N-2",
+      "continueAt": "lub kontynuuj na N-{{level}}",
+      "start": "Rozpocznij kalibrację",
+      "redo": "Powtórz kalibrację",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "Aktualne ustawienia",
+      "currentSlotView": "Aktualne ustawienia",
+      "lockedTitle": "Niektóre opcje są zablokowane",
+      "lockedDesc": "Aby zachować porównywalny progres, modalności (i kilka opcji) nie mogą się zmienić po rozpoczęciu ścieżki."
+    },
+    "completed": {
+      "title": "Ścieżka ukończona!",
+      "subtitle": "Wszystkie etapy zaliczone. Brawo!",
+      "continueFree": "Kontynuuj trening"
+    },
+    "report": {
+      "stage": "Etap",
+      "level": "Poziom",
+      "score": "Wynik",
+      "sessionValidated": "Sesja zaliczona!",
+      "sessionNotValidated": "Sesja niezaliczona",
+      "minScore": "Wymagany minimalny wynik:",
+      "stageCompleted": "Etap ukończony!",
+      "stageUnlocked": "Odblokowano etap {{stage}}!",
+      "replay": "Powtórz",
+      "nextStage": "Następny etap",
+      "home": "Strona główna",
+      "hits": "Trafienia",
+      "misses": "Pudła",
+      "falseAlarms": "Fałszywe alarmy",
+      "correctRejections": "Poprawne odrzucenia"
+    }
+  }
+}

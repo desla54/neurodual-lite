@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "حالت چطوره؟",
+      "tired": "خسته",
+      "normal": "عادی",
+      "energized": "پرانرژی"
+    },
+    "aria": {
+      "trialTimer": "تایمر آزمایه",
+      "positionMatch": "تطابق موقعیت",
+      "audioMatch": "تطابق صدا",
+      "audioLetter": "حرف صوتی:",
+      "traceGrid": "شبکه ردگیری"
+    },
+    "syncHud": {
+      "shortLabel": "همگام سازی",
+      "toggleTitle": "تغییر مانیتور هماهنگ‌سازی",
+      "start": "شروع",
+      "end": "پایان",
+      "pinLabel": "سنجاق",
+      "pinTitle": "سنجاق روی صفحه",
+      "inputLabel": "ورودی",
+      "inputTitle": "تغییر پروفایل تأخیر ورودی (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "روشن",
+      "off": "خاموش",
+      "hideLabel": "مخفی",
+      "hideTitle": "مخفی (مگر syncHud=1 یا ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "صدا",
+        "expected": "مورد انتظار"
+      },
+      "labels": {
+        "trial": "آزمایه",
+        "lagShow": "تأخیر نمایش",
+        "lagHide": "تأخیر پوشش",
+        "winErr": "خطای پنجره",
+        "endRef": "مرجع پایان",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "تصویری_پست p95",
+        "inputToDispatchP95": "input-> dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "ورودی در انتظار",
+        "inputSamples": "نمونه‌های ورودی",
+        "touchSamples": "نمونه‌های لمسی",
+        "mouseSamples": "نمونه‌های ماوس",
+        "keyboardSamples": "نمونه‌های صفحه‌کلید",
+        "latestMethod": "آخرین (روش)",
+        "latestModality": "آخرین مدالیته",
+        "audioCueMode": "نشانه‌های صوتی",
+        "audioCodec": "کدک"
+      },
+      "resetInputProfiler": "بازنشانی پروفایلر ورودی"
+    },
+    "hud": {
+      "resume": "ادامه",
+      "pause": "توقف",
+      "quit": "خروج",
+      "restart": "شروع دوباره",
+      "spaceToStart": "Space برای شروع",
+      "settings": "تنظیمات",
+      "enterToAdvance": "Enter برای ادامه",
+      "trial": "آزمایه",
+      "muteTexture": "بی‌صدا کردن صدای پس‌زمینه"
+    },
+    "status": {
+      "paused": "متوقف"
+    },
+    "completed": "تکمیل شد",
+    "starting": {
+      "getReady": "آماده شو..."
+    },
+    "quitModal": {
+      "title": "خروج از جلسه؟",
+      "message": "پیشرفتت ذخیره نمیشه.",
+      "confirm": "خروج",
+      "cancel": "ادامه",
+      "close": "بستن"
+    },
+    "controls": {
+      "position": "موقعیت",
+      "position2": "موقع. ۲",
+      "position3": "موقع. ۳",
+      "position4": "موقع. ۴",
+      "visvis": "بصری و n-بصری",
+      "visaudio": "بصری و n-شنیداری",
+      "audiovis": "شنیداری و n-بصری",
+      "vis1": "بصری ۱",
+      "vis2": "بصری ۲",
+      "vis3": "بصری ۳",
+      "vis4": "بصری ۴",
+      "audio": "صدا",
+      "audio2": "صدا ۲",
+      "color": "رنگ",
+      "arithmetic": "حساب",
+      "image": "شکل"
+    },
+    "arithmetic": {
+      "answer": "پاسخ",
+      "clear": "پاک کردن",
+      "hint": "صفحه‌کلید: ۰-۹ · '-' برای علامت · '.' برای اعشار · Backspace برای پاک کردن"
+    },
+    "navigation": {
+      "back": "بازگشت"
+    },
+    "xp": {
+      "title": "XP کسب شده",
+      "base": "پایه (N-{{level}})",
+      "performance": "عملکرد",
+      "accuracy": "دقت",
+      "streakBonus": "پاداش سری",
+      "dailyBonus": "اولین امروز",
+      "badgeBonus": "نشان‌ها",
+      "flowBonus": "پاداش Dual Place",
+      "confidenceMultiplier": "اطمینان",
+      "dailyCapReached": "سقف XP روزانه رسید",
+      "levelReached": "به سطح {{level}} رسیدی!"
+    },
+    "badges": {
+      "newUnlocked": "نشان‌های جدید باز شدند"
+    },
+    "getReady": "آماده شو...",
+    "layoutEdit": {
+      "done": "انجام شد",
+      "reset": "بازنشانی",
+      "instructions": "بکش‌ورها کن برای مرتب‌سازی. اندازه را با دستگیره‌ها تغییر بده.",
+      "title": "حالت ویرایش",
+      "cancel": "لغو",
+      "save": "قفل",
+      "editLayout": "ویرایش چیدمان"
+    },
+    "paused": "متوقف",
+    "pressEscapeToResume": "Escape رو بزن برای ادامه",
+    "settings": {
+      "editLayout": "ویرایش چیدمان",
+      "gridAndButtons": "شبکه و دکمه‌ها",
+      "swapPositionAudio": "جابه‌جایی موقعیت / صدا",
+      "title": "تنظیمات",
+      "quickHint": "چند تنظیم را بدون خروج از بازی تغییر بده.",
+      "quickUnavailable": "هنوز تنظیمات سریعی برای این حالت موجود نیست."
+    },
+    "pinkNoiseInfo": "یک صدای پس‌زمینه هر محرک را همراهی می‌کنه. می‌تونی در تنظیمات صدا سفارشی یا غیرفعالش کنی.",
+    "pinkNoiseDismiss": "ادامه",
+    "audioMode": "حالت صوتی",
+    "cogTask": {
+      "precision": "دقت",
+      "avgRt": "میانگین RT",
+      "avgRtShort": "میانگین RT",
+      "trials": "آزمایه‌ها",
+      "correct": "صحیح",
+      "errors": "خطاها",
+      "effect": "اثر",
+      "restart": "شروع دوباره",
+      "home": "خانه",
+      "performance": "عملکرد",
+      "trialDetail": "جزئیات آزمایه",
+      "setDetail": "جزئیات مجموعه",
+      "roundDetail": "جزئیات دور",
+      "problemDetail": "جزئیات مسئله",
+      "phaseDetail": "جزئیات مرحله",
+      "feedbackCorrect": "صحیح",
+      "feedbackIncorrect": "نادرست",
+      "feedbackTimeout": "خیلی کُند!",
+      "preparing": "آماده شو...",
+      "loading": "در حال بارگذاری...",
+      "left": "چپ",
+      "right": "راست",
+      "up": "بالا",
+      "down": "پایین",
+      "congruent": "سازگار",
+      "incongruent": "ناسازگار",
+      "congruencyEffect": "اثر سازگاری",
+      "maxSpan": "حداکثر دامنه",
+      "startingSpan": "دامنه شروع",
+      "maxSpanReached": "حداکثر دامنه رسید",
+      "longestStreak": "طولانی‌ترین سری صحیح",
+      "series": "سری",
+      "avgResponseTime": "میانگین زمان پاسخ",
+      "recall": "یادآوری",
+      "expected": "مورد انتظار",
+      "submit": "ثبت",
+      "cancel": "لغو",
+      "clear": "پاک کردن",
+      "delete": "حذف",
+      "true": "درست",
+      "false": "نادرست",
+      "target": "هدف",
+      "nonTarget": "غیرهدف",
+      "distractor": "پرت‌کننده",
+      "same": "یکسان",
+      "different": "متفاوت",
+      "identical": "مشابه",
+      "mirror": "آینه‌ای",
+      "symmetric": "متقارن",
+      "asymmetric": "نامتقارن",
+      "symShort": "متق.",
+      "present": "حاضر",
+      "absent": "غایب",
+      "noTrials": "هیچ آزمایه‌ای تکمیل نشده.",
+      "noSets": "هیچ مجموعه‌ای تکمیل نشده.",
+      "noRounds": "هیچ دوری تکمیل نشده.",
+      "noProblems": "هیچ مسئله‌ای تکمیل نشده.",
+      "noPhases": "هیچ مرحله‌ای تکمیل نشده.",
+      "sets": "مجموعه‌ها",
+      "rounds": "دورها",
+      "equations": "معادلات",
+      "sentences": "جملات",
+      "equationAccuracy": "دقت معادلات",
+      "forward": "رو به جلو",
+      "backward": "رو به عقب",
+      "forwardMaxSpan": "حداکثر دامنه رو به جلو",
+      "backwardMaxSpan": "حداکثر دامنه رو به عقب",
+      "odd": "فرد",
+      "even": "زوج",
+      "score": "امتیاز",
+      "easy": "آسان",
+      "hard": "سخت",
+      "totalTrials": "کل آزمایه‌ها",
+      "totalErrors": "کل خطاها",
+      "totalErrShort": "کل خطا",
+      "hits": "درست‌ها",
+      "misses": "از دست رفته‌ها",
+      "falseAlarms": "هشدار کاذب",
+      "correctRejections": "رد صحیح",
+      "yes": "بله",
+      "no": "خیر",
+      "sessionInterrupted": "جلسه قطع شد",
+      "reverseOrder": "به ترتیب معکوس",
+      "normalOrder": "به ترتیب",
+      "lnsInstruction": "اعداد صعودی، سپس حروف A-Z",
+      "vs": "در مقابل",
+      "simon": {
+        "simonEffect": "اثر Simon",
+        "blue": "آبی",
+        "red": "قرمز",
+        "heroTitle": "سیمون"
+      },
+      "soroban": {
+        "target": "این عدد را نشان بده",
+        "submit": "ثبت",
+        "rodLabel": "میله {{n}}",
+        "heavenBead": "مهره بالایی (ارزش ۵)",
+        "earthBead": "مهره پایینی (ارزش ۱)",
+        "instrBeadTitle": "مهره‌ها چطور کار می‌کنند",
+        "instrBeadDesc": "هر میله یک رقم را نشان میده. مهره بالایی (آسمانی) ارزش ۵ داره. مهره‌های پایینی (زمینی) هرکدوم ارزش ۱ دارن. مهره‌ها رو به سمت نوار مرکزی حرکت بده تا فعال بشن.",
+        "instrExampleTitle": "مثال: ۷",
+        "instrExampleDesc": "۷ = مهره آسمانی پایین (۵) + ۲ مهره زمینی بالا (۲). بزن یا بکش برای حرکت مهره‌ها.",
+        "instrGoalTitle": "هدف تو",
+        "instrGoalDesc": "یک عدد ظاهر میشه. مهره‌ها رو تنظیم کن تا اون عدد رو نشون بدن، بعد ثبت رو بزن. دقیق و سریع باش!",
+        "startButton": "شروع",
+        "settings": "تنظیمات",
+        "closeSettings": "بستن تنظیمات",
+        "settingsRods": "تعداد میله‌ها",
+        "settingsRodsHint": "از طریق سطح N در تنظیمات بازی تعیین کن",
+        "settingsTrials": "آزمایه‌ها در هر جلسه",
+        "settingsTrialsHint": "از طریق آزمایه‌ها در تنظیمات بازی تعیین کن",
+        "settingsRange": "محدوده اعداد"
+      },
+      "stroop": {
+        "pressInkColorButton": "دکمه‌ای رو بزن که با رنگ جوهر مطابقت داره",
+        "redWord": "قرمز",
+        "redLabel": "قرمز",
+        "blueWord": "آبی",
+        "blueLabel": "آبی",
+        "greenWord": "سبز",
+        "greenLabel": "سبز",
+        "yellowWord": "زرد",
+        "yellowLabel": "زرد"
+      },
+      "stroopFlex": {
+        "followRule": "قانون",
+        "ruleInk": "رنگ جوهر",
+        "ruleWord": "کلمه نوشته شده",
+        "pressMatchingRuleButton": "دکمه‌ای رو بزن که با قانون فعلی مطابقت داره"
+      },
+      "goNogo": {
+        "goTrials": "آزمایه‌های Go",
+        "nogoTrials": "آزمایه‌های No-Go",
+        "hitRate": "نرخ درست (Go)",
+        "faRate": "نرخ هشدار کاذب (No-Go)",
+        "meanRt": "میانگین زمان واکنش",
+        "sensitivity": "حساسیت",
+        "press": "فشار بده",
+        "withhold": "خودداری کن"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (زمان واکنش سیگنال توقف)",
+        "ssdMean": "میانگین SSD (توقف‌های موفق)",
+        "ssd": "SSD",
+        "goRt": "برو RT",
+        "successfulInhibition": "بازداری موفق",
+        "stop": "توقف",
+        "meanGoRt": "میانگین زمان واکنش GO",
+        "ssrtInvalid": "داده ناکافی",
+        "ssrtNegativeNote": "SSRT منفی است (میانگین SSD > میانگین GO RT) — نتیجه با تعداد فعلی آزمایه‌ها قابل اطمینان نیست."
+      },
+      "pvt": {
+        "rtMedian": "میانه RT",
+        "rtMean": "میانگین RT",
+        "fastest": "سریع‌ترین",
+        "slowest": "کُندترین",
+        "falseStarts": "شروع‌های زودهنگام",
+        "falseStartsShort": "شروع زودهنگام",
+        "lapses": "افت‌ها",
+        "mean": "میانگین",
+        "reaction": "واکنش",
+        "wait": "صبر کن...",
+        "pressStimulus": "منتظر محرک باش...",
+        "pressAnywhere": "وقتی شمارنده ظاهر شد هرجایی بزن",
+        "press": "فشار بده!",
+        "tooEarly": "خیلی زود!",
+        "lapsesLabel": "افت‌ها"
+      },
+      "posner": {
+        "cueingEffect": "اثر نشانه‌دهی",
+        "validMeanRt": "میانگین RT معتبر",
+        "invalidMeanRt": "میانگین RT نامعتبر",
+        "validAccuracy": "دقت معتبر",
+        "invalidAccuracy": "دقت نامعتبر",
+        "validTrials": "آزمایه‌های معتبر",
+        "invalidTrials": "آزمایه‌های نامعتبر",
+        "validRtShort": "RT معتبر",
+        "invalidRtShort": "RT نامعتبر",
+        "valid": "معتبر",
+        "invalid": "نامعتبر"
+      },
+      "antisaccade": {
+        "cost": "هزینه Antisaccade",
+        "proAccuracy": "دقت Pro",
+        "antiAccuracy": "دقت Anti",
+        "pro": "حرفه ای",
+        "anti": "ضد",
+        "proRt": "پرو RT",
+        "antiRt": "ضد RT",
+        "proMeanRt": "میانگین RT pro-saccade",
+        "antiMeanRt": "میانگین RT anti-saccade",
+        "costLabel": "هزینه",
+        "antiLabel": "ضد"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "دقت AX",
+        "bxFa": "هشدار کاذب BX",
+        "ayError": "خطای AY",
+        "bxFaShort": "هشدار کاذب BX",
+        "ayErrShort": "خطای AY",
+        "cogControl": "کنترل شناختی",
+        "target": "هدف",
+        "nonTarget": "غیرهدف"
+      },
+      "ant": {
+        "scores": "نمرات ANT",
+        "alerting": "هشداردهی (بدون نشانه − نشانه دوگانه)",
+        "orienting": "جهت‌گیری (مرکزی − فضایی)",
+        "executive": "اجرایی (ناسازگار − سازگار)"
+      },
+      "changeDet": {
+        "kCowan": "ظرفیت K (Cowan)",
+        "sameShort": "یکسان",
+        "diffShort": "متفاوت"
+      },
+      "swm": {
+        "withinErrors": "خطاهای درون‌جستجو",
+        "betweenErrors": "خطاهای بین‌جستجو",
+        "totalErrors": "کل خطاها",
+        "errorFree": "بدون خطا",
+        "foundErrorFree": "بدون خطا پیدا شد!",
+        "errorCount": "{{count}} خطا",
+        "tapsLabel": "ضربه‌ها"
+      },
+      "taskSwitch": {
+        "switchCost": "هزینه تعویض",
+        "rtRepeat": "میانگین RT (تکرار)",
+        "rtSwitch": "میانگین RT (تعویض)",
+        "oddEven": "فرد / زوج",
+        "highLow": "بالا / پایین",
+        "title": "تعویض تکلیف"
+      },
+      "trailMaking": {
+        "tmtATime": "زمان TMT-A",
+        "tmtBTime": "زمان TMT-B",
+        "executiveCost": "هزینه اجرایی (B − A)",
+        "executiveCostShort": "هزینه اجرایی (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "خطا A",
+        "errB": "خطا B",
+        "preparingB": "آماده‌سازی TMT-B...",
+        "tmtADone": "TMT-A تمام شد!",
+        "totalErrors": "کل خطاها",
+        "tmtALabel": "TMT-A: اعداد",
+        "tmtBLabel": "TMT-B: اعداد و حروف",
+        "next": "بعدی",
+        "heroTitle": "ساخت دنباله",
+        "alternateHint": "اعداد و حروف رو تناوبی وصل کن: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "حداقل ISI",
+        "fastestIsi": "سریع‌ترین ISI"
+      },
+      "wcst": {
+        "referenceCards": "کارت‌های مرجع",
+        "testCard": "کارت آزمون",
+        "categories": "دسته‌بندی‌ها",
+        "categoriesCompleted": "دسته‌بندی‌های تکمیل شده",
+        "perseverativeErrors": "خطاهای پشت‌سرهم",
+        "persevShort": "تکرار.",
+        "avgRt": "میانگین RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT بر اساس زاویه",
+        "findMatch": "شکل مشابه رو پیدا کن",
+        "reference": "شکل مرجع",
+        "referenceLabel": "مرجع",
+        "candidate": "نامزد",
+        "distractor": "دیگر",
+        "mirrorErrors": "آینه‌ای‌ها",
+        "title": "چرخش ذهنی"
+      },
+      "sternberg": {
+        "rtBySize": "RT بر اساس اندازه مجموعه",
+        "title": "استرنبرگ",
+        "avgRt": "میانگین RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT بر اساس اندازه مجموعه",
+        "title": "جستجوی بصری"
+      },
+      "ospan": {
+        "typeLetters": "حروف رو به ترتیب تایپ کن",
+        "trueOrFalse": "درست یا نادرست؟",
+        "processingWarning": "دقت معادلات زیر ۸۵% — نتایج ممکنه ظرفیت واقعی حافظه کاری رو نشون نده"
+      },
+      "readingSpan": {
+        "s0": "خورشید از شرق طلوع می‌کنه.",
+        "s1": "ماهی‌ها در درختان زندگی می‌کنن.",
+        "s2": "پاریس پایتخت فرانسه است.",
+        "s3": "مثلث چهار ضلع داره.",
+        "s4": "آب در ۱۰۰ درجه می‌جوشه.",
+        "s5": "گربه‌ها خزنده هستن.",
+        "s6": "زمین دور خورشید می‌چرخه.",
+        "s7": "شکلات روی سنگ رشد می‌کنه.",
+        "s8": "یک سال دوازده ماه داره.",
+        "s9": "پرنده‌ها زیر آب نفس می‌کشن.",
+        "s10": "شیر سفید است.",
+        "s11": "ماشین‌ها روی ریل حرکت می‌کنن.",
+        "s12": "زنبورها عسل تولید می‌کنن.",
+        "s13": "برف گرم است.",
+        "s14": "قلب خون رو پمپ می‌کنه.",
+        "s15": "سنگ‌ها روی آب شناور می‌مونن.",
+        "s16": "ماه شب رو روشن می‌کنه.",
+        "s17": "مارها پا دارن.",
+        "s18": "چوب روی آب شناور می‌مونه.",
+        "s19": "آتش سرد است.",
+        "s20": "انسان‌ها پنج حس دارن.",
+        "s21": "عنکبوت‌ها شش پا دارن.",
+        "s22": "نان با آرد درست میشه.",
+        "s23": "نهنگ‌ها ماهی هستن.",
+        "w0": "خانه",
+        "w1": "سگ",
+        "w2": "کتاب",
+        "w3": "گل",
+        "w4": "در",
+        "w5": "میز",
+        "w6": "درخت",
+        "w7": "جاده",
+        "w8": "ابر",
+        "w9": "ستاره",
+        "w10": "ساحل",
+        "w11": "برف",
+        "w12": "لامپ",
+        "w13": "باران",
+        "w14": "لیوان",
+        "w15": "چمن",
+        "w16": "قطار",
+        "w17": "جهان",
+        "w18": "خورشید",
+        "w19": "جنگل",
+        "w20": "یخ",
+        "w21": "زمین",
+        "w22": "آسمان",
+        "w23": "سنگ",
+        "d0": "صبح",
+        "d1": "قلب",
+        "d2": "پارچه",
+        "d3": "برگ",
+        "d4": "صدا",
+        "d5": "باغ",
+        "d6": "سایه",
+        "d7": "زنگ",
+        "d8": "پل",
+        "d9": "دود",
+        "d10": "شن",
+        "d11": "سوپ",
+        "heroTitle": "بازه خواندن"
+      },
+      "memorizeSequence": "دنباله رو حفظ کن...",
+      "reproduce": "بازتولید",
+      "span": "دامنه",
+      "size": "اندازه",
+      "fixateCenter": "روی مرکز تمرکز کن...",
+      "identicalOrMirror": "مشابه یا آینه‌ای؟",
+      "wellInhibited": "بازداری خوب!",
+      "badDirection": "جهت اشتباه!",
+      "stopMissed": "توقف از دست رفت!",
+      "falseAlarm": "هشدار کاذب!",
+      "pressNow": "فشار بده!",
+      "hitBang": "درست!",
+      "miss": "از دست رفت!",
+      "doNotTouch": "دست نزن!",
+      "whichDirection": "کدوم جهت؟",
+      "stopBang": "توقف!",
+      "cueBang": "نشانه!",
+      "memorizeLetters": "این حروف رو حفظ کن",
+      "memorizeLetter": "این حرف رو حفظ کن",
+      "memorizeSequenceLetters": "دنباله رو حفظ کن...",
+      "memorizeDigits": "ارقام رو حفظ کن...",
+      "memorizeColors": "رنگ‌ها رو حفظ کن!",
+      "memorizePosition": "این موقعیت رو حفظ کن...",
+      "retainWord": "این کلمه رو به خاطر بسپار",
+      "retainNumber": "این عدد رو به خاطر بسپار",
+      "addWithPrevious": "با قبلی جمع کن",
+      "sentenceTrueOrFalse": "آیا این جمله درسته؟",
+      "findRedCircle": "دایره قرمز رو پیدا کن!",
+      "findHiddenToken": "ژتون مخفی رو پیدا کن!",
+      "chooseMatchingCard": "کارت مشابه رو انتخاب کن",
+      "arrowDirection": "جهت فلش مرکزی؟",
+      "attention": "توجه...",
+      "preparation": "آماده‌سازی...",
+      "recallLettersInOrder": "{{count}} حرف رو به ترتیب یادآوری کن",
+      "recallWordsInOrder": "{{count}} کلمه رو به ترتیب یادآوری کن",
+      "recallLastLetters": "{{count}} حرف آخر رو یادآوری کن",
+      "typeLastLetters": "{{count}} حرف آخر رو تایپ کن",
+      "recallPositionsInOrder": "یادآوری: موقعیت‌ها رو به ترتیب بزن",
+      "pressEnterToValidate": "Enter رو بزن برای تایید",
+      "pressAnywhereToContinue": "هرجایی بزن برای ادامه",
+      "temporalPrecision": "دقت زمانی",
+      "estimationPrecision": "دقت تخمین",
+      "touchStartClockwise": "نقطه شروع رو لمس کن و ساعتگرد بکش",
+      "touchAtoB": "نقطه A رو لمس کن و به B بکش",
+      "cue": "نشانه",
+      "retainCue": "نشانه رو به خاطر بسپار...",
+      "targetOrNot": "هدف یا غیرهدف؟",
+      "whereIsTarget": "هدف کجاست؟",
+      "wasLetterInSet": "آیا این حرف در مجموعه بود؟",
+      "regular": "منظم",
+      "regularity": "انتظام",
+      "msDeviation": "انحراف ms",
+      "boxes": "جعبه‌ها",
+      "found": "{{count}} پیدا شد",
+      "past": "گذشته",
+      "tooSlow": "خیلی کُند",
+      "tooFast": "خیلی سریع",
+      "timeout": "خیلی کُند!",
+      "answer": "پاسخ",
+      "dontPress": "نزن!",
+      "feedbackWrong": "اشتباه!",
+      "level": "سطح",
+      "wrong": "اشتباه",
+      "you": "تو",
+      "paused": "توقف",
+      "instructions": "دستورالعمل",
+      "selectAnswer": "یک پاسخ انتخاب کن",
+      "tapTheOddOne": "روی عجیب و غریب ضربه بزنید",
+      "pal": {
+        "subtitle": "یادگیری تداعی‌های جفتی",
+        "pairsLearned": "جفت‌های یاد گرفته",
+        "maxSetSize": "حداکثر اندازه مجموعه",
+        "totalErrors": "کل خطاها",
+        "round": "دور",
+        "pairs": "جفت",
+        "meanRt": "میانگین RT (صحیح)",
+        "studyPhase": "مطالعه - موقعیت‌ها رو حفظ کن",
+        "testPhase": "این شکل کجا بود؟",
+        "studying": "مطالعه",
+        "tapBox": "جعبه‌ای رو بزن که این شکل نشون داده شد"
+      },
+      "visualLogic": {
+        "easy": "آسان",
+        "hard": "سخت",
+        "oneRule": "۱ قانون",
+        "twoRules": "۲ قانون",
+        "findMissing": "قطعه گم‌شده رو پیدا کن",
+        "maxLevel": "حداکثر سطح",
+        "finalLevel": "سطح نهایی",
+        "nextMode": "حالت جلسه بعدی",
+        "adaptive": "تطبیقی",
+        "fixed": "ثابت",
+        "spm": "SPM 60",
+        "level": "سطح",
+        "confirm": "تایید"
+      },
+      "tetrisMind": {
+        "findPiece": "کدوم قطعه در حفره جا میشه؟",
+        "target": "هدف"
+      },
+      "timeEstimation": {
+        "overestimationBias": "خطای بیش‌برآورد",
+        "underestimationBias": "خطای کم‌برآورد",
+        "noBias": "بدون خطای قابل توجه",
+        "avgError": "میانگین خطا",
+        "overestimations": "بیش‌برآوردها",
+        "underestimations": "کم‌برآوردها",
+        "avgAbsoluteError": "میانگین خطای مطلق",
+        "avgRelativeError": "میانگین خطای نسبی",
+        "cv": "ضریب تغییرات",
+        "watchDemo": "مدت زمان رو ببین",
+        "getReady": "آماده شو...",
+        "holdToReproduce": "نگه‌دار تا بازتولید کنی!",
+        "tooLong": "خیلی طولانی!",
+        "tooShort": "خیلی کوتاه!",
+        "target": "هدف",
+        "demoLabel": "مرجع",
+        "yourTurn": "نوبت تو",
+        "watchInstruction": "تماشا کن",
+        "holdInstruction": "نگه‌دار تا بازتولید کنی",
+        "heroTitle": "تخمین زمان"
+      },
+      "puzzleDetails": "جزئیات پازل",
+      "roundDetails": "جزئیات دور",
+      "stageResults": "نتایج مرحله",
+      "recognized": "تشخیص داده شده",
+      "missed": "از دست رفته",
+      "win": "برد",
+      "lose": "باخت",
+      "winBang": "برد!",
+      "loseBang": "باخت!",
+      "correctBang": "صحیح!",
+      "wrongBang": "اشتباه!",
+      "completeBang": "کامل!",
+      "repeatedBang": "تکراری!",
+      "incompleteBang": "ناقص!",
+      "levelCompleteBang": "سطح کامل شد!",
+      "timesUp": "وقت تمام شد",
+      "seeResults": "مشاهده نتایج",
+      "nextRound": "دور بعدی",
+      "startBlock": "شروع بلوک",
+      "continue": "ادامه",
+      "patientChoice": "انتخاب صبورانه",
+      "immediateChoice": "انتخاب فوری",
+      "immediate": "فوری",
+      "digitSpan": {
+        "heroTitle": "بازه رقمی"
+      },
+      "resume": "ادامه",
+      "numericalStroop": {
+        "heroTitle": "Stroop عددی"
+      },
+      "lineOrientation": {
+        "heroTitle": "قضاوت جهت خط"
+      },
+      "chain": "زنجیره",
+      "undo": "برگرداندن",
+      "vocalProsody": {
+        "heroTitle": "آهنگ صوتی"
+      },
+      "letterNumber": {
+        "title": "دنباله حرف-عدد",
+        "expectedAnswer": "پاسخ مورد انتظار"
+      },
+      "patternComparison": {
+        "heroTitle": "مقایسه الگو"
+      },
+      "speedPack": {
+        "title": "بسته سرعت",
+        "whenFoldedWhichTouch": "وقتی تا بشه، کدوم مربع‌ها بهم می‌رسن؟"
+      },
+      "dotProbe": {
+        "heroTitle": "کاوشگر نقطه ای"
+      },
+      "reflex": {
+        "heroTitle": "رفلکس"
+      },
+      "hooperVisual": {
+        "title": "سازمان‌دهی بصری Hooper",
+        "whatIsThisObject": "این شی چیه؟"
+      },
+      "blockDesign": {
+        "heroTitle": "طرح بلوکی"
+      },
+      "accuracy": "دقت",
+      "avgTime": "میانگین زمان",
+      "check": "بررسی",
+      "dualTrace": {
+        "playArea": "فضای بازی"
+      },
+      "paperFolding": {
+        "title": "تا کردن کاغذ",
+        "foldSequenceHolePunch": "دنباله تا کردن و سوراخ",
+        "whichPatternWhenUnfolded": "وقتی باز بشه کدوم الگو؟"
+      },
+      "lexicalDecision": {
+        "heroTitle": "تصمیم واژگانی"
+      },
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxGrid": "حداکثر شبکه",
+      "symmetry": "تقارن",
+      "threshold": "آستانه",
+      "hitRate": "نرخ درست",
+      "faRate": "نرخ هشدار کاذب",
+      "changeDetection": {
+        "heroTitle": "تشخیص تغییر"
+      },
+      "syllogisms": {
+        "heroTitle": "قیاس‌ها"
+      },
+      "subitizing": {
+        "title": "شمارش لحظه‌ای",
+        "range": "محدوده"
+      },
+      "jitter": "لرزش",
+      "sentenceCompletion": {
+        "title": "تکمیل جمله (Cloze)",
+        "highCloze": "Cloze بالا",
+        "lowCloze": "Cloze پایین"
+      },
+      "grid": "شبکه",
+      "pinballRecall": {
+        "title": "یادآوری پین‌بال",
+        "byBounces": "بر اساس بازتاب",
+        "whereDoesItLand": "کجا فرود میاد؟"
+      },
+      "mean": "میانگین",
+      "speedup": "سرعت‌بخشی",
+      "memorize": "حفظ کن",
+      "time": "زمان",
+      "surfaceDevelopment": {
+        "title": "توسعه سطح",
+        "whichEdgeMatches": "کدوم لبه مطابقت داره؟"
+      },
+      "crowding": {
+        "heroTitle": "ازدحام بصری",
+        "spacing": "فاصله‌گذاری"
+      },
+      "patternRecognition": {
+        "heroTitle": "تشخیص الگو"
+      },
+      "brixton": {
+        "heroTitle": "بریکستون"
+      },
+      "dualMemo": {
+        "trial": "آزمایه",
+        "position": "موقعیت",
+        "audio": "صدا"
+      },
+      "sceneCrasher": {
+        "heroTitle": "مزاحم صحنه",
+        "detect": "تشخیص"
+      },
+      "eyesTest": {
+        "heroTitle": "خواندن ذهن از چشم‌ها"
+      }
+    },
+    "gridlock": {
+      "undone": "آخرین حرکت برگردانده شد.",
+      "resetMessage": "پازل بازنشانی شد.",
+      "hintMessage": "راهنمایی: {{pieceId}} رو {{dir}} {{delta}} بکش.",
+      "previewCountdown": "صفحه رو مطالعه کن. شروع در {{seconds}} ثانیه.",
+      "challenge": "چالش",
+      "optimal": "بهینه",
+      "moves": "حرکت‌ها",
+      "piece": "قطعه {{id}}",
+      "targetPiece": "قطعه {{id}} (هدف - ماشین قرمز)",
+      "challengeClassic": "کلاسیک",
+      "challengePrecision": "دقت",
+      "challengeMemory": "حافظه",
+      "challengeTimed": "زمان‌دار",
+      "hint": "راهنمایی",
+      "reset": "بازنشانی",
+      "undo": "برگرداندن",
+      "nextPuzzle": "پازل بعدی →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "درست‌های بلوک ۱",
+      "block2Hits": "درست‌های بلوک ۲",
+      "goPositive": "Go = مثبت",
+      "goNegative": "Go = منفی",
+      "title": "Go/No-Go عاطفی",
+      "block1CommissionErrors": "خطاهای ارتکابی بلوک ۱",
+      "block2CommissionErrors": "خطاهای ارتکابی بلوک ۲",
+      "block": "بلوک",
+      "go": "برو"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "میانگین نرخ تعویض",
+      "meanSwitchesfigure": "میانگین تعویض/تصویر",
+      "totalSwitches": "کل تعویض‌ها",
+      "title": "تصاویر مبهم",
+      "meanSwitches": "میانگین تعویض‌ها",
+      "switchRate": "نرخ تعویض",
+      "figures": "تصاویر",
+      "totalSwitchesLabel": "کل تعویض‌ها",
+      "duration": "مدت زمان",
+      "switchesCount": "ثانیه | تعویض‌ها:",
+      "switchButton": "تعویض!"
+    },
+    "analogies": {
+      "verbalCorrect": "کلامی صحیح",
+      "timeout": "وقت تمام",
+      "title": "قیاس‌ها"
+    },
+    "ansComparison": {
+      "weber": "وبر",
+      "title": "مقایسه ANS",
+      "ratio": "نسبت",
+      "leftMore": "چپ بیشتر",
+      "rightMore": "راست بیشتر"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "نرخ هشدار کاذب",
+      "grammatical": "دستوری",
+      "memorizeTheseStrings": "این رشته‌ها رو حفظ کن",
+      "testPhase": "مرحله آزمون",
+      "ungrammatical": "غیردستوری",
+      "learning": "یادگیری",
+      "test": "آزمون",
+      "title": "گرامر مصنوعی",
+      "learningPhase": "یادگیری",
+      "testIntroText": "حالا رشته‌های جدیدی می‌بینی. تصمیم بگیر که هرکدوم از همون قوانین رشته‌هایی که مطالعه کردی پیروی می‌کنه یا نه.",
+      "startTest": "شروع آزمون",
+      "followsRules": "از قوانین پیروی می‌کنه",
+      "breaksRules": "قوانین رو نقض می‌کنه"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "بزرگی پلک زدن",
+      "title": "پلک زدن توجهی",
+      "blink": "پلک",
+      "t1Acc": "دقت T1",
+      "t2Acc": "دقت T2",
+      "firstGreenLetter": "اولین حرف سبز؟",
+      "secondGreenLetter": "دومین حرف سبز؟"
+    },
+    "attentionalCapture": {
+      "captureCost": "هزینه جلب توجه",
+      "singletonPresent": "Singleton حاضر",
+      "noSingleton": "بدون Singleton",
+      "title": "جلب توجه",
+      "capture": "جلب",
+      "horizontal": "افقی",
+      "vertical": "عمودی"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "پنجره اتصال",
+      "title": "اتصال شنیداری-بصری",
+      "window": "پنجره",
+      "pssLabel": "PSS (نقطه همزمانی ذهنی)",
+      "simultaneousOrNot": "همزمان یا نه؟",
+      "simultaneous": "همزمان",
+      "notSimultaneous": "غیر همزمان"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "آستانه مدت",
+      "reference": "مرجع",
+      "weberFraction": "کسر Weber",
+      "title": "مدت شنیداری",
+      "threshold": "آستانه",
+      "weber": "وبر",
+      "whichLonger": "کدوم طولانی‌تره؟",
+      "firstLonger": "اولی طولانی‌تر",
+      "secondLonger": "دومی طولانی‌تر"
+    },
+    "bart": {
+      "adjustedAvgPumps": "میانگین تنظیم شده پمپ‌ها",
+      "avgTimeballoon": "میانگین زمان/بالن",
+      "banked": "ذخیره شد!",
+      "lostEarnings": "درآمد از دست رفت!",
+      "overallAvgPumps": "میانگین کل پمپ‌ها",
+      "popRate": "نرخ ترکیدن",
+      "totalEarned": "مجموع کسب شده",
+      "balloons": "بالن‌ها",
+      "cashed": "ذخیره شده",
+      "popped": "ترکیده",
+      "adjPumps": "پمپ تنظیم.",
+      "pop": "ترک",
+      "pump": "پمپ",
+      "cashIn": "ذخیره"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "میانگین زمان تصمیم",
+      "drawBeadsToGatherEvidence": "مهره بکش تا شواهد جمع کنی",
+      "jtc": "JTC",
+      "title": "تکلیف مهره‌ها",
+      "meanDraws": "میانگین کشیدن",
+      "rounds": "دورها",
+      "jtcRate": "نرخ JTC",
+      "meanDrawsToDecision": "میانگین کشیدن تا تصمیم",
+      "jtcRateThreshold": "نرخ JTC (کمتر از {{threshold}} کشیدن)",
+      "round": "دور",
+      "jarDescription": "شیشه A: ۸۵% سبز / شیشه B: ۸۵% قرمز",
+      "itWasJar": "شیشه بود",
+      "drawABead": "یک مهره بکش",
+      "jarAGreen": "شیشه A سبز",
+      "jarBRed": "شیشه B قرمز"
+    },
+    "binding": {
+      "changedTrials": "آزمایه‌های تغییریافته",
+      "sameAccuracy": "دقت یکسان",
+      "sameTrials": "آزمایه‌های یکسان",
+      "title": "اتصال ویژگی",
+      "binding": "اتصال",
+      "bindingAccuracyChanged": "دقت تغییر",
+      "same": "یکسان",
+      "different": "متفاوت"
+    },
+    "blockDesign": {
+      "cells": "خانه‌ها",
+      "target": "هدف",
+      "yourAnswer": "پاسخ تو",
+      "tapHint": "بزن تا رنگ‌ها عوض بشن",
+      "check": "بررسی"
+    },
+    "brixton": {
+      "adapt": "تطبیق",
+      "adaptationCost": "هزینه تطبیق",
+      "nonswitchTrials": "آزمایه‌های غیرتعویضی",
+      "switchTrials": "آزمایه‌های تعویضی"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "این حروف رو به خاطر بسپار",
+      "selectThe3Letters": "۳ حرف رو انتخاب کن",
+      "title": "تکلیف Brown-Peterson",
+      "forgetting": "فراموشی",
+      "sDelay": "تأخیر S",
+      "minus3": "منهای ۳",
+      "delay": "تأخیر"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "کیفیت تصمیم",
+      "finalPoints": "امتیاز نهایی",
+      "meanBet": "میانگین شرط",
+      "winRate": "نرخ برد",
+      "wins": "بردها",
+      "title": "تکلیف قمار Cambridge",
+      "totalPoints": "کل امتیازات",
+      "quality": "کیفیت",
+      "rational": "منطقی",
+      "avgBet": "میانگین شرط",
+      "trial": "آزمایه",
+      "whichColorHidesToken": "کدوم رنگ ژتون رو مخفی کرده؟",
+      "youChose": "تو انتخاب کردی",
+      "howMuchToBet": "چقدر شرط ببندی؟"
+    },
+    "cancellation": {
+      "false": "نادرست",
+      "target": "هدف:",
+      "total": "کل",
+      "title": "تکلیف حذف (d2)",
+      "misses": "از دست رفته‌ها",
+      "targetDescription": "d با ۲ نشانه"
+    },
+    "changeBlindness": {
+      "detectionRate": "نرخ تشخیص",
+      "found": "پیدا شده",
+      "meanDetectionTime": "میانگین زمان تشخیص",
+      "title": "کوری تغییر",
+      "missed": "از دست رفته",
+      "avgTime": "میانگین زمان",
+      "instructions": "دستورالعمل"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "بهترین تخمین",
+      "meanScore": "میانگین امتیاز",
+      "worstEstimate": "بدترین تخمین",
+      "inRange": "تخمین خوب!",
+      "title": "تخمین شناختی",
+      "meanScoreLabel": "میانگین امتیاز",
+      "inRangeLabel": "در محدوده",
+      "extreme": "افراطی",
+      "scoreLabel": "امتیاز",
+      "submit": "ثبت"
+    },
+    "common": {
+      "accuracy": "دقت",
+      "bias": "خطای سیستماتیک",
+      "falseAlarmRate": "نرخ هشدار کاذب",
+      "hitRate": "نرخ درست",
+      "hits": "درست‌ها",
+      "listening": "در حال گوش دادن...",
+      "meanRt": "میانگین RT",
+      "timedOut": "وقت تمام شد",
+      "timedOut2": "وقت تمام شد",
+      "faRate": "نرخ هشدار کاذب",
+      "paused": "متوقف"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "چقدر مطمئنی؟",
+      "rateYourConfidence": "میزان اطمینانت رو مشخص کن",
+      "title": "کالیبراسیون اطمینان",
+      "calError": "خطای کالیبراسیون",
+      "confidence": "اطمینان"
+    },
+    "consequences": {
+      "best": "بهترین",
+      "nextRound": "دور بعدی...",
+      "time": "زمان",
+      "placeholder": "یک نتیجه تایپ کن...",
+      "title": "نتایج",
+      "totalIdeas": "کل ایده‌ها",
+      "avgPerRound": "میانگین در هر دور",
+      "rounds": "دورها",
+      "noConsequencesListed": "هیچ نتیجه‌ای ذکر نشده",
+      "roundProgress": "دور {{current}} / {{total}}",
+      "typeAndPressAdd": "تایپ کن و اضافه کن رو بزن"
+    },
+    "contextualCueing": {
+      "cueingEffect": "اثر نشانه‌دهی",
+      "newConfigRt": "RT پیکربندی جدید",
+      "oldConfigRt": "RT پیکربندی قدیمی",
+      "title": "نشانه‌دهی زمینه‌ای",
+      "cueing": "نشانه‌دهی",
+      "oldRt": "RT قدیمی",
+      "newRt": "RT جدید",
+      "prompt": "محرک",
+      "left": "چپ",
+      "right": "راست"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "لرزش آستانه",
+      "title": "ادغام کانتور",
+      "pipeJitter": "| لرزش"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "آستانه کنتراست",
+      "title": "حساسیت کنتراست",
+      "threshold": "آستانه",
+      "left": "چپ",
+      "right": "راست"
+    },
+    "cpt": {
+      "nontargets": "غیرهدف‌ها",
+      "target": "هدف",
+      "nonTarget": "غیرهدف",
+      "dPrime": "d'",
+      "targetsLetter": "حرف هدف",
+      "tapForLetterOnly": "فقط برای حرف هدف بزن"
+    },
+    "crowding": {
+      "criticalSpacing": "فاصله بحرانی",
+      "leftAccuracy": "دقت چپ",
+      "rightAccuracy": "دقت راست"
+    },
+    "cryptogram": {
+      "hints": "راهنمایی‌ها",
+      "title": "رمزنگاشت",
+      "solved": "حل شده",
+      "time": "زمان",
+      "puzzles": "پازل‌ها",
+      "puzzle": "پازل",
+      "hint": "راهنمایی",
+      "clear": "پاک کردن"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "سطح زیر منحنی",
+      "discountRateK": "نرخ تنزیل (k)",
+      "impulsivityIndex": "شاخص تکانشگری",
+      "title": "تنزیل تأخیری",
+      "aucPatience": "صبر AUC",
+      "patient": "صبور",
+      "kRate": "نرخ K",
+      "impuls": "تکانشی",
+      "indifferencePoints": "نقاط بی‌تفاوتی",
+      "whichPrefer": "کدوم رو ترجیح میدی؟",
+      "today": "امروز"
+    },
+    "delayedMatching": {
+      "long": "طولانی",
+      "longDelay68s": "تأخیر طولانی (۶-۸ ثانیه)",
+      "med": "متوسط",
+      "mediumDelay46s": "تأخیر متوسط (۴-۶ ثانیه)",
+      "short": "کوتاه",
+      "shortDelay34s": "تأخیر کوتاه (۳-۴ ثانیه)",
+      "title": "تطابق تأخیری",
+      "delay": "تأخیر",
+      "rememberThisPattern": "این الگو رو به خاطر بسپار",
+      "whichWasIt": "کدوم بود؟"
+    },
+    "dichoticListening": {
+      "alertDetection": "تشخیص هشدار",
+      "attendToTheLeftColumn": "به ستون چپ توجه کن",
+      "attendedAccuracy": "دقت حضور",
+      "ignoreTheRightColumn": "ستون راست رو نادیده بگیر",
+      "right": "راست",
+      "title": "گوش دادن دوگوشی",
+      "attendedAcc": "دقت توجه شده",
+      "alertDet": "تشخیص هشدار",
+      "alerts": "هشدارها",
+      "selectLeftColumnWords": "کلمات ستون چپ رو انتخاب کن",
+      "submit": "ثبت",
+      "alertQuestion": "سؤال هشدار"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "دقت فراموشی",
+      "forgettingEffect": "اثر فراموشی",
+      "newRejection": "رد جدید",
+      "rememberAccuracy": "دقت یادآوری",
+      "title": "فراموشی هدایت شده",
+      "remember": "به خاطر بسپار",
+      "forget": "فراموش کن",
+      "round": "دور",
+      "word": "کلمه",
+      "wasThisWordShown": "آیا این کلمه نشون داده شد؟"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "امتیاز سوگیری توجه",
+      "congruentAcc": "دقت سازگار",
+      "congruentRt": "RT سازگار",
+      "incongruentAcc": "دقت ناسازگار",
+      "incongruentRt": "RT ناسازگار"
+    },
+    "doubleDecision": {
+      "carOrTruck": "ماشین یا کامیون؟",
+      "minDisplayReached": "حداقل نمایش رسید",
+      "positionAccuracy": "دقت موقعیت",
+      "thresholdDisplay": "نمایش آستانه",
+      "vehicleAccuracy": "دقت وسیله نقلیه",
+      "whereWasTheDiamond": "الماس کجا بود؟",
+      "title": "تصمیم دوگانه",
+      "threshold": "آستانه",
+      "bothOk": "هر دو صحیح",
+      "vehicle": "وسیله نقلیه",
+      "position": "موقعیت",
+      "car": "ماشین",
+      "truck": "کامیون"
+    },
+    "dsst": {
+      "items": "آیتم‌ها",
+      "itemsCompleted": "آیتم‌های تکمیل شده",
+      "speedItemsmin": "سرعت (آیتم/دقیقه)",
+      "attempts": "تلاش‌ها",
+      "itemsPerMin": "آیتم / دقیقه"
+    },
+    "dualTask": {
+      "dualtaskCost": "هزینه تکلیف دوگانه",
+      "taskANumber": "تکلیف A (عدد)",
+      "taskBSymbol": "تکلیف B (نماد)",
+      "title": "تکلیف دوگانه",
+      "taskA": "تکلیف A",
+      "taskB": "تکلیف B",
+      "number": "عدد",
+      "symbol": "نماد",
+      "up": "بالا",
+      "down": "پایین"
+    },
+    "dualTime": {
+      "sessionEnPause": "جلسه متوقف شد",
+      "votreEstimationSecondes": "تخمین تو (ثانیه)",
+      "sessionInterrupted": "جلسه قطع شد",
+      "target": "هدف",
+      "estimation": "تخمین",
+      "avgTime": "میانگین زمان",
+      "avgError": "میانگین خطا",
+      "trials": "آزمایه‌ها",
+      "resumeToContinue": "برای ادامه از سر بگیر",
+      "aimFor": "هدف بگیر",
+      "second": "ثانیه",
+      "howLongDidYouTake": "چقدر طول کشید؟"
+    },
+    "dualTrack": {
+      "confirmer": "تایید",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "برای ادامه از سر بگیر.",
+      "sessionEnPause": "جلسه متوقف شد",
+      "tapezLesCibles": "هدف‌ها رو بزن",
+      "tapezLaCible": "هدف رو بزن",
+      "appuyezConfirmer": "تایید رو بزن",
+      "targetsCountLabel": "{{count}} هدف",
+      "distractorsCountLabel": "{{count}} پرت‌کننده",
+      "roundsCountLabel": "{{count}} دور",
+      "calibrationRoundsLabel": "{{count}} دور کالیبراسیون",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = سطح سختی داخلی سفر.",
+      "tierHelpCurrentWithPhase": "الان در T{{current}} از {{total}} برای {{targets}} هدف هستی. مرحله فعلی: {{phase}}. {{remaining}} سطح تا سطح هدف بعدی باقی مونده.",
+      "phaseTracking": "ردیابی",
+      "phaseAudio": "ردیابی + صدا",
+      "phaseColor": "ردیابی + رنگ",
+      "phaseCombined": "ردیابی + صدا + رنگ",
+      "passLetters": "حروف",
+      "passColors": "رنگ‌ها",
+      "moveInstruction": "دستور حرکت",
+      "moveConfirmBtn": "دکمه تایید حرکت",
+      "preparingSession": "آماده‌سازی جلسه...",
+      "preparing3dScene": "آماده‌سازی صحنه سه‌بعدی...",
+      "startJourney": "شروع سفر",
+      "calibrationDescription": "قبل از مرحله اول، یک کالیبراسیون طولانی‌تر سطح شروعت رو تخمین میزنه.",
+      "defaultDescription": "توپ‌ها روشن میشن. دنبالشون کن وقتی حرکت می‌کنن، بعد شناساییشون کن.",
+      "startCalibration": "شروع کالیبراسیون",
+      "calibrationTitle": "کالیبراسیون",
+      "estimatedStart": "شروع تخمینی",
+      "roundsAnalyzed": "دورهای تحلیل شده",
+      "willStartAt": "شروع از",
+      "targetsCount": "هدف‌ها",
+      "thenProgress": "سپس پیشرفت"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "میانگین خطای مطلق",
+      "ratio": "نسبت",
+      "slope": "شیب",
+      "vierordtSlope": "شیب Vierordt",
+      "wait": "صبر کن...",
+      "title": "بازتولید مدت",
+      "meanError": "میانگین خطا",
+      "meanRatio": "میانگین نسبت (تولید/هدف)",
+      "holdNow": "الان نگه‌دار",
+      "target": "هدف",
+      "error": "خطا"
+    },
+    "embeddedFigures": {
+      "fastest": "سریع‌ترین",
+      "found": "پیدا شده",
+      "meanDetectionTime": "میانگین زمان تشخیص",
+      "slowest": "کُندترین",
+      "title": "اشکال تودرتو",
+      "missed": "از دست رفته",
+      "fastestLabel": "سریع‌ترین",
+      "findThisShape": "این شکل رو پیدا کن",
+      "memorizeShape": "شکل رو حفظ کن...",
+      "foundIt": "پیداش کردم!",
+      "giveUp": "تسلیم"
+    },
+    "emotionalNback": {
+      "falseAlarms": "هشدارهای کاذب",
+      "misses": "از دست رفته‌ها",
+      "title": "N-Back احساسی",
+      "match": "تطابق"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT خنثی",
+      "positiveRt": "RT مثبت",
+      "threatRt": "RT تهدید",
+      "title": "Stroop احساسی",
+      "interference": "تداخل",
+      "interferenceThreatNeutral": "تداخل (تهدید − خنثی)"
+    },
+    "eyesTest": {
+      "totalTime": "کل زمان"
+    },
+    "faceName": {
+      "gain": "بهبود",
+      "learningImprovement": "بهبود یادگیری",
+      "round1Accuracy": "دقت دور ۱",
+      "round2Accuracy": "دقت دور ۲",
+      "whoIsThis": "این کیه؟",
+      "title": "تداعی چهره-نام",
+      "round": "دور",
+      "testPhase": "مرحله آزمون"
+    },
+    "fauxPas": {
+      "who": "کی؟",
+      "why": "چرا؟",
+      "title": "تشخیص اشتباه اجتماعی",
+      "detection": "تشخیص",
+      "scenarios": "سناریوها",
+      "fpFound": "اشتباه اجتماعی پیدا شد",
+      "control": "کنترل",
+      "readyToAnswer": "آماده پاسخ",
+      "didSomeoneSay": "آیا کسی چیزی گفت که نباید می‌گفت؟",
+      "whoSaidIt": "کی گفت؟",
+      "whyInappropriate": "چرا نامناسب بود؟"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "دقت یادآوری",
+      "recognitionAccuracy": "دقت بازشناسی",
+      "recallPlaceholder": "پاسخت رو تایپ کن...",
+      "unlikely": "بعید",
+      "certain": "مطمئن",
+      "title": "احساس دانستن",
+      "recall": "یادآوری",
+      "recognition": "بازشناسی",
+      "fokR": "فوک آر",
+      "questions": "سؤالات",
+      "recalled": "یادآوری شده",
+      "recognized": "تشخیص داده شده",
+      "fokSensitivity": "حساسیت FOK",
+      "submit": "ثبت",
+      "dontKnow": "نمیدونم",
+      "fokPrompt": "آیا تشخیصش میدی؟",
+      "selectCorrectAnswer": "پاسخ صحیح رو انتخاب کن",
+      "answer": "پاسخ"
+    },
+    "fingerTapping": {
+      "firstTrial": "آزمایه اول",
+      "lastTrial": "آزمایه آخر",
+      "sequence": "دنباله",
+      "speedupT1VsT12": "سرعت‌بخشی (T1 در مقابل T12)",
+      "title": "ضربه زدن انگشت"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "میانگین زمان حرکت",
+      "avgThroughput": "میانگین بازده",
+      "title": "ضربه Fitts",
+      "throughput": "بازده",
+      "tapTarget": "هدف برجسته رو بزن"
+    },
+    "foreperiod": {
+      "early": "زودهنگام",
+      "slope": "شیب",
+      "title": "آمادگی زمانی",
+      "fpEffectSlope": "شیب اثر FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "بازگشت‌ها",
+      "threshold": "آستانه",
+      "tone1": "تُن ۱",
+      "tone2": "تُن ۲",
+      "weber": "وبر",
+      "weberFraction": "کسر Weber",
+      "hz": "هرتز",
+      "title": "تمایز فرکانس",
+      "thresholdLabel": "آستانه",
+      "hzDiff": " هرتز تفاوت",
+      "whichWasHigher": "کدوم بالاتر بود؟",
+      "firstHigher": "اولی بالاتر",
+      "secondHigher": "دومی بالاتر"
+    },
+    "gabor": {
+      "gaborPatch": "وصله Gabor",
+      "leftAccuracy": "دقت چپ",
+      "leftTrials": "آزمایه‌های چپ",
+      "noiseMask": "ماسک نویز",
+      "rightAccuracy": "دقت راست",
+      "rightTrials": "آزمایه‌های راست",
+      "thresholdAngle": "زاویه آستانه",
+      "title": "گابور",
+      "threshold": "آستانه",
+      "reversals": "بازگشت‌ها",
+      "timedOut": "وقت تمام شد",
+      "left": "چپ",
+      "right": "راست"
+    },
+    "gameOfDice": {
+      "finalPoints": "امتیاز نهایی",
+      "risky": "خطرناک",
+      "riskyChoices": "انتخاب‌های خطرناک",
+      "safe": "امن",
+      "winRate": "نرخ برد",
+      "wins": "بردها",
+      "title": "تکلیف بازی تاس",
+      "totalPoints": "کل امتیازات",
+      "riskyLabel": "خطرناک",
+      "roll": "پرتاب",
+      "chooseYourBet": "شرطت رو انتخاب کن",
+      "pickNumbers": "اعدادت رو انتخاب کن"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "شکاف یا بدون شکاف؟",
+      "gapThreshold": "آستانه شکاف",
+      "title": "تشخیص سکوت",
+      "noGap": "بدون شکاف"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "نگاه کجا بود؟",
+      "direct": "مستقیم",
+      "left": "چپ",
+      "right": "راست",
+      "title": "جهت نگاه",
+      "dPrimeDirectGaze": "D Prime نگاه مستقیم"
+    },
+    "hayling": {
+      "part1Initiation": "بخش ۱ (آغاز)",
+      "part2": "بخش ۲",
+      "part2Suppression": "بخش ۲ (بازداری)",
+      "suppressionCost": "هزینه بازداری",
+      "title": "هایلینگ",
+      "part1": "بخش ۱",
+      "part2Label": "بخش ۲",
+      "suppression": "بازداری",
+      "obvious": "بدیهی",
+      "obviousPicksPart2": "انتخاب‌های بدیهی (بخش ۲)",
+      "chooseUnrelated": "یک کلمه نامرتبط انتخاب کن ",
+      "completelyUnrelated": "کاملاً نامرتبط",
+      "doNotPickObvious": "کلمه بدیهی رو انتخاب نکن!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "رفتن به مرحله بعدی...",
+      "stageComplete": "مرحله کامل شد!",
+      "title": "IED Set Shift",
+      "stages": "مراحل",
+      "edsCost": "هزینه EDS",
+      "stage": "مرحله",
+      "correctNeeded": "تعداد صحیح لازم برای پیشرفت"
+    },
+    "informationSampling": {
+      "cost": "هزینه",
+      "free": "رایگان",
+      "meanTilesCost": "میانگین کاشی‌ها (هزینه)",
+      "meanTilesFree": "میانگین کاشی‌ها (رایگان)",
+      "totalCost": "هزینه کل",
+      "title": "نمونه‌برداری اطلاعات",
+      "tiles": "کاشی‌ها",
+      "tapToReveal": "بزن تا آشکار بشه"
+    },
+    "inspectionTime": {
+      "final": "نهایی",
+      "finalDisplayTime": "زمان نمایش نهایی",
+      "minCorrectIt": "حداقل IT صحیح",
+      "threshold": "آستانه",
+      "title": "زمان بازرسی",
+      "thresholdLabel": "آستانه",
+      "minIt": "حداقل IT"
+    },
+    "iowaGambling": {
+      "balance": "موجودی:",
+      "chooseADeck": "یک دسته انتخاب کن",
+      "deckADraws": "برداشت‌های دسته A",
+      "deckBDraws": "برداشت‌های دسته B",
+      "deckCDraws": "برداشت‌های دسته C",
+      "deckDDraws": "برداشت‌های دسته D",
+      "first40Advantageous": "۴۰ تای اول سودمند",
+      "last40Advantageous": "۴۰ تای آخر سودمند",
+      "learn": "یادگیری",
+      "learningIndex": "شاخص یادگیری",
+      "title": "قمار Iowa",
+      "advantageousPct": "درصد سودمند",
+      "earnings": "درآمد",
+      "last40": "۴۰ آخر"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "خطای کالیبراسیون",
+      "meanJol": "میانگین JOL",
+      "nowTestYourRecall": "حالا یادآوریت رو امتحان کن",
+      "studyComplete": "مطالعه تکمیل شد",
+      "whatWasPairedWith": "چی باهاش جفت شده بود…؟",
+      "title": "قضاوت یادگیری",
+      "recallAccuracy": "دقت یادآوری",
+      "jolGamma": "JOL گاما",
+      "jolAccuracyGamma": "دقت JOL (Gamma)",
+      "howLikelyRemember": "چقدر احتمال داره یادت بمونه؟",
+      "hiddenAnswer": "پاسخ مخفی"
+    },
+    "judgmentOfRecency": {
+      "close": "بستن",
+      "closeGap13": "فاصله نزدیک (۱-۳)",
+      "far": "دور",
+      "farGap9": "فاصله دور (۹+)",
+      "mediumGap48": "فاصله متوسط (۴-۸)",
+      "title": "قضاوت تأخر",
+      "medium": "متوسط",
+      "studyPhaseMemorizeOrder": "مرحله مطالعه — ترتیب رو حفظ کن",
+      "whichMoreRecently": "کدوم اخیراً ظاهر شد؟"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "میانگین RT (غیرکلمات)",
+      "meanRtWords": "میانگین RT (کلمات)",
+      "nonwordsAccuracy": "دقت غیرکلمات",
+      "wordsAccuracy": "دقت کلمات",
+      "word": "کلمه",
+      "nonword": "غیرکلمه"
+    },
+    "maze": {
+      "duration": "مدت زمان",
+      "optimalSteps": "حرکات بهینه",
+      "pathEfficiency": "بازدهی مسیر",
+      "totalSteps": "کل حرکات",
+      "wallHits": "برخورد با دیوار",
+      "title": "ماز",
+      "completed": "تکمیل شد",
+      "efficiency": "بازدهی",
+      "wallHitsLabel": "برخورد با دیوار",
+      "steps": "حرکات"
+    },
+    "memobox": {
+      "easy": "آسان",
+      "easy2Boxes": "آسان (۲ جعبه)",
+      "hard": "سخت",
+      "hard4Boxes": "سخت (۴ جعبه)",
+      "medium3Boxes": "متوسط (۳ جعبه)",
+      "title": "Memobox",
+      "rounds": "دورها",
+      "medium": "متوسط",
+      "watchMovements": "حرکات رو ببین...",
+      "howManyBalls": "هر جعبه چند توپ داره؟",
+      "submit": "ثبت",
+      "roundOf": "دور {{current}} از {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "سطح مقطع چیه؟",
+      "title": "برش ذهنی"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "قدیمی، مشابه، یا جدید؟",
+      "patternSeparation": "جداسازی الگو",
+      "sep": "جداس.",
+      "old": "قدیمی",
+      "similar": "مشابه",
+      "new": "جدید",
+      "ldi": "LDI",
+      "title": "تمایز حافظه‌ای",
+      "hitRateOldDetected": "نرخ درست (قدیمی تشخیص داده)",
+      "lureDiscrimination": "تمایز فریب (LDI)",
+      "memorize": "حفظ کن",
+      "testPhase": "مرحله آزمون"
+    },
+    "multiArmedBandit": {
+      "earnings": "درآمد:",
+      "pickMachine": "یک دستگاه انتخاب کن",
+      "title": "بازوی چندگانه",
+      "totalReward": "جایزه کل",
+      "optimal": "بهینه",
+      "regret": "حسرت",
+      "exploit": "بهره‌برداری",
+      "machine": "دستگاه",
+      "armsExplored": "بازوهای کاوش شده"
+    },
+    "navon": {
+      "globalBigLetter": "کلی (حرف بزرگ)",
+      "localSmallLetter": "محلی (حرف کوچک)",
+      "title": "ناوون",
+      "globalAdv": "برتری کلی",
+      "whatBigLetter": "حرف بزرگ چیه؟",
+      "whatSmallLetter": "حرف کوچک چیه؟"
+    },
+    "negativePriming": {
+      "controlRt": "RT کنترل",
+      "nameTheRedShape": "شکل قرمز رو نام ببر",
+      "negativePrimingRt": "RT پیش‌فعالی منفی",
+      "positivePrimingRt": "RT پیش‌فعالی مثبت",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "اثر NP",
+      "title": "پیش‌فعالی منفی",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "خطای تخمین",
+      "linearityRsup2": "خطی بودن (R²)",
+      "meanAbsoluteError": "میانگین خطای مطلق",
+      "tapTheLineToPlaceTheNumber": "خط رو بزن تا عدد رو قرار بدی",
+      "title": "خط اعداد",
+      "meanError": "میانگین خطا",
+      "yourEstimate": "تخمین تو",
+      "correct": "صحیح"
+    },
+    "oddOneOut": {
+      "colorTrials": "آزمایه‌های رنگ",
+      "shapeTrials": "آزمایه‌های شکل",
+      "shape": "شکل",
+      "color": "رنگ",
+      "timeout": "وقت تمام",
+      "shapeDiffAccuracy": "دقت تفاوت شکل",
+      "colorDiffAccuracy": "دقت تفاوت رنگ",
+      "shapeDiffAvgRt": "میانگین RT تفاوت شکل",
+      "colorDiffAvgRt": "میانگین RT تفاوت رنگ"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "کدوم سمت؟",
+      "thresholdAngle": "زاویه آستانه",
+      "title": "تمایز جهت",
+      "threshold": "آستانه",
+      "counterCw": "پادساعتگرد",
+      "clockwise": "ساعتگرد"
+    },
+    "patternComparison": {
+      "differentTrials": "آزمایه‌های متفاوت",
+      "sameTrials": "آزمایه‌های یکسان",
+      "same": "یکسان",
+      "different": "متفاوت"
+    },
+    "patternRecognition": {
+      "newPatterns": "الگوهای جدید",
+      "oldPatterns": "الگوهای قدیمی",
+      "old": "قدیمی",
+      "new": "جدید",
+      "studyPatterns": "الگوها رو با دقت مطالعه کن",
+      "memorize": "حفظ کن ({{current}}/{{total}})",
+      "getReady": "آماده شو...",
+      "testPhaseStarting": "مرحله آزمون شروع میشه..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "کاملاً صحیح",
+      "meanAngularError": "میانگین خطای زاویه‌ای",
+      "withinTolerance": "در محدوده مجاز",
+      "title": "دیدگاه‌گیری",
+      "avgErr": "میانگین خطا",
+      "youAreAt": "تو هستی در ",
+      "facing": "رو به",
+      "pointTo": "اشاره کن به "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "آستانه فرکانس",
+      "seq1": "دنباله ۱",
+      "seq2": "دنباله ۲",
+      "title": "تمایز واج",
+      "thresh": "آستانه",
+      "sameOrDifferent": "یکسان یا متفاوت؟",
+      "same": "یکسان",
+      "different": "متفاوت"
+    },
+    "predictionMotion": {
+      "biasLate": "خطا (+ = دیر)",
+      "meanAbsoluteError": "میانگین خطای مطلق",
+      "precisionSd": "دقت (SD)",
+      "title": "پیش‌بینی حرکت",
+      "absError": "خطای مطلق",
+      "precision": "دقت",
+      "responded": "پاسخ داده شد",
+      "tapWhenReachesTarget": "وقتی به هدف رسید بزن"
+    },
+    "promem": {
+      "ongoingAccuracy": "دقت جاری",
+      "ongoingRt": "RT جاری",
+      "pmHitRate": "نرخ درست PM",
+      "pmRt": "PM RT",
+      "pmTargets": "اهداف PM",
+      "title": "حافظه آینده‌نگر",
+      "ongoing": "جاری",
+      "pmHits": "درست‌های PM",
+      "pmMisses": "از دست رفته‌های PM",
+      "living": "زنده",
+      "nonLiving": "غیرزنده",
+      "redWordInstruction": "کلمه قرمز = فشار بده"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "خطاهای پرت‌کننده",
+      "literalErrorRate": "نرخ خطای تحت‌اللفظی",
+      "literalErrors": "خطاهای تحت‌اللفظی",
+      "title": "تفسیر ضرب‌المثل",
+      "literal": "تحت‌اللفظی",
+      "litRate": "نرخ تحت‌الل.",
+      "whatDoesThisMean": "معنی این چیه؟"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "آماده شو تا دنبال کنی",
+      "meanTimeOnTarget": "میانگین زمان روی هدف",
+      "meanTrackingError": "میانگین خطای ردیابی",
+      "placeYourFingerOnTheScreen": "انگشتت رو روی صفحه بذار",
+      "title": "ردیابی تعقیبی",
+      "timeOnTarget": "زمان روی هدف",
+      "error": "خطا",
+      "onTarget": "روی هدف",
+      "avgError": "میانگین خطا",
+      "improve": "بهبود",
+      "improvementT1VsT": "بهبود T1 در مقابل T",
+      "errorLabel": "خطا",
+      "followGreenTarget": "هدف سبز رو دنبال کن"
+    },
+    "rapidNaming": {
+      "roundComplete": "دور تکمیل شد",
+      "totalErrors": "کل خطاها",
+      "title": "نام‌گذاری سریع",
+      "avgSpeed": "میانگین سرعت",
+      "totalTime": "کل زمان",
+      "round": "دور",
+      "getReady": "آماده شو!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "میانگین زمان حل",
+      "solved": "حل شده",
+      "wrong": "اشتباه",
+      "placeholder": "پاسخ تو...",
+      "title": "پازل‌های ریباس",
+      "puzzles": "پازل‌ها",
+      "timeout": "وقت تمام",
+      "submit": "ثبت",
+      "answer": "پاسخ"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "میانگین زمان حل",
+      "solved": "حل شده",
+      "placeholder": "پاسخ تو...",
+      "title": "تداعی‌های دور",
+      "timeout": "وقت تمام",
+      "submit": "ثبت",
+      "answer": "پاسخ"
+    },
+    "reversalLearning": {
+      "adapt": "تطبیق",
+      "loseshiftRate": "نرخ تغییر-باخت",
+      "score": "امتیاز:",
+      "winstayRate": "نرخ ماندن-برد",
+      "title": "یادگیری معکوس",
+      "rewards": "جوایز",
+      "reversals": "بازگشت‌ها",
+      "persev": "تکرار",
+      "avgTrialsToCriterion": "میانگین آزمایه‌ها تا معیار",
+      "pickACard": "یک کارت انتخاب کن"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "از ۷ تا ۷ معکوس بشمار",
+      "reproduceThePatternFromMemory": "الگو رو از حافظه بازتولید کن",
+      "title": "شکل پیچیده Rey",
+      "copy": "کپی",
+      "recall": "یادآوری",
+      "retention": "نگهداری",
+      "trial": "آزمایه",
+      "target": "هدف",
+      "yourCopy": "کپی تو",
+      "submit": "ثبت"
+    },
+    "rhythm": {
+      "avgTimingError": "میانگین خطای زمان‌بندی",
+      "bestTrialError": "خطای بهترین آزمایه",
+      "correctTrials": "آزمایه‌های صحیح",
+      "worstTrialError": "خطای بدترین آزمایه",
+      "watchRhythm": "ریتم رو ببین",
+      "getReady": "آماده شو...",
+      "tapTheRhythm": "ریتم رو بزن!",
+      "tooFarOff": "خیلی دور!",
+      "tapToReproduce": "بزن تا بازتولید کنی",
+      "beats": "{{count}} ضربه",
+      "bestTrial": "بهترین آزمایه",
+      "worstTrial": "بدترین آزمایه",
+      "title": "ریتم",
+      "msErr": "خطای ms"
+    },
+    "routePlanning": {
+      "time": "زمان",
+      "title": "برنامه‌ریزی مسیر",
+      "levels": "سطوح",
+      "completed": "تکمیل شد",
+      "avgMoves": "میانگین حرکات",
+      "clear": "پاک کردن",
+      "submit": "ثبت",
+      "instructions": "دستورالعمل"
+    },
+    "rvp": {
+      "detect357246468": "تشخیص: ۳-۵-۷، ۲-۴-۶، ۴-۶-۸",
+      "targetSequences": "دنباله‌های هدف",
+      "fa": "هشدار کاذب",
+      "hitRate": "نرخ درست",
+      "misses": "از دست رفته‌ها",
+      "sequences": "دنباله‌ها"
+    },
+    "sart": {
+      "commissionErrors": "خطاهای ارتکابی",
+      "omissionErrors": "خطاهای حذفی",
+      "tapAllDigits": "همه ارقام رو بزن به جز ۳",
+      "except3": "جز ۳"
+    },
+    "sceneCrasher": {
+      "adds": "اضافه‌ها",
+      "studyTheScene": "صحنه رو مطالعه کن",
+      "swaps": "جابه‌جایی‌ها",
+      "tapTheNewchangedObject": "شی جدید/تغییریافته رو بزن"
+    },
+    "sentenceVerification": {
+      "falseSentences": "جملات نادرست",
+      "trueSentences": "جملات درست",
+      "byCategory": "بر اساس دسته‌بندی",
+      "title": "تأیید جمله",
+      "trueRt": "RT درست",
+      "true": "درست",
+      "false": "نادرست",
+      "pressKey": "فشار بده "
+    },
+    "soundSweeps": {
+      "down": "پایین",
+      "downAccuracy": "دقت پایین",
+      "durationThreshold": "آستانه مدت",
+      "up": "بالا",
+      "upAccuracy": "دقت بالا",
+      "title": "جارو صوتی",
+      "threshold": "آستانه",
+      "upOrDown": "بالا یا پایین؟"
+    },
+    "sourceMemory": {
+      "color": "رنگ",
+      "colorRecall": "یادآوری رنگ",
+      "frame": "قاب",
+      "frameRecall": "یادآوری قاب",
+      "getReadyForTheTest": "برای آزمون آماده شو!",
+      "itemRecognition": "بازشناسی آیتم",
+      "positionRecall": "یادآوری موقعیت",
+      "sourceAccuracy": "دقت منبع",
+      "title": "حافظه منبع",
+      "source": "منبع",
+      "position": "موقعیت",
+      "word": "کلمه",
+      "wasThisWordShown": "آیا این کلمه نشون داده شد؟",
+      "bottom": "پایین",
+      "blue": "آبی",
+      "orange": "نارنجی",
+      "circle": "دایره",
+      "square": "مربع"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "آستانه نویز",
+      "title": "گفتار در نویز",
+      "noise": "نویز",
+      "whichWordWasIt": "کدوم کلمه بود؟"
+    },
+    "srtt": {
+      "learningEffect": "اثر یادگیری",
+      "learning": "یادگیری",
+      "block": "بلوک"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "سطح شانس",
+      "learningDetected": "یادگیری تشخیص داده شد",
+      "testPhase": "مرحله آزمون",
+      "whichPairLooksMoreFamiliar": "کدوم جفت آشناتر به نظر میاد؟",
+      "title": "یادگیری آماری",
+      "learning": "یادگیری",
+      "watchTheShapes": "شکل‌ها رو ببین"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "اثر سوگیری باور",
+      "conclusion": "نتیجه",
+      "premise1": "مقدمه ۱",
+      "premise2": "مقدمه ۲",
+      "logicalValidityQuestion": "آیا این از نظر منطقی معتبره؟",
+      "valid": "معتبر",
+      "invalid": "نامعتبر"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "دقت غایب",
+      "presentAccuracy": "دقت حاضر",
+      "title": "جستجوی نماد",
+      "present": "حاضر",
+      "absent": "غایب",
+      "targets": "هدف‌ها",
+      "searchGroup": "گروه جستجو"
+    },
+    "syncContinuation": {
+      "async": "ناهمزمان",
+      "asynchrony": "ناهمزمانی",
+      "drift": "انحراف",
+      "cv": "CV",
+      "title": "هماهنگ-ادامه",
+      "meanCv": "میانگین CV",
+      "tempos": "تمپوها",
+      "tempo": "تمپو",
+      "ioi": "Ioi",
+      "getReady": "آماده شو...",
+      "nextTempo": "تمپو بعدی..."
+    },
+    "taskJuggling": {
+      "correctResets": "بازنشانی‌های صحیح",
+      "duration": "مدت زمان",
+      "missedCounters": "شمارنده‌های از دست رفته",
+      "prematureResets": "بازنشانی‌های زودهنگام",
+      "totalEvents": "کل رویدادها",
+      "tooEarly": "خیلی زود!",
+      "missed": "از دست رفت!",
+      "title": "شعبده‌بازی تکلیف",
+      "premature": "زودهنگام",
+      "counter": "شمارنده",
+      "tapCounterInstruction": "هر شمارنده رو وقتی به آستانه‌ش رسید بزن. نذار سرریز بشه!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "نقطه دونیمه (PSE)",
+      "curveSteepness": "شیب منحنی",
+      "idealMidpoint": "نقطه میانی ایده‌آل",
+      "pse": "PSE",
+      "title": "دونیمه‌سازی زمانی",
+      "steepness": "شیب",
+      "shortOrLong": "کوتاه یا بلند؟",
+      "trainingPhase": "مرحله آموزشی",
+      "short": "کوتاه",
+      "long": "طولانی"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "عرض گرادیان",
+      "rememberThisDuration": "این مدت رو به خاطر بسپار",
+      "width": "عرض",
+      "standard": "استاندارد",
+      "title": "تعمیم زمانی",
+      "hitRate": "نرخ درست",
+      "faRate": "نرخ هشدار کاذب",
+      "hitRateDetectStandard": "نرخ درست (تشخیص استاندارد)",
+      "sameDuration": "مدت یکسان؟",
+      "trainingPhase": "مرحله آموزشی",
+      "same": "یکسان",
+      "different": "متفاوت"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "آستانه SOA",
+      "title": "تمایز بافت",
+      "threshold": "آستانه"
+    },
+    "timePromem": {
+      "avgTimingError": "میانگین خطای زمان‌بندی",
+      "clockChecks": "بررسی ساعت",
+      "ongoingAccuracy": "دقت جاری",
+      "ongoingTrials": "آزمایه‌های جاری",
+      "totalPmPresses": "کل فشارهای PM",
+      "pmAccuracy": "دقت PM",
+      "pmMisses": "از دست رفته‌های PM",
+      "title": "حافظه آینده‌نگر زمانی",
+      "ongoing": "جاری",
+      "pmHitsLabel": "درست‌های PM",
+      "timingErr": "خطای زمان‌بندی",
+      "pmHitsExpected": "درست‌های PM / مورد انتظار",
+      "pmPresses": "فشارهای PM",
+      "checkClock": "ساعت رو ببین",
+      "thirtySecMark": "نشانه ۳۰ ثانیه"
+    },
+    "toj": {
+      "meanResponseTime": "میانگین زمان پاسخ",
+      "temporalResolution": "تفکیک زمانی",
+      "title": "قضاوت ترتیب زمانی",
+      "threshold": "آستانه",
+      "whichCameFirst": "کدوم اول آمد؟",
+      "leftFirst": "اول چپ",
+      "rightFirst": "اول راست"
+    },
+    "tower": {
+      "budget": "بودجه",
+      "challenge": "چالش",
+      "challengeClassic": "کلاسیک",
+      "challengeExpert": "حرفه‌ای",
+      "challengeMemory": "حافظه",
+      "challengePrecision": "دقت",
+      "dragDiscAriaLabel": "دیسک بالایی رو از میخ {{peg}} بکش",
+      "goal": "هدف",
+      "goalHiddenStatus": "هدف مخفیه. از آشکارسازی برای نمایش کوتاه استفاده کن.",
+      "goalRevealedMessage": "هدف برای ۳ ثانیه آشکار شد.",
+      "hint": "راهنمایی",
+      "hintDescription": "بهترین حرکت بعدی رو نشون بده",
+      "hintMessage": "راهنمایی: دیسک بالایی رو از میخ {{fromPeg}} به میخ {{toPeg}} ببر.",
+      "hiddenGoalDescription": "هدف حین بازی مخفیه. وقتی نیاز به یادآوری کوتاه داری از آشکارسازی استفاده کن.",
+      "hiddenGoalTitle": "چالش حافظه",
+      "invalid": "نامعتبر",
+      "moves": "حرکت‌ها",
+      "optimal": "بهینه",
+      "pegFullMessage": "اون میخ پُره.",
+      "previewMemoryCountdown": "هدف رو حفظ کن. شروع در {{seconds}} ثانیه.",
+      "previewPlanCountdown": "راه‌حل {{moves}} حرکتی رو برنامه‌ریزی کن. شروع در {{seconds}} ثانیه.",
+      "reset": "بازنشانی",
+      "resetDescription": "این پازل رو از نو شروع کن",
+      "resetMessage": "پازل بازنشانی شد.",
+      "reveal": "آشکارسازی",
+      "revealDescription": "هدف مخفی رو آشکار کن",
+      "statusOptimalSolve": "حل بهینه. امتیاز {{score}}.",
+      "statusSolvedScore": "در {{moves}} حرکت حل شد (+{{extraMoves}}). امتیاز {{score}}.",
+      "undo": "برگرداندن",
+      "undoDescription": "آخرین حرکت رو برگردان",
+      "undoneMessage": "آخرین حرکت برگردانده شد.",
+      "yourPegs": "میخ‌های تو"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "تحویل‌های صحیح",
+      "trainsLost": "قطارهای از دست رفته",
+      "wrongStation": "ایستگاه اشتباه",
+      "title": "قطار فکر",
+      "trains": "قطارها",
+      "missed": "از دست رفته",
+      "scoreLabel": "امتیاز",
+      "instructions": "دستورالعمل"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "میانگین سؤالات استفاده شده",
+      "title": "بیست سؤال",
+      "avgQuestions": "میانگین سؤالات",
+      "rounds": "دورها",
+      "efficiency": "بازدهی",
+      "avgQuestionsCorrectOnly": "میانگین سؤالات (فقط صحیح)",
+      "questionsLabel": "سؤالات",
+      "remaining": "باقیمانده",
+      "readyToGuess": "آماده حدس زدنم!",
+      "tapTheTarget": "شیئی رو بزن که فکر می‌کنی هدفه!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "میدان دید مفید",
+      "visualNoiseMask": "ماسک نویز بصری",
+      "whatWasInTheCenter": "مرکز چی بود؟",
+      "whereWasTheTarget": "هدف کجا بود؟",
+      "avgThreshold": "میانگین آستانه",
+      "speed": "سرعت",
+      "accuracy": "دقت",
+      "central": "مرکزی",
+      "peripheral": "محیطی",
+      "overall": "کلی",
+      "block": "بلوک",
+      "trials": "آزمایه‌ها",
+      "start": "شروع",
+      "focus": "تمرکز",
+      "threshold": "آستانه",
+      "stimulus": "محرک",
+      "respondFromMemory": "از حافظه پاسخ بده",
+      "truck": "کامیون",
+      "choosePeripheralLocation": "موقعیت محیطی رو انتخاب کن",
+      "currentBlock": "بلوک {{n}}",
+      "exposure": "نوردهی"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "کلماتی که با {{letter}} شروع میشن",
+      "title": "روانی کلامی",
+      "totalWords": "کل کلمات",
+      "duplicates": "تکراری‌ها",
+      "letter": "حرف",
+      "round": "دور",
+      "roundComplete": "دور تکمیل شد",
+      "nextRound": "دور بعدی",
+      "middotRound": " · دور"
+    },
+    "vernierAcuity": {
+      "whichSide": "کدوم سمت؟",
+      "title": "دقت Vernier",
+      "leftOffset": "انحراف چپ",
+      "rightOffset": "انحراف راست",
+      "offset": "انحراف"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "استراتژی بهینه",
+      "correct": "صحیح!",
+      "wrong": "اشتباه",
+      "title": "پیش‌بینی آب و هوا",
+      "optimal": "بهینه",
+      "learningCurve": "منحنی یادگیری",
+      "predictTheWeather": "آب و هوا رو پیش‌بینی کن",
+      "rain": "باران"
+    },
+    "wordChain": {
+      "avgResponseTime": "میانگین زمان پاسخ",
+      "chain": "زنجیره",
+      "longestChain": "طولانی‌ترین زنجیره",
+      "totalCorrect": "کل صحیح",
+      "totalWords": "کل کلمات",
+      "words": "کلمات",
+      "title": "زنجیره کلمات",
+      "longest": "طولانی‌ترین",
+      "avgRt": "میانگین RT",
+      "endsWith": "ختم شده به ",
+      "chainLabel": "زنجیره",
+      "bestLabel": "بهترین"
+    },
+    "wordFlow": {
+      "avgWordLength": "میانگین طول کلمه",
+      "correct": "صحیح",
+      "invalidWords": "کلمات نامعتبر",
+      "totalWordsSelected": "کل کلمات انتخاب شده",
+      "validWords": "کلمات معتبر",
+      "wordsPerMinute": "کلمه در دقیقه",
+      "wrong": "اشتباه",
+      "seeResults": "مشاهده نتایج",
+      "nextRound": "دور بعدی ({{current}}/{{total}})",
+      "title": "روانی کلامی",
+      "validWordsLabel": "کلمات معتبر",
+      "wordsPerMinLabel": "کلمه/دقیقه",
+      "avgLengthLabel": "میانگین طول",
+      "invalidLabel": "نامعتبر",
+      "round": "دور",
+      "selectWordsBelongTo": "کلماتی رو انتخاب کن که متعلق به",
+      "selected": "انتخاب شده"
+    },
+    "wordList": {
+      "avgRtCorrect": "میانگین RT (صحیح)",
+      "primacyEffect": "اثر تقدم",
+      "recencyEffect": "اثر تأخر",
+      "studyPhaseRememberEachWord": "مرحله مطالعه — هر کلمه رو به خاطر بسپار",
+      "wordsRecalled": "کلمات یادآوری شده",
+      "title": "لیست کلمات",
+      "serialPositionCurve": "منحنی موقعیت ترتیبی",
+      "wasWordInList": "آیا این کلمه در لیست بود؟",
+      "seenBefore": "قبلاً دیده شده",
+      "newWord": "جدید"
+    },
+    "speedSort": {
+      "switchAccuracy": "دقت تعویض",
+      "switchTrials": "آزمایه‌های تعویضی",
+      "sortByColor": "مرتب‌سازی بر اساس رنگ",
+      "sortByShape": "مرتب‌سازی بر اساس شکل",
+      "sortByNumber": "مرتب‌سازی بر اساس عدد",
+      "ruleChanged": "قانون عوض شد!",
+      "binRed": "قرمز",
+      "binBlue": "آبی",
+      "binGreen": "سبز",
+      "binYellow": "زرد",
+      "binCircle": "دایره",
+      "binSquare": "مربع",
+      "binTriangle": "مثلث",
+      "binStar": "ستاره",
+      "title": "مرتب‌سازی سریع",
+      "switch": "تعویض‌ها"
+    },
+    "reflex": {
+      "target": "هدف",
+      "lure": "فریب",
+      "tooSlow": "خیلی کُند!",
+      "wrongTarget": "هدف اشتباه!",
+      "tapTargets": "دایره‌های سبز رو بزن!",
+      "hits": "درست‌ها",
+      "misses": "از دست رفته‌ها",
+      "fa": "هشدار کاذب"
+    },
+    "chainCalculation": {
+      "rememberTotal": "مجموع جاری رو به خاطر بسپار...",
+      "title": "محاسبه زنجیره‌ای",
+      "stepChains": "زنجیره‌های {{len}} مرحله‌ای",
+      "start": "شروع",
+      "step": "مرحله",
+      "whatIsTheResult": "نتیجه چیه؟"
+    },
+    "alternateUses": {
+      "placeholder": "یک کاربرد تایپ کن...",
+      "title": "کاربردهای جایگزین",
+      "totalUses": "کل کاربردها",
+      "perObject": "در هر شی",
+      "rounds": "دورها",
+      "bestObject": "بهترین شی",
+      "bestCount": "بهترین تعداد",
+      "noUsesSubmitted": "هیچ کاربردی ثبت نشده",
+      "timesUp": "وقت تمام شد!",
+      "nextObject": "شی بعدی ({{object}})",
+      "listCreativeUses": "کاربردهای خلاقانه برای این شی رو فهرست کن"
+    },
+    "anagram": {
+      "placeholder": "کلمه رو تایپ کن...",
+      "title": "آناگرام",
+      "avgSolve": "میانگین حل",
+      "letterWords": "کلمات {{len}} حرفی",
+      "submit": "ثبت"
+    },
+    "facialEmotion": {
+      "happy": "شاد",
+      "sad": "غمگین",
+      "angry": "عصبانی",
+      "fearful": "ترسیده",
+      "disgusted": "بیزار",
+      "surprised": "متعجب",
+      "lc": "LC",
+      "title": "تشخیص احساسات چهره",
+      "topConfusions": "بالاترین اشتباهات"
+    },
+    "numberSeries": {
+      "easy": "آسان",
+      "hard": "سخت"
+    },
+    "chainRecall": {
+      "round": "دور",
+      "title": "یادآوری زنجیره‌ای",
+      "chain": "زنجیره",
+      "placeholder": "جایگزین"
+    },
+    "emotionalGoNogo": {
+      "fa": "هشدار کاذب",
+      "title": "Go/No-Go احساسی",
+      "block1CommissionErrors": "خطاهای ارتکابی بلوک ۱",
+      "block2CommissionErrors": "خطاهای ارتکابی بلوک ۲",
+      "goHappy": "Go = شاد",
+      "goSad": "Go = غمگین",
+      "block": "بلوک",
+      "go": "برو"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "اثر Stroop",
+      "title": "هجوم رنگ",
+      "congShort": "سازگار",
+      "incongShort": "ناسازگار",
+      "congruentAccuracy": "دقت سازگار",
+      "incongruentAccuracy": "دقت ناسازگار"
+    },
+    "mirror": {
+      "avgCorrectCells": "خانه‌های صحیح (میانگین)",
+      "symmetryType": "نوع تقارن",
+      "title": "آینه‌ای"
+    },
+    "rhythmTap": {
+      "correctTrials": "آزمایه‌های صحیح",
+      "avgRhythmScore": "میانگین امتیاز ریتم",
+      "bestTrialScore": "امتیاز بهترین آزمایه",
+      "worstTrialScore": "امتیاز بدترین آزمایه",
+      "level": "سطح",
+      "rhythm": "ریتم",
+      "bestTrial": "بهترین آزمایه",
+      "worstTrial": "بدترین آزمایه"
+    },
+    "vocalProsody": {
+      "questioning": "پرسشی"
+    },
+    "arithmeticSpeed": {
+      "multiply": "ضرب",
+      "add": "اضافه کن",
+      "subtract": "تفریق",
+      "title": "سرعت حساب",
+      "score": "امتیاز",
+      "solved": "حل شده",
+      "missed": "از دست رفته"
+    },
+    "puzzle": {
+      "avgSolveTime": "میانگین زمان حل",
+      "totalMoves": "کل حرکات",
+      "totalErrors": "کل خطاها",
+      "gridSize": "اندازه شبکه",
+      "maxGridReached": "حداکثر شبکه رسید",
+      "maxLevelReached": "حداکثر سطح رسید",
+      "maxNodesReached": "حداکثر گره‌ها رسید",
+      "puzzleDetails": "جزئیات پازل",
+      "roundDetails": "جزئیات دور",
+      "solved": "حل شد!",
+      "undo": "برگرداندن",
+      "reset": "بازنشانی",
+      "check": "بررسی",
+      "moves": "حرکت‌ها",
+      "time": "زمان",
+      "level": "سطح",
+      "errors": "خطاها",
+      "score": "امتیاز",
+      "grid": "شبکه",
+      "crossings": "تقاطع‌ها",
+      "pearls": "مروارید‌ها",
+      "clues": "سرنخ‌ها",
+      "region": "ناحیه",
+      "filled": "پر شده",
+      "cells": "خانه‌ها",
+      "undosLeft": "برگرداندن‌های باقیمانده",
+      "gems": "جواهرات",
+      "connected": "متصل",
+      "slides": "لغزش‌ها",
+      "progress": "پیشرفت",
+      "rotations": "چرخش‌ها",
+      "puzzle": "پازل",
+      "uncovered": "کشف شده",
+      "colored": "رنگ شده",
+      "violations": "تخلفات",
+      "blacked": "سیاه شده",
+      "empty": "خالی",
+      "remaining": "باقیمانده",
+      "pairs": "جفت‌ها",
+      "flips": "چرخاندن‌ها",
+      "found": "پیدا شده",
+      "balls": "توپ‌ها",
+      "guesses": "حدس‌ها",
+      "original": "اصلی",
+      "findDifferences": "تفاوت‌ها رو پیدا کن",
+      "totalDrags": "کل کشیدن‌ها",
+      "totalUndos": "کل برگرداندن‌ها",
+      "totalEdgesDrawn": "کل لبه‌های کشیده شده",
+      "totalLasers": "کل لیزرها",
+      "totalSlides": "کل لغزش‌ها",
+      "totalRotations": "کل چرخش‌ها",
+      "totalRectangles": "کل مستطیل‌ها",
+      "totalScore": "امتیاز کل",
+      "avgTime": "میانگین زمان",
+      "cellsCleared": "خانه‌های پاک شده",
+      "totalDiffsFound": "کل تفاوت‌های پیدا شده",
+      "gemsCollected": "جواهرات جمع شده",
+      "pushBoxesOntoTargets": "همه جعبه‌ها رو روی هدف‌ها هل بده",
+      "fireLasersMarkBalls": "لیزرها رو از لبه‌ها شلیک کن، بعد موقعیت توپ‌ها رو علامت بزن",
+      "revealingAnswer": "آشکارسازی پاسخ...",
+      "checkAnswer": "بررسی پاسخ",
+      "pickNumberBelow": "یک عدد از پایین انتخاب کن",
+      "tapCellToAssign": "یک خانه رو بزن تا عدد بذاری",
+      "tapEdgesToPlaceWalls": "لبه‌ها رو بزن تا دیوار بذاری. به ناحیه‌های K تقسیم کن.",
+      "ghosts": "ارواح",
+      "vampires": "خون‌آشام‌ها",
+      "zombies": "زامبی‌ها",
+      "dominoes": "دومینوها",
+      "islands": "جزیره‌ها",
+      "pegsLeft": "میخ‌های باقیمانده",
+      "bestRemaining": "بهترین باقیمانده",
+      "puzzlesSolved": "پازل‌های حل شده",
+      "flooded": "سیل شده",
+      "edges": "لبه‌ها",
+      "totalPlacements": "کل قرارگیری‌ها",
+      "totalRemovals": "کل برداشتن‌ها",
+      "maxTileReached": "حداکثر کاشی رسید",
+      "target": "هدف",
+      "placed": "قرار داده شده",
+      "totalGuesses": "کل حدس‌ها",
+      "guessesLeft": "حدس‌های باقیمانده",
+      "difficulty": "سختی"
+    },
+    "palisade": {
+      "title": "پالیسید",
+      "puzzles": "پازل‌ها",
+      "maxLevel": "حداکثر سطح"
+    },
+    "keen": {
+      "title": "کنکن",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "errors": "خطاها",
+      "avgTime": "میانگین زمان",
+      "erase": "پاک کردن"
+    },
+    "blackbox": {
+      "title": "جعبه سیاه",
+      "puzzles": "پازل‌ها",
+      "lasers": "لیزرها",
+      "avgTime": "میانگین زمان"
+    },
+    "designFluency": {
+      "title": "روانی طراحی",
+      "uniqueDesigns": "طرح‌های منحصربه‌فرد",
+      "duplicates": "تکراری‌ها",
+      "round": "دور",
+      "roundComplete": "دور تکمیل شد",
+      "youCreatedDesigns": "{{count}} طرح ساختی",
+      "startRound": "شروع دور",
+      "instructions": "دستورالعمل",
+      "designs": "طرح‌ها",
+      "clear": "پاک کردن",
+      "addDesign": "اضافه کن"
+    },
+    "signpost": {
+      "title": "تابلوی راهنما",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "avgTime": "میانگین زمان",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "sokoban": {
+      "title": "سوکوبان",
+      "level": "سطح",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "undos": "برگرداندن‌ها",
+      "puzzle": "پازل"
+    },
+    "numericalStroop": {
+      "left": "چپ",
+      "right": "راست"
+    },
+    "biologicalMotion": {
+      "title": "حرکت بیولوژیکی",
+      "noiseDots": "نقطه‌های نویز",
+      "whichDirection": "کدوم جهت؟",
+      "left": "چپ",
+      "right": "راست"
+    },
+    "inertia": {
+      "title": "اینرسی",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "gems": "جواهرات",
+      "moves": "حرکت‌ها"
+    },
+    "waterLevel": {
+      "title": "سطح آب",
+      "error": "خطا",
+      "tilt": "شیب",
+      "waterLine": "خط آب؟"
+    },
+    "twiddle": {
+      "title": "پیچ و خم",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "sudoku": {
+      "title": "سودوکو",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "errors": "خطاها",
+      "avgTime": "میانگین زمان",
+      "erase": "پاک کردن"
+    },
+    "rectangles": {
+      "title": "مستطیل‌ها",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "rectanglesCount": "مستطیل‌ها",
+      "maxGrid": "حداکثر شبکه",
+      "cancelSelection": "لغو انتخاب"
+    },
+    "filling": {
+      "title": "پر کردن",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "avgTime": "میانگین زمان",
+      "grid": "شبکه"
+    },
+    "spacedRetrieval": {
+      "title": "بازیابی فاصله‌دار",
+      "studyPair": "این جفت رو مطالعه کن",
+      "waitAndSolve": "صبر کن… بعد حل کن",
+      "equalsQuestion": "= ؟",
+      "intervalWhatPairs": "فاصله: کدوم جفت‌ها؟"
+    },
+    "prototypeDistortion": {
+      "title": "تحریف نمونه اولیه",
+      "studyPhase": "مرحله مطالعه",
+      "testPhase": "مرحله آزمون",
+      "yesBelongs": "بله — متعلقه",
+      "noRandom": "خیر — تصادفی"
+    },
+    "motionCoherence": {
+      "title": "انسجام حرکت",
+      "threshold": "آستانه",
+      "coherence": "انسجام",
+      "whichDirection": "کدوم جهت؟"
+    },
+    "cube": {
+      "title": "مکعب",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxLevel": "حداکثر سطح",
+      "cubeFaces": "وجوه مکعب",
+      "moveUp": "بالا",
+      "moveLeft": "چپ",
+      "moveDown": "پایین",
+      "moveRight": "راست"
+    },
+    "sameGame": {
+      "title": "همین بازی",
+      "score": "امتیاز",
+      "cleared": "پاک شده",
+      "cells": "خانه‌ها",
+      "accuracy": "دقت"
+    },
+    "crossModalMatching": {
+      "title": "تطابق بین‌حسی",
+      "chance": "شانس",
+      "whichPatternMatchesRhythm": "کدوم الگو با ریتم مطابقت داره؟"
+    },
+    "mosaic": {
+      "title": "موزاییک",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "spotDiff": {
+      "title": "پیدا کردن تفاوت",
+      "level": "سطح",
+      "grid": "شبکه",
+      "accuracy": "دقت",
+      "perfect": "بی‌نقص",
+      "avgTime": "میانگین زمان",
+      "found": "پیدا شده"
+    },
+    "lightsOut": {
+      "title": "چراغ خاموش",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "pipeline": {
+      "title": "خط لوله",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "rotations": "چرخش‌ها",
+      "avgTime": "میانگین زمان"
+    },
+    "tracks": {
+      "title": "آهنگ ها",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "errors": "خطاها",
+      "avgTime": "میانگین زمان"
+    },
+    "netslide": {
+      "title": "نت اسلاید",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "slides": "لغزش‌ها",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "cognitiveBias": {
+      "title": "آموزش سوگیری شناختی",
+      "biasResistance": "مقاومت سوگیری",
+      "biased": "سوگیرانه",
+      "continue": "ادامه"
+    },
+    "empathicAccuracy": {
+      "title": "دقت همدلانه",
+      "emotionId": "احساس",
+      "avgRatingError": "میانگین خطای رتبه‌بندی",
+      "scenarios": "سناریوها",
+      "perfect": "بی‌نقص",
+      "rating": "رتبه‌بندی",
+      "howDoesCharacterFeel": "شخصیت چه احساسی داره؟",
+      "rateIntensity": "شدت رو مشخص کن",
+      "whatEmotion": "چه احساسی؟",
+      "yourRating": "رتبه‌بندی تو",
+      "correct": "صحیح",
+      "emotion": "احساس"
+    },
+    "guess": {
+      "title": "متفکر",
+      "solved": "حل شده",
+      "guesses": "حدس‌ها"
+    },
+    "dominosa": {
+      "title": "دومینوزا",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxLevel": "حداکثر سطح"
+    },
+    "magnets": {
+      "title": "آهنربا",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxLevel": "حداکثر سطح"
+    },
+    "tangram": {
+      "placeAll": "همه قطعات رو قرار بده",
+      "solved": "حل شد!",
+      "notRight": "کاملاً درست نیست",
+      "title": "تانگرام",
+      "level": "سطح",
+      "puzzles": "پازل‌ها",
+      "placements": "قرارگیری‌ها",
+      "removals": "برداشتن‌ها",
+      "puzzleNumber": "پازل {{n}}",
+      "pieces": "قطعات",
+      "targetCells": "هدف",
+      "dragHint": "قطعه رو روی شبکه بکش یا قرار بده",
+      "selectHint": "یک قطعه انتخاب کن",
+      "rotate": "چرخاندن",
+      "undo": "لغو",
+      "check": "بررسی"
+    },
+    "galaxies": {
+      "title": "کهکشان ها"
+    },
+    "flood": {
+      "title": "سیل"
+    },
+    "pegs": {
+      "title": "گیره",
+      "bestPegs": "بهترین میخ‌ها"
+    },
+    "auditoryFigureGround": {
+      "title": "تصویر-زمینه شنیداری",
+      "patternPresent": "الگو حاضره؟",
+      "pattern": "الگو",
+      "noPattern": "بدون الگو"
+    },
+    "selfOrderedPointing": {
+      "title": "اشاره خودمرتب",
+      "maxSpan": "حداکثر دامنه",
+      "errors": "خطاها",
+      "round": "دور",
+      "setOf": "مجموعه {{count}} تایی"
+    },
+    "mirrorTracing": {
+      "title": "ردیابی آینه‌ای",
+      "totalErrors": "کل خطاها",
+      "avgTime": "میانگین زمان",
+      "shapes": "شکل‌ها",
+      "perfect": "بی‌نقص",
+      "improvement": "بهبود",
+      "errorsMiddot": "خطا ·",
+      "shape": "شکل",
+      "errors": "خطاها",
+      "xIsMirrored": "X آینه‌ای شده!"
+    },
+    "clockDrawing": {
+      "title": "رسم ساعت",
+      "avgError": "میانگین خطا",
+      "setTo": "تنظیم به ",
+      "submit": "ثبت"
+    },
+    "cognitiveMap": {
+      "title": "نقشه شناختی",
+      "explore": "کاوش",
+      "sRemaining": "S باقیمانده",
+      "from": "از",
+      "whichDirectionIs": "جهت کدومه "
+    },
+    "sixteen": {
+      "title": "شانزده"
+    },
+    "loopy": {
+      "title": "لوپی"
+    },
+    "lightup": {
+      "title": "روشن کردن"
+    },
+    "twentyFortyEight": {
+      "maxTile": "حداکثر کاشی",
+      "moves": "حرکت‌ها",
+      "max": "حداکثر"
+    },
+    "bridges": {
+      "title": "پل‌ها",
+      "puzzles": "پازل‌ها",
+      "maxLevel": "حداکثر سطح",
+      "level": "سطح"
+    },
+    "net": {
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxGrid": "حداکثر شبکه"
+    },
+    "flip": {
+      "title": "تلنگر"
+    },
+    "range": {
+      "title": "محدوده"
+    },
+    "slant": {
+      "title": "شیب"
+    },
+    "towers": {
+      "title": "برج‌ها",
+      "puzzles": "پازل‌ها",
+      "avgTime": "میانگین زمان",
+      "erase": "پاک کردن"
+    },
+    "pearl": {
+      "title": "مروارید",
+      "edges": "لبه‌ها"
+    },
+    "mapColoring": {
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "moves": "حرکت‌ها",
+      "maxLevel": "حداکثر سطح"
+    },
+    "singles": {
+      "title": "مجردها"
+    },
+    "nonogram": {
+      "title": "نونوگرام"
+    },
+    "undead": {
+      "title": "مرده",
+      "accuracy": "دقت",
+      "puzzles": "پازل‌ها",
+      "avgTime": "میانگین زمان"
+    },
+    "untangle": {
+      "title": "گره گشایی کنید",
+      "drags": "کشیدن‌ها",
+      "maxNodes": "حداکثر گره‌ها"
+    },
+    "unruly": {
+      "title": "سرکش"
+    },
+    "fifteen": {
+      "title": "پانزده"
+    },
+    "tents": {
+      "title": "چادر"
+    },
+    "mesker": {
+      "pen": "قلم",
+      "stroke": "ضربه",
+      "penPressureHint": "با فشار قلم یکنواخت بنویس"
+    },
+    "modality": {
+      "position": "موقعیت",
+      "audio": "صدا"
+    },
+    "validate": "تایید"
+  },
+  "trace": {
+    "instructions": "به موقعیت N-back بکش. اگه موقعیت یکسانه دوبار بزن.",
+    "hint": {
+      "validated": "تایید شد",
+      "draw": "حرف رو بکش • بزن برای تایید",
+      "drawWithColor": "حرف رو بکش • رنگ انتخاب کن • بزن برای تایید",
+      "type": "حرف رو تایپ کن • Enter برای تایید",
+      "typeWithColor": "حرف رو تایپ کن • رنگ انتخاب کن • Enter برای تایید",
+      "typeResult": "نتیجه رو تایپ کن • Enter برای تایید",
+      "writeResult": "نتیجه رو بنویس • بزن برای تایید"
+    },
+    "keyboard": {
+      "letterInput": "حرف",
+      "numberInput": "عدد"
+    },
+    "arithmetic": {
+      "cueHint": "۲ رقم رو حفظ کن",
+      "refresh": "جدید"
+    },
+    "hintPosition": "محرک {{n}} نوبت پیش کجا بود؟",
+    "hintN0": "محرک فعلی رو مشخص کن",
+    "warmupHint": "موقعیت‌ها رو حفظ کن. پاسخ لازم نیست.",
+    "hintDraw": "حرف رو بکش • بزن برای تایید",
+    "hintDrawWithColor": "حرف رو بکش • رنگ انتخاب کن • بزن برای تایید",
+    "hintWriteResult": "نتیجه رو بنویس • بزن برای تایید",
+    "guide": {
+      "swipeNormal": "از آخرین موقعیت (N-0) به موقعیت {{n}} مرحله قبل (N-{{n}}) بکش. اگه یکسانه دوبار بزن.",
+      "swipeSequential": "قدم به قدم از N-0 به N-{{n}} بکش و از هر موقعیت میانی رد شو. اگه یکسانه دوبار بزن.",
+      "swipeDynamic": "طبق قانون نمایش داده شده بکش. اگه یکسانه دوبار بزن.",
+      "tapN0": "روی موقعیت فعلی بزن.",
+      "warmup": "موقعیت‌ها رو حفظ کن — پاسخ لازم نیست.",
+      "writeDraw": "حرفی که {{n}} مرحله قبل شنیدی رو بکش • بزن برای تایید",
+      "writeDrawColor": "حرفی که {{n}} مرحله قبل شنیدی رو بکش • رنگش رو انتخاب کن • بزن برای تایید",
+      "writeType": "حرفی که {{n}} مرحله قبل شنیدی رو تایپ کن • Enter برای تایید",
+      "writeTypeColor": "حرفی که {{n}} مرحله قبل شنیدی رو تایپ کن • رنگش رو انتخاب کن • Enter برای تایید",
+      "writeDrawN0": "حرفی که الان شنیدی رو بکش • بزن برای تایید",
+      "writeDrawColorN0": "حرفی که الان شنیدی رو بکش • رنگش رو انتخاب کن • بزن برای تایید",
+      "writeTypeN0": "حرفی که الان شنیدی رو تایپ کن • Enter برای تایید",
+      "writeTypeColorN0": "حرفی که الان شنیدی رو تایپ کن • رنگش رو انتخاب کن • Enter برای تایید",
+      "writeResult": "نتیجه رو بنویس • بزن برای تایید",
+      "validated": "تایید شد",
+      "holdMindful": "خانه رو {{seconds}} ثانیه نگه‌دار",
+      "swipeMindful": "در {{seconds}} ثانیه بکش"
+    },
+    "settings": {
+      "adaptiveTiming": "زمان‌بندی تطبیقی",
+      "inputKeyboard": "صفحه‌کلید",
+      "inputHandwriting": "دست‌خط",
+      "writingInput": "حروف/اعداد",
+      "section": {
+        "grid": "شبکه",
+        "input": "ورودی",
+        "rhythm": "ریتم",
+        "interface": "رابط",
+        "interfaceNone": "استاندارد",
+        "sound": "صدا"
+      },
+      "isi": "فاصله (ISI)",
+      "stimulusDuration": "مدت محرک",
+      "feedbackDuration": "مدت بازخورد",
+      "ruleDisplay": "مدت قانون",
+      "blankInterval": "فاصله خالی",
+      "showProgressBar": "نوار پیشرفت",
+      "showInstructions": "دستورالعمل درون‌بازی",
+      "arithmeticInterference": "تداخل حسابی",
+      "fullMenu": "منوی کامل",
+      "gridStyle": "سبک شبکه",
+      "gridStyleClassic": "کلاسیک",
+      "gridStyleTrace": "ردگیری",
+      "guide": {
+        "swipeMindful": "در {{seconds}} ثانیه بکش",
+        "holdMindful": "خانه رو {{seconds}} ثانیه نگه‌دار"
+      },
+      "feedback": {
+        "gestureDuration": "حرکت",
+        "holdDuration": "نگه‌داشتن",
+        "writingDuration": "نوشتن"
+      }
+    },
+    "feedback": {
+      "holdDuration": "نگه‌داشتن",
+      "gestureDuration": "حرکت",
+      "writingDuration": "نوشتن"
+    },
+    "image": "شکل",
+    "digits": "ارقام",
+    "emotions": "احساس",
+    "words": "کلمه",
+    "tones": "تُن",
+    "spatial": "جهت"
+  },
+  "replay": {
+    "title": "بازپخش جلسه",
+    "play": "پخش",
+    "pause": "توقف",
+    "restart": "شروع دوباره",
+    "speed": "سرعت",
+    "loading": "بارگذاری جلسه...",
+    "unavailable": "بازپخش برای این جلسه موجود نیست",
+    "backToStats": "بازگشت به آمار",
+    "runStack": {
+      "original": "اصلی",
+      "correction": "تصحیح",
+      "delta": "Δ d'",
+      "inProgress": "در حال انجام",
+      "completed": "تکمیل شد"
+    },
+    "abandon": "رها کردن",
+    "badge": "بازپخش",
+    "completionReport": {
+      "backToHome": "بازگشت",
+      "correctAgain": "دوباره صحیح",
+      "deltaVsOriginal": "در مقابل اصلی",
+      "deltaVsParent": "در مقابل اجرای قبلی",
+      "falseAlarmsSkipped": "خطاهای اجتناب شده",
+      "missesCorrections": "تصحیحات",
+      "newFalseAlarms": "خطاهای جدید",
+      "replayAgain": "بازپخش",
+      "scoreLabel": "امتیاز d'",
+      "title": "تصحیح تکمیل شد"
+    },
+    "controls": "کنترل‌ها",
+    "correction": "تصحیح",
+    "finished": "پایان بازپخش",
+    "home": "خانه",
+    "parseError": "خواندن جلسه ممکن نیست",
+    "tapSlotToPlace": "یک جایگاه رو بزن تا قرار بدی",
+    "timeline": "خط زمانی",
+    "focusTimeline": {
+      "open": "نمایش خط زمانی",
+      "close": "بستن خط زمانی",
+      "title": "خط زمانی N-Back",
+      "fillAll": "پر کردن همه",
+      "fillCard": "پر کردن کارت"
+    },
+    "hud": {
+      "counterDisplay": "نمایش شمارنده",
+      "toggleCounterDisplay": "تغییر نمایش شمارنده"
+    },
+    "validate": "تایید"
+  },
+  "recovery": {
+    "title": "جلسه قطع شد",
+    "description": "یک جلسه در حال انجام بود. می‌خوای ادامه بدی؟",
+    "mode": "حالت",
+    "level": "سطح",
+    "progress": "پیشرفت",
+    "timeAgo": "زمان",
+    "resume": "ادامه جلسه",
+    "startFresh": "شروع تازه",
+    "staleWarning": "این جلسه قدیمیه، ادامه دادنش ممکنه سخت باشه.",
+    "modes": {
+      "game": "تمرین",
+      "activeTraining": "تمرین فعال",
+      "flowTraining": "تمرین Dual Place",
+      "dualPickTraining": "انتخاب دوگانه",
+      "traceTraining": "ردیابی دوگانه"
+    }
+  },
+  "rewards": {
+    "congratulations": "تبریک!",
+    "duration": "{{days}} روز Premium",
+    "lifetimeLabel": "دسترسی مادام‌العمر",
+    "expiresAt": "معتبر تا {{date}}",
+    "neverExpires": "هرگز منقضی نمیشه",
+    "continue": "ادامه",
+    "discovery": {
+      "name": "پاس اکتشاف",
+      "description": "۷ روز Premium — همه امکانات رو کشف کن"
+    },
+    "engagement": {
+      "name": "پاس تعهد",
+      "description": "۱ ماه Premium — انضباطت نتیجه داد"
+    },
+    "expert": {
+      "name": "پاس حرفه‌ای",
+      "description": "۳ ماه Premium — تو یک تمرین‌کننده واقعی هستی"
+    },
+    "lifetime": {
+      "name": "دسترسی مادام‌العمر",
+      "description": "Premium برای همیشه — تو بر NeuroDual تسلط پیدا کردی"
+    },
+    "xpRemaining": "XP باقیمانده",
+    "permanentAccessUnlocked": "دسترسی دائمی باز شد",
+    "reachedTheTop": "به قله رسیدی!"
+  },
+  "progression": {
+    "level": "سطح {{level}}",
+    "levelShort": "سطح {{level}}",
+    "nextLevel": "سطح بعدی",
+    "reached": "رسیده",
+    "inProgress": "در حال انجام"
+  },
+  "gridlock": {
+    "nextPuzzle": "پازل بعدی →"
+  }
+}

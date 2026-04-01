@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "版权所有。",
+    "terms": {
+      "title": "通用使用条款",
+      "version": "版本 3.0 — 最后更新：2026-03-04",
+      "healthWarning": {
+        "title": "重要提示：健康",
+        "content": "NeuroDual 是一款认知训练和健康应用。<strong>它不是医疗设备。</strong>它不诊断、治疗、治愈或预防任何疾病。如有疑问或不适，请停止使用并咨询医疗专业人员。"
+      },
+      "section1": {
+        "title": "1. 目的和接受",
+        "content": "下载、安装或使用 NeuroDual 即表示您无保留地接受本条款。如果您不接受这些条款，请勿使用该应用。"
+      },
+      "section2": {
+        "title": "2. 提供的服务",
+        "content": "NeuroDual 提供 Dual N-Back 类型的工作记忆训练，具有本地数据管理和通过账户的同步选项。服务按现状提供，可能会发展。",
+        "item1": "兼容性：网页和移动应用（视可用性而定）。",
+        "item2": "访问：某些功能需要互联网连接和/或创建账户。",
+        "item3": "更新：我们可能出于安全或性能原因不经通知部署修复或更改。",
+        "item4": "广告：手机上的免费版本可能显示插页式广告（Google AdMob）。高级用户不会看到广告。"
+      },
+      "section3": {
+        "title": "3. 账户和安全",
+        "item1": "通过电子邮件或身份提供商（Google、Apple）可选创建。",
+        "item2": "您有责任维护凭证的机密性以及使用您的账户执行的操作。",
+        "item3": "账户及相关数据的删除可在设置中完成。",
+        "item4": "如果违反本条款、企图欺诈或威胁安全，我们可能会暂停或终止账户。"
+      },
+      "section4": {
+        "title": "4. 使用规则和禁令",
+        "item1": "不要绕过安全措施或技术限制。",
+        "item2": "不要将应用用于非法或有害目的。",
+        "item3": "不要尝试逆向工程或未经授权提取内容。",
+        "item4": "尊重应用及其内容的知识产权。"
+      },
+      "section5": {
+        "title": "5. 知识产权",
+        "content": "所有元素（文本、图形、声音、源代码、徽标）均受版权保护，是出版商或其许可方的财产。除根据本条款使用应用的个人、非独占、不可转让权利外，不授予任何许可。"
+      },
+      "section6": {
+        "title": "6. 可用性和支持",
+        "content": "服务全天候可用，但维护或不可抗力除外。我们不保证持续的可用性或性能。支持：support@neurodual.fr。"
+      },
+      "section7": {
+        "title": "7. 应用内购买/订阅",
+        "content": "提供高级订阅：年度和终身（10年）。付款由 RevenueCat（移动）或 Lemon Squeezy（网页）管理。<strong>通用销售条款</strong>适用（价格、撤回、续订、取消、退款），可在购买前查阅。"
+      },
+      "section8": {
+        "title": "8. 责任",
+        "item1": "服务按“现状”提供，不保证结果。",
+        "item2": "我们不对与使用、未保存的本地数据丢失或统计数据解读相关的直接或间接损害负责。",
+        "item3": "如有不适、不良反应或对健康有疑问，请停止使用。"
+      },
+      "section9": {
+        "title": "9. 个人数据",
+        "content": "个人数据的处理在<a>隐私政策</a>中描述。如果条款与隐私政策在数据方面存在矛盾，以隐私政策为准。"
+      },
+      "section10": {
+        "title": "10. 条款修改",
+        "content": "我们可能出于法律、技术或服务原因修改条款。更新日期将在文档开头注明。如有重大更改，将在应用中显示通知。"
+      },
+      "section11": {
+        "title": "11. 适用法律和争议",
+        "content": "本条款受法国法律管辖。如有争议且经友好协商后，消费者可诉诸消费者调解或欧洲在线争议解决（ODR）平台。否则，仅法国法院有管辖权。"
+      },
+      "section12": {
+        "title": "12. 联系方式",
+        "content": "有关条款的任何问题："
+      }
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "version": "版本 3.0 — 最后更新：2026-03-04",
+      "intro": {
+        "p1": "本隐私政策描述了 NeuroDual（“我们”、“我们的”）在您使用我们的移动应用和网站时如何处理您的个人数据。",
+        "p2": "我们遵循《通用数据保护条例》（GDPR）和法国数据保护法的原则。我们采用“本地优先”架构，不出售或出租您的数据，并使用受众衡量来改善产品。"
+      },
+      "section1": {
+        "title": "1. 数据控制者",
+        "responsible": "负责人：",
+        "address": "注册地址：",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, 法国",
+        "siret": "SIREN：",
+        "email": "电子邮件：",
+        "dpo": "DPO：AGUILAL Abdeslam（同一联系人）。有关您数据的任何问题，请联系上述地址。",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "siretValue": "818 474 082"
+      },
+      "section2": {
+        "title": "2. 我们收集的数据",
+        "sub1": {
+          "title": "2.1 用户生成的数据（本地模式）",
+          "content": "在您未登录时仅通过 SQLite 存储在您的设备上：",
+          "item1": "N-Back 会话的分数和历史。",
+          "item2": "游戏配置设置。",
+          "item3": "本地档案（昵称、选择的头像）。",
+          "note": "在您创建账户之前，这些数据不会传输到我们的服务器。卸载后将丢失。"
+        },
+        "sub2": {
+          "title": "2.2 账户数据（可选）",
+          "content": "如果您创建账户以同步数据：",
+          "item1": "电子邮件地址（唯一标识符）。",
+          "item2": "身份提供商（Google、Apple）提供的用户 ID。",
+          "note": "这些数据通过我们的认证提供商（Supabase）管理。"
+        },
+        "sub3": {
+          "title": "2.3 技术日志",
+          "content": "假名化日志（错误、同步状态、性能），用于安全和支持。"
+        },
+        "sub4": {
+          "title": "2.4 支持数据",
+          "content": "与支持的电子邮件交流可能包含您的联系信息和请求内容以便回复。"
+        },
+        "sub5": {
+          "title": "2.5 监控和错误跟踪",
+          "content": "通过 Sentry 收集的技术数据（错误、性能、异常行为）以改善应用稳定性。假名化数据，无广告定位。"
+        },
+        "sub6": {
+          "title": "2.6 受众衡量和产品分析",
+          "content": "通过 PostHog 收集的匿名使用数据（访问的页面、应用内操作、设备类型）以改善产品。不传输可识别的个人数据。无广告定位。"
+        },
+        "sub7": {
+          "title": "2.7 广告（免费移动版本）",
+          "content": "免费 Android 版本通过 Google AdMob 显示插页式广告。Google 可能收集广告标识符和技术数据（设备类型、语言、与广告的互动）。高级用户不会接触广告。更多信息：Google Ads 隐私政策。"
+        }
+      },
+      "section3": {
+        "title": "3. 目的和法律依据",
+        "content": "我们仅将您的数据用于：",
+        "item1": "<strong>服务运营</strong>（本地存储、统计、多设备同步）——法律依据：合同履行（GDPR 第 6.1.b 条）。",
+        "item2": "<strong>安全和防欺诈</strong>（技术日志、访问控制）——法律依据：合法利益（GDPR 第 6.1.f 条）。",
+        "item3": "<strong>用户支持</strong>——法律依据：合法利益（回复请求）。",
+        "item4": "<strong>法律义务</strong>——法律依据：法律义务（GDPR 第 6.1.c 条）。",
+        "item5": "<strong>监控和错误跟踪</strong>——法律依据：合法利益（提高稳定性）；假名化数据，无个性化广告。",
+        "item6": "<strong>受众衡量</strong>（通过 PostHog 的匿名产品分析）——法律依据：合法利益（GDPR 第 6.1.f 条）；匿名数据。",
+        "note": "任何目的变更都将在本政策更新中记录。",
+        "item7": "<strong>广告</strong>（为移动端免费用户显示插页式广告）——法律依据：合法利益（GDPR 第 6.1.f 条）。",
+        "item8": "<strong>营销和通讯</strong>——法律依据：明确同意（GDPR 第 6.1.a 条）。"
+      },
+      "section4": {
+        "title": "4. 保留期限",
+        "item1": "<strong>本地数据：</strong>存储在设备上，卸载或重置时删除。",
+        "item2": "<strong>账户和同步数据：</strong>账户活跃期间保留。删除账户请求后 30 天内删除。",
+        "item3": "<strong>技术日志：</strong>最多保留 12 个月，然后自动删除。",
+        "item4": "<strong>监控：</strong>假名化技术数据保留 90 天，用于错误跟踪和产品改进。",
+        "item5": "<strong>支持请求：</strong>工单关闭后保留 24 个月，然后删除。",
+        "item6": "<strong>受众数据（PostHog）：</strong>匿名化，保留 12 个月。"
+      },
+      "section5": {
+        "title": "5. 接收者、处理者和传输",
+        "content": "您的数据可能由以下提供商处理：",
+        "item1": "Supabase Inc.（认证和云数据库，欧盟托管）。",
+        "item2": "Amazon Web Services（Supabase 基础设施，欧盟区域）。",
+        "item3": "Cloudflare Inc.（网页应用托管、CDN 和安全）。",
+        "item4": "Sentry（错误和性能监控；欧盟外传输受标准合同条款保护）。",
+        "item5": "RevenueCat Inc.（订阅和移动应用内支付管理；不存储银行卡数据）。",
+        "note": "添加新提供商时，本节将更新。",
+        "transfers": "<strong>欧盟外传输：</strong>当涉及欧盟外提供商时（如 Cloudflare、Supabase US、Sentry、RevenueCat、Google AdMob），传输受欧盟委员会标准合同条款（SCC）或等效机制保护。",
+        "item6": "PostHog Inc.（受众衡量和产品分析；匿名数据；欧盟托管）。",
+        "item7": "Lemon Squeezy（网页支付处理；不存储银行卡数据）。",
+        "item8": "Google AdMob（免费移动版本广告；欧盟外传输受标准合同条款保护）。"
+      },
+      "section6": {
+        "title": "6. 您的权利",
+        "content": "根据 GDPR，您享有以下权利：",
+        "item1": "访问、更正、删除。",
+        "item2": "限制和反对（根据法律依据）。",
+        "item3": "数据可移植性（以 JSON 或 CSV 导出数据）。",
+        "item4": "撤回同意（如适用）。",
+        "item5": "向监管机构投诉（CNIL — <a>cnil.fr</a>）。",
+        "deletion": "<strong>删除账户：</strong>您可以直接在应用设置中删除您的账户和所有相关数据。此操作不可撤销。",
+        "exercise": "要行使其他权利，请联系 <strong>support@neurodual.fr</strong>。在合理怀疑的情况下可能需要身份证明。回复期限：1 个月（复杂情况下可延长至 3 个月）。"
+      },
+      "section7": {
+        "title": "7. 安全",
+        "content": "加密通信（HTTPS/TLS），管理员访问受限，权限控制。如发生有风险的数据泄露，将执行法定通知（CNIL 和受影响人员）。"
+      },
+      "section8": {
+        "title": "8. Cookie 和本地存储",
+        "content": "应用使用 SQLite 直接在设备上存储进度。仅使用必要的技术 Cookie（认证、会话）。免费移动版本使用 Google AdMob，可能设置 Cookie 或广告标识符。"
+      },
+      "section9": {
+        "title": "9. 未成年人",
+        "content": "NeuroDual 面向 16 岁以上的用户。未成年人须在法定代理人的监督下使用应用。"
+      },
+      "section10": {
+        "title": "10. 修改",
+        "content": "每个更新版本将在此处发布并注明最后更新日期。如有重大修改，将在应用中提供通知。"
+      },
+      "section11": {
+        "title": "11. 联系方式",
+        "content": "如有任何问题或行使您的权利：",
+        "responsible": "数据控制者：AGUILAL Abdeslam",
+        "email": "邮箱：support@neurodual.fr"
+      }
+    },
+    "cgv": {
+      "title": "通用销售条款",
+      "version": "年度和终身订阅 — 最后更新：2026-03-04",
+      "section1": {
+        "title": "1. 目的",
+        "content": "本条款规管 NeuroDual 高级订阅（年度和终身）的订购。它们补充了<a1>使用条款</a1>和<a2>隐私政策</a2>。"
+      },
+      "section2": {
+        "title": "2. 报价和价格",
+        "item1": "<strong>年度订阅</strong>：付款前显示价格（含税如适用），年度自动续订。",
+        "item2": "<strong>终身订阅（10年）</strong>：一次性付款享受 10 年高级访问，无自动续订。",
+        "item3": "高级访问：多设备云同步、远程备份、访问所有 N 级别、高级导出、无广告、优先支持。",
+        "item4": "当前价格可在应用订阅页面和商店（App Store、Google Play）查看。",
+        "item5": "价格可能变化；任何修改在续订前通知以允许取消（不适用于终身）。"
+      },
+      "section3": {
+        "title": "3. 期限、续订和取消",
+        "item1": "<strong>年度订阅</strong>：自订购之日起 12 个月。",
+        "item2": "<strong>终身订阅</strong>：自订购之日起 10 年，不续订。",
+        "item3": "续订（年度）：每次到期时自动续订，除非提前取消。",
+        "item4": "取消（年度）：可随时通过应用或商店设置（App Store、Google Play）取消。在当前期间结束时生效。",
+        "item5": "终身订阅不可取消，但受法定撤回权约束（见第 5 节）。"
+      },
+      "section4": {
+        "title": "4. 付款",
+        "item1": "付款由 RevenueCat 通过商店（App Store、Google Play）或 Lemon Squeezy（网页）管理。我们不存储银行卡数据。",
+        "item2": "付款失败（循环订阅）时，高级访问可能暂停直至解决。",
+        "item3": "通过 App Store 或 Google Play 购买的退款须向相应商店申请。"
+      },
+      "section5": {
+        "title": "5. 撤回权",
+        "content": "购买后提供的数字服务。如果您在 14 天法定期限结束前要求立即执行，您承认在服务完全提供后放弃撤回权。未明确放弃的，可在购买后 14 天内写信至 support@neurodual.fr 行使撤回权。"
+      },
+      "section6": {
+        "title": "6. 退款",
+        "content": "在法定撤回权之外，已开始的订阅不予退款，除非有强制性规定或可归咎于服务的严重缺陷。"
+      },
+      "section7": {
+        "title": "7. 报价发展",
+        "content": "高级功能可能会发展。任何基本功能的移除将事先通知，必要时提供到期前免费取消的选项。"
+      },
+      "section8": {
+        "title": "8. 个人数据",
+        "content": "与账单和账户相关的数据处理在<a>隐私政策</a>中详述。"
+      },
+      "section9": {
+        "title": "9. 客户服务",
+        "content": "如有任何问题、撤回权范围内的退款或投诉："
+      }
+    },
+    "mentions": {
+      "title": "法律声明",
+      "version": "最后更新：",
+      "section1": {
+        "title": "1. 出版者",
+        "company": "公司名称：",
+        "companyValue": "AGUILAL Abdeslam（微型企业）",
+        "address": "地址：",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, 法国",
+        "siren": "SIREN：",
+        "email": "电子邮件：",
+        "sirenValue": "818 474 082"
+      },
+      "section2": {
+        "title": "2. 出版负责人",
+        "email": "电子邮件：",
+        "name": "AGUILAL Abdeslam"
+      },
+      "section3": {
+        "title": "3. 托管",
+        "content": "NeuroDual 应用由以下方托管：",
+        "webapp": "网页应用",
+        "database": "数据库和认证",
+        "databaseInfra": "基础设施：Amazon Web Services（欧盟区域 - eu-central-1）",
+        "monitoring": "监控和错误跟踪",
+        "subscriptions": "订阅管理",
+        "analytics": "流量分析",
+        "analyticsInfra": "欧盟托管",
+        "advertising": "广告（免费移动版本）",
+        "payments": "网页支付",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+        "admobName": "Google LLC (AdMob)",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "cloudflareName": "Cloudflare, Inc.",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "posthogName": "PostHog, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "supabaseName": "Supabase, Inc."
+      },
+      "section4": {
+        "title": "4. 知识产权",
+        "p1": "NeuroDual 应用的所有元素（文本、图形、声音、源代码、徽标、商标）受版权和商标法保护。任何未经授权的复制、展示或利用均被禁止。",
+        "p2": "某些功能的源代码使用开源库，其相应许可证得到遵守。"
+      },
+      "section5": {
+        "title": "5. 个人数据",
+        "content": "个人数据的处理在我们的<a>隐私政策</a>中描述。",
+        "responsible": "数据控制者：",
+        "dpo": "DPO：",
+        "dpoValue": "AGUILAL Abdeslam",
+        "responsibleValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. 调解和争议解决",
+        "p1": "根据消费者法典第 L.611-1 条及后续条款，消费者在向我们客户服务提出投诉后未解决争议的情况下，可免费诉诸消费者调解员。",
+        "odr": "欧洲在线争议解决（ODR）平台："
+      },
+      "section7": {
+        "title": "7. 法律文件",
+        "privacy": "隐私政策",
+        "privacyNote": "（GDPR）",
+        "terms": "通用使用条款",
+        "termsNote": "（CGU）",
+        "cgv": "通用销售条款",
+        "cgvNote": "（CGV）"
+      },
+      "section8": {
+        "title": "8. 联系方式",
+        "content": "有关法律声明的任何问题：",
+        "email": "电子邮件："
+      }
+    }
+  }
+}

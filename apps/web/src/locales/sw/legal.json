@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Haki zote zimehifadhiwa.",
+    "terms": {
+      "title": "Masharti ya huduma",
+      "version": "Toleo la 3.0 - Ilisasishwa mwisho: 2026-03-04",
+      "healthWarning": {
+        "title": "ONYO MUHIMU LA AFYA",
+        "content": "NeuroDual ni programu ya mafunzo ya utambuzi na ustawi. <strong>Si kifaa cha matibabu.</strong> Hakichunguzi, hakitibu, kinaponya au kuzuia ugonjwa wowote. Ikiwa una wasiwasi wowote au unapata usumbufu, acha kutumia programu na uwasiliane na mtaalamu wa afya."
+      },
+      "section1": {
+        "title": "1. Kusudi na Kukubalika",
+        "content": "Kwa kupakua, kusakinisha au kutumia NeuroDual, unakubali Sheria na Masharti haya bila masharti. Ikiwa hukubali masharti haya, tafadhali usitumie programu."
+      },
+      "section2": {
+        "title": "2. Maelezo ya Huduma",
+        "content": "NeuroDual hutoa mafunzo ya kumbukumbu ya kufanya kazi ya N-Back mbili, na usimamizi wa data wa ndani na chaguzi za ulandanishi kupitia akaunti. Huduma hutolewa kama ilivyo na inaweza kubadilika.",
+        "item1": "Utangamano: mtandao na programu za simu (kulingana na upatikanaji).",
+        "item2": "Ufikiaji: baadhi ya vipengele vinahitaji muunganisho wa intaneti na/au kuunda akaunti.",
+        "item3": "Masasisho: tunaweza kupeleka marekebisho au masasisho bila notisi kwa sababu za usalama au utendakazi.",
+        "item4": "Utangazaji: toleo la bure la simu inaweza kuonyesha matangazo ya kati (Google AdMob). Watumiaji wa Premium hawaoni utangazaji."
+      },
+      "section3": {
+        "title": "3. Akaunti na Usalama",
+        "item1": "Uundaji wa akaunti ya hiari kupitia barua pepe au mtoa huduma za utambulisho (Google, Apple).",
+        "item2": "Una jukumu la kudumisha usiri wa kitambulisho chako na vitendo vyote vinavyofanywa na akaunti yako.",
+        "item3": "Ufutaji wa akaunti na data husika unapatikana kutoka kwa Mipangilio.",
+        "item4": "Tunaweza kusimamisha au kufunga akaunti katika kesi ya ukiukaji wa Sheria na Masharti haya, majaribio ya ulaghai au ukiukaji wa usalama."
+      },
+      "section4": {
+        "title": "4. Sheria za Matumizi na Vikwazo",
+        "item1": "Usipuuze hatua za usalama au vikwazo vya kiufundi.",
+        "item2": "Usitumie programu kwa madhumuni haramu au hatari.",
+        "item3": "Usijaribu kubadilisha uhandisi au uchimbaji wa maudhui ambao haujaidhinishwa.",
+        "item4": "Heshimu haki miliki kwenye programu na yaliyomo."
+      },
+      "section5": {
+        "title": "5. Miliki",
+        "content": "Vipengele vyote (maandishi, michoro, sauti, msimbo wa chanzo, nembo) zinalindwa na hakimiliki na hubaki kuwa mali ya mchapishaji au watoa leseni wake. Hakuna leseni inayotolewa isipokuwa haki ya kibinafsi, isiyo ya kipekee na isiyoweza kuhamishwa ya kutumia programu kwa mujibu wa Masharti haya."
+      },
+      "section6": {
+        "title": "6. Upatikanaji na Usaidizi",
+        "content": "Huduma inapatikana 24/7 chini ya matengenezo au nguvu majeure. Hatutoi hakikisho la upatikanaji au utendaji unaoendelea. Msaada: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Ununuzi wa Ndani ya Programu / Usajili",
+        "content": "Usajili wa malipo unapatikana: kila mwaka na maisha yote (miaka 10). Malipo yanasimamiwa na RevenueCat (simu ya rununu) au Lemon Squeezy (wavuti). <strong>Sheria na Masharti</strong> yanatumika (bei, uondoaji, kusasisha, kughairiwa, kurejesha pesa) na zinapatikana kabla ya ununuzi."
+      },
+      "section8": {
+        "title": "8. Dhima",
+        "item1": "Huduma hutolewa \"kama-ilivyo\" bila udhamini wa matokeo.",
+        "item2": "Hatuwajibikii uharibifu wa moja kwa moja au usio wa moja kwa moja unaohusiana na matumizi, upotezaji wa data ya ndani ambayo haijahifadhiwa, au tafsiri ya takwimu.",
+        "item3": "Ikiwa unapata usumbufu, athari mbaya, au wasiwasi kuhusu afya yako, acha kutumia."
+      },
+      "section9": {
+        "title": "9. Data ya kibinafsi",
+        "content": "Uchakataji wa data ya kibinafsi umefafanuliwa katika <a>Sera ya Faragha</a>. Katika kesi ya mgongano kati ya Sheria na Masharti na Sera ya Faragha kuhusu masuala ya data, sera ya Faragha hutumika."
+      },
+      "section10": {
+        "title": "10. Mabadiliko ya Masharti",
+        "content": "Tunaweza kurekebisha Sheria na Masharti haya kwa sababu za kisheria, kiufundi au huduma. Tarehe ya kusasisha itaonekana juu ya hati. Katika kesi ya mabadiliko makubwa, arifa itaonyeshwa kwenye programu."
+      },
+      "section11": {
+        "title": "11. Sheria Inayotumika na Migogoro",
+        "content": "Masharti haya yanasimamiwa na sheria za Ufaransa. Katika kesi ya mzozo na baada ya majaribio ya kirafiki, watumiaji wa watumiaji wanaweza kutumia upatanishi wa watumiaji au jukwaa la Utatuzi wa Migogoro ya Mtandaoni ya Ulaya (ODR). Vinginevyo, mahakama za Ufaransa zitakuwa na mamlaka ya kipekee."
+      },
+      "section12": {
+        "title": "12. Mawasiliano",
+        "content": "Kwa maswali yoyote kuhusu Masharti haya:"
+      }
+    },
+    "privacy": {
+      "title": "Sera ya faragha",
+      "version": "Toleo la 3.0 - Ilisasishwa mwisho: 2026-03-04",
+      "intro": {
+        "p1": "Sera hii ya Faragha inaeleza jinsi NeuroDual (\"sisi\", \"yetu\", \"sisi\") huchakata data yako ya kibinafsi unapotumia programu na tovuti yetu ya simu.",
+        "p2": "Tunatumia kanuni za Udhibiti wa Jumla wa Ulinzi wa Data (GDPR) na Sheria ya Ufaransa ya Ulinzi wa Data. Tunapendelea usanifu wa \"ndani-ya kwanza\", hatuuzi au kukodisha data yako, na tunatumia kipimo cha hadhira ili kuboresha bidhaa."
+      },
+      "section1": {
+        "title": "1. Kidhibiti Data",
+        "responsible": "Kidhibiti:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Ofisi iliyosajiliwa:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Ufaransa",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Barua pepe:",
+        "dpo": "DPO: AGUILAL Abdeslam (mawasiliano sawa). Kwa maswali yoyote kuhusu data yako, wasiliana na anwani iliyo hapo juu."
+      },
+      "section2": {
+        "title": "2. Takwimu Tunazokusanya",
+        "sub1": {
+          "title": "2.1 Data Inayozalishwa na Mtumiaji (Njia ya Ndani)",
+          "content": "Imehifadhiwa tu kwenye kifaa chako kupitia SQLite huku ukiwa umetoka nje:",
+          "item1": "Alama na historia ya kipindi cha N-Back.",
+          "item2": "Mipangilio ya usanidi wa mchezo.",
+          "item3": "Wasifu wa ndani (jina la utani, avatar iliyochaguliwa).",
+          "note": "Data hii haipiti kwenye seva zetu hadi ufungue akaunti. Ukiondoa programu, data hii itapotea."
+        },
+        "sub2": {
+          "title": "2.2 Data ya Akaunti (Si lazima)",
+          "content": "Ukifungua akaunti ili kusawazisha data yako:",
+          "item1": "Anwani ya barua pepe (kitambulisho cha kipekee).",
+          "item2": "Kitambulisho cha Mtumiaji kilichotolewa na mtoa huduma za utambulisho (Google, Apple).",
+          "note": "Data hii inadhibitiwa kupitia mtoa huduma wetu wa uthibitishaji (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Kumbukumbu za Kiufundi",
+          "content": "Kumbukumbu za uwongo (makosa, hali ya usawazishaji, utendakazi) kwa usalama na usaidizi."
+        },
+        "sub4": {
+          "title": "2.4 Data ya Usaidizi",
+          "content": "Mabadilishano ya barua pepe na usaidizi yanaweza kuwa na maelezo yako ya mawasiliano na kuomba maudhui ili kujibu."
+        },
+        "sub5": {
+          "title": "2.5 Ufuatiliaji na Ufuatiliaji wa Hitilafu",
+          "content": "Data ya kiufundi (hitilafu, utendakazi, tabia isiyo ya kawaida) iliyokusanywa kupitia Sentry ili kuboresha uthabiti wa programu. Data ya uwongo, hakuna ulengaji wa utangazaji."
+        },
+        "sub6": {
+          "title": "2.6 Vipimo vya Hadhira na Uchanganuzi wa Bidhaa",
+          "content": "Data ya matumizi isiyojulikana iliyokusanywa kupitia PostHog (kurasa zilizotembelewa, vitendo vya ndani ya programu, aina ya kifaa) ili kuboresha bidhaa. Hakuna data inayoweza kumtambulisha mtu inayosambazwa. Hakuna ulengaji wa matangazo."
+        },
+        "sub7": {
+          "title": "2.7 Utangazaji (Toleo la Bure la Simu ya Mkononi)",
+          "content": "Toleo la bure la Android linaonyesha matangazo ya kati kupitia Google AdMob. Google inaweza kukusanya kitambulisho cha utangazaji na data ya kiufundi (aina ya kifaa, lugha, mwingiliano wa matangazo). Watumiaji wa Premium hawaonekani kwenye utangazaji. Kwa maelezo zaidi: Sera ya faragha ya Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Madhumuni na Misingi ya Kisheria",
+        "content": "Tunatumia data yako kwa:",
+        "item1": "<strong>Uendeshaji wa huduma</strong> (hifadhi nakala ya ndani, takwimu, usawazishaji wa vifaa vingi) — Msingi wa kisheria: utendaji wa mkataba (Kifungu 6.1.b GDPR).",
+        "item2": "<strong>Uzuiaji wa usalama na ulaghai</strong> ( ukataji miti wa kiufundi, udhibiti wa ufikiaji) — Msingi wa kisheria: maslahi halali (Kifungu cha 6.1.f GDPR).",
+        "item3": "<strong>Usaidizi wa mtumiaji</strong> — Msingi wa kisheria: maslahi halali (kujibu maombi).",
+        "item4": "<strong>Majukumu ya kisheria</strong> — Msingi wa kisheria: wajibu wa kisheria (Kifungu cha 6.1.c GDPR).",
+        "item5": "<strong>Ufuatiliaji na ufuatiliaji wa makosa</strong> — Msingi wa kisheria: maslahi halali (kuboresha uthabiti); data bandia, hakuna utangazaji wa kibinafsi.",
+        "item6": "<strong>Kipimo cha hadhira</strong> (uchanganuzi wa bidhaa usiojulikana kupitia PostHog) — Msingi wa kisheria: maslahi halali (Kifungu cha 6.1.f GDPR); data isiyojulikana.",
+        "note": "Mabadiliko yoyote katika madhumuni yatarekodiwa katika sasisho la sera hii.",
+        "item7": "<strong>Utangazaji</strong> (onyesho la matangazo ya kati kwa watumiaji wa simu za mkononi bila malipo) — Msingi wa kisheria: maslahi halali (Kifungu cha 6.1.f GDPR).",
+        "item8": "<strong>Uuzaji na majarida</strong> — Msingi wa kisheria: idhini ya wazi (Kifungu cha 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Vipindi vya Uhifadhi",
+        "item1": "<strong>Data ya ndani:</strong> iliyohifadhiwa kwenye kifaa chako na kufutwa baada ya kusanidua au kuweka upya.",
+        "item2": "<strong>Akaunti na data iliyosawazishwa:</strong> iliyohifadhiwa wakati akaunti inatumika. Imefutwa ndani ya siku 30 baada ya ombi la kufuta akaunti.",
+        "item3": "<strong>Kumbukumbu za kiufundi:</strong> huhifadhiwa kwa muda usiozidi miezi 12, kisha kufutwa kiotomatiki.",
+        "item4": "<strong>Ufuatiliaji:</strong> data ya kiufundi ya bandia iliyohifadhiwa kwa siku 90 kwa ufuatiliaji wa hitilafu na uboreshaji wa bidhaa.",
+        "item5": "<strong>Maombi ya usaidizi:</strong> yamehifadhiwa kwa miezi 24 baada ya kufungwa kwa tikiti, kisha kufutwa.",
+        "item6": "<strong>Data ya hadhira (PostHog):</strong> haijatambuliwa, iliyohifadhiwa kwa miezi 12."
+      },
+      "section5": {
+        "title": "5. Wapokeaji, Wachakataji, na Wahamishaji",
+        "content": "Data yako inaweza kuchakatwa na watoa huduma wafuatao:",
+        "item1": "Supabase Inc. (uthibitishaji na hifadhidata ya wingu, mwenyeji wa EU).",
+        "item2": "Amazon Web Services (Miundombinu ya Supabase, mikoa ya EU).",
+        "item3": "Cloudflare Inc. (kupangisha programu za wavuti, CDN, na usalama).",
+        "item4": "Mtumaji (ufuatiliaji wa makosa na utendakazi; uhamishaji usio wa Umoja wa Ulaya unaotawaliwa na Vifungu vya Kawaida vya Mikataba).",
+        "item5": "RevenueCat Inc. (usajili wa simu ya mkononi na usimamizi wa malipo ya ndani ya programu; haihifadhi data ya kadi ya mkopo).",
+        "note": "Ikiwa mtoa huduma mpya ataongezwa, sehemu hii itasasishwa.",
+        "transfers": "<strong>Uhamisho usio wa EU:</strong> wakati watoa huduma nje ya Umoja wa Ulaya wanahusika (k.m., Cloudflare, huluki ya Supabase ya Marekani, Sentry, RevenueCat, Google AdMob), uhamishaji unasimamiwa na Vifungu vya Kawaida vya Mikataba vya Tume ya Ulaya (SCC) au utaratibu sawa.",
+        "item6": "PostHog Inc. (kipimo cha hadhira na uchanganuzi wa bidhaa; data isiyojulikana; upangishaji wa EU).",
+        "item7": "Lemon Squeezy (usimamizi wa malipo ya wavuti; haihifadhi data ya kadi ya mkopo).",
+        "item8": "Google AdMob (onyesho la utangazaji kwenye toleo lisilolipishwa la simu ya mkononi; uhamishaji usio wa Umoja wa Ulaya unaotawaliwa na Vifungu Kawaida vya Kimkataba)."
+      },
+      "section6": {
+        "title": "6. Haki zako",
+        "content": "Chini ya GDPR, una haki zifuatazo:",
+        "item1": "Ufikiaji, urekebishaji, ufutaji.",
+        "item2": "Kizuizi na pingamizi (kulingana na msingi wa kisheria).",
+        "item3": "Uwezo wa kubebeka (hamisha data yako katika JSON au CSV).",
+        "item4": "Kuondolewa kwa idhini (inapohitajika).",
+        "item5": "Malalamiko kwa mamlaka ya usimamizi (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Ufutaji wa akaunti:</strong> unaweza kufuta akaunti yako na data zote zinazohusiana moja kwa moja kutoka kwa Mipangilio ya programu. Kitendo hiki hakiwezi kutenduliwa.",
+        "exercise": "Ili kutekeleza haki zako nyingine, wasiliana na <strong>support@neurodual.fr</strong>. Uthibitisho wa utambulisho unaweza kuombwa ikiwa kuna shaka yoyote. Wakati wa kujibu: mwezi 1 (unaweza kupanuliwa hadi miezi 3 katika hali ngumu)."
+      },
+      "section7": {
+        "title": "7. Usalama",
+        "content": "Mawasiliano yaliyosimbwa kwa njia fiche (HTTPS/TLS), ufikiaji wa vidhibiti wenye vikwazo, vidhibiti vya ruhusa. Katika kesi ya ukiukaji wa data unaoweza kusababisha hatari, arifa za kisheria zitatolewa (CNIL na watu walioathirika)."
+      },
+      "section8": {
+        "title": "8. Vidakuzi na Hifadhi ya Ndani",
+        "content": "Programu hutumia SQLite kuhifadhi maendeleo yako moja kwa moja kwenye kifaa chako. Vidakuzi muhimu tu vya kiufundi (uthibitishaji, kikao) hutumiwa. Toleo la bure la simu ya mkononi hutumia Google AdMob ambayo inaweza kuweka vidakuzi au vitambulishi vya utangazaji."
+      },
+      "section9": {
+        "title": "9. Watoto wadogo",
+        "content": "NeuroDual imekusudiwa watumiaji zaidi ya miaka 16. Watoto lazima watumie maombi chini ya wajibu wa mlezi wa kisheria."
+      },
+      "section10": {
+        "title": "10. Mabadiliko",
+        "content": "Toleo lolote lililosasishwa litachapishwa hapa na tarehe ya mwisho ya kusasishwa. Katika kesi ya mabadiliko makubwa, arifa itatolewa katika maombi."
+      },
+      "section11": {
+        "title": "11. Mawasiliano",
+        "content": "Kwa maswali yoyote au kutumia haki zako:",
+        "email": "Barua pepe: support@neurodual.fr",
+        "responsible": "Kidhibiti Data: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Masharti ya Uuzaji",
+      "version": "Usajili wa kila mwaka na maisha yote - Ilisasishwa mwisho: 2026-03-04",
+      "section1": {
+        "title": "1. Kusudi",
+        "content": "Sheria na Masharti haya ya Uuzaji yanasimamia usajili wa mipango ya malipo ya NeuroDual (ya kila mwaka na ya maisha). Zinatimiza <a1>Sheria na Masharti</a1> na <a2>Sera ya Faragha</a2>."
+      },
+      "section2": {
+        "title": "2. Ofa na Bei",
+        "item1": "<strong>Usajili wa kila mwaka</strong>: bei inayoonyeshwa kabla ya malipo (pamoja na kodi ikitumika), inasasishwa kiotomatiki kila mwaka.",
+        "item2": "<strong>Usajili wa maisha yote (miaka 10)</strong>: malipo ya mara moja yanayotoa ufikiaji wa vipengele vinavyolipiwa kwa miaka 10 bila kusasishwa kiotomatiki.",
+        "item3": "Ufikiaji wa malipo: usawazishaji wa wingu wa vifaa vingi, nakala rudufu za mbali, ufikiaji wa viwango vyote vya N, uhamishaji wa hali ya juu, matumizi bila matangazo, usaidizi wa kipaumbele.",
+        "item4": "Bei za sasa zinapatikana kwenye ukurasa wa usajili wa ndani ya programu na kwenye maduka (App Store, Google Play).",
+        "item5": "Bei zinaweza kubadilika; marekebisho yoyote yanawasilishwa kabla ya kusasishwa ili kuruhusu kughairiwa (haitumiki maishani)."
+      },
+      "section3": {
+        "title": "3. Muda, Usasishaji, na Kughairiwa",
+        "item1": "<strong>Usajili wa kila mwaka</strong>: Muda wa miezi 12 kutoka tarehe ya usajili.",
+        "item2": "<strong>Usajili wa maisha yote</strong>: Muda wa miaka 10 kutoka tarehe ya usajili, hakuna kusasishwa.",
+        "item3": "Usasishaji (kila mwaka): usasishaji kiotomatiki kwa kila muhula isipokuwa kughairiwa mapema.",
+        "item4": "Kughairi (kila mwaka): inawezekana wakati wowote kutoka kwa mipangilio ya programu au duka (App Store, Google Play). Huanza kutumika mwishoni mwa kipindi cha sasa.",
+        "item5": "Muda wa maisha hauwezi kughairiwa lakini unasalia chini ya haki ya kisheria ya kujiondoa (ona sehemu ya 5)."
+      },
+      "section4": {
+        "title": "4. Malipo",
+        "item1": "Malipo yanadhibitiwa na RevenueCat kupitia maduka (App Store, Google Play) au Lemon Squeezy kwa wavuti. Hatuhifadhi data ya kadi yako ya mkopo.",
+        "item2": "Katika kesi ya kushindwa kwa malipo (usajili unaorudiwa), ufikiaji unaolipishwa unaweza kusimamishwa hadi kutatuliwa.",
+        "item3": "Urejeshaji pesa kwa ununuzi kupitia App Store au Google Play lazima uombwe kutoka kwa duka husika."
+      },
+      "section5": {
+        "title": "5. Haki ya Kujitoa",
+        "content": "Huduma ya kidijitali inayotolewa baada ya ununuzi. Ukiomba kutekelezwa mara moja kabla ya mwisho wa kipindi cha kisheria cha siku 14, unakubali kuwa umeondoa haki yako ya kujiondoa baada ya utoaji wa huduma kamili. Bila msamaha wa moja kwa moja, unaweza kutumia haki ya kujiondoa ndani ya siku 14 za ununuzi kwa kuandika kwa support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Rudia",
+        "content": "Nje ya haki ya kisheria ya kujiondoa, usajili ambao tayari umeanzishwa haurudishwi isipokuwa kwa masharti ya lazima au kasoro kubwa zinazotokana na huduma."
+      },
+      "section7": {
+        "title": "7. Toa Mabadiliko",
+        "content": "Vipengele vya kulipia vinaweza kubadilika. Uondoaji wowote wa kipengele muhimu utawasilishwa mapema na, ikiwezekana, kwa chaguo la kughairi bila malipo kabla ya muda."
+      },
+      "section8": {
+        "title": "8. Data ya kibinafsi",
+        "content": "Uchakataji wa data ya bili na akaunti umefafanuliwa katika <a>Sera ya Faragha</a>."
+      },
+      "section9": {
+        "title": "9. Huduma kwa Wateja",
+        "content": "Kwa maswali yoyote, kurejesha pesa chini ya haki ya kujiondoa au malalamiko:"
+      }
+    },
+    "mentions": {
+      "title": "Notisi ya kisheria",
+      "version": "Mara ya mwisho kusasishwa:",
+      "section1": {
+        "title": "1. Mchapishaji",
+        "company": "Jina la kampuni:",
+        "companyValue": "AGUILAL Abdeslam (Umiliki wa pekee)",
+        "address": "Anwani:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Ufaransa",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Barua pepe:"
+      },
+      "section2": {
+        "title": "2. Mkurugenzi wa Uchapishaji",
+        "name": "AGUILAL Abdeslam",
+        "email": "Barua pepe:"
+      },
+      "section3": {
+        "title": "3. Kukaribisha",
+        "content": "Programu ya NeuroDual inasimamiwa na:",
+        "webapp": "Maombi ya Wavuti",
+        "database": "Hifadhidata na Uthibitishaji",
+        "databaseInfra": "Miundombinu: Huduma za Wavuti za Amazon (eneo la EU - eu-kati-1)",
+        "monitoring": "Ufuatiliaji na Ufuatiliaji wa Hitilafu",
+        "subscriptions": "Usimamizi wa usajili",
+        "analytics": "Kipimo cha hadhira",
+        "analyticsInfra": "Ukaribishaji wa EU",
+        "advertising": "Utangazaji (toleo la bure la simu)",
+        "payments": "Malipo ya mtandao",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, Marekani",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, Marekani",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, Marekani",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, Marekani",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, Marekani.",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, Marekani"
+      },
+      "section4": {
+        "title": "4. Miliki",
+        "p1": "Vipengele vyote vya programu ya NeuroDual (maandishi, michoro, sauti, msimbo wa chanzo, nembo, alama za biashara) zinalindwa na hakimiliki na sheria ya alama za biashara. Utoaji upya wowote usioidhinishwa, uwakilishi, au unyonyaji ni marufuku.",
+        "p2": "Msimbo wa chanzo wa vipengele fulani hutumia maktaba huria ambazo leseni zao zinaheshimiwa."
+      },
+      "section5": {
+        "title": "5. Data ya kibinafsi",
+        "content": "Uchakataji wa data ya kibinafsi umefafanuliwa katika <a>Sera yetu ya Faragha</a>.",
+        "responsible": "Kidhibiti Data:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Usuluhishi na Utatuzi wa Migogoro",
+        "p1": "Kwa mujibu wa Vifungu L.611-1 et seq. ya Msimbo wa Wateja wa Ufaransa, watumiaji wa watumiaji wanaweza, katika kesi ya mzozo ambao haujasuluhishwa baada ya malalamiko ya awali kwa huduma yetu kwa wateja, kuamua bila malipo kwa mpatanishi wa watumiaji.",
+        "odr": "Jukwaa la Utatuzi wa Migogoro ya Mtandaoni ya Ulaya (ODR):"
+      },
+      "section7": {
+        "title": "7. Nyaraka za Kisheria",
+        "privacy": "Sera ya faragha",
+        "privacyNote": "(GDPR)",
+        "terms": "Masharti ya huduma",
+        "termsNote": "(ToS)",
+        "cgv": "Masharti ya kuuza",
+        "cgvNote": "(Mauzo)"
+      },
+      "section8": {
+        "title": "8. Mawasiliano",
+        "content": "Kwa maswali yoyote kuhusu notisi hii ya kisheria:",
+        "email": "Barua pepe:"
+      }
+    }
+  }
+}

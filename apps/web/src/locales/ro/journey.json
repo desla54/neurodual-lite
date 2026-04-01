@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Traseu de antrenament",
+    "pageSubtitle": "Alege, organizează și creează-ți traseele",
+    "enabled": "Activează traseul de antrenament",
+    "description": "30 de etape progresive de la N-1 la N-10",
+    "progress": "Progres",
+    "locked": "Blocat",
+    "createJourney": "Creează un traseu",
+    "viewJourneys": "Vezi traseele",
+    "current": "Traseul curent",
+    "myJourneys": "Traseele mele",
+    "stage": "Etapă",
+    "stages": "etape",
+    "stagesShort": "et.",
+    "stageLabels": {
+      "pick": "Alege",
+      "catch": "Prinde",
+      "place": "Locul",
+      "memo": "Notă"
+    },
+    "name": "Nume",
+    "namePlaceholder": "Ex. Provocare N-5",
+    "levels": "Niveluri",
+    "levelRange": "Interval de niveluri",
+    "levelTo": "la",
+    "createNew": "Traseu nou",
+    "new": "Nou",
+    "defaultCustomName": "Traseul meu",
+    "created": "Traseu creat!",
+    "deleted": "Traseu șters",
+    "sessionSettings": "Setări sesiune",
+    "savedStatus": "Setări salvate",
+    "preset": {
+      "easy": "Ușor",
+      "medium": "Recomandat",
+      "hard": "Dificil"
+    },
+    "setup": {
+      "title": "Traseu și profiluri",
+      "journey": "Traseu",
+      "journeyNone": "Selectează…",
+      "profile": "Profil",
+      "profileNone": "Selectează…",
+      "configure": "Configurează",
+      "configureNone": "Selectează un traseu",
+      "create": "Traseu nou",
+      "createDesc": "Creează un traseu nou"
+    },
+    "deleteConfirmTitle": "Ștergi acest traseu?",
+    "deleteConfirmMessage": "Traseul \"{{name}}\" va fi șters definitiv.",
+    "renameTitle": "Redenumește acest traseu",
+    "renameMessage": "Editează numele \"{{name}}\".",
+    "renamed": "Traseu redenumit.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Implicit"
+    },
+    "mode": "Mod",
+    "modeStandard": "Traseu (4 moduri)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Captură dublă",
+      "dualPlace": "Loc dublu",
+      "dualMemo": "Notă dublă",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Clasic",
+      "brainWorkshop": "Atelier de creier"
+    },
+    "validation": {
+      "sessions": "{{count}} sesiune/sesiuni de validare",
+      "needed": "{{count}} sesiune/sesiuni rămase",
+      "excellent": "Excelent!",
+      "good": "Bine!",
+      "passing": "Trecut"
+    },
+    "progression": {
+      "title": "Progresie",
+      "description": "Pentru a avansa la nivelul următor, obține un scor bun:",
+      "excellent": "≥95% → 1 sesiune",
+      "good": "≥85% → 2 sesiuni",
+      "passing": "≥80% → 3 sesiuni",
+      "rules": "Reguli de progresie",
+      "jaeggi": {
+        "description": "Pe baza modalității celei mai slabe:",
+        "up": "< 3 erori → Nivel mai sus",
+        "stay": "3 la 5 erori → Rămâi la acest nivel",
+        "down": "> 5 erori → Nivel mai jos"
+      },
+      "brainworkshop": {
+        "description": "Protocolul Brain Workshop (scor BW):",
+        "up": "≥80% → Nivel mai sus",
+        "stay": "50-79% → Rămâi la nivel",
+        "strike": "3 scoruri consecutive <50% → Nivel mai jos"
+      },
+      "hybrid": {
+        "description": "Acest traseu rulează {{trackCount}} sesiune/sesiuni Dual Track, apoi {{dnbCount}} sesiune/sesiuni Dual N-Back la același nivel.",
+        "alternation": "Bucla repornește întotdeauna cu Dual Track ori de câte ori se ia o decizie.",
+        "authority": "Doar sesiunile Dual N-Back decid sus, menținere sau jos.",
+        "up": "0-1 erori → Nivel mai sus",
+        "stay": "2-3 erori → Menținere",
+        "down": "4+ erori → Nivel mai jos",
+        "streakRule": "Două sesiuni consecutive în aceeași zonă declanșează decizia.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Validat {{current}}/{{required}}",
+        "stayProgress": "Menținere {{current}}/{{required}}",
+        "downProgress": "Eșec {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track folosește o bară de măiestrie continuă pentru fiecare etapă de număr de ținte:",
+        "calibration": "O primă calibrare estimează numărul tău de ținte de start",
+        "goodSession": "Fiecare sesiune bună umple puțin etapa curentă",
+        "mastery": "Sesiunile aproape perfecte o umplu mai repede, dar sesiunile obișnuite rămân modeste",
+        "regression": "Sesiunile slabe pot face bara de măiestrie curentă să scadă",
+        "unlock": "Următorul număr de ținte se deblochează doar când etapa curentă atinge 100%"
+      }
+    },
+    "switcher": {
+      "open": "Deschide selectorul de trasee",
+      "current": "Curent",
+      "showAll": "Toate traseele",
+      "settings": "Setări traseu"
+    },
+    "previous": "Traseul anterior",
+    "next": "Traseul următor",
+    "calibration": {
+      "title": "Prima sesiune",
+      "subtitle": "O scurtă calibrare va determina nivelul tău de start, sau poți începe direct la nivelul 2.",
+      "skipToN2": "sau începe la N-2",
+      "continueAt": "sau continuă la N-{{level}}",
+      "start": "Începe calibrarea",
+      "redo": "Refă calibrarea",
+      "badge": "Calibrare"
+    },
+    "presets": {
+      "currentSlot": "Personalizat",
+      "currentSlotView": "Personalizat",
+      "lockedTitle": "Unele opțiuni sunt blocate",
+      "lockedDesc": "Pentru a menține progresia comparabilă, modalitățile (și câteva opțiuni) nu pot fi schimbate după ce traseul a început."
+    },
+    "completed": {
+      "title": "Traseu finalizat!",
+      "subtitle": "Toate etapele validate. Bravo!",
+      "continueFree": "Continuă antrenamentul"
+    },
+    "report": {
+      "stage": "Etapă",
+      "level": "Nivel",
+      "score": "Scor",
+      "sessionValidated": "Sesiune validată!",
+      "sessionNotValidated": "Sesiune nevalidată",
+      "minScore": "Minim necesar:",
+      "stageCompleted": "Etapă finalizată!",
+      "stageUnlocked": "Etapa {{stage}} deblocată!",
+      "replay": "Rejoacă",
+      "nextStage": "Etapa următoare",
+      "home": "Acasă",
+      "hits": "Răspunsuri corecte",
+      "misses": "Omisiuni",
+      "falseAlarms": "Alarme false",
+      "correctRejections": "Respingeri corecte"
+    }
+  }
+}

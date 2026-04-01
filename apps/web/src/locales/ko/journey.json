@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "트레이닝 경로",
+    "pageSubtitle": "코스를 선택하고, 정리하고, 만들어 보세요",
+    "enabled": "코스 활성화",
+    "description": "N-1에서 N-10까지 30개의 단계적 스테이지",
+    "progress": "진행",
+    "locked": "잠김",
+    "createJourney": "경로 만들기",
+    "viewJourneys": "경로 보기",
+    "current": "현재 경로",
+    "myJourneys": "내 경로",
+    "stage": "단계",
+    "stages": "스테이지",
+    "stagesShort": "스테이지",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "이름",
+    "namePlaceholder": "예: N-5 챌린지",
+    "levels": "레벨",
+    "levelRange": "레벨 범위",
+    "levelTo": "to",
+    "createNew": "새 경로",
+    "new": "새로운",
+    "defaultCustomName": "내 경로",
+    "created": "경로가 생성되었습니다!",
+    "deleted": "경로가 삭제되었습니다",
+    "sessionSettings": "세션 설정",
+    "savedStatus": "설정 저장됨",
+    "preset": {
+      "easy": "Easy",
+      "medium": "추천",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "경로 및 프로필",
+      "journey": "경로",
+      "journeyNone": "선택…",
+      "profile": "프로필",
+      "profileNone": "선택…",
+      "configure": "설정",
+      "configureNone": "경로를 선택하세요",
+      "create": "새 경로",
+      "createDesc": "새 경로 만들기"
+    },
+    "deleteConfirmTitle": "이 경로를 삭제하시겠습니까?",
+    "deleteConfirmMessage": "여정 \"{{name}}\"이(가) 영구적으로 삭제됩니다.",
+    "renameTitle": "이 코스 이름 변경",
+    "renameMessage": "\"{{name}}\"의 이름을 수정합니다.",
+    "renamed": "코스 이름이 변경되었습니다!",
+    "badge": {
+      "simulator": "시뮬레이터",
+      "beta": "베타",
+      "default": "기본"
+    },
+    "mode": "모드",
+    "modeStandard": "경로 (4가지 모드)",
+    "modeDnb": "Dual N-Back Classic",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "시뮬레이터",
+      "jaeggi": "클래식",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "검증 세션 {{count}}회",
+      "needed": "{{count}} 세션 더 필요",
+      "excellent": "훌륭해요!",
+      "good": "좋아요!",
+      "passing": "통과"
+    },
+    "progression": {
+      "title": "진행",
+      "description": "다음 레벨로 이동하려면 좋은 점수를 획득하세요:",
+      "excellent": "≥95% → 1 세션",
+      "good": "≥85% → 2 세션",
+      "passing": "≥80% → 3 세션",
+      "rules": "진행 규칙",
+      "jaeggi": {
+        "description": "가장 약한 모달리티 기준:",
+        "up": "< 3 오류 → 레벨 업",
+        "stay": "3~5 오류 → 현재 레벨 유지",
+        "down": "> 5 오류 → 레벨 다운"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop 프로토콜:",
+        "up": "≥80% → 레벨 업",
+        "stay": "50-79% → 유지",
+        "strike": "연속 3회 <50% → 레벨 다운"
+      },
+      "hybrid": {
+        "description": "이 코스는 {{trackCount}}회 Dual Track 세션 후 같은 레벨에서 {{dnbCount}}회 Dual N-Back 세션을 진행합니다.",
+        "alternation": "결정이 내려질 때마다 사이클은 항상 Dual Track부터 다시 시작됩니다.",
+        "authority": "레벨 상승, 유지 또는 하강을 결정하는 것은 Dual N-Back 세션뿐입니다.",
+        "up": "0~1회 오류 → 레벨 상승",
+        "stay": "2-3회 오류 → 유지",
+        "down": "4회 이상 오류 → 레벨 하락",
+        "streakRule": "같은 구간에서 2회 연속 세션이 판정을 발동합니다.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "통과 {{current}}/{{required}}",
+        "stayProgress": "유지 {{current}}/{{required}}",
+        "downProgress": "실패 {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track은 각 목표 단계에 연속적인 숙련도 바를 사용합니다:",
+        "calibration": "초기 캘리브레이션으로 시작 레벨을 추정합니다",
+        "goodSession": "좋은 세션마다 현재 단계가 조금씩 채워집니다",
+        "mastery": "거의 완벽한 세션은 더 빠르게 채워지고, 일반 세션은 완만하게 진행됩니다",
+        "regression": "약한 세션은 현재 숙련도 바를 낮출 수도 있습니다",
+        "unlock": "다음 목표 단계는 100%에 도달해야만 잠금 해제됩니다"
+      }
+    },
+    "switcher": {
+      "open": "코스 선택기 열기",
+      "current": "현재",
+      "showAll": "모든 코스",
+      "settings": "코스 설정"
+    },
+    "previous": "이전 코스",
+    "next": "다음 코스",
+    "calibration": {
+      "title": "첫 번째 세션",
+      "subtitle": "짧은 캘리브레이션으로 시작 레벨을 결정합니다. 레벨 2에서 바로 시작할 수도 있습니다.",
+      "skipToN2": "또는 N-2에서 시작하기",
+      "continueAt": "또는 N-{{level}}에서 계속하기",
+      "start": "캘리브레이션 시작",
+      "redo": "캘리브레이션 다시 하기",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "현재 설정",
+      "currentSlotView": "현재 설정",
+      "lockedTitle": "일부 옵션이 잠겨 있습니다",
+      "lockedDesc": "진행의 비교 가능성을 유지하기 위해, 경로 시작 후 모달리티(및 일부 옵션)를 변경할 수 없습니다."
+    },
+    "completed": {
+      "title": "경로 완료!",
+      "subtitle": "모든 스테이지 통과. 잘하셨습니다!",
+      "continueFree": "트레이닝 계속하기"
+    },
+    "report": {
+      "stage": "스테이지",
+      "level": "레벨",
+      "score": "점수",
+      "sessionValidated": "세션 검증됨",
+      "sessionNotValidated": "세션 미검증",
+      "minScore": "최소 점수 요구:",
+      "stageCompleted": "스테이지 완료!",
+      "stageUnlocked": "스테이지 {{stage}} 잠금 해제됨",
+      "replay": "다시 플레이",
+      "nextStage": "다음 스테이지",
+      "home": "홈",
+      "hits": "적중",
+      "misses": "놓침",
+      "falseAlarms": "오경보",
+      "correctRejections": "올바른 거부"
+    }
+  }
+}

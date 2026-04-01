@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "\n\t\t\t\tسازگاری\t\t\t",
+      "performance": "عملکرد",
+      "resilience": "ارتجاع",
+      "exploration": "شواکجهانگردی",
+      "milestone": "نقاط عطف",
+      "cognitive": "شناختی"
+    },
+    "first_session": {
+      "name": "نورون بیدار",
+      "description": "جلسه اول تکمیل شد."
+    },
+    "sessions_10": {
+      "name": "ستون (برنز)",
+      "description": "۱۰ جلسه تمام شد."
+    },
+    "sessions_25": {
+      "name": "ستون (نقره‌ای)",
+      "description": "۲۵ جلسه تمام شد."
+    },
+    "marathoner": {
+      "name": "ستون (طلایی)",
+      "description": "۵۰ جلسه انجام شده."
+    },
+    "streak_3": {
+      "name": "آیین نوپا",
+      "description": "روند نزولی ۳ روزه."
+    },
+    "streak_7": {
+      "name": "مراسم روزانه",
+      "description": "روند نزولی ۷ روزه."
+    },
+    "streak_14": {
+      "name": "عادت تثبیت‌شده",
+      "description": "روند نزولی ۱۴ روزه."
+    },
+    "streak_30": {
+      "name": "انضباط آهنین",
+      "description": "روند صعودی ۳۰ روزه."
+    },
+    "early_bird": {
+      "name": "پرنده زودهنگام",
+      "description": "۵ روز مختلف با جلسه قبل از ساعت ۸ صبح."
+    },
+    "night_owl": {
+      "name": "جغد شب",
+      "description": "۵ روز مختلف با جلسه بعد از ساعت ۱۰ شب."
+    },
+    "brain_n3": {
+      "name": "مغز تیز",
+      "description": "به سطح N-3 برسید."
+    },
+    "brain_n4": {
+      "name": "مغز عضلانی",
+      "description": "به سطح N-4 برسید."
+    },
+    "brain_n5": {
+      "name": "مغز المپیکی",
+      "description": "به سطح N-5 برسید."
+    },
+    "brain_n7": {
+      "name": "نخبگان شناختی",
+      "description": "به سطح N-7 برسید."
+    },
+    "brain_n10": {
+      "name": "برتر از انسان.",
+      "description": "به سطح N-10 برسید."
+    },
+    "sniper": {
+      "name": "تک‌تیرانداز",
+      "description": "دقت &gt; 90% در N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "دقت جراحی",
+      "description": "دقت &gt; 95% در N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "لیزر",
+      "description": "دقت &gt; 98% در N ≥ 2."
+    },
+    "untouchable": {
+      "name": "غیر قابل لمس",
+      "description": "جلسه بی‌نقص (0 خطا) در N ≥ 2."
+    },
+    "rt_500": {
+      "name": "رفلکس سریع",
+      "description": "میانگین زمان واکنش کمتر از ۵۰۰ میلی‌ثانیه با دقت ≥۷۰٪."
+    },
+    "flash": {
+      "name": "فلاش",
+      "description": "میانگین زمان واکنش کمتر از ۴۰۰ میلی‌ثانیه با دقت ≥۷۰٪."
+    },
+    "rt_300": {
+      "name": "آذرخش",
+      "description": "میانگین زمان واکنش کمتر از ۳۰۰ میلی‌ثانیه با دقت ≥۷۰٪."
+    },
+    "consistent": {
+      "name": "سازگاری",
+      "description": "انحراف معیار RT &lt; 100ms (≥10 پاسخ مورد نیاز است)."
+    },
+    "dprime_master": {
+      "name": "استاد",
+      "description": "d-prime &gt; 3.0 در یک جلسه."
+    },
+    "dprime_4": {
+      "name": "کارشناس SDT",
+      "description": "d-prime &gt; 4.0 در یک جلسه."
+    },
+    "no_pause": {
+      "name": "غیر منقلع.",
+      "description": "۵ جلسه متوالی بدون وقفه با دقت ≥۷۵٪."
+    },
+    "steady_hands": {
+      "name": "دست‌های ثابت",
+      "description": "بدون ورودی کاذب در طول جلسه (دقت ≥80٪)."
+    },
+    "zen_master": {
+      "name": "استاد ذن",
+      "description": "ده جلسه بدون اینکه حتی یک لحظه هم ترک کنم."
+    },
+    "comeback_kid": {
+      "name": "بچه‌ی بازگشته",
+      "description": "بعد از یک سطح پایین‌تر، به سطح بالاتری بروید."
+    },
+    "persistent": {
+      "name": "ماندگار",
+      "description": "۳ جلسه در همان روز پس از شکست."
+    },
+    "second_wind": {
+      "name": "باد دوم",
+      "description": "بهبود d-prime بین نیمه ۱ و ۲ (d′ ≥ ۲.۰ مورد نیاز است)."
+    },
+    "plateau_breaker": {
+      "name": "فلات شکن",
+      "description": "پس از بیش از ۱۰ جلسه در همان سطح پیشرفت کنید."
+    },
+    "no_surrender": {
+      "name": "تسلیم ممنوع",
+      "description": "۲۵ جلسه بدون ترک اعتیاد."
+    },
+    "ironwill": {
+      "name": "اراده آهنین",
+      "description": "۵۰ جلسه بدون ترک اعتیاد."
+    },
+    "audiophile": {
+      "name": "علاقه‌مند به موسیقی",
+      "description": "صدا &gt; ۸۰٪ اما تصویر &lt; ۷۰٪."
+    },
+    "eagle_eye": {
+      "name": "چشم عقاب",
+      "description": "تصویر &gt; ۸۰٪ اما صدا &lt; ۷۰٪."
+    },
+    "synchronized": {
+      "name": "همگام شده.",
+      "description": "نمرات شنیداری و دیداری کمتر از ۵٪ (الزامی معادل ۶۰٪)."
+    },
+    "dual_master": {
+      "name": "استاد دوگانه",
+      "description": "صدا و تصویر &gt; ۸۵٪ در یک جلسه (≥۶ طعمه/روش)."
+    },
+    "dual_elite": {
+      "name": "نخبگان دوگانه",
+      "description": "صدا و تصویر &gt; ۹۰٪ در یک جلسه با تعداد طعمه بیشتر یا مساوی ۳ (≥ ۶ طعمه/روش صید)."
+    },
+    "centurion": {
+      "name": "یوزباشی.",
+      "description": "۱۰۰ جلسه انجام شده."
+    },
+    "sessions_250": {
+      "name": "افسانه (زمرد)",
+      "description": "۲۵۰ جلسه تکمیل شده."
+    },
+    "sessions_500": {
+      "name": "جاودانه (الماس)",
+      "description": "۵۰۰ جلسه تکمیل شده."
+    },
+    "trials_500": {
+      "name": "پزشک عمومی",
+      "description": "۵۰۰ آزمایش انجام شد."
+    },
+    "trials_1000": {
+      "name": "آموزش دیده",
+      "description": "۱۰۰۰ آزمایش انجام شد."
+    },
+    "trials_5000": {
+      "name": "فصلی",
+      "description": "۵۰۰۰ آزمایش انجام شد."
+    },
+    "trials_10k": {
+      "name": "۱۰،۰۰۰ آزمایش",
+      "description": "در مجموع ۱۰،۰۰۰ آزمایش انجام شد."
+    },
+    "trials_50k": {
+      "name": "تایتان",
+      "description": "۵۰،۰۰۰ آزمایش انجام شده."
+    },
+    "streak_90": {
+      "name": "محله بی‌عیب و نقص",
+      "description": "روند صعودی ۹۰ روزه."
+    },
+    "streak_365": {
+      "name": "سال بی‌نقص",
+      "description": "رکورد ۳۶۵ روزه."
+    },
+    "veteran": {
+      "name": "جانباز",
+      "description": "۱ سال استفاده."
+    },
+    "metronome": {
+      "name": "مترونوم",
+      "description": "واریانس RT کمتر از ۵۰ میلی‌ثانیه در ۲۰ یا بیشتر آزمایش (پاسخ‌های فعال مورد نیاز است)."
+    },
+    "flow_state": {
+      "name": "ایالت فیض",
+      "description": "جریان در کل یک جلسه شناسایی شد."
+    },
+    "sang_froid": {
+      "name": "کله باحال",
+      "description": "بدون آبشار خطا پس از خطا (دقت ≥70٪)."
+    },
+    "imperturbable": {
+      "name": "تزلزل‌ناپذیر",
+      "description": "کل جلسه بدون از دست دادن تمرکز (دقت ≥60٪)."
+    },
+    "comeback_strong": {
+      "name": "بازگشت قدرتمند",
+      "description": "رکورد d-prime خود را بعد از ۳+ روز دوری بشکنید (d′ ≥ ۲.۵)."
+    }
+  }
+}

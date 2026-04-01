@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Lộ trình luyện tập",
+    "pageSubtitle": "Chọn, sắp xếp và tạo hành trình của bạn",
+    "enabled": "Bật lộ trình luyện tập",
+    "description": "30 giai đoạn tiến bộ từ N-1 đến N-10",
+    "progress": "Tiến trình",
+    "locked": "Đã khóa",
+    "createJourney": "Tạo hành trình",
+    "viewJourneys": "Xem hành trình",
+    "current": "Hành trình hiện tại",
+    "myJourneys": "Hành trình của tôi",
+    "stage": "Giai đoạn",
+    "stages": "giai đoạn",
+    "stagesShort": "gđ.",
+    "stageLabels": {
+      "pick": "Chọn",
+      "catch": "Bắt",
+      "place": "Đặt",
+      "memo": "Ghi nhớ"
+    },
+    "name": "Tên",
+    "namePlaceholder": "VD: Thử thách N-5",
+    "levels": "Cấp độ",
+    "levelRange": "Phạm vi cấp độ",
+    "levelTo": "đến",
+    "createNew": "Hành trình mới",
+    "new": "Mới",
+    "defaultCustomName": "Hành trình của tôi",
+    "created": "Đã tạo hành trình!",
+    "deleted": "Đã xóa hành trình",
+    "sessionSettings": "Cài đặt phiên",
+    "savedStatus": "Đã lưu cài đặt",
+    "preset": {
+      "easy": "Dễ",
+      "medium": "Đề xuất",
+      "hard": "Khó"
+    },
+    "setup": {
+      "title": "Hành trình & hồ sơ",
+      "journey": "Hành trình",
+      "journeyNone": "Chọn…",
+      "profile": "Hồ sơ",
+      "profileNone": "Chọn…",
+      "configure": "Cấu hình",
+      "configureNone": "Chọn một hành trình",
+      "create": "Hành trình mới",
+      "createDesc": "Tạo hành trình mới"
+    },
+    "deleteConfirmTitle": "Xóa hành trình này?",
+    "deleteConfirmMessage": "Hành trình \"{{name}}\" sẽ bị xóa vĩnh viễn.",
+    "renameTitle": "Đổi tên hành trình này",
+    "renameMessage": "Chỉnh sửa tên của \"{{name}}\".",
+    "renamed": "Đã đổi tên hành trình.",
+    "badge": {
+      "simulator": "Mô phỏng",
+      "beta": "Beta",
+      "default": "Mặc định"
+    },
+    "mode": "Chế độ",
+    "modeStandard": "Hành trình (4 chế độ)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Mô phỏng",
+      "jaeggi": "Cổ điển",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} phiên xác nhận",
+      "needed": "{{count}} phiên còn lại",
+      "excellent": "Xuất sắc!",
+      "good": "Tốt!",
+      "passing": "Đạt"
+    },
+    "progression": {
+      "title": "Tiến trình",
+      "description": "Để lên cấp tiếp theo, hãy đạt điểm tốt:",
+      "excellent": "≥95% → 1 phiên",
+      "good": "≥85% → 2 phiên",
+      "passing": "≥80% → 3 phiên",
+      "rules": "Quy tắc tiến trình",
+      "jaeggi": {
+        "description": "Dựa trên phương thức yếu nhất:",
+        "up": "< 3 lỗi → Lên cấp",
+        "stay": "3 - 5 lỗi → Giữ nguyên cấp",
+        "down": "> 5 lỗi → Xuống cấp"
+      },
+      "brainworkshop": {
+        "description": "Giao thức Brain Workshop (điểm BW):",
+        "up": "≥80% → Lên cấp",
+        "stay": "50-79% → Giữ nguyên cấp",
+        "strike": "3 điểm liên tiếp <50% → Xuống cấp"
+      },
+      "hybrid": {
+        "description": "Hành trình này chạy {{trackCount}} phiên Dual Track, sau đó {{dnbCount}} phiên Dual N-Back ở cùng cấp.",
+        "alternation": "Vòng lặp luôn bắt đầu lại với Dual Track khi đạt được quyết định.",
+        "authority": "Chỉ phiên Dual N-Back quyết định lên, giữ hoặc xuống.",
+        "up": "0-1 lỗi → Lên cấp",
+        "stay": "2-3 lỗi → Giữ nguyên",
+        "down": "4+ lỗi → Xuống cấp",
+        "streakRule": "Hai phiên liên tiếp trong cùng vùng sẽ kích hoạt quyết định.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Đã xác nhận {{current}}/{{required}}",
+        "stayProgress": "Giữ {{current}}/{{required}}",
+        "downProgress": "Thất bại {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track sử dụng thanh thành thạo liên tục cho mỗi giai đoạn mục tiêu:",
+        "calibration": "Hiệu chuẩn đầu tiên ước tính số mục tiêu khởi đầu của bạn",
+        "goodSession": "Mỗi phiên tốt lấp đầy giai đoạn hiện tại một chút",
+        "mastery": "Phiên gần hoàn hảo lấp đầy nhanh hơn, phiên bình thường khiêm tốn hơn",
+        "regression": "Phiên yếu có thể làm giảm thanh thành thạo hiện tại",
+        "unlock": "Số mục tiêu tiếp theo chỉ mở khóa khi giai đoạn hiện tại đạt 100%"
+      }
+    },
+    "switcher": {
+      "open": "Mở bộ chuyển hành trình",
+      "current": "Hiện tại",
+      "showAll": "Tất cả hành trình",
+      "settings": "Cài đặt hành trình"
+    },
+    "previous": "Hành trình trước",
+    "next": "Hành trình tiếp",
+    "calibration": {
+      "title": "Phiên đầu tiên",
+      "subtitle": "Một bài hiệu chuẩn ngắn sẽ xác định cấp độ khởi đầu, hoặc bạn có thể bắt đầu trực tiếp từ cấp 2.",
+      "skipToN2": "hoặc bắt đầu từ N-2",
+      "continueAt": "hoặc tiếp tục từ N-{{level}}",
+      "start": "Bắt đầu hiệu chuẩn",
+      "redo": "Hiệu chuẩn lại",
+      "badge": "Hiệu chuẩn"
+    },
+    "presets": {
+      "currentSlot": "Tùy chỉnh",
+      "currentSlotView": "Tùy chỉnh",
+      "lockedTitle": "Một số tùy chọn bị khóa",
+      "lockedDesc": "Để giữ tiến trình có thể so sánh, các phương thức (và một số tùy chọn) không thể thay đổi sau khi hành trình đã bắt đầu."
+    },
+    "completed": {
+      "title": "Hoàn thành hành trình!",
+      "subtitle": "Tất cả giai đoạn đã xác nhận. Làm tốt lắm!",
+      "continueFree": "Tiếp tục luyện tập"
+    },
+    "report": {
+      "stage": "Giai đoạn",
+      "level": "Cấp độ",
+      "score": "Điểm",
+      "sessionValidated": "Phiên đã xác nhận!",
+      "sessionNotValidated": "Phiên chưa xác nhận",
+      "minScore": "Điểm tối thiểu yêu cầu:",
+      "stageCompleted": "Hoàn thành giai đoạn!",
+      "stageUnlocked": "Giai đoạn {{stage}} đã mở khóa!",
+      "replay": "Chơi lại",
+      "nextStage": "Giai đoạn tiếp",
+      "home": "Trang chủ",
+      "hits": "Đúng",
+      "misses": "Bỏ lỡ",
+      "falseAlarms": "Báo động giả",
+      "correctRejections": "Từ chối đúng"
+    }
+  }
+}

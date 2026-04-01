@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "今の調子は？",
+      "tired": "疲れている",
+      "normal": "普通",
+      "energized": "元気いっぱい"
+    },
+    "aria": {
+      "trialTimer": "試行タイマー",
+      "positionMatch": "位置マッチ",
+      "audioMatch": "音声マッチ",
+      "audioLetter": "音声文字：",
+      "traceGrid": "トレースグリッド"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "同期モニターの切替",
+      "start": "開始",
+      "end": "終了",
+      "pinLabel": "pin",
+      "pinTitle": "画面に固定する",
+      "inputLabel": "input",
+      "inputTitle": "入力レイテンシプロファイリングの切替 (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "オン",
+      "off": "オフ",
+      "hideLabel": "非表示",
+      "hideTitle": "非表示 (syncHud=1 または ND_AUDIO_DEBUG_TIMING=1 の場合を除く)",
+      "endRef": {
+        "audio": "オーディオ",
+        "expected": "期待値"
+      },
+      "labels": {
+        "trial": "試行",
+        "lagShow": "表示の遅延",
+        "lagHide": "非表示の遅延",
+        "winErr": "ウィンドウエラー",
+        "endRef": "終了基準",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "入力保留中",
+        "inputSamples": "入力サンプル",
+        "touchSamples": "タッチサンプル",
+        "mouseSamples": "マウスサンプル",
+        "keyboardSamples": "キーボードサンプル",
+        "latestMethod": "最新（メソッド）",
+        "latestModality": "最新モダリティ",
+        "audioCueMode": "音声キュー",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "入力プロファイラーをリセット"
+    },
+    "hud": {
+      "resume": "再開",
+      "pause": "一時停止",
+      "quit": "終了",
+      "restart": "再スタート",
+      "spaceToStart": "スペースキーで開始",
+      "settings": "設定",
+      "enterToAdvance": "Enterで進む",
+      "trial": "試行",
+      "muteTexture": "背景音をミュートする"
+    },
+    "status": {
+      "paused": "一時停止中"
+    },
+    "completed": "完了",
+    "starting": {
+      "getReady": "準備..."
+    },
+    "quitModal": {
+      "title": "セッションを終了しますか？",
+      "message": "進捗は保存されません。",
+      "confirm": "終了",
+      "cancel": "続ける",
+      "close": "閉じる"
+    },
+    "controls": {
+      "position": "位置",
+      "position2": "位置 2",
+      "position3": "位置 3",
+      "position4": "位置 4",
+      "visvis": "視覚 & n-視覚",
+      "visaudio": "視覚 & n-音声",
+      "audiovis": "音声 & n-視覚",
+      "vis1": "視覚 1",
+      "vis2": "視覚 2",
+      "vis3": "視覚 3",
+      "vis4": "視覚 4",
+      "audio": "音声",
+      "audio2": "音声 2",
+      "color": "色",
+      "arithmetic": "算数",
+      "image": "形"
+    },
+    "arithmetic": {
+      "answer": "回答",
+      "clear": "クリア",
+      "hint": "キーボード：0–9 · '-' で符号 · '.' で小数 · Backspaceでクリア"
+    },
+    "navigation": {
+      "back": "戻る"
+    },
+    "xp": {
+      "title": "獲得XP",
+      "base": "ベース (N-{{level}})",
+      "performance": "パフォーマンス",
+      "accuracy": "正確性",
+      "streakBonus": "連続ボーナス",
+      "dailyBonus": "今日初",
+      "badgeBonus": "バッジ",
+      "flowBonus": "Dual Placeボーナス",
+      "confidenceMultiplier": "信頼度",
+      "dailyCapReached": "1日のXP上限に達しました",
+      "levelReached": "レベル {{level}} に到達！"
+    },
+    "badges": {
+      "newUnlocked": "新しいバッジがアンロックされました"
+    },
+    "getReady": "準備してください...",
+    "layoutEdit": {
+      "done": "完了",
+      "reset": "リセット",
+      "instructions": "ゾーンをドラッグして並べ替え。ハンドルでサイズ変更。",
+      "title": "編集モード",
+      "cancel": "キャンセル",
+      "save": "ロック",
+      "editLayout": "レイアウト編集"
+    },
+    "paused": "一時停止中",
+    "pressEscapeToResume": "Escキーで再開",
+    "settings": {
+      "editLayout": "レイアウトを編集",
+      "gridAndButtons": "グリッドとボタン",
+      "swapPositionAudio": "位置 / 音声を入れ替え",
+      "title": "設定",
+      "quickHint": "ゲームを離れずにいくつかの設定を調整します。",
+      "quickUnavailable": "このモードではクイック設定はありません。"
+    },
+    "pinkNoiseInfo": "各刺激にバックグラウンドトーンが付きます。オーディオ設定でカスタマイズまたは無効化できます。",
+    "pinkNoiseDismiss": "続ける",
+    "audioMode": "オーディオモード",
+    "cogTask": {
+      "precision": "正確度",
+      "avgRt": "平均 RT",
+      "avgRtShort": "平均 RT",
+      "trials": "試行",
+      "correct": "正解",
+      "errors": "エラー",
+      "effect": "効果",
+      "restart": "やり直す",
+      "home": "ホーム",
+      "performance": "パフォーマンス",
+      "trialDetail": "試行の詳細",
+      "setDetail": "セットの詳細",
+      "roundDetail": "ラウンドの詳細",
+      "problemDetail": "問題の詳細",
+      "phaseDetail": "フェーズの詳細",
+      "feedbackCorrect": "正解",
+      "feedbackIncorrect": "不正解",
+      "feedbackTimeout": "遅すぎます！",
+      "preparing": "準備中...",
+      "loading": "読み込み中...",
+      "left": "左",
+      "right": "右",
+      "up": "上",
+      "down": "下",
+      "congruent": "一致",
+      "incongruent": "不一致",
+      "congruencyEffect": "一致性効果",
+      "maxSpan": "最大スパン",
+      "startingSpan": "開始スパン",
+      "maxSpanReached": "最大スパン達成",
+      "longestStreak": "最長連続正解",
+      "series": "連続",
+      "avgResponseTime": "平均反応時間",
+      "recall": "再生",
+      "expected": "期待値",
+      "submit": "送信",
+      "cancel": "キャンセル",
+      "clear": "クリア",
+      "delete": "DEL",
+      "true": "正しい",
+      "false": "誤り",
+      "target": "ターゲット",
+      "nonTarget": "非ターゲット",
+      "distractor": "妨害刺激",
+      "same": "同じ",
+      "different": "異なる",
+      "identical": "同一",
+      "mirror": "鏡像",
+      "symmetric": "対称",
+      "asymmetric": "非対称",
+      "symShort": "Sym.",
+      "present": "存在",
+      "absent": "不在",
+      "noTrials": "試行が完了していません。",
+      "noSets": "セットが完了していません。",
+      "noRounds": "ラウンドが完了していません。",
+      "noProblems": "問題が完了していません。",
+      "noPhases": "フェーズが完了していません。",
+      "sets": "セット",
+      "rounds": "ラウンド",
+      "equations": "方程式",
+      "sentences": "文",
+      "equationAccuracy": "計算の正確性",
+      "forward": "順唱",
+      "backward": "逆唱",
+      "forwardMaxSpan": "順唱最大スパン",
+      "backwardMaxSpan": "逆順最大スパン",
+      "odd": "奇数",
+      "even": "偶数",
+      "score": "スコア",
+      "easy": "簡単",
+      "hard": "難しい",
+      "totalTrials": "総試行数",
+      "totalErrors": "総エラー数",
+      "totalErrShort": "合計エラー",
+      "hits": "ヒット",
+      "misses": "ミス",
+      "falseAlarms": "誤報",
+      "correctRejections": "正棄却",
+      "yes": "はい",
+      "no": "いいえ",
+      "sessionInterrupted": "セッション中断",
+      "reverseOrder": "逆順で",
+      "normalOrder": "順番に",
+      "lnsInstruction": "数字を昇順、次に文字をA-Z順",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "サイモン効果",
+        "blue": "青",
+        "red": "赤",
+        "heroTitle": "サイモン"
+      },
+      "soroban": {
+        "target": "この数字を表してください",
+        "submit": "確定",
+        "rodLabel": "桁 {{n}}",
+        "heavenBead": "天珠（値5）",
+        "earthBead": "地珠（値1）",
+        "instrBeadTitle": "珠の動かし方",
+        "instrBeadDesc": "各桁は一つの位を表します。上の珠（天珠）は5の値です。下の珠（地珠）はそれぞれ1の値です。珠を中央の梁に向かって動かすと有効になります。",
+        "instrExampleTitle": "例：7",
+        "instrExampleDesc": "7 = 天珠を下げる（5）+ 地珠を2つ上げる（2）。珠をタップまたはスワイプして動かします。",
+        "instrGoalTitle": "目標",
+        "instrGoalDesc": "数字が表示されます。珠を動かしてその数を表し、確定を押してください。正確かつ素早く！",
+        "startButton": "開始",
+        "settings": "設定",
+        "closeSettings": "設定を閉じる",
+        "settingsRods": "桁数（棒の数）",
+        "settingsRodsHint": "設定のNレベルで調整可能",
+        "settingsTrials": "セッションあたりの試行数",
+        "settingsTrialsHint": "設定の試行数で調整可能",
+        "settingsRange": "数値の範囲"
+      },
+      "stroop": {
+        "pressInkColorButton": "インクの色に対応するボタンを押してください",
+        "redWord": "アカ",
+        "redLabel": "赤",
+        "blueWord": "アオ",
+        "blueLabel": "青",
+        "greenWord": "ミドリ",
+        "greenLabel": "緑",
+        "yellowWord": "キイロ",
+        "yellowLabel": "黄"
+      },
+      "stroopFlex": {
+        "followRule": "ルール",
+        "ruleInk": "インク色",
+        "ruleWord": "書かれた単語",
+        "pressMatchingRuleButton": "現在のルールに対応するボタンを押してください"
+      },
+      "goNogo": {
+        "goTrials": "Go 試行",
+        "nogoTrials": "No-Go 試行",
+        "hitRate": "ヒット率 (Go)",
+        "faRate": "誤報率 (No-Go)",
+        "meanRt": "平均反応時間",
+        "sensitivity": "感度",
+        "press": "押す",
+        "withhold": "押さない"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (停止信号 RT)",
+        "ssdMean": "平均 SSD (停止成功)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "抑制成功率",
+        "stop": "停止",
+        "meanGoRt": "平均 GO 反応時間",
+        "ssrtInvalid": "データ不足",
+        "ssrtNegativeNote": "SSRTが負の値です（平均SSD > 平均GO RT）——現在の試行数では信頼性の低い結果です。"
+      },
+      "pvt": {
+        "rtMedian": "RT 中央値",
+        "rtMean": "平均 RT",
+        "fastest": "最速",
+        "slowest": "最遅",
+        "falseStarts": "早押し",
+        "falseStartsShort": "早押し",
+        "lapses": "失敗",
+        "mean": "平均",
+        "reaction": "反応",
+        "wait": "待って...",
+        "pressStimulus": "刺激を待って...",
+        "pressAnywhere": "カウンターが表示されたらどこかをタップ",
+        "press": "押して！",
+        "tooEarly": "早すぎます！",
+        "lapsesLabel": "注意散漫回数"
+      },
+      "posner": {
+        "cueingEffect": "手がかり効果",
+        "validMeanRt": "有効手がかり平均RT",
+        "invalidMeanRt": "無効手がかり平均RT",
+        "validAccuracy": "有効正確度",
+        "invalidAccuracy": "無効正確度",
+        "validTrials": "有効試行",
+        "invalidTrials": "無効試行",
+        "validRtShort": "RT 有効",
+        "invalidRtShort": "RT 無効",
+        "valid": "有効",
+        "invalid": "無効"
+      },
+      "antisaccade": {
+        "cost": "アンチサッカードコスト",
+        "proAccuracy": "プロ正確度",
+        "antiAccuracy": "アンチ正確度",
+        "pro": "プロ",
+        "anti": "アンチ",
+        "proRt": "プロ RT",
+        "antiRt": "アンチ RT",
+        "proMeanRt": "プロサッカード平均RT",
+        "antiMeanRt": "アンチサッカード平均RT",
+        "costLabel": "コスト",
+        "antiLabel": "アンチ"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "AX 正確度",
+        "bxFa": "BX 誤報",
+        "ayError": "AY エラー",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY err",
+        "cogControl": "認知制御",
+        "target": "ターゲット",
+        "nonTarget": "非ターゲット"
+      },
+      "ant": {
+        "scores": "ANT スコア",
+        "alerting": "覚醒効果 (no-cue − double-cue)",
+        "orienting": "定位 (中央 − 空間)",
+        "executive": "実行 (不一致 − 一致)"
+      },
+      "changeDet": {
+        "kCowan": "K 容量 (Cowan)",
+        "sameShort": "同じ",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "検索内エラー",
+        "betweenErrors": "検索間エラー",
+        "totalErrors": "総エラー",
+        "errorFree": "エラーなし",
+        "foundErrorFree": "エラーなしで発見！",
+        "errorCount": "{{count}}個のエラー",
+        "tapsLabel": "タップ"
+      },
+      "taskSwitch": {
+        "switchCost": "切替コスト",
+        "rtRepeat": "平均 RT (反復)",
+        "rtSwitch": "平均 RT (切替)",
+        "oddEven": "奇数 / 偶数",
+        "highLow": "大 / 小",
+        "title": "タスクスイッチング"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A 時間",
+        "tmtBTime": "TMT-B 時間",
+        "executiveCost": "実行コスト (B − A)",
+        "executiveCostShort": "実行コスト (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "TMT-B 準備中...",
+        "tmtADone": "TMT-A 完了！",
+        "totalErrors": "総エラー",
+        "tmtALabel": "TMT-A: 数字",
+        "tmtBLabel": "TMT-B: 数字と文字",
+        "next": "次へ",
+        "heroTitle": "トレイルメイキング",
+        "alternateHint": "数字と文字を交互に：1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI 最小",
+        "fastestIsi": "最速ISI"
+      },
+      "wcst": {
+        "referenceCards": "参照カード",
+        "testCard": "テストカード",
+        "categories": "カテゴリ",
+        "categoriesCompleted": "完了したカテゴリ数",
+        "perseverativeErrors": "保続的エラー",
+        "persevShort": "固着",
+        "avgRt": "平均RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "角度別 RT",
+        "findMatch": "同じ形を見つけてください",
+        "reference": "基準図形",
+        "referenceLabel": "参照",
+        "candidate": "候補",
+        "distractor": "その他",
+        "mirrorErrors": "鏡像",
+        "title": "心的回転"
+      },
+      "sternberg": {
+        "rtBySize": "セットサイズ別 RT",
+        "title": "スターンバーグ",
+        "avgRt": "平均RT"
+      },
+      "visualSearch": {
+        "rtBySize": "セットサイズ別 RT",
+        "title": "視覚探索"
+      },
+      "ospan": {
+        "typeLetters": "文字を順番に入力してください",
+        "trueOrFalse": "正しいか間違いか？",
+        "processingWarning": "計算の正確さ < 85% — 結果はワーキングメモリの真の能力を反映していない可能性があります"
+      },
+      "readingSpan": {
+        "s0": "太陽は東から昇る。",
+        "s1": "魚は木の上に住んでいる。",
+        "s2": "パリはフランスの首都である。",
+        "s3": "三角形には四つの辺がある。",
+        "s4": "水は100度で沸騰する。",
+        "s5": "猫は爬虫類である。",
+        "s6": "地球は太陽の周りを回っている。",
+        "s7": "チョコレートは岩の上で育つ。",
+        "s8": "一年は十二ヶ月ある。",
+        "s9": "鳥は水中で呼吸する。",
+        "s10": "牛乳は白い。",
+        "s11": "車はレールの上を走る。",
+        "s12": "蜂は蜂蜜を作る。",
+        "s13": "雪は熱い。",
+        "s14": "心臓は血液を送り出す。",
+        "s15": "石は水に浮く。",
+        "s16": "月は夜を照らす。",
+        "s17": "蛇には足がある。",
+        "s18": "木は水に浮く。",
+        "s19": "火は冷たい。",
+        "s20": "人間には五感がある。",
+        "s21": "クモには六本の足がある。",
+        "s22": "パンは小麦粉から作られる。",
+        "s23": "クジラは魚である。",
+        "w0": "イエ",
+        "w1": "イヌ",
+        "w2": "ホン",
+        "w3": "ハナ",
+        "w4": "トビラ",
+        "w5": "テーブル",
+        "w6": "キ",
+        "w7": "ミチ",
+        "w8": "クモ",
+        "w9": "ホシ",
+        "w10": "ハマ",
+        "w11": "ユキ",
+        "w12": "ランプ",
+        "w13": "アメ",
+        "w14": "コップ",
+        "w15": "クサ",
+        "w16": "デンシャ",
+        "w17": "セカイ",
+        "w18": "タイヨウ",
+        "w19": "モリ",
+        "w20": "コオリ",
+        "w21": "チキュウ",
+        "w22": "ソラ",
+        "w23": "イシ",
+        "d0": "アサ",
+        "d1": "ココロ",
+        "d2": "ヌノ",
+        "d3": "ハ",
+        "d4": "オト",
+        "d5": "ニワ",
+        "d6": "カゲ",
+        "d7": "カネ",
+        "d8": "ハシ",
+        "d9": "ケムリ",
+        "d10": "スナ",
+        "d11": "スープ",
+        "heroTitle": "リーディングスパン"
+      },
+      "memorizeSequence": "順序を覚えてください...",
+      "reproduce": "再現",
+      "span": "スパン",
+      "size": "サイズ",
+      "fixateCenter": "中央を注視...",
+      "identicalOrMirror": "同一？ 鏡像？",
+      "wellInhibited": "うまく抑制できました！",
+      "badDirection": "方向が違います！",
+      "stopMissed": "停止失敗！",
+      "falseAlarm": "誤報！",
+      "pressNow": "押して！",
+      "hitBang": "ヒット！",
+      "miss": "ミス！",
+      "doNotTouch": "触らないで！",
+      "whichDirection": "どの方向？",
+      "stopBang": "ストップ！",
+      "cueBang": "手がかり！",
+      "memorizeLetters": "これらの文字を覚えてください",
+      "memorizeLetter": "この文字を覚えてください",
+      "memorizeSequenceLetters": "順序を覚えてください...",
+      "memorizeDigits": "数字を覚えてください...",
+      "memorizeColors": "色を覚えてください！",
+      "memorizePosition": "この位置を覚えてください...",
+      "retainWord": "この単語を覚えてください",
+      "retainNumber": "この数字を覚えてください",
+      "addWithPrevious": "前の数と足してください",
+      "sentenceTrueOrFalse": "この文は正しいですか？",
+      "findRedCircle": "赤い丸を見つけてください！",
+      "findHiddenToken": "隠されたトークンを見つけてください！",
+      "chooseMatchingCard": "一致するカードを選んでください",
+      "arrowDirection": "中央の矢印の方向は？",
+      "attention": "注意...",
+      "preparation": "準備...",
+      "recallLettersInOrder": "{{count}}文字を順番に思い出してください",
+      "recallWordsInOrder": "{{count}}語を順番に思い出してください",
+      "recallLastLetters": "最後の{{count}}文字を思い出してください",
+      "typeLastLetters": "最後の{{count}}文字を入力してください",
+      "recallPositionsInOrder": "思い出し：位置を順番にタップ",
+      "pressEnterToValidate": "Enterキーで確定",
+      "pressAnywhereToContinue": "どこかを押して続ける",
+      "temporalPrecision": "時間的精度",
+      "estimationPrecision": "推定精度",
+      "touchStartClockwise": "開始点をタッチして時計回りにスワイプ",
+      "touchAtoB": "点Aをタッチしてから点Bまでスワイプ",
+      "cue": "手がかり",
+      "retainCue": "手がかりを覚えて...",
+      "targetOrNot": "ターゲット？ 非ターゲット？",
+      "whereIsTarget": "ターゲットはどこですか？",
+      "wasLetterInSet": "この文字はセットに含まれていましたか？",
+      "regular": "規則的",
+      "regularity": "規則性",
+      "msDeviation": "msの偏差",
+      "boxes": "箱",
+      "found": "{{count}}個発見",
+      "past": "過去",
+      "tooSlow": "遅すぎ",
+      "tooFast": "速すぎ",
+      "timeout": "遅すぎます！",
+      "answer": "回答",
+      "dontPress": "押さないで！",
+      "feedbackWrong": "不正解！",
+      "level": "レベル",
+      "wrong": "不正解",
+      "you": "あなた",
+      "paused": "Pause",
+      "instructions": "Instructions",
+      "selectAnswer": "答えを選んでください",
+      "tapTheOddOne": "仲間はずれをタップしてください",
+      "pal": {
+        "subtitle": "対連合学習",
+        "pairsLearned": "学習済みペア数",
+        "maxSetSize": "最大セットサイズ",
+        "totalErrors": "合計エラー",
+        "round": "ラウンド",
+        "pairs": "ペア",
+        "meanRt": "平均RT（正答）",
+        "studyPhase": "学習 - 位置を覚えてください",
+        "testPhase": "この形はどこでしたか？",
+        "studying": "学習中",
+        "tapBox": "この形が表示されたボックスをタップしてください"
+      },
+      "visualLogic": {
+        "easy": "簡単",
+        "hard": "難しい",
+        "oneRule": "ルール1つ",
+        "twoRules": "ルール2つ",
+        "findMissing": "欠けているピースを見つけてください",
+        "maxLevel": "最高レベル",
+        "finalLevel": "最終レベル",
+        "nextMode": "次のセッションモード",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "どのピースが穴にはまりますか？",
+        "target": "ターゲット"
+      },
+      "timeEstimation": {
+        "overestimationBias": "過大評価バイアス",
+        "underestimationBias": "過小評価バイアス",
+        "noBias": "有意なバイアスなし",
+        "avgError": "平均エラー",
+        "overestimations": "過大評価",
+        "underestimations": "過小評価",
+        "avgAbsoluteError": "平均絶対誤差",
+        "avgRelativeError": "平均相対誤差",
+        "cv": "変動係数",
+        "watchDemo": "持続時間を観察してください",
+        "getReady": "準備して...",
+        "holdToReproduce": "押し続けて再現！",
+        "tooLong": "長すぎます！",
+        "tooShort": "短すぎます！",
+        "target": "ターゲット",
+        "demoLabel": "参照",
+        "yourTurn": "あなたの番",
+        "watchInstruction": "観察する",
+        "holdInstruction": "押し続けて再現",
+        "heroTitle": "時間推定"
+      },
+      "puzzleDetails": "パズル詳細",
+      "roundDetails": "ラウンド詳細",
+      "stageResults": "ステージ結果",
+      "recognized": "認識済み",
+      "missed": "ミス",
+      "win": "勝ち",
+      "lose": "負け",
+      "winBang": "勝ち！",
+      "loseBang": "負け！",
+      "correctBang": "正解！",
+      "wrongBang": "不正解！",
+      "completeBang": "完了！",
+      "repeatedBang": "繰り返し！",
+      "incompleteBang": "未完了！",
+      "levelCompleteBang": "レベル完了！",
+      "timesUp": "時間切れ",
+      "seeResults": "結果を見る",
+      "nextRound": "次のラウンド",
+      "startBlock": "ブロック開始",
+      "continue": "続ける",
+      "patientChoice": "忍耐選択",
+      "immediateChoice": "即時選択",
+      "immediate": "即時",
+      "digitSpan": {
+        "heroTitle": "数字スパン"
+      },
+      "resume": "再開",
+      "numericalStroop": {
+        "heroTitle": "数値ストループ"
+      },
+      "lineOrientation": {
+        "heroTitle": "線分方向判断"
+      },
+      "chain": "チェーン",
+      "undo": "元に戻す",
+      "vocalProsody": {
+        "heroTitle": "音声韻律"
+      },
+      "letterNumber": {
+        "title": "文字-数字",
+        "expectedAnswer": "期待される回答"
+      },
+      "patternComparison": {
+        "heroTitle": "パターン比較"
+      },
+      "speedPack": {
+        "title": "スピードパック",
+        "whenFoldedWhichTouch": "折りたたんだとき、どの正方形が接触しますか？"
+      },
+      "dotProbe": {
+        "heroTitle": "注意プローブ課題"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "フーパー視覚的構成",
+        "whatIsThisObject": "この物体は何ですか？"
+      },
+      "blockDesign": {
+        "heroTitle": "ブロックデザイン"
+      },
+      "accuracy": "正確度",
+      "avgTime": "平均時間",
+      "check": "確認",
+      "dualTrace": {
+        "playArea": "プレイエリア"
+      },
+      "paperFolding": {
+        "title": "紙折り",
+        "foldSequenceHolePunch": "折り順と穴あけ",
+        "whichPatternWhenUnfolded": "広げるとどの模様になりますか？"
+      },
+      "lexicalDecision": {
+        "heroTitle": "語彙判断"
+      },
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxGrid": "最大グリッド",
+      "symmetry": "対称性",
+      "threshold": "閾値",
+      "hitRate": "ヒット率",
+      "faRate": "FA率",
+      "changeDetection": {
+        "heroTitle": "変化検出"
+      },
+      "syllogisms": {
+        "heroTitle": "三段論法"
+      },
+      "subitizing": {
+        "title": "サビタイジング",
+        "range": "Range"
+      },
+      "jitter": "ジッター",
+      "sentenceCompletion": {
+        "title": "文完成（クローズ）",
+        "highCloze": "高クローズ",
+        "lowCloze": "低クローズ"
+      },
+      "grid": "グリッド",
+      "pinballRecall": {
+        "title": "ピンボール想起",
+        "byBounces": "バウンス別",
+        "whereDoesItLand": "どこに着地する？"
+      },
+      "mean": "平均",
+      "speedup": "加速",
+      "memorize": "記憶する",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "表面展開",
+        "whichEdgeMatches": "どの辺が一致しますか？"
+      },
+      "crowding": {
+        "heroTitle": "視覚的クラウディング",
+        "spacing": "間隔"
+      },
+      "patternRecognition": {
+        "heroTitle": "パターン認識"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "試行",
+        "position": "位置",
+        "audio": "オーディオ"
+      },
+      "sceneCrasher": {
+        "heroTitle": "シーンの侵入者",
+        "detect": "検出"
+      },
+      "eyesTest": {
+        "heroTitle": "目の表情を読むテスト"
+      }
+    },
+    "gridlock": {
+      "undone": "最後の手を取り消しました。",
+      "resetMessage": "パズルをリセットしました。",
+      "hintMessage": "ヒント：{{pieceId}} を {{dir}} に {{delta}} スライド。",
+      "previewCountdown": "盤面を確認してください。{{seconds}}秒後に開始します。",
+      "challenge": "チャレンジ",
+      "optimal": "最適",
+      "moves": "手数",
+      "piece": "ピース {{id}}",
+      "targetPiece": "ピース {{id}}（ターゲット - 赤い車）",
+      "challengeClassic": "クラシック",
+      "challengePrecision": "プレシジョン",
+      "challengeMemory": "メモリー",
+      "challengeTimed": "タイムアタック",
+      "hint": "ヒント",
+      "reset": "リセット",
+      "undo": "元に戻す",
+      "nextPuzzle": "次のパズル →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "ブロック1 ヒット",
+      "block2Hits": "ブロック2 ヒット",
+      "goPositive": "Go = ポジティブ",
+      "goNegative": "Go = ネガティブ",
+      "title": "情動Go/No-Go課題",
+      "block1CommissionErrors": "ブロック1コミッションエラー",
+      "block2CommissionErrors": "ブロック2コミッションエラー",
+      "block": "ブロック",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "平均切替率",
+      "meanSwitchesfigure": "平均切替/図形",
+      "totalSwitches": "切り替え合計",
+      "title": "多義図形",
+      "meanSwitches": "平均切り替え回数",
+      "switchRate": "切り替え率",
+      "figures": "図形",
+      "totalSwitchesLabel": "切り替え合計",
+      "duration": "持続時間",
+      "switchesCount": "秒 | 切替：",
+      "switchButton": "切り替え！"
+    },
+    "analogies": {
+      "verbalCorrect": "言語正答",
+      "timeout": "タイムアウト",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "ウェーバー",
+      "title": "ANS比較",
+      "ratio": "比率",
+      "leftMore": "左が多い",
+      "rightMore": "右が多い"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "誤警報率",
+      "grammatical": "文法的",
+      "memorizeTheseStrings": "これらの文字列を記憶してください",
+      "testPhase": "テストフェーズ",
+      "ungrammatical": "非文法的",
+      "learning": "学習",
+      "test": "Test",
+      "title": "人工文法",
+      "learningPhase": "学習",
+      "testIntroText": "新しい文字列が表示されます。先ほど学んだルールに従っているか判断してください。",
+      "startTest": "テスト開始",
+      "followsRules": "ルールに従う",
+      "breaksRules": "ルール違反"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "瞬目振幅",
+      "title": "注意の瞬き",
+      "blink": "ブリンク",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1つ目の緑の文字は？",
+      "secondGreenLetter": "2つ目の緑の文字は？"
+    },
+    "attentionalCapture": {
+      "captureCost": "キャプチャコスト",
+      "singletonPresent": "シングルトン有り",
+      "noSingleton": "シングルトンなし",
+      "title": "注意の捕捉",
+      "capture": "キャプチャ",
+      "horizontal": "水平",
+      "vertical": "垂直"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "結合ウィンドウ",
+      "title": "視聴覚バインディング",
+      "window": "Window",
+      "pssLabel": "PSS（主観的同時性点）",
+      "simultaneousOrNot": "同時かどうか？",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "非同時"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "持続時間閾値",
+      "reference": "基準",
+      "weberFraction": "ウェーバー比",
+      "title": "聴覚持続時間",
+      "threshold": "閾値",
+      "weber": "Weber",
+      "whichLonger": "どちらが長い？",
+      "firstLonger": "最初の方が長い",
+      "secondLonger": "2番目の方が長い"
+    },
+    "bart": {
+      "adjustedAvgPumps": "調整済み平均ポンプ数",
+      "avgTimeballoon": "平均時間/風船",
+      "banked": "確保！",
+      "lostEarnings": "獲得分を失いました！",
+      "overallAvgPumps": "全体平均ポンプ数",
+      "popRate": "破裂率",
+      "totalEarned": "合計獲得",
+      "balloons": "風船",
+      "cashed": "回収済み",
+      "popped": "破裂",
+      "adjPumps": "調整済みポンプ",
+      "pop": "ポップ",
+      "pump": "Pump",
+      "cashIn": "換金"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "平均決定時間",
+      "drawBeadsToGatherEvidence": "証拠を集めるためにビーズを引く",
+      "jtc": "JTC",
+      "title": "ビーズ課題",
+      "meanDraws": "平均抽選数",
+      "rounds": "ラウンド",
+      "jtcRate": "JTC率",
+      "meanDrawsToDecision": "平均ドローによる決定",
+      "jtcRateThreshold": "JTC率（<{{threshold}}回引き）",
+      "round": "ラウンド",
+      "jarDescription": "瓶A：85%緑 / 瓶B：85%赤",
+      "itWasJar": "この瓶でした",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "変化試行",
+      "sameAccuracy": "同一正確度",
+      "sameTrials": "同一試行",
+      "title": "特徴の結合",
+      "binding": "バインディング",
+      "bindingAccuracyChanged": "変化精度",
+      "same": "同じ",
+      "different": "違う"
+    },
+    "blockDesign": {
+      "cells": "セル",
+      "target": "ターゲット",
+      "yourAnswer": "あなたの回答",
+      "tapHint": "タップして色を切り替え",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "適応",
+      "adaptationCost": "適応コスト",
+      "nonswitchTrials": "非切替試行",
+      "switchTrials": "切替試行"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "これらの文字を覚えてください",
+      "selectThe3Letters": "3つの文字を選択",
+      "title": "Brown-Peterson Task",
+      "forgetting": "忘却",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "遅延"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "意思決定の質",
+      "finalPoints": "最終ポイント",
+      "meanBet": "平均ベット",
+      "winRate": "勝率",
+      "wins": "勝利",
+      "title": "ケンブリッジ・ギャンブリング課題",
+      "totalPoints": "合計ポイント",
+      "quality": "品質",
+      "rational": "合理的",
+      "avgBet": "平均賭け金",
+      "trial": "試行",
+      "whichColorHidesToken": "どの色にトークンが隠れていますか？",
+      "youChose": "あなたの選択",
+      "howMuchToBet": "いくら賭けますか？"
+    },
+    "cancellation": {
+      "false": "誤",
+      "target": "ターゲット：",
+      "total": "合計",
+      "title": "抹消課題（d2）",
+      "misses": "ミス",
+      "targetDescription": "2本線のd"
+    },
+    "changeBlindness": {
+      "detectionRate": "検出率",
+      "found": "発見",
+      "meanDetectionTime": "平均検出時間",
+      "title": "変化盲",
+      "missed": "見逃し",
+      "avgTime": "平均時間",
+      "instructions": "説明"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "最良推定",
+      "meanScore": "平均スコア",
+      "worstEstimate": "最低推定",
+      "inRange": "良い推定！",
+      "title": "認知推定",
+      "meanScoreLabel": "平均スコア",
+      "inRangeLabel": "範囲内",
+      "extreme": "極端",
+      "scoreLabel": "スコア",
+      "submit": "送信"
+    },
+    "common": {
+      "accuracy": "正確度",
+      "bias": "バイアス",
+      "falseAlarmRate": "誤警報率",
+      "hitRate": "検出率",
+      "hits": "検出",
+      "listening": "聞いています...",
+      "meanRt": "平均反応時間",
+      "timedOut": "タイムアウト",
+      "timedOut2": "タイムアウト",
+      "faRate": "FA率",
+      "paused": "一時停止中"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "どれくらい自信がありますか？",
+      "rateYourConfidence": "自信度を評価",
+      "title": "確信度キャリブレーション",
+      "calError": "較正誤差",
+      "confidence": "確信度"
+    },
+    "consequences": {
+      "best": "最高",
+      "nextRound": "次のラウンド...",
+      "time": "時間",
+      "placeholder": "結果を入力...",
+      "title": "結果",
+      "totalIdeas": "アイデア合計",
+      "avgPerRound": "ラウンドあたりの平均",
+      "rounds": "ラウンド",
+      "noConsequencesListed": "結果なし",
+      "roundProgress": "ラウンド {{current}} / {{total}}",
+      "typeAndPressAdd": "入力して追加を押す"
+    },
+    "contextualCueing": {
+      "cueingEffect": "キューイング効果",
+      "newConfigRt": "新配置RT",
+      "oldConfigRt": "旧配置RT",
+      "title": "文脈手がかり",
+      "cueing": "キューイング",
+      "oldRt": "旧RT",
+      "newRt": "新RT",
+      "prompt": "プロンプト",
+      "left": "左",
+      "right": "右"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "閾値ジッター",
+      "title": "輪郭統合",
+      "pipeJitter": "| ジッター"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "閾値コントラスト",
+      "title": "コントラスト感度",
+      "threshold": "閾値",
+      "left": "左",
+      "right": "右"
+    },
+    "cpt": {
+      "nontargets": "非ターゲット",
+      "target": "ターゲット",
+      "nonTarget": "非ターゲット",
+      "dPrime": "d'",
+      "targetsLetter": "ターゲット文字",
+      "tapForLetterOnly": "ターゲット文字のときだけタップ"
+    },
+    "crowding": {
+      "criticalSpacing": "臨界間隔",
+      "leftAccuracy": "左側正確度",
+      "rightAccuracy": "右側正確度"
+    },
+    "cryptogram": {
+      "hints": "ヒント",
+      "title": "暗号文",
+      "solved": "解決",
+      "time": "Time",
+      "puzzles": "パズル",
+      "puzzle": "パズル",
+      "hint": "ヒント",
+      "clear": "クリア"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "曲線下面積",
+      "discountRateK": "割引率 (k)",
+      "impulsivityIndex": "衝動性指数",
+      "title": "遅延割引",
+      "aucPatience": "AUC忍耐力",
+      "patient": "忍耐強い",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "無差別点",
+      "whichPrefer": "どちらを好みますか？",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "長",
+      "longDelay68s": "長い遅延（6-8秒）",
+      "med": "中",
+      "mediumDelay46s": "中遅延 (4-6秒)",
+      "short": "短",
+      "shortDelay34s": "短遅延 (3-4秒)",
+      "title": "遅延照合",
+      "delay": "遅延",
+      "rememberThisPattern": "このパターンを覚えてください",
+      "whichWasIt": "どれでしたか？"
+    },
+    "dichoticListening": {
+      "alertDetection": "アラート検出",
+      "attendToTheLeftColumn": "左の列に注目",
+      "attendedAccuracy": "注意チャネル正答率",
+      "ignoreTheRightColumn": "右の列を無視",
+      "right": "右",
+      "title": "両耳分離聴取",
+      "attendedAcc": "注意精度",
+      "alertDet": "アラート検出",
+      "alerts": "アラート",
+      "selectLeftColumnWords": "左列の単語を選択",
+      "submit": "送信",
+      "alertQuestion": "アラート質問"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "忘却精度",
+      "forgettingEffect": "忘却効果",
+      "newRejection": "新規拒否",
+      "rememberAccuracy": "記憶正答率",
+      "title": "指示忘却",
+      "remember": "覚える",
+      "forget": "忘却",
+      "round": "ラウンド",
+      "word": "単語",
+      "wasThisWordShown": "この単語は表示されましたか？"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "注意バイアススコア",
+      "congruentAcc": "一致条件正答率",
+      "congruentRt": "一致RT",
+      "incongruentAcc": "不一致条件正答率",
+      "incongruentRt": "不一致RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "車かトラックか？",
+      "minDisplayReached": "最小表示到達",
+      "positionAccuracy": "位置正答率",
+      "thresholdDisplay": "表示閾値",
+      "vehicleAccuracy": "車両正答率",
+      "whereWasTheDiamond": "ひし形はどこでしたか？",
+      "title": "ダブルデシジョン",
+      "threshold": "閾値",
+      "bothOk": "両方正解",
+      "vehicle": "車両",
+      "position": "位置",
+      "car": "車",
+      "truck": "トラック"
+    },
+    "dsst": {
+      "items": "項目",
+      "itemsCompleted": "完了アイテム",
+      "speedItemsmin": "速度（項目/分）",
+      "attempts": "試行回数",
+      "itemsPerMin": "アイテム/分"
+    },
+    "dualTask": {
+      "dualtaskCost": "二重課題コスト",
+      "taskANumber": "タスクA（数字）",
+      "taskBSymbol": "課題B（記号）",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "数字",
+      "symbol": "シンボル",
+      "up": "上",
+      "down": "下"
+    },
+    "dualTime": {
+      "sessionEnPause": "セッション一時停止中",
+      "votreEstimationSecondes": "あなたの推定（秒）",
+      "sessionInterrupted": "セッション中断",
+      "target": "ターゲット",
+      "estimation": "推定",
+      "avgTime": "平均時間",
+      "avgError": "平均誤差",
+      "trials": "Trials",
+      "resumeToContinue": "続行するには再開",
+      "aimFor": "目標:",
+      "second": "Second",
+      "howLongDidYouTake": "どれくらい時間がかかりましたか？"
+    },
+    "dualTrack": {
+      "confirmer": "確認",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "再開して続行してください。",
+      "sessionEnPause": "セッション一時停止中",
+      "tapezLesCibles": "ターゲットをタップ",
+      "tapezLaCible": "ターゲットをタップ",
+      "appuyezConfirmer": "確認を押してください",
+      "targetsCountLabel": "ターゲット {{count}} 個",
+      "distractorsCountLabel": "ディストラクター {{count}} 個",
+      "roundsCountLabel": "{{count}}ラウンド",
+      "calibrationRoundsLabel": "キャリブレーション {{count}} ラウンド",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = パス内部の難易度ティアです。",
+      "tierHelpCurrentWithPhase": "現在、ターゲット {{targets}} 個の T{{current}}/{{total}} にいます。現在のフェーズ: {{phase}}。次のターゲットレベルまで残り {{remaining}} ティアです。",
+      "phaseTracking": "トラッキング",
+      "phaseAudio": "追跡 + 音声",
+      "phaseColor": "追跡＋色",
+      "phaseCombined": "追跡 + 音声 + 色",
+      "passLetters": "文字",
+      "passColors": "色",
+      "moveInstruction": "指示を移動",
+      "moveConfirmBtn": "確認ボタンを移動",
+      "preparingSession": "セッション準備中...",
+      "preparing3dScene": "3Dシーン準備中...",
+      "startJourney": "ジャーニー開始",
+      "calibrationDescription": "最初のステージの前に、長めのキャリブレーションで開始レベルを推定します。",
+      "defaultDescription": "ボールが光ります。動きを追跡し、見分けてください。",
+      "startCalibration": "キャリブレーション開始",
+      "calibrationTitle": "キャリブレーション",
+      "estimatedStart": "推定開始",
+      "roundsAnalyzed": "分析済みラウンド",
+      "willStartAt": "開始位置",
+      "targetsCount": "ターゲット",
+      "thenProgress": "その後の進行"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "平均絶対誤差",
+      "ratio": "比率",
+      "slope": "傾き",
+      "vierordtSlope": "フィーロルト傾斜",
+      "wait": "待ってください...",
+      "title": "持続時間の再現",
+      "meanError": "平均誤差",
+      "meanRatio": "平均比率（再現/目標）",
+      "holdNow": "長押し",
+      "target": "ターゲット",
+      "error": "エラー"
+    },
+    "embeddedFigures": {
+      "fastest": "最速",
+      "found": "発見",
+      "meanDetectionTime": "平均検出時間",
+      "slowest": "最遅",
+      "title": "隠し絵",
+      "missed": "見逃し",
+      "fastestLabel": "最速",
+      "findThisShape": "この形を見つけてください",
+      "memorizeShape": "形を覚えてください…",
+      "foundIt": "見つけた！",
+      "giveUp": "ギブアップ"
+    },
+    "emotionalNback": {
+      "falseAlarms": "誤警報",
+      "misses": "見逃し",
+      "title": "感情N-back",
+      "match": "マッチ"
+    },
+    "emotionalStroop": {
+      "neutralRt": "中性RT",
+      "positiveRt": "正のRT",
+      "threatRt": "脅威RT",
+      "title": "感情的ストループ",
+      "interference": "干渉",
+      "interferenceThreatNeutral": "干渉（脅威 − 中立）"
+    },
+    "eyesTest": {
+      "totalTime": "合計時間"
+    },
+    "faceName": {
+      "gain": "ゲイン",
+      "learningImprovement": "学習向上",
+      "round1Accuracy": "ラウンド1正答率",
+      "round2Accuracy": "ラウンド2正答率",
+      "whoIsThis": "これは誰？",
+      "title": "顔-名前連合",
+      "round": "ラウンド",
+      "testPhase": "テストフェーズ"
+    },
+    "fauxPas": {
+      "who": "誰？",
+      "why": "なぜ？",
+      "title": "失言の認識",
+      "detection": "検出",
+      "scenarios": "シナリオ",
+      "fpFound": "失言を検出",
+      "control": "コントロール",
+      "readyToAnswer": "回答の準備完了",
+      "didSomeoneSay": "誰か不適切なことを言いましたか？",
+      "whoSaidIt": "誰が言いましたか？",
+      "whyInappropriate": "なぜ不適切でしたか？"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "想起正答率",
+      "recognitionAccuracy": "再認正答率",
+      "recallPlaceholder": "回答を入力してください...",
+      "unlikely": "ありそうにない",
+      "certain": "Certain",
+      "title": "既知感",
+      "recall": "再生",
+      "recognition": "再認",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "FOK感度",
+      "submit": "送信",
+      "dontKnow": "わからない",
+      "fokPrompt": "それを認識できますか？",
+      "selectCorrectAnswer": "正しい答えを選択",
+      "answer": "回答"
+    },
+    "fingerTapping": {
+      "firstTrial": "第1試行",
+      "lastTrial": "最終試行",
+      "sequence": "シーケンス",
+      "speedupT1VsT12": "加速 (T1 vs T12)",
+      "title": "指タッピング"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "平均移動時間",
+      "avgThroughput": "平均スループット",
+      "title": "フィッツタッピング",
+      "throughput": "スループット",
+      "tapTarget": "ハイライトされた標的をタップ"
+    },
+    "foreperiod": {
+      "early": "早い",
+      "slope": "傾き",
+      "title": "時間準備",
+      "fpEffectSlope": "FP効果傾斜"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "反転",
+      "threshold": "閾値",
+      "tone1": "トーン 1",
+      "tone2": "トーン 2",
+      "weber": "ウェーバー",
+      "weberFraction": "ウェーバー比",
+      "hz": "Hz",
+      "title": "周波数弁別",
+      "thresholdLabel": "閾値",
+      "hzDiff": " Hz差",
+      "whichWasHigher": "どちらが高かった？",
+      "firstHigher": "最初の方が高い",
+      "secondHigher": "2番目の方が高い"
+    },
+    "gabor": {
+      "gaborPatch": "ガボールパッチ",
+      "leftAccuracy": "左側正確度",
+      "leftTrials": "左側試行",
+      "noiseMask": "ノイズマスク",
+      "rightAccuracy": "右側正確度",
+      "rightTrials": "右側試行",
+      "thresholdAngle": "閾値角度",
+      "title": "Gabor",
+      "threshold": "閾値",
+      "reversals": "逆転回数",
+      "timedOut": "タイムアウト",
+      "left": "左",
+      "right": "右"
+    },
+    "gameOfDice": {
+      "finalPoints": "最終ポイント",
+      "risky": "リスキー",
+      "riskyChoices": "リスキーな選択",
+      "safe": "安全",
+      "winRate": "勝率",
+      "wins": "勝利",
+      "title": "サイコロ課題",
+      "totalPoints": "合計ポイント",
+      "riskyLabel": "リスキー",
+      "roll": "振る",
+      "chooseYourBet": "賭け金を選んでください",
+      "pickNumbers": "数字を選んでください"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "ギャップあり？なし？",
+      "gapThreshold": "ギャップ閾値",
+      "title": "無音検出",
+      "noGap": "ギャップなし"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "視線はどこでしたか？",
+      "direct": "Direct",
+      "left": "左",
+      "right": "右",
+      "title": "視線方向",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "パート1（開始）",
+      "part2": "パート2",
+      "part2Suppression": "パート2（抑制）",
+      "suppressionCost": "抑制コスト",
+      "title": "Hayling",
+      "part1": "パート1",
+      "part2Label": "パート2",
+      "suppression": "抑制",
+      "obvious": "明白",
+      "obviousPicksPart2": "明白な選択（パート2）",
+      "chooseUnrelated": "無関係な単語を選んでください ",
+      "completelyUnrelated": "全く無関係",
+      "doNotPickObvious": "明らかな単語を選ばないでください！"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "次のステージに進んでいます…",
+      "stageComplete": "ステージクリア！",
+      "title": "IED Set Shift",
+      "stages": "ステージ",
+      "edsCost": "EDSコスト",
+      "stage": "ステージ",
+      "correctNeeded": "進行に必要な正答数"
+    },
+    "informationSampling": {
+      "cost": "コスト",
+      "free": "無料",
+      "meanTilesCost": "平均タイル数（有料）",
+      "meanTilesFree": "平均タイル数（無料）",
+      "totalCost": "総コスト",
+      "title": "情報サンプリング",
+      "tiles": "タイル",
+      "tapToReveal": "タップして表示"
+    },
+    "inspectionTime": {
+      "final": "最終",
+      "finalDisplayTime": "最終表示時間",
+      "minCorrectIt": "最小正答IT",
+      "threshold": "閾値",
+      "title": "検査時間",
+      "thresholdLabel": "閾値",
+      "minIt": "最小IT"
+    },
+    "iowaGambling": {
+      "balance": "残高：",
+      "chooseADeck": "デッキを選んでください",
+      "deckADraws": "デッキA引き",
+      "deckBDraws": "デッキB引き",
+      "deckCDraws": "デッキC引き",
+      "deckDDraws": "デッキD引き",
+      "first40Advantageous": "最初の40回 有利選択",
+      "last40Advantageous": "最後の40回 有利選択",
+      "learn": "学習",
+      "learningIndex": "学習指数",
+      "title": "アイオワ・ギャンブリング",
+      "advantageousPct": "有利な割合",
+      "earnings": "獲得額",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "校正バイアス",
+      "meanJol": "平均JOL",
+      "nowTestYourRecall": "今から想起テスト",
+      "studyComplete": "学習完了",
+      "whatWasPairedWith": "…とペアだったのは？",
+      "title": "学習判断",
+      "recallAccuracy": "想起正答率",
+      "jolGamma": "JOL ガンマ",
+      "jolAccuracyGamma": "JOL正確度（ガンマ）",
+      "howLikelyRemember": "覚えている可能性は？",
+      "hiddenAnswer": "隠された答え"
+    },
+    "judgmentOfRecency": {
+      "close": "近い",
+      "closeGap13": "近い間隔 (1-3)",
+      "far": "遠い",
+      "farGap9": "遠い間隔 (9+)",
+      "mediumGap48": "中間の間隔 (4-8)",
+      "title": "新近性判断",
+      "medium": "中",
+      "studyPhaseMemorizeOrder": "学習フェーズ — 順番を覚えてください",
+      "whichMoreRecently": "どちらが最近表示されましたか？"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "平均RT（非単語）",
+      "meanRtWords": "平均RT（単語）",
+      "nonwordsAccuracy": "非単語正答率",
+      "wordsAccuracy": "単語正確度",
+      "word": "単語",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "所要時間",
+      "optimalSteps": "最適歩数",
+      "pathEfficiency": "経路効率",
+      "totalSteps": "合計歩数",
+      "wallHits": "壁衝突",
+      "title": "Maze",
+      "completed": "完了",
+      "efficiency": "効率",
+      "wallHitsLabel": "壁衝突",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "簡単",
+      "easy2Boxes": "簡単（2箱）",
+      "hard": "難しい",
+      "hard4Boxes": "難しい（4箱）",
+      "medium3Boxes": "普通（3箱）",
+      "title": "Memobox",
+      "rounds": "ラウンド",
+      "medium": "中",
+      "watchMovements": "動きを見てください…",
+      "howManyBalls": "各箱にいくつのボール？",
+      "submit": "送信",
+      "roundOf": "ラウンド {{current}} / {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "断面はどれですか？",
+      "title": "メンタルカッティング"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "古い？似ている？新しい？",
+      "patternSeparation": "パターン分離",
+      "sep": "分離",
+      "old": "旧",
+      "similar": "類似",
+      "new": "新規",
+      "ldi": "LDI",
+      "title": "記憶弁別",
+      "hitRateOldDetected": "ヒット率（古い検出）",
+      "lureDiscrimination": "ルア弁別（LDI）",
+      "memorize": "記憶する",
+      "testPhase": "テストフェーズ"
+    },
+    "multiArmedBandit": {
+      "earnings": "獲得：",
+      "pickMachine": "マシンを選んでください",
+      "title": "多腕バンディット",
+      "totalReward": "合計報酬",
+      "optimal": "最適",
+      "regret": "後悔",
+      "exploit": "活用",
+      "machine": "マシン",
+      "armsExplored": "探索したアーム"
+    },
+    "navon": {
+      "globalBigLetter": "全体（大きい文字）",
+      "localSmallLetter": "局所（小さい文字）",
+      "title": "ナヴォン",
+      "globalAdv": "全体優位性",
+      "whatBigLetter": "大きな文字は？",
+      "whatSmallLetter": "小さな文字は？"
+    },
+    "negativePriming": {
+      "controlRt": "統制RT",
+      "nameTheRedShape": "赤い図形の名前は？",
+      "negativePrimingRt": "ネガティブプライミングRT",
+      "positivePrimingRt": "ポジティブプライミングRT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP効果",
+      "title": "ネガティブプライミング",
+      "ctrlRt": "統制RT"
+    },
+    "numberLine": {
+      "estimationBias": "推定バイアス",
+      "linearityRsup2": "線形性 (R²)",
+      "meanAbsoluteError": "平均絶対誤差",
+      "tapTheLineToPlaceTheNumber": "ラインをタップして数字を配置",
+      "title": "数直線",
+      "meanError": "平均誤差",
+      "yourEstimate": "あなたの推定",
+      "correct": "正解"
+    },
+    "oddOneOut": {
+      "colorTrials": "色試行",
+      "shapeTrials": "形試行",
+      "shape": "形状",
+      "color": "色",
+      "timeout": "タイムアウト",
+      "shapeDiffAccuracy": "形状差分正答率",
+      "colorDiffAccuracy": "色差精度",
+      "shapeDiffAvgRt": "形状差分平均RT",
+      "colorDiffAvgRt": "色差平均RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "どちらの方向？",
+      "thresholdAngle": "閾値角度",
+      "title": "方向の識別",
+      "threshold": "閾値",
+      "counterCw": "反時計回り",
+      "clockwise": "時計回り"
+    },
+    "patternComparison": {
+      "differentTrials": "異なる試行",
+      "sameTrials": "同一試行",
+      "same": "同じ",
+      "different": "異なる"
+    },
+    "patternRecognition": {
+      "newPatterns": "新パターン",
+      "oldPatterns": "旧パターン",
+      "old": "旧",
+      "new": "新規",
+      "studyPatterns": "パターンを注意深く観察してください",
+      "memorize": "記憶 ({{current}}/{{total}})",
+      "getReady": "準備して...",
+      "testPhaseStarting": "テストフェーズ開始..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "完全正答",
+      "meanAngularError": "平均角度誤差",
+      "withinTolerance": "許容範囲内",
+      "title": "視点取得",
+      "avgErr": "平均誤差",
+      "youAreAt": "あなたの位置: ",
+      "facing": "Facing",
+      "pointTo": "指し示してください "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "周波数閾値",
+      "seq1": "シーケンス 1",
+      "seq2": "シーケンス 2",
+      "title": "音素弁別",
+      "thresh": "Thresh",
+      "sameOrDifferent": "同じか違うか？",
+      "same": "同じ",
+      "different": "違う"
+    },
+    "predictionMotion": {
+      "biasLate": "バイアス（+ = 遅い）",
+      "meanAbsoluteError": "平均絶対誤差",
+      "precisionSd": "精度（SD）",
+      "title": "運動予測",
+      "absError": "絶対誤差",
+      "precision": "精度",
+      "responded": "応答済み",
+      "tapWhenReachesTarget": "ターゲットに達したらタップ"
+    },
+    "promem": {
+      "ongoingAccuracy": "進行中タスク正答率",
+      "ongoingRt": "進行中RT",
+      "pmHitRate": "PMヒット率",
+      "pmRt": "PM RT",
+      "pmTargets": "PMターゲット",
+      "title": "展望記憶",
+      "ongoing": "進行中",
+      "pmHits": "PMヒット",
+      "pmMisses": "PMミス",
+      "living": "Living",
+      "nonLiving": "非生物",
+      "redWordInstruction": "赤い単語 = 押す"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "ディストラクタエラー",
+      "literalErrorRate": "逐語的エラー率",
+      "literalErrors": "逐語的エラー",
+      "title": "ことわざ解釈",
+      "literal": "文字通り",
+      "litRate": "字義率",
+      "whatDoesThisMean": "これはどういう意味ですか？"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "追跡の準備をしてください",
+      "meanTimeOnTarget": "平均ターゲット上時間",
+      "meanTrackingError": "平均追跡誤差",
+      "placeYourFingerOnTheScreen": "画面に指を置いてください",
+      "title": "視覚追跡",
+      "timeOnTarget": "ターゲット上の時間",
+      "error": "エラー",
+      "onTarget": "ターゲット上",
+      "avgError": "平均誤差",
+      "improve": "Improve",
+      "improvementT1VsT": "改善 T1 対 T",
+      "errorLabel": "エラー",
+      "followGreenTarget": "緑の標的を追ってください"
+    },
+    "rapidNaming": {
+      "roundComplete": "ラウンド完了",
+      "totalErrors": "合計エラー",
+      "title": "高速命名課題",
+      "avgSpeed": "平均速度",
+      "totalTime": "合計時間",
+      "round": "ラウンド",
+      "getReady": "準備して！"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "平均解答時間",
+      "solved": "解答済み",
+      "wrong": "不正解",
+      "placeholder": "あなたの回答...",
+      "title": "判じ絵",
+      "puzzles": "パズル",
+      "timeout": "タイムアウト",
+      "submit": "送信",
+      "answer": "回答"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "平均解答時間",
+      "solved": "解答済み",
+      "placeholder": "あなたの回答...",
+      "title": "遠隔連想課題",
+      "timeout": "タイムアウト",
+      "submit": "送信",
+      "answer": "回答"
+    },
+    "reversalLearning": {
+      "adapt": "適応",
+      "loseshiftRate": "敗北後切替率",
+      "score": "スコア：",
+      "winstayRate": "勝ち-継続率",
+      "title": "逆転学習",
+      "rewards": "報酬",
+      "reversals": "逆転回数",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "基準までの平均試行",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7ずつ逆算してください",
+      "reproduceThePatternFromMemory": "記憶から図形を再現してください",
+      "title": "レイ図形",
+      "copy": "コピー",
+      "recall": "再生",
+      "retention": "保持",
+      "trial": "試行",
+      "target": "ターゲット",
+      "yourCopy": "あなたの写し",
+      "submit": "送信"
+    },
+    "rhythm": {
+      "avgTimingError": "平均タイミング誤差",
+      "bestTrialError": "最良試行誤差",
+      "correctTrials": "正答試行数",
+      "worstTrialError": "最悪試行誤差",
+      "watchRhythm": "リズムを観察",
+      "getReady": "準備...",
+      "tapTheRhythm": "リズムを再現！",
+      "tooFarOff": "不正確すぎます！",
+      "tapToReproduce": "タップして再現",
+      "beats": "{{count}}拍子",
+      "bestTrial": "最良の試行",
+      "worstTrial": "最悪の試行",
+      "title": "Rhythm",
+      "msErr": "msエラー"
+    },
+    "routePlanning": {
+      "time": "時間",
+      "title": "ルートプランニング",
+      "levels": "レベル",
+      "completed": "完了",
+      "avgMoves": "平均手数",
+      "clear": "クリア",
+      "submit": "送信",
+      "instructions": "説明"
+    },
+    "rvp": {
+      "detect357246468": "検出：3-5-7、2-4-6、4-6-8",
+      "targetSequences": "ターゲットシーケンス",
+      "fa": "FA",
+      "hitRate": "ヒット率",
+      "misses": "Misses",
+      "sequences": "シーケンス"
+    },
+    "sart": {
+      "commissionErrors": "遂行エラー",
+      "omissionErrors": "省略エラー",
+      "tapAllDigits": "3以外のすべての数字をタップ",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "追加",
+      "studyTheScene": "シーンを観察",
+      "swaps": "入替",
+      "tapTheNewchangedObject": "新しい/変わったオブジェクトをタップ"
+    },
+    "sentenceVerification": {
+      "falseSentences": "誤文",
+      "trueSentences": "真の文",
+      "byCategory": "カテゴリ別",
+      "title": "文検証",
+      "trueRt": "真RT",
+      "true": "True",
+      "false": "False",
+      "pressKey": "押してください "
+    },
+    "soundSweeps": {
+      "down": "下降",
+      "downAccuracy": "下降正確度",
+      "durationThreshold": "持続時間閾値",
+      "up": "上",
+      "upAccuracy": "上昇スイープ正確度",
+      "title": "サウンドスイープ",
+      "threshold": "閾値",
+      "upOrDown": "上か下か？"
+    },
+    "sourceMemory": {
+      "color": "色",
+      "colorRecall": "色の想起",
+      "frame": "フレーム",
+      "frameRecall": "フレームの想起",
+      "getReadyForTheTest": "テストの準備をしてください！",
+      "itemRecognition": "項目再認",
+      "positionRecall": "位置想起",
+      "sourceAccuracy": "ソース正答率",
+      "title": "ソース記憶",
+      "source": "ソース",
+      "position": "位置",
+      "word": "単語",
+      "wasThisWordShown": "この単語は表示されましたか？",
+      "bottom": "下",
+      "blue": "青",
+      "orange": "オレンジ",
+      "circle": "丸",
+      "square": "四角"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "ノイズ閾値",
+      "title": "騒音中の音声",
+      "noise": "ノイズ",
+      "whichWordWasIt": "どの単語でしたか？"
+    },
+    "srtt": {
+      "learningEffect": "学習効果",
+      "learning": "学習",
+      "block": "ブロック"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "チャンスレベル",
+      "learningDetected": "学習検出",
+      "testPhase": "テストフェーズ",
+      "whichPairLooksMoreFamiliar": "どちらのペアがより見覚えがありますか？",
+      "title": "統計学習",
+      "learning": "学習",
+      "watchTheShapes": "図形を見てください"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "信念バイアス効果",
+      "conclusion": "結論",
+      "premise1": "前提 1",
+      "premise2": "前提 2",
+      "logicalValidityQuestion": "これは論理的に妥当ですか？",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "不在時正答率",
+      "presentAccuracy": "存在時正答率",
+      "title": "記号探索",
+      "present": "存在",
+      "absent": "不在",
+      "targets": "Targets",
+      "searchGroup": "検索グループ"
+    },
+    "syncContinuation": {
+      "async": "非同期",
+      "asynchrony": "非同期性",
+      "drift": "ドリフト",
+      "cv": "CV",
+      "title": "同期-継続",
+      "meanCv": "平均CV",
+      "tempos": "テンポ",
+      "tempo": "テンポ",
+      "ioi": "Ioi",
+      "getReady": "準備して…",
+      "nextTempo": "次のテンポ…"
+    },
+    "taskJuggling": {
+      "correctResets": "正しいリセット",
+      "duration": "所要時間",
+      "missedCounters": "見逃したカウンター",
+      "prematureResets": "早すぎるリセット",
+      "totalEvents": "合計イベント",
+      "tooEarly": "早すぎます！",
+      "missed": "ミス！",
+      "title": "タスクジャグリング課題",
+      "premature": "早まった",
+      "counter": "カウンター",
+      "tapCounterInstruction": "しきい値に達したら各カウンターをタップ。オーバーフローさせないで！"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "二等分点（PSE）",
+      "curveSteepness": "曲線の急峻さ",
+      "idealMidpoint": "理想的な中間点",
+      "pse": "PSE",
+      "title": "時間二分法",
+      "steepness": "急峻度",
+      "shortOrLong": "短い？長い？",
+      "trainingPhase": "トレーニングフェーズ",
+      "short": "短い",
+      "long": "長い"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "勾配幅",
+      "rememberThisDuration": "この長さを覚えてください",
+      "width": "幅",
+      "standard": "STANDARD",
+      "title": "時間汎化",
+      "hitRate": "ヒット率",
+      "faRate": "FA率",
+      "hitRateDetectStandard": "ヒット率（標準検出）",
+      "sameDuration": "同じ長さ？",
+      "trainingPhase": "トレーニングフェーズ",
+      "same": "同じ",
+      "different": "違う"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "SOA閾値",
+      "title": "テクスチャ弁別",
+      "threshold": "閾値"
+    },
+    "timePromem": {
+      "avgTimingError": "平均タイミング誤差",
+      "clockChecks": "時計確認",
+      "ongoingAccuracy": "進行中タスク正答率",
+      "ongoingTrials": "進行中試行",
+      "totalPmPresses": "展望的記憶の総押下数",
+      "pmAccuracy": "PM正確度",
+      "pmMisses": "PMミス",
+      "title": "時間的展望記憶",
+      "ongoing": "進行中",
+      "pmHitsLabel": "展望的記憶ヒット",
+      "timingErr": "タイミングエラー",
+      "pmHitsExpected": "PMヒット / 期待数",
+      "pmPresses": "PM押下",
+      "checkClock": "時計を確認",
+      "thirtySecMark": "30秒マーク"
+    },
+    "toj": {
+      "meanResponseTime": "平均反応時間",
+      "temporalResolution": "時間分解能",
+      "title": "時間順序判断",
+      "threshold": "閾値",
+      "whichCameFirst": "どちらが先でしたか？",
+      "leftFirst": "左が先",
+      "rightFirst": "右が先"
+    },
+    "tower": {
+      "budget": "バジェット",
+      "challenge": "チャレンジ",
+      "challengeClassic": "クラシック",
+      "challengeExpert": "エキスパート",
+      "challengeMemory": "メモリー",
+      "challengePrecision": "プレシジョン",
+      "dragDiscAriaLabel": "棒{{peg}}の一番上のディスクをドラッグ",
+      "goal": "目標",
+      "goalHiddenStatus": "目標が隠されています。「表示」で一時的に確認できます。",
+      "goalRevealedMessage": "目標が3秒間表示されました。",
+      "hint": "ヒント",
+      "hintDescription": "最善の次の手を表示",
+      "hintMessage": "ヒント：ペグ {{fromPeg}} の一番上のディスクをペグ {{toPeg}} に移動。",
+      "hiddenGoalDescription": "ゲーム中は目標が隠されています。短い確認が必要な場合は「表示」を使ってください。",
+      "hiddenGoalTitle": "メモリーチャレンジ",
+      "invalid": "無効",
+      "moves": "手数",
+      "optimal": "最適",
+      "pegFullMessage": "この棒はいっぱいです。",
+      "previewMemoryCountdown": "目標を覚えてください。{{seconds}}秒後に開始。",
+      "previewPlanCountdown": "{{moves}}手で解法を計画してください。{{seconds}}秒後に開始します。",
+      "reset": "リセット",
+      "resetDescription": "このパズルをリセット",
+      "resetMessage": "パズルをリセットしました。",
+      "reveal": "表示",
+      "revealDescription": "隠された目標を表示",
+      "statusOptimalSolve": "最適解。スコア {{score}}。",
+      "statusSolvedScore": "{{moves}}手で解決 (+{{extraMoves}})。スコア {{score}}。",
+      "undo": "元に戻す",
+      "undoDescription": "最後の手を元に戻す",
+      "undoneMessage": "最後の手を取り消しました。",
+      "yourPegs": "あなたのペグ"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "正しい配達",
+      "trainsLost": "失った列車",
+      "wrongStation": "間違った駅",
+      "title": "思考の連鎖課題",
+      "trains": "列車",
+      "missed": "見逃し",
+      "scoreLabel": "スコア",
+      "instructions": "説明"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "平均使用質問数",
+      "title": "20の質問",
+      "avgQuestions": "平均質問数",
+      "rounds": "ラウンド",
+      "efficiency": "効率",
+      "avgQuestionsCorrectOnly": "平均質問数（正解のみ）",
+      "questionsLabel": "質問",
+      "remaining": "残り",
+      "readyToGuess": "推測の準備完了！",
+      "tapTheTarget": "ターゲットだと思うオブジェクトをタップ！"
+    },
+    "ufov": {
+      "usefulFieldOfView": "有効視野",
+      "visualNoiseMask": "視覚ノイズマスク",
+      "whatWasInTheCenter": "中央に何がありましたか？",
+      "whereWasTheTarget": "ターゲットはどこでしたか？",
+      "avgThreshold": "平均閾値",
+      "speed": "速度",
+      "accuracy": "正確度",
+      "central": "中央",
+      "peripheral": "周辺",
+      "overall": "全体",
+      "block": "ブロック",
+      "trials": "Trials",
+      "start": "開始",
+      "focus": "フォーカス",
+      "threshold": "閾値",
+      "stimulus": "刺激",
+      "respondFromMemory": "記憶から回答",
+      "truck": "トラック",
+      "choosePeripheralLocation": "周辺位置を選択",
+      "currentBlock": "ブロック {{n}}",
+      "exposure": "露出"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} で始まる単語",
+      "title": "言語流暢性",
+      "totalWords": "合計単語数",
+      "duplicates": "重複",
+      "letter": "文字",
+      "round": "ラウンド",
+      "roundComplete": "ラウンド完了",
+      "nextRound": "次のラウンド",
+      "middotRound": " · ラウンド"
+    },
+    "vernierAcuity": {
+      "whichSide": "どちら側？",
+      "title": "バーニア視力",
+      "leftOffset": "左オフセット",
+      "rightOffset": "右オフセット",
+      "offset": "オフセット"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "最適戦略",
+      "correct": "正解！",
+      "wrong": "不正解",
+      "title": "天気予測",
+      "optimal": "最適",
+      "learningCurve": "学習曲線",
+      "predictTheWeather": "天気を予測",
+      "rain": "雨"
+    },
+    "wordChain": {
+      "avgResponseTime": "平均応答時間",
+      "chain": "チェーン",
+      "longestChain": "最長チェーン",
+      "totalCorrect": "合計正答",
+      "totalWords": "合計単語",
+      "words": "単語",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "平均RT",
+      "endsWith": "で終わる ",
+      "chainLabel": "チェーン",
+      "bestLabel": "最高"
+    },
+    "wordFlow": {
+      "avgWordLength": "平均単語長",
+      "correct": "正解",
+      "invalidWords": "無効な単語",
+      "totalWordsSelected": "選択単語合計",
+      "validWords": "有効な単語",
+      "wordsPerMinute": "1分あたりの単語数",
+      "wrong": "不正解",
+      "seeResults": "結果を見る",
+      "nextRound": "次のラウンド ({{current}}/{{total}})",
+      "title": "言語流暢性",
+      "validWordsLabel": "有効な単語",
+      "wordsPerMinLabel": "語/分",
+      "avgLengthLabel": "平均長さ",
+      "invalidLabel": "無効",
+      "round": "ラウンド",
+      "selectWordsBelongTo": "…に属する単語を選択",
+      "selected": "選択済み"
+    },
+    "wordList": {
+      "avgRtCorrect": "平均RT（正解）",
+      "primacyEffect": "初頭効果",
+      "recencyEffect": "新近効果",
+      "studyPhaseRememberEachWord": "学習フェーズ — 各単語を覚えてください",
+      "wordsRecalled": "想起した単語",
+      "title": "Word List",
+      "serialPositionCurve": "系列位置曲線",
+      "wasWordInList": "この単語はリストにありましたか？",
+      "seenBefore": "見たことがある",
+      "newWord": "新規"
+    },
+    "speedSort": {
+      "switchAccuracy": "切替正確率",
+      "switchTrials": "切替試行",
+      "sortByColor": "色で分類",
+      "sortByShape": "形でソート",
+      "sortByNumber": "数で分類",
+      "ruleChanged": "ルール変更！",
+      "binRed": "赤",
+      "binBlue": "青",
+      "binGreen": "緑",
+      "binYellow": "黄",
+      "binCircle": "丸",
+      "binSquare": "四角",
+      "binTriangle": "三角",
+      "binStar": "星",
+      "title": "スピードソート",
+      "switch": "切替"
+    },
+    "reflex": {
+      "target": "ターゲット",
+      "lure": "ルアー",
+      "tooSlow": "遅すぎます！",
+      "wrongTarget": "間違ったターゲット！",
+      "tapTargets": "緑の丸をタップしてください！",
+      "hits": "ヒット",
+      "misses": "ミス",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "累計を覚えておいてください...",
+      "title": "連鎖計算",
+      "stepChains": "{{len}}ステップチェーン",
+      "start": "開始",
+      "step": "ステップ",
+      "whatIsTheResult": "結果は？"
+    },
+    "alternateUses": {
+      "placeholder": "使い方を入力...",
+      "title": "代替用途",
+      "totalUses": "合計用途数",
+      "perObject": "物体ごと",
+      "rounds": "ラウンド",
+      "bestObject": "最良の物体",
+      "bestCount": "最高数",
+      "noUsesSubmitted": "用途が提出されていません",
+      "timesUp": "時間切れ！",
+      "nextObject": "次のオブジェクト（{{object}}）",
+      "listCreativeUses": "このオブジェクトの創造的な用途を挙げてください"
+    },
+    "anagram": {
+      "placeholder": "単語を入力...",
+      "title": "アナグラム",
+      "avgSolve": "平均解答",
+      "letterWords": "{{len}}文字の単語",
+      "submit": "送信"
+    },
+    "facialEmotion": {
+      "happy": "喜び",
+      "sad": "悲しみ",
+      "angry": "怒り",
+      "fearful": "恐怖",
+      "disgusted": "嫌悪",
+      "surprised": "驚き",
+      "lc": "LC",
+      "title": "表情認知",
+      "topConfusions": "主な混同"
+    },
+    "numberSeries": {
+      "easy": "簡単",
+      "hard": "難しい"
+    },
+    "chainRecall": {
+      "round": "ラウンド",
+      "title": "チェーンリコール",
+      "chain": "チェーン",
+      "placeholder": "プレースホルダー"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "感情的Go/No-Go課題",
+      "block1CommissionErrors": "ブロック1コミッションエラー",
+      "block2CommissionErrors": "ブロック2コミッションエラー",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "ブロック",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "ストループ効果",
+      "title": "カラーラッシュ",
+      "congShort": "一致",
+      "incongShort": "不一致",
+      "congruentAccuracy": "一致精度",
+      "incongruentAccuracy": "不一致条件正答率"
+    },
+    "mirror": {
+      "avgCorrectCells": "平均正解セル数",
+      "symmetryType": "対称タイプ",
+      "title": "ミラー"
+    },
+    "rhythmTap": {
+      "correctTrials": "正答試行数",
+      "avgRhythmScore": "平均リズムスコア",
+      "bestTrialScore": "最高試行スコア",
+      "worstTrialScore": "最低試行スコア",
+      "level": "レベル",
+      "rhythm": "リズム",
+      "bestTrial": "最高試行",
+      "worstTrial": "最低試行"
+    },
+    "vocalProsody": {
+      "questioning": "疑問"
+    },
+    "arithmeticSpeed": {
+      "multiply": "掛ける",
+      "add": "足す",
+      "subtract": "引く",
+      "title": "高速計算",
+      "score": "スコア",
+      "solved": "解決",
+      "missed": "見逃し"
+    },
+    "puzzle": {
+      "avgSolveTime": "平均解答時間",
+      "totalMoves": "総手数",
+      "totalErrors": "合計エラー",
+      "gridSize": "グリッドサイズ",
+      "maxGridReached": "最大グリッド到達",
+      "maxLevelReached": "最大レベル到達",
+      "maxNodesReached": "最大ノード到達",
+      "puzzleDetails": "パズル詳細",
+      "roundDetails": "ラウンド詳細",
+      "solved": "解決！",
+      "undo": "元に戻す",
+      "reset": "リセット",
+      "check": "チェック",
+      "moves": "手数",
+      "time": "時間",
+      "level": "レベル",
+      "errors": "エラー",
+      "score": "Score",
+      "grid": "グリッド",
+      "crossings": "交差",
+      "pearls": "パール",
+      "clues": "手がかり",
+      "region": "領域",
+      "filled": "塗りつぶし",
+      "cells": "セル",
+      "undosLeft": "残り取り消し回数",
+      "gems": "宝石",
+      "connected": "接続済",
+      "slides": "スライド",
+      "progress": "進捗",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "解明",
+      "colored": "カラー",
+      "violations": "Violations",
+      "blacked": "黒塗り",
+      "empty": "空",
+      "remaining": "残り",
+      "pairs": "ペア",
+      "flips": "フリップ",
+      "found": "発見",
+      "balls": "ボール",
+      "guesses": "推測",
+      "original": "Original",
+      "findDifferences": "違いを見つけてください",
+      "totalDrags": "総ドラッグ回数",
+      "totalUndos": "合計取り消し",
+      "totalEdgesDrawn": "描いた辺の合計",
+      "totalLasers": "合計レーザー",
+      "totalSlides": "スライド回数",
+      "totalRotations": "合計回転",
+      "totalRectangles": "合計長方形",
+      "totalScore": "合計スコア",
+      "avgTime": "平均時間",
+      "cellsCleared": "セルクリア",
+      "totalDiffsFound": "発見した違いの合計",
+      "gemsCollected": "宝石獲得",
+      "pushBoxesOntoTargets": "すべての箱をターゲットの上に押しましょう",
+      "fireLasersMarkBalls": "端からレーザーを発射し、ボールの位置をマークしてください",
+      "revealingAnswer": "答えを表示中...",
+      "checkAnswer": "答えを確認",
+      "pickNumberBelow": "下から数字を選んでください",
+      "tapCellToAssign": "セルをタップして数字を割り当てます",
+      "tapEdgesToPlaceWalls": "端をタップして壁を配置。K個の領域に分割してください。",
+      "ghosts": "ゴースト",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "ドミノ",
+      "islands": "島",
+      "pegsLeft": "残りペグ",
+      "bestRemaining": "最善の残り手",
+      "puzzlesSolved": "パズル解決",
+      "flooded": "浸水",
+      "edges": "辺",
+      "totalPlacements": "合計配置",
+      "totalRemovals": "合計除去",
+      "maxTileReached": "最大タイル到達",
+      "target": "ターゲット",
+      "placed": "配置",
+      "totalGuesses": "総推測回数",
+      "guessesLeft": "残り推測",
+      "difficulty": "難易度"
+    },
+    "palisade": {
+      "title": "パリセード",
+      "puzzles": "パズル",
+      "maxLevel": "最高レベル"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "errors": "エラー",
+      "avgTime": "平均時間",
+      "erase": "消去"
+    },
+    "blackbox": {
+      "title": "ブラックボックス",
+      "puzzles": "パズル",
+      "lasers": "レーザー",
+      "avgTime": "平均時間"
+    },
+    "designFluency": {
+      "title": "デザイン流暢性",
+      "uniqueDesigns": "ユニークなデザイン",
+      "duplicates": "重複",
+      "round": "ラウンド",
+      "roundComplete": "ラウンド完了",
+      "youCreatedDesigns": "{{count}}個のデザインを作成しました",
+      "startRound": "ラウンド開始",
+      "instructions": "説明",
+      "designs": "デザイン",
+      "clear": "クリア",
+      "addDesign": "追加"
+    },
+    "signpost": {
+      "title": "標識",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "avgTime": "平均時間",
+      "maxGrid": "最大グリッド"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "レベル",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "undos": "取消",
+      "puzzle": "パズル"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "生物学的運動",
+      "noiseDots": "ノイズドット",
+      "whichDirection": "どの方向？",
+      "left": "左",
+      "right": "右"
+    },
+    "inertia": {
+      "title": "慣性",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "gems": "宝石",
+      "moves": "手数"
+    },
+    "waterLevel": {
+      "title": "水位",
+      "error": "エラー",
+      "tilt": "傾き",
+      "waterLine": "水面はどこ？"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxGrid": "最大グリッド"
+    },
+    "sudoku": {
+      "title": "数独",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "errors": "エラー",
+      "avgTime": "平均時間",
+      "erase": "消去"
+    },
+    "rectangles": {
+      "title": "長方形",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "rectanglesCount": "長方形",
+      "maxGrid": "最大グリッド",
+      "cancelSelection": "選択をキャンセル"
+    },
+    "filling": {
+      "title": "充填",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "avgTime": "平均時間",
+      "grid": "グリッド"
+    },
+    "spacedRetrieval": {
+      "title": "間隔想起",
+      "studyPair": "このペアを覚えてください",
+      "waitAndSolve": "待って…それから解答",
+      "equalsQuestion": "= ？",
+      "intervalWhatPairs": "インターバル：どのペア？"
+    },
+    "prototypeDistortion": {
+      "title": "プロトタイプ歪み",
+      "studyPhase": "学習フェーズ",
+      "testPhase": "テストフェーズ",
+      "yesBelongs": "はい — 所属",
+      "noRandom": "いいえ — ランダム"
+    },
+    "motionCoherence": {
+      "title": "運動コヒーレンス",
+      "threshold": "閾値",
+      "coherence": "コヒーレンス",
+      "whichDirection": "どの方向？"
+    },
+    "cube": {
+      "title": "キューブ",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxLevel": "最高レベル",
+      "cubeFaces": "キューブの面",
+      "moveUp": "上",
+      "moveLeft": "左",
+      "moveDown": "下",
+      "moveRight": "右"
+    },
+    "sameGame": {
+      "title": "セイムゲーム",
+      "score": "スコア",
+      "cleared": "クリア済み",
+      "cells": "セル",
+      "accuracy": "正確度"
+    },
+    "crossModalMatching": {
+      "title": "クロスモーダルマッチング",
+      "chance": "偶然",
+      "whichPatternMatchesRhythm": "どのパターンがリズムに合いますか？"
+    },
+    "mosaic": {
+      "title": "モザイク",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxGrid": "最大グリッド"
+    },
+    "spotDiff": {
+      "title": "間違い探し",
+      "level": "レベル",
+      "grid": "グリッド",
+      "accuracy": "正確度",
+      "perfect": "完璧",
+      "avgTime": "平均時間",
+      "found": "発見"
+    },
+    "lightsOut": {
+      "title": "ライツアウト",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxGrid": "最大グリッド"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "rotations": "回転数",
+      "avgTime": "平均時間"
+    },
+    "tracks": {
+      "title": "レール",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "errors": "エラー",
+      "avgTime": "平均時間"
+    },
+    "netslide": {
+      "title": "ネットスライド",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "slides": "スライド",
+      "maxGrid": "最大グリッド"
+    },
+    "cognitiveBias": {
+      "title": "認知バイアストレーニング",
+      "biasResistance": "バイアス耐性",
+      "biased": "バイアスあり",
+      "continue": "続ける"
+    },
+    "empathicAccuracy": {
+      "title": "共感的正確性",
+      "emotionId": "感情",
+      "avgRatingError": "平均評定誤差",
+      "scenarios": "シナリオ",
+      "perfect": "完璧",
+      "rating": "評価",
+      "howDoesCharacterFeel": "キャラクターはどう感じていますか？",
+      "rateIntensity": "強度を評価",
+      "whatEmotion": "どんな感情？",
+      "yourRating": "あなたの評価",
+      "correct": "正解",
+      "emotion": "感情"
+    },
+    "guess": {
+      "title": "マスターマインド",
+      "solved": "解決",
+      "guesses": "推測"
+    },
+    "dominosa": {
+      "title": "ドミノサ",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxLevel": "最高レベル"
+    },
+    "magnets": {
+      "title": "マグネット",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxLevel": "最高レベル"
+    },
+    "tangram": {
+      "placeAll": "すべてのピースを配置してください",
+      "solved": "解決！",
+      "notRight": "まだ正しくありません",
+      "title": "Tangram",
+      "level": "レベル",
+      "puzzles": "パズル",
+      "placements": "配置",
+      "removals": "除去",
+      "puzzleNumber": "パズル {{n}}",
+      "pieces": "ピース",
+      "targetCells": "Cible",
+      "dragHint": "ピースをグリッドにドラッグまたは配置",
+      "selectHint": "ピースを選択",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "確認"
+    },
+    "galaxies": {
+      "title": "ギャラクシー"
+    },
+    "flood": {
+      "title": "フラッド"
+    },
+    "pegs": {
+      "title": "ソリティア",
+      "bestPegs": "最高ペグ"
+    },
+    "auditoryFigureGround": {
+      "title": "聴覚的図と地の分離",
+      "patternPresent": "パターンあり？",
+      "pattern": "パターン",
+      "noPattern": "パターンなし"
+    },
+    "selfOrderedPointing": {
+      "title": "セルフオーダード・ポインティング",
+      "maxSpan": "最大スパン",
+      "errors": "エラー",
+      "round": "ラウンド",
+      "setOf": "{{count}}個のセット"
+    },
+    "mirrorTracing": {
+      "title": "鏡像トレース",
+      "totalErrors": "合計エラー",
+      "avgTime": "平均時間",
+      "shapes": "形",
+      "perfect": "完璧",
+      "improvement": "改善",
+      "errorsMiddot": "エラー ·",
+      "shape": "形",
+      "errors": "エラー",
+      "xIsMirrored": "Xが反転しています！"
+    },
+    "clockDrawing": {
+      "title": "時計描画",
+      "avgError": "平均誤差",
+      "setTo": "設定: ",
+      "submit": "送信"
+    },
+    "cognitiveMap": {
+      "title": "認知地図",
+      "explore": "探索",
+      "sRemaining": "S Remaining",
+      "from": "から",
+      "whichDirectionIs": "どの方向にありますか "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "ループ"
+    },
+    "lightup": {
+      "title": "あかり"
+    },
+    "twentyFortyEight": {
+      "maxTile": "最大タイル",
+      "moves": "手数",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "橋",
+      "puzzles": "パズル",
+      "maxLevel": "最高レベル",
+      "level": "レベル"
+    },
+    "net": {
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxGrid": "最大グリッド"
+    },
+    "flip": {
+      "title": "フリップ"
+    },
+    "range": {
+      "title": "レンジ"
+    },
+    "slant": {
+      "title": "スラント"
+    },
+    "towers": {
+      "title": "タワー",
+      "puzzles": "パズル",
+      "avgTime": "平均時間",
+      "erase": "消去"
+    },
+    "pearl": {
+      "title": "パール",
+      "edges": "エッジ"
+    },
+    "mapColoring": {
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "moves": "手数",
+      "maxLevel": "最高レベル"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "アンデッド",
+      "accuracy": "正確度",
+      "puzzles": "パズル",
+      "avgTime": "平均時間"
+    },
+    "untangle": {
+      "title": "ほどく",
+      "drags": "ドラッグ",
+      "maxNodes": "最大ノード"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "15パズル"
+    },
+    "tents": {
+      "title": "テント"
+    },
+    "mesker": {
+      "pen": "ペン",
+      "stroke": "ストローク",
+      "penPressureHint": "一定のペン圧で書いてください"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "N-back位置にスワイプしてください。同じ位置なら二度タップ。",
+    "hint": {
+      "validated": "確認済み",
+      "draw": "文字を描いてください • タップして確認",
+      "drawWithColor": "文字を描いてください • 色を選択 • タップして確認",
+      "type": "文字を入力 • Enterで確認",
+      "typeWithColor": "文字を入力 • 色を選択 • Enterで確認",
+      "typeResult": "結果を入力 • Enterで確認",
+      "writeResult": "結果を書いてください • タップして確認"
+    },
+    "keyboard": {
+      "letterInput": "文字",
+      "numberInput": "数字"
+    },
+    "arithmetic": {
+      "cueHint": "2つの数字を覚えてください",
+      "refresh": "新規"
+    },
+    "hintPosition": "刺激は{{n}}ターン前にどこにありましたか？",
+    "hintN0": "現在の刺激を示してください",
+    "warmupHint": "位置を覚えてください。回答は不要です。",
+    "hintDraw": "文字を描いてください • タップして確認",
+    "hintDrawWithColor": "文字を描いてください • 色を選択 • タップして確認",
+    "hintWriteResult": "結果を書いてください • タップして確認",
+    "guide": {
+      "swipeNormal": "最後のマスから N-{{n}} にスワイプ。同じ位置ならダブルタップ。",
+      "swipeSequential": "N-0 から N-{{n}} へ一歩ずつスワイプ。同じ位置ならダブルタップ。",
+      "swipeDynamic": "表示されたルールに従ってスワイプ。同じ位置ならダブルタップ。",
+      "tapN0": "現在の位置をタップしてください。",
+      "warmup": "位置を覚えてください — 回答は不要です。",
+      "writeDraw": "{{n}} ステップ前に聞いた文字を描いてください • タップで確定",
+      "writeDrawColor": "{{n}} ステップ前に聞いた文字を描いてください • 色を選択 • タップで確定",
+      "writeType": "{{n}} ステップ前に聞いた文字を入力 • Enterで確定",
+      "writeTypeColor": "{{n}} ステップ前に聞いた文字を入力 • 色を選択 • Enterで確定",
+      "writeDrawN0": "今聞いた文字を描いてください • タップで確定",
+      "writeDrawColorN0": "今聞いた文字を描いてください • 色を選択 • タップで確定",
+      "writeTypeN0": "今聞いた文字を入力 • Enterで確定",
+      "writeTypeColorN0": "今聞いた文字を入力 • 色を選択 • Enterで確定",
+      "writeResult": "結果を書いてください • タップで確定",
+      "validated": "確定済み",
+      "holdMindful": "セルを{{seconds}}秒間長押ししてください",
+      "swipeMindful": "{{seconds}}秒でスワイプ"
+    },
+    "settings": {
+      "adaptiveTiming": "適応タイミング",
+      "inputKeyboard": "キーボード",
+      "inputHandwriting": "手書き",
+      "writingInput": "文字/数字",
+      "section": {
+        "grid": "グリッド",
+        "input": "入力",
+        "rhythm": "リズム",
+        "interface": "インターフェース",
+        "interfaceNone": "標準",
+        "sound": "サウンド"
+      },
+      "isi": "間隔（ISI）",
+      "stimulusDuration": "刺激の長さ",
+      "feedbackDuration": "フィードバックの長さ",
+      "ruleDisplay": "ルール表示",
+      "blankInterval": "空白間隔",
+      "showProgressBar": "プログレスバー",
+      "showInstructions": "ゲーム内ガイド",
+      "arithmeticInterference": "算数干渉",
+      "fullMenu": "フルメニュー",
+      "gridStyle": "グリッドスタイル",
+      "gridStyleClassic": "クラシック",
+      "gridStyleTrace": "トレース",
+      "guide": {
+        "swipeMindful": "{{seconds}} 秒でスワイプ",
+        "holdMindful": "マスを {{seconds}} 秒間押し続ける"
+      },
+      "feedback": {
+        "gestureDuration": "ジェスチャー",
+        "holdDuration": "ホールド",
+        "writingDuration": "ライティング"
+      }
+    },
+    "feedback": {
+      "holdDuration": "ホールド",
+      "gestureDuration": "ジェスチャー",
+      "writingDuration": "書き取り"
+    },
+    "image": "形",
+    "digits": "Digits",
+    "emotions": "感情",
+    "words": "単語",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "セッションリプレイ",
+    "play": "再生",
+    "pause": "一時停止",
+    "restart": "最初から",
+    "speed": "速度",
+    "loading": "セッションを読み込み中...",
+    "unavailable": "このセッションでは再生できません",
+    "backToStats": "統計に戻る",
+    "runStack": {
+      "original": "オリジナル",
+      "correction": "修正",
+      "delta": "Δ d'",
+      "inProgress": "進行中",
+      "completed": "完了"
+    },
+    "abandon": "終了",
+    "badge": "リプレイ",
+    "completionReport": {
+      "backToHome": "戻る",
+      "correctAgain": "もう一度修正",
+      "deltaVsOriginal": "オリジナルとの比較",
+      "deltaVsParent": "前回との比較",
+      "falseAlarmsSkipped": "回避したエラー",
+      "missesCorrections": "修正した見落とし",
+      "newFalseAlarms": "新しいエラー",
+      "replayAgain": "もう一度見る",
+      "scoreLabel": "スコア",
+      "title": "修正完了"
+    },
+    "controls": "コントロール",
+    "correction": "修正",
+    "finished": "再生終了",
+    "home": "ホーム",
+    "parseError": "セッションを読み込めません",
+    "tapSlotToPlace": "スロットをタップして配置",
+    "timeline": "タイムライン",
+    "focusTimeline": {
+      "open": "タイムラインを表示",
+      "close": "タイムラインを閉じる",
+      "title": "N-backタイムライン",
+      "fillAll": "すべて埋める",
+      "fillCard": "カードを埋める"
+    },
+    "hud": {
+      "counterDisplay": "カウンター表示",
+      "toggleCounterDisplay": "カウンター表示を切り替え"
+    },
+    "validate": "確認"
+  },
+  "recovery": {
+    "title": "セッション中断",
+    "description": "セッションが進行中でした。再開しますか？",
+    "mode": "モード",
+    "level": "レベル",
+    "progress": "進捗",
+    "timeAgo": "前",
+    "resume": "セッションを再開",
+    "startFresh": "最初から始める",
+    "staleWarning": "このセッションは古いため、再開が難しい場合があります。",
+    "modes": {
+      "game": "トレーニング",
+      "activeTraining": "アクティブトレーニング",
+      "flowTraining": "Dual Placeトレーニング",
+      "dualPickTraining": "デュアルピック",
+      "traceTraining": "デュアルトレース"
+    }
+  },
+  "rewards": {
+    "congratulations": "おめでとうございます！",
+    "duration": "{{days}} 日間Premium",
+    "lifetimeLabel": "永久アクセス",
+    "expiresAt": "{{date}} まで有効",
+    "neverExpires": "有効期限なし",
+    "continue": "続ける",
+    "discovery": {
+      "name": "ディスカバリーパス",
+      "description": "7日間Premium — すべての機能を探索"
+    },
+    "engagement": {
+      "name": "コミットメントパス",
+      "description": "1ヶ月Premium — あなたの規律が報われます"
+    },
+    "expert": {
+      "name": "エキスパートパス",
+      "description": "3ヶ月Premium — 真の実践者です"
+    },
+    "lifetime": {
+      "name": "永久アクセス",
+      "description": "生涯Premium — Neurodualをマスターしました"
+    },
+    "xpRemaining": "残りXP",
+    "permanentAccessUnlocked": "永久アクセス解除",
+    "reachedTheTop": "頂点に到達しました！"
+  },
+  "progression": {
+    "level": "レベル {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "次のレベル",
+    "reached": "到達",
+    "inProgress": "進行中"
+  },
+  "gridlock": {
+    "nextPuzzle": "次のパズル →"
+  }
+}

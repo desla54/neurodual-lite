@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutorial",
+    "exitConfirm": "Tutorial beenden?",
+    "exitWarning": "Dein Fortschritt wird nicht gespeichert.",
+    "continue": "Weiter",
+    "quit": "Beenden",
+    "stepLabel": "Schritt {{step}}",
+    "previous": "Zurück",
+    "restart": "Neustart",
+    "next": "Weiter",
+    "startGame": "Starten",
+    "progress": "Zähler",
+    "tapToContinue": "Tippe, um fortzufahren",
+    "controls": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "annotation": {
+      "label": "Anweisung"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Gut gemacht. Du hast das Tutorial bestanden.",
+        "stay": "Fast geschafft. Noch etwas Übung und du hast es drauf.",
+        "down": "Noch nicht bestanden. Wiederhole das Tutorial, um die Grundlagen zu festigen."
+      },
+      "header": {
+        "up": "Tutorial abgeschlossen!",
+        "down": "Wiederholung",
+        "stay": "Fast!"
+      },
+      "noteMinAssessment": "Hinweis: Für eine genauere Bewertung prüfen Tutorials mindestens 8 Antworten.",
+      "guidance": {
+        "passed": "Du bist bereit für das freie Training.",
+        "failed": "Wir empfehlen, dieses Tutorial zu wiederholen, bevor du zum Training übergehst."
+      },
+      "correctAnswers": "{{correct}}/{{total}} richtige Antworten",
+      "actions": {
+        "backToHome": "Zurück zur Startseite",
+        "retryTutorial": "Tutorial wiederholen",
+        "explainLevels": "N-Stufen verstehen (N)",
+        "goToTraining": "Zum Training",
+        "continueToTraining": "Weiter zum Training"
+      }
+    },
+    "welcome": {
+      "title": "Einführung ins Training",
+      "description": "Dual N-Back fordert dein Arbeitsgedächtnis, indem du zwei Informationsströme gleichzeitig verfolgen musst: eine visuelle Position und einen Klang. Dieses Tutorial führt dich Schritt für Schritt.",
+      "button": "Tutorial starten"
+    },
+    "timeline": {
+      "legend": "Die Timeline erleichtert den Vergleich — im Spiel ist sie ausgeblendet",
+      "past": "Vergangenheit",
+      "present": "Gegenwart"
+    },
+    "hub": {
+      "title": "Tutorials",
+      "subtitle": "Wähle einen Modus zum Lernen",
+      "basics": {
+        "title": "Die Grundlagen",
+        "description": "Lerne den Reflex und Rhythmus des klassischen Dual N-Back."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Meistere die zeitliche Platzierung auf der Timeline."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Ordne jedem Stimulus seine zeitliche Referenz zu (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Lerne aktive Abruf-Gesten durch Nachzeichnen."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Rekonstruiere die vollständige Sequenz aus dem Gedächtnis."
+      },
+      "soroban": {
+        "title": "Soroban meistern",
+        "description": "Lernen Sie den japanischen Abakus Schritt für Schritt in 8 aufeinander aufbauenden Stufen."
+      }
+    },
+    "place": {
+      "comingSoon": "Place-Tutorial ist in Entwicklung",
+      "cardPool": "Verfügbare Karten",
+      "slot": "Slot",
+      "observe": "Beobachte: eine Position im Raster und ein Buchstabe als Audio.",
+      "buffer": "Zweiter Stimulus. Der N-Back-Puffer füllt sich.",
+      "cardsAppear": "Karten erscheinen! Sie stellen die letzten 3 Stimuli dar.",
+      "firstDrag": "Klicke auf die markierte Karte, dann auf den N-2-Slot (den ältesten).",
+      "timelineExplain": "Die Timeline zeigt die Zeit: N-2 = ältester, N = aktuell.",
+      "positionN1": "Platziere die mittlere Position im N-1-Slot.",
+      "positionN": "Super! Beende mit der neuesten Position (N-Slot).",
+      "audioIntro": "Jetzt die Audio-Karten! Gleiches Prinzip.",
+      "audioN2": "Platziere den ersten gehörten Buchstaben im N-2-Slot.",
+      "audioN1": "Weiter mit dem mittleren Buchstaben (N-1-Slot).",
+      "audioN": "Beende mit dem neuesten Buchstaben (N-Slot).",
+      "dualIntro": "Neuer Durchgang! Platziere Positionen UND Buchstaben.",
+      "dualPractice": "Platziere alle 6 Karten in die richtigen Slots. Nimm dir Zeit!",
+      "rhythmExplain": "Im echten Spiel hast du begrenzte Zeit.",
+      "autonomy": "Du bist dran! Platziere alle Karten richtig.",
+      "conclusion": "Gut gemacht! Du beherrschst die Grundlagen von Dual Place.",
+      "selectCard": "Wähle eine Karte, dann klicke auf ihren Slot",
+      "clickSlot": "Klicke auf den richtigen Slot, um die Karte zu platzieren",
+      "wrongSlot": "Nicht dieser Slot! Achte auf die zeitliche Reihenfolge.",
+      "wrongCard": "Nicht diese Karte. Finde die, die zum Slot passt.",
+      "tryAgain": "Versuch es nochmal! Der richtige Slot ist hervorgehoben."
+    },
+    "memo": {
+      "comingSoon": "Memo-Tutorial ist in Entwicklung",
+      "selectPosition": "Position auswählen",
+      "selectAudio": "Buchstaben auswählen",
+      "clickToRecall": "Klicke auf ein Feld, um den Wert abzurufen",
+      "validate": "Bestätigen",
+      "observeFirst": "Erster Stimulus. Merke dir sowohl die Position ALS AUCH den Buchstaben!",
+      "observeSecond": "Zweiter Stimulus. Weiter merken.",
+      "observeThird": "Dritter Stimulus. Puffer vollständig. Mach dich bereit!",
+      "recallIntro": "Das Raster verschwindet! Erinnere dich aus dem Gedächtnis. Klicke auf den N-2-Slot.",
+      "firstRecall": "Klicke auf den N-2-Slot. Was war die erste Position?",
+      "feedbackExplain": "Grün = richtig. Rot = Fehler. Du kannst bis zu 3 Mal korrigieren!",
+      "multiSlot": "Weiter! Erinnere dich an die Positionen N-1 und N.",
+      "newStimulus": "Neuer Stimulus! Das N-Back-Fenster verschiebt sich um eins.",
+      "windowShift": "Das Fenster hat sich verschoben. Alter N-2 geht raus, neuer N kommt rein.",
+      "fullPosition": "Erinnere dich an alle 3 Positionen. Konzentration!",
+      "audioIntro": "Neuer Stimulus. Jetzt kommt der Audio-Abruf dazu!",
+      "firstAudioRecall": "Klicke auf den Audio-N-2-Slot. Welcher Buchstabe?",
+      "fullAudio": "Weiter mit den Buchstaben N-1 und N.",
+      "dualIntro": "Im echten Spiel rufst du Positionen UND Buchstaben zusammen ab.",
+      "dualPractice": "Erinnere dich an alle 6 Felder, dann klicke Bestätigen.",
+      "correctionExplain": "Bei einem Fehler klicke erneut zum Korrigieren. Max. 3 Mal.",
+      "withCorrection": "Probier es! Wenn du falsch liegst, korrigiere durch erneutes Klicken.",
+      "conclusion": "Ausgezeichnet! Du beherrschst den aktiven Abruf. Starte eine Sitzung!",
+      "wrongAnswer": "Das stimmt nicht. Überlege, welcher Stimulus war zu diesem Zeitpunkt?",
+      "tryAgain": "Versuch es nochmal! Du kannst noch korrigieren.",
+      "maxCorrections": "3 Korrekturen erreicht. Dieser Slot ist gesperrt.",
+      "validateHint": "Alle Slots sind gefüllt. Klicke Bestätigen!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Willkommen bei Dual Pick! Lerne, jeden Stimulus zu klassifizieren.",
+        "hud": "Oben: dein Fortschritt im Tutorial.",
+        "grid": "Das Raster ist in 3 Zonen unterteilt: OBEN, MITTE, UNTEN.",
+        "controls": "Diese Tasten klassifizieren. Position links, Klang rechts.",
+        "outro": "Bereit? Starten wir mit der Positionsklassifizierung!"
+      },
+      "intro": "Bei Dual Pick klassifizierst du jeden Stimulus nach zwei Kriterien: Rasterzone und Klangtyp.",
+      "gridExplain": "Das Raster hat 3 Zonen: OBEN (obere Reihe), MITTE (Zentrum), UNTEN (untere Reihe).",
+      "positionHaut": "Das Quadrat ist oben. Klicke OBEN.",
+      "positionMilieu": "Das Quadrat ist in der Mitte. Klicke MITTE.",
+      "positionBas": "Das Quadrat ist unten. Klicke UNTEN.",
+      "positionRecap": "Perfekt! OBEN = obere Reihe, MITTE = Zentrum, UNTEN = untere Reihe.",
+      "positionPractice": "Du bist dran! Klassifiziere diese Position.",
+      "soundIntro": "Jetzt Klänge. Es gibt zwei Typen: VOKAL (A, E, I, O, U) und KONSONANT (alle anderen).",
+      "soundVoyelle": "Du hörst A. Das ist ein Vokal. Klicke VOKAL.",
+      "soundConsonne": "Du hörst T. Das ist ein Konsonant. Klicke KONSONANT.",
+      "soundRecap": "Merke dir: A, E, I, O, U = VOKAL. Alles andere = KONSONANT.",
+      "soundPractice": "Du bist dran! Klassifiziere diesen Klang.",
+      "dualIntro": "Im echten Spiel klassifizierst du BEIDES gleichzeitig: Position UND Klang.",
+      "dualFirst": "Klassifiziere Position UND Klang. Nimm dir Zeit.",
+      "dualSecond": "Weiter. Position + Klang.",
+      "dualThird": "Ausgezeichnet! Noch einer zum Üben.",
+      "rhythm": "In der Sitzung halte einen gleichmäßigen Rhythmus. Flüssigkeit kommt mit der Übung.",
+      "conclusion": "Gut gemacht! Du beherrschst die Klassifizierung. Starte eine Dual Pick-Sitzung!",
+      "buttons": {
+        "top": "OBEN",
+        "middle": "MITTE",
+        "bottom": "UNTEN",
+        "vowel": "VOKAL",
+        "consonant": "KONSONANT"
+      },
+      "feedback": {
+        "correctPosition": "Richtige Zone!",
+        "correctSound": "Richtiger Klangtyp!",
+        "wrongPosition": "Nicht diese Zone. Schau, wo das Quadrat ist.",
+        "wrongSound": "Das stimmt nicht. A, E, I, O, U = Vokale."
+      }
+    },
+    "trace": {
+      "intro": "Willkommen bei Dual Trace. Keine Tasten hier: Du rufst die vorherige Position aktiv durch eine Wischgeste ab.",
+      "observe": "Merke dir diese Position. Im nächsten Zug musst du dorthin wischen.",
+      "firstSwipe": "Erster Wisch! Gleite mit dem Finger zur Position des vorherigen Zugs. Der Pfeil führt dich.",
+      "firstAudioMatch": "Gleicher Buchstabe wie im vorherigen Zug! Wische zur Position UND doppeltippe, um den Audio-Match zu signalisieren.",
+      "audioMatch": "Audio-Match erkannt! Wischen + Doppeltippen.",
+      "swipe1": "Wische zur N-1-Position. Erinnere dich, wo das Quadrat war.",
+      "swipe2": "Weiter. Jeder Wisch stärkt dein aktives Gedächtnis.",
+      "swipe3": "Aktiver Abruf ist anspruchsvoller als einfaches Erkennen.",
+      "swipe4": "Bleib konzentriert. Visualisiere die Position vor dem Wischen.",
+      "swipe5": "Ausgezeichnet! Du beherrschst die Abruf-Geste.",
+      "complete": "Tutorial abgeschlossen. Du bist bereit für das Dual Trace-Training.",
+      "tapTarget": "Tippe auf die Position des vorherigen Zugs",
+      "tapTargetAndAudio": "Tippe auf die Zielposition, dann Audio"
+    },
+    "ui": {
+      "startExercise": "Übung starten",
+      "score": "Punkte: {{current}}/{{total}}",
+      "complete": "Abgeschlossen",
+      "correct": "✓ Richtig!",
+      "expectedMatch": "✗ Erwartet: Match",
+      "expectedNoMatch": "✗ Erwartet: Kein Match",
+      "memorize": "Merke dir die Position...",
+      "memorizeLetter": "Merke dir den Buchstaben...",
+      "matchDetected": "✓ Match erkannt!",
+      "noMatch": "✗ Kein Match",
+      "matchExplanation": "Match! Schritt {{current}} = Schritt {{previous}}",
+      "exerciseComplete": "Übung abgeschlossen!",
+      "match": "Match",
+      "noMatchButton": "Kein Match",
+      "none": "Keiner",
+      "both": "Beide",
+      "position": "Position",
+      "audio": "Audio",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Ihr Dashboard: N-Back-Level, Rundenzähler und Sitzungssteuerung.",
+      "timeline": "Die Timeline zeigt die letzten 3 Stimuli zum Vergleich. Im echten Spiel ist diese Hilfe ausgeblendet.",
+      "grid": "Das Gitter: Jede Runde leuchtet ein Feld in einer von 8 Positionen auf. Gleichzeitig wird ein Buchstabe gesprochen.",
+      "controls": "Deine Antworttasten. Drücke, wenn du eine Wiederholung erkennst.",
+      "intro": "Willkommen! Lass uns gemeinsam die Spieloberfläche entdecken.",
+      "continue": "Weiter",
+      "outro": "Jetzt geht's weiter mit einer geführten Sitzung. Beobachte die Animationen und folge den Anweisungen.",
+      "start": "Starten",
+      "tapToContinue": "Tippe irgendwo, um fortzufahren"
+    },
+    "speed": {
+      "label": "Geschwindigkeit: {{speed}}",
+      "pauseToChange": "Pausiere, um die Geschwindigkeit zu ändern"
+    },
+    "assessment": {
+      "title": "Bewertungsphase",
+      "subtitle": "Ab jetzt ist es ein kurzer klassischer Durchlauf.",
+      "body": "Das Tempo ist durchgehend und du bekommst keine Hinweise mehr. Spiele wie in einer echten Sitzung.",
+      "goal": "Ziel: mindestens {{min}}% Genauigkeit über {{count}} Durchgänge.",
+      "cta": "Los geht's"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N-Stufen verstehen",
+        "desc": "Du hast N=2 gelernt. So funktioniert es von N=1 bis N=4.",
+        "start": "Start",
+        "done": "Fertig",
+        "skip": "Überspringen",
+        "hud": "N = wie viele Züge zurück.",
+        "present": "N = der aktuelle Stimulus (Gegenwart).",
+        "past": "Vergleiche mit N-{{n}}.",
+        "pressPosition": "Wenn sich die Position wiederholt, drücke Position.",
+        "pressAudio": "Wenn sich der Klang wiederholt, drücke Audio.",
+        "annotation": {
+          "n1": "N=1: Vergleiche den aktuellen Stimulus (N) mit dem vorherigen Zug (N-1).",
+          "n2": "N=2: Vergleiche den aktuellen Stimulus (N) mit zwei Zügen zurück (N-2).",
+          "n3": "N=3: Vergleiche den aktuellen Stimulus (N) mit drei Zügen zurück (N-3)."
+        },
+        "outroTitle": "Und so weiter…",
+        "outroBody": "Bei N=5 vergleichst du mit N-5. Die Regel bleibt gleich; nur der Abstand erhöht sich."
+      }
+    },
+    "annotations": {
+      "intro": "Beobachten Sie: Ein Feld leuchtet auf dem Gitter auf, und gleichzeitig wird ein Buchstabe gesprochen.",
+      "observe": "Merken. Die Timeline verfolgt die Stimuli.",
+      "firstComparison": "Du hast jetzt genug Verlauf zum Vergleichen.",
+      "firstPositionMatch": "Gleiche Position wie vor 2 Zügen! Vergleiche N und N-2 auf der Timeline, dann drücke Position.",
+      "firstAudioMatch": "Gleicher Buchstabe wie vor 2 Zügen! Vergleiche N und N-2 auf der Timeline, dann drücke Audio.",
+      "firstDualMatch": "Doppelter Match! Sowohl Position ALS AUCH Klang wiederholen sich. Drücken Sie beide Tasten.",
+      "positionMatch": "Gleiche Position. Drücke Position.",
+      "audioMatch": "Gleicher Klang. Drücke Audio.",
+      "dualMatch": "Beides stimmt überein. Drücke Position und Audio.",
+      "noMatch": "Kein Match in diesem Zug. Weiter merken.",
+      "noMatch1": "Keine Wiederholung diesmal. Tippe, um fortzufahren.",
+      "noMatch2": "Immer noch kein Match. Bleib auf den Position-+Klang-Fluss konzentriert.",
+      "noMatch3": "Nichts zu melden. Vergleiche immer mit N-2 auf der Timeline.",
+      "noMatch4": "Kein Match. Das Tempo zieht jetzt an.",
+      "noMatch5": "Weiter. Matches kommen unvorhersehbar.",
+      "noMatch6": "Kein Match. Bleib dran, du hast den Rhythmus.",
+      "noMatch7": "Letzte Runde. Bleib konzentriert.",
+      "noMatch8": "Fast geschafft. Noch ein paar Stimuli.",
+      "complete": "Glückwunsch! Du beherrschst die Grundlagen von Dual N-Back. Bereit fürs Training?"
+    },
+    "exit": {
+      "confirm": "Beenden",
+      "title": "Tutorial beenden?",
+      "message": "Dein Fortschritt wird gespeichert. Du kannst später weitermachen."
+    },
+    "recovery": {
+      "message": "Eine unterbrochene Sitzung wurde gefunden.",
+      "staleMessage": "Eine unterbrochene Sitzung von vor mehr als 30 Minuten wurde gefunden.",
+      "resume": "Fortsetzen",
+      "startFresh": "Neu starten",
+      "title": "Tutorial fortsetzen?"
+    }
+  }
+}

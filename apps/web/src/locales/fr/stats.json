@@ -266,41 +266,6 @@
         "slotAccuracy": "Précision par slot",
         "recentAccuracies": "Précisions récentes"
       },
-      "specDriven": {
-        "modeScore": {
-          "dprime": "d' global",
-          "dprimeTooltip": "Signal Detection Theory : d' de 2,0 ou plus = bonne discrimination",
-          "bwScore": "Score BW",
-          "bwScoreTooltip": "Chaque fausse alerte annule une bonne réponse. La précision prime sur la vitesse.",
-          "jaeggiErrors": "Taux d'erreurs",
-          "jaeggiErrorsTooltip": "Pourcentage d'erreurs (omissions + fausses alarmes). Moins de 3 erreurs par modalité pour progresser.",
-          "placementAccuracy": "Précision placement",
-          "placementAccuracyTooltip": "Pourcentage de placements corrects",
-          "recallAccuracy": "Précision rappel",
-          "recallAccuracyTooltip": "Pourcentage de cellules correctement rappelées",
-          "traceAccuracy": "Précision tracé",
-          "traceAccuracyTooltip": "Pourcentage de réponses position correctes"
-        },
-        "speed": {
-          "reactionTime": "Temps de réaction moyen",
-          "placementTime": "Temps de placement moyen",
-          "recallTime": "Temps de rappel moyen",
-          "responseTime": "Temps de réponse moyen",
-          "writingTime": "Temps de traçage moyen"
-        },
-        "insights": {
-          "confidence": "Score de confiance",
-          "directness": "Ratio de directivité",
-          "placementTime": "Temps de placement",
-          "wrongSlotDwell": "Temps sur slot incorrect",
-          "fluency": "Score de fluidité",
-          "corrections": "Corrections",
-          "slotAccuracy": "Précision par slot",
-          "recentAccuracies": "Précisions récentes",
-          "responseTime": "Temps de réponse",
-          "writingAccuracy": "Précision d'écriture"
-        }
-      },
       "confidence": {
         "title": "Analyse de la confiance",
         "noActionOnTargets": "Aucune action sur les essais cibles",
@@ -376,6 +341,10 @@
       "corsiBlockDesc": "Mémoire spatiale séquentielle",
       "ospan": "Operation Span",
       "ospanDesc": "Empan complexe : équations + rappel de lettres",
+      "gridlock": "Gridlock",
+      "gridlockDesc": "Puzzle spatial de type taquin",
+      "strobeFlex": "Strobe Flex",
+      "strobeFlexDesc": "Flexibilité cognitive et changement de règle",
       "runningSpan": "Running Span",
       "runningSpanDesc": "Rappelez les N derniers éléments d'un flux imprévisible",
       "pasat": "PASAT",
@@ -1081,12 +1050,6 @@
       "rounds": "Tours",
       "flawless": "Sans faute",
       "perfectRounds": "Sans faute",
-      "band": {
-        "mastery": "Excellent",
-        "solid": "Solide",
-        "building": "En progrès",
-        "struggling": "Difficile"
-      },
       "perfect": "Parfait",
       "partial": "Partiel",
       "error": "Erreur",
@@ -1144,13 +1107,6 @@
       "replayPhaseLabel": "Phase",
       "response": "Réponse",
       "trackingTimeShort": "Suivi",
-      "replayPhase": {
-        "idle": "Attente",
-        "highlight": "Repérage",
-        "tracking": "Suivi",
-        "selection": "Sélection",
-        "finished": "Terminé"
-      },
       "targets": "Targets",
       "stageUnlocked": "Nouveau palier cible débloqué pour la prochaine session."
     },

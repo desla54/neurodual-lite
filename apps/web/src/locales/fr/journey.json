@@ -116,6 +116,12 @@
         "mastery": "Les sessions quasi parfaites remplissent plus vite, les sessions ordinaires restent modestes",
         "regression": "Les sessions faibles peuvent aussi faire redescendre la barre de maîtrise courante",
         "unlock": "Le palier de cibles suivant se débloque seulement à 100 %"
+      },
+      "neurodualMix": {
+        "description": "NeuroDual Mix — DNB Classic + Stroop Flex :",
+        "fill": "Chaque session à 85%+ de précision remplit l'étape de 10%",
+        "both": "Les sessions DNB Classic et Stroop Flex comptent toutes les deux",
+        "unlock": "À 100%, le niveau N suivant se débloque"
       }
     },
     "switcher": {

@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Bạn đang cảm thấy thế nào?",
+      "tired": "Mệt mỏi",
+      "normal": "Bình thường",
+      "energized": "tràn đầy năng lượng"
+    },
+    "aria": {
+      "trialTimer": "Hẹn giờ dùng thử",
+      "positionMatch": "Trận đấu vị trí",
+      "audioMatch": "Kết hợp âm thanh",
+      "audioLetter": "Thư âm thanh:",
+      "traceGrid": "Lưới theo dõi"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Chuyển đổi màn hình đồng bộ hóa",
+      "start": "bắt đầu",
+      "end": "kết thúc",
+      "pinLabel": "ghim",
+      "pinTitle": "Ghim trên màn hình",
+      "inputLabel": "đầu vào",
+      "inputTitle": "Chuyển đổi cấu hình độ trễ đầu vào (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "trên",
+      "off": "tắt",
+      "hideLabel": "trốn",
+      "hideTitle": "Ẩn (trừ khi syncHud=1 hoặc ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "âm thanh",
+        "expected": "dự kiến"
+      },
+      "labels": {
+        "trial": "thử nghiệm",
+        "lagShow": "Độ trễ hiển thị",
+        "lagHide": "Mặt nạ làm chậm",
+        "winErr": "thắng lỗi",
+        "endRef": "kết thúc giới thiệu",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "đầu vào-> gửi p95",
+        "inputToCommitP95": "đầu vào-> cam kết p95",
+        "inputToPaintP95": "đầu vào-> sơn p95",
+        "inputPending": "đầu vào đang chờ xử lý",
+        "inputSamples": "mẫu đầu vào",
+        "touchSamples": "chạm vào mẫu",
+        "mouseSamples": "mẫu chuột",
+        "keyboardSamples": "mẫu bàn phím",
+        "latestMethod": "mới nhất (phương pháp)",
+        "latestModality": "phương thức mới nhất",
+        "audioCueMode": "tín hiệu âm thanh",
+        "audioCodec": "bộ giải mã"
+      },
+      "resetInputProfiler": "thiết lập lại hồ sơ đầu vào"
+    },
+    "hud": {
+      "resume": "Tiếp tục",
+      "pause": "Tạm dừng",
+      "quit": "Thoát",
+      "restart": "Khởi động lại",
+      "spaceToStart": "Không gian để bắt đầu",
+      "settings": "Cài đặt",
+      "enterToAdvance": "Nhập để tiến lên",
+      "trial": "dùng thử",
+      "muteTexture": "Tắt âm thanh nền"
+    },
+    "status": {
+      "paused": "Đã tạm dừng"
+    },
+    "completed": "Đã hoàn thành",
+    "starting": {
+      "getReady": "Hãy sẵn sàng..."
+    },
+    "quitModal": {
+      "title": "Thoát khỏi phiên?",
+      "message": "Tiến trình của bạn sẽ không được lưu.",
+      "confirm": "Thoát",
+      "cancel": "Tiếp tục",
+      "close": "Đóng"
+    },
+    "controls": {
+      "position": "Vị trí",
+      "position2": "Vị trí. 2",
+      "position3": "Vị trí. 3",
+      "position4": "Vị trí. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-âm thanh",
+      "audiovis": "Âm thanh & hình ảnh",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Âm thanh",
+      "audio2": "Âm thanh 2",
+      "color": "Màu sắc",
+      "arithmetic": "số học",
+      "image": "hình dạng"
+    },
+    "arithmetic": {
+      "answer": "Trả lời",
+      "clear": "Xóa",
+      "hint": "Bàn phím: 0–9 · '-' cho dấu · '.' cho số thập phân · Phím lùi để xóa"
+    },
+    "navigation": {
+      "back": "Quay lại"
+    },
+    "xp": {
+      "title": "XP kiếm được",
+      "base": "Cơ sở (N-{{level}})",
+      "performance": "Hiệu suất",
+      "accuracy": "Độ chính xác",
+      "streakBonus": "Tiền thưởng theo chuỗi",
+      "dailyBonus": "Đầu tiên trong ngày",
+      "badgeBonus": "Huy hiệu",
+      "flowBonus": "Tiền thưởng vị trí kép",
+      "confidenceMultiplier": "sự tự tin",
+      "dailyCapReached": "Đã đạt đến giới hạn XP hàng ngày",
+      "levelReached": "Đã đạt cấp độ {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "Đã mở khóa huy hiệu mới"
+    },
+    "getReady": "Hãy sẵn sàng...",
+    "layoutEdit": {
+      "done": "Xong",
+      "reset": "Đặt lại",
+      "instructions": "Kéo các vùng để sắp xếp lại. Thay đổi kích thước bằng cách sử dụng tay cầm.",
+      "title": "Chế độ chỉnh sửa",
+      "cancel": "Hủy bỏ",
+      "save": "Khóa",
+      "editLayout": "Chỉnh sửa bố cục"
+    },
+    "paused": "Đã tạm dừng",
+    "pressEscapeToResume": "Nhấn Escape để tiếp tục",
+    "settings": {
+      "editLayout": "Chỉnh sửa bố cục",
+      "gridAndButtons": "Lưới & nút",
+      "swapPositionAudio": "Hoán đổi vị trí / âm thanh",
+      "title": "Cài đặt",
+      "quickHint": "Điều chỉnh một số cài đặt mà không cần rời khỏi trò chơi.",
+      "quickUnavailable": "Chưa có cài đặt nhanh nào cho chế độ này."
+    },
+    "pinkNoiseInfo": "Một âm nền đi kèm với mỗi kích thích. Bạn có thể tùy chỉnh hoặc tắt nó trong cài đặt âm thanh.",
+    "pinkNoiseDismiss": "Tiếp tục",
+    "audioMode": "Chế độ âm thanh",
+    "cogTask": {
+      "precision": "Độ chính xác",
+      "avgRt": "RT trung bình",
+      "avgRtShort": "RT trung bình",
+      "trials": "Thử nghiệm",
+      "correct": "đúng",
+      "errors": "Lỗi",
+      "effect": "Hiệu ứng",
+      "restart": "Khởi động lại",
+      "home": "Trang chủ",
+      "performance": "Hiệu suất",
+      "trialDetail": "Chi tiết dùng thử",
+      "setDetail": "Đặt chi tiết",
+      "roundDetail": "Chi tiết tròn",
+      "problemDetail": "Chi tiết vấn đề",
+      "phaseDetail": "Chi tiết pha",
+      "feedbackCorrect": "Đúng",
+      "feedbackIncorrect": "sai",
+      "feedbackTimeout": "Quá chậm!",
+      "preparing": "Hãy sẵn sàng...",
+      "loading": "Đang tải...",
+      "left": "trái",
+      "right": "Đúng",
+      "up": "Lên",
+      "down": "xuống",
+      "congruent": "đồng dạng",
+      "incongruent": "không phù hợp",
+      "congruencyEffect": "Hiệu ứng phù hợp",
+      "maxSpan": "Khoảng tối đa",
+      "startingSpan": "Khoảng thời gian bắt đầu",
+      "maxSpanReached": "Đã đạt đến khoảng thời gian tối đa",
+      "longestStreak": "Chuỗi đúng dài nhất",
+      "series": "Vệt",
+      "avgResponseTime": "Thời gian phản hồi trung bình",
+      "recall": "thu hồi",
+      "expected": "Dự kiến",
+      "submit": "Gửi",
+      "cancel": "Hủy bỏ",
+      "clear": "Xóa",
+      "delete": "DEL",
+      "true": "Đúng",
+      "false": "sai",
+      "target": "Mục tiêu",
+      "nonTarget": "Không phải mục tiêu",
+      "distractor": "phân tâm",
+      "same": "giống nhau",
+      "different": "Khác nhau",
+      "identical": "giống hệt nhau",
+      "mirror": "Gương",
+      "symmetric": "đối xứng",
+      "asymmetric": "Bất đối xứng",
+      "symShort": "Sym.",
+      "present": "hiện tại",
+      "absent": "Vắng mặt",
+      "noTrials": "Không có thử nghiệm nào được hoàn thành.",
+      "noSets": "Không có bộ nào được hoàn thành.",
+      "noRounds": "Không có vòng nào được hoàn thành.",
+      "noProblems": "Không có vấn đề nào được hoàn thành.",
+      "noPhases": "Không có giai đoạn nào được hoàn thành.",
+      "sets": "bộ",
+      "rounds": "Vòng đấu",
+      "equations": "phương trình",
+      "sentences": "câu",
+      "equationAccuracy": "Độ chính xác của phương trình",
+      "forward": "Chuyển tiếp",
+      "backward": "Lùi lại",
+      "forwardMaxSpan": "Chuyển tiếp nhịp tối đa",
+      "backwardMaxSpan": "Khoảng lùi tối đa",
+      "odd": "Lẻ",
+      "even": "Thậm chí",
+      "score": "Điểm",
+      "easy": "Dễ dàng",
+      "hard": "Cứng",
+      "totalTrials": "Tổng số lần thử",
+      "totalErrors": "Tổng số lỗi",
+      "totalErrShort": "Tổng số lỗi.",
+      "hits": "Lượt truy cập",
+      "misses": "Bỏ lỡ",
+      "falseAlarms": "Al sai.",
+      "correctRejections": "Đúng. Rej.",
+      "yes": "Có",
+      "no": "Không",
+      "sessionInterrupted": "Phiên bị gián đoạn",
+      "reverseOrder": "theo thứ tự ngược lại",
+      "normalOrder": "theo thứ tự",
+      "lnsInstruction": "Số tăng dần rồi đến chữ cái A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "hiệu ứng Simon",
+        "blue": "Màu xanh da trời",
+        "red": "màu đỏ",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Đại diện cho số này",
+        "submit": "Gửi",
+        "rodLabel": "Thanh {{n}}",
+        "heavenBead": "Hạt trời (giá trị 5)",
+        "earthBead": "Hạt đất (giá trị 1)",
+        "instrBeadTitle": "Các hạt hoạt động như thế nào",
+        "instrBeadDesc": "Mỗi thanh đại diện cho một chữ số. Hạt trên cùng (trời) có giá trị 5. Hạt dưới cùng (đất) mỗi hạt có giá trị 1. Di chuyển các hạt về phía thanh trung tâm để kích hoạt chúng.",
+        "instrExampleTitle": "Ví dụ: 7",
+        "instrExampleDesc": "7 = hạt trời xuống (5) + 2 hạt đất lên (2). Nhấn hoặc kéo hạt để di chuyển chúng.",
+        "instrGoalTitle": "Mục tiêu của bạn",
+        "instrGoalDesc": "Một con số sẽ xuất hiện. Đặt các hạt đại diện cho nó, sau đó chạm vào Gửi. Hãy chính xác và nhanh chóng!",
+        "startButton": "Bắt đầu",
+        "settings": "Cài đặt",
+        "closeSettings": "Đóng cài đặt",
+        "settingsRods": "Số lượng thanh",
+        "settingsRodsHint": "Đặt qua N-Level trong cài đặt trò chơi",
+        "settingsTrials": "Thử nghiệm mỗi phiên",
+        "settingsTrialsHint": "Đặt qua Thử nghiệm trong cài đặt trò chơi",
+        "settingsRange": "Phạm vi số"
+      },
+      "stroop": {
+        "pressInkColorButton": "Nhấn nút phù hợp với màu mực",
+        "redWord": "RED",
+        "redLabel": "màu đỏ",
+        "blueWord": "BLUE",
+        "blueLabel": "Màu xanh",
+        "greenWord": "GREEN",
+        "greenLabel": "màu xanh lá cây",
+        "yellowWord": "VÀNG",
+        "yellowLabel": "màu vàng"
+      },
+      "stroopFlex": {
+        "followRule": "quy tắc",
+        "ruleInk": "Màu mực",
+        "ruleWord": "Từ viết",
+        "pressMatchingRuleButton": "Nhấn nút phù hợp với quy tắc hiện tại"
+      },
+      "goNogo": {
+        "goTrials": "Đi thử nghiệm",
+        "nogoTrials": "Thử nghiệm không đi",
+        "hitRate": "Tỷ lệ trúng (Đi)",
+        "faRate": "Tỷ lệ cảnh báo sai (No-Go)",
+        "meanRt": "Thời gian phản ứng trung bình",
+        "sensitivity": "sự nhạy cảm",
+        "press": "Nhấn",
+        "withhold": "Giữ lại"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Tín hiệu dừng RT)",
+        "ssdMean": "SSD trung bình (dừng thành công)",
+        "ssd": "SSD",
+        "goRt": "Đi RT",
+        "successfulInhibition": "Ức chế thành công",
+        "stop": "Dừng lại",
+        "meanGoRt": "Thời gian phản ứng GO trung bình",
+        "ssrtInvalid": "không đủ dữ liệu",
+        "ssrtNegativeNote": "SSRT âm tính (có nghĩa là SSD > có nghĩa là GO RT) — kết quả không đáng tin cậy với số lượng bản dùng thử hiện tại."
+      },
+      "pvt": {
+        "rtMedian": "RT trung bình",
+        "rtMean": "RT trung bình",
+        "fastest": "Nhanh nhất",
+        "slowest": "Chậm nhất",
+        "falseStarts": "Bắt đầu sai",
+        "falseStartsShort": "sai lầm.",
+        "lapses": "Mất hiệu lực",
+        "mean": "Nghĩa là",
+        "reaction": "phản ứng",
+        "wait": "Đợi đã...",
+        "pressStimulus": "Chờ kích thích...",
+        "pressAnywhere": "Nhấn vào bất cứ đâu khi bộ đếm xuất hiện",
+        "press": "Nhấn!",
+        "tooEarly": "Quá sớm!",
+        "lapsesLabel": "Mất hiệu lực"
+      },
+      "posner": {
+        "cueingEffect": "Hiệu ứng gợi ý",
+        "validMeanRt": "RT hợp lệ trung bình",
+        "invalidMeanRt": "RT không hợp lệ có nghĩa là",
+        "validAccuracy": "Độ chính xác hợp lệ",
+        "invalidAccuracy": "Độ chính xác không hợp lệ",
+        "validTrials": "Các thử nghiệm hợp lệ",
+        "invalidTrials": "Thử nghiệm không hợp lệ",
+        "validRtShort": "Giá trị RT.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Có hiệu lực",
+        "invalid": "không hợp lệ"
+      },
+      "antisaccade": {
+        "cost": "Chi phí chống trượt",
+        "proAccuracy": "Độ chính xác chuyên nghiệp",
+        "antiAccuracy": "Chống chính xác",
+        "pro": "chuyên nghiệp",
+        "anti": "Chống",
+        "proRt": "Pro RT",
+        "antiRt": "Chống RT",
+        "proMeanRt": "Có nghĩa là ủng hộ RT",
+        "antiMeanRt": "Nghĩa chống saccade RT",
+        "costLabel": "Chi phí",
+        "antiLabel": "Chống"
+      },
+      "axCpt": {
+        "dPrime": "d'-bối cảnh",
+        "axAccuracy": "Độ chính xác của AX",
+        "bxFa": "BX báo động sai",
+        "ayError": "lỗi AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY lỗi",
+        "cogControl": "Kiểm soát nhận thức",
+        "target": "Mục tiêu",
+        "nonTarget": "Không phải mục tiêu"
+      },
+      "ant": {
+        "scores": "Điểm ANT",
+        "alerting": "Cảnh báo (không có tín hiệu - tín hiệu kép)",
+        "orienting": "Định hướng (trung tâm - không gian)",
+        "executive": "Điều hành (không phù hợp - đồng nhất)"
+      },
+      "changeDet": {
+        "kCowan": "Công suất K (Cowan)",
+        "sameShort": "giống nhau",
+        "diffShort": "Khác biệt."
+      },
+      "swm": {
+        "withinErrors": "Lỗi trong tìm kiếm",
+        "betweenErrors": "Lỗi giữa các lần tìm kiếm",
+        "totalErrors": "Tổng số lỗi",
+        "errorFree": "Không có lỗi",
+        "foundErrorFree": "Tìm thấy không có lỗi!",
+        "errorCount": "{{count}} lỗi",
+        "tapsLabel": "Vòi"
+      },
+      "taskSwitch": {
+        "switchCost": "Chi phí chuyển đổi",
+        "rtRepeat": "RT trung bình (Lặp lại)",
+        "rtSwitch": "Có nghĩa là RT (Chuyển đổi)",
+        "oddEven": "Lẻ/Chẵn",
+        "highLow": "Cao / Thấp",
+        "title": "Chuyển đổi tác vụ"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A thời gian",
+        "tmtBTime": "thời gian TMT-B",
+        "executiveCost": "Chi phí điều hành (B – A)",
+        "executiveCostShort": "Chi phí điều hành (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Ờ. A",
+        "errB": "Ờ. B",
+        "preparingB": "Đang chuẩn bị TMT-B...",
+        "tmtADone": "TMT-A xong rồi!",
+        "totalErrors": "Tổng số lỗi",
+        "tmtALabel": "TMT-A: Những con số",
+        "tmtBLabel": "TMT-B: Số & Chữ cái",
+        "next": "Tiếp theo",
+        "heroTitle": "Tạo đường mòn",
+        "alternateHint": "Các số và chữ cái thay thế: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI phút",
+        "fastestIsi": "ISI nhanh nhất"
+      },
+      "wcst": {
+        "referenceCards": "Thẻ tham khảo",
+        "testCard": "Thẻ kiểm tra",
+        "categories": "Danh mục",
+        "categoriesCompleted": "Danh mục đã hoàn thành",
+        "perseverativeErrors": "Lỗi kiên trì",
+        "persevShort": "Kiên trì.",
+        "avgRt": "Trung bình RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT theo góc",
+        "findMatch": "Tìm hình dạng phù hợp",
+        "reference": "Hình tham khảo",
+        "referenceLabel": "Tham chiếu",
+        "candidate": "ứng viên",
+        "distractor": "Khác",
+        "mirrorErrors": "Gương",
+        "title": "Xoay tâm trí"
+      },
+      "sternberg": {
+        "rtBySize": "RT theo kích thước đã đặt",
+        "title": "Sternberg",
+        "avgRt": "Trung bình RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT theo kích thước đã đặt",
+        "title": "Tìm kiếm trực quan"
+      },
+      "ospan": {
+        "typeLetters": "Gõ các chữ cái theo thứ tự",
+        "trueOrFalse": "Đúng hay sai?",
+        "processingWarning": "Độ chính xác của phương trình dưới 85% - kết quả có thể không phản ánh dung lượng bộ nhớ làm việc thực sự"
+      },
+      "readingSpan": {
+        "s0": "Mặt trời mọc ở phía đông.",
+        "s1": "Cá sống trên cây.",
+        "s2": "Paris là thủ đô của nước Pháp.",
+        "s3": "Một hình tam giác có bốn cạnh.",
+        "s4": "Nước sôi ở 100 độ.",
+        "s5": "Mèo là loài bò sát.",
+        "s6": "Trái Đất quay quanh Mặt Trời.",
+        "s7": "Sô cô la mọc trên đá.",
+        "s8": "Một năm có mười hai tháng.",
+        "s9": "Chim thở dưới nước.",
+        "s10": "Sữa có màu trắng.",
+        "s11": "Ôtô chạy trên đường ray.",
+        "s12": "Ong sản xuất mật ong.",
+        "s13": "Tuyết rất nóng.",
+        "s14": "Tim bơm máu.",
+        "s15": "Đá nổi trên mặt nước.",
+        "s16": "Trăng soi sáng màn đêm.",
+        "s17": "Rắn có chân.",
+        "s18": "Gỗ nổi trên mặt nước.",
+        "s19": "Lửa lạnh.",
+        "s20": "Con người có năm giác quan.",
+        "s21": "Nhện có sáu chân.",
+        "s22": "Bánh mì được làm bằng bột mì.",
+        "s23": "Cá voi là cá.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "HOA",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "RỪNG",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "BUỔI SÁNG",
+        "d1": "HEART",
+        "d2": "VẢI",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "VƯỜN",
+        "d6": "BÓNG",
+        "d7": "BELL",
+        "d8": "CẦU",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Khoảng đọc"
+      },
+      "memorizeSequence": "Ghi nhớ trình tự...",
+      "reproduce": "sinh sản",
+      "span": "Khoảng cách",
+      "size": "Kích thước",
+      "fixateCenter": "Cố định vào trung tâm...",
+      "identicalOrMirror": "Giống hệt nhau hay phản chiếu?",
+      "wellInhibited": "Được ức chế tốt!",
+      "badDirection": "Sai hướng!",
+      "stopMissed": "Dừng bỏ lỡ!",
+      "falseAlarm": "Báo động giả!",
+      "pressNow": "Nhấn!",
+      "hitBang": "Đánh!",
+      "miss": "Cô!",
+      "doNotTouch": "Đừng chạm vào!",
+      "whichDirection": "Hướng nào?",
+      "stopBang": "DỪNG LẠI!",
+      "cueBang": "Thôi!",
+      "memorizeLetters": "Hãy ghi nhớ những chữ cái này",
+      "memorizeLetter": "Hãy ghi nhớ lá thư này",
+      "memorizeSequenceLetters": "Ghi nhớ trình tự...",
+      "memorizeDigits": "Ghi nhớ các chữ số...",
+      "memorizeColors": "Ghi nhớ màu sắc!",
+      "memorizePosition": "Hãy ghi nhớ vị trí này...",
+      "retainWord": "Hãy nhớ lời này",
+      "retainNumber": "Hãy nhớ con số này",
+      "addWithPrevious": "Thêm vào trước đó",
+      "sentenceTrueOrFalse": "Câu này có đúng không?",
+      "findRedCircle": "Tìm vòng tròn màu đỏ!",
+      "findHiddenToken": "Tìm mã thông báo ẩn!",
+      "chooseMatchingCard": "Chọn thẻ phù hợp",
+      "arrowDirection": "Hướng của mũi tên trung tâm?",
+      "attention": "Chú ý...",
+      "preparation": "Chuẩn bị...",
+      "recallLettersInOrder": "Nhớ lại các chữ cái {{count}} theo thứ tự",
+      "recallWordsInOrder": "Nhớ lại các từ {{count}} theo thứ tự",
+      "recallLastLetters": "Nhớ lại những chữ {{count}} cuối cùng",
+      "typeLastLetters": "Nhập các chữ cái {{count}} cuối cùng",
+      "recallPositionsInOrder": "Nhớ lại: chạm vào các vị trí theo thứ tự",
+      "pressEnterToValidate": "Nhấn Enter để xác thực",
+      "pressAnywhereToContinue": "Nhấn vào bất cứ đâu để tiếp tục",
+      "temporalPrecision": "Độ chính xác tạm thời",
+      "estimationPrecision": "Ước lượng độ chính xác",
+      "touchStartClockwise": "Chạm vào điểm bắt đầu rồi vuốt theo chiều kim đồng hồ",
+      "touchAtoB": "Chạm vào điểm A rồi vuốt sang B",
+      "cue": "Cue",
+      "retainCue": "Hãy nhớ gợi ý...",
+      "targetOrNot": "Mục tiêu hay không mục tiêu?",
+      "whereIsTarget": "Mục tiêu ở đâu?",
+      "wasLetterInSet": "Bức thư này có trong bộ này không?",
+      "regular": "đều đặn",
+      "regularity": "Đều đặn",
+      "msDeviation": "độ lệch ms",
+      "boxes": "hộp",
+      "found": "{{count}} đã tìm thấy",
+      "past": "quá khứ",
+      "tooSlow": "quá chậm",
+      "tooFast": "quá nhanh",
+      "timeout": "Quá chậm!",
+      "answer": "Trả lời",
+      "dontPress": "Đừng nhấn!",
+      "feedbackWrong": "Sai!",
+      "level": "Cấp độ",
+      "wrong": "sai",
+      "you": "bạn",
+      "paused": "Tạm dừng",
+      "instructions": "Hướng dẫn",
+      "selectAnswer": "Chọn một câu trả lời",
+      "tapTheOddOne": "Nhấn vào cái lẻ",
+      "pal": {
+        "subtitle": "Học tập liên kết theo cặp",
+        "pairsLearned": "Các cặp đã học",
+        "maxSetSize": "Kích thước đặt tối đa",
+        "totalErrors": "Tổng số lỗi",
+        "round": "vòng",
+        "pairs": "cặp",
+        "meanRt": "RT trung bình (đúng)",
+        "studyPhase": "Học - ghi nhớ các vị trí",
+        "testPhase": "Hình dạng này ở đâu?",
+        "studying": "Đang học",
+        "tapBox": "Nhấn vào hộp nơi hình này được hiển thị"
+      },
+      "visualLogic": {
+        "easy": "Dễ dàng",
+        "hard": "Cứng",
+        "oneRule": "1 quy tắc",
+        "twoRules": "2 quy tắc",
+        "findMissing": "Tìm mảnh còn thiếu",
+        "maxLevel": "Cấp độ tối đa",
+        "finalLevel": "Cấp độ cuối cùng",
+        "nextMode": "Chế độ phiên tiếp theo",
+        "adaptive": "Thích ứng",
+        "fixed": "Đã sửa",
+        "spm": "SPM 60",
+        "level": "Cấp độ",
+        "confirm": "Trình xác thực"
+      },
+      "tetrisMind": {
+        "findPiece": "Mảnh nào vừa với lỗ?",
+        "target": "Mục tiêu"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Định kiến đánh giá quá cao",
+        "underestimationBias": "Định kiến đánh giá thấp",
+        "noBias": "Không có sai lệch đáng kể",
+        "avgError": "Lỗi trung bình",
+        "overestimations": "Đánh giá quá cao",
+        "underestimations": "Đánh giá thấp",
+        "avgAbsoluteError": "Lỗi tuyệt đối trung bình",
+        "avgRelativeError": "Lỗi tương đối trung bình",
+        "cv": "Hệ số biến thiên",
+        "watchDemo": "Xem thời lượng",
+        "getReady": "Hãy sẵn sàng...",
+        "holdToReproduce": "Giữ để tái tạo!",
+        "tooLong": "Quá lâu!",
+        "tooShort": "Quá ngắn!",
+        "target": "Mục tiêu",
+        "demoLabel": "Tài liệu tham khảo",
+        "yourTurn": "Đến lượt bạn",
+        "watchInstruction": "Xem",
+        "holdInstruction": "Giữ để tái tạo",
+        "heroTitle": "Ước tính thời gian"
+      },
+      "puzzleDetails": "Chi tiết câu đố",
+      "roundDetails": "Chi tiết tròn",
+      "stageResults": "Kết quả giai đoạn",
+      "recognized": "Được công nhận",
+      "missed": "bị bỏ lỡ",
+      "win": "Thắng",
+      "lose": "Thua",
+      "winBang": "Thắng!",
+      "loseBang": "Thua!",
+      "correctBang": "Chính xác!",
+      "wrongBang": "Sai!",
+      "completeBang": "Hoàn thành!",
+      "repeatedBang": "Lặp đi lặp lại!",
+      "incompleteBang": "Chưa đầy đủ!",
+      "levelCompleteBang": "Cấp độ hoàn thành!",
+      "timesUp": "Hết giờ rồi",
+      "seeResults": "Xem kết quả",
+      "nextRound": "Vòng tiếp theo",
+      "startBlock": "Khối bắt đầu",
+      "continue": "Tiếp tục",
+      "patientChoice": "Sự lựa chọn của bệnh nhân",
+      "immediateChoice": "Lựa chọn ngay lập tức",
+      "immediate": "ngay lập tức",
+      "digitSpan": {
+        "heroTitle": "Khoảng chữ số"
+      },
+      "resume": "Tiếp tục",
+      "numericalStroop": {
+        "heroTitle": "Số Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Phán quyết về hướng đường"
+      },
+      "chain": "Chuỗi",
+      "undo": "Hoàn tác",
+      "vocalProsody": {
+        "heroTitle": "giai điệu thanh nhạc"
+      },
+      "letterNumber": {
+        "title": "Thứ tự chữ-số",
+        "expectedAnswer": "Câu trả lời dự kiến"
+      },
+      "patternComparison": {
+        "heroTitle": "So sánh mẫu"
+      },
+      "speedPack": {
+        "title": "Gói tốc độ",
+        "whenFoldedWhichTouch": "Khi gấp lại, hình vuông nào tiếp xúc nhau?"
+      },
+      "dotProbe": {
+        "heroTitle": "Đầu dò chấm"
+      },
+      "reflex": {
+        "heroTitle": "phản xạ"
+      },
+      "hooperVisual": {
+        "title": "Tổ chức trực quan Hooper",
+        "whatIsThisObject": "Đối tượng này là gì?"
+      },
+      "blockDesign": {
+        "heroTitle": "Thiết kế khối"
+      },
+      "accuracy": "Độ chính xác",
+      "avgTime": "Trung bình thời gian",
+      "check": "Kiểm tra",
+      "dualTrace": {
+        "playArea": "Khu vui chơi"
+      },
+      "paperFolding": {
+        "title": "Gấp giấy",
+        "foldSequenceHolePunch": "Trình tự gấp & đục lỗ",
+        "whichPatternWhenUnfolded": "Mẫu nào khi mở ra?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Quyết định từ vựng"
+      },
+      "puzzles": "Câu đố",
+      "moves": "di chuyển",
+      "maxGrid": "Lưới tối đa",
+      "symmetry": "tính đối xứng",
+      "threshold": "Ngưỡng",
+      "hitRate": "Tỷ lệ trúng",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Phát hiện thay đổi"
+      },
+      "syllogisms": {
+        "heroTitle": "Tam đoạn luận"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Phạm vi"
+      },
+      "jitter": "Giật giật",
+      "sentenceCompletion": {
+        "title": "Hoàn thành câu (Cloze)",
+        "highCloze": "clo cao",
+        "lowCloze": "clot thấp"
+      },
+      "grid": "Lưới",
+      "pinballRecall": {
+        "title": "thu hồi pinball",
+        "byBounces": "Theo số lần trả lại",
+        "whereDoesItLand": "Nó hạ cánh ở đâu?"
+      },
+      "mean": "Nghĩa là",
+      "speedup": "tăng tốc",
+      "memorize": "ghi nhớ",
+      "time": "thời gian",
+      "surfaceDevelopment": {
+        "title": "Phát triển bề mặt",
+        "whichEdgeMatches": "Cạnh nào phù hợp?"
+      },
+      "crowding": {
+        "heroTitle": "Sự đông đúc thị giác",
+        "spacing": "Khoảng cách"
+      },
+      "patternRecognition": {
+        "heroTitle": "Nhận dạng mẫu"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "dùng thử",
+        "position": "Vị trí",
+        "audio": "Âm thanh"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Kẻ đột nhập cảnh",
+        "detect": "Phát hiện"
+      },
+      "eyesTest": {
+        "heroTitle": "Đọc suy nghĩ trong mắt"
+      }
+    },
+    "gridlock": {
+      "undone": "Bước cuối cùng được hoàn tác.",
+      "resetMessage": "Đặt lại câu đố.",
+      "hintMessage": "Gợi ý: trượt {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Nghiên cứu bảng. Bắt đầu sau {{seconds}}giây.",
+      "challenge": "Thử thách",
+      "optimal": "Tối ưu",
+      "moves": "Di chuyển",
+      "piece": "Mảnh {{id}}",
+      "targetPiece": "Mảnh {{id}} (mục tiêu - xe màu đỏ)",
+      "challengeClassic": "cổ điển",
+      "challengePrecision": "Độ chính xác",
+      "challengeMemory": "Bộ nhớ",
+      "challengeTimed": "Đã hẹn giờ",
+      "hint": "gợi ý",
+      "reset": "Đặt lại",
+      "undo": "Hoàn tác",
+      "nextPuzzle": "Câu đố tiếp theo →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Chặn 1 lượt truy cập",
+      "block2Hits": "Chặn 2 lượt truy cập",
+      "goPositive": "Đi = Tích cực",
+      "goNegative": "Đi = Tiêu cực",
+      "title": "Có ảnh hưởng Đi/Không đi",
+      "block1CommissionErrors": "Lỗi hoa hồng khối 1",
+      "block2CommissionErrors": "Lỗi hoa hồng khối 2",
+      "block": "Chặn",
+      "go": "Đi"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Tỷ lệ chuyển đổi trung bình",
+      "meanSwitchesfigure": "Công tắc/hình trung bình",
+      "totalSwitches": "Tổng số công tắc",
+      "title": "số liệu mơ hồ",
+      "meanSwitches": "Công tắc trung bình",
+      "switchRate": "Tỷ lệ chuyển đổi",
+      "figures": "số liệu",
+      "totalSwitchesLabel": "Tổng số công tắc",
+      "duration": "Thời lượng",
+      "switchesCount": "s | Công tắc:",
+      "switchButton": "Công tắc!"
+    },
+    "analogies": {
+      "verbalCorrect": "Nói đúng",
+      "timeout": "Hết giờ",
+      "title": "Tương tự"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "So sánh ANS",
+      "ratio": "Tỷ lệ",
+      "leftMore": "Còn lại nhiều hơn",
+      "rightMore": "Đúng hơn"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Tỷ lệ báo động sai",
+      "grammatical": "Ngữ pháp",
+      "memorizeTheseStrings": "Ghi nhớ các chuỗi này",
+      "testPhase": "Giai đoạn thử nghiệm",
+      "ungrammatical": "không đúng ngữ pháp",
+      "learning": "học tập",
+      "test": "kiểm tra",
+      "title": "Ngữ pháp nhân tạo",
+      "learningPhase": "Học hỏi",
+      "testIntroText": "Bây giờ bạn sẽ thấy các chuỗi mới. Quyết định xem mỗi dây có tuân theo các quy tắc giống như các dây bạn vừa học hay không.",
+      "startTest": "Bắt đầu kiểm tra",
+      "followsRules": "Tuân theo quy tắc",
+      "breaksRules": "Phá vỡ quy tắc"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Cường độ chớp mắt",
+      "title": "Chú ý chớp mắt",
+      "blink": "chớp mắt",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "Chữ cái màu xanh đầu tiên?",
+      "secondGreenLetter": "chữ màu xanh thứ 2?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Chi phí nắm bắt",
+      "singletonPresent": "Hiện tại Singleton",
+      "noSingleton": "Không có Singleton",
+      "title": "Ghi chú ý",
+      "capture": "Chụp",
+      "horizontal": "ngang",
+      "vertical": "Dọc"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Cửa sổ ràng buộc",
+      "title": "Ràng buộc nghe nhìn",
+      "window": "Cửa sổ",
+      "pssLabel": "PSS (Điểm chủ quan đồng thời)",
+      "simultaneousOrNot": "Đồng thời hay không?",
+      "simultaneous": "Đồng thời",
+      "notSimultaneous": "Không đồng thời"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Ngưỡng thời lượng",
+      "reference": "Tài liệu tham khảo",
+      "weberFraction": "Phân số Weber",
+      "title": "Thời lượng thính giác",
+      "threshold": "Ngưỡng",
+      "weber": "Weber",
+      "whichLonger": "Cái nào dài hơn?",
+      "firstLonger": "Đầu tiên dài hơn",
+      "secondLonger": "Thứ hai dài hơn"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Máy bơm trung bình đã điều chỉnh",
+      "avgTimeballoon": "Thời gian trung bình/bóng bay",
+      "banked": "Ngân hàng!",
+      "lostEarnings": "Thu nhập bị mất!",
+      "overallAvgPumps": "Máy bơm trung bình tổng thể",
+      "popRate": "Tỷ lệ phổ biến",
+      "totalEarned": "Tổng số tiền kiếm được",
+      "balloons": "Bóng bay",
+      "cashed": "Đã rút tiền mặt",
+      "popped": "Đã xuất hiện",
+      "adjPumps": "Điều chỉnh. máy bơm",
+      "pop": "bật lên",
+      "pump": "Máy bơm",
+      "cashIn": "Tiền mặt"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Thời gian quyết định trung bình",
+      "drawBeadsToGatherEvidence": "Rút hạt để thu thập bằng chứng",
+      "jtc": "JTC",
+      "title": "Nhiệm vụ hạt",
+      "meanDraws": "Trung bình hòa",
+      "rounds": "Vòng đấu",
+      "jtcRate": "Tỷ lệ JTC",
+      "meanDrawsToDecision": "Có nghĩa là rút ra quyết định",
+      "jtcRateThreshold": "Tỷ lệ JTC (<{{threshold}} hòa)",
+      "round": "vòng",
+      "jarDescription": "Lọ A: 85% xanh / Lọ B: 85% đỏ",
+      "itWasJar": "Đó là Jar",
+      "drawABead": "Vẽ một hạt",
+      "jarAGreen": "Bình A Xanh",
+      "jarBRed": "Bình B đỏ"
+    },
+    "binding": {
+      "changedTrials": "Các thử nghiệm đã thay đổi",
+      "sameAccuracy": "Độ chính xác tương tự",
+      "sameTrials": "Các thử nghiệm tương tự",
+      "title": "Ràng buộc tính năng",
+      "binding": "Ràng buộc",
+      "bindingAccuracyChanged": "Thay đổi độ chính xác",
+      "same": "giống nhau",
+      "different": "Khác nhau"
+    },
+    "blockDesign": {
+      "cells": "Tế bào",
+      "target": "Mục tiêu",
+      "yourAnswer": "Câu trả lời của bạn",
+      "tapHint": "Nhấn để xoay vòng màu",
+      "check": "Kiểm tra"
+    },
+    "brixton": {
+      "adapt": "Thích nghi",
+      "adaptationCost": "Chi phí thích ứng",
+      "nonswitchTrials": "Thử nghiệm không chuyển đổi",
+      "switchTrials": "Chuyển đổi thử nghiệm"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Hãy nhớ những lá thư này",
+      "selectThe3Letters": "Chọn 3 chữ cái",
+      "title": "Nhiệm vụ Brown-Peterson",
+      "forgetting": "quên",
+      "sDelay": "Độ trễ",
+      "minus3": "Trừ3",
+      "delay": "Trì hoãn"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Chất lượng quyết định",
+      "finalPoints": "Điểm cuối cùng",
+      "meanBet": "Đặt cược trung bình",
+      "winRate": "Tỷ lệ thắng",
+      "wins": "Thắng",
+      "title": "Nhiệm vụ cờ bạc của Cambridge",
+      "totalPoints": "Tổng số điểm",
+      "quality": "chất lượng",
+      "rational": "hợp lý",
+      "avgBet": "Trung bình cá cược",
+      "trial": "dùng thử",
+      "whichColorHidesToken": "Màu nào ẩn mã thông báo?",
+      "youChose": "Bạn đã chọn",
+      "howMuchToBet": "Đặt cược bao nhiêu?"
+    },
+    "cancellation": {
+      "false": "sai",
+      "target": "Mục tiêu:",
+      "total": "Tổng cộng",
+      "title": "Nhiệm vụ hủy bỏ (d2)",
+      "misses": "Bỏ lỡ",
+      "targetDescription": "d có 2 điểm"
+    },
+    "changeBlindness": {
+      "detectionRate": "Tỷ lệ phát hiện",
+      "found": "Đã tìm thấy",
+      "meanDetectionTime": "Thời gian phát hiện trung bình",
+      "title": "Thay đổi độ mù",
+      "missed": "bị bỏ lỡ",
+      "avgTime": "Trung bình thời gian",
+      "instructions": "Hướng dẫn"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Ước tính Tốt nhất",
+      "meanScore": "Điểm trung bình",
+      "worstEstimate": "Ước tính tồi tệ nhất",
+      "inRange": "Ước tính tốt!",
+      "title": "Ước tính nhận thức",
+      "meanScoreLabel": "Điểm trung bình",
+      "inRangeLabel": "Trong phạm vi",
+      "extreme": "Cực đoan",
+      "scoreLabel": "ghi điểm",
+      "submit": "Gửi"
+    },
+    "common": {
+      "accuracy": "Độ chính xác",
+      "bias": "thiên vị",
+      "falseAlarmRate": "Tỷ lệ cảnh báo sai",
+      "hitRate": "Tỷ lệ trúng",
+      "hits": "Lượt truy cập",
+      "listening": "Đang nghe...",
+      "meanRt": "RT trung bình",
+      "timedOut": "Đã hết thời gian",
+      "timedOut2": "Đã hết thời gian",
+      "faRate": "Taux de FA",
+      "paused": "Đã tạm dừng"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Bạn tự tin đến mức nào?",
+      "rateYourConfidence": "Đánh giá sự tự tin của bạn",
+      "title": "Hiệu chuẩn độ tin cậy",
+      "calError": "Lỗi hiệu chuẩn",
+      "confidence": "sự tự tin"
+    },
+    "consequences": {
+      "best": "Tốt nhất",
+      "nextRound": "Vòng tiếp theo...",
+      "time": "thời gian",
+      "placeholder": "Nhập một hậu quả...",
+      "title": "hậu quả",
+      "totalIdeas": "Tổng số ý tưởng",
+      "avgPerRound": "Trung bình mỗi vòng",
+      "rounds": "Vòng đấu",
+      "noConsequencesListed": "Không có hậu quả được liệt kê",
+      "roundProgress": "Vòng {{current}} / {{total}}",
+      "typeAndPressAdd": "Nhập và nhấn Thêm"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Hiệu ứng gợi ý",
+      "newConfigRt": "Cấu hình mới RT",
+      "oldConfigRt": "Cấu hình cũ RT",
+      "title": "Gợi ý theo ngữ cảnh",
+      "cueing": "Gợi ý",
+      "oldRt": "RT cũ",
+      "newRt": "RT mới",
+      "prompt": "Lời nhắc",
+      "left": "trái",
+      "right": "Đúng"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Ngưỡng jitter",
+      "title": "Tích hợp đường viền",
+      "pipeJitter": "| sự bồn chồn"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Ngưỡng tương phản",
+      "title": "Độ nhạy tương phản",
+      "threshold": "Ngưỡng",
+      "left": "trái",
+      "right": "Đúng"
+    },
+    "cpt": {
+      "nontargets": "Không phải mục tiêu",
+      "target": "Mục tiêu",
+      "nonTarget": "Không phải mục tiêu",
+      "dPrime": "d'",
+      "targetsLetter": "Thư mục tiêu",
+      "tapForLetterOnly": "Chỉ nhấn vào chữ cái đích"
+    },
+    "crowding": {
+      "criticalSpacing": "Khoảng cách tới hạn",
+      "leftAccuracy": "Độ chính xác bên trái",
+      "rightAccuracy": "Độ chính xác đúng"
+    },
+    "cryptogram": {
+      "hints": "gợi ý",
+      "title": "mật mã",
+      "solved": "Đã giải quyết",
+      "time": "thời gian",
+      "puzzles": "Câu đố",
+      "puzzle": "câu đố",
+      "hint": "gợi ý",
+      "clear": "Xóa"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Diện tích dưới đường cong",
+      "discountRateK": "Tỷ lệ chiết khấu (k)",
+      "impulsivityIndex": "chỉ số xung động",
+      "title": "Trì hoãn giảm giá",
+      "aucPatience": "sự kiên nhẫn của AUC",
+      "patient": "bệnh nhân",
+      "kRate": "Tỷ lệ K",
+      "impuls": "xung lực",
+      "indifferencePoints": "Điểm thờ ơ",
+      "whichPrefer": "Bạn thích cái nào hơn?",
+      "today": "hôm nay"
+    },
+    "delayedMatching": {
+      "long": "Dài",
+      "longDelay68s": "Độ trễ dài (6-8 giây)",
+      "med": "Địa Trung Hải",
+      "mediumDelay46s": "Độ trễ trung bình (4-6 giây)",
+      "short": "ngắn",
+      "shortDelay34s": "Độ trễ ngắn (3-4 giây)",
+      "title": "Kết hợp bị trì hoãn",
+      "delay": "Trì hoãn",
+      "rememberThisPattern": "Hãy nhớ mẫu này",
+      "whichWasIt": "Đó là cái nào?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Phát hiện cảnh báo",
+      "attendToTheLeftColumn": "Chú ý đến cột TRÁI",
+      "attendedAccuracy": "Đã tham dự chính xác",
+      "ignoreTheRightColumn": "Bỏ qua cột bên phải",
+      "right": "RIGHT",
+      "title": "Nghe phân đôi",
+      "attendedAcc": "Tham dự chính xác",
+      "alertDet": "Phát hiện cảnh báo",
+      "alerts": "Cảnh báo",
+      "selectLeftColumnWords": "Chọn các từ cột bên trái",
+      "submit": "Gửi",
+      "alertQuestion": "Câu hỏi cảnh báo"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Quên tính chính xác",
+      "forgettingEffect": "Hiệu ứng quên",
+      "newRejection": "Từ chối mới",
+      "rememberAccuracy": "Ghi nhớ độ chính xác",
+      "title": "định hướng quên",
+      "remember": "Ghi nhớ",
+      "forget": "quên đi",
+      "round": "vòng",
+      "word": "từ",
+      "wasThisWordShown": "Từ này có được hiển thị không?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Điểm thiên vị chú ý",
+      "congruentAcc": "Acc đồng dạng",
+      "congruentRt": "RT đồng dạng",
+      "incongruentAcc": "Acc không phù hợp",
+      "incongruentRt": "RT không phù hợp"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Ô tô hay xe tải?",
+      "minDisplayReached": "Đã đạt đến hiển thị tối thiểu",
+      "positionAccuracy": "Độ chính xác của vị trí",
+      "thresholdDisplay": "Hiển thị ngưỡng",
+      "vehicleAccuracy": "Độ chính xác của xe",
+      "whereWasTheDiamond": "Viên kim cương ở đâu?",
+      "title": "Quyết định kép",
+      "threshold": "Ngưỡng",
+      "bothOk": "Cả hai đều đúng",
+      "vehicle": "Xe",
+      "position": "Vị trí",
+      "car": "xe hơi",
+      "truck": "xe tải"
+    },
+    "dsst": {
+      "items": "Mặt hàng",
+      "itemsCompleted": "Các hạng mục đã hoàn thành",
+      "speedItemsmin": "Tốc độ (mục/phút)",
+      "attempts": "Nỗ lực",
+      "itemsPerMin": "Mục / phút"
+    },
+    "dualTask": {
+      "dualtaskCost": "Chi phí nhiệm vụ kép",
+      "taskANumber": "Nhiệm vụ A (Số)",
+      "taskBSymbol": "Nhiệm vụ B (Ký hiệu)",
+      "title": "Nhiệm vụ kép",
+      "taskA": "Nhiệm vụ A",
+      "taskB": "Nhiệm vụ B",
+      "number": "Số",
+      "symbol": "Biểu tượng",
+      "up": "Lên",
+      "down": "xuống"
+    },
+    "dualTime": {
+      "sessionEnPause": "Phiên bị tạm dừng",
+      "votreEstimationSecondes": "Ước tính của bạn (giây)",
+      "sessionInterrupted": "Phiên bị gián đoạn",
+      "target": "Mục tiêu",
+      "estimation": "ước tính",
+      "avgTime": "Trung bình thời gian",
+      "avgError": "Trung bình lỗi",
+      "trials": "Thử nghiệm",
+      "resumeToContinue": "Tiếp tục để tiếp tục",
+      "aimFor": "Nhằm mục đích",
+      "second": "Thứ hai",
+      "howLongDidYouTake": "Bạn mất bao lâu?"
+    },
+    "dualTrack": {
+      "confirmer": "Xác nhận",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Tiếp tục để tiếp tục.",
+      "sessionEnPause": "Phiên bị tạm dừng",
+      "tapezLesCibles": "Nhấn vào các mục tiêu",
+      "tapezLaCible": "Nhấn vào mục tiêu",
+      "appuyezConfirmer": "Nhấn Xác nhận",
+      "targetsCountLabel": "{{count}} mục tiêu",
+      "distractorsCountLabel": "{{count}} yếu tố gây phân tâm",
+      "roundsCountLabel": "{{count}} vòng",
+      "calibrationRoundsLabel": "{{count}} vòng hiệu chuẩn",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = cấp độ khó của hành trình nội bộ.",
+      "tierHelpCurrentWithPhase": "Bạn hiện đang đạt T{{current}} trong tổng số {{total}} cho {{targets}} mục tiêu. Giai đoạn hiện tại: {{phase}}. Còn {{remaining}} bậc trước cấp mục tiêu tiếp theo.",
+      "phaseTracking": "Theo dõi",
+      "phaseAudio": "Theo dõi + âm thanh",
+      "phaseColor": "Theo dõi + màu sắc",
+      "phaseCombined": "Theo dõi + âm thanh + màu sắc",
+      "passLetters": "chữ cái",
+      "passColors": "Màu sắc",
+      "moveInstruction": "Hướng dẫn di chuyển",
+      "moveConfirmBtn": "Di chuyển nút xác nhận",
+      "preparingSession": "Đang chuẩn bị phiên...",
+      "preparing3dScene": "Đang chuẩn bị cảnh 3D...",
+      "startJourney": "Bắt đầu hành trình",
+      "calibrationDescription": "Trước giai đoạn đầu tiên, việc hiệu chuẩn lâu hơn sẽ ước tính mức ban đầu của bạn.",
+      "defaultDescription": "Những quả bóng sẽ sáng lên. Theo dõi họ trong khi họ di chuyển, sau đó xác định chúng.",
+      "startCalibration": "Bắt đầu hiệu chuẩn",
+      "calibrationTitle": "Hiệu chuẩn",
+      "estimatedStart": "Ước tính. bắt đầu",
+      "roundsAnalyzed": "Vòng phân tích",
+      "willStartAt": "Sẽ bắt đầu lúc",
+      "targetsCount": "Mục tiêu",
+      "thenProgress": "sau đó tiến bộ"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Có nghĩa là lỗi tuyệt đối",
+      "ratio": "Tỷ lệ",
+      "slope": "Độ dốc",
+      "vierordtSlope": "Dốc Vierordt",
+      "wait": "Đợi đã...",
+      "title": "Thời lượng sinh sản",
+      "meanError": "Lỗi trung bình",
+      "meanRatio": "Tỷ lệ trung bình (sản xuất/mục tiêu)",
+      "holdNow": "GIỮ NGAY",
+      "target": "Mục tiêu",
+      "error": "Lỗi"
+    },
+    "embeddedFigures": {
+      "fastest": "Nhanh nhất",
+      "found": "Đã tìm thấy",
+      "meanDetectionTime": "Thời gian phát hiện trung bình",
+      "slowest": "Chậm nhất",
+      "title": "Số liệu nhúng",
+      "missed": "bị bỏ lỡ",
+      "fastestLabel": "Nhanh nhất",
+      "findThisShape": "Tìm hình dạng này",
+      "memorizeShape": "Ghi nhớ hình dạng...",
+      "foundIt": "Tìm thấy nó!",
+      "giveUp": "từ bỏ"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Cảnh báo sai",
+      "misses": "Bỏ lỡ",
+      "title": "Cảm xúc N-Back",
+      "match": "Trận đấu"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT trung tính",
+      "positiveRt": "RT tích cực",
+      "threatRt": "Đe dọa RT",
+      "title": "Stroop đầy cảm xúc",
+      "interference": "Sự can thiệp",
+      "interferenceThreatNeutral": "Can thiệp (Mối đe dọa - Trung tính)"
+    },
+    "eyesTest": {
+      "totalTime": "Tổng thời gian"
+    },
+    "faceName": {
+      "gain": "Đạt được",
+      "learningImprovement": "Cải thiện học tập",
+      "round1Accuracy": "Độ chính xác vòng 1",
+      "round2Accuracy": "Độ chính xác vòng 2",
+      "whoIsThis": "Đây là ai?",
+      "title": "Hiệp hội tên mặt",
+      "round": "vòng",
+      "testPhase": "Giai đoạn thử nghiệm"
+    },
+    "fauxPas": {
+      "who": "Ai?",
+      "why": "Tại sao?",
+      "title": "Nhận dạng giả mạo",
+      "detection": "Phát hiện",
+      "scenarios": "kịch bản",
+      "fpFound": "Đã tìm thấy giấy tờ giả",
+      "control": "Kiểm soát",
+      "readyToAnswer": "Sẵn sàng trả lời",
+      "didSomeoneSay": "Có ai đó đã nói điều gì đó mà họ không nên nói phải không?",
+      "whoSaidIt": "Ai đã nói điều đó?",
+      "whyInappropriate": "Tại sao nó lại không phù hợp?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Nhớ lại độ chính xác",
+      "recognitionAccuracy": "Độ chính xác nhận dạng",
+      "recallPlaceholder": "Nhập câu trả lời của bạn...",
+      "unlikely": "khó xảy ra",
+      "certain": "chắc chắn",
+      "title": "Cảm giác được biết",
+      "recall": "thu hồi",
+      "recognition": "Sự công nhận",
+      "fokR": "Fok R",
+      "questions": "Câu hỏi",
+      "recalled": "bị thu hồi",
+      "recognized": "Được công nhận",
+      "fokSensitivity": "Độ nhạy FOK",
+      "submit": "Gửi",
+      "dontKnow": "không biết",
+      "fokPrompt": "Bạn sẽ nhận ra nó chứ?",
+      "selectCorrectAnswer": "Chọn câu trả lời đúng",
+      "answer": "Trả lời"
+    },
+    "fingerTapping": {
+      "firstTrial": "Thử nghiệm đầu tiên",
+      "lastTrial": "Thử nghiệm cuối cùng",
+      "sequence": "trình tự",
+      "speedupT1VsT12": "Tăng tốc (T1 vs T12)",
+      "title": "Chạm ngón tay"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Thời gian di chuyển trung bình",
+      "avgThroughput": "Thông lượng trung bình",
+      "title": "Khai thác Fitts",
+      "throughput": "Thông lượng",
+      "tapTarget": "Nhấn vào mục tiêu được đánh dấu"
+    },
+    "foreperiod": {
+      "early": "Sớm",
+      "slope": "Độ dốc",
+      "title": "Chuẩn bị tạm thời",
+      "fpEffectSlope": "Độ dốc hiệu ứng FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Đảo ngược",
+      "threshold": "Ngưỡng",
+      "tone1": "Giai điệu 1",
+      "tone2": "Giai điệu 2",
+      "weber": "Weber",
+      "weberFraction": "Phân số Weber",
+      "hz": "Hz",
+      "title": "Phân biệt tần số",
+      "thresholdLabel": "Ngưỡng",
+      "hzDiff": "độ lệch Hz",
+      "whichWasHigher": "Cái nào cao hơn?",
+      "firstHigher": "Cao hơn đầu tiên",
+      "secondHigher": "Cao thứ hai"
+    },
+    "gabor": {
+      "gaborPatch": "Bản vá Gabor",
+      "leftAccuracy": "Độ chính xác bên trái",
+      "leftTrials": "Thử nghiệm còn lại",
+      "noiseMask": "Mặt nạ chống ồn",
+      "rightAccuracy": "Độ chính xác đúng",
+      "rightTrials": "Thử nghiệm đúng",
+      "thresholdAngle": "Góc ngưỡng",
+      "title": "Gabor",
+      "threshold": "Ngưỡng",
+      "reversals": "Đảo ngược",
+      "timedOut": "Đã hết thời gian",
+      "left": "trái",
+      "right": "Đúng"
+    },
+    "gameOfDice": {
+      "finalPoints": "Điểm cuối cùng",
+      "risky": "Rủi ro",
+      "riskyChoices": "Lựa chọn rủi ro",
+      "safe": "An toàn",
+      "winRate": "Tỷ lệ thắng",
+      "wins": "Thắng",
+      "title": "Nhiệm vụ trò chơi xúc xắc",
+      "totalPoints": "Tổng số điểm",
+      "riskyLabel": "Rủi ro",
+      "roll": "cuộn",
+      "chooseYourBet": "Chọn đặt cược của bạn",
+      "pickNumbers": "Chọn số của bạn"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Có khoảng cách hay không có khoảng cách?",
+      "gapThreshold": "Ngưỡng khoảng cách",
+      "title": "Phát hiện im lặng",
+      "noGap": "không có khoảng cách"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Ánh mắt đó ở đâu?",
+      "direct": "trực tiếp",
+      "left": "trái",
+      "right": "Đúng",
+      "title": "Hướng nhìn",
+      "dPrimeDirectGaze": "D Nhìn thẳng vào Prime"
+    },
+    "hayling": {
+      "part1Initiation": "Phần 1 (Mở đầu)",
+      "part2": "Phần 2",
+      "part2Suppression": "Phần 2 (Đàn áp)",
+      "suppressionCost": "Chi phí ngăn chặn",
+      "title": "Hayling",
+      "part1": "Phần 1",
+      "part2Label": "Phần 2",
+      "suppression": "đàn áp",
+      "obvious": "Rõ ràng",
+      "obviousPicksPart2": "Lựa chọn rõ ràng (Phần 2)",
+      "chooseUnrelated": "Chọn một từ không liên quan",
+      "completelyUnrelated": "Hoàn toàn không liên quan",
+      "doNotPickObvious": "KHÔNG chọn từ rõ ràng!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Tiến tới giai đoạn tiếp theo...",
+      "stageComplete": "Giai đoạn hoàn thành!",
+      "title": "IED Đặt ca",
+      "stages": "Giai đoạn",
+      "edsCost": "Chi phí EDS",
+      "stage": "sân khấu",
+      "correctNeeded": "Cần đúng để thăng tiến"
+    },
+    "informationSampling": {
+      "cost": "Chi phí",
+      "free": "miễn phí",
+      "meanTilesCost": "Gạch trung bình (chi phí)",
+      "meanTilesFree": "Gạch trung bình (miễn phí)",
+      "totalCost": "Tổng chi phí",
+      "title": "Lấy mẫu thông tin",
+      "tiles": "Gạch lát",
+      "tapToReveal": "Nhấn để tiết lộ"
+    },
+    "inspectionTime": {
+      "final": "Chung kết",
+      "finalDisplayTime": "Thời gian hiển thị cuối cùng",
+      "minCorrectIt": "CNTT chính xác tối thiểu",
+      "threshold": "Ngưỡng",
+      "title": "Thời gian kiểm tra",
+      "thresholdLabel": "Ngưỡng",
+      "minIt": "CNTT tối thiểu"
+    },
+    "iowaGambling": {
+      "balance": "Số dư:",
+      "chooseADeck": "Chọn một bộ bài",
+      "deckADraws": "Bộ bài A rút bài",
+      "deckBDraws": "Rút bài B",
+      "deckCDraws": "Rút bài ở bộ C",
+      "deckDDraws": "Rút bài D",
+      "first40Advantageous": "40 người đầu tiên có lợi",
+      "last40Advantageous": "40 cuối cùng thuận lợi",
+      "learn": "Tìm hiểu",
+      "learningIndex": "chỉ số học tập",
+      "title": "Đánh bạc ở Iowa",
+      "advantageousPct": "% thuận lợi",
+      "earnings": "Thu nhập",
+      "last40": "Cuối cùng40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Độ lệch hiệu chuẩn",
+      "meanJol": "nghĩa là JOL",
+      "nowTestYourRecall": "Bây giờ hãy kiểm tra khả năng nhớ lại của bạn",
+      "studyComplete": "Nghiên cứu hoàn thành",
+      "whatWasPairedWith": "Cái gì đã được ghép nối với…?",
+      "title": "Phán quyết của việc học",
+      "recallAccuracy": "Nhớ lại độ chính xác",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Độ chính xác JOL (Gamma)",
+      "howLikelyRemember": "Khả năng bạn sẽ nhớ là bao nhiêu?",
+      "hiddenAnswer": "Câu trả lời ẩn"
+    },
+    "judgmentOfRecency": {
+      "close": "Đóng",
+      "closeGap13": "Thu hẹp khoảng cách (1-3)",
+      "far": "Xa",
+      "farGap9": "Khoảng cách xa (9+)",
+      "mediumGap48": "Khoảng cách trung bình (4-8)",
+      "title": "Phán quyết gần đây",
+      "medium": "Trung bình",
+      "studyPhaseMemorizeOrder": "Giai đoạn học tập - Ghi nhớ thứ tự",
+      "whichMoreRecently": "Cái nào xuất hiện gần đây hơn?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "RT trung bình (không có từ)",
+      "meanRtWords": "RT trung bình (từ)",
+      "nonwordsAccuracy": "Độ chính xác của phi từ",
+      "wordsAccuracy": "Độ chính xác của từ",
+      "word": "từ",
+      "nonword": "Không từ"
+    },
+    "maze": {
+      "duration": "Thời lượng",
+      "optimalSteps": "Các bước tối ưu",
+      "pathEfficiency": "Hiệu quả đường dẫn",
+      "totalSteps": "Tổng số bước",
+      "wallHits": "Lượt truy cập vào tường",
+      "title": "mê cung",
+      "completed": "Đã hoàn thành",
+      "efficiency": "Hiệu quả",
+      "wallHitsLabel": "Lượt truy cập vào tường",
+      "steps": "bước"
+    },
+    "memobox": {
+      "easy": "Dễ dàng",
+      "easy2Boxes": "Dễ dàng (2 hộp)",
+      "hard": "Cứng",
+      "hard4Boxes": "Cứng (4 hộp)",
+      "medium3Boxes": "Trung bình (3 hộp)",
+      "title": "Hộp ghi nhớ",
+      "rounds": "Vòng đấu",
+      "medium": "Trung bình",
+      "watchMovements": "Hãy quan sát những chuyển động...",
+      "howManyBalls": "Mỗi hộp có bao nhiêu quả bóng?",
+      "submit": "Gửi",
+      "roundOf": "Vòng {{current}} của {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Mặt cắt ngang là gì?",
+      "title": "Cắt tinh thần"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Cũ, tương tự, hay mới?",
+      "patternSeparation": "Tách mẫu",
+      "sep": "Tháng 9",
+      "old": "Cũ",
+      "similar": "Tương tự",
+      "new": "Mới",
+      "ldi": "LDI",
+      "title": "Phân biệt trí nhớ",
+      "hitRateOldDetected": "Tỷ lệ trúng (Đã phát hiện cũ)",
+      "lureDiscrimination": "Phân biệt đối xử thu hút (LDI)",
+      "memorize": "ghi nhớ",
+      "testPhase": "Giai đoạn thử nghiệm"
+    },
+    "multiArmedBandit": {
+      "earnings": "Thu nhập:",
+      "pickMachine": "Chọn một chiếc máy",
+      "title": "Tên cướp đa vũ trang",
+      "totalReward": "Tổng phần thưởng",
+      "optimal": "Tối ưu",
+      "regret": "Hối hận",
+      "exploit": "Khai thác",
+      "machine": "Máy",
+      "armsExplored": "Cánh tay khám phá"
+    },
+    "navon": {
+      "globalBigLetter": "Toàn cầu (chữ lớn)",
+      "localSmallLetter": "Địa phương (chữ nhỏ)",
+      "title": "Navon",
+      "globalAdv": "Tư vấn toàn cầu",
+      "whatBigLetter": "Chữ cái LỚN nào?",
+      "whatSmallLetter": "Chữ cái gì NHỎ?"
+    },
+    "negativePriming": {
+      "controlRt": "Kiểm soát RT",
+      "nameTheRedShape": "Đặt tên cho hình màu đỏ",
+      "negativePrimingRt": "RT mồi âm",
+      "positivePrimingRt": "RT mồi tích cực",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "Hiệu ứng NP",
+      "title": "Sơn lót âm",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Độ lệch ước tính",
+      "linearityRsup2": "Độ tuyến tính (R&sup2;)",
+      "meanAbsoluteError": "Sai số tuyệt đối trung bình",
+      "tapTheLineToPlaceTheNumber": "Nhấn vào dòng để đặt số",
+      "title": "Dòng số",
+      "meanError": "Lỗi trung bình",
+      "yourEstimate": "Ước tính của bạn",
+      "correct": "đúng"
+    },
+    "oddOneOut": {
+      "colorTrials": "Thử nghiệm màu sắc",
+      "shapeTrials": "thử nghiệm hình dạng",
+      "shape": "hình dạng",
+      "color": "Màu sắc",
+      "timeout": "Hết giờ",
+      "shapeDiffAccuracy": "Sự khác biệt về hình dạng độ chính xác",
+      "colorDiffAccuracy": "Sự khác biệt về màu sắc độ chính xác",
+      "shapeDiffAvgRt": "Sự khác biệt về hình dạng RT trung bình",
+      "colorDiffAvgRt": "Sự khác biệt về màu sắc trung bình RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Đường nào?",
+      "thresholdAngle": "Góc ngưỡng",
+      "title": "Phân biệt định hướng",
+      "threshold": "Ngưỡng",
+      "counterCw": "CCW",
+      "clockwise": "Theo chiều kim đồng hồ"
+    },
+    "patternComparison": {
+      "differentTrials": "Các thử nghiệm khác nhau",
+      "sameTrials": "Các thử nghiệm tương tự",
+      "same": "giống nhau",
+      "different": "Khác nhau"
+    },
+    "patternRecognition": {
+      "newPatterns": "Mẫu mới",
+      "oldPatterns": "Mẫu cũ",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Nghiên cứu kỹ các mẫu",
+      "memorize": "Ghi nhớ ({{current}}/{{total}})",
+      "getReady": "Hãy sẵn sàng...",
+      "testPhaseStarting": "Giai đoạn thử nghiệm bắt đầu..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Chính xác Đúng",
+      "meanAngularError": "Lỗi góc trung bình",
+      "withinTolerance": "Trong phạm vi dung sai",
+      "title": "Quan điểm lấy",
+      "avgErr": "Trung bình lỗi",
+      "youAreAt": "Bạn đang ở",
+      "facing": "Đối mặt",
+      "pointTo": "Chỉ vào"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Tần số Ngưỡng",
+      "seq1": "Thứ tự 1",
+      "seq2": "Tuần 2",
+      "title": "Phân biệt âm vị",
+      "thresh": "đập lúa",
+      "sameOrDifferent": "Giống nhau hay khác nhau?",
+      "same": "giống nhau",
+      "different": "Khác nhau"
+    },
+    "predictionMotion": {
+      "biasLate": "Xu hướng (+ = muộn)",
+      "meanAbsoluteError": "Có nghĩa là lỗi tuyệt đối",
+      "precisionSd": "Độ chính xác (SD)",
+      "title": "Chuyển động dự đoán",
+      "absError": "Cơ bụng. lỗi",
+      "precision": "Độ chính xác",
+      "responded": "Đã phản hồi",
+      "tapWhenReachesTarget": "TAP khi nó đạt được mục tiêu"
+    },
+    "promem": {
+      "ongoingAccuracy": "Độ chính xác liên tục",
+      "ongoingRt": "RT đang diễn ra",
+      "pmHitRate": "Tỷ lệ trúng PM",
+      "pmRt": "PM RT",
+      "pmTargets": "mục tiêu thủ tướng",
+      "title": "Ký ức triển vọng",
+      "ongoing": "Đang thực hiện",
+      "pmHits": "Lượt truy cập PM",
+      "pmMisses": "Thủ tướng bỏ lỡ",
+      "living": "Sống",
+      "nonLiving": "Không sống",
+      "redWordInstruction": "Từ màu đỏ = nhấn"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Lỗi phân tâm",
+      "literalErrorRate": "Tỷ lệ lỗi theo nghĩa đen",
+      "literalErrors": "Lỗi nghĩa đen",
+      "title": "Giải nghĩa tục ngữ",
+      "literal": "nghĩa đen",
+      "litRate": "Sáng. tỷ lệ",
+      "whatDoesThisMean": "Điều này có nghĩa là gì?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Hãy sẵn sàng theo dõi",
+      "meanTimeOnTarget": "Thời gian trung bình trên mục tiêu",
+      "meanTrackingError": "Lỗi theo dõi trung bình",
+      "placeYourFingerOnTheScreen": "Đặt ngón tay của bạn lên màn hình",
+      "title": "Theo dõi truy đuổi",
+      "timeOnTarget": "Thời gian đạt mục tiêu",
+      "error": "Lỗi",
+      "onTarget": "Đúng mục tiêu",
+      "avgError": "Trung bình lỗi",
+      "improve": "Cải thiện",
+      "improvementT1VsT": "Cải Tiến T1 Vs T",
+      "errorLabel": "Lỗi",
+      "followGreenTarget": "Theo đuổi mục tiêu xanh"
+    },
+    "rapidNaming": {
+      "roundComplete": "Vòng hoàn thành",
+      "totalErrors": "Tổng số lỗi",
+      "title": "Đặt tên nhanh",
+      "avgSpeed": "Trung bình tốc độ",
+      "totalTime": "Tổng thời gian",
+      "round": "vòng",
+      "getReady": "Hãy sẵn sàng!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Thời gian giải quyết trung bình",
+      "solved": "Đã giải quyết",
+      "wrong": "sai",
+      "placeholder": "Câu trả lời của bạn...",
+      "title": "Câu đố Rebus",
+      "puzzles": "Câu đố",
+      "timeout": "Hết giờ",
+      "submit": "Gửi",
+      "answer": "Trả lời"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Thời gian giải quyết trung bình",
+      "solved": "Đã giải quyết",
+      "placeholder": "Câu trả lời của bạn...",
+      "title": "Cộng tác viên từ xa",
+      "timeout": "Hết giờ",
+      "submit": "Gửi",
+      "answer": "Trả lời"
+    },
+    "reversalLearning": {
+      "adapt": "Thích nghi",
+      "loseshiftRate": "Tỷ lệ mất dịch chuyển",
+      "score": "Điểm:",
+      "winstayRate": "Tỷ lệ thắng-ở lại",
+      "title": "Học ngược",
+      "rewards": "Phần thưởng",
+      "reversals": "Đảo ngược",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Trung bình thử nghiệm theo tiêu chí",
+      "pickACard": "Chọn một thẻ"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Đếm ngược tới 7",
+      "reproduceThePatternFromMemory": "Tái tạo mẫu từ bộ nhớ",
+      "title": "Hình phức hợp Rey",
+      "copy": "Sao chép",
+      "recall": "thu hồi",
+      "retention": "giữ lại",
+      "trial": "dùng thử",
+      "target": "Mục tiêu",
+      "yourCopy": "Bản sao của bạn",
+      "submit": "Gửi"
+    },
+    "rhythm": {
+      "avgTimingError": "Lỗi thời gian trung bình",
+      "bestTrialError": "Lỗi dùng thử tốt nhất",
+      "correctTrials": "Thử nghiệm đúng",
+      "worstTrialError": "Lỗi dùng thử tồi tệ nhất",
+      "watchRhythm": "Xem nhịp điệu",
+      "getReady": "Hãy sẵn sàng...",
+      "tapTheRhythm": "Nhấn vào nhịp điệu!",
+      "tooFarOff": "Xa quá!",
+      "tapToReproduce": "Nhấn để sao chép",
+      "beats": "{{count}} nhịp đập",
+      "bestTrial": "Bản dùng thử tốt nhất",
+      "worstTrial": "Thử nghiệm tồi tệ nhất",
+      "title": "Nhịp điệu",
+      "msErr": "thưa cô, lỗi"
+    },
+    "routePlanning": {
+      "time": "thời gian",
+      "title": "Quy hoạch tuyến đường",
+      "levels": "Cấp độ",
+      "completed": "Đã hoàn thành",
+      "avgMoves": "Trung bình di chuyển",
+      "clear": "Xóa",
+      "submit": "Gửi",
+      "instructions": "Hướng dẫn"
+    },
+    "rvp": {
+      "detect357246468": "Phát hiện: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Chuỗi mục tiêu",
+      "fa": "FA",
+      "hitRate": "Tỷ lệ trúng",
+      "misses": "Bỏ lỡ",
+      "sequences": "trình tự"
+    },
+    "sart": {
+      "commissionErrors": "Lỗi hoa hồng",
+      "omissionErrors": "Lỗi thiếu sót",
+      "tapAllDigits": "Nhấn vào tất cả các chữ số ngoại trừ 3",
+      "except3": "Ngoại trừ3"
+    },
+    "sceneCrasher": {
+      "adds": "Thêm",
+      "studyTheScene": "Nghiên cứu hiện trường",
+      "swaps": "Hoán đổi",
+      "tapTheNewchangedObject": "Nhấn vào đối tượng mới/đã thay đổi"
+    },
+    "sentenceVerification": {
+      "falseSentences": "câu sai",
+      "trueSentences": "Câu đúng",
+      "byCategory": "Theo danh mục",
+      "title": "Xác minh câu",
+      "trueRt": "RT thật",
+      "true": "Đúng",
+      "false": "sai",
+      "pressKey": "Nhấn"
+    },
+    "soundSweeps": {
+      "down": "xuống",
+      "downAccuracy": "Giảm độ chính xác",
+      "durationThreshold": "Ngưỡng thời lượng",
+      "up": "Lên",
+      "upAccuracy": "Lên độ chính xác",
+      "title": "Quét âm thanh",
+      "threshold": "Ngưỡng",
+      "upOrDown": "Lên hay xuống?"
+    },
+    "sourceMemory": {
+      "color": "Màu sắc",
+      "colorRecall": "Thu hồi màu",
+      "frame": "khung",
+      "frameRecall": "Thu hồi khung hình",
+      "getReadyForTheTest": "Hãy sẵn sàng cho bài kiểm tra!",
+      "itemRecognition": "Nhận dạng vật phẩm",
+      "positionRecall": "Thu hồi vị trí",
+      "sourceAccuracy": "Độ chính xác của nguồn",
+      "title": "Bộ nhớ nguồn",
+      "source": "Nguồn",
+      "position": "Vị trí",
+      "word": "từ",
+      "wasThisWordShown": "Từ này có được hiển thị không?",
+      "bottom": "Dưới cùng",
+      "blue": "Màu xanh",
+      "orange": "trái cam",
+      "circle": "Vòng tròn",
+      "square": "hình vuông"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Ngưỡng tiếng ồn",
+      "title": "Lời nói trong tiếng ồn",
+      "noise": "Tiếng ồn",
+      "whichWordWasIt": "Đó là từ nào?"
+    },
+    "srtt": {
+      "learningEffect": "Hiệu quả học tập",
+      "learning": "học tập",
+      "block": "Chặn"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Mức cơ hội",
+      "learningDetected": "Đã phát hiện học tập",
+      "testPhase": "Giai đoạn thử nghiệm",
+      "whichPairLooksMoreFamiliar": "Cặp nào trông quen hơn?",
+      "title": "Học thống kê",
+      "learning": "học tập",
+      "watchTheShapes": "Quan sát các hình dạng"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Hiệu ứng thiên vị niềm tin",
+      "conclusion": "Kết luận",
+      "premise1": "Cơ sở 1",
+      "premise2": "Tiền đề 2",
+      "logicalValidityQuestion": "Điều này có hợp lý về mặt logic không?",
+      "valid": "hợp lệ",
+      "invalid": "không hợp lệ"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Thiếu độ chính xác",
+      "presentAccuracy": "Độ chính xác hiện tại",
+      "title": "Tìm kiếm biểu tượng",
+      "present": "hiện tại",
+      "absent": "Vắng mặt",
+      "targets": "Mục tiêu",
+      "searchGroup": "Nhóm tìm kiếm"
+    },
+    "syncContinuation": {
+      "async": "Không đồng bộ",
+      "asynchrony": "Không đồng bộ",
+      "drift": "Trôi",
+      "cv": "CV",
+      "title": "Đồng bộ-Tiếp tục",
+      "meanCv": "CV trung bình",
+      "tempos": "Nhịp độ",
+      "tempo": "nhịp độ",
+      "ioi": "Ioi",
+      "getReady": "Hãy sẵn sàng...",
+      "nextTempo": "Nhịp độ tiếp theo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Đặt lại chính xác",
+      "duration": "Thời lượng",
+      "missedCounters": "Bộ đếm bị bỏ lỡ",
+      "prematureResets": "Đặt lại sớm",
+      "totalEvents": "Tổng số sự kiện",
+      "tooEarly": "Quá sớm!",
+      "missed": "Bỏ lỡ!",
+      "title": "tung hứng nhiệm vụ",
+      "premature": "Sinh non",
+      "counter": "quầy",
+      "tapCounterInstruction": "Nhấn vào từng bộ đếm khi nó đạt đến ngưỡng. Đừng để bất kỳ tràn!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Điểm chia đôi (PSE)",
+      "curveSteepness": "Độ dốc đường cong",
+      "idealMidpoint": "Điểm giữa lý tưởng",
+      "pse": "PSE",
+      "title": "Phân chia tạm thời",
+      "steepness": "Độ dốc",
+      "shortOrLong": "Ngắn hay dài?",
+      "trainingPhase": "Giai đoạn đào tạo",
+      "short": "ngắn",
+      "long": "Dài"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Độ rộng dải màu",
+      "rememberThisDuration": "Hãy nhớ khoảng thời gian này",
+      "width": "Chiều rộng",
+      "standard": "TIÊU CHUẨN",
+      "title": "Khái quát hóa thời gian",
+      "hitRate": "Tỷ lệ trúng",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Tỷ lệ trúng (tiêu chuẩn phát hiện)",
+      "sameDuration": "Thời lượng giống nhau?",
+      "trainingPhase": "Giai đoạn đào tạo",
+      "same": "giống nhau",
+      "different": "Khác nhau"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Ngưỡng SOA",
+      "title": "Phân biệt kết cấu",
+      "threshold": "Ngưỡng"
+    },
+    "timePromem": {
+      "avgTimingError": "Lỗi thời gian trung bình",
+      "clockChecks": "Kiểm tra đồng hồ",
+      "ongoingAccuracy": "Độ chính xác liên tục",
+      "ongoingTrials": "Đang tiến hành thử nghiệm",
+      "totalPmPresses": "Tổng số máy ép PM",
+      "pmAccuracy": "Độ chính xác của PM",
+      "pmMisses": "Thủ tướng bỏ lỡ",
+      "title": "Thời gian dự kiến",
+      "ongoing": "Đang thực hiện",
+      "pmHitsLabel": "lượt truy cập PM",
+      "timingErr": "Lỗi thời gian",
+      "pmHitsExpected": "Số lượt truy cập PM / Dự kiến",
+      "pmPresses": "Máy ép PM",
+      "checkClock": "Kiểm tra đồng hồ",
+      "thirtySecMark": "dấu mốc tuổi 30"
+    },
+    "toj": {
+      "meanResponseTime": "Thời gian phản hồi trung bình",
+      "temporalResolution": "Độ phân giải tạm thời",
+      "title": "Phán quyết tạm thời",
+      "threshold": "Ngưỡng",
+      "whichCameFirst": "Cái nào đến trước?",
+      "leftFirst": "Bên trái đầu tiên",
+      "rightFirst": "Bên phải đầu tiên"
+    },
+    "tower": {
+      "budget": "Ngân sách",
+      "challenge": "Thử thách",
+      "challengeClassic": "cổ điển",
+      "challengeExpert": "chuyên gia",
+      "challengeMemory": "Bộ nhớ",
+      "challengePrecision": "Độ chính xác",
+      "dragDiscAriaLabel": "Kéo đĩa trên cùng từ chốt {{peg}}",
+      "goal": "Mục tiêu",
+      "goalHiddenStatus": "Mục tiêu bị ẩn. Sử dụng Reveal để hiển thị nó một cách ngắn gọn.",
+      "goalRevealedMessage": "Mục tiêu được tiết lộ trong 3 giây.",
+      "hint": "gợi ý",
+      "hintDescription": "Hiển thị bước đi tiếp theo tốt nhất",
+      "hintMessage": "Gợi ý: di chuyển đĩa trên cùng từ chốt {{fromPeg}} sang chốt {{toPeg}}.",
+      "hiddenGoalDescription": "Mục tiêu được ẩn trong khi chơi. Sử dụng Reveal khi bạn cần làm mới trong thời gian ngắn.",
+      "hiddenGoalTitle": "Thử thách trí nhớ",
+      "invalid": "không hợp lệ",
+      "moves": "Di chuyển",
+      "optimal": "Tối ưu",
+      "pegFullMessage": "Cái chốt đó đã đầy.",
+      "previewMemoryCountdown": "Ghi nhớ mục tiêu. Bắt đầu sau {{seconds}}giây.",
+      "previewPlanCountdown": "Lên kế hoạch cho giải pháp {{moves}}-di chuyển. Bắt đầu sau {{seconds}}giây.",
+      "reset": "Đặt lại",
+      "resetDescription": "Bắt đầu lại câu đố này",
+      "resetMessage": "Đặt lại câu đố.",
+      "reveal": "Tiết lộ",
+      "revealDescription": "Tiết lộ mục tiêu ẩn giấu",
+      "statusOptimalSolve": "Giải quyết tối ưu. Điểm {{score}}.",
+      "statusSolvedScore": "Giải quyết trong {{moves}} nước đi (+{{extraMoves}}). Điểm {{score}}.",
+      "undo": "Hoàn tác",
+      "undoDescription": "Đảo ngược bước đi cuối cùng",
+      "undoneMessage": "Bước cuối cùng được hoàn tác.",
+      "yourPegs": "chốt của bạn"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Giao hàng đúng",
+      "trainsLost": "Chuyến tàu bị mất",
+      "wrongStation": "Trạm sai",
+      "title": "Chuyến tàu suy nghĩ",
+      "trains": "Xe lửa",
+      "missed": "bị bỏ lỡ",
+      "scoreLabel": "Điểm",
+      "instructions": "Hướng dẫn"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Câu hỏi trung bình được sử dụng",
+      "title": "Hai mươi câu hỏi",
+      "avgQuestions": "Trung bình câu hỏi",
+      "rounds": "Vòng đấu",
+      "efficiency": "Hiệu quả",
+      "avgQuestionsCorrectOnly": "Trung bình câu hỏi (chỉ đúng)",
+      "questionsLabel": "Câu hỏi",
+      "remaining": "Còn lại",
+      "readyToGuess": "Tôi đã sẵn sàng để đoán!",
+      "tapTheTarget": "Nhấn vào đối tượng bạn nghĩ là mục tiêu!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Trường quan sát hữu ích",
+      "visualNoiseMask": "Mặt nạ tiếng ồn thị giác",
+      "whatWasInTheCenter": "Ở trung tâm có gì?",
+      "whereWasTheTarget": "Mục tiêu ở đâu?",
+      "avgThreshold": "Trung bình ngưỡng",
+      "speed": "Tốc độ",
+      "accuracy": "Độ chính xác",
+      "central": "miền Trung",
+      "peripheral": "Ngoại vi",
+      "overall": "Nhìn chung",
+      "block": "Chặn",
+      "trials": "Thử nghiệm",
+      "start": "Bắt đầu",
+      "focus": "Tập trung",
+      "threshold": "Ngưỡng",
+      "stimulus": "Kích thích",
+      "respondFromMemory": "Trả lời từ bộ nhớ",
+      "truck": "Xe tải",
+      "choosePeripheralLocation": "Chọn vị trí ngoại vi",
+      "currentBlock": "Chặn {{n}}",
+      "exposure": "Tiếp xúc"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Những từ bắt đầu bằng {{letter}}",
+      "title": "Sự lưu loát bằng lời nói",
+      "totalWords": "Tổng số từ",
+      "duplicates": "trùng lặp",
+      "letter": "Thư",
+      "round": "vòng",
+      "roundComplete": "Vòng hoàn thành",
+      "nextRound": "Vòng tiếp theo",
+      "middotRound": "· Vòng"
+    },
+    "vernierAcuity": {
+      "whichSide": "Bên nào?",
+      "title": "Thị lực Vernier",
+      "leftOffset": "Bù trái",
+      "rightOffset": "Bù phải",
+      "offset": "Bù đắp"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Chiến lược tối ưu",
+      "correct": "Chính xác!",
+      "wrong": "sai",
+      "title": "Dự báo thời tiết",
+      "optimal": "Tối ưu",
+      "learningCurve": "Đường cong học tập",
+      "predictTheWeather": "Dự đoán thời tiết",
+      "rain": "Mưa"
+    },
+    "wordChain": {
+      "avgResponseTime": "Thời gian phản hồi trung bình",
+      "chain": "Chuỗi",
+      "longestChain": "Chuỗi dài nhất",
+      "totalCorrect": "Tổng số chính xác",
+      "totalWords": "Tổng số từ",
+      "words": "từ",
+      "title": "Chuỗi từ",
+      "longest": "Dài nhất",
+      "avgRt": "Trung bình RT",
+      "endsWith": "kết thúc bằng",
+      "chainLabel": "Chuỗi",
+      "bestLabel": "Tốt nhất"
+    },
+    "wordFlow": {
+      "avgWordLength": "Độ dài từ trung bình",
+      "correct": "đúng",
+      "invalidWords": "Từ không hợp lệ",
+      "totalWordsSelected": "Tổng số từ đã chọn",
+      "validWords": "từ hợp lệ",
+      "wordsPerMinute": "Từ mỗi phút",
+      "wrong": "sai",
+      "seeResults": "Xem kết quả",
+      "nextRound": "Vòng tiếp theo ({{current}}/{{total}})",
+      "title": "Sự lưu loát bằng lời nói",
+      "validWordsLabel": "từ hợp lệ",
+      "wordsPerMinLabel": "Từ/phút",
+      "avgLengthLabel": "Trung bình chiều dài",
+      "invalidLabel": "không hợp lệ",
+      "round": "vòng",
+      "selectWordsBelongTo": "Chọn các từ thuộc",
+      "selected": "Đã chọn"
+    },
+    "wordList": {
+      "avgRtCorrect": "RT trung bình (đúng)",
+      "primacyEffect": "Hiệu ứng ưu việt",
+      "recencyEffect": "Hiệu ứng gần đây",
+      "studyPhaseRememberEachWord": "Giai đoạn học - nhớ từng từ",
+      "wordsRecalled": "từ nhớ lại",
+      "title": "Danh sách từ",
+      "serialPositionCurve": "Đường cong vị trí nối tiếp",
+      "wasWordInList": "Từ này có trong danh sách không?",
+      "seenBefore": "Đã thấy trước đây",
+      "newWord": "Mới"
+    },
+    "speedSort": {
+      "switchAccuracy": "Chuyển đổi độ chính xác",
+      "switchTrials": "Chuyển đổi thử nghiệm",
+      "sortByColor": "Sắp xếp theo MÀU SẮC",
+      "sortByShape": "Sắp xếp theo HÌNH DẠNG",
+      "sortByNumber": "Sắp xếp theo NUMBER",
+      "ruleChanged": "Quy tắc đã thay đổi!",
+      "binRed": "màu đỏ",
+      "binBlue": "Màu xanh",
+      "binGreen": "màu xanh lá cây",
+      "binYellow": "màu vàng",
+      "binCircle": "Vòng tròn",
+      "binSquare": "hình vuông",
+      "binTriangle": "Tam giác",
+      "binStar": "Ngôi sao",
+      "title": "Sắp xếp tốc độ",
+      "switch": "Công tắc"
+    },
+    "reflex": {
+      "target": "Mục tiêu",
+      "lure": "Thu hút",
+      "tooSlow": "Quá chậm!",
+      "wrongTarget": "Mục tiêu sai!",
+      "tapTargets": "Nhấn vào vòng tròn màu xanh lá cây!",
+      "hits": "Lượt truy cập",
+      "misses": "Bỏ lỡ",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Hãy nhớ tổng số đang chạy ...",
+      "title": "Tính toán chuỗi",
+      "stepChains": "{{len}}-chuỗi bước",
+      "start": "Bắt đầu",
+      "step": "Bước",
+      "whatIsTheResult": "Kết quả là gì?"
+    },
+    "alternateUses": {
+      "placeholder": "Nhập cách sử dụng...",
+      "title": "Sử dụng thay thế",
+      "totalUses": "Tổng số lần sử dụng",
+      "perObject": "Mỗi đối tượng",
+      "rounds": "Vòng đấu",
+      "bestObject": "Đối tượng tốt nhất",
+      "bestCount": "Số lượng tốt nhất",
+      "noUsesSubmitted": "Không có mục đích sử dụng nào được gửi",
+      "timesUp": "Hết giờ rồi!",
+      "nextObject": "Đối tượng tiếp theo ({{object}})",
+      "listCreativeUses": "Liệt kê các cách sử dụng sáng tạo cho đối tượng này"
+    },
+    "anagram": {
+      "placeholder": "Hãy gõ từ...",
+      "title": "Đảo chữ",
+      "avgSolve": "Trung bình giải quyết",
+      "letterWords": "{{len}}từ có chữ cái",
+      "submit": "Gửi"
+    },
+    "facialEmotion": {
+      "happy": "hạnh phúc",
+      "sad": "Buồn",
+      "angry": "tức giận",
+      "fearful": "Sợ hãi",
+      "disgusted": "ghê tởm",
+      "surprised": "Ngạc nhiên",
+      "lc": "LC",
+      "title": "Nhận dạng cảm xúc trên khuôn mặt",
+      "topConfusions": "Những nhầm lẫn hàng đầu"
+    },
+    "numberSeries": {
+      "easy": "Dễ dàng",
+      "hard": "Cứng"
+    },
+    "chainRecall": {
+      "round": "vòng",
+      "title": "Thu hồi dây chuyền",
+      "chain": "Chuỗi",
+      "placeholder": "Trình giữ chỗ"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Cảm xúc Đi/Không Đi",
+      "block1CommissionErrors": "Lỗi hoa hồng khối 1",
+      "block2CommissionErrors": "Lỗi hoa hồng khối 2",
+      "goHappy": "Đi = Hạnh phúc",
+      "goSad": "Đi = Buồn",
+      "block": "Chặn",
+      "go": "Đi"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Hiệu ứng Stroop",
+      "title": "Cơn sốt màu",
+      "congShort": "Công.",
+      "incongShort": "Công.",
+      "congruentAccuracy": "Độ chính xác phù hợp",
+      "incongruentAccuracy": "Độ chính xác không phù hợp"
+    },
+    "mirror": {
+      "avgCorrectCells": "Các ô chính xác (trung bình)",
+      "symmetryType": "Kiểu đối xứng",
+      "title": "Gương"
+    },
+    "rhythmTap": {
+      "correctTrials": "Thử nghiệm đúng",
+      "avgRhythmScore": "Điểm nhịp điệu trung bình",
+      "bestTrialScore": "Điểm thử tốt nhất",
+      "worstTrialScore": "Điểm thi tệ nhất",
+      "level": "Cấp độ",
+      "rhythm": "Nhịp điệu",
+      "bestTrial": "Bản dùng thử tốt nhất",
+      "worstTrial": "Thử nghiệm tồi tệ nhất"
+    },
+    "vocalProsody": {
+      "questioning": "Đặt câu hỏi"
+    },
+    "arithmeticSpeed": {
+      "multiply": "nhân",
+      "add": "Thêm",
+      "subtract": "Trừ",
+      "title": "Tốc độ số học",
+      "score": "Điểm",
+      "solved": "Đã giải quyết",
+      "missed": "bị bỏ lỡ"
+    },
+    "puzzle": {
+      "avgSolveTime": "Thời gian giải quyết trung bình",
+      "totalMoves": "Tổng số nước đi",
+      "totalErrors": "Tổng số lỗi",
+      "gridSize": "Kích thước lưới",
+      "maxGridReached": "Đã đạt đến lưới tối đa",
+      "maxLevelReached": "Đã đạt đến cấp độ tối đa",
+      "maxNodesReached": "Đã đạt đến số nút tối đa",
+      "puzzleDetails": "Chi tiết câu đố",
+      "roundDetails": "Chi tiết tròn",
+      "solved": "Đã giải quyết!",
+      "undo": "Hoàn tác",
+      "reset": "Đặt lại",
+      "check": "Kiểm tra",
+      "moves": "Di chuyển",
+      "time": "thời gian",
+      "level": "Cấp độ",
+      "errors": "Lỗi",
+      "score": "Điểm",
+      "grid": "Lưới",
+      "crossings": "Giao lộ",
+      "pearls": "Ngọc trai",
+      "clues": "Manh mối",
+      "region": "Vùng",
+      "filled": "đầy",
+      "cells": "Tế bào",
+      "undosLeft": "Hoàn tác còn lại",
+      "gems": "đá quý",
+      "connected": "Đã kết nối",
+      "slides": "Trang trình bày",
+      "progress": "Tiến độ",
+      "rotations": "Phép quay",
+      "puzzle": "câu đố",
+      "uncovered": "Khám phá",
+      "colored": "màu",
+      "violations": "Vi phạm",
+      "blacked": "Bị bôi đen",
+      "empty": "trống",
+      "remaining": "Còn lại",
+      "pairs": "Cặp",
+      "flips": "Lật",
+      "found": "Đã tìm thấy",
+      "balls": "Quả bóng",
+      "guesses": "đoán",
+      "original": "Bản gốc",
+      "findDifferences": "Tìm sự khác biệt",
+      "totalDrags": "Tổng số lần kéo",
+      "totalUndos": "Tổng số lần hoàn tác",
+      "totalEdgesDrawn": "Tổng số cạnh được vẽ",
+      "totalLasers": "Tổng số tia laser",
+      "totalSlides": "Tổng số slide",
+      "totalRotations": "Tổng số vòng quay",
+      "totalRectangles": "Tổng số hình chữ nhật",
+      "totalScore": "Tổng số điểm",
+      "avgTime": "Thời gian trung bình",
+      "cellsCleared": "Đã xóa ô",
+      "totalDiffsFound": "Tổng số khác biệt được tìm thấy",
+      "gemsCollected": "Đá quý được thu thập",
+      "pushBoxesOntoTargets": "Đẩy tất cả các hộp vào mục tiêu",
+      "fireLasersMarkBalls": "Bắn tia laser từ các cạnh, sau đó đánh dấu vị trí bóng",
+      "revealingAnswer": "Tiết lộ câu trả lời...",
+      "checkAnswer": "Kiểm tra câu trả lời",
+      "pickNumberBelow": "Chọn một số dưới đây",
+      "tapCellToAssign": "Nhấn vào một ô để gán số",
+      "tapEdgesToPlaceWalls": "Chạm vào các cạnh để đặt các bức tường. Chia thành các khu vực của K.",
+      "ghosts": "ma",
+      "vampires": "ma cà rồng",
+      "zombies": "Zombie",
+      "dominoes": "Domino",
+      "islands": "Quần đảo",
+      "pegsLeft": "chốt còn lại",
+      "bestRemaining": "Tốt nhất còn lại",
+      "puzzlesSolved": "Câu đố đã được giải",
+      "flooded": "Bị ngập",
+      "edges": "Các cạnh",
+      "totalPlacements": "Tổng số vị trí",
+      "totalRemovals": "Tổng số lần xóa",
+      "maxTileReached": "Đã đạt đến ô tối đa",
+      "target": "Mục tiêu",
+      "placed": "Đã đặt",
+      "totalGuesses": "Tổng số lần đoán",
+      "guessesLeft": "Đoán còn lại",
+      "difficulty": "độ khó"
+    },
+    "palisade": {
+      "title": "hàng rào",
+      "puzzles": "Câu đố",
+      "maxLevel": "Cấp độ tối đa"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "errors": "Lỗi",
+      "avgTime": "Trung bình thời gian",
+      "erase": "Xóa"
+    },
+    "blackbox": {
+      "title": "Hộp đen",
+      "puzzles": "Câu đố",
+      "lasers": "Laser",
+      "avgTime": "Trung bình thời gian"
+    },
+    "designFluency": {
+      "title": "Thiết kế trôi chảy",
+      "uniqueDesigns": "Thiết kế độc đáo",
+      "duplicates": "trùng lặp",
+      "round": "vòng",
+      "roundComplete": "Vòng hoàn thành",
+      "youCreatedDesigns": "Bạn đã tạo {{count}} thiết kế",
+      "startRound": "Bắt đầu vòng",
+      "instructions": "Hướng dẫn",
+      "designs": "thiết kế",
+      "clear": "Xóa",
+      "addDesign": "Thêm"
+    },
+    "signpost": {
+      "title": "Biển chỉ dẫn",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "avgTime": "Trung bình thời gian",
+      "maxGrid": "Lưới tối đa"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Cấp độ",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "undos": "Hoàn tác",
+      "puzzle": "câu đố"
+    },
+    "numericalStroop": {
+      "left": "trái",
+      "right": "Đúng"
+    },
+    "biologicalMotion": {
+      "title": "Chuyển động sinh học",
+      "noiseDots": "chấm tiếng ồn",
+      "whichDirection": "Hướng nào?",
+      "left": "trái",
+      "right": "Đúng"
+    },
+    "inertia": {
+      "title": "Quán tính",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "gems": "đá quý",
+      "moves": "Di chuyển"
+    },
+    "waterLevel": {
+      "title": "Mực nước",
+      "error": "Lỗi",
+      "tilt": "Nghiêng",
+      "waterLine": "Đường nước?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxGrid": "Lưới tối đa"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "errors": "Lỗi",
+      "avgTime": "Trung bình thời gian",
+      "erase": "Xóa"
+    },
+    "rectangles": {
+      "title": "Hình chữ nhật",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "rectanglesCount": "Hình chữ nhật",
+      "maxGrid": "Lưới tối đa",
+      "cancelSelection": "Hủy lựa chọn"
+    },
+    "filling": {
+      "title": "điền",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "avgTime": "Trung bình thời gian",
+      "grid": "Lưới"
+    },
+    "spacedRetrieval": {
+      "title": "Truy xuất cách nhau",
+      "studyPair": "Nghiên cứu cặp này",
+      "waitAndSolve": "Đợi…rồi giải quyết",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Khoảng thời gian: cặp nào?"
+    },
+    "prototypeDistortion": {
+      "title": "Biến dạng nguyên mẫu",
+      "studyPhase": "Giai đoạn nghiên cứu",
+      "testPhase": "Giai đoạn thử nghiệm",
+      "yesBelongs": "Có - Thuộc về",
+      "noRandom": "Không - Ngẫu nhiên"
+    },
+    "motionCoherence": {
+      "title": "Sự kết hợp chuyển động",
+      "threshold": "Ngưỡng",
+      "coherence": "mạch lạc",
+      "whichDirection": "Hướng nào?"
+    },
+    "cube": {
+      "title": "khối lập phương",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxLevel": "Cấp độ tối đa",
+      "cubeFaces": "Mặt khối lập phương",
+      "moveUp": "Lên",
+      "moveLeft": "trái",
+      "moveDown": "xuống",
+      "moveRight": "Đúng"
+    },
+    "sameGame": {
+      "title": "Cùng một trò chơi",
+      "score": "Điểm",
+      "cleared": "Đã xóa",
+      "cells": "Tế bào",
+      "accuracy": "Độ chính xác"
+    },
+    "crossModalMatching": {
+      "title": "Kết hợp đa phương thức",
+      "chance": "Cơ hội",
+      "whichPatternMatchesRhythm": "Mẫu nào phù hợp với nhịp điệu?"
+    },
+    "mosaic": {
+      "title": "Khảm",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxGrid": "Lưới tối đa"
+    },
+    "spotDiff": {
+      "title": "Phát hiện sự khác biệt",
+      "level": "Cấp độ",
+      "grid": "Lưới",
+      "accuracy": "Độ chính xác",
+      "perfect": "hoàn hảo",
+      "avgTime": "Trung bình thời gian",
+      "found": "Đã tìm thấy"
+    },
+    "lightsOut": {
+      "title": "Tắt đèn",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxGrid": "Lưới tối đa"
+    },
+    "pipeline": {
+      "title": "Đường ống",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "rotations": "Phép quay",
+      "avgTime": "Trung bình thời gian"
+    },
+    "tracks": {
+      "title": "Bài hát",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "errors": "Lỗi",
+      "avgTime": "Trung bình thời gian"
+    },
+    "netslide": {
+      "title": "trượt lưới",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "slides": "Trang trình bày",
+      "maxGrid": "Lưới tối đa"
+    },
+    "cognitiveBias": {
+      "title": "Đào tạo thiên vị nhận thức",
+      "biasResistance": "Kháng thiên vị",
+      "biased": "thiên vị",
+      "continue": "Tiếp tục"
+    },
+    "empathicAccuracy": {
+      "title": "Độ chính xác đồng cảm",
+      "emotionId": "Cảm xúc",
+      "avgRatingError": "Trung bình lỗi đánh giá",
+      "scenarios": "kịch bản",
+      "perfect": "hoàn hảo",
+      "rating": "Đánh giá",
+      "howDoesCharacterFeel": "Nhân vật cảm thấy thế nào?",
+      "rateIntensity": "Đánh giá cường độ",
+      "whatEmotion": "Cảm xúc gì?",
+      "yourRating": "Đánh giá của bạn",
+      "correct": "đúng",
+      "emotion": "Cảm xúc"
+    },
+    "guess": {
+      "title": "Kẻ chủ mưu",
+      "solved": "Đã giải quyết",
+      "guesses": "đoán"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxLevel": "Cấp độ tối đa"
+    },
+    "magnets": {
+      "title": "Nam châm",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxLevel": "Cấp độ tối đa"
+    },
+    "tangram": {
+      "placeAll": "Đặt tất cả các mảnh",
+      "solved": "Đã giải quyết!",
+      "notRight": "Không hoàn toàn đúng",
+      "title": "tangram",
+      "level": "Cấp độ",
+      "puzzles": "Câu đố",
+      "placements": "Vị trí",
+      "removals": "Xóa",
+      "puzzleNumber": "Câu đố {{n}}",
+      "pieces": "miếng",
+      "targetCells": "cáp",
+      "dragHint": "Kéo hoặc đặt mảnh trên lưới",
+      "selectHint": "Chọn một mảnh",
+      "rotate": "Người tham gia",
+      "undo": "Thông báo",
+      "check": "Kiểm tra"
+    },
+    "galaxies": {
+      "title": "thiên hà"
+    },
+    "flood": {
+      "title": "Lũ lụt"
+    },
+    "pegs": {
+      "title": "chốt",
+      "bestPegs": "chốt tốt nhất"
+    },
+    "auditoryFigureGround": {
+      "title": "Thính giác Hình-Mặt Đất",
+      "patternPresent": "Mẫu hiện tại?",
+      "pattern": "mẫu",
+      "noPattern": "Không có mẫu"
+    },
+    "selfOrderedPointing": {
+      "title": "Tự trỏ chỉ",
+      "maxSpan": "Khoảng tối đa",
+      "errors": "Lỗi",
+      "round": "vòng",
+      "setOf": "Bộ {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Truy tìm gương",
+      "totalErrors": "Tổng số lỗi",
+      "avgTime": "Trung bình thời gian",
+      "shapes": "Hình dạng",
+      "perfect": "hoàn hảo",
+      "improvement": "Cải tiến",
+      "errorsMiddot": "lỗi ·",
+      "shape": "hình dạng",
+      "errors": "Lỗi",
+      "xIsMirrored": "X được nhân đôi!"
+    },
+    "clockDrawing": {
+      "title": "Vẽ đồng hồ",
+      "avgError": "Trung bình lỗi",
+      "setTo": "Đặt thành",
+      "submit": "Gửi"
+    },
+    "cognitiveMap": {
+      "title": "Bản đồ nhận thức",
+      "explore": "Khám phá",
+      "sRemaining": "S còn lại",
+      "from": "Từ",
+      "whichDirectionIs": "hướng nào"
+    },
+    "sixteen": {
+      "title": "mười sáu"
+    },
+    "loopy": {
+      "title": "điên rồ"
+    },
+    "lightup": {
+      "title": "Thắp sáng"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Ngói tối đa",
+      "moves": "Di chuyển",
+      "max": "Tối đa"
+    },
+    "bridges": {
+      "title": "Cầu",
+      "puzzles": "Câu đố",
+      "maxLevel": "Cấp độ tối đa",
+      "level": "Cấp độ"
+    },
+    "net": {
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxGrid": "Lưới tối đa"
+    },
+    "flip": {
+      "title": "Lật"
+    },
+    "range": {
+      "title": "Phạm vi"
+    },
+    "slant": {
+      "title": "Nghiêng"
+    },
+    "towers": {
+      "title": "Tháp",
+      "puzzles": "Câu đố",
+      "avgTime": "Trung bình thời gian",
+      "erase": "Xóa"
+    },
+    "pearl": {
+      "title": "ngọc trai",
+      "edges": "Các cạnh"
+    },
+    "mapColoring": {
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "moves": "Di chuyển",
+      "maxLevel": "Cấp độ tối đa"
+    },
+    "singles": {
+      "title": "Đơn"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "xác sống",
+      "accuracy": "Độ chính xác",
+      "puzzles": "Câu đố",
+      "avgTime": "Trung bình thời gian"
+    },
+    "untangle": {
+      "title": "gỡ rối",
+      "drags": "Kéo",
+      "maxNodes": "Nút tối đa"
+    },
+    "unruly": {
+      "title": "ngỗ ngược"
+    },
+    "fifteen": {
+      "title": "mười lăm"
+    },
+    "tents": {
+      "title": "Lều"
+    },
+    "mesker": {
+      "pen": "Bút",
+      "stroke": "Đột quỵ",
+      "penPressureHint": "Viết với lực nhấn bút nhất quán"
+    },
+    "modality": {
+      "position": "Vị trí",
+      "audio": "Âm thanh"
+    },
+    "validate": "Xác thực"
+  },
+  "trace": {
+    "instructions": "Vuốt sang vị trí N-back. Nhấn đúp nếu vị trí tương tự.",
+    "hint": {
+      "validated": "Đã xác thực",
+      "draw": "Vẽ chữ cái • Nhấn để xác nhận",
+      "drawWithColor": "Vẽ chữ • Chọn màu • Nhấn để xác nhận",
+      "type": "Gõ chữ cái • Enter để xác nhận",
+      "typeWithColor": "Gõ chữ • Chọn màu • Enter để xác nhận",
+      "typeResult": "Nhập kết quả • Nhập để xác thực",
+      "writeResult": "Viết kết quả • Nhấn để xác nhận"
+    },
+    "keyboard": {
+      "letterInput": "Thư",
+      "numberInput": "Số"
+    },
+    "arithmetic": {
+      "cueHint": "Ghi nhớ 2 chữ số",
+      "refresh": "Mới"
+    },
+    "hintPosition": "Kích thích {{n}} lượt trước ở đâu?",
+    "hintN0": "Cho biết kích thích hiện tại",
+    "warmupHint": "Ghi nhớ các vị trí. Không cần phản hồi.",
+    "hintDraw": "Vẽ chữ cái • Nhấn để xác nhận",
+    "hintDrawWithColor": "Vẽ chữ • Chọn màu • Nhấn để xác nhận",
+    "hintWriteResult": "Viết kết quả • Nhấn để xác nhận",
+    "guide": {
+      "swipeNormal": "Vuốt từ vị trí cuối cùng (N-0) sang vị trí từ {{n}} bước trước (N-{{n}}). Nhấn đúp nếu vị trí tương tự.",
+      "swipeSequential": "Vuốt từng bước từ N-0 đến N-{{n}}, đi qua từng vị trí trung gian. Nhấn đúp nếu vị trí tương tự.",
+      "swipeDynamic": "Vuốt theo quy tắc được hiển thị. Nhấn đúp nếu vị trí tương tự.",
+      "tapN0": "Nhấn vào vị trí hiện tại.",
+      "warmup": "Ghi nhớ các vị trí - không cần phản hồi.",
+      "writeDraw": "Vẽ chữ đã nghe {{n}} bước trước • Nhấn để xác thực",
+      "writeDrawColor": "Vẽ chữ đã nghe {{n}} bước trước • Chọn màu của nó • Nhấn để xác nhận",
+      "writeType": "Gõ chữ đã nghe {{n}} bước trước • Enter để xác thực",
+      "writeTypeColor": "Nhập chữ đã nghe {{n}} bước trước • Chọn màu của nó • Enter để xác thực",
+      "writeDrawN0": "Vẽ chữ cái bạn vừa nghe • Nhấn để xác nhận",
+      "writeDrawColorN0": "Vẽ chữ cái bạn vừa nghe • Chọn màu của nó • Nhấn để xác nhận",
+      "writeTypeN0": "Nhập chữ cái bạn vừa nghe • Enter để xác nhận",
+      "writeTypeColorN0": "Nhập chữ cái bạn vừa nghe • Chọn màu của nó • Enter để xác nhận",
+      "writeResult": "Viết kết quả • Nhấn để xác nhận",
+      "validated": "Đã xác thực",
+      "holdMindful": "Giữ ô trong {{seconds}}s",
+      "swipeMindful": "Vuốt trong {{seconds}}giây"
+    },
+    "settings": {
+      "adaptiveTiming": "Thời gian thích ứng",
+      "inputKeyboard": "Bàn phím",
+      "inputHandwriting": "Chữ viết tay",
+      "writingInput": "Chữ/số",
+      "section": {
+        "grid": "Lưới",
+        "input": "đầu vào",
+        "rhythm": "Nhịp điệu",
+        "interface": "Giao diện",
+        "interfaceNone": "Tiêu chuẩn",
+        "sound": "Âm thanh"
+      },
+      "isi": "Khoảng thời gian (ISI)",
+      "stimulusDuration": "Thời gian kích thích",
+      "feedbackDuration": "Thời gian phản hồi",
+      "ruleDisplay": "Thời lượng quy tắc",
+      "blankInterval": "Khoảng trống",
+      "showProgressBar": "Thanh tiến trình",
+      "showInstructions": "Hướng dẫn trong trò chơi",
+      "arithmeticInterference": "Giao thoa số học",
+      "fullMenu": "Thực đơn đầy đủ",
+      "gridStyle": "Kiểu lưới",
+      "gridStyleClassic": "cổ điển",
+      "gridStyleTrace": "Dấu vết",
+      "guide": {
+        "swipeMindful": "Vuốt trong {{seconds}}giây",
+        "holdMindful": "Giữ ô trong {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Cử chỉ",
+        "holdDuration": "Giữ",
+        "writingDuration": "Viết"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Giữ",
+      "gestureDuration": "Cử chỉ",
+      "writingDuration": "Viết"
+    },
+    "image": "hình dạng",
+    "digits": "chữ số",
+    "emotions": "Cảm xúc",
+    "words": "từ",
+    "tones": "Giai điệu",
+    "spatial": "Hướng"
+  },
+  "replay": {
+    "title": "Phát lại phiên",
+    "play": "Chơi",
+    "pause": "Tạm dừng",
+    "restart": "Khởi động lại",
+    "speed": "Tốc độ",
+    "loading": "Đang tải phiên...",
+    "unavailable": "Tính năng phát lại không có sẵn cho phiên này",
+    "backToStats": "Quay lại số liệu thống kê",
+    "runStack": {
+      "original": "Bản gốc",
+      "correction": "Sửa chữa",
+      "delta": "Δd'",
+      "inProgress": "Đang tiến hành",
+      "completed": "Đã hoàn thành"
+    },
+    "abandon": "từ bỏ",
+    "badge": "Phát lại",
+    "completionReport": {
+      "backToHome": "Quay lại",
+      "correctAgain": "Sửa lại",
+      "deltaVsOriginal": "so với bản gốc",
+      "deltaVsParent": "so với lần chạy trước",
+      "falseAlarmsSkipped": "Lỗi tránh được",
+      "missesCorrections": "Sửa chữa",
+      "newFalseAlarms": "Lỗi mới",
+      "replayAgain": "Phát lại",
+      "scoreLabel": "điểm d'",
+      "title": "Chỉnh sửa hoàn tất"
+    },
+    "controls": "Điều khiển",
+    "correction": "Sửa chữa",
+    "finished": "Kết thúc phát lại",
+    "home": "Trang chủ",
+    "parseError": "Không thể đọc phiên",
+    "tapSlotToPlace": "Nhấn vào một vị trí để đặt",
+    "timeline": "Dòng thời gian",
+    "focusTimeline": {
+      "open": "Hiển thị dòng thời gian",
+      "close": "Đóng dòng thời gian",
+      "title": "Dòng thời gian N-Back",
+      "fillAll": "Điền vào tất cả",
+      "fillCard": "Điền vào thẻ"
+    },
+    "hud": {
+      "counterDisplay": "hiển thị quầy",
+      "toggleCounterDisplay": "Chuyển đổi hiển thị bộ đếm"
+    },
+    "validate": "Xác thực"
+  },
+  "recovery": {
+    "title": "Phiên bị gián đoạn",
+    "description": "Một phiên đang diễn ra. Bạn có muốn tiếp tục không?",
+    "mode": "Chế độ",
+    "level": "Cấp độ",
+    "progress": "Tiến độ",
+    "timeAgo": "thời gian",
+    "resume": "Tiếp tục phiên",
+    "startFresh": "Bắt đầu mới",
+    "staleWarning": "Phiên này đã cũ, việc tiếp tục có thể khó khăn.",
+    "modes": {
+      "game": "đào tạo",
+      "activeTraining": "Đào tạo tích cực",
+      "flowTraining": "Đào tạo ở vị trí kép",
+      "dualPickTraining": "Chọn kép",
+      "traceTraining": "Dấu vết kép"
+    }
+  },
+  "rewards": {
+    "congratulations": "Chúc mừng!",
+    "duration": "{{days}} ngày Phí bảo hiểm",
+    "lifetimeLabel": "Truy cập trọn đời",
+    "expiresAt": "Có hiệu lực đến {{date}}",
+    "neverExpires": "Không bao giờ hết hạn",
+    "continue": "Tiếp tục",
+    "discovery": {
+      "name": "Thẻ khám phá",
+      "description": "7 ngày Premium — Khám phá tất cả tính năng"
+    },
+    "engagement": {
+      "name": "Thẻ đính hôn",
+      "description": "Premium 1 tháng — Kỷ luật của bạn sẽ được đền đáp"
+    },
+    "expert": {
+      "name": "Thẻ chuyên gia",
+      "description": "3 tháng Premium — Bạn là một học viên thực thụ"
+    },
+    "lifetime": {
+      "name": "Truy cập trọn đời",
+      "description": "Premium mãi mãi — Bạn đã thành thạo Neurodual"
+    },
+    "xpRemaining": "XP còn lại",
+    "permanentAccessUnlocked": "Đã mở khóa quyền truy cập vĩnh viễn",
+    "reachedTheTop": "Bạn đã đạt đến đỉnh cao!"
+  },
+  "progression": {
+    "level": "Cấp độ {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Cấp độ tiếp theo",
+    "reached": "Đã đạt",
+    "inProgress": "Đang tiến hành"
+  },
+  "gridlock": {
+    "nextPuzzle": "Câu đố tiếp theo →"
+  }
+}

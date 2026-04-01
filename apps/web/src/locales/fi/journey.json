@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Harjoittelupolku",
+    "pageSubtitle": "Valitse, järjestä ja luo matkojasi",
+    "enabled": "Ota harjoittelupolku käyttöön",
+    "description": "30 etenevää vaihetta N-1:stä N-10:een",
+    "progress": "Edistyminen",
+    "locked": "Lukittu",
+    "createJourney": "Luo matka",
+    "viewJourneys": "Näytä matkat",
+    "current": "Nykyinen matka",
+    "myJourneys": "Matkani",
+    "stage": "Vaihe",
+    "stages": "vaihetta",
+    "stagesShort": "vh.",
+    "stageLabels": {
+      "pick": "Valitse",
+      "catch": "Nappaa",
+      "place": "Aseta",
+      "memo": "Muisti"
+    },
+    "name": "Nimi",
+    "namePlaceholder": "Esim. N-5 Haaste",
+    "levels": "Tasot",
+    "levelRange": "Tasoalue",
+    "levelTo": "–",
+    "createNew": "Uusi matka",
+    "new": "Uusi",
+    "defaultCustomName": "Oma matka",
+    "created": "Matka luotu!",
+    "deleted": "Matka poistettu",
+    "sessionSettings": "Istunnon asetukset",
+    "savedStatus": "Asetukset tallennettu",
+    "preset": {
+      "easy": "Helppo",
+      "medium": "Suositeltu",
+      "hard": "Vaikea"
+    },
+    "setup": {
+      "title": "Matka ja profiilit",
+      "journey": "Matka",
+      "journeyNone": "Valitse…",
+      "profile": "Profiili",
+      "profileNone": "Valitse…",
+      "configure": "Määritä",
+      "configureNone": "Valitse matka",
+      "create": "Uusi matka",
+      "createDesc": "Luo uusi matka"
+    },
+    "deleteConfirmTitle": "Poista tämä matka?",
+    "deleteConfirmMessage": "Matka \"{{name}}\" poistetaan pysyvästi.",
+    "renameTitle": "Nimeä tämä matka uudelleen",
+    "renameMessage": "Muokkaa nimeä \"{{name}}\".",
+    "renamed": "Matka nimetty uudelleen.",
+    "badge": {
+      "simulator": "Simulaattori",
+      "beta": "Beta",
+      "default": "Oletus"
+    },
+    "mode": "Tila",
+    "modeStandard": "Matka (4 tilaa)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulaattori",
+      "jaeggi": "Klassinen",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} vahvistusistuntoa",
+      "needed": "{{count}} istuntoa jäljellä",
+      "excellent": "Erinomainen!",
+      "good": "Hyvä!",
+      "passing": "Hyväksytty"
+    },
+    "progression": {
+      "title": "Eteneminen",
+      "description": "Siirtyäksesi seuraavalle tasolle, saavuta hyvä tulos:",
+      "excellent": "≥95% → 1 istunto",
+      "good": "≥85% → 2 istuntoa",
+      "passing": "≥80% → 3 istuntoa",
+      "rules": "Etenemissäännöt",
+      "jaeggi": {
+        "description": "Heikoimmman modaliteetin perusteella:",
+        "up": "< 3 virhettä → Taso ylös",
+        "stay": "3 - 5 virhettä → Pysy tällä tasolla",
+        "down": "> 5 virhettä → Taso alas"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop -protokolla (BW-pisteet):",
+        "up": "≥80% → Taso ylös",
+        "stay": "50-79% → Pysy tasolla",
+        "strike": "3 peräkkäistä tulosta <50% → Taso alas"
+      },
+      "hybrid": {
+        "description": "Tämä matka ajaa {{trackCount}} Dual Track -istuntoa, sitten {{dnbCount}} Dual N-Back -istuntoa samalla tasolla.",
+        "alternation": "Silmukka alkaa aina uudelleen Dual Trackilla, kun päätös on tehty.",
+        "authority": "Vain Dual N-Back -istunnot päättävät ylös, pysy tai alas.",
+        "up": "0-1 virhettä → Taso ylös",
+        "stay": "2-3 virhettä → Pysy",
+        "down": "4+ virhettä → Taso alas",
+        "streakRule": "Kaksi peräkkäistä istuntoa samalla alueella laukaisee päätöksen.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Vahvistettu {{current}}/{{required}}",
+        "stayProgress": "Pidä {{current}}/{{required}}",
+        "downProgress": "Epäonnistunut {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track käyttää jatkuvaa hallintapalkkia jokaiselle tavoitemäärävaiheelle:",
+        "calibration": "Ensimmäinen kalibrointi arvioi aloitustavoitemääräsi",
+        "goodSession": "Jokainen hyvä istunto täyttää nykyistä vaihetta hieman",
+        "mastery": "Lähes täydelliset istunnot täyttävät nopeammin, tavalliset istunnot pysyvät vaatimattomina",
+        "regression": "Heikot istunnot voivat myös laskea nykyistä hallintapalkkia",
+        "unlock": "Seuraava tavoitemäärä avautuu vasta, kun nykyinen vaihe saavuttaa 100%"
+      }
+    },
+    "switcher": {
+      "open": "Avaa matkanvaihtaja",
+      "current": "Nykyinen",
+      "showAll": "Kaikki matkat",
+      "settings": "Matkan asetukset"
+    },
+    "previous": "Edellinen matka",
+    "next": "Seuraava matka",
+    "calibration": {
+      "title": "Ensimmäinen istunto",
+      "subtitle": "Lyhyt kalibrointi määrittää aloitustasosi, tai voit aloittaa suoraan tasolta 2.",
+      "skipToN2": "tai aloita N-2:sta",
+      "continueAt": "tai jatka N-{{level}}:sta",
+      "start": "Aloita kalibrointi",
+      "redo": "Tee kalibrointi uudelleen",
+      "badge": "Kalibrointi"
+    },
+    "presets": {
+      "currentSlot": "Mukautettu",
+      "currentSlotView": "Mukautettu",
+      "lockedTitle": "Jotkut vaihtoehdot ovat lukittuja",
+      "lockedDesc": "Jotta eteneminen pysyy vertailukelpoisena, modaliteetteja (ja joitakin vaihtoehtoja) ei voi muuttaa matkan alkamisen jälkeen."
+    },
+    "completed": {
+      "title": "Matka suoritettu!",
+      "subtitle": "Kaikki vaiheet vahvistettu. Hienoa!",
+      "continueFree": "Jatka harjoittelua"
+    },
+    "report": {
+      "stage": "Vaihe",
+      "level": "Taso",
+      "score": "Pisteet",
+      "sessionValidated": "Istunto vahvistettu!",
+      "sessionNotValidated": "Istuntoa ei vahvistettu",
+      "minScore": "Vaadittu vähimmäismäärä:",
+      "stageCompleted": "Vaihe suoritettu!",
+      "stageUnlocked": "Vaihe {{stage}} avattu!",
+      "replay": "Pelaa uudelleen",
+      "nextStage": "Seuraava vaihe",
+      "home": "Etusivu",
+      "hits": "Osumat",
+      "misses": "Ohi",
+      "falseAlarms": "Väärät hälytykset",
+      "correctRejections": "Oikeat hylkäykset"
+    }
+  }
+}

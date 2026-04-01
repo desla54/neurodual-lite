@@ -38,68 +38,7 @@
       "refresh": "Actualiser",
       "resetVfsPreference": "Réinitialiser la préférence VFS",
       "healthError": "Erreur de santé",
-      "sync": {
-        "title": "Sync",
-        "status": "Statut",
-        "available": "Disponible",
-        "pending": "En attente",
-        "lastSync": "Dernière synchro",
-        "error": "Erreur",
-        "blockedReason": "Raison du blocage"
-      },
-      "runtime": {
-        "title": "Runtime",
-        "stage": "Étape",
-        "vfsSelected": "VFS (sélectionné)",
-        "vfsPreferred": "VFS (préféré)",
-        "browser": "Navigateur",
-        "platform": "Plateforme",
-        "opfsSupported": "OPFS disponible",
-        "opfsChecks": "Checks OPFS",
-        "activeWatches": "Surveillances actives"
-      },
-      "projections": {
-        "title": "Projections",
-        "endedSessions": "Sessions terminées (emt_messages)",
-        "sessionSummaries": "Résumés de session",
-        "missingSummaries": "Résumés manquants",
-        "lastChecked": "Dernière vérification",
-        "mismatchDetected": "Incohérence détectée : les projections sont en retard sur les événements bruts.",
-        "status": "Statut des projections",
-        "source": "Source de projection",
-        "orphanSummaries": "Résumés orphelins",
-        "error": "Erreur de projection"
-      },
-      "runtimeEventsLatest": "Événements runtime (derniers)",
-      "lifecycle": {
-        "title": "Cycle veille / réveil",
-        "hiddenVisible": "Caché / visible",
-        "pagehidePageshow": "Pagehide / pageshow",
-        "online": "Événements en ligne",
-        "lastBackground": "Dernier arrière-plan",
-        "maxBackground": "Max arrière-plan",
-        "lastHiddenAt": "Dernière mise en veille",
-        "lastVisibleAt": "Dernier réveil"
-      },
-      "reconnect": {
-        "title": "Diagnostics de reconnexion",
-        "attempts": "Tentatives / ok / échouées",
-        "reason": "Dernière raison",
-        "duration": "Dernière durée",
-        "startedAt": "Dernier démarrage",
-        "completedAt": "Dernière complétion",
-        "error": "Dernière erreur"
-      },
-      "memory": {
-        "title": "Mémoire / stockage",
-        "sampledAt": "Échantillonné à",
-        "reason": "Raison",
-        "jsHeapUsed": "Tas JS utilisé",
-        "jsHeapLimit": "Limite du tas JS",
-        "storageUsage": "Utilisation stockage",
-        "storageQuota": "Quota stockage",
-        "deviceMemory": "Mémoire appareil"
-      }
+      "runtimeEventsLatest": "Événements runtime (derniers)"
     },
     "devPanel": {
       "titleBot": "Bot dev",
@@ -165,13 +104,6 @@
       },
       "test": {
         "title": "Test Sync A/V (500ms)",
-        "params": {
-          "bufferMs": "buffer (ms)",
-          "visualOffsetMs": "visualOffset (ms)",
-          "durationMs": "durée (ms)",
-          "interTrialMs": "interTrial (ms)",
-          "trials": "essais"
-        },
         "stimulusZone": "Zone de stimulus",
         "running": "En cours...",
         "start": "Démarrer",
@@ -198,25 +130,9 @@
       "nLevel": "Niveau N",
       "quality": "Qualité",
       "score": "Score",
-      "statLabels": {
-        "min": "min",
-        "avg": "moy",
-        "max": "max",
-        "p95": "p95"
-      },
       "details": "Détails",
       "alerts": "Alertes de sessions dégradées",
       "noAlerts": "Aucune alerte — toutes les sessions ont une bonne qualité.",
-      "metrics": {
-        "processingLag": "Latence de traitement",
-        "eventLoopLag": "Latence Event Loop au démarrage",
-        "rtStability": "Stabilité TR (CV)",
-        "focusLoss": "Pertes de focus",
-        "focusLostTime": "Temps total perdu",
-        "freezes": "Blocages",
-        "longTasks": "Tâches longues",
-        "reliabilityScore": "Score de fiabilité"
-      },
       "quality_high": "Haute",
       "quality_medium": "Moyenne",
       "quality_degraded": "Dégradée"
@@ -247,17 +163,7 @@
       "noEventsInSession": "Aucun événement dans cette session",
       "eventsTitle": "Événements",
       "eventsTotal": "({{count}} total)",
-      "inspectPayload": "Inspecter le payload brut",
-      "integrity": {
-        "title": "Intégrité du payload d'événements",
-        "envelopeOnly": "Événements enveloppe seule : {{count}} / {{total}}",
-        "hasTrial": "Événements avec données trial : {{count}} / {{total}}",
-        "hint": "Si les événements semblent vides dans la grille/la modale, cliquez sur l'icône bug pour inspecter la chaîne de payload brute stockée."
-      },
-      "rawPayload": {
-        "title": "Extrait de payload brut",
-        "empty": "Aucune ligne trouvée pour cette session."
-      }
+      "inspectPayload": "Inspecter le payload brut"
     },
     "bot": {
       "title": "Bot de test de gameplay",
@@ -302,19 +208,7 @@
       "sessionsAvailable_one": "{{count}} session disponible",
       "sessionsAvailable_other": "{{count}} sessions disponibles",
       "events_one": "{{count}} événement",
-      "events_other": "{{count}} événements",
-      "reasons": {
-        "completed": "terminée",
-        "abandoned": "abandonnée",
-        "error": "erreur"
-      },
-      "modes": {
-        "tempo": "Tempo",
-        "flow": "Dual Place",
-        "recall": "Dual Memo",
-        "dualPick": "Dual Pick",
-        "trace": "Dual Trace"
-      }
+      "events_other": "{{count}} événements"
     },
     "analytics": {
       "title": "Analyse de session",

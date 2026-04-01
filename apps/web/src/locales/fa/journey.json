@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "مسیر آموزشی",
+    "pageSubtitle": "سفرهای خود را انتخاب، سازماندهی و ایجاد کنید",
+    "enabled": "فعال کردن مسیر آموزشی",
+    "description": "30 مرحله پیشرونده از N-1 تا N-10",
+    "progress": "پیشرفت",
+    "locked": "قفل شده است",
+    "createJourney": "یک سفر ایجاد کنید",
+    "viewJourneys": "مشاهده سفرها",
+    "current": "سفر فعلی",
+    "myJourneys": "سفرهای من",
+    "stage": "مرحله",
+    "stages": "مراحل",
+    "stagesShort": "خیابان",
+    "stageLabels": {
+      "pick": "انتخاب کنید",
+      "catch": "گرفتن",
+      "place": "مکان",
+      "memo": "یادداشت"
+    },
+    "name": "نام",
+    "namePlaceholder": "به عنوان مثال چالش N-5",
+    "levels": "سطوح",
+    "levelRange": "محدوده سطح",
+    "levelTo": "به",
+    "createNew": "سفر جدید",
+    "new": "جدید",
+    "defaultCustomName": "سفر من",
+    "created": "سفر ایجاد شد!",
+    "deleted": "سفر حذف شد",
+    "sessionSettings": "تنظیمات جلسه",
+    "savedStatus": "تنظیمات ذخیره شد",
+    "preset": {
+      "easy": "آسان",
+      "medium": "توصیه می شود",
+      "hard": "سخت"
+    },
+    "setup": {
+      "title": "سفر و پروفایل",
+      "journey": "سفر",
+      "journeyNone": "انتخاب…",
+      "profile": "نمایه",
+      "profileNone": "انتخاب…",
+      "configure": "پیکربندی کنید",
+      "configureNone": "یک سفر را انتخاب کنید",
+      "create": "سفر جدید",
+      "createDesc": "یک سفر جدید ایجاد کنید"
+    },
+    "deleteConfirmTitle": "این سفر حذف شود؟",
+    "deleteConfirmMessage": "سفر \"{{name}}\" برای همیشه حذف خواهد شد.",
+    "renameTitle": "نام این سفر را تغییر دهید",
+    "renameMessage": "نام \"{{name}}\" را ویرایش کنید.",
+    "renamed": "سفر تغییر نام داد",
+    "badge": {
+      "simulator": "شبیه ساز",
+      "beta": "بتا",
+      "default": "پیش فرض"
+    },
+    "mode": "حالت",
+    "modeStandard": "سفر (4 حالت)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "گرفتن دوگانه",
+      "dualPlace": "مکان دوگانه",
+      "dualMemo": "یادداشت دوگانه",
+      "dualPick": "انتخاب دوگانه",
+      "simulator": "شبیه ساز",
+      "jaeggi": "کلاسیک",
+      "brainWorkshop": "کارگاه مغز"
+    },
+    "validation": {
+      "sessions": "{{count}} تأیید صحت جلسه(های)",
+      "needed": "{{count}} جلسه باقی مانده است",
+      "excellent": "عالی!",
+      "good": "خوب!",
+      "passing": "گذشت"
+    },
+    "progression": {
+      "title": "پیشرفت",
+      "description": "برای صعود به مرحله بعدی، به یک امتیاز خوب برسید:",
+      "excellent": "≥95٪ → 1 جلسه",
+      "good": "≥85% → 2 جلسه",
+      "passing": "≥80% → 3 جلسه",
+      "rules": "قوانین پیشرفت",
+      "jaeggi": {
+        "description": "بر اساس ضعیف ترین روش:",
+        "up": "< 3 خطا → سطح بالا",
+        "stay": "3 تا 5 خطا → در این سطح بمانید",
+        "down": "> 5 خطا → سطح پایین"
+      },
+      "brainworkshop": {
+        "description": "پروتکل Brain Workshop (امتیاز BW):",
+        "up": "≥80% → سطح بالا",
+        "stay": "50-79٪ → در سطح بمانید",
+        "strike": "3 امتیاز متوالی <50% → سطح پایین"
+      },
+      "hybrid": {
+        "description": "این سفر {{trackCount}} Dual Track جلسه(ها)، سپس {{dnbCount}} دو جلسه N-Back در همان سطح اجرا می شود.",
+        "alternation": "هر زمان که تصمیمی گرفته شود، حلقه همیشه با Dual Track دوباره راه اندازی می شود.",
+        "authority": "فقط جلسات دوگانه N-Back تصمیم به بالا، ماندن یا کاهش می‌دهند.",
+        "up": "خطای 0-1 → Level up",
+        "stay": "2-3 خطا → ماندن",
+        "down": "4+ خطا → سطح پایین",
+        "streakRule": "دو جلسه متوالی در یک منطقه باعث تصمیم گیری می شود.",
+        "trackProgress": "آهنگ {{current}}/{{required}}",
+        "cleanProgress": "تأیید شده {{current}}/{{required}}",
+        "stayProgress": "{{current}}/{{required}} را نگه دارید",
+        "downProgress": "شکست {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track از یک نوار تسلط پیوسته برای هر مرحله شمارش هدف استفاده می کند:",
+        "calibration": "اولین کالیبراسیون تعداد هدف شروع شما را تخمین می زند",
+        "goodSession": "هر جلسه خوب کمی مرحله فعلی را پر می کند",
+        "mastery": "جلسات تقریباً عالی آن را سریعتر پر می کنند، اما جلسات معمولی کم می مانند",
+        "regression": "جلسات ضعیف همچنین می توانند نوار تسلط فعلی را پایین بیاورند",
+        "unlock": "تعداد هدف بعدی فقط زمانی باز می شود که مرحله فعلی به 100٪ برسد"
+      }
+    },
+    "switcher": {
+      "open": "تعویض کننده سفر را باز کنید",
+      "current": "فعلی",
+      "showAll": "همه سفرها",
+      "settings": "تنظیمات سفر"
+    },
+    "previous": "سفر قبلی",
+    "next": "سفر بعدی",
+    "calibration": {
+      "title": "جلسه اول",
+      "subtitle": "یک کالیبراسیون کوتاه سطح شروع شما را مشخص می کند یا می توانید مستقیماً از سطح 2 شروع کنید.",
+      "skipToN2": "یا از N-2 شروع کنید",
+      "continueAt": "یا در N-{{level}} ادامه دهید",
+      "start": "شروع کالیبراسیون",
+      "redo": "کالیبراسیون را دوباره انجام دهید",
+      "badge": "کالیبراسیون"
+    },
+    "presets": {
+      "currentSlot": "سفارشی",
+      "currentSlotView": "سفارشی",
+      "lockedTitle": "برخی از گزینه ها قفل هستند",
+      "lockedDesc": "برای اینکه پیشرفت قابل مقایسه باشد، پس از شروع سفر، روش ها (و چند گزینه) نمی توانند تغییر کنند."
+    },
+    "completed": {
+      "title": "سفر تکمیل شد!",
+      "subtitle": "تمام مراحل تایید شده است آفرین!",
+      "continueFree": "ادامه آموزش"
+    },
+    "report": {
+      "stage": "مرحله",
+      "level": "سطح",
+      "score": "امتیاز",
+      "sessionValidated": "جلسه تایید شد!",
+      "sessionNotValidated": "جلسه تایید نشد",
+      "minScore": "حداقل مورد نیاز:",
+      "stageCompleted": "مرحله تکمیل شد!",
+      "stageUnlocked": "مرحله {{stage}} باز شد!",
+      "replay": "پخش مجدد",
+      "nextStage": "مرحله بعدی",
+      "home": "صفحه اصلی",
+      "hits": "بازدیدها",
+      "misses": "خانم ها",
+      "falseAlarms": "آلارم های کاذب",
+      "correctRejections": "ردهای صحیح"
+    }
+  }
+}

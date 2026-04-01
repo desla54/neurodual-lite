@@ -86,14 +86,6 @@
       "comingSoon": "Tutoriel Place en cours de développement",
       "cardPool": "Cartes disponibles",
       "slot": "Slot",
-      "spotlight": {
-        "intro": "Bienvenue dans Dual Place ! Apprenez à placer les stimuli dans l'ordre temporel.",
-        "hud": "En haut : compteur de trials et niveau N-back.",
-        "grid": "La grille 3×3 affiche les positions des stimuli.",
-        "timeline": "La timeline montre l'ordre temporel : N-2 (ancien) → N (présent).",
-        "cardPool": "Les cartes représentent les stimuli. Placez-les dans la timeline !",
-        "outro": "Prêt à commencer ? C'est parti !"
-      },
       "observe": "Observez : une position sur la grille et une lettre audio.",
       "buffer": "Deuxième stimulus. Le buffer N-back se remplit.",
       "cardsAppear": "Des cartes apparaissent ! Elles représentent les 3 derniers stimuli.",
@@ -122,14 +114,6 @@
       "selectAudio": "Sélectionnez la lettre",
       "clickToRecall": "Cliquez sur un slot pour rappeler la valeur",
       "validate": "Valider",
-      "spotlight": {
-        "intro": "Bienvenue dans Dual Memo ! L'entraînement par rappel actif.",
-        "hud": "En haut : compteur et niveau N-back.",
-        "grid": "La grille affiche les stimuli. Mémorisez-les bien !",
-        "recallZone": "Après chaque stimulus, rappelez la fenêtre N-back de mémoire.",
-        "validateButton": "Quand vous avez tout rempli, cliquez Valider.",
-        "outro": "Prêt pour le défi mémoriel ? C'est parti !"
-      },
       "observeFirst": "Premier stimulus. Mémorisez bien la position ET la lettre !",
       "observeSecond": "Deuxième stimulus. Continuez de mémoriser.",
       "observeThird": "Troisième stimulus. Le buffer est complet. Préparez-vous !",
@@ -151,12 +135,7 @@
       "wrongAnswer": "Ce n'est pas ça. Réfléchissez, quel stimulus était à ce moment ?",
       "tryAgain": "Réessayez ! Vous pouvez encore corriger.",
       "maxCorrections": "3 corrections atteintes. Ce slot est verrouillé.",
-      "validateHint": "Tous les slots sont remplis. Cliquez sur Valider !",
-      "picker": {
-        "positionTitle": "Quelle position ?",
-        "audioTitle": "Quelle lettre ?",
-        "cancel": "Annuler"
-      }
+      "validateHint": "Tous les slots sont remplis. Cliquez sur Valider !"
     },
     "pick": {
       "spotlight": {
@@ -211,44 +190,7 @@
       "swipe5": "Excellent ! Vous maîtrisez le geste de rappel.",
       "complete": "Tutoriel terminé. Vous êtes prêt pour l'entraînement Dual Trace.",
       "tapTarget": "Tapez la position du tour précédent",
-      "tapTargetAndAudio": "Tapez la position cible, puis Audio",
-      "feedback": {
-        "wrongDirection": "Pas cette direction. La position précédente était ici.",
-        "forgotAudio": "N'oubliez pas le double-tap pour le match audio !",
-        "tooShort": "Swipez plus loin pour valider."
-      },
-      "spotlight": {
-        "intro": "Dual Trace utilise des gestes au lieu de boutons. Découvrons l'interface.",
-        "hud": "Votre tableau de bord : niveau N-Back et progression.",
-        "grid": "La grille : une position s'affiche à chaque tour. Vous devrez swiper vers la position du tour précédent (N-1).",
-        "outro": "Passons à la pratique. Observez d'abord, puis swipez quand c'est votre tour."
-      }
-    },
-    "steps": {
-      "workingMemory": {
-        "title": "Mémoire de travail",
-        "desc": "Le Dual N-Back entraîne votre mémoire de travail. Vous devez vous souvenir des stimuli N étapes auparavant et détecter les correspondances."
-      },
-      "positionMode": {
-        "title": "Mode Position",
-        "desc": "Observez la position du carré. Quand il apparaît au même endroit qu'il y a 2 étapes, appuyez sur Position."
-      },
-      "yourTurn": {
-        "title": "À vous de jouer",
-        "desc": "Appuyez sur Position quand le carré est au même endroit qu'il y a 2 étapes."
-      },
-      "audioMode": {
-        "title": "Mode Audio",
-        "desc": "Écoutez les lettres. Quand vous entendez la même lettre qu'il y a 2 étapes, appuyez sur Audio."
-      },
-      "audioPractice": {
-        "title": "Pratique Audio",
-        "desc": "Appuyez sur Audio quand vous entendez la même lettre qu'il y a 2 étapes."
-      },
-      "dualMode": {
-        "title": "Mode Dual",
-        "desc": "Combinez position ET audio. Appuyez sur le bouton correspondant quand une répétition se produit."
-      }
+      "tapTargetAndAudio": "Tapez la position cible, puis Audio"
     },
     "ui": {
       "startExercise": "Commencer l'exercice",

@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Trainingspfad",
+    "pageSubtitle": "Wähle, organisiere und erstelle deine Parcours",
+    "enabled": "Pfad aktivieren",
+    "description": "30 progressive Stufen von N-1 bis N-10",
+    "progress": "Fortschritt",
+    "locked": "Gesperrt",
+    "createJourney": "Pfad erstellen",
+    "viewJourneys": "Pfade anzeigen",
+    "current": "Aktueller Pfad",
+    "myJourneys": "Meine Pfade",
+    "stage": "Etappe",
+    "stages": "Stufen",
+    "stagesShort": "St.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "Name",
+    "namePlaceholder": "z.B.: N-5 Herausforderung",
+    "levels": "Level",
+    "levelRange": "Level-Bereich",
+    "levelTo": "to",
+    "createNew": "Neuer Pfad",
+    "new": "Neu",
+    "defaultCustomName": "Mein Pfad",
+    "created": "Pfad erstellt!",
+    "deleted": "Parcours gelöscht",
+    "sessionSettings": "Einstellungen der Sitzung",
+    "savedStatus": "Einstellungen gespeichert",
+    "preset": {
+      "easy": "Easy",
+      "medium": "Empfohlen",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "Pfade & Profile",
+      "journey": "Pfad",
+      "journeyNone": "Auswählen…",
+      "profile": "Profil",
+      "profileNone": "Auswählen…",
+      "configure": "Konfigurieren",
+      "configureNone": "Pfad auswählen",
+      "create": "Neuer Pfad",
+      "createDesc": "Erstelle einen neuen Pfad"
+    },
+    "deleteConfirmTitle": "Diesen Pfad löschen?",
+    "deleteConfirmMessage": "Die Reise „{{name}}\" wird dauerhaft gelöscht.",
+    "renameTitle": "Diesen Pfad umbenennen",
+    "renameMessage": "Bearbeite den Namen von \"{{name}}\".",
+    "renamed": "Parcours umbenannt!",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Standard"
+    },
+    "mode": "Modus",
+    "modeStandard": "Pfad (4 Modi)",
+    "modeDnb": "Dual N-Back Klassisch",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klassisch",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} validierende Sitzung(en)",
+      "needed": "{{count}} Sitzung(en) verbleibend",
+      "excellent": "Ausgezeichnet!",
+      "good": "Gut!",
+      "passing": "Bestanden"
+    },
+    "progression": {
+      "title": "Progression",
+      "description": "Um zum nächsten Level aufzusteigen, erreiche einen guten Score:",
+      "excellent": "≥95% → 1 Sitzung",
+      "good": "≥85% → 2 Sitzungen",
+      "passing": "≥80% → 3 Sitzungen",
+      "rules": "Progressionsregeln",
+      "jaeggi": {
+        "description": "Basierend auf der schwächsten Modalität:",
+        "up": "< 3 Fehler → Aufstieg",
+        "stay": "3-5 Fehler → Auf diesem Level bleiben",
+        "down": "> 5 Fehler → Abstieg"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop Protokoll (BW Score):",
+        "up": "≥80% → Ein Level aufsteigen",
+        "stay": "50-79% → Halten",
+        "strike": "3 Scores hintereinander <50% → Abstieg"
+      },
+      "hybrid": {
+        "description": "Dieser Parcours verkettet {{trackCount}} Dual Track-Sitzung(en), dann {{dnbCount}} Dual N-Back-Sitzung(en) auf demselben Niveau.",
+        "alternation": "Der Zyklus beginnt immer wieder mit Dual Track, sobald eine Entscheidung getroffen wird.",
+        "authority": "Nur die Dual N-Back-Sitzungen entscheiden über Aufstieg, Beibehaltung oder Abstieg.",
+        "up": "0-1 Fehler → Aufstieg",
+        "stay": "2-3 Fehler → Halten",
+        "down": "4+ Fehler → Abstieg",
+        "streakRule": "Zwei aufeinanderfolgende Sitzungen in derselben Zone lösen die Entscheidung aus.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Bestanden {{current}}/{{required}}",
+        "stayProgress": "Beibehaltung {{current}}/{{required}}",
+        "downProgress": "Fehlschlag {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track verwendet einen fortlaufenden Meisterschaftsbalken für jede Zielstufe:",
+        "calibration": "Eine anfängliche Kalibrierung schätzt dein Ausgangsniveau",
+        "goodSession": "Jede gute Sitzung füllt die aktuelle Stufe etwas auf",
+        "mastery": "Fast perfekte Sitzungen füllen schneller, gewöhnliche Sitzungen bleiben bescheiden",
+        "regression": "Schwache Sitzungen können den aktuellen Meisterschaftsbalken auch wieder senken",
+        "unlock": "Die nächste Zielstufe wird erst bei 100 % freigeschaltet"
+      }
+    },
+    "switcher": {
+      "open": "Parcours-Auswahl öffnen",
+      "current": "Aktuell",
+      "showAll": "Alle Parcours",
+      "settings": "Parcours-Einstellungen"
+    },
+    "previous": "Vorheriger Parcours",
+    "next": "Nächster Parcours",
+    "calibration": {
+      "title": "Erste Sitzung",
+      "subtitle": "Eine kurze Kalibrierung bestimmt Ihr Startlevel, oder Sie können direkt auf Level 2 beginnen.",
+      "skipToN2": "oder bei N-2 beginnen",
+      "continueAt": "oder bei N-{{level}} fortsetzen",
+      "start": "Kalibrierung starten",
+      "redo": "Kalibrierung wiederholen",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "Aktuelle Einstellungen",
+      "currentSlotView": "Aktuelle Einstellungen",
+      "lockedTitle": "Einige Optionen sind gesperrt",
+      "lockedDesc": "Um die Progression vergleichbar zu halten, können Modalitäten (und einige Optionen) nach dem Start des Pfads nicht geändert werden."
+    },
+    "completed": {
+      "title": "Pfad abgeschlossen!",
+      "subtitle": "Alle Stufen bestanden. Gut gemacht!",
+      "continueFree": "Weitertrainieren"
+    },
+    "report": {
+      "stage": "Stufe",
+      "level": "Level",
+      "score": "Punktzahl",
+      "sessionValidated": "Sitzung Validiert",
+      "sessionNotValidated": "Sitzung Nicht Validiert",
+      "minScore": "Erforderliche Mindestpunktzahl:",
+      "stageCompleted": "Stufe Abgeschlossen!",
+      "stageUnlocked": "Stufe {{stage}} freigeschaltet",
+      "replay": "Nochmal spielen",
+      "nextStage": "Nächste Stufe",
+      "home": "Startseite",
+      "hits": "Richtig",
+      "misses": "Verpasst",
+      "falseAlarms": "Fehlalarm",
+      "correctRejections": "Korrekte Ablehnung"
+    }
+  }
+}

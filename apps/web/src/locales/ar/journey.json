@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "مسار التدريب",
+    "pageSubtitle": "اختر ونظّم وأنشئ مساراتك",
+    "enabled": "تفعيل المسار",
+    "description": "30 مرحلة تدريجية من N-1 إلى N-10",
+    "progress": "التقدم",
+    "locked": "مقفل",
+    "createJourney": "إنشاء مسار",
+    "viewJourneys": "عرض المسارات",
+    "current": "المسار الحالي",
+    "myJourneys": "مساراتي",
+    "stage": "مرحلة",
+    "stages": "المراحل",
+    "stagesShort": "مر.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "الاسم",
+    "namePlaceholder": "مثال: تحدي N-5",
+    "levels": "المستويات",
+    "levelRange": "نطاق المستويات",
+    "levelTo": "to",
+    "createNew": "مسار جديد",
+    "new": "جديد",
+    "defaultCustomName": "مساري",
+    "created": "تم إنشاء المسار!",
+    "deleted": "تم حذف المسار",
+    "sessionSettings": "إعدادات الجلسات",
+    "savedStatus": "تم حفظ الإعدادات",
+    "preset": {
+      "easy": "Easy",
+      "medium": "مُوصى به",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "المسارات والملفات الشخصية",
+      "journey": "المسار",
+      "journeyNone": "اختر…",
+      "profile": "الملف الشخصي",
+      "profileNone": "اختر…",
+      "configure": "تكوين",
+      "configureNone": "اختر مساراً",
+      "create": "مسار جديد",
+      "createDesc": "إنشاء مسار جديد"
+    },
+    "deleteConfirmTitle": "حذف هذا المسار؟",
+    "deleteConfirmMessage": "سيتم حذف الرحلة \"{{name}}\" نهائيًا.",
+    "renameTitle": "إعادة تسمية هذا المسار",
+    "renameMessage": "تعديل اسم \"{{name}}\".",
+    "renamed": "تمت إعادة تسمية المسار!",
+    "badge": {
+      "simulator": "المحاكي",
+      "beta": "تجريبي",
+      "default": "افتراضي"
+    },
+    "mode": "الوضع",
+    "modeStandard": "المسار (4 أوضاع)",
+    "modeDnb": "Dual N-Back الكلاسيكي",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "المحاكي",
+      "jaeggi": "كلاسيكي",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} جلسة تأهيلية",
+      "needed": "{{count}} جلسة متبقية",
+      "excellent": "ممتاز!",
+      "good": "جيد!",
+      "passing": "ناجح"
+    },
+    "progression": {
+      "title": "التقدم",
+      "description": "للانتقال للمستوى التالي، احصل على نتيجة جيدة:",
+      "excellent": "≥95% → جلسة واحدة",
+      "good": "≥85% → جلستان",
+      "passing": "≥80% → 3 جلسات",
+      "rules": "قواعد التقدم",
+      "jaeggi": {
+        "description": "بناءً على أضعف نمط:",
+        "up": "< 3 أخطاء → ترقية",
+        "stay": "3 إلى 5 أخطاء → البقاء في هذا المستوى",
+        "down": "> 5 أخطاء → تخفيض"
+      },
+      "brainworkshop": {
+        "description": "بروتوكول Brain Workshop (نتيجة BW):",
+        "up": "≥80% → ترقية مستوى",
+        "stay": "50-79% → ثبات",
+        "strike": "3 نتائج متتالية <50% → تخفيض"
+      },
+      "hybrid": {
+        "description": "يربط هذا المسار {{trackCount}} جلسة Dual Track، ثم {{dnbCount}} جلسة Dual N-Back على نفس المستوى.",
+        "alternation": "تبدأ الدورة دائمًا من جديد بـ Dual Track بمجرد اتخاذ القرار.",
+        "authority": "جلسات Dual N-Back وحدها هي التي تقرر الصعود أو الثبات أو الهبوط.",
+        "up": "0-1 خطأ → صعود",
+        "stay": "2-3 أخطاء → ثبات",
+        "down": "أكثر من 4 أخطاء → هبوط",
+        "streakRule": "جلستان متتاليتان في نفس النطاق تُطلقان القرار.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "تم التحقق {{current}}/{{required}}",
+        "stayProgress": "ثبات {{current}}/{{required}}",
+        "downProgress": "إخفاق {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "يستخدم Dual Track شريط إتقان مستمر لكل مستوى من الأهداف:",
+        "calibration": "تقوم معايرة أولية بتقدير مستواك الابتدائي",
+        "goodSession": "كل جلسة جيدة تملأ جزءًا من المستوى الحالي",
+        "mastery": "الجلسات شبه المثالية تملأ أسرع، والجلسات العادية تتقدم بشكل متواضع",
+        "regression": "الجلسات الضعيفة يمكن أن تُنقص شريط الإتقان الحالي أيضًا",
+        "unlock": "يُفتح مستوى الأهداف التالي فقط عند بلوغ 100%"
+      }
+    },
+    "switcher": {
+      "open": "فتح محدد المسار",
+      "current": "الحالي",
+      "showAll": "جميع المسارات",
+      "settings": "إعدادات المسار"
+    },
+    "previous": "المسار السابق",
+    "next": "المسار التالي",
+    "calibration": {
+      "title": "الجلسة الأولى",
+      "subtitle": "ستحدّد معايرة قصيرة مستوى البداية المناسب لك، أو يمكنك البدء مباشرة من المستوى 2.",
+      "skipToN2": "أو البدء من N-2",
+      "continueAt": "أو المتابعة من N-{{level}}",
+      "start": "بدء المعايرة",
+      "redo": "إعادة المعايرة",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "الإعدادات الحالية",
+      "currentSlotView": "الإعدادات الحالية",
+      "lockedTitle": "بعض الخيارات مقفلة",
+      "lockedDesc": "للحفاظ على قابلية المقارنة، لا يمكن تغيير الأنماط (وبعض الخيارات) بعد بدء المسار."
+    },
+    "completed": {
+      "title": "اكتمل المسار!",
+      "subtitle": "تم اجتياز جميع المراحل. أحسنت!",
+      "continueFree": "متابعة التدريب"
+    },
+    "report": {
+      "stage": "المرحلة",
+      "level": "المستوى",
+      "score": "النتيجة",
+      "sessionValidated": "تم التحقق من الجلسة",
+      "sessionNotValidated": "لم يتم التحقق من الجلسة",
+      "minScore": "الحد الأدنى للنتيجة المطلوب:",
+      "stageCompleted": "المرحلة مكتملة!",
+      "stageUnlocked": "تم فتح المرحلة {{stage}}",
+      "replay": "إعادة اللعب",
+      "nextStage": "المرحلة التالية",
+      "home": "الرئيسية",
+      "hits": "صحيح",
+      "misses": "خاطئ",
+      "falseAlarms": "إنذار كاذب",
+      "correctRejections": "رفض صحيح"
+    }
+  }
+}

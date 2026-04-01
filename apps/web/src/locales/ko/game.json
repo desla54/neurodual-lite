@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "지금 컨디션이 어떠신가요?",
+      "tired": "피곤함",
+      "normal": "보통",
+      "energized": "활력 충만"
+    },
+    "aria": {
+      "trialTimer": "시행 타이머",
+      "positionMatch": "위치 매치",
+      "audioMatch": "오디오 매치",
+      "audioLetter": "오디오 글자:",
+      "traceGrid": "트레이스 그리드"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "동기화 모니터 전환",
+      "start": "시작",
+      "end": "종료",
+      "pinLabel": "pin",
+      "pinTitle": "화면에 고정하기",
+      "inputLabel": "input",
+      "inputTitle": "입력 지연 프로파일링 전환 (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "켜기",
+      "off": "끄기",
+      "hideLabel": "숨기기",
+      "hideTitle": "숨기기 (syncHud=1 또는 ND_AUDIO_DEBUG_TIMING=1인 경우 제외)",
+      "endRef": {
+        "audio": "오디오",
+        "expected": "예상"
+      },
+      "labels": {
+        "trial": "시행",
+        "lagShow": "표시 지연",
+        "lagHide": "숨김 지연",
+        "winErr": "윈도우 오류",
+        "endRef": "종료 기준",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input→dispatch p95",
+        "inputToCommitP95": "input→commit p95",
+        "inputToPaintP95": "input→paint p95",
+        "inputPending": "입력 대기 중",
+        "inputSamples": "입력 샘플",
+        "touchSamples": "터치 샘플",
+        "mouseSamples": "마우스 샘플",
+        "keyboardSamples": "키보드 샘플",
+        "latestMethod": "최근 (메서드)",
+        "latestModality": "최근 모달리티",
+        "audioCueMode": "오디오 신호",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "입력 프로파일러 초기화"
+    },
+    "hud": {
+      "resume": "재개",
+      "pause": "일시정지",
+      "quit": "종료",
+      "restart": "다시 시작",
+      "spaceToStart": "스페이스로 시작",
+      "settings": "설정",
+      "enterToAdvance": "Enter로 다음으로",
+      "trial": "시행",
+      "muteTexture": "배경음 음소거"
+    },
+    "status": {
+      "paused": "일시정지됨"
+    },
+    "completed": "완료",
+    "starting": {
+      "getReady": "준비..."
+    },
+    "quitModal": {
+      "title": "세션을 종료하시겠습니까?",
+      "message": "진행 상황이 저장되지 않습니다.",
+      "confirm": "종료",
+      "cancel": "계속",
+      "close": "닫기"
+    },
+    "controls": {
+      "position": "위치",
+      "position2": "위치 2",
+      "position3": "위치 3",
+      "position4": "위치 4",
+      "visvis": "시각 & n-시각",
+      "visaudio": "시각 & n-오디오",
+      "audiovis": "오디오 & n-시각",
+      "vis1": "시각 1",
+      "vis2": "시각 2",
+      "vis3": "시각 3",
+      "vis4": "시각 4",
+      "audio": "오디오",
+      "audio2": "오디오 2",
+      "color": "색상",
+      "arithmetic": "산수",
+      "image": "도형"
+    },
+    "arithmetic": {
+      "answer": "답",
+      "clear": "지우기",
+      "hint": "키보드: 0–9 · '-'로 부호 · '.'로 소수점 · Backspace로 지우기"
+    },
+    "navigation": {
+      "back": "뒤로"
+    },
+    "xp": {
+      "title": "획득 XP",
+      "base": "기본 (N-{{level}})",
+      "performance": "성과",
+      "accuracy": "정확도",
+      "streakBonus": "연속 보너스",
+      "dailyBonus": "오늘 첫 번째",
+      "badgeBonus": "배지",
+      "flowBonus": "Dual Place 보너스",
+      "confidenceMultiplier": "신뢰도",
+      "dailyCapReached": "일일 XP 한도에 도달함",
+      "levelReached": "레벨 {{level}} 도달!"
+    },
+    "badges": {
+      "newUnlocked": "새 배지가 잠금 해제되었습니다"
+    },
+    "getReady": "준비하세요...",
+    "layoutEdit": {
+      "done": "완료",
+      "reset": "초기화",
+      "instructions": "영역을 드래그하여 순서를 변경하세요. 핸들로 크기를 조정하세요.",
+      "title": "편집 모드",
+      "cancel": "취소",
+      "save": "잠금",
+      "editLayout": "레이아웃 편집"
+    },
+    "paused": "일시정지됨",
+    "pressEscapeToResume": "Esc를 눌러 재개하세요",
+    "settings": {
+      "editLayout": "레이아웃 편집",
+      "gridAndButtons": "그리드 및 버튼",
+      "swapPositionAudio": "위치 / 오디오 전환",
+      "title": "설정",
+      "quickHint": "게임을 떠나지 않고 몇 가지 설정을 조정하세요.",
+      "quickUnavailable": "이 모드에는 빠른 설정이 없습니다."
+    },
+    "pinkNoiseInfo": "각 자극에 배경 톤이 함께 재생됩니다. 오디오 설정에서 변경하거나 비활성화할 수 있습니다.",
+    "pinkNoiseDismiss": "계속",
+    "audioMode": "오디오 모드",
+    "cogTask": {
+      "precision": "정확도",
+      "avgRt": "평균 RT",
+      "avgRtShort": "평균 RT",
+      "trials": "시행",
+      "correct": "정답",
+      "errors": "오류",
+      "effect": "효과",
+      "restart": "다시 시작",
+      "home": "홈",
+      "performance": "수행",
+      "trialDetail": "시행별 상세 정보",
+      "setDetail": "세트 상세",
+      "roundDetail": "라운드별 상세 정보",
+      "problemDetail": "문제별 상세 정보",
+      "phaseDetail": "단계 상세",
+      "feedbackCorrect": "정답",
+      "feedbackIncorrect": "오답",
+      "feedbackTimeout": "너무 느려요!",
+      "preparing": "준비 중...",
+      "loading": "로딩 중...",
+      "left": "왼쪽",
+      "right": "오른쪽",
+      "up": "위",
+      "down": "아래",
+      "congruent": "일치",
+      "incongruent": "불일치",
+      "congruencyEffect": "일치성 효과",
+      "maxSpan": "최대 스팬",
+      "startingSpan": "시작 스팬",
+      "maxSpanReached": "최대 스팬 도달",
+      "longestStreak": "최장 연속 정답",
+      "series": "연속",
+      "avgResponseTime": "평균 반응 시간",
+      "recall": "회상",
+      "expected": "기대값",
+      "submit": "제출",
+      "cancel": "취소",
+      "clear": "지우기",
+      "delete": "DEL",
+      "true": "참",
+      "false": "거짓",
+      "target": "목표",
+      "nonTarget": "비목표",
+      "distractor": "방해 자극",
+      "same": "같음",
+      "different": "다름",
+      "identical": "동일",
+      "mirror": "거울상",
+      "symmetric": "대칭",
+      "asymmetric": "비대칭",
+      "symShort": "Sym.",
+      "present": "있음",
+      "absent": "없음",
+      "noTrials": "완료된 시행이 없습니다.",
+      "noSets": "완료된 세트가 없습니다.",
+      "noRounds": "완료된 라운드가 없습니다.",
+      "noProblems": "완료된 문제가 없습니다.",
+      "noPhases": "완료된 단계가 없습니다.",
+      "sets": "세트",
+      "rounds": "라운드",
+      "equations": "방정식",
+      "sentences": "문장",
+      "equationAccuracy": "방정식 정확도",
+      "forward": "순방향",
+      "backward": "역방향",
+      "forwardMaxSpan": "순방향 최대 스팬",
+      "backwardMaxSpan": "역순 최대 스팬",
+      "odd": "홀수",
+      "even": "짝수",
+      "score": "점수",
+      "easy": "쉬움",
+      "hard": "어려움",
+      "totalTrials": "총 시행 수",
+      "totalErrors": "총 오류 수",
+      "totalErrShort": "총 오류",
+      "hits": "적중",
+      "misses": "누락",
+      "falseAlarms": "오경보",
+      "correctRejections": "정기각",
+      "yes": "예",
+      "no": "아니오",
+      "sessionInterrupted": "세션 중단됨",
+      "reverseOrder": "역순으로",
+      "normalOrder": "순서대로",
+      "lnsInstruction": "숫자 오름차순, 그 다음 문자 A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "사이먼 효과",
+        "blue": "파랑",
+        "red": "빨강",
+        "heroTitle": "사이먼"
+      },
+      "soroban": {
+        "target": "이 숫자를 나타내세요",
+        "submit": "확인",
+        "rodLabel": "막대 {{n}}",
+        "heavenBead": "천주 (값 5)",
+        "earthBead": "지주 (값 1)",
+        "instrBeadTitle": "주판알의 작동 원리",
+        "instrBeadDesc": "각 막대는 한 자릿수를 나타냅니다. 위쪽 알(천주)은 5의 값입니다. 아래쪽 알(지주)은 각각 1의 값입니다. 알을 중앙 가로대 쪽으로 움직여 활성화하세요.",
+        "instrExampleTitle": "예시: 7",
+        "instrExampleDesc": "7 = 천주를 내려 (5) + 지주 2개를 올립니다 (2). 알을 탭하거나 스와이프하여 움직이세요.",
+        "instrGoalTitle": "목표",
+        "instrGoalDesc": "숫자가 나타납니다. 알을 움직여 그 숫자를 나타낸 후 확인을 누르세요. 정확하고 빠르게!",
+        "startButton": "시작",
+        "settings": "설정",
+        "closeSettings": "설정 닫기",
+        "settingsRods": "막대 수(자릿수)",
+        "settingsRodsHint": "설정의 N 레벨로 조절 가능",
+        "settingsTrials": "세션당 시행 수",
+        "settingsTrialsHint": "설정에서 시행 수로 조절할 수 있습니다",
+        "settingsRange": "숫자 범위"
+      },
+      "stroop": {
+        "pressInkColorButton": "글자 색에 맞는 버튼을 누르세요",
+        "redWord": "빨강",
+        "redLabel": "빨강",
+        "blueWord": "파랑",
+        "blueLabel": "파랑",
+        "greenWord": "초록",
+        "greenLabel": "초록",
+        "yellowWord": "노랑",
+        "yellowLabel": "노랑"
+      },
+      "stroopFlex": {
+        "followRule": "규칙",
+        "ruleInk": "잉크 색",
+        "ruleWord": "쓰인 단어",
+        "pressMatchingRuleButton": "현재 규칙에 맞는 버튼을 누르세요"
+      },
+      "goNogo": {
+        "goTrials": "Go 시행",
+        "nogoTrials": "No-Go 시행",
+        "hitRate": "적중률 (Go)",
+        "faRate": "오경보율 (No-Go)",
+        "meanRt": "평균 반응 시간",
+        "sensitivity": "감도",
+        "press": "누르세요",
+        "withhold": "누르지 마세요"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (정지 신호 RT)",
+        "ssdMean": "평균 SSD (정지 성공)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "억제 성공",
+        "stop": "정지",
+        "meanGoRt": "평균 GO 반응 시간",
+        "ssrtInvalid": "데이터 부족",
+        "ssrtNegativeNote": "SSRT가 음수입니다 (평균 SSD > 평균 GO RT) — 현재 시행 수로는 신뢰할 수 없는 결과입니다."
+      },
+      "pvt": {
+        "rtMedian": "RT 중앙값",
+        "rtMean": "평균 RT",
+        "fastest": "최고속",
+        "slowest": "최저속",
+        "falseStarts": "조기 반응",
+        "falseStartsShort": "조기 반응",
+        "lapses": "실수",
+        "mean": "평균",
+        "reaction": "반응",
+        "wait": "기다려...",
+        "pressStimulus": "자극을 기다려...",
+        "pressAnywhere": "카운터가 나타나면 아무 곳이나 누르세요",
+        "press": "누르세요!",
+        "tooEarly": "너무 빨라요!",
+        "lapsesLabel": "실수"
+      },
+      "posner": {
+        "cueingEffect": "단서 효과",
+        "validMeanRt": "유효 단서 평균 RT",
+        "invalidMeanRt": "무효 단서 평균 RT",
+        "validAccuracy": "유효 정확도",
+        "invalidAccuracy": "무효 정확도",
+        "validTrials": "유효 시행",
+        "invalidTrials": "무효 시행",
+        "validRtShort": "RT 유효",
+        "invalidRtShort": "RT 무효",
+        "valid": "유효",
+        "invalid": "무효"
+      },
+      "antisaccade": {
+        "cost": "안티사케이드 비용",
+        "proAccuracy": "프로 정확도",
+        "antiAccuracy": "안티 정확도",
+        "pro": "프로",
+        "anti": "안티",
+        "proRt": "프로 RT",
+        "antiRt": "안티 RT",
+        "proMeanRt": "프로사케이드 평균 RT",
+        "antiMeanRt": "평균 안티사케이드 RT",
+        "costLabel": "비용",
+        "antiLabel": "안티"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "AX 정확도",
+        "bxFa": "BX 오경보",
+        "ayError": "AY 오류",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY err",
+        "cogControl": "인지 제어",
+        "target": "목표",
+        "nonTarget": "비표적"
+      },
+      "ant": {
+        "scores": "ANT 점수",
+        "alerting": "경계 효과 (no-cue − double-cue)",
+        "orienting": "지향 (중앙 − 공간)",
+        "executive": "실행 (불일치 − 일치)"
+      },
+      "changeDet": {
+        "kCowan": "K 용량 (Cowan)",
+        "sameShort": "같음",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "탐색 내 오류 수",
+        "betweenErrors": "탐색 간 오류",
+        "totalErrors": "총 오류",
+        "errorFree": "오류 없음",
+        "foundErrorFree": "오류 없이 발견!",
+        "errorCount": "{{count}}개의 오류",
+        "tapsLabel": "탭"
+      },
+      "taskSwitch": {
+        "switchCost": "전환 비용",
+        "rtRepeat": "평균 RT (반복)",
+        "rtSwitch": "평균 RT (전환)",
+        "oddEven": "홀수 / 짝수",
+        "highLow": "높음 / 낮음",
+        "title": "과제 전환"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A 시간",
+        "tmtBTime": "TMT-B 시간",
+        "executiveCost": "실행 비용 (B − A)",
+        "executiveCostShort": "실행 비용 (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "TMT-B 준비 중...",
+        "tmtADone": "TMT-A 완료!",
+        "totalErrors": "총 오류",
+        "tmtALabel": "TMT-A: 숫자",
+        "tmtBLabel": "TMT-B: 숫자 & 글자",
+        "next": "다음",
+        "heroTitle": "트레일 메이킹",
+        "alternateHint": "숫자와 문자를 번갈아: 1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI 최소",
+        "fastestIsi": "최고속 ISI"
+      },
+      "wcst": {
+        "referenceCards": "참조 카드",
+        "testCard": "검사 카드",
+        "categories": "범주",
+        "categoriesCompleted": "완료된 범주",
+        "perseverativeErrors": "보속 오류 수",
+        "persevShort": "고착",
+        "avgRt": "평균 RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "각도별 RT",
+        "findMatch": "같은 모양을 찾으세요",
+        "reference": "참조 도형",
+        "referenceLabel": "참조",
+        "candidate": "후보",
+        "distractor": "기타",
+        "mirrorErrors": "거울상",
+        "title": "심적 회전"
+      },
+      "sternberg": {
+        "rtBySize": "세트 크기별 RT",
+        "title": "Sternberg",
+        "avgRt": "평균 RT"
+      },
+      "visualSearch": {
+        "rtBySize": "세트 크기별 RT",
+        "title": "시각 탐색"
+      },
+      "ospan": {
+        "typeLetters": "문자를 순서대로 입력하세요",
+        "trueOrFalse": "참인가 거짓인가?",
+        "processingWarning": "방정식 정확도 < 85% — 결과가 실제 작업 기억 능력을 반영하지 않을 수 있습니다"
+      },
+      "readingSpan": {
+        "s0": "태양은 동쪽에서 뜬다.",
+        "s1": "물고기는 나무 위에서 산다.",
+        "s2": "파리는 프랑스의 수도이다.",
+        "s3": "삼각형에는 네 개의 변이 있다.",
+        "s4": "물은 100도에서 끓는다.",
+        "s5": "고양이는 파충류이다.",
+        "s6": "지구는 태양 주위를 돈다.",
+        "s7": "초콜릿은 바위 위에서 자란다.",
+        "s8": "일 년은 열두 달이다.",
+        "s9": "새는 물속에서 숨을 쉰다.",
+        "s10": "우유는 하얗다.",
+        "s11": "자동차는 레일 위를 달린다.",
+        "s12": "벌은 꿀을 만든다.",
+        "s13": "눈은 뜨겁다.",
+        "s14": "심장은 혈액을 펌프질한다.",
+        "s15": "돌은 물에 뜬다.",
+        "s16": "달은 밤을 밝힌다.",
+        "s17": "뱀에게는 다리가 있다.",
+        "s18": "나무는 물에 뜬다.",
+        "s19": "불은 차갑다.",
+        "s20": "인간에게는 오감이 있다.",
+        "s21": "거미에게는 여섯 개의 다리가 있다.",
+        "s22": "빵은 밀가루로 만든다.",
+        "s23": "고래는 물고기이다.",
+        "w0": "집",
+        "w1": "개",
+        "w2": "책",
+        "w3": "꽃",
+        "w4": "문",
+        "w5": "탁자",
+        "w6": "나무",
+        "w7": "길",
+        "w8": "구름",
+        "w9": "별",
+        "w10": "해변",
+        "w11": "눈",
+        "w12": "등",
+        "w13": "비",
+        "w14": "유리",
+        "w15": "풀",
+        "w16": "기차",
+        "w17": "세계",
+        "w18": "해",
+        "w19": "숲",
+        "w20": "얼음",
+        "w21": "땅",
+        "w22": "하늘",
+        "w23": "돌",
+        "d0": "아침",
+        "d1": "마음",
+        "d2": "천",
+        "d3": "잎",
+        "d4": "소리",
+        "d5": "정원",
+        "d6": "그림자",
+        "d7": "종",
+        "d8": "다리",
+        "d9": "연기",
+        "d10": "모래",
+        "d11": "국",
+        "heroTitle": "읽기 범위"
+      },
+      "memorizeSequence": "순서를 기억하세요...",
+      "reproduce": "재현",
+      "span": "스팬",
+      "size": "크기",
+      "fixateCenter": "중앙을 주시하세요...",
+      "identicalOrMirror": "동일? 거울상?",
+      "wellInhibited": "잘 억제했습니다!",
+      "badDirection": "방향이 틀렸습니다!",
+      "stopMissed": "정지 실패!",
+      "falseAlarm": "오경보!",
+      "pressNow": "누르세요!",
+      "hitBang": "적중!",
+      "miss": "놓침!",
+      "doNotTouch": "터치하지 마세요!",
+      "whichDirection": "어느 방향?",
+      "stopBang": "멈춰!",
+      "cueBang": "단서!",
+      "memorizeLetters": "이 글자들을 기억하세요",
+      "memorizeLetter": "이 글자를 기억하세요",
+      "memorizeSequenceLetters": "순서를 기억하세요...",
+      "memorizeDigits": "숫자를 기억하세요...",
+      "memorizeColors": "색상을 기억하세요!",
+      "memorizePosition": "이 위치를 기억하세요...",
+      "retainWord": "이 단어를 기억하세요",
+      "retainNumber": "이 숫자를 기억하세요",
+      "addWithPrevious": "이전 숫자와 더하세요",
+      "sentenceTrueOrFalse": "이 문장은 맞습니까?",
+      "findRedCircle": "빨간 원을 찾으세요!",
+      "findHiddenToken": "숨겨진 토큰을 찾으세요!",
+      "chooseMatchingCard": "일치하는 카드를 선택하세요",
+      "arrowDirection": "중앙 화살표의 방향은?",
+      "attention": "주의...",
+      "preparation": "준비...",
+      "recallLettersInOrder": "{{count}}글자를 순서대로 회상하세요",
+      "recallWordsInOrder": "{{count}}단어를 순서대로 회상하세요",
+      "recallLastLetters": "마지막 {{count}}글자를 회상하세요",
+      "typeLastLetters": "마지막 {{count}}글자를 입력하세요",
+      "recallPositionsInOrder": "회상: 위치를 순서대로 탭하세요",
+      "pressEnterToValidate": "Enter로 확인",
+      "pressAnywhereToContinue": "아무 곳이나 눌러 계속하기",
+      "temporalPrecision": "시간적 정확도",
+      "estimationPrecision": "추정 정확도",
+      "touchStartClockwise": "시작점을 터치한 후 시계 방향으로 스와이프",
+      "touchAtoB": "점 A를 터치한 후 점 B까지 스와이프",
+      "cue": "단서",
+      "retainCue": "단서를 기억하세요...",
+      "targetOrNot": "목표? 비목표?",
+      "whereIsTarget": "목표는 어디에 있습니까?",
+      "wasLetterInSet": "이 글자가 세트에 있었습니까?",
+      "regular": "규칙적",
+      "regularity": "규칙성",
+      "msDeviation": "ms 편차",
+      "boxes": "상자",
+      "found": "{{count}}개 발견",
+      "past": "과거",
+      "tooSlow": "너무 느림",
+      "tooFast": "너무 빠름",
+      "timeout": "너무 느려요!",
+      "answer": "답변",
+      "dontPress": "누르지 마세요!",
+      "feedbackWrong": "오답!",
+      "level": "레벨",
+      "wrong": "오답",
+      "you": "당신",
+      "paused": "Pause",
+      "instructions": "안내",
+      "selectAnswer": "답을 선택하세요",
+      "tapTheOddOne": "이상한 것을 탭하세요",
+      "pal": {
+        "subtitle": "연합 학습",
+        "pairsLearned": "학습한 쌍 수",
+        "maxSetSize": "최대 세트 크기",
+        "totalErrors": "총 오류",
+        "round": "라운드",
+        "pairs": "쌍",
+        "meanRt": "평균 RT (정답)",
+        "studyPhase": "학습 - 위치를 기억하세요",
+        "testPhase": "이 도형은 어디에 있었나요?",
+        "studying": "학습 중",
+        "tapBox": "이 도형이 표시된 상자를 탭하세요"
+      },
+      "visualLogic": {
+        "easy": "쉬움",
+        "hard": "어려움",
+        "oneRule": "규칙 1개",
+        "twoRules": "규칙 2개",
+        "findMissing": "빠진 조각을 찾으세요",
+        "maxLevel": "최고 레벨",
+        "finalLevel": "최종 레벨",
+        "nextMode": "다음 세션 모드",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "어떤 조각이 빈 곳에 맞나요?",
+        "target": "목표"
+      },
+      "timeEstimation": {
+        "overestimationBias": "과대 추정 편향",
+        "underestimationBias": "과소 추정 편향",
+        "noBias": "유의미한 편향 없음",
+        "avgError": "평균 오류",
+        "overestimations": "과대 추정 횟수",
+        "underestimations": "과소 추정 횟수",
+        "avgAbsoluteError": "평균 절대 오차",
+        "avgRelativeError": "평균 상대 오차",
+        "cv": "변동 계수",
+        "watchDemo": "시간을 관찰하세요",
+        "getReady": "준비하세요...",
+        "holdToReproduce": "누르고 있어서 재현하세요!",
+        "tooLong": "너무 길어요!",
+        "tooShort": "너무 짧아요!",
+        "target": "목표",
+        "demoLabel": "참조",
+        "yourTurn": "당신의 차례",
+        "watchInstruction": "관찰하세요",
+        "holdInstruction": "누르고 있어서 재현하세요",
+        "heroTitle": "시간 추정"
+      },
+      "puzzleDetails": "퍼즐 상세",
+      "roundDetails": "라운드별 상세 정보",
+      "stageResults": "단계 결과",
+      "recognized": "인식됨",
+      "missed": "놓침",
+      "win": "승리",
+      "lose": "패배",
+      "winBang": "승리!",
+      "loseBang": "패배!",
+      "correctBang": "정답!",
+      "wrongBang": "오답!",
+      "completeBang": "완료!",
+      "repeatedBang": "반복!",
+      "incompleteBang": "미완료!",
+      "levelCompleteBang": "레벨 완료!",
+      "timesUp": "시간 종료",
+      "seeResults": "결과 보기",
+      "nextRound": "다음 라운드",
+      "startBlock": "블록 시작",
+      "continue": "계속",
+      "patientChoice": "인내 선택",
+      "immediateChoice": "즉시 선택",
+      "immediate": "즉시",
+      "digitSpan": {
+        "heroTitle": "숫자 범위"
+      },
+      "resume": "재개",
+      "numericalStroop": {
+        "heroTitle": "수치 스트룹"
+      },
+      "lineOrientation": {
+        "heroTitle": "선분 방향 판단"
+      },
+      "chain": "체인",
+      "undo": "실행 취소",
+      "vocalProsody": {
+        "heroTitle": "음성 운율"
+      },
+      "letterNumber": {
+        "title": "문자-숫자",
+        "expectedAnswer": "예상 답변"
+      },
+      "patternComparison": {
+        "heroTitle": "패턴 비교"
+      },
+      "speedPack": {
+        "title": "스피드 팩",
+        "whenFoldedWhichTouch": "접었을 때 어떤 정사각형이 맞닿나요?"
+      },
+      "dotProbe": {
+        "heroTitle": "주의 탐침 과제"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "후퍼 시각 조직화",
+        "whatIsThisObject": "이것은 무슨 물체인가요?"
+      },
+      "blockDesign": {
+        "heroTitle": "블록 디자인"
+      },
+      "accuracy": "정확도",
+      "avgTime": "평균 시간",
+      "check": "확인",
+      "dualTrace": {
+        "playArea": "플레이 영역"
+      },
+      "paperFolding": {
+        "title": "종이접기",
+        "foldSequenceHolePunch": "접기 순서와 구멍 뚫기",
+        "whichPatternWhenUnfolded": "펼쳤을 때 어떤 패턴인가요?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "어휘 판단"
+      },
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxGrid": "최대 그리드",
+      "symmetry": "대칭",
+      "threshold": "임계값",
+      "hitRate": "적중률",
+      "faRate": "FA 비율",
+      "changeDetection": {
+        "heroTitle": "변화 탐지"
+      },
+      "syllogisms": {
+        "heroTitle": "삼단논법"
+      },
+      "subitizing": {
+        "title": "서비타이징",
+        "range": "Range"
+      },
+      "jitter": "지터",
+      "sentenceCompletion": {
+        "title": "문장 완성 (클로즈)",
+        "highCloze": "높은 클로즈",
+        "lowCloze": "낮은 클로즈"
+      },
+      "grid": "그리드",
+      "pinballRecall": {
+        "title": "핀볼 회상 과제",
+        "byBounces": "바운스별",
+        "whereDoesItLand": "어디에 떨어지나요?"
+      },
+      "mean": "평균",
+      "speedup": "가속",
+      "memorize": "외우세요",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "표면 전개",
+        "whichEdgeMatches": "어떤 변이 일치하나요?"
+      },
+      "crowding": {
+        "heroTitle": "시각적 밀집",
+        "spacing": "간격"
+      },
+      "patternRecognition": {
+        "heroTitle": "패턴 인식"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "시행",
+        "position": "위치",
+        "audio": "오디오"
+      },
+      "sceneCrasher": {
+        "heroTitle": "장면 침입자",
+        "detect": "탐지"
+      },
+      "eyesTest": {
+        "heroTitle": "눈으로 마음 읽기"
+      }
+    },
+    "gridlock": {
+      "undone": "마지막 수를 취소했습니다.",
+      "resetMessage": "퍼즐이 초기화되었습니다.",
+      "hintMessage": "힌트: {{pieceId}}를 {{dir}} 방향으로 {{delta}}칸 밀기.",
+      "previewCountdown": "보드를 살펴보세요. {{seconds}}초 후에 시작합니다.",
+      "challenge": "챌린지",
+      "optimal": "최적",
+      "moves": "수",
+      "piece": "조각 {{id}}",
+      "targetPiece": "조각 {{id}} (목표 - 빨간 자동차)",
+      "challengeClassic": "클래식",
+      "challengePrecision": "정밀",
+      "challengeMemory": "기억력",
+      "challengeTimed": "시간 제한",
+      "hint": "힌트",
+      "reset": "리셋",
+      "undo": "실행 취소",
+      "nextPuzzle": "다음 퍼즐 →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "블록 1 적중",
+      "block2Hits": "블록 2 적중",
+      "goPositive": "Go = 긍정",
+      "goNegative": "Go = 부정",
+      "title": "정서 Go/No-Go 과제",
+      "block1CommissionErrors": "블록 1 수행 오류",
+      "block2CommissionErrors": "블록 2 수행 오류",
+      "block": "블록",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "평균 전환율",
+      "meanSwitchesfigure": "평균 전환/도형",
+      "totalSwitches": "총 전환",
+      "title": "모호한 도형",
+      "meanSwitches": "평균 전환",
+      "switchRate": "전환 비율",
+      "figures": "도형",
+      "totalSwitchesLabel": "총 전환",
+      "duration": "지속 시간",
+      "switchesCount": "초 | 전환:",
+      "switchButton": "전환!"
+    },
+    "analogies": {
+      "verbalCorrect": "언어 정답",
+      "timeout": "시간 초과",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "베버",
+      "title": "ANS 비교",
+      "ratio": "비율",
+      "leftMore": "왼쪽이 더 많음",
+      "rightMore": "오른쪽이 더 많음"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "오경보율",
+      "grammatical": "문법적",
+      "memorizeTheseStrings": "이 문자열을 기억하세요",
+      "testPhase": "테스트 단계",
+      "ungrammatical": "비문법적",
+      "learning": "학습",
+      "test": "Test",
+      "title": "인공 문법",
+      "learningPhase": "학습",
+      "testIntroText": "이제 새 문자열이 표시됩니다. 같은 규칙을 따르는지 판단하세요.",
+      "startTest": "테스트 시작",
+      "followsRules": "규칙 준수",
+      "breaksRules": "규칙 위반"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "깜빡임 크기",
+      "title": "주의 깜빡임",
+      "blink": "깜빡임",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "첫 번째 녹색 글자?",
+      "secondGreenLetter": "두 번째 녹색 글자?"
+    },
+    "attentionalCapture": {
+      "captureCost": "포착 비용",
+      "singletonPresent": "싱글턴 존재",
+      "noSingleton": "싱글톤 없음",
+      "title": "주의 포착",
+      "capture": "캡처",
+      "horizontal": "수평",
+      "vertical": "수직"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "결합 창",
+      "title": "시청각 바인딩",
+      "window": "Window",
+      "pssLabel": "PSS(주관적 동시성 지점)",
+      "simultaneousOrNot": "동시인가요?",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "비동시"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "지속 시간 역치",
+      "reference": "기준",
+      "weberFraction": "베버 분수",
+      "title": "청각 지속 시간",
+      "threshold": "임계값",
+      "weber": "Weber",
+      "whichLonger": "어느 것이 더 길까요?",
+      "firstLonger": "첫 번째가 더 긺",
+      "secondLonger": "두 번째가 더 긺"
+    },
+    "bart": {
+      "adjustedAvgPumps": "조정된 평균 펌프",
+      "avgTimeballoon": "평균 시간/풍선",
+      "banked": "저장됨!",
+      "lostEarnings": "수익 손실!",
+      "overallAvgPumps": "전체 평균 펌프",
+      "popRate": "터짐률",
+      "totalEarned": "총 수입",
+      "balloons": "풍선",
+      "cashed": "현금화",
+      "popped": "터짐",
+      "adjPumps": "조정 펌프",
+      "pop": "팡",
+      "pump": "Pump",
+      "cashIn": "현금화"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "평균 결정 시간",
+      "drawBeadsToGatherEvidence": "증거를 모으기 위해 구슬을 뽑으세요",
+      "jtc": "JTC",
+      "title": "구슬 과제",
+      "meanDraws": "평균 추첨",
+      "rounds": "라운드",
+      "jtcRate": "JTC 비율",
+      "meanDrawsToDecision": "평균이 결정을 내리게 한다",
+      "jtcRateThreshold": "JTC 비율 (<{{threshold}}회 뽑기)",
+      "round": "라운드",
+      "jarDescription": "항아리 A: 85% 초록 / 항아리 B: 85% 빨강",
+      "itWasJar": "이 항아리였습니다",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "변경된 시행",
+      "sameAccuracy": "동일 정확도",
+      "sameTrials": "동일 시행",
+      "title": "특징 결합",
+      "binding": "결합",
+      "bindingAccuracyChanged": "변화 정확도",
+      "same": "같음",
+      "different": "다름"
+    },
+    "blockDesign": {
+      "cells": "셀",
+      "target": "목표",
+      "yourAnswer": "당신의 답",
+      "tapHint": "탭하여 색상 변경",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "적응",
+      "adaptationCost": "적응 비용",
+      "nonswitchTrials": "비전환 시행",
+      "switchTrials": "전환 시행"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "이 글자를 기억하세요",
+      "selectThe3Letters": "3개의 글자를 선택하세요",
+      "title": "Brown-Peterson Task",
+      "forgetting": "망각",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "지연"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "의사결정 품질",
+      "finalPoints": "최종 점수",
+      "meanBet": "평균 베팅",
+      "winRate": "승률",
+      "wins": "승리",
+      "title": "케임브리지 도박 과제",
+      "totalPoints": "총 점수",
+      "quality": "품질",
+      "rational": "합리적",
+      "avgBet": "평균 베팅",
+      "trial": "시행",
+      "whichColorHidesToken": "어떤 색에 토큰이 숨겨져 있나요?",
+      "youChose": "선택했습니다",
+      "howMuchToBet": "얼마를 걸까요?"
+    },
+    "cancellation": {
+      "false": "오답",
+      "target": "목표:",
+      "total": "합계",
+      "title": "취소 과제 (d2)",
+      "misses": "놓침",
+      "targetDescription": "표시 2개의 d"
+    },
+    "changeBlindness": {
+      "detectionRate": "탐지율",
+      "found": "발견",
+      "meanDetectionTime": "평균 탐지 시간",
+      "title": "변화 맹시 과제",
+      "missed": "놓침",
+      "avgTime": "평균 시간",
+      "instructions": "설명"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "최적 추정",
+      "meanScore": "평균 점수",
+      "worstEstimate": "최악 추정",
+      "inRange": "좋은 추정!",
+      "title": "인지 추정",
+      "meanScoreLabel": "평균 점수",
+      "inRangeLabel": "범위 내",
+      "extreme": "극단적",
+      "scoreLabel": "점수",
+      "submit": "제출"
+    },
+    "common": {
+      "accuracy": "정확도",
+      "bias": "편향",
+      "falseAlarmRate": "오경보율",
+      "hitRate": "탐지율",
+      "hits": "탐지",
+      "listening": "듣는 중...",
+      "meanRt": "평균 반응시간",
+      "timedOut": "시간 초과",
+      "timedOut2": "시간 초과",
+      "faRate": "FA 비율",
+      "paused": "일시정지"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "얼마나 확신하나요?",
+      "rateYourConfidence": "확신 정도를 평가",
+      "title": "확신도 교정",
+      "calError": "교정 오차",
+      "confidence": "확신"
+    },
+    "consequences": {
+      "best": "최고",
+      "nextRound": "다음 라운드...",
+      "time": "시간",
+      "placeholder": "결과를 입력하세요...",
+      "title": "결과",
+      "totalIdeas": "총 아이디어",
+      "avgPerRound": "라운드당 평균",
+      "rounds": "라운드",
+      "noConsequencesListed": "나열된 결과 없음",
+      "roundProgress": "라운드 {{current}} / {{total}}",
+      "typeAndPressAdd": "입력하고 추가 누르기"
+    },
+    "contextualCueing": {
+      "cueingEffect": "단서 효과",
+      "newConfigRt": "새 배치 RT",
+      "oldConfigRt": "이전 배치 RT",
+      "title": "맥락 단서",
+      "cueing": "단서",
+      "oldRt": "이전 RT",
+      "newRt": "새 RT",
+      "prompt": "프롬프트",
+      "left": "왼쪽",
+      "right": "오른쪽"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "임계 지터",
+      "title": "윤곽 통합",
+      "pipeJitter": "| 지터"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "임계 대비",
+      "title": "대비 감도",
+      "threshold": "임계값",
+      "left": "왼쪽",
+      "right": "오른쪽"
+    },
+    "cpt": {
+      "nontargets": "비표적",
+      "target": "목표",
+      "nonTarget": "비표적",
+      "dPrime": "d'",
+      "targetsLetter": "목표 글자",
+      "tapForLetterOnly": "목표 글자에만 탭하세요"
+    },
+    "crowding": {
+      "criticalSpacing": "임계 간격",
+      "leftAccuracy": "왼쪽 정확도",
+      "rightAccuracy": "오른쪽 정확도"
+    },
+    "cryptogram": {
+      "hints": "힌트",
+      "title": "암호문",
+      "solved": "해결",
+      "time": "Time",
+      "puzzles": "퍼즐",
+      "puzzle": "퍼즐",
+      "hint": "힌트",
+      "clear": "지우기"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "곡선 아래 면적",
+      "discountRateK": "할인율 (k)",
+      "impulsivityIndex": "충동성 지수",
+      "title": "지연 할인",
+      "aucPatience": "AUC 인내",
+      "patient": "인내심",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "무차별 점",
+      "whichPrefer": "어느 것을 선호하나요?",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "긴",
+      "longDelay68s": "긴 지연 (6-8초)",
+      "med": "중간",
+      "mediumDelay46s": "중간 지연 (4-6초)",
+      "short": "짧은",
+      "shortDelay34s": "짧은 지연 (3-4초)",
+      "title": "지연 매칭 과제",
+      "delay": "지연",
+      "rememberThisPattern": "이 패턴을 기억하세요",
+      "whichWasIt": "어느 것이었나요?"
+    },
+    "dichoticListening": {
+      "alertDetection": "경고 탐지",
+      "attendToTheLeftColumn": "왼쪽 열에 집중",
+      "attendedAccuracy": "주의 채널 정확도",
+      "ignoreTheRightColumn": "오른쪽 열 무시",
+      "right": "오른쪽",
+      "title": "이분 청취 과제",
+      "attendedAcc": "주의 정확도",
+      "alertDet": "경보 탐지",
+      "alerts": "경보",
+      "selectLeftColumnWords": "왼쪽 열의 단어를 선택",
+      "submit": "제출",
+      "alertQuestion": "경보 질문"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "망각 정확도",
+      "forgettingEffect": "망각 효과",
+      "newRejection": "새 항목 거부",
+      "rememberAccuracy": "기억 정확도",
+      "title": "지시 망각",
+      "remember": "기억",
+      "forget": "잊기",
+      "round": "라운드",
+      "word": "단어",
+      "wasThisWordShown": "이 단어가 표시되었나요?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "주의 편향 점수",
+      "congruentAcc": "일치 정확도",
+      "congruentRt": "일치 RT",
+      "incongruentAcc": "불일치 정확도",
+      "incongruentRt": "불일치 RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "자동차 아니면 트럭?",
+      "minDisplayReached": "최소 표시 도달",
+      "positionAccuracy": "위치 정확도",
+      "thresholdDisplay": "표시 역치",
+      "vehicleAccuracy": "차량 정확도",
+      "whereWasTheDiamond": "다이아몬드는 어디에 있었나요?",
+      "title": "이중 결정",
+      "threshold": "임계값",
+      "bothOk": "둘 다 정답",
+      "vehicle": "차량",
+      "position": "위치",
+      "car": "자동차",
+      "truck": "트럭"
+    },
+    "dsst": {
+      "items": "항목",
+      "itemsCompleted": "완료 항목",
+      "speedItemsmin": "속도 (항목/분)",
+      "attempts": "시도",
+      "itemsPerMin": "항목/분"
+    },
+    "dualTask": {
+      "dualtaskCost": "이중 과제 비용",
+      "taskANumber": "과제 A (숫자)",
+      "taskBSymbol": "과제 B (기호)",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "숫자",
+      "symbol": "기호",
+      "up": "위",
+      "down": "아래"
+    },
+    "dualTime": {
+      "sessionEnPause": "세션 일시 중지",
+      "votreEstimationSecondes": "추정치 (초)",
+      "sessionInterrupted": "세션 중단됨",
+      "target": "목표",
+      "estimation": "추정",
+      "avgTime": "평균 시간",
+      "avgError": "평균 오차",
+      "trials": "Trials",
+      "resumeToContinue": "계속하려면 재개",
+      "aimFor": "목표:",
+      "second": "Second",
+      "howLongDidYouTake": "얼마나 걸렸나요?"
+    },
+    "dualTrack": {
+      "confirmer": "확인",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "계속하려면 재개하세요.",
+      "sessionEnPause": "세션 일시 중지",
+      "tapezLesCibles": "목표를 탭하세요",
+      "tapezLaCible": "타겟을 탭하세요",
+      "appuyezConfirmer": "확인을 누르세요",
+      "targetsCountLabel": "타겟 {{count}}개",
+      "distractorsCountLabel": "방해물 {{count}}개",
+      "roundsCountLabel": "{{count}}라운드",
+      "calibrationRoundsLabel": "캘리브레이션 {{count}} 라운드",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = 경로 내부의 난이도 단계입니다.",
+      "tierHelpCurrentWithPhase": "현재 타겟 {{targets}}개의 T{{current}}/{{total}} 단계에 있습니다. 현재 단계: {{phase}}. 다음 타겟 레벨까지 {{remaining}} 단계 남았습니다.",
+      "phaseTracking": "추적",
+      "phaseAudio": "추적 + 음성",
+      "phaseColor": "추적 + 색상",
+      "phaseCombined": "추적 + 음성 + 색상",
+      "passLetters": "글자",
+      "passColors": "색상",
+      "moveInstruction": "지시 이동",
+      "moveConfirmBtn": "확인 버튼 이동",
+      "preparingSession": "세션 준비 중...",
+      "preparing3dScene": "3D 장면 준비 중...",
+      "startJourney": "코스 시작",
+      "calibrationDescription": "첫 단계 전에 더 긴 캘리브레이션으로 시작 레벨을 추정합니다.",
+      "defaultDescription": "공이 점등됩니다. 움직이는 동안 추적한 후 식별하세요.",
+      "startCalibration": "캘리브레이션 시작",
+      "calibrationTitle": "보정",
+      "estimatedStart": "예상 시작",
+      "roundsAnalyzed": "분석된 라운드",
+      "willStartAt": "시작 위치",
+      "targetsCount": "표적",
+      "thenProgress": "그 다음 진행"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "평균 절대 오차",
+      "ratio": "비율",
+      "slope": "기울기",
+      "vierordtSlope": "비어로트 기울기",
+      "wait": "기다리세요...",
+      "title": "지속 시간 재현 과제",
+      "meanError": "평균 오차",
+      "meanRatio": "평균 비율 (재현/목표)",
+      "holdNow": "지금 누르세요",
+      "target": "목표",
+      "error": "오류"
+    },
+    "embeddedFigures": {
+      "fastest": "가장 빠른",
+      "found": "발견",
+      "meanDetectionTime": "평균 탐지 시간",
+      "slowest": "가장 느린",
+      "title": "숨은 도형",
+      "missed": "놓침",
+      "fastestLabel": "최고 속도",
+      "findThisShape": "이 도형을 찾으세요",
+      "memorizeShape": "도형을 기억하세요…",
+      "foundIt": "찾았다!",
+      "giveUp": "포기"
+    },
+    "emotionalNback": {
+      "falseAlarms": "오경보",
+      "misses": "놓침",
+      "title": "감정 N-back 과제",
+      "match": "일치"
+    },
+    "emotionalStroop": {
+      "neutralRt": "중립 RT",
+      "positiveRt": "긍정 RT",
+      "threatRt": "위협 RT",
+      "title": "감정 스트룹 과제",
+      "interference": "간섭",
+      "interferenceThreatNeutral": "간섭 (위협 − 중립)"
+    },
+    "eyesTest": {
+      "totalTime": "총 시간"
+    },
+    "faceName": {
+      "gain": "향상",
+      "learningImprovement": "학습 개선",
+      "round1Accuracy": "1라운드 정확도",
+      "round2Accuracy": "2라운드 정확도",
+      "whoIsThis": "이 사람은 누구?",
+      "title": "얼굴-이름 연합 과제",
+      "round": "라운드",
+      "testPhase": "테스트 단계"
+    },
+    "fauxPas": {
+      "who": "누구?",
+      "why": "왜?",
+      "title": "실언 인식 과제",
+      "detection": "탐지",
+      "scenarios": "시나리오",
+      "fpFound": "실례 발견",
+      "control": "제어",
+      "readyToAnswer": "답변 준비 완료",
+      "didSomeoneSay": "누군가 부적절한 말을 했나요?",
+      "whoSaidIt": "누가 말했나요?",
+      "whyInappropriate": "왜 부적절했나요?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "회상 정확도",
+      "recognitionAccuracy": "재인 정확도",
+      "recallPlaceholder": "답을 입력하세요...",
+      "unlikely": "가능성 낮음",
+      "certain": "Certain",
+      "title": "아는 느낌",
+      "recall": "회상",
+      "recognition": "재인",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "FOK 민감도",
+      "submit": "제출",
+      "dontKnow": "모르겠어요",
+      "fokPrompt": "알아볼 수 있나요?",
+      "selectCorrectAnswer": "정답을 선택하세요",
+      "answer": "답변"
+    },
+    "fingerTapping": {
+      "firstTrial": "첫 번째 시행",
+      "lastTrial": "마지막 시행",
+      "sequence": "시퀀스",
+      "speedupT1VsT12": "가속 (T1 vs T12)",
+      "title": "손가락 탭핑"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "평균 이동 시간",
+      "avgThroughput": "평균 처리량",
+      "title": "Fitts 탭핑 과제",
+      "throughput": "처리량",
+      "tapTarget": "강조된 표적을 탭"
+    },
+    "foreperiod": {
+      "early": "이른",
+      "slope": "기울기",
+      "title": "시간 준비",
+      "fpEffectSlope": "FP 효과 기울기"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "반전",
+      "threshold": "역치",
+      "tone1": "톤 1",
+      "tone2": "톤 2",
+      "weber": "베버",
+      "weberFraction": "베버 분수",
+      "hz": "Hz",
+      "title": "주파수 변별",
+      "thresholdLabel": "역치",
+      "hzDiff": " Hz 차이",
+      "whichWasHigher": "어느 것이 더 높았나요?",
+      "firstHigher": "첫 번째가 더 높음",
+      "secondHigher": "두 번째가 더 높음"
+    },
+    "gabor": {
+      "gaborPatch": "가보르 패치",
+      "leftAccuracy": "왼쪽 정확도",
+      "leftTrials": "왼쪽 시행",
+      "noiseMask": "노이즈 마스크",
+      "rightAccuracy": "오른쪽 정확도",
+      "rightTrials": "오른쪽 시행",
+      "thresholdAngle": "역치 각도",
+      "title": "Gabor",
+      "threshold": "임계값",
+      "reversals": "역전 수",
+      "timedOut": "시간 초과",
+      "left": "왼쪽",
+      "right": "오른쪽"
+    },
+    "gameOfDice": {
+      "finalPoints": "최종 점수",
+      "risky": "위험",
+      "riskyChoices": "위험한 선택",
+      "safe": "안전",
+      "winRate": "승률",
+      "wins": "승리",
+      "title": "주사위 과제",
+      "totalPoints": "총 점수",
+      "riskyLabel": "위험",
+      "roll": "굴리기",
+      "chooseYourBet": "베팅을 선택하세요",
+      "pickNumbers": "숫자를 고르세요"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "간격이 있나요?",
+      "gapThreshold": "간격 역치",
+      "title": "무음 감지",
+      "noGap": "간격 없음"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "시선은 어디를 향했나요?",
+      "direct": "Direct",
+      "left": "왼쪽",
+      "right": "오른쪽",
+      "title": "시선 방향",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "파트 1 (개시)",
+      "part2": "파트 2",
+      "part2Suppression": "파트 2 (억제)",
+      "suppressionCost": "억제 비용",
+      "title": "Hayling",
+      "part1": "파트 1",
+      "part2Label": "파트 2",
+      "suppression": "억제",
+      "obvious": "명백한",
+      "obviousPicksPart2": "뻔한 선택 (파트 2)",
+      "chooseUnrelated": "관련 없는 단어를 선택하세요 ",
+      "completelyUnrelated": "완전히 무관",
+      "doNotPickObvious": "뻔한 단어를 고르지 마세요!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "다음 단계로 진행 중…",
+      "stageComplete": "단계 완료!",
+      "title": "IED Set Shift",
+      "stages": "단계",
+      "edsCost": "EDS 비용",
+      "stage": "단계",
+      "correctNeeded": "진행에 필요한 정답 수"
+    },
+    "informationSampling": {
+      "cost": "비용",
+      "free": "무료",
+      "meanTilesCost": "평균 타일 (비용)",
+      "meanTilesFree": "평균 타일 (무료)",
+      "totalCost": "총 비용",
+      "title": "정보 표본 추출",
+      "tiles": "타일",
+      "tapToReveal": "탭하여 공개"
+    },
+    "inspectionTime": {
+      "final": "최종",
+      "finalDisplayTime": "최종 표시 시간",
+      "minCorrectIt": "최소 정답 IT",
+      "threshold": "역치",
+      "title": "검사 시간",
+      "thresholdLabel": "역치",
+      "minIt": "최소 IT"
+    },
+    "iowaGambling": {
+      "balance": "잔액:",
+      "chooseADeck": "덱을 선택하세요",
+      "deckADraws": "덱 A 뽑기",
+      "deckBDraws": "덱 B 뽑기",
+      "deckCDraws": "덱 C 뽑기",
+      "deckDDraws": "덱 D 뽑기",
+      "first40Advantageous": "처음 40회 유리 선택",
+      "last40Advantageous": "마지막 40회 유리 선택",
+      "learn": "학습",
+      "learningIndex": "학습 지수",
+      "title": "아이오와 도박",
+      "advantageousPct": "유리한 %",
+      "earnings": "수익",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "교정 편향",
+      "meanJol": "평균 JOL",
+      "nowTestYourRecall": "이제 기억력을 테스트하세요",
+      "studyComplete": "학습 완료",
+      "whatWasPairedWith": "…와 짝지어진 것은?",
+      "title": "학습 판단",
+      "recallAccuracy": "회상 정확도",
+      "jolGamma": "JOL 감마",
+      "jolAccuracyGamma": "JOL 정확도 (감마)",
+      "howLikelyRemember": "기억할 가능성은?",
+      "hiddenAnswer": "숨겨진 답"
+    },
+    "judgmentOfRecency": {
+      "close": "가까운",
+      "closeGap13": "짧은 간격 (1-3)",
+      "far": "먼",
+      "farGap9": "긴 간격 (9+)",
+      "mediumGap48": "중간 간격 (4-8)",
+      "title": "최신성 판단",
+      "medium": "중간",
+      "studyPhaseMemorizeOrder": "학습 단계 — 순서를 기억하세요",
+      "whichMoreRecently": "어느 것이 더 최근에 나타났나요?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "평균 RT (비단어)",
+      "meanRtWords": "평균 RT (단어)",
+      "nonwordsAccuracy": "비단어 정확도",
+      "wordsAccuracy": "단어 정확도",
+      "word": "단어",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "소요 시간",
+      "optimalSteps": "최적 단계",
+      "pathEfficiency": "경로 효율",
+      "totalSteps": "총 단계",
+      "wallHits": "벽 충돌",
+      "title": "Maze",
+      "completed": "완료",
+      "efficiency": "효율성",
+      "wallHitsLabel": "벽 충돌",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "쉬운",
+      "easy2Boxes": "쉬움 (2상자)",
+      "hard": "어려운",
+      "hard4Boxes": "어려움 (4상자)",
+      "medium3Boxes": "보통 (3상자)",
+      "title": "Memobox",
+      "rounds": "라운드",
+      "medium": "중간",
+      "watchMovements": "움직임을 지켜보세요…",
+      "howManyBalls": "각 상자에 공이 몇 개?",
+      "submit": "제출",
+      "roundOf": "라운드 {{current}} / {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "단면은 무엇인가요?",
+      "title": "정신적 절단"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "이전, 유사, 새로운?",
+      "patternSeparation": "패턴 분리",
+      "sep": "분리",
+      "old": "이전",
+      "similar": "유사",
+      "new": "새로운",
+      "ldi": "LDI",
+      "title": "기억 변별",
+      "hitRateOldDetected": "적중률 (이전 감지)",
+      "lureDiscrimination": "미끼 변별 (LDI)",
+      "memorize": "외우세요",
+      "testPhase": "테스트 단계"
+    },
+    "multiArmedBandit": {
+      "earnings": "수익:",
+      "pickMachine": "기계를 선택하세요",
+      "title": "다중 팔 슬롯",
+      "totalReward": "총 보상",
+      "optimal": "최적",
+      "regret": "후회",
+      "exploit": "활용",
+      "machine": "기계",
+      "armsExplored": "탐색한 암"
+    },
+    "navon": {
+      "globalBigLetter": "전체 (큰 글자)",
+      "localSmallLetter": "지역 (작은 글자)",
+      "title": "나본",
+      "globalAdv": "전역 우위",
+      "whatBigLetter": "큰 글자는?",
+      "whatSmallLetter": "작은 글자는?"
+    },
+    "negativePriming": {
+      "controlRt": "통제 RT",
+      "nameTheRedShape": "빨간 도형을 말하세요",
+      "negativePrimingRt": "부적 프라이밍 RT",
+      "positivePrimingRt": "정적 프라이밍 RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP 효과",
+      "title": "부적 점화",
+      "ctrlRt": "통제 RT"
+    },
+    "numberLine": {
+      "estimationBias": "추정 편향",
+      "linearityRsup2": "선형성 (R²)",
+      "meanAbsoluteError": "평균 절대 오차",
+      "tapTheLineToPlaceTheNumber": "숫자를 놓을 위치를 터치",
+      "title": "수직선",
+      "meanError": "평균 오차",
+      "yourEstimate": "당신의 추정",
+      "correct": "정답"
+    },
+    "oddOneOut": {
+      "colorTrials": "색상 시행",
+      "shapeTrials": "모양 시행",
+      "shape": "도형",
+      "color": "색상",
+      "timeout": "시간 초과",
+      "shapeDiffAccuracy": "형태 차이 정확도",
+      "colorDiffAccuracy": "색상 차이 정확도",
+      "shapeDiffAvgRt": "형태 차이 평균 RT",
+      "colorDiffAvgRt": "색상 차이 평균 RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "어느 방향?",
+      "thresholdAngle": "임계 각도",
+      "title": "방향 변별",
+      "threshold": "임계값",
+      "counterCw": "반시계",
+      "clockwise": "시계 방향"
+    },
+    "patternComparison": {
+      "differentTrials": "다른 패턴 시행",
+      "sameTrials": "같은 시행",
+      "same": "동일",
+      "different": "다름"
+    },
+    "patternRecognition": {
+      "newPatterns": "새 패턴",
+      "oldPatterns": "기존 패턴",
+      "old": "이전",
+      "new": "새로운",
+      "studyPatterns": "패턴을 주의 깊게 살펴보세요",
+      "memorize": "기억하세요 ({{current}}/{{total}})",
+      "getReady": "준비하세요...",
+      "testPhaseStarting": "테스트 단계 시작..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "정확히 맞음",
+      "meanAngularError": "평균 각도 오차",
+      "withinTolerance": "허용 범위 내",
+      "title": "관점 취하기",
+      "avgErr": "평균 오차",
+      "youAreAt": "당신의 위치: ",
+      "facing": "Facing",
+      "pointTo": "가리키세요 "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "주파수 역치",
+      "seq1": "시퀀스 1",
+      "seq2": "시퀀스 2",
+      "title": "음소 변별",
+      "thresh": "Thresh",
+      "sameOrDifferent": "같은가요 다른가요?",
+      "same": "같음",
+      "different": "다름"
+    },
+    "predictionMotion": {
+      "biasLate": "편향 (+ = 늦음)",
+      "meanAbsoluteError": "평균 절대 오차",
+      "precisionSd": "정밀도 (SD)",
+      "title": "운동 예측",
+      "absError": "절대 오차",
+      "precision": "정밀도",
+      "responded": "응답함",
+      "tapWhenReachesTarget": "표적에 도달하면 탭"
+    },
+    "promem": {
+      "ongoingAccuracy": "진행 과제 정확도",
+      "ongoingRt": "진행 중 RT",
+      "pmHitRate": "PM 적중률",
+      "pmRt": "PM RT",
+      "pmTargets": "PM 표적",
+      "title": "전망 기억",
+      "ongoing": "진행 중",
+      "pmHits": "PM 적중",
+      "pmMisses": "PM 실패",
+      "living": "Living",
+      "nonLiving": "무생물",
+      "redWordInstruction": "빨간 단어 = 누르기"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "방해 자극 오류",
+      "literalErrorRate": "문자적 오류율",
+      "literalErrors": "문자적 오류",
+      "title": "속담 해석",
+      "literal": "문자적",
+      "litRate": "문자적 비율",
+      "whatDoesThisMean": "이것은 무슨 뜻인가요?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "추적 준비를 하세요",
+      "meanTimeOnTarget": "평균 표적 시간",
+      "meanTrackingError": "평균 추적 오차",
+      "placeYourFingerOnTheScreen": "화면에 손가락을 올려놓으세요",
+      "title": "시각 추적 과제",
+      "timeOnTarget": "목표 시간",
+      "error": "오류",
+      "onTarget": "표적 위",
+      "avgError": "평균 오차",
+      "improve": "Improve",
+      "improvementT1VsT": "개선 T1 대 T",
+      "errorLabel": "오류",
+      "followGreenTarget": "초록색 표적을 따라가세요"
+    },
+    "rapidNaming": {
+      "roundComplete": "라운드 완료",
+      "totalErrors": "총 오류",
+      "title": "빠른 명명",
+      "avgSpeed": "평균 속도",
+      "totalTime": "총 시간",
+      "round": "라운드",
+      "getReady": "준비하세요!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "평균 풀이 시간",
+      "solved": "해결됨",
+      "wrong": "틀림",
+      "placeholder": "답을 입력하세요...",
+      "title": "그림 퍼즐",
+      "puzzles": "퍼즐",
+      "timeout": "시간 초과",
+      "submit": "제출",
+      "answer": "답변"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "평균 풀이 시간",
+      "solved": "해결됨",
+      "placeholder": "답을 입력하세요...",
+      "title": "원격 연상 과제",
+      "timeout": "시간 초과",
+      "submit": "제출",
+      "answer": "답변"
+    },
+    "reversalLearning": {
+      "adapt": "적응",
+      "loseshiftRate": "패배 후 전환율",
+      "score": "점수:",
+      "winstayRate": "승리-유지율",
+      "title": "역전 학습 과제",
+      "rewards": "보상",
+      "reversals": "역전 수",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "평균 기준에 따른 시행",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7씩 거꾸로 세세요",
+      "reproduceThePatternFromMemory": "기억으로 패턴을 재현하세요",
+      "title": "레이 도형",
+      "copy": "복사",
+      "recall": "회상",
+      "retention": "보유",
+      "trial": "시행",
+      "target": "목표",
+      "yourCopy": "당신의 복사",
+      "submit": "제출"
+    },
+    "rhythm": {
+      "avgTimingError": "평균 타이밍 오차",
+      "bestTrialError": "최고 시행 오차",
+      "correctTrials": "정답 시행",
+      "worstTrialError": "최저 시행 오차",
+      "watchRhythm": "리듬을 관찰하세요",
+      "getReady": "준비...",
+      "tapTheRhythm": "리듬을 재현하세요!",
+      "tooFarOff": "너무 부정확합니다!",
+      "tapToReproduce": "탭하여 재현",
+      "beats": "{{count}}박자",
+      "bestTrial": "최고 시행",
+      "worstTrial": "최저 시행",
+      "title": "Rhythm",
+      "msErr": "ms 오차"
+    },
+    "routePlanning": {
+      "time": "시간",
+      "title": "경로 계획",
+      "levels": "레벨",
+      "completed": "완료",
+      "avgMoves": "평균 이동",
+      "clear": "지우기",
+      "submit": "제출",
+      "instructions": "설명"
+    },
+    "rvp": {
+      "detect357246468": "감지: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "표적 시퀀스",
+      "fa": "FA",
+      "hitRate": "적중률",
+      "misses": "Misses",
+      "sequences": "시퀀스"
+    },
+    "sart": {
+      "commissionErrors": "실행 오류",
+      "omissionErrors": "누락 오류",
+      "tapAllDigits": "3을 제외한 모든 숫자를 탭",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "추가",
+      "studyTheScene": "장면을 살펴보세요",
+      "swaps": "교체",
+      "tapTheNewchangedObject": "새로운/바뀐 물체를 탭"
+    },
+    "sentenceVerification": {
+      "falseSentences": "거짓 문장",
+      "trueSentences": "참 문장",
+      "byCategory": "범주별",
+      "title": "문장 검증",
+      "trueRt": "참 RT",
+      "true": "True",
+      "false": "False",
+      "pressKey": "누르세요 "
+    },
+    "soundSweeps": {
+      "down": "하강",
+      "downAccuracy": "하강 정확도",
+      "durationThreshold": "지속 시간 역치",
+      "up": "위",
+      "upAccuracy": "상승 스윕 정확도",
+      "title": "소리 스윕 과제",
+      "threshold": "임계값",
+      "upOrDown": "올라가나요 내려가나요?"
+    },
+    "sourceMemory": {
+      "color": "색상",
+      "colorRecall": "색상 회상",
+      "frame": "프레임",
+      "frameRecall": "프레임 회상",
+      "getReadyForTheTest": "테스트를 준비하세요!",
+      "itemRecognition": "항목 재인",
+      "positionRecall": "위치 회상",
+      "sourceAccuracy": "출처 정확도",
+      "title": "출처 기억",
+      "source": "출처",
+      "position": "위치",
+      "word": "단어",
+      "wasThisWordShown": "이 단어가 표시되었나요?",
+      "bottom": "하단",
+      "blue": "파랑",
+      "orange": "주황",
+      "circle": "원",
+      "square": "사각"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "소음 역치",
+      "title": "소음 속 말소리",
+      "noise": "잡음",
+      "whichWordWasIt": "어떤 단어였나요?"
+    },
+    "srtt": {
+      "learningEffect": "학습 효과",
+      "learning": "학습",
+      "block": "블록"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "우연 수준",
+      "learningDetected": "학습 감지됨",
+      "testPhase": "테스트 단계",
+      "whichPairLooksMoreFamiliar": "어떤 쌍이 더 익숙해 보이나요?",
+      "title": "통계 학습",
+      "learning": "학습",
+      "watchTheShapes": "도형을 지켜보세요"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "신념 편향 효과",
+      "conclusion": "결론",
+      "premise1": "전제 1",
+      "premise2": "전제 2",
+      "logicalValidityQuestion": "논리적으로 타당한가요?",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "비존재 정확도",
+      "presentAccuracy": "존재 정확도",
+      "title": "기호 검색",
+      "present": "있음",
+      "absent": "없음",
+      "targets": "Targets",
+      "searchGroup": "검색 그룹"
+    },
+    "syncContinuation": {
+      "async": "비동기",
+      "asynchrony": "비동기성",
+      "drift": "드리프트",
+      "cv": "CV",
+      "title": "동기화-계속",
+      "meanCv": "평균 CV",
+      "tempos": "템포",
+      "tempo": "템포",
+      "ioi": "Ioi",
+      "getReady": "준비하세요…",
+      "nextTempo": "다음 템포…"
+    },
+    "taskJuggling": {
+      "correctResets": "정확한 리셋",
+      "duration": "소요 시간",
+      "missedCounters": "놓친 카운터",
+      "prematureResets": "성급한 리셋",
+      "totalEvents": "총 이벤트",
+      "tooEarly": "너무 빨라요!",
+      "missed": "놓침!",
+      "title": "과제 저글링",
+      "premature": "조기",
+      "counter": "카운터",
+      "tapCounterInstruction": "각 카운터가 임계값에 도달하면 탭하세요. 넘치지 않게!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "이분점 (PSE)",
+      "curveSteepness": "곡선 가파름",
+      "idealMidpoint": "이상적 중간점",
+      "pse": "PSE",
+      "title": "시간 이분법",
+      "steepness": "기울기",
+      "shortOrLong": "짧은가요 긴가요?",
+      "trainingPhase": "훈련 단계",
+      "short": "짧음",
+      "long": "길음"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "구배 폭",
+      "rememberThisDuration": "이 시간을 기억하세요",
+      "width": "너비",
+      "standard": "STANDARD",
+      "title": "시간 일반화",
+      "hitRate": "적중률",
+      "faRate": "FA 비율",
+      "hitRateDetectStandard": "적중률 (표준 감지)",
+      "sameDuration": "같은 길이인가요?",
+      "trainingPhase": "훈련 단계",
+      "same": "같음",
+      "different": "다름"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "SOA 역치",
+      "title": "질감 변별",
+      "threshold": "임계값"
+    },
+    "timePromem": {
+      "avgTimingError": "평균 타이밍 오차",
+      "clockChecks": "시계 확인",
+      "ongoingAccuracy": "진행 과제 정확도",
+      "ongoingTrials": "진행 중 시행",
+      "totalPmPresses": "전망 기억 총 누름 수",
+      "pmAccuracy": "PM 정확도",
+      "pmMisses": "PM 놓침",
+      "title": "시간 기반 전망 기억",
+      "ongoing": "진행 중",
+      "pmHitsLabel": "전망 기억 적중",
+      "timingErr": "타이밍 오류",
+      "pmHitsExpected": "PM 적중 / 예상",
+      "pmPresses": "PM 누름",
+      "checkClock": "시계 확인",
+      "thirtySecMark": "30초 표시"
+    },
+    "toj": {
+      "meanResponseTime": "평균 반응 시간",
+      "temporalResolution": "시간 분해능",
+      "title": "시간 순서 판단",
+      "threshold": "임계값",
+      "whichCameFirst": "어느 것이 먼저였나요?",
+      "leftFirst": "왼쪽 먼저",
+      "rightFirst": "오른쪽 먼저"
+    },
+    "tower": {
+      "budget": "예산",
+      "challenge": "챌린지",
+      "challengeClassic": "클래식",
+      "challengeExpert": "전문가",
+      "challengeMemory": "기억력",
+      "challengePrecision": "정밀",
+      "dragDiscAriaLabel": "기둥 {{peg}}에서 맨 위 디스크를 드래그",
+      "goal": "목표",
+      "goalHiddenStatus": "목표가 숨겨져 있습니다. 표시를 사용하여 잠시 확인하세요.",
+      "goalRevealedMessage": "목표가 3초간 표시되었습니다.",
+      "hint": "힌트",
+      "hintDescription": "최적의 다음 수를 표시합니다",
+      "hintMessage": "힌트: 기둥 {{fromPeg}}의 맨 위 디스크를 기둥 {{toPeg}}로 이동.",
+      "hiddenGoalDescription": "게임 중 목표가 숨겨져 있습니다. 잠시 확인이 필요하면 표시를 사용하세요.",
+      "hiddenGoalTitle": "기억력 챌린지",
+      "invalid": "무효",
+      "moves": "수",
+      "optimal": "최적",
+      "pegFullMessage": "이 기둥이 가득 찼습니다.",
+      "previewMemoryCountdown": "목표를 외우세요. {{seconds}}초 후 시작합니다.",
+      "previewPlanCountdown": "{{moves}}수로 풀이를 계획하세요. {{seconds}}초 후 시작합니다.",
+      "reset": "리셋",
+      "resetDescription": "이 퍼즐 다시 시작",
+      "resetMessage": "퍼즐이 초기화되었습니다.",
+      "reveal": "표시",
+      "revealDescription": "숨겨진 목표 표시",
+      "statusOptimalSolve": "최적 풀이. 점수 {{score}}.",
+      "statusSolvedScore": "{{moves}}수로 해결 (+{{extraMoves}}). 점수 {{score}}.",
+      "undo": "실행 취소",
+      "undoDescription": "마지막 수를 취소합니다",
+      "undoneMessage": "마지막 수를 취소했습니다.",
+      "yourPegs": "당신의 기둥"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "정확한 배달",
+      "trainsLost": "잃은 기차",
+      "wrongStation": "잘못된 역",
+      "title": "사고의 흐름 과제",
+      "trains": "기차",
+      "missed": "놓침",
+      "scoreLabel": "점수",
+      "instructions": "설명"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "평균 사용 질문 수",
+      "title": "스무고개",
+      "avgQuestions": "평균 질문",
+      "rounds": "라운드",
+      "efficiency": "효율성",
+      "avgQuestionsCorrectOnly": "평균 질문 (정답만)",
+      "questionsLabel": "질문",
+      "remaining": "남은",
+      "readyToGuess": "추측할 준비가 됐어요!",
+      "tapTheTarget": "표적이라고 생각하는 물체를 탭!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "유용한 시야",
+      "visualNoiseMask": "시각 노이즈 마스크",
+      "whatWasInTheCenter": "가운데에 무엇이 있었나요?",
+      "whereWasTheTarget": "표적은 어디에 있었나요?",
+      "avgThreshold": "평균 임계값",
+      "speed": "속도",
+      "accuracy": "정확도",
+      "central": "중앙",
+      "peripheral": "주변",
+      "overall": "전체",
+      "block": "블록",
+      "trials": "Trials",
+      "start": "시작",
+      "focus": "초점",
+      "threshold": "임계값",
+      "stimulus": "자극",
+      "respondFromMemory": "기억으로 답하세요",
+      "truck": "트럭",
+      "choosePeripheralLocation": "주변 위치를 선택하세요",
+      "currentBlock": "블록 {{n}}",
+      "exposure": "노출"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}}(으)로 시작하는 단어",
+      "title": "언어 유창성",
+      "totalWords": "총 단어",
+      "duplicates": "중복",
+      "letter": "글자",
+      "round": "라운드",
+      "roundComplete": "라운드 완료",
+      "nextRound": "다음 라운드",
+      "middotRound": " · 라운드"
+    },
+    "vernierAcuity": {
+      "whichSide": "어느 쪽?",
+      "title": "버니어 시력",
+      "leftOffset": "왼쪽 오프셋",
+      "rightOffset": "오른쪽 오프셋",
+      "offset": "오프셋"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "최적 전략",
+      "correct": "정답!",
+      "wrong": "오답",
+      "title": "날씨 예측",
+      "optimal": "최적",
+      "learningCurve": "학습 곡선",
+      "predictTheWeather": "날씨를 예측하세요",
+      "rain": "비"
+    },
+    "wordChain": {
+      "avgResponseTime": "평균 응답 시간",
+      "chain": "체인",
+      "longestChain": "가장 긴 체인",
+      "totalCorrect": "총 정답",
+      "totalWords": "총 단어",
+      "words": "단어",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "평균 RT",
+      "endsWith": "(으)로 끝남 ",
+      "chainLabel": "체인",
+      "bestLabel": "최고"
+    },
+    "wordFlow": {
+      "avgWordLength": "평균 단어 길이",
+      "correct": "정답",
+      "invalidWords": "무효 단어",
+      "totalWordsSelected": "총 선택 단어",
+      "validWords": "유효 단어",
+      "wordsPerMinute": "분당 단어 수",
+      "wrong": "틀림",
+      "seeResults": "결과 보기",
+      "nextRound": "다음 라운드 ({{current}}/{{total}})",
+      "title": "언어 유창성",
+      "validWordsLabel": "유효한 단어",
+      "wordsPerMinLabel": "단어/분",
+      "avgLengthLabel": "평균 길이",
+      "invalidLabel": "무효",
+      "round": "라운드",
+      "selectWordsBelongTo": "…에 속하는 단어를 선택",
+      "selected": "선택됨"
+    },
+    "wordList": {
+      "avgRtCorrect": "평균 RT (정답)",
+      "primacyEffect": "초두 효과",
+      "recencyEffect": "최신 효과",
+      "studyPhaseRememberEachWord": "학습 단계 — 각 단어를 기억하세요",
+      "wordsRecalled": "회상된 단어",
+      "title": "Word List",
+      "serialPositionCurve": "계열 위치 곡선",
+      "wasWordInList": "이 단어가 목록에 있었나요?",
+      "seenBefore": "이전에 본 적 있음",
+      "newWord": "새로운"
+    },
+    "speedSort": {
+      "switchAccuracy": "전환 정확도",
+      "switchTrials": "전환 시행",
+      "sortByColor": "색상별 분류",
+      "sortByShape": "모양별로 분류하세요",
+      "sortByNumber": "숫자별 분류",
+      "ruleChanged": "규칙 변경!",
+      "binRed": "빨강",
+      "binBlue": "파랑",
+      "binGreen": "초록",
+      "binYellow": "노랑",
+      "binCircle": "원",
+      "binSquare": "사각",
+      "binTriangle": "삼각",
+      "binStar": "별",
+      "title": "스피드 정렬",
+      "switch": "전환"
+    },
+    "reflex": {
+      "target": "목표",
+      "lure": "미끼",
+      "tooSlow": "너무 느려요!",
+      "wrongTarget": "잘못된 타겟!",
+      "tapTargets": "초록색 원을 탭하세요!",
+      "hits": "적중",
+      "misses": "놓침",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "현재 합계를 기억하세요...",
+      "title": "연쇄 계산",
+      "stepChains": "{{len}}단계 체인",
+      "start": "시작",
+      "step": "단계",
+      "whatIsTheResult": "결과는?"
+    },
+    "alternateUses": {
+      "placeholder": "용도를 입력하세요...",
+      "title": "대안적 용도",
+      "totalUses": "총 용도",
+      "perObject": "물체당",
+      "rounds": "라운드",
+      "bestObject": "최고 물체",
+      "bestCount": "최고 수",
+      "noUsesSubmitted": "제출된 용도 없음",
+      "timesUp": "시간 종료!",
+      "nextObject": "다음 물건 ({{object}})",
+      "listCreativeUses": "이 물건의 창의적인 용도를 나열하세요"
+    },
+    "anagram": {
+      "placeholder": "단어를 입력하세요...",
+      "title": "아나그램",
+      "avgSolve": "평균 풀이",
+      "letterWords": "{{len}}자 단어",
+      "submit": "제출"
+    },
+    "facialEmotion": {
+      "happy": "행복",
+      "sad": "슬픔",
+      "angry": "화남",
+      "fearful": "두려움",
+      "disgusted": "혐오",
+      "surprised": "놀람",
+      "lc": "LC",
+      "title": "표정 인식",
+      "topConfusions": "주요 혼동"
+    },
+    "numberSeries": {
+      "easy": "쉬움",
+      "hard": "어려움"
+    },
+    "chainRecall": {
+      "round": "라운드",
+      "title": "체인 회상",
+      "chain": "체인",
+      "placeholder": "자리 표시자"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "감정 Go/No-Go 과제",
+      "block1CommissionErrors": "블록 1 수행 오류",
+      "block2CommissionErrors": "블록 2 수행 오류",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "블록",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "스트룹 효과",
+      "title": "컬러 러시",
+      "congShort": "일치",
+      "incongShort": "불일치",
+      "congruentAccuracy": "일치 정확도",
+      "incongruentAccuracy": "불일치 정확도"
+    },
+    "mirror": {
+      "avgCorrectCells": "평균 정답 칸 수",
+      "symmetryType": "대칭 유형",
+      "title": "거울"
+    },
+    "rhythmTap": {
+      "correctTrials": "정답 시행",
+      "avgRhythmScore": "평균 리듬 점수",
+      "bestTrialScore": "최고 시행 점수",
+      "worstTrialScore": "최저 시행 점수",
+      "level": "레벨",
+      "rhythm": "리듬",
+      "bestTrial": "최고 시행",
+      "worstTrial": "최악의 시행"
+    },
+    "vocalProsody": {
+      "questioning": "의문형"
+    },
+    "arithmeticSpeed": {
+      "multiply": "곱하기",
+      "add": "더하기",
+      "subtract": "빼기",
+      "title": "빠른 계산",
+      "score": "점수",
+      "solved": "해결",
+      "missed": "놓침"
+    },
+    "puzzle": {
+      "avgSolveTime": "평균 풀이 시간",
+      "totalMoves": "총 이동 횟수",
+      "totalErrors": "총 오류",
+      "gridSize": "격자 크기",
+      "maxGridReached": "최대 그리드 도달",
+      "maxLevelReached": "최대 레벨 도달",
+      "maxNodesReached": "최대 노드 도달",
+      "puzzleDetails": "퍼즐 상세",
+      "roundDetails": "라운드별 상세 정보",
+      "solved": "해결!",
+      "undo": "취소",
+      "reset": "초기화",
+      "check": "확인",
+      "moves": "이동",
+      "time": "시간",
+      "level": "레벨",
+      "errors": "오류",
+      "score": "Score",
+      "grid": "그리드",
+      "crossings": "교차",
+      "pearls": "진주",
+      "clues": "단서",
+      "region": "영역",
+      "filled": "채워짐",
+      "cells": "셀",
+      "undosLeft": "남은 실행 취소 횟수",
+      "gems": "보석",
+      "connected": "연결됨",
+      "slides": "슬라이드",
+      "progress": "진행 상황",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "밝혀짐",
+      "colored": "색칠됨",
+      "violations": "Violations",
+      "blacked": "검게 칠함",
+      "empty": "비어 있음",
+      "remaining": "남은",
+      "pairs": "쌍",
+      "flips": "뒤집기",
+      "found": "발견",
+      "balls": "공",
+      "guesses": "추측",
+      "original": "Original",
+      "findDifferences": "차이를 찾으세요",
+      "totalDrags": "총 드래그 횟수",
+      "totalUndos": "총 실행 취소 횟수",
+      "totalEdgesDrawn": "그린 변 수",
+      "totalLasers": "총 레이저",
+      "totalSlides": "총 슬라이드 횟수",
+      "totalRotations": "총 회전",
+      "totalRectangles": "총 직사각형",
+      "totalScore": "총 점수",
+      "avgTime": "평균 시간",
+      "cellsCleared": "지운 칸",
+      "totalDiffsFound": "찾은 차이",
+      "gemsCollected": "수집한 보석",
+      "pushBoxesOntoTargets": "모든 상자를 목표 위치에 밀어넣으세요",
+      "fireLasersMarkBalls": "가장자리에서 레이저를 쏜 뒤 공의 위치를 표시하세요",
+      "revealingAnswer": "정답 공개 중...",
+      "checkAnswer": "정답 확인",
+      "pickNumberBelow": "아래에서 숫자를 선택하세요",
+      "tapCellToAssign": "칸을 탭하여 숫자를 배정하세요",
+      "tapEdgesToPlaceWalls": "가장자리를 탭하여 벽을 배치하세요. K 크기의 영역으로 분할합니다.",
+      "ghosts": "유령",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "도미노",
+      "islands": "섬",
+      "pegsLeft": "남은 말",
+      "bestRemaining": "최선의 남은 수",
+      "puzzlesSolved": "해결한 퍼즐",
+      "flooded": "침수됨",
+      "edges": "모서리",
+      "totalPlacements": "총 배치",
+      "totalRemovals": "총 제거 횟수",
+      "maxTileReached": "도달한 최대 타일",
+      "target": "목표",
+      "placed": "배치됨",
+      "totalGuesses": "총 추측 횟수",
+      "guessesLeft": "남은 추측",
+      "difficulty": "난이도"
+    },
+    "palisade": {
+      "title": "팰리세이드",
+      "puzzles": "퍼즐",
+      "maxLevel": "최고 레벨"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "errors": "오류",
+      "avgTime": "평균 시간",
+      "erase": "지우기"
+    },
+    "blackbox": {
+      "title": "블랙박스",
+      "puzzles": "퍼즐",
+      "lasers": "레이저",
+      "avgTime": "평균 시간"
+    },
+    "designFluency": {
+      "title": "디자인 유창성",
+      "uniqueDesigns": "고유 디자인",
+      "duplicates": "중복",
+      "round": "라운드",
+      "roundComplete": "라운드 완료",
+      "youCreatedDesigns": "{{count}}개의 디자인을 만들었습니다",
+      "startRound": "라운드 시작",
+      "instructions": "설명",
+      "designs": "디자인",
+      "clear": "지우기",
+      "addDesign": "추가"
+    },
+    "signpost": {
+      "title": "이정표",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "avgTime": "평균 시간",
+      "maxGrid": "최대 그리드"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "레벨",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "undos": "되돌리기",
+      "puzzle": "퍼즐"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "생물학적 운동",
+      "noiseDots": "노이즈 도트",
+      "whichDirection": "어느 방향?",
+      "left": "왼쪽",
+      "right": "오른쪽"
+    },
+    "inertia": {
+      "title": "관성",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "gems": "보석",
+      "moves": "이동"
+    },
+    "waterLevel": {
+      "title": "수면",
+      "error": "오류",
+      "tilt": "기울기",
+      "waterLine": "수위선은?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxGrid": "최대 그리드"
+    },
+    "sudoku": {
+      "title": "스도쿠",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "errors": "오류",
+      "avgTime": "평균 시간",
+      "erase": "지우기"
+    },
+    "rectangles": {
+      "title": "직사각형",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "rectanglesCount": "직사각형",
+      "maxGrid": "최대 그리드",
+      "cancelSelection": "선택 취소"
+    },
+    "filling": {
+      "title": "채우기",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "avgTime": "평균 시간",
+      "grid": "그리드"
+    },
+    "spacedRetrieval": {
+      "title": "간격 회상",
+      "studyPair": "이 쌍을 학습하세요",
+      "waitAndSolve": "기다렸다가… 풀기",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "간격: 어떤 쌍?"
+    },
+    "prototypeDistortion": {
+      "title": "원형 왜곡",
+      "studyPhase": "학습 단계",
+      "testPhase": "테스트 단계",
+      "yesBelongs": "예 — 속함",
+      "noRandom": "아니오 — 무작위"
+    },
+    "motionCoherence": {
+      "title": "운동 일관성",
+      "threshold": "임계값",
+      "coherence": "일관성",
+      "whichDirection": "어느 방향?"
+    },
+    "cube": {
+      "title": "큐브",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxLevel": "최고 레벨",
+      "cubeFaces": "큐브 면",
+      "moveUp": "위",
+      "moveLeft": "왼쪽",
+      "moveDown": "아래",
+      "moveRight": "오른쪽"
+    },
+    "sameGame": {
+      "title": "세임 게임",
+      "score": "점수",
+      "cleared": "클리어",
+      "cells": "셀",
+      "accuracy": "정확도"
+    },
+    "crossModalMatching": {
+      "title": "교차 감각 매칭 과제",
+      "chance": "우연",
+      "whichPatternMatchesRhythm": "어떤 패턴이 리듬과 일치하나요?"
+    },
+    "mosaic": {
+      "title": "모자이크",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxGrid": "최대 그리드"
+    },
+    "spotDiff": {
+      "title": "다른 점 찾기",
+      "level": "레벨",
+      "grid": "그리드",
+      "accuracy": "정확도",
+      "perfect": "완벽",
+      "avgTime": "평균 시간",
+      "found": "발견"
+    },
+    "lightsOut": {
+      "title": "라이츠 아웃",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxGrid": "최대 그리드"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "rotations": "회전",
+      "avgTime": "평균 시간"
+    },
+    "tracks": {
+      "title": "레일",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "errors": "오류",
+      "avgTime": "평균 시간"
+    },
+    "netslide": {
+      "title": "넷슬라이드",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "slides": "슬라이드",
+      "maxGrid": "최대 그리드"
+    },
+    "cognitiveBias": {
+      "title": "인지 편향 훈련",
+      "biasResistance": "편향 저항",
+      "biased": "편향됨",
+      "continue": "계속"
+    },
+    "empathicAccuracy": {
+      "title": "공감 정확도",
+      "emotionId": "감정",
+      "avgRatingError": "평균 평가 오차",
+      "scenarios": "시나리오",
+      "perfect": "완벽",
+      "rating": "평가",
+      "howDoesCharacterFeel": "캐릭터의 기분은?",
+      "rateIntensity": "강도를 평가",
+      "whatEmotion": "어떤 감정?",
+      "yourRating": "당신의 평가",
+      "correct": "정답",
+      "emotion": "감정"
+    },
+    "guess": {
+      "title": "마스터마인드",
+      "solved": "해결",
+      "guesses": "추측"
+    },
+    "dominosa": {
+      "title": "도미노사",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxLevel": "최고 레벨"
+    },
+    "magnets": {
+      "title": "자석",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxLevel": "최고 레벨"
+    },
+    "tangram": {
+      "placeAll": "모든 조각을 배치하세요",
+      "solved": "해결!",
+      "notRight": "아직 맞지 않아요",
+      "title": "Tangram",
+      "level": "레벨",
+      "puzzles": "퍼즐",
+      "placements": "배치",
+      "removals": "제거",
+      "puzzleNumber": "퍼즐 {{n}}",
+      "pieces": "조각",
+      "targetCells": "Cible",
+      "dragHint": "조각을 그리드에 드래그하거나 놓으세요",
+      "selectHint": "조각을 선택하세요",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "확인"
+    },
+    "galaxies": {
+      "title": "은하"
+    },
+    "flood": {
+      "title": "플러드"
+    },
+    "pegs": {
+      "title": "솔리테어",
+      "bestPegs": "최고 페그"
+    },
+    "auditoryFigureGround": {
+      "title": "청각 도형-배경",
+      "patternPresent": "패턴이 있나요?",
+      "pattern": "패턴",
+      "noPattern": "패턴 없음"
+    },
+    "selfOrderedPointing": {
+      "title": "셀프 오더드 포인팅",
+      "maxSpan": "최대 범위",
+      "errors": "오류",
+      "round": "라운드",
+      "setOf": "{{count}}개 세트"
+    },
+    "mirrorTracing": {
+      "title": "거울 따라그리기 과제",
+      "totalErrors": "총 오류",
+      "avgTime": "평균 시간",
+      "shapes": "모양",
+      "perfect": "완벽",
+      "improvement": "개선",
+      "errorsMiddot": "오류 ·",
+      "shape": "모양",
+      "errors": "오류",
+      "xIsMirrored": "X가 반전됩니다!"
+    },
+    "clockDrawing": {
+      "title": "시계 그리기",
+      "avgError": "평균 오차",
+      "setTo": "설정: ",
+      "submit": "제출"
+    },
+    "cognitiveMap": {
+      "title": "인지 지도",
+      "explore": "탐험",
+      "sRemaining": "S Remaining",
+      "from": "에서",
+      "whichDirectionIs": "어느 방향에 있나요 "
+    },
+    "sixteen": {
+      "title": "식스틴"
+    },
+    "loopy": {
+      "title": "루피"
+    },
+    "lightup": {
+      "title": "아카리"
+    },
+    "twentyFortyEight": {
+      "maxTile": "최대 타일",
+      "moves": "이동",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "다리",
+      "puzzles": "퍼즐",
+      "maxLevel": "최고 레벨",
+      "level": "레벨"
+    },
+    "net": {
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxGrid": "최대 그리드"
+    },
+    "flip": {
+      "title": "플립"
+    },
+    "range": {
+      "title": "레인지"
+    },
+    "slant": {
+      "title": "슬랜트"
+    },
+    "towers": {
+      "title": "타워",
+      "puzzles": "퍼즐",
+      "avgTime": "평균 시간",
+      "erase": "지우기"
+    },
+    "pearl": {
+      "title": "펄",
+      "edges": "모서리"
+    },
+    "mapColoring": {
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "moves": "이동",
+      "maxLevel": "최고 레벨"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "언데드",
+      "accuracy": "정확도",
+      "puzzles": "퍼즐",
+      "avgTime": "평균 시간"
+    },
+    "untangle": {
+      "title": "엉킨 것 풀기",
+      "drags": "드래그",
+      "maxNodes": "최대 노드"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "15퍼즐"
+    },
+    "tents": {
+      "title": "텐트"
+    },
+    "mesker": {
+      "pen": "펜",
+      "stroke": "획",
+      "penPressureHint": "일정한 필압으로 쓰세요"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "N-back 위치로 스와이프하세요. 같은 위치면 두 번 탭하세요.",
+    "hint": {
+      "validated": "확인 완료",
+      "draw": "글자를 그리세요 • 탭하여 확인",
+      "drawWithColor": "글자를 그리세요 • 색상 선택 • 탭하여 확인",
+      "type": "글자를 입력하세요 • Enter로 확인",
+      "typeWithColor": "글자를 입력하세요 • 색상 선택 • Enter로 확인",
+      "typeResult": "결과를 입력하세요 • Enter로 확인",
+      "writeResult": "결과를 쓰세요 • 탭하여 확인"
+    },
+    "keyboard": {
+      "letterInput": "글자",
+      "numberInput": "숫자"
+    },
+    "arithmetic": {
+      "cueHint": "2자리 숫자를 기억하세요",
+      "refresh": "새로"
+    },
+    "hintPosition": "{{n}}턴 전에 자극이 어디 있었나요?",
+    "hintN0": "현재 자극을 표시하세요",
+    "warmupHint": "위치를 기억하세요. 응답은 필요 없습니다.",
+    "hintDraw": "글자를 그리세요 • 탭하여 확인",
+    "hintDrawWithColor": "글자를 그리세요 • 색상 선택 • 탭하여 확인",
+    "hintWriteResult": "결과를 쓰세요 • 탭하여 확인",
+    "guide": {
+      "swipeNormal": "마지막 칸에서 N-{{n}}으로 스와이프. 같은 위치면 더블 탭.",
+      "swipeSequential": "N-0에서 N-{{n}}까지 한 단계씩 스와이프. 같은 위치면 더블 탭.",
+      "swipeDynamic": "표시된 규칙에 따라 스와이프. 같은 위치면 더블 탭.",
+      "tapN0": "현재 위치를 탭하세요.",
+      "warmup": "위치를 외우세요 — 응답 불필요.",
+      "writeDraw": "{{n}}단계 전에 들은 글자를 그리세요 • 탭으로 확인",
+      "writeDrawColor": "{{n}}단계 전에 들은 글자를 그리세요 • 색상 선택 • 탭으로 확인",
+      "writeType": "{{n}}단계 전에 들은 글자를 입력 • Enter로 확인",
+      "writeTypeColor": "{{n}}단계 전에 들은 글자를 입력 • 색상 선택 • Enter로 확인",
+      "writeDrawN0": "방금 들은 글자를 그리세요 • 탭으로 확인",
+      "writeDrawColorN0": "방금 들은 글자를 그리세요 • 색상 선택 • 탭으로 확인",
+      "writeTypeN0": "방금 들은 글자를 입력 • Enter로 확인",
+      "writeTypeColorN0": "방금 들은 글자를 입력 • 색상 선택 • Enter로 확인",
+      "writeResult": "결과를 쓰세요 • 탭으로 확인",
+      "validated": "확인됨",
+      "holdMindful": "칸을 {{seconds}}초 동안 길게 누르세요",
+      "swipeMindful": "{{seconds}}초 안에 스와이프하세요"
+    },
+    "settings": {
+      "adaptiveTiming": "적응 타이밍",
+      "inputKeyboard": "키보드",
+      "inputHandwriting": "손글씨",
+      "writingInput": "글자/숫자",
+      "section": {
+        "grid": "그리드",
+        "input": "입력",
+        "rhythm": "리듬",
+        "interface": "인터페이스",
+        "interfaceNone": "표준",
+        "sound": "사운드"
+      },
+      "isi": "간격 (ISI)",
+      "stimulusDuration": "자극 지속 시간",
+      "feedbackDuration": "피드백 지속 시간",
+      "ruleDisplay": "규칙 표시 시간",
+      "blankInterval": "빈 간격",
+      "showProgressBar": "진행 바 표시",
+      "showInstructions": "게임 내 안내",
+      "arithmeticInterference": "산술 간섭",
+      "fullMenu": "전체 메뉴",
+      "gridStyle": "그리드 스타일",
+      "gridStyleClassic": "클래식",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "{{seconds}}초 안에 스와이프",
+        "holdMindful": "칸을 {{seconds}}초 동안 유지"
+      },
+      "feedback": {
+        "gestureDuration": "제스처",
+        "holdDuration": "유지",
+        "writingDuration": "쓰기"
+      }
+    },
+    "feedback": {
+      "holdDuration": "유지",
+      "gestureDuration": "제스처",
+      "writingDuration": "쓰기"
+    },
+    "image": "모양",
+    "digits": "Digits",
+    "emotions": "감정",
+    "words": "단어",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "세션 재생",
+    "play": "재생",
+    "pause": "일시정지",
+    "restart": "다시 시작",
+    "speed": "속도",
+    "loading": "세션 로딩 중...",
+    "unavailable": "이 세션은 재생할 수 없습니다",
+    "backToStats": "통계로 돌아가기",
+    "runStack": {
+      "original": "원본",
+      "correction": "수정",
+      "delta": "Δ d'",
+      "inProgress": "진행 중",
+      "completed": "완료"
+    },
+    "abandon": "종료",
+    "badge": "리플레이",
+    "completionReport": {
+      "backToHome": "돌아가기",
+      "correctAgain": "다시 수정",
+      "deltaVsOriginal": "원본 대비",
+      "deltaVsParent": "이전 실행 대비",
+      "falseAlarmsSkipped": "피한 오류",
+      "missesCorrections": "수정된 놓침",
+      "newFalseAlarms": "새로운 오류",
+      "replayAgain": "다시 보기",
+      "scoreLabel": "수정 점수",
+      "title": "수정 완료"
+    },
+    "controls": "컨트롤",
+    "correction": "수정",
+    "finished": "재생 종료",
+    "home": "홈",
+    "parseError": "세션을 읽을 수 없습니다",
+    "tapSlotToPlace": "슬롯을 탭하여 배치",
+    "timeline": "타임라인",
+    "focusTimeline": {
+      "open": "타임라인 표시",
+      "close": "타임라인 닫기",
+      "title": "N-back 타임라인",
+      "fillAll": "모두 채우기",
+      "fillCard": "카드 채우기"
+    },
+    "hud": {
+      "counterDisplay": "카운터 표시",
+      "toggleCounterDisplay": "카운터 표시 전환"
+    },
+    "validate": "수정 확인"
+  },
+  "recovery": {
+    "title": "세션 중단됨",
+    "description": "세션이 진행 중이었습니다. 재개하시겠습니까?",
+    "mode": "모드",
+    "level": "레벨",
+    "progress": "진행",
+    "timeAgo": "전",
+    "resume": "세션 재개",
+    "startFresh": "처음부터 시작",
+    "staleWarning": "이 세션은 오래되어 재개가 어려울 수 있습니다.",
+    "modes": {
+      "game": "트레이닝",
+      "activeTraining": "활성 훈련",
+      "flowTraining": "Dual Place 트레이닝",
+      "dualPickTraining": "듀얼 픽",
+      "traceTraining": "듀얼 트레이스"
+    }
+  },
+  "rewards": {
+    "congratulations": "축하합니다!",
+    "duration": "{{days}}일 Premium",
+    "lifetimeLabel": "영구 이용권",
+    "expiresAt": "{{date}}까지 유효",
+    "neverExpires": "만료 없음",
+    "continue": "계속",
+    "discovery": {
+      "name": "디스커버리 패스",
+      "description": "7일 Premium — 모든 기능 탐색"
+    },
+    "engagement": {
+      "name": "커미트먼트 패스",
+      "description": "1개월 Premium — 당신의 규율이 보상받습니다"
+    },
+    "expert": {
+      "name": "전문가 패스",
+      "description": "3개월 Premium — 진정한 실천가입니다"
+    },
+    "lifetime": {
+      "name": "영구 접근",
+      "description": "평생 Premium — Neurodual을 마스터했습니다"
+    },
+    "xpRemaining": "남은 XP",
+    "permanentAccessUnlocked": "영구 접근 잠금 해제됨",
+    "reachedTheTop": "정상에 도달하셨습니다!"
+  },
+  "progression": {
+    "level": "레벨 {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "다음 레벨",
+    "reached": "도달함",
+    "inProgress": "진행 중"
+  },
+  "gridlock": {
+    "nextPuzzle": "다음 퍼즐 →"
+  }
+}

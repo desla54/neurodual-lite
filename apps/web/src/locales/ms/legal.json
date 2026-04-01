@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Hak cipta terpelihara.",
+    "terms": {
+      "title": "Syarat perkhidmatan",
+      "version": "Versi 3.0 — Kemas kini terakhir: 2026-03-04",
+      "healthWarning": {
+        "title": "AMARAN KESIHATAN PENTING",
+        "content": "NeuroDual ialah aplikasi latihan kognitif dan kesejahteraan. <strong>Ia bukan peranti perubatan.</strong> Ia tidak mendiagnos, merawat, menyembuhkan atau mencegah sebarang penyakit. Jika kamu mempunyai sebarang kebimbangan atau rasa tidak selesa, hentikan penggunaan aplikasi dan rujuk profesional kesihatan."
+      },
+      "section1": {
+        "title": "1. Tujuan dan Penerimaan",
+        "content": "Dengan memuat turun, memasang atau menggunakan NeuroDual, kamu menerima tanpa syarat Syarat Perkhidmatan ini. Jika kamu tidak menerima syarat ini, sila jangan gunakan aplikasi."
+      },
+      "section2": {
+        "title": "2. Penerangan Perkhidmatan",
+        "content": "NeuroDual menyediakan latihan memori kerja Dual N-Back, dengan pengurusan data tempatan dan pilihan penyegerakan melalui akaun. Perkhidmatan disediakan seadanya dan mungkin berkembang.",
+        "item1": "Keserasian: aplikasi web dan mudah alih (tertakluk kepada ketersediaan).",
+        "item2": "Akses: sesetengah ciri memerlukan sambungan internet dan/atau penciptaan akaun.",
+        "item3": "Kemas kini: kami mungkin melancarkan pembaikan atau kemas kini tanpa notis atas sebab keselamatan atau prestasi.",
+        "item4": "Pengiklanan: versi mudah alih percuma mungkin memaparkan iklan interstisial (Google AdMob). Pengguna Premium tidak melihat pengiklanan."
+      },
+      "section3": {
+        "title": "3. Akaun dan Keselamatan",
+        "item1": "Penciptaan akaun pilihan melalui e-mel atau pembekal identiti (Google, Apple).",
+        "item2": "Kamu bertanggungjawab menjaga kerahsiaan kelayakan dan semua tindakan yang dilakukan dengan akaun kamu.",
+        "item3": "Pemadaman akaun dan data berkaitan boleh dilakukan dari Tetapan.",
+        "item4": "Kami mungkin menggantung atau menamatkan akaun sekiranya berlaku pelanggaran Syarat ini, percubaan penipuan atau pelanggaran keselamatan."
+      },
+      "section4": {
+        "title": "4. Peraturan dan Sekatan Penggunaan",
+        "item1": "Jangan memintas langkah keselamatan atau had teknikal.",
+        "item2": "Jangan gunakan aplikasi untuk tujuan haram atau berbahaya.",
+        "item3": "Jangan cuba kejuruteraan songsang atau pengekstrakan kandungan tanpa kebenaran.",
+        "item4": "Hormati hak harta intelek ke atas aplikasi dan kandungannya."
+      },
+      "section5": {
+        "title": "5. Harta Intelek",
+        "content": "Semua elemen (teks, grafik, bunyi, kod sumber, logo) dilindungi hak cipta dan kekal hak milik penerbit atau pemberi lesennya. Tiada lesen diberikan kecuali hak peribadi, bukan eksklusif dan tidak boleh dipindah milik untuk menggunakan aplikasi mengikut Syarat ini."
+      },
+      "section6": {
+        "title": "6. Ketersediaan dan Sokongan",
+        "content": "Perkhidmatan boleh diakses 24/7 tertakluk kepada penyelenggaraan atau force majeure. Kami tidak menjamin ketersediaan atau prestasi berterusan. Sokongan: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Pembelian Dalam Aplikasi / Langganan",
+        "content": "Langganan Premium tersedia: tahunan dan seumur hidup (10 tahun). Pembayaran diuruskan oleh RevenueCat (mudah alih) atau Lemon Squeezy (web). <strong>Syarat Jualan</strong> terpakai (harga, penarikan diri, pembaharuan, pembatalan, bayaran balik) dan boleh didapati sebelum pembelian."
+      },
+      "section8": {
+        "title": "8. Tanggungjawab",
+        "item1": "Perkhidmatan disediakan \"seadanya\" tanpa jaminan hasil.",
+        "item2": "Kami tidak bertanggungjawab atas kerosakan langsung atau tidak langsung berkaitan penggunaan, kehilangan data tempatan yang tidak disimpan atau tafsiran statistik.",
+        "item3": "Jika kamu mengalami ketidakselesaan, kesan buruk atau kebimbangan tentang kesihatan, hentikan penggunaan."
+      },
+      "section9": {
+        "title": "9. Data Peribadi",
+        "content": "Pemprosesan data peribadi diterangkan dalam <a>Dasar Privasi</a>. Sekiranya berlaku konflik antara Syarat dan Dasar Privasi mengenai hal data, Dasar Privasi diutamakan."
+      },
+      "section10": {
+        "title": "10. Perubahan Syarat",
+        "content": "Kami mungkin mengubah Syarat ini atas sebab undang-undang, teknikal atau perkhidmatan. Tarikh kemas kini akan terpapar di bahagian atas dokumen. Sekiranya berlaku perubahan substansial, notifikasi akan dipaparkan dalam aplikasi."
+      },
+      "section11": {
+        "title": "11. Undang-undang Terpakai dan Pertikaian",
+        "content": "Syarat ini ditadbir oleh undang-undang Perancis. Sekiranya berlaku pertikaian dan selepas percubaan secara baik, pengguna pengguna boleh menggunakan mediasi pengguna atau platform Penyelesaian Pertikaian Dalam Talian (ODR) Eropah. Jika tidak, mahkamah Perancis mempunyai bidang kuasa eksklusif."
+      },
+      "section12": {
+        "title": "12. Hubungi",
+        "content": "Untuk sebarang soalan mengenai Syarat ini:"
+      }
+    },
+    "privacy": {
+      "title": "Dasar privasi",
+      "version": "Versi 3.0 — Kemas kini terakhir: 2026-03-04",
+      "intro": {
+        "p1": "Dasar Privasi ini menerangkan cara NeuroDual (\"kami\") memproses data peribadi kamu apabila kamu menggunakan aplikasi mudah alih dan laman web kami.",
+        "p2": "Kami menggunakan prinsip Peraturan Perlindungan Data Am (GDPR) dan Akta Perlindungan Data Perancis. Kami mengutamakan seni bina \"tempatan dahulu\", tidak menjual atau menyewakan data kamu dan menggunakan pengukuran khalayak untuk menambah baik produk."
+      },
+      "section1": {
+        "title": "1. Pengawal Data",
+        "responsible": "Pengawal:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Pejabat berdaftar:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Perancis",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "E-mel:",
+        "dpo": "DPO: AGUILAL Abdeslam (maklumat hubungan yang sama). Untuk soalan tentang data kamu, hubungi alamat di atas."
+      },
+      "section2": {
+        "title": "2. Data yang Kami Kumpul",
+        "sub1": {
+          "title": "2.1 Data Dijana Pengguna (Mod Tempatan)",
+          "content": "Disimpan hanya pada peranti kamu melalui SQLite semasa kamu belum log masuk:",
+          "item1": "Skor dan sejarah sesi N-Back.",
+          "item2": "Tetapan konfigurasi permainan.",
+          "item3": "Profil tempatan (nama samaran, avatar pilihan).",
+          "note": "Data ini tidak melalui pelayan kami sehingga kamu membuat akaun. Jika kamu menyahpasang aplikasi, data ini akan hilang."
+        },
+        "sub2": {
+          "title": "2.2 Data Akaun (Pilihan)",
+          "content": "Jika kamu membuat akaun untuk menyegerakkan data:",
+          "item1": "Alamat e-mel (pengenal pasti unik).",
+          "item2": "ID pengguna yang disediakan oleh pembekal identiti (Google, Apple).",
+          "note": "Data ini diuruskan melalui pembekal pengesahan kami (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Log Teknikal",
+          "content": "Log yang dipseudonimkan (ralat, status penyegerakan, prestasi) untuk keselamatan dan sokongan."
+        },
+        "sub4": {
+          "title": "2.4 Data Sokongan",
+          "content": "Pertukaran e-mel dengan sokongan mungkin mengandungi butiran hubungan dan kandungan permintaan kamu untuk memberi respons."
+        },
+        "sub5": {
+          "title": "2.5 Pemantauan dan Penjejakan Ralat",
+          "content": "Data teknikal (ralat, prestasi, tingkah laku abnormal) dikumpul melalui Sentry untuk meningkatkan kestabilan aplikasi. Data dipseudonimkan, tiada penyasaran iklan."
+        },
+        "sub6": {
+          "title": "2.6 Pengukuran Khalayak dan Analitik Produk",
+          "content": "Data penggunaan tanpa nama dikumpul melalui PostHog (halaman yang dilawati, tindakan dalam aplikasi, jenis peranti) untuk menambah baik produk. Tiada data yang boleh dikenal pasti secara peribadi dihantar. Tiada penyasaran iklan."
+        },
+        "sub7": {
+          "title": "2.7 Pengiklanan (Versi Mudah Alih Percuma)",
+          "content": "Versi Android percuma memaparkan iklan interstisial melalui Google AdMob. Google mungkin mengumpul pengecam iklan dan data teknikal (jenis peranti, bahasa, interaksi iklan). Pengguna Premium tidak terdedah kepada pengiklanan. Maklumat lanjut: Dasar privasi Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Tujuan dan Asas Undang-undang",
+        "content": "Kami menggunakan data kamu hanya untuk:",
+        "item1": "<strong>Operasi perkhidmatan</strong> (sandaran tempatan, statistik, penyegerakan berbilang peranti) — Asas undang-undang: pelaksanaan kontrak (Perkara 6.1.b GDPR).",
+        "item2": "<strong>Keselamatan dan pencegahan penipuan</strong> (pengelogan teknikal, kawalan akses) — Asas undang-undang: kepentingan sah (Perkara 6.1.f GDPR).",
+        "item3": "<strong>Sokongan pengguna</strong> — Asas undang-undang: kepentingan sah (memberi respons kepada permintaan).",
+        "item4": "<strong>Kewajipan undang-undang</strong> — Asas undang-undang: kewajipan undang-undang (Perkara 6.1.c GDPR).",
+        "item5": "<strong>Pemantauan dan penjejakan ralat</strong> — Asas undang-undang: kepentingan sah (peningkatan kestabilan); data dipseudonimkan, tiada pengiklanan diperibadikan.",
+        "item6": "<strong>Pengukuran khalayak</strong> (analitik produk tanpa nama melalui PostHog) — Asas undang-undang: kepentingan sah (Perkara 6.1.f GDPR); data tanpa nama.",
+        "note": "Sebarang perubahan tujuan akan didokumenkan dalam kemas kini dasar ini.",
+        "item7": "<strong>Pengiklanan</strong> (paparan iklan interstisial untuk pengguna mudah alih percuma) — Asas undang-undang: kepentingan sah (Perkara 6.1.f GDPR).",
+        "item8": "<strong>Pemasaran dan surat berita</strong> — Asas undang-undang: persetujuan nyata (Perkara 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Tempoh Penyimpanan",
+        "item1": "<strong>Data tempatan:</strong> disimpan pada peranti kamu dan dipadam semasa penyahpasangan atau tetapan semula.",
+        "item2": "<strong>Akaun dan data yang disegerakkan:</strong> disimpan selagi akaun aktif. Dipadam dalam 30 hari dari permintaan pemadaman akaun.",
+        "item3": "<strong>Log teknikal:</strong> disimpan maksimum 12 bulan, kemudian dipadam secara automatik.",
+        "item4": "<strong>Pemantauan:</strong> data teknikal dipseudonimkan disimpan 90 hari untuk penjejakan ralat dan penambahbaikan produk.",
+        "item5": "<strong>Permintaan sokongan:</strong> disimpan 24 bulan selepas penutupan tiket, kemudian dipadam.",
+        "item6": "<strong>Data khalayak (PostHog):</strong> tanpa nama, disimpan 12 bulan."
+      },
+      "section5": {
+        "title": "5. Penerima, Pemproses dan Pemindahan",
+        "content": "Data kamu mungkin diproses oleh pembekal berikut:",
+        "item1": "Supabase Inc. (pengesahan dan pangkalan data awan, pengehosan EU).",
+        "item2": "Amazon Web Services (infrastruktur Supabase, kawasan EU).",
+        "item3": "Cloudflare Inc. (pengehosan aplikasi web, CDN dan keselamatan).",
+        "item4": "Sentry (pemantauan ralat dan prestasi; pemindahan bukan EU ditadbir oleh Klausa Kontrak Standard).",
+        "item5": "RevenueCat Inc. (pengurusan langganan mudah alih dan pembayaran dalam aplikasi; tidak menyimpan data kad kredit).",
+        "note": "Jika pembekal baharu ditambah, bahagian ini akan dikemas kini.",
+        "transfers": "<strong>Pemindahan bukan EU:</strong> apabila pembekal di luar EU terlibat (cth. Cloudflare, Supabase entiti AS, Sentry, RevenueCat, Google AdMob), pemindahan ditadbir oleh Klausa Kontrak Standard (SCC) Suruhanjaya Eropah atau mekanisme setara.",
+        "item6": "PostHog Inc. (pengukuran khalayak dan analitik produk; data tanpa nama; pengehosan EU).",
+        "item7": "Lemon Squeezy (pengurusan pembayaran web; tidak menyimpan data kad kredit).",
+        "item8": "Google AdMob (paparan iklan dalam versi mudah alih percuma; pemindahan bukan EU ditadbir oleh Klausa Kontrak Standard)."
+      },
+      "section6": {
+        "title": "6. Hak Kamu",
+        "content": "Di bawah GDPR, kamu mempunyai hak berikut:",
+        "item1": "Akses, pembetulan, pemadaman.",
+        "item2": "Sekatan dan bantahan (bergantung pada asas undang-undang).",
+        "item3": "Kemudahalihan (eksport data kamu dalam format JSON atau CSV).",
+        "item4": "Penarikan balik persetujuan (jika berkenaan).",
+        "item5": "Aduan kepada pihak berkuasa penyeliaan (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Pemadaman akaun:</strong> kamu boleh memadamkan akaun dan semua data berkaitan terus dari Tetapan aplikasi. Tindakan ini tidak boleh dibatalkan.",
+        "exercise": "Untuk melaksanakan hak lain kamu, hubungi <strong>support@neurodual.fr</strong>. Bukti identiti mungkin diminta sekiranya terdapat keraguan munasabah. Masa respons: 1 bulan (boleh dilanjutkan hingga 3 bulan untuk kes kompleks)."
+      },
+      "section7": {
+        "title": "7. Keselamatan",
+        "content": "Komunikasi disulitkan (HTTPS/TLS), akses pentadbir terhad, kawalan kebenaran. Sekiranya berlaku pelanggaran data yang berkemungkinan menimbulkan risiko, pemberitahuan undang-undang akan dibuat (CNIL dan individu yang terjejas)."
+      },
+      "section8": {
+        "title": "8. Kuki dan Storan Tempatan",
+        "content": "Aplikasi menggunakan SQLite untuk menyimpan kemajuan kamu terus pada peranti. Hanya kuki teknikal penting (pengesahan, sesi) digunakan. Versi mudah alih percuma menggunakan Google AdMob yang mungkin menetapkan kuki atau pengecam iklan."
+      },
+      "section9": {
+        "title": "9. Kanak-kanak Bawah Umur",
+        "content": "NeuroDual ditujukan untuk pengguna berumur 16 tahun ke atas. Kanak-kanak bawah umur mesti menggunakan aplikasi di bawah tanggungjawab penjaga yang sah."
+      },
+      "section10": {
+        "title": "10. Perubahan",
+        "content": "Sebarang versi dikemas kini akan diterbitkan di sini dengan tarikh kemas kini terakhir. Sekiranya berlaku perubahan substansial, notifikasi akan disediakan dalam aplikasi."
+      },
+      "section11": {
+        "title": "11. Hubungi",
+        "content": "Untuk sebarang soalan atau melaksanakan hak kamu:",
+        "email": "E-mel: support@neurodual.fr",
+        "responsible": "Pengawal Data: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Syarat jualan",
+      "version": "Langganan tahunan dan seumur hidup — Kemas kini terakhir: 2026-03-04",
+      "section1": {
+        "title": "1. Tujuan",
+        "content": "Syarat Jualan ini mengawal langganan pelan NeuroDual Premium (tahunan dan seumur hidup). Ia melengkapkan <a1>Syarat Perkhidmatan</a1> dan <a2>Dasar Privasi</a2>."
+      },
+      "section2": {
+        "title": "2. Tawaran dan Harga",
+        "item1": "<strong>Langganan tahunan</strong>: harga dipaparkan sebelum pembayaran (termasuk cukai jika berkenaan), diperbaharui secara automatik setiap tahun.",
+        "item2": "<strong>Langganan seumur hidup (10 tahun)</strong>: bayaran sekali memberi akses kepada ciri premium selama 10 tahun tanpa pembaharuan automatik.",
+        "item3": "Akses Premium: penyegerakan awan berbilang peranti, sandaran jauh, akses semua tahap N, eksport lanjutan, pengalaman bebas iklan, sokongan keutamaan.",
+        "item4": "Harga semasa boleh didapati di halaman langganan dalam aplikasi dan di kedai (App Store, Google Play).",
+        "item5": "Harga mungkin berubah; sebarang pengubahsuaian dikomunikasikan sebelum pembaharuan untuk membolehkan pembatalan (tidak terpakai untuk seumur hidup)."
+      },
+      "section3": {
+        "title": "3. Tempoh, Pembaharuan dan Pembatalan",
+        "item1": "<strong>Langganan tahunan</strong>: tempoh 12 bulan dari tarikh langganan.",
+        "item2": "<strong>Langganan seumur hidup</strong>: tempoh 10 tahun dari tarikh langganan, tanpa pembaharuan.",
+        "item3": "Pembaharuan (tahunan): pembaharuan automatik pada setiap penggal kecuali dibatalkan terlebih dahulu.",
+        "item4": "Pembatalan (tahunan): boleh dilakukan pada bila-bila masa dari tetapan aplikasi atau kedai (App Store, Google Play). Berkuat kuasa pada akhir tempoh semasa.",
+        "item5": "Seumur hidup tidak boleh dibatalkan tetapi masih tertakluk kepada hak penarikan diri mengikut undang-undang (lihat bahagian 5)."
+      },
+      "section4": {
+        "title": "4. Pembayaran",
+        "item1": "Pembayaran diuruskan oleh RevenueCat melalui kedai (App Store, Google Play) atau Lemon Squeezy untuk web. Kami tidak menyimpan data kad kredit kamu.",
+        "item2": "Sekiranya pembayaran gagal (langganan berulang), akses premium mungkin digantung sehingga diselesaikan.",
+        "item3": "Bayaran balik untuk pembelian melalui App Store atau Google Play mesti diminta dari kedai berkenaan."
+      },
+      "section5": {
+        "title": "5. Hak Penarikan Diri",
+        "content": "Perkhidmatan digital disediakan selepas pembelian. Jika kamu meminta pelaksanaan segera sebelum tamat tempoh 14 hari mengikut undang-undang, kamu mengakui mengetepikan hak penarikan diri apabila perkhidmatan dihantar sepenuhnya. Tanpa penepian nyata, kamu boleh melaksanakan hak penarikan diri dalam 14 hari dari pembelian dengan menulis ke support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Bayaran Balik",
+        "content": "Di luar hak penarikan diri mengikut undang-undang, langganan yang telah bermula tidak boleh dikembalikan kecuali untuk peruntukan mandatori atau kecacatan utama yang boleh dikaitkan dengan perkhidmatan."
+      },
+      "section7": {
+        "title": "7. Perubahan Tawaran",
+        "content": "Ciri Premium mungkin berkembang. Sebarang penyingkiran ciri penting akan dikomunikasikan terlebih dahulu dan, jika berkenaan, dengan pilihan untuk membatalkan tanpa caj sebelum penggal."
+      },
+      "section8": {
+        "title": "8. Data Peribadi",
+        "content": "Pemprosesan data pengebilan dan akaun diperincikan dalam <a>Dasar Privasi</a>."
+      },
+      "section9": {
+        "title": "9. Perkhidmatan Pelanggan",
+        "content": "Untuk sebarang soalan, bayaran balik di bawah hak penarikan diri atau aduan:"
+      }
+    },
+    "mentions": {
+      "title": "Notis undang-undang",
+      "version": "Kemas kini terakhir:",
+      "section1": {
+        "title": "1. Penerbit",
+        "company": "Nama syarikat:",
+        "companyValue": "AGUILAL Abdeslam (Perusahaan tunggal)",
+        "address": "Alamat:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Perancis",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "E-mel:"
+      },
+      "section2": {
+        "title": "2. Pengarah Penerbitan",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-mel:"
+      },
+      "section3": {
+        "title": "3. Pengehosan",
+        "content": "Aplikasi NeuroDual dihoskan oleh:",
+        "webapp": "Aplikasi Web",
+        "database": "Pangkalan Data dan Pengesahan",
+        "databaseInfra": "Infrastruktur: Amazon Web Services (kawasan EU - eu-central-1)",
+        "monitoring": "Pemantauan dan Penjejakan Ralat",
+        "subscriptions": "Pengurusan langganan",
+        "analytics": "Pengukuran khalayak",
+        "analyticsInfra": "Pengehosan EU",
+        "advertising": "Pengiklanan (versi mudah alih percuma)",
+        "payments": "Pembayaran web",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Harta Intelek",
+        "p1": "Semua elemen aplikasi NeuroDual (teks, grafik, bunyi, kod sumber, logo, tanda dagangan) dilindungi oleh undang-undang hak cipta dan tanda dagangan. Pengeluaran semula, representasi atau eksploitasi tanpa kebenaran adalah dilarang.",
+        "p2": "Kod sumber sesetengah ciri menggunakan pustaka sumber terbuka yang lesen masing-masing dihormati."
+      },
+      "section5": {
+        "title": "5. Data Peribadi",
+        "content": "Pemprosesan data peribadi diterangkan dalam <a>Dasar Privasi</a> kami.",
+        "responsible": "Pengawal Data:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediasi dan Penyelesaian Pertikaian",
+        "p1": "Selaras dengan Perkara L.611-1 dan seterusnya Kod Pengguna Perancis, pengguna pengguna boleh, sekiranya pertikaian yang tidak diselesaikan selepas aduan terdahulu kepada perkhidmatan pelanggan kami, mendapatkan mediator pengguna secara percuma.",
+        "odr": "Platform Penyelesaian Pertikaian Dalam Talian (ODR) Eropah:"
+      },
+      "section7": {
+        "title": "7. Dokumen Undang-undang",
+        "privacy": "Dasar privasi",
+        "privacyNote": "(GDPR)",
+        "terms": "Syarat perkhidmatan",
+        "termsNote": "(SP)",
+        "cgv": "Syarat jualan",
+        "cgvNote": "(Jualan)"
+      },
+      "section8": {
+        "title": "8. Hubungi",
+        "content": "Untuk sebarang soalan mengenai notis undang-undang ini:",
+        "email": "E-mel:"
+      }
+    }
+  }
+}

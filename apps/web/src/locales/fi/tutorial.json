@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Opastus",
+    "exitConfirm": "Poistu opastuksesta?",
+    "exitWarning": "Edistymistäsi ei tallenneta.",
+    "continue": "Jatka",
+    "quit": "Poistu",
+    "stepLabel": "Vaihe {{step}}",
+    "previous": "Edellinen",
+    "restart": "Aloita alusta",
+    "next": "Seuraava",
+    "startGame": "Aloita",
+    "progress": "Laskuri",
+    "tapToContinue": "Napauta jatkaaksesi",
+    "controls": {
+      "position": "Sijainti",
+      "audio": "Ääni"
+    },
+    "annotation": {
+      "label": "Ohje"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Hienoa. Läpäisit opastuksen.",
+        "stay": "Melkein. Vähän lisää harjoittelua niin onnistut.",
+        "down": "Ei vielä hyväksytty. Yritä opastusta uudelleen vahvistaaksesi perusteita."
+      },
+      "header": {
+        "up": "Opastus suoritettu!",
+        "down": "Kertaus",
+        "stay": "Melkein!"
+      },
+      "noteMinAssessment": "Huom: Tarkempaa arviointia varten opastukset arvioivat vähintään 8 vastausta.",
+      "guidance": {
+        "passed": "Olet valmis vapaaseen harjoitteluun.",
+        "failed": "Suosittelemme yrittämään tätä opastusta uudelleen ennen harjoitteluun siirtymistä."
+      },
+      "correctAnswers": "{{correct}}/{{total}} oikeaa vastausta",
+      "actions": {
+        "backToHome": "Takaisin etusivulle",
+        "retryTutorial": "Yritä opastusta uudelleen",
+        "explainLevels": "Ymmärrä N-tasot (N)",
+        "goToTraining": "Harjoitteluun",
+        "continueToTraining": "Jatka harjoitteluun"
+      }
+    },
+    "welcome": {
+      "title": "Johdanto harjoitteluun",
+      "description": "Dual N-Back haastaa työmuistisi vaatimalla kahden tietovirran samanaikaista seuraamista: visuaalisen sijainnin ja äänen. Tämä opastus opastaa sinua askel askeleelta.",
+      "button": "Aloita opastus"
+    },
+    "timeline": {
+      "legend": "Aikajana auttaa vertailussa — se on piilotettu pelin aikana",
+      "past": "Mennyt",
+      "present": "Nykyinen"
+    },
+    "hub": {
+      "title": "Opastukset",
+      "subtitle": "Valitse tila oppiaksesi",
+      "basics": {
+        "title": "Perusteet",
+        "description": "Opi klassisen Dual N-Backin refleksi ja rytmi."
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Hallitse ajallinen sijoittelu aikajanalla."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Merkitse jokainen ärsyke sen ajallisella viitteellä (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Opi aktiivisen muistelun eleitä piirtämällä."
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "Rakenna koko jakso uudelleen muistista."
+      },
+      "soroban": {
+        "title": "Soroban-mestaruus",
+        "description": "Opi japanilainen helmitaulu vaihe vaiheelta 8 etenevän vaiheen kautta."
+      }
+    },
+    "place": {
+      "comingSoon": "Place-opastus on kehitteillä",
+      "cardPool": "Saatavilla olevat kortit",
+      "slot": "Paikka",
+      "observe": "Havainnoi: sijainti ruudukossa ja äänikirjain.",
+      "buffer": "Toinen ärsyke. N-back-puskuri täyttyy.",
+      "cardsAppear": "Kortit ilmestyvät! Ne edustavat 3 viimeisintä ärsykettä.",
+      "firstDrag": "Napsauta merkittyä korttia, sitten N-2-paikkaa (vanhin).",
+      "timelineExplain": "Aikajana näyttää ajan: N-2 = vanhin, N = nykyinen.",
+      "positionN1": "Sijoita keskimmäinen sijainti N-1-paikkaan.",
+      "positionN": "Hienoa! Lopeta viimeisimmällä sijainnilla (N-paikka).",
+      "audioIntro": "Nyt äänikortit! Sama periaate.",
+      "audioN2": "Sijoita ensimmäinen kuultu kirjain N-2-paikkaan.",
+      "audioN1": "Jatka keskimmäisellä kirjaimella (N-1-paikka).",
+      "audioN": "Lopeta viimeisimmällä kirjaimella (N-paikka).",
+      "dualIntro": "Uusi koe! Sijoita sijainnit JA kirjaimet.",
+      "dualPractice": "Sijoita kaikki 6 korttia oikeisiin paikkoihin. Ota aikaa!",
+      "rhythmExplain": "Oikeassa pelissä aikasi on rajallinen.",
+      "autonomy": "Sinun vuorosi! Sijoita kaikki kortit oikein.",
+      "conclusion": "Hienoa! Olet oppinut Dual Placen perusteet.",
+      "selectCard": "Valitse kortti, napsauta sitten sen paikkaa",
+      "clickSlot": "Napsauta oikeaa paikkaa kortin sijoittamiseksi",
+      "wrongSlot": "Ei tuo paikka! Katso aikajärjestystä.",
+      "wrongCard": "Ei tuo kortti. Etsi paikkaan sopiva kortti.",
+      "tryAgain": "Yritä uudelleen! Oikea paikka on korostettu."
+    },
+    "memo": {
+      "comingSoon": "Memo-opastus on kehitteillä",
+      "selectPosition": "Valitse sijainti",
+      "selectAudio": "Valitse kirjain",
+      "clickToRecall": "Napsauta paikkaa muistellaksesi arvon",
+      "validate": "Vahvista",
+      "observeFirst": "Ensimmäinen ärsyke. Muista SEKÄ sijainti ETTÄ kirjain!",
+      "observeSecond": "Toinen ärsyke. Jatka muistamista.",
+      "observeThird": "Kolmas ärsyke. Puskuri täynnä. Valmistaudu!",
+      "recallIntro": "Ruudukko katoaa! Muistele muistista. Napsauta N-2-paikkaa.",
+      "firstRecall": "Napsauta N-2-paikkaa. Mikä oli ensimmäinen sijainti?",
+      "feedbackExplain": "Vihreä = oikein. Punainen = virhe. Voit korjata 3 kertaa!",
+      "multiSlot": "Jatka! Muistele sijainnit N-1 ja N.",
+      "newStimulus": "Uusi ärsyke! N-back-ikkuna siirtyy yhden.",
+      "windowShift": "Ikkuna on siirtynyt. Vanha N-2 poistuu, uusi N tulee.",
+      "fullPosition": "Muistele kaikki 3 sijaintia. Keskity!",
+      "audioIntro": "Uusi ärsyke. Nyt lisätään äänimuistelu!",
+      "firstAudioRecall": "Napsauta ääni-N-2-paikkaa. Mikä kirjain?",
+      "fullAudio": "Jatka kirjaimilla N-1 ja N.",
+      "dualIntro": "Oikeassa pelissä muistelet sijainteja JA kirjaimia yhdessä.",
+      "dualPractice": "Muistele kaikki 6 solua ja napsauta Vahvista.",
+      "correctionExplain": "Jos teet virheen, napsauta uudelleen korjataksesi. Enintään 3 kertaa.",
+      "withCorrection": "Kokeile! Jos olet väärässä, korjaa napsauttamalla uudelleen.",
+      "conclusion": "Erinomaista! Olet oppinut aktiivisen muistelun. Aloita istunto!",
+      "wrongAnswer": "Ei se. Mieti, mikä ärsyke oli siinä kohdassa?",
+      "tryAgain": "Yritä uudelleen! Voit vielä korjata.",
+      "maxCorrections": "3 korjausta saavutettu. Tämä paikka on lukittu.",
+      "validateHint": "Kaikki paikat ovat täytetty. Napsauta Vahvista!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Tervetuloa Dual Pickiin! Opi luokittelemaan jokainen ärsyke.",
+        "hud": "Ylhäällä: edistymisesi opastuksessa.",
+        "grid": "Ruudukko on jaettu 3 vyöhykkeeseen: YLÄ, KESKI, ALA.",
+        "controls": "Nämä painikkeet luokittelevat. Sijainti vasemmalla, Ääni oikealla.",
+        "outro": "Valmis? Aloitetaan sijaintiluokittelusta!"
+      },
+      "intro": "Dual Pickissä luokittelet jokaisen ärsykkeen kahden kriteerin mukaan: ruudukon vyöhyke ja äänityyppi.",
+      "gridExplain": "Ruudukossa on 3 vyöhykettä: YLÄ (ylin rivi), KESKI (keskusta), ALA (alin rivi).",
+      "positionHaut": "Neliö on ylhäällä. Napsauta YLÄ.",
+      "positionMilieu": "Neliö on keskellä. Napsauta KESKI.",
+      "positionBas": "Neliö on alhaalla. Napsauta ALA.",
+      "positionRecap": "Täydellistä! YLÄ = ylin rivi, KESKI = keskusta, ALA = alin rivi.",
+      "positionPractice": "Sinun vuorosi! Luokittele tämä sijainti.",
+      "soundIntro": "Nyt äänet. Kaksi tyyppiä: VOKAALI (A, E, I, O, U) ja KONSONANTTI (kaikki muut).",
+      "soundVoyelle": "Kuulet A:n. Se on vokaali. Napsauta VOKAALI.",
+      "soundConsonne": "Kuulet T:n. Se on konsonantti. Napsauta KONSONANTTI.",
+      "soundRecap": "Muista: A, E, I, O, U = VOKAALI. Kaikki muu = KONSONANTTI.",
+      "soundPractice": "Sinun vuorosi! Luokittele tämä ääni.",
+      "dualIntro": "Oikeassa pelissä luokittelet MOLEMMAT samanaikaisesti: sijainti JA ääni.",
+      "dualFirst": "Luokittele sijainti JA ääni. Ota rauhallisesti.",
+      "dualSecond": "Jatka. Sijainti + Ääni.",
+      "dualThird": "Erinomaista! Vielä yksi harjoitteluksi.",
+      "rhythm": "Istunnossa pidä tasainen rytmi. Sujuvuus tulee harjoittelulla.",
+      "conclusion": "Hienoa! Olet oppinut luokittelun. Aloita Dual Pick -istunto!",
+      "buttons": {
+        "top": "YLÄ",
+        "middle": "KESKI",
+        "bottom": "ALA",
+        "vowel": "VOKAALI",
+        "consonant": "KONSONANTTI"
+      },
+      "feedback": {
+        "correctPosition": "Oikea vyöhyke!",
+        "correctSound": "Oikea äänityyppi!",
+        "wrongPosition": "Ei tuo vyöhyke. Katso missä neliö on.",
+        "wrongSound": "Ei se. A, E, I, O, U = vokaalit."
+      }
+    },
+    "trace": {
+      "intro": "Tervetuloa Dual Traceen. Ei painikkeita täällä: muistelet edellisen sijainnin aktiivisesti pyyhkäisyeleellä.",
+      "observe": "Muista tämä sijainti. Seuraavalla kierroksella sinun täytyy pyyhkäistä sitä kohti.",
+      "firstSwipe": "Ensimmäinen pyyhkäisy! Liu'uta sormeasi edellisen kierroksen sijaintia kohti. Nuoli ohjaa sinua.",
+      "firstAudioMatch": "Sama kirjain kuin edellisellä kierroksella! Pyyhkäise sijaintiin JA kaksoisnapauta ilmaistaksesi äänivastaavuuden.",
+      "audioMatch": "Äänivastaavuus havaittu! Pyyhkäise + kaksoisnapauta.",
+      "swipe1": "Pyyhkäise kohti N-1-sijaintia. Muista missä neliö oli.",
+      "swipe2": "Jatka. Jokainen pyyhkäisy vahvistaa aktiivista muistiasi.",
+      "swipe3": "Aktiivinen muistelu on vaativampaa kuin yksinkertainen tunnistaminen.",
+      "swipe4": "Pysy keskittyneenä. Visualisoi sijainti ennen pyyhkäisyä.",
+      "swipe5": "Erinomaista! Olet oppinut muistelueleen.",
+      "complete": "Opastus suoritettu. Olet valmis Dual Trace -harjoitteluun.",
+      "tapTarget": "Napauta edellisen kierroksen sijaintia",
+      "tapTargetAndAudio": "Napauta kohdesijaintia, sitten Ääni"
+    },
+    "ui": {
+      "startExercise": "Aloita harjoitus",
+      "score": "Pisteet: {{current}}/{{total}}",
+      "complete": "Valmis",
+      "correct": "✓ Oikein!",
+      "expectedMatch": "✗ Odotettu: Vastaavuus",
+      "expectedNoMatch": "✗ Odotettu: Ei vastaavuutta",
+      "memorize": "Muista sijainti...",
+      "memorizeLetter": "Muista kirjain...",
+      "matchDetected": "✓ Vastaavuus havaittu!",
+      "noMatch": "✗ Ei vastaavuutta",
+      "matchExplanation": "Vastaavuus! Askel {{current}} = Askel {{previous}}",
+      "exerciseComplete": "Harjoitus valmis!",
+      "match": "Vastaavuus",
+      "noMatchButton": "Ei vastaavuutta",
+      "none": "Ei mikään",
+      "both": "Molemmat",
+      "position": "Sijainti",
+      "audio": "Ääni",
+      "posShort": "Sij"
+    },
+    "spotlight": {
+      "hud": "Ohjauspaneelisi: N-back-taso, kierroslaskuri ja istunnon hallinta.",
+      "timeline": "Aikajana säilyttää 3 viimeisintä ärsykettä vertailua varten. Oikeassa pelissä tämä apu on piilotettu.",
+      "grid": "Ruudukko: joka kierros solu syttyy yhdessä 8 sijainnista. Samalla kirjain lausutaan.",
+      "controls": "Vastauspainikkeesi. Paina kun havaitset toiston.",
+      "intro": "Tervetuloa! Tutkitaan pelikäyttöliittymää yhdessä.",
+      "continue": "Jatka",
+      "outro": "Nyt siirrytään ohjattuun istuntoon. Katso animaatiot ja seuraa ohjeita.",
+      "start": "Aloita",
+      "tapToContinue": "Napauta mihin tahansa jatkaaksesi"
+    },
+    "speed": {
+      "label": "Nopeus: {{speed}}",
+      "pauseToChange": "Pysäytä vaihtaaksesi nopeutta"
+    },
+    "assessment": {
+      "title": "Arviointivaihe",
+      "subtitle": "Tästä eteenpäin se on lyhyt klassinen harjoitus.",
+      "body": "Tahti on jatkuva etkä saa enää vihjeitä. Pelaa kuin oikeassa istunnossa.",
+      "goal": "Tavoite: vähintään {{min}}% tarkkuus {{count}} kokeen aikana.",
+      "cta": "Mennään"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N-tasojen ymmärtäminen",
+        "desc": "Opit N=2:n. Näin se yleistyy N=1:stä N=4:ään.",
+        "start": "Aloita",
+        "done": "Valmis",
+        "skip": "Ohita",
+        "hud": "N = kuinka monta kierrosta taaksepäin.",
+        "present": "N = nykyinen ärsyke (nykyinen).",
+        "past": "Vertaa N-{{n}}:ään.",
+        "pressPosition": "Jos sijainti toistuu, paina Sijainti.",
+        "pressAudio": "Jos ääni toistuu, paina Ääni.",
+        "annotation": {
+          "n1": "N=1: vertaa nykyistä ärsykettä (N) edelliseen kierrokseen (N-1).",
+          "n2": "N=2: vertaa nykyistä ärsykettä (N) kahden kierroksen takaiseen (N-2).",
+          "n3": "N=3: vertaa nykyistä ärsykettä (N) kolmen kierroksen takaiseen (N-3)."
+        },
+        "outroTitle": "Ja niin edelleen…",
+        "outroBody": "Jos siirryt N=5:een, vertaat N-5:een. Sääntö pysyy samana; vain etäisyys kasvaa."
+      }
+    },
+    "annotations": {
+      "intro": "Havainnoi: solu syttyy ruudukossa ja kirjain lausutaan samanaikaisesti.",
+      "observe": "Muista. Aikajana seuraa ärsykkeitä.",
+      "firstComparison": "Sinulla on nyt tarpeeksi historiaa vertailuun.",
+      "firstPositionMatch": "Sama sijainti kuin 2 kierrosta sitten! Vertaa N ja N-2 aikajanalla, paina sitten Sijainti.",
+      "firstAudioMatch": "Sama kirjain kuin 2 kierrosta sitten! Vertaa N ja N-2 aikajanalla, paina sitten Ääni.",
+      "firstDualMatch": "Kaksoisvastaavuus! Sekä sijainti ETTÄ ääni toistuvat. Paina molempia painikkeita.",
+      "positionMatch": "Sama sijainti. Paina Sijainti.",
+      "audioMatch": "Sama ääni. Paina Ääni.",
+      "dualMatch": "Molemmat vastaavat. Paina Sijainti ja Ääni.",
+      "noMatch": "Ei vastaavuutta tällä kierroksella. Jatka muistamista.",
+      "noMatch1": "Ei toistoa tällä kertaa. Napauta jatkaaksesi.",
+      "noMatch2": "Yhä ei vastaavuutta. Keskity sijainti + ääni -virtaan.",
+      "noMatch3": "Ei raportoitavaa. Vertaa aina N-2:een aikajanalla.",
+      "noMatch4": "Ei vastaavuutta. Tahti nopeutuu.",
+      "noMatch5": "Jatka. Vastaavuudet tulevat ennakoimattomasti.",
+      "noMatch6": "Ei vastaavuutta. Jatka, olet löytänyt rytmin.",
+      "noMatch7": "Viimeinen osuus. Pysy keskittyneenä.",
+      "noMatch8": "Melkein valmis. Muutama ärsyke vielä.",
+      "complete": "Onnittelut! Olet oppinut Dual N-Backin perusteet. Valmis harjoitteluun?"
+    },
+    "exit": {
+      "confirm": "Poistu",
+      "title": "Poistu opastuksesta?",
+      "message": "Edistymisesi tallennetaan. Voit jatkaa myöhemmin."
+    },
+    "recovery": {
+      "message": "Keskeytynyt istunto löytyi.",
+      "staleMessage": "Yli 30 minuuttia sitten keskeytynyt istunto löytyi.",
+      "resume": "Jatka",
+      "startFresh": "Aloita alusta",
+      "title": "Jatka opastusta?"
+    }
+  }
+}

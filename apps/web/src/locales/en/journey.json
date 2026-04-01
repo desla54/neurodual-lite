@@ -116,6 +116,12 @@
         "mastery": "Near-perfect sessions fill it faster, but ordinary sessions stay modest",
         "regression": "Weak sessions can also make the current mastery bar go down",
         "unlock": "The next target count unlocks only when the current stage reaches 100%"
+      },
+      "neurodualMix": {
+        "description": "NeuroDual Mix — DNB Classic + Stroop Flex:",
+        "fill": "Each session with 85%+ accuracy fills the stage by 10%",
+        "both": "Both DNB Classic and Stroop Flex sessions count",
+        "unlock": "At 100%, the next N-level unlocks"
       }
     },
     "switcher": {

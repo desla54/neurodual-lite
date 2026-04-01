@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "কেমন লাগছে?",
+      "tired": "ক্লান্ত",
+      "normal": "স্বাভাবিক",
+      "energized": "উজ্জীবিত"
+    },
+    "aria": {
+      "trialTimer": "ট্রায়াল টাইমার",
+      "positionMatch": "পজিশন ম্যাচ",
+      "audioMatch": "অডিও ম্যাচ",
+      "audioLetter": "অডিও চিঠি:",
+      "traceGrid": "ট্রেস গ্রিড"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "সিঙ্ক মনিটর টগল করুন",
+      "start": "শুরু",
+      "end": "শেষ",
+      "pinLabel": "পিন",
+      "pinTitle": "স্ক্রিনে পিন করুন",
+      "inputLabel": "ইনপুট",
+      "inputTitle": "ইনপুট লেটেন্সি প্রোফাইলিং টগল করুন (স্থানীয় স্টোরেজ ND_INPUT_DEBUG_TIMING)",
+      "on": "অন",
+      "off": "বন্ধ",
+      "hideLabel": "লুকান",
+      "hideTitle": "লুকান (যদি না syncHud=1 বা ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "অডিও",
+        "expected": "প্রত্যাশিত"
+      },
+      "labels": {
+        "trial": "বিচার",
+        "lagShow": "ডিসপ্লে ল্যাগ",
+        "lagHide": "রিটার্ড মাস্কোয়াজ",
+        "winErr": "ভুল জয়",
+        "endRef": "শেষ রেফ",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "ইনপুট->ডিসপ্যাচ p95",
+        "inputToCommitP95": "ইনপুট->কমিট p95",
+        "inputToPaintP95": "ইনপুট->পেইন্ট p95",
+        "inputPending": "ইনপুট মুলতুবি",
+        "inputSamples": "ইনপুট নমুনা",
+        "touchSamples": "স্পর্শ নমুনা",
+        "mouseSamples": "মাউস নমুনা",
+        "keyboardSamples": "কীবোর্ড নমুনা",
+        "latestMethod": "সর্বশেষ (পদ্ধতি)",
+        "latestModality": "সর্বশেষ পদ্ধতি",
+        "audioCueMode": "অডিও সংকেত",
+        "audioCodec": "কোডেক"
+      },
+      "resetInputProfiler": "ইনপুট প্রোফাইলার রিসেট করুন"
+    },
+    "hud": {
+      "resume": "পুনরায় শুরু করুন",
+      "pause": "বিরতি",
+      "quit": "প্রস্থান করুন",
+      "restart": "রিস্টার্ট করুন",
+      "spaceToStart": "শুরু করার জন্য স্থান",
+      "settings": "সেটিংস",
+      "enterToAdvance": "অগ্রিম প্রবেশ করুন",
+      "trial": "বিচার",
+      "muteTexture": "পটভূমি শব্দ নিঃশব্দ করুন"
+    },
+    "status": {
+      "paused": "বিরতি দেওয়া হয়েছে"
+    },
+    "completed": "সম্পন্ন",
+    "starting": {
+      "getReady": "প্রস্তুত হও..."
+    },
+    "quitModal": {
+      "title": "অধিবেশন বন্ধ করবেন?",
+      "message": "আপনার অগ্রগতি সংরক্ষণ করা হবে না.",
+      "confirm": "প্রস্থান করুন",
+      "cancel": "চালিয়ে যান",
+      "close": "বন্ধ"
+    },
+    "controls": {
+      "position": "অবস্থান",
+      "position2": "পদ 2",
+      "position3": "পদ 3",
+      "position4": "পদ 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "ভিস এবং এন-অডিও",
+      "audiovis": "অডিও এবং এন-ভিস",
+      "vis1": "ভিস। 1",
+      "vis2": "ভিস। 2",
+      "vis3": "ভিস। 3",
+      "vis4": "ভিস। 4",
+      "audio": "অডিও",
+      "audio2": "অডিও 2",
+      "color": "রঙ",
+      "arithmetic": "পাটিগণিত",
+      "image": "আকৃতি"
+    },
+    "arithmetic": {
+      "answer": "উত্তর",
+      "clear": "পরিষ্কার",
+      "hint": "কীবোর্ড: 0-9 · '-' চিহ্নের জন্য · '।' দশমিকের জন্য · ব্যাকস্পেস পরিষ্কার করার জন্য"
+    },
+    "navigation": {
+      "back": "ব্যাক"
+    },
+    "xp": {
+      "title": "এক্সপি অর্জন করেছে",
+      "base": "বেস (N-{{level}})",
+      "performance": "কর্মক্ষমতা",
+      "accuracy": "নির্ভুলতা",
+      "streakBonus": "স্ট্রিক বোনাস",
+      "dailyBonus": "দিনের প্রথম",
+      "badgeBonus": "ব্যাজ",
+      "flowBonus": "ডুয়াল প্লেস বোনাস",
+      "confidenceMultiplier": "আত্মবিশ্বাস",
+      "dailyCapReached": "দৈনিক XP সীমা পৌঁছেছে",
+      "levelReached": "{{level}} স্তরে পৌঁছেছে!"
+    },
+    "badges": {
+      "newUnlocked": "নতুন ব্যাজ আনলক করা হয়েছে"
+    },
+    "getReady": "প্রস্তুত হও...",
+    "layoutEdit": {
+      "done": "সম্পন্ন",
+      "reset": "রিসেট করুন",
+      "instructions": "পুনর্বিন্যাস করতে অঞ্চলগুলি টেনে আনুন৷ হ্যান্ডলগুলি ব্যবহার করে আকার পরিবর্তন করুন।",
+      "title": "সম্পাদনা মোড",
+      "cancel": "বাতিল করুন",
+      "save": "তালা",
+      "editLayout": "লেআউট সম্পাদনা করুন"
+    },
+    "paused": "বিরতি দেওয়া হয়েছে",
+    "pressEscapeToResume": "পুনরায় শুরু করতে Escape টিপুন",
+    "settings": {
+      "editLayout": "লেআউট সম্পাদনা করুন",
+      "gridAndButtons": "গ্রিড এবং বোতাম",
+      "swapPositionAudio": "অদলবদল অবস্থান / অডিও",
+      "title": "সেটিংস",
+      "quickHint": "গেমটি ছেড়ে না দিয়ে কয়েকটি সেটিংস সামঞ্জস্য করুন।",
+      "quickUnavailable": "এই মোডের জন্য এখনও কোন দ্রুত সেটিংস উপলব্ধ নেই৷"
+    },
+    "pinkNoiseInfo": "একটি ব্যাকগ্রাউন্ড টোন প্রতিটি উদ্দীপকের সাথে থাকে। আপনি অডিও সেটিংসে এটি কাস্টমাইজ বা অক্ষম করতে পারেন।",
+    "pinkNoiseDismiss": "চালিয়ে যান",
+    "audioMode": "অডিও মোড",
+    "cogTask": {
+      "precision": "নির্ভুলতা",
+      "avgRt": "গড় RT",
+      "avgRtShort": "গড় RT",
+      "trials": "বিচার",
+      "correct": "সঠিক",
+      "errors": "ত্রুটি",
+      "effect": "প্রভাব",
+      "restart": "রিস্টার্ট করুন",
+      "home": "বাড়ি",
+      "performance": "কর্মক্ষমতা",
+      "trialDetail": "ট্রায়াল বিস্তারিত",
+      "setDetail": "বিস্তারিত সেট করুন",
+      "roundDetail": "বৃত্তাকার বিস্তারিত",
+      "problemDetail": "সমস্যা বিস্তারিত",
+      "phaseDetail": "ফেজ বিস্তারিত",
+      "feedbackCorrect": "সঠিক",
+      "feedbackIncorrect": "ভুল",
+      "feedbackTimeout": "খুব ধীর!",
+      "preparing": "প্রস্তুত হও...",
+      "loading": "লোড হচ্ছে...",
+      "left": "বাম",
+      "right": "ঠিক",
+      "up": "উপরে",
+      "down": "নিচে",
+      "congruent": "সঙ্গতিপূর্ণ",
+      "incongruent": "অসঙ্গতিপূর্ণ",
+      "congruencyEffect": "সামঞ্জস্য প্রভাব",
+      "maxSpan": "সর্বোচ্চ স্প্যান",
+      "startingSpan": "স্প্যান শুরু",
+      "maxSpanReached": "সর্বোচ্চ স্প্যান পৌঁছেছে",
+      "longestStreak": "দীর্ঘতম সঠিক ধারা",
+      "series": "স্ট্রিক",
+      "avgResponseTime": "গড় প্রতিক্রিয়া সময়",
+      "recall": "স্মরণ করুন",
+      "expected": "প্রত্যাশিত",
+      "submit": "জমা দিন",
+      "cancel": "বাতিল করুন",
+      "clear": "পরিষ্কার",
+      "delete": "DEL",
+      "true": "সত্য",
+      "false": "মিথ্যা",
+      "target": "টার্গেট",
+      "nonTarget": "অ-লক্ষ্য",
+      "distractor": "বিক্ষিপ্ত",
+      "same": "একই",
+      "different": "ভিন্ন",
+      "identical": "অভিন্ন",
+      "mirror": "আয়না",
+      "symmetric": "সিমেট্রিক",
+      "asymmetric": "অপ্রতিসম",
+      "symShort": "সিম",
+      "present": "বর্তমান",
+      "absent": "অনুপস্থিত",
+      "noTrials": "কোনো ট্রায়াল সম্পন্ন হয়নি।",
+      "noSets": "কোনো সেট সম্পূর্ণ হয়নি।",
+      "noRounds": "কোন রাউন্ড সম্পন্ন.",
+      "noProblems": "কোনো সমস্যা সম্পন্ন হয়নি।",
+      "noPhases": "কোনো পর্যায় সম্পন্ন হয়নি।",
+      "sets": "সেট",
+      "rounds": "বৃত্তাকার",
+      "equations": "সমীকরণ",
+      "sentences": "বাক্য",
+      "equationAccuracy": "সমীকরণ নির্ভুলতা",
+      "forward": "ফরোয়ার্ড",
+      "backward": "পশ্চাৎপদ",
+      "forwardMaxSpan": "ফরোয়ার্ড সর্বোচ্চ স্প্যান",
+      "backwardMaxSpan": "অনগ্রসর সর্বাধিক স্প্যান",
+      "odd": "বিজোড়",
+      "even": "এমনকি",
+      "score": "স্কোর",
+      "easy": "সহজ",
+      "hard": "কঠিন",
+      "totalTrials": "মোট ট্রায়াল",
+      "totalErrors": "মোট ত্রুটি",
+      "totalErrShort": "মোট ভুল",
+      "hits": "হিট",
+      "misses": "মিস করে",
+      "falseAlarms": "মিথ্যা আল।",
+      "correctRejections": "কর. রেজ.",
+      "yes": "হ্যাঁ",
+      "no": "না",
+      "sessionInterrupted": "অধিবেশন বিঘ্নিত",
+      "reverseOrder": "বিপরীত ক্রমে",
+      "normalOrder": "ক্রমে",
+      "lnsInstruction": "সংখ্যা আরোহী, তারপর A-Z অক্ষর",
+      "vs": "বনাম",
+      "simon": {
+        "simonEffect": "সাইমন প্রভাব",
+        "blue": "নীল",
+        "red": "লাল",
+        "heroTitle": "সাইমন"
+      },
+      "soroban": {
+        "target": "এই সংখ্যা প্রতিনিধিত্ব",
+        "submit": "জমা দিন",
+        "rodLabel": "রড {{n}}",
+        "heavenBead": "স্বর্গীয় গুটিকা (মান 5)",
+        "earthBead": "মাটির গুটিকা (মান 1)",
+        "instrBeadTitle": "পুঁতি কিভাবে কাজ করে",
+        "instrBeadDesc": "প্রতিটি রড একটি সংখ্যা প্রতিনিধিত্ব করে। উপরের পুঁতির (স্বর্গ) মূল্য 5। নীচের পুঁতির (পৃথিবী) প্রতিটির মূল্য 1। তাদের সক্রিয় করতে কেন্দ্র বারের দিকে জপমালা সরান।",
+        "instrExampleTitle": "উদাহরণ: 7",
+        "instrExampleDesc": "7 = স্বর্গের পুঁতি নিচে (5) + 2 পৃথিবীর পুঁতি উপরে (2)। তাদের সরাতে জপমালা আলতো চাপুন বা টেনে আনুন।",
+        "instrGoalTitle": "আপনার লক্ষ্য",
+        "instrGoalDesc": "একটি সংখ্যা প্রদর্শিত হবে। এটি উপস্থাপন করার জন্য পুঁতি সেট করুন, তারপর জমা দিন আলতো চাপুন। সঠিক এবং দ্রুত হতে!",
+        "startButton": "শুরু করুন",
+        "settings": "সেটিংস",
+        "closeSettings": "সেটিংস বন্ধ করুন",
+        "settingsRods": "রডের সংখ্যা",
+        "settingsRodsHint": "গেম সেটিংসে এন-লেভেলের মাধ্যমে সেট করুন",
+        "settingsTrials": "সেশন প্রতি ট্রায়াল",
+        "settingsTrialsHint": "গেম সেটিংসে ট্রায়ালের মাধ্যমে সেট করুন",
+        "settingsRange": "সংখ্যা পরিসীমা"
+      },
+      "stroop": {
+        "pressInkColorButton": "কালি রঙের সাথে মিলে যাওয়া বোতাম টিপুন",
+        "redWord": "লাল",
+        "redLabel": "লাল",
+        "blueWord": "নীল",
+        "blueLabel": "নীল",
+        "greenWord": "সবুজ",
+        "greenLabel": "সবুজ",
+        "yellowWord": "হলুদ",
+        "yellowLabel": "হলুদ"
+      },
+      "stroopFlex": {
+        "followRule": "নিয়ম",
+        "ruleInk": "কালি রঙ",
+        "ruleWord": "লিখিত শব্দ",
+        "pressMatchingRuleButton": "বর্তমান নিয়মের সাথে মেলে বোতাম টিপুন"
+      },
+      "goNogo": {
+        "goTrials": "ট্রায়াল যান",
+        "nogoTrials": "নো-গো ট্রায়াল",
+        "hitRate": "হিট রেট (যাও)",
+        "faRate": "মিথ্যা অ্যালার্ম রেট (নো-গো)",
+        "meanRt": "গড় প্রতিক্রিয়া সময়",
+        "sensitivity": "সংবেদনশীলতা",
+        "press": "চাপুন",
+        "withhold": "আটকে রাখা"
+      },
+      "stopSignal": {
+        "ssrt": "এসএসআরটি",
+        "ssrtFull": "SSRT (স্টপ সিগন্যাল RT)",
+        "ssdMean": "গড় SSD (সফল স্টপ)",
+        "ssd": "এসএসডি",
+        "goRt": "আরটি করুন",
+        "successfulInhibition": "সফল বাধা",
+        "stop": "থামো",
+        "meanGoRt": "গড় GO প্রতিক্রিয়া সময়",
+        "ssrtInvalid": "অপর্যাপ্ত তথ্য",
+        "ssrtNegativeNote": "SSRT নেতিবাচক (মানে SSD > মানে GO RT) — বর্তমান ট্রায়াল গণনার সাথে ফলাফল অবিশ্বস্ত।"
+      },
+      "pvt": {
+        "rtMedian": "মিডিয়ান RT",
+        "rtMean": "মানে RT",
+        "fastest": "দ্রুততম",
+        "slowest": "সবচেয়ে ধীর",
+        "falseStarts": "মিথ্যা শুরু হয়",
+        "falseStartsShort": "মিথ্যা সেন্ট.",
+        "lapses": "ল্যাপ্স",
+        "mean": "মানে",
+        "reaction": "প্রতিক্রিয়া",
+        "wait": "অপেক্ষা করুন...",
+        "pressStimulus": "উদ্দীপনার জন্য অপেক্ষা করুন...",
+        "pressAnywhere": "কাউন্টার উপস্থিত হলে যে কোন জায়গায় টিপুন",
+        "press": "প্রেস !",
+        "tooEarly": "খুব তাড়াতাড়ি!",
+        "lapsesLabel": "ল্যাপ্স"
+      },
+      "posner": {
+        "cueingEffect": "কুইং প্রভাব",
+        "validMeanRt": "মানে বৈধ RT",
+        "invalidMeanRt": "মানে অবৈধ RT",
+        "validAccuracy": "বৈধ নির্ভুলতা",
+        "invalidAccuracy": "অবৈধ নির্ভুলতা",
+        "validTrials": "বৈধ ট্রায়াল",
+        "invalidTrials": "অবৈধ ট্রায়াল",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "আরটি ইনভ.",
+        "valid": "বৈধ",
+        "invalid": "অবৈধ"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade খরচ",
+        "proAccuracy": "প্রো নির্ভুলতা",
+        "antiAccuracy": "বিরোধী নির্ভুলতা",
+        "pro": "প্রো",
+        "anti": "বিরোধী",
+        "proRt": "প্রো আরটি",
+        "antiRt": "অ্যান্টি আরটি",
+        "proMeanRt": "মানে প্রো-স্যাকেড আরটি",
+        "antiMeanRt": "মানে অ্যান্টি-স্যাকেড আরটি",
+        "costLabel": "খরচ",
+        "antiLabel": "বিরোধী"
+      },
+      "axCpt": {
+        "dPrime": "d'-প্রসঙ্গ",
+        "axAccuracy": "AX নির্ভুলতা",
+        "bxFa": "BX মিথ্যা অ্যালার্ম",
+        "ayError": "AY ত্রুটি",
+        "bxFaShort": "বিএক্স এফএ",
+        "ayErrShort": "AY ভুল",
+        "cogControl": "জ্ঞানীয় নিয়ন্ত্রণ",
+        "target": "টার্গেট",
+        "nonTarget": "অ-লক্ষ্য"
+      },
+      "ant": {
+        "scores": "ANT স্কোর",
+        "alerting": "সতর্কতা (নো-ক্যু - ডবল-কিউ)",
+        "orienting": "ওরিয়েন্টিং (কেন্দ্র - স্থানিক)",
+        "executive": "কার্যনির্বাহী (অসঙ্গত − সঙ্গতিপূর্ণ)"
+      },
+      "changeDet": {
+        "kCowan": "কে ক্যাপাসিটি (কোয়ান)",
+        "sameShort": "একই",
+        "diffShort": "পার্থক্য"
+      },
+      "swm": {
+        "withinErrors": "অনুসন্ধান ত্রুটির মধ্যে",
+        "betweenErrors": "বিটুইন-সার্চ ত্রুটি",
+        "totalErrors": "মোট ত্রুটি",
+        "errorFree": "ত্রুটি-মুক্ত",
+        "foundErrorFree": "ত্রুটি-মুক্ত পাওয়া গেছে!",
+        "errorCount": "{{count}} ত্রুটি(গুলি)",
+        "tapsLabel": "ট্যাপস"
+      },
+      "taskSwitch": {
+        "switchCost": "সুইচ খরচ",
+        "rtRepeat": "গড় RT (পুনরাবৃত্তি)",
+        "rtSwitch": "গড় RT (সুইচ)",
+        "oddEven": "বিজোড়/জোড়",
+        "highLow": "উচ্চ/নিম্ন",
+        "title": "টাস্ক স্যুইচিং"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A সময়",
+        "tmtBTime": "টিএমটি-বি সময়",
+        "executiveCost": "নির্বাহী খরচ (B − A)",
+        "executiveCostShort": "নির্বাহী খরচ (B-A)",
+        "tmtA": "টিএমটি-এ",
+        "tmtB": "টিএমটি-বি",
+        "errA": "ভুল ক",
+        "errB": "ভুল খ",
+        "preparingB": "TMT-B প্রস্তুত করা হচ্ছে...",
+        "tmtADone": "টিএমটি-এ সম্পন্ন!",
+        "totalErrors": "মোট ত্রুটি",
+        "tmtALabel": "TMT-A: সংখ্যা",
+        "tmtBLabel": "TMT-B: সংখ্যা ও অক্ষর",
+        "next": "পরবর্তী",
+        "heroTitle": "ট্রেইল মেকিং",
+        "alternateHint": "বিকল্প সংখ্যা এবং অক্ষর: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "আইএসআই মিন",
+        "fastestIsi": "দ্রুততম আইএসআই"
+      },
+      "wcst": {
+        "referenceCards": "রেফারেন্স কার্ড",
+        "testCard": "টেস্ট কার্ড",
+        "categories": "ক্যাটাগরি",
+        "categoriesCompleted": "বিভাগ সম্পূর্ণ হয়েছে",
+        "perseverativeErrors": "অধ্যবসায়ী ত্রুটি",
+        "persevShort": "পারসেভ।",
+        "avgRt": "গড় আরটি"
+      },
+      "mentalRot": {
+        "rtByAngle": "কোণ দ্বারা RT",
+        "findMatch": "মিল আকৃতি খুঁজুন",
+        "reference": "রেফারেন্স আকৃতি",
+        "referenceLabel": "রেফ.",
+        "candidate": "প্রার্থী",
+        "distractor": "অন্যান্য",
+        "mirrorErrors": "আয়না",
+        "title": "মানসিক ঘূর্ণন"
+      },
+      "sternberg": {
+        "rtBySize": "সেট আকার অনুযায়ী RT",
+        "title": "স্টার্নবার্গ",
+        "avgRt": "গড় আরটি"
+      },
+      "visualSearch": {
+        "rtBySize": "সেট আকার অনুযায়ী RT",
+        "title": "ভিজ্যুয়াল অনুসন্ধান"
+      },
+      "ospan": {
+        "typeLetters": "ক্রমানুসারে অক্ষর টাইপ করুন",
+        "trueOrFalse": "সত্য না মিথ্যা?",
+        "processingWarning": "সমীকরণ নির্ভুলতা 85% এর নিচে — ফলাফল সত্যিকারের কাজের মেমরি ক্ষমতা প্রতিফলিত নাও করতে পারে"
+      },
+      "readingSpan": {
+        "s0": "সূর্য পূর্ব দিকে উদিত হয়।",
+        "s1": "মাছ গাছে বাস করে।",
+        "s2": "প্যারিস ফ্রান্সের রাজধানী।",
+        "s3": "একটি ত্রিভুজের চারটি বাহু রয়েছে।",
+        "s4": "পানি 100 ডিগ্রিতে ফুটে।",
+        "s5": "বিড়াল সরীসৃপ।",
+        "s6": "পৃথিবী সূর্যকে প্রদক্ষিণ করে।",
+        "s7": "চকলেট পাথরে জন্মায়।",
+        "s8": "বছরে বারো মাস থাকে।",
+        "s9": "পাখিরা পানির নিচে শ্বাস নেয়।",
+        "s10": "দুধ সাদা।",
+        "s11": "রেলের উপর দিয়ে গাড়ি চলে।",
+        "s12": "মৌমাছি মধু উৎপাদন করে।",
+        "s13": "তুষার গরম।",
+        "s14": "হৃদপিন্ড রক্ত পাম্প করে।",
+        "s15": "পাথর পানির উপর ভাসছে।",
+        "s16": "চাঁদ রাতে আলো দেয়।",
+        "s17": "সাপের পা আছে।",
+        "s18": "কাঠ জলের উপর ভাসে।",
+        "s19": "আগুন ঠান্ডা।",
+        "s20": "মানুষের পাঁচটি ইন্দ্রিয় আছে।",
+        "s21": "মাকড়সার ছয়টি পা আছে।",
+        "s22": "ময়দা দিয়ে রুটি তৈরি করা হয়।",
+        "s23": "তিমি মাছ।",
+        "w0": "হাউস",
+        "w1": "কুকুর",
+        "w2": "বই",
+        "w3": "ফুল",
+        "w4": "দরজা",
+        "w5": "টেবিল",
+        "w6": "গাছ",
+        "w7": "রাস্তা",
+        "w8": "মেঘ",
+        "w9": "স্টার",
+        "w10": "সমুদ্র সৈকত",
+        "w11": "তুষার",
+        "w12": "ল্যাম্প",
+        "w13": "বৃষ্টি",
+        "w14": "গ্লাস",
+        "w15": "ঘাস",
+        "w16": "ট্রেন",
+        "w17": "বিশ্ব",
+        "w18": "সূর্য",
+        "w19": "বন",
+        "w20": "আইসিই",
+        "w21": "পৃথিবী",
+        "w22": "আকাশ",
+        "w23": "পাথর",
+        "d0": "সকাল",
+        "d1": "হৃদয়",
+        "d2": "ফ্যাব্রিক",
+        "d3": "পাতা",
+        "d4": "গোলমাল",
+        "d5": "বাগান",
+        "d6": "ছায়া",
+        "d7": "বেল",
+        "d8": "ব্রিজ",
+        "d9": "ধোঁয়া",
+        "d10": "বালি",
+        "d11": "স্যুপ",
+        "heroTitle": "রিডিং স্প্যান"
+      },
+      "memorizeSequence": "ক্রমটি মুখস্থ করুন...",
+      "reproduce": "পুনরুত্পাদন",
+      "span": "স্প্যান",
+      "size": "আকার",
+      "fixateCenter": "কেন্দ্রে ফিক্সেট...",
+      "identicalOrMirror": "অভিন্ন বা আয়না?",
+      "wellInhibited": "ভাল বাধা!",
+      "badDirection": "ভুল দিক!",
+      "stopMissed": "স্টপ মিস!",
+      "falseAlarm": "মিথ্যা শঙ্কা!",
+      "pressNow": "প্রেস !",
+      "hitBang": "আঘাত!",
+      "miss": "মিস!",
+      "doNotTouch": "স্পর্শ করবেন না!",
+      "whichDirection": "কোন দিকে?",
+      "stopBang": "থামো!",
+      "cueBang": "কিউ!",
+      "memorizeLetters": "এই অক্ষর মুখস্থ",
+      "memorizeLetter": "এই চিঠি মুখস্থ",
+      "memorizeSequenceLetters": "ক্রমটি মুখস্থ করুন...",
+      "memorizeDigits": "অঙ্কগুলি মুখস্থ করুন...",
+      "memorizeColors": "রং মুখস্থ!",
+      "memorizePosition": "এই অবস্থানটি মনে রাখবেন...",
+      "retainWord": "এই শব্দটি মনে রাখবেন",
+      "retainNumber": "এই নম্বরটি মনে রাখবেন",
+      "addWithPrevious": "আগেরটির সাথে যোগ করুন",
+      "sentenceTrueOrFalse": "এই বাক্যটি কি সত্য?",
+      "findRedCircle": "লাল বৃত্ত খুঁজুন!",
+      "findHiddenToken": "লুকানো টোকেন খুঁজুন!",
+      "chooseMatchingCard": "মানানসই কার্ড বেছে নিন",
+      "arrowDirection": "কেন্দ্রীয় তীর অভিমুখ?",
+      "attention": "মনোযোগ...",
+      "preparation": "প্রস্তুতি...",
+      "recallLettersInOrder": "ক্রমানুসারে {{count}} অক্ষরগুলি স্মরণ করুন",
+      "recallWordsInOrder": "ক্রমানুসারে {{count}} শব্দগুলি স্মরণ করুন",
+      "recallLastLetters": "শেষ {{count}} অক্ষরগুলি স্মরণ করুন",
+      "typeLastLetters": "শেষ {{count}} অক্ষর টাইপ করুন",
+      "recallPositionsInOrder": "স্মরণ করুন: ক্রমানুসারে অবস্থানে ট্যাপ করুন",
+      "pressEnterToValidate": "যাচাই করতে এন্টার টিপুন",
+      "pressAnywhereToContinue": "চালিয়ে যেতে যেকোনো জায়গায় চাপুন",
+      "temporalPrecision": "অস্থায়ী নির্ভুলতা",
+      "estimationPrecision": "অনুমান নির্ভুলতা",
+      "touchStartClockwise": "স্টার্ট পয়েন্টে টাচ করুন তারপর ঘড়ির কাঁটার দিকে সোয়াইপ করুন",
+      "touchAtoB": "বিন্দু A স্পর্শ করুন তারপর B-তে সোয়াইপ করুন",
+      "cue": "ক্যু",
+      "retainCue": "ইঙ্গিত মনে রাখবেন...",
+      "targetOrNot": "টার্গেট না অ-টার্গেট?",
+      "whereIsTarget": "লক্ষ্য কোথায়?",
+      "wasLetterInSet": "এই চিঠি কি সেটে ছিল?",
+      "regular": "নিয়মিত",
+      "regularity": "নিয়মিততা",
+      "msDeviation": "ms বিচ্যুতি",
+      "boxes": "বাক্স",
+      "found": "{{count}} পাওয়া গেছে",
+      "past": "অতীত",
+      "tooSlow": "খুব ধীর",
+      "tooFast": "খুব দ্রুত",
+      "timeout": "খুব ধীর!",
+      "answer": "উত্তর",
+      "dontPress": "চাপবেন না!",
+      "feedbackWrong": "ভুল!",
+      "level": "স্তর",
+      "wrong": "ভুল",
+      "you": "আপনি",
+      "paused": "বিরতি",
+      "instructions": "নির্দেশনা",
+      "selectAnswer": "একটি উত্তর নির্বাচন করুন",
+      "tapTheOddOne": "বিজোড়টি আলতো চাপুন",
+      "pal": {
+        "subtitle": "পেয়ারড অ্যাসোসিয়েটস লার্নিং",
+        "pairsLearned": "জোড়া শিখেছে",
+        "maxSetSize": "সর্বোচ্চ সেট আকার",
+        "totalErrors": "মোট ত্রুটি",
+        "round": "গোলাকার",
+        "pairs": "জোড়া",
+        "meanRt": "গড় RT (সঠিক)",
+        "studyPhase": "অধ্যয়ন - পদগুলি মুখস্থ করুন",
+        "testPhase": "এই আকৃতি কোথায় ছিল?",
+        "studying": "অধ্যয়নরত",
+        "tapBox": "এই আকৃতিটি যেখানে দেখানো হয়েছে সেই বাক্সে ট্যাপ করুন"
+      },
+      "visualLogic": {
+        "easy": "সহজ",
+        "hard": "কঠিন",
+        "oneRule": "1 নিয়ম",
+        "twoRules": "2 নিয়ম",
+        "findMissing": "অনুপস্থিত টুকরা খুঁজুন",
+        "maxLevel": "ম্যাক্স এলভিএল",
+        "finalLevel": "ফাইনাল Lvl",
+        "nextMode": "পরবর্তী সেশন মোড",
+        "adaptive": "অভিযোজিত",
+        "fixed": "স্থির",
+        "spm": "SPM 60",
+        "level": "স্তর",
+        "confirm": "ভ্যালিডার"
+      },
+      "tetrisMind": {
+        "findPiece": "কোন টুকরা গর্ত মাপসই?",
+        "target": "টার্গেট"
+      },
+      "timeEstimation": {
+        "overestimationBias": "অতিমূল্যায়ন পক্ষপাত",
+        "underestimationBias": "অবমূল্যায়ন পক্ষপাত",
+        "noBias": "কোন উল্লেখযোগ্য পক্ষপাত নেই",
+        "avgError": "গড় ত্রুটি",
+        "overestimations": "অতিমূল্যায়ন",
+        "underestimations": "অবমূল্যায়ন",
+        "avgAbsoluteError": "গড় পরম ত্রুটি",
+        "avgRelativeError": "গড় আপেক্ষিক ত্রুটি",
+        "cv": "প্রকরণের সহগ",
+        "watchDemo": "সময়কাল দেখুন",
+        "getReady": "প্রস্তুত হও...",
+        "holdToReproduce": "প্রজনন ধরে রাখুন!",
+        "tooLong": "অনেক লম্বা!",
+        "tooShort": "খুব ছোট!",
+        "target": "টার্গেট",
+        "demoLabel": "রেফারেন্স",
+        "yourTurn": "তোমার পালা",
+        "watchInstruction": "ঘড়ি",
+        "holdInstruction": "প্রজনন ধরে রাখুন",
+        "heroTitle": "সময়ের অনুমান"
+      },
+      "puzzleDetails": "ধাঁধা বিস্তারিত",
+      "roundDetails": "বৃত্তাকার বিবরণ",
+      "stageResults": "পর্যায় ফলাফল",
+      "recognized": "স্বীকৃত",
+      "missed": "মিস",
+      "win": "জয়",
+      "lose": "হারান",
+      "winBang": "জয়!",
+      "loseBang": "হারান!",
+      "correctBang": "সঠিক!",
+      "wrongBang": "ভুল!",
+      "completeBang": "সম্পূর্ণ!",
+      "repeatedBang": "বারবার !",
+      "incompleteBang": "অসম্পূর্ণ !",
+      "levelCompleteBang": "স্তর সম্পূর্ণ!",
+      "timesUp": "সময় শেষ",
+      "seeResults": "ফলাফল দেখুন",
+      "nextRound": "পরের রাউন্ড",
+      "startBlock": "ব্লক শুরু করুন",
+      "continue": "চালিয়ে যান",
+      "patientChoice": "রোগীর পছন্দ",
+      "immediateChoice": "অবিলম্বে পছন্দ",
+      "immediate": "তাৎক্ষণিক",
+      "digitSpan": {
+        "heroTitle": "ডিজিট স্প্যান"
+      },
+      "resume": "পুনরায় শুরু করুন",
+      "numericalStroop": {
+        "heroTitle": "সংখ্যাসূচক Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "লাইন ওরিয়েন্টেশনের বিচার"
+      },
+      "chain": "চেইন",
+      "undo": "পূর্বাবস্থায় ফেরান",
+      "vocalProsody": {
+        "heroTitle": "ভোকাল প্রসোডি"
+      },
+      "letterNumber": {
+        "title": "চিঠি-সংখ্যা অনুক্রম.",
+        "expectedAnswer": "প্রত্যাশিত উত্তর"
+      },
+      "patternComparison": {
+        "heroTitle": "প্যাটার্ন তুলনা"
+      },
+      "speedPack": {
+        "title": "স্পিড প্যাক",
+        "whenFoldedWhichTouch": "ভাঁজ করা হলে কোন বর্গক্ষেত্র স্পর্শ করে?"
+      },
+      "dotProbe": {
+        "heroTitle": "ডট প্রোব"
+      },
+      "reflex": {
+        "heroTitle": "রিফ্লেক্স"
+      },
+      "hooperVisual": {
+        "title": "হুপার ভিজ্যুয়াল সংস্থা",
+        "whatIsThisObject": "এই বস্তু কি?"
+      },
+      "blockDesign": {
+        "heroTitle": "ব্লক ডিজাইন"
+      },
+      "accuracy": "নির্ভুলতা",
+      "avgTime": "গড় সময়",
+      "check": "চেক করুন",
+      "dualTrace": {
+        "playArea": "খেলার এলাকা"
+      },
+      "paperFolding": {
+        "title": "কাগজ ভাঁজ",
+        "foldSequenceHolePunch": "ভাঁজ ক্রম এবং গর্ত পাঞ্চ",
+        "whichPatternWhenUnfolded": "কোন প্যাটার্ন যখন unfolded?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "আভিধানিক সিদ্ধান্ত"
+      },
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxGrid": "সর্বোচ্চ গ্রিড",
+      "symmetry": "প্রতিসাম্য",
+      "threshold": "থ্রেশহোল্ড",
+      "hitRate": "হিট রেট",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "পরিবর্তন সনাক্তকরণ"
+      },
+      "syllogisms": {
+        "heroTitle": "সিলোজিজম"
+      },
+      "subitizing": {
+        "title": "সাবটাইজিং",
+        "range": "পরিসর"
+      },
+      "jitter": "জিটার",
+      "sentenceCompletion": {
+        "title": "বাক্য সমাপ্তি (ক্লোজ)",
+        "highCloze": "উচ্চ ক্লোজ",
+        "lowCloze": "কম ক্লোজ"
+      },
+      "grid": "গ্রিড",
+      "pinballRecall": {
+        "title": "পিনবল রিকল",
+        "byBounces": "বাউন্স করে",
+        "whereDoesItLand": "এটি কোথায় অবতরণ করে?"
+      },
+      "mean": "মানে",
+      "speedup": "স্পিডআপ",
+      "memorize": "মুখস্থ করা",
+      "time": "সময়",
+      "surfaceDevelopment": {
+        "title": "সারফেস ডেভেলপমেন্ট",
+        "whichEdgeMatches": "কোন প্রান্ত মেলে?"
+      },
+      "crowding": {
+        "heroTitle": "ভিজ্যুয়াল ভিড়",
+        "spacing": "ব্যবধান"
+      },
+      "patternRecognition": {
+        "heroTitle": "প্যাটার্ন স্বীকৃতি"
+      },
+      "brixton": {
+        "heroTitle": "ব্রিক্সটন"
+      },
+      "dualMemo": {
+        "trial": "বিচার",
+        "position": "অবস্থান",
+        "audio": "অডিও"
+      },
+      "sceneCrasher": {
+        "heroTitle": "দৃশ্য অনুপ্রবেশকারী",
+        "detect": "সনাক্ত করুন"
+      },
+      "eyesTest": {
+        "heroTitle": "চোখে মনের পড়া"
+      }
+    },
+    "gridlock": {
+      "undone": "শেষ সরানো পূর্বাবস্থায়।",
+      "resetMessage": "ধাঁধা রিসেট।",
+      "hintMessage": "ইঙ্গিত: {{pieceId}} {{dir}} {{delta}} স্লাইড করুন।",
+      "previewCountdown": "বোর্ড অধ্যয়ন. {{seconds}}s এ শুরু হয়।",
+      "challenge": "চ্যালেঞ্জ",
+      "optimal": "সর্বোত্তম",
+      "moves": "নড়াচড়া করে",
+      "piece": "টুকরা {{id}}",
+      "targetPiece": "পিস {{id}} (লক্ষ্য - লাল গাড়ি)",
+      "challengeClassic": "ক্লাসিক",
+      "challengePrecision": "যথার্থতা",
+      "challengeMemory": "স্মৃতি",
+      "challengeTimed": "সময়মতো",
+      "hint": "ইঙ্গিত",
+      "reset": "রিসেট করুন",
+      "undo": "পূর্বাবস্থায় ফেরান",
+      "nextPuzzle": "পরবর্তী ধাঁধা →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "ব্লক 1 হিট",
+      "block2Hits": "ব্লক 2 হিট",
+      "goPositive": "যান = পজিটিভ",
+      "goNegative": "যান = নেতিবাচক",
+      "title": "কার্যকর Go/No-Go",
+      "block1CommissionErrors": "ব্লক 1 কমিশন ত্রুটি",
+      "block2CommissionErrors": "ব্লক 2 কমিশন ত্রুটি",
+      "block": "ব্লক",
+      "go": "যাও"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "গড় সুইচ হার",
+      "meanSwitchesfigure": "গড় সুইচ/চিত্র",
+      "totalSwitches": "মোট সুইচ",
+      "title": "অস্পষ্ট পরিসংখ্যান",
+      "meanSwitches": "গড় সুইচ",
+      "switchRate": "সুইচ রেট",
+      "figures": "পরিসংখ্যান",
+      "totalSwitchesLabel": "মোট সুইচ",
+      "duration": "সময়কাল",
+      "switchesCount": "s | সুইচ:",
+      "switchButton": "সুইচ !"
+    },
+    "analogies": {
+      "verbalCorrect": "মৌখিক সঠিক",
+      "timeout": "টাইমআউট",
+      "title": "উপমা"
+    },
+    "ansComparison": {
+      "weber": "ওয়েবার",
+      "title": "ANS তুলনা",
+      "ratio": "অনুপাত",
+      "leftMore": "আরো বাম",
+      "rightMore": "ডান আরো"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "মিথ্যা অ্যালার্ম রেট",
+      "grammatical": "ব্যাকরণগত",
+      "memorizeTheseStrings": "এই স্ট্রিং মুখস্থ",
+      "testPhase": "পরীক্ষার পর্যায়",
+      "ungrammatical": "ব্যাকরণহীন",
+      "learning": "শেখা",
+      "test": "পরীক্ষা",
+      "title": "কৃত্রিম ব্যাকরণ",
+      "learningPhase": "শেখা",
+      "testIntroText": "আপনি এখন নতুন স্ট্রিং দেখতে পাবেন। আপনি এইমাত্র যে স্ট্রিংগুলি অধ্যয়ন করেছেন সেগুলির মতো প্রত্যেকটি একই নিয়ম অনুসরণ করে কিনা তা নির্ধারণ করুন।",
+      "startTest": "পরীক্ষা শুরু করুন",
+      "followsRules": "নিয়ম মেনে চলে",
+      "breaksRules": "নিয়ম ভাঙে"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "ব্লিঙ্ক ম্যাগনিটিউড",
+      "title": "মনোযোগী পলক",
+      "blink": "পলক",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "১ম সবুজ পত্র?",
+      "secondGreenLetter": "২য় সবুজ চিঠি?"
+    },
+    "attentionalCapture": {
+      "captureCost": "ক্যাপচার খরচ",
+      "singletonPresent": "সিঙ্গেলটন প্রেজেন্ট",
+      "noSingleton": "সিঙ্গেলটন নেই",
+      "title": "মনোযোগী ক্যাপচার",
+      "capture": "ক্যাপচার",
+      "horizontal": "অনুভূমিক",
+      "vertical": "উল্লম্ব"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "বাইন্ডিং উইন্ডো",
+      "title": "অডিওভিজ্যুয়াল বাঁধাই",
+      "window": "জানালা",
+      "pssLabel": "পিএসএস (বিন্দুর বিষয়গত একতা)",
+      "simultaneousOrNot": "যুগপৎ নাকি?",
+      "simultaneous": "যুগপৎ",
+      "notSimultaneous": "যুগপৎ নয়"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "সময়কাল থ্রেশহোল্ড",
+      "reference": "রেফারেন্স",
+      "weberFraction": "ওয়েবার ভগ্নাংশ",
+      "title": "শ্রবণ সময়কাল",
+      "threshold": "থ্রেশহোল্ড",
+      "weber": "ওয়েবার",
+      "whichLonger": "কোনটি দীর্ঘ?",
+      "firstLonger": "প্রথম আর",
+      "secondLonger": "দ্বিতীয় আর"
+    },
+    "bart": {
+      "adjustedAvgPumps": "সামঞ্জস্য করা গড় পাম্প",
+      "avgTimeballoon": "গড় সময়/বেলুন",
+      "banked": "ব্যাঙ্কড !",
+      "lostEarnings": "রোজগার হারিয়েছে!",
+      "overallAvgPumps": "সামগ্রিক গড় পাম্প",
+      "popRate": "পপ হার",
+      "totalEarned": "মোট অর্জিত",
+      "balloons": "বেলুন",
+      "cashed": "ক্যাশড",
+      "popped": "পপড",
+      "adjPumps": "Adj. পাম্প",
+      "pop": "পপ",
+      "pump": "পাম্প",
+      "cashIn": "ক্যাশ ইন"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "গড় সিদ্ধান্ত সময়",
+      "drawBeadsToGatherEvidence": "প্রমাণ সংগ্রহের জন্য পুঁতি আঁকুন",
+      "jtc": "জেটিসি",
+      "title": "জপমালা টাস্ক",
+      "meanDraws": "গড় আঁকা",
+      "rounds": "বৃত্তাকার",
+      "jtcRate": "জেটিসি রেট",
+      "meanDrawsToDecision": "সিদ্ধান্তের দিকে গড়ায়",
+      "jtcRateThreshold": "JTC রেট (<{{threshold}} ড্র)",
+      "round": "গোলাকার",
+      "jarDescription": "জার A: 85% সবুজ / Jar B: 85% লাল",
+      "itWasJar": "এটা জার ছিল",
+      "drawABead": "একটি পুঁতি আঁকা",
+      "jarAGreen": "জার এ সবুজ",
+      "jarBRed": "জার বি লাল"
+    },
+    "binding": {
+      "changedTrials": "পরিবর্তিত ট্রায়াল",
+      "sameAccuracy": "একই নির্ভুলতা",
+      "sameTrials": "একই ট্রায়াল",
+      "title": "ফিচার বাইন্ডিং",
+      "binding": "বাঁধাই",
+      "bindingAccuracyChanged": "সঠিকতা পরিবর্তন করুন",
+      "same": "একই",
+      "different": "ভিন্ন"
+    },
+    "blockDesign": {
+      "cells": "কোষ",
+      "target": "টার্গেট",
+      "yourAnswer": "আপনার উত্তর",
+      "tapHint": "রং চক্র করতে আলতো চাপুন",
+      "check": "চেক করুন"
+    },
+    "brixton": {
+      "adapt": "মানিয়ে নেওয়া",
+      "adaptationCost": "অভিযোজন খরচ",
+      "nonswitchTrials": "নন-সুইচ ট্রায়াল",
+      "switchTrials": "সুইচ ট্রায়াল"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "এই চিঠিগুলো মনে রাখবেন",
+      "selectThe3Letters": "3টি অক্ষর নির্বাচন করুন",
+      "title": "ব্রাউন-পিটারসন টাস্ক",
+      "forgetting": "ভুলে যাওয়া",
+      "sDelay": "এস বিলম্ব",
+      "minus3": "মাইনাস ৩",
+      "delay": "বিলম্ব"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "সিদ্ধান্তের গুণমান",
+      "finalPoints": "চূড়ান্ত পয়েন্ট",
+      "meanBet": "মানে বাজি",
+      "winRate": "জয়ের হার",
+      "wins": "জিতেছে",
+      "title": "কেমব্রিজ জুয়া টাস্ক",
+      "totalPoints": "মোট পয়েন্ট",
+      "quality": "গুণমান",
+      "rational": "যুক্তিবাদী",
+      "avgBet": "গড় বাজি",
+      "trial": "বিচার",
+      "whichColorHidesToken": "কোন রঙ টোকেন লুকায়?",
+      "youChose": "আপনি বেছে নিয়েছেন",
+      "howMuchToBet": "কত বাজি?"
+    },
+    "cancellation": {
+      "false": "মিথ্যা",
+      "target": "লক্ষ্য:",
+      "total": "মোট",
+      "title": "বাতিলকরণ টাস্ক (d2)",
+      "misses": "মিস করে",
+      "targetDescription": "2 নম্বর সহ d"
+    },
+    "changeBlindness": {
+      "detectionRate": "সনাক্তকরণ হার",
+      "found": "পাওয়া গেছে",
+      "meanDetectionTime": "গড় সনাক্তকরণ সময়",
+      "title": "অন্ধত্ব পরিবর্তন করুন",
+      "missed": "মিস",
+      "avgTime": "গড় সময়",
+      "instructions": "নির্দেশনা"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "সেরা অনুমান",
+      "meanScore": "গড় স্কোর",
+      "worstEstimate": "সবচেয়ে খারাপ অনুমান",
+      "inRange": "ভাল অনুমান!",
+      "title": "জ্ঞানীয় অনুমান",
+      "meanScoreLabel": "গড় স্কোর",
+      "inRangeLabel": "পরিসরে",
+      "extreme": "চরম",
+      "scoreLabel": "স্কোর",
+      "submit": "জমা দিন"
+    },
+    "common": {
+      "accuracy": "নির্ভুলতা",
+      "bias": "পক্ষপাত",
+      "falseAlarmRate": "মিথ্যা অ্যালার্ম রেট",
+      "hitRate": "আঘাত হার",
+      "hits": "হিট",
+      "listening": "শুনছি...",
+      "meanRt": "মানে RT",
+      "timedOut": "টাইম আউট",
+      "timedOut2": "সময় শেষ",
+      "faRate": "Taux de FA",
+      "paused": "বিরতি দেওয়া হয়েছে"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "আপনি কতটা আত্মবিশ্বাসী?",
+      "rateYourConfidence": "আপনার আস্থা রেট",
+      "title": "আত্মবিশ্বাস ক্রমাঙ্কন",
+      "calError": "ক্রমাঙ্কন ত্রুটি",
+      "confidence": "আত্মবিশ্বাস"
+    },
+    "consequences": {
+      "best": "সেরা",
+      "nextRound": "পরবর্তী রাউন্ড...",
+      "time": "সময়",
+      "placeholder": "একটি ফলাফল টাইপ করুন...",
+      "title": "পরিণতি",
+      "totalIdeas": "মোট ধারণা",
+      "avgPerRound": "গড় প্রতি রাউন্ড",
+      "rounds": "বৃত্তাকার",
+      "noConsequencesListed": "কোন ফলাফল তালিকাভুক্ত",
+      "roundProgress": "রাউন্ড {{current}} / {{total}}",
+      "typeAndPressAdd": "টাইপ করুন এবং অ্যাড টিপুন"
+    },
+    "contextualCueing": {
+      "cueingEffect": "কুইং ইফেক্ট",
+      "newConfigRt": "নতুন কনফিগারেশন RT",
+      "oldConfigRt": "পুরানো কনফিগার আরটি",
+      "title": "প্রাসঙ্গিক ক্যুইং",
+      "cueing": "কুইং",
+      "oldRt": "পুরাতন RT",
+      "newRt": "নতুন আরটি",
+      "prompt": "প্রম্পট",
+      "left": "বাম",
+      "right": "ঠিক"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "থ্রেশহোল্ড জিটার",
+      "title": "কনট্যুর ইন্টিগ্রেশন",
+      "pipeJitter": "| ঝাঁকুনি"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "প্রান্তিক বৈসাদৃশ্য",
+      "title": "কনট্রাস্ট সংবেদনশীলতা",
+      "threshold": "থ্রেশহোল্ড",
+      "left": "বাম",
+      "right": "ঠিক"
+    },
+    "cpt": {
+      "nontargets": "অ-লক্ষ্য",
+      "target": "টার্গেট",
+      "nonTarget": "অ-লক্ষ্য",
+      "dPrime": "ডি'",
+      "targetsLetter": "লক্ষ্য পত্র",
+      "tapForLetterOnly": "শুধুমাত্র লক্ষ্য চিঠির জন্য আলতো চাপুন"
+    },
+    "crowding": {
+      "criticalSpacing": "সমালোচনামূলক ব্যবধান",
+      "leftAccuracy": "বাম নির্ভুলতা",
+      "rightAccuracy": "সঠিক নির্ভুলতা"
+    },
+    "cryptogram": {
+      "hints": "ইঙ্গিত",
+      "title": "ক্রিপ্টোগ্রাম",
+      "solved": "সমাধান করা হয়েছে",
+      "time": "সময়",
+      "puzzles": "ধাঁধা",
+      "puzzle": "ধাঁধা",
+      "hint": "ইঙ্গিত",
+      "clear": "পরিষ্কার"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "বক্ররেখার অধীনে এলাকা",
+      "discountRateK": "ডিসকাউন্ট রেট (k)",
+      "impulsivityIndex": "আবেগপ্রবণতা সূচক",
+      "title": "বিলম্ব ডিসকাউন্টিং",
+      "aucPatience": "AUC ধৈর্য",
+      "patient": "রোগী",
+      "kRate": "কে হার",
+      "impuls": "ইম্পুলস",
+      "indifferencePoints": "উদাসীনতা পয়েন্ট",
+      "whichPrefer": "আপনি কোনটি পছন্দ করেন?",
+      "today": "আজ"
+    },
+    "delayedMatching": {
+      "long": "দীর্ঘ",
+      "longDelay68s": "দীর্ঘ বিলম্ব (6-8 সেকেন্ড)",
+      "med": "মেড",
+      "mediumDelay46s": "মাঝারি বিলম্ব (৪-৬ সেকেন্ড)",
+      "short": "সংক্ষিপ্ত",
+      "shortDelay34s": "অল্প বিলম্ব (3-4 সেকেন্ড)",
+      "title": "বিলম্বিত মিল",
+      "delay": "বিলম্ব",
+      "rememberThisPattern": "এই প্যাটার্ন মনে রাখবেন",
+      "whichWasIt": "এটা কোনটা ছিল?"
+    },
+    "dichoticListening": {
+      "alertDetection": "সতর্কতা সনাক্তকরণ",
+      "attendToTheLeftColumn": "বাম কলামে যোগ দিন",
+      "attendedAccuracy": "উপস্থিতি সঠিকতা",
+      "ignoreTheRightColumn": "ডান কলাম উপেক্ষা করুন",
+      "right": "ডান",
+      "title": "দ্বিমুখী শোনা",
+      "attendedAcc": "উপস্থিতি সঠিকতা",
+      "alertDet": "সতর্কতা সনাক্তকরণ",
+      "alerts": "সতর্কতা",
+      "selectLeftColumnWords": "বাম কলাম শব্দ নির্বাচন করুন",
+      "submit": "জমা দিন",
+      "alertQuestion": "সতর্কতামূলক প্রশ্ন"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "সঠিকতা ভুলে যান",
+      "forgettingEffect": "ভুলে যাওয়া প্রভাব",
+      "newRejection": "নতুন প্রত্যাখ্যান",
+      "rememberAccuracy": "নির্ভুলতা মনে রাখবেন",
+      "title": "নির্দেশিত ভুলে যাওয়া",
+      "remember": "মনে রাখবেন",
+      "forget": "ভুলে যাও",
+      "round": "গোলাকার",
+      "word": "শব্দ",
+      "wasThisWordShown": "এই শব্দ দেখানো হয়েছে?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "মনোযোগ পক্ষপাত স্কোর",
+      "congruentAcc": "সামঞ্জস্যপূর্ণ Acc",
+      "congruentRt": "সঙ্গতিপূর্ণ RT",
+      "incongruentAcc": "অসংগত Acc",
+      "incongruentRt": "অসঙ্গত RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "গাড়ি না ট্রাক?",
+      "minDisplayReached": "সর্বনিম্ন প্রদর্শন পৌঁছেছে",
+      "positionAccuracy": "অবস্থান নির্ভুলতা",
+      "thresholdDisplay": "থ্রেশহোল্ড ডিসপ্লে",
+      "vehicleAccuracy": "যানবাহনের নির্ভুলতা",
+      "whereWasTheDiamond": "হীরা কোথায় ছিল?",
+      "title": "দ্বৈত সিদ্ধান্ত",
+      "threshold": "থ্রেশহোল্ড",
+      "bothOk": "উভয়ই সঠিক",
+      "vehicle": "যানবাহন",
+      "position": "অবস্থান",
+      "car": "গাড়ী",
+      "truck": "ট্রাক"
+    },
+    "dsst": {
+      "items": "আইটেম",
+      "itemsCompleted": "আইটেম সম্পন্ন",
+      "speedItemsmin": "গতি (আইটেম/মিনিট)",
+      "attempts": "প্রচেষ্টা",
+      "itemsPerMin": "আইটেম / মিনিট"
+    },
+    "dualTask": {
+      "dualtaskCost": "ডুয়াল-টাস্ক খরচ",
+      "taskANumber": "টাস্ক A (সংখ্যা)",
+      "taskBSymbol": "টাস্ক বি (প্রতীক)",
+      "title": "ডুয়াল টাস্ক",
+      "taskA": "টাস্ক এ",
+      "taskB": "টাস্ক বি",
+      "number": "সংখ্যা",
+      "symbol": "প্রতীক",
+      "up": "উপরে",
+      "down": "নিচে"
+    },
+    "dualTime": {
+      "sessionEnPause": "সেশন বিরাম দেওয়া হয়েছে৷",
+      "votreEstimationSecondes": "আপনার অনুমান (সেকেন্ড)",
+      "sessionInterrupted": "অধিবেশন বিঘ্নিত",
+      "target": "টার্গেট",
+      "estimation": "অনুমান",
+      "avgTime": "গড় সময়",
+      "avgError": "গড় ত্রুটি",
+      "trials": "বিচার",
+      "resumeToContinue": "চালিয়ে যেতে পুনরায় শুরু করুন",
+      "aimFor": "জন্য লক্ষ্য",
+      "second": "দ্বিতীয়",
+      "howLongDidYouTake": "আপনি কতক্ষণ সময় নেন?"
+    },
+    "dualTrack": {
+      "confirmer": "নিশ্চিত করুন",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "চালিয়ে যেতে পুনরায় শুরু করুন।",
+      "sessionEnPause": "সেশন বিরাম দেওয়া হয়েছে৷",
+      "tapezLesCibles": "লক্ষ্য ট্যাপ করুন",
+      "tapezLaCible": "লক্ষ্য আলতো চাপুন",
+      "appuyezConfirmer": "নিশ্চিত করুন টিপুন",
+      "targetsCountLabel": "{{count}} লক্ষ্য",
+      "distractorsCountLabel": "{{count}} বিক্ষিপ্তকারী",
+      "roundsCountLabel": "{{count}} রাউন্ড",
+      "calibrationRoundsLabel": "{{count}} ক্রমাঙ্কন রাউন্ড",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = অভ্যন্তরীণ যাত্রা অসুবিধা স্তর।",
+      "tierHelpCurrentWithPhase": "আপনি বর্তমানে {{targets}} লক্ষ্যগুলির জন্য {{total}}-এর মধ্যে T{{current}}-এ আছেন। বর্তমান পর্যায়: {{phase}}। পরবর্তী লক্ষ্য স্তরের আগে {{remaining}} স্তর(গুলি) বাকি আছে৷",
+      "phaseTracking": "ট্র্যাকিং",
+      "phaseAudio": "ট্র্যাকিং + অডিও",
+      "phaseColor": "ট্র্যাকিং + রঙ",
+      "phaseCombined": "ট্র্যাকিং + অডিও + রঙ",
+      "passLetters": "চিঠিপত্র",
+      "passColors": "রং",
+      "moveInstruction": "নির্দেশনা সরান",
+      "moveConfirmBtn": "নিশ্চিত বোতাম সরান",
+      "preparingSession": "সেশনের প্রস্তুতি হচ্ছে...",
+      "preparing3dScene": "3D দৃশ্য প্রস্তুত করা হচ্ছে...",
+      "startJourney": "যাত্রা শুরু করুন",
+      "calibrationDescription": "প্রথম পর্যায়ের আগে, একটি দীর্ঘ ক্রমাঙ্কন আপনার শুরুর স্তর অনুমান করবে।",
+      "defaultDescription": "বলগুলি আলোকিত হবে। তারা চলাফেরা করার সময় তাদের অনুসরণ করুন, তারপর তাদের সনাক্ত করুন।",
+      "startCalibration": "ক্রমাঙ্কন শুরু করুন",
+      "calibrationTitle": "ক্রমাঙ্কন",
+      "estimatedStart": "অনুমান। শুরু",
+      "roundsAnalyzed": "রাউন্ড বিশ্লেষণ করা হয়েছে",
+      "willStartAt": "এ শুরু হবে",
+      "targetsCount": "টার্গেট",
+      "thenProgress": "তারপর অগ্রগতি"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "মানে পরম ত্রুটি",
+      "ratio": "অনুপাত",
+      "slope": "ঢাল",
+      "vierordtSlope": "Vierordt ঢাল",
+      "wait": "অপেক্ষা করুন...",
+      "title": "সময়কাল প্রজনন",
+      "meanError": "গড় ত্রুটি",
+      "meanRatio": "গড় অনুপাত (উত্পাদিত/লক্ষ্য)",
+      "holdNow": "এখন ধরে রাখুন",
+      "target": "টার্গেট",
+      "error": "ত্রুটি"
+    },
+    "embeddedFigures": {
+      "fastest": "দ্রুততম",
+      "found": "পাওয়া গেছে",
+      "meanDetectionTime": "গড় সনাক্তকরণ সময়",
+      "slowest": "সবচেয়ে ধীর",
+      "title": "এমবেডেড পরিসংখ্যান",
+      "missed": "মিস",
+      "fastestLabel": "দ্রুততম",
+      "findThisShape": "এই আকৃতি খুঁজুন",
+      "memorizeShape": "আকৃতি মুখস্থ...",
+      "foundIt": "পাওয়া গেছে!",
+      "giveUp": "ছেড়ে দাও"
+    },
+    "emotionalNback": {
+      "falseAlarms": "মিথ্যা অ্যালার্ম",
+      "misses": "মিস করে",
+      "title": "আবেগপূর্ণ N-Back",
+      "match": "ম্যাচ"
+    },
+    "emotionalStroop": {
+      "neutralRt": "নিরপেক্ষ RT",
+      "positiveRt": "ইতিবাচক আরটি",
+      "threatRt": "হুমকি RT",
+      "title": "আবেগপূর্ণ Stroop",
+      "interference": "হস্তক্ষেপ",
+      "interferenceThreatNeutral": "হস্তক্ষেপ (হুমকি - নিরপেক্ষ)"
+    },
+    "eyesTest": {
+      "totalTime": "মোট সময়"
+    },
+    "faceName": {
+      "gain": "লাভ",
+      "learningImprovement": "শেখার উন্নতি",
+      "round1Accuracy": "রাউন্ড 1 সঠিকতা",
+      "round2Accuracy": "রাউন্ড 2 সঠিকতা",
+      "whoIsThis": "কে এই?",
+      "title": "মুখ-নাম সমিতি",
+      "round": "গোলাকার",
+      "testPhase": "পরীক্ষার পর্যায়"
+    },
+    "fauxPas": {
+      "who": "কে?",
+      "why": "কেন?",
+      "title": "ভুল পাস স্বীকৃতি",
+      "detection": "সনাক্তকরণ",
+      "scenarios": "দৃশ্যকল্প",
+      "fpFound": "ভুল পাস পাওয়া গেছে",
+      "control": "নিয়ন্ত্রণ",
+      "readyToAnswer": "উত্তর দিতে প্রস্তুত",
+      "didSomeoneSay": "কেউ কি এমন কিছু বলেছে যা তাদের উচিত নয়?",
+      "whoSaidIt": "এটা কে বলেছে?",
+      "whyInappropriate": "কেন এটা অনুপযুক্ত ছিল?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "যথার্থতা স্মরণ করুন",
+      "recognitionAccuracy": "স্বীকৃতির যথার্থতা",
+      "recallPlaceholder": "আপনার উত্তর টাইপ করুন...",
+      "unlikely": "অসম্ভাব্য",
+      "certain": "নিশ্চিত",
+      "title": "জানার অনুভূতি",
+      "recall": "স্মরণ করুন",
+      "recognition": "স্বীকৃতি",
+      "fokR": "ফোক আর",
+      "questions": "প্রশ্ন",
+      "recalled": "স্মরণ করা হয়েছে",
+      "recognized": "স্বীকৃত",
+      "fokSensitivity": "FOK সংবেদনশীলতা",
+      "submit": "জমা দিন",
+      "dontKnow": "জানি না",
+      "fokPrompt": "চিনতে পারবে তো?",
+      "selectCorrectAnswer": "সঠিক উত্তর নির্বাচন করুন",
+      "answer": "উত্তর"
+    },
+    "fingerTapping": {
+      "firstTrial": "প্রথম বিচার",
+      "lastTrial": "শেষ বিচার",
+      "sequence": "সিকোয়েন্স",
+      "speedupT1VsT12": "স্পিডআপ (T1 বনাম T12)",
+      "title": "আঙুল ট্যাপিং"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "গড় আন্দোলনের সময়",
+      "avgThroughput": "গড় থ্রুপুট",
+      "title": "ফিট ট্যাপিং",
+      "throughput": "থ্রুপুট",
+      "tapTarget": "হাইলাইট করা লক্ষ্যে আলতো চাপুন"
+    },
+    "foreperiod": {
+      "early": "প্রারম্ভিক",
+      "slope": "ঢাল",
+      "title": "টেম্পোরাল প্রিপারেশন",
+      "fpEffectSlope": "FP প্রভাব ঢাল"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "বিপরীত",
+      "threshold": "থ্রেশহোল্ড",
+      "tone1": "স্বর ঘ",
+      "tone2": "স্বর 2",
+      "weber": "ওয়েবার",
+      "weberFraction": "ওয়েবার ভগ্নাংশ",
+      "hz": "Hz",
+      "title": "ফ্রিকোয়েন্সি বৈষম্য",
+      "thresholdLabel": "থ্রেশহোল্ড",
+      "hzDiff": "Hz পার্থক্য",
+      "whichWasHigher": "কোনটা বেশি ছিল?",
+      "firstHigher": "প্রথম উচ্চতর",
+      "secondHigher": "দ্বিতীয় উচ্চতর"
+    },
+    "gabor": {
+      "gaborPatch": "গাবর প্যাচ",
+      "leftAccuracy": "বাম নির্ভুলতা",
+      "leftTrials": "বাম ট্রায়াল",
+      "noiseMask": "নয়েজ মাস্ক",
+      "rightAccuracy": "সঠিক নির্ভুলতা",
+      "rightTrials": "সঠিক বিচার",
+      "thresholdAngle": "থ্রেশহোল্ড কোণ",
+      "title": "গাবর",
+      "threshold": "থ্রেশহোল্ড",
+      "reversals": "বিপরীত",
+      "timedOut": "সময় শেষ",
+      "left": "বাম",
+      "right": "ঠিক"
+    },
+    "gameOfDice": {
+      "finalPoints": "চূড়ান্ত পয়েন্ট",
+      "risky": "ঝুঁকিপূর্ণ",
+      "riskyChoices": "ঝুঁকিপূর্ণ পছন্দ",
+      "safe": "নিরাপদ",
+      "winRate": "জয়ের হার",
+      "wins": "জিতেছে",
+      "title": "গেম অফ ডাইস টাস্ক",
+      "totalPoints": "মোট পয়েন্ট",
+      "riskyLabel": "ঝুঁকিপূর্ণ",
+      "roll": "রোল",
+      "chooseYourBet": "আপনার বাজি চয়ন করুন",
+      "pickNumbers": "আপনার নম্বর চয়ন করুন"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "ফাঁক নাকি ফাঁক নেই?",
+      "gapThreshold": "গ্যাপ থ্রেশহোল্ড",
+      "title": "নীরবতা সনাক্তকরণ",
+      "noGap": "নো গ্যাপ"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "দৃষ্টি কোথায় ছিল?",
+      "direct": "সরাসরি",
+      "left": "বাম",
+      "right": "ঠিক",
+      "title": "তাকানো দিক",
+      "dPrimeDirectGaze": "ডি প্রাইম ডাইরেক্ট গেজ"
+    },
+    "hayling": {
+      "part1Initiation": "পর্ব 1 (দীক্ষা)",
+      "part2": "পার্ট 2",
+      "part2Suppression": "পার্ট 2 (দমন)",
+      "suppressionCost": "দমন খরচ",
+      "title": "হেইলিং",
+      "part1": "পার্ট 1",
+      "part2Label": "পার্ট 2",
+      "suppression": "দমন",
+      "obvious": "স্পষ্ট",
+      "obviousPicksPart2": "স্পষ্ট বাছাই (পর্ব 2)",
+      "chooseUnrelated": "একটি সম্পর্কহীন শব্দ চয়ন করুন",
+      "completelyUnrelated": "সম্পূর্ণ সম্পর্কহীন",
+      "doNotPickObvious": "স্পষ্ট শব্দ বাছাই করবেন না!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "পরবর্তী পর্যায়ে অগ্রসর হচ্ছে...",
+      "stageComplete": "পর্যায় সম্পূর্ণ!",
+      "title": "আইইডি সেট শিফট",
+      "stages": "পর্যায়",
+      "edsCost": "EDS খরচ",
+      "stage": "মঞ্চ",
+      "correctNeeded": "অগ্রসর হওয়ার জন্য সঠিক প্রয়োজন"
+    },
+    "informationSampling": {
+      "cost": "খরচ",
+      "free": "বিনামূল্যে",
+      "meanTilesCost": "গড় টাইলস (খরচ)",
+      "meanTilesFree": "গড় টাইলস (বিনামূল্যে)",
+      "totalCost": "মোট খরচ",
+      "title": "তথ্য নমুনা",
+      "tiles": "টাইলস",
+      "tapToReveal": "প্রকাশ করতে আলতো চাপুন"
+    },
+    "inspectionTime": {
+      "final": "ফাইনাল",
+      "finalDisplayTime": "চূড়ান্ত প্রদর্শন সময়",
+      "minCorrectIt": "ন্যূনতম সঠিক আইটি",
+      "threshold": "থ্রেশহোল্ড",
+      "title": "পরিদর্শন সময়",
+      "thresholdLabel": "থ্রেশহোল্ড",
+      "minIt": "মিন আইটি"
+    },
+    "iowaGambling": {
+      "balance": "ভারসাম্য:",
+      "chooseADeck": "একটি ডেক চয়ন করুন",
+      "deckADraws": "ডেক A ড্র করেছে",
+      "deckBDraws": "ডেক বি ড্র",
+      "deckCDraws": "ডেক সি আঁকে",
+      "deckDDraws": "ডেক ডি আঁকে",
+      "first40Advantageous": "প্রথম 40 সুবিধাজনক",
+      "last40Advantageous": "শেষ 40 সুবিধাজনক",
+      "learn": "শিখুন",
+      "learningIndex": "শেখার সূচক",
+      "title": "আইওয়া জুয়া",
+      "advantageousPct": "সুবিধাজনক %",
+      "earnings": "আয়",
+      "last40": "শেষ ৪০"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "ক্রমাঙ্কন পক্ষপাত",
+      "meanJol": "মানে JOL",
+      "nowTestYourRecall": "এখন আপনার প্রত্যাহার পরীক্ষা",
+      "studyComplete": "পড়াশুনা সম্পূর্ণ",
+      "whatWasPairedWith": "কিসের সাথে জুটি ছিল...?",
+      "title": "শেখার বিচার",
+      "recallAccuracy": "যথার্থতা স্মরণ করুন",
+      "jolGamma": "JOL গামা",
+      "jolAccuracyGamma": "JOL সঠিকতা (গামা)",
+      "howLikelyRemember": "কতটা সম্ভব আপনি মনে রাখবেন?",
+      "hiddenAnswer": "লুকানো উত্তর"
+    },
+    "judgmentOfRecency": {
+      "close": "বন্ধ",
+      "closeGap13": "ক্লোজ গ্যাপ (1-3)",
+      "far": "দূর",
+      "farGap9": "দূর ব্যবধান (9+)",
+      "mediumGap48": "মাঝারি ব্যবধান (4-8)",
+      "title": "Recency এর রায়",
+      "medium": "মাঝারি",
+      "studyPhaseMemorizeOrder": "অধ্যয়নের পর্যায় - আদেশটি মুখস্থ করুন",
+      "whichMoreRecently": "যা আরো সম্প্রতি হাজির?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "গড় RT (অ-শব্দ)",
+      "meanRtWords": "গড় RT (শব্দ)",
+      "nonwordsAccuracy": "অ-শব্দ নির্ভুলতা",
+      "wordsAccuracy": "শব্দের যথার্থতা",
+      "word": "শব্দ",
+      "nonword": "অ-শব্দ"
+    },
+    "maze": {
+      "duration": "সময়কাল",
+      "optimalSteps": "সর্বোত্তম পদক্ষেপ",
+      "pathEfficiency": "পাথ দক্ষতা",
+      "totalSteps": "মোট পদক্ষেপ",
+      "wallHits": "ওয়াল হিট",
+      "title": "গোলকধাঁধা",
+      "completed": "সম্পন্ন",
+      "efficiency": "কর্মদক্ষতা",
+      "wallHitsLabel": "ওয়াল হিট",
+      "steps": "ধাপ"
+    },
+    "memobox": {
+      "easy": "সহজ",
+      "easy2Boxes": "সহজ (2 বক্স)",
+      "hard": "কঠিন",
+      "hard4Boxes": "শক্ত (4 বক্স)",
+      "medium3Boxes": "মাঝারি (3 বাক্স)",
+      "title": "মেমোবক্স",
+      "rounds": "বৃত্তাকার",
+      "medium": "মাঝারি",
+      "watchMovements": "গতিবিধি লক্ষ্য করুন...",
+      "howManyBalls": "প্রতিটি বক্সে কয়টি বল?",
+      "submit": "জমা দিন",
+      "roundOf": "{{total}} এর রাউন্ড {{current}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "ক্রস-সেকশন কি?",
+      "title": "মানসিক কাটিং"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "পুরানো, অনুরূপ, বা নতুন?",
+      "patternSeparation": "প্যাটার্ন বিচ্ছেদ",
+      "sep": "সেপ্টেম্বর",
+      "old": "পুরাতন",
+      "similar": "অনুরূপ",
+      "new": "নতুন",
+      "ldi": "এলডিআই",
+      "title": "স্মৃতি সংক্রান্ত বৈষম্য",
+      "hitRateOldDetected": "হিট রেট (পুরাতন সনাক্ত করা হয়েছে)",
+      "lureDiscrimination": "প্রলুব্ধ বৈষম্য (LDI)",
+      "memorize": "মুখস্থ করা",
+      "testPhase": "পরীক্ষার পর্যায়"
+    },
+    "multiArmedBandit": {
+      "earnings": "উপার্জন:",
+      "pickMachine": "একটি মেশিন চয়ন করুন",
+      "title": "মাল্টি-আর্মড দস্যু",
+      "totalReward": "মোট পুরস্কার",
+      "optimal": "সর্বোত্তম",
+      "regret": "আফসোস",
+      "exploit": "শোষণ",
+      "machine": "মেশিন",
+      "armsExplored": "অস্ত্র অন্বেষণ"
+    },
+    "navon": {
+      "globalBigLetter": "বিশ্বব্যাপী (বড় অক্ষর)",
+      "localSmallLetter": "স্থানীয় (ছোট অক্ষর)",
+      "title": "নাভন",
+      "globalAdv": "বিশ্বব্যাপী অ্যাড.",
+      "whatBigLetter": "কি বড় চিঠি?",
+      "whatSmallLetter": "কি ছোট চিঠি?"
+    },
+    "negativePriming": {
+      "controlRt": "RT নিয়ন্ত্রণ করুন",
+      "nameTheRedShape": "লাল আকৃতির নাম দাও",
+      "negativePrimingRt": "নেগেটিভ প্রাইমিং আরটি",
+      "positivePrimingRt": "পজিটিভ প্রাইমিং আরটি",
+      "npRt": "এনপি আরটি",
+      "ppRt": "পিপি আরটি",
+      "npEffect": "এনপি প্রভাব",
+      "title": "নেতিবাচক প্রাইমিং",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "অনুমানের পক্ষপাত",
+      "linearityRsup2": "রৈখিকতা (R²)",
+      "meanAbsoluteError": "মানে পরম ত্রুটি",
+      "tapTheLineToPlaceTheNumber": "নম্বর বসাতে লাইনে আলতো চাপুন",
+      "title": "নম্বর লাইন",
+      "meanError": "গড় ত্রুটি",
+      "yourEstimate": "আপনার অনুমান",
+      "correct": "সঠিক"
+    },
+    "oddOneOut": {
+      "colorTrials": "রঙ ট্রায়াল",
+      "shapeTrials": "আকার ট্রায়াল",
+      "shape": "আকৃতি",
+      "color": "রঙ",
+      "timeout": "টাইমআউট",
+      "shapeDiffAccuracy": "আকৃতির পার্থক্য। নির্ভুলতা",
+      "colorDiffAccuracy": "রঙের পার্থক্য। নির্ভুলতা",
+      "shapeDiffAvgRt": "আকৃতির পার্থক্য। গড় RT",
+      "colorDiffAvgRt": "রঙের পার্থক্য। গড় আরটি"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "কোন পথে?",
+      "thresholdAngle": "থ্রেশহোল্ড কোণ",
+      "title": "ওরিয়েন্টেশন বৈষম্য",
+      "threshold": "থ্রেশহোল্ড",
+      "counterCw": "CCW",
+      "clockwise": "ঘড়ির কাঁটার দিকে"
+    },
+    "patternComparison": {
+      "differentTrials": "বিভিন্ন ট্রায়াল",
+      "sameTrials": "একই ট্রায়াল",
+      "same": "একই",
+      "different": "ভিন্ন"
+    },
+    "patternRecognition": {
+      "newPatterns": "নতুন নিদর্শন",
+      "oldPatterns": "পুরানো নিদর্শন",
+      "old": "পুরাতন",
+      "new": "নতুন",
+      "studyPatterns": "নিদর্শনগুলি সাবধানে অধ্যয়ন করুন",
+      "memorize": "মুখস্থ করুন ({{current}}/{{total}})",
+      "getReady": "প্রস্তুত হও...",
+      "testPhaseStarting": "পরীক্ষা পর্ব শুরু হচ্ছে..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "একদম সঠিক",
+      "meanAngularError": "কৌণিক ত্রুটি মানে",
+      "withinTolerance": "সহনশীলতার মধ্যে",
+      "title": "দৃষ্টিভঙ্গি গ্রহণ",
+      "avgErr": "গড় ত্রুটি",
+      "youAreAt": "আপনি এ",
+      "facing": "মুখোমুখি",
+      "pointTo": "নির্দেশ করুন"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "ফ্রিকোয়েন্সি থ্রেশহোল্ড",
+      "seq1": "সেক 1",
+      "seq2": "সেক 2",
+      "title": "Phoneme বৈষম্য",
+      "thresh": "মাড়াই",
+      "sameOrDifferent": "একই বা ভিন্ন?",
+      "same": "একই",
+      "different": "ভিন্ন"
+    },
+    "predictionMotion": {
+      "biasLate": "পক্ষপাত (+ = দেরী)",
+      "meanAbsoluteError": "মানে পরম ত্রুটি",
+      "precisionSd": "নির্ভুলতা (SD)",
+      "title": "পূর্বাভাস গতি",
+      "absError": "অ্যাবস ত্রুটি",
+      "precision": "যথার্থতা",
+      "responded": "সাড়া দিয়েছে",
+      "tapWhenReachesTarget": "লক্ষ্যে পৌঁছালে ট্যাপ করুন"
+    },
+    "promem": {
+      "ongoingAccuracy": "চলমান নির্ভুলতা",
+      "ongoingRt": "চলমান RT",
+      "pmHitRate": "পিএম হিট রেট",
+      "pmRt": "পিএম আরটি",
+      "pmTargets": "প্রধানমন্ত্রীর লক্ষ্য",
+      "title": "সম্ভাব্য মেমরি",
+      "ongoing": "চলমান",
+      "pmHits": "পিএম হিট",
+      "pmMisses": "পিএম মিস",
+      "living": "বসবাস",
+      "nonLiving": "নির্জীব",
+      "redWordInstruction": "লাল শব্দ = প্রেস"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "বিভ্রান্তিকর ত্রুটি",
+      "literalErrorRate": "আক্ষরিক ত্রুটি হার",
+      "literalErrors": "আক্ষরিক ত্রুটি",
+      "title": "প্রবাদ ব্যাখ্যা",
+      "literal": "আক্ষরিক",
+      "litRate": "লিট হার",
+      "whatDoesThisMean": "এর মানে কি?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "অনুসরণ করার জন্য প্রস্তুত হন",
+      "meanTimeOnTarget": "টার্গেটের উপর গড় সময়",
+      "meanTrackingError": "ট্র্যাকিং ত্রুটি মানে",
+      "placeYourFingerOnTheScreen": "স্ক্রিনে আপনার আঙুল রাখুন",
+      "title": "সাধনা ট্র্যাকিং",
+      "timeOnTarget": "লক্ষ্যে সময়",
+      "error": "ত্রুটি",
+      "onTarget": "টার্গেটে",
+      "avgError": "গড় ত্রুটি",
+      "improve": "উন্নতি করুন",
+      "improvementT1VsT": "উন্নতি T1 বনাম T",
+      "errorLabel": "ত্রুটি",
+      "followGreenTarget": "সবুজ লক্ষ্য অনুসরণ করুন"
+    },
+    "rapidNaming": {
+      "roundComplete": "রাউন্ড সম্পূর্ণ",
+      "totalErrors": "মোট ত্রুটি",
+      "title": "দ্রুত নামকরণ",
+      "avgSpeed": "গড় গতি",
+      "totalTime": "মোট সময়",
+      "round": "গোলাকার",
+      "getReady": "প্রস্তুত হও!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "গড় সমাধান সময়",
+      "solved": "সমাধান করা হয়েছে",
+      "wrong": "ভুল",
+      "placeholder": "তোমার উত্তর...",
+      "title": "Rebus পাজল",
+      "puzzles": "ধাঁধা",
+      "timeout": "টাইমআউট",
+      "submit": "জমা দিন",
+      "answer": "উত্তর"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "গড় সমাধান সময়",
+      "solved": "সমাধান করা হয়েছে",
+      "placeholder": "তোমার উত্তর...",
+      "title": "দূরবর্তী সহযোগী",
+      "timeout": "টাইমআউট",
+      "submit": "জমা দিন",
+      "answer": "উত্তর"
+    },
+    "reversalLearning": {
+      "adapt": "মানিয়ে নেওয়া",
+      "loseshiftRate": "হারান-শিফট রেট",
+      "score": "স্কোর:",
+      "winstayRate": "উইন-স্টে রেট",
+      "title": "রিভার্সাল লার্নিং",
+      "rewards": "পুরস্কার",
+      "reversals": "বিপরীত",
+      "persev": "পারসেভ",
+      "avgTrialsToCriterion": "গড় মানদণ্ডে ট্রায়াল",
+      "pickACard": "একটি কার্ড বাছুন"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7 দ্বারা পিছনের দিকে গণনা করুন",
+      "reproduceThePatternFromMemory": "মেমরি থেকে প্যাটার্ন পুনরুত্পাদন",
+      "title": "রে জটিল চিত্র",
+      "copy": "কপি",
+      "recall": "স্মরণ করুন",
+      "retention": "ধরে রাখা",
+      "trial": "বিচার",
+      "target": "টার্গেট",
+      "yourCopy": "আপনার কপি",
+      "submit": "জমা দিন"
+    },
+    "rhythm": {
+      "avgTimingError": "গড় সময় ত্রুটি",
+      "bestTrialError": "সেরা ট্রায়াল ত্রুটি",
+      "correctTrials": "সঠিক বিচার",
+      "worstTrialError": "সবচেয়ে খারাপ ট্রায়াল ত্রুটি",
+      "watchRhythm": "ছন্দ দেখুন",
+      "getReady": "প্রস্তুত হও...",
+      "tapTheRhythm": "তাল টোকা!",
+      "tooFarOff": "অনেক দূরে!",
+      "tapToReproduce": "পুনরুত্পাদন করতে আলতো চাপুন",
+      "beats": "{{count}} বীট",
+      "bestTrial": "সেরা বিচার",
+      "worstTrial": "সবচেয়ে খারাপ বিচার",
+      "title": "ছন্দ",
+      "msErr": "ms ভুল"
+    },
+    "routePlanning": {
+      "time": "সময়",
+      "title": "রুট পরিকল্পনা",
+      "levels": "স্তর",
+      "completed": "সম্পন্ন",
+      "avgMoves": "গড় চলে",
+      "clear": "পরিষ্কার",
+      "submit": "জমা দিন",
+      "instructions": "নির্দেশনা"
+    },
+    "rvp": {
+      "detect357246468": "সনাক্ত করুন: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "টার্গেট সিকোয়েন্স",
+      "fa": "এফ.এ",
+      "hitRate": "হিট রেট",
+      "misses": "মিস করে",
+      "sequences": "সিকোয়েন্স"
+    },
+    "sart": {
+      "commissionErrors": "কমিশনের ত্রুটি",
+      "omissionErrors": "বাদ ত্রুটি",
+      "tapAllDigits": "3 ব্যতীত সমস্ত সংখ্যায় আলতো চাপুন৷",
+      "except3": "বাদে 3"
+    },
+    "sceneCrasher": {
+      "adds": "যোগ করে",
+      "studyTheScene": "দৃশ্যটি অধ্যয়ন করুন",
+      "swaps": "অদলবদল",
+      "tapTheNewchangedObject": "নতুন/পরিবর্তিত বস্তুটি আলতো চাপুন"
+    },
+    "sentenceVerification": {
+      "falseSentences": "মিথ্যা বাক্য",
+      "trueSentences": "সত্য বাক্য",
+      "byCategory": "বিভাগ অনুসারে",
+      "title": "বাক্য যাচাইকরণ",
+      "trueRt": "সত্য RT",
+      "true": "সত্য",
+      "false": "মিথ্যা",
+      "pressKey": "চাপুন"
+    },
+    "soundSweeps": {
+      "down": "নিচে",
+      "downAccuracy": "সঠিকতা নিচে",
+      "durationThreshold": "সময়কাল থ্রেশহোল্ড",
+      "up": "উপরে",
+      "upAccuracy": "আপ সঠিকতা",
+      "title": "সাউন্ড সুইপস",
+      "threshold": "থ্রেশহোল্ড",
+      "upOrDown": "উপরে না নিচে?"
+    },
+    "sourceMemory": {
+      "color": "রঙ",
+      "colorRecall": "রঙ প্রত্যাহার",
+      "frame": "ফ্রেম",
+      "frameRecall": "ফ্রেম প্রত্যাহার",
+      "getReadyForTheTest": "পরীক্ষার জন্য প্রস্তুত হন!",
+      "itemRecognition": "আইটেম স্বীকৃতি",
+      "positionRecall": "অবস্থান প্রত্যাহার",
+      "sourceAccuracy": "উৎস নির্ভুলতা",
+      "title": "উত্স মেমরি",
+      "source": "উৎস",
+      "position": "অবস্থান",
+      "word": "শব্দ",
+      "wasThisWordShown": "এই শব্দ দেখানো হয়েছে?",
+      "bottom": "নীচে",
+      "blue": "নীল",
+      "orange": "কমলা",
+      "circle": "বৃত্ত",
+      "square": "বর্গক্ষেত্র"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "নয়েজ থ্রেশহোল্ড",
+      "title": "স্পিচ-ইন-নোইজ",
+      "noise": "গোলমাল",
+      "whichWordWasIt": "এটা কোন শব্দ ছিল?"
+    },
+    "srtt": {
+      "learningEffect": "শেখার প্রভাব",
+      "learning": "শেখা",
+      "block": "ব্লক"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "চান্স লেভেল",
+      "learningDetected": "শেখা সনাক্ত করা হয়েছে",
+      "testPhase": "পরীক্ষার পর্যায়",
+      "whichPairLooksMoreFamiliar": "কোন জুটি বেশি পরিচিত মনে হয়?",
+      "title": "পরিসংখ্যানগত শিক্ষা",
+      "learning": "শেখা",
+      "watchTheShapes": "আকার দেখুন"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "বিশ্বাসের পক্ষপাতের প্রভাব",
+      "conclusion": "উপসংহার",
+      "premise1": "প্রিমিস ১",
+      "premise2": "প্রিমিস 2",
+      "logicalValidityQuestion": "এটা কি যৌক্তিকভাবে বৈধ?",
+      "valid": "বৈধ",
+      "invalid": "অবৈধ"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "অনুপস্থিত সঠিকতা",
+      "presentAccuracy": "বর্তমান নির্ভুলতা",
+      "title": "প্রতীক অনুসন্ধান",
+      "present": "বর্তমান",
+      "absent": "অনুপস্থিত",
+      "targets": "টার্গেট",
+      "searchGroup": "অনুসন্ধান গ্রুপ"
+    },
+    "syncContinuation": {
+      "async": "অ্যাসিঙ্ক",
+      "asynchrony": "অ্যাসিঙ্ক্রোনি",
+      "drift": "প্রবাহ",
+      "cv": "সিভি",
+      "title": "সিঙ্ক-কন্টিনিউয়েশন",
+      "meanCv": "গড় সিভি",
+      "tempos": "টেম্পোস",
+      "tempo": "টেম্পো",
+      "ioi": "আইওআই",
+      "getReady": "প্রস্তুত হও...",
+      "nextTempo": "পরবর্তী টেম্পো..."
+    },
+    "taskJuggling": {
+      "correctResets": "সঠিক রিসেট",
+      "duration": "সময়কাল",
+      "missedCounters": "মিসড কাউন্টার",
+      "prematureResets": "অকাল রিসেট",
+      "totalEvents": "মোট ইভেন্ট",
+      "tooEarly": "খুব তাড়াতাড়ি!",
+      "missed": "মিস!",
+      "title": "টাস্ক জাগলিং",
+      "premature": "অকাল",
+      "counter": "কাউন্টার",
+      "tapCounterInstruction": "প্রতিটি কাউন্টারে আলতো চাপুন যখন এটি তার থ্রেশহোল্ডে পৌঁছে যায়। কোন উপচে পড়া যাক না!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "বিভক্তি বিন্দু (PSE)",
+      "curveSteepness": "কার্ভ স্টিপনেস",
+      "idealMidpoint": "আদর্শ মধ্যবিন্দু",
+      "pse": "পিএসই",
+      "title": "টেম্পোরাল বিসেকশন",
+      "steepness": "খাড়াতা",
+      "shortOrLong": "ছোট না লম্বা?",
+      "trainingPhase": "প্রশিক্ষণ পর্যায়",
+      "short": "সংক্ষিপ্ত",
+      "long": "দীর্ঘ"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "গ্রেডিয়েন্ট প্রস্থ",
+      "rememberThisDuration": "এই সময়কাল মনে রাখবেন",
+      "width": "প্রস্থ",
+      "standard": "স্ট্যান্ডার্ড",
+      "title": "টেম্পোরাল জেনারেলাইজেশন",
+      "hitRate": "হিট রেট",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "হিট রেট (মান সনাক্ত করুন)",
+      "sameDuration": "একই সময়কাল?",
+      "trainingPhase": "প্রশিক্ষণ পর্যায়",
+      "same": "একই",
+      "different": "ভিন্ন"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "থ্রেশহোল্ড SOA",
+      "title": "টেক্সচার বৈষম্য",
+      "threshold": "থ্রেশহোল্ড"
+    },
+    "timePromem": {
+      "avgTimingError": "গড় সময় ত্রুটি",
+      "clockChecks": "ঘড়ি চেক",
+      "ongoingAccuracy": "চলমান নির্ভুলতা",
+      "ongoingTrials": "চলমান বিচার",
+      "totalPmPresses": "মোট PM প্রেস",
+      "pmAccuracy": "PM নির্ভুলতা",
+      "pmMisses": "প্রধানমন্ত্রী মিস করেন",
+      "title": "সময় সম্ভাব্য",
+      "ongoing": "চলমান",
+      "pmHitsLabel": "পিএম হিট",
+      "timingErr": "টাইমিং এরর",
+      "pmHitsExpected": "PM হিট/প্রত্যাশিত",
+      "pmPresses": "প্রধানমন্ত্রী প্রেস",
+      "checkClock": "ঘড়ি চেক করুন",
+      "thirtySecMark": "30s মার্ক"
+    },
+    "toj": {
+      "meanResponseTime": "মিন রেসপন্স টাইম",
+      "temporalResolution": "টেম্পোরাল রেজোলিউশন",
+      "title": "টেম্পোরাল অর্ডার জাজমেন্ট",
+      "threshold": "থ্রেশহোল্ড",
+      "whichCameFirst": "কোনটি প্রথম এসেছিল?",
+      "leftFirst": "প্রথমে বাম",
+      "rightFirst": "রাইট ফার্স্ট"
+    },
+    "tower": {
+      "budget": "বাজেট",
+      "challenge": "চ্যালেঞ্জ",
+      "challengeClassic": "ক্লাসিক",
+      "challengeExpert": "বিশেষজ্ঞ",
+      "challengeMemory": "স্মৃতি",
+      "challengePrecision": "যথার্থতা",
+      "dragDiscAriaLabel": "পেগ {{peg}} থেকে শীর্ষ ডিস্কটি টেনে আনুন",
+      "goal": "গোল",
+      "goalHiddenStatus": "লক্ষ্য লুকানো. এটি সংক্ষিপ্তভাবে দেখানোর জন্য প্রকাশ ব্যবহার করুন।",
+      "goalRevealedMessage": "3 সেকেন্ডের জন্য লক্ষ্য প্রকাশ করা হয়েছে।",
+      "hint": "ইঙ্গিত",
+      "hintDescription": "সেরা পরবর্তী পদক্ষেপ দেখান",
+      "hintMessage": "ইঙ্গিত: পেগ {{fromPeg}} থেকে পেগ {{toPeg}}-এ শীর্ষ ডিস্ক সরান।",
+      "hiddenGoalDescription": "খেলার সময় লক্ষ্য লুকিয়ে থাকে। আপনার একটি সংক্ষিপ্ত রিফ্রেশ প্রয়োজন হলে প্রকাশ ব্যবহার করুন.",
+      "hiddenGoalTitle": "মেমরি চ্যালেঞ্জ",
+      "invalid": "অবৈধ",
+      "moves": "নড়াচড়া করে",
+      "optimal": "সর্বোত্তম",
+      "pegFullMessage": "সেই পেগ পূর্ণ।",
+      "previewMemoryCountdown": "লক্ষ্য মুখস্থ করুন। {{seconds}}s এ শুরু হয়।",
+      "previewPlanCountdown": "{{moves}}-মুভ সমাধানের পরিকল্পনা করুন। {{seconds}} এ শুরু হয়।",
+      "reset": "রিসেট করুন",
+      "resetDescription": "এই ধাঁধা পুনরায় আরম্ভ করুন",
+      "resetMessage": "ধাঁধা রিসেট।",
+      "reveal": "প্রকাশ",
+      "revealDescription": "লুকানো লক্ষ্য প্রকাশ করুন",
+      "statusOptimalSolve": "সর্বোত্তম সমাধান। স্কোর {{score}}।",
+      "statusSolvedScore": "{{moves}} চালে সমাধান করা হয়েছে (+{{extraMoves}})। স্কোর {{score}}।",
+      "undo": "পূর্বাবস্থায় ফেরান",
+      "undoDescription": "শেষ চাল বিপরীত",
+      "undoneMessage": "শেষ সরানো পূর্বাবস্থায়।",
+      "yourPegs": "আপনার পেগ"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "সঠিক ডেলিভারি",
+      "trainsLost": "হারিয়ে গেছে ট্রেন",
+      "wrongStation": "ভুল স্টেশন",
+      "title": "ট্রেন অফ থট",
+      "trains": "ট্রেন",
+      "missed": "মিস",
+      "scoreLabel": "স্কোর",
+      "instructions": "নির্দেশনা"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "ব্যবহৃত গড় প্রশ্ন",
+      "title": "বিশটি প্রশ্ন",
+      "avgQuestions": "গড় প্রশ্ন",
+      "rounds": "বৃত্তাকার",
+      "efficiency": "কর্মদক্ষতা",
+      "avgQuestionsCorrectOnly": "গড় প্রশ্ন (শুধুমাত্র সঠিক)",
+      "questionsLabel": "প্রশ্ন",
+      "remaining": "অবশিষ্ট",
+      "readyToGuess": "আমি অনুমান করতে প্রস্তুত!",
+      "tapTheTarget": "আপনি লক্ষ্য মনে হয় বস্তু আলতো চাপুন!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "দেখার জন্য দরকারী ক্ষেত্র",
+      "visualNoiseMask": "ভিজ্যুয়াল নয়েজ মাস্ক",
+      "whatWasInTheCenter": "কেন্দ্রে কি ছিল?",
+      "whereWasTheTarget": "কোথায় লক্ষ্য ছিল?",
+      "avgThreshold": "গড় প্রান্তিক",
+      "speed": "গতি",
+      "accuracy": "নির্ভুলতা",
+      "central": "কেন্দ্রীয়",
+      "peripheral": "পেরিফেরাল",
+      "overall": "সামগ্রিকভাবে",
+      "block": "ব্লক",
+      "trials": "বিচার",
+      "start": "শুরু করুন",
+      "focus": "ফোকাস",
+      "threshold": "থ্রেশহোল্ড",
+      "stimulus": "উদ্দীপক",
+      "respondFromMemory": "স্মৃতি থেকে সাড়া দিন",
+      "truck": "ট্রাক",
+      "choosePeripheralLocation": "পেরিফেরাল অবস্থান চয়ন করুন",
+      "currentBlock": "ব্লক {{n}}",
+      "exposure": "এক্সপোজার"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} দিয়ে শুরু হওয়া শব্দ",
+      "title": "মৌখিক সাবলীলতা",
+      "totalWords": "মোট শব্দ",
+      "duplicates": "ডুপ্লিকেট",
+      "letter": "চিঠি",
+      "round": "গোলাকার",
+      "roundComplete": "রাউন্ড সম্পূর্ণ",
+      "nextRound": "পরের রাউন্ড",
+      "middotRound": "· গোলাকার"
+    },
+    "vernierAcuity": {
+      "whichSide": "কোন দিকে?",
+      "title": "ভার্নিয়ার তীক্ষ্ণতা",
+      "leftOffset": "বাম অফসেট",
+      "rightOffset": "ডান অফসেট",
+      "offset": "অফসেট"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "সর্বোত্তম কৌশল",
+      "correct": "সঠিক!",
+      "wrong": "ভুল",
+      "title": "আবহাওয়ার পূর্বাভাস",
+      "optimal": "সর্বোত্তম",
+      "learningCurve": "শেখার বক্ররেখা",
+      "predictTheWeather": "আবহাওয়ার পূর্বাভাস দিন",
+      "rain": "বৃষ্টি"
+    },
+    "wordChain": {
+      "avgResponseTime": "গড় প্রতিক্রিয়া সময়",
+      "chain": "চেইন",
+      "longestChain": "দীর্ঘতম চেইন",
+      "totalCorrect": "মোট সঠিক",
+      "totalWords": "মোট শব্দ",
+      "words": "শব্দ",
+      "title": "শব্দ চেইন",
+      "longest": "দীর্ঘতম",
+      "avgRt": "গড় আরটি",
+      "endsWith": "দিয়ে শেষ হয়",
+      "chainLabel": "চেইন",
+      "bestLabel": "সেরা"
+    },
+    "wordFlow": {
+      "avgWordLength": "গড় শব্দের দৈর্ঘ্য",
+      "correct": "সঠিক",
+      "invalidWords": "অবৈধ শব্দ",
+      "totalWordsSelected": "মোট শব্দ নির্বাচিত",
+      "validWords": "বৈধ শব্দ",
+      "wordsPerMinute": "প্রতি মিনিটে শব্দ",
+      "wrong": "ভুল",
+      "seeResults": "ফলাফল দেখুন",
+      "nextRound": "পরবর্তী রাউন্ড ({{current}}/{{total}})",
+      "title": "মৌখিক সাবলীলতা",
+      "validWordsLabel": "বৈধ শব্দ",
+      "wordsPerMinLabel": "শব্দ/মিনিট",
+      "avgLengthLabel": "গড় দৈর্ঘ্য",
+      "invalidLabel": "অবৈধ",
+      "round": "গোলাকার",
+      "selectWordsBelongTo": "অন্তর্গত শব্দ নির্বাচন করুন",
+      "selected": "নির্বাচিত"
+    },
+    "wordList": {
+      "avgRtCorrect": "গড় RT (সঠিক)",
+      "primacyEffect": "প্রাইমাসি ইফেক্ট",
+      "recencyEffect": "রিসেন্সি ইফেক্ট",
+      "studyPhaseRememberEachWord": "অধ্যয়ন পর্ব - প্রতিটি শব্দ মনে রাখবেন",
+      "wordsRecalled": "শব্দ স্মরণ",
+      "title": "শব্দ তালিকা",
+      "serialPositionCurve": "সিরিয়াল পজিশন কার্ভ",
+      "wasWordInList": "এই শব্দটি কি তালিকায় ছিল?",
+      "seenBefore": "আগে দেখা হয়েছে",
+      "newWord": "নতুন"
+    },
+    "speedSort": {
+      "switchAccuracy": "সঠিকতা পরিবর্তন করুন",
+      "switchTrials": "সুইচ ট্রায়াল",
+      "sortByColor": "COLOR অনুসারে সাজান",
+      "sortByShape": "SHAPE অনুসারে সাজান",
+      "sortByNumber": "NUMBER অনুসারে সাজান",
+      "ruleChanged": "নিয়ম বদলে গেল!",
+      "binRed": "লাল",
+      "binBlue": "নীল",
+      "binGreen": "সবুজ",
+      "binYellow": "হলুদ",
+      "binCircle": "বৃত্ত",
+      "binSquare": "বর্গক্ষেত্র",
+      "binTriangle": "ত্রিভুজ",
+      "binStar": "তারা",
+      "title": "গতি বাছাই",
+      "switch": "সুইচ"
+    },
+    "reflex": {
+      "target": "টার্গেট",
+      "lure": "লোভ",
+      "tooSlow": "খুব ধীর!",
+      "wrongTarget": "ভুল টার্গেট!",
+      "tapTargets": "সবুজ বৃত্ত আলতো চাপুন!",
+      "hits": "হিট",
+      "misses": "মিস করে",
+      "fa": "এফ.এ"
+    },
+    "chainCalculation": {
+      "rememberTotal": "রানিং টোটাল মনে রাখবেন...",
+      "title": "চেইন গণনা",
+      "stepChains": "{{len}}- ধাপের চেইন",
+      "start": "শুরু করুন",
+      "step": "ধাপ",
+      "whatIsTheResult": "ফলাফল কি?"
+    },
+    "alternateUses": {
+      "placeholder": "একটি ব্যবহার টাইপ করুন...",
+      "title": "বিকল্প ব্যবহার",
+      "totalUses": "মোট ব্যবহার",
+      "perObject": "বস্তুর প্রতি",
+      "rounds": "বৃত্তাকার",
+      "bestObject": "সেরা বস্তু",
+      "bestCount": "সেরা গণনা",
+      "noUsesSubmitted": "কোনো ব্যবহার জমা দেওয়া হয়নি",
+      "timesUp": "সময় শেষ!",
+      "nextObject": "পরবর্তী অবজেক্ট ({{object}})",
+      "listCreativeUses": "এই বস্তুর জন্য সৃজনশীল ব্যবহারের তালিকা করুন"
+    },
+    "anagram": {
+      "placeholder": "শব্দটি টাইপ করুন...",
+      "title": "আনাগ্রাম",
+      "avgSolve": "গড় সমাধান",
+      "letterWords": "{{len}}-অক্ষরের শব্দ",
+      "submit": "জমা দিন"
+    },
+    "facialEmotion": {
+      "happy": "খুশি",
+      "sad": "দুঃখজনক",
+      "angry": "রাগ",
+      "fearful": "ভীতু",
+      "disgusted": "বিরক্ত",
+      "surprised": "বিস্মিত",
+      "lc": "এলসি",
+      "title": "ফেসিয়াল ইমোশন রিকগনিশন",
+      "topConfusions": "শীর্ষ বিভ্রান্তি"
+    },
+    "numberSeries": {
+      "easy": "সহজ",
+      "hard": "কঠিন"
+    },
+    "chainRecall": {
+      "round": "গোলাকার",
+      "title": "চেইন রিকল",
+      "chain": "চেইন",
+      "placeholder": "স্থানধারক"
+    },
+    "emotionalGoNogo": {
+      "fa": "এফ.এ",
+      "title": "আবেগপূর্ণ Go/No-Go",
+      "block1CommissionErrors": "ব্লক 1 কমিশন ত্রুটি",
+      "block2CommissionErrors": "ব্লক 2 কমিশন ত্রুটি",
+      "goHappy": "যান = সুখী",
+      "goSad": "গো = দুঃখ",
+      "block": "ব্লক",
+      "go": "যাও"
+    },
+    "timeEstimation": {
+      "cv": "সিভি"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop প্রভাব",
+      "title": "রঙ রাশ",
+      "congShort": "কং.",
+      "incongShort": "ইনকং।",
+      "congruentAccuracy": "সামঞ্জস্যপূর্ণ নির্ভুলতা",
+      "incongruentAccuracy": "অসঙ্গত নির্ভুলতা"
+    },
+    "mirror": {
+      "avgCorrectCells": "সঠিক কোষ (গড়)",
+      "symmetryType": "প্রতিসাম্য প্রকার",
+      "title": "আয়না"
+    },
+    "rhythmTap": {
+      "correctTrials": "সঠিক বিচার",
+      "avgRhythmScore": "গড় ছন্দের স্কোর",
+      "bestTrialScore": "সেরা ট্রায়াল স্কোর",
+      "worstTrialScore": "সবচেয়ে খারাপ ট্রায়াল স্কোর",
+      "level": "স্তর",
+      "rhythm": "ছন্দ",
+      "bestTrial": "সেরা বিচার",
+      "worstTrial": "সবচেয়ে খারাপ বিচার"
+    },
+    "vocalProsody": {
+      "questioning": "প্রশ্ন করা"
+    },
+    "arithmeticSpeed": {
+      "multiply": "গুন করুন",
+      "add": "যোগ করুন",
+      "subtract": "বিয়োগ করুন",
+      "title": "পাটিগণিতের গতি",
+      "score": "স্কোর",
+      "solved": "সমাধান করা হয়েছে",
+      "missed": "মিস"
+    },
+    "puzzle": {
+      "avgSolveTime": "গড় সমাধান সময়",
+      "totalMoves": "মোট চাল",
+      "totalErrors": "মোট ত্রুটি",
+      "gridSize": "গ্রিডের আকার",
+      "maxGridReached": "সর্বোচ্চ গ্রিডে পৌঁছেছে",
+      "maxLevelReached": "সর্বোচ্চ স্তরে পৌঁছেছে৷",
+      "maxNodesReached": "সর্বাধিক নোড পৌঁছেছে",
+      "puzzleDetails": "ধাঁধা বিস্তারিত",
+      "roundDetails": "বৃত্তাকার বিবরণ",
+      "solved": "সমাধান করা হয়েছে!",
+      "undo": "পূর্বাবস্থায় ফেরান",
+      "reset": "রিসেট করুন",
+      "check": "চেক করুন",
+      "moves": "নড়াচড়া করে",
+      "time": "সময়",
+      "level": "স্তর",
+      "errors": "ত্রুটি",
+      "score": "স্কোর",
+      "grid": "গ্রিড",
+      "crossings": "ক্রসিং",
+      "pearls": "মুক্তা",
+      "clues": "ক্লুস",
+      "region": "অঞ্চল",
+      "filled": "ভরা",
+      "cells": "কোষ",
+      "undosLeft": "পূর্বাবস্থা বাকি আছে",
+      "gems": "রত্ন",
+      "connected": "সংযুক্ত",
+      "slides": "স্লাইড",
+      "progress": "অগ্রগতি",
+      "rotations": "ঘূর্ণন",
+      "puzzle": "ধাঁধা",
+      "uncovered": "অনাবৃত",
+      "colored": "রঙিন",
+      "violations": "লঙ্ঘন",
+      "blacked": "কালো করা হয়েছে",
+      "empty": "খালি",
+      "remaining": "অবশিষ্ট",
+      "pairs": "জোড়া",
+      "flips": "উল্টে যায়",
+      "found": "পাওয়া গেছে",
+      "balls": "বল",
+      "guesses": "অনুমান করে",
+      "original": "আসল",
+      "findDifferences": "পার্থক্য খুঁজুন",
+      "totalDrags": "মোট ড্র্যাগ",
+      "totalUndos": "মোট পূর্বাবস্থা",
+      "totalEdgesDrawn": "মোট প্রান্ত টানা",
+      "totalLasers": "মোট লেজার",
+      "totalSlides": "মোট স্লাইড",
+      "totalRotations": "মোট ঘূর্ণন",
+      "totalRectangles": "মোট আয়তক্ষেত্র",
+      "totalScore": "মোট স্কোর",
+      "avgTime": "গড় সময়",
+      "cellsCleared": "কোষ সাফ করা হয়েছে",
+      "totalDiffsFound": "মোট পার্থক্য পাওয়া গেছে",
+      "gemsCollected": "রত্ন সংগ্রহ",
+      "pushBoxesOntoTargets": "লক্ষ্য সম্মুখের সমস্ত বাক্স ধাক্কা",
+      "fireLasersMarkBalls": "প্রান্ত থেকে ফায়ার লেজার, তারপর বল অবস্থান চিহ্নিত",
+      "revealingAnswer": "উত্তর প্রকাশ করা হচ্ছে...",
+      "checkAnswer": "উত্তর চেক করুন",
+      "pickNumberBelow": "নীচের একটি সংখ্যা চয়ন করুন",
+      "tapCellToAssign": "একটি নম্বর বরাদ্দ করতে একটি ঘরে আলতো চাপুন৷",
+      "tapEdgesToPlaceWalls": "দেয়াল স্থাপনের জন্য প্রান্তে আলতো চাপুন। K অঞ্চলে বিভক্ত করুন।",
+      "ghosts": "ভূত",
+      "vampires": "ভ্যাম্পায়ার",
+      "zombies": "জম্বি",
+      "dominoes": "ডমিনোস",
+      "islands": "দ্বীপপুঞ্জ",
+      "pegsLeft": "পেগস বাম",
+      "bestRemaining": "সেরা বাকি",
+      "puzzlesSolved": "ধাঁধার সমাধান",
+      "flooded": "বন্যা",
+      "edges": "প্রান্ত",
+      "totalPlacements": "মোট বসানো",
+      "totalRemovals": "মোট অপসারণ",
+      "maxTileReached": "সর্বোচ্চ টাইল পৌঁছেছে",
+      "target": "টার্গেট",
+      "placed": "স্থাপন করা হয়েছে",
+      "totalGuesses": "মোট অনুমান",
+      "guessesLeft": "অনুমান বাকি",
+      "difficulty": "অসুবিধা"
+    },
+    "palisade": {
+      "title": "পালিসেড",
+      "puzzles": "ধাঁধা",
+      "maxLevel": "সর্বোচ্চ স্তর"
+    },
+    "keen": {
+      "title": "কেনকেন",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "errors": "ত্রুটি",
+      "avgTime": "গড় সময়",
+      "erase": "মুছে ফেলুন"
+    },
+    "blackbox": {
+      "title": "ব্ল্যাক বক্স",
+      "puzzles": "ধাঁধা",
+      "lasers": "লেজার",
+      "avgTime": "গড় সময়"
+    },
+    "designFluency": {
+      "title": "নকশা সাবলীলতা",
+      "uniqueDesigns": "অনন্য ডিজাইন",
+      "duplicates": "ডুপ্লিকেট",
+      "round": "গোলাকার",
+      "roundComplete": "রাউন্ড সম্পূর্ণ",
+      "youCreatedDesigns": "আপনি {{count}} ডিজাইন তৈরি করেছেন",
+      "startRound": "রাউন্ড শুরু করুন",
+      "instructions": "নির্দেশনা",
+      "designs": "ডিজাইন",
+      "clear": "পরিষ্কার",
+      "addDesign": "যোগ করুন"
+    },
+    "signpost": {
+      "title": "সাইনপোস্ট",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "avgTime": "গড় সময়",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "sokoban": {
+      "title": "সোকোবন",
+      "level": "স্তর",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "undos": "পূর্বাবস্থা",
+      "puzzle": "ধাঁধা"
+    },
+    "numericalStroop": {
+      "left": "বাম",
+      "right": "ঠিক"
+    },
+    "biologicalMotion": {
+      "title": "জৈবিক গতি",
+      "noiseDots": "গোলমাল বিন্দু",
+      "whichDirection": "কোন দিকে?",
+      "left": "বাম",
+      "right": "ঠিক"
+    },
+    "inertia": {
+      "title": "জড়তা",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "gems": "রত্ন",
+      "moves": "নড়াচড়া করে"
+    },
+    "waterLevel": {
+      "title": "পানির স্তর",
+      "error": "ত্রুটি",
+      "tilt": "কাত",
+      "waterLine": "জলের লাইন?"
+    },
+    "twiddle": {
+      "title": "টুইডল",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "sudoku": {
+      "title": "সুডোকু",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "errors": "ত্রুটি",
+      "avgTime": "গড় সময়",
+      "erase": "মুছে ফেলুন"
+    },
+    "rectangles": {
+      "title": "আয়তক্ষেত্র",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "rectanglesCount": "আয়তক্ষেত্র",
+      "maxGrid": "সর্বোচ্চ গ্রিড",
+      "cancelSelection": "নির্বাচন বাতিল করুন"
+    },
+    "filling": {
+      "title": "ফিলিং",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "avgTime": "গড় সময়",
+      "grid": "গ্রিড"
+    },
+    "spacedRetrieval": {
+      "title": "ফাঁকা পুনরুদ্ধার",
+      "studyPair": "এই জুটি অধ্যয়ন",
+      "waitAndSolve": "অপেক্ষা করুন... তারপর সমাধান করুন",
+      "equalsQuestion": "=?",
+      "intervalWhatPairs": "ব্যবধান: কোন জোড়া?"
+    },
+    "prototypeDistortion": {
+      "title": "প্রোটোটাইপ বিকৃতি",
+      "studyPhase": "অধ্যয়ন পর্ব",
+      "testPhase": "পরীক্ষার পর্যায়",
+      "yesBelongs": "হ্যাঁ — অন্তর্গত",
+      "noRandom": "না — এলোমেলো"
+    },
+    "motionCoherence": {
+      "title": "মোশন কোহেরেন্স",
+      "threshold": "থ্রেশহোল্ড",
+      "coherence": "সমন্বয়",
+      "whichDirection": "কোন দিকে?"
+    },
+    "cube": {
+      "title": "কিউব",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxLevel": "সর্বোচ্চ স্তর",
+      "cubeFaces": "ঘন মুখ",
+      "moveUp": "উপরে",
+      "moveLeft": "বাম",
+      "moveDown": "নিচে",
+      "moveRight": "ঠিক"
+    },
+    "sameGame": {
+      "title": "একই খেলা",
+      "score": "স্কোর",
+      "cleared": "সাফ",
+      "cells": "কোষ",
+      "accuracy": "নির্ভুলতা"
+    },
+    "crossModalMatching": {
+      "title": "ক্রস-মোডাল ম্যাচিং",
+      "chance": "সুযোগ",
+      "whichPatternMatchesRhythm": "কোন প্যাটার্ন ছন্দ মেলে?"
+    },
+    "mosaic": {
+      "title": "মোজাইক",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "spotDiff": {
+      "title": "পার্থক্য স্পট",
+      "level": "স্তর",
+      "grid": "গ্রিড",
+      "accuracy": "নির্ভুলতা",
+      "perfect": "পারফেক্ট",
+      "avgTime": "গড় সময়",
+      "found": "পাওয়া গেছে"
+    },
+    "lightsOut": {
+      "title": "লাইট আউট",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "pipeline": {
+      "title": "পাইপলাইন",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "rotations": "ঘূর্ণন",
+      "avgTime": "গড় সময়"
+    },
+    "tracks": {
+      "title": "ট্র্যাক",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "errors": "ত্রুটি",
+      "avgTime": "গড় সময়"
+    },
+    "netslide": {
+      "title": "নেটস্লাইড",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "slides": "স্লাইড",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "cognitiveBias": {
+      "title": "জ্ঞানীয় পক্ষপাতের প্রশিক্ষণ",
+      "biasResistance": "পক্ষপাত প্রতিরোধ",
+      "biased": "পক্ষপাতদুষ্ট",
+      "continue": "চালিয়ে যান"
+    },
+    "empathicAccuracy": {
+      "title": "সহানুভূতিশীল নির্ভুলতা",
+      "emotionId": "আবেগ",
+      "avgRatingError": "গড় রেটিং ত্রুটি",
+      "scenarios": "দৃশ্যকল্প",
+      "perfect": "পারফেক্ট",
+      "rating": "রেটিং",
+      "howDoesCharacterFeel": "চরিত্রটি কেমন লাগছে?",
+      "rateIntensity": "তীব্রতা রেট",
+      "whatEmotion": "কি আবেগ?",
+      "yourRating": "আপনার রেটিং",
+      "correct": "সঠিক",
+      "emotion": "আবেগ"
+    },
+    "guess": {
+      "title": "মাস্টারমাইন্ড",
+      "solved": "সমাধান করা হয়েছে",
+      "guesses": "অনুমান করে"
+    },
+    "dominosa": {
+      "title": "ডমিনোসা",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxLevel": "সর্বোচ্চ স্তর"
+    },
+    "magnets": {
+      "title": "চুম্বক",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxLevel": "সর্বোচ্চ স্তর"
+    },
+    "tangram": {
+      "placeAll": "সমস্ত টুকরা রাখুন",
+      "solved": "সমাধান করা হয়েছে!",
+      "notRight": "একদম ঠিক না",
+      "title": "ট্যাংগ্রাম",
+      "level": "স্তর",
+      "puzzles": "ধাঁধা",
+      "placements": "প্লেসমেন্ট",
+      "removals": "অপসারণ",
+      "puzzleNumber": "ধাঁধা {{n}}",
+      "pieces": "টুকরা",
+      "targetCells": "সিবল",
+      "dragHint": "টেনে আনুন বা গ্রিডে টুকরা রাখুন",
+      "selectHint": "একটি টুকরা নির্বাচন করুন",
+      "rotate": "টুর্নার",
+      "undo": "অ্যানুলার",
+      "check": "চেক করুন"
+    },
+    "galaxies": {
+      "title": "ছায়াপথ"
+    },
+    "flood": {
+      "title": "বন্যা"
+    },
+    "pegs": {
+      "title": "পেগস",
+      "bestPegs": "সেরা পেগ"
+    },
+    "auditoryFigureGround": {
+      "title": "অডিটরি ফিগার-গ্রাউন্ড",
+      "patternPresent": "প্যাটার্ন বর্তমান?",
+      "pattern": "প্যাটার্ন",
+      "noPattern": "কোন প্যাটার্ন নেই"
+    },
+    "selfOrderedPointing": {
+      "title": "স্ব-অর্ডারড পয়েন্টিং",
+      "maxSpan": "সর্বোচ্চ স্প্যান",
+      "errors": "ত্রুটি",
+      "round": "গোলাকার",
+      "setOf": "{{count}} এর সেট"
+    },
+    "mirrorTracing": {
+      "title": "মিরর ট্রেসিং",
+      "totalErrors": "মোট ত্রুটি",
+      "avgTime": "গড় সময়",
+      "shapes": "আকৃতি",
+      "perfect": "পারফেক্ট",
+      "improvement": "উন্নতি",
+      "errorsMiddot": "ত্রুটি ·",
+      "shape": "আকৃতি",
+      "errors": "ত্রুটি",
+      "xIsMirrored": "এক্স মিরর করা হয়!"
+    },
+    "clockDrawing": {
+      "title": "ঘড়ি অঙ্কন",
+      "avgError": "গড় ত্রুটি",
+      "setTo": "সেট করুন",
+      "submit": "জমা দিন"
+    },
+    "cognitiveMap": {
+      "title": "জ্ঞানীয় মানচিত্র",
+      "explore": "অন্বেষণ",
+      "sRemaining": "S অবশিষ্ট",
+      "from": "থেকে",
+      "whichDirectionIs": "কোন দিকে"
+    },
+    "sixteen": {
+      "title": "ষোল"
+    },
+    "loopy": {
+      "title": "লুপি"
+    },
+    "lightup": {
+      "title": "লাইট আপ"
+    },
+    "twentyFortyEight": {
+      "maxTile": "সর্বোচ্চ টালি",
+      "moves": "নড়াচড়া করে",
+      "max": "সর্বোচ্চ"
+    },
+    "bridges": {
+      "title": "ব্রিজ",
+      "puzzles": "ধাঁধা",
+      "maxLevel": "সর্বোচ্চ স্তর",
+      "level": "স্তর"
+    },
+    "net": {
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxGrid": "সর্বোচ্চ গ্রিড"
+    },
+    "flip": {
+      "title": "ফ্লিপ"
+    },
+    "range": {
+      "title": "পরিসর"
+    },
+    "slant": {
+      "title": "তির্যক"
+    },
+    "towers": {
+      "title": "টাওয়ার",
+      "puzzles": "ধাঁধা",
+      "avgTime": "গড় সময়",
+      "erase": "মুছে ফেলুন"
+    },
+    "pearl": {
+      "title": "মুক্তা",
+      "edges": "প্রান্ত"
+    },
+    "mapColoring": {
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "moves": "নড়াচড়া করে",
+      "maxLevel": "সর্বোচ্চ স্তর"
+    },
+    "singles": {
+      "title": "অবিবাহিত"
+    },
+    "nonogram": {
+      "title": "ননগ্রাম"
+    },
+    "undead": {
+      "title": "অমৃত",
+      "accuracy": "নির্ভুলতা",
+      "puzzles": "ধাঁধা",
+      "avgTime": "গড় সময়"
+    },
+    "untangle": {
+      "title": "জট খুলুন",
+      "drags": "টেনে নেয়",
+      "maxNodes": "সর্বোচ্চ নোড"
+    },
+    "unruly": {
+      "title": "অশান্ত"
+    },
+    "fifteen": {
+      "title": "পনেরো"
+    },
+    "tents": {
+      "title": "তাঁবু"
+    },
+    "mesker": {
+      "pen": "কলম",
+      "stroke": "স্ট্রোক",
+      "penPressureHint": "ধারাবাহিক কলমের চাপ দিয়ে লিখুন"
+    },
+    "modality": {
+      "position": "অবস্থান",
+      "audio": "অডিও"
+    },
+    "validate": "যাচাই করুন"
+  },
+  "trace": {
+    "instructions": "N-ব্যাক অবস্থানে সোয়াইপ করুন। একই অবস্থানে থাকলে ডবল-ট্যাপ করুন।",
+    "hint": {
+      "validated": "যাচাই করা হয়েছে",
+      "draw": "অক্ষরটি আঁকুন • যাচাই করতে আলতো চাপুন৷",
+      "drawWithColor": "অক্ষরটি আঁকুন • রঙ নির্বাচন করুন • যাচাই করতে আলতো চাপুন৷",
+      "type": "অক্ষরটি টাইপ করুন • যাচাই করতে লিখুন",
+      "typeWithColor": "অক্ষরটি টাইপ করুন • রঙ নির্বাচন করুন • যাচাই করতে প্রবেশ করুন৷",
+      "typeResult": "ফলাফল টাইপ করুন • যাচাই করতে প্রবেশ করুন",
+      "writeResult": "ফলাফল লিখুন • যাচাই করতে আলতো চাপুন"
+    },
+    "keyboard": {
+      "letterInput": "চিঠি",
+      "numberInput": "সংখ্যা"
+    },
+    "arithmetic": {
+      "cueHint": "2 সংখ্যা মুখস্থ করুন",
+      "refresh": "নতুন"
+    },
+    "hintPosition": "উদ্দীপক {{n}} আগে কোথায় ছিল?",
+    "hintN0": "বর্তমান উদ্দীপনা নির্দেশ করুন",
+    "warmupHint": "পদগুলি মুখস্থ করুন। কোন প্রতিক্রিয়া প্রয়োজন.",
+    "hintDraw": "অক্ষরটি আঁকুন • যাচাই করতে আলতো চাপুন৷",
+    "hintDrawWithColor": "অক্ষরটি আঁকুন • রঙ নির্বাচন করুন • যাচাই করতে আলতো চাপুন৷",
+    "hintWriteResult": "ফলাফল লিখুন • যাচাই করতে আলতো চাপুন",
+    "guide": {
+      "swipeNormal": "শেষ অবস্থান (N-0) থেকে {{n}} ধাপ আগে (N-{{n}}) অবস্থানে সোয়াইপ করুন। একই অবস্থানে থাকলে ডবল-ট্যাপ করুন।",
+      "swipeSequential": "প্রতিটি মধ্যবর্তী অবস্থানের মধ্য দিয়ে N-0 থেকে N-{{n}} পর্যন্ত ধাপে ধাপে সোয়াইপ করুন। একই অবস্থানে থাকলে ডবল-ট্যাপ করুন।",
+      "swipeDynamic": "প্রদর্শিত নিয়ম অনুসরণ করে সোয়াইপ করুন। একই অবস্থানে থাকলে ডবল-ট্যাপ করুন।",
+      "tapN0": "বর্তমান অবস্থানে আলতো চাপুন।",
+      "warmup": "অবস্থানগুলি মুখস্থ করুন - কোনও প্রতিক্রিয়ার প্রয়োজন নেই।",
+      "writeDraw": "{{n}} ধাপ আগে শোনা চিঠিটি আঁকুন • যাচাই করতে আলতো চাপুন",
+      "writeDrawColor": "{{n}} ধাপ আগে শোনা চিঠিটি আঁকুন • এর রঙ নির্বাচন করুন • যাচাই করতে আলতো চাপুন৷",
+      "writeType": "{{n}} পদক্ষেপ আগে শোনা চিঠিটি টাইপ করুন • যাচাই করতে প্রবেশ করুন৷",
+      "writeTypeColor": "{{n}} পদক্ষেপ আগে শোনা চিঠি টাইপ করুন • এর রঙ নির্বাচন করুন • যাচাই করতে প্রবেশ করুন৷",
+      "writeDrawN0": "আপনি এইমাত্র শুনেছেন এমন চিঠিটি আঁকুন • যাচাই করতে আলতো চাপুন৷",
+      "writeDrawColorN0": "আপনি এইমাত্র যে চিঠিটি শুনেছেন তা আঁকুন • এর রঙ নির্বাচন করুন • যাচাই করতে আলতো চাপুন৷",
+      "writeTypeN0": "আপনি এইমাত্র যে চিঠিটি শুনেছেন সেটি টাইপ করুন • যাচাই করতে প্রবেশ করুন৷",
+      "writeTypeColorN0": "আপনি এইমাত্র যে চিঠিটি শুনেছেন তা টাইপ করুন • এর রঙ নির্বাচন করুন • যাচাই করতে প্রবেশ করুন৷",
+      "writeResult": "ফলাফল লিখুন • যাচাই করতে আলতো চাপুন",
+      "validated": "যাচাই করা হয়েছে",
+      "holdMindful": "{{seconds}}s এর জন্য সেলটি ধরে রাখুন",
+      "swipeMindful": "{{seconds}}s-এ সোয়াইপ করুন"
+    },
+    "settings": {
+      "adaptiveTiming": "অভিযোজিত সময়",
+      "inputKeyboard": "কীবোর্ড",
+      "inputHandwriting": "হাতের লেখা",
+      "writingInput": "অক্ষর/সংখ্যা",
+      "section": {
+        "grid": "গ্রিড",
+        "input": "ইনপুট",
+        "rhythm": "ছন্দ",
+        "interface": "ইন্টারফেস",
+        "interfaceNone": "স্ট্যান্ডার্ড",
+        "sound": "শব্দ"
+      },
+      "isi": "ব্যবধান (ISI)",
+      "stimulusDuration": "উদ্দীপনার সময়কাল",
+      "feedbackDuration": "প্রতিক্রিয়া সময়কাল",
+      "ruleDisplay": "নিয়মের সময়কাল",
+      "blankInterval": "ফাঁকা ব্যবধান",
+      "showProgressBar": "অগ্রগতি বার",
+      "showInstructions": "ইন-গেম নির্দেশাবলী",
+      "arithmeticInterference": "পাটিগণিতের হস্তক্ষেপ",
+      "fullMenu": "সম্পূর্ণ মেনু",
+      "gridStyle": "গ্রিড শৈলী",
+      "gridStyleClassic": "ক্লাসিক",
+      "gridStyleTrace": "ট্রেস",
+      "guide": {
+        "swipeMindful": "{{seconds}}s-এ সোয়াইপ করুন",
+        "holdMindful": "{{seconds}}s এর জন্য সেলটি ধরে রাখুন"
+      },
+      "feedback": {
+        "gestureDuration": "অঙ্গভঙ্গি",
+        "holdDuration": "ধরে রাখুন",
+        "writingDuration": "লেখা"
+      }
+    },
+    "feedback": {
+      "holdDuration": "ধরে রাখুন",
+      "gestureDuration": "অঙ্গভঙ্গি",
+      "writingDuration": "লেখা"
+    },
+    "image": "আকৃতি",
+    "digits": "অঙ্ক",
+    "emotions": "আবেগ",
+    "words": "শব্দ",
+    "tones": "স্বর",
+    "spatial": "দিকনির্দেশনা"
+  },
+  "replay": {
+    "title": "সেশন রিপ্লে",
+    "play": "খেলা",
+    "pause": "বিরতি",
+    "restart": "রিস্টার্ট করুন",
+    "speed": "গতি",
+    "loading": "সেশন লোড হচ্ছে...",
+    "unavailable": "এই সেশনের জন্য রিপ্লে অনুপলব্ধ৷",
+    "backToStats": "পরিসংখ্যানে ফিরে যান",
+    "runStack": {
+      "original": "আসল",
+      "correction": "সংশোধন",
+      "delta": "Δ d'",
+      "inProgress": "চলছে",
+      "completed": "সম্পন্ন"
+    },
+    "abandon": "পরিত্যাগ করুন",
+    "badge": "রিপ্লে",
+    "completionReport": {
+      "backToHome": "ব্যাক",
+      "correctAgain": "আবার ঠিক করুন",
+      "deltaVsOriginal": "বনাম আসল",
+      "deltaVsParent": "বনাম পূর্ববর্তী রান",
+      "falseAlarmsSkipped": "ত্রুটি এড়ানো",
+      "missesCorrections": "সংশোধন",
+      "newFalseAlarms": "নতুন ত্রুটি",
+      "replayAgain": "রিপ্লে",
+      "scoreLabel": "d'স্কোর",
+      "title": "সংশোধন সম্পূর্ণ"
+    },
+    "controls": "নিয়ন্ত্রণ করে",
+    "correction": "সংশোধন",
+    "finished": "রিপ্লে শেষ",
+    "home": "বাড়ি",
+    "parseError": "অধিবেশন পড়তে অক্ষম",
+    "tapSlotToPlace": "স্থাপন করার জন্য একটি স্লটে আলতো চাপুন",
+    "timeline": "টাইমলাইন",
+    "focusTimeline": {
+      "open": "টাইমলাইন দেখান",
+      "close": "টাইমলাইন বন্ধ করুন",
+      "title": "N-Back টাইমলাইন",
+      "fillAll": "সব পূরণ করুন",
+      "fillCard": "কার্ড পূরণ করুন"
+    },
+    "hud": {
+      "counterDisplay": "কাউন্টার প্রদর্শন",
+      "toggleCounterDisplay": "কাউন্টার ডিসপ্লে টগল করুন"
+    },
+    "validate": "যাচাই করুন"
+  },
+  "recovery": {
+    "title": "অধিবেশন বিঘ্নিত",
+    "description": "একটি অধিবেশন চলছিল. আপনি কি আবার শুরু করতে চান?",
+    "mode": "মোড",
+    "level": "স্তর",
+    "progress": "অগ্রগতি",
+    "timeAgo": "সময়",
+    "resume": "সেশন পুনরায় শুরু করুন",
+    "startFresh": "নতুন করে শুরু করুন",
+    "staleWarning": "এই সেশনটি পুরানো, আবার শুরু করা চ্যালেঞ্জিং হতে পারে।",
+    "modes": {
+      "game": "প্রশিক্ষণ",
+      "activeTraining": "সক্রিয় প্রশিক্ষণ",
+      "flowTraining": "ডুয়েল প্লেস ট্রেনিং",
+      "dualPickTraining": "ডুয়াল পিক",
+      "traceTraining": "ডুয়াল ট্রেস"
+    }
+  },
+  "rewards": {
+    "congratulations": "অভিনন্দন!",
+    "duration": "{{days}} দিনের প্রিমিয়াম",
+    "lifetimeLabel": "আজীবন অ্যাক্সেস",
+    "expiresAt": "{{date}} পর্যন্ত বৈধ",
+    "neverExpires": "কখনই মেয়াদ শেষ হয় না",
+    "continue": "চালিয়ে যান",
+    "discovery": {
+      "name": "আবিষ্কার পাস",
+      "description": "7 দিনের প্রিমিয়াম — সমস্ত বৈশিষ্ট্য অন্বেষণ করুন"
+    },
+    "engagement": {
+      "name": "এনগেজমেন্ট পাস",
+      "description": "1 মাসের প্রিমিয়াম — আপনার শৃঙ্খলা পরিশোধ করে"
+    },
+    "expert": {
+      "name": "বিশেষজ্ঞ পাস",
+      "description": "3 মাসের প্রিমিয়াম — আপনি একজন সত্যিকারের অনুশীলনকারী"
+    },
+    "lifetime": {
+      "name": "আজীবন অ্যাক্সেস",
+      "description": "প্রিমিয়াম চিরকাল — আপনি নিউরোডুয়াল আয়ত্ত করেছেন"
+    },
+    "xpRemaining": "XP বাকি",
+    "permanentAccessUnlocked": "স্থায়ী অ্যাক্সেস আনলক করা হয়েছে",
+    "reachedTheTop": "আপনি শীর্ষে পৌঁছেছেন!"
+  },
+  "progression": {
+    "level": "লেভেল {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "পরবর্তী স্তর",
+    "reached": "পৌঁছেছে",
+    "inProgress": "চলছে"
+  },
+  "gridlock": {
+    "nextPuzzle": "পরবর্তী ধাঁধা →"
+  }
+}

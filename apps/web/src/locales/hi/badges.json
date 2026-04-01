@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "निरंतरता",
+      "performance": "प्रदर्शन",
+      "resilience": "दृढ़ता",
+      "exploration": "अन्वेषण",
+      "milestone": "उपलब्धियाँ",
+      "cognitive": "संज्ञानात्मक"
+    },
+    "first_session": {
+      "name": "जागृत न्यूरॉन",
+      "description": "पहला सत्र पूरा हुआ।"
+    },
+    "sessions_10": {
+      "name": "स्तंभ (कांस्य)",
+      "description": "10 सत्र पूरे हुए।"
+    },
+    "sessions_25": {
+      "name": "स्तंभ (रजत)",
+      "description": "25 सत्र पूरे हुए।"
+    },
+    "marathoner": {
+      "name": "स्तंभ (स्वर्ण)",
+      "description": "50 सत्र पूरे हुए।"
+    },
+    "streak_3": {
+      "name": "नवजात अनुष्ठान",
+      "description": "3 दिन की श्रृंखला।"
+    },
+    "streak_7": {
+      "name": "दैनिक अनुष्ठान",
+      "description": "7 दिन की श्रृंखला।"
+    },
+    "streak_14": {
+      "name": "दृढ़ आदत",
+      "description": "14 दिन की श्रृंखला।"
+    },
+    "streak_30": {
+      "name": "लौह अनुशासन",
+      "description": "30 दिन की श्रृंखला।"
+    },
+    "early_bird": {
+      "name": "सुबह का पंछी",
+      "description": "5 अलग-अलग दिनों में सुबह 8 बजे से पहले सत्र।"
+    },
+    "night_owl": {
+      "name": "रात का उल्लू",
+      "description": "5 अलग-अलग दिनों में रात 10 बजे के बाद सत्र।"
+    },
+    "brain_n3": {
+      "name": "तेज़ दिमाग",
+      "description": "स्तर N-3 तक पहुँचें।"
+    },
+    "brain_n4": {
+      "name": "मजबूत दिमाग",
+      "description": "स्तर N-4 तक पहुँचें।"
+    },
+    "brain_n5": {
+      "name": "ओलंपिक दिमाग",
+      "description": "स्तर N-5 तक पहुँचें।"
+    },
+    "brain_n7": {
+      "name": "संज्ञानात्मक विशिष्ट",
+      "description": "स्तर N-7 तक पहुँचें।"
+    },
+    "brain_n10": {
+      "name": "अतिमानव",
+      "description": "स्तर N-10 तक पहुँचें।"
+    },
+    "sniper": {
+      "name": "निशानेबाज़",
+      "description": "N ≥ 2 पर > 90% सटीकता।"
+    },
+    "accuracy_95": {
+      "name": "शल्य-चिकित्सा सटीकता",
+      "description": "N ≥ 2 पर > 95% सटीकता।"
+    },
+    "accuracy_98": {
+      "name": "लेज़र",
+      "description": "N ≥ 2 पर > 98% सटीकता।"
+    },
+    "untouchable": {
+      "name": "अछूत",
+      "description": "N ≥ 2 पर पूर्ण सत्र (0 त्रुटियाँ)।"
+    },
+    "rt_500": {
+      "name": "तीव्र प्रतिक्रिया",
+      "description": "औसत प्रतिक्रिया समय < 500ms, ≥70% सटीकता के साथ।"
+    },
+    "flash": {
+      "name": "चमक",
+      "description": "औसत प्रतिक्रिया समय < 400ms, ≥70% सटीकता के साथ।"
+    },
+    "rt_300": {
+      "name": "बिजली",
+      "description": "औसत प्रतिक्रिया समय < 300ms, ≥70% सटीकता के साथ।"
+    },
+    "consistent": {
+      "name": "स्थिर",
+      "description": "RT मानक विचलन < 100ms (≥10 उत्तर आवश्यक)।"
+    },
+    "dprime_master": {
+      "name": "d' मास्टर",
+      "description": "एक सत्र में d-prime > 3.0।"
+    },
+    "dprime_4": {
+      "name": "SDT विशेषज्ञ",
+      "description": "एक सत्र में d-prime > 4.0।"
+    },
+    "no_pause": {
+      "name": "अविराम",
+      "description": "≥75% सटीकता के साथ बिना रुके 5 लगातार सत्र।"
+    },
+    "steady_hands": {
+      "name": "स्थिर हाथ",
+      "description": "सत्र के दौरान कोई गलत इनपुट नहीं (≥80% सटीकता)।"
+    },
+    "zen_master": {
+      "name": "ज़ेन मास्टर",
+      "description": "बिना छोड़े 10 सत्र।"
+    },
+    "comeback_kid": {
+      "name": "वापसी का वार",
+      "description": "स्तर गिरने के बाद स्तर ऊपर जाना।"
+    },
+    "persistent": {
+      "name": "दृढ़",
+      "description": "विफलता के बाद उसी दिन 3 सत्र।"
+    },
+    "second_wind": {
+      "name": "दूसरी साँस",
+      "description": "पहली और दूसरी छमाही के बीच d-prime सुधारें (d′ ≥ 2.0 आवश्यक)।"
+    },
+    "plateau_breaker": {
+      "name": "पठार भंजक",
+      "description": "एक ही स्तर पर 10+ सत्रों के बाद प्रगति।"
+    },
+    "no_surrender": {
+      "name": "कभी न हारो",
+      "description": "बिना छोड़े 25 सत्र।"
+    },
+    "ironwill": {
+      "name": "लौह इच्छाशक्ति",
+      "description": "बिना छोड़े 50 सत्र।"
+    },
+    "audiophile": {
+      "name": "श्रवण प्रेमी",
+      "description": "ऑडियो > 80% लेकिन विज़ुअल < 70%।"
+    },
+    "eagle_eye": {
+      "name": "बाज की नज़र",
+      "description": "विज़ुअल > 80% लेकिन ऑडियो < 70%।"
+    },
+    "synchronized": {
+      "name": "सिंक्रनाइज़्ड",
+      "description": "ऑडियो और विज़ुअल स्कोर 5% के भीतर (≥60% आवश्यक)।"
+    },
+    "dual_master": {
+      "name": "Dual मास्टर",
+      "description": "एक ही सत्र में ऑडियो और विज़ुअल > 85% (≥6 ल्यूर/मोडैलिटी)।"
+    },
+    "dual_elite": {
+      "name": "Dual विशिष्ट",
+      "description": "N ≥ 3 पर एक ही सत्र में ऑडियो और विज़ुअल > 90% (≥6 ल्यूर/मोडैलिटी)।"
+    },
+    "centurion": {
+      "name": "सेंचुरियन",
+      "description": "100 सत्र पूरे हुए।"
+    },
+    "sessions_250": {
+      "name": "किंवदंती (पन्ना)",
+      "description": "250 सत्र पूरे हुए।"
+    },
+    "sessions_500": {
+      "name": "अमर (हीरा)",
+      "description": "500 सत्र पूरे हुए।"
+    },
+    "trials_500": {
+      "name": "अभ्यासी",
+      "description": "कुल 500 प्रयास खेले गए।"
+    },
+    "trials_1000": {
+      "name": "प्रशिक्षित",
+      "description": "कुल 1,000 प्रयास खेले गए।"
+    },
+    "trials_5000": {
+      "name": "अनुभवी",
+      "description": "कुल 5,000 प्रयास खेले गए।"
+    },
+    "trials_10k": {
+      "name": "10,000 प्रयास",
+      "description": "कुल 10,000 प्रयास खेले गए।"
+    },
+    "trials_50k": {
+      "name": "दैत्य",
+      "description": "कुल 50,000 प्रयास खेले गए।"
+    },
+    "streak_90": {
+      "name": "निर्दोष तिमाही",
+      "description": "90 दिन की श्रृंखला।"
+    },
+    "streak_365": {
+      "name": "पूर्ण वर्ष",
+      "description": "365 दिन की श्रृंखला।"
+    },
+    "veteran": {
+      "name": "दिग्गज",
+      "description": "1 वर्ष का उपयोग।"
+    },
+    "metronome": {
+      "name": "मेट्रोनोम",
+      "description": "≥20 प्रयासों पर RT विचरण < 50ms (सक्रिय उत्तर आवश्यक)।"
+    },
+    "flow_state": {
+      "name": "कृपा की स्थिति",
+      "description": "पूरे सत्र में फ़्लो का पता चला।"
+    },
+    "sang_froid": {
+      "name": "ठंडा दिमाग",
+      "description": "त्रुटि के बाद कोई त्रुटि श्रृंखला नहीं (≥70% सटीकता)।"
+    },
+    "imperturbable": {
+      "name": "अविचलित",
+      "description": "बिना ध्यान खोए पूर्ण सत्र (≥60% सटीकता)।"
+    },
+    "comeback_strong": {
+      "name": "शानदार वापसी",
+      "description": "3+ दिन की अनुपस्थिति के बाद अपना d-prime रिकॉर्ड तोड़ें (d′ ≥ 2.5)।"
+    }
+  }
+}

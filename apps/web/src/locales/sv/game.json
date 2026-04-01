@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Hur mår du?",
+      "tired": "Trött",
+      "normal": "Normal",
+      "energized": "Energiserad"
+    },
+    "aria": {
+      "trialTimer": "Testtimer",
+      "positionMatch": "Positionsmatch",
+      "audioMatch": "Ljudmatchning",
+      "audioLetter": "Ljudbrev:",
+      "traceGrid": "Spårrutnät"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Växla synkmonitor",
+      "start": "starta",
+      "end": "slut",
+      "pinLabel": "stift",
+      "pinTitle": "Fäst på skärmen",
+      "inputLabel": "ingång",
+      "inputTitle": "Växla ingångsfördröjningsprofilering (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "på",
+      "off": "av",
+      "hideLabel": "gömma sig",
+      "hideTitle": "Dölj (om inte syncHud=1 eller ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "ljud",
+        "expected": "förväntas"
+      },
+      "labels": {
+        "trial": "rättegång",
+        "lagShow": "Visningsfördröjning",
+        "lagHide": "Fördröjd mask",
+        "winErr": "vinna fel",
+        "endRef": "slutref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "ingång->utskick p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "ingång->måla p95",
+        "inputPending": "inmatning väntar",
+        "inputSamples": "ingångsexempel",
+        "touchSamples": "beröringsprover",
+        "mouseSamples": "musprover",
+        "keyboardSamples": "tangentbordsexempel",
+        "latestMethod": "senaste (metod)",
+        "latestModality": "senaste modalitet",
+        "audioCueMode": "ljudsignaler",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "återställ ingångsprofilerare"
+    },
+    "hud": {
+      "resume": "Återuppta",
+      "pause": "Pausa",
+      "quit": "Avsluta",
+      "restart": "Starta om",
+      "spaceToStart": "Utrymme att börja",
+      "settings": "Inställningar",
+      "enterToAdvance": "Gå in för att gå vidare",
+      "trial": "Rättegång",
+      "muteTexture": "Stäng av bakgrundsljudet"
+    },
+    "status": {
+      "paused": "Pausad"
+    },
+    "completed": "Avslutad",
+    "starting": {
+      "getReady": "Gör dig redo..."
+    },
+    "quitModal": {
+      "title": "Vill du avsluta sessionen?",
+      "message": "Dina framsteg kommer inte att sparas.",
+      "confirm": "Avsluta",
+      "cancel": "Fortsätt",
+      "close": "Stäng"
+    },
+    "controls": {
+      "position": "Position",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Ljud & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Ljud",
+      "audio2": "Ljud 2",
+      "color": "Färg",
+      "arithmetic": "Aritmetik",
+      "image": "Form"
+    },
+    "arithmetic": {
+      "answer": "Svara",
+      "clear": "Rensa",
+      "hint": "Tangentbord: 0–9 · '-' för tecknet · '.' för decimaler · Backsteg för att rensa"
+    },
+    "navigation": {
+      "back": "Tillbaka"
+    },
+    "xp": {
+      "title": "XP tjänat",
+      "base": "Bas (N-{{level}})",
+      "performance": "Prestanda",
+      "accuracy": "Noggrannhet",
+      "streakBonus": "Streak bonus",
+      "dailyBonus": "Dagens första",
+      "badgeBonus": "Märken",
+      "flowBonus": "Dubbelplatsbonus",
+      "confidenceMultiplier": "Förtroende",
+      "dailyCapReached": "Daglig XP-gräns nådd",
+      "levelReached": "Nivå {{level}} nådd!"
+    },
+    "badges": {
+      "newUnlocked": "Nya märken upplåsta"
+    },
+    "getReady": "Gör dig redo...",
+    "layoutEdit": {
+      "done": "Klart",
+      "reset": "Återställ",
+      "instructions": "Dra zoner för att ändra ordning. Ändra storlek med handtagen.",
+      "title": "Redigera läge",
+      "cancel": "Avbryt",
+      "save": "Lås",
+      "editLayout": "Redigera layout"
+    },
+    "paused": "Pausad",
+    "pressEscapeToResume": "Tryck på Escape för att fortsätta",
+    "settings": {
+      "editLayout": "Redigera layout",
+      "gridAndButtons": "Rutnät och knappar",
+      "swapPositionAudio": "Byt position / ljud",
+      "title": "Inställningar",
+      "quickHint": "Justera några inställningar utan att lämna spelet.",
+      "quickUnavailable": "Inga snabbinställningar tillgängliga för det här läget ännu."
+    },
+    "pinkNoiseInfo": "En bakgrundston följer med varje stimulans. Du kan anpassa eller inaktivera den i ljudinställningarna.",
+    "pinkNoiseDismiss": "Fortsätt",
+    "audioMode": "Ljudläge",
+    "cogTask": {
+      "precision": "Noggrannhet",
+      "avgRt": "Genomsnittlig RT",
+      "avgRtShort": "Genomsnittlig RT",
+      "trials": "Rättegångar",
+      "correct": "Rätt",
+      "errors": "Fel",
+      "effect": "Effekt",
+      "restart": "Starta om",
+      "home": "Hem",
+      "performance": "Prestanda",
+      "trialDetail": "Försöksdetalj",
+      "setDetail": "Ställ in detalj",
+      "roundDetail": "Rund detalj",
+      "problemDetail": "Problemdetaljer",
+      "phaseDetail": "Fasdetalj",
+      "feedbackCorrect": "Rätt",
+      "feedbackIncorrect": "Felaktigt",
+      "feedbackTimeout": "För långsamt!",
+      "preparing": "Gör dig redo...",
+      "loading": "Laddar...",
+      "left": "Vänster",
+      "right": "Rätt",
+      "up": "Upp",
+      "down": "Ner",
+      "congruent": "Kongruent",
+      "incongruent": "Inkongruent",
+      "congruencyEffect": "Kongruenseffekt",
+      "maxSpan": "Max spann",
+      "startingSpan": "Startspann",
+      "maxSpanReached": "Max intervall uppnått",
+      "longestStreak": "Längsta korrekta streak",
+      "series": "Streak",
+      "avgResponseTime": "Genomsnittlig svarstid",
+      "recall": "Minns",
+      "expected": "Förväntat",
+      "submit": "Skicka in",
+      "cancel": "Avbryt",
+      "clear": "Rensa",
+      "delete": "DEL",
+      "true": "Sant",
+      "false": "Falskt",
+      "target": "Mål",
+      "nonTarget": "Icke-mål",
+      "distractor": "Distraktör",
+      "same": "Samma",
+      "different": "Olika",
+      "identical": "Identiska",
+      "mirror": "Spegel",
+      "symmetric": "Symmetrisk",
+      "asymmetric": "Asymmetrisk",
+      "symShort": "Sym.",
+      "present": "Närvarande",
+      "absent": "Frånvarande",
+      "noTrials": "Inga försök slutförda.",
+      "noSets": "Inga set färdiga.",
+      "noRounds": "Inga rundor genomförda.",
+      "noProblems": "Inga problem slutförda.",
+      "noPhases": "Inga faser avslutade.",
+      "sets": "Uppsättningar",
+      "rounds": "Omgångar",
+      "equations": "Ekvationer",
+      "sentences": "Meningar",
+      "equationAccuracy": "Ekvationsnoggrannhet",
+      "forward": "Framåt",
+      "backward": "Bakåt",
+      "forwardMaxSpan": "Framåt max span",
+      "backwardMaxSpan": "Bakåt max span",
+      "odd": "Udda",
+      "even": "Till och med",
+      "score": "Betyg",
+      "easy": "Lätt",
+      "hard": "Hårt",
+      "totalTrials": "Totala försök",
+      "totalErrors": "Totala fel",
+      "totalErrShort": "Totalt fel.",
+      "hits": "Träffar",
+      "misses": "Missar",
+      "falseAlarms": "Falskt Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Ja",
+      "no": "Nej",
+      "sessionInterrupted": "Session avbruten",
+      "reverseOrder": "i omvänd ordning",
+      "normalOrder": "i ordning",
+      "lnsInstruction": "Siffror stigande, sedan bokstäverna A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simon effekt",
+        "blue": "Blå",
+        "red": "Röd",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Representera detta nummer",
+        "submit": "Skicka in",
+        "rodLabel": "Stång {{n}}",
+        "heavenBead": "Himmelsk pärla (värde 5)",
+        "earthBead": "Jordpärla (värde 1)",
+        "instrBeadTitle": "Hur pärlorna fungerar",
+        "instrBeadDesc": "Varje stav representerar en siffra. Den översta pärlan (himlen) är värd 5. De nedersta pärlorna (jorden) är värda 1 vardera. Flytta pärlor mot mittfältet för att aktivera dem.",
+        "instrExampleTitle": "Exempel: 7",
+        "instrExampleDesc": "7 = himmelpärla ner (5) + 2 jordpärlor upp (2). Tryck eller dra pärlor för att flytta dem.",
+        "instrGoalTitle": "Ditt mål",
+        "instrGoalDesc": "Ett nummer visas. Ställ in pärlorna så att de representerar den och tryck sedan på Skicka. Var noggrann och snabb!",
+        "startButton": "Starta",
+        "settings": "Inställningar",
+        "closeSettings": "Stäng inställningarna",
+        "settingsRods": "Antal spön",
+        "settingsRodsHint": "Ställs in via N-Level i spelinställningar",
+        "settingsTrials": "Försök per session",
+        "settingsTrialsHint": "Ställ in via Trials i spelinställningarna",
+        "settingsRange": "Nummerintervall"
+      },
+      "stroop": {
+        "pressInkColorButton": "Tryck på knappen som matchar bläckfärgen",
+        "redWord": "RED",
+        "redLabel": "Röd",
+        "blueWord": "BLUE",
+        "blueLabel": "Blå",
+        "greenWord": "GREEN",
+        "greenLabel": "Grönt",
+        "yellowWord": "GUL",
+        "yellowLabel": "Gul"
+      },
+      "stroopFlex": {
+        "followRule": "Regel",
+        "ruleInk": "Bläckfärg",
+        "ruleWord": "Skriftligt ord",
+        "pressMatchingRuleButton": "Tryck på knappen som matchar den aktuella regeln"
+      },
+      "goNogo": {
+        "goTrials": "Gå på prov",
+        "nogoTrials": "No-Go-försök",
+        "hitRate": "Träfffrekvens (Go)",
+        "faRate": "Falskt larmfrekvens (No-Go)",
+        "meanRt": "Genomsnittlig reaktionstid",
+        "sensitivity": "känslighet",
+        "press": "Tryck",
+        "withhold": "undanhålla"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (stoppsignal RT)",
+        "ssdMean": "Genomsnittlig SSD (lyckade stopp)",
+        "ssd": "SSD",
+        "goRt": "Gå RT",
+        "successfulInhibition": "Framgångsrik hämning",
+        "stop": "Sluta",
+        "meanGoRt": "Genomsnittlig GO-reaktionstid",
+        "ssrtInvalid": "otillräckliga data",
+        "ssrtNegativeNote": "SSRT är negativ (medelvärde SSD > medelvärde GO RT) — resultatet är otillförlitligt med aktuellt antal försök."
+      },
+      "pvt": {
+        "rtMedian": "Median RT",
+        "rtMean": "Menar RT",
+        "fastest": "Snabbast",
+        "slowest": "Långsammast",
+        "falseStarts": "Falska starter",
+        "falseStartsShort": "Falsk st.",
+        "lapses": "Förfaller",
+        "mean": "Mean",
+        "reaction": "Reaktion",
+        "wait": "Vänta...",
+        "pressStimulus": "Vänta på stimulans...",
+        "pressAnywhere": "Tryck var som helst när räknaren visas",
+        "press": "Trycka!",
+        "tooEarly": "För tidigt!",
+        "lapsesLabel": "Förfaller"
+      },
+      "posner": {
+        "cueingEffect": "Cueing effekt",
+        "validMeanRt": "Genomsnittlig giltig RT",
+        "invalidMeanRt": "Betyder ogiltig RT",
+        "validAccuracy": "Giltig noggrannhet",
+        "invalidAccuracy": "Ogiltig noggrannhet",
+        "validTrials": "Giltiga försök",
+        "invalidTrials": "Ogiltiga försök",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Giltig",
+        "invalid": "Ogiltig"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade kostnad",
+        "proAccuracy": "Pro noggrannhet",
+        "antiAccuracy": "Anti noggrannhet",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Genomsnittlig pro-saccade RT",
+        "antiMeanRt": "Genomsnittlig anti-saccade RT",
+        "costLabel": "Kostnad",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-sammanhang",
+        "axAccuracy": "AXE noggrannhet",
+        "bxFa": "BX falskt larm",
+        "ayError": "AY-fel",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY fel",
+        "cogControl": "Kognitiv kontroll",
+        "target": "Mål",
+        "nonTarget": "Icke-mål"
+      },
+      "ant": {
+        "scores": "ANT poäng",
+        "alerting": "Varning (no-cue − double-cue)",
+        "orienting": "Orientering (centrum - rumslig)",
+        "executive": "Executive (inkongruent − kongruent)"
+      },
+      "changeDet": {
+        "kCowan": "K-kapacitet (Cowan)",
+        "sameShort": "Samma",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "Fel inom sökning",
+        "betweenErrors": "Mellansökningsfel",
+        "totalErrors": "Totala fel",
+        "errorFree": "Felfritt",
+        "foundErrorFree": "Hittade felfritt!",
+        "errorCount": "{{count}} fel",
+        "tapsLabel": "Kranar"
+      },
+      "taskSwitch": {
+        "switchCost": "Bytekostnad",
+        "rtRepeat": "Genomsnittlig RT (upprepa)",
+        "rtSwitch": "Genomsnittlig RT (switch)",
+        "oddEven": "Udda/jämnt",
+        "highLow": "Hög / Låg",
+        "title": "Uppgiftsbyte"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A tid",
+        "tmtBTime": "TMT-B tid",
+        "executiveCost": "Verkställande kostnad (B − A)",
+        "executiveCostShort": "Verkställande kostnad (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Fela. A",
+        "errB": "Fela. B",
+        "preparingB": "Förbereder TMT-B...",
+        "tmtADone": "TMT-A klart!",
+        "totalErrors": "Totala fel",
+        "tmtALabel": "TMT-A: Siffror",
+        "tmtBLabel": "TMT-B: Siffror och bokstäver",
+        "next": "Nästa",
+        "heroTitle": "Trail Making",
+        "alternateHint": "Alternativa siffror och bokstäver: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Snabbaste ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referenskort",
+        "testCard": "Testkort",
+        "categories": "Kategorier",
+        "categoriesCompleted": "Kategorier slutförda",
+        "perseverativeErrors": "Uthålliga misstag",
+        "persevShort": "Persev.",
+        "avgRt": "Genomsnittlig RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT efter vinkel",
+        "findMatch": "Hitta den matchande formen",
+        "reference": "Referensform",
+        "referenceLabel": "Ref.",
+        "candidate": "Kandidat",
+        "distractor": "Annat",
+        "mirrorErrors": "Speglar",
+        "title": "Mental rotation"
+      },
+      "sternberg": {
+        "rtBySize": "RT efter inställd storlek",
+        "title": "Sternberg",
+        "avgRt": "Genomsnittlig RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT efter inställd storlek",
+        "title": "Visuell sökning"
+      },
+      "ospan": {
+        "typeLetters": "Skriv bokstäverna i ordning",
+        "trueOrFalse": "Sant eller falskt?",
+        "processingWarning": "Ekvationsnoggrannhet under 85 % — resultaten kanske inte återspeglar verklig arbetsminneskapacitet"
+      },
+      "readingSpan": {
+        "s0": "Solen går upp i öster.",
+        "s1": "Fisk lever i träd.",
+        "s2": "Paris är Frankrikes huvudstad.",
+        "s3": "En triangel har fyra sidor.",
+        "s4": "Vatten kokar vid 100 grader.",
+        "s5": "Katter är reptiler.",
+        "s6": "Jorden kretsar runt solen.",
+        "s7": "Choklad växer på stenar.",
+        "s8": "Ett år har tolv månader.",
+        "s9": "Fåglar andas under vattnet.",
+        "s10": "Mjölk är vit.",
+        "s11": "Bilar kör på räls.",
+        "s12": "Bin producerar honung.",
+        "s13": "Snön är varm.",
+        "s14": "Hjärtat pumpar blod.",
+        "s15": "Stenar flyter på vattnet.",
+        "s16": "Månen lyser upp natten.",
+        "s17": "Ormar har ben.",
+        "s18": "Trä flyter på vattnet.",
+        "s19": "Elden är kall.",
+        "s20": "Människan har fem sinnen.",
+        "s21": "Spindlar har sex ben.",
+        "s22": "Bröd görs med mjöl.",
+        "s23": "Valar är fiskar.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "BLOMMA",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "SKOG",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "MORGON",
+        "d1": "HEART",
+        "d2": "TYG",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "TRÄDGÅRD",
+        "d6": "SKUGGA",
+        "d7": "BELL",
+        "d8": "BRO",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Lässpann"
+      },
+      "memorizeSequence": "Memorera sekvensen...",
+      "reproduce": "Reproducera",
+      "span": "Spänn",
+      "size": "Storlek",
+      "fixateCenter": "Fäst på mitten...",
+      "identicalOrMirror": "Identisk eller spegel?",
+      "wellInhibited": "Väl hämmad!",
+      "badDirection": "Fel riktning!",
+      "stopMissed": "Stopp missat!",
+      "falseAlarm": "Falskt larm!",
+      "pressNow": "Trycka!",
+      "hitBang": "Hit!",
+      "miss": "Miss!",
+      "doNotTouch": "Rör inte!",
+      "whichDirection": "Vilken riktning?",
+      "stopBang": "STOPP!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Memorera dessa bokstäver",
+      "memorizeLetter": "Memorera detta brev",
+      "memorizeSequenceLetters": "Memorera sekvensen...",
+      "memorizeDigits": "Memorera siffrorna...",
+      "memorizeColors": "Memorera färgerna!",
+      "memorizePosition": "Memorera denna position...",
+      "retainWord": "Kom ihåg detta ord",
+      "retainNumber": "Kom ihåg detta nummer",
+      "addWithPrevious": "Lägg till med föregående",
+      "sentenceTrueOrFalse": "Är den här meningen sann?",
+      "findRedCircle": "Hitta den röda cirkeln!",
+      "findHiddenToken": "Hitta den dolda token!",
+      "chooseMatchingCard": "Välj det matchande kortet",
+      "arrowDirection": "Riktning på mittpilen?",
+      "attention": "Uppmärksamhet...",
+      "preparation": "Förberedelser...",
+      "recallLettersInOrder": "Återkalla {{count}} bokstäverna i ordning",
+      "recallWordsInOrder": "Kom ihåg {{count}} orden i ordning",
+      "recallLastLetters": "Kom ihåg de sista {{count}} bokstäverna",
+      "typeLastLetters": "Skriv de sista {{count}} bokstäverna",
+      "recallPositionsInOrder": "Återkalla: tryck positioner i ordning",
+      "pressEnterToValidate": "Tryck på Enter för att bekräfta",
+      "pressAnywhereToContinue": "Tryck var som helst för att fortsätta",
+      "temporalPrecision": "Temporell precision",
+      "estimationPrecision": "Uppskattningsprecision",
+      "touchStartClockwise": "Tryck på startpunkten och svep sedan medurs",
+      "touchAtoB": "Tryck på punkt A och svep sedan till B",
+      "cue": "Cue",
+      "retainCue": "Kom ihåg signalen...",
+      "targetOrNot": "Mål eller icke-mål?",
+      "whereIsTarget": "Var är målet?",
+      "wasLetterInSet": "Var det här brevet i uppsättningen?",
+      "regular": "regelbundet",
+      "regularity": "Regelbundenhet",
+      "msDeviation": "ms avvikelse",
+      "boxes": "lådor",
+      "found": "{{count}} hittades",
+      "past": "Tidigare",
+      "tooSlow": "för långsamt",
+      "tooFast": "för snabbt",
+      "timeout": "För långsamt!",
+      "answer": "Svara",
+      "dontPress": "Tryck inte!",
+      "feedbackWrong": "Fel!",
+      "level": "Nivå",
+      "wrong": "Fel",
+      "you": "Du",
+      "paused": "Pausa",
+      "instructions": "Instruktioner",
+      "selectAnswer": "Välj ett svar",
+      "tapTheOddOne": "Tryck ut den udda",
+      "pal": {
+        "subtitle": "Paired Associates Learning",
+        "pairsLearned": "Par lärde sig",
+        "maxSetSize": "Max uppsättningsstorlek",
+        "totalErrors": "Totala fel",
+        "round": "Runt",
+        "pairs": "par",
+        "meanRt": "Genomsnittlig RT (rätt)",
+        "studyPhase": "Studera - memorera positionerna",
+        "testPhase": "Var fanns den här formen?",
+        "studying": "Studerar",
+        "tapBox": "Tryck på rutan där denna form visades"
+      },
+      "visualLogic": {
+        "easy": "Lätt",
+        "hard": "Hårt",
+        "oneRule": "1 regel",
+        "twoRules": "2 regler",
+        "findMissing": "Hitta den saknade biten",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Slutlig Lvl",
+        "nextMode": "Nästa sessionsläge",
+        "adaptive": "Adaptiv",
+        "fixed": "Fixat",
+        "spm": "SPM 60",
+        "level": "Nivå",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Vilken bit passar hålet?",
+        "target": "Mål"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Överskattningsbias",
+        "underestimationBias": "Underskattningsbias",
+        "noBias": "Ingen betydande partiskhet",
+        "avgError": "Genomsnittligt fel",
+        "overestimations": "Överskattningar",
+        "underestimations": "Underskattningar",
+        "avgAbsoluteError": "Genomsnittligt absolut fel",
+        "avgRelativeError": "Genomsnittligt relativ fel",
+        "cv": "Variationskoefficient",
+        "watchDemo": "Se varaktigheten",
+        "getReady": "Gör dig redo...",
+        "holdToReproduce": "Håll för att reproducera!",
+        "tooLong": "För länge!",
+        "tooShort": "För kort!",
+        "target": "Mål",
+        "demoLabel": "Referens",
+        "yourTurn": "Din tur",
+        "watchInstruction": "Titta",
+        "holdInstruction": "Håll för att reproducera",
+        "heroTitle": "Tidsuppskattning"
+      },
+      "puzzleDetails": "Pusseldetaljer",
+      "roundDetails": "Runda detaljer",
+      "stageResults": "Etappresultat",
+      "recognized": "Kändes igen",
+      "missed": "Saknad",
+      "win": "Vinn",
+      "lose": "Förlora",
+      "winBang": "Vinna!",
+      "loseBang": "Förlora!",
+      "correctBang": "Rätta!",
+      "wrongBang": "Fel!",
+      "completeBang": "Komplett!",
+      "repeatedBang": "Upprepad!",
+      "incompleteBang": "Ofullständig!",
+      "levelCompleteBang": "Nivå klar!",
+      "timesUp": "Tiden är slut",
+      "seeResults": "Se resultat",
+      "nextRound": "Nästa omgång",
+      "startBlock": "Startblock",
+      "continue": "Fortsätt",
+      "patientChoice": "Patientval",
+      "immediateChoice": "Omedelbart val",
+      "immediate": "Omedelbart",
+      "digitSpan": {
+        "heroTitle": "Sifferspann"
+      },
+      "resume": "Återuppta",
+      "numericalStroop": {
+        "heroTitle": "Numerisk Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Bedömning av linjeorientering"
+      },
+      "chain": "Kedja",
+      "undo": "Ångra",
+      "vocalProsody": {
+        "heroTitle": "Vokal prosodi"
+      },
+      "letterNumber": {
+        "title": "Bokstav-Nummer Sekv.",
+        "expectedAnswer": "Förväntat svar"
+      },
+      "patternComparison": {
+        "heroTitle": "Mönsterjämförelse"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "När de är vikta, vilka rutor rör vid?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Hooper Visual Organization",
+        "whatIsThisObject": "Vad är detta objekt?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blockdesign"
+      },
+      "accuracy": "Noggrannhet",
+      "avgTime": "Genomsnittlig tid",
+      "check": "Kontrollera",
+      "dualTrace": {
+        "playArea": "Lekplats"
+      },
+      "paperFolding": {
+        "title": "Pappersvikning",
+        "foldSequenceHolePunch": "Viksekvens & hålslag",
+        "whichPatternWhenUnfolded": "Vilket mönster när det är utvikt?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Lexikaliskt beslut"
+      },
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxGrid": "Max rutnät",
+      "symmetry": "Symmetri",
+      "threshold": "Tröskel",
+      "hitRate": "Träfffrekvens",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Ändringsdetektering"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogismer"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Räckvidd"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Slutförande av mening (Cloze)",
+        "highCloze": "Hög cloze",
+        "lowCloze": "Låg cloze"
+      },
+      "grid": "Grid",
+      "pinballRecall": {
+        "title": "Pinball Recall",
+        "byBounces": "Genom studsar",
+        "whereDoesItLand": "Var landar den?"
+      },
+      "mean": "Mean",
+      "speedup": "Snabba upp",
+      "memorize": "Memorera",
+      "time": "Tid",
+      "surfaceDevelopment": {
+        "title": "Ytutveckling",
+        "whichEdgeMatches": "Vilken kant matchar?"
+      },
+      "crowding": {
+        "heroTitle": "Visuell trängsel",
+        "spacing": "Avstånd"
+      },
+      "patternRecognition": {
+        "heroTitle": "Mönsterigenkänning"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Rättegång",
+        "position": "Position",
+        "audio": "Ljud"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scen inkräktare",
+        "detect": "Upptäck"
+      },
+      "eyesTest": {
+        "heroTitle": "Att läsa sinnet i ögonen"
+      }
+    },
+    "gridlock": {
+      "undone": "Sista draget ångrat.",
+      "resetMessage": "Återställning av pussel.",
+      "hintMessage": "Tips: skjut {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Studera tavlan. Startar om {{seconds}}s.",
+      "challenge": "Utmaning",
+      "optimal": "Optimal",
+      "moves": "Rör sig",
+      "piece": "Stycke {{id}}",
+      "targetPiece": "Del {{id}} (mål - röd bil)",
+      "challengeClassic": "Klassisk",
+      "challengePrecision": "Precision",
+      "challengeMemory": "Minne",
+      "challengeTimed": "Tidsinställd",
+      "hint": "Tips",
+      "reset": "Återställ",
+      "undo": "Ångra",
+      "nextPuzzle": "Nästa pussel →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Block 1 träffar",
+      "block2Hits": "Block 2 träffar",
+      "goPositive": "Gå = positiv",
+      "goNegative": "Gå = Negativ",
+      "title": "Affektiva Go/No-Go",
+      "block1CommissionErrors": "Block 1 provisionsfel",
+      "block2CommissionErrors": "Block 2 provisionsfel",
+      "block": "Block",
+      "go": "Gå"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Genomsnittlig omkopplingshastighet",
+      "meanSwitchesfigure": "Medelströmbrytare/figur",
+      "totalSwitches": "Totalt växlar",
+      "title": "Tvetydiga figurer",
+      "meanSwitches": "Medelströmbrytare",
+      "switchRate": "Växlingshastighet",
+      "figures": "Siffror",
+      "totalSwitchesLabel": "Totalt växlar",
+      "duration": "Varaktighet",
+      "switchesCount": "s | Omkopplare:",
+      "switchButton": "Växla!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbalt korrekt",
+      "timeout": "Timeout",
+      "title": "Analogier"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS jämförelse",
+      "ratio": "Förhållande",
+      "leftMore": "Lämnade mer",
+      "rightMore": "Rätt mer"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Falskt larmfrekvens",
+      "grammatical": "Grammatisk",
+      "memorizeTheseStrings": "Memorera dessa strängar",
+      "testPhase": "Testfas",
+      "ungrammatical": "Ogrammatisk",
+      "learning": "Lärande",
+      "test": "Testa",
+      "title": "Konstgjord grammatik",
+      "learningPhase": "Inlärning",
+      "testIntroText": "Du kommer nu att se nya strängar. Bestäm om var och en följer samma regler som de strängar du just studerade.",
+      "startTest": "Starta testet",
+      "followsRules": "Följer regler",
+      "breaksRules": "Bryter mot regler"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Blink Magnitude",
+      "title": "Uppmärksam blinkning",
+      "blink": "Blinka",
+      "t1Acc": "T1 Enl",
+      "t2Acc": "T2 Enl",
+      "firstGreenLetter": "1:a gröna bokstaven?",
+      "secondGreenLetter": "2:a gröna bokstaven?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Fångstkostnad",
+      "singletonPresent": "Singleton närvarande",
+      "noSingleton": "Ingen Singleton",
+      "title": "Uppmärksam fångst",
+      "capture": "Fånga",
+      "horizontal": "Horisontell",
+      "vertical": "Vertikal"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Bindande fönster",
+      "title": "Audiovisuell bindning",
+      "window": "Fönster",
+      "pssLabel": "PSS (Point of Subjective Simultaneity)",
+      "simultaneousOrNot": "Samtidigt eller inte?",
+      "simultaneous": "Samtidigt",
+      "notSimultaneous": "Inte samtidigt"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Varaktighetströskel",
+      "reference": "Referens",
+      "weberFraction": "Weber fraktion",
+      "title": "Auditiv varaktighet",
+      "threshold": "Tröskel",
+      "weber": "Weber",
+      "whichLonger": "Vilket är längre?",
+      "firstLonger": "Först längre",
+      "secondLonger": "Andra längre"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Justerade medelpumpar",
+      "avgTimeballoon": "Genomsnittlig tid/ballong",
+      "banked": "Bankad!",
+      "lostEarnings": "Förlorade intäkter!",
+      "overallAvgPumps": "Totalt genomsnittliga pumpar",
+      "popRate": "Pophastighet",
+      "totalEarned": "Totalt intjänat",
+      "balloons": "Ballonger",
+      "cashed": "Inkasserad",
+      "popped": "Poppade",
+      "adjPumps": "Adj. pumpar",
+      "pop": "Pop",
+      "pump": "Pump",
+      "cashIn": "Cash In"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Genomsnittlig beslutstid",
+      "drawBeadsToGatherEvidence": "Rita pärlor för att samla bevis",
+      "jtc": "JTC",
+      "title": "Pärlor Uppgift",
+      "meanDraws": "Genomsnittlig drar",
+      "rounds": "Omgångar",
+      "jtcRate": "JTC-kurs",
+      "meanDrawsToDecision": "Mean drar till beslut",
+      "jtcRateThreshold": "JTC Rate (<{{threshold}} dragningar)",
+      "round": "Runt",
+      "jarDescription": "Burk A: 85% grön / Burk B: 85% röd",
+      "itWasJar": "Det var burken",
+      "drawABead": "Rita en pärla",
+      "jarAGreen": "Burk A Grön",
+      "jarBRed": "Burk B Röd"
+    },
+    "binding": {
+      "changedTrials": "Ändrade försök",
+      "sameAccuracy": "Samma noggrannhet",
+      "sameTrials": "Samma prövningar",
+      "title": "Funktionsbindning",
+      "binding": "Bindande",
+      "bindingAccuracyChanged": "Ändra noggrannhet",
+      "same": "Samma",
+      "different": "Olika"
+    },
+    "blockDesign": {
+      "cells": "Celler",
+      "target": "Mål",
+      "yourAnswer": "Ditt svar",
+      "tapHint": "Tryck för att växla färger",
+      "check": "Kontrollera"
+    },
+    "brixton": {
+      "adapt": "Anpassa sig",
+      "adaptationCost": "Anpassningskostnad",
+      "nonswitchTrials": "Icke-switch försök",
+      "switchTrials": "Byt försök"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Kom ihåg dessa bokstäver",
+      "selectThe3Letters": "Välj de 3 bokstäverna",
+      "title": "Brown-Peterson Task",
+      "forgetting": "Att glömma",
+      "sDelay": "S Fördröjning",
+      "minus3": "Minus 3",
+      "delay": "Fördröjning"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Beslutskvalitet",
+      "finalPoints": "Sista poäng",
+      "meanBet": "Mean bet",
+      "winRate": "Vinsthastighet",
+      "wins": "Vinner",
+      "title": "Cambridge speluppgift",
+      "totalPoints": "Totalt poäng",
+      "quality": "Kvalitet",
+      "rational": "Rationell",
+      "avgBet": "Genomsnittlig bet",
+      "trial": "Rättegång",
+      "whichColorHidesToken": "Vilken färg döljer token?",
+      "youChose": "Du valde",
+      "howMuchToBet": "Hur mycket ska man satsa?"
+    },
+    "cancellation": {
+      "false": "Falskt",
+      "target": "Mål:",
+      "total": "Totalt",
+      "title": "Avbokningsuppgift (d2)",
+      "misses": "Missar",
+      "targetDescription": "d med 2 poäng"
+    },
+    "changeBlindness": {
+      "detectionRate": "Detektionshastighet",
+      "found": "Hittade",
+      "meanDetectionTime": "Genomsnittlig detektionstid",
+      "title": "Ändra blindhet",
+      "missed": "Saknad",
+      "avgTime": "Genomsnittlig tid",
+      "instructions": "Instruktioner"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Bästa uppskattning",
+      "meanScore": "Genomsnittlig poäng",
+      "worstEstimate": "Sämsta uppskattning",
+      "inRange": "Bra uppskattning!",
+      "title": "Kognitiv uppskattning",
+      "meanScoreLabel": "Genomsnittlig poäng",
+      "inRangeLabel": "I Range",
+      "extreme": "Extrem",
+      "scoreLabel": "poäng",
+      "submit": "Skicka in"
+    },
+    "common": {
+      "accuracy": "Noggrannhet",
+      "bias": "Bias",
+      "falseAlarmRate": "Falsk larmfrekvens",
+      "hitRate": "Träfffrekvens",
+      "hits": "Träffar",
+      "listening": "Lyssnar...",
+      "meanRt": "Menar RT",
+      "timedOut": "Timeout",
+      "timedOut2": "Timeout",
+      "faRate": "Taux de FA",
+      "paused": "Pausad"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Hur säker är du?",
+      "rateYourConfidence": "Betygsätt ditt självförtroende",
+      "title": "Förtroendekalibrering",
+      "calError": "Kalibreringsfel",
+      "confidence": "Förtroende"
+    },
+    "consequences": {
+      "best": "Bästa",
+      "nextRound": "Nästa omgång...",
+      "time": "Tid",
+      "placeholder": "Skriv en konsekvens...",
+      "title": "Konsekvenser",
+      "totalIdeas": "Totala idéer",
+      "avgPerRound": "Genomsnittlig per omgång",
+      "rounds": "Omgångar",
+      "noConsequencesListed": "Inga konsekvenser listade",
+      "roundProgress": "Omgång {{current}} / {{total}}",
+      "typeAndPressAdd": "Skriv och tryck på Lägg till"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Cueing effekt",
+      "newConfigRt": "Ny Config RT",
+      "oldConfigRt": "Gammal Config RT",
+      "title": "Kontextuell Cueing",
+      "cueing": "Cueing",
+      "oldRt": "Gamla RT",
+      "newRt": "Ny RT",
+      "prompt": "Fråga",
+      "left": "Vänster",
+      "right": "Rätt"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Tröskeljitter",
+      "title": "Konturintegration",
+      "pipeJitter": "| skaka"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Tröskelkontrast",
+      "title": "Kontrastkänslighet",
+      "threshold": "Tröskel",
+      "left": "Vänster",
+      "right": "Rätt"
+    },
+    "cpt": {
+      "nontargets": "Icke-mål",
+      "target": "Mål",
+      "nonTarget": "Icke-mål",
+      "dPrime": "d'",
+      "targetsLetter": "Målbokstav",
+      "tapForLetterOnly": "Tryck endast för målbokstaven"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritiskt mellanrum",
+      "leftAccuracy": "Vänster noggrannhet",
+      "rightAccuracy": "Rätt noggrannhet"
+    },
+    "cryptogram": {
+      "hints": "Tips",
+      "title": "Kryptogram",
+      "solved": "Löst",
+      "time": "Tid",
+      "puzzles": "Pussel",
+      "puzzle": "Pussel",
+      "hint": "Tips",
+      "clear": "Rensa"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Område under kurva",
+      "discountRateK": "Diskonteringsränta (k)",
+      "impulsivityIndex": "Impulsivitetsindex",
+      "title": "Fördröjning av rabatt",
+      "aucPatience": "AUC-tålamod",
+      "patient": "Patient",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "Likgiltighetspoäng",
+      "whichPrefer": "Vilken föredrar du?",
+      "today": "Idag"
+    },
+    "delayedMatching": {
+      "long": "Lång",
+      "longDelay68s": "Lång fördröjning (6-8 s)",
+      "med": "Med",
+      "mediumDelay46s": "Medium fördröjning (4-6 s)",
+      "short": "Kort",
+      "shortDelay34s": "Kort fördröjning (3-4 s)",
+      "title": "Fördröjd matchning",
+      "delay": "Fördröjning",
+      "rememberThisPattern": "Kom ihåg detta mönster",
+      "whichWasIt": "Vilken var det?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Varningsdetektering",
+      "attendToTheLeftColumn": "Gå till VÄNSTER kolumnen",
+      "attendedAccuracy": "Deltog i Accuracy",
+      "ignoreTheRightColumn": "Ignorera den högra kolumnen",
+      "right": "RIGHT",
+      "title": "Dikotiskt lyssnande",
+      "attendedAcc": "Deltog i noggrannhet",
+      "alertDet": "Varningsdetektering",
+      "alerts": "Varningar",
+      "selectLeftColumnWords": "Välj ord i vänsterkolumnen",
+      "submit": "Skicka in",
+      "alertQuestion": "Varningsfråga"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Glöm noggrannhet",
+      "forgettingEffect": "Glömmande effekt",
+      "newRejection": "Nytt avslag",
+      "rememberAccuracy": "Kom ihåg noggrannhet",
+      "title": "Regisserad Forgetting",
+      "remember": "Kom ihåg",
+      "forget": "Glöm",
+      "round": "Runt",
+      "word": "Ord",
+      "wasThisWordShown": "Visades detta ord?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias Score",
+      "congruentAcc": "Kongruent Acc",
+      "congruentRt": "Kongruent RT",
+      "incongruentAcc": "Inkongruent Acc",
+      "incongruentRt": "Inkongruent RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Bil eller lastbil?",
+      "minDisplayReached": "Minsta visning nådd",
+      "positionAccuracy": "Positionsnoggrannhet",
+      "thresholdDisplay": "Tröskeldisplay",
+      "vehicleAccuracy": "Fordonets noggrannhet",
+      "whereWasTheDiamond": "Var var diamanten?",
+      "title": "Dubbelt beslut",
+      "threshold": "Tröskel",
+      "bothOk": "Båda rätt",
+      "vehicle": "Fordon",
+      "position": "Position",
+      "car": "Bil",
+      "truck": "Lastbil"
+    },
+    "dsst": {
+      "items": "Föremål",
+      "itemsCompleted": "Föremål färdigställda",
+      "speedItemsmin": "Hastighet (artiklar/min)",
+      "attempts": "Försök",
+      "itemsPerMin": "Artiklar / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Dual-Task Kostnad",
+      "taskANumber": "Uppgift A (nummer)",
+      "taskBSymbol": "Uppgift B (Symbol)",
+      "title": "Dubbel uppgift",
+      "taskA": "Uppgift A",
+      "taskB": "Uppgift B",
+      "number": "Nummer",
+      "symbol": "Symbol",
+      "up": "Upp",
+      "down": "Ner"
+    },
+    "dualTime": {
+      "sessionEnPause": "Session pausad",
+      "votreEstimationSecondes": "Din uppskattning (sekunder)",
+      "sessionInterrupted": "Session avbruten",
+      "target": "Mål",
+      "estimation": "Uppskattning",
+      "avgTime": "Genomsnittlig tid",
+      "avgError": "Genomsnittlig fel",
+      "trials": "Rättegångar",
+      "resumeToContinue": "Fortsätt för att fortsätta",
+      "aimFor": "Sikta på",
+      "second": "För det andra",
+      "howLongDidYouTake": "Hur lång tid tog du?"
+    },
+    "dualTrack": {
+      "confirmer": "Bekräfta",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Fortsätt för att fortsätta.",
+      "sessionEnPause": "Session pausad",
+      "tapezLesCibles": "Tryck på målen",
+      "tapezLaCible": "Tryck på målet",
+      "appuyezConfirmer": "Tryck på Bekräfta",
+      "targetsCountLabel": "{{count}} mål",
+      "distractorsCountLabel": "{{count}} distraktörer",
+      "roundsCountLabel": "{{count}} omgångar",
+      "calibrationRoundsLabel": "{{count}} kalibreringsrundor",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = svårighetsnivå för intern resa.",
+      "tierHelpCurrentWithPhase": "Du är för närvarande på T{{current}} av {{total}} för {{targets}} mål. Aktuell fas: {{phase}}. Det finns {{remaining}} nivå(er) kvar innan nästa målnivå.",
+      "phaseTracking": "Spårning",
+      "phaseAudio": "Spårning + ljud",
+      "phaseColor": "Spårning + färg",
+      "phaseCombined": "Spårning + ljud + färg",
+      "passLetters": "Bokstäver",
+      "passColors": "Färger",
+      "moveInstruction": "Flytta instruktion",
+      "moveConfirmBtn": "Flytta bekräftelseknappen",
+      "preparingSession": "Förbereder session...",
+      "preparing3dScene": "Förbereder 3D-scen...",
+      "startJourney": "Börja resan",
+      "calibrationDescription": "Före det första steget kommer en längre kalibrering att uppskatta din startnivå.",
+      "defaultDescription": "Bollar kommer att lysa upp. Följ dem medan de rör sig och identifiera dem sedan.",
+      "startCalibration": "Starta kalibreringen",
+      "calibrationTitle": "Kalibrering",
+      "estimatedStart": "Uppskattad starta",
+      "roundsAnalyzed": "Omgångar analyserade",
+      "willStartAt": "Börjar kl",
+      "targetsCount": "Mål",
+      "thenProgress": "sedan framsteg"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Genomsnittligt absolut fel",
+      "ratio": "Förhållande",
+      "slope": "Lutning",
+      "vierordtSlope": "Vierordt sluttning",
+      "wait": "Vänta...",
+      "title": "Varaktighet Reproduktion",
+      "meanError": "Genomsnittligt fel",
+      "meanRatio": "Medelkvot (producerat/mål)",
+      "holdNow": "HÅLL NU",
+      "target": "Mål",
+      "error": "Fel"
+    },
+    "embeddedFigures": {
+      "fastest": "Snabbast",
+      "found": "Hittade",
+      "meanDetectionTime": "Genomsnittlig upptäcktstid",
+      "slowest": "Långsammast",
+      "title": "Inbäddade figurer",
+      "missed": "Saknad",
+      "fastestLabel": "Snabbast",
+      "findThisShape": "Hitta den här formen",
+      "memorizeShape": "Memorera formen...",
+      "foundIt": "Hittade det!",
+      "giveUp": "Ge upp"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Falska larm",
+      "misses": "Missar",
+      "title": "Emotionell N-Back",
+      "match": "Match"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutral RT",
+      "positiveRt": "Positiv RT",
+      "threatRt": "Hot RT",
+      "title": "Känslomässig Stroop",
+      "interference": "Interferens",
+      "interferenceThreatNeutral": "Interferens (hot − neutral)"
+    },
+    "eyesTest": {
+      "totalTime": "Total tid"
+    },
+    "faceName": {
+      "gain": "Vinst",
+      "learningImprovement": "Inlärningsförbättring",
+      "round1Accuracy": "Omgång 1 noggrannhet",
+      "round2Accuracy": "Omgång 2 noggrannhet",
+      "whoIsThis": "Vem är det här?",
+      "title": "Ansiktsnamnsförening",
+      "round": "Runt",
+      "testPhase": "Testfas"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "Varför?",
+      "title": "Faux Pas erkännande",
+      "detection": "Detektion",
+      "scenarios": "Scenarier",
+      "fpFound": "Faux pas hittades",
+      "control": "Kontroll",
+      "readyToAnswer": "Redo att svara",
+      "didSomeoneSay": "Sa någon något de inte borde ha?",
+      "whoSaidIt": "Vem sa det?",
+      "whyInappropriate": "Varför var det olämpligt?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Återkalla noggrannhet",
+      "recognitionAccuracy": "Igenkänningsnoggrannhet",
+      "recallPlaceholder": "Skriv ditt svar...",
+      "unlikely": "Osannolikt",
+      "certain": "Visst",
+      "title": "Känslan av att veta",
+      "recall": "Minns",
+      "recognition": "Erkännande",
+      "fokR": "Fok R",
+      "questions": "Frågor",
+      "recalled": "Återkallad",
+      "recognized": "Kändes igen",
+      "fokSensitivity": "FOK Känslighet",
+      "submit": "Skicka in",
+      "dontKnow": "Vet inte",
+      "fokPrompt": "Kommer du att känna igen det?",
+      "selectCorrectAnswer": "Välj rätt svar",
+      "answer": "Svara"
+    },
+    "fingerTapping": {
+      "firstTrial": "Första rättegången",
+      "lastTrial": "Senaste rättegången",
+      "sequence": "Sekvens",
+      "speedupT1VsT12": "Speedup (T1 vs T12)",
+      "title": "Knacka med fingrar"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Genomsnittlig rörelsetid",
+      "avgThroughput": "Genomsnittlig genomströmning",
+      "title": "Passar Tappning",
+      "throughput": "Genomströmning",
+      "tapTarget": "Tryck på det markerade målet"
+    },
+    "foreperiod": {
+      "early": "Tidigt",
+      "slope": "Lutning",
+      "title": "Temporala förberedelser",
+      "fpEffectSlope": "FP Effect Slope"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Återföringar",
+      "threshold": "Tröskel",
+      "tone1": "Ton 1",
+      "tone2": "Ton 2",
+      "weber": "Weber",
+      "weberFraction": "Weber fraktion",
+      "hz": "Hz",
+      "title": "Frekvensdiskriminering",
+      "thresholdLabel": "Tröskel",
+      "hzDiff": "Hz diff",
+      "whichWasHigher": "Vilket var högre?",
+      "firstHigher": "Först högre",
+      "secondHigher": "Andra högre"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor-lapp",
+      "leftAccuracy": "Vänster noggrannhet",
+      "leftTrials": "Lämnade rättegångar",
+      "noiseMask": "Buller mask",
+      "rightAccuracy": "Rätt noggrannhet",
+      "rightTrials": "Rätt prövningar",
+      "thresholdAngle": "Tröskelvinkel",
+      "title": "Gabor",
+      "threshold": "Tröskel",
+      "reversals": "Återföringar",
+      "timedOut": "Timeout",
+      "left": "Vänster",
+      "right": "Rätt"
+    },
+    "gameOfDice": {
+      "finalPoints": "Sista poäng",
+      "risky": "Riskfyllt",
+      "riskyChoices": "Riskfyllda val",
+      "safe": "Säker",
+      "winRate": "Vinsthastighet",
+      "wins": "Vinner",
+      "title": "Game of Dice Task",
+      "totalPoints": "Totalt poäng",
+      "riskyLabel": "Riskfyllt",
+      "roll": "Rulla",
+      "chooseYourBet": "Välj din insats",
+      "pickNumbers": "Välj dina nummer"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Gap eller ingen lucka?",
+      "gapThreshold": "Gap tröskel",
+      "title": "Tystnadsdetektering",
+      "noGap": "Inget gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Var var blicken?",
+      "direct": "Direkt",
+      "left": "Vänster",
+      "right": "Rätt",
+      "title": "Blickens riktning",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Del 1 (Initiering)",
+      "part2": "Del 2",
+      "part2Suppression": "Del 2 (Undertryckning)",
+      "suppressionCost": "Undertryckningskostnad",
+      "title": "Hayling",
+      "part1": "Del 1",
+      "part2Label": "Del 2",
+      "suppression": "Undertryckning",
+      "obvious": "Uppenbart",
+      "obviousPicksPart2": "Uppenbara val (del 2)",
+      "chooseUnrelated": "Välj ett orelaterat ord",
+      "completelyUnrelated": "Helt orelaterade",
+      "doNotPickObvious": "Välj INTE det självklara ordet!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Går vidare till nästa steg...",
+      "stageComplete": "Scenen klar!",
+      "title": "IED Set Shift",
+      "stages": "Etapper",
+      "edsCost": "EDS kostnad",
+      "stage": "Scen",
+      "correctNeeded": "Rätt behövs för att avancera"
+    },
+    "informationSampling": {
+      "cost": "Kostnad",
+      "free": "Gratis",
+      "meanTilesCost": "Genomsnittlig kakel (kostnad)",
+      "meanTilesFree": "Genomsnittliga brickor (gratis)",
+      "totalCost": "Total kostnad",
+      "title": "Informationsprovtagning",
+      "tiles": "Kakel",
+      "tapToReveal": "Tryck för att avslöja"
+    },
+    "inspectionTime": {
+      "final": "Final",
+      "finalDisplayTime": "Slutlig visningstid",
+      "minCorrectIt": "Min korrekta IT",
+      "threshold": "Tröskel",
+      "title": "Inspektionstid",
+      "thresholdLabel": "Tröskel",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Saldo:",
+      "chooseADeck": "Välj ett däck",
+      "deckADraws": "Däck A drar",
+      "deckBDraws": "Däck B drar",
+      "deckCDraws": "Däck C drar",
+      "deckDDraws": "Däck D drar",
+      "first40Advantageous": "Första 40 fördelaktiga",
+      "last40Advantageous": "Sista 40 fördelaktiga",
+      "learn": "Lär dig",
+      "learningIndex": "Inlärningsindex",
+      "title": "Iowa spelande",
+      "advantageousPct": "Fördelaktig %",
+      "earnings": "Resultat",
+      "last40": "Senaste 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibreringsbias",
+      "meanJol": "Menar JOL",
+      "nowTestYourRecall": "Testa nu ditt återkallande",
+      "studyComplete": "Studien klar",
+      "whatWasPairedWith": "Vad parades ihop med...?",
+      "title": "Bedömning av lärande",
+      "recallAccuracy": "Återkalla noggrannhet",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL-noggrannhet (gamma)",
+      "howLikelyRemember": "Hur troligt kommer du att minnas?",
+      "hiddenAnswer": "Dolt svar"
+    },
+    "judgmentOfRecency": {
+      "close": "Stäng",
+      "closeGap13": "Stäng mellanrum (1-3)",
+      "far": "Långt",
+      "farGap9": "Långt mellanrum (9+)",
+      "mediumGap48": "Mellanrum (4-8)",
+      "title": "Nyhetsdom",
+      "medium": "Medium",
+      "studyPhaseMemorizeOrder": "Studiefas — Memorera ordningen",
+      "whichMoreRecently": "Vilket dök upp mer nyligen?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Mean RT (icke-ord)",
+      "meanRtWords": "Mean RT (ord)",
+      "nonwordsAccuracy": "Icke-ords noggrannhet",
+      "wordsAccuracy": "Ord noggrannhet",
+      "word": "Ord",
+      "nonword": "Icke-ord"
+    },
+    "maze": {
+      "duration": "Varaktighet",
+      "optimalSteps": "Optimala steg",
+      "pathEfficiency": "Vägeffektivitet",
+      "totalSteps": "Totala steg",
+      "wallHits": "Väggträffar",
+      "title": "Labyrint",
+      "completed": "Avslutad",
+      "efficiency": "Effektivitet",
+      "wallHitsLabel": "Väggträffar",
+      "steps": "Steg"
+    },
+    "memobox": {
+      "easy": "Lätt",
+      "easy2Boxes": "Lätt (2 lådor)",
+      "hard": "Hårt",
+      "hard4Boxes": "Hård (4 lådor)",
+      "medium3Boxes": "Medium (3 lådor)",
+      "title": "Memobox",
+      "rounds": "Omgångar",
+      "medium": "Medium",
+      "watchMovements": "Se rörelserna...",
+      "howManyBalls": "Hur många bollar i varje låda?",
+      "submit": "Skicka in",
+      "roundOf": "Omgång {{current}} av {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Vad är tvärsnittet?",
+      "title": "Mental skärning"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Gammal, liknande eller ny?",
+      "patternSeparation": "Mönsterseparation",
+      "sep": "sep.",
+      "old": "Gammal",
+      "similar": "Liknande",
+      "new": "Nytt",
+      "ldi": "LDI",
+      "title": "Mnemonisk diskriminering",
+      "hitRateOldDetected": "Träfffrekvens (gammal upptäckt)",
+      "lureDiscrimination": "Lockelsediskriminering (LDI)",
+      "memorize": "Memorera",
+      "testPhase": "Testfas"
+    },
+    "multiArmedBandit": {
+      "earnings": "Intäkter:",
+      "pickMachine": "Välj en maskin",
+      "title": "Flerarmad bandit",
+      "totalReward": "Total belöning",
+      "optimal": "Optimal",
+      "regret": "Ånger",
+      "exploit": "Utnyttja",
+      "machine": "Maskin",
+      "armsExplored": "Armar utforskade"
+    },
+    "navon": {
+      "globalBigLetter": "Global (stor bokstav)",
+      "localSmallLetter": "Lokal (liten bokstav)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Vilken STOR bokstav?",
+      "whatSmallLetter": "Vilken LITEN bokstav?"
+    },
+    "negativePriming": {
+      "controlRt": "Styr RT",
+      "nameTheRedShape": "Namnge den röda formen",
+      "negativePrimingRt": "Negativ priming RT",
+      "positivePrimingRt": "Positiv priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP-effekt",
+      "title": "Negativ priming",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Uppskattningsbias",
+      "linearityRsup2": "Linjäritet (R&sup2;)",
+      "meanAbsoluteError": "Betyder absolut fel",
+      "tapTheLineToPlaceTheNumber": "Tryck på raden för att placera numret",
+      "title": "Nummerrad",
+      "meanError": "Genomsnittligt fel",
+      "yourEstimate": "Din uppskattning",
+      "correct": "Rätt"
+    },
+    "oddOneOut": {
+      "colorTrials": "Färgförsök",
+      "shapeTrials": "Formprövningar",
+      "shape": "Form",
+      "color": "Färg",
+      "timeout": "Timeout",
+      "shapeDiffAccuracy": "Formdiff. noggrannhet",
+      "colorDiffAccuracy": "Färgdiff. noggrannhet",
+      "shapeDiffAvgRt": "Formdiff. medel RT",
+      "colorDiffAvgRt": "Färgdiff. snitt RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Vilket sätt?",
+      "thresholdAngle": "Tröskelvinkel",
+      "title": "Orientering Diskriminering",
+      "threshold": "Tröskel",
+      "counterCw": "CCW",
+      "clockwise": "Medurs"
+    },
+    "patternComparison": {
+      "differentTrials": "Olika prövningar",
+      "sameTrials": "Samma prövningar",
+      "same": "Samma",
+      "different": "Olika"
+    },
+    "patternRecognition": {
+      "newPatterns": "Nya mönster",
+      "oldPatterns": "Gamla mönster",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Studera mönstren noggrant",
+      "memorize": "Memorera ({{current}}/{{total}})",
+      "getReady": "Gör dig redo...",
+      "testPhaseStarting": "Testfasen börjar..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Exakt korrekt",
+      "meanAngularError": "Medelvinkelfel",
+      "withinTolerance": "Inom tolerans",
+      "title": "Perspektivtagning",
+      "avgErr": "Genomsnittlig fel",
+      "youAreAt": "Du är på",
+      "facing": "Motstående",
+      "pointTo": "Peka på"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frekv. Tröskel",
+      "seq1": "Sekv 1",
+      "seq2": "Sekv 2",
+      "title": "Fonemdiskriminering",
+      "thresh": "Tröska",
+      "sameOrDifferent": "Samma eller olika?",
+      "same": "Samma",
+      "different": "Olika"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = sent)",
+      "meanAbsoluteError": "Genomsnittligt absolut fel",
+      "precisionSd": "Precision (SD)",
+      "title": "Förutsägelserörelse",
+      "absError": "Abs. fel",
+      "precision": "Precision",
+      "responded": "Svarade",
+      "tapWhenReachesTarget": "KNAPP när den når målet"
+    },
+    "promem": {
+      "ongoingAccuracy": "Pågående noggrannhet",
+      "ongoingRt": "Pågående RT",
+      "pmHitRate": "PM träfffrekvens",
+      "pmRt": "PM RT",
+      "pmTargets": "PM mål",
+      "title": "Prospektivt minne",
+      "ongoing": "Pågår",
+      "pmHits": "PM träffar",
+      "pmMisses": "PM fröknar",
+      "living": "Levande",
+      "nonLiving": "Icke-levande",
+      "redWordInstruction": "Rött ord = tryck"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Distraktörfel",
+      "literalErrorRate": "Literal felfrekvens",
+      "literalErrors": "Bokstavliga fel",
+      "title": "Ordspråkstolkning",
+      "literal": "Bokstavligt",
+      "litRate": "Belyst. Betygsätt",
+      "whatDoesThisMean": "vad betyder det?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Gör dig redo att följa",
+      "meanTimeOnTarget": "Mean Time on Target",
+      "meanTrackingError": "Genomsnittligt spårningsfel",
+      "placeYourFingerOnTheScreen": "Placera fingret på skärmen",
+      "title": "Jaktspårning",
+      "timeOnTarget": "Tid på mål",
+      "error": "Fel",
+      "onTarget": "På mål",
+      "avgError": "Genomsnittlig fel",
+      "improve": "Förbättra",
+      "improvementT1VsT": "Förbättring T1 mot T",
+      "errorLabel": "Fel",
+      "followGreenTarget": "Följ det gröna målet"
+    },
+    "rapidNaming": {
+      "roundComplete": "Omgången klar",
+      "totalErrors": "Totala fel",
+      "title": "Snabb namngivning",
+      "avgSpeed": "Genomsnittlig hastighet",
+      "totalTime": "Total tid",
+      "round": "Runt",
+      "getReady": "Gör dig redo!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Genomsnittlig lösningstid",
+      "solved": "Löst",
+      "wrong": "Fel",
+      "placeholder": "Ditt svar...",
+      "title": "Rebus pussel",
+      "puzzles": "Pussel",
+      "timeout": "Timeout",
+      "submit": "Skicka in",
+      "answer": "Svara"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Genomsnittlig lösningstid",
+      "solved": "Löst",
+      "placeholder": "Ditt svar...",
+      "title": "Remote Associates",
+      "timeout": "Timeout",
+      "submit": "Skicka in",
+      "answer": "Svara"
+    },
+    "reversalLearning": {
+      "adapt": "Anpassa sig",
+      "loseshiftRate": "Lose-Shift Rate",
+      "score": "Poäng:",
+      "winstayRate": "Win-Stay-pris",
+      "title": "Omvänd lärande",
+      "rewards": "Belöningar",
+      "reversals": "Återföringar",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Genomsnittlig försök till kriterium",
+      "pickACard": "Välj ett kort"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Räkna bakåt med 7",
+      "reproduceThePatternFromMemory": "Återskapa mönstret från minnet",
+      "title": "Rey komplex figur",
+      "copy": "Kopiera",
+      "recall": "Minns",
+      "retention": "Retention",
+      "trial": "Rättegång",
+      "target": "Mål",
+      "yourCopy": "Ditt exemplar",
+      "submit": "Skicka in"
+    },
+    "rhythm": {
+      "avgTimingError": "Genomsnittligt tidsfel",
+      "bestTrialError": "Bästa försöksfelet",
+      "correctTrials": "Rätt prövningar",
+      "worstTrialError": "Värsta försöksfelet",
+      "watchRhythm": "Titta på rytmen",
+      "getReady": "Gör dig redo...",
+      "tapTheRhythm": "Tryck på rytmen!",
+      "tooFarOff": "För långt borta!",
+      "tapToReproduce": "Tryck för att reproducera",
+      "beats": "{{count}} beats",
+      "bestTrial": "Bästa försöket",
+      "worstTrial": "Värsta rättegången",
+      "title": "Rytm",
+      "msErr": "ms fel"
+    },
+    "routePlanning": {
+      "time": "Tid",
+      "title": "Ruttplanering",
+      "levels": "Nivåer",
+      "completed": "Avslutad",
+      "avgMoves": "Genomsnittlig rör sig",
+      "clear": "Rensa",
+      "submit": "Skicka in",
+      "instructions": "Instruktioner"
+    },
+    "rvp": {
+      "detect357246468": "Upptäck: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Målsekvenser",
+      "fa": "FA",
+      "hitRate": "Träfffrekvens",
+      "misses": "Missar",
+      "sequences": "Sekvenser"
+    },
+    "sart": {
+      "commissionErrors": "kommissionens fel",
+      "omissionErrors": "Utelämnande fel",
+      "tapAllDigits": "Tryck på alla siffror utom 3",
+      "except3": "Förutom 3"
+    },
+    "sceneCrasher": {
+      "adds": "Lägger till",
+      "studyTheScene": "Studera scenen",
+      "swaps": "Byten",
+      "tapTheNewchangedObject": "Tryck på det nya/ändrade objektet"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Falska meningar",
+      "trueSentences": "Sanna meningar",
+      "byCategory": "Efter kategori",
+      "title": "Meningsverifiering",
+      "trueRt": "Sann RT",
+      "true": "Sant",
+      "false": "Falskt",
+      "pressKey": "Tryck"
+    },
+    "soundSweeps": {
+      "down": "Ner",
+      "downAccuracy": "Nedsatt noggrannhet",
+      "durationThreshold": "Varaktighetströskel",
+      "up": "Upp",
+      "upAccuracy": "Upp noggrannhet",
+      "title": "Ljudsvep",
+      "threshold": "Tröskel",
+      "upOrDown": "Upp eller ner?"
+    },
+    "sourceMemory": {
+      "color": "Färg",
+      "colorRecall": "Färgåterkallelse",
+      "frame": "Ram",
+      "frameRecall": "Frame recall",
+      "getReadyForTheTest": "Gör dig redo för testet!",
+      "itemRecognition": "Objektigenkänning",
+      "positionRecall": "Positionsåterkallelse",
+      "sourceAccuracy": "Källa noggrannhet",
+      "title": "Källminne",
+      "source": "Källa",
+      "position": "Position",
+      "word": "Ord",
+      "wasThisWordShown": "Visades detta ord?",
+      "bottom": "Nederst",
+      "blue": "Blå",
+      "orange": "Orange",
+      "circle": "Cirkel",
+      "square": "Square"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Bullertröskel",
+      "title": "Tal-i-Noise",
+      "noise": "Buller",
+      "whichWordWasIt": "Vilket ord var det?"
+    },
+    "srtt": {
+      "learningEffect": "Lärande effekt",
+      "learning": "Lärande",
+      "block": "Block"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Chansnivå",
+      "learningDetected": "Inlärning upptäckt",
+      "testPhase": "Testfas",
+      "whichPairLooksMoreFamiliar": "Vilket par ser mer bekanta ut?",
+      "title": "Statistiskt lärande",
+      "learning": "Lärande",
+      "watchTheShapes": "Titta på formerna"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Belief Bias Effect",
+      "conclusion": "Slutsats",
+      "premise1": "Premiss 1",
+      "premise2": "Premiss 2",
+      "logicalValidityQuestion": "Är detta logiskt giltigt?",
+      "valid": "Giltigt",
+      "invalid": "Ogiltig"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Frånvarande noggrannhet",
+      "presentAccuracy": "Nuvarande noggrannhet",
+      "title": "Symbolsökning",
+      "present": "Närvarande",
+      "absent": "Frånvarande",
+      "targets": "Mål",
+      "searchGroup": "Sök grupp"
+    },
+    "syncContinuation": {
+      "async": "Asynkron",
+      "asynchrony": "Asynkroni",
+      "drift": "Drift",
+      "cv": "CV",
+      "title": "Sync-Fortsättning",
+      "meanCv": "Genomsnittligt CV",
+      "tempos": "Tempos",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Gör dig redo...",
+      "nextTempo": "Nästa tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Korrekt återställningar",
+      "duration": "Varaktighet",
+      "missedCounters": "Missade räknare",
+      "prematureResets": "För tidig återställning",
+      "totalEvents": "Totalt antal händelser",
+      "tooEarly": "För tidigt!",
+      "missed": "Saknad!",
+      "title": "Uppgiftsjonglering",
+      "premature": "För tidigt",
+      "counter": "Räknare",
+      "tapCounterInstruction": "Tryck på varje räknare när den når sin tröskel. Låt inget svämma över!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Bisektionspunkt (PSE)",
+      "curveSteepness": "Branthet i kurvan",
+      "idealMidpoint": "Idealisk mittpunkt",
+      "pse": "PSE",
+      "title": "Temporal Bisektion",
+      "steepness": "Branthet",
+      "shortOrLong": "Kort eller lång?",
+      "trainingPhase": "Utbildningsfas",
+      "short": "Kort",
+      "long": "Lång"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Gradientbredd",
+      "rememberThisDuration": "Kom ihåg denna varaktighet",
+      "width": "Bredd",
+      "standard": "STANDARD",
+      "title": "Temporell generalisering",
+      "hitRate": "Träfffrekvens",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Träfffrekvens (upptäck standard)",
+      "sameDuration": "Samma varaktighet?",
+      "trainingPhase": "Utbildningsfas",
+      "same": "Samma",
+      "different": "Olika"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Tröskel SOA",
+      "title": "Texturdiskriminering",
+      "threshold": "Tröskel"
+    },
+    "timePromem": {
+      "avgTimingError": "Genomsnittligt tidsfel",
+      "clockChecks": "Klockkontroller",
+      "ongoingAccuracy": "Pågående noggrannhet",
+      "ongoingTrials": "Pågående försök",
+      "totalPmPresses": "Totalt PM-tryck",
+      "pmAccuracy": "PM-noggrannhet",
+      "pmMisses": "PM missar",
+      "title": "Tidsperspektiv",
+      "ongoing": "Pågår",
+      "pmHitsLabel": "PM träffar",
+      "timingErr": "Timing Err",
+      "pmHitsExpected": "PM träffar / förväntat",
+      "pmPresses": "PM trycker",
+      "checkClock": "Kontrollera klockan",
+      "thirtySecMark": "30-talsmärke"
+    },
+    "toj": {
+      "meanResponseTime": "Genomsnittlig svarstid",
+      "temporalResolution": "Temporal resolution",
+      "title": "Temporal Order Dome",
+      "threshold": "Tröskel",
+      "whichCameFirst": "Vilket kom först?",
+      "leftFirst": "Vänster först",
+      "rightFirst": "Rätt först"
+    },
+    "tower": {
+      "budget": "Budget",
+      "challenge": "Utmaning",
+      "challengeClassic": "Klassisk",
+      "challengeExpert": "Expert",
+      "challengeMemory": "Minne",
+      "challengePrecision": "Precision",
+      "dragDiscAriaLabel": "Dra den översta skivan från peg {{peg}}",
+      "goal": "Mål",
+      "goalHiddenStatus": "Mål dolt. Använd Reveal för att visa det kort.",
+      "goalRevealedMessage": "Målet avslöjat i 3 sekunder.",
+      "hint": "Tips",
+      "hintDescription": "Visa bästa nästa drag",
+      "hintMessage": "Tips: flytta den översta skivan från peg {{fromPeg}} till peg {{toPeg}}.",
+      "hiddenGoalDescription": "Målet är dolt under spel. Använd Reveal när du behöver en kort uppfräschning.",
+      "hiddenGoalTitle": "Minnesutmaning",
+      "invalid": "Ogiltig",
+      "moves": "Rör sig",
+      "optimal": "Optimal",
+      "pegFullMessage": "Den pinnen är full.",
+      "previewMemoryCountdown": "Memorera målet. Startar om {{seconds}}s.",
+      "previewPlanCountdown": "Planera lösningen {{moves}}-move. Startar om {{seconds}}s.",
+      "reset": "Återställ",
+      "resetDescription": "Starta om detta pussel",
+      "resetMessage": "Återställning av pussel.",
+      "reveal": "Avslöja",
+      "revealDescription": "Avslöja det dolda målet",
+      "statusOptimalSolve": "Optimal lösning. Poäng {{score}}.",
+      "statusSolvedScore": "Löst i {{moves}} drag (+{{extraMoves}}). Poäng {{score}}.",
+      "undo": "Ångra",
+      "undoDescription": "Vänd om sista draget",
+      "undoneMessage": "Sista draget ångrat.",
+      "yourPegs": "Dina pinnar"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Korrekta leveranser",
+      "trainsLost": "Tåg förlorade",
+      "wrongStation": "Fel station",
+      "title": "Tankegång",
+      "trains": "Tåg",
+      "missed": "Saknad",
+      "scoreLabel": "Betyg",
+      "instructions": "Instruktioner"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Genomsnittliga frågor som används",
+      "title": "Tjugo frågor",
+      "avgQuestions": "Genomsnittlig frågor",
+      "rounds": "Omgångar",
+      "efficiency": "Effektivitet",
+      "avgQuestionsCorrectOnly": "Genomsnittlig frågor (endast korrekt)",
+      "questionsLabel": "Frågor",
+      "remaining": "Kvar",
+      "readyToGuess": "Jag är redo att gissa!",
+      "tapTheTarget": "Tryck på objektet du tror är målet!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Användbart synfält",
+      "visualNoiseMask": "Visuell brusmask",
+      "whatWasInTheCenter": "Vad stod i centrum?",
+      "whereWasTheTarget": "Var var målet?",
+      "avgThreshold": "Genomsnittlig tröskel",
+      "speed": "Hastighet",
+      "accuracy": "Noggrannhet",
+      "central": "Centralt",
+      "peripheral": "Perifer",
+      "overall": "Sammantaget",
+      "block": "Block",
+      "trials": "Rättegångar",
+      "start": "Starta",
+      "focus": "Fokusera",
+      "threshold": "Tröskel",
+      "stimulus": "Stimulans",
+      "respondFromMemory": "Svara från minnet",
+      "truck": "Lastbil",
+      "choosePeripheralLocation": "Välj en perifer plats",
+      "currentBlock": "Blockera {{n}}",
+      "exposure": "Exponering"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Ord som börjar på {{letter}}",
+      "title": "Verbal flyt",
+      "totalWords": "Totalt antal ord",
+      "duplicates": "Dubletter",
+      "letter": "Brev",
+      "round": "Runt",
+      "roundComplete": "Omgången klar",
+      "nextRound": "Nästa omgång",
+      "middotRound": "· Runda"
+    },
+    "vernierAcuity": {
+      "whichSide": "Vilken sida?",
+      "title": "Vernier Acuity",
+      "leftOffset": "Vänster offset",
+      "rightOffset": "Höger offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimal strategi",
+      "correct": "Rätta!",
+      "wrong": "Fel",
+      "title": "Väderprognos",
+      "optimal": "Optimal",
+      "learningCurve": "Inlärningskurva",
+      "predictTheWeather": "Förutsäg vädret",
+      "rain": "Regn"
+    },
+    "wordChain": {
+      "avgResponseTime": "Genomsnittlig svarstid",
+      "chain": "Kedja",
+      "longestChain": "Längsta kedja",
+      "totalCorrect": "Helt korrekt",
+      "totalWords": "Totala ord",
+      "words": "Ord",
+      "title": "Ordkedja",
+      "longest": "Längst",
+      "avgRt": "Genomsnittlig RT",
+      "endsWith": "slutar med",
+      "chainLabel": "Kedja",
+      "bestLabel": "Bästa"
+    },
+    "wordFlow": {
+      "avgWordLength": "Genomsnittlig ordlängd",
+      "correct": "Rätt",
+      "invalidWords": "Ogiltiga ord",
+      "totalWordsSelected": "Totalt valda ord",
+      "validWords": "Giltiga ord",
+      "wordsPerMinute": "Ord per minut",
+      "wrong": "Fel",
+      "seeResults": "Se resultat",
+      "nextRound": "Nästa omgång ({{current}}/{{total}})",
+      "title": "Verbal flyt",
+      "validWordsLabel": "Giltiga ord",
+      "wordsPerMinLabel": "Ord/min",
+      "avgLengthLabel": "Genomsnittlig längd",
+      "invalidLabel": "Ogiltig",
+      "round": "Runt",
+      "selectWordsBelongTo": "Välj ord som hör till",
+      "selected": "Vald"
+    },
+    "wordList": {
+      "avgRtCorrect": "Genomsnittlig RT (rätt)",
+      "primacyEffect": "Primacy effekt",
+      "recencyEffect": "Nyhetseffekt",
+      "studyPhaseRememberEachWord": "Studiefas - kom ihåg varje ord",
+      "wordsRecalled": "Ord som återkallas",
+      "title": "Ordlista",
+      "serialPositionCurve": "Seriell positionskurva",
+      "wasWordInList": "Fanns detta ord i listan?",
+      "seenBefore": "Sett förut",
+      "newWord": "Nytt"
+    },
+    "speedSort": {
+      "switchAccuracy": "Växlingsnoggrannhet",
+      "switchTrials": "Byt försök",
+      "sortByColor": "Sortera efter FÄRG",
+      "sortByShape": "Sortera efter SHAPE",
+      "sortByNumber": "Sortera efter NUMBER",
+      "ruleChanged": "Regeln ändrad!",
+      "binRed": "Röd",
+      "binBlue": "Blå",
+      "binGreen": "Grönt",
+      "binYellow": "Gul",
+      "binCircle": "Cirkel",
+      "binSquare": "Square",
+      "binTriangle": "Triangel",
+      "binStar": "Stjärna",
+      "title": "Hastighetssortering",
+      "switch": "Växlar"
+    },
+    "reflex": {
+      "target": "Mål",
+      "lure": "Lure",
+      "tooSlow": "För långsamt!",
+      "wrongTarget": "Fel mål!",
+      "tapTargets": "Tryck på de gröna cirklarna!",
+      "hits": "Träffar",
+      "misses": "Missar",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Kom ihåg totalsumman...",
+      "title": "Kedjeberäkning",
+      "stepChains": "{{len}}-stegskedjor",
+      "start": "Starta",
+      "step": "Steg",
+      "whatIsTheResult": "Vad är resultatet?"
+    },
+    "alternateUses": {
+      "placeholder": "Skriv en användning...",
+      "title": "Alternativa användningsområden",
+      "totalUses": "Totala användningar",
+      "perObject": "Per objekt",
+      "rounds": "Omgångar",
+      "bestObject": "Bästa objektet",
+      "bestCount": "Bästa räkning",
+      "noUsesSubmitted": "Inga användningar inlämnade",
+      "timesUp": "Tiden är ute!",
+      "nextObject": "Nästa objekt ({{object}})",
+      "listCreativeUses": "Lista kreativa användningsområden för detta objekt"
+    },
+    "anagram": {
+      "placeholder": "Skriv ordet...",
+      "title": "Anagram",
+      "avgSolve": "Genomsnittlig lösa",
+      "letterWords": "{{len}}-bokstavsord",
+      "submit": "Skicka in"
+    },
+    "facialEmotion": {
+      "happy": "Glad",
+      "sad": "Sorgligt",
+      "angry": "Arg",
+      "fearful": "Rädsla",
+      "disgusted": "Äckla",
+      "surprised": "Förvånad",
+      "lc": "LC",
+      "title": "Känsla i ansiktet",
+      "topConfusions": "Topp förvirring"
+    },
+    "numberSeries": {
+      "easy": "Lätt",
+      "hard": "Hårt"
+    },
+    "chainRecall": {
+      "round": "Runt",
+      "title": "Kedjeåterkallelse",
+      "chain": "Kedja",
+      "placeholder": "Platshållare"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotionell Go/No-Go",
+      "block1CommissionErrors": "Block 1 provisionsfel",
+      "block2CommissionErrors": "Block 2 provisionsfel",
+      "goHappy": "Gå = glad",
+      "goSad": "Gå = ledsen",
+      "block": "Block",
+      "go": "Gå"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop effekt",
+      "title": "Färg Rush",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Kongruent noggrannhet",
+      "incongruentAccuracy": "Inkongruent noggrannhet"
+    },
+    "mirror": {
+      "avgCorrectCells": "Korrigera celler (genomsnitt)",
+      "symmetryType": "Symmetri typ",
+      "title": "Spegel"
+    },
+    "rhythmTap": {
+      "correctTrials": "Rätt prövningar",
+      "avgRhythmScore": "Genomsnittlig rytmpoäng",
+      "bestTrialScore": "Bästa provresultat",
+      "worstTrialScore": "Sämsta provresultat",
+      "level": "Nivå",
+      "rhythm": "Rytm",
+      "bestTrial": "Bästa försöket",
+      "worstTrial": "Värsta rättegången"
+    },
+    "vocalProsody": {
+      "questioning": "Ifrågasättande"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Multiplicera",
+      "add": "Lägg till",
+      "subtract": "Subtrahera",
+      "title": "Aritmetisk hastighet",
+      "score": "Betyg",
+      "solved": "Löst",
+      "missed": "Saknad"
+    },
+    "puzzle": {
+      "avgSolveTime": "Genomsnittlig lösningstid",
+      "totalMoves": "Totalt antal drag",
+      "totalErrors": "Totala fel",
+      "gridSize": "Rutnätsstorlek",
+      "maxGridReached": "Max rutnät nått",
+      "maxLevelReached": "Maxnivå nådd",
+      "maxNodesReached": "Max noder nådde",
+      "puzzleDetails": "Pusseldetaljer",
+      "roundDetails": "Runda detaljer",
+      "solved": "Löst!",
+      "undo": "Ångra",
+      "reset": "Återställ",
+      "check": "Kontrollera",
+      "moves": "Rör sig",
+      "time": "Tid",
+      "level": "Nivå",
+      "errors": "Fel",
+      "score": "Betyg",
+      "grid": "Grid",
+      "crossings": "Korsningar",
+      "pearls": "Pärlor",
+      "clues": "Ledtrådar",
+      "region": "Region",
+      "filled": "Fylld",
+      "cells": "Celler",
+      "undosLeft": "Ångra återstår",
+      "gems": "Ädelstenar",
+      "connected": "Ansluten",
+      "slides": "Rutschbanor",
+      "progress": "Framsteg",
+      "rotations": "Rotationer",
+      "puzzle": "Pussel",
+      "uncovered": "Avtäckt",
+      "colored": "Färgad",
+      "violations": "Kränkningar",
+      "blacked": "Svartad",
+      "empty": "Tom",
+      "remaining": "Kvar",
+      "pairs": "Par",
+      "flips": "Vänder",
+      "found": "Hittade",
+      "balls": "Bollar",
+      "guesses": "Gissningar",
+      "original": "Original",
+      "findDifferences": "Hitta skillnader",
+      "totalDrags": "Totalt drag",
+      "totalUndos": "Totalt ångrar",
+      "totalEdgesDrawn": "Totalt ritade kanter",
+      "totalLasers": "Totalt lasrar",
+      "totalSlides": "Totalt antal bilder",
+      "totalRotations": "Totala rotationer",
+      "totalRectangles": "Totala rektanglar",
+      "totalScore": "Totalpoäng",
+      "avgTime": "Genomsnittlig tid",
+      "cellsCleared": "Cellerna rensades",
+      "totalDiffsFound": "Totala skillnader hittades",
+      "gemsCollected": "Ädelstenar samlade in",
+      "pushBoxesOntoTargets": "Skjut alla lådor på mål",
+      "fireLasersMarkBalls": "Avfyra lasrar från kanterna och markera sedan kulpositioner",
+      "revealingAnswer": "Avslöjande svar...",
+      "checkAnswer": "Kontrollera Svar",
+      "pickNumberBelow": "Välj ett nummer nedan",
+      "tapCellToAssign": "Tryck på en cell för att tilldela ett nummer",
+      "tapEdgesToPlaceWalls": "Knacka kanter för att placera väggar. Dela in i regioner av K.",
+      "ghosts": "Spöken",
+      "vampires": "Vampyrer",
+      "zombies": "Zombies",
+      "dominoes": "Domino",
+      "islands": "öar",
+      "pegsLeft": "Pinnarna vänster",
+      "bestRemaining": "Bäst kvar",
+      "puzzlesSolved": "Pussel lösta",
+      "flooded": "Översvämmad",
+      "edges": "Kanter",
+      "totalPlacements": "Totalt antal placeringar",
+      "totalRemovals": "Totala borttagningar",
+      "maxTileReached": "Maxbrickan nådd",
+      "target": "Mål",
+      "placed": "Placerad",
+      "totalGuesses": "Totala gissningar",
+      "guessesLeft": "Gissningar kvar",
+      "difficulty": "Svårighet"
+    },
+    "palisade": {
+      "title": "Palisad",
+      "puzzles": "Pussel",
+      "maxLevel": "Max nivå"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "errors": "Fel",
+      "avgTime": "Genomsnittlig tid",
+      "erase": "Radera"
+    },
+    "blackbox": {
+      "title": "Svart låda",
+      "puzzles": "Pussel",
+      "lasers": "Lasrar",
+      "avgTime": "Genomsnittlig tid"
+    },
+    "designFluency": {
+      "title": "Design flytande",
+      "uniqueDesigns": "Unika design",
+      "duplicates": "Dubletter",
+      "round": "Runt",
+      "roundComplete": "Omgången klar",
+      "youCreatedDesigns": "Du skapade {{count}}-designer",
+      "startRound": "Börja rundan",
+      "instructions": "Instruktioner",
+      "designs": "Mönster",
+      "clear": "Rensa",
+      "addDesign": "Lägg till"
+    },
+    "signpost": {
+      "title": "Vägvisare",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "avgTime": "Genomsnittlig tid",
+      "maxGrid": "Max rutnät"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Nivå",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "undos": "Ångra",
+      "puzzle": "Pussel"
+    },
+    "numericalStroop": {
+      "left": "Vänster",
+      "right": "Rätt"
+    },
+    "biologicalMotion": {
+      "title": "Biologisk rörelse",
+      "noiseDots": "brusprickar",
+      "whichDirection": "Vilken riktning?",
+      "left": "Vänster",
+      "right": "Rätt"
+    },
+    "inertia": {
+      "title": "Tröghet",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "gems": "Ädelstenar",
+      "moves": "Rör sig"
+    },
+    "waterLevel": {
+      "title": "Vattennivå",
+      "error": "Fel",
+      "tilt": "Luta",
+      "waterLine": "Vattenledning?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxGrid": "Max rutnät"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "errors": "Fel",
+      "avgTime": "Genomsnittlig tid",
+      "erase": "Radera"
+    },
+    "rectangles": {
+      "title": "Rektanglar",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "rectanglesCount": "Rektanglar",
+      "maxGrid": "Max rutnät",
+      "cancelSelection": "Avbryt val"
+    },
+    "filling": {
+      "title": "Fyllning",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "avgTime": "Genomsnittlig tid",
+      "grid": "Grid"
+    },
+    "spacedRetrieval": {
+      "title": "Avståndshämtning",
+      "studyPair": "Studera detta par",
+      "waitAndSolve": "Vänta... lös sedan",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Intervall: vilka par?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototyp Distorsion",
+      "studyPhase": "Studiefas",
+      "testPhase": "Testfas",
+      "yesBelongs": "Ja - hör till",
+      "noRandom": "Nej - Slumpmässigt"
+    },
+    "motionCoherence": {
+      "title": "Motion Coherence",
+      "threshold": "Tröskel",
+      "coherence": "Koherens",
+      "whichDirection": "Vilken riktning?"
+    },
+    "cube": {
+      "title": "Kub",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxLevel": "Max nivå",
+      "cubeFaces": "Kubansikten",
+      "moveUp": "Upp",
+      "moveLeft": "Vänster",
+      "moveDown": "Ner",
+      "moveRight": "Rätt"
+    },
+    "sameGame": {
+      "title": "Samma spel",
+      "score": "Betyg",
+      "cleared": "Rensat",
+      "cells": "Celler",
+      "accuracy": "Noggrannhet"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal Matchning",
+      "chance": "Chans",
+      "whichPatternMatchesRhythm": "Vilket mönster matchar rytmen?"
+    },
+    "mosaic": {
+      "title": "Mosaik",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxGrid": "Max rutnät"
+    },
+    "spotDiff": {
+      "title": "Spot the Diff",
+      "level": "Nivå",
+      "grid": "Grid",
+      "accuracy": "Noggrannhet",
+      "perfect": "Perfekt",
+      "avgTime": "Genomsnittlig tid",
+      "found": "Hittade"
+    },
+    "lightsOut": {
+      "title": "Lights Out",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxGrid": "Max rutnät"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "rotations": "Rotationer",
+      "avgTime": "Genomsnittlig tid"
+    },
+    "tracks": {
+      "title": "Spår",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "errors": "Fel",
+      "avgTime": "Genomsnittlig tid"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "slides": "Rutschbanor",
+      "maxGrid": "Max rutnät"
+    },
+    "cognitiveBias": {
+      "title": "Kognitiv bias träning",
+      "biasResistance": "Bias motstånd",
+      "biased": "Partisk",
+      "continue": "Fortsätt"
+    },
+    "empathicAccuracy": {
+      "title": "Empatisk noggrannhet",
+      "emotionId": "Känslor",
+      "avgRatingError": "Genomsnittlig betygsfel",
+      "scenarios": "Scenarier",
+      "perfect": "Perfekt",
+      "rating": "Betyg",
+      "howDoesCharacterFeel": "Hur känns karaktären?",
+      "rateIntensity": "Betygsätt intensiteten",
+      "whatEmotion": "Vilken känsla?",
+      "yourRating": "Ditt betyg",
+      "correct": "Rätt",
+      "emotion": "Känslor"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Löst",
+      "guesses": "Gissningar"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxLevel": "Max nivå"
+    },
+    "magnets": {
+      "title": "Magneter",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxLevel": "Max nivå"
+    },
+    "tangram": {
+      "placeAll": "Lägg alla bitar",
+      "solved": "Löst!",
+      "notRight": "Inte helt rätt",
+      "title": "Tangram",
+      "level": "Nivå",
+      "puzzles": "Pussel",
+      "placements": "Placeringar",
+      "removals": "Flyttningar",
+      "puzzleNumber": "Pussel {{n}}",
+      "pieces": "Bitar",
+      "targetCells": "Cible",
+      "dragHint": "Dra eller placera biten på rutnätet",
+      "selectHint": "Välj en bit",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Kontrollera"
+    },
+    "galaxies": {
+      "title": "Galaxer"
+    },
+    "flood": {
+      "title": "Översvämning"
+    },
+    "pegs": {
+      "title": "Pinnar",
+      "bestPegs": "Bästa pinnarna"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditiv Figur-Ground",
+      "patternPresent": "Mönster närvarande?",
+      "pattern": "Mönster",
+      "noPattern": "Inget mönster"
+    },
+    "selfOrderedPointing": {
+      "title": "Självbeställd peka",
+      "maxSpan": "Max spann",
+      "errors": "Fel",
+      "round": "Runt",
+      "setOf": "Uppsättning av {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Spegelspårning",
+      "totalErrors": "Totala fel",
+      "avgTime": "Genomsnittlig tid",
+      "shapes": "Former",
+      "perfect": "Perfekt",
+      "improvement": "Förbättring",
+      "errorsMiddot": "fel ·",
+      "shape": "Form",
+      "errors": "Fel",
+      "xIsMirrored": "X är spegelvänd!"
+    },
+    "clockDrawing": {
+      "title": "Klockritning",
+      "avgError": "Genomsnittlig fel",
+      "setTo": "Ställ in på",
+      "submit": "Skicka in"
+    },
+    "cognitiveMap": {
+      "title": "Kognitiv karta",
+      "explore": "Utforska",
+      "sRemaining": "S Kvar",
+      "from": "Från",
+      "whichDirectionIs": "Vilken riktning är"
+    },
+    "sixteen": {
+      "title": "Sexton"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Lyser upp"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max kakel",
+      "moves": "Rör sig",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Broar",
+      "puzzles": "Pussel",
+      "maxLevel": "Max nivå",
+      "level": "Nivå"
+    },
+    "net": {
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxGrid": "Max rutnät"
+    },
+    "flip": {
+      "title": "Vänd"
+    },
+    "range": {
+      "title": "Räckvidd"
+    },
+    "slant": {
+      "title": "Sned"
+    },
+    "towers": {
+      "title": "Torn",
+      "puzzles": "Pussel",
+      "avgTime": "Genomsnittlig tid",
+      "erase": "Radera"
+    },
+    "pearl": {
+      "title": "Pärla",
+      "edges": "Kanter"
+    },
+    "mapColoring": {
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "moves": "Rör sig",
+      "maxLevel": "Max nivå"
+    },
+    "singles": {
+      "title": "Singlar"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Odöda",
+      "accuracy": "Noggrannhet",
+      "puzzles": "Pussel",
+      "avgTime": "Genomsnittlig tid"
+    },
+    "untangle": {
+      "title": "Reda ut",
+      "drags": "Drag",
+      "maxNodes": "Max noder"
+    },
+    "unruly": {
+      "title": "Oregerlig"
+    },
+    "fifteen": {
+      "title": "Femton"
+    },
+    "tents": {
+      "title": "Tält"
+    },
+    "mesker": {
+      "pen": "Penna",
+      "stroke": "Stroke",
+      "penPressureHint": "Skriv med konsekvent penntryck"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Ljud"
+    },
+    "validate": "Validera"
+  },
+  "trace": {
+    "instructions": "Svep till N-bakläge. Dubbeltryck om samma position.",
+    "hint": {
+      "validated": "Validerad",
+      "draw": "Rita bokstaven • Tryck för att bekräfta",
+      "drawWithColor": "Rita bokstaven • Välj färg • Tryck för att bekräfta",
+      "type": "Skriv bokstaven • Enter för att bekräfta",
+      "typeWithColor": "Skriv bokstaven • Välj färg • Enter för att bekräfta",
+      "typeResult": "Skriv resultatet • Enter för att validera",
+      "writeResult": "Skriv resultatet • Tryck för att validera"
+    },
+    "keyboard": {
+      "letterInput": "Brev",
+      "numberInput": "Nummer"
+    },
+    "arithmetic": {
+      "cueHint": "Memorera de två siffrorna",
+      "refresh": "Nytt"
+    },
+    "hintPosition": "Var var stimulansen för {{n}} svängarna sedan?",
+    "hintN0": "Ange aktuell stimulans",
+    "warmupHint": "Memorera positionerna. Inget svar behövs.",
+    "hintDraw": "Rita bokstaven • Tryck för att bekräfta",
+    "hintDrawWithColor": "Rita bokstaven • Välj färg • Tryck för att bekräfta",
+    "hintWriteResult": "Skriv resultatet • Tryck för att validera",
+    "guide": {
+      "swipeNormal": "Svep från den senaste positionen (N-0) till positionen från {{n}} steg sedan (N-{{n}}). Dubbeltryck om samma position.",
+      "swipeSequential": "Svep steg för steg från N-0 till N-{{n}} och passera genom varje mellanposition. Dubbeltryck om samma position.",
+      "swipeDynamic": "Svep enligt den visade regeln. Dubbeltryck om samma position.",
+      "tapN0": "Tryck på den aktuella positionen.",
+      "warmup": "Memorera positionerna - inget svar krävs.",
+      "writeDraw": "Rita bokstaven som hördes för {{n}} steg sedan • Tryck för att bekräfta",
+      "writeDrawColor": "Rita bokstaven som hördes för {{n}} steg sedan • Välj dess färg • Tryck för att validera",
+      "writeType": "Skriv bokstaven som hördes {{n}} steg sedan • Enter för att validera",
+      "writeTypeColor": "Skriv bokstaven som hördes {{n}} steg sedan • Välj dess färg • Enter för att validera",
+      "writeDrawN0": "Rita bokstaven du just hörde • Tryck för att bekräfta",
+      "writeDrawColorN0": "Rita bokstaven du just hörde • Välj dess färg • Tryck för att bekräfta",
+      "writeTypeN0": "Skriv bokstaven du just hörde • Enter för att bekräfta",
+      "writeTypeColorN0": "Skriv bokstaven du just hörde • Välj dess färg • Enter för att bekräfta",
+      "writeResult": "Skriv resultatet • Tryck för att validera",
+      "validated": "Validerad",
+      "holdMindful": "Håll cellen i {{seconds}}s",
+      "swipeMindful": "Svep in {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptiv timing",
+      "inputKeyboard": "Tangentbord",
+      "inputHandwriting": "Handstil",
+      "writingInput": "Bokstäver/siffror",
+      "section": {
+        "grid": "Grid",
+        "input": "Ingång",
+        "rhythm": "Rytm",
+        "interface": "Gränssnitt",
+        "interfaceNone": "Standard",
+        "sound": "Ljud"
+      },
+      "isi": "Intervall (ISI)",
+      "stimulusDuration": "Stimulans varaktighet",
+      "feedbackDuration": "Återkopplingens varaktighet",
+      "ruleDisplay": "Regelns varaktighet",
+      "blankInterval": "Tomt intervall",
+      "showProgressBar": "Förloppsindikator",
+      "showInstructions": "Instruktioner i spelet",
+      "arithmeticInterference": "Aritmetisk störning",
+      "fullMenu": "Fullständig meny",
+      "gridStyle": "Rutnätsstil",
+      "gridStyleClassic": "Klassisk",
+      "gridStyleTrace": "Spåra",
+      "guide": {
+        "swipeMindful": "Svep in {{seconds}}s",
+        "holdMindful": "Håll cellen i {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Gest",
+        "holdDuration": "Vänta",
+        "writingDuration": "Skrivande"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Vänta",
+      "gestureDuration": "Gest",
+      "writingDuration": "Skrivande"
+    },
+    "image": "Form",
+    "digits": "Siffror",
+    "emotions": "Känslor",
+    "words": "Ord",
+    "tones": "Tone",
+    "spatial": "Riktning"
+  },
+  "replay": {
+    "title": "Repris på sessionen",
+    "play": "Spela",
+    "pause": "Pausa",
+    "restart": "Starta om",
+    "speed": "Hastighet",
+    "loading": "Laddar session...",
+    "unavailable": "Omspelning är inte tillgänglig för denna session",
+    "backToStats": "Tillbaka till statistik",
+    "runStack": {
+      "original": "Original",
+      "correction": "Rättelse",
+      "delta": "Δ d'",
+      "inProgress": "Pågår",
+      "completed": "Avslutad"
+    },
+    "abandon": "Överge",
+    "badge": "Spela om",
+    "completionReport": {
+      "backToHome": "Tillbaka",
+      "correctAgain": "Rätt igen",
+      "deltaVsOriginal": "vs original",
+      "deltaVsParent": "vs föregående körning",
+      "falseAlarmsSkipped": "Fel undviks",
+      "missesCorrections": "Rättelser",
+      "newFalseAlarms": "Nya fel",
+      "replayAgain": "Spela om",
+      "scoreLabel": "d' poäng",
+      "title": "Rättelsen klar"
+    },
+    "controls": "Kontroller",
+    "correction": "Rättelse",
+    "finished": "Slut på repris",
+    "home": "Hem",
+    "parseError": "Det gick inte att läsa sessionen",
+    "tapSlotToPlace": "Tryck på en plats för att placera",
+    "timeline": "Tidslinje",
+    "focusTimeline": {
+      "open": "Visa tidslinjen",
+      "close": "Stäng tidslinjen",
+      "title": "N-Back tidslinje",
+      "fillAll": "Fyll alla",
+      "fillCard": "Fyll kort"
+    },
+    "hud": {
+      "counterDisplay": "Räknardisplay",
+      "toggleCounterDisplay": "Växla räknarevisning"
+    },
+    "validate": "Validera"
+  },
+  "recovery": {
+    "title": "Session avbruten",
+    "description": "En session pågick. Vill du fortsätta?",
+    "mode": "Läge",
+    "level": "Nivå",
+    "progress": "Framsteg",
+    "timeAgo": "Tid",
+    "resume": "Återuppta sessionen",
+    "startFresh": "Börja fräscht",
+    "staleWarning": "Denna session är gammal, att återuppta kan vara utmanande.",
+    "modes": {
+      "game": "Utbildning",
+      "activeTraining": "Aktiv träning",
+      "flowTraining": "Dual Place utbildning",
+      "dualPickTraining": "Dubbelval",
+      "traceTraining": "Dubbla spår"
+    }
+  },
+  "rewards": {
+    "congratulations": "Grattis!",
+    "duration": "{{days}} dagar Premium",
+    "lifetimeLabel": "Livstidsåtkomst",
+    "expiresAt": "Gäller till {{date}}",
+    "neverExpires": "Går aldrig ut",
+    "continue": "Fortsätt",
+    "discovery": {
+      "name": "Discovery pass",
+      "description": "7 dagar Premium — Utforska alla funktioner"
+    },
+    "engagement": {
+      "name": "Förlovningspass",
+      "description": "1 månad Premium — Din disciplin lönar sig"
+    },
+    "expert": {
+      "name": "Expertpass",
+      "description": "3 månader Premium — Du är en sann utövare"
+    },
+    "lifetime": {
+      "name": "Livstidsåtkomst",
+      "description": "Premium för alltid — Du har bemästrat Neurodual"
+    },
+    "xpRemaining": "XP kvar",
+    "permanentAccessUnlocked": "Permanent åtkomst upplåst",
+    "reachedTheTop": "Du har nått toppen!"
+  },
+  "progression": {
+    "level": "Nivå {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Nästa nivå",
+    "reached": "Nått",
+    "inProgress": "Pågår"
+  },
+  "gridlock": {
+    "nextPuzzle": "Nästa pussel →"
+  }
+}

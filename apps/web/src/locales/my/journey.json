@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "လေ့ကျင့်ရေး လမ်းကြောင်း",
+    "pageSubtitle": "သင့် journey များကို ရွေးချယ်ပါ၊ စီစဉ်ပါ နှင့် ဖန်တီးပါ",
+    "enabled": "Training path ဖွင့်ရန်",
+    "description": "N-1 မှ N-10 အထိ တိုးတက်သော အဆင့် ၃၀",
+    "progress": "တိုးတက်မှု",
+    "locked": "သော့ပိတ်ထားသည်",
+    "createJourney": "Journey ဖန်တီးရန်",
+    "viewJourneys": "Journey များ ကြည့်ရန်",
+    "current": "လက်ရှိ journey",
+    "myJourneys": "ကျွန်တော့် journey များ",
+    "stage": "အဆင့်",
+    "stages": "အဆင့်များ",
+    "stagesShort": "ဆင့်",
+    "stageLabels": {
+      "pick": "ကောက်",
+      "catch": "ဖမ်းတယ်။",
+      "place": "နေရာ",
+      "memo": "မှတ်စုတို"
+    },
+    "name": "အမည်",
+    "namePlaceholder": "ဥပမာ N-5 Challenge",
+    "levels": "Level များ",
+    "levelRange": "Level အတိုင်းအတာ",
+    "levelTo": "မှ",
+    "createNew": "Journey အသစ်",
+    "new": "အသစ်",
+    "defaultCustomName": "ကျွန်တော့် journey",
+    "created": "Journey ဖန်တီးပြီး!",
+    "deleted": "Journey ဖျက်ပြီး",
+    "sessionSettings": "Session ဆက်တင်များ",
+    "savedStatus": "ဆက်တင်များ သိမ်းပြီး",
+    "preset": {
+      "easy": "လွယ်ကူ",
+      "medium": "အကြံပြု",
+      "hard": "ခက်ခဲ"
+    },
+    "setup": {
+      "title": "Journey နှင့် profile များ",
+      "journey": "ခရီး",
+      "journeyNone": "ရွေးပါ...",
+      "profile": "ကိုယ်ရေးအကျဉ်း",
+      "profileNone": "ရွေးပါ...",
+      "configure": "ပြင်ဆင်ရန်",
+      "configureNone": "Journey တစ်ခု ရွေးပါ",
+      "create": "Journey အသစ်",
+      "createDesc": "Journey အသစ် ဖန်တီးရန်"
+    },
+    "deleteConfirmTitle": "ဤ journey ကို ဖျက်မလား?",
+    "deleteConfirmMessage": "\"{{name}}\" journey ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။",
+    "renameTitle": "ဤ journey ၏ အမည်ပြောင်းရန်",
+    "renameMessage": "\"{{name}}\" ၏ အမည်ကို တည်းဖြတ်ပါ။",
+    "renamed": "Journey အမည်ပြောင်းပြီး။",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "ဘီတာ",
+      "default": "ပုံသေ"
+    },
+    "mode": "မုဒ်",
+    "modeStandard": "Journey (mode ၄ ခု)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "ဂန္ထဝင်",
+      "brainWorkshop": "ဦးနှောက်အလုပ်ရုံဆွေးနွေးပွဲ"
+    },
+    "validation": {
+      "sessions": "{{count}} အတည်ပြုနေသော session(များ)",
+      "needed": "{{count}} session(များ) ကျန်ရှိ",
+      "excellent": "အကောင်းဆုံး!",
+      "good": "ကောင်းပါတယ်!",
+      "passing": "အောင်မြင်"
+    },
+    "progression": {
+      "title": "တိုးတက်မှု",
+      "description": "နောက် level သို့ တက်ရန် ကောင်းမွန်သော score ရယူပါ:",
+      "excellent": "≥95% → session ၁ ခု",
+      "good": "≥85% → session ၂ ခု",
+      "passing": "≥80% → session ၃ ခု",
+      "rules": "တိုးတက်မှု စည်းမျဉ်းများ",
+      "jaeggi": {
+        "description": "အားနည်းဆုံး modality ကို အခြေခံ၍:",
+        "up": "< error ၃ → Level တက်",
+        "stay": "error ၃ မှ ၅ → ဤ level တွင် ဆက်နေ",
+        "down": "> error ၅ → Level ကျ"
+      },
+      "brainworkshop": {
+        "description": "ဦးနှောက်အလုပ်ရုံဆွေးနွေးပွဲ ပရိုတိုကော (BW ရမှတ်)-",
+        "up": "≥80% → Level တက်",
+        "stay": "50-79% → Level ဆက်နေ",
+        "strike": "ဆက်တိုက် <50% score ၃ ခု → Level ကျ"
+      },
+      "hybrid": {
+        "description": "ဤ journey သည် Dual Track session {{trackCount}} ခု၊ ထို့နောက် တူညီသော level တွင် Dual N-Back session {{dnbCount}} ခု လုပ်ဆောင်သည်။",
+        "alternation": "ဆုံးဖြတ်ချက်တစ်ခု ရောက်တိုင်း loop သည် Dual Track ဖြင့် ပြန်စသည်။",
+        "authority": "Dual N-Back session များသာ up, stay, down ဆုံးဖြတ်သည်။",
+        "up": "error ၀-၁ → Level တက်",
+        "stay": "error ၂-၃ → ဆက်နေ",
+        "down": "error ၄+ → Level ကျ",
+        "streakRule": "တူညီသော zone တွင် ဆက်တိုက် session ၂ ခုသည် ဆုံးဖြတ်ချက်ကို အစပြုသည်။",
+        "trackProgress": "သီချင်း {{current}}/{{required}}",
+        "cleanProgress": "အတည်ပြုပြီး {{current}}/{{required}}",
+        "stayProgress": "ကိုင်ထား {{current}}/{{required}}",
+        "downProgress": "ကျရှုံး {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track သည် target-count အဆင့်တစ်ခုစီအတွက် ဆက်တိုက် mastery bar ကို အသုံးပြုသည်:",
+        "calibration": "ပထမ calibration သည် သင့်အစ target count ကို ခန့်မှန်းသည်",
+        "goodSession": "ကောင်းမွန်သော session တစ်ခုစီသည် လက်ရှိ အဆင့်ကို အနည်းငယ် ဖြည့်သည်",
+        "mastery": "နီးပါး ပြည့်စုံသော session များသည် ပိုမြန်စွာ ဖြည့်သည်၊ သာမန် session များသည် အလယ်အလတ် ဖြစ်နေသည်",
+        "regression": "အားနည်းသော session များသည် လက်ရှိ mastery bar ကို ကျစေနိုင်သည်",
+        "unlock": "နောက် target count သည် လက်ရှိ အဆင့် 100% ရောက်မှသာ unlock ဖြစ်သည်"
+      }
+    },
+    "switcher": {
+      "open": "Journey switcher ဖွင့်ရန်",
+      "current": "လက်ရှိ",
+      "showAll": "Journey အားလုံး",
+      "settings": "Journey ဆက်တင်များ"
+    },
+    "previous": "ယခင် journey",
+    "next": "နောက် journey",
+    "calibration": {
+      "title": "ပထမ session",
+      "subtitle": "တိုတောင်းသော calibration တစ်ခုက သင့်အစ level ကို ဆုံးဖြတ်မည်၊ သို့မဟုတ် level 2 မှ တိုက်ရိုက် စတင်နိုင်သည်။",
+      "skipToN2": "သို့မဟုတ် N-2 မှ စရန်",
+      "continueAt": "သို့မဟုတ် N-{{level}} တွင် ဆက်လုပ်ရန်",
+      "start": "Calibration စတင်ရန်",
+      "redo": "Calibration ပြန်လုပ်ရန်",
+      "badge": "အိမ်မြောင်"
+    },
+    "presets": {
+      "currentSlot": "စိတ်ကြိုက်",
+      "currentSlotView": "စိတ်ကြိုက်",
+      "lockedTitle": "အချို့ ရွေးချယ်စရာများ သော့ပိတ်ထားသည်",
+      "lockedDesc": "တိုးတက်မှု နှိုင်းယှဉ်နိုင်ရန်အတွက် modality များ (နှင့် အချို့ ရွေးချယ်စရာများ) သည် journey စတင်ပြီးနောက် ပြောင်း၍ မရပါ။"
+    },
+    "completed": {
+      "title": "Journey ပြီးဆုံးပြီ!",
+      "subtitle": "အဆင့်အားလုံး အတည်ပြုပြီး။ ကောင်းပါတယ်!",
+      "continueFree": "လေ့ကျင့်ခန်း ဆက်လုပ်ရန်"
+    },
+    "report": {
+      "stage": "အဆင့်",
+      "level": "အဆင့်",
+      "score": "ရမှတ်",
+      "sessionValidated": "Session အတည်ပြုပြီး!",
+      "sessionNotValidated": "Session အတည်မပြုပါ",
+      "minScore": "လိုအပ်သော အနည်းဆုံး:",
+      "stageCompleted": "အဆင့် ပြီးဆုံးပြီ!",
+      "stageUnlocked": "အဆင့် {{stage}} unlock ပြီး!",
+      "replay": "ပြန်ကစားရန်",
+      "nextStage": "နောက် အဆင့်",
+      "home": "ပင်မ",
+      "hits": "မှန်",
+      "misses": "လွဲ",
+      "falseAlarms": "False alarm များ",
+      "correctRejections": "မှန်ကန်သော rejection များ"
+    }
+  }
+}

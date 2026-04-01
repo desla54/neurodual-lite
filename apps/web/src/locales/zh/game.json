@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "您感觉如何？",
+      "tired": "疲倦",
+      "normal": "正常",
+      "energized": "精力充沛"
+    },
+    "aria": {
+      "trialTimer": "试次计时器",
+      "positionMatch": "位置匹配",
+      "audioMatch": "音频匹配",
+      "audioLetter": "音频字母：",
+      "traceGrid": "描摹网格"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "切换同步监视器",
+      "start": "开始",
+      "end": "结束",
+      "pinLabel": "pin",
+      "pinTitle": "固定到屏幕",
+      "inputLabel": "input",
+      "inputTitle": "切换输入延迟分析（localStorage ND_INPUT_DEBUG_TIMING）",
+      "on": "开",
+      "off": "关",
+      "hideLabel": "隐藏",
+      "hideTitle": "隐藏（除非 syncHud=1 或 ND_AUDIO_DEBUG_TIMING=1）",
+      "endRef": {
+        "audio": "音频",
+        "expected": "预期"
+      },
+      "labels": {
+        "trial": "试次",
+        "lagShow": "显示延迟",
+        "lagHide": "隐藏延迟",
+        "winErr": "窗口错误",
+        "endRef": "结束参考",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "输入等待中",
+        "inputSamples": "输入样本",
+        "touchSamples": "触摸样本",
+        "mouseSamples": "鼠标采样",
+        "keyboardSamples": "键盘样本",
+        "latestMethod": "最新（方法）",
+        "latestModality": "最新模态",
+        "audioCueMode": "音频提示",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "重置输入分析器"
+    },
+    "hud": {
+      "resume": "继续",
+      "pause": "暂停",
+      "quit": "退出",
+      "restart": "重新开始",
+      "spaceToStart": "按空格键开始",
+      "settings": "设置",
+      "enterToAdvance": "按回车键继续",
+      "trial": "试次",
+      "muteTexture": "静音背景音"
+    },
+    "status": {
+      "paused": "已暂停"
+    },
+    "completed": "已完成",
+    "starting": {
+      "getReady": "准备..."
+    },
+    "quitModal": {
+      "title": "退出会话？",
+      "message": "您的进度将不会被保存。",
+      "confirm": "退出",
+      "cancel": "继续",
+      "close": "关闭"
+    },
+    "controls": {
+      "position": "位置",
+      "position2": "位置 2",
+      "position3": "位置 3",
+      "position4": "位置 4",
+      "visvis": "视觉 & n-视觉",
+      "visaudio": "视觉 & n-音频",
+      "audiovis": "音频 & n-视觉",
+      "vis1": "视觉 1",
+      "vis2": "视觉 2",
+      "vis3": "视觉 3",
+      "vis4": "视觉 4",
+      "audio": "音频",
+      "audio2": "音频 2",
+      "color": "颜色",
+      "arithmetic": "算术",
+      "image": "形状"
+    },
+    "arithmetic": {
+      "answer": "答案",
+      "clear": "清除",
+      "hint": "键盘：0–9 · '-'表示符号 · '.'表示小数 · Backspace清除"
+    },
+    "navigation": {
+      "back": "返回"
+    },
+    "xp": {
+      "title": "获得的经验值",
+      "base": "基础 (N-{{level}})",
+      "performance": "表现",
+      "accuracy": "准确度",
+      "streakBonus": "连续奖励",
+      "dailyBonus": "每日首次",
+      "badgeBonus": "徽章",
+      "flowBonus": "Dual Place奖励",
+      "confidenceMultiplier": "信心",
+      "dailyCapReached": "已达到每日经验值上限",
+      "levelReached": "达到等级 {{level}}！"
+    },
+    "badges": {
+      "newUnlocked": "新徽章已解锁"
+    },
+    "getReady": "准备...",
+    "layoutEdit": {
+      "done": "完成",
+      "reset": "重置",
+      "instructions": "拖拽区域可重新排列。使用手柄可调整大小。",
+      "title": "编辑模式",
+      "cancel": "取消",
+      "save": "锁定",
+      "editLayout": "编辑布局"
+    },
+    "paused": "已暂停",
+    "pressEscapeToResume": "按Esc键继续",
+    "settings": {
+      "editLayout": "修改布局",
+      "gridAndButtons": "网格和按钮",
+      "swapPositionAudio": "交换位置 / 音频",
+      "title": "设置",
+      "quickHint": "无需退出游戏即可调整一些设置。",
+      "quickUnavailable": "此模式暂无快捷设置。"
+    },
+    "pinkNoiseInfo": "每个刺激都伴有背景音。您可以在音频设置中自定义或关闭它。",
+    "pinkNoiseDismiss": "继续",
+    "audioMode": "音频模式",
+    "cogTask": {
+      "precision": "准确率",
+      "avgRt": "平均 RT",
+      "avgRtShort": "平均 RT",
+      "trials": "试次",
+      "correct": "正确",
+      "errors": "错误",
+      "effect": "效应",
+      "restart": "重新开始",
+      "home": "首页",
+      "performance": "表现",
+      "trialDetail": "逐试次详情",
+      "setDetail": "组详情",
+      "roundDetail": "轮次详情",
+      "problemDetail": "逐题详情",
+      "phaseDetail": "阶段详情",
+      "feedbackCorrect": "正确",
+      "feedbackIncorrect": "错误",
+      "feedbackTimeout": "太慢了！",
+      "preparing": "准备中...",
+      "loading": "加载中...",
+      "left": "左",
+      "right": "右",
+      "up": "上",
+      "down": "下",
+      "congruent": "一致",
+      "incongruent": "不一致",
+      "congruencyEffect": "一致性效应",
+      "maxSpan": "最大广度",
+      "startingSpan": "起始广度",
+      "maxSpanReached": "已达最大广度",
+      "longestStreak": "最长连续正确数",
+      "series": "连续",
+      "avgResponseTime": "平均反应时间",
+      "recall": "回忆",
+      "expected": "期望值",
+      "submit": "提交",
+      "cancel": "取消",
+      "clear": "清除",
+      "delete": "DEL",
+      "true": "正确",
+      "false": "错误",
+      "target": "目标",
+      "nonTarget": "非目标",
+      "distractor": "干扰项",
+      "same": "相同",
+      "different": "不同",
+      "identical": "相同",
+      "mirror": "镜像",
+      "symmetric": "对称",
+      "asymmetric": "不对称",
+      "symShort": "Sym.",
+      "present": "存在",
+      "absent": "缺失",
+      "noTrials": "未完成任何试次。",
+      "noSets": "未完成任何组合。",
+      "noRounds": "没有完成的轮次。",
+      "noProblems": "未完成任何题目。",
+      "noPhases": "没有完成的阶段。",
+      "sets": "组",
+      "rounds": "轮次",
+      "equations": "方程",
+      "sentences": "句子",
+      "equationAccuracy": "方程准确率",
+      "forward": "正序",
+      "backward": "倒序",
+      "forwardMaxSpan": "正序最大广度",
+      "backwardMaxSpan": "倒序最大广度",
+      "odd": "奇数",
+      "even": "偶数",
+      "score": "得分",
+      "easy": "简单",
+      "hard": "困难",
+      "totalTrials": "总试次数",
+      "totalErrors": "总错误数",
+      "totalErrShort": "总错误",
+      "hits": "命中",
+      "misses": "遗漏",
+      "falseAlarms": "虚报",
+      "correctRejections": "正确拒绝",
+      "yes": "是",
+      "no": "否",
+      "sessionInterrupted": "会话中断",
+      "reverseOrder": "倒序",
+      "normalOrder": "正序",
+      "lnsInstruction": "数字升序，然后字母 A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "西蒙效应",
+        "blue": "蓝",
+        "red": "红",
+        "heroTitle": "西蒙"
+      },
+      "soroban": {
+        "target": "表示这个数字",
+        "submit": "确认",
+        "rodLabel": "杆 {{n}}",
+        "heavenBead": "上珠（值为5）",
+        "earthBead": "地珠（值 1）",
+        "instrBeadTitle": "珠子的运作方式",
+        "instrBeadDesc": "每根杆代表一个数位。上珠（天珠）值为5。下珠（地珠）每个值为1。将珠子移向中间横梁即可激活。",
+        "instrExampleTitle": "示例：7",
+        "instrExampleDesc": "7 = 拨下天珠（5）+ 拨上 2 颗地珠（2）。触摸或滑动珠子来移动。",
+        "instrGoalTitle": "你的目标",
+        "instrGoalDesc": "一个数字将会出现。拨动珠子来表示它，然后按确认。要又准又快！",
+        "startButton": "开始",
+        "settings": "设置",
+        "closeSettings": "关闭设置",
+        "settingsRods": "杆数",
+        "settingsRodsHint": "可通过设置中的N级别调整",
+        "settingsTrials": "每次训练试次数",
+        "settingsTrialsHint": "可通过设置中的试次数调整",
+        "settingsRange": "数字范围"
+      },
+      "stroop": {
+        "pressInkColorButton": "按下与字色对应的按钮",
+        "redWord": "红",
+        "redLabel": "红",
+        "blueWord": "蓝",
+        "blueLabel": "蓝",
+        "greenWord": "绿",
+        "greenLabel": "绿",
+        "yellowWord": "黄",
+        "yellowLabel": "黄"
+      },
+      "stroopFlex": {
+        "followRule": "规则",
+        "ruleInk": "墨水颜色",
+        "ruleWord": "写出的词语",
+        "pressMatchingRuleButton": "按下与当前规则对应的按钮"
+      },
+      "goNogo": {
+        "goTrials": "Go 试次",
+        "nogoTrials": "No-Go 试次",
+        "hitRate": "命中率 (Go)",
+        "faRate": "虚报率（No-Go）",
+        "meanRt": "平均反应时间",
+        "sensitivity": "灵敏度",
+        "press": "按下",
+        "withhold": "不要按"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (停止信号 RT)",
+        "ssdMean": "平均 SSD (成功停止)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "成功抑制",
+        "stop": "停止",
+        "meanGoRt": "平均 GO 反应时间",
+        "ssrtInvalid": "数据不足",
+        "ssrtNegativeNote": "SSRT为负值（平均SSD > 平均GO RT）——在当前试次数下结果不可靠。"
+      },
+      "pvt": {
+        "rtMedian": "RT 中位数",
+        "rtMean": "平均 RT",
+        "fastest": "最快",
+        "slowest": "最慢",
+        "falseStarts": "抢按",
+        "falseStartsShort": "抢按",
+        "lapses": "失误",
+        "mean": "平均",
+        "reaction": "反应",
+        "wait": "等待...",
+        "pressStimulus": "等待刺激...",
+        "pressAnywhere": "当计数器出现时按任意位置",
+        "press": "按！",
+        "tooEarly": "太早了！",
+        "lapsesLabel": "失误"
+      },
+      "posner": {
+        "cueingEffect": "线索引导效应",
+        "validMeanRt": "有效线索平均反应时",
+        "invalidMeanRt": "无效线索平均反应时",
+        "validAccuracy": "有效准确率",
+        "invalidAccuracy": "无效准确率",
+        "validTrials": "有效试次",
+        "invalidTrials": "无效线索试次",
+        "validRtShort": "RT 有效",
+        "invalidRtShort": "RT 无效",
+        "valid": "有效",
+        "invalid": "无效"
+      },
+      "antisaccade": {
+        "cost": "反向眼跳代价",
+        "proAccuracy": "正向准确率",
+        "antiAccuracy": "反向准确率",
+        "pro": "正向",
+        "anti": "反向",
+        "proRt": "正向 RT",
+        "antiRt": "反向 RT",
+        "proMeanRt": "正向眼跳平均RT",
+        "antiMeanRt": "反向眼跳平均反应时",
+        "costLabel": "代价",
+        "antiLabel": "反"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "AX 准确率",
+        "bxFa": "BX 虚报",
+        "ayError": "AY 错误",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY err",
+        "cogControl": "认知控制",
+        "target": "目标",
+        "nonTarget": "非目标"
+      },
+      "ant": {
+        "scores": "ANT 得分",
+        "alerting": "警觉效应（no-cue − double-cue）",
+        "orienting": "定向 (中央 − 空间)",
+        "executive": "执行 (不一致 − 一致)"
+      },
+      "changeDet": {
+        "kCowan": "K 容量 (Cowan)",
+        "sameShort": "同",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "搜索内错误",
+        "betweenErrors": "搜索间错误",
+        "totalErrors": "总错误数",
+        "errorFree": "无错误",
+        "foundErrorFree": "无错误找到！",
+        "errorCount": "{{count}} 个错误",
+        "tapsLabel": "点击"
+      },
+      "taskSwitch": {
+        "switchCost": "切换代价",
+        "rtRepeat": "平均 RT (重复)",
+        "rtSwitch": "平均 RT (切换)",
+        "oddEven": "奇数 / 偶数",
+        "highLow": "大 / 小",
+        "title": "任务切换"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A 时间",
+        "tmtBTime": "TMT-B 时间",
+        "executiveCost": "执行代价 (B − A)",
+        "executiveCostShort": "执行代价 (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "准备 TMT-B...",
+        "tmtADone": "TMT-A 完成！",
+        "totalErrors": "总错误数",
+        "tmtALabel": "TMT-A：数字",
+        "tmtBLabel": "TMT-B：数字和字母",
+        "next": "下一步",
+        "heroTitle": "连线测试",
+        "alternateHint": "交替数字和字母：1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI 最小",
+        "fastestIsi": "最快 ISI"
+      },
+      "wcst": {
+        "referenceCards": "参照卡",
+        "testCard": "测试卡",
+        "categories": "类别",
+        "categoriesCompleted": "已完成的类别数",
+        "perseverativeErrors": "持续性错误",
+        "persevShort": "固着",
+        "avgRt": "平均反应时"
+      },
+      "mentalRot": {
+        "rtByAngle": "按角度 RT",
+        "findMatch": "找出相同的形状",
+        "reference": "参考形状",
+        "referenceLabel": "参考",
+        "candidate": "候选",
+        "distractor": "其他",
+        "mirrorErrors": "镜像",
+        "title": "心理旋转"
+      },
+      "sternberg": {
+        "rtBySize": "按集大小 RT",
+        "title": "Sternberg",
+        "avgRt": "平均反应时"
+      },
+      "visualSearch": {
+        "rtBySize": "按集大小 RT",
+        "title": "视觉搜索"
+      },
+      "ospan": {
+        "typeLetters": "按顺序输入字母",
+        "trueOrFalse": "对还是错？",
+        "processingWarning": "方程正确率 < 85% — 结果可能无法反映真实的工作记忆能力"
+      },
+      "readingSpan": {
+        "s0": "太阳从东方升起。",
+        "s1": "鱼住在树上。",
+        "s2": "巴黎是法国的首都。",
+        "s3": "三角形有四条边。",
+        "s4": "水在100度时沸腾。",
+        "s5": "猫是爬行动物。",
+        "s6": "地球绕太阳运转。",
+        "s7": "巧克力长在石头上。",
+        "s8": "一年有十二个月。",
+        "s9": "鸟在水下呼吸。",
+        "s10": "牛奶是白色的。",
+        "s11": "汽车在铁轨上行驶。",
+        "s12": "蜜蜂酿蜜。",
+        "s13": "雪是热的。",
+        "s14": "心脏泵送血液。",
+        "s15": "石头浮在水面上。",
+        "s16": "月亮照亮夜晚。",
+        "s17": "蛇有腿。",
+        "s18": "木头浮在水面上。",
+        "s19": "火是冷的。",
+        "s20": "人类有五种感官。",
+        "s21": "蜘蛛有六条腿。",
+        "s22": "面包是用面粉做的。",
+        "s23": "鲸鱼是鱼。",
+        "w0": "房子",
+        "w1": "狗",
+        "w2": "书",
+        "w3": "花",
+        "w4": "门",
+        "w5": "桌子",
+        "w6": "树",
+        "w7": "路",
+        "w8": "云",
+        "w9": "星",
+        "w10": "海滩",
+        "w11": "雪",
+        "w12": "灯",
+        "w13": "雨",
+        "w14": "杯子",
+        "w15": "草",
+        "w16": "火车",
+        "w17": "世界",
+        "w18": "太阳",
+        "w19": "森林",
+        "w20": "冰",
+        "w21": "大地",
+        "w22": "天空",
+        "w23": "石头",
+        "d0": "早晨",
+        "d1": "心",
+        "d2": "布",
+        "d3": "叶",
+        "d4": "声音",
+        "d5": "花园",
+        "d6": "影子",
+        "d7": "钟",
+        "d8": "桥",
+        "d9": "烟",
+        "d10": "沙",
+        "d11": "汤",
+        "heroTitle": "阅读广度"
+      },
+      "memorizeSequence": "记住顺序...",
+      "reproduce": "复现",
+      "span": "广度",
+      "size": "大小",
+      "fixateCenter": "注视中央...",
+      "identicalOrMirror": "相同还是镜像？",
+      "wellInhibited": "抑制成功！",
+      "badDirection": "方向错误！",
+      "stopMissed": "停止失败！",
+      "falseAlarm": "虚报！",
+      "pressNow": "按！",
+      "hitBang": "命中！",
+      "miss": "未命中！",
+      "doNotTouch": "不要触摸！",
+      "whichDirection": "哪个方向？",
+      "stopBang": "停！",
+      "cueBang": "线索！",
+      "memorizeLetters": "记住这些字母",
+      "memorizeLetter": "记住这个字母",
+      "memorizeSequenceLetters": "记住顺序...",
+      "memorizeDigits": "记住数字...",
+      "memorizeColors": "记住颜色！",
+      "memorizePosition": "记住这个位置...",
+      "retainWord": "记住这个词",
+      "retainNumber": "记住这个数字",
+      "addWithPrevious": "与前一个数相加",
+      "sentenceTrueOrFalse": "这句话正确吗？",
+      "findRedCircle": "找到红色圆圈！",
+      "findHiddenToken": "找到隐藏的标记！",
+      "chooseMatchingCard": "选择匹配的卡片",
+      "arrowDirection": "中央箭头的方向？",
+      "attention": "注意...",
+      "preparation": "准备...",
+      "recallLettersInOrder": "按顺序回忆 {{count}} 个字母",
+      "recallWordsInOrder": "按顺序回忆 {{count}} 个单词",
+      "recallLastLetters": "回忆最后 {{count}} 个字母",
+      "typeLastLetters": "输入最后 {{count}} 个字母",
+      "recallPositionsInOrder": "回忆：按顺序点击各位置",
+      "pressEnterToValidate": "按回车键确认",
+      "pressAnywhereToContinue": "点击任意位置继续",
+      "temporalPrecision": "时间精度",
+      "estimationPrecision": "估计精度",
+      "touchStartClockwise": "触摸起始点然后顺时针滑动",
+      "touchAtoB": "触摸点A然后滑动到点B",
+      "cue": "线索",
+      "retainCue": "记住线索...",
+      "targetOrNot": "目标还是非目标？",
+      "whereIsTarget": "目标在哪里？",
+      "wasLetterInSet": "这个字母在集合中吗？",
+      "regular": "规律",
+      "regularity": "规律性",
+      "msDeviation": "毫秒偏差",
+      "boxes": "盒子",
+      "found": "已找到 {{count}} 个",
+      "past": "过去",
+      "tooSlow": "太慢",
+      "tooFast": "太快",
+      "timeout": "太慢了！",
+      "answer": "回答",
+      "dontPress": "不要按！",
+      "feedbackWrong": "错误！",
+      "level": "等级",
+      "wrong": "错误",
+      "you": "你",
+      "paused": "Pause",
+      "instructions": "Instructions",
+      "selectAnswer": "选择一个答案",
+      "tapTheOddOne": "敲出奇数一个",
+      "pal": {
+        "subtitle": "配对联想学习",
+        "pairsLearned": "已习得的配对",
+        "maxSetSize": "最大集合大小",
+        "totalErrors": "总错误",
+        "round": "回合",
+        "pairs": "对",
+        "meanRt": "平均 RT（正确）",
+        "studyPhase": "学习 - 记住位置",
+        "testPhase": "这个形状在哪里？",
+        "studying": "学习中",
+        "tapBox": "点击显示该形状的方框"
+      },
+      "visualLogic": {
+        "easy": "简单",
+        "hard": "困难",
+        "oneRule": "1条规则",
+        "twoRules": "2条规则",
+        "findMissing": "找出缺失的部分",
+        "maxLevel": "最高等级",
+        "finalLevel": "最终等级",
+        "nextMode": "下一场会话模式",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "哪块拼图适合这个洞？",
+        "target": "目标"
+      },
+      "timeEstimation": {
+        "overestimationBias": "高估偏差",
+        "underestimationBias": "低估偏差",
+        "noBias": "无显著偏差",
+        "avgError": "平均误差",
+        "overestimations": "高估",
+        "underestimations": "低估",
+        "avgAbsoluteError": "平均绝对误差",
+        "avgRelativeError": "平均相对误差",
+        "cv": "变异系数",
+        "watchDemo": "观察持续时间",
+        "getReady": "准备好...",
+        "holdToReproduce": "按住以重现！",
+        "tooLong": "太长了！",
+        "tooShort": "太短了！",
+        "target": "目标",
+        "demoLabel": "参考",
+        "yourTurn": "轮到你了",
+        "watchInstruction": "观察",
+        "holdInstruction": "按住以重现",
+        "heroTitle": "时间估计"
+      },
+      "puzzleDetails": "谜题详情",
+      "roundDetails": "回合详情",
+      "stageResults": "阶段结果",
+      "recognized": "已识别",
+      "missed": "遗漏",
+      "win": "赢",
+      "lose": "输",
+      "winBang": "赢了！",
+      "loseBang": "输了！",
+      "correctBang": "正确！",
+      "wrongBang": "错误！",
+      "completeBang": "完成！",
+      "repeatedBang": "重复！",
+      "incompleteBang": "未完成！",
+      "levelCompleteBang": "等级完成！",
+      "timesUp": "时间到",
+      "seeResults": "查看结果",
+      "nextRound": "下一回合",
+      "startBlock": "开始本组",
+      "continue": "继续",
+      "patientChoice": "耐心选择",
+      "immediateChoice": "立即选择",
+      "immediate": "立即",
+      "digitSpan": {
+        "heroTitle": "数字广度"
+      },
+      "resume": "继续",
+      "numericalStroop": {
+        "heroTitle": "数字 Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "线段方向判断"
+      },
+      "chain": "链",
+      "undo": "撤销",
+      "vocalProsody": {
+        "heroTitle": "语音韵律"
+      },
+      "letterNumber": {
+        "title": "字母-数字",
+        "expectedAnswer": "预期答案"
+      },
+      "patternComparison": {
+        "heroTitle": "模式比较"
+      },
+      "speedPack": {
+        "title": "速度包装",
+        "whenFoldedWhichTouch": "折叠后，哪些方块会相碰？"
+      },
+      "dotProbe": {
+        "heroTitle": "注意探针"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "胡珀视觉组织",
+        "whatIsThisObject": "这是什么物体？"
+      },
+      "blockDesign": {
+        "heroTitle": "积木设计"
+      },
+      "accuracy": "准确度",
+      "avgTime": "平均时间",
+      "check": "检查",
+      "dualTrace": {
+        "playArea": "游戏区域"
+      },
+      "paperFolding": {
+        "title": "折纸",
+        "foldSequenceHolePunch": "折叠顺序和打孔",
+        "whichPatternWhenUnfolded": "展开后是什么图案？"
+      },
+      "lexicalDecision": {
+        "heroTitle": "词汇决策"
+      },
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxGrid": "最大网格",
+      "symmetry": "对称",
+      "threshold": "阈值",
+      "hitRate": "命中率",
+      "faRate": "虚报率",
+      "changeDetection": {
+        "heroTitle": "变化检测"
+      },
+      "syllogisms": {
+        "heroTitle": "三段论"
+      },
+      "subitizing": {
+        "title": "小数目知觉",
+        "range": "Range"
+      },
+      "jitter": "抖动",
+      "sentenceCompletion": {
+        "title": "句子补全（完形填空）",
+        "highCloze": "高完形概率",
+        "lowCloze": "低完形概率"
+      },
+      "grid": "网格",
+      "pinballRecall": {
+        "title": "弹球回忆",
+        "byBounces": "按反弹",
+        "whereDoesItLand": "它会落在哪里？"
+      },
+      "mean": "均值",
+      "speedup": "加速",
+      "memorize": "记忆",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "表面展开",
+        "whichEdgeMatches": "哪条边匹配？"
+      },
+      "crowding": {
+        "heroTitle": "视觉拥挤",
+        "spacing": "间距"
+      },
+      "patternRecognition": {
+        "heroTitle": "模式识别"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "试次",
+        "position": "位置",
+        "audio": "音频"
+      },
+      "sceneCrasher": {
+        "heroTitle": "场景入侵者",
+        "detect": "检测"
+      },
+      "eyesTest": {
+        "heroTitle": "读心术（目光测试）"
+      }
+    },
+    "gridlock": {
+      "undone": "已撤销上一步。",
+      "resetMessage": "拼图已重置。",
+      "hintMessage": "提示：滑动 {{pieceId}} {{dir}} {{delta}}。",
+      "previewCountdown": "观察棋盘。{{seconds}}秒后开始。",
+      "challenge": "挑战",
+      "optimal": "最优",
+      "moves": "步数",
+      "piece": "块 {{id}}",
+      "targetPiece": "块 {{id}}（目标 - 红色汽车）",
+      "challengeClassic": "经典",
+      "challengePrecision": "精确",
+      "challengeMemory": "记忆",
+      "challengeTimed": "计时",
+      "hint": "提示",
+      "reset": "重置",
+      "undo": "撤销",
+      "nextPuzzle": "下一个谜题 →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "第1组命中",
+      "block2Hits": "第2组命中",
+      "goPositive": "Go = 积极",
+      "goNegative": "Go = 消极",
+      "title": "情感 Go/No-Go",
+      "block1CommissionErrors": "第1组执行错误",
+      "block2CommissionErrors": "第2组执行错误",
+      "block": "组",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "平均切换率",
+      "meanSwitchesfigure": "平均切换/图形",
+      "totalSwitches": "总切换次数",
+      "title": "双义图形",
+      "meanSwitches": "平均切换次数",
+      "switchRate": "切换率",
+      "figures": "图形",
+      "totalSwitchesLabel": "总切换",
+      "duration": "持续时间",
+      "switchesCount": "秒 | 切换：",
+      "switchButton": "切换！"
+    },
+    "analogies": {
+      "verbalCorrect": "言语正确",
+      "timeout": "超时",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "韦伯分数",
+      "title": "ANS比较",
+      "ratio": "比率",
+      "leftMore": "左边多",
+      "rightMore": "右边多"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "虚报率",
+      "grammatical": "合语法",
+      "memorizeTheseStrings": "记住这些字符串",
+      "testPhase": "测试阶段",
+      "ungrammatical": "不合语法",
+      "learning": "学习",
+      "test": "Test",
+      "title": "人工语法",
+      "learningPhase": "学习",
+      "testIntroText": "现在你将看到新的字符串。判断每个是否遵循相同的规则。",
+      "startTest": "开始测试",
+      "followsRules": "遵循规则",
+      "breaksRules": "违反规则"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "注意瞬脱幅度",
+      "title": "注意瞬脱",
+      "blink": "闪烁",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "第1个绿色字母？",
+      "secondGreenLetter": "第2个绿色字母？"
+    },
+    "attentionalCapture": {
+      "captureCost": "捕获代价",
+      "singletonPresent": "单例存在",
+      "noSingleton": "无单例",
+      "title": "注意捕获",
+      "capture": "捕获",
+      "horizontal": "水平",
+      "vertical": "垂直"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "绑定窗口",
+      "title": "视听绑定",
+      "window": "Window",
+      "pssLabel": "PSS（主观同时性点）",
+      "simultaneousOrNot": "同时还是不同时？",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "不同时"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "时长阈值",
+      "reference": "参考",
+      "weberFraction": "韦伯分数",
+      "title": "听觉时长",
+      "threshold": "阈值",
+      "weber": "Weber",
+      "whichLonger": "哪个更长？",
+      "firstLonger": "第一个更长",
+      "secondLonger": "第二个更长"
+    },
+    "bart": {
+      "adjustedAvgPumps": "调整后的平均泵数",
+      "avgTimeballoon": "平均时间/气球",
+      "banked": "已存入！",
+      "lostEarnings": "收益损失！",
+      "overallAvgPumps": "总体平均泵数",
+      "popRate": "爆炸率",
+      "totalEarned": "总收益",
+      "balloons": "气球",
+      "cashed": "已兑现",
+      "popped": "爆破",
+      "adjPumps": "调整泵次",
+      "pop": "砰",
+      "pump": "Pump",
+      "cashIn": "兑现"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "平均决策时间",
+      "drawBeadsToGatherEvidence": "抽取珠子以收集证据",
+      "jtc": "JTC",
+      "title": "珠子任务",
+      "meanDraws": "平均抽取",
+      "rounds": "轮次",
+      "jtcRate": "JTC比率",
+      "meanDrawsToDecision": "平均值决定决策",
+      "jtcRateThreshold": "JTC比率（<{{threshold}}次抽取）",
+      "round": "轮次",
+      "jarDescription": "罐A：85%绿色 / 罐B：85%红色",
+      "itWasJar": "这是该罐子",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "变化试次",
+      "sameAccuracy": "相同准确率",
+      "sameTrials": "相同试次",
+      "title": "特征绑定",
+      "binding": "绑定",
+      "bindingAccuracyChanged": "变化准确度",
+      "same": "相同",
+      "different": "不同"
+    },
+    "blockDesign": {
+      "cells": "单元格",
+      "target": "目标",
+      "yourAnswer": "你的答案",
+      "tapHint": "点击切换颜色",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "适应",
+      "adaptationCost": "适应代价",
+      "nonswitchTrials": "非转换试次",
+      "switchTrials": "切换试次"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "记住这些字母",
+      "selectThe3Letters": "选择3个字母",
+      "title": "Brown-Peterson Task",
+      "forgetting": "遗忘",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "延迟"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "决策质量",
+      "finalPoints": "最终得分",
+      "meanBet": "平均赌注",
+      "winRate": "胜率",
+      "wins": "胜利",
+      "title": "剑桥赌博任务",
+      "totalPoints": "总分",
+      "quality": "质量",
+      "rational": "理性",
+      "avgBet": "平均赌注",
+      "trial": "试次",
+      "whichColorHidesToken": "哪种颜色藏着代币？",
+      "youChose": "你选择了",
+      "howMuchToBet": "下注多少？"
+    },
+    "cancellation": {
+      "false": "错误",
+      "target": "目标：",
+      "total": "合计",
+      "title": "删除任务（d2）",
+      "misses": "遗漏",
+      "targetDescription": "带2个标记的d"
+    },
+    "changeBlindness": {
+      "detectionRate": "检测率",
+      "found": "已找到",
+      "meanDetectionTime": "平均检测时间",
+      "title": "变化盲视",
+      "missed": "遗漏",
+      "avgTime": "平均时间",
+      "instructions": "说明"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "最佳估计",
+      "meanScore": "平均分数",
+      "worstEstimate": "最差估计",
+      "inRange": "估算正确！",
+      "title": "认知估计",
+      "meanScoreLabel": "平均分数",
+      "inRangeLabel": "在范围内",
+      "extreme": "极端",
+      "scoreLabel": "分",
+      "submit": "提交"
+    },
+    "common": {
+      "accuracy": "准确率",
+      "bias": "偏差",
+      "falseAlarmRate": "虚报率",
+      "hitRate": "命中率",
+      "hits": "命中",
+      "listening": "正在聆听...",
+      "meanRt": "平均反应时",
+      "timedOut": "时间到",
+      "timedOut2": "时间到",
+      "faRate": "虚报率",
+      "paused": "已暂停"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "你有多确定？",
+      "rateYourConfidence": "评价你的信心",
+      "title": "信心校准",
+      "calError": "校准误差",
+      "confidence": "信心"
+    },
+    "consequences": {
+      "best": "最佳",
+      "nextRound": "下一轮...",
+      "time": "时间",
+      "placeholder": "输入一个后果…",
+      "title": "后果",
+      "totalIdeas": "总创意数",
+      "avgPerRound": "每轮平均",
+      "rounds": "轮次",
+      "noConsequencesListed": "未列出后果",
+      "roundProgress": "第 {{current}} / {{total}} 轮",
+      "typeAndPressAdd": "输入并按添加"
+    },
+    "contextualCueing": {
+      "cueingEffect": "线索效应",
+      "newConfigRt": "新配置RT",
+      "oldConfigRt": "旧配置RT",
+      "title": "上下文线索",
+      "cueing": "线索",
+      "oldRt": "旧RT",
+      "newRt": "新RT",
+      "prompt": "提示",
+      "left": "左",
+      "right": "右"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "阈值抖动",
+      "title": "轮廓整合",
+      "pipeJitter": "| 抖动"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "阈值对比度",
+      "title": "对比敏感度",
+      "threshold": "阈值",
+      "left": "左",
+      "right": "右"
+    },
+    "cpt": {
+      "nontargets": "非目标",
+      "target": "目标",
+      "nonTarget": "非目标",
+      "dPrime": "d'",
+      "targetsLetter": "目标字母",
+      "tapForLetterOnly": "仅在目标字母出现时点击"
+    },
+    "crowding": {
+      "criticalSpacing": "临界间距",
+      "leftAccuracy": "左侧准确率",
+      "rightAccuracy": "右侧准确率"
+    },
+    "cryptogram": {
+      "hints": "提示",
+      "title": "密码图",
+      "solved": "已解决",
+      "time": "Time",
+      "puzzles": "谜题",
+      "puzzle": "谜题",
+      "hint": "提示",
+      "clear": "清除"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "曲线下面积",
+      "discountRateK": "折扣率 (k)",
+      "impulsivityIndex": "冲动性指数",
+      "title": "延迟折扣",
+      "aucPatience": "AUC耐心",
+      "patient": "有耐心",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "无差异点",
+      "whichPrefer": "你更喜欢哪个？",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "长",
+      "longDelay68s": "长延迟（6-8秒）",
+      "med": "中",
+      "mediumDelay46s": "中延迟 (4-6秒)",
+      "short": "短",
+      "shortDelay34s": "短延迟 (3-4秒)",
+      "title": "延迟匹配",
+      "delay": "延迟",
+      "rememberThisPattern": "记住这个图案",
+      "whichWasIt": "哪一个？"
+    },
+    "dichoticListening": {
+      "alertDetection": "警报检测",
+      "attendToTheLeftColumn": "请注意左侧列",
+      "attendedAccuracy": "注意通道准确率",
+      "ignoreTheRightColumn": "忽略右列",
+      "right": "右",
+      "title": "双耳分听",
+      "attendedAcc": "注意准确度",
+      "alertDet": "警报检测",
+      "alerts": "警报",
+      "selectLeftColumnWords": "选择左列的单词",
+      "submit": "提交",
+      "alertQuestion": "警报问题"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "遗忘准确率",
+      "forgettingEffect": "遗忘效应",
+      "newRejection": "新项目拒绝",
+      "rememberAccuracy": "记忆准确率",
+      "title": "定向遗忘",
+      "remember": "记住",
+      "forget": "忘记",
+      "round": "轮次",
+      "word": "词",
+      "wasThisWordShown": "这个词展示过吗？"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "注意偏向分数",
+      "congruentAcc": "一致准确率",
+      "congruentRt": "一致反应时",
+      "incongruentAcc": "不一致准确率",
+      "incongruentRt": "不一致反应时"
+    },
+    "doubleDecision": {
+      "carOrTruck": "小汽车还是卡车？",
+      "minDisplayReached": "已达最短显示时间",
+      "positionAccuracy": "位置准确率",
+      "thresholdDisplay": "显示阈值",
+      "vehicleAccuracy": "车辆准确率",
+      "whereWasTheDiamond": "菱形在哪里？",
+      "title": "双重决策",
+      "threshold": "阈值",
+      "bothOk": "两个正确",
+      "vehicle": "车辆",
+      "position": "位置",
+      "car": "汽车",
+      "truck": "卡车"
+    },
+    "dsst": {
+      "items": "项目",
+      "itemsCompleted": "已完成项目",
+      "speedItemsmin": "速度（项目/分钟）",
+      "attempts": "尝试",
+      "itemsPerMin": "项目/分钟"
+    },
+    "dualTask": {
+      "dualtaskCost": "双任务代价",
+      "taskANumber": "任务A（数字）",
+      "taskBSymbol": "任务B（符号）",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "数字",
+      "symbol": "符号",
+      "up": "上",
+      "down": "下"
+    },
+    "dualTime": {
+      "sessionEnPause": "会话已暂停",
+      "votreEstimationSecondes": "您的估计（秒）",
+      "sessionInterrupted": "会话中断",
+      "target": "目标",
+      "estimation": "估计",
+      "avgTime": "平均时间",
+      "avgError": "平均误差",
+      "trials": "Trials",
+      "resumeToContinue": "继续进行",
+      "aimFor": "目标为",
+      "second": "Second",
+      "howLongDidYouTake": "你花了多长时间？"
+    },
+    "dualTrack": {
+      "confirmer": "确认",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "恢复以继续。",
+      "sessionEnPause": "会话已暂停",
+      "tapezLesCibles": "点击目标",
+      "tapezLaCible": "点击目标",
+      "appuyezConfirmer": "按确认键",
+      "targetsCountLabel": "{{count}} 个目标",
+      "distractorsCountLabel": "{{count}} 个干扰物",
+      "roundsCountLabel": "{{count}}轮",
+      "calibrationRoundsLabel": "{{count}} 轮校准",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = 路径内部难度等级。",
+      "tierHelpCurrentWithPhase": "当前位于 {{targets}} 个目标的 T{{current}}/{{total}}。当前阶段：{{phase}}。距下一个目标等级还剩 {{remaining}} 个层级。",
+      "phaseTracking": "追踪",
+      "phaseAudio": "追踪 + 音频",
+      "phaseColor": "追踪 + 颜色",
+      "phaseCombined": "追踪 + 音频 + 颜色",
+      "passLetters": "字母",
+      "passColors": "颜色",
+      "moveInstruction": "移动指令",
+      "moveConfirmBtn": "移动确认按钮",
+      "preparingSession": "正在准备会话...",
+      "preparing3dScene": "正在准备3D场景...",
+      "startJourney": "开始旅程",
+      "calibrationDescription": "在第一阶段之前，将通过较长的校准来估算您的起始水平。",
+      "defaultDescription": "球会亮起。跟踪它们的移动，然后识别它们。",
+      "startCalibration": "开始校准",
+      "calibrationTitle": "校准",
+      "estimatedStart": "预计开始",
+      "roundsAnalyzed": "已分析的轮次",
+      "willStartAt": "将从开始",
+      "targetsCount": "目标数",
+      "thenProgress": "然后进度"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "平均绝对误差",
+      "ratio": "比率",
+      "slope": "斜率",
+      "vierordtSlope": "维罗特斜率",
+      "wait": "等待...",
+      "title": "时长再现",
+      "meanError": "平均误差",
+      "meanRatio": "平均比率（产出/目标）",
+      "holdNow": "现在按住",
+      "target": "目标",
+      "error": "错误"
+    },
+    "embeddedFigures": {
+      "fastest": "最快",
+      "found": "已找到",
+      "meanDetectionTime": "平均检测时间",
+      "slowest": "最慢",
+      "title": "隐藏图形",
+      "missed": "遗漏",
+      "fastestLabel": "最快",
+      "findThisShape": "找到这个形状",
+      "memorizeShape": "记住这个形状…",
+      "foundIt": "找到了！",
+      "giveUp": "放弃"
+    },
+    "emotionalNback": {
+      "falseAlarms": "虚报",
+      "misses": "漏报",
+      "title": "情绪 N-back",
+      "match": "匹配"
+    },
+    "emotionalStroop": {
+      "neutralRt": "中性反应时",
+      "positiveRt": "积极反应时",
+      "threatRt": "威胁反应时",
+      "title": "情绪 Stroop",
+      "interference": "干扰",
+      "interferenceThreatNeutral": "干扰（威胁 − 中性）"
+    },
+    "eyesTest": {
+      "totalTime": "总时间"
+    },
+    "faceName": {
+      "gain": "增益",
+      "learningImprovement": "学习提升",
+      "round1Accuracy": "第1轮准确率",
+      "round2Accuracy": "第2轮准确率",
+      "whoIsThis": "这是谁？",
+      "title": "面孔-姓名关联",
+      "round": "轮次",
+      "testPhase": "测试阶段"
+    },
+    "fauxPas": {
+      "who": "谁？",
+      "why": "为什么？",
+      "title": "社交失误识别",
+      "detection": "检测",
+      "scenarios": "场景",
+      "fpFound": "发现失礼",
+      "control": "控制",
+      "readyToAnswer": "准备回答",
+      "didSomeoneSay": "有人说了不该说的话吗？",
+      "whoSaidIt": "谁说的？",
+      "whyInappropriate": "为什么不恰当？"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "回忆准确率",
+      "recognitionAccuracy": "识别准确率",
+      "recallPlaceholder": "输入你的答案...",
+      "unlikely": "不太可能",
+      "certain": "Certain",
+      "title": "知晓感",
+      "recall": "回忆",
+      "recognition": "再认",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "FOK敏感度",
+      "submit": "提交",
+      "dontKnow": "不知道",
+      "fokPrompt": "你会认出它吗？",
+      "selectCorrectAnswer": "选择正确答案",
+      "answer": "答案"
+    },
+    "fingerTapping": {
+      "firstTrial": "第一次试验",
+      "lastTrial": "最后一次试验",
+      "sequence": "序列",
+      "speedupT1VsT12": "加速 (T1 vs T12)",
+      "title": "手指敲击"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "平均运动时间",
+      "avgThroughput": "平均吞吐量",
+      "title": "Fitts 敲击",
+      "throughput": "吞吐量",
+      "tapTarget": "点击高亮目标"
+    },
+    "foreperiod": {
+      "early": "早期",
+      "slope": "斜率",
+      "title": "时间准备",
+      "fpEffectSlope": "前期效应斜率"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "反转次数",
+      "threshold": "阈值",
+      "tone1": "音调 1",
+      "tone2": "音调 2",
+      "weber": "韦伯",
+      "weberFraction": "韦伯分数",
+      "hz": "Hz",
+      "title": "频率辨别",
+      "thresholdLabel": "阈值",
+      "hzDiff": " Hz差",
+      "whichWasHigher": "哪个更高？",
+      "firstHigher": "第一个更高",
+      "secondHigher": "第二个更高"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor光栅",
+      "leftAccuracy": "左侧准确率",
+      "leftTrials": "左侧试次",
+      "noiseMask": "噪声掩蔽",
+      "rightAccuracy": "右侧准确率",
+      "rightTrials": "右侧试次",
+      "thresholdAngle": "阈值角度",
+      "title": "Gabor",
+      "threshold": "阈值",
+      "reversals": "逆转次数",
+      "timedOut": "超时",
+      "left": "左",
+      "right": "右"
+    },
+    "gameOfDice": {
+      "finalPoints": "最终得分",
+      "risky": "冒险",
+      "riskyChoices": "冒险选择",
+      "safe": "安全",
+      "winRate": "胜率",
+      "wins": "胜利",
+      "title": "骰子任务",
+      "totalPoints": "总分",
+      "riskyLabel": "高风险",
+      "roll": "掷",
+      "chooseYourBet": "选择你的赌注",
+      "pickNumbers": "选择你的数字"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "有间隔还是没有？",
+      "gapThreshold": "间隔阈值",
+      "title": "间隙检测",
+      "noGap": "无间隔"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "目光看向哪里？",
+      "direct": "Direct",
+      "left": "左",
+      "right": "右",
+      "title": "注视方向",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "第1部分（启动）",
+      "part2": "第2部分",
+      "part2Suppression": "第2部分（抑制）",
+      "suppressionCost": "抑制代价",
+      "title": "Hayling",
+      "part1": "第1部分",
+      "part2Label": "第2部分",
+      "suppression": "抑制",
+      "obvious": "明显",
+      "obviousPicksPart2": "显而易见的选择（第2部分）",
+      "chooseUnrelated": "选择一个无关的词 ",
+      "completelyUnrelated": "完全无关",
+      "doNotPickObvious": "不要选择明显的词！"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "正在进入下一阶段…",
+      "stageComplete": "阶段完成！",
+      "title": "IED Set Shift",
+      "stages": "阶段",
+      "edsCost": "EDS代价",
+      "stage": "阶段",
+      "correctNeeded": "通过所需正确数"
+    },
+    "informationSampling": {
+      "cost": "代价",
+      "free": "免费",
+      "meanTilesCost": "平均方块数（付费）",
+      "meanTilesFree": "平均方块数（免费）",
+      "totalCost": "总成本",
+      "title": "信息采样",
+      "tiles": "瓷砖",
+      "tapToReveal": "点击揭示"
+    },
+    "inspectionTime": {
+      "final": "最终",
+      "finalDisplayTime": "最终显示时间",
+      "minCorrectIt": "最短正确IT",
+      "threshold": "阈值",
+      "title": "检查时间",
+      "thresholdLabel": "阈值",
+      "minIt": "最短IT"
+    },
+    "iowaGambling": {
+      "balance": "余额：",
+      "chooseADeck": "选择一副牌",
+      "deckADraws": "A组牌抽取",
+      "deckBDraws": "B组牌抽取",
+      "deckCDraws": "C组牌抽取",
+      "deckDDraws": "D组牌抽取",
+      "first40Advantageous": "前40次有利选择",
+      "last40Advantageous": "最后40次有利选择",
+      "learn": "学习",
+      "learningIndex": "学习指数",
+      "title": "爱荷华赌博",
+      "advantageousPct": "有利百分比",
+      "earnings": "收益",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "校准偏差",
+      "meanJol": "平均学习判断",
+      "nowTestYourRecall": "现在测试你的记忆",
+      "studyComplete": "学习完成",
+      "whatWasPairedWith": "与…配对的是什么？",
+      "title": "学习判断",
+      "recallAccuracy": "回忆准确率",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL准确度（Gamma）",
+      "howLikelyRemember": "你记住的可能性有多大？",
+      "hiddenAnswer": "隐藏的答案"
+    },
+    "judgmentOfRecency": {
+      "close": "近",
+      "closeGap13": "小间隔 (1-3)",
+      "far": "远",
+      "farGap9": "大间隔 (9+)",
+      "mediumGap48": "中间隔 (4-8)",
+      "title": "近因判断",
+      "medium": "中",
+      "studyPhaseMemorizeOrder": "学习阶段——记住顺序",
+      "whichMoreRecently": "哪个出现得更晚？"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "平均RT（非词）",
+      "meanRtWords": "平均RT（词）",
+      "nonwordsAccuracy": "非词准确率",
+      "wordsAccuracy": "词准确率",
+      "word": "词",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "时长",
+      "optimalSteps": "最优步数",
+      "pathEfficiency": "路径效率",
+      "totalSteps": "总步数",
+      "wallHits": "撞墙次数",
+      "title": "Maze",
+      "completed": "已完成",
+      "efficiency": "效率",
+      "wallHitsLabel": "撞墙次数",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "简单",
+      "easy2Boxes": "简单（2个盒子）",
+      "hard": "困难",
+      "hard4Boxes": "困难（4个盒子）",
+      "medium3Boxes": "中等（3个盒子）",
+      "title": "Memobox",
+      "rounds": "轮次",
+      "medium": "中",
+      "watchMovements": "观察移动…",
+      "howManyBalls": "每个盒子里有多少球？",
+      "submit": "提交",
+      "roundOf": "第 {{current}} 轮，共 {{total}} 轮"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "横截面是什么？",
+      "title": "心理切割"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "旧的、相似的还是新的？",
+      "patternSeparation": "模式分离",
+      "sep": "分离",
+      "old": "旧",
+      "similar": "相似",
+      "new": "新",
+      "ldi": "LDI",
+      "title": "记忆辨别",
+      "hitRateOldDetected": "命中率（检测到旧项）",
+      "lureDiscrimination": "诱饵辨别（LDI）",
+      "memorize": "记忆",
+      "testPhase": "测试阶段"
+    },
+    "multiArmedBandit": {
+      "earnings": "收益：",
+      "pickMachine": "选择一台机器",
+      "title": "多臂赌博机",
+      "totalReward": "总奖励",
+      "optimal": "最优",
+      "regret": "遗憾",
+      "exploit": "利用",
+      "machine": "机器",
+      "armsExplored": "已探索臂"
+    },
+    "navon": {
+      "globalBigLetter": "整体（大字母）",
+      "localSmallLetter": "局部（小字母）",
+      "title": "Navon",
+      "globalAdv": "全局优势",
+      "whatBigLetter": "什么大字母？",
+      "whatSmallLetter": "什么小字母？"
+    },
+    "negativePriming": {
+      "controlRt": "控制反应时",
+      "nameTheRedShape": "说出红色形状",
+      "negativePrimingRt": "负启动RT",
+      "positivePrimingRt": "正向启动RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP效应",
+      "title": "负启动",
+      "ctrlRt": "控制RT"
+    },
+    "numberLine": {
+      "estimationBias": "估计偏差",
+      "linearityRsup2": "线性度 (R²)",
+      "meanAbsoluteError": "平均绝对误差",
+      "tapTheLineToPlaceTheNumber": "点击线条放置数字",
+      "title": "数字线",
+      "meanError": "平均误差",
+      "yourEstimate": "你的估计",
+      "correct": "正确"
+    },
+    "oddOneOut": {
+      "colorTrials": "颜色试次",
+      "shapeTrials": "形状试次",
+      "shape": "形状",
+      "color": "颜色",
+      "timeout": "超时",
+      "shapeDiffAccuracy": "形状差异准确率",
+      "colorDiffAccuracy": "颜色差异准确度",
+      "shapeDiffAvgRt": "形状差异平均RT",
+      "colorDiffAvgRt": "颜色差异平均RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "哪个方向？",
+      "thresholdAngle": "阈值角度",
+      "title": "方向辨别",
+      "threshold": "阈值",
+      "counterCw": "逆时针",
+      "clockwise": "顺时针"
+    },
+    "patternComparison": {
+      "differentTrials": "不同试次",
+      "sameTrials": "相同试次",
+      "same": "相同",
+      "different": "不同"
+    },
+    "patternRecognition": {
+      "newPatterns": "新模式",
+      "oldPatterns": "旧模式",
+      "old": "旧",
+      "new": "新",
+      "studyPatterns": "仔细研究图案",
+      "memorize": "记忆（{{current}}/{{total}}）",
+      "getReady": "准备好...",
+      "testPhaseStarting": "测试阶段开始..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "完全正确",
+      "meanAngularError": "平均角度误差",
+      "withinTolerance": "在容差范围内",
+      "title": "视角采择",
+      "avgErr": "平均误差",
+      "youAreAt": "你在 ",
+      "facing": "Facing",
+      "pointTo": "指向 "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "频率阈值",
+      "seq1": "序列 1",
+      "seq2": "序列 2",
+      "title": "音素辨别",
+      "thresh": "Thresh",
+      "sameOrDifferent": "相同还是不同？",
+      "same": "相同",
+      "different": "不同"
+    },
+    "predictionMotion": {
+      "biasLate": "偏差（+ = 延迟）",
+      "meanAbsoluteError": "平均绝对误差",
+      "precisionSd": "精度（标准差）",
+      "title": "运动预测",
+      "absError": "绝对误差",
+      "precision": "精确度",
+      "responded": "已回应",
+      "tapWhenReachesTarget": "到达目标时点击"
+    },
+    "promem": {
+      "ongoingAccuracy": "进行中任务准确率",
+      "ongoingRt": "持续任务反应时",
+      "pmHitRate": "前瞻记忆命中率",
+      "pmRt": "前瞻记忆RT",
+      "pmTargets": "前瞻记忆目标",
+      "title": "前瞻记忆",
+      "ongoing": "进行中",
+      "pmHits": "前瞻记忆命中",
+      "pmMisses": "前瞻记忆未命中",
+      "living": "Living",
+      "nonLiving": "非生物",
+      "redWordInstruction": "红色词 = 按下"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "干扰项错误",
+      "literalErrorRate": "字面错误率",
+      "literalErrors": "字面错误",
+      "title": "谚语解释",
+      "literal": "字面",
+      "litRate": "字面率",
+      "whatDoesThisMean": "这是什么意思？"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "准备跟踪",
+      "meanTimeOnTarget": "平均目标时间",
+      "meanTrackingError": "平均追踪误差",
+      "placeYourFingerOnTheScreen": "将手指放在屏幕上",
+      "title": "视觉追踪",
+      "timeOnTarget": "目标时间",
+      "error": "错误",
+      "onTarget": "命中目标",
+      "avgError": "平均误差",
+      "improve": "Improve",
+      "improvementT1VsT": "改善 T1 对比 T",
+      "errorLabel": "误差",
+      "followGreenTarget": "跟踪绿色目标"
+    },
+    "rapidNaming": {
+      "roundComplete": "回合完成",
+      "totalErrors": "总错误",
+      "title": "快速命名",
+      "avgSpeed": "平均速度",
+      "totalTime": "总时间",
+      "round": "轮次",
+      "getReady": "准备好！"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "平均解题时间",
+      "solved": "已解决",
+      "wrong": "错误",
+      "placeholder": "您的答案...",
+      "title": "画谜",
+      "puzzles": "谜题",
+      "timeout": "超时",
+      "submit": "提交",
+      "answer": "答案"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "平均解题时间",
+      "solved": "已解决",
+      "placeholder": "您的答案...",
+      "title": "远距联想",
+      "timeout": "超时",
+      "submit": "提交",
+      "answer": "答案"
+    },
+    "reversalLearning": {
+      "adapt": "适应",
+      "loseshiftRate": "损失后切换率",
+      "score": "得分：",
+      "winstayRate": "胜利-保持率",
+      "title": "反转学习",
+      "rewards": "奖励",
+      "reversals": "逆转次数",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "达标平均试次",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "从7开始倒数",
+      "reproduceThePatternFromMemory": "凭记忆重现图案",
+      "title": "Rey图形",
+      "copy": "复制",
+      "recall": "回忆",
+      "retention": "保持",
+      "trial": "试次",
+      "target": "目标",
+      "yourCopy": "你的副本",
+      "submit": "提交"
+    },
+    "rhythm": {
+      "avgTimingError": "平均时序误差",
+      "bestTrialError": "最佳试次误差",
+      "correctTrials": "正确试次数",
+      "worstTrialError": "最差试次误差",
+      "watchRhythm": "观察节奏",
+      "getReady": "准备...",
+      "tapTheRhythm": "重现节奏！",
+      "tooFarOff": "太不精确！",
+      "tapToReproduce": "点击以重现",
+      "beats": "{{count}} 拍",
+      "bestTrial": "最佳试次",
+      "worstTrial": "最差试次",
+      "title": "Rhythm",
+      "msErr": "ms误差"
+    },
+    "routePlanning": {
+      "time": "时间",
+      "title": "路线规划",
+      "levels": "等级",
+      "completed": "已完成",
+      "avgMoves": "平均步数",
+      "clear": "清除",
+      "submit": "提交",
+      "instructions": "说明"
+    },
+    "rvp": {
+      "detect357246468": "检测：3-5-7、2-4-6、4-6-8",
+      "targetSequences": "目标序列",
+      "fa": "FA",
+      "hitRate": "命中率",
+      "misses": "Misses",
+      "sequences": "序列"
+    },
+    "sart": {
+      "commissionErrors": "虚报错误",
+      "omissionErrors": "遗漏错误",
+      "tapAllDigits": "点击除3以外的所有数字",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "添加",
+      "studyTheScene": "观察场景",
+      "swaps": "交换",
+      "tapTheNewchangedObject": "点击新的/改变的物体"
+    },
+    "sentenceVerification": {
+      "falseSentences": "错误句子",
+      "trueSentences": "正确句子",
+      "byCategory": "按类别",
+      "title": "句子验证",
+      "trueRt": "正确RT",
+      "true": "True",
+      "false": "False",
+      "pressKey": "按下 "
+    },
+    "soundSweeps": {
+      "down": "下降",
+      "downAccuracy": "下降准确率",
+      "durationThreshold": "时长阈值",
+      "up": "上",
+      "upAccuracy": "上升方向准确率",
+      "title": "声音扫频",
+      "threshold": "阈值",
+      "upOrDown": "上升还是下降？"
+    },
+    "sourceMemory": {
+      "color": "颜色",
+      "colorRecall": "颜色回忆",
+      "frame": "边框",
+      "frameRecall": "边框回忆",
+      "getReadyForTheTest": "准备好测试！",
+      "itemRecognition": "项目再认",
+      "positionRecall": "位置回忆",
+      "sourceAccuracy": "来源准确率",
+      "title": "来源记忆",
+      "source": "来源",
+      "position": "位置",
+      "word": "词",
+      "wasThisWordShown": "这个词展示过吗？",
+      "bottom": "底部",
+      "blue": "蓝",
+      "orange": "橙",
+      "circle": "圆",
+      "square": "方"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "噪声阈值",
+      "title": "噪声中的言语",
+      "noise": "噪音",
+      "whichWordWasIt": "那个词是什么？"
+    },
+    "srtt": {
+      "learningEffect": "学习效应",
+      "learning": "学习",
+      "block": "组"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "机会水平",
+      "learningDetected": "检测到学习",
+      "testPhase": "测试阶段",
+      "whichPairLooksMoreFamiliar": "哪对看起来更熟悉？",
+      "title": "统计学习",
+      "learning": "学习",
+      "watchTheShapes": "观察形状"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "信念偏差效应",
+      "conclusion": "结论",
+      "premise1": "前提 1",
+      "premise2": "前提 2",
+      "logicalValidityQuestion": "这在逻辑上有效吗？",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "不存在准确率",
+      "presentAccuracy": "存在准确率",
+      "title": "符号搜索",
+      "present": "存在",
+      "absent": "缺失",
+      "targets": "Targets",
+      "searchGroup": "搜索组"
+    },
+    "syncContinuation": {
+      "async": "异步",
+      "asynchrony": "异步性",
+      "drift": "漂移",
+      "cv": "CV",
+      "title": "同步-延续",
+      "meanCv": "平均CV",
+      "tempos": "节奏",
+      "tempo": "节奏",
+      "ioi": "Ioi",
+      "getReady": "准备好…",
+      "nextTempo": "下一个节奏…"
+    },
+    "taskJuggling": {
+      "correctResets": "正确重置",
+      "duration": "时长",
+      "missedCounters": "遗漏计数器",
+      "prematureResets": "过早重置",
+      "totalEvents": "总事件",
+      "tooEarly": "太早了！",
+      "missed": "遗漏！",
+      "title": "任务切换",
+      "premature": "过早",
+      "counter": "计数器",
+      "tapCounterInstruction": "当计数器达到阈值时点击。别让它溢出！"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "等分点（PSE）",
+      "curveSteepness": "曲线陡峭度",
+      "idealMidpoint": "理想中点",
+      "pse": "PSE",
+      "title": "时间二分法",
+      "steepness": "陡度",
+      "shortOrLong": "短还是长？",
+      "trainingPhase": "训练阶段",
+      "short": "短",
+      "long": "长"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "梯度宽度",
+      "rememberThisDuration": "记住这个时长",
+      "width": "宽度",
+      "standard": "STANDARD",
+      "title": "时间泛化",
+      "hitRate": "命中率",
+      "faRate": "虚报率",
+      "hitRateDetectStandard": "命中率（检测标准）",
+      "sameDuration": "持续时间相同吗？",
+      "trainingPhase": "训练阶段",
+      "same": "相同",
+      "different": "不同"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "SOA阈值",
+      "title": "纹理辨别",
+      "threshold": "阈值"
+    },
+    "timePromem": {
+      "avgTimingError": "平均计时误差",
+      "clockChecks": "查看时钟",
+      "ongoingAccuracy": "进行中任务准确率",
+      "ongoingTrials": "持续任务试次",
+      "totalPmPresses": "前瞻记忆总按压数",
+      "pmAccuracy": "前瞻记忆准确度",
+      "pmMisses": "前瞻记忆遗漏",
+      "title": "时间前瞻记忆",
+      "ongoing": "进行中",
+      "pmHitsLabel": "前瞻记忆命中",
+      "timingErr": "计时误差",
+      "pmHitsExpected": "前瞻记忆命中/预期",
+      "pmPresses": "PM按压",
+      "checkClock": "查看时钟",
+      "thirtySecMark": "30秒标记"
+    },
+    "toj": {
+      "meanResponseTime": "平均反应时间",
+      "temporalResolution": "时间分辨率",
+      "title": "时间顺序判断",
+      "threshold": "阈值",
+      "whichCameFirst": "哪个先出现？",
+      "leftFirst": "左边先",
+      "rightFirst": "右边先"
+    },
+    "tower": {
+      "budget": "预算",
+      "challenge": "挑战",
+      "challengeClassic": "经典",
+      "challengeExpert": "专家",
+      "challengeMemory": "记忆",
+      "challengePrecision": "精确",
+      "dragDiscAriaLabel": "从柱 {{peg}} 拖动顶部圆盘",
+      "goal": "目标",
+      "goalHiddenStatus": "目标已隐藏。使用「显示」短暂查看。",
+      "goalRevealedMessage": "目标已显示 3 秒。",
+      "hint": "提示",
+      "hintDescription": "显示最佳下一步",
+      "hintMessage": "提示：将顶部圆盘从柱 {{fromPeg}} 移到柱 {{toPeg}}。",
+      "hiddenGoalDescription": "游戏期间目标被隐藏。如需简短提醒请使用「显示」。",
+      "hiddenGoalTitle": "记忆挑战",
+      "invalid": "无效",
+      "moves": "步数",
+      "optimal": "最优",
+      "pegFullMessage": "此柱已满。",
+      "previewMemoryCountdown": "记住目标布局。{{seconds}}秒后开始。",
+      "previewPlanCountdown": "在 {{moves}} 步内规划解法。{{seconds}}秒后开始。",
+      "reset": "重置",
+      "resetDescription": "重新开始这个拼图",
+      "resetMessage": "拼图已重置。",
+      "reveal": "显示",
+      "revealDescription": "显示隐藏的目标",
+      "statusOptimalSolve": "最优解。得分 {{score}}。",
+      "statusSolvedScore": "以 {{moves}} 步解决 (+{{extraMoves}})。得分 {{score}}。",
+      "undo": "撤销",
+      "undoDescription": "撤销上一步",
+      "undoneMessage": "已撤销上一步。",
+      "yourPegs": "你的柱子"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "正确交付",
+      "trainsLost": "丢失的列车",
+      "wrongStation": "错误站台",
+      "title": "思维列车",
+      "trains": "列车",
+      "missed": "遗漏",
+      "scoreLabel": "分数",
+      "instructions": "说明"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "平均使用问题数",
+      "title": "二十个问题",
+      "avgQuestions": "平均问题数",
+      "rounds": "轮次",
+      "efficiency": "效率",
+      "avgQuestionsCorrectOnly": "平均问题数（仅正确）",
+      "questionsLabel": "问题",
+      "remaining": "剩余",
+      "readyToGuess": "我准备猜了！",
+      "tapTheTarget": "点击你认为是目标的物体！"
+    },
+    "ufov": {
+      "usefulFieldOfView": "有效视野",
+      "visualNoiseMask": "视觉噪声遮罩",
+      "whatWasInTheCenter": "中间是什么？",
+      "whereWasTheTarget": "目标在哪里？",
+      "avgThreshold": "平均阈值",
+      "speed": "速度",
+      "accuracy": "准确度",
+      "central": "中央",
+      "peripheral": "外围",
+      "overall": "总体",
+      "block": "组",
+      "trials": "Trials",
+      "start": "开始",
+      "focus": "焦点",
+      "threshold": "阈值",
+      "stimulus": "刺激",
+      "respondFromMemory": "凭记忆回答",
+      "truck": "卡车",
+      "choosePeripheralLocation": "选择外围位置",
+      "currentBlock": "第 {{n}} 组",
+      "exposure": "曝光"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "以 {{letter}} 开头的词",
+      "title": "言语流畅性",
+      "totalWords": "总词数",
+      "duplicates": "重复",
+      "letter": "字母",
+      "round": "轮次",
+      "roundComplete": "轮次完成",
+      "nextRound": "下一轮",
+      "middotRound": " · 轮次"
+    },
+    "vernierAcuity": {
+      "whichSide": "哪一边？",
+      "title": "游标视力",
+      "leftOffset": "左偏移",
+      "rightOffset": "右偏移",
+      "offset": "偏移"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "最优策略",
+      "correct": "正确！",
+      "wrong": "错误",
+      "title": "天气预测",
+      "optimal": "最优",
+      "learningCurve": "学习曲线",
+      "predictTheWeather": "预测天气",
+      "rain": "雨"
+    },
+    "wordChain": {
+      "avgResponseTime": "平均反应时间",
+      "chain": "链",
+      "longestChain": "最长链条",
+      "totalCorrect": "总正确",
+      "totalWords": "总词数",
+      "words": "词",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "平均反应时",
+      "endsWith": "以…结尾 ",
+      "chainLabel": "链",
+      "bestLabel": "最佳"
+    },
+    "wordFlow": {
+      "avgWordLength": "平均词长",
+      "correct": "正确",
+      "invalidWords": "无效词",
+      "totalWordsSelected": "总选词数",
+      "validWords": "有效词",
+      "wordsPerMinute": "每分钟词数",
+      "wrong": "错误",
+      "seeResults": "查看结果",
+      "nextRound": "下一回合 ({{current}}/{{total}})",
+      "title": "语言流畅性",
+      "validWordsLabel": "有效词",
+      "wordsPerMinLabel": "词/分",
+      "avgLengthLabel": "平均长度",
+      "invalidLabel": "无效",
+      "round": "轮次",
+      "selectWordsBelongTo": "选择属于…的词",
+      "selected": "已选"
+    },
+    "wordList": {
+      "avgRtCorrect": "平均RT（正确）",
+      "primacyEffect": "首因效应",
+      "recencyEffect": "近因效应",
+      "studyPhaseRememberEachWord": "学习阶段——记住每个词",
+      "wordsRecalled": "回忆词数",
+      "title": "Word List",
+      "serialPositionCurve": "序列位置曲线",
+      "wasWordInList": "这个词在列表中吗？",
+      "seenBefore": "之前见过",
+      "newWord": "新"
+    },
+    "speedSort": {
+      "switchAccuracy": "切换准确率",
+      "switchTrials": "切换试次数",
+      "sortByColor": "按颜色分类",
+      "sortByShape": "按形状分类",
+      "sortByNumber": "按数字分类",
+      "ruleChanged": "规则已变！",
+      "binRed": "红",
+      "binBlue": "蓝",
+      "binGreen": "绿",
+      "binYellow": "黄",
+      "binCircle": "圆",
+      "binSquare": "方",
+      "binTriangle": "三角",
+      "binStar": "星",
+      "title": "快速排序",
+      "switch": "切换"
+    },
+    "reflex": {
+      "target": "目标",
+      "lure": "诱饵",
+      "tooSlow": "太慢了！",
+      "wrongTarget": "错误目标！",
+      "tapTargets": "点击绿色圆圈！",
+      "hits": "命中",
+      "misses": "未命中",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "记住当前累计值…",
+      "title": "连锁计算",
+      "stepChains": "{{len}}步链式计算",
+      "start": "开始",
+      "step": "步骤",
+      "whatIsTheResult": "结果是什么？"
+    },
+    "alternateUses": {
+      "placeholder": "输入一种用途…",
+      "title": "替代用途",
+      "totalUses": "总用途数",
+      "perObject": "每物体",
+      "rounds": "轮次",
+      "bestObject": "最佳物体",
+      "bestCount": "最佳数量",
+      "noUsesSubmitted": "未提交用途",
+      "timesUp": "时间到！",
+      "nextObject": "下一个物品（{{object}}）",
+      "listCreativeUses": "列出该物品的创意用途"
+    },
+    "anagram": {
+      "placeholder": "输入单词...",
+      "title": "字谜",
+      "avgSolve": "平均。解决",
+      "letterWords": "{{len}}个字母的词",
+      "submit": "提交"
+    },
+    "facialEmotion": {
+      "happy": "快乐",
+      "sad": "悲伤",
+      "angry": "愤怒",
+      "fearful": "恐惧",
+      "disgusted": "厌恶",
+      "surprised": "惊讶",
+      "lc": "LC",
+      "title": "面部表情识别",
+      "topConfusions": "常见混淆"
+    },
+    "numberSeries": {
+      "easy": "简单",
+      "hard": "困难"
+    },
+    "chainRecall": {
+      "round": "回合",
+      "title": "链式回忆",
+      "chain": "链",
+      "placeholder": "占位符"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "情绪 Go/No-Go",
+      "block1CommissionErrors": "第1组执行错误",
+      "block2CommissionErrors": "第2组执行错误",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "组",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop效应",
+      "title": "颜色冲刺",
+      "congShort": "一致",
+      "incongShort": "不一致",
+      "congruentAccuracy": "一致准确度",
+      "incongruentAccuracy": "不一致准确率"
+    },
+    "mirror": {
+      "avgCorrectCells": "正确格数（均值）",
+      "symmetryType": "对称类型",
+      "title": "镜像"
+    },
+    "rhythmTap": {
+      "correctTrials": "正确试次数",
+      "avgRhythmScore": "平均节奏分数",
+      "bestTrialScore": "最佳试次分数",
+      "worstTrialScore": "最差试次分数",
+      "level": "等级",
+      "rhythm": "节奏",
+      "bestTrial": "最佳试次",
+      "worstTrial": "最差试验"
+    },
+    "vocalProsody": {
+      "questioning": "疑问"
+    },
+    "arithmeticSpeed": {
+      "multiply": "乘",
+      "add": "加",
+      "subtract": "减",
+      "title": "快速计算",
+      "score": "分数",
+      "solved": "已解决",
+      "missed": "遗漏"
+    },
+    "puzzle": {
+      "avgSolveTime": "平均解题时间",
+      "totalMoves": "总移动次数",
+      "totalErrors": "总错误",
+      "gridSize": "网格大小",
+      "maxGridReached": "已达最大网格",
+      "maxLevelReached": "已达最大等级",
+      "maxNodesReached": "已达最大节点",
+      "puzzleDetails": "谜题详情",
+      "roundDetails": "回合详情",
+      "solved": "已解决！",
+      "undo": "撤销",
+      "reset": "重置",
+      "check": "检查",
+      "moves": "步数",
+      "time": "时间",
+      "level": "等级",
+      "errors": "错误",
+      "score": "Score",
+      "grid": "网格",
+      "crossings": "交叉",
+      "pearls": "珍珠",
+      "clues": "线索",
+      "region": "区域",
+      "filled": "已填充",
+      "cells": "单元格",
+      "undosLeft": "剩余撤销次数",
+      "gems": "宝石",
+      "connected": "已连接",
+      "slides": "滑动",
+      "progress": "进度",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "已揭示",
+      "colored": "彩色",
+      "violations": "Violations",
+      "blacked": "涂黑",
+      "empty": "空",
+      "remaining": "剩余",
+      "pairs": "对",
+      "flips": "翻转",
+      "found": "找到",
+      "balls": "球",
+      "guesses": "猜测",
+      "original": "Original",
+      "findDifferences": "找出不同",
+      "totalDrags": "总拖拽次数",
+      "totalUndos": "总撤销",
+      "totalEdgesDrawn": "总绘制边",
+      "totalLasers": "总激光",
+      "totalSlides": "总滑动次数",
+      "totalRotations": "总旋转",
+      "totalRectangles": "总矩形",
+      "totalScore": "总分",
+      "avgTime": "平均时间",
+      "cellsCleared": "单元格已清除",
+      "totalDiffsFound": "总发现差异",
+      "gemsCollected": "收集的宝石",
+      "pushBoxesOntoTargets": "将所有箱子推到目标位置",
+      "fireLasersMarkBalls": "从边缘发射激光，然后标记球的位置",
+      "revealingAnswer": "正在揭示答案...",
+      "checkAnswer": "检查答案",
+      "pickNumberBelow": "选择下面的数字",
+      "tapCellToAssign": "点击单元格分配数字",
+      "tapEdgesToPlaceWalls": "点击边缘放置墙壁。将区域分成大小为 K 的块。",
+      "ghosts": "幽灵",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "多米诺",
+      "islands": "岛屿",
+      "pegsLeft": "剩余钉子",
+      "bestRemaining": "最佳剩余",
+      "puzzlesSolved": "已解谜题",
+      "flooded": "已淹没",
+      "edges": "边",
+      "totalPlacements": "总放置",
+      "totalRemovals": "总移除",
+      "maxTileReached": "已达最大方块",
+      "target": "目标",
+      "placed": "已放置",
+      "totalGuesses": "总猜测次数",
+      "guessesLeft": "剩余猜测",
+      "difficulty": "难度"
+    },
+    "palisade": {
+      "title": "栅栏",
+      "puzzles": "谜题",
+      "maxLevel": "最高等级"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "errors": "错误",
+      "avgTime": "平均时间",
+      "erase": "擦除"
+    },
+    "blackbox": {
+      "title": "黑箱",
+      "puzzles": "谜题",
+      "lasers": "激光",
+      "avgTime": "平均时间"
+    },
+    "designFluency": {
+      "title": "设计流畅性",
+      "uniqueDesigns": "独特图案",
+      "duplicates": "重复",
+      "round": "轮次",
+      "roundComplete": "轮次完成",
+      "youCreatedDesigns": "你创建了 {{count}} 个设计",
+      "startRound": "开始回合",
+      "instructions": "说明",
+      "designs": "图案",
+      "clear": "清除",
+      "addDesign": "添加"
+    },
+    "signpost": {
+      "title": "路标",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "avgTime": "平均时间",
+      "maxGrid": "最大网格"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "等级",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "undos": "撤销",
+      "puzzle": "谜题"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "生物运动",
+      "noiseDots": "噪声点",
+      "whichDirection": "什么方向？",
+      "left": "左",
+      "right": "右"
+    },
+    "inertia": {
+      "title": "惯性",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "gems": "宝石",
+      "moves": "步数"
+    },
+    "waterLevel": {
+      "title": "水平面",
+      "error": "错误",
+      "tilt": "倾斜",
+      "waterLine": "水位线？"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxGrid": "最大网格"
+    },
+    "sudoku": {
+      "title": "数独",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "errors": "错误",
+      "avgTime": "平均时间",
+      "erase": "擦除"
+    },
+    "rectangles": {
+      "title": "矩形",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "rectanglesCount": "矩形",
+      "maxGrid": "最大网格",
+      "cancelSelection": "取消选择"
+    },
+    "filling": {
+      "title": "填充",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "avgTime": "平均时间",
+      "grid": "网格"
+    },
+    "spacedRetrieval": {
+      "title": "间隔回忆",
+      "studyPair": "学习这对",
+      "waitAndSolve": "等待…然后回答",
+      "equalsQuestion": "= ？",
+      "intervalWhatPairs": "间隔：哪些配对？"
+    },
+    "prototypeDistortion": {
+      "title": "原型失真",
+      "studyPhase": "学习阶段",
+      "testPhase": "测试阶段",
+      "yesBelongs": "是 — 属于",
+      "noRandom": "否 — 随机"
+    },
+    "motionCoherence": {
+      "title": "运动一致性",
+      "threshold": "阈值",
+      "coherence": "一致性",
+      "whichDirection": "什么方向？"
+    },
+    "cube": {
+      "title": "魔方",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxLevel": "最高等级",
+      "cubeFaces": "立方体面",
+      "moveUp": "上",
+      "moveLeft": "左",
+      "moveDown": "下",
+      "moveRight": "右"
+    },
+    "sameGame": {
+      "title": "同色消除",
+      "score": "分数",
+      "cleared": "已清除",
+      "cells": "格子",
+      "accuracy": "准确度"
+    },
+    "crossModalMatching": {
+      "title": "跨通道匹配",
+      "chance": "概率",
+      "whichPatternMatchesRhythm": "哪个图案与节奏匹配？"
+    },
+    "mosaic": {
+      "title": "马赛克",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxGrid": "最大网格"
+    },
+    "spotDiff": {
+      "title": "找不同",
+      "level": "等级",
+      "grid": "网格",
+      "accuracy": "准确度",
+      "perfect": "完美",
+      "avgTime": "平均时间",
+      "found": "找到"
+    },
+    "lightsOut": {
+      "title": "熄灯",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxGrid": "最大网格"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "rotations": "旋转",
+      "avgTime": "平均时间"
+    },
+    "tracks": {
+      "title": "轨道",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "errors": "错误",
+      "avgTime": "平均时间"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "slides": "滑动",
+      "maxGrid": "最大网格"
+    },
+    "cognitiveBias": {
+      "title": "认知偏见训练",
+      "biasResistance": "偏见抵抗",
+      "biased": "有偏",
+      "continue": "继续"
+    },
+    "empathicAccuracy": {
+      "title": "共情准确性",
+      "emotionId": "情绪",
+      "avgRatingError": "平均评分误差",
+      "scenarios": "场景",
+      "perfect": "完美",
+      "rating": "评分",
+      "howDoesCharacterFeel": "角色的感受如何？",
+      "rateIntensity": "评价强度",
+      "whatEmotion": "什么情绪？",
+      "yourRating": "你的评分",
+      "correct": "正确",
+      "emotion": "情绪"
+    },
+    "guess": {
+      "title": "猜色",
+      "solved": "已解决",
+      "guesses": "猜测"
+    },
+    "dominosa": {
+      "title": "多米诺骨牌",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxLevel": "最高等级"
+    },
+    "magnets": {
+      "title": "磁铁",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxLevel": "最高等级"
+    },
+    "tangram": {
+      "placeAll": "放置所有碎片",
+      "solved": "已解决！",
+      "notRight": "还不太对",
+      "title": "Tangram",
+      "level": "等级",
+      "puzzles": "谜题",
+      "placements": "放置",
+      "removals": "移除",
+      "puzzleNumber": "拼图 {{n}}",
+      "pieces": "碎片",
+      "targetCells": "Cible",
+      "dragHint": "拖动或放置碎片到网格上",
+      "selectHint": "选择一个碎片",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "检查"
+    },
+    "galaxies": {
+      "title": "星系"
+    },
+    "flood": {
+      "title": "洪水"
+    },
+    "pegs": {
+      "title": "独粒钻石",
+      "bestPegs": "最佳剩余棋子"
+    },
+    "auditoryFigureGround": {
+      "title": "听觉图形-背景",
+      "patternPresent": "有规律吗？",
+      "pattern": "模式",
+      "noPattern": "无规律"
+    },
+    "selfOrderedPointing": {
+      "title": "自序指认",
+      "maxSpan": "最大广度",
+      "errors": "错误",
+      "round": "轮次",
+      "setOf": "{{count}}个一组"
+    },
+    "mirrorTracing": {
+      "title": "镜像描摹",
+      "totalErrors": "总错误",
+      "avgTime": "平均时间",
+      "shapes": "形状",
+      "perfect": "完美",
+      "improvement": "改善",
+      "errorsMiddot": "错误 ·",
+      "shape": "形状",
+      "errors": "错误",
+      "xIsMirrored": "X已镜像翻转！"
+    },
+    "clockDrawing": {
+      "title": "时钟绘制",
+      "avgError": "平均误差",
+      "setTo": "设为 ",
+      "submit": "提交"
+    },
+    "cognitiveMap": {
+      "title": "认知地图",
+      "explore": "探索",
+      "sRemaining": "S Remaining",
+      "from": "从",
+      "whichDirectionIs": "哪个方向是 "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "环路"
+    },
+    "lightup": {
+      "title": "Akari"
+    },
+    "twentyFortyEight": {
+      "maxTile": "最大方块",
+      "moves": "步数",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "桥梁",
+      "puzzles": "谜题",
+      "maxLevel": "最高等级",
+      "level": "等级"
+    },
+    "net": {
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxGrid": "最大网格"
+    },
+    "flip": {
+      "title": "翻转"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "斜线"
+    },
+    "towers": {
+      "title": "塔楼",
+      "puzzles": "谜题",
+      "avgTime": "平均时间",
+      "erase": "擦除"
+    },
+    "pearl": {
+      "title": "Pearl",
+      "edges": "边"
+    },
+    "mapColoring": {
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "moves": "步数",
+      "maxLevel": "最高等级"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "不死族",
+      "accuracy": "准确度",
+      "puzzles": "谜题",
+      "avgTime": "平均时间"
+    },
+    "untangle": {
+      "title": "解结",
+      "drags": "拖动",
+      "maxNodes": "最大节点"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "数字华容道"
+    },
+    "tents": {
+      "title": "帐篷"
+    },
+    "mesker": {
+      "pen": "笔",
+      "stroke": "笔画",
+      "penPressureHint": "保持均匀的书写力度"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "滑动到N-back位置。如果是相同位置，请双击。",
+    "hint": {
+      "validated": "已验证",
+      "draw": "画出字母 · 点击验证",
+      "drawWithColor": "画出字母 · 选择颜色 · 点击验证",
+      "type": "输入字母 · Enter验证",
+      "typeWithColor": "输入字母 · 选择颜色 · Enter验证",
+      "typeResult": "输入结果 · Enter验证",
+      "writeResult": "写出结果 · 点击验证"
+    },
+    "keyboard": {
+      "letterInput": "字母",
+      "numberInput": "数字"
+    },
+    "arithmetic": {
+      "cueHint": "记住这2个数字",
+      "refresh": "新"
+    },
+    "hintPosition": "刺激在 {{n}} 个回合前在哪里？",
+    "hintN0": "指示当前刺激",
+    "warmupHint": "记住位置。无需作答。",
+    "hintDraw": "画出字母 · 点击验证",
+    "hintDrawWithColor": "画出字母 · 选择颜色 · 点击验证",
+    "hintWriteResult": "写出结果 · 点击验证",
+    "guide": {
+      "swipeNormal": "从最后一格滑向 N-{{n}}。相同位置则双击。",
+      "swipeSequential": "从 N-0 滑向 N-{{n}}，逐步进行。相同位置则双击。",
+      "swipeDynamic": "按照显示的规则滑动。相同位置则双击。",
+      "tapN0": "点击当前位置。",
+      "warmup": "记住位置——无需回答。",
+      "writeDraw": "画出 {{n}} 步前听到的字母 • 点击确认",
+      "writeDrawColor": "画出 {{n}} 步前听到的字母 • 选择颜色 • 点击确认",
+      "writeType": "输入 {{n}} 步前听到的字母 · 回车确认",
+      "writeTypeColor": "输入 {{n}} 步前听到的字母 • 选择颜色 • 回车确认",
+      "writeDrawN0": "画出刚才听到的字母 • 点击确认",
+      "writeDrawColorN0": "画出刚才听到的字母 • 选择颜色 • 点击确认",
+      "writeTypeN0": "输入刚才听到的字母 • 回车确认",
+      "writeTypeColorN0": "输入刚才听到的字母 • 选择颜色 • 回车确认",
+      "writeResult": "写出结果 • 点击确认",
+      "validated": "已确认",
+      "holdMindful": "按住格子 {{seconds}} 秒",
+      "swipeMindful": "在 {{seconds}} 秒内滑动"
+    },
+    "settings": {
+      "adaptiveTiming": "自适应节奏",
+      "inputKeyboard": "键盘",
+      "inputHandwriting": "手写",
+      "writingInput": "字母/数字",
+      "section": {
+        "grid": "网格",
+        "input": "输入",
+        "rhythm": "节奏",
+        "interface": "界面",
+        "interfaceNone": "标准",
+        "sound": "声音"
+      },
+      "isi": "间隔（ISI）",
+      "stimulusDuration": "刺激持续时间",
+      "feedbackDuration": "反馈持续时间",
+      "ruleDisplay": "规则显示",
+      "blankInterval": "空白间隔",
+      "showProgressBar": "进度条",
+      "showInstructions": "游戏内指引",
+      "arithmeticInterference": "算术干扰",
+      "fullMenu": "完整菜单",
+      "gridStyle": "网格样式",
+      "gridStyleClassic": "经典",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "在 {{seconds}} 秒内滑动",
+        "holdMindful": "按住格子 {{seconds}} 秒"
+      },
+      "feedback": {
+        "gestureDuration": "手势",
+        "holdDuration": "按住",
+        "writingDuration": "书写"
+      }
+    },
+    "feedback": {
+      "holdDuration": "按住",
+      "gestureDuration": "手势",
+      "writingDuration": "书写"
+    },
+    "image": "形状",
+    "digits": "Digits",
+    "emotions": "情绪",
+    "words": "词",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "会话回放",
+    "play": "播放",
+    "pause": "暂停",
+    "restart": "重新开始",
+    "speed": "速度",
+    "loading": "加载会话中...",
+    "unavailable": "此训练不支持回放",
+    "backToStats": "返回统计",
+    "runStack": {
+      "original": "原始",
+      "correction": "修正",
+      "delta": "Δ d'",
+      "inProgress": "进行中",
+      "completed": "已完成"
+    },
+    "abandon": "退出",
+    "badge": "回放",
+    "completionReport": {
+      "backToHome": "返回",
+      "correctAgain": "再次修正",
+      "deltaVsOriginal": "vs 原始",
+      "deltaVsParent": "vs 上一次运行",
+      "falseAlarmsSkipped": "避免的错误",
+      "missesCorrections": "已修正的遗漏",
+      "newFalseAlarms": "新错误",
+      "replayAgain": "再次回放",
+      "scoreLabel": "修正分数",
+      "title": "修正完成"
+    },
+    "controls": "控制",
+    "correction": "修正",
+    "finished": "回放结束",
+    "home": "首页",
+    "parseError": "无法读取会话",
+    "tapSlotToPlace": "点击槽位进行放置",
+    "timeline": "时间轴",
+    "focusTimeline": {
+      "open": "显示时间轴",
+      "close": "关闭时间轴",
+      "title": "N-back时间轴",
+      "fillAll": "全部填充",
+      "fillCard": "填充卡片"
+    },
+    "hud": {
+      "counterDisplay": "计数器显示",
+      "toggleCounterDisplay": "切换计数器显示"
+    },
+    "validate": "验证修正"
+  },
+  "recovery": {
+    "title": "会话中断",
+    "description": "有一个会话正在进行中。要恢复吗？",
+    "mode": "模式",
+    "level": "等级",
+    "progress": "进度",
+    "timeAgo": "之前",
+    "resume": "恢复会话",
+    "startFresh": "重新开始",
+    "staleWarning": "此会话较旧，恢复可能会有困难。",
+    "modes": {
+      "game": "训练",
+      "activeTraining": "主动训练",
+      "flowTraining": "Dual Place训练",
+      "dualPickTraining": "双选",
+      "traceTraining": "双轨迹"
+    }
+  },
+  "rewards": {
+    "congratulations": "恭喜！",
+    "duration": "{{days}} 天Premium",
+    "lifetimeLabel": "永久权限",
+    "expiresAt": "有效期至 {{date}}",
+    "neverExpires": "永不过期",
+    "continue": "继续",
+    "discovery": {
+      "name": "探索通行证",
+      "description": "7天Premium — 探索所有功能"
+    },
+    "engagement": {
+      "name": "承诺通行证",
+      "description": "1个月Premium — 您的自律得到了回报"
+    },
+    "expert": {
+      "name": "专家通行证",
+      "description": "3个月Premium — 您是真正的练习者"
+    },
+    "lifetime": {
+      "name": "永久权限",
+      "description": "终身Premium — 您已掌握Neurodual"
+    },
+    "xpRemaining": "剩余经验值",
+    "permanentAccessUnlocked": "永久访问已解锁",
+    "reachedTheTop": "您已达到巅峰！"
+  },
+  "progression": {
+    "level": "等级 {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "下一等级",
+    "reached": "已达到",
+    "inProgress": "进行中"
+  },
+  "gridlock": {
+    "nextPuzzle": "下一个谜题 →"
+  }
+}

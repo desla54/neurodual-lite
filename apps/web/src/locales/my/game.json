@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "မင်းဘယ်လိုနေလဲ။",
+      "tired": "ပင်ပန်းတယ်။",
+      "normal": "မဟုတ်ပါrmal",
+      "energized": "ခွန်အားဖြစ်စေတယ်။"
+    },
+    "aria": {
+      "trialTimer": "စမ်းသပ်မှုအချိန်တိုင်း",
+      "positionMatch": "အနေအထား match",
+      "audioMatch": "အသံ match",
+      "audioLetter": "အသံ letter:",
+      "traceGrid": "ခြေရာခံဇယား"
+    },
+    "syncHud": {
+      "shortLabel": "ချိန်ကိုက်ခြင်း။",
+      "toggleTitle": "စင့်ခ်လုပ်ခြင်း မော်နီတာကို ပြောင်းရန်",
+      "start": "စတင်ပါ။",
+      "end": "အဆုံး",
+      "pinLabel": "ပင်",
+      "pinTitle": "မျက်နှာပြင်ပေါ်တွင် ပင်ထိုးပါ။",
+      "inputLabel": "ထည့်သွင်းမှု",
+      "inputTitle": "ထည့်သွင်းမှု latency ပရိုဖိုင်ကို ပြောင်းရန် (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "ဖွင့်",
+      "off": "ပိတ်",
+      "hideLabel": "ပုန်း",
+      "hideTitle": "ဝှက်ရန် (unless syncHud=1 or ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "အသံ",
+        "expected": "မျှော်လင့်ထားသည်။"
+      },
+      "labels": {
+        "trial": "အစမ်း",
+        "lagShow": "ပြသမှု နောက်ကျခြင်း။",
+        "lagHide": "နှောင့်နှေးသော အနှိပ်ခန်း",
+        "winErr": "အမှားအယွင်းအနိုင်ရ",
+        "endRef": "ref",
+        "visualPreP95": "Visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "ထည့်သွင်းမှုကို ဆိုင်းငံ့ထားသည်။",
+        "inputSamples": "input နမူနာများ",
+        "touchSamples": "ထိနမူနာများ",
+        "mouseSamples": "mouse နမူနာများ",
+        "keyboardSamples": "ကီးဘုတ်နမူနာများ",
+        "latestMethod": "နောက်ဆုံးပေါ် (နည်းလမ်း)",
+        "latestModality": "နောက်ဆုံးပေါ်ပုံစံ",
+        "audioCueMode": "အသံအချက်များ",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "ထည့်သွင်းမှု ပရိုဖိုင်ကို ပြန်လည်သတ်မှတ်ပါ။"
+    },
+    "hud": {
+      "resume": "ဆက်လုပ်ရန်",
+      "pause": "ခေတ္တရပ်ရန်",
+      "quit": "ထွက်ရန်",
+      "restart": "ပြန်လည်စတင်ပါ။",
+      "spaceToStart": "စတင်ရန်နေရာ",
+      "settings": "ဆက်တင်များ",
+      "enterToAdvance": "ကြိုတင်ဝင်ရောက်ပါ။",
+      "trial": "အစမ်း",
+      "muteTexture": "အသံပိတ် background sound"
+    },
+    "status": {
+      "paused": "ခေတ္တရပ်ထား"
+    },
+    "completed": "ပြီးသွားပြီ",
+    "starting": {
+      "getReady": "ပြင်ဆင်ပါ..."
+    },
+    "quitModal": {
+      "title": "ထွက်ရန် session?",
+      "message": "သင်၏တိုးတက်မှုကို သိမ်းဆည်းမည်မဟုတ်ပါ။",
+      "confirm": "ထွက်ရန်",
+      "cancel": "ဆက်လုပ်ရန်",
+      "close": "ပိတ်ရန်"
+    },
+    "controls": {
+      "position": "အနေအထား",
+      "position2": "Pos ၂",
+      "position3": "Pos ၃",
+      "position4": "Pos ၄",
+      "visvis": "မြင်နိုင် & မမြင်နိုင်",
+      "visaudio": "Vis & n-အသံ",
+      "audiovis": "အသံ & n-vis",
+      "vis1": "တစ်ပိဿာ ၁",
+      "vis2": "တစ်ပိဿာ ၂",
+      "vis3": "တစ်ပိဿာ ၃",
+      "vis4": "တစ်ပိဿာ ၄",
+      "audio": "အသံ",
+      "audio2": "အသံ 2",
+      "color": "အရောင်",
+      "arithmetic": "ဂဏန်းသင်္ချာ",
+      "image": "ပုံသဏ္ဍာန်"
+    },
+    "arithmetic": {
+      "answer": "အဖြေ",
+      "clear": "ရှင်းလင်းရန်",
+      "hint": "Keyboard: 0–9 · '-' for the sign · '.' for decimals · နောက်သို့space to clear"
+    },
+    "navigation": {
+      "back": "နောက်သို့"
+    },
+    "xp": {
+      "title": "XP ရရှိခဲ့သည်။",
+      "base": "အခြေခံ (N-{{level}})",
+      "performance": "စွမ်းဆောင်ရည်",
+      "accuracy": "တိကျမှု",
+      "streakBonus": "Streak ဆုကြေးငွေ",
+      "dailyBonus": "ပထမနေ့",
+      "badgeBonus": "တံဆိပ်များ",
+      "flowBonus": "Dual Place ဆုကြေး",
+      "confidenceMultiplier": "ယုံကြည်မှု",
+      "dailyCapReached": "နေ့စဉ် XP ကန့်သတ်ချက် ပြည့်သွားပါပြီ။",
+      "levelReached": "အဆင့် {{level}} ရောက်ပါပြီ။"
+    },
+    "badges": {
+      "newUnlocked": "တံဆိပ်အသစ်များ ရရှိပြီ"
+    },
+    "getReady": "ပြင်ဆင်ပါ...",
+    "layoutEdit": {
+      "done": "ပြီးပြီ။",
+      "reset": "ပြန်သတ်မှတ်ရန်",
+      "instructions": "ပြန်စီရန် ဇုန်များကို ဆွဲယူပါ။ လက်ကိုင်များကို အသုံးပြု၍ အရွယ်အစားပြောင်းပါ။",
+      "title": "တည်းဖြတ်ရန် mode",
+      "cancel": "မလုပ်တော့",
+      "save": "သော့ခတ်",
+      "editLayout": "တည်းဖြတ်ရန် layout"
+    },
+    "paused": "ခေတ္တရပ်ထား",
+    "pressEscapeToResume": "ပြန်လည်စတင်ရန် Escape ကိုနှိပ်ပါ။",
+    "settings": {
+      "editLayout": "တည်းဖြတ်ရန် layout",
+      "gridAndButtons": "ဇယားကွက်များနှင့် ခလုတ်များ",
+      "swapPositionAudio": "Swap အနေအထား / အသံ",
+      "title": "ဆက်တင်များ",
+      "quickHint": "ဂိမ်းမှမထွက်ဘဲ ဆက်တင်အနည်းငယ်ကို ချိန်ညှိပါ။",
+      "quickUnavailable": "မဟုတ်ပါ quick settings available for this mode yet."
+    },
+    "pinkNoiseInfo": "နောက်ခံလေသံသည် လှုံ့ဆော်မှုတစ်ခုစီနှင့် တွဲနေသည်။ အသံဆက်တင်များတွင် စိတ်ကြိုက်ပြင်ဆင်နိုင်သည် သို့မဟုတ် ပိတ်နိုင်သည်။",
+    "pinkNoiseDismiss": "ဆက်လုပ်ရန်",
+    "audioMode": "အသံ mode",
+    "cogTask": {
+      "precision": "တိကျမှု",
+      "avgRt": "ပျမ်းမျှ RT",
+      "avgRtShort": "ပျမ်းမျှ RT",
+      "trials": "Trial များ",
+      "correct": "မှန်",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "effect": "သက်ရောက်မှု",
+      "restart": "ပြန်လည်စတင်ပါ။",
+      "home": "ပင်မ",
+      "performance": "စွမ်းဆောင်ရည်",
+      "trialDetail": "အစမ်းအသေးစိတ်",
+      "setDetail": "အသေးစိတ်သတ်မှတ်ပါ။",
+      "roundDetail": "ဝိုင်းအသေးစိတ်",
+      "problemDetail": "ပြဿနာအသေးစိတ်",
+      "phaseDetail": "အဆင့်အသေးစိတ်",
+      "feedbackCorrect": "မှန်",
+      "feedbackIncorrect": "မမှန်",
+      "feedbackTimeout": "အရမ်းနှေးတယ်။",
+      "preparing": "ပြင်ဆင်ပါ...",
+      "loading": "ဖွင့်နေသည်...",
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။",
+      "up": "ချီ",
+      "down": "ဆင်းတယ်။",
+      "congruent": "ကိုက်ညီသည်။",
+      "incongruent": "ကွဲလွဲမှု",
+      "congruencyEffect": "ကိုက်ညီမှုအကျိုးသက်ရောက်မှု",
+      "maxSpan": "Max ထွာ",
+      "startingSpan": "စတင်ရန်ing span",
+      "maxSpanReached": "Max span ရောက်ပါပြီ။",
+      "longestStreak": "အရှည်ဆုံး မှန်ကန်သော လမ်းကြောင်း",
+      "series": "Streak ပါ။",
+      "avgResponseTime": "ပျမ်းမျှ response time",
+      "recall": "သတိရပါ။",
+      "expected": "မျှော်လင့်သည်။",
+      "submit": "တင်ပြပါ။",
+      "cancel": "မလုပ်တော့",
+      "clear": "ရှင်းလင်းရန်",
+      "delete": "ဖျက်",
+      "true": "မှန်ပါတယ်။",
+      "false": "မှားသော",
+      "target": "ပစ်မှတ်",
+      "nonTarget": "မဟုတ်ပါn-target",
+      "distractor": "အာရုံပြောင်း",
+      "same": "အတူတူပါပဲ။",
+      "different": "မတူဘူး။",
+      "identical": "ထပ်တူထပ်မျှ",
+      "mirror": "ကြေးမုံ",
+      "symmetric": "အချိုးကျသည်။",
+      "asymmetric": "အချိုးမညီ",
+      "symShort": "Sym",
+      "present": "ပစ္စုပ္ပန်",
+      "absent": "လာခဲ့ပါ။",
+      "noTrials": "မဟုတ်ပါ trials completed.",
+      "noSets": "မဟုတ်ပါ sets completed.",
+      "noRounds": "မဟုတ်ပါ rounds completed.",
+      "noProblems": "မဟုတ်ပါ problems completed.",
+      "noPhases": "မဟုတ်ပါ phases completed.",
+      "sets": "အစုံပါပဲ။",
+      "rounds": "ဟိုနေ့က",
+      "equations": "ညီမျှခြင်း",
+      "sentences": "စာကြောင်းများ",
+      "equationAccuracy": "ညီမျှခြင်း တိကျမှု",
+      "forward": "ရှေ့သို့",
+      "backward": "နောက်သို့ward",
+      "forwardMaxSpan": "ရှေ့သို့ max span",
+      "backwardMaxSpan": "နောက်သို့ward max span",
+      "odd": "အထူးအဆန်း",
+      "even": "ပင်",
+      "score": "ရမှတ်",
+      "easy": "လွယ်ပါတယ်။",
+      "hard": "ခက်တယ်။",
+      "totalTrials": "စုစုပေါင်း trials",
+      "totalErrors": "စုစုပေါင်း errors",
+      "totalErrShort": "စုစုပေါင်း Err.",
+      "hits": "မှန်",
+      "misses": "လွဲ",
+      "falseAlarms": "မိစ်အယ်၊",
+      "correctRejections": "ကော်. Rej",
+      "yes": "ဟုတ်ကဲ့",
+      "no": "မရှိ",
+      "sessionInterrupted": "ဆက်ရှင် ပြတ်တောက်သွားသည်။",
+      "reverseOrder": "အပြောင်းအလဲ အစဉ်",
+      "normalOrder": "အစဉ်လိုက်",
+      "lnsInstruction": "နံပါတ်များ ကြီးနေခြင်း၊ ထို့နောက် A-Z စာလုံးများ",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "ဆိုင်မွန်အကျိုးသက်ရောက်မှု",
+        "blue": "အပြာ",
+        "red": "အနီရောင်",
+        "heroTitle": "ရှိမုန်"
+      },
+      "soroban": {
+        "target": "ဤနံပါတ်ကိုကိုယ်စားပြုပါ။",
+        "submit": "တင်ပြပါ။",
+        "rodLabel": "တံ {{n}}",
+        "heavenBead": "ကောင်းကင်ပုတီးစေ့ (တန်ဖိုး ၅)၊",
+        "earthBead": "မြေကြီးပုတီးစေ့ (တန်ဖိုး ၁)၊",
+        "instrBeadTitle": "ပုတီးစေ့တွေ ဘယ်လိုအလုပ်လုပ်လဲ။",
+        "instrBeadDesc": "တံတိုင်းတစ်ခုစီသည် ဂဏန်းတစ်ခုကို ကိုယ်စားပြုသည်။ ထိပ်ပုတီး (ကောင်းကင်) သည် ၅ တန်ဖြစ်သည်။ အောက်ပုတီး (မြေကြီး) သည် ၁ လုံးစီ တန်ဖိုးရှိသည်။ ပုတီးစေ့များကို အသက်သွင်းရန်အတွက် အလယ်ဘားဆီသို့ ရွှေ့ပါ။",
+        "instrExampleTitle": "ဥပမာ- ၇",
+        "instrExampleDesc": "7 = ကောင်းကင်ပုတီးစေ့ (5) + မြေကြီးပုတီး (2) လုံး။ ပုတီးစေ့များကို ရွှေ့ရန် တို့ပါ သို့မဟုတ် ဆွဲယူပါ။",
+        "instrGoalTitle": "မင်းရဲ့ပန်းတိုင်",
+        "instrGoalDesc": "နံပါတ်တစ်ခုပေါ်လာလိမ့်မည်။ ပုတီးစေ့များကို ကိုယ်စားပြုရန် သတ်မှတ်ပြီးနောက် တင်သွင်းမည်ကို နှိပ်ပါ။ တိကျမြန်ဆန်ပါစေ။",
+        "startButton": "စတင်ရန်",
+        "settings": "ဆက်တင်များ",
+        "closeSettings": "ပိတ်ရန် settings",
+        "settingsRods": "ချောင်းအရေအတွက်",
+        "settingsRodsHint": "ဂိမ်းဆက်တင်များတွင် N-Level ကိုသတ်မှတ်ပါ။",
+        "settingsTrials": "Trial များ per session",
+        "settingsTrialsHint": "Set via Trial များ in game settings",
+        "settingsRange": "နံပါတ်အပိုင်းအခြား"
+      },
+      "stroop": {
+        "pressInkColorButton": "မင်အရောင်နှင့် ကိုက်ညီသော ခလုတ်ကို နှိပ်ပါ။",
+        "redWord": "အနီရောင်",
+        "redLabel": "အနီရောင်",
+        "blueWord": "အပြာရောင်",
+        "blueLabel": "အပြာ",
+        "greenWord": "အစိမ်းရောင်",
+        "greenLabel": "အစိမ်းရောင်",
+        "yellowWord": "အဝါရောင်",
+        "yellowLabel": "အဝါရောင်"
+      },
+      "stroopFlex": {
+        "followRule": "စည်းကမ်း",
+        "ruleInk": "မင်ရောင်",
+        "ruleWord": "ရေးထားသောစကားလုံး",
+        "pressMatchingRuleButton": "လက်ရှိစည်းမျဉ်းနှင့်ကိုက်ညီသော ခလုတ်ကို နှိပ်ပါ။"
+      },
+      "goNogo": {
+        "goTrials": "သွားစမ်း",
+        "nogoTrials": "မဟုတ်ပါ-Go trials",
+        "hitRate": "တိုက်နှုန်း (သွား)",
+        "faRate": "False alarm rate (မဟုတ်ပါ-Go)",
+        "meanRt": "ဆိုလိုတာက တုံ့ပြန်ချိန်",
+        "sensitivity": "ထိခိုက်လွယ်မှု",
+        "press": "စာနယ်ဇင်း",
+        "withhold": "မလုပ်နဲ့"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (ရပ်ရန် Signal RT)",
+        "ssdMean": "ပျမ်းမျှ SSD (အောင်မြင်သော ရပ်တန့်မှုများ)",
+        "ssd": "ပေးရပါတယ်။",
+        "goRt": "RT ကိုသွားပါ။",
+        "successfulInhibition": "အောင်မြင်သောတားဆီးမှု",
+        "stop": "ရပ်ရန်",
+        "meanGoRt": "GO တုံ့ပြန်မှုအချိန်ကို ဆိုလိုသည်။",
+        "ssrtInvalid": "ဒေတာမလုံလောက်",
+        "ssrtNegativeNote": "SSRT သည် အနုတ်လက္ခဏာ ( ဆိုလိုသည်မှာ SSD > ဆိုလို GO RT) — လက်ရှိ အစမ်းရေတွက်မှုဖြင့် ရလဒ်သည် ယုံကြည်စိတ်ချရခြင်းမရှိပါ။"
+      },
+      "pvt": {
+        "rtMedian": "အလယ်အလတ် RT",
+        "rtMean": "ဆိုလိုထားတာကို",
+        "fastest": "အမြန်ဆုံး",
+        "slowest": "အနှေးဆုံး",
+        "falseStarts": "မှားနေပြီလား။",
+        "falseStartsShort": "မိစ္ဆာ st.",
+        "lapses": "လျှို",
+        "mean": "ဆိုလိုတာ",
+        "reaction": "တုံ့ပြန်ခြင်း။",
+        "wait": "ခဏနေ...",
+        "pressStimulus": "လှုံ့ဆော်မှုကို စောင့်ပါ...",
+        "pressAnywhere": "ကောင်တာပေါ်လာသောအခါ မည်သည့်နေရာတွင်မဆို နှိပ်ပါ။",
+        "press": "နှိပ်!",
+        "tooEarly": "စောလွန်းတယ်။",
+        "lapsesLabel": "လျှို"
+      },
+      "posner": {
+        "cueingEffect": "ညွှန်ပြခြင်းအကျိုးသက်ရောက်မှု",
+        "validMeanRt": "အဓိပ္ပာယ် တရားဝင် RT",
+        "invalidMeanRt": "ဆိုလိုရင်းမှာ မမှန်ကန်သော RT",
+        "validAccuracy": "မှန်ကန်တိကျမှု",
+        "invalidAccuracy": "မမှန်ကန်သော တိကျမှု",
+        "validTrials": "မှန်ကန်သော စမ်းသပ်မှုများ",
+        "invalidTrials": "မမှန်ကန်သော စမ်းသပ်မှုများ",
+        "validRtShort": "RT Val",
+        "invalidRtShort": "RT မမှန်",
+        "valid": "အကျုံးဝင်သည်။",
+        "invalid": "မမှန်ပါ။"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade ကုန်ကျစရိတ်",
+        "proAccuracy": "တိကျမှုကိုလိုလားသည်။",
+        "antiAccuracy": "ဆန့်ကျင်တိကျမှု",
+        "pro": "လိုလားသူ",
+        "anti": "ဆန့်ကျင်သည်။",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "ပျမ်းမျှ Pro-saccade RT",
+        "antiMeanRt": "ဆိုလိုတာက ဆန့်ကျင်ဘက် saccade ထားတာကို",
+        "costLabel": "ကုန်ကျစရိတ်",
+        "antiLabel": "ဆန့်ကျင်သည်။"
+      },
+      "axCpt": {
+        "dPrime": "d'-ဆက်စပ်",
+        "axAccuracy": "AX တိကျမှု",
+        "bxFa": "BX မှားယွင်းသော အချက်ပေးသံ",
+        "ayError": "AY အမှား",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY အမှား",
+        "cogControl": "သိမှုထိန်းချုပ်မှု",
+        "target": "ပစ်မှတ်",
+        "nonTarget": "မဟုတ်ပါn-target"
+      },
+      "ant": {
+        "scores": "ANT ရမှတ်များ",
+        "alerting": "သတိပေးချက် (no-cue − double-cue)",
+        "orienting": "ဦးတည်ချက် (ဗဟို− အာကာသ)",
+        "executive": "အမှုဆောင် (မညီညွတ် − သဟဇာတ)"
+      },
+      "changeDet": {
+        "kCowan": "K စွမ်းရည် (Cowan)",
+        "sameShort": "အတူတူပါပဲ။",
+        "diffShort": "ကွဲပြားမှု။"
+      },
+      "swm": {
+        "withinErrors": "ရှာဖွေမှုအမှားများ",
+        "betweenErrors": "အကြား-ရှာဖွေမှုအမှားများ",
+        "totalErrors": "စုစုပေါင်း errors",
+        "errorFree": "အမှားကင်းသည်။",
+        "foundErrorFree": "အမှားအယွင်းမရှိ တွေ့ရှိခဲ့သည်။",
+        "errorCount": "{{count}} အမှား(များ)",
+        "tapsLabel": "ပုတ်သည်။"
+      },
+      "taskSwitch": {
+        "switchCost": "ပြောင်းဆိုလည်း ရတယ်။",
+        "rtRepeat": "ဆိုလိုတာက RT (ထပ်ခါထပ်ခါ)",
+        "rtSwitch": "ဆိုလိုတာက RT (ပြောင်း)",
+        "oddEven": "ဗာဟီရ/တောင်",
+        "highLow": "မြင့်/နိမ့်",
+        "title": "အလုပ်ပြောင်းခြင်း။"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A အချိန်",
+        "tmtBTime": "TMT-B အချိန်",
+        "executiveCost": "အမှုဆောင်စရိတ် (B−A)",
+        "executiveCostShort": "အမှုဆောင်စရိတ် (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "အမှား။ တစ်",
+        "errB": "အမှား။ ခ",
+        "preparingB": "TMT-B ပြင်ဆင်နေသည်...",
+        "tmtADone": "TMT-A ပြီးပါပြီ။",
+        "totalErrors": "စုစုပေါင်း errors",
+        "tmtALabel": "TMT-A- နံပါတ်များ",
+        "tmtBLabel": "TMT-B: Numbers & စာလုံးs",
+        "next": "ရှေ့",
+        "heroTitle": "လမ်းလျှောက်ခြင်း။",
+        "alternateHint": "နံပါတ်များနှင့် အက္ခရာများ- 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI မိနစ်",
+        "fastestIsi": "အမြန်ဆုံး ISI"
+      },
+      "wcst": {
+        "referenceCards": "ကိုးကားကတ်များ",
+        "testCard": "စမ်းသပ်ကတ်",
+        "categories": "အမျိုးအစားများ",
+        "categoriesCompleted": "အမျိုးအစားများ ပြီးပါပြီ။",
+        "perseverativeErrors": "ဇွဲလုံ့လ အမှားများ",
+        "persevShort": "Persev",
+        "avgRt": "ပျမ်းမျှ RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "ထောင့်အားဖြင့် RT",
+        "findMatch": "လိုက်ဖက်သောပုံစံကိုရှာပါ။",
+        "reference": "ရည်ညွှန်းပုံသဏ္ဍာန်",
+        "referenceLabel": "ရည်ညွှန်း",
+        "candidate": "ကိုယ်စားလှယ်လောင်း",
+        "distractor": "အခြား",
+        "mirrorErrors": "ကြေးမုံ",
+        "title": "စိတ်လှည့်"
+      },
+      "sternberg": {
+        "rtBySize": "သတ်မှတ်အရွယ်အစားအားဖြင့် RT",
+        "title": "Sternberg",
+        "avgRt": "ပျမ်းမျှ RT"
+      },
+      "visualSearch": {
+        "rtBySize": "သတ်မှတ်အရွယ်အစားအားဖြင့် RT",
+        "title": "အမြင် ရှာဖွေရန်"
+      },
+      "ospan": {
+        "typeLetters": "စာလုံးများကို အစဉ်လိုက်ရိုက်ပါ။",
+        "trueOrFalse": "မှန်လား မှားလား?",
+        "processingWarning": "ညီမျှခြင်းတိကျမှု 85% အောက်တွင် — ရလဒ်များသည် စစ်မှန်သောလုပ်ဆောင်နိုင်သော မှတ်ဉာဏ်စွမ်းရည်ကို ထင်ဟပ်စေမည်မဟုတ်ပါ။"
+      },
+      "readingSpan": {
+        "s0": "အရှေ့ဘက်တွင် နေထွက်သည်။",
+        "s1": "ငါးများသည် သစ်ပင်များတွင် နေထိုင်ကြသည်။",
+        "s2": "ပါရီသည် ပြင်သစ်နိုင်ငံ၏ မြို့တော်ဖြစ်သည်။",
+        "s3": "တြိဂံတစ်ခုတွင် လေးဘက်ရှိသည်။",
+        "s4": "ရေ 100 ဒီဂရီမှာဆူပွက်။",
+        "s5": "ကြောင်များသည် တွားသွားသတ္တဝါများဖြစ်သည်။",
+        "s6": "ကမ္ဘာသည် နေကို လှည့်ပတ်နေသည်။",
+        "s7": "ချောကလက်သည် ကျောက်တုံးများပေါ်တွင် ပေါက်သည်။",
+        "s8": "တစ်နှစ်မှာ ဆယ့်နှစ်လရှိတယ်။",
+        "s9": "ငှက်တွေဟာ ရေအောက်မှာ အသက်ရှုတယ်။",
+        "s10": "နို့က အဖြူရောင်။",
+        "s11": "ကားတွေက သံလမ်းပေါ်မှာ မောင်းတယ်။",
+        "s12": "ပျားများသည် ပျားရည်ကို ထုတ်လုပ်သည်။",
+        "s13": "နှင်းတွေပူတယ်။",
+        "s14": "နှလုံးသည် သွေးများကို ညှစ်ထုတ်သည်။",
+        "s15": "ကျောက်ခဲများသည် ရေပေါ်တွင် လွင့်မျောနေသည်။",
+        "s16": "လသည် ညကိုလင်းစေ၏။",
+        "s17": "မြွေတွေမှာ ခြေထောက်တွေရှိတယ်။",
+        "s18": "သစ်သားသည် ရေပေါ်တွင် လွင့်နေသည်။",
+        "s19": "မီးက အေးတယ်။",
+        "s20": "လူတွင် အာရုံငါးပါးရှိသည်။",
+        "s21": "ပင့်ကူများသည် ခြေခြောက်ချောင်းရှိသည်။",
+        "s22": "ပေါင်မုန့်ကို ဂျုံမှုန့်ဖြင့် ပြုလုပ်ထားသည်။",
+        "s23": "ဝေလငါးများသည် ငါးများဖြစ်သည်။",
+        "w0": "အိမ်",
+        "w1": "ခွေး",
+        "w2": "စာအုပ်လေး",
+        "w3": "ပန်း",
+        "w4": "တံခါး",
+        "w5": "ဇယား",
+        "w6": "သစ်ပင်",
+        "w7": "လမ်း",
+        "w8": "မိုးတိမ်",
+        "w9": "ကြယ်စင်",
+        "w10": "သဲသောင်ပြင်",
+        "w11": "နှင်းများ",
+        "w12": "မီးခွက်",
+        "w13": "မိုးရွာတယ်။",
+        "w14": "ဖန်ခွက်",
+        "w15": "မြက်",
+        "w16": "ရထား",
+        "w17": "ကမ္ဘာ",
+        "w18": "နေမင်း",
+        "w19": "သစ်တော",
+        "w20": "ICE",
+        "w21": "မြေကြီး",
+        "w22": "SKY",
+        "w23": "ကျောက်စာ",
+        "d0": "မနက်ခင်း",
+        "d1": "နှလုံးသား",
+        "d2": "ရှစ်လေးလုံး",
+        "d3": "သစ်ရွက်",
+        "d4": "ဆူညံသံ",
+        "d5": "ဥယျာဉ်",
+        "d6": "အရိပ်",
+        "d7": "ဘဲလ်",
+        "d8": "တံတား",
+        "d9": "မီးခိုး",
+        "d10": "သဲ",
+        "d11": "ဟင်းရည်",
+        "heroTitle": "စာဖတ်ခြင်း အတိုင်းအတာ"
+      },
+      "memorizeSequence": "စီးရီးကို ကျက်ပါ...",
+      "reproduce": "မျိုးပွားခြင်း။",
+      "span": "ထွာ",
+      "size": "အရွယ်အစား",
+      "fixateCenter": "အလယ်ဗဟိုတွင် ပြုပြင်ပါ...",
+      "identicalOrMirror": "ထပ်တူလား ဒါမှမဟုတ် ကြေးမုံလား။",
+      "wellInhibited": "ကောင်းကောင်း တားထားတယ်။",
+      "badDirection": "မှား direction!",
+      "stopMissed": "ရပ်ရန် missed!",
+      "falseAlarm": "မှားယွင်းသော အချက်ပေးသံ။",
+      "pressNow": "နှိပ်!",
+      "hitBang": "ရိုက်!",
+      "miss": "အလှမယ်!",
+      "doNotTouch": "မထိနဲ့။",
+      "whichDirection": "ဘယ်ဦးတည်ချက်လဲ။",
+      "stopBang": "ရပ်!",
+      "cueBang": "ကိုိ",
+      "memorizeLetters": "ဒီစာတွေကို အလွတ်ကျက်ပါ။",
+      "memorizeLetter": "ဒီစာကို အလွတ်ကျက်ပါ။",
+      "memorizeSequenceLetters": "စီးရီးကို ကျက်ပါ...",
+      "memorizeDigits": "ဂဏန်းတွေကို ကျက်ပါ...",
+      "memorizeColors": "အရောင်များကို မှတ်သားပါ။",
+      "memorizePosition": "ဒီရာထူးကို မှတ်သားထားပါ...",
+      "retainWord": "ဒီစကားကို သတိရပါ။",
+      "retainNumber": "ဒီနံပါတ်ကို မှတ်ထားပါ။",
+      "addWithPrevious": "ယခင်နှင့်ထည့်ပါ။",
+      "sentenceTrueOrFalse": "ဒီစာကြောင်းက မှန်ပါသလား။",
+      "findRedCircle": "အနီရောင်စက်ဝိုင်းကိုရှာပါ။",
+      "findHiddenToken": "ဝှက်ထားသော တိုကင်ကို ရှာပါ။",
+      "chooseMatchingCard": "ကိုက်ညီသောကတ်ကိုရွေးချယ်ပါ။",
+      "arrowDirection": "ဗဟိုမြှား၏ဦးတည်ချက်။",
+      "attention": "အာရုံ...",
+      "preparation": "ပြင်ဆင်မှု...",
+      "recallLettersInOrder": "{{count}} စာလုံးများကို အစဉ်လိုက်ပြန်မှတ်မိပါ။",
+      "recallWordsInOrder": "{{count}} စကားလုံးများကို အစီအစဉ်တကျ မှတ်သားပါ။",
+      "recallLastLetters": "နောက်ဆုံး {{count}} စာလုံးများကို ပြန်သတိရပါ။",
+      "typeLastLetters": "နောက်ဆုံး {{count}} စာလုံးကို ရိုက်ထည့်ပါ။",
+      "recallPositionsInOrder": "ပြန်လည်သိမ်းဆည်းပါ- ရာထူးများကို အစဉ်လိုက်နှိပ်ပါ။",
+      "pressEnterToValidate": "အတည်ပြုရန် Enter နှိပ်ပါ။",
+      "pressAnywhereToContinue": "ဆက်လုပ်ရန် မည်သည့်နေရာကို နှိပ်ပါ။",
+      "temporalPrecision": "ယာယီတိကျမှု",
+      "estimationPrecision": "ခန့်မှန်းခြေတိကျမှု",
+      "touchStartClockwise": "စမှတ်ကို ထိပြီးနောက် နာရီလက်တံအတိုင်း ပွတ်ဆွဲပါ။",
+      "touchAtoB": "အမှတ် A ကို ထိပြီး B သို့ ပွတ်ဆွဲပါ။",
+      "cue": "ကိုိ",
+      "retainCue": "အမှတ်ရစရာ...",
+      "targetOrNot": "Target or မဟုတ်ပါn-target?",
+      "whereIsTarget": "ပစ်မှတ်က ဘယ်မှာလဲ။",
+      "wasLetterInSet": "ဤစာသည် အတွဲထဲတွင် ရှိပါသလား။",
+      "regular": "ပုံမှန်",
+      "regularity": "ပုံမှန်",
+      "msDeviation": "ms သွေဖည်ခြင်း။",
+      "boxes": "သေတ္တာများ",
+      "found": "{{count}} တွေ့ရှိခဲ့သည်။",
+      "past": "အတိတ်",
+      "tooSlow": "အရမ်းနှေးတယ်။",
+      "tooFast": "အရမ်းမြန်တယ်။",
+      "timeout": "အရမ်းနှေးတယ်။",
+      "answer": "ဖြေ",
+      "dontPress": "မနှိပ်ပါနဲ့!",
+      "feedbackWrong": "မှား!",
+      "level": "အဆင့်",
+      "wrong": "မှား",
+      "you": "မင်း",
+      "paused": "ခေတ္တရပ်ရန်",
+      "instructions": "ညွှန်ကြားချက်များ",
+      "selectAnswer": "အဖြေတစ်ခုကို ရွေးပါ။",
+      "tapTheOddOne": "ထူးထူးခြားခြား တစ်ချက်နှိပ်လိုက်ပါ။",
+      "pal": {
+        "subtitle": "တွဲဖက်သင်ယူခြင်း။",
+        "pairsLearned": "သင်ယူပြီး အတွဲများ",
+        "maxSetSize": "အများဆုံးအရွယ်အစားသတ်မှတ်",
+        "totalErrors": "စုစုပေါင်း Errors",
+        "round": "ဝိုင်း",
+        "pairs": "အတွဲများ",
+        "meanRt": "ဆိုလိုတာက RT (မှန်ပါ့)",
+        "studyPhase": "လေ့လာမှု - ရာထူးများကိုအလွတ်ကျက်",
+        "testPhase": "ဒီပုံစံက ဘယ်မှာလဲ။",
+        "studying": "လေ့လာနေတယ်။",
+        "tapBox": "ဤပုံသဏ္ဍာန်ပြသထားသည့် အကွက်ကို နှိပ်ပါ။"
+      },
+      "visualLogic": {
+        "easy": "လွယ်ပါတယ်။",
+        "hard": "ခက်တယ်။",
+        "oneRule": "1 စည်းမျဉ်း",
+        "twoRules": "စည်းကမ်း ၂",
+        "findMissing": "ပျောက်ဆုံးနေသောအပိုင်းကိုရှာပါ။",
+        "maxLevel": "အမြင့်ဆုံးအဆင့်",
+        "finalLevel": "နောက်ဆုံးအဆင့်",
+        "nextMode": "ရှေ့ session mode",
+        "adaptive": "အလိုက်သင့်",
+        "fixed": "ပုံသေ",
+        "spm": "SPM 60",
+        "level": "အဆင့်",
+        "confirm": "မှန်ကန်သော"
+      },
+      "tetrisMind": {
+        "findPiece": "ဘယ်အပိုင်းက အပေါက်နဲ့ ကိုက်ညီလဲ။",
+        "target": "ပစ်မှတ်"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Overestimation ဘက်လိုက်မှု",
+        "underestimationBias": "လျှော့တွက် ဘက်လိုက်မှု",
+        "noBias": "မဟုတ်ပါ significant bias",
+        "avgError": "ပျမ်းမျှအမှား",
+        "overestimations": "မတန်တဆ",
+        "underestimations": "လျှော့တွက်ခြင်း။",
+        "avgAbsoluteError": "ပျမ်းမျှ အမှားအယွင်း",
+        "avgRelativeError": "Avg နှိုင်းရအမှား",
+        "cv": "ပြောင်းလဲခြင်း၏ကိန်းဂဏန်း",
+        "watchDemo": "ကြာချိန်ကိုကြည့်ပါ။",
+        "getReady": "ပြင်ဆင်ပါ...",
+        "holdToReproduce": "မျိုးပွားရန် ဖိထားပါ။",
+        "tooLong": "ရှည်လွန်းတယ်။",
+        "tooShort": "တိုလွန်းတယ်။",
+        "target": "ပစ်မှတ်",
+        "demoLabel": "အကိုးအကား",
+        "yourTurn": "သင့်အလှည့်",
+        "watchInstruction": "ကင်း",
+        "holdInstruction": "မျိုးပွားရန် ထိန်းထားပါ။",
+        "heroTitle": "အချိန် Estimation"
+      },
+      "puzzleDetails": "ပဟေဠိအသေးစိတ်",
+      "roundDetails": "အဝိုင်းအသေးစိတ်",
+      "stageResults": "အဆင့်ရလဒ်များ",
+      "recognized": "အသိအမှတ်ပြုပါတယ်။",
+      "missed": "လွတ်သွားတယ်။",
+      "win": "ဝင်း",
+      "lose": "ဈာန်",
+      "winBang": "ဝင်း!",
+      "loseBang": "ရှုံး!",
+      "correctBang": "မှန်!",
+      "wrongBang": "မှား!",
+      "completeBang": "ပြီးအောင်။",
+      "repeatedBang": "ထပ်ခါထပ်ခါ!",
+      "incompleteBang": "မပြည့်စုံ။",
+      "levelCompleteBang": "အဆင့် ပြီးပါပြီ။",
+      "timesUp": "အချိန်'s Up",
+      "seeResults": "ရလဒ်များကိုကြည့်ပါ။",
+      "nextRound": "ရှေ့ round",
+      "startBlock": "စတင်ရန် block",
+      "continue": "ဆက်လုပ်ရန်",
+      "patientChoice": "လူနာရွေးချယ်မှု",
+      "immediateChoice": "ချက်ချင်းရွေးချယ်မှု",
+      "immediate": "ချက်ချင်း",
+      "digitSpan": {
+        "heroTitle": "ဂဏန်းတန်း"
+      },
+      "resume": "ဆက်လုပ်ရန်",
+      "numericalStroop": {
+        "heroTitle": "ဂဏန်း Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Line Orientation ကို စီရင်ဆုံးဖြတ်ခြင်း။"
+      },
+      "chain": "ကွင်းဆက်",
+      "undo": "မလုပ်တော့",
+      "vocalProsody": {
+        "heroTitle": "အသံဝေါဟာရ"
+      },
+      "letterNumber": {
+        "title": "စာလုံး-Number Seq.",
+        "expectedAnswer": "မျှော်လင့်ထားသောအဖြေ"
+      },
+      "patternComparison": {
+        "heroTitle": "ပုံစံ နှိုင်းယှဉ်မှု"
+      },
+      "speedPack": {
+        "title": "အမြန်နှုန်း Pack",
+        "whenFoldedWhichTouch": "ခေါက်တဲ့အခါ ဘယ်စတုရန်းနဲ့ထိတာလဲ။"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "တုံ့ပြန်မှု"
+      },
+      "hooperVisual": {
+        "title": "Hooper အမြင် Organization",
+        "whatIsThisObject": "ဤအရာဝတ္ထုကား အဘယ်နည်း။"
+      },
+      "blockDesign": {
+        "heroTitle": "Block ဒီဇိုင်း"
+      },
+      "accuracy": "တိကျမှု",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "check": "စစ်ဆေးပါ။",
+      "dualTrace": {
+        "playArea": "ကစားရန် area"
+      },
+      "paperFolding": {
+        "title": "စက္ကူခေါက်",
+        "foldSequenceHolePunch": "ခေါက်ပြီး အပေါက်ဖောက်တယ်။",
+        "whichPatternWhenUnfolded": "ဘယ်ပုံစံကို ဖြန့်မလဲ?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "အဘိဓာန်ဆုံးဖြတ်ချက်"
+      },
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxGrid": "မက်ဂရစ်",
+      "symmetry": "အချိုးကျ",
+      "threshold": "တံခါးခုံ",
+      "hitRate": "တိုက်နှုန်း",
+      "faRate": "FA နှုန်း",
+      "changeDetection": {
+        "heroTitle": "ထောက်လှမ်းမှုကို ပြောင်းလဲပါ။"
+      },
+      "syllogisms": {
+        "heroTitle": "သင်ရိုးညွှန်းတမ်းများ"
+      },
+      "subitizing": {
+        "title": "တင်သွင်းခြင်း။",
+        "range": "အပိုင်းအခြား"
+      },
+      "jitter": "တုန်နေသည်။",
+      "sentenceCompletion": {
+        "title": "ဝါကျပြီးဆုံးခြင်း (Cloze)",
+        "highCloze": "မြင့်မားသော cloze",
+        "lowCloze": "ခန့်မှန်းနိုင်မှု နည်း"
+      },
+      "grid": "ဂရစ်",
+      "pinballRecall": {
+        "title": "Pinball ပြန်သတိရ",
+        "byBounces": "ခုန်ပေါက်ခြင်းဖြင့်",
+        "whereDoesItLand": "ဘယ်မှာလဲ။"
+      },
+      "mean": "ဆိုလိုတာ",
+      "speedup": "အမြန်နှုန်းup",
+      "memorize": "အလွတ်ကျက်",
+      "time": "အချိန်",
+      "surfaceDevelopment": {
+        "title": "မျက်နှာပြင်ဖွံ့ဖြိုးတိုးတက်မှု",
+        "whichEdgeMatches": "ဘယ်အစွန်းနဲ့ ကိုက်ညီလဲ။"
+      },
+      "crowding": {
+        "heroTitle": "အမြင် Crowding",
+        "spacing": "အကွာ"
+      },
+      "patternRecognition": {
+        "heroTitle": "ပုံစံကို အသိအမှတ်ပြုခြင်း။"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "အစမ်း",
+        "position": "အနေအထား",
+        "audio": "အသံ"
+      },
+      "sceneCrasher": {
+        "heroTitle": "မြင်ကွင်းက ကျူးကျော်သူ",
+        "detect": "ထောက်လှမ်းပါ။"
+      },
+      "eyesTest": {
+        "heroTitle": "မျက်လုံးထဲတွင် စိတ်ကိုဖတ်ခြင်း။"
+      }
+    },
+    "gridlock": {
+      "undone": "နောက်ဆုံးရွှေ့ခြင်းကို ပြန်ပြင်ပါ။",
+      "resetMessage": "ပဟေဋ္ဌိပြန်ညှိ။",
+      "hintMessage": "အရိပ်အမြွက်- ဆလိုက် {{pieceId}} {{dir}} {{delta}}။",
+      "previewCountdown": "Study the board. စတင်ရန်s in {{seconds}}s.",
+      "challenge": "စိန်ခေါ်မှု",
+      "optimal": "အကောင်းဆုံး",
+      "moves": "ရွေ့လျား",
+      "piece": "အပိုင်း {{id}}",
+      "targetPiece": "အပိုင်း {{id}} (ပစ်မှတ် - ကားအနီ)",
+      "challengeClassic": "ဂန္ထဝင်",
+      "challengePrecision": "တိကျမှု",
+      "challengeMemory": "ဉာဏ်",
+      "challengeTimed": "အချိန်d",
+      "hint": "အရိပ်အမြွက်",
+      "reset": "ပြန်သတ်မှတ်ရန်",
+      "undo": "မလုပ်တော့",
+      "nextPuzzle": "ရှေ့ puzzle →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Block 1 မှန်",
+      "block2Hits": "Block 2 မှန်",
+      "goPositive": "သွားပါ = အပြုသဘော",
+      "goNegative": "သွားပါ = အပျက်သဘော",
+      "title": "Affective Go/မဟုတ်ပါ-Go",
+      "block1CommissionErrors": "အဆင့် ၁ commission အမှားများ",
+      "block2CommissionErrors": "အဆင့် ၂ commission အမှားများ",
+      "block": "အဆင့်",
+      "go": "သွားပါ"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "ပျမ်းမျှပြောင်းလဲနှုန်း",
+      "meanSwitchesfigure": "ပျမ်းမျှပြောင်းလဲမှု/ရုပ်ပုံ",
+      "totalSwitches": "စုစုပေါင်း switches",
+      "title": "နှစ်ထပ်ရုပ်ပုံများ",
+      "meanSwitches": "ပျမ်းမျှပြောင်းလဲမှု",
+      "switchRate": "ပြောင်းလဲနှုန်း",
+      "figures": "ရုပ်ပုံများ",
+      "totalSwitchesLabel": "စုစုပေါင်း Switches",
+      "duration": "ကြာချိန်",
+      "switchesCount": "s | ပြောင်းလဲမှု:",
+      "switchButton": "ပြောင်းပါ!"
+    },
+    "analogies": {
+      "verbalCorrect": "စကားလုံးမှန်",
+      "timeout": "အချိန်out",
+      "title": "နှိုင်းယှဉ်မှုများ"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS နှိုင်းယှဉ်မှု",
+      "ratio": "အချိုး",
+      "leftMore": "ဘယ်ဘက်များ",
+      "rightMore": "ညာဘက်များ"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "အတုသတိပေးနှုန်း",
+      "grammatical": "သဒ္ဒါမှန်",
+      "memorizeTheseStrings": "ဤစာကြောင်းများကို မှတ်မိပါ",
+      "testPhase": "စာမေးပွဲအဆင့်",
+      "ungrammatical": "သဒ္ဒါမမှန်",
+      "learning": "သင်ယူခြင်း",
+      "test": "စာမေးပွဲ",
+      "title": "အတုသဒ္ဒါ",
+      "learningPhase": "သင်ယူခြင်း",
+      "testIntroText": "ယခု စာကြောင်းအသစ်များ တွေ့ရပါမည်။ တစ်ခုချင်းစီသည် သင်လေ့လာခဲ့သော စာကြောင်းများနှင့် တူညီသောစည်းမျဉ်းကို လိုက်နာသလား ဆုံးဖြတ်ပါ။",
+      "startTest": "စတင်ရန် Test",
+      "followsRules": "စည်းမျဉ်းလိုက်နာ",
+      "breaksRules": "စည်းမျဉ်းချိုးဖောက်"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "မှိတ်ခြင်းပမာဏ",
+      "title": "အာရုံမှိတ်ခြင်း",
+      "blink": "မှိတ်",
+      "t1Acc": "T1 တိကျမှု",
+      "t2Acc": "T2 တိကျမှု",
+      "firstGreenLetter": "ပထမအစိမ်းရောင်အက္ခရာ?",
+      "secondGreenLetter": "ဒုတိယအစိမ်းရောင်အက္ခရာ?"
+    },
+    "attentionalCapture": {
+      "captureCost": "ဖမ်းယူကုန်ကျစရိတ်",
+      "singletonPresent": "Singleton ရှိ",
+      "noSingleton": "မဟုတ်ပါ Singleton",
+      "title": "အာရုံဖမ်းယူခြင်း",
+      "capture": "ဖမ်းယူ",
+      "horizontal": "အလျားလိုက်",
+      "vertical": "ဒေါင်လိုက်"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "ချိတ်ဆက်ကြားကွက်",
+      "title": "အသံvisual Binding",
+      "window": "ကြားကွက်",
+      "pssLabel": "PSS (ပုဂ္ဂလတူညီချိန်)",
+      "simultaneousOrNot": "တစ်ပြိုင်နက်ဟုတ်/မဟုတ်?",
+      "simultaneous": "တစ်ပြိုင်နက်",
+      "notSimultaneous": "မဟုတ်ပါt simultaneous"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "ကြာချိန် Threshold",
+      "reference": "ရည်ညွှန်း",
+      "weberFraction": "Weber အချိုး",
+      "title": "Auditory ကြာချိန်",
+      "threshold": "အတိုင်းအတာ",
+      "weber": "Weber",
+      "whichLonger": "ဘယ်ဟာပိုရှည်လဲ?",
+      "firstLonger": "ပထမပိုရှည်",
+      "secondLonger": "ဒုတိယပိုရှည်"
+    },
+    "bart": {
+      "adjustedAvgPumps": "ချိန်ညှိပျမ်းမျှမှုတ်",
+      "avgTimeballoon": "ပျမ်းမျှအချိန်/မိုးပျံပုံး",
+      "banked": "သိမ်းဆည်းပြီ!",
+      "lostEarnings": "ဝင်ငွေဆုံးရှုံးပြီ!",
+      "overallAvgPumps": "စုစုပေါင်းပျမ်းမျှမှုတ်",
+      "popRate": "ပေါက်ကွဲနှုန်း",
+      "totalEarned": "စုစုပေါင်း Earned",
+      "balloons": "မိုးပျံပုံးများ",
+      "cashed": "သိမ်းပြီး",
+      "popped": "ပေါက်ကွဲပြီ",
+      "adjPumps": "ချိန်ညှိမှု",
+      "pop": "ပေါက်ကွဲ",
+      "pump": "မှုတ်",
+      "cashIn": "သိမ်းဆည်း"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Avg Decision အချိန်",
+      "drawBeadsToGatherEvidence": "သက်သေစုဆောင်းရန် အလုံးများဆွဲပါ",
+      "jtc": "JTC",
+      "title": "ပုတီးစေ့အလုပ်",
+      "meanDraws": "ပျမ်းမျှဆွဲမှု",
+      "rounds": "အကြိမ်များ",
+      "jtcRate": "JTC နှုန်း",
+      "meanDrawsToDecision": "ဆုံးဖြတ်ချက်အထိ ပျမ်းမျှဆွဲမှု",
+      "jtcRateThreshold": "JTC နှုန်း (<{{threshold}} ဆွဲမှု)",
+      "round": "အကြိမ်",
+      "jarDescription": "အိုး A: ၈၅% အစိမ်း / အိုး B: ၈၅% အနီ",
+      "itWasJar": "အိုးဖြစ်ပါသည်",
+      "drawABead": "အလုံးတစ်လုံးဆွဲ",
+      "jarAGreen": "အိုး A အစိမ်းရောင်",
+      "jarBRed": "အိုး B အနီရောင်"
+    },
+    "binding": {
+      "changedTrials": "ပြောင်းလဲစမ်းသပ်မှုများ",
+      "sameAccuracy": "တူညီတိကျမှု",
+      "sameTrials": "တူညီစမ်းသပ်မှုများ",
+      "title": "အင်္ဂါရပ်ချိတ်ဆက်",
+      "binding": "ချိတ်ဆက်",
+      "bindingAccuracyChanged": "ပြောင်းလဲတိကျမှု",
+      "same": "တူညီ",
+      "different": "ကွဲပြား"
+    },
+    "blockDesign": {
+      "cells": "ခန်းများ",
+      "target": "ပစ်မှတ်",
+      "yourAnswer": "သင့်အဖြေ",
+      "tapHint": "အရောင်ပြောင်းရန် နှိပ်ပါ",
+      "check": "စစ်ဆေး"
+    },
+    "brixton": {
+      "adapt": "လိုက်လျောညီထွေ",
+      "adaptationCost": "လိုက်လျောညီထွေ ကုန်ကျစရိတ်",
+      "nonswitchTrials": "မဟုတ်ပါn-switch trials",
+      "switchTrials": "စမ်းသပ်မှုများကို ပြောင်းပါ။"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "ဒီစာတွေကို သတိရပါ။",
+      "selectThe3Letters": "စာလုံး ၃ လုံးကို ရွေးပါ။",
+      "title": "Brown-Peterson စမ်းသပ်မှု",
+      "forgetting": "မေ့လျော့ခြင်း။",
+      "sDelay": "S ကြန့်ကြာချိန်",
+      "minus3": "အနှုတ် ၃",
+      "delay": "နှောင့်နှေးခြင်း။"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "ဆုံးဖြတ်ချက်အရည်အသွေး",
+      "finalPoints": "နောက်ဆုံးအချက်များ",
+      "meanBet": "ဆိုလိုတာက အလောင်းအစား",
+      "winRate": "အနိုင်ရနှုန်း",
+      "wins": "အနိုင်ရတယ်။",
+      "title": "Cambridge လောင်းကစားလုပ်ငန်း",
+      "totalPoints": "စုစုပေါင်း points",
+      "quality": "အရည်အသွေး",
+      "rational": "ဆင်ခြင်တုံတရား",
+      "avgBet": "ပျမ်းမျှ အလောင်းအစား",
+      "trial": "အစမ်း",
+      "whichColorHidesToken": "ဘယ်အရောင်က တိုကင်ကို ဝှက်ထားလဲ။",
+      "youChose": "သင်ရွေးချယ်ခဲ့သည်။",
+      "howMuchToBet": "ဘယ်လောက်လောင်းရမလဲ။"
+    },
+    "cancellation": {
+      "false": "မှားသော",
+      "target": "ပစ်မှတ်-",
+      "total": "စုစုပေါင်း",
+      "title": "မလုပ်တော့lation Task (d2)",
+      "misses": "လွဲ",
+      "targetDescription": "d သည် 2 အမှတ်ရှိသည်။"
+    },
+    "changeBlindness": {
+      "detectionRate": "ထောက်လှမ်းမှုနှုန်း",
+      "found": "တွေ့တယ်။",
+      "meanDetectionTime": "Mean Detection အချိန်",
+      "title": "မျက်စိကွယ်ခြင်းကို ပြောင်းလဲပါ။",
+      "missed": "လွတ်သွားတယ်။",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "instructions": "ညွှန်ကြားချက်များ"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "အကောင်းဆုံး Estimate",
+      "meanScore": "ပျမ်းမျှရမှတ်",
+      "worstEstimate": "အဆိုးဆုံး ခန့်မှန်းချက်",
+      "inRange": "ခန့်မှန်းချက်ကောင်း။",
+      "title": "သိမြင်မှု ခန့်မှန်းချက်",
+      "meanScoreLabel": "ပျမ်းမျှရမှတ်",
+      "inRangeLabel": "Range မှာ",
+      "extreme": "အလွန်အမင်း",
+      "scoreLabel": "အမှတ်",
+      "submit": "တင်ပြပါ။"
+    },
+    "common": {
+      "accuracy": "တိကျမှု",
+      "bias": "ဘက်လိုက်မှု",
+      "falseAlarmRate": "မှားယွင်းသော အချက်ပေးနှုန်း",
+      "hitRate": "ထိမှန်နှုန်း",
+      "hits": "မှန်",
+      "listening": "နားထောင်နေသည်...",
+      "meanRt": "ဆိုလိုထားတာကို",
+      "timedOut": "အချိန်d Out",
+      "timedOut2": "အချိန်d out",
+      "faRate": "FA နှုန်း",
+      "paused": "ခေတ္တရပ်ထား"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "သင်ဘယ်လောက်ယုံကြည်မှုရှိပါလဲ။",
+      "rateYourConfidence": "သင်၏ယုံကြည်မှုကို အဆင့်သတ်မှတ်ပါ။",
+      "title": "ယုံကြည်မှုချိန်ညှိ",
+      "calError": "ချိန်ညှိမှု အမှား",
+      "confidence": "ယုံကြည်မှု"
+    },
+    "consequences": {
+      "best": "အကောင်းဆုံး",
+      "nextRound": "ရှေ့ round...",
+      "time": "အချိန်",
+      "placeholder": "အကျိုးဆက်ကိုရိုက်ပါ...",
+      "title": "အကျိုးဆက်များ",
+      "totalIdeas": "စုစုပေါင်း Ideas",
+      "avgPerRound": "ပျမ်းမျှ ပတ်ပတ်လည်",
+      "rounds": "ဟိုနေ့က",
+      "noConsequencesListed": "မဟုတ်ပါ consequences listed",
+      "roundProgress": "အဝိုင်း {{current}} / {{total}}",
+      "typeAndPressAdd": "ရိုက်ထည့်ပြီး Add ကိုနှိပ်ပါ။"
+    },
+    "contextualCueing": {
+      "cueingEffect": "အရိပ်အမြွက်သက်ရောက်မှု",
+      "newConfigRt": "Config အသစ် RT",
+      "oldConfigRt": "ယခင်ပုံစံ RT",
+      "title": "အကြောင်းအရာအရိပ်အမြွက်",
+      "cueing": "ညွှန်ပြနေသည်။",
+      "oldRt": "RT အဟောင်း",
+      "newRt": "RT အသစ်",
+      "prompt": "အချက်ပေး",
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "တံခါးခုံ တုန်နေသည်။",
+      "title": "Contour ပေါင်းစည်းခြင်း။",
+      "pipeJitter": "| တုန်"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Threshold ဆန့်ကျင်ဘက်",
+      "title": "အလင်းအမှောင် အာရုံခံနိုင်စွမ်း",
+      "threshold": "တံခါးခုံ",
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။"
+    },
+    "cpt": {
+      "nontargets": "မဟုတ်ပါn-targets",
+      "target": "ပစ်မှတ်",
+      "nonTarget": "မဟုတ်ပါn-target",
+      "dPrime": "d'",
+      "targetsLetter": "ပစ်မှတ်စာ",
+      "tapForLetterOnly": "ပစ်မှတ်စာလုံးအတွက်သာ နှိပ်ပါ။"
+    },
+    "crowding": {
+      "criticalSpacing": "အရေးပါသောအကွာအဝေး",
+      "leftAccuracy": "ဘယ်ဘက် တိကျမှု",
+      "rightAccuracy": "မှန်ကန်တိကျမှု"
+    },
+    "cryptogram": {
+      "hints": "အရိပ်အမြွက်",
+      "title": "Cryptogram",
+      "solved": "ကြွပ်ကြွပ်အိတ်",
+      "time": "အချိန်",
+      "puzzles": "ပဟေဠိများ",
+      "puzzle": "ပဟေဋ္ဌိ",
+      "hint": "အရိပ်အမြွက်",
+      "clear": "ရှင်းလင်းရန်"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "မျဉ်းကွေးအောက် ဧရိယာ",
+      "discountRateK": "လျှော့စျေး (ဋ)",
+      "impulsivityIndex": "စိတ်အားထက်သန်မှုညွှန်းကိန်း",
+      "title": "နှောင့်နှေးလျှော့စျေး",
+      "aucPatience": "AUC စိတ်ရှည်ပါ။",
+      "patient": "သည်းခံပါ။",
+      "kRate": "K နှုန်း",
+      "impuls": "ပေးတာ။",
+      "indifferencePoints": "ဥပေက္ခာအချက်များ",
+      "whichPrefer": "ဘယ်ဟာကို ပိုကြိုက်လဲ။",
+      "today": "ဒီနေ့"
+    },
+    "delayedMatching": {
+      "long": "ရှည်သည်။",
+      "longDelay68s": "ကြာရှည်နှောင့်နှေး (6-8s)",
+      "med": "အလယ်",
+      "mediumDelay46s": "နှောင့်နှေးမှု အလယ်အလတ် (၄-၆ စက္ကန့်)",
+      "short": "တိုတိုလေးပါ။",
+      "shortDelay34s": "နှောင့်နှေးမှု (၃-၄ စက္ကန့်)",
+      "title": "နှောင့်နှေးကိုက်ညီမှု",
+      "delay": "နှောင့်နှေးခြင်း။",
+      "rememberThisPattern": "ဒီပုံစံကိုသတိရပါ။",
+      "whichWasIt": "ဘယ်ဟာလဲ?"
+    },
+    "dichoticListening": {
+      "alertDetection": "သတိပေးချက် ထောက်လှမ်းခြင်း။",
+      "attendToTheLeftColumn": "လက်ဝဲကော်လံသို့ တက်ရောက်ပါ။",
+      "attendedAccuracy": "Accuracy တက်တယ်။",
+      "ignoreTheRightColumn": "ညာဘက်ကော်လံကို လျစ်လျူရှုပါ။",
+      "right": "ညာဘက်",
+      "title": "Dichotic နားထောင်ခြင်း။",
+      "attendedAcc": "တက်ပြီး တိကျတယ်။",
+      "alertDet": "သတိပေးချက်",
+      "alerts": "သတိပေးချက်များ",
+      "selectLeftColumnWords": "ဘယ်ဘက်ကော်လံ စကားလုံးများကို ရွေးပါ။",
+      "submit": "တင်ပြပါ။",
+      "alertQuestion": "သတိပေးချက်မေးခွန်း"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "တိကျမှုကို မေ့ထားပါ။",
+      "forgettingEffect": "အကျိုးသက်ရောက်မှုကို မေ့လျော့ခြင်း။",
+      "newRejection": "ငြင်းပယ်မှုအသစ်",
+      "rememberAccuracy": "တိကျမှုကို မှတ်ထားပါ။",
+      "title": "မေ့ပျောက်ရန် ညွှန်ကြားသည်။",
+      "remember": "သတိရပါ။",
+      "forget": "မေ့လိုက်ပါ။",
+      "round": "ဝိုင်း",
+      "word": "စကားလုံး",
+      "wasThisWordShown": "ဒီစကားလုံးကို ပြခဲ့တာလား။"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "အာရုံစူးစိုက်မှု Bias ရမှတ်",
+      "congruentAcc": "ကိုက်ညီသော Acc",
+      "congruentRt": "တူညီထားတာကို",
+      "incongruentAcc": "ကွဲလွဲနေသော Acc",
+      "incongruentRt": "ကွဲလွဲထားတာကို တွေ့ရပါတယ်။"
+    },
+    "doubleDecision": {
+      "carOrTruck": "ကားလား ထရပ်ကားလား?",
+      "minDisplayReached": "Min Display ကိုရောက်ရှိပါပြီ။",
+      "positionAccuracy": "အနေအထား Accuracy",
+      "thresholdDisplay": "အတိုင်းအတာပြသ",
+      "vehicleAccuracy": "ယာဉ်တိကျမှု",
+      "whereWasTheDiamond": "စိန်ဘယ်မှာလဲ။",
+      "title": "နှစ်ချက်ဆုံးဖြတ်ချက်",
+      "threshold": "တံခါးခုံ",
+      "bothOk": "နှစ်ခုလုံးမှန်တယ်။",
+      "vehicle": "ယာဉ်",
+      "position": "အနေအထား",
+      "car": "ကား",
+      "truck": "ကုန်ကား"
+    },
+    "dsst": {
+      "items": "ပစ္စည်းများ",
+      "itemsCompleted": "ပြီးသွားသည့်အရာများ",
+      "speedItemsmin": "အမြန်နှုန်း (items/min)",
+      "attempts": "ကြိုးစားမှု",
+      "itemsPerMin": "ပစ္စည်းများ / မိနစ်"
+    },
+    "dualTask": {
+      "dualtaskCost": "Dual-Task ကုန်ကျစရိတ်",
+      "taskANumber": "လုပ်ဆောင်စရာ A (နံပါတ်)",
+      "taskBSymbol": "Task B (သင်္ကေတ)",
+      "title": "အလုပ်နှစ်ခု",
+      "taskA": "လုပ်ငန်း A",
+      "taskB": "လုပ်ငန်း B",
+      "number": "နံပါတ်",
+      "symbol": "သင်္ကေတ",
+      "up": "ချီ",
+      "down": "ဆင်းတယ်။"
+    },
+    "dualTime": {
+      "sessionEnPause": "ဆက်ရှင်ကို ခေတ္တရပ်ထားသည်။",
+      "votreEstimationSecondes": "သင့်ခန့်မှန်းချက် (စက္ကန့်)",
+      "sessionInterrupted": "ဆက်ရှင် ပြတ်တောက်သွားသည်။",
+      "target": "ပစ်မှတ်",
+      "estimation": "ခန့်မှန်းချက်",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "avgError": "ပျမ်းမျှ အမှား",
+      "trials": "Trial များ",
+      "resumeToContinue": "ဆက်လုပ်ရန် to continue",
+      "aimFor": "ရည်ရွယ်ပါတယ်။",
+      "second": "ဒုတိယ",
+      "howLongDidYouTake": "ဘယ်လောက်ကြာခဲ့လဲ။"
+    },
+    "dualTrack": {
+      "confirmer": "အတည်ပြုရန်",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "ဆက်လုပ်ရန် to continue.",
+      "sessionEnPause": "ဆက်ရှင်ကို ခေတ္တရပ်ထားသည်။",
+      "tapezLesCibles": "ပစ်မှတ်များကိုနှိပ်ပါ။",
+      "tapezLaCible": "ပစ်မှတ်ကို နှိပ်ပါ။",
+      "appuyezConfirmer": "Press အတည်ပြုရန်",
+      "targetsCountLabel": "{{count}} ပစ်မှတ်များ",
+      "distractorsCountLabel": "{{count}} အာရုံပြောင်းသည်။",
+      "roundsCountLabel": "{{count}} အကြိမ်",
+      "calibrationRoundsLabel": "{{count}} ချိန်ညှိမှု အဝိုင်းများ",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = ပြည်တွင်းခရီး ခက်ခဲမှုအဆင့်။",
+      "tierHelpCurrentWithPhase": "သင်သည် လက်ရှိတွင် {{targets}} ပစ်မှတ်များအတွက် {{total}} မှ T{{current}} တွင် ရှိနေပါသည်။ လက်ရှိအဆင့်- {{phase}}။ နောက်ပစ်မှတ်အဆင့်မတိုင်မီ {{remaining}} အဆင့်(များ) ကျန်နေပါသည်။",
+      "phaseTracking": "ခြေရာခံခြင်း။",
+      "phaseAudio": "ခြေရာခံခြင်း + အသံ",
+      "phaseColor": "ခြေရာခံခြင်း + အရောင်",
+      "phaseCombined": "ခြေရာခံခြင်း + အသံ + အရောင်",
+      "passLetters": "စာလုံးs",
+      "passColors": "အရောင်s",
+      "moveInstruction": "ညွှန်ကြားချက်ကို ရွှေ့ပါ။",
+      "moveConfirmBtn": "အတည်ပြုခလုတ်ကို ရွှေ့ပါ။",
+      "preparingSession": "စက်ရှင်ပြင်ဆင်နေသည်...",
+      "preparing3dScene": "3D မြင်ကွင်းကို ပြင်ဆင်နေသည်...",
+      "startJourney": "စတင်ရန် journey",
+      "calibrationDescription": "ပထမအဆင့်မစမီ၊ ပိုရှည်သော ချိန်ညှိမှုတစ်ခုသည် သင်၏စတင်မှုအဆင့်ကို ခန့်မှန်းပေးလိမ့်မည်။",
+      "defaultDescription": "ဘောလုံးတွေ လင်းလာမယ်။ ရွေ့လျားနေစဉ် ၎င်းတို့နောက်ကို လိုက်ပြီးနောက် ၎င်းတို့ကို ခွဲခြားသတ်မှတ်ပါ။",
+      "startCalibration": "စတင်ရန် calibration",
+      "calibrationTitle": "အိမ်မြောင်",
+      "estimatedStart": "ခန့်မှန်း စတင်ပါ။",
+      "roundsAnalyzed": "ခွဲခြမ်းစိတ်ဖြာပြီး အကြိမ်များ",
+      "willStartAt": "တွင် စတင်ပါမည်။",
+      "targetsCount": "ပစ်မှတ်များ",
+      "thenProgress": "ထို့နောက်တိုးတက်မှု"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "ဆိုလိုရင်းမှာ အကြွင်းမဲ့အမှား",
+      "ratio": "အချိုးအစား",
+      "slope": "ကုန်းစောင်း",
+      "vierordtSlope": "Vierordt မျှောက်",
+      "wait": "ခဏနေ...",
+      "title": "ကြာချိန် Reproduction",
+      "meanError": "ဆိုလိုရင်းက အမှား",
+      "meanRatio": "ပျမ်းမျှအချိုး (ထုတ်လုပ်/ပစ်မှတ်)",
+      "holdNow": "ယခု ကိုင်ထားပါ။",
+      "target": "ပစ်မှတ်",
+      "error": "အမှား"
+    },
+    "embeddedFigures": {
+      "fastest": "အမြန်ဆုံး",
+      "found": "တွေ့တယ်။",
+      "meanDetectionTime": "ဆိုလိုတာက ထောက်လှမ်းတဲ့အချိန်",
+      "slowest": "အနှေးဆုံး",
+      "title": "မြှုပ်ထားသော ရုပ်ပုံများ",
+      "missed": "လွတ်သွားတယ်။",
+      "fastestLabel": "အမြန်ဆုံး",
+      "findThisShape": "ဤပုံစံကိုရှာပါ။",
+      "memorizeShape": "ပုံသဏ္ဍာန်ကို မှတ်သားထားပါ...",
+      "foundIt": "တွေ့ပြီ!",
+      "giveUp": "လက်လျှော့လိုက်ပါ။"
+    },
+    "emotionalNback": {
+      "falseAlarms": "မှားယွင်းသော နှိုးစက်များ",
+      "misses": "လွဲ",
+      "title": "Emotional N-နောက်သို့",
+      "match": "တစ်ပွဲ"
+    },
+    "emotionalStroop": {
+      "neutralRt": "ကြားနေ RT",
+      "positiveRt": "အပြုသဘောဆောင်ထားတာကို တွေ့ရပါတယ်။",
+      "threatRt": "ခြိမ်းခြောက်ထားတာကို တွေ့ရပါတယ်။",
+      "title": "စိတ်ခံစားမှု Stroop",
+      "interference": "အနှောင့်အယှက်",
+      "interferenceThreatNeutral": "အနှောင့်အယှက်ပေးခြင်း (ခြိမ်းခြောက်မှု - ကြားနေ)"
+    },
+    "eyesTest": {
+      "totalTime": "စုစုပေါင်း အချိန်"
+    },
+    "faceName": {
+      "gain": "အမြတ်",
+      "learningImprovement": "သင်ယူမှုတိုးတက်မှု",
+      "round1Accuracy": "Round 1 တိကျမှု",
+      "round2Accuracy": "Round 2 တိကျမှု",
+      "whoIsThis": "ဒါဘယ်သူလဲ။",
+      "title": "မျက်နှာအမည်အသင်း",
+      "round": "ဝိုင်း",
+      "testPhase": "စမ်းသပ်အဆင့်"
+    },
+    "fauxPas": {
+      "who": "ဘယ်သူလဲ?",
+      "why": "ဘာကြောင့်လဲ?",
+      "title": "Faux Pas အသိအမှတ်ပြုမှု",
+      "detection": "ထောက်လှမ်းခြင်း။",
+      "scenarios": "ဇာတ်လမ်းများ",
+      "fpFound": "Faux pas ကို တွေ့ရှိခဲ့သည်။",
+      "control": "ထိန်းချုပ်မှု",
+      "readyToAnswer": "ဖြေဖို့ အဆင်သင့်ပါပဲ။",
+      "didSomeoneSay": "မရှိသင့်ဘူးလို့ တစ်စုံတစ်ယောက်က ပြောဖူးလား။",
+      "whoSaidIt": "ဘယ်သူပြောတာလဲ?",
+      "whyInappropriate": "အဘယ်ကြောင့် မသင့်လျော်သနည်း။"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "တိကျမှုကို ပြန်လည်သိမ်းဆည်းပါ။",
+      "recognitionAccuracy": "အသိအမှတ်ပြုမှု တိကျမှု",
+      "recallPlaceholder": "သင့်အဖြေကို ရိုက်ထည့်ပါ...",
+      "unlikely": "မဖြစ်နိုင်ပါဘူး။",
+      "certain": "သေချာပါတယ်။",
+      "title": "သိခြင်းခံစားမှု",
+      "recall": "သတိရပါ။",
+      "recognition": "အသိ",
+      "fokR": "FoK R",
+      "questions": "မေးခွန်းများ",
+      "recalled": "ပြန်ပြောပြသည်။",
+      "recognized": "အသိအမှတ်ပြုပါတယ်။",
+      "fokSensitivity": "FOK ထိခိုက်လွယ်မှု",
+      "submit": "တင်ပြပါ။",
+      "dontKnow": "မသိဘူး။",
+      "fokPrompt": "အသိအမှတ်ပြုမှာလား။",
+      "selectCorrectAnswer": "အဖြေမှန်ကို ရွေးပါ။",
+      "answer": "ဖြေ"
+    },
+    "fingerTapping": {
+      "firstTrial": "ပထမအစမ်း",
+      "lastTrial": "နောက်ဆုံးအစမ်း",
+      "sequence": "တစ်ဆက်တည်း",
+      "speedupT1VsT12": "အမြန်နှုန်းup (T1 vs T12)",
+      "title": "လက်ဖြင့်ပုတ်ခြင်း။"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Avg Movement အချိန်",
+      "avgThroughput": "ပျမ်းမျှဖြတ်သန်းမှု",
+      "title": "Fitts နှိပ်ခြင်း",
+      "throughput": "ဖြတ်သန်းမှု",
+      "tapTarget": "မီးမောင်းထိုးပြထားသော ပစ်မှတ်ကို နှိပ်ပါ။"
+    },
+    "foreperiod": {
+      "early": "အစောကြီး",
+      "slope": "ကုန်းစောင်း",
+      "title": "ယာယီပြင်ဆင်မှု",
+      "fpEffectSlope": "FP သက်ရောက်မှုမျှောက်"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "ပြောင်းပြန်များ",
+      "threshold": "တံခါးခုံ",
+      "tone1": "လေသံ ၁",
+      "tone2": "လေသံ ၂",
+      "weber": "Weber",
+      "weberFraction": "Weber အပိုင်း",
+      "hz": "Hz",
+      "title": "ကြိမ်နှုန်းခွဲခြားဆက်ဆံမှု",
+      "thresholdLabel": "တံခါးခုံ",
+      "hzDiff": " Hz ကွာခြားမှု",
+      "whichWasHigher": "ဘယ်ဟာ ပိုမြင့်သလဲ။",
+      "firstHigher": "ပထမအဆင့်မြင့်တယ်။",
+      "secondHigher": "ဒုတိယ ပိုမြင့်တယ်။"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor patch",
+      "leftAccuracy": "ဘယ်ဘက် တိကျမှု",
+      "leftTrials": "လက်ဝဲစမ်း",
+      "noiseMask": "မဟုတ်ပါise mask",
+      "rightAccuracy": "မှန်ကန်တိကျမှု",
+      "rightTrials": "မှန်ကန်သော စမ်းသပ်မှုများ",
+      "thresholdAngle": "တံခါးခုံထောင့်",
+      "title": "Gabor",
+      "threshold": "တံခါးခုံ",
+      "reversals": "ပြောင်းပြန်များ",
+      "timedOut": "အချိန်d out",
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။"
+    },
+    "gameOfDice": {
+      "finalPoints": "နောက်ဆုံးအချက်များ",
+      "risky": "အန္တရာယ်များသည်။",
+      "riskyChoices": "အန္တရာယ်ရှိသောရွေးချယ်မှုများ",
+      "safe": "အန္တရာယ်ကင်းတယ်။",
+      "winRate": "အနိုင်ရနှုန်း",
+      "wins": "အနိုင်ရတယ်။",
+      "title": "Dice Task ဂိမ်း",
+      "totalPoints": "စုစုပေါင်း points",
+      "riskyLabel": "အန္တရာယ်များသည်။",
+      "roll": "လိပ်",
+      "chooseYourBet": "သင်၏အလောင်းအစားကိုရွေးချယ်ပါ။",
+      "pickNumbers": "သင့်နံပါတ်များကို ရွေးပါ။"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "ကွာဟမှု သို့မဟုတ် ကွာဟမှု မရှိဘူးလား။",
+      "gapThreshold": "ကွာဟချက်အတိုင်းအတာ",
+      "title": "တိတ်ဆိတ်ခြင်းရှာဖွေမှု",
+      "noGap": "မဟုတ်ပါ Gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "အကြည့်က ဘယ်မှာလဲ။",
+      "direct": "တိုက်ရိုက်",
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။",
+      "title": "ငေးကြည့်ရန် ဦးတည်ချက်",
+      "dPrimeDirectGaze": "D Prime တိုက်ရိုက်ကြည့်"
+    },
+    "hayling": {
+      "part1Initiation": "အပိုင်း ၁ (အစပြုခြင်း)",
+      "part2": "အပိုင်း ၂",
+      "part2Suppression": "အပိုင်း ၂ (နှိမ်နင်းရေး)၊",
+      "suppressionCost": "နှိမ်နင်းရေးကုန်ကျစရိတ်",
+      "title": "Hayling",
+      "part1": "အပိုင်း ၁",
+      "part2Label": "အပိုင်း ၂",
+      "suppression": "နှိမ်နှင်းခြင်း။",
+      "obvious": "သိသာသည်။",
+      "obviousPicksPart2": "ထင်ရှားသော ရွေးချယ်မှုများ အပိုင်း (၂)",
+      "chooseUnrelated": "မသက်ဆိုင်သောစကားလုံးကို ရွေးပါ။ ",
+      "completelyUnrelated": "လုံးဝမသက်ဆိုင်ပါ။",
+      "doNotPickObvious": "ထင်ရှားသော စကားလုံးကို မရွေးချယ်ပါနှင့်။"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "နောက်တစ်ဆင့်တက်ဖို့...",
+      "stageComplete": "အဆင့် ပြီးပါပြီ။",
+      "title": "IED သတ်မှတ် Shift",
+      "stages": "အဆင့်ဆင့်",
+      "edsCost": "EDS ကုန်ကျစရိတ်",
+      "stage": "ဇာတ်ခုံ",
+      "correctNeeded": "မှန် needed to advance"
+    },
+    "informationSampling": {
+      "cost": "ကုန်ကျစရိတ်",
+      "free": "အခမဲ့",
+      "meanTilesCost": "ပျမ်းမျှ ကြွေပြားများ (ကုန်ကျစရိတ်)",
+      "meanTilesFree": "ပျမ်းမျှ ကြွေပြားများ (အခမဲ့)",
+      "totalCost": "စုစုပေါင်း Cost",
+      "title": "အချက်အလက်rmation Sampling",
+      "tiles": "ကြွေပြားများ",
+      "tapToReveal": "ဖော်ထုတ်ရန် တို့ပါ။"
+    },
+    "inspectionTime": {
+      "final": "နောက်ဆုံး",
+      "finalDisplayTime": "နောက်ဆုံးပြသချိန်",
+      "minCorrectIt": "မင်း IT မှန်တယ်။",
+      "threshold": "တံခါးခုံ",
+      "title": "Inspection အချိန်",
+      "thresholdLabel": "တံခါးခုံ",
+      "minIt": "မင်း အိုင်တီ"
+    },
+    "iowaGambling": {
+      "balance": "လက်ကျန်-",
+      "chooseADeck": "ခြေသည်းကို ရွေးပါ။",
+      "deckADraws": "ပက်လက် Aဆွဲ",
+      "deckBDraws": "Deck B ဆွဲသည်။",
+      "deckCDraws": "Deck C ဆွဲတယ်။",
+      "deckDDraws": "Deck D ဆွဲတယ်။",
+      "first40Advantageous": "ပထမ 40 အားသာချက်",
+      "last40Advantageous": "နောက်ဆုံး 40 အားသာချက်",
+      "learn": "လေ့လာပါ။",
+      "learningIndex": "သင်ယူမှုအညွှန်း",
+      "title": "အိုင်အိုဝါ လောင်းကစား",
+      "advantageousPct": "အားသာချက် %",
+      "earnings": "ဝင်ငွေများ",
+      "last40": "နောက်ဆုံး ၄၀"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "ချိန်ညှိအလွဲ",
+      "meanJol": "JOL ကိုဆိုလိုသည်။",
+      "nowTestYourRecall": "မဟုတ်ပါw test your recall",
+      "studyComplete": "လေ့လာ ပြီးပါပြီ။",
+      "whatWasPairedWith": "ဘာနဲ့တွဲလဲ...?",
+      "title": "သင်ယူမှုစီရင်ခြင်း။",
+      "recallAccuracy": "တိကျမှုကို ပြန်လည်သိမ်းဆည်းပါ။",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL တိကျမှု (Gamma)",
+      "howLikelyRemember": "မည်မျှမှတ်မိနိုင်မည်နည်း။",
+      "hiddenAnswer": "ဝှက်ထားသောအဖြေ"
+    },
+    "judgmentOfRecency": {
+      "close": "ပိတ်ရန်",
+      "closeGap13": "ပိတ်ရန် gap (1-3)",
+      "far": "အဝေးကြီး",
+      "farGap9": "ကွာဟချက် (9+)",
+      "mediumGap48": "အလယ်အလတ်ကွာဟချက် (၄-၈)၊",
+      "title": "Recency ၏တရားစီရင်ခြင်း။",
+      "medium": "လတ်",
+      "studyPhaseMemorizeOrder": "လေ့လာမှုအဆင့် - အမိန့်ကို အလွတ်ကျက်ပါ။",
+      "whichMoreRecently": "ဘယ်ဟာက ပိုမကြာသေးဘူး။"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "ဆိုလိုသည်မှာ RT (စကားလုံးမဟုတ်သော)",
+      "meanRtWords": "ဆိုလိုသည်မှာ RT (စကားလုံးများ)",
+      "nonwordsAccuracy": "မဟုတ်ပါn-words accuracy",
+      "wordsAccuracy": "စာလုံးများ accuracy",
+      "word": "စကားလုံး",
+      "nonword": "မဟုတ်ပါn-word"
+    },
+    "maze": {
+      "duration": "ကြာချိန်",
+      "optimalSteps": "အကောင်းဆုံးအဆင့်များ",
+      "pathEfficiency": "လမ်းကြောင်းထိရောက်မှု",
+      "totalSteps": "စုစုပေါင်း Steps",
+      "wallHits": "Wall မှန်",
+      "title": "ဝင်္ကဘာ",
+      "completed": "ပြီးသွားပြီ",
+      "efficiency": "လုပ်ရည်ကိုင်ရည်",
+      "wallHitsLabel": "Wall မှန်",
+      "steps": "ခြေလှမ်းများ"
+    },
+    "memobox": {
+      "easy": "လွယ်ပါတယ်။",
+      "easy2Boxes": "အလွယ် (၂ ဗူး)၊",
+      "hard": "ခက်တယ်။",
+      "hard4Boxes": "ခဲ(၄သေတ္တာ)၊",
+      "medium3Boxes": "အလတ် (၃ ဗူး)၊",
+      "title": "Memobox",
+      "rounds": "ဟိုနေ့က",
+      "medium": "လတ်",
+      "watchMovements": "လှုပ်ရှားမှုတွေကို စောင့်ကြည့်ပါ...",
+      "howManyBalls": "အကွက်တစ်ခုစီတွင် ဘောလုံးမည်မျှ",
+      "submit": "တင်ပြပါ။",
+      "roundOf": "{{total}} ၏ {{current}} အဝိုင်း"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "အပိုင်းဆိုတာဘာလဲ။",
+      "title": "စိတ်ပိုင်းဖြတ်ခြင်း။"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "အဟောင်း၊ အလားတူလား ဒါမှမဟုတ် အသစ်လား။",
+      "patternSeparation": "ပုံစံကွဲခြင်း။",
+      "sep": "စက်တင်ဘာ",
+      "old": "အဟောင်း",
+      "similar": "ပုံစံတူ",
+      "new": "အသစ်",
+      "ldi": "LDI",
+      "title": "Mnemonic ခွဲခြားဆက်ဆံမှု",
+      "hitRateOldDetected": "Hit Rate (အဟောင်းတွေ့ရှိသည်)",
+      "lureDiscrimination": "သွေးဆောင် ခွဲခြားဆက်ဆံခြင်း (LDI)",
+      "memorize": "အလွတ်ကျက်",
+      "testPhase": "စမ်းသပ်အဆင့်"
+    },
+    "multiArmedBandit": {
+      "earnings": "ဝင်ငွေများ-",
+      "pickMachine": "စက်ကို ရွေးပါ။",
+      "title": "လက်နက်ကိုင်အဖွဲ့ပေါင်းစုံ",
+      "totalReward": "စုစုပေါင်း reward",
+      "optimal": "အကောင်းဆုံး",
+      "regret": "နောင်တ",
+      "exploit": "အမြတ်ထုတ်သည်။",
+      "machine": "စက်",
+      "armsExplored": "လက်နက်ကြီးနဲ့"
+    },
+    "navon": {
+      "globalBigLetter": "ကမ္ဘာလုံးဆိုင်ရာ (စာလုံးကြီး)",
+      "localSmallLetter": "ဒေသဆိုင်ရာ (စာလုံးသေး)",
+      "title": "Navon",
+      "globalAdv": "ကမ္ဘာလုံးဆိုင်ရာ Adv.",
+      "whatBigLetter": "ဘာစာလုံးကြီးလဲ။",
+      "whatSmallLetter": "ဘာစာလုံးသေးလဲ။"
+    },
+    "negativePriming": {
+      "controlRt": "ထိန်းချုပ်ထားတာကို",
+      "nameTheRedShape": "အနီရောင်ပုံသဏ္ဍာန်ကို နာမည်ပေးလိုက်ပါ။",
+      "negativePrimingRt": "အပျက်သဘော Priming RT",
+      "positivePrimingRt": "အပြုသဘော Priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP သက်ရောက်မှု",
+      "title": "အနုတ်လက္ခဏာဆောင်ခြင်း။",
+      "ctrlRt": "ထိန်းချုပ် RT"
+    },
+    "numberLine": {
+      "estimationBias": "ခန့်မှန်းချက်ဘက်လိုက်မှု",
+      "linearityRsup2": "Linearity (R²)",
+      "meanAbsoluteError": "ဆိုလိုတာက ပကတိအမှား",
+      "tapTheLineToPlaceTheNumber": "နံပါတ်ကိုနေရာချရန် လိုင်းကိုနှိပ်ပါ။",
+      "title": "နံပါတ်လိုင်း",
+      "meanError": "ဆိုလိုရင်းက အမှား",
+      "yourEstimate": "သင်၏ခန့်မှန်းချက်",
+      "correct": "မှန်"
+    },
+    "oddOneOut": {
+      "colorTrials": "အရောင် trials",
+      "shapeTrials": "ပုံသဏ္ဍာန် trials",
+      "shape": "ပုံသဏ္ဍာန်",
+      "color": "အရောင်",
+      "timeout": "အချိန်out",
+      "shapeDiffAccuracy": "ပုံသဏ္ဍာန် diff. accuracy",
+      "colorDiffAccuracy": "အရောင် diff. accuracy",
+      "shapeDiffAvgRt": "ပုံသဏ္ဍာန် diff. avg RT",
+      "colorDiffAvgRt": "အရောင် diff. avg. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "ဘယ်လမ်းလဲ။",
+      "thresholdAngle": "တံခါးခုံထောင့်",
+      "title": "တိမ်းညွှတ်ခွဲခြားဆက်ဆံခြင်း။",
+      "threshold": "တံခါးခုံ",
+      "counterCw": "နာရီပြောင်းပြန်",
+      "clockwise": "လက်ယာရစ်"
+    },
+    "patternComparison": {
+      "differentTrials": "မတူညီသောစမ်းသပ်မှုများ",
+      "sameTrials": "တူညီသောစမ်းသပ်မှုများ",
+      "same": "အတူတူပါပဲ။",
+      "different": "မတူဘူး။"
+    },
+    "patternRecognition": {
+      "newPatterns": "ပုံစံအသစ်များ",
+      "oldPatterns": "ပုံစံဟောင်းများ",
+      "old": "အဟောင်း",
+      "new": "အသစ်",
+      "studyPatterns": "ပုံစံများကို သေချာလေ့လာပါ။",
+      "memorize": "အလွတ်ကျက်ပါ ({{current}}/{{total}})",
+      "getReady": "ပြင်ဆင်ပါ...",
+      "testPhaseStarting": "စမ်းသပ်မှုအဆင့်စတင်သည်..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Exact မှန်",
+      "meanAngularError": "ဆိုလိုရင်းမှာ ကျီးကန်းအမှား",
+      "withinTolerance": "ခံနိုင်ရည်ရှိမှာပဲ။",
+      "title": "အမြင်ယူခြင်း။",
+      "avgErr": "ပျမ်းမျှ အမှား",
+      "youAreAt": "မင်းမှာ ရှိတယ်။ ",
+      "facing": "ရင်ဆိုင်နေရသည်။",
+      "pointTo": "ထောက်ပြပါ။ "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "အကြိမ်ရေ တံခါးခုံ",
+      "seq1": "နောက်ဆက်တွဲ ၁",
+      "seq2": "နောက်ဆက်တွဲ ၂",
+      "title": "Phoneme ခွဲခြားဆက်ဆံမှု",
+      "thresh": "စပါးနယ်",
+      "sameOrDifferent": "အတူတူလား မတူဘူးလား?",
+      "same": "အတူတူပါပဲ။",
+      "different": "မတူဘူး။"
+    },
+    "predictionMotion": {
+      "biasLate": "ဇောင်း(+=နောက်ကျ)၊",
+      "meanAbsoluteError": "ဆိုလိုရင်းမှာ အကြွင်းမဲ့အမှား",
+      "precisionSd": "တိကျမှု (SD)",
+      "title": "ခန့်မှန်းရွေ့လျားမှု",
+      "absError": "ဗိုက်သား။ အမှား",
+      "precision": "တိကျမှု",
+      "responded": "တုံ့ပြန်ခဲ့သည်။",
+      "tapWhenReachesTarget": "ပစ်မှတ်သို့ရောက်သောအခါ ထိပါ။"
+    },
+    "promem": {
+      "ongoingAccuracy": "ဖွင့်going accuracy",
+      "ongoingRt": "ဖွင့်going RT",
+      "pmHitRate": "PM hit နှုန်း",
+      "pmRt": "PM RT",
+      "pmTargets": "PM ပစ်မှတ်များ",
+      "title": "အနာဂတ်မှတ်ဉာဏ်",
+      "ongoing": "ဖွင့်going",
+      "pmHits": "PM မှန်",
+      "pmMisses": "PM လွဲ",
+      "living": "နေထိုင်ခြင်း။",
+      "nonLiving": "မဟုတ်ပါn-living",
+      "redWordInstruction": "အနီရောင်စကားလုံး = စာနယ်ဇင်း"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Distractor အမှားများ",
+      "literalErrorRate": "စာသားအမှားအဆင့်",
+      "literalErrors": "စာသားအမှားများ",
+      "title": "စကားပုံအနက်",
+      "literal": "ပကတိ",
+      "litRate": "ထွန်းညှိ။ နှုန်းထား",
+      "whatDoesThisMean": "ဒါက ဘာကို ဆိုလိုတာလဲ။"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "လိုက်နာရန် အသင့်ပြင်ထားပါ။",
+      "meanTimeOnTarget": "Mean အချိန် on Target",
+      "meanTrackingError": "ဆိုလိုတာက ခြေရာခံအမှား",
+      "placeYourFingerOnTheScreen": "သင့်လက်ချောင်းကို စခရင်ပေါ်တွင် တင်ပါ။",
+      "title": "လိုက်စားခြေရာခံခြင်း။",
+      "timeOnTarget": "အချိန် on target",
+      "error": "အမှား",
+      "onTarget": "ဖွင့် Target",
+      "avgError": "ပျမ်းမျှ အမှား",
+      "improve": "တိုးတက်စေပါသည်။",
+      "improvementT1VsT": "တိုးတက်မှု T1 နှင့် T",
+      "errorLabel": "အမှား",
+      "followGreenTarget": "အစိမ်းရောင်ပန်းတိုင်ကို လိုက်နာပါ။"
+    },
+    "rapidNaming": {
+      "roundComplete": "ဝိုင်းပြီးပါပြီ။",
+      "totalErrors": "စုစုပေါင်း Errors",
+      "title": "အမြန်အမည်ပေးခြင်း",
+      "avgSpeed": "ပျမ်းမျှ အရှိန်",
+      "totalTime": "စုစုပေါင်း အချိန်",
+      "round": "ဝိုင်း",
+      "getReady": "ပြင်ဆင်ပါ။"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Avg Solve အချိန်",
+      "solved": "ကြွပ်ကြွပ်အိတ်",
+      "wrong": "မှား",
+      "placeholder": "မင်းရဲ့အဖြေ...",
+      "title": "Rebus ပဟေဋ္ဌိများ",
+      "puzzles": "ပဟေဠိများ",
+      "timeout": "အချိန်out",
+      "submit": "တင်ပြပါ။",
+      "answer": "ဖြေ"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Avg Solve အချိန်",
+      "solved": "ကြွပ်ကြွပ်အိတ်",
+      "placeholder": "မင်းရဲ့အဖြေ...",
+      "title": "အဝေးမှ အပေါင်းအသင်းများ",
+      "timeout": "အချိန်out",
+      "submit": "တင်ပြပါ။",
+      "answer": "ဖြေ"
+    },
+    "reversalLearning": {
+      "adapt": "လိုက်လျောညီထွေ",
+      "loseshiftRate": "ရှုံး-ပြောင်းနှုန်း",
+      "score": "ရမှတ်-",
+      "winstayRate": "Win-Stay နှုန်း",
+      "title": "ပြောင်းပြန်သင်ယူခြင်း။",
+      "rewards": "ဆုလာဘ်",
+      "reversals": "ပြောင်းပြန်များ",
+      "persev": "ငြိတွယ်",
+      "avgTrialsToCriterion": "ပျမ်းမျှ စံသတ်မှတ်ရန် စမ်းသပ်မှုများ",
+      "pickACard": "ကတ်တစ်ခုရွေးပါ။"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7 ဖြင့် နောက်ပြန်ရေတွက်ပါ။",
+      "reproduceThePatternFromMemory": "ပုံစံကို မှတ်ဉာဏ်မှ ပြန်ထုတ်ပါ။",
+      "title": "Rey Complex ပုံ",
+      "copy": "ကော်ပီ",
+      "recall": "သတိရပါ။",
+      "retention": "ထိန်းထား",
+      "trial": "အစမ်း",
+      "target": "ပစ်မှတ်",
+      "yourCopy": "သင့်မိတ္တူ",
+      "submit": "တင်ပြပါ။"
+    },
+    "rhythm": {
+      "avgTimingError": "ပျမ်းမျှ အချိန်ကိုက်မှု အမှား",
+      "bestTrialError": "အကောင်းဆုံး trial error",
+      "correctTrials": "မှန် trials",
+      "worstTrialError": "အဆိုးဆုံး စမ်းသပ်မှု အမှား",
+      "watchRhythm": "ရစ်သမ်ကိုကြည့်ပါ။",
+      "getReady": "ပြင်ဆင်ပါ...",
+      "tapTheRhythm": "ရစ်သမ်ကို နှိပ်ပါ။",
+      "tooFarOff": "ဝေးလွန်းတယ်။",
+      "tapToReproduce": "မျိုးပွားရန် တို့ပါ။",
+      "beats": "{{count}} ကြိမ်",
+      "bestTrial": "အကောင်းဆုံး trial",
+      "worstTrial": "အဆိုးဆုံးစမ်း",
+      "title": "စည်းချက်",
+      "msErr": "ms အမှား"
+    },
+    "routePlanning": {
+      "time": "အချိန်",
+      "title": "လမ်းကြောင်းစီစဉ်ခြင်း။",
+      "levels": "အဆင့်များ",
+      "completed": "ပြီးသွားပြီ",
+      "avgMoves": "ပျမ်းမျှ ရွေ့လျား",
+      "clear": "ရှင်းလင်းရန်",
+      "submit": "တင်ပြပါ။",
+      "instructions": "ညွှန်ကြားချက်များ"
+    },
+    "rvp": {
+      "detect357246468": "ထောက်လှမ်း- ၃-၅-၇၊ ၂-၄-၆၊ ၄-၆-၈",
+      "targetSequences": "ပစ်မှတ်များ",
+      "fa": "FA",
+      "hitRate": "တိုက်နှုန်း",
+      "misses": "လွဲ",
+      "sequences": "တစ်ဆက်တည်း"
+    },
+    "sart": {
+      "commissionErrors": "ကော်မရှင်အမှားများ",
+      "omissionErrors": "လွဲချော်မှုအမှားများ",
+      "tapAllDigits": "3 မှလွဲ၍ ဂဏန်းအားလုံးကိုနှိပ်ပါ။",
+      "except3": "၃ မှလွဲ၍"
+    },
+    "sceneCrasher": {
+      "adds": "ထပ်လောင်းသည်။",
+      "studyTheScene": "မြင်ကွင်းကိုလေ့လာပါ။",
+      "swaps": "လဲလှယ်မှုများ",
+      "tapTheNewchangedObject": "အသစ်/ပြောင်းလဲထားသော အရာဝတ္တုကို နှိပ်ပါ။"
+    },
+    "sentenceVerification": {
+      "falseSentences": "မှားသောစာကြောင်းများ",
+      "trueSentences": "မှန်သောစာကြောင်းများ",
+      "byCategory": "By အမျိုးအစား",
+      "title": "စာကြောင်းအတည်ပြုခြင်း။",
+      "trueRt": "မှန်ထားတာကို",
+      "true": "မှန်ပါတယ်။",
+      "false": "မှားသော",
+      "pressKey": "စာနယ်ဇင်း "
+    },
+    "soundSweeps": {
+      "down": "ဆင်းတယ်။",
+      "downAccuracy": "တိကျသည်။",
+      "durationThreshold": "ကြာချိန် Threshold",
+      "up": "ချီ",
+      "upAccuracy": "တိကျမှု",
+      "title": "အသံ Sweeps",
+      "threshold": "တံခါးခုံ",
+      "upOrDown": "အပေါ်လား အောက်လား?"
+    },
+    "sourceMemory": {
+      "color": "အရောင်",
+      "colorRecall": "အရောင် recall",
+      "frame": "ဘောင်",
+      "frameRecall": "ဘောင်ပြန်သိမ်း",
+      "getReadyForTheTest": "စာမေးပွဲအတွက် ပြင်ဆင်ပါ။",
+      "itemRecognition": "အကုသိုလ်ကံ အသိအမှတ်ပြုခြင်း။",
+      "positionRecall": "အနေအထား recall",
+      "sourceAccuracy": "အရင်းအမြစ် တိကျမှု",
+      "title": "အရင်းအမြစ်မှတ်ဉာဏ်",
+      "source": "အရင်းအမြစ်",
+      "position": "အနေအထား",
+      "word": "စကားလုံး",
+      "wasThisWordShown": "ဒီစကားလုံးကို ပြခဲ့တာလား။",
+      "bottom": "အောက်ခြေ",
+      "blue": "အပြာ",
+      "orange": "လိမ္မော်ရောင်",
+      "circle": "စက်ဝိုင်း",
+      "square": "ရင်ပြင်"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "မဟုတ်ပါise Threshold",
+      "title": "Speech-in-မဟုတ်ပါise",
+      "noise": "မဟုတ်ပါise",
+      "whichWordWasIt": "ဘယ်စကားလုံးလဲ။"
+    },
+    "srtt": {
+      "learningEffect": "သင်ယူခြင်းအကျိုးသက်ရောက်မှု",
+      "learning": "သင်ယူခြင်း။",
+      "block": "ပိတ်ဆို့သည်။"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "အခွင့်အလမ်းအဆင့်",
+      "learningDetected": "သင်ယူမှုကို တွေ့ရှိခဲ့သည်။",
+      "testPhase": "စမ်းသပ်မှုအဆင့်",
+      "whichPairLooksMoreFamiliar": "ဘယ်အတွဲက ပိုရင်းနှီးလဲ။",
+      "title": "စာရင်းအင်းပညာ သင်ယူခြင်း။",
+      "learning": "သင်ယူခြင်း။",
+      "watchTheShapes": "ပုံစံများကိုကြည့်ပါ။"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "ယုံကြည်မှု ဘက်လိုက်မှု သက်ရောက်မှု",
+      "conclusion": "နိဂုံး",
+      "premise1": "ဥပစာ ၁",
+      "premise2": "ဥပစာ ၂",
+      "logicalValidityQuestion": "ဒါက ယုတ္တိရှိရှိ မှန်ကန်ပါသလား။",
+      "valid": "အကျုံးဝင်သည်။",
+      "invalid": "မမှန်ပါ။"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "တိကျမှုမရှိပါ။",
+      "presentAccuracy": "ပစ္စုပ္ပန်တိကျမှု",
+      "title": "Symbol ရှာဖွေရန်",
+      "present": "ပစ္စုပ္ပန်",
+      "absent": "လာခဲ့ပါ။",
+      "targets": "ပစ်မှတ်များ",
+      "searchGroup": "ရှာဖွေရန် group"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "အချိုးညီညီ",
+      "drift": "ပျံ့",
+      "cv": "ကျွ န်တော်",
+      "title": "ထပ်တူပြုခြင်း-ဆက်လက်လုပ်ဆောင်ခြင်း။",
+      "meanCv": "CV ကိုဆိုလိုတာပါ။",
+      "tempos": "အရှိန်များ",
+      "tempo": "အရှိန်",
+      "ioi": "အိုင်အို",
+      "getReady": "ပြင်ဆင်ပါ...",
+      "nextTempo": "ရှေ့ tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "မှန် ပြန်သတ်မှတ်ရန်s",
+      "duration": "ကြာချိန်",
+      "missedCounters": "လွတ်သွားသောကောင်တာများ",
+      "prematureResets": "အချိန်မတန်မီ ပြန်လည်သတ်မှတ်ခြင်း။",
+      "totalEvents": "စုစုပေါင်း Events",
+      "tooEarly": "စောလွန်းတယ်။",
+      "missed": "လွတ်သွားသည်!",
+      "title": "လုပ်ဆောင်စရာ Juggling",
+      "premature": "အချိန်မတန်သေး",
+      "counter": "ကောင်တာ",
+      "tapCounterInstruction": "အတိုင်းအတာတစ်ခုအထိ ကောင်တာတစ်ခုစီကို တို့ပါ။ မလျှံပါစေနဲ့။"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "ခွဲခြမ်းအမှတ် (PSE)",
+      "curveSteepness": "မျဉ်းကွေး မတ်စောက်ခြင်း။",
+      "idealMidpoint": "စံပြအလယ်အလတ်မှတ်",
+      "pse": "PSE",
+      "title": "ယာယီနှစ်ခွဲ",
+      "steepness": "မတ်စောက်ခြင်း။",
+      "shortOrLong": "အတိုလား အရှည်လား။",
+      "trainingPhase": "လေ့ကျင့်ခန်း Phase",
+      "short": "တိုတိုလေးပါ။",
+      "long": "ရှည်သည်။"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Gradient အနံ",
+      "rememberThisDuration": "ဤကာလကို သတိရပါ။",
+      "width": "အကျယ်",
+      "standard": "စံ",
+      "title": "Temporal အထွေထွေization",
+      "hitRate": "တိုက်နှုန်း",
+      "faRate": "FA နှုန်း",
+      "hitRateDetectStandard": "Hit Rate (စံနှုန်းကိုသိရှိနိုင်သည်)",
+      "sameDuration": "ကြာချိန် အတူတူပဲလား။",
+      "trainingPhase": "လေ့ကျင့်ခန်း Phase",
+      "same": "အတူတူပါပဲ။",
+      "different": "မတူဘူး။"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "အဆင့်သတ်မှတ်ချက် SOA",
+      "title": "အသွေးအရောင်ခွဲခြားမှု",
+      "threshold": "တံခါးခုံ"
+    },
+    "timePromem": {
+      "avgTimingError": "ပျမ်းမျှ အချိန်ကိုက်မှု အမှား",
+      "clockChecks": "နာရီစစ်ဆေးမှုများ",
+      "ongoingAccuracy": "ဖွင့်going accuracy",
+      "ongoingTrials": "ဖွင့်going trials",
+      "totalPmPresses": "စုစုပေါင်း PM Presses",
+      "pmAccuracy": "PM တိကျမှု",
+      "pmMisses": "PM လွမ်းတယ်။",
+      "title": "အချိန် Prospective",
+      "ongoing": "ဖွင့်going",
+      "pmHitsLabel": "ကြိုတင်မှတ်ဉာဏ် အောင်မြင်မှု",
+      "timingErr": "Timing အမှား",
+      "pmHitsExpected": "PM မှန် / Expected",
+      "pmPresses": "PM စာနယ်ဇင်းများ",
+      "checkClock": "နာရီကို စစ်ဆေးပါ။",
+      "thirtySecMark": "စက္ကန့် ၃၀ အမှတ်"
+    },
+    "toj": {
+      "meanResponseTime": "Mean တုံ့ပြန်မှု အချိန်",
+      "temporalResolution": "ယာယီဖြေရှင်းချက်",
+      "title": "ယာယီအမိန့် စီရင်ချက်",
+      "threshold": "တံခါးခုံ",
+      "whichCameFirst": "ဘယ်ကအရင်လာတာလဲ။",
+      "leftFirst": "လက်ဝဲ ပထမ",
+      "rightFirst": "မှန်တယ် ပထမ"
+    },
+    "tower": {
+      "budget": "ဘတ်ဂျက်",
+      "challenge": "စိန်ခေါ်မှု",
+      "challengeClassic": "ဂန္ထဝင်",
+      "challengeExpert": "ကျွမ်းကျင်သူ",
+      "challengeMemory": "ဉာဏ်",
+      "challengePrecision": "တိကျမှု",
+      "dragDiscAriaLabel": "ထိပ်အချပ်ပြားကို တံစို့ {{peg}} မှ ဆွဲယူပါ",
+      "goal": "ပန်းတိုင်",
+      "goalHiddenStatus": "ပန်းတိုင်ကို ဝှက်ထားသည်။ အတိုချုံးပြရန် Reveal ကိုသုံးပါ။",
+      "goalRevealedMessage": "ပန်းတိုင်ကို ၃ စက္ကန့်အတွင်း ထုတ်ဖော်ပြသခဲ့သည်။",
+      "hint": "အရိပ်အမြွက်",
+      "hintDescription": "ပြရန် best next move",
+      "hintMessage": "အရိပ်အမြွက်- ထိပ်ဒစ်ကို တံစို့ {{fromPeg}} မှ တံစို့ {{toPeg}} သို့ ရွှေ့ပါ။",
+      "hiddenGoalDescription": "ကစားနေစဉ်အတွင်း ဂိုးကို ဝှက်ထားသည်။ တိုတောင်းသော ပြန်လည်ဆန်းသစ်မှု လိုအပ်သည့်အခါ Reveal ကို သုံးပါ။",
+      "hiddenGoalTitle": "မှတ်ဉာဏ်စိန်ခေါ်မှု",
+      "invalid": "မမှန်ပါ။",
+      "moves": "ရွေ့လျား",
+      "optimal": "အကောင်းဆုံး",
+      "pegFullMessage": "အဲဒီအကွက်က ပြည့်နေတယ်။",
+      "previewMemoryCountdown": "Memorize the goal. စတင်ရန်s in {{seconds}}s.",
+      "previewPlanCountdown": "Plan the {{moves}}-move solution. စတင်ရန်s in {{seconds}}s.",
+      "reset": "ပြန်သတ်မှတ်ရန်",
+      "resetDescription": "ဤပဟေဠိကို ပြန်လည်စတင်ပါ။",
+      "resetMessage": "ပဟေဋ္ဌိပြန်ညှိ။",
+      "reveal": "ထုတ်ပြပါ။",
+      "revealDescription": "လျှို့ဝှက်ပန်းတိုင်ကို ဖော်ထုတ်ပါ။",
+      "statusOptimalSolve": "အကောင်းဆုံးဖြေရှင်းပါ။ ရမှတ် {{score}}။",
+      "statusSolvedScore": "{{moves}} ရွှေ့ခြင်း (+{{extraMoves}}) တွင် ဖြေရှင်းခဲ့သည်။ ရမှတ် {{score}}။",
+      "undo": "မလုပ်တော့",
+      "undoDescription": "နောက်ပြန်လှည့်ပါ။",
+      "undoneMessage": "နောက်ဆုံးရွှေ့ခြင်းကို ပြန်ပြင်ပါ။",
+      "yourPegs": "မင်းရဲ့တံစို့"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "မှန် Deliveries",
+      "trainsLost": "ရထားများ ဆုံးရှုံးခဲ့သည်။",
+      "wrongStation": "မှား station",
+      "title": "အတွေးရထား",
+      "trains": "ရထား",
+      "missed": "လွတ်သွားတယ်။",
+      "scoreLabel": "ရမှတ်",
+      "instructions": "ညွှန်ကြားချက်များ"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "ပျမ်းမျှမေးခွန်းများကို အသုံးပြုထားသည်။",
+      "title": "မေးခွန်းနှစ်ဆယ်",
+      "avgQuestions": "ပျမ်းမျှ မေးခွန်းများ",
+      "rounds": "ဟိုနေ့က",
+      "efficiency": "လုပ်ရည်ကိုင်ရည်",
+      "avgQuestionsCorrectOnly": "ပျမ်းမျှ မေးခွန်းများ (မှန်ကန်မှသာ)",
+      "questionsLabel": "မေးခွန်းများ",
+      "remaining": "လက်ကျန်",
+      "readyToGuess": "ခန့်မှန်းဖို့ အဆင်သင့်ဖြစ်နေပါပြီ။",
+      "tapTheTarget": "ပစ်မှတ်ဟု သင်ထင်သောအရာကို တို့ပါ။"
+    },
+    "ufov": {
+      "usefulFieldOfView": "အသုံးဝင်သော Field of View",
+      "visualNoiseMask": "အမြင် noise mask",
+      "whatWasInTheCenter": "အလယ်မှာ ဘာရှိလဲ။",
+      "whereWasTheTarget": "ပစ်မှတ်က ဘယ်မှာလဲ။",
+      "avgThreshold": "ပျမ်းမျှ တံခါးခုံ",
+      "speed": "အမြန်နှုန်း",
+      "accuracy": "တိကျမှု",
+      "central": "ဗဟို",
+      "peripheral": "အရံ",
+      "overall": "ခြုံ",
+      "block": "ပိတ်ဆို့သည်။",
+      "trials": "Trial များ",
+      "start": "စတင်ရန်",
+      "focus": "အာရုံစူးစိုက်မှု",
+      "threshold": "တံခါးခုံ",
+      "stimulus": "နှိုးဆော်ခြင်း။",
+      "respondFromMemory": "မှတ်ဉာဏ်မှ တုံ့ပြန်ပါ။",
+      "truck": "ကုန်ကား",
+      "choosePeripheralLocation": "အရံတည်နေရာကို ရွေးပါ။",
+      "currentBlock": "{{n}} ပိတ်ရန်",
+      "exposure": "ထိတွေ့မှု"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "စာလုံးများ starting with {{letter}}",
+      "title": "စကားလုံးချောမွေ့မှု",
+      "totalWords": "စုစုပေါင်း words",
+      "duplicates": "ထပ်တူ",
+      "letter": "စာလုံး",
+      "round": "ဝိုင်း",
+      "roundComplete": "ဝိုင်းပြီးပါပြီ။",
+      "nextRound": "ရှေ့ round",
+      "middotRound": " · ပတ်ပတ်လည်"
+    },
+    "vernierAcuity": {
+      "whichSide": "ဘယ်ဘက်ကလဲ?",
+      "title": "Vernier တိကျမြင်ရမှု",
+      "leftOffset": "ဘယ်ဘက် အရွေ့",
+      "rightOffset": "ညာနှိမ်",
+      "offset": "ပိတ်set"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "အကောင်းဆုံးဗျူဟာ",
+      "correct": "မှန်!",
+      "wrong": "မှား",
+      "title": "မိုးလေဝသခန့်မှန်းချက်",
+      "optimal": "အကောင်းဆုံး",
+      "learningCurve": "သင်ယူမှုမျဉ်းကွေး",
+      "predictTheWeather": "ရာသီဥတုကိုခန့်မှန်းပါ။",
+      "rain": "မိုး"
+    },
+    "wordChain": {
+      "avgResponseTime": "Avg တုံ့ပြန်မှု အချိန်",
+      "chain": "ကွင်းဆက်",
+      "longestChain": "အရှည်ဆုံးကွင်းဆက်",
+      "totalCorrect": "စုစုပေါင်း မှန်",
+      "totalWords": "စုစုပေါင်း စာလုံးများ",
+      "words": "စာလုံးများ",
+      "title": "စကားလုံးကွင်းဆက်",
+      "longest": "အရှည်ဆုံး",
+      "avgRt": "ပျမ်းမျှ RT",
+      "endsWith": "ဖြင့် အဆုံးသတ်သည်။ ",
+      "chainLabel": "ကွင်းဆက်",
+      "bestLabel": "အကောင်းဆုံး"
+    },
+    "wordFlow": {
+      "avgWordLength": "ပျမ်းမျှစကားလုံးအရှည်",
+      "correct": "မှန်",
+      "invalidWords": "မမှန်သောစကား",
+      "totalWordsSelected": "စုစုပေါင်း စာလုံးများ Selected",
+      "validWords": "မှန်ကန်သောစကား",
+      "wordsPerMinute": "စာလုံးများ per minute",
+      "wrong": "မှား",
+      "seeResults": "ရလဒ်များကိုကြည့်ပါ။",
+      "nextRound": "ရှေ့ round ({{current}}/{{total}})",
+      "title": "စကားလုံးချောမွေ့မှု",
+      "validWordsLabel": "မှန်ကန်သောစကား",
+      "wordsPerMinLabel": "စာလုံးများ/min",
+      "avgLengthLabel": "ပျမ်းမျှ အရှည်",
+      "invalidLabel": "မမှန်ပါ။",
+      "round": "ဝိုင်း",
+      "selectWordsBelongTo": "သက်ဆိုင်သော စကားလုံးများကို ရွေးချယ်ပါ။",
+      "selected": "ရွေးချယ်ခဲ့သည်။"
+    },
+    "wordList": {
+      "avgRtCorrect": "ပျမ်းမျှ RT (မှန်ပါ)",
+      "primacyEffect": "ဦးစားပေးသက်ရောက်မှု",
+      "recencyEffect": "မကြာသေးသောသက်ရောက်မှု",
+      "studyPhaseRememberEachWord": "လေ့လာမှုအဆင့် - စကားလုံးတစ်လုံးစီကို မှတ်ထားပါ။",
+      "wordsRecalled": "စာလုံးများ Recalled",
+      "title": "စကားလုံးစာရင်း",
+      "serialPositionCurve": "Serial အနေအထား Curve",
+      "wasWordInList": "ဒီစကားလုံးစာရင်းထဲမှာပါလား။",
+      "seenBefore": "အရင်က တွေ့ဖူးတယ်။",
+      "newWord": "အသစ်"
+    },
+    "speedSort": {
+      "switchAccuracy": "မှန်ကန်မှုပြောင်းပါ။",
+      "switchTrials": "စမ်းသပ်မှုများကို ပြောင်းပါ။",
+      "sortByColor": "စီရန် by COLOR",
+      "sortByShape": "စီရန် by SHAPE",
+      "sortByNumber": "စီရန် by NUMBER",
+      "ruleChanged": "စည်းကမ်းပြောင်းသွားပြီ။",
+      "binRed": "အနီရောင်",
+      "binBlue": "အပြာ",
+      "binGreen": "အစိမ်းရောင်",
+      "binYellow": "အဝါရောင်",
+      "binCircle": "စက်ဝိုင်း",
+      "binSquare": "ရင်ပြင်",
+      "binTriangle": "တြိဂံ",
+      "binStar": "ကြယ်ပွင့်",
+      "title": "အမြန်နှုန်း စီရန်",
+      "switch": "ခလုတ်များ"
+    },
+    "reflex": {
+      "target": "ပစ်မှတ်",
+      "lure": "မြှူသည်။",
+      "tooSlow": "အရမ်းနှေးတယ်။",
+      "wrongTarget": "မှား target!",
+      "tapTargets": "အစိမ်းရောင် စက်ဝိုင်းများကို နှိပ်ပါ။",
+      "hits": "မှန်",
+      "misses": "လွဲ",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "အပြေးစုစုပေါင်းကို သတိရပါ...",
+      "title": "ကွင်းဆက်တွက်ချက်ခြင်း။",
+      "stepChains": "{{len}}- ခြေလှမ်းကြိုးများ",
+      "start": "စတင်ရန်",
+      "step": "အဆင့်",
+      "whatIsTheResult": "ရလဒ်ကဘာလဲ။"
+    },
+    "alternateUses": {
+      "placeholder": "အသုံးပြုမှုတစ်ခု ရိုက်ထည့်ပါ...",
+      "title": "အခြားသုံးစွဲမှုများ",
+      "totalUses": "စုစုပေါင်း uses",
+      "perObject": "အရာဝတ္ထုတစ်ခုစီ",
+      "rounds": "အကြိမ်",
+      "bestObject": "အကောင်းဆုံး object",
+      "bestCount": "အကောင်းဆုံး count",
+      "noUsesSubmitted": "မဟုတ်ပါ uses submitted",
+      "timesUp": "အချိန်'s up!",
+      "nextObject": "ရှေ့ Object ({{object}})",
+      "listCreativeUses": "ဤအရာဝတ္ထုအတွက် ဖန်တီးမှုရှိသော အသုံးပြုမှုများ စာရင်းပြုလုပ်ပါ"
+    },
+    "anagram": {
+      "placeholder": "စကားလုံးကို ရိုက်ထည့်ပါ...",
+      "title": "အက္ခရာဖျာ",
+      "avgSolve": "ပျမ်းမျှဖြေချိန်",
+      "letterWords": "အက္ခရာ {{len}} လုံးစကားလုံးများ",
+      "submit": "တင်သွင်းပါ"
+    },
+    "facialEmotion": {
+      "happy": "ပျော်တယ်။",
+      "sad": "ဝမ်းနည်းစရာ",
+      "angry": "စိတ်ဆိုးတယ်။",
+      "fearful": "ကြောက်စရာ",
+      "disgusted": "စက်ဆုပ်သည်။",
+      "surprised": "အံသြသွားတယ်။",
+      "lc": "LC",
+      "title": "မျက်နှာခံစားချက်ကို အသိအမှတ်ပြုခြင်း။",
+      "topConfusions": "ထိပ်တန်းအရှုပ်အထွေးများ"
+    },
+    "numberSeries": {
+      "easy": "လွယ်ပါတယ်။",
+      "hard": "ခက်တယ်။"
+    },
+    "chainRecall": {
+      "round": "ဝိုင်း",
+      "title": "ကွင်းဆက်ပြန်သတိရ",
+      "chain": "ကွင်းဆက်",
+      "placeholder": "နေရာယူသည်။"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotional Go/မဟုတ်ပါ-Go",
+      "block1CommissionErrors": "ကော်မရှင်အမှား 1 ခုကို ပိတ်ပါ။",
+      "block2CommissionErrors": "ကော်မရှင်အမှား 2 ခုကို ပိတ်ပါ။",
+      "goHappy": "သွား = ပျော်တယ်။",
+      "goSad": "သွား = စိတ်မကောင်းဘူး။",
+      "block": "ပိတ်ဆို့သည်။",
+      "go": "သွားတော့"
+    },
+    "timeEstimation": {
+      "cv": "ကျွ န်တော်"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop အကျိုးသက်ရောက်မှု",
+      "title": "အရောင် Rush",
+      "congShort": "Cong",
+      "incongShort": "Incong",
+      "congruentAccuracy": "ကိုက်ညီသော တိကျမှု",
+      "incongruentAccuracy": "ကွဲလွဲတိကျမှု"
+    },
+    "mirror": {
+      "avgCorrectCells": "မှန် cells (avg.)",
+      "symmetryType": "Symmetry အမျိုးအစား",
+      "title": "ကြေးမုံ"
+    },
+    "rhythmTap": {
+      "correctTrials": "မှန် trials",
+      "avgRhythmScore": "ပျမ်းမျှရစ်သမ်ရမှတ်",
+      "bestTrialScore": "အကောင်းဆုံး trial score",
+      "worstTrialScore": "အဆိုးဆုံး အစမ်းရမှတ်",
+      "level": "အဆင့်",
+      "rhythm": "စည်းချက်",
+      "bestTrial": "အကောင်းဆုံး trial",
+      "worstTrial": "အဆိုးဆုံးစမ်း"
+    },
+    "vocalProsody": {
+      "questioning": "အမေးအမြန်း"
+    },
+    "arithmeticSpeed": {
+      "multiply": "မြှောက်",
+      "add": "ပေါင်း",
+      "subtract": "နုတ်",
+      "title": "Arithmetic အမြန်နှုန်း",
+      "score": "အမှတ်",
+      "solved": "ဖြေဆိုပြီး",
+      "missed": "လွတ်သွား"
+    },
+    "puzzle": {
+      "avgSolveTime": "ပျမ်းမျှဖြေရှင်းချိန်",
+      "totalMoves": "စုစုပေါင်း moves",
+      "totalErrors": "စုစုပေါင်း errors",
+      "gridSize": "ဇယားကွက်အရွယ်အစား",
+      "maxGridReached": "မက်ဂရစ်ကို ရောက်ပါပြီ။",
+      "maxLevelReached": "အမြင့်ဆုံးအဆင့်သို့ ရောက်ရှိခဲ့သည်။",
+      "maxNodesReached": "Max node များရောက်ပါပြီ။",
+      "puzzleDetails": "ပဟေဠိအသေးစိတ်",
+      "roundDetails": "အဝိုင်းအသေးစိတ်",
+      "solved": "ကြွပ်ကြွပ်အိတ်!",
+      "undo": "မလုပ်တော့",
+      "reset": "ပြန်သတ်မှတ်ရန်",
+      "check": "စစ်ဆေးပါ။",
+      "moves": "ရွေ့လျား",
+      "time": "အချိန်",
+      "level": "အဆင့်",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "score": "ရမှတ်",
+      "grid": "ဂရစ်",
+      "crossings": "လမ်းဖြတ်ကူးခြင်း။",
+      "pearls": "ပုလဲ",
+      "clues": "သဲလွန်စ",
+      "region": "တိုင်းဒေသကြီး",
+      "filled": "ပြည့်စုံတယ်။",
+      "cells": "ဆဲလ်များ",
+      "undosLeft": "ကျန်ရှိ ပြန်ဖျက်မှုများ",
+      "gems": "ကျောက်မျက်ရတနာ",
+      "connected": "ချိတ်ဆက်ထားသည်။",
+      "slides": "ဆလိုက်များ",
+      "progress": "တိုးတက်မှု",
+      "rotations": "အလှည့်",
+      "puzzle": "ပဟေဋ္ဌိ",
+      "uncovered": "အသာလေး",
+      "colored": "အရောင်ed",
+      "violations": "ချိုးဖောက်မှုများ",
+      "blacked": "အမည်းရောင်",
+      "empty": "ဗလာ",
+      "remaining": "လက်ကျန်",
+      "pairs": "စွမ်းတယ်။",
+      "flips": "လှန်သည်။",
+      "found": "တွေ့တယ်။",
+      "balls": "ဘောလုံးများ",
+      "guesses": "မှန်းဆ",
+      "original": "မူရင်း",
+      "findDifferences": "ကွဲပြားမှုများကို ရှာဖွေပါ။",
+      "totalDrags": "စုစုပေါင်း drags",
+      "totalUndos": "စုစုပေါင်း undos",
+      "totalEdgesDrawn": "စုစုပေါင်း edges drawn",
+      "totalLasers": "စုစုပေါင်း lasers",
+      "totalSlides": "စုစုပေါင်း slides",
+      "totalRotations": "စုစုပေါင်း rotations",
+      "totalRectangles": "စုစုပေါင်း rectangles",
+      "totalScore": "စုစုပေါင်း score",
+      "avgTime": "ပျမ်းမျှအချိန်",
+      "cellsCleared": "ဆဲလ်များကို ရှင်းလင်းထားသည်။",
+      "totalDiffsFound": "စုစုပေါင်း diffs found",
+      "gemsCollected": "ရတနာတွေ စုဆောင်းတယ်။",
+      "pushBoxesOntoTargets": "သေတ္တာအားလုံးကို ပစ်မှတ်များပေါ်သို့ တွန်းချပါ။",
+      "fireLasersMarkBalls": "အစွန်းများမှ လေဆာရောင်ခြည်များကို ပစ်ခတ်ပြီးနောက် ဘောလုံးတည်နေရာများကို အမှတ်အသားပြုပါ။",
+      "revealingAnswer": "အဖြေထုတ်နေသည်...",
+      "checkAnswer": "အဖြေစစ်ဆေးပါ။",
+      "pickNumberBelow": "အောက်ပါ နံပါတ်တစ်ခုကို ရွေးပါ။",
+      "tapCellToAssign": "နံပါတ်တစ်ခုသတ်မှတ်ရန် ဆဲလ်တစ်ခုကို တို့ပါ။",
+      "tapEdgesToPlaceWalls": "နံရံများထားရန် အနားများကို တို့ပါ။ K ၏ဒေသများခွဲခြား။",
+      "ghosts": "သရဲတစ္ဆေ",
+      "vampires": "သွေးစုပ်ဖုတ်ကောင်များ",
+      "zombies": "ဖုတ်ကောင်များ",
+      "dominoes": "ဒိုမီနိုများ",
+      "islands": "ကျွန်းများ",
+      "pegsLeft": "လက်ဝဲဘက်",
+      "bestRemaining": "အကောင်းဆုံး remaining",
+      "puzzlesSolved": "ပဟေဋ္ဌိများကိုဖြေရှင်းခဲ့သည်။",
+      "flooded": "ရေမြုပ်တယ်။",
+      "edges": "အနားများ",
+      "totalPlacements": "စုစုပေါင်း placements",
+      "totalRemovals": "စုစုပေါင်း removals",
+      "maxTileReached": "Max tile ကိုရောက်ပါပြီ။",
+      "target": "ပစ်မှတ်",
+      "placed": "နေရာချ",
+      "totalGuesses": "စုစုပေါင်း guesses",
+      "guessesLeft": "ကျန်ရှိ ခန့်မှန်းချက်များ",
+      "difficulty": "အခက်အခဲ"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "ပဟေဠိများ",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "erase": "ဖျက်ပါ။"
+    },
+    "blackbox": {
+      "title": "Black Box ပါ။",
+      "puzzles": "ပဟေဋ္ဌိများ",
+      "lasers": "လေဆာများ",
+      "avgTime": "ပျမ်းမျှအချိန်"
+    },
+    "designFluency": {
+      "title": "ဒီဇိုင်း Fluency",
+      "uniqueDesigns": "ထူးခြားသောဒီဇိုင်းများ",
+      "duplicates": "ထပ်တူ",
+      "round": "ဝိုင်း",
+      "roundComplete": "ဝိုင်းပြီးပါပြီ။",
+      "youCreatedDesigns": "သင်သည် {{count}} ဒီဇိုင်းများကို ဖန်တီးခဲ့သည်။",
+      "startRound": "စတင်ရန် round",
+      "instructions": "ညွှန်ကြားချက်များ",
+      "designs": "ဒီဇိုင်းများ",
+      "clear": "ရှင်းလင်းရန်",
+      "addDesign": "ထည့်ပါ။"
+    },
+    "signpost": {
+      "title": "ဆိုင်းဘုတ်",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "sokoban": {
+      "title": "ဆိုကိုဘန်",
+      "level": "အဆင့်",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "undos": "မလုပ်တော့",
+      "puzzle": "ပဟေဋ္ဌိ"
+    },
+    "numericalStroop": {
+      "left": "ဝဲ",
+      "right": "မှန်တယ်။"
+    },
+    "biologicalMotion": {
+      "title": "ဇီဝလှုပ်ရှားမှု",
+      "noiseDots": "ဆူညံအမှတ်များ",
+      "whichDirection": "ဘယ်ဘက်ကို?",
+      "left": "ဘယ်",
+      "right": "ညာ"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "gems": "ကျောက်မျက်ရတနာ",
+      "moves": "ရွေ့လျား"
+    },
+    "waterLevel": {
+      "title": "ရေအဆင့်",
+      "error": "အမှား",
+      "tilt": "စောင်း",
+      "waterLine": "ရေလိုင်း?"
+    },
+    "twiddle": {
+      "title": "လှုပ်လှုပ်ရွရွ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "erase": "ဖျက်ပါ။"
+    },
+    "rectangles": {
+      "title": "စတုဂံများ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "rectanglesCount": "စတုဂံများ",
+      "maxGrid": "မက်ဂရစ်",
+      "cancelSelection": "မလုပ်တော့ selection"
+    },
+    "filling": {
+      "title": "ဖြည့်စွက်ခြင်း။",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "grid": "ဂရစ်"
+    },
+    "spacedRetrieval": {
+      "title": "အကွာအဝေးထားပြန်ရယူ",
+      "studyPair": "ဒီအတွဲကို လေ့လာပါ။",
+      "waitAndSolve": "ခဏနေ…ပြီးရင် ဖြေရှင်းလိုက်ပါ။",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "ကြားကာလ- ဘယ်အတွဲတွေလဲ။"
+    },
+    "prototypeDistortion": {
+      "title": "ပုံကြမ်းပုံမမှန်ခြင်း။",
+      "studyPhase": "လေ့လာမှုအဆင့်",
+      "testPhase": "စမ်းသပ်အဆင့်",
+      "yesBelongs": "ဟုတ်ကဲ့ — Belongs",
+      "noRandom": "မဟုတ်ပါ — Random"
+    },
+    "motionCoherence": {
+      "title": "ရွေ့လျားညီညွတ်မှု",
+      "threshold": "တံခါးခုံ",
+      "coherence": "အစပ်",
+      "whichDirection": "ဘယ်ဦးတည်ချက်လဲ။"
+    },
+    "cube": {
+      "title": "Cube",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်",
+      "cubeFaces": "Cube မျက်နှာများ",
+      "moveUp": "ချီ",
+      "moveLeft": "ဝဲ",
+      "moveDown": "ဆင်းတယ်။",
+      "moveRight": "မှန်တယ်။"
+    },
+    "sameGame": {
+      "title": "တူညီသောဂိမ်း",
+      "score": "ရမှတ်",
+      "cleared": "ရှင်းလင်းရန်ed",
+      "cells": "ဆဲလ်များ",
+      "accuracy": "တိကျမှု"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal ကိုက်ညီမှု",
+      "chance": "အခွင့်အလမ်း",
+      "whichPatternMatchesRhythm": "ဘယ်ပုံစံက စည်းချက်နဲ့လိုက်ဖက်လဲ။"
+    },
+    "mosaic": {
+      "title": "မှန်စီရွှေချ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "spotDiff": {
+      "title": "ကွဲပြားမှုကိုကြည့်",
+      "level": "အဆင့်",
+      "grid": "ဂရစ်",
+      "accuracy": "တိကျမှု",
+      "perfect": "ပြည့်စုံ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "found": "တွေ့တယ်။"
+    },
+    "lightsOut": {
+      "title": "အလင်းs Out",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "pipeline": {
+      "title": "ပိုက်လိုင်း",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "rotations": "အလှည့်",
+      "avgTime": "ပျမ်းမျှ အချိန်"
+    },
+    "tracks": {
+      "title": "သီချင်းများ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "avgTime": "ပျမ်းမျှ အချိန်"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "slides": "ဆလိုက်များ",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "cognitiveBias": {
+      "title": "Cognitive Bias လေ့ကျင့်ခန်း",
+      "biasResistance": "ဘက်လိုက်မှု ခုခံမှု",
+      "biased": "ဘက်လိုက်",
+      "continue": "ဆက်လုပ်ရန်"
+    },
+    "empathicAccuracy": {
+      "title": "ကိုယ်ချင်းစာတရား တိကျမှု",
+      "emotionId": "စိတ်ခံစားမှု",
+      "avgRatingError": "ပျမ်းမျှ အဆင့်သတ်မှတ်မှုအမှား",
+      "scenarios": "ဇာတ်လမ်းများ",
+      "perfect": "ပြည့်စုံ",
+      "rating": "အဆင့်သတ်မှတ်ချက်",
+      "howDoesCharacterFeel": "ဇာတ်ကောင်က ဘယ်လိုခံစားရလဲ။",
+      "rateIntensity": "ပြင်းထန်မှုကို အဆင့်သတ်မှတ်ပါ။",
+      "whatEmotion": "ဘာခံစားချက်လဲ?",
+      "yourRating": "သင့်အဆင့်သတ်မှတ်ချက်",
+      "correct": "မှန်",
+      "emotion": "စိတ်ခံစားမှု"
+    },
+    "guess": {
+      "title": "ချုပ်ကိုင်သည်။",
+      "solved": "ကြွပ်ကြွပ်အိတ်",
+      "guesses": "မှန်းဆ"
+    },
+    "dominosa": {
+      "title": "ဒိုမီနိုဆာ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်"
+    },
+    "magnets": {
+      "title": "သံလိုက်",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်"
+    },
+    "tangram": {
+      "placeAll": "အပိုင်းအစများအားလုံးကို နေရာချပါ။",
+      "solved": "ကြွပ်ကြွပ်အိတ်!",
+      "notRight": "မဟုတ်ပါt quite right",
+      "title": "တန်ဂရမ်",
+      "level": "အဆင့်",
+      "puzzles": "ပဟေဠိများ",
+      "placements": "နေရာချထားခြင်း။",
+      "removals": "ဖယ်ရှားမှုများ",
+      "puzzleNumber": "ပဟေဋ္ဌိ {{n}}",
+      "pieces": "ဖဲ့",
+      "targetCells": "ကေဘယ်လ်",
+      "dragHint": "အပိုင်းကို ဇယားကွက်ပေါ်တွင် ဆွဲထည့်ပါ သို့မဟုတ် နေရာချပါ။",
+      "selectHint": "အပိုင်းတစ်ခုကို ရွေးပါ။",
+      "rotate": "လှည့်",
+      "undo": "ပြန်ဖျက်",
+      "check": "စစ်ဆေးပါ။"
+    },
+    "galaxies": {
+      "title": "ဂလက်ဆီများ"
+    },
+    "flood": {
+      "title": "ရေဘေး"
+    },
+    "pegs": {
+      "title": "တံစို့",
+      "bestPegs": "အကောင်းဆုံး pegs"
+    },
+    "auditoryFigureGround": {
+      "title": "အသံပုံနှင့်နောက်ခံ",
+      "patternPresent": "ပုံစံရှိသလား?",
+      "pattern": "ပုံစံ",
+      "noPattern": "မဟုတ်ပါ pattern"
+    },
+    "selfOrderedPointing": {
+      "title": "ကိုယ်တိုင် ညွှန်ပြသည်။",
+      "maxSpan": "Max ထွာ",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "round": "ဝိုင်း",
+      "setOf": "{{count}} အစုံ"
+    },
+    "mirrorTracing": {
+      "title": "မှန်ခြေရာခံ",
+      "totalErrors": "စုစုပေါင်း errors",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "shapes": "ပုံသဏ္ဍာန်s",
+      "perfect": "ပြည့်စုံ",
+      "improvement": "တိုးတက်မှု",
+      "errorsMiddot": "အမှားများ ·",
+      "shape": "ပုံသဏ္ဍာန်",
+      "errors": "အဆင်ပြေကြပါစေ",
+      "xIsMirrored": "X ကို ရောင်ပြန်ဟပ်ထားသည်။"
+    },
+    "clockDrawing": {
+      "title": "နာရီပုံဆွဲခြင်း။",
+      "avgError": "ပျမ်းမျှ အမှား",
+      "setTo": "သတ်မှတ်ထားသည်။ ",
+      "submit": "တင်ပြပါ။"
+    },
+    "cognitiveMap": {
+      "title": "သိမှုမြေပုံ",
+      "explore": "စူးစမ်းပါ။",
+      "sRemaining": "၎",
+      "from": "ထံမှ",
+      "whichDirectionIs": "ဘယ်ဦးတည်ချက်လဲ။ "
+    },
+    "sixteen": {
+      "title": "ဆယ့်ခြောက်"
+    },
+    "loopy": {
+      "title": "လွန်ကဲသော"
+    },
+    "lightup": {
+      "title": "အလင်း Up"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max ကြွေပြား",
+      "moves": "ရွေ့လျား",
+      "max": "မက်တယ်။"
+    },
+    "bridges": {
+      "title": "တံတားများ",
+      "puzzles": "ပဟေဠိများ",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်",
+      "level": "အဆင့်"
+    },
+    "net": {
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxGrid": "မက်ဂရစ်"
+    },
+    "flip": {
+      "title": "လှန်ပါ။"
+    },
+    "range": {
+      "title": "အပိုင်းအခြား"
+    },
+    "slant": {
+      "title": "စောင်း"
+    },
+    "towers": {
+      "title": "တာဝါတိုင်များ",
+      "puzzles": "ပဟေဠိများ",
+      "avgTime": "ပျမ်းမျှ အချိန်",
+      "erase": "ဖျက်ပါ။"
+    },
+    "pearl": {
+      "title": "ပုလဲ",
+      "edges": "အနားများ"
+    },
+    "mapColoring": {
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "moves": "ရွေ့လျား",
+      "maxLevel": "အမြင့်ဆုံးအဆင့်"
+    },
+    "singles": {
+      "title": "တစ်ဦးတည်း"
+    },
+    "nonogram": {
+      "title": "မဟုတ်ပါnogram"
+    },
+    "undead": {
+      "title": "မသေ",
+      "accuracy": "တိကျမှု",
+      "puzzles": "ပဟေဠိများ",
+      "avgTime": "ပျမ်းမျှ အချိန်"
+    },
+    "untangle": {
+      "title": "အရှုပ်အထွေး",
+      "drags": "ဆွဲယူပါ။",
+      "maxNodes": "Max မဟုတ်ပါdes"
+    },
+    "unruly": {
+      "title": "ရမ်းတယ်။"
+    },
+    "fifteen": {
+      "title": "ချမ်းချမ်း"
+    },
+    "tents": {
+      "title": "တဲ"
+    },
+    "mesker": {
+      "pen": "ဘောပင်",
+      "stroke": "လေဖြတ်ခြင်း။",
+      "penPressureHint": "တသမတ်တည်း ဘောပင်ဖိအားဖြင့် ရေးပါ။"
+    },
+    "modality": {
+      "position": "အနေအထား",
+      "audio": "အသံ"
+    },
+    "validate": "အတည်ပြုပါ။"
+  },
+  "trace": {
+    "instructions": "N-back အနေအထားသို့ ပွတ်ဆွဲပါ။ အနေအထားတူပါက နှစ်ချက်တို့ပါ။",
+    "hint": {
+      "validated": "အတည်ပြုထားသည်။",
+      "draw": "စာကိုဆွဲပါ • အတည်ပြုရန် တို့ပါ။",
+      "drawWithColor": "စာလုံးကိုဆွဲပါ • အရောင်ရွေးပါ • အတည်ပြုရန် ကိုနှိပ်ပါ။",
+      "type": "မှန်ကန်ကြောင်း အတည်ပြုရန် စာလုံးကို ရိုက်ထည့်ပါ။",
+      "typeWithColor": "စာလုံးကိုရိုက်ထည့်ပါ • အရောင်ကိုရွေးချယ်ပါ • အတည်ပြုရန် Enter",
+      "typeResult": "ရလဒ်ကိုအတည်ပြုရန် • Enter ကိုရိုက်ထည့်ပါ။",
+      "writeResult": "ရလဒ်ကိုရေးပါ • အတည်ပြုရန် တို့ပါ။"
+    },
+    "keyboard": {
+      "letterInput": "စာလုံး",
+      "numberInput": "နံပါတ်"
+    },
+    "arithmetic": {
+      "cueHint": "ဂဏန်း ၂ လုံးကို အလွတ်ကျက်ပါ။",
+      "refresh": "အသစ်"
+    },
+    "hintPosition": "နှိုးဆွမှု {{n}} လွန်ခဲ့သောအလှည့်က ဘယ်မှာလဲ။",
+    "hintN0": "လက်ရှိ လှုံ့ဆော်မှုကို ညွှန်ပြပါ။",
+    "warmupHint": "Memorize the positions. မဟုတ်ပါ response needed.",
+    "hintDraw": "စာကိုဆွဲပါ • အတည်ပြုရန် တို့ပါ။",
+    "hintDrawWithColor": "စာလုံးကိုဆွဲပါ • အရောင်ရွေးပါ • အတည်ပြုရန် ကိုနှိပ်ပါ။",
+    "hintWriteResult": "ရလဒ်ကိုရေးပါ • အတည်ပြုရန် တို့ပါ။",
+    "guide": {
+      "swipeNormal": "နောက်ဆုံးအနေအထား (N-0) မှ လွန်ခဲ့သော {{n}} ခြေလှမ်းများ (N-{{n}}) မှ အနေအထားသို့ ပွတ်ဆွဲပါ။ အနေအထားတူပါက နှစ်ချက်တို့ပါ။",
+      "swipeSequential": "N-0 မှ N-{{n}} သို့ အဆင့်ဆင့် ပွတ်ဆွဲပါ၊ အလယ်အလတ် အနေအထား တစ်ခုစီကို ဖြတ်သန်းပါ။ အနေအထားတူပါက နှစ်ချက်တို့ပါ။",
+      "swipeDynamic": "ဖော်ပြထားသော စည်းမျဉ်းအတိုင်း ပွတ်ဆွဲပါ။ အနေအထားတူပါက နှစ်ချက်တို့ပါ။",
+      "tapN0": "လက်ရှိအနေအထားကို နှိပ်ပါ။",
+      "warmup": "ရာထူးများကိုအလွတ်ကျက်ပါ - တုံ့ပြန်မှုမလိုအပ်ပါ။",
+      "writeDraw": "ပြီးခဲ့သော {{n}} ခြေလှမ်းများကြားခဲ့သည့် စာကိုဆွဲပါ • အတည်ပြုရန် တို့ပါ။",
+      "writeDrawColor": "လွန်ခဲ့သော {{n}} ခြေလှမ်းများကြားခဲ့သည့် စာလုံးကိုဆွဲပါ • ၎င်း၏အရောင်ကို ရွေးပါ • အတည်ပြုရန် တို့ပါ။",
+      "writeType": "ပြီးခဲ့သော {{n}} ခြေလှမ်းများ ကြားသိရသည့် စာကို ရိုက်ထည့်ပါ • အတည်ပြုရန် Enter",
+      "writeTypeColor": "ပြီးခဲ့သော {{n}} ခြေလှမ်းများကြားခဲ့သည့် စာလုံးကို ရိုက်ထည့်ပါ • ၎င်း၏အရောင်ကို ရွေးပါ • အတည်ပြုရန် Enter",
+      "writeDrawN0": "သင်ကြားဖူးသောစာကိုဆွဲပါ • အတည်ပြုရန် တို့ပါ။",
+      "writeDrawColorN0": "သင်ကြားဖူးသော စာလုံးကိုဆွဲပါ • ၎င်း၏အရောင်ကို ရွေးပါ • အတည်ပြုရန် ကိုနှိပ်ပါ။",
+      "writeTypeN0": "သင်ကြားဖူးသော စာလုံးကို ရိုက်ထည့်ပါ • အတည်ပြုရန် Enter",
+      "writeTypeColorN0": "သင်ကြားဖူးသော စာလုံးကို ရိုက်ထည့်ပါ • ၎င်း၏အရောင်ကို ရွေးပါ • အတည်ပြုရန် Enter",
+      "writeResult": "ရလဒ်ကိုရေးပါ • အတည်ပြုရန် တို့ပါ။",
+      "validated": "အတည်ပြုထားသည်။",
+      "holdMindful": "ဆဲလ်ကို {{seconds}} စက္ကန့်ကြာ ထိန်းထားပါ။",
+      "swipeMindful": "{{seconds}}s တွင် ပွတ်ဆွဲပါ။"
+    },
+    "settings": {
+      "adaptiveTiming": "အလိုက်သင့် အချိန်ကိုက်",
+      "inputKeyboard": "ကီးဘုတ်",
+      "inputHandwriting": "လက်ရေး",
+      "writingInput": "စာလုံးs/numbers",
+      "section": {
+        "grid": "ဂရစ်",
+        "input": "ထည့်သွင်းခြင်း။",
+        "rhythm": "စည်းချက်",
+        "interface": "အင်တာဖေ့စ်",
+        "interfaceNone": "စံ",
+        "sound": "အသံ"
+      },
+      "isi": "ကြားကာလ (ISI)",
+      "stimulusDuration": "လှုံ့ဆော်မှုကြာချိန်",
+      "feedbackDuration": "အကြံပြုချက် duration",
+      "ruleDisplay": "စည်းကမ်းကြာချိန်",
+      "blankInterval": "ကြားကာလချည်း",
+      "showProgressBar": "တိုးတက်မှု bar",
+      "showInstructions": "ဂိမ်းအတွင်း ညွှန်ကြားချက်များ",
+      "arithmeticInterference": "ဂဏန်းသင်္ချာ အနှောင့်အယှက်",
+      "fullMenu": "မီနူးအပြည့်အစုံ",
+      "gridStyle": "ဂရစ်စတိုင်",
+      "gridStyleClassic": "ဂန္ထဝင်",
+      "gridStyleTrace": "ခြေရာကောက်",
+      "guide": {
+        "swipeMindful": "{{seconds}}s တွင် ပွတ်ဆွဲပါ။",
+        "holdMindful": "ဆဲလ်ကို {{seconds}} စက္ကန့်ကြာ ထိန်းထားပါ။"
+      },
+      "feedback": {
+        "gestureDuration": "လက်ဟန်ခြေဟန်",
+        "holdDuration": "ကိုင်ပါ။",
+        "writingDuration": "အရေးအသား"
+      }
+    },
+    "feedback": {
+      "holdDuration": "ကိုင်ပါ။",
+      "gestureDuration": "လက်ဟန်ခြေဟန်",
+      "writingDuration": "အရေးအသား"
+    },
+    "image": "ပုံသဏ္ဍာန်",
+    "digits": "ဂဏန်းများ",
+    "emotions": "စိတ်ခံစားမှု",
+    "words": "စကားလုံး",
+    "tones": "လေသံ",
+    "spatial": "ဦးတည်ချက်"
+  },
+  "replay": {
+    "title": "အပိုင်းပြန်ဖွင့်သည်။",
+    "play": "ကစားရန်",
+    "pause": "ခေတ္တရပ်ရန်",
+    "restart": "ပြန်လည်စတင်ပါ။",
+    "speed": "အမြန်နှုန်း",
+    "loading": "စက်ရှင်ကို ဖွင့်နေသည်...",
+    "unavailable": "ဤစက်ရှင်အတွက် ပြန်ဖွင့်၍မရပါ။",
+    "backToStats": "နောက်သို့ to stats",
+    "runStack": {
+      "original": "မူရင်း",
+      "correction": "မှန်ion",
+      "delta": "Δ d'",
+      "inProgress": "လုပ်ဆောင်နေသည်။",
+      "completed": "ပြီးသွားပြီ"
+    },
+    "abandon": "စွန့်လွှတ်လိုက်ပါ။",
+    "badge": "ပြန်ဖွင့်သည်။",
+    "completionReport": {
+      "backToHome": "နောက်သို့",
+      "correctAgain": "မှန် again",
+      "deltaVsOriginal": "vs မူရင်း",
+      "deltaVsParent": "vs ယခင် run",
+      "falseAlarmsSkipped": "အမှားများကို ရှောင်ရှားပါ။",
+      "missesCorrections": "မှန်ions",
+      "newFalseAlarms": "အသစ်အမှားများ",
+      "replayAgain": "ပြန်ဖွင့်သည်။",
+      "scoreLabel": "d' ရမှတ်",
+      "title": "မှန်ion complete"
+    },
+    "controls": "ထိန်းချုပ်မှုများ",
+    "correction": "မှန်ion",
+    "finished": "ပြန်လည်ပြသခြင်းပြီးဆုံး",
+    "home": "ပင်မ",
+    "parseError": "စက်ရှင်ကို ဖတ်၍မရပါ။",
+    "tapSlotToPlace": "နေရာအတွက် အထိုင်တစ်ခုကို နှိပ်ပါ။",
+    "timeline": "အချိန်line",
+    "focusTimeline": {
+      "open": "ပြရန် timeline",
+      "close": "ပိတ်ရန် timeline",
+      "title": "N-နောက်သို့ အချိန်line",
+      "fillAll": "အားလုံးဖြည့်ပါ။",
+      "fillCard": "ကတ်ဖြည့်ပါ။"
+    },
+    "hud": {
+      "counterDisplay": "ကောင်တာပြသမှု",
+      "toggleCounterDisplay": "ကောင်တာမျက်နှာပြင်ကို ပြောင်းရန်"
+    },
+    "validate": "အတည်ပြုပါ။"
+  },
+  "recovery": {
+    "title": "ဆက်ရှင် ပြတ်တောက်သွားသည်။",
+    "description": "စက်ရှင်တစ်ခု လုပ်ဆောင်နေပါသည်။ ပြန်လည်စတင်လိုပါသလား။",
+    "mode": "မုဒ်",
+    "level": "အဆင့်",
+    "progress": "တိုးတက်မှု",
+    "timeAgo": "အချိန်",
+    "resume": "ဆက်လုပ်ရန် session",
+    "startFresh": "စတင်ရန် fresh",
+    "staleWarning": "ဤစက်ရှင်သည် ဟောင်းနေပြီဖြစ်၍ ပြန်လည်စတင်ရန် စိန်ခေါ်မှုဖြစ်နိုင်သည်။",
+    "modes": {
+      "game": "လေ့ကျင့်ခန်း",
+      "activeTraining": "တက်ကြွသောလေ့ကျင့်မှု",
+      "flowTraining": "Dual Place သင်တန်း",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dual Trace"
+    }
+  },
+  "rewards": {
+    "congratulations": "ဂုဏ်ယူပါသည်!",
+    "duration": "{{days}} ရက် ပရီမီယံ",
+    "lifetimeLabel": "တစ်သက်တာဝင်ရောက်ခွင့်",
+    "expiresAt": "{{date}} အထိ အကျုံးဝင်သည်",
+    "neverExpires": "ဘယ်တော့မှ သက်တမ်းမကုန်ဘူး။",
+    "continue": "ဆက်လုပ်ရန်",
+    "discovery": {
+      "name": "ရှာဖွေတွေ့ရှိမှုပတ်စ်",
+      "description": "7 ရက် ပရီမီယံ — ဝန်ဆောင်မှုအားလုံးကို စူးစမ်းပါ။"
+    },
+    "engagement": {
+      "name": "ပါဝင်ဆောင်ရွက်မှုပတ်စ်",
+      "description": "ပရီမီယံ 1 လ — သင့်စည်းကမ်းက ပြေသည်။"
+    },
+    "expert": {
+      "name": "ကျွမ်းကျင် pass",
+      "description": "3 လ ပရီမီယံ — သင်သည် စစ်မှန်သော လေ့ကျင့်သူတစ်ဦးဖြစ်သည်။"
+    },
+    "lifetime": {
+      "name": "တစ်သက်တာဝင်ရောက်ခွင့်",
+      "description": "ပရီမီယံ ထာဝရ — သင်သည် Neurodual ကို ကျွမ်းကျင်သည်။"
+    },
+    "xpRemaining": "XP ကျန်တယ်။",
+    "permanentAccessUnlocked": "အမြဲတမ်းဝင်ရောက်ခွင့်ကို လော့ခ်ဖွင့်ထားသည်။",
+    "reachedTheTop": "သင် ထိပ်ဆုံးကို ရောက်နေပါပြီ။"
+  },
+  "progression": {
+    "level": "အဆင့် {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "ရှေ့ level",
+    "reached": "ရောက်တယ်။",
+    "inProgress": "လုပ်ဆောင်နေသည်။"
+  },
+  "gridlock": {
+    "nextPuzzle": "ရှေ့ puzzle →"
+  }
+}

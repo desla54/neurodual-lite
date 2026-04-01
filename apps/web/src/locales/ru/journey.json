@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Путь обучения",
+    "pageSubtitle": "Выбирайте, организуйте и создавайте свои маршруты",
+    "enabled": "Включить маршрут",
+    "description": "30 этапов от N-1 до N-10",
+    "progress": "Прогресс",
+    "locked": "Заблокировано",
+    "createJourney": "Создать путь",
+    "viewJourneys": "Просмотреть пути",
+    "current": "Текущий путь",
+    "myJourneys": "Мои пути",
+    "stage": "Этап",
+    "stages": "этапы",
+    "stagesShort": "эт.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Catch",
+      "place": "Place",
+      "memo": "Memo"
+    },
+    "name": "Название",
+    "namePlaceholder": "Например: Испытание N-5",
+    "levels": "Уровни",
+    "levelRange": "Диапазон уровней",
+    "levelTo": "to",
+    "createNew": "Новый путь",
+    "new": "Новый",
+    "defaultCustomName": "Мой путь",
+    "created": "Маршрут создан!",
+    "deleted": "Путь удалён",
+    "sessionSettings": "Настройки сессий",
+    "savedStatus": "Настройки сохранены",
+    "preset": {
+      "easy": "Easy",
+      "medium": "Рекомендуемый",
+      "hard": "Hard"
+    },
+    "setup": {
+      "title": "Пути и профили",
+      "journey": "Путь",
+      "journeyNone": "Выберите…",
+      "profile": "Профиль",
+      "profileNone": "Выберите…",
+      "configure": "Настроить",
+      "configureNone": "Выберите путь",
+      "create": "Новый путь",
+      "createDesc": "Создать новый путь"
+    },
+    "deleteConfirmTitle": "Удалить этот путь?",
+    "deleteConfirmMessage": "Путешествие «{{name}}» будет удалено навсегда.",
+    "renameTitle": "Переименовать маршрут",
+    "renameMessage": "Изменить название «{{name}}».",
+    "renamed": "Маршрут переименован!",
+    "badge": {
+      "simulator": "Симулятор",
+      "beta": "Бета",
+      "default": "По умолчанию"
+    },
+    "mode": "Режим",
+    "modeStandard": "Путь (4 режима)",
+    "modeDnb": "Классический Dual N-Back",
+    "modeBw": "Brain Workshop",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Симулятор",
+      "jaeggi": "Классический",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} зачётных сессий",
+      "needed": "{{count}} сессий осталось",
+      "excellent": "Отлично!",
+      "good": "Хорошо!",
+      "passing": "Пройдено"
+    },
+    "progression": {
+      "title": "Прогрессия",
+      "description": "Для перехода на следующий уровень получите хороший результат:",
+      "excellent": "≥95% → 1 сессия",
+      "good": "≥85% → 2 сессии",
+      "passing": "≥80% → 3 сессии",
+      "rules": "Правила прогрессии",
+      "jaeggi": {
+        "description": "На основе худшей модальности:",
+        "up": "< 3 ошибок → Повышение",
+        "stay": "3–5 ошибок → Остаться на этом уровне",
+        "down": "> 5 ошибок → Понижение"
+      },
+      "brainworkshop": {
+        "description": "Протокол Brain Workshop (оценка BW):",
+        "up": "≥80% → Повышение уровня",
+        "stay": "50-79% → Сохранение",
+        "strike": "3 подряд <50% → Понижение"
+      },
+      "hybrid": {
+        "description": "Этот маршрут объединяет {{trackCount}} сессию(й) Dual Track, затем {{dnbCount}} сессию(й) Dual N-Back на том же уровне.",
+        "alternation": "Цикл всегда начинается заново с Dual Track, как только принимается решение.",
+        "authority": "Только сессии Dual N-Back решают повышение, удержание или понижение.",
+        "up": "0-1 ошибка → повышение",
+        "stay": "2-3 ошибки → без изменений",
+        "down": "4+ ошибки → понижение",
+        "streakRule": "Две сессии подряд в одной зоне запускают решение.",
+        "trackProgress": "Трек {{current}}/{{required}}",
+        "cleanProgress": "Засчитано {{current}}/{{required}}",
+        "stayProgress": "Удержание {{current}}/{{required}}",
+        "downProgress": "Неудача {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track использует непрерывную шкалу мастерства для каждого уровня целей:",
+        "calibration": "Начальная калибровка оценивает ваш стартовый уровень",
+        "goodSession": "Каждая хорошая сессия немного заполняет текущий уровень",
+        "mastery": "Почти идеальные сессии заполняют быстрее, обычные сессии продвигаются умеренно",
+        "regression": "Слабые сессии также могут понизить текущую шкалу мастерства",
+        "unlock": "Следующий уровень целей разблокируется только при 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Открыть выбор маршрута",
+      "current": "Текущий",
+      "showAll": "Все маршруты",
+      "settings": "Настройки маршрута"
+    },
+    "previous": "Предыдущий маршрут",
+    "next": "Следующий маршрут",
+    "calibration": {
+      "title": "Первая сессия",
+      "subtitle": "Короткая калибровка определит ваш начальный уровень, или вы можете сразу начать со 2-го уровня.",
+      "skipToN2": "или начать с N-2",
+      "continueAt": "или продолжить с N-{{level}}",
+      "start": "Начать калибровку",
+      "redo": "Повторить калибровку",
+      "badge": "Calibration"
+    },
+    "presets": {
+      "currentSlot": "Текущие настройки",
+      "currentSlotView": "Текущие настройки",
+      "lockedTitle": "Некоторые параметры заблокированы",
+      "lockedDesc": "Для сопоставимости прогресса модальности (и некоторые параметры) нельзя изменить после начала пути."
+    },
+    "completed": {
+      "title": "Путь завершён!",
+      "subtitle": "Все этапы пройдены. Отличная работа!",
+      "continueFree": "Продолжить тренировку"
+    },
+    "report": {
+      "stage": "Этап",
+      "level": "Уровень",
+      "score": "Оценка",
+      "sessionValidated": "Сессия подтверждена",
+      "sessionNotValidated": "Сессия не подтверждена",
+      "minScore": "Минимальный требуемый счёт:",
+      "stageCompleted": "Этап завершён!",
+      "stageUnlocked": "Этап {{stage}} разблокирован",
+      "replay": "Повтор",
+      "nextStage": "Следующий этап",
+      "home": "Главная",
+      "hits": "Попадания",
+      "misses": "Промахи",
+      "falseAlarms": "Ложные тревоги",
+      "correctRejections": "Правильные отклонения"
+    }
+  }
+}

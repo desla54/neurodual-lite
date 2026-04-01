@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "ကျူတိုရီရယ်",
+    "exitConfirm": "Tutorial မှ ထွက်မလား?",
+    "exitWarning": "သင့်တိုးတက်မှု သိမ်းမည်မဟုတ်ပါ။",
+    "continue": "ဆက်လုပ်ရန်",
+    "quit": "ထွက်ရန်",
+    "stepLabel": "အဆင့် {{step}}",
+    "previous": "ယခင်",
+    "restart": "ပြန်စရန်",
+    "next": "ရှေ့",
+    "startGame": "စတင်ရန်",
+    "progress": "ကောင်တာ",
+    "tapToContinue": "ဆက်လုပ်ရန် တို့ပါ",
+    "controls": {
+      "position": "အနေအထား",
+      "audio": "အသံ"
+    },
+    "annotation": {
+      "label": "ညွှန်ကြားချက်"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "ကောင်းပါတယ်။ Tutorial ကို အောင်မြင်စွာ ဖြတ်သန်းပြီးပါပြီ။",
+        "stay": "နီးပါးပြီ။ နောက်ထပ် အနည်းငယ် လေ့ကျင့်ပါ။",
+        "down": "မအောင်မြင်သေးပါ။ အခြေခံများ ပြန်အားဖြည့်ရန် tutorial ကို ပြန်လုပ်ပါ။"
+      },
+      "header": {
+        "up": "Tutorial ပြီးဆုံးပြီ!",
+        "down": "ပြန်လေ့လာရန်",
+        "stay": "နီးပါးပြီ!"
+      },
+      "noteMinAssessment": "မှတ်ချက်: ပိုမိုတိကျသော အကဲဖြတ်မှုအတွက် tutorial များသည် အနည်းဆုံး အဖြေ ၈ ခုကို အကဲဖြတ်သည်။",
+      "guidance": {
+        "passed": "Free training အတွက် အဆင်သင့်ဖြစ်ပါပြီ။",
+        "failed": "Training သို့ မသွားမီ ဤ tutorial ကို ပြန်လုပ်ရန် အကြံပြုပါသည်။"
+      },
+      "correctAnswers": "{{correct}}/{{total}} မှန်ကန်သော အဖြေ",
+      "actions": {
+        "backToHome": "ပင်မသို့ ပြန်သွားရန်",
+        "retryTutorial": "Tutorial ပြန်လုပ်ရန်",
+        "explainLevels": "N level များကို နားလည်ရန် (N)",
+        "goToTraining": "Training သို့ သွားရန်",
+        "continueToTraining": "Training သို့ ဆက်သွားရန်"
+      }
+    },
+    "welcome": {
+      "title": "Training မိတ်ဆက်",
+      "description": "Dual N-Back သည် အချက်အလက် နှစ်စုံကို တစ်ပြိုင်နက်တည်း ခြေရာခံစေခြင်းဖြင့် သင့် working memory ကို စိန်ခေါ်သည်: မြင်ကွင်းအနေအထားတစ်ခုနှင့် အသံတစ်ခု။ ဤ tutorial သည် သင့်ကို အဆင့်လိုက် လမ်းညွှန်ပေးသည်။",
+      "button": "Tutorial စတင်ရန်"
+    },
+    "timeline": {
+      "legend": "Timeline သည် နှိုင်းယှဉ်ရာတွင် ကူညီသည် — ဂိမ်းအတွင်း ဝှက်ထားသည်",
+      "past": "အတိတ်",
+      "present": "ပစ္စုပ္ပန်"
+    },
+    "hub": {
+      "title": "Tutorial များ",
+      "subtitle": "သင်ယူလိုသော mode ရွေးပါ",
+      "basics": {
+        "title": "အခြေခံများ",
+        "description": "Classic Dual N-Back ၏ reflex နှင့် rhythm ကို သင်ယူပါ။"
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "Timeline ပေါ်တွင် temporal placement ကို ကျွမ်းကျင်ပါ။"
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Stimulus တစ်ခုစီကို ၎င်း၏ temporal reference (N, N-1, N-2) ဖြင့် label တပ်ပါ။"
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Tracing ဖြင့် active recall gesture များ သင်ယူပါ။"
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "မှတ်ဉာဏ်မှ sequence တစ်ခုလုံးကို ပြန်တည်ဆောက်ပါ။"
+      },
+      "soroban": {
+        "title": "Soroban Mastery",
+        "description": "ဂျပန် abacus ကို တိုးတက်သော အဆင့် ၈ ဆင့်ဖြင့် အဆင့်လိုက် သင်ယူပါ။"
+      }
+    },
+    "place": {
+      "comingSoon": "Place tutorial ဖန်တီးနေဆဲ",
+      "cardPool": "ရနိုင်သော card များ",
+      "slot": "အထိုင်",
+      "observe": "ကြည့်ပါ: grid ပေါ်ရှိ အနေအထားတစ်ခုနှင့် audio letter တစ်ခု။",
+      "buffer": "ဒုတိယ stimulus။ N-back buffer ပြည့်နေပါပြီ။",
+      "cardsAppear": "Card များ ပေါ်လာပါပြီ! နောက်ဆုံး stimulus ၃ ခုကို ကိုယ်စားပြုသည်။",
+      "firstDrag": "အမှတ်အသားပြထားသော card ကို click ပြီး N-2 slot (အဟောင်းဆုံး) ကို click ပါ။",
+      "timelineExplain": "Timeline သည် အချိန်ကို ပြသည်: N-2 = အဟောင်းဆုံး, N = ပစ္စုပ္ပန်။",
+      "positionN1": "အလယ် အနေအထားကို N-1 slot တွင် ထားပါ။",
+      "positionN": "ကောင်းပါတယ်! အသစ်ဆုံး အနေအထား (N slot) ဖြင့် ပြီးစီးပါ။",
+      "audioIntro": "ယခု audio card များ! တူညီသော စည်းမျဉ်း။",
+      "audioN2": "ပထမဆုံး ကြားသော letter ကို N-2 slot တွင် ထားပါ။",
+      "audioN1": "အလယ် letter (N-1 slot) ဖြင့် ဆက်လုပ်ပါ။",
+      "audioN": "အသစ်ဆုံး letter (N slot) ဖြင့် ပြီးစီးပါ။",
+      "dualIntro": "Trial အသစ်! အနေအထားများ နှင့် letter များ ထားပါ။",
+      "dualPractice": "Card ၆ ခုအားလုံးကို မှန်ကန်သော slot များတွင် ထားပါ။ အချိန်ယူပါ!",
+      "rhythmExplain": "တကယ့်ဂိမ်းတွင် အချိန်ကန့်သတ်ထားသည်။",
+      "autonomy": "သင့်အလှည့်! Card အားလုံးကို မှန်ကန်စွာ ထားပါ။",
+      "conclusion": "ကောင်းပါတယ်! Dual Place ၏ အခြေခံများကို ကျွမ်းကျင်ပြီ။",
+      "selectCard": "Card ရွေးပြီး ၎င်း၏ slot ကို click ပါ",
+      "clickSlot": "Card ထားရန် မှန်ကန်သော slot ကို click ပါ",
+      "wrongSlot": "ဤ slot မဟုတ်ပါ! Temporal order ကို ကြည့်ပါ။",
+      "wrongCard": "ဤ card မဟုတ်ပါ။ Slot နှင့် ကိုက်ညီသော card ကို ရှာပါ။",
+      "tryAgain": "ထပ်စမ်းပါ! မှန်ကန်သော slot ကို highlight ပြထားပါသည်။"
+    },
+    "memo": {
+      "comingSoon": "Memo tutorial ဖန်တီးနေဆဲ",
+      "selectPosition": "အနေအထား ရွေးပါ",
+      "selectAudio": "Letter ရွေးပါ",
+      "clickToRecall": "တန်ဖိုး အမှတ်ရရန် slot ကို click ပါ",
+      "validate": "အတည်ပြုရန်",
+      "observeFirst": "ပထမ stimulus။ အနေအထား နှင့် letter နှစ်ခုလုံးကို မှတ်ပါ!",
+      "observeSecond": "ဒုတိယ stimulus။ ဆက်မှတ်ပါ။",
+      "observeThird": "တတိယ stimulus။ Buffer ပြည့်ပြီ။ ပြင်ဆင်ပါ!",
+      "recallIntro": "Grid ပျောက်သွားပြီ! မှတ်ဉာဏ်မှ ပြန်အမှတ်ရပါ။ N-2 slot ကို click ပါ။",
+      "firstRecall": "N-2 slot ကို click ပါ။ ပထမ အနေအထား ဘာလဲ?",
+      "feedbackExplain": "အစိမ်း = မှန်။ အနီ = မှား။ ၃ ကြိမ်အထိ ပြင်နိုင်သည်!",
+      "multiSlot": "ဆက်လုပ်ပါ! အနေအထား N-1 နှင့် N ကို ပြန်အမှတ်ရပါ။",
+      "newStimulus": "Stimulus အသစ်! N-back window တစ်ခု ရွှေ့သွားပြီ။",
+      "windowShift": "Window ရွှေ့ပြီး။ N-2 အဟောင်း ထွက်သွားပြီး N အသစ် ဝင်လာပြီ။",
+      "fullPosition": "အနေအထား ၃ ခုလုံးကို ပြန်အမှတ်ရပါ။ အာရုံစိုက်ပါ!",
+      "audioIntro": "Stimulus အသစ်။ ယခု audio recall ထပ်ထည့်ပါမည်!",
+      "firstAudioRecall": "Audio N-2 slot ကို click ပါ။ ဘယ် letter လဲ?",
+      "fullAudio": "Letter N-1 နှင့် N ဖြင့် ဆက်လုပ်ပါ။",
+      "dualIntro": "တကယ့်ဂိမ်းတွင် အနေအထားများ နှင့် letter များ နှစ်ခုလုံးကို တွဲပြီး ပြန်အမှတ်ရသည်။",
+      "dualPractice": "Cell ၆ ခုအားလုံးကို ပြန်အမှတ်ရပြီး အတည်ပြုရန် ကို click ပါ။",
+      "correctionExplain": "မှားပါက ပြင်ရန် ထပ် click ပါ။ အများဆုံး ၃ ကြိမ်။",
+      "withCorrection": "စမ်းကြည့်ပါ! မှားပါက ထပ် click ပြီး ပြင်ပါ။",
+      "conclusion": "အကောင်းဆုံး! Active recall ကို ကျွမ်းကျင်ပြီ။ Session စတင်ပါ!",
+      "wrongAnswer": "မဟုတ်ပါ။ ထိုအခိုက်အတန့်တွင် ဘယ် stimulus ရှိခဲ့သနည်း ဆင်ခြင်ပါ။",
+      "tryAgain": "ထပ်စမ်းပါ! ပြင်ဆင်နိုင်သေးသည်။",
+      "maxCorrections": "ပြင်ဆင်မှု ၃ ကြိမ် ပြည့်ပြီ။ ဤ slot သော့ပိတ်ပြီ။",
+      "validateHint": "Slot အားလုံး ဖြည့်ပြီးပါပြီ။ အတည်ပြုရန် ကို click ပါ!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Dual Pick မှ ကြိုဆိုပါသည်! Stimulus တစ်ခုစီကို ခွဲခြားတတ်ရန် သင်ယူပါ။",
+        "hud": "အပေါ်: tutorial တွင် သင့်တိုးတက်မှု။",
+        "grid": "Grid ကို zone ၃ ခုသို့ ခွဲထားသည်: ABOVE, MIDDLE, BELOW။",
+        "controls": "ဤ button များသည် ခွဲခြားသည်။ ဘယ်ဘက်တွင် အနေအထား, ညာဘက်တွင် အသံ။",
+        "outro": "အဆင်သင့်ပဲလား? အနေအထား classification ဖြင့် စလိုက်ရအောင်!"
+      },
+      "intro": "Dual Pick တွင် stimulus တစ်ခုစီကို criteria ၂ ခုဖြင့် ခွဲခြားသည်: grid zone နှင့် အသံအမျိုးအစား။",
+      "gridExplain": "Grid တွင် zone ၃ ခုရှိသည်: ABOVE (အပေါ်တန်း), MIDDLE (အလယ်), BELOW (အောက်တန်း)။",
+      "positionHaut": "စတုရန်းသည် အပေါ်တွင်ရှိသည်။ ABOVE ကို click ပါ။",
+      "positionMilieu": "စတုရန်းသည် အလယ်တွင်ရှိသည်။ MIDDLE ကို click ပါ။",
+      "positionBas": "စတုရန်းသည် အောက်တွင်ရှိသည်။ BELOW ကို click ပါ။",
+      "positionRecap": "ပြည့်စုံပါတယ်! ABOVE = အပေါ်တန်း, MIDDLE = အလယ်, BELOW = အောက်တန်း။",
+      "positionPractice": "သင့်အလှည့်! ဤအနေအထားကို ခွဲခြားပါ။",
+      "soundIntro": "ယခု အသံများ။ အမျိုးအစား ၂ ခုရှိသည်: VOWEL (A, E, I, O, U) နှင့် CONSONANT (ကျန်အားလုံး)။",
+      "soundVoyelle": "A ကြားရပါသည်။ Vowel ဖြစ်သည်။ VOWEL ကို click ပါ။",
+      "soundConsonne": "T ကြားရပါသည်။ Consonant ဖြစ်သည်။ CONSONANT ကို click ပါ။",
+      "soundRecap": "မှတ်ပါ: A, E, I, O, U = VOWEL။ ကျန်အားလုံး = CONSONANT။",
+      "soundPractice": "သင့်အလှည့်! ဤအသံကို ခွဲခြားပါ။",
+      "dualIntro": "တကယ့်ဂိမ်းတွင် နှစ်ခုလုံးကို တစ်ပြိုင်နက် ခွဲခြားသည်: အနေအထား နှင့် အသံ။",
+      "dualFirst": "အနေအထား နှင့် အသံ ခွဲခြားပါ။ အချိန်ယူပါ။",
+      "dualSecond": "ဆက်လုပ်ပါ။ အနေအထား + အသံ။",
+      "dualThird": "ကောင်းပါတယ်! Practice အတွက် နောက်တစ်ခု။",
+      "rhythm": "Session တွင် ပုံမှန် rhythm ထိန်းပါ။ Fluidity သည် လေ့ကျင့်မှုဖြင့် လာမည်။",
+      "conclusion": "ကောင်းပါတယ်! Classification ကို ကျွမ်းကျင်ပြီ။ Dual Pick session စတင်ပါ!",
+      "buttons": {
+        "top": "ABOVE",
+        "middle": "အလယ်တန်း",
+        "bottom": "BELOW",
+        "vowel": "VOWEL",
+        "consonant": "ဗျည်း"
+      },
+      "feedback": {
+        "correctPosition": "Zone မှန်ပါတယ်!",
+        "correctSound": "အသံအမျိုးအစား မှန်ပါတယ်!",
+        "wrongPosition": "ဤ zone မဟုတ်ပါ။ စတုရန်း ဘယ်မှာရှိသနည်း ကြည့်ပါ။",
+        "wrongSound": "မဟုတ်ပါ။ A, E, I, O, U = vowel များ။"
+      }
+    },
+    "trace": {
+      "intro": "Dual Trace မှ ကြိုဆိုပါသည်။ Button မရှိပါ: swipe gesture ဖြင့် ယခင် အနေအထားကို တက်ကြွစွာ ပြန်အမှတ်ရမည်ဖြစ်သည်။",
+      "observe": "ဤအနေအထားကို မှတ်ပါ။ နောက် turn တွင် ၎င်းဆီသို့ swipe ရမည်။",
+      "firstSwipe": "ပထမ swipe! ယခင် turn ၏ အနေအထားဆီသို့ လက်ချောင်းကို ရွှေ့ပါ။ Arrow က လမ်းညွှန်ပေးသည်။",
+      "firstAudioMatch": "ယခင် turn နှင့် letter တူသည်! အနေအထားသို့ swipe ပြီး audio match ကို signal ပေးရန် double-tap ပါ။",
+      "audioMatch": "Audio match တွေ့ရှိပြီ! Swipe + double-tap။",
+      "swipe1": "N-1 အနေအထားဆီသို့ swipe ပါ။ စတုရန်း ဘယ်မှာရှိခဲ့သနည်း မှတ်ပါ။",
+      "swipe2": "ဆက်လုပ်ပါ။ Swipe တစ်ခုစီသည် active memory ကို အားဖြည့်သည်။",
+      "swipe3": "Active recall သည် ရိုးရှင်းသော recognition ထက် ပိုခက်သည်။",
+      "swipe4": "အာရုံစိုက်ပါ။ Swipe မလုပ်မီ အနေအထားကို မြင်ယောင်ပါ။",
+      "swipe5": "ကောင်းပါတယ်! Recall gesture ကို ကျွမ်းကျင်ပြီ။",
+      "complete": "Tutorial ပြီးဆုံးပြီ။ Dual Trace training အတွက် အဆင်သင့်ပါပြီ။",
+      "tapTarget": "ယခင် turn ၏ အနေအထားကို tap ပါ",
+      "tapTargetAndAudio": "Target အနေအထားကို tap ပါ, ထို့နောက် Audio"
+    },
+    "ui": {
+      "startExercise": "လေ့ကျင့်ခန်း စတင်ရန်",
+      "score": "ရမှတ်- {{current}}/{{total}}",
+      "complete": "ပြီးဆုံးပြီ",
+      "correct": "✓ မှန်ပါတယ်!",
+      "expectedMatch": "✗ မျှော်လင့်: ကိုက်ညီ",
+      "expectedNoMatch": "✗ မျှော်လင့်: မကိုက်ညီ",
+      "memorize": "အနေအထားကို မှတ်ပါ...",
+      "memorizeLetter": "Letter ကို မှတ်ပါ...",
+      "matchDetected": "✓ ကိုက်ညီမှု တွေ့ရှိ!",
+      "noMatch": "✗ မကိုက်ညီ",
+      "matchExplanation": "ကိုက်ညီ! အဆင့် {{current}} = အဆင့် {{previous}}",
+      "exerciseComplete": "လေ့ကျင့်ခန်း ပြီးဆုံးပြီ!",
+      "match": "ကိုက်ညီ",
+      "noMatchButton": "မကိုက်ညီ",
+      "none": "မရှိ",
+      "both": "နှစ်ခုလုံး",
+      "position": "အနေအထား",
+      "audio": "အသံ",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "သင့် dashboard: N-back level, turn counter နှင့် session ထိန်းချုပ်မှုများ။",
+      "timeline": "Timeline သည် နှိုင်းယှဉ်ရန် နောက်ဆုံး stimulus ၃ ခုကို ထိန်းထားသည်။ တကယ့်ဂိမ်းတွင် ဤအကူအညီ ဝှက်ထားသည်။",
+      "grid": "Grid: turn တစ်ခုစီတွင် cell တစ်ခု ၈ အနေအထားတွင် မီးလင်းသည်။ တစ်ချိန်တည်းတွင် letter ပြောသည်။",
+      "controls": "သင့်တုံ့ပြန်မှု button များ။ ထပ်တူ တွေ့ရှိပါက နှိပ်ပါ။",
+      "intro": "ကြိုဆိုပါသည်! ဂိမ်း interface ကို အတူ ရှာဖွေကြရအောင်။",
+      "continue": "ဆက်လုပ်ရန်",
+      "outro": "ယခု guided session သို့ ပြောင်းရအောင်။ Animation များကို ကြည့်ပြီး ညွှန်ကြားချက်များ လိုက်နာပါ။",
+      "start": "စတင်ရန်",
+      "tapToContinue": "ဆက်လုပ်ရန် မည်သည့်နေရာတွင်မဆို tap ပါ"
+    },
+    "speed": {
+      "label": "အမြန်နှုန်း: {{speed}}",
+      "pauseToChange": "အမြန်နှုန်း ပြောင်းရန် ခေတ္တရပ်ပါ"
+    },
+    "assessment": {
+      "title": "အကဲဖြတ်မှု အဆင့်",
+      "subtitle": "ယခုမှစ၍ တိုတောင်းသော classic run ဖြစ်သည်။",
+      "body": "Rhythm ဆက်တိုက်ဖြစ်ပြီး hint များ ထပ်မရပါ။ တကယ့် session လို ကစားပါ။",
+      "goal": "ရည်မှန်းချက်: trial {{count}} ခုတွင် accuracy {{min}}% ထက် နည်းမခံ။",
+      "cta": "စလိုက်ရအောင်"
+    },
+    "postlude": {
+      "levels": {
+        "title": "N level များ နားလည်ခြင်း",
+        "desc": "N=2 ကို သင်ယူပြီးပါပြီ။ N=1 မှ N=4 အထိ မည်သို့ generalize ဖြစ်သည်ကို ကြည့်ပါ။",
+        "start": "စတင်ရန်",
+        "done": "ပြီးဆုံးရန်",
+        "skip": "ကျော်ရန်",
+        "hud": "N = ဘယ်နှစ် turn ပြန်ကြည့်ရသည်။",
+        "present": "N = လက်ရှိ stimulus (ပစ္စုပ္ပန်)။",
+        "past": "N-{{n}} နှင့် နှိုင်းယှဉ်ပါ။",
+        "pressPosition": "အနေအထား ထပ်တူပါက Position ကို နှိပ်ပါ။",
+        "pressAudio": "အသံ ထပ်တူပါက Audio ကို နှိပ်ပါ။",
+        "annotation": {
+          "n1": "N=1: လက်ရှိ stimulus (N) ကို ယခင် turn (N-1) နှင့် နှိုင်းယှဉ်ပါ။",
+          "n2": "N=2: လက်ရှိ stimulus (N) ကို turn ၂ ခု ယခင် (N-2) နှင့် နှိုင်းယှဉ်ပါ။",
+          "n3": "N=3: လက်ရှိ stimulus (N) ကို turn ၃ ခု ယခင် (N-3) နှင့် နှိုင်းယှဉ်ပါ။"
+        },
+        "outroTitle": "ဆက်လက်...",
+        "outroBody": "N=5 သို့ ပြောင်းပါက N-5 နှင့် နှိုင်းယှဉ်ရမည်။ စည်းမျဉ်း အတူတူပဲ; အကွာအဝေးသာ တိုးသည်။"
+      }
+    },
+    "annotations": {
+      "intro": "ကြည့်ပါ: grid ပေါ်တွင် cell တစ်ခု မီးလင်းပြီး letter တစ်ခု တစ်ပြိုင်နက် ပြောသည်။",
+      "observe": "မှတ်ပါ။ Timeline သည် stimulus များကို ခြေရာခံသည်။",
+      "firstComparison": "နှိုင်းယှဉ်ရန် လုံလောက်သော history ရှိပြီ။",
+      "firstPositionMatch": "Turn ၂ ခု ယခင်နှင့် အနေအထား တူသည်! Timeline ပေါ်တွင် N နှင့် N-2 ကို နှိုင်းယှဉ်ပြီး Position ကို နှိပ်ပါ။",
+      "firstAudioMatch": "Turn ၂ ခု ယခင်နှင့် letter တူသည်! Timeline ပေါ်တွင် N နှင့် N-2 ကို နှိုင်းယှဉ်ပြီး Audio ကို နှိပ်ပါ။",
+      "firstDualMatch": "ထပ်တူ နှစ်ဆ! အနေအထား နှင့် အသံ နှစ်ခုလုံး ထပ်တူ။ Button နှစ်ခုလုံး နှိပ်ပါ။",
+      "positionMatch": "အနေအထား တူသည်။ Position ကို နှိပ်ပါ။",
+      "audioMatch": "အသံ တူသည်။ Audio ကို နှိပ်ပါ။",
+      "dualMatch": "နှစ်ခုလုံး ကိုက်ညီ။ Position နှင့် Audio ကို နှိပ်ပါ။",
+      "noMatch": "ဤ turn တွင် ကိုက်ညီမှု မရှိပါ။ ဆက်မှတ်ပါ။",
+      "noMatch1": "ယခုအကြိမ် ထပ်တူ မရှိပါ။ ဆက်လုပ်ရန် tap ပါ။",
+      "noMatch2": "ကိုက်ညီမှု မရှိသေးပါ။ အနေအထား + အသံ flow ကို အာရုံစိုက်ပါ။",
+      "noMatch3": "အစီရင်ခံစရာ မရှိပါ။ Timeline ပေါ်တွင် N-2 နှင့် အမြဲ နှိုင်းယှဉ်ပါ။",
+      "noMatch4": "ကိုက်ညီမှု မရှိပါ။ Rhythm မြန်နေပြီ။",
+      "noMatch5": "ဆက်လုပ်ပါ။ ကိုက်ညီမှုများ ခန့်မှန်း၍ မရပါ။",
+      "noMatch6": "ကိုက်ညီမှု မရှိပါ။ ဆက်သွားပါ, rhythm ရပြီ။",
+      "noMatch7": "နောက်ဆုံး အပိုင်း။ အာရုံစိုက်ပါ။",
+      "noMatch8": "နီးပါးပြီ။ Stimulus အနည်းငယ် ကျန်ပါသေးသည်။",
+      "complete": "ဂုဏ်ယူပါသည်! Dual N-Back ၏ အခြေခံများကို ကျွမ်းကျင်ပြီ။ Training အတွက် အဆင်သင့်ပဲလား?"
+    },
+    "exit": {
+      "confirm": "ထွက်ရန်",
+      "title": "Tutorial မှ ထွက်မလား?",
+      "message": "သင့်တိုးတက်မှု သိမ်းထားမည်။ နောက်မှ ပြန်ဆက်နိုင်သည်။"
+    },
+    "recovery": {
+      "message": "ပြတ်တောက်ခဲ့သော session တစ်ခု တွေ့ရှိသည်။",
+      "staleMessage": "မိနစ် ၃၀ ကျော် ယခင်က ပြတ်တောက်ခဲ့သော session တစ်ခု တွေ့ရှိသည်။",
+      "resume": "ဆက်လုပ်ရန်",
+      "startFresh": "အသစ် စတင်ရန်",
+      "title": "Tutorial ဆက်လုပ်မလား?"
+    }
+  }
+}

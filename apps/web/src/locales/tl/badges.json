@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Pagkakatuloy-tuloy",
+      "performance": "Pagganap",
+      "resilience": "Katatagan",
+      "exploration": "Pag-explore",
+      "milestone": "Milestone",
+      "cognitive": "Cognitive"
+    },
+    "first_session": {
+      "name": "Nagising na Neuron",
+      "description": "Natapos ang unang session."
+    },
+    "sessions_10": {
+      "name": "Haligi (Bronze)",
+      "description": "10 session ang natapos."
+    },
+    "sessions_25": {
+      "name": "Haligi (Silver)",
+      "description": "25 session ang natapos."
+    },
+    "marathoner": {
+      "name": "Haligi (Gold)",
+      "description": "50 session ang natapos."
+    },
+    "streak_3": {
+      "name": "Bagong Ritwal",
+      "description": "3 araw na streak."
+    },
+    "streak_7": {
+      "name": "Pang-araw-araw na Ritwal",
+      "description": "7 araw na streak."
+    },
+    "streak_14": {
+      "name": "Nakaugat na Gawi",
+      "description": "14 na araw na streak."
+    },
+    "streak_30": {
+      "name": "Bakal na Disiplina",
+      "description": "30 araw na streak."
+    },
+    "early_bird": {
+      "name": "Maagang Ibon",
+      "description": "5 magkakaibang araw na may session bago mag-8am."
+    },
+    "night_owl": {
+      "name": "Night Owl",
+      "description": "5 magkakaibang araw na may session pagkatapos ng 10pm."
+    },
+    "brain_n3": {
+      "name": "Matalas na Utak",
+      "description": "Umabot sa level N-3."
+    },
+    "brain_n4": {
+      "name": "Malakas na Utak",
+      "description": "Umabot sa level N-4."
+    },
+    "brain_n5": {
+      "name": "Olympic na Utak",
+      "description": "Umabot sa level N-5."
+    },
+    "brain_n7": {
+      "name": "Cognitive Elite",
+      "description": "Umabot sa level N-7."
+    },
+    "brain_n10": {
+      "name": "Superhuman",
+      "description": "Umabot sa level N-10."
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "> 90% accuracy sa N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Surgical Precision",
+      "description": "> 95% accuracy sa N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% accuracy sa N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Hindi mahawakan",
+      "description": "Perpektong session (0 error) sa N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Mabilis na Reflex",
+      "description": "Average reaction time < 500ms na may ≥70% accuracy."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Average reaction time < 400ms na may ≥70% accuracy."
+    },
+    "rt_300": {
+      "name": "Kidlat",
+      "description": "Average reaction time < 300ms na may ≥70% accuracy."
+    },
+    "consistent": {
+      "name": "Consistent",
+      "description": "RT standard deviation < 100ms (≥10 sagot ang kailangan)."
+    },
+    "dprime_master": {
+      "name": "d' Guro",
+      "description": "d-prime > 3.0 sa isang session."
+    },
+    "dprime_4": {
+      "name": "Eksperto ng SDT",
+      "description": "d-prime > 4.0 sa isang session."
+    },
+    "no_pause": {
+      "name": "Walang Tigil",
+      "description": "5 magkakasunod na session na walang pause na may ≥75% accuracy."
+    },
+    "steady_hands": {
+      "name": "Mga Matatag na Kamay",
+      "description": "Walang maling input sa session (≥80% accuracy)."
+    },
+    "zen_master": {
+      "name": "Zen Master",
+      "description": "10 session na hindi kailanman umalis."
+    },
+    "comeback_kid": {
+      "name": "Comeback Anak",
+      "description": "Umakyat ng level pagkatapos bumaba."
+    },
+    "persistent": {
+      "name": "Nagpupursige",
+      "description": "3 session sa parehong araw pagkatapos ng pagkabigo."
+    },
+    "second_wind": {
+      "name": "Pangalawang Hangin",
+      "description": "Bumuti ang d-prime sa pagitan ng kalahati 1 at 2 (d′ ≥ 2.0 kailangan)."
+    },
+    "plateau_breaker": {
+      "name": "Plateau Breaker",
+      "description": "Umunlad pagkatapos ng 10+ session sa parehong level."
+    },
+    "no_surrender": {
+      "name": "Walang Pagsuko",
+      "description": "25 session na hindi umalis."
+    },
+    "ironwill": {
+      "name": "Iron Will",
+      "description": "50 session na hindi umalis."
+    },
+    "audiophile": {
+      "name": "Audiophile",
+      "description": "Audio > 80% pero Visual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Eagle Eye",
+      "description": "Visual > 80% pero Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Naka-synchronize",
+      "description": "Nasa loob ng 5% ang Audio at Visual score (≥60% kailangan)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio AT Visual > 85% sa parehong session (≥6 lure/modality)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio AT Visual > 90% sa parehong session sa N ≥ 3 (≥6 lure/modality)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 session ang natapos."
+    },
+    "sessions_250": {
+      "name": "Alamat (Emerald)",
+      "description": "250 session ang natapos."
+    },
+    "sessions_500": {
+      "name": "Walang kamatayan (Diamond)",
+      "description": "500 session ang natapos."
+    },
+    "trials_500": {
+      "name": "Practitioner",
+      "description": "500 kabuuang trial na nalaro."
+    },
+    "trials_1000": {
+      "name": "Sanay na",
+      "description": "1,000 kabuuang trial na nalaro."
+    },
+    "trials_5000": {
+      "name": "Bihasa",
+      "description": "5,000 kabuuang trial na nalaro."
+    },
+    "trials_10k": {
+      "name": "10,000 Trial",
+      "description": "10,000 kabuuang trial na nalaro."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "50,000 kabuuang trial na nalaro."
+    },
+    "streak_90": {
+      "name": "Perpektong Quarter",
+      "description": "90 araw na streak."
+    },
+    "streak_365": {
+      "name": "Perpektong Taon",
+      "description": "365 araw na streak."
+    },
+    "veteran": {
+      "name": "Beterano",
+      "description": "1 taon ng paggamit."
+    },
+    "metronome": {
+      "name": "Ang Metronome",
+      "description": "RT variance < 50ms sa ≥20 trial (aktibong sagot kailangan)."
+    },
+    "flow_state": {
+      "name": "Estado ng Biyaya",
+      "description": "Nakita ang flow sa buong session."
+    },
+    "sang_froid": {
+      "name": "Malamig ang Ulo",
+      "description": "Walang sunod-sunod na error pagkatapos ng isang error (≥70% accuracy)."
+    },
+    "imperturbable": {
+      "name": "Hindi Nababagabag",
+      "description": "Buong session na walang nawawalang pokus (≥60% accuracy)."
+    },
+    "comeback_strong": {
+      "name": "Matinding Comeback",
+      "description": "Tinalo ang iyong d-prime record pagkatapos ng 3+ araw na wala (d′ ≥ 2.5)."
+    }
+  }
+}

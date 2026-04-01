@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Come ti senti?",
+      "tired": "Stanco",
+      "normal": "Normale",
+      "energized": "Energico"
+    },
+    "aria": {
+      "trialTimer": "Timer della prova",
+      "positionMatch": "Match posizione",
+      "audioMatch": "Corrispondenza audio",
+      "audioLetter": "Lettera audio:",
+      "traceGrid": "Griglia di tracciamento"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Attiva/disattiva il monitor di sincronizzazione",
+      "start": "inizio",
+      "end": "fine",
+      "pinLabel": "pin",
+      "pinTitle": "Fissa sullo schermo",
+      "inputLabel": "input",
+      "inputTitle": "Attiva profilazione latenza input (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "on",
+      "off": "off",
+      "hideLabel": "nascondi",
+      "hideTitle": "Nascondi (tranne se syncHud=1 o ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "audio",
+        "expected": "atteso"
+      },
+      "labels": {
+        "trial": "prova",
+        "lagShow": "ritardo di visualizzazione",
+        "lagHide": "ritardo di nascondimento",
+        "winErr": "errore finestra",
+        "endRef": "rif fine",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "input in attesa",
+        "inputSamples": "campioni input",
+        "touchSamples": "campioni touch",
+        "mouseSamples": "campioni mouse",
+        "keyboardSamples": "campioni tastiera",
+        "latestMethod": "ultimo (metodo)",
+        "latestModality": "ultima modalita",
+        "audioCueMode": "segnali audio",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "Reimposta profilatore input"
+    },
+    "hud": {
+      "resume": "Riprendi",
+      "pause": "Pausa",
+      "quit": "Esci",
+      "restart": "Ricomincia",
+      "spaceToStart": "Spazio per iniziare",
+      "settings": "Impostazioni",
+      "enterToAdvance": "Invio per avanzare",
+      "trial": "Prova",
+      "muteTexture": "Disattiva suono di sfondo"
+    },
+    "status": {
+      "paused": "In pausa"
+    },
+    "completed": "Completato",
+    "starting": {
+      "getReady": "Preparati..."
+    },
+    "quitModal": {
+      "title": "Uscire dalla sessione?",
+      "message": "I tuoi progressi non verranno salvati.",
+      "confirm": "Esci",
+      "cancel": "Continua",
+      "close": "Chiudi"
+    },
+    "controls": {
+      "position": "Posizione",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Audio & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Audio",
+      "audio2": "Audio 2",
+      "color": "Colore",
+      "arithmetic": "Aritmetica",
+      "image": "Forma"
+    },
+    "arithmetic": {
+      "answer": "Risposta",
+      "clear": "Cancella",
+      "hint": "Tastiera: 0–9 · '-' per il segno · '.' per decimale · Backspace per cancellare"
+    },
+    "navigation": {
+      "back": "Indietro"
+    },
+    "xp": {
+      "title": "XP guadagnati",
+      "base": "Base (N-{{level}})",
+      "performance": "Prestazione",
+      "accuracy": "Precisione",
+      "streakBonus": "Bonus serie",
+      "dailyBonus": "Primo del giorno",
+      "badgeBonus": "Badge",
+      "flowBonus": "Bonus Dual Place",
+      "confidenceMultiplier": "Confidenza",
+      "dailyCapReached": "Limite XP giornaliero raggiunto",
+      "levelReached": "Livello {{level}} raggiunto!"
+    },
+    "badges": {
+      "newUnlocked": "Nuovi badge sbloccati"
+    },
+    "getReady": "Preparati...",
+    "layoutEdit": {
+      "done": "Fatto",
+      "reset": "Reimposta",
+      "instructions": "Trascina le zone per riordinare. Ridimensiona usando le maniglie.",
+      "title": "Modalità modifica",
+      "cancel": "Annulla",
+      "save": "Blocca",
+      "editLayout": "Modifica layout"
+    },
+    "paused": "In pausa",
+    "pressEscapeToResume": "Premi Esc per riprendere",
+    "settings": {
+      "editLayout": "Modifica disposizione",
+      "gridAndButtons": "Griglia e pulsanti",
+      "swapPositionAudio": "Inverti Posizione / Audio",
+      "title": "Impostazioni",
+      "quickHint": "Regola alcune impostazioni senza uscire dal gioco.",
+      "quickUnavailable": "Nessuna impostazione rapida disponibile per questa modalità."
+    },
+    "pinkNoiseInfo": "Un tono di sottofondo accompagna ogni stimolo. Puoi personalizzarlo o disattivarlo nelle impostazioni audio.",
+    "pinkNoiseDismiss": "Continua",
+    "audioMode": "Modalità audio",
+    "cogTask": {
+      "precision": "Precisione",
+      "avgRt": "TR medio",
+      "avgRtShort": "TR med.",
+      "trials": "Prove",
+      "correct": "Corretti",
+      "errors": "Errori",
+      "effect": "Effetto",
+      "restart": "Ricomincia",
+      "home": "Home",
+      "performance": "Prestazione",
+      "trialDetail": "Dettaglio per prova",
+      "setDetail": "Dettaglio per set",
+      "roundDetail": "Dettaglio per round",
+      "problemDetail": "Dettaglio per problema",
+      "phaseDetail": "Dettaglio per fase",
+      "feedbackCorrect": "Corretto",
+      "feedbackIncorrect": "Sbagliato",
+      "feedbackTimeout": "Troppo lento!",
+      "preparing": "Preparati...",
+      "loading": "Caricamento...",
+      "left": "Sinistra",
+      "right": "Destra",
+      "up": "Su",
+      "down": "Giù",
+      "congruent": "Congruente",
+      "incongruent": "Incongruente",
+      "congruencyEffect": "Effetto di congruenza",
+      "maxSpan": "Span massimo",
+      "startingSpan": "Span iniziale",
+      "maxSpanReached": "Span massimo raggiunto",
+      "longestStreak": "Serie corretta più lunga",
+      "series": "Serie",
+      "avgResponseTime": "Tempo di risposta medio",
+      "recall": "Richiamo",
+      "expected": "Atteso",
+      "submit": "Conferma",
+      "cancel": "Annulla",
+      "clear": "Cancella",
+      "delete": "DEL",
+      "true": "Vero",
+      "false": "Falso",
+      "target": "Bersaglio",
+      "nonTarget": "Non-bersaglio",
+      "distractor": "Distrattore",
+      "same": "Uguale",
+      "different": "Diverso",
+      "identical": "Identico",
+      "mirror": "Specchio",
+      "symmetric": "Simmetrico",
+      "asymmetric": "Asimmetrico",
+      "symShort": "Sym.",
+      "present": "Presente",
+      "absent": "Assente",
+      "noTrials": "Nessuna prova completata.",
+      "noSets": "Nessun set completato.",
+      "noRounds": "Nessun round completato.",
+      "noProblems": "Nessun problema completato.",
+      "noPhases": "Nessuna fase completata.",
+      "sets": "Set",
+      "rounds": "Round",
+      "equations": "Equazioni",
+      "sentences": "Frasi",
+      "equationAccuracy": "Precisione equazioni",
+      "forward": "Avanti",
+      "backward": "Indietro",
+      "forwardMaxSpan": "Ampiezza max avanti",
+      "backwardMaxSpan": "Ampiezza max indietro",
+      "odd": "Dispari",
+      "even": "Pari",
+      "score": "Punteggio",
+      "easy": "Facile",
+      "hard": "Difficile",
+      "totalTrials": "Prove totali",
+      "totalErrors": "Errori totali",
+      "totalErrShort": "Err. totali",
+      "hits": "Colpi",
+      "misses": "Mancati",
+      "falseAlarms": "F. Allarmi",
+      "correctRejections": "Rig. Corr.",
+      "yes": "Sì",
+      "no": "No",
+      "sessionInterrupted": "Sessione interrotta",
+      "reverseOrder": "in ordine inverso",
+      "normalOrder": "in ordine",
+      "lnsInstruction": "Cifre in ordine crescente, poi lettere A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Effetto Simon",
+        "blue": "Blu",
+        "red": "Rosso",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Rappresenta questo numero",
+        "submit": "Conferma",
+        "rodLabel": "Asta {{n}}",
+        "heavenBead": "Pallina celeste (valore 5)",
+        "earthBead": "Pallina terrestre (valore 1)",
+        "instrBeadTitle": "Come funzionano le palline",
+        "instrBeadDesc": "Ogni asta rappresenta una cifra. La pallina superiore (celeste) vale 5. Le palline inferiori (terrestri) valgono 1 ciascuna. Sposta le palline verso la barra centrale per attivarle.",
+        "instrExampleTitle": "Esempio: 7",
+        "instrExampleDesc": "7 = pallina celeste abbassata (5) + 2 palline terrestri alzate (2). Tocca o scorri le palline per spostarle.",
+        "instrGoalTitle": "Il tuo obiettivo",
+        "instrGoalDesc": "Apparirà un numero. Posiziona le palline per rappresentarlo, poi premi Conferma. Sii preciso e veloce!",
+        "startButton": "Inizia",
+        "settings": "Impostazioni",
+        "closeSettings": "Chiudi impostazioni",
+        "settingsRods": "Numero di aste",
+        "settingsRodsHint": "Regolabile tramite Livello N nelle impostazioni",
+        "settingsTrials": "Prove per sessione",
+        "settingsTrialsHint": "Regolabile tramite Prove nelle impostazioni",
+        "settingsRange": "Intervallo di numeri"
+      },
+      "stroop": {
+        "pressInkColorButton": "Premi il pulsante del colore dell'inchiostro",
+        "redWord": "ROSSO",
+        "redLabel": "Rosso",
+        "blueWord": "BLU",
+        "blueLabel": "Blu",
+        "greenWord": "VERDE",
+        "greenLabel": "Verde",
+        "yellowWord": "GIALLO",
+        "yellowLabel": "Giallo"
+      },
+      "stroopFlex": {
+        "followRule": "Regola",
+        "ruleInk": "Colore dell'inchiostro",
+        "ruleWord": "Parola scritta",
+        "pressMatchingRuleButton": "Premi il pulsante che corrisponde alla regola corrente"
+      },
+      "goNogo": {
+        "goTrials": "Prove Go",
+        "nogoTrials": "Prove No-Go",
+        "hitRate": "Tasso di colpi (Go)",
+        "faRate": "Tasso falsi allarmi (No-Go)",
+        "meanRt": "Tempo di reazione medio",
+        "sensitivity": "sensibilità",
+        "press": "Premi",
+        "withhold": "Trattieni"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "SSD medio (stop riusciti)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "Inibizione riuscita",
+        "stop": "Stop",
+        "meanGoRt": "Tempo di reazione GO medio",
+        "ssrtInvalid": "dati insufficienti",
+        "ssrtNegativeNote": "SSRT è negativo (SSD medio > RT GO medio) — risultato non affidabile con il numero di trial attuale."
+      },
+      "pvt": {
+        "rtMedian": "RT mediana",
+        "rtMean": "RT medio",
+        "fastest": "Più veloce",
+        "slowest": "Più lento",
+        "falseStarts": "Partenze false",
+        "falseStartsShort": "Part. false",
+        "lapses": "Vuoti",
+        "mean": "Medio",
+        "reaction": "Reazione",
+        "wait": "Aspetta...",
+        "pressStimulus": "Aspetta lo stimolo...",
+        "pressAnywhere": "Premi ovunque quando appare il contatore",
+        "press": "Premi!",
+        "tooEarly": "Troppo presto!",
+        "lapsesLabel": "Défaillances"
+      },
+      "posner": {
+        "cueingEffect": "Effetto di indizio",
+        "validMeanRt": "RT valido medio",
+        "invalidMeanRt": "RT invalido medio",
+        "validAccuracy": "Precisione valida",
+        "invalidAccuracy": "Precisione invalida",
+        "validTrials": "Prove valide",
+        "invalidTrials": "Prove invalide",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Valido",
+        "invalid": "Invalido"
+      },
+      "antisaccade": {
+        "cost": "Costo antisaccade",
+        "proAccuracy": "Precisione pro",
+        "antiAccuracy": "Precisione anti",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "RT medio prosaccade",
+        "antiMeanRt": "RT medio antisaccade",
+        "costLabel": "Costo",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d’-context",
+        "axAccuracy": "AX Precisione",
+        "bxFa": "BX falso allarme",
+        "ayError": "AY errore",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY err",
+        "cogControl": "Controllo cognitivo",
+        "target": "Obiettivo",
+        "nonTarget": "Non-bersaglio"
+      },
+      "ant": {
+        "scores": "Punteggi ANT",
+        "alerting": "Allerta (no-cue − double-cue)",
+        "orienting": "Orientamento (center − spatial)",
+        "executive": "Esecutivo (incongruente − congruente)"
+      },
+      "changeDet": {
+        "kCowan": "Capacità K (Cowan)",
+        "sameShort": "Uguale",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "Errori intra-ricerca",
+        "betweenErrors": "Errori inter-ricerca",
+        "totalErrors": "Errori totali",
+        "errorFree": "Senza errori",
+        "foundErrorFree": "Trovato senza errori!",
+        "errorCount": "{{count}} errore/i",
+        "tapsLabel": "Tocchi"
+      },
+      "taskSwitch": {
+        "switchCost": "Switch cost",
+        "rtRepeat": "RT medio (Repeat)",
+        "rtSwitch": "RT medio (Switch)",
+        "oddEven": "Dispari / Pari",
+        "highLow": "Alto / Basso",
+        "title": "Cambio di compito"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A tempo",
+        "tmtBTime": "TMT-B tempo",
+        "executiveCost": "Costo esecutivo (B − A)",
+        "executiveCostShort": "Costo esecutivo (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Preparazione TMT-B...",
+        "tmtADone": "TMT-A completato!",
+        "totalErrors": "Errori totali",
+        "tmtALabel": "TMT-A: Numeri",
+        "tmtBLabel": "TMT-B: Numeri e lettere",
+        "next": "Avanti",
+        "heroTitle": "Trail Making",
+        "alternateHint": "Alterna numeri e lettere: 1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "ISI più veloce"
+      },
+      "wcst": {
+        "referenceCards": "Carte di riferimento",
+        "testCard": "Carta test",
+        "categories": "Categorie",
+        "categoriesCompleted": "Categorie completate",
+        "perseverativeErrors": "Errori perseverativi",
+        "persevShort": "Persev.",
+        "avgRt": "TR medio"
+      },
+      "mentalRot": {
+        "rtByAngle": "TR per angolo",
+        "findMatch": "Trova la forma identica",
+        "reference": "Forma di riferimento",
+        "referenceLabel": "Rif.",
+        "candidate": "Candidato",
+        "distractor": "Altro",
+        "mirrorErrors": "Specchi",
+        "title": "Rotazione mentale"
+      },
+      "sternberg": {
+        "rtBySize": "TR per dimensione",
+        "title": "Sternberg",
+        "avgRt": "TR medio"
+      },
+      "visualSearch": {
+        "rtBySize": "TR per dimensione",
+        "title": "Ricerca visiva"
+      },
+      "ospan": {
+        "typeLetters": "Digita le lettere nell’ordine",
+        "trueOrFalse": "Vero o falso?",
+        "processingWarning": "Precisione nelle equazioni < 85% — i risultati potrebbero non riflettere la reale capacità di memoria di lavoro"
+      },
+      "readingSpan": {
+        "s0": "Il sole sorge a est.",
+        "s1": "I pesci vivono sugli alberi.",
+        "s2": "Roma è la capitale d’Italia.",
+        "s3": "Un triangolo ha quattro lati.",
+        "s4": "L’acqua bolle a 100 gradi.",
+        "s5": "I gatti sono rettili.",
+        "s6": "La Terra gira intorno al Sole.",
+        "s7": "Il cioccolato cresce sulle rocce.",
+        "s8": "Un anno ha dodici mesi.",
+        "s9": "Gli uccelli respirano sott’acqua.",
+        "s10": "Il latte è bianco.",
+        "s11": "Le auto viaggiano sui binari.",
+        "s12": "Le api producono miele.",
+        "s13": "La neve è calda.",
+        "s14": "Il cuore pompa il sangue.",
+        "s15": "Le pietre galleggiano sull’acqua.",
+        "s16": "La Luna illumina la notte.",
+        "s17": "I serpenti hanno le zampe.",
+        "s18": "Il legno galleggia sull’acqua.",
+        "s19": "Il fuoco è freddo.",
+        "s20": "Gli esseri umani hanno cinque sensi.",
+        "s21": "I ragni hanno sei zampe.",
+        "s22": "Il pane si fa con la farina.",
+        "s23": "Le balene sono pesci.",
+        "w0": "CASA",
+        "w1": "CANE",
+        "w2": "LIBRO",
+        "w3": "FIORE",
+        "w4": "PORTA",
+        "w5": "TAVOLO",
+        "w6": "ALBERO",
+        "w7": "STRADA",
+        "w8": "NUVOLA",
+        "w9": "STELLA",
+        "w10": "SPIAGGIA",
+        "w11": "NEVE",
+        "w12": "LAMPADA",
+        "w13": "PIOGGIA",
+        "w14": "BICCHIERE",
+        "w15": "ERBA",
+        "w16": "TRENO",
+        "w17": "MONDO",
+        "w18": "SOLE",
+        "w19": "FORESTA",
+        "w20": "GHIACCIO",
+        "w21": "TERRA",
+        "w22": "CIELO",
+        "w23": "PIETRA",
+        "d0": "MATTINA",
+        "d1": "CUORE",
+        "d2": "TESSUTO",
+        "d3": "FOGLIA",
+        "d4": "RUMORE",
+        "d5": "GIARDINO",
+        "d6": "OMBRA",
+        "d7": "CAMPANA",
+        "d8": "PONTE",
+        "d9": "FUMO",
+        "d10": "SABBIA",
+        "d11": "ZUPPA",
+        "heroTitle": "Span di lettura"
+      },
+      "memorizeSequence": "Memorizza la sequenza...",
+      "reproduce": "Riproduci",
+      "span": "Ampiezza",
+      "size": "Dimensione",
+      "fixateCenter": "Fissa il centro...",
+      "identicalOrMirror": "Identico o Specchio?",
+      "wellInhibited": "Ben inibito!",
+      "badDirection": "Direzione sbagliata!",
+      "stopMissed": "Stop mancato!",
+      "falseAlarm": "Falso allarme!",
+      "pressNow": "Premi!",
+      "hitBang": "Colpito!",
+      "miss": "Mancato!",
+      "doNotTouch": "Non toccare!",
+      "whichDirection": "Quale direzione?",
+      "stopBang": "STOP!",
+      "cueBang": "Indizio!",
+      "memorizeLetters": "Memorizza queste lettere",
+      "memorizeLetter": "Memorizza questa lettera",
+      "memorizeSequenceLetters": "Memorizza la sequenza...",
+      "memorizeDigits": "Memorizza le cifre...",
+      "memorizeColors": "Memorizza i colori!",
+      "memorizePosition": "Memorizza questa posizione...",
+      "retainWord": "Ricorda questa parola",
+      "retainNumber": "Ricorda questo numero",
+      "addWithPrevious": "Somma con il precedente",
+      "sentenceTrueOrFalse": "Questa frase è vera?",
+      "findRedCircle": "Trova il cerchio rosso!",
+      "findHiddenToken": "Trova il gettone nascosto!",
+      "chooseMatchingCard": "Scegli la carta corrispondente",
+      "arrowDirection": "Direzione della freccia centrale?",
+      "attention": "Attenzione...",
+      "preparation": "Preparazione...",
+      "recallLettersInOrder": "Ricorda le {{count}} lettere in ordine",
+      "recallWordsInOrder": "Ricorda le {{count}} parole in ordine",
+      "recallLastLetters": "Ricorda le ultime {{count}} lettere",
+      "typeLastLetters": "Digita le ultime {{count}} lettere",
+      "recallPositionsInOrder": "Richiamo: tocca le posizioni in ordine",
+      "pressEnterToValidate": "Premi Invio per confermare",
+      "pressAnywhereToContinue": "Premi ovunque per continuare",
+      "temporalPrecision": "Precisione temporale",
+      "estimationPrecision": "Precisione della stima",
+      "touchStartClockwise": "Tocca il punto di partenza poi scorri in senso orario",
+      "touchAtoB": "Tocca il punto A poi scorri verso B",
+      "cue": "Indizio",
+      "retainCue": "Ricorda l'indizio...",
+      "targetOrNot": "Obiettivo o Non-obiettivo?",
+      "whereIsTarget": "Dov'è il bersaglio?",
+      "wasLetterInSet": "Questa lettera era nel set?",
+      "regular": "regolare",
+      "regularity": "Regolarità",
+      "msDeviation": "ms deviazione",
+      "boxes": "caselle",
+      "found": "{{count}} trovati",
+      "past": "Passato",
+      "tooSlow": "troppo lento",
+      "tooFast": "troppo veloce",
+      "timeout": "Troppo lento!",
+      "answer": "Risposta",
+      "dontPress": "Non premere!",
+      "feedbackWrong": "Sbagliato!",
+      "level": "Livello",
+      "wrong": "Sbagliato",
+      "you": "Tu",
+      "paused": "Pause",
+      "instructions": "Instructions",
+      "selectAnswer": "Seleziona una risposta",
+      "tapTheOddOne": "Tocca l'intruso",
+      "pal": {
+        "subtitle": "Apprendimento per associazione",
+        "pairsLearned": "Coppie apprese",
+        "maxSetSize": "Dim. max set",
+        "totalErrors": "Errori totali",
+        "round": "Turno",
+        "pairs": "coppie",
+        "meanRt": "TR medio (corretti)",
+        "studyPhase": "Studia - memorizza le posizioni",
+        "testPhase": "Dove era questa forma?",
+        "studying": "Studio",
+        "tapBox": "Tocca la casella dove questa forma è stata mostrata"
+      },
+      "visualLogic": {
+        "easy": "Facile",
+        "hard": "Difficile",
+        "oneRule": "1 regola",
+        "twoRules": "2 regole",
+        "findMissing": "Trova il pezzo mancante",
+        "maxLevel": "Liv. max",
+        "finalLevel": "Liv. finale",
+        "nextMode": "Modalità della prossima sessione",
+        "adaptive": "Adaptive",
+        "fixed": "Fixed",
+        "spm": "SPM 60",
+        "level": "Level",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Quale pezzo si adatta al buco?",
+        "target": "Obiettivo"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Bias di sovrastima",
+        "underestimationBias": "Bias di sottostima",
+        "noBias": "Nessun bias significativo",
+        "avgError": "Errore medio",
+        "overestimations": "Sovrastime",
+        "underestimations": "Sottostime",
+        "avgAbsoluteError": "Errore assoluto medio",
+        "avgRelativeError": "Errore relativo medio",
+        "cv": "Coefficiente di variazione",
+        "watchDemo": "Osserva la durata",
+        "getReady": "Preparati...",
+        "holdToReproduce": "Tieni premuto per riprodurre!",
+        "tooLong": "Troppo lungo!",
+        "tooShort": "Troppo corto!",
+        "target": "Obiettivo",
+        "demoLabel": "Riferimento",
+        "yourTurn": "Il tuo turno",
+        "watchInstruction": "Osserva",
+        "holdInstruction": "Tieni premuto per riprodurre",
+        "heroTitle": "Stima temporale"
+      },
+      "puzzleDetails": "Dettagli puzzle",
+      "roundDetails": "Dettagli turno",
+      "stageResults": "Risultati della fase",
+      "recognized": "Riconosciuto",
+      "missed": "Mancato",
+      "win": "Vinto",
+      "lose": "Perso",
+      "winBang": "Vinto!",
+      "loseBang": "Perso!",
+      "correctBang": "Corretto!",
+      "wrongBang": "Sbagliato!",
+      "completeBang": "Completato!",
+      "repeatedBang": "Ripetuto!",
+      "incompleteBang": "Incompleto!",
+      "levelCompleteBang": "Livello completato!",
+      "timesUp": "Tempo scaduto",
+      "seeResults": "Vedi risultati",
+      "nextRound": "Turno successivo",
+      "startBlock": "Inizia il blocco",
+      "continue": "Continua",
+      "patientChoice": "Scelta paziente",
+      "immediateChoice": "Scelta immediata",
+      "immediate": "Immediato",
+      "digitSpan": {
+        "heroTitle": "Span di cifre"
+      },
+      "resume": "Riprendi",
+      "numericalStroop": {
+        "heroTitle": "Stroop numerico"
+      },
+      "lineOrientation": {
+        "heroTitle": "Giudizio di orientamento delle linee"
+      },
+      "chain": "Catena",
+      "undo": "Annulla",
+      "vocalProsody": {
+        "heroTitle": "Prosodia vocale"
+      },
+      "letterNumber": {
+        "title": "Lettere-Numeri",
+        "expectedAnswer": "Risposta attesa"
+      },
+      "patternComparison": {
+        "heroTitle": "Confronto di pattern"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "Una volta piegato, quali quadrati si toccano?"
+      },
+      "dotProbe": {
+        "heroTitle": "Sonda attentiva"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Organizzazione visiva di Hooper",
+        "whatIsThisObject": "Che cos'è questo oggetto?"
+      },
+      "blockDesign": {
+        "heroTitle": "Disegno con blocchi"
+      },
+      "accuracy": "Precisione",
+      "avgTime": "Tempo medio",
+      "check": "Verifica",
+      "dualTrace": {
+        "playArea": "Area di gioco"
+      },
+      "paperFolding": {
+        "title": "Piegatura della carta",
+        "foldSequenceHolePunch": "Sequenza di piegatura e perforazione",
+        "whichPatternWhenUnfolded": "Quale modello una volta aperto?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Decisione lessicale"
+      },
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxGrid": "Griglia max",
+      "symmetry": "Simmetria",
+      "threshold": "Soglia",
+      "hitRate": "Tasso di successo",
+      "faRate": "Tasso di FA",
+      "changeDetection": {
+        "heroTitle": "Rilevamento del cambiamento"
+      },
+      "syllogisms": {
+        "heroTitle": "Sillogismi"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Range"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Completamento di frasi (Cloze)",
+        "highCloze": "Alta prevedibilità",
+        "lowCloze": "Bassa prevedibilità"
+      },
+      "grid": "Griglia",
+      "pinballRecall": {
+        "title": "Richiamo del flipper",
+        "byBounces": "Per rimbalzi",
+        "whereDoesItLand": "Dove atterra?"
+      },
+      "mean": "Media",
+      "speedup": "Accelerazione",
+      "memorize": "Memorizza",
+      "time": "Time",
+      "surfaceDevelopment": {
+        "title": "Sviluppo della superficie",
+        "whichEdgeMatches": "Quale spigolo corrisponde?"
+      },
+      "crowding": {
+        "heroTitle": "Affollamento visivo",
+        "spacing": "Spaziatura"
+      },
+      "patternRecognition": {
+        "heroTitle": "Riconoscimento di motivi"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Prova",
+        "position": "Posizione",
+        "audio": "Audio"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Intruso nella scena",
+        "detect": "Rileva"
+      },
+      "eyesTest": {
+        "heroTitle": "Leggere negli occhi"
+      }
+    },
+    "gridlock": {
+      "undone": "Ultima mossa annullata.",
+      "resetMessage": "Puzzle reimpostato.",
+      "hintMessage": "Suggerimento: trascinare {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Studia il tabellone. Inizio tra {{seconds}}s.",
+      "challenge": "Sfida",
+      "optimal": "Ottimale",
+      "moves": "Mosse",
+      "piece": "Pezzo {{id}}",
+      "targetPiece": "Pezzo {{id}} (obiettivo - auto rossa)",
+      "challengeClassic": "Classico",
+      "challengePrecision": "Precisione",
+      "challengeMemory": "Memoria",
+      "challengeTimed": "Cronometro",
+      "hint": "Suggerimento",
+      "reset": "Reimposta",
+      "undo": "Annulla",
+      "nextPuzzle": "Puzzle successivo →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Blocco 1 — Corretti",
+      "block2Hits": "Blocco 2 — Corretti",
+      "goPositive": "Go = Positivo",
+      "goNegative": "Go = Negativo",
+      "title": "Go/No-Go affettivo",
+      "block1CommissionErrors": "Errori commissione blocco 1",
+      "block2CommissionErrors": "Errori commissione blocco 2",
+      "block": "Blocco",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Tasso di commutazione medio",
+      "meanSwitchesfigure": "Commutazioni medie/figura",
+      "totalSwitches": "Alternanze totali",
+      "title": "Figure ambigue",
+      "meanSwitches": "Alternanze medie",
+      "switchRate": "Tasso di alternanza",
+      "figures": "Figure",
+      "totalSwitchesLabel": "Alternanze totali",
+      "duration": "Durata",
+      "switchesCount": "s | Alternanze:",
+      "switchButton": "Cambia!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbale corretto",
+      "timeout": "Tempo scaduto",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Confronto ANS",
+      "ratio": "Rapporto",
+      "leftMore": "Sinistra di più",
+      "rightMore": "Destra di più"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Tasso di falsi allarmi",
+      "grammatical": "Grammaticale",
+      "memorizeTheseStrings": "Memorizza queste stringhe",
+      "testPhase": "Fase di test",
+      "ungrammatical": "Non grammaticale",
+      "learning": "Apprendimento",
+      "test": "Test",
+      "title": "Grammatica artificiale",
+      "learningPhase": "Apprendimento",
+      "testIntroText": "Ora vedrai nuove stringhe. Decidi se ciascuna segue le stesse regole.",
+      "startTest": "Inizia il test",
+      "followsRules": "Segue le regole",
+      "breaksRules": "Viola le regole"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Ampiezza del blink",
+      "title": "Blink attentivo",
+      "blink": "Lampeggio",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1ª lettera verde?",
+      "secondGreenLetter": "2ª lettera verde?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Costo di cattura",
+      "singletonPresent": "Singleton presente",
+      "noSingleton": "Nessun singleton",
+      "title": "Cattura attentiva",
+      "capture": "Cattura",
+      "horizontal": "Orizzontale",
+      "vertical": "Verticale"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Finestra di binding",
+      "title": "Legame audiovisivo",
+      "window": "Window",
+      "pssLabel": "PSS (punto di simultaneità soggettiva)",
+      "simultaneousOrNot": "Simultaneo o no?",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "Non simultaneo"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Soglia di durata",
+      "reference": "Riferimento",
+      "weberFraction": "Frazione di Weber",
+      "title": "Durata uditiva",
+      "threshold": "Soglia",
+      "weber": "Weber",
+      "whichLonger": "Quale è più lungo?",
+      "firstLonger": "Il primo è più lungo",
+      "secondLonger": "Il secondo è più lungo"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Media pompaggi corretta",
+      "avgTimeballoon": "Tempo medio/palloncino",
+      "banked": "Incassato!",
+      "lostEarnings": "Guadagni persi!",
+      "overallAvgPumps": "Media totale pompaggi",
+      "popRate": "Tasso di scoppio",
+      "totalEarned": "Totale guadagnato",
+      "balloons": "Palloncini",
+      "cashed": "Incassato",
+      "popped": "Scoppiato",
+      "adjPumps": "Pompe reg.",
+      "pop": "Scoppio",
+      "pump": "Pump",
+      "cashIn": "Incassa"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Tempo di decisione medio",
+      "drawBeadsToGatherEvidence": "Estrai perle per raccogliere prove",
+      "jtc": "JTC",
+      "title": "Compito delle perle",
+      "meanDraws": "Estrazioni medie",
+      "rounds": "Round",
+      "jtcRate": "Tasso JTC",
+      "meanDrawsToDecision": "Estrazioni medie alla decisione",
+      "jtcRateThreshold": "Tasso JTC (<{{threshold}} estrazioni)",
+      "round": "Round",
+      "jarDescription": "Barattolo A: 85 % verde / Barattolo B: 85 % rosso",
+      "itWasJar": "Era questo il barattolo",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "Prove modificate",
+      "sameAccuracy": "Precisione identici",
+      "sameTrials": "Prove identiche",
+      "title": "Legame di tratti",
+      "binding": "Legame",
+      "bindingAccuracyChanged": "Precisione cambio",
+      "same": "Uguale",
+      "different": "Diverso"
+    },
+    "blockDesign": {
+      "cells": "Celle",
+      "target": "Obiettivo",
+      "yourAnswer": "La tua risposta",
+      "tapHint": "Tocca per cambiare colore",
+      "check": "Check"
+    },
+    "brixton": {
+      "adapt": "Adattamento",
+      "adaptationCost": "Costo di adattamento",
+      "nonswitchTrials": "Prove senza cambio",
+      "switchTrials": "Prove con cambio"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Ricorda queste lettere",
+      "selectThe3Letters": "Seleziona le 3 lettere",
+      "title": "Brown-Peterson Task",
+      "forgetting": "Dimenticanza",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "Ritardo"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Qualità delle decisioni",
+      "finalPoints": "Punti finali",
+      "meanBet": "Puntata media",
+      "winRate": "Tasso di vittoria",
+      "wins": "Vittorie",
+      "title": "Compito di scommessa di Cambridge",
+      "totalPoints": "Punti totali",
+      "quality": "Qualità",
+      "rational": "Razionale",
+      "avgBet": "Scommessa media",
+      "trial": "Prova",
+      "whichColorHidesToken": "Quale colore nasconde il gettone?",
+      "youChose": "Hai scelto",
+      "howMuchToBet": "Quanto scommettere?"
+    },
+    "cancellation": {
+      "false": "Falso",
+      "target": "Obiettivo:",
+      "total": "Totale",
+      "title": "Compito di cancellazione (d2)",
+      "misses": "Mancati",
+      "targetDescription": "d con 2 segni"
+    },
+    "changeBlindness": {
+      "detectionRate": "Tasso di rilevamento",
+      "found": "Trovato",
+      "meanDetectionTime": "Tempo di rilevamento medio",
+      "title": "Cecità al cambiamento",
+      "missed": "Mancati",
+      "avgTime": "Tempo medio",
+      "instructions": "Istruzioni"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Migliore stima",
+      "meanScore": "Punteggio medio",
+      "worstEstimate": "Peggiore stima",
+      "inRange": "Buona stima!",
+      "title": "Stima cognitiva",
+      "meanScoreLabel": "Punteggio medio",
+      "inRangeLabel": "Nel range",
+      "extreme": "Estremo",
+      "scoreLabel": "punt.",
+      "submit": "Invia"
+    },
+    "common": {
+      "accuracy": "Precisione",
+      "bias": "Bias",
+      "falseAlarmRate": "Tasso di falsi allarmi",
+      "hitRate": "Tasso di rilevamento",
+      "hits": "Rilevamenti",
+      "listening": "Ascolto in corso...",
+      "meanRt": "TR medio",
+      "timedOut": "Tempo scaduto",
+      "timedOut2": "Tempo scaduto",
+      "faRate": "Tasso di FA",
+      "paused": "In pausa"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Quanto sei sicuro?",
+      "rateYourConfidence": "Valuta la tua sicurezza",
+      "title": "Calibrazione della fiducia",
+      "calError": "Errore di calibrazione",
+      "confidence": "Fiducia"
+    },
+    "consequences": {
+      "best": "Migliore",
+      "nextRound": "Prossimo round...",
+      "time": "Tempo",
+      "placeholder": "Scrivi una conseguenza...",
+      "title": "Conseguenze",
+      "totalIdeas": "Idee totali",
+      "avgPerRound": "Media per round",
+      "rounds": "Round",
+      "noConsequencesListed": "Nessuna conseguenza elencata",
+      "roundProgress": "Turno {{current}} / {{total}}",
+      "typeAndPressAdd": "Digita e premi Aggiungi"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Effetto cueing",
+      "newConfigRt": "TR nuova config.",
+      "oldConfigRt": "TR vecchia config.",
+      "title": "Suggerimento contestuale",
+      "cueing": "Suggerimento",
+      "oldRt": "TR vecchio",
+      "newRt": "TR nuovo",
+      "prompt": "Istruzione",
+      "left": "Sinistra",
+      "right": "Destra"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Jitter alla soglia",
+      "title": "Integrazione del contorno",
+      "pipeJitter": "| jitter"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Contrasto alla soglia",
+      "title": "Sensibilità al contrasto",
+      "threshold": "Soglia",
+      "left": "Sinistra",
+      "right": "Destra"
+    },
+    "cpt": {
+      "nontargets": "Non bersagli",
+      "target": "Obiettivo",
+      "nonTarget": "Non-target",
+      "dPrime": "d'",
+      "targetsLetter": "Lettera bersaglio",
+      "tapForLetterOnly": "Tocca solo per la lettera bersaglio"
+    },
+    "crowding": {
+      "criticalSpacing": "Spaziatura critica",
+      "leftAccuracy": "Precisione sinistra",
+      "rightAccuracy": "Precisione destra"
+    },
+    "cryptogram": {
+      "hints": "Suggerimenti",
+      "title": "Crittogramma",
+      "solved": "Risolto",
+      "time": "Time",
+      "puzzles": "Puzzle",
+      "puzzle": "Puzzle",
+      "hint": "Suggerimento",
+      "clear": "Cancella"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Area sotto la curva",
+      "discountRateK": "Tasso di sconto (k)",
+      "impulsivityIndex": "Indice di impulsività",
+      "title": "Sconto temporale",
+      "aucPatience": "AUC pazienza",
+      "patient": "Paziente",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "Punti di indifferenza",
+      "whichPrefer": "Quale preferisci?",
+      "today": "Today"
+    },
+    "delayedMatching": {
+      "long": "Lungo",
+      "longDelay68s": "Ritardo lungo (6-8 s)",
+      "med": "Medio",
+      "mediumDelay46s": "Ritardo medio (4-6s)",
+      "short": "Corto",
+      "shortDelay34s": "Ritardo corto (3-4s)",
+      "title": "Appaiamento differito",
+      "delay": "Ritardo",
+      "rememberThisPattern": "Ricorda questo schema",
+      "whichWasIt": "Qual era?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Rilevamento allarme",
+      "attendToTheLeftColumn": "Fai attenzione alla colonna di SINISTRA",
+      "attendedAccuracy": "Precisione (canale atteso)",
+      "ignoreTheRightColumn": "Ignora la colonna di destra",
+      "right": "DESTRA",
+      "title": "Ascolto dicotico",
+      "attendedAcc": "Precisione attenzione",
+      "alertDet": "Rilevamento allerta",
+      "alerts": "Allerte",
+      "selectLeftColumnWords": "Seleziona le parole della colonna sinistra",
+      "submit": "Invia",
+      "alertQuestion": "Domanda allerta"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Precisione di oblio",
+      "forgettingEffect": "Effetto di oblio",
+      "newRejection": "Rifiuto nuovo",
+      "rememberAccuracy": "Precisione di ricordo",
+      "title": "Oblio diretto",
+      "remember": "Ricorda",
+      "forget": "Dimentica",
+      "round": "Round",
+      "word": "Parola",
+      "wasThisWordShown": "Questa parola è stata mostrata?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Punteggio di bias attentivo",
+      "congruentAcc": "Prec. congruente",
+      "congruentRt": "TR congruente",
+      "incongruentAcc": "Prec. incongruente",
+      "incongruentRt": "TR incongruente"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Auto o camion?",
+      "minDisplayReached": "Display min. raggiunto",
+      "positionAccuracy": "Precisione di posizione",
+      "thresholdDisplay": "Soglia di visualizzazione",
+      "vehicleAccuracy": "Precisione veicolo",
+      "whereWasTheDiamond": "Dov'era il rombo?",
+      "title": "Doppia decisione",
+      "threshold": "Soglia",
+      "bothOk": "Entrambi corretti",
+      "vehicle": "Veicolo",
+      "position": "Posizione",
+      "car": "Auto",
+      "truck": "Camion"
+    },
+    "dsst": {
+      "items": "Elementi",
+      "itemsCompleted": "Elementi completati",
+      "speedItemsmin": "Velocità (item/min)",
+      "attempts": "Tentativi",
+      "itemsPerMin": "Elementi / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Costo del doppio compito",
+      "taskANumber": "Compito A (Numero)",
+      "taskBSymbol": "Compito B (Simbolo)",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "Numero",
+      "symbol": "Simbolo",
+      "up": "Su",
+      "down": "Giù"
+    },
+    "dualTime": {
+      "sessionEnPause": "Sessione in pausa",
+      "votreEstimationSecondes": "La tua stima (secondi)",
+      "sessionInterrupted": "Sessione interrotta",
+      "target": "Obiettivo",
+      "estimation": "Stima",
+      "avgTime": "Tempo medio",
+      "avgError": "Errore medio",
+      "trials": "Trials",
+      "resumeToContinue": "Riprendi per continuare",
+      "aimFor": "Punta a",
+      "second": "Second",
+      "howLongDidYouTake": "Quanto tempo hai impiegato?"
+    },
+    "dualTrack": {
+      "confirmer": "Conferma",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Riprendi per continuare.",
+      "sessionEnPause": "Sessione in pausa",
+      "tapezLesCibles": "Tocca i bersagli",
+      "tapezLaCible": "Tocca il bersaglio",
+      "appuyezConfirmer": "Premi Conferma",
+      "targetsCountLabel": "{{count}} obiettivi",
+      "distractorsCountLabel": "{{count}} distrattori",
+      "roundsCountLabel": "{{count}} turni",
+      "calibrationRoundsLabel": "{{count}} round di calibrazione",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = livello di difficoltà interno del percorso.",
+      "tierHelpCurrentWithPhase": "Sei attualmente a T{{current}} su {{total}} per {{targets}} bersagli. Fase attuale: {{phase}}. Mancano {{remaining}} livello/i prima del prossimo livello di bersagli.",
+      "phaseTracking": "Tracciamento",
+      "phaseAudio": "Tracciamento + audio",
+      "phaseColor": "Tracciamento + colore",
+      "phaseCombined": "Tracciamento + audio + colore",
+      "passLetters": "Lettere",
+      "passColors": "Colori",
+      "moveInstruction": "Sposta l'istruzione",
+      "moveConfirmBtn": "Sposta il pulsante conferma",
+      "preparingSession": "Preparazione sessione...",
+      "preparing3dScene": "Preparazione scena 3D...",
+      "startJourney": "Inizia il percorso",
+      "calibrationDescription": "Prima della prima fase, una calibrazione più lunga stimerà il tuo livello iniziale.",
+      "defaultDescription": "Le sfere si illumineranno. Seguile mentre si muovono, poi identificale.",
+      "startCalibration": "Avvia calibrazione",
+      "calibrationTitle": "Calibrazione",
+      "estimatedStart": "Inizio stimato",
+      "roundsAnalyzed": "Turni analizzati",
+      "willStartAt": "Inizierà a",
+      "targetsCount": "Bersagli",
+      "thenProgress": "poi avanzare"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Errore assoluto medio",
+      "ratio": "Rapporto",
+      "slope": "Pendenza",
+      "vierordtSlope": "Pendenza di Vierordt",
+      "wait": "Attendi...",
+      "title": "Riproduzione della durata",
+      "meanError": "Errore medio",
+      "meanRatio": "Rapporto medio (prodotto/target)",
+      "holdNow": "TIENI ORA",
+      "target": "Obiettivo",
+      "error": "Errore"
+    },
+    "embeddedFigures": {
+      "fastest": "Più veloce",
+      "found": "Trovato",
+      "meanDetectionTime": "Tempo di rilevamento medio",
+      "slowest": "Più lento",
+      "title": "Figure nascoste",
+      "missed": "Mancati",
+      "fastestLabel": "Più veloce",
+      "findThisShape": "Trova questa forma",
+      "memorizeShape": "Memorizza la forma…",
+      "foundIt": "Trovato!",
+      "giveUp": "Arrendersi"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Falsi allarmi",
+      "misses": "Omissioni",
+      "title": "N-back emotivo",
+      "match": "Corrispondenza"
+    },
+    "emotionalStroop": {
+      "neutralRt": "TR neutro",
+      "positiveRt": "TR positivo",
+      "threatRt": "TR minaccia",
+      "title": "Stroop emotivo",
+      "interference": "Interferenza",
+      "interferenceThreatNeutral": "Interferenza (Minaccia − Neutro)"
+    },
+    "eyesTest": {
+      "totalTime": "Tempo totale"
+    },
+    "faceName": {
+      "gain": "Guadagno",
+      "learningImprovement": "Miglioramento dell'apprendimento",
+      "round1Accuracy": "Precisione turno 1",
+      "round2Accuracy": "Precisione turno 2",
+      "whoIsThis": "Chi è questo?",
+      "title": "Associazione volto-nome",
+      "round": "Round",
+      "testPhase": "Fase di test"
+    },
+    "fauxPas": {
+      "who": "Chi?",
+      "why": "Perché?",
+      "title": "Riconoscimento di gaffe",
+      "detection": "Rilevamento",
+      "scenarios": "Scenari",
+      "fpFound": "Trovato passo falso",
+      "control": "Controllo",
+      "readyToAnswer": "Pronto a rispondere",
+      "didSomeoneSay": "Qualcuno ha detto qualcosa di inappropriato?",
+      "whoSaidIt": "Chi l'ha detto?",
+      "whyInappropriate": "Perché era inappropriato?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Precisione di richiamo",
+      "recognitionAccuracy": "Precisione di riconoscimento",
+      "recallPlaceholder": "Digita la tua risposta...",
+      "unlikely": "Improbabile",
+      "certain": "Certain",
+      "title": "Sensazione di sapere",
+      "recall": "Richiamo",
+      "recognition": "Riconoscimento",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "Sensibilità FOK",
+      "submit": "Invia",
+      "dontKnow": "Non lo so",
+      "fokPrompt": "Lo riconoscerai?",
+      "selectCorrectAnswer": "Seleziona la risposta corretta",
+      "answer": "Risposta"
+    },
+    "fingerTapping": {
+      "firstTrial": "Primo tentativo",
+      "lastTrial": "Ultimo tentativo",
+      "sequence": "Sequenza",
+      "speedupT1VsT12": "Accelerazione (T1 vs T12)",
+      "title": "Tapping delle dita"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Tempo di movimento medio",
+      "avgThroughput": "Throughput medio",
+      "title": "Tapping di Fitts",
+      "throughput": "Produttività",
+      "tapTarget": "Tocca il bersaglio evidenziato"
+    },
+    "foreperiod": {
+      "early": "Anticipato",
+      "slope": "Pendenza",
+      "title": "Preparazione temporale",
+      "fpEffectSlope": "Pendenza effetto FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Inversioni",
+      "threshold": "Soglia",
+      "tone1": "Tono 1",
+      "tone2": "Tono 2",
+      "weber": "Weber",
+      "weberFraction": "Frazione di Weber",
+      "hz": "Hz",
+      "title": "Discriminazione di frequenza",
+      "thresholdLabel": "Soglia",
+      "hzDiff": " Hz diff.",
+      "whichWasHigher": "Quale era più alto?",
+      "firstHigher": "Il primo è più alto",
+      "secondHigher": "Il secondo è più alto"
+    },
+    "gabor": {
+      "gaborPatch": "Patch di Gabor",
+      "leftAccuracy": "Precisione sinistra",
+      "leftTrials": "Prove sinistra",
+      "noiseMask": "Maschera di rumore",
+      "rightAccuracy": "Precisione destra",
+      "rightTrials": "Prove destra",
+      "thresholdAngle": "Angolo soglia",
+      "title": "Gabor",
+      "threshold": "Soglia",
+      "reversals": "Inversioni",
+      "timedOut": "Tempo scaduto",
+      "left": "Sinistra",
+      "right": "Destra"
+    },
+    "gameOfDice": {
+      "finalPoints": "Punti finali",
+      "risky": "Rischioso",
+      "riskyChoices": "Scelte rischiose",
+      "safe": "Sicuro",
+      "winRate": "Tasso di vittoria",
+      "wins": "Vittorie",
+      "title": "Gioco dei dadi",
+      "totalPoints": "Punti totali",
+      "riskyLabel": "Rischioso",
+      "roll": "Lancia",
+      "chooseYourBet": "Scegli la tua scommessa",
+      "pickNumbers": "Scegli i tuoi numeri"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Intervallo o nessun intervallo?",
+      "gapThreshold": "Soglia di rilevamento",
+      "title": "Rilevamento del silenzio",
+      "noGap": "Nessun intervallo"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Dove guardava?",
+      "direct": "Direct",
+      "left": "Sinistra",
+      "right": "Destra",
+      "title": "Direzione dello sguardo",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Parte 1 (Iniziazione)",
+      "part2": "Parte 2",
+      "part2Suppression": "Parte 2 (Soppressione)",
+      "suppressionCost": "Costo di soppressione",
+      "title": "Hayling",
+      "part1": "Parte 1",
+      "part2Label": "Parte 2",
+      "suppression": "Soppressione",
+      "obvious": "Ovvio",
+      "obviousPicksPart2": "Scelte ovvie (parte 2)",
+      "chooseUnrelated": "Scegli una parola non correlata ",
+      "completelyUnrelated": "Completamente non correlato",
+      "doNotPickObvious": "NON scegliere la parola ovvia!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Passaggio alla fase successiva…",
+      "stageComplete": "Fase completata!",
+      "title": "IED Set Shift",
+      "stages": "Stadi",
+      "edsCost": "Costo EDS",
+      "stage": "Stadio",
+      "correctNeeded": "Corrette necessarie per avanzare"
+    },
+    "informationSampling": {
+      "cost": "Costo",
+      "free": "Gratuito",
+      "meanTilesCost": "Tessere medie (costo)",
+      "meanTilesFree": "Tessere medie (gratis)",
+      "totalCost": "Costo totale",
+      "title": "Campionamento di informazioni",
+      "tiles": "Tessere",
+      "tapToReveal": "Tocca per rivelare"
+    },
+    "inspectionTime": {
+      "final": "Finale",
+      "finalDisplayTime": "Tempo di visualizzazione finale",
+      "minCorrectIt": "IT min. corretta",
+      "threshold": "Soglia",
+      "title": "Tempo di ispezione",
+      "thresholdLabel": "Soglia",
+      "minIt": "IT min."
+    },
+    "iowaGambling": {
+      "balance": "Saldo:",
+      "chooseADeck": "Scegli un mazzo",
+      "deckADraws": "Pescate mazzo A",
+      "deckBDraws": "Pescate mazzo B",
+      "deckCDraws": "Pescate mazzo C",
+      "deckDDraws": "Pescate mazzo D",
+      "first40Advantageous": "Primi 40 vantaggiosi",
+      "last40Advantageous": "Ultimi 40 vantaggiosi",
+      "learn": "Apprendimento",
+      "learningIndex": "Indice di apprendimento",
+      "title": "Iowa Gambling",
+      "advantageousPct": "% vantaggioso",
+      "earnings": "Guadagni",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Bias di calibrazione",
+      "meanJol": "JOL medio",
+      "nowTestYourRecall": "Ora testa il tuo richiamo",
+      "studyComplete": "Studio completato",
+      "whatWasPairedWith": "Cosa era abbinato a…?",
+      "title": "Giudizio di apprendimento",
+      "recallAccuracy": "Precisione di richiamo",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Precisione JOL (Gamma)",
+      "howLikelyRemember": "Quanto è probabile che ricorderai?",
+      "hiddenAnswer": "Risposta nascosta"
+    },
+    "judgmentOfRecency": {
+      "close": "Vicino",
+      "closeGap13": "Gap corto (1-3)",
+      "far": "Lontano",
+      "farGap9": "Gap lungo (9+)",
+      "mediumGap48": "Gap medio (4-8)",
+      "title": "Giudizio di recenza",
+      "medium": "Medio",
+      "studyPhaseMemorizeOrder": "Fase di studio — Memorizza l'ordine",
+      "whichMoreRecently": "Quale è apparso più di recente?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "TR medio (non-parole)",
+      "meanRtWords": "TR medio (parole)",
+      "nonwordsAccuracy": "Precisione non-parole",
+      "wordsAccuracy": "Precisione parole",
+      "word": "Parola",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "Durata",
+      "optimalSteps": "Passi ottimali",
+      "pathEfficiency": "Efficienza del percorso",
+      "totalSteps": "Passi totali",
+      "wallHits": "Collisioni con i muri",
+      "title": "Maze",
+      "completed": "Completato",
+      "efficiency": "Efficienza",
+      "wallHitsLabel": "Collisioni con i muri",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "Facile",
+      "easy2Boxes": "Facile (2 scatole)",
+      "hard": "Difficile",
+      "hard4Boxes": "Difficile (4 scatole)",
+      "medium3Boxes": "Medio (3 scatole)",
+      "title": "Memobox",
+      "rounds": "Round",
+      "medium": "Medio",
+      "watchMovements": "Guarda i movimenti…",
+      "howManyBalls": "Quante palle in ogni scatola?",
+      "submit": "Invia",
+      "roundOf": "Turno {{current}} di {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Qual è la sezione trasversale?",
+      "title": "Taglio mentale"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Vecchio, simile o nuovo?",
+      "patternSeparation": "Separazione di pattern",
+      "sep": "Sep.",
+      "old": "Vecchio",
+      "similar": "Simile",
+      "new": "Nuovo",
+      "ldi": "LDI",
+      "title": "Discriminazione mnestica",
+      "hitRateOldDetected": "Tasso di successo (Vecchio rilevato)",
+      "lureDiscrimination": "Discriminazione esche (LDI)",
+      "memorize": "Memorizza",
+      "testPhase": "Fase di test"
+    },
+    "multiArmedBandit": {
+      "earnings": "Guadagni:",
+      "pickMachine": "Scegli una macchina",
+      "title": "Bandito multi-braccio",
+      "totalReward": "Ricompensa totale",
+      "optimal": "Ottimale",
+      "regret": "Rimpianto",
+      "exploit": "Sfrutta",
+      "machine": "Macchina",
+      "armsExplored": "Bracci esplorati"
+    },
+    "navon": {
+      "globalBigLetter": "Globale (lettera grande)",
+      "localSmallLetter": "Locale (lettera piccola)",
+      "title": "Navon",
+      "globalAdv": "Vantaggio globale",
+      "whatBigLetter": "Quale lettera GRANDE?",
+      "whatSmallLetter": "Quale lettera PICCOLA?"
+    },
+    "negativePriming": {
+      "controlRt": "TR controllo",
+      "nameTheRedShape": "Nomina la forma rossa",
+      "negativePrimingRt": "RT priming negativo",
+      "positivePrimingRt": "RT priming positivo",
+      "npRt": "TR NP",
+      "ppRt": "TR PP",
+      "npEffect": "Effetto NP",
+      "title": "Priming negativo",
+      "ctrlRt": "RT controllo"
+    },
+    "numberLine": {
+      "estimationBias": "Bias di stima",
+      "linearityRsup2": "Linearità (R²)",
+      "meanAbsoluteError": "Errore assoluto medio",
+      "tapTheLineToPlaceTheNumber": "Tocca la linea per posizionare il numero",
+      "title": "Linea numerica",
+      "meanError": "Errore medio",
+      "yourEstimate": "La tua stima",
+      "correct": "Corretto"
+    },
+    "oddOneOut": {
+      "colorTrials": "Prove colore",
+      "shapeTrials": "Prove forma",
+      "shape": "Forma",
+      "color": "Colore",
+      "timeout": "Tempo scaduto",
+      "shapeDiffAccuracy": "Prec. diff. di forma",
+      "colorDiffAccuracy": "Precisione diff. colore",
+      "shapeDiffAvgRt": "RT medio diff. forma",
+      "colorDiffAvgRt": "TR medio diff. colore"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "In che direzione?",
+      "thresholdAngle": "Angolo soglia",
+      "title": "Discriminazione dell'orientamento",
+      "threshold": "Soglia",
+      "counterCw": "Antiorario",
+      "clockwise": "Orario"
+    },
+    "patternComparison": {
+      "differentTrials": "Prove diverse",
+      "sameTrials": "Prove uguali",
+      "same": "Uguale",
+      "different": "Diverso"
+    },
+    "patternRecognition": {
+      "newPatterns": "Pattern nuovi",
+      "oldPatterns": "Pattern vecchi",
+      "old": "VECCHIO",
+      "new": "NUOVO",
+      "studyPatterns": "Studia attentamente i pattern",
+      "memorize": "Memorizza ({{current}}/{{total}})",
+      "getReady": "Preparati...",
+      "testPhaseStarting": "Fase di test in avvio..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Esattamente corretto",
+      "meanAngularError": "Errore angolare medio",
+      "withinTolerance": "Nella tolleranza",
+      "title": "Assunzione di prospettiva",
+      "avgErr": "Errore medio",
+      "youAreAt": "Sei a ",
+      "facing": "Facing",
+      "pointTo": "Indica "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Soglia di frequenza",
+      "seq1": "Seq. 1",
+      "seq2": "Seq. 2",
+      "title": "Discriminazione dei fonemi",
+      "thresh": "Thresh",
+      "sameOrDifferent": "Uguale o diverso?",
+      "same": "Uguale",
+      "different": "Diverso"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = tardivo)",
+      "meanAbsoluteError": "Errore assoluto medio",
+      "precisionSd": "Precisione (DS)",
+      "title": "Predizione di movimento",
+      "absError": "Errore ass.",
+      "precision": "Precisione",
+      "responded": "Risposto",
+      "tapWhenReachesTarget": "TOCCA quando raggiunge il bersaglio"
+    },
+    "promem": {
+      "ongoingAccuracy": "Precisione compito in corso",
+      "ongoingRt": "TR continuo",
+      "pmHitRate": "Tasso successo PM",
+      "pmRt": "TR PM",
+      "pmTargets": "Obiettivi PM",
+      "title": "Memoria prospettica",
+      "ongoing": "In corso",
+      "pmHits": "Colpi PM",
+      "pmMisses": "Mancati PM",
+      "living": "Living",
+      "nonLiving": "Non vivente",
+      "redWordInstruction": "Parola rossa = premi"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Errori di distrattore",
+      "literalErrorRate": "Tasso di errori letterali",
+      "literalErrors": "Errori letterali",
+      "title": "Interpretazione di proverbi",
+      "literal": "Letterale",
+      "litRate": "Tasso lett.",
+      "whatDoesThisMean": "Cosa significa?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Preparati a seguire",
+      "meanTimeOnTarget": "Tempo medio sul bersaglio",
+      "meanTrackingError": "Errore di inseguimento medio",
+      "placeYourFingerOnTheScreen": "Posiziona il dito sullo schermo",
+      "title": "Inseguimento visivo",
+      "timeOnTarget": "Tempo sul bersaglio",
+      "error": "Errore",
+      "onTarget": "Sul bersaglio",
+      "avgError": "Errore medio",
+      "improve": "Improve",
+      "improvementT1VsT": "Miglioramento T1 vs T",
+      "errorLabel": "Errore",
+      "followGreenTarget": "Segui il bersaglio verde"
+    },
+    "rapidNaming": {
+      "roundComplete": "Turno completato",
+      "totalErrors": "Errori totali",
+      "title": "Denominazione rapida",
+      "avgSpeed": "Velocità media",
+      "totalTime": "Tempo totale",
+      "round": "Round",
+      "getReady": "Preparati!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Tempo di risoluzione medio",
+      "solved": "Risolti",
+      "wrong": "Errato",
+      "placeholder": "La tua risposta...",
+      "title": "Rebus",
+      "puzzles": "Puzzle",
+      "timeout": "Tempo scaduto",
+      "submit": "Invia",
+      "answer": "Risposta"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Tempo di risoluzione medio",
+      "solved": "Risolti",
+      "placeholder": "La tua risposta...",
+      "title": "Associazioni remote",
+      "timeout": "Tempo scaduto",
+      "submit": "Invia",
+      "answer": "Risposta"
+    },
+    "reversalLearning": {
+      "adapt": "Adattamento",
+      "loseshiftRate": "Tasso cambio dopo perdita",
+      "score": "Punteggio:",
+      "winstayRate": "Tasso Vinci-Resta",
+      "title": "Apprendimento per inversione",
+      "rewards": "Ricompense",
+      "reversals": "Inversioni",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Prove medie al criterio",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Conta all'indietro di 7 in 7",
+      "reproduceThePatternFromMemory": "Riproduci il motivo a memoria",
+      "title": "Figura di Rey",
+      "copy": "Copia",
+      "recall": "Richiamo",
+      "retention": "Ritenzione",
+      "trial": "Prova",
+      "target": "Obiettivo",
+      "yourCopy": "La tua copia",
+      "submit": "Invia"
+    },
+    "rhythm": {
+      "avgTimingError": "Errore di timing medio",
+      "bestTrialError": "Miglior errore di prova",
+      "correctTrials": "Prove corrette",
+      "worstTrialError": "Peggior errore di prova",
+      "watchRhythm": "Osserva il ritmo",
+      "getReady": "Preparati...",
+      "tapTheRhythm": "Riproduci il ritmo!",
+      "tooFarOff": "Troppo impreciso!",
+      "tapToReproduce": "Tocca per riprodurre",
+      "beats": "{{count}} tempi",
+      "bestTrial": "Miglior prova",
+      "worstTrial": "Peggior prova",
+      "title": "Rhythm",
+      "msErr": "ms err."
+    },
+    "routePlanning": {
+      "time": "Tempo",
+      "title": "Pianificazione del percorso",
+      "levels": "Livelli",
+      "completed": "Completato",
+      "avgMoves": "Mosse medie",
+      "clear": "Cancella",
+      "submit": "Invia",
+      "instructions": "Istruzioni"
+    },
+    "rvp": {
+      "detect357246468": "Rileva: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Sequenze bersaglio",
+      "fa": "FA",
+      "hitRate": "Tasso di successo",
+      "misses": "Misses",
+      "sequences": "Sequenze"
+    },
+    "sart": {
+      "commissionErrors": "Errori di commissione",
+      "omissionErrors": "Errori di omissione",
+      "tapAllDigits": "Tocca tutte le cifre tranne 3",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "Aggiunti",
+      "studyTheScene": "Studia la scena",
+      "swaps": "Scambi",
+      "tapTheNewchangedObject": "Tocca l'oggetto nuovo/cambiato"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Frasi false",
+      "trueSentences": "Frasi vere",
+      "byCategory": "Per categoria",
+      "title": "Verifica di frasi",
+      "trueRt": "RT vero",
+      "true": "True",
+      "false": "False",
+      "pressKey": "Premi "
+    },
+    "soundSweeps": {
+      "down": "Giù",
+      "downAccuracy": "Precisione discendente",
+      "durationThreshold": "Soglia di durata",
+      "up": "Su",
+      "upAccuracy": "Precisione ascendente",
+      "title": "Sweep sonori",
+      "threshold": "Soglia",
+      "upOrDown": "Su o giù?"
+    },
+    "sourceMemory": {
+      "color": "Colore",
+      "colorRecall": "Richiamo colore",
+      "frame": "Cornice",
+      "frameRecall": "Richiamo cornice",
+      "getReadyForTheTest": "Preparati per il test!",
+      "itemRecognition": "Riconoscimento elementi",
+      "positionRecall": "Richiamo di posizione",
+      "sourceAccuracy": "Precisione della fonte",
+      "title": "Memoria della fonte",
+      "source": "Fonte",
+      "position": "Posizione",
+      "word": "Parola",
+      "wasThisWordShown": "Questa parola è stata mostrata?",
+      "bottom": "Basso",
+      "blue": "Blu",
+      "orange": "Arancione",
+      "circle": "Cerchio",
+      "square": "Quadrato"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Soglia di rumore",
+      "title": "Parlato nel rumore",
+      "noise": "Rumore",
+      "whichWordWasIt": "Quale parola era?"
+    },
+    "srtt": {
+      "learningEffect": "Effetto di apprendimento",
+      "learning": "Apprendimento",
+      "block": "Blocco"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Livello casuale",
+      "learningDetected": "Apprendimento rilevato",
+      "testPhase": "Fase di test",
+      "whichPairLooksMoreFamiliar": "Quale coppia sembra più familiare?",
+      "title": "Apprendimento statistico",
+      "learning": "Apprendimento",
+      "watchTheShapes": "Guarda le forme"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Effetto bias di credenza",
+      "conclusion": "Conclusione",
+      "premise1": "Premessa 1",
+      "premise2": "Premessa 2",
+      "logicalValidityQuestion": "È logicamente valido?",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Precisione assente",
+      "presentAccuracy": "Precisione presente",
+      "title": "Ricerca di simboli",
+      "present": "Presente",
+      "absent": "Assente",
+      "targets": "Targets",
+      "searchGroup": "Gruppo di ricerca"
+    },
+    "syncContinuation": {
+      "async": "Asincrono",
+      "asynchrony": "Asincronia",
+      "drift": "Deriva",
+      "cv": "CV",
+      "title": "Sincronizzazione-Continuazione",
+      "meanCv": "CV medio",
+      "tempos": "Tempi",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Preparati…",
+      "nextTempo": "Prossimo tempo…"
+    },
+    "taskJuggling": {
+      "correctResets": "Reset corretti",
+      "duration": "Durata",
+      "missedCounters": "Contatori mancati",
+      "prematureResets": "Reimpostazioni premature",
+      "totalEvents": "Eventi totali",
+      "tooEarly": "Troppo presto!",
+      "missed": "Mancato!",
+      "title": "Giocoleria di compiti",
+      "premature": "Prematuro",
+      "counter": "Contatore",
+      "tapCounterInstruction": "Tocca ogni contatore quando raggiunge la soglia. Non far traboccare nessuno!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Punto di bisezione (PSE)",
+      "curveSteepness": "Ripidità della curva",
+      "idealMidpoint": "Punto medio ideale",
+      "pse": "PSE",
+      "title": "Bisezione temporale",
+      "steepness": "Pendenza",
+      "shortOrLong": "Corto o lungo?",
+      "trainingPhase": "Fase di allenamento",
+      "short": "Corto",
+      "long": "Lungo"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Larghezza del gradiente",
+      "rememberThisDuration": "Ricorda questa durata",
+      "width": "Larghezza",
+      "standard": "STANDARD",
+      "title": "Generalizzazione temporale",
+      "hitRate": "Tasso di successo",
+      "faRate": "Tasso di FA",
+      "hitRateDetectStandard": "Tasso di successo (standard rilevato)",
+      "sameDuration": "Stessa durata?",
+      "trainingPhase": "Fase di allenamento",
+      "same": "Uguale",
+      "different": "Diverso"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Soglia SOA",
+      "title": "Discriminazione di texture",
+      "threshold": "Soglia"
+    },
+    "timePromem": {
+      "avgTimingError": "Errore di temporizzazione medio",
+      "clockChecks": "Controlli orologio",
+      "ongoingAccuracy": "Precisione compito in corso",
+      "ongoingTrials": "Prove continue",
+      "totalPmPresses": "Pressioni prospettiche totali",
+      "pmAccuracy": "Precisione PM",
+      "pmMisses": "PM mancati",
+      "title": "Prospettica temporale",
+      "ongoing": "In corso",
+      "pmHitsLabel": "Successi prospettici",
+      "timingErr": "Err. di tempismo",
+      "pmHitsExpected": "Colpi PM / Attesi",
+      "pmPresses": "Pressioni PM",
+      "checkClock": "Controlla orologio",
+      "thirtySecMark": "Segno 30 s"
+    },
+    "toj": {
+      "meanResponseTime": "Tempo di risposta medio",
+      "temporalResolution": "Risoluzione temporale",
+      "title": "Giudizio di ordine temporale",
+      "threshold": "Soglia",
+      "whichCameFirst": "Quale è apparso prima?",
+      "leftFirst": "Sinistra per primo",
+      "rightFirst": "Destra per primo"
+    },
+    "tower": {
+      "budget": "Budget",
+      "challenge": "Sfida",
+      "challengeClassic": "Classico",
+      "challengeExpert": "Esperto",
+      "challengeMemory": "Memoria",
+      "challengePrecision": "Precisione",
+      "dragDiscAriaLabel": "Trascinare il disco superiore dal piolo {{peg}}",
+      "goal": "Obiettivo",
+      "goalHiddenStatus": "Obiettivo nascosto. Usa Rivela per mostrarlo brevemente.",
+      "goalRevealedMessage": "Obiettivo rivelato per 3 secondi.",
+      "hint": "Suggerimento",
+      "hintDescription": "Mostra la prossima mossa migliore",
+      "hintMessage": "Suggerimento: spostare il disco superiore dal piolo {{fromPeg}} al piolo {{toPeg}}.",
+      "hiddenGoalDescription": "L'obiettivo è nascosto durante la partita. Usa Rivela se hai bisogno di un breve promemoria.",
+      "hiddenGoalTitle": "Sfida di memoria",
+      "invalid": "Non validi",
+      "moves": "Mosse",
+      "optimal": "Ottimale",
+      "pegFullMessage": "Questa asta è piena.",
+      "previewMemoryCountdown": "Memorizza l'obiettivo. Inizio tra {{seconds}}s.",
+      "previewPlanCountdown": "Pianifica la soluzione in {{moves}} mosse. Inizio tra {{seconds}}s.",
+      "reset": "Reimposta",
+      "resetDescription": "Reimpostare questo puzzle",
+      "resetMessage": "Puzzle reimpostato.",
+      "reveal": "Rivela",
+      "revealDescription": "Rivela l'obiettivo nascosto",
+      "statusOptimalSolve": "Risoluzione ottimale. Punteggio {{score}}.",
+      "statusSolvedScore": "Risolto in {{moves}} mosse (+{{extraMoves}}). Punteggio {{score}}.",
+      "undo": "Annulla",
+      "undoDescription": "Annulla l'ultima mossa",
+      "undoneMessage": "Ultima mossa annullata.",
+      "yourPegs": "I tuoi pioli"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Consegne corrette",
+      "trainsLost": "Treni persi",
+      "wrongStation": "Stazione sbagliata",
+      "title": "Filo del pensiero",
+      "trains": "Treni",
+      "missed": "Mancati",
+      "scoreLabel": "Punteggio",
+      "instructions": "Istruzioni"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Domande usate in media",
+      "title": "Venti domande",
+      "avgQuestions": "Domande medie",
+      "rounds": "Round",
+      "efficiency": "Efficienza",
+      "avgQuestionsCorrectOnly": "Domande medie (solo corrette)",
+      "questionsLabel": "Domande",
+      "remaining": "Rimanente",
+      "readyToGuess": "Sono pronto a indovinare!",
+      "tapTheTarget": "Tocca l'oggetto che pensi sia il bersaglio!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Campo visivo utile",
+      "visualNoiseMask": "Maschera di rumore visivo",
+      "whatWasInTheCenter": "Cosa c'era al centro?",
+      "whereWasTheTarget": "Dov'era il bersaglio?",
+      "avgThreshold": "Soglia media",
+      "speed": "Velocità",
+      "accuracy": "Precisione",
+      "central": "Centrale",
+      "peripheral": "Periferico",
+      "overall": "Complessivo",
+      "block": "Blocco",
+      "trials": "Trials",
+      "start": "Avvia",
+      "focus": "Focus",
+      "threshold": "Soglia",
+      "stimulus": "Stimolo",
+      "respondFromMemory": "Rispondi a memoria",
+      "truck": "Camion",
+      "choosePeripheralLocation": "Scegli la posizione periferica",
+      "currentBlock": "Blocco {{n}}",
+      "exposure": "Esposizione"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Parole che iniziano con {{letter}}",
+      "title": "Fluenza verbale",
+      "totalWords": "Parole totali",
+      "duplicates": "Duplicati",
+      "letter": "Lettera",
+      "round": "Round",
+      "roundComplete": "Round completato",
+      "nextRound": "Round successivo",
+      "middotRound": " · Round"
+    },
+    "vernierAcuity": {
+      "whichSide": "Quale lato?",
+      "title": "Acuità di Vernier",
+      "leftOffset": "Offset sinistro",
+      "rightOffset": "Offset destro",
+      "offset": "Scostamento"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Strategia ottimale",
+      "correct": "Corretto!",
+      "wrong": "Sbagliato",
+      "title": "Previsione meteo",
+      "optimal": "Ottimale",
+      "learningCurve": "Curva di apprendimento",
+      "predictTheWeather": "Prevedi il meteo",
+      "rain": "Pioggia"
+    },
+    "wordChain": {
+      "avgResponseTime": "Tempo di risposta medio",
+      "chain": "Catena",
+      "longestChain": "Catena più lunga",
+      "totalCorrect": "Totale corretti",
+      "totalWords": "Parole totali",
+      "words": "Parole",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "TR medio",
+      "endsWith": "finisce con ",
+      "chainLabel": "Catena",
+      "bestLabel": "Record"
+    },
+    "wordFlow": {
+      "avgWordLength": "Lunghezza media parola",
+      "correct": "Corretto",
+      "invalidWords": "Parole non valide",
+      "totalWordsSelected": "Parole selezionate in totale",
+      "validWords": "Parole valide",
+      "wordsPerMinute": "Parole al minuto",
+      "wrong": "Errato",
+      "seeResults": "Vedi risultati",
+      "nextRound": "Turno successivo ({{current}}/{{total}})",
+      "title": "Fluenza verbale",
+      "validWordsLabel": "Parole valide",
+      "wordsPerMinLabel": "Parole/min",
+      "avgLengthLabel": "Lunghezza media",
+      "invalidLabel": "Non valido",
+      "round": "Round",
+      "selectWordsBelongTo": "Seleziona le parole che appartengono a",
+      "selected": "Selezionato"
+    },
+    "wordList": {
+      "avgRtCorrect": "TR medio (corretto)",
+      "primacyEffect": "Effetto primacy",
+      "recencyEffect": "Effetto recency",
+      "studyPhaseRememberEachWord": "Fase di studio — ricorda ogni parola",
+      "wordsRecalled": "Parole ricordate",
+      "title": "Word List",
+      "serialPositionCurve": "Curva di posizione seriale",
+      "wasWordInList": "Questa parola era nella lista?",
+      "seenBefore": "Visto prima",
+      "newWord": "Nuovo"
+    },
+    "speedSort": {
+      "switchAccuracy": "Precisione di alternanza",
+      "switchTrials": "Prove di cambio",
+      "sortByColor": "Ordina per COLORE",
+      "sortByShape": "Ordina per FORMA",
+      "sortByNumber": "Ordina per NUMERO",
+      "ruleChanged": "Regola cambiata!",
+      "binRed": "Rosso",
+      "binBlue": "Blu",
+      "binGreen": "Verde",
+      "binYellow": "Giallo",
+      "binCircle": "Cerchio",
+      "binSquare": "Quadrato",
+      "binTriangle": "Triangolo",
+      "binStar": "Stella",
+      "title": "Ordinamento rapido",
+      "switch": "Cambi"
+    },
+    "reflex": {
+      "target": "Obiettivo",
+      "lure": "Esca",
+      "tooSlow": "Troppo lento!",
+      "wrongTarget": "Bersaglio sbagliato!",
+      "tapTargets": "Tocca i cerchi verdi!",
+      "hits": "Successi",
+      "misses": "Mancati",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Ricorda il totale corrente...",
+      "title": "Calcolo a catena",
+      "stepChains": "Catene di {{len}} passi",
+      "start": "Avvia",
+      "step": "Passo",
+      "whatIsTheResult": "Qual è il risultato?"
+    },
+    "alternateUses": {
+      "placeholder": "Digita un uso...",
+      "title": "Usi alternativi",
+      "totalUses": "Usi totali",
+      "perObject": "Per oggetto",
+      "rounds": "Round",
+      "bestObject": "Oggetto migliore",
+      "bestCount": "Conteggio migliore",
+      "noUsesSubmitted": "Nessun uso inviato",
+      "timesUp": "Tempo scaduto!",
+      "nextObject": "Prossimo oggetto ({{object}})",
+      "listCreativeUses": "Elenca usi creativi per questo oggetto"
+    },
+    "anagram": {
+      "placeholder": "Digita la parola...",
+      "title": "Anagramma",
+      "avgSolve": "Risoluzione media",
+      "letterWords": "Parole di {{len}} lettere",
+      "submit": "Invia"
+    },
+    "facialEmotion": {
+      "happy": "Felice",
+      "sad": "Triste",
+      "angry": "Arrabbiato",
+      "fearful": "Impaurito",
+      "disgusted": "Disgustato",
+      "surprised": "Sorpreso",
+      "lc": "LC",
+      "title": "Riconoscimento delle emozioni facciali",
+      "topConfusions": "Principali confusioni"
+    },
+    "numberSeries": {
+      "easy": "Facile",
+      "hard": "Difficile"
+    },
+    "chainRecall": {
+      "round": "Turno",
+      "title": "Richiamo a catena",
+      "chain": "Catena",
+      "placeholder": "Segnaposto"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Go/No-Go emotivo",
+      "block1CommissionErrors": "Errori commissione blocco 1",
+      "block2CommissionErrors": "Errori commissione blocco 2",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "Blocco",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Effetto Stroop",
+      "title": "Color Rush",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Precisione congruente",
+      "incongruentAccuracy": "Precisione incongruente"
+    },
+    "mirror": {
+      "avgCorrectCells": "Caselle corrette (media)",
+      "symmetryType": "Tipo di simmetria",
+      "title": "Specchio"
+    },
+    "rhythmTap": {
+      "correctTrials": "Prove corrette",
+      "avgRhythmScore": "Punteggio ritmico medio",
+      "bestTrialScore": "Miglior punteggio prova",
+      "worstTrialScore": "Peggior punteggio prova",
+      "level": "Livello",
+      "rhythm": "Ritmo",
+      "bestTrial": "Miglior prova",
+      "worstTrial": "Peggior tentativo"
+    },
+    "vocalProsody": {
+      "questioning": "Interrogativo"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Moltiplica",
+      "add": "Somma",
+      "subtract": "Sottrai",
+      "title": "Calcolo rapido",
+      "score": "Punteggio",
+      "solved": "Risolto",
+      "missed": "Mancati"
+    },
+    "puzzle": {
+      "avgSolveTime": "Tempo medio di risoluz.",
+      "totalMoves": "Movimenti totali",
+      "totalErrors": "Errori totali",
+      "gridSize": "Dimensione griglia",
+      "maxGridReached": "Griglia massima raggiunta",
+      "maxLevelReached": "Livello max raggiunto",
+      "maxNodesReached": "Nodi max raggiunti",
+      "puzzleDetails": "Dettagli puzzle",
+      "roundDetails": "Dettagli turno",
+      "solved": "Risolto!",
+      "undo": "Annulla",
+      "reset": "Resetta",
+      "check": "Controlla",
+      "moves": "Mosse",
+      "time": "Tempo",
+      "level": "Livello",
+      "errors": "Errori",
+      "score": "Score",
+      "grid": "Griglia",
+      "crossings": "Incroci",
+      "pearls": "Perle",
+      "clues": "Indizi",
+      "region": "Regione",
+      "filled": "Riempito",
+      "cells": "Celle",
+      "undosLeft": "Annullamenti rimanenti",
+      "gems": "Gemme",
+      "connected": "Connesso",
+      "slides": "Scorrimenti",
+      "progress": "Progresso",
+      "rotations": "Rotations",
+      "puzzle": "Puzzle",
+      "uncovered": "Scoperto",
+      "colored": "Colorato",
+      "violations": "Violations",
+      "blacked": "Annerito",
+      "empty": "Vuoto",
+      "remaining": "Rimanenti",
+      "pairs": "Coppie",
+      "flips": "Capovolgimenti",
+      "found": "Trovato",
+      "balls": "Sfere",
+      "guesses": "Tentativi",
+      "original": "Original",
+      "findDifferences": "Trova le differenze",
+      "totalDrags": "Trascinamenti totali",
+      "totalUndos": "Annullamenti totali",
+      "totalEdgesDrawn": "Bordi tracciati",
+      "totalLasers": "Laser totali",
+      "totalSlides": "Scorrimenti totali",
+      "totalRotations": "Rotazioni totali",
+      "totalRectangles": "Rettangoli totali",
+      "totalScore": "Punteggio totale",
+      "avgTime": "Tempo medio",
+      "cellsCleared": "Celle svuotate",
+      "totalDiffsFound": "Differenze trovate",
+      "gemsCollected": "Gemme raccolte",
+      "pushBoxesOntoTargets": "Spingi tutte le scatole sugli obiettivi",
+      "fireLasersMarkBalls": "Spara laser dai bordi, poi segna le posizioni delle sfere",
+      "revealingAnswer": "Rivelando risposta...",
+      "checkAnswer": "Controlla risposta",
+      "pickNumberBelow": "Scegli un numero qui sotto",
+      "tapCellToAssign": "Tocca una cella per assegnare un numero",
+      "tapEdgesToPlaceWalls": "Tocca i bordi per posizionare muri. Dividi in regioni di K.",
+      "ghosts": "Fantasmi",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "Domino",
+      "islands": "Isole",
+      "pegsLeft": "Pioli rimanenti",
+      "bestRemaining": "Miglior restante",
+      "puzzlesSolved": "Puzzle risolti",
+      "flooded": "Allagato",
+      "edges": "Bordi",
+      "totalPlacements": "Posizionamenti totali",
+      "totalRemovals": "Rimozioni totali",
+      "maxTileReached": "Tessera massima raggiunta",
+      "target": "Obiettivo",
+      "placed": "Posizionato",
+      "totalGuesses": "Tentativi totali",
+      "guessesLeft": "Tentativi rimanenti",
+      "difficulty": "Difficoltà"
+    },
+    "palisade": {
+      "title": "Palizzata",
+      "puzzles": "Puzzle",
+      "maxLevel": "Livello max"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "errors": "Errori",
+      "avgTime": "Tempo medio",
+      "erase": "Cancella"
+    },
+    "blackbox": {
+      "title": "Scatola nera",
+      "puzzles": "Puzzle",
+      "lasers": "Laser",
+      "avgTime": "Tempo medio"
+    },
+    "designFluency": {
+      "title": "Fluenza di design",
+      "uniqueDesigns": "Disegni unici",
+      "duplicates": "Duplicati",
+      "round": "Round",
+      "roundComplete": "Round completato",
+      "youCreatedDesigns": "Hai creato {{count}} design",
+      "startRound": "Inizia il turno",
+      "instructions": "Istruzioni",
+      "designs": "Disegni",
+      "clear": "Cancella",
+      "addDesign": "Aggiungi"
+    },
+    "signpost": {
+      "title": "Cartelli",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "avgTime": "Tempo medio",
+      "maxGrid": "Griglia max"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Livello",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "undos": "Annullamenti",
+      "puzzle": "Puzzle"
+    },
+    "numericalStroop": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "biologicalMotion": {
+      "title": "Movimento biologico",
+      "noiseDots": "punti di rumore",
+      "whichDirection": "Quale direzione?",
+      "left": "Sinistra",
+      "right": "Destra"
+    },
+    "inertia": {
+      "title": "Inerzia",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "gems": "Gemme",
+      "moves": "Mosse"
+    },
+    "waterLevel": {
+      "title": "Livello dell'acqua",
+      "error": "Errore",
+      "tilt": "Inclinazione",
+      "waterLine": "Linea dell'acqua?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxGrid": "Griglia max"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "errors": "Errori",
+      "avgTime": "Tempo medio",
+      "erase": "Cancella"
+    },
+    "rectangles": {
+      "title": "Rettangoli",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "rectanglesCount": "Rettangoli",
+      "maxGrid": "Griglia max",
+      "cancelSelection": "Annulla selezione"
+    },
+    "filling": {
+      "title": "Riempimento",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "avgTime": "Tempo medio",
+      "grid": "Griglia"
+    },
+    "spacedRetrieval": {
+      "title": "Richiamo spaziato",
+      "studyPair": "Studia questa coppia",
+      "waitAndSolve": "Aspetta… poi risolvi",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Intervallo: quali coppie?"
+    },
+    "prototypeDistortion": {
+      "title": "Distorsione del prototipo",
+      "studyPhase": "Fase di studio",
+      "testPhase": "Fase di test",
+      "yesBelongs": "Sì — Appartiene",
+      "noRandom": "No — Casuale"
+    },
+    "motionCoherence": {
+      "title": "Coerenza del movimento",
+      "threshold": "Soglia",
+      "coherence": "Coerenza",
+      "whichDirection": "Quale direzione?"
+    },
+    "cube": {
+      "title": "Cubo",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxLevel": "Livello max",
+      "cubeFaces": "Facce del cubo",
+      "moveUp": "Su",
+      "moveLeft": "Sinistra",
+      "moveDown": "Giù",
+      "moveRight": "Destra"
+    },
+    "sameGame": {
+      "title": "Same Game",
+      "score": "Punteggio",
+      "cleared": "Eliminato",
+      "cells": "Celle",
+      "accuracy": "Precisione"
+    },
+    "crossModalMatching": {
+      "title": "Appaiamento cross-modale",
+      "chance": "Caso",
+      "whichPatternMatchesRhythm": "Quale modello corrisponde al ritmo?"
+    },
+    "mosaic": {
+      "title": "Mosaico",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxGrid": "Griglia max"
+    },
+    "spotDiff": {
+      "title": "Trova le differenze",
+      "level": "Livello",
+      "grid": "Griglia",
+      "accuracy": "Precisione",
+      "perfect": "Perfetto",
+      "avgTime": "Tempo medio",
+      "found": "Trovato"
+    },
+    "lightsOut": {
+      "title": "Luci spente",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxGrid": "Griglia max"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "rotations": "Rotazioni",
+      "avgTime": "Tempo medio"
+    },
+    "tracks": {
+      "title": "Binari",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "errors": "Errori",
+      "avgTime": "Tempo medio"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "slides": "Scorrimenti",
+      "maxGrid": "Griglia max"
+    },
+    "cognitiveBias": {
+      "title": "Allenamento ai bias cognitivi",
+      "biasResistance": "Resistenza al bias",
+      "biased": "Distorto",
+      "continue": "Continua"
+    },
+    "empathicAccuracy": {
+      "title": "Accuratezza empatica",
+      "emotionId": "Emozione",
+      "avgRatingError": "Errore medio",
+      "scenarios": "Scenari",
+      "perfect": "Perfetto",
+      "rating": "Valutazione",
+      "howDoesCharacterFeel": "Come si sente il personaggio?",
+      "rateIntensity": "Valuta l'intensità",
+      "whatEmotion": "Quale emozione?",
+      "yourRating": "La tua valutazione",
+      "correct": "Corretto",
+      "emotion": "Emozione"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Risolto",
+      "guesses": "Tentativi"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxLevel": "Livello max"
+    },
+    "magnets": {
+      "title": "Magneti",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxLevel": "Livello max"
+    },
+    "tangram": {
+      "placeAll": "Posiziona tutti i pezzi",
+      "solved": "Risolto!",
+      "notRight": "Non proprio giusto",
+      "title": "Tangram",
+      "level": "Livello",
+      "puzzles": "Puzzle",
+      "placements": "Posizionamenti",
+      "removals": "Rimozioni",
+      "puzzleNumber": "Puzzle {{n}}",
+      "pieces": "Pezzi",
+      "targetCells": "Cible",
+      "dragHint": "Trascina o posiziona il pezzo sulla griglia",
+      "selectHint": "Seleziona un pezzo",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Verifica"
+    },
+    "galaxies": {
+      "title": "Galassie"
+    },
+    "flood": {
+      "title": "Flood"
+    },
+    "pegs": {
+      "title": "Solitario",
+      "bestPegs": "Migliori pioli"
+    },
+    "auditoryFigureGround": {
+      "title": "Figura-sfondo uditiva",
+      "patternPresent": "Modello presente?",
+      "pattern": "Schema",
+      "noPattern": "Nessun modello"
+    },
+    "selfOrderedPointing": {
+      "title": "Puntamento auto-ordinato",
+      "maxSpan": "Span max",
+      "errors": "Errori",
+      "round": "Round",
+      "setOf": "Set di {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Tracciamento a specchio",
+      "totalErrors": "Errori totali",
+      "avgTime": "Tempo medio",
+      "shapes": "Forme",
+      "perfect": "Perfetto",
+      "improvement": "Miglioramento",
+      "errorsMiddot": "errori ·",
+      "shape": "Forma",
+      "errors": "Errori",
+      "xIsMirrored": "X è specchiato!"
+    },
+    "clockDrawing": {
+      "title": "Disegno dell'orologio",
+      "avgError": "Errore medio",
+      "setTo": "Impostare a ",
+      "submit": "Invia"
+    },
+    "cognitiveMap": {
+      "title": "Mappa cognitiva",
+      "explore": "Esplora",
+      "sRemaining": "S Remaining",
+      "from": "Da",
+      "whichDirectionIs": "In che direzione si trova "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Akari"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Tessera max.",
+      "moves": "Mosse",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Ponti",
+      "puzzles": "Puzzle",
+      "maxLevel": "Livello max",
+      "level": "Livello"
+    },
+    "net": {
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxGrid": "Griglia max"
+    },
+    "flip": {
+      "title": "Flip"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "Slant"
+    },
+    "towers": {
+      "title": "Torri",
+      "puzzles": "Puzzle",
+      "avgTime": "Tempo medio",
+      "erase": "Cancella"
+    },
+    "pearl": {
+      "title": "Pearl",
+      "edges": "Bordi"
+    },
+    "mapColoring": {
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "moves": "Mosse",
+      "maxLevel": "Livello max"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "Precisione",
+      "puzzles": "Puzzle",
+      "avgTime": "Tempo medio"
+    },
+    "untangle": {
+      "title": "Districare",
+      "drags": "Trascinamenti",
+      "maxNodes": "Nodi max."
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "Taquin"
+    },
+    "tents": {
+      "title": "Tende"
+    },
+    "mesker": {
+      "pen": "Penna",
+      "stroke": "Tratto",
+      "penPressureHint": "Scrivi con pressione costante"
+    },
+    "modality": {
+      "position": "Position",
+      "audio": "Audio"
+    },
+    "validate": "Validate"
+  },
+  "trace": {
+    "instructions": "Scorri verso la posizione N-back. Tocca due volte se è la stessa posizione.",
+    "hint": {
+      "validated": "Convalidato",
+      "draw": "Disegna la lettera • Tocca per convalidare",
+      "drawWithColor": "Disegna la lettera • Seleziona il colore • Tocca per convalidare",
+      "type": "Digita la lettera • Invio per convalidare",
+      "typeWithColor": "Digita la lettera • Seleziona il colore • Invio per convalidare",
+      "typeResult": "Digita il risultato • Invio per convalidare",
+      "writeResult": "Scrivi il risultato • Tocca per convalidare"
+    },
+    "keyboard": {
+      "letterInput": "Lettera",
+      "numberInput": "Numero"
+    },
+    "arithmetic": {
+      "cueHint": "Memorizza le 2 cifre",
+      "refresh": "Nuovo"
+    },
+    "hintPosition": "Dov'era lo stimolo {{n}} turni fa?",
+    "hintN0": "Indica lo stimolo attuale",
+    "warmupHint": "Memorizza le posizioni. Nessuna risposta richiesta.",
+    "hintDraw": "Disegna la lettera • Tocca per convalidare",
+    "hintDrawWithColor": "Disegna la lettera • Seleziona il colore • Tocca per convalidare",
+    "hintWriteResult": "Scrivi il risultato • Tocca per convalidare",
+    "guide": {
+      "swipeNormal": "Scorri dall'ultima casella a N-{{n}}. Doppio tocco se stessa posizione.",
+      "swipeSequential": "Scorri da N-0 a N-{{n}}, un passo alla volta. Doppio tocco se stessa posizione.",
+      "swipeDynamic": "Scorri seguendo la regola mostrata. Doppio tocco se stessa posizione.",
+      "tapN0": "Tocca la posizione corrente.",
+      "warmup": "Memorizza le posizioni — nessuna risposta richiesta.",
+      "writeDraw": "Disegna la lettera sentita {{n}} passi fa • Tocca per confermare",
+      "writeDrawColor": "Disegna la lettera sentita {{n}} passi fa • Seleziona il colore • Tocca per confermare",
+      "writeType": "Digita la lettera sentita {{n}} passi fa • Invio per confermare",
+      "writeTypeColor": "Digita la lettera sentita {{n}} passi fa • Seleziona il colore • Invio per confermare",
+      "writeDrawN0": "Disegna la lettera appena sentita • Tocca per confermare",
+      "writeDrawColorN0": "Disegna la lettera appena sentita • Seleziona il colore • Tocca per confermare",
+      "writeTypeN0": "Digita la lettera appena sentita • Invio per confermare",
+      "writeTypeColorN0": "Digita la lettera appena sentita • Seleziona il colore • Invio per confermare",
+      "writeResult": "Scrivi il risultato • Tocca per confermare",
+      "validated": "Validato",
+      "holdMindful": "Tieni premuta la cella per {{seconds}}s",
+      "swipeMindful": "Scorri in {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Timing adattivo",
+      "inputKeyboard": "Tastiera",
+      "inputHandwriting": "Scrittura a mano",
+      "writingInput": "Lettere/numeri",
+      "section": {
+        "grid": "Griglia",
+        "input": "Input",
+        "rhythm": "Ritmo",
+        "interface": "Indicatori",
+        "interfaceNone": "Standard",
+        "sound": "Suono"
+      },
+      "isi": "Intervallo (ISI)",
+      "stimulusDuration": "Durata stimolo",
+      "feedbackDuration": "Durata feedback",
+      "ruleDisplay": "Visualizzazione regola",
+      "blankInterval": "Pausa vuota",
+      "showProgressBar": "Barra di avanzamento",
+      "showInstructions": "Istruzioni in gioco",
+      "arithmeticInterference": "Interferenza aritmetica",
+      "fullMenu": "Menu completo",
+      "gridStyle": "Stile della griglia",
+      "gridStyleClassic": "Classico",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "Scorri in {{seconds}} s",
+        "holdMindful": "Mantieni la casella per {{seconds}} s"
+      },
+      "feedback": {
+        "gestureDuration": "Gesto",
+        "holdDuration": "Mantenimento",
+        "writingDuration": "Scrittura"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Tieni",
+      "gestureDuration": "Gesto",
+      "writingDuration": "Scrittura"
+    },
+    "image": "Forma",
+    "digits": "Digits",
+    "emotions": "Emozione",
+    "words": "Parola",
+    "tones": "Tone",
+    "spatial": "Direction"
+  },
+  "replay": {
+    "title": "Rilettura della sessione",
+    "play": "Riproduci",
+    "pause": "Pausa",
+    "restart": "Ricomincia",
+    "speed": "Velocità",
+    "loading": "Caricamento della sessione...",
+    "unavailable": "Riproduzione non disponibile per questa sessione",
+    "backToStats": "Torna alle statistiche",
+    "runStack": {
+      "original": "Originale",
+      "correction": "Correzione",
+      "delta": "Δ d'",
+      "inProgress": "In corso",
+      "completed": "Completato"
+    },
+    "abandon": "Abbandona",
+    "badge": "Replay",
+    "completionReport": {
+      "backToHome": "Indietro",
+      "correctAgain": "Correggi ancora",
+      "deltaVsOriginal": "vs Originale",
+      "deltaVsParent": "vs Run precedente",
+      "falseAlarmsSkipped": "Errori evitati",
+      "missesCorrections": "Omissioni corrette",
+      "newFalseAlarms": "Nuovi errori",
+      "replayAgain": "Rivedi",
+      "scoreLabel": "Punteggio di correzione",
+      "title": "Correzione terminata"
+    },
+    "controls": "Controlli",
+    "correction": "Correzione",
+    "finished": "Fine della riproduzione",
+    "home": "Home",
+    "parseError": "Impossibile leggere la sessione",
+    "tapSlotToPlace": "Tocca uno slot per posizionare",
+    "timeline": "Timeline",
+    "focusTimeline": {
+      "open": "Mostra timeline",
+      "close": "Chiudi timeline",
+      "title": "Timeline N-Back",
+      "fillAll": "Compila tutto",
+      "fillCard": "Compila scheda"
+    },
+    "hud": {
+      "counterDisplay": "Visualizzazione contatore",
+      "toggleCounterDisplay": "Cambia visualizzazione contatore"
+    },
+    "validate": "Convalida la correzione"
+  },
+  "recovery": {
+    "title": "Sessione interrotta",
+    "description": "Una sessione era in corso. Vuoi riprenderla?",
+    "mode": "Modalità",
+    "level": "Livello",
+    "progress": "Progressione",
+    "timeAgo": "Fa",
+    "resume": "Riprendi la sessione",
+    "startFresh": "Ricomincia",
+    "staleWarning": "Questa sessione è vecchia, riprenderla potrebbe essere difficile.",
+    "modes": {
+      "game": "Allenamento",
+      "activeTraining": "Allenamento attivo",
+      "flowTraining": "Allenamento Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Doppia traccia"
+    }
+  },
+  "rewards": {
+    "congratulations": "Congratulazioni!",
+    "duration": "{{days}} giorni Premium",
+    "lifetimeLabel": "Accesso permanente",
+    "expiresAt": "Valido fino al {{date}}",
+    "neverExpires": "Nessuna scadenza",
+    "continue": "Continua",
+    "discovery": {
+      "name": "Pass Scoperta",
+      "description": "7 giorni Premium — Esplora tutte le funzionalità"
+    },
+    "engagement": {
+      "name": "Pass Impegno",
+      "description": "1 mese Premium — La tua disciplina paga"
+    },
+    "expert": {
+      "name": "Pass Esperto",
+      "description": "3 mesi Premium — Sei un vero praticante"
+    },
+    "lifetime": {
+      "name": "Accesso Permanente",
+      "description": "Premium a vita — Hai padroneggiato Neurodual"
+    },
+    "xpRemaining": "XP rimanenti",
+    "permanentAccessUnlocked": "Accesso Permanente Sbloccato",
+    "reachedTheTop": "Hai raggiunto la vetta!"
+  },
+  "progression": {
+    "level": "Livello {{level}}",
+    "levelShort": "Liv. {{level}}",
+    "nextLevel": "Prossimo livello",
+    "reached": "Raggiunto",
+    "inProgress": "In corso"
+  },
+  "gridlock": {
+    "nextPuzzle": "Puzzle successivo →"
+  }
+}

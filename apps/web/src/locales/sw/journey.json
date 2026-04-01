@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Njia ya mafunzo",
+    "pageSubtitle": "Chagua, panga na uunda safari zako",
+    "enabled": "Washa njia ya mafunzo",
+    "description": "Hatua 30 za maendeleo kutoka N-1 hadi N-10",
+    "progress": "Maendeleo",
+    "locked": "Imefungwa",
+    "createJourney": "Unda safari",
+    "viewJourneys": "Tazama safari",
+    "current": "Safari ya sasa",
+    "myJourneys": "Safari zangu",
+    "stage": "Hatua",
+    "stages": "hatua",
+    "stagesShort": "St.",
+    "stageLabels": {
+      "pick": "Chagua",
+      "catch": "Kukamata",
+      "place": "Mahali",
+      "memo": "Memo"
+    },
+    "name": "Jina",
+    "namePlaceholder": "K.m. Changamoto ya N-5",
+    "levels": "Viwango",
+    "levelRange": "Kiwango cha kiwango",
+    "levelTo": "kwa",
+    "createNew": "Safari mpya",
+    "new": "Mpya",
+    "defaultCustomName": "Safari yangu",
+    "created": "Safari imeundwa!",
+    "deleted": "Safari imefutwa",
+    "sessionSettings": "Mipangilio ya kikao",
+    "savedStatus": "Mipangilio imehifadhiwa",
+    "preset": {
+      "easy": "Rahisi",
+      "medium": "Iliyopendekezwa",
+      "hard": "Ngumu"
+    },
+    "setup": {
+      "title": "Safari na wasifu",
+      "journey": "Safari",
+      "journeyNone": "Chagua...",
+      "profile": "Wasifu",
+      "profileNone": "Chagua...",
+      "configure": "Sanidi",
+      "configureNone": "Chagua safari",
+      "create": "Safari mpya",
+      "createDesc": "Unda safari mpya"
+    },
+    "deleteConfirmTitle": "Ungependa kufuta safari hii?",
+    "deleteConfirmMessage": "Safari ya \"{{name}}\" itafutwa kabisa.",
+    "renameTitle": "Ipe safari hii jina jipya",
+    "renameMessage": "Hariri jina la \"{{name}}\".",
+    "renamed": "Safari imebadilishwa jina.",
+    "badge": {
+      "simulator": "Mwimbaji",
+      "beta": "Beta",
+      "default": "Chaguomsingi"
+    },
+    "mode": "Hali",
+    "modeStandard": "Safari (Njia 4)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Kukamata Mara Mbili",
+      "dualPlace": "Mahali Pawili",
+      "dualMemo": "Memo Mbili",
+      "dualPick": "Chaguo mbili",
+      "simulator": "Mwimbaji",
+      "jaeggi": "Classic",
+      "brainWorkshop": "Warsha ya Ubongo"
+    },
+    "validation": {
+      "sessions": "{{count}} vipindi vya uthibitishaji",
+      "needed": "{{count}} vipindi vimesalia",
+      "excellent": "Bora kabisa!",
+      "good": "Nzuri!",
+      "passing": "Imepitishwa"
+    },
+    "progression": {
+      "title": "Maendeleo",
+      "description": "Ili kusonga mbele hadi kiwango kinachofuata, pata alama nzuri:",
+      "excellent": "≥95% → kipindi 1",
+      "good": "≥85% → vipindi 2",
+      "passing": "≥80% → vipindi 3",
+      "rules": "Kanuni za maendeleo",
+      "jaeggi": {
+        "description": "Kulingana na njia dhaifu zaidi:",
+        "up": "<Hitilafu 3 → Ongeza kiwango",
+        "stay": "Makosa 3 hadi 5 → Baki katika kiwango hiki",
+        "down": "> hitilafu 5 → Ngazi chini"
+      },
+      "brainworkshop": {
+        "description": "Itifaki ya Warsha ya Ubongo (alama ya BW):",
+        "up": "≥80% → Panda ngazi",
+        "stay": "50-79% → Kaa katika kiwango",
+        "strike": "Alama 3 mfululizo <50% → Kiwango cha chini"
+      },
+      "hybrid": {
+        "description": "Safari hii ina vipindi {{trackCount}} vya Wimbo Mbili, kisha {{dnbCount}} vipindi viwili vya N-Back katika kiwango sawa.",
+        "alternation": "Kitanzi huanza tena kwa Wimbo Mbili kila uamuzi unapofikiwa.",
+        "authority": "Vipindi viwili pekee vya N-Back huamua juu, kukaa au kushuka.",
+        "up": "Hitilafu 0-1 → Ongeza kiwango",
+        "stay": "Makosa 2-3 → Kaa",
+        "down": "Hitilafu 4+ → Ngazi chini",
+        "streakRule": "Vikao viwili mfululizo katika eneo moja husababisha uamuzi.",
+        "trackProgress": "Wimbo {{current}}/{{required}}",
+        "cleanProgress": "Imeidhinishwa {{current}}/{{required}}",
+        "stayProgress": "Shikilia {{current}}/{{required}}",
+        "downProgress": "Imeshindwa {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Wimbo Mbili hutumia upau wa umahiri unaoendelea kwa kila hatua ya kuhesabu walengwa:",
+        "calibration": "Urekebishaji wa kwanza hukadiria hesabu ya lengo lako la kuanzia",
+        "goodSession": "Kila kikao kizuri kinajaza hatua ya sasa kidogo",
+        "mastery": "Vipindi vinavyokaribia ukamilifu huijaza haraka, lakini vipindi vya kawaida hubaki vya wastani",
+        "regression": "Vipindi dhaifu vinaweza pia kufanya upau wa ujuzi wa sasa kushuka",
+        "unlock": "Hesabu inayofuata ya lengo hufunguliwa tu wakati hatua ya sasa inafikia 100%"
+      }
+    },
+    "switcher": {
+      "open": "Fungua swichi ya safari",
+      "current": "Ya sasa",
+      "showAll": "Safari zote",
+      "settings": "Mipangilio ya safari"
+    },
+    "previous": "Safari ya awali",
+    "next": "Safari inayofuata",
+    "calibration": {
+      "title": "Kikao cha kwanza",
+      "subtitle": "Urekebishaji mfupi utaamua kiwango chako cha kuanzia, au unaweza kuanza moja kwa moja kwenye kiwango cha 2.",
+      "skipToN2": "au kuanzia N-2",
+      "continueAt": "au endelea kwa N-{{level}}",
+      "start": "Anza urekebishaji",
+      "redo": "Rudia urekebishaji",
+      "badge": "Urekebishaji"
+    },
+    "presets": {
+      "currentSlot": "Desturi",
+      "currentSlotView": "Desturi",
+      "lockedTitle": "Baadhi ya chaguzi zimefungwa",
+      "lockedDesc": "Ili kuendelea kulinganishwa, mbinu (na chaguo chache) haziwezi kubadilika baada ya safari kuanza."
+    },
+    "completed": {
+      "title": "Safari imekamilika!",
+      "subtitle": "Hatua zote zimethibitishwa. Umefanya vizuri!",
+      "continueFree": "Endelea mafunzo"
+    },
+    "report": {
+      "stage": "Hatua",
+      "level": "Kiwango",
+      "score": "Alama",
+      "sessionValidated": "Kipindi kimethibitishwa!",
+      "sessionNotValidated": "Kipindi hakijathibitishwa",
+      "minScore": "Kima cha chini zaidi kinahitajika:",
+      "stageCompleted": "Hatua imekamilika!",
+      "stageUnlocked": "Hatua ya {{stage}} imefunguliwa!",
+      "replay": "Cheza tena",
+      "nextStage": "Hatua inayofuata",
+      "home": "Nyumbani",
+      "hits": "Majibu sahihi",
+      "misses": "Zilizokosekana",
+      "falseAlarms": "Tahadhari za uwongo",
+      "correctRejections": "Kukataa sahihi"
+    }
+  }
+}

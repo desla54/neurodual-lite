@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Trainingspad",
+    "pageSubtitle": "Kies, organiseer en maak je trajecten",
+    "enabled": "Trainingspad inschakelen",
+    "description": "30 progressieve fasen van N-1 tot N-10",
+    "progress": "Voortgang",
+    "locked": "Vergrendeld",
+    "createJourney": "Traject aanmaken",
+    "viewJourneys": "Trajecten bekijken",
+    "current": "Huidig traject",
+    "myJourneys": "Mijn trajecten",
+    "stage": "Fase",
+    "stages": "fasen",
+    "stagesShort": "fs.",
+    "stageLabels": {
+      "pick": "Kies",
+      "catch": "Vang",
+      "place": "Plaats",
+      "memo": "Memo"
+    },
+    "name": "Naam",
+    "namePlaceholder": "Bijv. N-5 Uitdaging",
+    "levels": "Niveaus",
+    "levelRange": "Niveaubereik",
+    "levelTo": "tot",
+    "createNew": "Nieuw traject",
+    "new": "Nieuw",
+    "defaultCustomName": "Mijn traject",
+    "created": "Traject aangemaakt!",
+    "deleted": "Traject verwijderd",
+    "sessionSettings": "Sessie-instellingen",
+    "savedStatus": "Instellingen opgeslagen",
+    "preset": {
+      "easy": "Makkelijk",
+      "medium": "Aanbevolen",
+      "hard": "Moeilijk"
+    },
+    "setup": {
+      "title": "Traject & profielen",
+      "journey": "Traject",
+      "journeyNone": "Selecteer…",
+      "profile": "Profiel",
+      "profileNone": "Selecteer…",
+      "configure": "Configureren",
+      "configureNone": "Selecteer een traject",
+      "create": "Nieuw traject",
+      "createDesc": "Maak een nieuw traject"
+    },
+    "deleteConfirmTitle": "Dit traject verwijderen?",
+    "deleteConfirmMessage": "Het traject \"{{name}}\" wordt permanent verwijderd.",
+    "renameTitle": "Dit traject hernoemen",
+    "renameMessage": "Bewerk de naam van \"{{name}}\".",
+    "renamed": "Traject hernoemd.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Standaard"
+    },
+    "mode": "Modus",
+    "modeStandard": "Traject (4 modi)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klassiek",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} validatiesessie(s)",
+      "needed": "{{count}} resterende sessie(s)",
+      "excellent": "Uitstekend!",
+      "good": "Goed!",
+      "passing": "Geslaagd"
+    },
+    "progression": {
+      "title": "Progressie",
+      "description": "Om naar het volgende niveau te gaan, behaal een goede score:",
+      "excellent": "≥95% → 1 sessie",
+      "good": "≥85% → 2 sessies",
+      "passing": "≥80% → 3 sessies",
+      "rules": "Progressieregels",
+      "jaeggi": {
+        "description": "Gebaseerd op de zwakste modaliteit:",
+        "up": "< 3 fouten → Niveau omhoog",
+        "stay": "3 - 5 fouten → Op dit niveau blijven",
+        "down": "> 5 fouten → Niveau omlaag"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop-protocol (BW-score):",
+        "up": "≥80% → Niveau omhoog",
+        "stay": "50-79% → Op niveau blijven",
+        "strike": "3 opeenvolgende scores <50% → Niveau omlaag"
+      },
+      "hybrid": {
+        "description": "Dit traject draait {{trackCount}} Dual Track-sessie(s), daarna {{dnbCount}} Dual N-Back-sessie(s) op hetzelfde niveau.",
+        "alternation": "De loop herstart altijd met Dual Track wanneer een beslissing is bereikt.",
+        "authority": "Alleen Dual N-Back-sessies bepalen omhoog, blijven of omlaag.",
+        "up": "0-1 fout → Niveau omhoog",
+        "stay": "2-3 fouten → Blijven",
+        "down": "4+ fouten → Niveau omlaag",
+        "streakRule": "Twee sessies op rij in dezelfde zone activeren de beslissing.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Gevalideerd {{current}}/{{required}}",
+        "stayProgress": "Vasthouden {{current}}/{{required}}",
+        "downProgress": "Mislukt {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track gebruikt een doorlopende meesterschapsbalk voor elke doelstadiumfase:",
+        "calibration": "Een eerste kalibratie schat je startdoelaantal",
+        "goodSession": "Elke goede sessie vult de huidige fase een beetje",
+        "mastery": "Bijna perfecte sessies vullen sneller, gewone sessies blijven bescheiden",
+        "regression": "Zwakke sessies kunnen de huidige meesterschapsbalk ook laten dalen",
+        "unlock": "Het volgende doelaantal ontgrendelt pas wanneer de huidige fase 100% bereikt"
+      }
+    },
+    "switcher": {
+      "open": "Trajectwisselaar openen",
+      "current": "Huidig",
+      "showAll": "Alle trajecten",
+      "settings": "Trajectinstellingen"
+    },
+    "previous": "Vorig traject",
+    "next": "Volgend traject",
+    "calibration": {
+      "title": "Eerste sessie",
+      "subtitle": "Een korte kalibratie bepaalt je startniveau, of je kunt direct beginnen op niveau 2.",
+      "skipToN2": "of begin op N-2",
+      "continueAt": "of ga verder op N-{{level}}",
+      "start": "Kalibratie starten",
+      "redo": "Kalibratie opnieuw",
+      "badge": "Kalibratie"
+    },
+    "presets": {
+      "currentSlot": "Aangepast",
+      "currentSlotView": "Aangepast",
+      "lockedTitle": "Sommige opties zijn vergrendeld",
+      "lockedDesc": "Om progressie vergelijkbaar te houden, kunnen modaliteiten (en enkele opties) niet worden gewijzigd nadat het traject is gestart."
+    },
+    "completed": {
+      "title": "Traject voltooid!",
+      "subtitle": "Alle fasen gevalideerd. Goed gedaan!",
+      "continueFree": "Doorgaan met trainen"
+    },
+    "report": {
+      "stage": "Fase",
+      "level": "Niveau",
+      "score": "Score",
+      "sessionValidated": "Sessie gevalideerd!",
+      "sessionNotValidated": "Sessie niet gevalideerd",
+      "minScore": "Minimum vereist:",
+      "stageCompleted": "Fase voltooid!",
+      "stageUnlocked": "Fase {{stage}} ontgrendeld!",
+      "replay": "Opnieuw spelen",
+      "nextStage": "Volgende fase",
+      "home": "Startpagina",
+      "hits": "Treffers",
+      "misses": "Gemist",
+      "falseAlarms": "Vals alarm",
+      "correctRejections": "Correcte afwijzingen"
+    }
+  }
+}

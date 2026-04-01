@@ -1068,7 +1068,13 @@
       },
       "continueWithout": "Continue without account",
       "createAccount": "Create account",
-      "purchaseSuccess": "Welcome to Premium!"
+      "purchaseSuccess": "Welcome to Premium!",
+      "free": "Free mode",
+      "freeTimeRemaining": "{{time}} remaining in free mode",
+      "playedTime": "Play time",
+      "activationCode": "Activation code",
+      "activate": "Activate",
+      "active": "Premium active"
     },
     "data": {
       "title": "Data",
@@ -1636,9 +1642,5 @@
       "difficultyMedium": "Medium",
       "difficultyHard": "Hard"
     }
-  },
-  "subscription": {
-    "free": "Free",
-    "trial": "Trial"
   }
 }

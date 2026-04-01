@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "教程",
+    "exitConfirm": "退出教程？",
+    "exitWarning": "你的进度不会被保存。",
+    "continue": "继续",
+    "quit": "退出",
+    "stepLabel": "步骤 {{step}}",
+    "previous": "上一步",
+    "restart": "重新开始",
+    "next": "下一步",
+    "startGame": "开始",
+    "progress": "计数器",
+    "tapToContinue": "点击继续",
+    "controls": {
+      "position": "位置",
+      "audio": "声音"
+    },
+    "annotation": {
+      "label": "指引"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "做得好，你通过了教程。",
+        "stay": "差一点了，再练习一下就能掌握。",
+        "down": "尚未通过。重新学习教程以巩固基础。"
+      },
+      "header": {
+        "up": "教程完成！",
+        "down": "复习",
+        "stay": "差一点！"
+      },
+      "noteMinAssessment": "注意：为了更准确的评估，教程至少评估8个回答。",
+      "guidance": {
+        "passed": "你已准备好进行自由训练。",
+        "failed": "建议在进入训练前重新学习此教程。"
+      },
+      "correctAnswers": "{{correct}}/{{total}} 正确答案",
+      "actions": {
+        "backToHome": "返回首页",
+        "retryTutorial": "重新学习教程",
+        "explainLevels": "了解 N 等级",
+        "goToTraining": "前往训练",
+        "continueToTraining": "继续训练"
+      }
+    },
+    "welcome": {
+      "title": "训练简介",
+      "description": "Dual N-Back通过要求你同时追踪两个信息流来挑战你的工作记忆：一个视觉位置和一个声音。本教程将一步步引导你。",
+      "button": "开始教程"
+    },
+    "timeline": {
+      "legend": "时间轴帮助比较——游戏中会隐藏",
+      "past": "过去",
+      "present": "现在"
+    },
+    "hub": {
+      "title": "教程",
+      "subtitle": "选择一个模式来学习",
+      "basics": {
+        "title": "基础",
+        "description": "学习经典Dual N-Back的反应和节奏。"
+      },
+      "place": {
+        "title": "Dual Place",
+        "description": "掌握时间轴上的时间排列。"
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "为每个刺激标注时间参考（N、N-1、N-2）。"
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "通过描摹学习主动回忆手势。"
+      },
+      "memo": {
+        "title": "Dual Memo",
+        "description": "从记忆中重建完整序列。"
+      },
+      "soroban": {
+        "title": "掌握 Soroban",
+        "description": "通过 8 个渐进级别，逐步学习日本算盘。"
+      }
+    },
+    "place": {
+      "comingSoon": "Place教程正在开发中",
+      "cardPool": "可用卡片",
+      "slot": "插槽",
+      "observe": "观察：网格上的位置和音频字母。",
+      "buffer": "第二个刺激。N-Back缓冲区正在填充。",
+      "cardsAppear": "卡片出现了！代表最后3个刺激。",
+      "firstDrag": "点击标记的卡片，然后点击N-2插槽（最旧的）。",
+      "timelineExplain": "时间轴显示时间：N-2 = 最旧，N = 当前。",
+      "positionN1": "将中间位置放到N-1插槽。",
+      "positionN": "很好！用最近的位置（N插槽）完成。",
+      "audioIntro": "现在是音频卡片！同样的原理。",
+      "audioN2": "将第一个听到的字母放到N-2插槽。",
+      "audioN1": "继续放中间的字母（N-1插槽）。",
+      "audioN": "用最近的字母（N插槽）完成。",
+      "dualIntro": "新试验！放置位置和字母。",
+      "dualPractice": "把6张卡片全部放到正确的插槽。慢慢来！",
+      "rhythmExplain": "在实际游戏中，你的时间是有限的。",
+      "autonomy": "轮到你了！正确放置所有卡片。",
+      "conclusion": "做得好！你已掌握了Dual Place的基础。",
+      "selectCard": "选择一张卡片，然后点击它的插槽",
+      "clickSlot": "点击正确的插槽放置卡片",
+      "wrongSlot": "不是那个插槽！看看时间顺序。",
+      "wrongCard": "不是那张卡片。找到与插槽匹配的卡片。",
+      "tryAgain": "再试一次！正确的插槽已高亮显示。"
+    },
+    "memo": {
+      "comingSoon": "Memo教程正在开发中",
+      "selectPosition": "选择位置",
+      "selectAudio": "选择字母",
+      "clickToRecall": "点击槽位回忆对应值",
+      "validate": "确认",
+      "observeFirst": "第一个刺激。记住位置和字母！",
+      "observeSecond": "第二个刺激。继续记忆。",
+      "observeThird": "第三个刺激。缓冲区已满。准备好！",
+      "recallIntro": "网格消失了！凭记忆回忆。点击 N-2 槽位。",
+      "firstRecall": "点击N-2插槽。第一个位置是什么？",
+      "feedbackExplain": "绿色 = 正确。红色 = 错误。你可以修正最多3次！",
+      "multiSlot": "继续！回忆N-1和N的位置。",
+      "newStimulus": "新刺激！N-Back窗口移动一步。",
+      "windowShift": "窗口已移动。旧的N-2退出，新的N进入。",
+      "fullPosition": "回忆所有3个位置。集中注意力！",
+      "audioIntro": "新刺激。现在加入音频回忆！",
+      "firstAudioRecall": "点击音频N-2插槽。哪个字母？",
+      "fullAudio": "继续回忆N-1和N的字母。",
+      "dualIntro": "在实际游戏中，你同时回忆位置和字母。",
+      "dualPractice": "回忆所有6个单元格，然后点击确认。",
+      "correctionExplain": "如果出错，再次点击修正。最多3次。",
+      "withCorrection": "试试看！如果错了，再次点击修正。",
+      "conclusion": "太棒了！你已掌握主动回忆。开始一个会话吧！",
+      "wrongAnswer": "不是这个。想想，那个时刻的刺激是什么？",
+      "tryAgain": "再试一次！你还可以修正。",
+      "maxCorrections": "已达3次修正。此插槽已锁定。",
+      "validateHint": "所有插槽已填满。点击确认！"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "欢迎来到Dual Pick！学习分类每个刺激。",
+        "hud": "顶部：你在教程中的进度。",
+        "grid": "网格分为3个区域：上、中、下。",
+        "controls": "这些按钮用于分类。位置在左边，声音在右边。",
+        "outro": "准备好了吗？从位置分类开始！"
+      },
+      "intro": "在Dual Pick中，你按两个标准分类每个刺激：网格区域和声音类型。",
+      "gridExplain": "网格有3个区域：上（顶行）、中（中心）、下（底行）。",
+      "positionHaut": "方块在上方。点击「上」。",
+      "positionMilieu": "方块在中间。点击「中」。",
+      "positionBas": "方块在下方。点击「下」。",
+      "positionRecap": "完美！上 = 顶行，中 = 中心，下 = 底行。",
+      "positionPractice": "轮到你了！分类这个位置。",
+      "soundIntro": "现在是声音。有两种类型：元音（A、E、I、O、U）和辅音（其他所有）。",
+      "soundVoyelle": "你听到 A。这是元音。点击「元音」。",
+      "soundConsonne": "你听到T。这是辅音。点击辅音。",
+      "soundRecap": "记住：A、E、I、O、U = 元音。其他 = 辅音。",
+      "soundPractice": "轮到你了！分类这个声音。",
+      "dualIntro": "在实际游戏中，你同时分类两者：位置和声音。",
+      "dualFirst": "分类位置和声音。慢慢来。",
+      "dualSecond": "继续。位置 + 声音。",
+      "dualThird": "太棒了！再来一个练习。",
+      "rhythm": "在会话中，保持稳定的节奏。流畅度来自练习。",
+      "conclusion": "做得好！你已掌握分类。开始一个Dual Pick会话吧！",
+      "buttons": {
+        "top": "上",
+        "middle": "中",
+        "bottom": "下",
+        "vowel": "元音",
+        "consonant": "辅音"
+      },
+      "feedback": {
+        "correctPosition": "正确的区域！",
+        "correctSound": "正确的声音类型！",
+        "wrongPosition": "不是那个区域。看看方块在哪里。",
+        "wrongSound": "不对。A、E、I、O、U = 元音。"
+      }
+    },
+    "trace": {
+      "intro": "欢迎来到Dual Trace。这里没有按钮：你将通过滑动手势主动回忆上一个位置。",
+      "observe": "记住这个位置。下一回合，你需要朝它滑动。",
+      "firstSwipe": "第一次滑动！朝上一回合的位置滑动手指。箭头引导你。",
+      "firstAudioMatch": "和上一回合相同的字母！滑向位置并双击来标记音频匹配。",
+      "audioMatch": "检测到音频匹配！滑动 + 双击。",
+      "swipe1": "朝N-1位置滑动。回忆方块在哪里。",
+      "swipe2": "继续。每次滑动都在强化你的主动记忆。",
+      "swipe3": "主动回忆比简单识别更有难度。",
+      "swipe4": "保持专注。滑动前先想象位置。",
+      "swipe5": "太棒了！你已掌握回忆手势。",
+      "complete": "教程完成。你已准备好进行Dual Trace训练。",
+      "tapTarget": "点击上一回合的位置",
+      "tapTargetAndAudio": "点击目标位置，然后声音"
+    },
+    "ui": {
+      "startExercise": "开始练习",
+      "score": "得分：{{current}}/{{total}}",
+      "complete": "完成",
+      "correct": "✓ 正确！",
+      "expectedMatch": "✗ 预期：匹配",
+      "expectedNoMatch": "✗ 预期：不匹配",
+      "memorize": "记住位置...",
+      "memorizeLetter": "记住字母...",
+      "matchDetected": "✓ 检测到匹配！",
+      "noMatch": "✗ 不匹配",
+      "matchExplanation": "匹配！步骤 {{current}} = 步骤 {{previous}}",
+      "exerciseComplete": "练习完成！",
+      "match": "匹配",
+      "noMatchButton": "不匹配",
+      "none": "无",
+      "both": "两者",
+      "position": "位置",
+      "audio": "声音",
+      "posShort": "位"
+    },
+    "spotlight": {
+      "hud": "仪表盘：N-back级别、回合计数器和训练控制。",
+      "timeline": "时间轴保留最后3个刺激以帮助比较。在实际游戏中，这个帮助是隐藏的。",
+      "grid": "网格：每回合，8个位置中的一个格子亮起。同时朗读一个字母。",
+      "controls": "你的回答按钮。检测到重复时按下。",
+      "intro": "欢迎！让我们一起了解游戏界面。",
+      "continue": "继续",
+      "outro": "现在让我们进入引导会话。观察动画并跟随指引。",
+      "start": "开始",
+      "tapToContinue": "点击任意位置继续"
+    },
+    "speed": {
+      "label": "速度：{{speed}}",
+      "pauseToChange": "暂停以更改速度"
+    },
+    "assessment": {
+      "title": "评估阶段",
+      "subtitle": "从现在开始，这是一个简短的经典回合。",
+      "body": "节奏是连续的，不再有提示。像真正的训练一样去做。",
+      "goal": "目标：在{{count}}次尝试中至少达到{{min}}%的准确率。",
+      "cta": "开始吧"
+    },
+    "postlude": {
+      "levels": {
+        "title": "理解等级系统",
+        "desc": "你学会了N=2。以下是N=1到N=4的工作原理。",
+        "start": "开始",
+        "done": "完成",
+        "skip": "跳过",
+        "hud": "N = 往回几步。",
+        "present": "N = 当前刺激（现在）。",
+        "past": "与N-{{n}}比较。",
+        "pressPosition": "如果位置重复，按「位置」。",
+        "pressAudio": "如果声音重复，按声音。",
+        "annotation": {
+          "n1": "N=1：将当前刺激(N)与前一步(N-1)比较。",
+          "n2": "N=2：将当前刺激(N)与两步前(N-2)比较。",
+          "n3": "N=3：将当前刺激(N)与三步前(N-3)比较。"
+        },
+        "outroTitle": "以此类推…",
+        "outroBody": "到N=5时，你将与N-5比较。规则不变，只是距离增加。"
+      }
+    },
+    "annotations": {
+      "intro": "观察：网格上一个格子亮起，同时朗读一个字母。",
+      "observe": "记忆。时间轴追踪刺激。",
+      "firstComparison": "你现在有足够的历史记录来比较了。",
+      "firstPositionMatch": "和2回合前相同的位置！在时间轴上比较N和N-2，然后按位置。",
+      "firstAudioMatch": "和2回合前相同的字母！在时间轴上比较N和N-2，然后按声音。",
+      "firstDualMatch": "双重匹配！位置和声音都重复了。按两个按钮。",
+      "positionMatch": "位置相同。按「位置」。",
+      "audioMatch": "声音相同。按「音频」。",
+      "dualMatch": "两者都匹配。按位置和声音。",
+      "noMatch": "本回合无匹配。继续记忆。",
+      "noMatch1": "这次没有重复。点击继续。",
+      "noMatch2": "仍然没有匹配。专注于位置+声音的流动。",
+      "noMatch3": "没什么可报告的。始终与时间轴上的N-2比较。",
+      "noMatch4": "没有匹配。节奏正在加快。",
+      "noMatch5": "继续。匹配会不可预测地出现。",
+      "noMatch6": "没有匹配。保持节奏，你掌控得很好。",
+      "noMatch7": "最后冲刺。保持专注。",
+      "noMatch8": "快结束了。还有几个刺激。",
+      "complete": "恭喜！你已掌握了Dual N-Back的基础。准备好训练了吗？"
+    },
+    "exit": {
+      "confirm": "退出",
+      "title": "退出教程？",
+      "message": "你的进度会被保存。你可以稍后继续。"
+    },
+    "recovery": {
+      "message": "发现一个中断的会话。",
+      "staleMessage": "发现一个超过30分钟前中断的会话。",
+      "resume": "恢复",
+      "startFresh": "重新开始",
+      "title": "恢复教程？"
+    }
+  }
+}

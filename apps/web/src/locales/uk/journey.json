@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Шлях тренування",
+    "pageSubtitle": "Обирай, організовуй та створюй свої подорожі",
+    "enabled": "Увімкнути шлях тренування",
+    "description": "30 прогресивних етапів від N-1 до N-10",
+    "progress": "Прогрес",
+    "locked": "Заблоковано",
+    "createJourney": "Створити подорож",
+    "viewJourneys": "Переглянути подорожі",
+    "current": "Поточна подорож",
+    "myJourneys": "Мої подорожі",
+    "stage": "Етап",
+    "stages": "етапів",
+    "stagesShort": "ет.",
+    "stageLabels": {
+      "pick": "Обери",
+      "catch": "Лови",
+      "place": "Розмісти",
+      "memo": "Запам'ятай"
+    },
+    "name": "Назва",
+    "namePlaceholder": "Напр. Виклик N-5",
+    "levels": "Рівні",
+    "levelRange": "Діапазон рівнів",
+    "levelTo": "до",
+    "createNew": "Нова подорож",
+    "new": "Нова",
+    "defaultCustomName": "Моя подорож",
+    "created": "Подорож створено!",
+    "deleted": "Подорож видалено",
+    "sessionSettings": "Налаштування сесії",
+    "savedStatus": "Налаштування збережено",
+    "preset": {
+      "easy": "Легко",
+      "medium": "Рекомендовано",
+      "hard": "Складно"
+    },
+    "setup": {
+      "title": "Подорож та профілі",
+      "journey": "Подорож",
+      "journeyNone": "Обрати…",
+      "profile": "Профіль",
+      "profileNone": "Обрати…",
+      "configure": "Налаштувати",
+      "configureNone": "Обери подорож",
+      "create": "Нова подорож",
+      "createDesc": "Створити нову подорож"
+    },
+    "deleteConfirmTitle": "Видалити цю подорож?",
+    "deleteConfirmMessage": "Подорож \"{{name}}\" буде видалено назавжди.",
+    "renameTitle": "Перейменувати цю подорож",
+    "renameMessage": "Редагувати назву \"{{name}}\".",
+    "renamed": "Подорож перейменовано.",
+    "badge": {
+      "simulator": "Симулятор",
+      "beta": "Beta",
+      "default": "За замовчуванням"
+    },
+    "mode": "Режим",
+    "modeStandard": "Подорож (4 режими)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Симулятор",
+      "jaeggi": "Класичний",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} сесій підтвердження",
+      "needed": "{{count}} сесій залишилось",
+      "excellent": "Чудово!",
+      "good": "Добре!",
+      "passing": "Пройдено"
+    },
+    "progression": {
+      "title": "Прогресія",
+      "description": "Щоб перейти на наступний рівень, досягни хорошого результату:",
+      "excellent": "≥95% → 1 сесія",
+      "good": "≥85% → 2 сесії",
+      "passing": "≥80% → 3 сесії",
+      "rules": "Правила прогресії",
+      "jaeggi": {
+        "description": "За найслабшою модальністю:",
+        "up": "< 3 помилки → Рівень вгору",
+        "stay": "3 - 5 помилок → Залишитись на цьому рівні",
+        "down": "> 5 помилок → Рівень вниз"
+      },
+      "brainworkshop": {
+        "description": "Протокол Brain Workshop (бал BW):",
+        "up": "≥80% → Рівень вгору",
+        "stay": "50-79% → Залишитись на рівні",
+        "strike": "3 бали поспіль <50% → Рівень вниз"
+      },
+      "hybrid": {
+        "description": "Ця подорож запускає {{trackCount}} сесій Dual Track, потім {{dnbCount}} сесій Dual N-Back на тому ж рівні.",
+        "alternation": "Цикл завжди починається з Dual Track, коли прийнято рішення.",
+        "authority": "Лише сесії Dual N-Back вирішують: вгору, залишитись чи вниз.",
+        "up": "0-1 помилка → Рівень вгору",
+        "stay": "2-3 помилки → Залишитись",
+        "down": "4+ помилок → Рівень вниз",
+        "streakRule": "Дві сесії поспіль в одній зоні запускають рішення.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Підтверджено {{current}}/{{required}}",
+        "stayProgress": "Утримання {{current}}/{{required}}",
+        "downProgress": "Невдача {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track використовує безперервну шкалу майстерності для кожного етапу цільової кількості:",
+        "calibration": "Перша калібровка оцінює початкову цільову кількість",
+        "goodSession": "Кожна вдала сесія трохи заповнює поточний етап",
+        "mastery": "Майже ідеальні сесії заповнюють швидше, звичайні — помірно",
+        "regression": "Слабкі сесії також можуть знизити поточну шкалу майстерності",
+        "unlock": "Наступна цільова кількість відкривається лише коли поточний етап досягає 100%"
+      }
+    },
+    "switcher": {
+      "open": "Відкрити перемикач подорожей",
+      "current": "Поточна",
+      "showAll": "Усі подорожі",
+      "settings": "Налаштування подорожі"
+    },
+    "previous": "Попередня подорож",
+    "next": "Наступна подорож",
+    "calibration": {
+      "title": "Перша сесія",
+      "subtitle": "Коротка калібровка визначить твій початковий рівень, або ти можеш почати одразу з рівня 2.",
+      "skipToN2": "або почати з N-2",
+      "continueAt": "або продовжити з N-{{level}}",
+      "start": "Почати калібровку",
+      "redo": "Повторити калібровку",
+      "badge": "Калібровка"
+    },
+    "presets": {
+      "currentSlot": "Власне",
+      "currentSlotView": "Власне",
+      "lockedTitle": "Деякі параметри заблоковано",
+      "lockedDesc": "Щоб зберегти порівнянність прогресії, модальності (та деякі параметри) не можна змінити після початку подорожі."
+    },
+    "completed": {
+      "title": "Подорож завершено!",
+      "subtitle": "Усі етапи підтверджено. Молодець!",
+      "continueFree": "Продовжити тренування"
+    },
+    "report": {
+      "stage": "Етап",
+      "level": "Рівень",
+      "score": "Бал",
+      "sessionValidated": "Сесію підтверджено!",
+      "sessionNotValidated": "Сесію не підтверджено",
+      "minScore": "Мінімальний необхідний:",
+      "stageCompleted": "Етап завершено!",
+      "stageUnlocked": "Етап {{stage}} відкрито!",
+      "replay": "Грати знову",
+      "nextStage": "Наступний етап",
+      "home": "Головна",
+      "hits": "Влучання",
+      "misses": "Промахи",
+      "falseAlarms": "Хибні тривоги",
+      "correctRejections": "Правильні відхилення"
+    }
+  }
+}

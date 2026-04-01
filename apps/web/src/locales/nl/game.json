@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Hoe voel je je?",
+      "tired": "Moe",
+      "normal": "Normaal",
+      "energized": "Energiek"
+    },
+    "aria": {
+      "trialTimer": "Proeftimer",
+      "positionMatch": "Positie wedstrijd",
+      "audioMatch": "Audio-match",
+      "audioLetter": "Audiobrief:",
+      "traceGrid": "Traceer raster"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Schakel synchronisatiemonitor in",
+      "start": "begin",
+      "end": "einde",
+      "pinLabel": "speld",
+      "pinTitle": "Vastzetten op scherm",
+      "inputLabel": "invoer",
+      "inputTitle": "Schakel profilering van invoerlatentie in (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "op",
+      "off": "uit",
+      "hideLabel": "verbergen",
+      "hideTitle": "Verbergen (tenzij syncHud=1 of ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "geluid",
+        "expected": "verwacht"
+      },
+      "labels": {
+        "trial": "proef",
+        "lagShow": "Weergavevertraging",
+        "lagHide": "Vertraag masker",
+        "winErr": "winnen fout",
+        "endRef": "eind ref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_synchronisatie p95",
+        "visualPostP95": "visuele_post p95",
+        "inputToDispatchP95": "invoer->verzending p95",
+        "inputToCommitP95": "invoer->commit p95",
+        "inputToPaintP95": "invoer->verf p95",
+        "inputPending": "invoer in behandeling",
+        "inputSamples": "invoermonsters",
+        "touchSamples": "monsters aanraken",
+        "mouseSamples": "muizen monsters",
+        "keyboardSamples": "toetsenbordvoorbeelden",
+        "latestMethod": "nieuwste (methode)",
+        "latestModality": "nieuwste modaliteit",
+        "audioCueMode": "audiosignalen",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "invoerprofiler opnieuw instellen"
+    },
+    "hud": {
+      "resume": "Hervatten",
+      "pause": "Pauze",
+      "quit": "Stoppen",
+      "restart": "Opnieuw opstarten",
+      "spaceToStart": "Ruimte om te beginnen",
+      "settings": "Instellingen",
+      "enterToAdvance": "Ga naar binnen om verder te gaan",
+      "trial": "Proef",
+      "muteTexture": "Achtergrondgeluid dempen"
+    },
+    "status": {
+      "paused": "Gepauzeerd"
+    },
+    "completed": "Voltooid",
+    "starting": {
+      "getReady": "Maak je klaar..."
+    },
+    "quitModal": {
+      "title": "Sessie beëindigen?",
+      "message": "Je voortgang wordt niet opgeslagen.",
+      "confirm": "Stoppen",
+      "cancel": "Ga door",
+      "close": "Sluiten"
+    },
+    "controls": {
+      "position": "Positie",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Audio & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Audio",
+      "audio2": "Geluid 2",
+      "color": "Kleur",
+      "arithmetic": "Rekenkundig",
+      "image": "Vorm"
+    },
+    "arithmetic": {
+      "answer": "Antwoord",
+      "clear": "Duidelijk",
+      "hint": "Toetsenbord: 0–9 · '-' voor het teken · '.' voor decimalen · Backspace om te wissen"
+    },
+    "navigation": {
+      "back": "Terug"
+    },
+    "xp": {
+      "title": "XP verdiend",
+      "base": "Basis (N-{{level}})",
+      "performance": "Prestaties",
+      "accuracy": "Nauwkeurigheid",
+      "streakBonus": "Streak-bonus",
+      "dailyBonus": "Eerste van de dag",
+      "badgeBonus": "Insignes",
+      "flowBonus": "Dubbele plaatsbonus",
+      "confidenceMultiplier": "Vertrouwen",
+      "dailyCapReached": "Dagelijkse XP-limiet bereikt",
+      "levelReached": "Niveau {{level}} bereikt!"
+    },
+    "badges": {
+      "newUnlocked": "Nieuwe badges ontgrendeld"
+    },
+    "getReady": "Maak je klaar...",
+    "layoutEdit": {
+      "done": "Klaar",
+      "reset": "Opnieuw instellen",
+      "instructions": "Versleep zones om de volgorde te wijzigen. Formaat wijzigen met behulp van de handvatten.",
+      "title": "Bewerkingsmodus",
+      "cancel": "Annuleer",
+      "save": "Vergrendelen",
+      "editLayout": "Lay-out bewerken"
+    },
+    "paused": "Gepauzeerd",
+    "pressEscapeToResume": "Druk op Escape om door te gaan",
+    "settings": {
+      "editLayout": "Lay-out bewerken",
+      "gridAndButtons": "Raster en knoppen",
+      "swapPositionAudio": "Wissel positie / audio",
+      "title": "Instellingen",
+      "quickHint": "Pas een paar instellingen aan zonder het spel te verlaten.",
+      "quickUnavailable": "Er zijn nog geen snelle instellingen beschikbaar voor deze modus."
+    },
+    "pinkNoiseInfo": "Bij elke stimulus hoort een achtergrondtoon. Je kunt het aanpassen of uitschakelen in de audio-instellingen.",
+    "pinkNoiseDismiss": "Ga door",
+    "audioMode": "Audiomodus",
+    "cogTask": {
+      "precision": "Nauwkeurigheid",
+      "avgRt": "Gem. RT",
+      "avgRtShort": "Gem. RT",
+      "trials": "Proeven",
+      "correct": "Juist",
+      "errors": "Fouten",
+      "effect": "Effect",
+      "restart": "Opnieuw opstarten",
+      "home": "Thuis",
+      "performance": "Prestaties",
+      "trialDetail": "Proefdetail",
+      "setDetail": "Details instellen",
+      "roundDetail": "Rond detail",
+      "problemDetail": "Probleemdetail",
+      "phaseDetail": "Fasedetail",
+      "feedbackCorrect": "Juist",
+      "feedbackIncorrect": "Onjuist",
+      "feedbackTimeout": "Te langzaam!",
+      "preparing": "Maak je klaar...",
+      "loading": "Laden...",
+      "left": "Links",
+      "right": "Juist",
+      "up": "Op",
+      "down": "Naar beneden",
+      "congruent": "Congruent",
+      "incongruent": "Incongruent",
+      "congruencyEffect": "Congruentie-effect",
+      "maxSpan": "Maximale overspanning",
+      "startingSpan": "Startbereik",
+      "maxSpanReached": "Maximale spanwijdte bereikt",
+      "longestStreak": "Langste correcte reeks",
+      "series": "Streep",
+      "avgResponseTime": "Gemiddelde responstijd",
+      "recall": "Terugroepen",
+      "expected": "Verwacht",
+      "submit": "Verzenden",
+      "cancel": "Annuleer",
+      "clear": "Duidelijk",
+      "delete": "DEL",
+      "true": "Waar",
+      "false": "Vals",
+      "target": "Doel",
+      "nonTarget": "Niet-doelwit",
+      "distractor": "Afleider",
+      "same": "Hetzelfde",
+      "different": "Anders",
+      "identical": "Identiek",
+      "mirror": "Spiegel",
+      "symmetric": "Symmetrisch",
+      "asymmetric": "Asymmetrisch",
+      "symShort": "Sym.",
+      "present": "Aanwezig",
+      "absent": "Afwezig",
+      "noTrials": "Geen proeven voltooid.",
+      "noSets": "Geen sets voltooid.",
+      "noRounds": "Geen rondes voltooid.",
+      "noProblems": "Geen problemen voltooid.",
+      "noPhases": "Geen fasen voltooid.",
+      "sets": "Stelt in",
+      "rounds": "Rondes",
+      "equations": "Vergelijkingen",
+      "sentences": "Zinnen",
+      "equationAccuracy": "Nauwkeurigheid van vergelijkingen",
+      "forward": "Vooruit",
+      "backward": "Achteruit",
+      "forwardMaxSpan": "Maximale spanwijdte vooruit",
+      "backwardMaxSpan": "Achterwaartse maximale spanwijdte",
+      "odd": "Vreemd",
+      "even": "Zelfs",
+      "score": "Scoren",
+      "easy": "Gemakkelijk",
+      "hard": "Moeilijk",
+      "totalTrials": "Totaal beproevingen",
+      "totalErrors": "Totaal aantal fouten",
+      "totalErrShort": "Totaal fout.",
+      "hits": "Hits",
+      "misses": "Missen",
+      "falseAlarms": "Valse Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Ja",
+      "no": "Nee",
+      "sessionInterrupted": "Sessie onderbroken",
+      "reverseOrder": "in omgekeerde volgorde",
+      "normalOrder": "in volgorde",
+      "lnsInstruction": "Cijfers oplopend, daarna letters A-Z",
+      "vs": "versus",
+      "simon": {
+        "simonEffect": "Simon-effect",
+        "blue": "Blauw",
+        "red": "Rood",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Vertegenwoordig dit nummer",
+        "submit": "Verzenden",
+        "rodLabel": "Staaf {{n}}",
+        "heavenBead": "Hemelkraal (waarde 5)",
+        "earthBead": "Aardekraal (waarde 1)",
+        "instrBeadTitle": "Hoe de kralen werken",
+        "instrBeadDesc": "Elke staaf vertegenwoordigt een cijfer. De bovenste kraal (hemel) is 5 waard. De onderste kralen (aarde) zijn elk 1 waard. Verplaats kralen naar de middenbalk om ze te activeren.",
+        "instrExampleTitle": "Voorbeeld: 7",
+        "instrExampleDesc": "7 = hemelkraal omlaag (5) + 2 aardekralen omhoog (2). Tik of sleep kralen om ze te verplaatsen.",
+        "instrGoalTitle": "Jouw doel",
+        "instrGoalDesc": "Er verschijnt een nummer. Stel de kralen in om deze weer te geven en tik vervolgens op Verzenden. Wees nauwkeurig en snel!",
+        "startButton": "Begin",
+        "settings": "Instellingen",
+        "closeSettings": "Instellingen sluiten",
+        "settingsRods": "Aantal staven",
+        "settingsRodsHint": "Ingesteld via N-Level in de spelinstellingen",
+        "settingsTrials": "Proeven per sessie",
+        "settingsTrialsHint": "Instellen via Trials in de spelinstellingen",
+        "settingsRange": "Nummerbereik"
+      },
+      "stroop": {
+        "pressInkColorButton": "Druk op de knop die overeenkomt met de inktkleur",
+        "redWord": "RED",
+        "redLabel": "Rood",
+        "blueWord": "BLUE",
+        "blueLabel": "Blauw",
+        "greenWord": "GREEN",
+        "greenLabel": "Groen",
+        "yellowWord": "GEEL",
+        "yellowLabel": "Geel"
+      },
+      "stroopFlex": {
+        "followRule": "Regel",
+        "ruleInk": "Inkt kleur",
+        "ruleWord": "Geschreven woord",
+        "pressMatchingRuleButton": "Druk op de knop die overeenkomt met de huidige regel"
+      },
+      "goNogo": {
+        "goTrials": "Ga beproevingen",
+        "nogoTrials": "No-Go-proeven",
+        "hitRate": "Hitpercentage (Go)",
+        "faRate": "Aantal valse alarmen (No-Go)",
+        "meanRt": "Gemiddelde reactietijd",
+        "sensitivity": "gevoeligheid",
+        "press": "Druk op",
+        "withhold": "Inhouden"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (stopsignaal RT)",
+        "ssdMean": "Gemiddelde SSD (succesvolle stops)",
+        "ssd": "SSD",
+        "goRt": "Ga RT",
+        "successfulInhibition": "Succesvolle remming",
+        "stop": "Stop",
+        "meanGoRt": "Gemiddelde GO-reactietijd",
+        "ssrtInvalid": "onvoldoende gegevens",
+        "ssrtNegativeNote": "SSRT is negatief (gemiddelde SSD > gemiddelde GO RT) — resultaat onbetrouwbaar met het huidige aantal pogingen."
+      },
+      "pvt": {
+        "rtMedian": "Mediane RT",
+        "rtMean": "Bedoel RT",
+        "fastest": "Snelste",
+        "slowest": "Langzaamst",
+        "falseStarts": "Valse starts",
+        "falseStartsShort": "Valse st.",
+        "lapses": "Vervalt",
+        "mean": "Bedoel",
+        "reaction": "Reactie",
+        "wait": "Wacht...",
+        "pressStimulus": "Wacht op de stimulans...",
+        "pressAnywhere": "Druk ergens wanneer de teller verschijnt",
+        "press": "Druk!",
+        "tooEarly": "Te vroeg!",
+        "lapsesLabel": "Vervalt"
+      },
+      "posner": {
+        "cueingEffect": "Cue-effect",
+        "validMeanRt": "Gemiddelde geldige RT",
+        "invalidMeanRt": "Beteken ongeldige RT",
+        "validAccuracy": "Geldige nauwkeurigheid",
+        "invalidAccuracy": "Ongeldige nauwkeurigheid",
+        "validTrials": "Geldige proeven",
+        "invalidTrials": "Ongeldige proeven",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT-inv.",
+        "valid": "Geldig",
+        "invalid": "Ongeldig"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade-kosten",
+        "proAccuracy": "Professionele nauwkeurigheid",
+        "antiAccuracy": "Anti-nauwkeurigheid",
+        "pro": "Pro",
+        "anti": "Tegen",
+        "proRt": "Pro RT",
+        "antiRt": "Anti-RT",
+        "proMeanRt": "Bedoel pro-saccade RT",
+        "antiMeanRt": "Beteken anti-saccade RT",
+        "costLabel": "Kosten",
+        "antiLabel": "Tegen"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "AX-nauwkeurigheid",
+        "bxFa": "BX vals alarm",
+        "ayError": "AY-fout",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY fout",
+        "cogControl": "Cognitieve controle",
+        "target": "Doel",
+        "nonTarget": "Niet-doelwit"
+      },
+      "ant": {
+        "scores": "ANT-scores",
+        "alerting": "Alarmering (geen signaal - dubbele signaal)",
+        "orienting": "Oriënteren (midden − ruimtelijk)",
+        "executive": "Uitvoerend (incongruent - congruent)"
+      },
+      "changeDet": {
+        "kCowan": "K-capaciteit (Cowan)",
+        "sameShort": "Hetzelfde",
+        "diffShort": "Verschil."
+      },
+      "swm": {
+        "withinErrors": "Fouten binnen de zoekopdracht",
+        "betweenErrors": "Fouten tussen zoekopdrachten",
+        "totalErrors": "Totaal aantal fouten",
+        "errorFree": "Foutloos",
+        "foundErrorFree": "Foutloos gevonden!",
+        "errorCount": "{{count}} fout(en)",
+        "tapsLabel": "Kranen"
+      },
+      "taskSwitch": {
+        "switchCost": "Schakelkosten",
+        "rtRepeat": "Gemiddelde RT (herhaling)",
+        "rtSwitch": "Gemiddelde RT (schakelaar)",
+        "oddEven": "Oneven / Even",
+        "highLow": "Hoog / Laag",
+        "title": "Taakwisseling"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A-tijd",
+        "tmtBTime": "TMT-B-tijd",
+        "executiveCost": "Uitvoeringskosten (B − A)",
+        "executiveCostShort": "Uitvoerende kosten (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. EEN",
+        "errB": "Err. B",
+        "preparingB": "TMT-B voorbereiden...",
+        "tmtADone": "TMT-A klaar!",
+        "totalErrors": "Totaal aantal fouten",
+        "tmtALabel": "TMT-A: Cijfers",
+        "tmtBLabel": "TMT-B: cijfers en letters",
+        "next": "Volgende",
+        "heroTitle": "Trail maken",
+        "alternateHint": "Alternatieve cijfers en letters: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Snelste ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referentiekaarten",
+        "testCard": "Testkaart",
+        "categories": "Categorieën",
+        "categoriesCompleted": "Categorieën voltooid",
+        "perseverativeErrors": "Perseveratieve fouten",
+        "persevShort": "Persev.",
+        "avgRt": "Gem. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT per hoek",
+        "findMatch": "Zoek de bijpassende vorm",
+        "reference": "Referentievorm",
+        "referenceLabel": "Ref.",
+        "candidate": "Kandidaat",
+        "distractor": "Anders",
+        "mirrorErrors": "Spiegels",
+        "title": "Mentale rotatie"
+      },
+      "sternberg": {
+        "rtBySize": "RT op ingestelde maat",
+        "title": "Sternberg",
+        "avgRt": "Gem. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT op ingestelde maat",
+        "title": "Visueel zoeken"
+      },
+      "ospan": {
+        "typeLetters": "Typ de letters in volgorde",
+        "trueOrFalse": "Waar of niet waar?",
+        "processingWarning": "Nauwkeurigheid van vergelijkingen lager dan 85%: de resultaten weerspiegelen mogelijk niet de werkelijke werkgeheugencapaciteit"
+      },
+      "readingSpan": {
+        "s0": "De zon komt op in het oosten.",
+        "s1": "Vissen leven in bomen.",
+        "s2": "Parijs is de hoofdstad van Frankrijk.",
+        "s3": "Een driehoek heeft vier zijden.",
+        "s4": "Water kookt op 100 graden.",
+        "s5": "Katten zijn reptielen.",
+        "s6": "De aarde draait om de zon.",
+        "s7": "Chocolade groeit op rotsen.",
+        "s8": "Een jaar heeft twaalf maanden.",
+        "s9": "Vogels ademen onder water.",
+        "s10": "Melk is wit.",
+        "s11": "Auto's rijden op rails.",
+        "s12": "Bijen produceren honing.",
+        "s13": "Sneeuw is heet.",
+        "s14": "Het hart pompt bloed rond.",
+        "s15": "Stenen drijven op water.",
+        "s16": "De maan verlicht de nacht.",
+        "s17": "Slangen hebben poten.",
+        "s18": "Hout drijft op water.",
+        "s19": "Vuur is koud.",
+        "s20": "Mensen hebben vijf zintuigen.",
+        "s21": "Spinnen hebben zes poten.",
+        "s22": "Brood wordt gemaakt met meel.",
+        "s23": "Walvissen zijn vissen.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "BLOEM",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "BOS",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "OCHTEND",
+        "d1": "HEART",
+        "d2": "STOF",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "TUIN",
+        "d6": "SCHADUW",
+        "d7": "BELL",
+        "d8": "BRUG",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Leesspan"
+      },
+      "memorizeSequence": "Onthoud de volgorde...",
+      "reproduce": "Reproduceer",
+      "span": "Spanwijdte",
+      "size": "Grootte",
+      "fixateCenter": "Fixeer op het midden...",
+      "identicalOrMirror": "Identiek of spiegel?",
+      "wellInhibited": "Goed geremd!",
+      "badDirection": "Verkeerde richting!",
+      "stopMissed": "Stop gemist!",
+      "falseAlarm": "Vals alarm!",
+      "pressNow": "Druk!",
+      "hitBang": "Hit!",
+      "miss": "Missen!",
+      "doNotTouch": "Niet aanraken!",
+      "whichDirection": "Welke richting?",
+      "stopBang": "STOP!",
+      "cueBang": "Keu!",
+      "memorizeLetters": "Onthoud deze brieven",
+      "memorizeLetter": "Onthoud deze brief",
+      "memorizeSequenceLetters": "Onthoud de volgorde...",
+      "memorizeDigits": "Onthoud de cijfers...",
+      "memorizeColors": "Onthoud de kleuren!",
+      "memorizePosition": "Onthoud deze positie...",
+      "retainWord": "Onthoud dit woord",
+      "retainNumber": "Onthoud dit nummer",
+      "addWithPrevious": "Voeg toe met de vorige",
+      "sentenceTrueOrFalse": "Is deze zin waar?",
+      "findRedCircle": "Zoek de rode cirkel!",
+      "findHiddenToken": "Vind het verborgen token!",
+      "chooseMatchingCard": "Kies de bijpassende kaart",
+      "arrowDirection": "Richting van de centrale pijl?",
+      "attention": "Let op...",
+      "preparation": "Voorbereiding...",
+      "recallLettersInOrder": "Roep de letters {{count}} op volgorde op",
+      "recallWordsInOrder": "Roep de {{count}} woorden op volgorde op",
+      "recallLastLetters": "Denk aan de laatste {{count}} letters",
+      "typeLastLetters": "Typ de laatste {{count}} letters",
+      "recallPositionsInOrder": "Recall: tik op posities in volgorde",
+      "pressEnterToValidate": "Druk op Enter om te valideren",
+      "pressAnywhereToContinue": "Druk ergens om door te gaan",
+      "temporalPrecision": "Tijdelijke precisie",
+      "estimationPrecision": "Precisie van de schatting",
+      "touchStartClockwise": "Raak het startpunt aan en veeg vervolgens met de klok mee",
+      "touchAtoB": "Raak punt A aan en veeg vervolgens naar B",
+      "cue": "Keu",
+      "retainCue": "Onthoud de keu...",
+      "targetOrNot": "Doel of niet-doel?",
+      "whereIsTarget": "Waar is het doel?",
+      "wasLetterInSet": "Zat deze brief in de set?",
+      "regular": "regelmatig",
+      "regularity": "Regelmaat",
+      "msDeviation": "ms afwijking",
+      "boxes": "dozen",
+      "found": "{{count}} gevonden",
+      "past": "Verleden",
+      "tooSlow": "te langzaam",
+      "tooFast": "te snel",
+      "timeout": "Te langzaam!",
+      "answer": "Antwoord",
+      "dontPress": "Niet drukken!",
+      "feedbackWrong": "Fout!",
+      "level": "Niveau",
+      "wrong": "Verkeerd",
+      "you": "Jij",
+      "paused": "Pauze",
+      "instructions": "Instructies",
+      "selectAnswer": "Selecteer een antwoord",
+      "tapTheOddOne": "Tik op de vreemde eend in de bijt",
+      "pal": {
+        "subtitle": "Gekoppeld Associates Leren",
+        "pairsLearned": "Paren geleerd",
+        "maxSetSize": "Maximale ingestelde grootte",
+        "totalErrors": "Totaal aantal fouten",
+        "round": "Rond",
+        "pairs": "paren",
+        "meanRt": "Gemiddelde RT (correct)",
+        "studyPhase": "Studeer - onthoud de posities",
+        "testPhase": "Waar was deze vorm?",
+        "studying": "Studeren",
+        "tapBox": "Tik op het vak waarin deze vorm werd weergegeven"
+      },
+      "visualLogic": {
+        "easy": "Gemakkelijk",
+        "hard": "Moeilijk",
+        "oneRule": "1 regel",
+        "twoRules": "2 regels",
+        "findMissing": "Zoek het ontbrekende stuk",
+        "maxLevel": "Max niveau",
+        "finalLevel": "Laatste niveau",
+        "nextMode": "Volgende sessiemodus",
+        "adaptive": "Adaptief",
+        "fixed": "Vast",
+        "spm": "SPM 60",
+        "level": "Niveau",
+        "confirm": "Geldig"
+      },
+      "tetrisMind": {
+        "findPiece": "Welk stuk past in het gat?",
+        "target": "Doel"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Overschattingsvooroordeel",
+        "underestimationBias": "Onderschattingsvooroordeel",
+        "noBias": "Geen noemenswaardige bias",
+        "avgError": "Gem. fout",
+        "overestimations": "Overschattingen",
+        "underestimations": "Onderschattingen",
+        "avgAbsoluteError": "Gem. absolute fout",
+        "avgRelativeError": "Gem. relatieve fout",
+        "cv": "Variatiecoëfficiënt",
+        "watchDemo": "Let op de duur",
+        "getReady": "Maak je klaar...",
+        "holdToReproduce": "Houd ingedrukt om te reproduceren!",
+        "tooLong": "Te lang!",
+        "tooShort": "Te kort!",
+        "target": "Doel",
+        "demoLabel": "Referentie",
+        "yourTurn": "Jouw beurt",
+        "watchInstruction": "Kijk",
+        "holdInstruction": "Houd ingedrukt om te reproduceren",
+        "heroTitle": "Tijdschatting"
+      },
+      "puzzleDetails": "Puzzeldetails",
+      "roundDetails": "Ronde details",
+      "stageResults": "Faseresultaten",
+      "recognized": "Erkend",
+      "missed": "Gemist",
+      "win": "Winnen",
+      "lose": "Verliezen",
+      "winBang": "Winnen!",
+      "loseBang": "Verliezen!",
+      "correctBang": "Juist!",
+      "wrongBang": "Fout!",
+      "completeBang": "Compleet!",
+      "repeatedBang": "Herhaald!",
+      "incompleteBang": "Onvolledig!",
+      "levelCompleteBang": "Niveau voltooid!",
+      "timesUp": "De tijd is om",
+      "seeResults": "Zie resultaten",
+      "nextRound": "Volgende ronde",
+      "startBlock": "Start blok",
+      "continue": "Ga door",
+      "patientChoice": "Keuze van de patiënt",
+      "immediateChoice": "Onmiddellijke keuze",
+      "immediate": "Onmiddellijk",
+      "digitSpan": {
+        "heroTitle": "Cijferbereik"
+      },
+      "resume": "Hervatten",
+      "numericalStroop": {
+        "heroTitle": "Numerieke Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Beoordeling van lijnoriëntatie"
+      },
+      "chain": "Ketting",
+      "undo": "Ongedaan maken",
+      "vocalProsody": {
+        "heroTitle": "Vocale prosodie"
+      },
+      "letterNumber": {
+        "title": "Letter-nummervolgorde",
+        "expectedAnswer": "Verwacht antwoord"
+      },
+      "patternComparison": {
+        "heroTitle": "Patroonvergelijking"
+      },
+      "speedPack": {
+        "title": "Snelheidspakket",
+        "whenFoldedWhichTouch": "Welke vierkanten raken elkaar als ze zijn opgevouwen?"
+      },
+      "dotProbe": {
+        "heroTitle": "Puntsonde"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Hooper visuele organisatie",
+        "whatIsThisObject": "Wat is dit voorwerp?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blokontwerp"
+      },
+      "accuracy": "Nauwkeurigheid",
+      "avgTime": "Gem. tijd",
+      "check": "Controleer",
+      "dualTrace": {
+        "playArea": "Speelruimte"
+      },
+      "paperFolding": {
+        "title": "Papier vouwen",
+        "foldSequenceHolePunch": "Vouwvolgorde en perforatie",
+        "whichPatternWhenUnfolded": "Welk patroon wanneer uitgevouwen?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Lexicale beslissing"
+      },
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxGrid": "Maximaal raster",
+      "symmetry": "Symmetrie",
+      "threshold": "Drempel",
+      "hitRate": "Hitpercentage",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Wijzigingsdetectie"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogismen"
+      },
+      "subitizing": {
+        "title": "Subitiseren",
+        "range": "Bereik"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Zinvoltooiing (Cloze)",
+        "highCloze": "Hoge cloze",
+        "lowCloze": "Lage sluiting"
+      },
+      "grid": "Raster",
+      "pinballRecall": {
+        "title": "Terugroepactie flipperkast",
+        "byBounces": "Door stuiters",
+        "whereDoesItLand": "Waar landt het?"
+      },
+      "mean": "Bedoel",
+      "speedup": "Versnellen",
+      "memorize": "Onthoud",
+      "time": "Tijd",
+      "surfaceDevelopment": {
+        "title": "Oppervlakteontwikkeling",
+        "whichEdgeMatches": "Welke rand komt overeen?"
+      },
+      "crowding": {
+        "heroTitle": "Visuele drukte",
+        "spacing": "Afstand"
+      },
+      "patternRecognition": {
+        "heroTitle": "Patroonherkenning"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Proef",
+        "position": "Positie",
+        "audio": "Audio"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scène Indringer",
+        "detect": "Detecteer"
+      },
+      "eyesTest": {
+        "heroTitle": "De geest in de ogen lezen"
+      }
+    },
+    "gridlock": {
+      "undone": "Laatste zet ongedaan gemaakt.",
+      "resetMessage": "Puzzel opnieuw instellen.",
+      "hintMessage": "Tip: schuif {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Bestudeer het bord. Begint over {{seconds}}s.",
+      "challenge": "Uitdaging",
+      "optimal": "Optimaal",
+      "moves": "Beweegt",
+      "piece": "Stuk {{id}}",
+      "targetPiece": "Stuk {{id}} (doel - rode auto)",
+      "challengeClassic": "Klassiek",
+      "challengePrecision": "Precisie",
+      "challengeMemory": "Geheugen",
+      "challengeTimed": "Getimed",
+      "hint": "Tip",
+      "reset": "Opnieuw instellen",
+      "undo": "Ongedaan maken",
+      "nextPuzzle": "Volgende puzzel →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Blok 1 treffers",
+      "block2Hits": "Blok 2 treffers",
+      "goPositive": "Ga = Positief",
+      "goNegative": "Ga = Negatief",
+      "title": "Affectieve go/no-go",
+      "block1CommissionErrors": "Blok 1 commissiefouten",
+      "block2CommissionErrors": "Blok 2 commissiefouten",
+      "block": "Blok",
+      "go": "Ga"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Gemiddelde overstapsnelheid",
+      "meanSwitchesfigure": "Betekenen schakelaars/figuur",
+      "totalSwitches": "Totaal schakelaars",
+      "title": "Dubbelzinnige cijfers",
+      "meanSwitches": "Beteken schakelaars",
+      "switchRate": "Wisselsnelheid",
+      "figures": "Figuren",
+      "totalSwitchesLabel": "Totaal aantal schakelaars",
+      "duration": "Duur",
+      "switchesCount": "s | Schakelaars:",
+      "switchButton": "Schakelaar!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbaal correct",
+      "timeout": "Time-out",
+      "title": "Analogieën"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS-vergelijking",
+      "ratio": "Verhouding",
+      "leftMore": "Nog meer achtergelaten",
+      "rightMore": "Juist meer"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Vals alarmpercentage",
+      "grammatical": "Grammaticaal",
+      "memorizeTheseStrings": "Onthoud deze snaren",
+      "testPhase": "Testfase",
+      "ungrammatical": "Ongrammaticaal",
+      "learning": "Leren",
+      "test": "Testen",
+      "title": "Kunstmatige grammatica",
+      "learningPhase": "Leren",
+      "testIntroText": "Je ziet nu nieuwe snaren. Bepaal of ze allemaal dezelfde regels volgen als de snaren die je zojuist hebt bestudeerd.",
+      "startTest": "Test starten",
+      "followsRules": "Volgt regels",
+      "breaksRules": "Breekt regels"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Knippergrootte",
+      "title": "Aandacht knipperen",
+      "blink": "Knipperen",
+      "t1Acc": "T1 acc",
+      "t2Acc": "T2 acc",
+      "firstGreenLetter": "1e groene letter?",
+      "secondGreenLetter": "2e groene letter?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Kosten vastleggen",
+      "singletonPresent": "Singleton aanwezig",
+      "noSingleton": "Geen Singleton",
+      "title": "Aandacht vangen",
+      "capture": "Vastleggen",
+      "horizontal": "Horizontaal",
+      "vertical": "Verticaal"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Bindend venster",
+      "title": "Audiovisuele binding",
+      "window": "Venster",
+      "pssLabel": "PSS (punt van subjectieve gelijktijdigheid)",
+      "simultaneousOrNot": "Gelijktijdig of niet?",
+      "simultaneous": "Gelijktijdig",
+      "notSimultaneous": "Niet gelijktijdig"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Duurdrempel",
+      "reference": "Referentie",
+      "weberFraction": "Weber-fractie",
+      "title": "Auditieve duur",
+      "threshold": "Drempel",
+      "weber": "Weber",
+      "whichLonger": "Welke is langer?",
+      "firstLonger": "Eerst langer",
+      "secondLonger": "Tweede langer"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Aangepaste gemiddelde pompen",
+      "avgTimeballoon": "Gem. tijd/ballon",
+      "banked": "Gebankiseerd!",
+      "lostEarnings": "Gederfde inkomsten!",
+      "overallAvgPumps": "Totaal gemiddelde pompen",
+      "popRate": "Pop-tarief",
+      "totalEarned": "Totaal verdiend",
+      "balloons": "Ballonnen",
+      "cashed": "Geïnd",
+      "popped": "Geknald",
+      "adjPumps": "Aanpassing pompen",
+      "pop": "Pop",
+      "pump": "Pomp",
+      "cashIn": "Contant geld"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Gem. beslissingstijd",
+      "drawBeadsToGatherEvidence": "Teken kralen om bewijsmateriaal te verzamelen",
+      "jtc": "JTC",
+      "title": "Kralen taak",
+      "meanDraws": "Gem. trekt",
+      "rounds": "Rondes",
+      "jtcRate": "JTC-tarief",
+      "meanDrawsToDecision": "Het gemiddelde trekt tot besluit",
+      "jtcRateThreshold": "JTC-tarief (<{{threshold}} trekkingen)",
+      "round": "Rond",
+      "jarDescription": "Pot A: 85% groen / Pot B: 85% rood",
+      "itWasJar": "Het was Jar",
+      "drawABead": "Teken een kraal",
+      "jarAGreen": "Pot A Groen",
+      "jarBRed": "Pot B Rood"
+    },
+    "binding": {
+      "changedTrials": "Gewijzigde proeven",
+      "sameAccuracy": "Dezelfde nauwkeurigheid",
+      "sameTrials": "Dezelfde beproevingen",
+      "title": "Functiebinding",
+      "binding": "Bindend",
+      "bindingAccuracyChanged": "Nauwkeurigheid wijzigen",
+      "same": "Hetzelfde",
+      "different": "Anders"
+    },
+    "blockDesign": {
+      "cells": "Cellen",
+      "target": "Doel",
+      "yourAnswer": "Jouw antwoord",
+      "tapHint": "Tik om kleuren te doorlopen",
+      "check": "Controleer"
+    },
+    "brixton": {
+      "adapt": "Pas je aan",
+      "adaptationCost": "Aanpassingskosten",
+      "nonswitchTrials": "Proeven zonder overstap",
+      "switchTrials": "Wissel van proef"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Onthoud deze brieven",
+      "selectThe3Letters": "Selecteer de 3 letters",
+      "title": "Brown-Peterson-taak",
+      "forgetting": "Vergeten",
+      "sDelay": "S Vertraging",
+      "minus3": "Min 3",
+      "delay": "Vertraging"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Beslissingskwaliteit",
+      "finalPoints": "Laatste punten",
+      "meanBet": "Gemene weddenschap",
+      "winRate": "Winstpercentage",
+      "wins": "wint",
+      "title": "Cambridge Gambling Task",
+      "totalPoints": "Totaal aantal punten",
+      "quality": "Kwaliteit",
+      "rational": "Rationeel",
+      "avgBet": "Gem. weddenschap",
+      "trial": "Proef",
+      "whichColorHidesToken": "Welke kleur verbergt het token?",
+      "youChose": "Jij hebt gekozen",
+      "howMuchToBet": "Hoeveel te wedden?"
+    },
+    "cancellation": {
+      "false": "Vals",
+      "target": "Doel:",
+      "total": "Totaal",
+      "title": "Annuleringstaak (d2)",
+      "misses": "Missen",
+      "targetDescription": "d met 2 punten"
+    },
+    "changeBlindness": {
+      "detectionRate": "Detectiesnelheid",
+      "found": "Gevonden",
+      "meanDetectionTime": "Gemiddelde detectietijd",
+      "title": "Verander blindheid",
+      "missed": "Gemist",
+      "avgTime": "Gem. tijd",
+      "instructions": "Instructies"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Beste schatting",
+      "meanScore": "Gemiddelde score",
+      "worstEstimate": "Slechtste schatting",
+      "inRange": "Goede schatting!",
+      "title": "Cognitieve schatting",
+      "meanScoreLabel": "Gemiddelde score",
+      "inRangeLabel": "Binnen bereik",
+      "extreme": "Extreem",
+      "scoreLabel": "scoren",
+      "submit": "Verzenden"
+    },
+    "common": {
+      "accuracy": "Nauwkeurigheid",
+      "bias": "Vooringenomenheid",
+      "falseAlarmRate": "Vals alarmpercentage",
+      "hitRate": "Hitpercentage",
+      "hits": "Hits",
+      "listening": "Luisteren...",
+      "meanRt": "Bedoel RT",
+      "timedOut": "Time-out",
+      "timedOut2": "Time-out",
+      "faRate": "Taux de FA",
+      "paused": "Gepauzeerd"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Hoe zelfverzekerd ben jij?",
+      "rateYourConfidence": "Beoordeel uw vertrouwen",
+      "title": "Vertrouwen kalibratie",
+      "calError": "Kalibratiefout",
+      "confidence": "Vertrouwen"
+    },
+    "consequences": {
+      "best": "Beste",
+      "nextRound": "Volgende ronde...",
+      "time": "Tijd",
+      "placeholder": "Typ een gevolg...",
+      "title": "Gevolgen",
+      "totalIdeas": "Totaal ideeën",
+      "avgPerRound": "Gem. per ronde",
+      "rounds": "Rondes",
+      "noConsequencesListed": "Geen gevolgen vermeld",
+      "roundProgress": "Ronde {{current}} / {{total}}",
+      "typeAndPressAdd": "Typ en druk op Toevoegen"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Cue-effect",
+      "newConfigRt": "Nieuwe configuratie RT",
+      "oldConfigRt": "Oude configuratie RT",
+      "title": "Contextueel signaal geven",
+      "cueing": "Aansturen",
+      "oldRt": "Oude RT",
+      "newRt": "Nieuwe RT",
+      "prompt": "Prompt",
+      "left": "Links",
+      "right": "Juist"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Drempeljitter",
+      "title": "Contourintegratie",
+      "pipeJitter": "| rilling"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Drempelcontrast",
+      "title": "Contrastgevoeligheid",
+      "threshold": "Drempel",
+      "left": "Links",
+      "right": "Juist"
+    },
+    "cpt": {
+      "nontargets": "Niet-doelen",
+      "target": "Doel",
+      "nonTarget": "Niet-doelwit",
+      "dPrime": "d'",
+      "targetsLetter": "Doelbrief",
+      "tapForLetterOnly": "Tik alleen op de doelletter"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritieke afstand",
+      "leftAccuracy": "Nauwkeurigheid links",
+      "rightAccuracy": "Juiste nauwkeurigheid"
+    },
+    "cryptogram": {
+      "hints": "Tips",
+      "title": "Cryptogram",
+      "solved": "Opgelost",
+      "time": "Tijd",
+      "puzzles": "Puzzels",
+      "puzzle": "Puzzel",
+      "hint": "Tip",
+      "clear": "Duidelijk"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Gebied onder curve",
+      "discountRateK": "Disconteringsvoet (k)",
+      "impulsivityIndex": "Impulsiviteitsindex",
+      "title": "Uitstel van korting",
+      "aucPatience": "AUC geduld",
+      "patient": "Patiënt",
+      "kRate": "K-tarief",
+      "impuls": "Impuls",
+      "indifferencePoints": "Onverschilligheidspunten",
+      "whichPrefer": "Welke heeft jouw voorkeur?",
+      "today": "Vandaag"
+    },
+    "delayedMatching": {
+      "long": "Lang",
+      "longDelay68s": "Lange vertraging (6-8s)",
+      "med": "Med",
+      "mediumDelay46s": "Gemiddelde vertraging (4-6s)",
+      "short": "Kort",
+      "shortDelay34s": "Korte vertraging (3-4s)",
+      "title": "Vertraagde matching",
+      "delay": "Vertraging",
+      "rememberThisPattern": "Onthoud dit patroon",
+      "whichWasIt": "Welke was het?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Waarschuwingsdetectie",
+      "attendToTheLeftColumn": "Let op de LINKERkolom",
+      "attendedAccuracy": "Bijgewoonde nauwkeurigheid",
+      "ignoreTheRightColumn": "Negeer de rechterkolom",
+      "right": "RIGHT",
+      "title": "Dichotisch luisteren",
+      "attendedAcc": "Bijgewoonde nauwkeurigheid",
+      "alertDet": "Waarschuwingsdetectie",
+      "alerts": "Waarschuwingen",
+      "selectLeftColumnWords": "Selecteer woorden in de linkerkolom",
+      "submit": "Verzenden",
+      "alertQuestion": "Alerte vraag"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Vergeet nauwkeurigheid",
+      "forgettingEffect": "Effect vergeten",
+      "newRejection": "Nieuwe afwijzing",
+      "rememberAccuracy": "Denk aan nauwkeurigheid",
+      "title": "Geregisseerd vergeten",
+      "remember": "Onthoud",
+      "forget": "Vergeet",
+      "round": "Rond",
+      "word": "Woord",
+      "wasThisWordShown": "Is dit woord getoond?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Aandachtsbiasscore",
+      "congruentAcc": "Congruente Acc",
+      "congruentRt": "Congruente RT",
+      "incongruentAcc": "Incongruente acc",
+      "incongruentRt": "Incongruente RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Auto of vrachtwagen?",
+      "minDisplayReached": "Min. weergave bereikt",
+      "positionAccuracy": "Positienauwkeurigheid",
+      "thresholdDisplay": "Drempelweergave",
+      "vehicleAccuracy": "Voertuignauwkeurigheid",
+      "whereWasTheDiamond": "Waar was de diamant?",
+      "title": "Dubbele beslissing",
+      "threshold": "Drempel",
+      "bothOk": "Beide correct",
+      "vehicle": "Voertuig",
+      "position": "Positie",
+      "car": "Auto",
+      "truck": "Vrachtwagen"
+    },
+    "dsst": {
+      "items": "Artikelen",
+      "itemsCompleted": "Items voltooid",
+      "speedItemsmin": "Snelheid (items/min)",
+      "attempts": "Pogingen",
+      "itemsPerMin": "Artikelen / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Kosten voor dubbele taken",
+      "taskANumber": "Taak A (nummer)",
+      "taskBSymbol": "Taak B (symbool)",
+      "title": "Dubbele taak",
+      "taskA": "Taak A",
+      "taskB": "Taak B",
+      "number": "Nummer",
+      "symbol": "Symbool",
+      "up": "Op",
+      "down": "Naar beneden"
+    },
+    "dualTime": {
+      "sessionEnPause": "Sessie onderbroken",
+      "votreEstimationSecondes": "Uw schatting (seconden)",
+      "sessionInterrupted": "Sessie onderbroken",
+      "target": "Doel",
+      "estimation": "Schatting",
+      "avgTime": "Gem. tijd",
+      "avgError": "Gem. fout",
+      "trials": "Proeven",
+      "resumeToContinue": "Hervatten om door te gaan",
+      "aimFor": "Doel voor",
+      "second": "Ten tweede",
+      "howLongDidYouTake": "Hoe lang heb je erover gedaan?"
+    },
+    "dualTrack": {
+      "confirmer": "Bevestig",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Hervatten om door te gaan.",
+      "sessionEnPause": "Sessie onderbroken",
+      "tapezLesCibles": "Tik op de doelen",
+      "tapezLaCible": "Tik op het doel",
+      "appuyezConfirmer": "Druk op Bevestigen",
+      "targetsCountLabel": "{{count}} doelen",
+      "distractorsCountLabel": "{{count}} afleiders",
+      "roundsCountLabel": "{{count}} rondes",
+      "calibrationRoundsLabel": "{{count}} kalibratierondes",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = interne reismoeilijkheidsgraad.",
+      "tierHelpCurrentWithPhase": "U bevindt zich momenteel op T{{current}} van {{total}} voor {{targets}} doelen. Huidige fase: {{phase}}. Er zijn {{remaining}} niveaus over voor het volgende doelniveau.",
+      "phaseTracking": "Volgen",
+      "phaseAudio": "Volgen + audio",
+      "phaseColor": "Volgen + kleur",
+      "phaseCombined": "Tracking + audio + kleur",
+      "passLetters": "Brieven",
+      "passColors": "Kleuren",
+      "moveInstruction": "Verplaats instructie",
+      "moveConfirmBtn": "Bevestigingsknop verplaatsen",
+      "preparingSession": "Sessie voorbereiden...",
+      "preparing3dScene": "3D-scène voorbereiden...",
+      "startJourney": "Begin reis",
+      "calibrationDescription": "Vóór de eerste fase zal een langere kalibratie uw startniveau schatten.",
+      "defaultDescription": "Ballen zullen oplichten. Volg ze terwijl ze bewegen en identificeer ze vervolgens.",
+      "startCalibration": "Kalibratie starten",
+      "calibrationTitle": "Kalibratie",
+      "estimatedStart": "Geschat. begin",
+      "roundsAnalyzed": "Rondes geanalyseerd",
+      "willStartAt": "Zal beginnen om",
+      "targetsCount": "Doelstellingen",
+      "thenProgress": "dan vooruitgang"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Gemiddelde absolute fout",
+      "ratio": "Verhouding",
+      "slope": "Helling",
+      "vierordtSlope": "Vierordt-piste",
+      "wait": "Wacht...",
+      "title": "Duur Reproductie",
+      "meanError": "Gemiddelde fout",
+      "meanRatio": "Gemiddelde verhouding (geproduceerd/doel)",
+      "holdNow": "HOUD NU",
+      "target": "Doel",
+      "error": "Fout"
+    },
+    "embeddedFigures": {
+      "fastest": "Snelste",
+      "found": "Gevonden",
+      "meanDetectionTime": "Gemiddelde detectietijd",
+      "slowest": "Langzaamst",
+      "title": "Ingebedde figuren",
+      "missed": "Gemist",
+      "fastestLabel": "Snelste",
+      "findThisShape": "Zoek deze vorm",
+      "memorizeShape": "Onthoud de vorm...",
+      "foundIt": "Gevonden!",
+      "giveUp": "Geef het op"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Valse alarmen",
+      "misses": "Missen",
+      "title": "Emotionele N-Back",
+      "match": "Overeenkomen"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutrale RT",
+      "positiveRt": "Positieve RT",
+      "threatRt": "Bedreiging RT",
+      "title": "Emotionele Stroop",
+      "interference": "Interferentie",
+      "interferenceThreatNeutral": "Interferentie (dreiging − neutraal)"
+    },
+    "eyesTest": {
+      "totalTime": "Totale tijd"
+    },
+    "faceName": {
+      "gain": "Winst",
+      "learningImprovement": "Leerverbetering",
+      "round1Accuracy": "Ronde 1 nauwkeurigheid",
+      "round2Accuracy": "Ronde 2 nauwkeurigheid",
+      "whoIsThis": "Wie is dit?",
+      "title": "Gezichtsnaam Associatie",
+      "round": "Rond",
+      "testPhase": "Testfase"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "Waarom?",
+      "title": "Erkenning van valse pas",
+      "detection": "Detectie",
+      "scenarios": "Scenario's",
+      "fpFound": "Fout gevonden",
+      "control": "Controle",
+      "readyToAnswer": "Klaar om te antwoorden",
+      "didSomeoneSay": "Heeft iemand iets gezegd wat hij niet had moeten zeggen?",
+      "whoSaidIt": "Wie zei het?",
+      "whyInappropriate": "Waarom was het ongepast?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Herinner nauwkeurigheid",
+      "recognitionAccuracy": "Herkenningsnauwkeurigheid",
+      "recallPlaceholder": "Typ uw antwoord...",
+      "unlikely": "Onwaarschijnlijk",
+      "certain": "Zeker",
+      "title": "Gevoel van weten",
+      "recall": "Terugroepen",
+      "recognition": "Herkenning",
+      "fokR": "Fok R",
+      "questions": "Vragen",
+      "recalled": "Teruggeroepen",
+      "recognized": "Erkend",
+      "fokSensitivity": "FOK-gevoeligheid",
+      "submit": "Verzenden",
+      "dontKnow": "Weet het niet",
+      "fokPrompt": "Zult u het herkennen?",
+      "selectCorrectAnswer": "Selecteer het juiste antwoord",
+      "answer": "Antwoord"
+    },
+    "fingerTapping": {
+      "firstTrial": "Eerste proef",
+      "lastTrial": "Laatste proef",
+      "sequence": "Volgorde",
+      "speedupT1VsT12": "Versnelling (T1 versus T12)",
+      "title": "Vinger tikken"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Gem. bewegingstijd",
+      "avgThroughput": "Gem. doorvoer",
+      "title": "Fitts tikken",
+      "throughput": "Doorvoer",
+      "tapTarget": "Tik op het gemarkeerde doel"
+    },
+    "foreperiod": {
+      "early": "Vroeg",
+      "slope": "Helling",
+      "title": "Tijdelijke voorbereiding",
+      "fpEffectSlope": "FP-effecthelling"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Omkeringen",
+      "threshold": "Drempel",
+      "tone1": "Toon 1",
+      "tone2": "Toon 2",
+      "weber": "Weber",
+      "weberFraction": "Weber-fractie",
+      "hz": "Hz",
+      "title": "Frequentiediscriminatie",
+      "thresholdLabel": "Drempel",
+      "hzDiff": "Hz-verschil",
+      "whichWasHigher": "Welke was hoger?",
+      "firstHigher": "Eerst hoger",
+      "secondHigher": "Tweede hoger"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor-patch",
+      "leftAccuracy": "Nauwkeurigheid links",
+      "leftTrials": "Linkse beproevingen",
+      "noiseMask": "Geluidsmasker",
+      "rightAccuracy": "Juiste nauwkeurigheid",
+      "rightTrials": "Juiste beproevingen",
+      "thresholdAngle": "Drempelhoek",
+      "title": "Gabor",
+      "threshold": "Drempel",
+      "reversals": "Omkeringen",
+      "timedOut": "Time-out",
+      "left": "Links",
+      "right": "Juist"
+    },
+    "gameOfDice": {
+      "finalPoints": "Laatste punten",
+      "risky": "Riskant",
+      "riskyChoices": "Risicovolle keuzes",
+      "safe": "Veilig",
+      "winRate": "Winstpercentage",
+      "wins": "wint",
+      "title": "Spel van dobbelstenen taak",
+      "totalPoints": "Totaal aantal punten",
+      "riskyLabel": "Riskant",
+      "roll": "Rol",
+      "chooseYourBet": "Kies uw weddenschap",
+      "pickNumbers": "Kies uw cijfers"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Gat of geen gat?",
+      "gapThreshold": "Tussenruimtedrempel",
+      "title": "Stiltedetectie",
+      "noGap": "Geen kloof"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Waar was de blik?",
+      "direct": "Direct",
+      "left": "Links",
+      "right": "Juist",
+      "title": "Kijkrichting",
+      "dPrimeDirectGaze": "D Eerste directe blik"
+    },
+    "hayling": {
+      "part1Initiation": "Deel 1 (Initiatie)",
+      "part2": "Deel 2",
+      "part2Suppression": "Deel 2 (Onderdrukking)",
+      "suppressionCost": "Onderdrukkingskosten",
+      "title": "Hayling",
+      "part1": "Deel 1",
+      "part2Label": "Deel 2",
+      "suppression": "Onderdrukking",
+      "obvious": "Duidelijk",
+      "obviousPicksPart2": "Voor de hand liggende keuzes (deel 2)",
+      "chooseUnrelated": "Kies een niet-gerelateerd woord",
+      "completelyUnrelated": "Volledig ongerelateerd",
+      "doNotPickObvious": "Kies NIET het voor de hand liggende woord!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Op naar de volgende fase...",
+      "stageComplete": "Fase voltooid!",
+      "title": "IED Stel ploeg in",
+      "stages": "Fasen",
+      "edsCost": "EDS-kosten",
+      "stage": "Stadium",
+      "correctNeeded": "Correct nodig om verder te komen"
+    },
+    "informationSampling": {
+      "cost": "Kosten",
+      "free": "Gratis",
+      "meanTilesCost": "Gemiddelde tegels (kosten)",
+      "meanTilesFree": "Gemiddelde tegels (gratis)",
+      "totalCost": "Totale kosten",
+      "title": "Informatiebemonstering",
+      "tiles": "Tegels",
+      "tapToReveal": "Tik om te onthullen"
+    },
+    "inspectionTime": {
+      "final": "Finale",
+      "finalDisplayTime": "Laatste weergavetijd",
+      "minCorrectIt": "Min correcte IT",
+      "threshold": "Drempel",
+      "title": "Inspectietijd",
+      "thresholdLabel": "Drempel",
+      "minIt": "Minimale IT"
+    },
+    "iowaGambling": {
+      "balance": "Saldo:",
+      "chooseADeck": "Kies een kaartspel",
+      "deckADraws": "Dek A trekt",
+      "deckBDraws": "Dek B trekt",
+      "deckCDraws": "Dek C trekt",
+      "deckDDraws": "Dek D trekt",
+      "first40Advantageous": "Eerste 40 voordelig",
+      "last40Advantageous": "Laatste 40 voordelig",
+      "learn": "Leer",
+      "learningIndex": "Leerindex",
+      "title": "Gokken in Iowa",
+      "advantageousPct": "Voordelig %",
+      "earnings": "Inkomsten",
+      "last40": "Laatste40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibratie bias",
+      "meanJol": "Beteken JOL",
+      "nowTestYourRecall": "Test nu uw terugroepactie",
+      "studyComplete": "Studie voltooid",
+      "whatWasPairedWith": "Wat ging gepaard met...?",
+      "title": "Oordeel over leren",
+      "recallAccuracy": "Herinner nauwkeurigheid",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL-nauwkeurigheid (gamma)",
+      "howLikelyRemember": "Hoe waarschijnlijk zult u het zich herinneren?",
+      "hiddenAnswer": "Verborgen antwoord"
+    },
+    "judgmentOfRecency": {
+      "close": "Sluiten",
+      "closeGap13": "Kloof dichten (1-3)",
+      "far": "Ver",
+      "farGap9": "Verre kloof (9+)",
+      "mediumGap48": "Middelgrote opening (4-8)",
+      "title": "Oordeel van recentheid",
+      "medium": "Middelmatig",
+      "studyPhaseMemorizeOrder": "Studiefase – Onthoud de volgorde",
+      "whichMoreRecently": "Welke verscheen recenter?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Gemiddelde RT (niet-woorden)",
+      "meanRtWords": "Beteken RT (woorden)",
+      "nonwordsAccuracy": "Nauwkeurigheid van niet-woorden",
+      "wordsAccuracy": "Woorden nauwkeurigheid",
+      "word": "Woord",
+      "nonword": "Niet-woord"
+    },
+    "maze": {
+      "duration": "Duur",
+      "optimalSteps": "Optimale stappen",
+      "pathEfficiency": "Padefficiëntie",
+      "totalSteps": "Totaal aantal stappen",
+      "wallHits": "Muurhits",
+      "title": "Doolhof",
+      "completed": "Voltooid",
+      "efficiency": "Efficiëntie",
+      "wallHitsLabel": "Muurhits",
+      "steps": "Stappen"
+    },
+    "memobox": {
+      "easy": "Gemakkelijk",
+      "easy2Boxes": "Makkelijk (2 dozen)",
+      "hard": "Moeilijk",
+      "hard4Boxes": "Hard (4 dozen)",
+      "medium3Boxes": "Middel (3 dozen)",
+      "title": "Memobox",
+      "rounds": "Rondes",
+      "medium": "Middelmatig",
+      "watchMovements": "Bekijk de bewegingen...",
+      "howManyBalls": "Hoeveel ballen in elke doos?",
+      "submit": "Verzenden",
+      "roundOf": "Ronde {{current}} van {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Wat is de doorsnede?",
+      "title": "Geestelijk snijden"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Oud, vergelijkbaar of nieuw?",
+      "patternSeparation": "Patroonscheiding",
+      "sep": "september",
+      "old": "Oud",
+      "similar": "Gelijkaardig",
+      "new": "Nieuw",
+      "ldi": "LDI",
+      "title": "Mnemonische discriminatie",
+      "hitRateOldDetected": "Hitpercentage (oud gedetecteerd)",
+      "lureDiscrimination": "Lokaasdiscriminatie (LDI)",
+      "memorize": "Onthoud",
+      "testPhase": "Testfase"
+    },
+    "multiArmedBandit": {
+      "earnings": "Inkomsten:",
+      "pickMachine": "Kies een machine",
+      "title": "Meerarmige bandiet",
+      "totalReward": "Totale beloning",
+      "optimal": "Optimaal",
+      "regret": "Spijt",
+      "exploit": "Exploitatie",
+      "machine": "Machine",
+      "armsExplored": "Armen onderzocht"
+    },
+    "navon": {
+      "globalBigLetter": "Globaal (grote letter)",
+      "localSmallLetter": "Lokaal (kleine letter)",
+      "title": "Navon",
+      "globalAdv": "Globaal geav.",
+      "whatBigLetter": "Welke GROTE brief?",
+      "whatSmallLetter": "Welke kleine letter?"
+    },
+    "negativePriming": {
+      "controlRt": "Controle RT",
+      "nameTheRedShape": "Noem de rode vorm",
+      "negativePrimingRt": "Negatieve priming RT",
+      "positivePrimingRt": "Positieve priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP-effect",
+      "title": "Negatieve priming",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Schattingsbias",
+      "linearityRsup2": "Lineariteit (R&sup2;)",
+      "meanAbsoluteError": "Bedoel absolute fout",
+      "tapTheLineToPlaceTheNumber": "Tik op de lijn om het nummer te plaatsen",
+      "title": "Nummerlijn",
+      "meanError": "Gemiddelde fout",
+      "yourEstimate": "Uw schatting",
+      "correct": "Juist"
+    },
+    "oddOneOut": {
+      "colorTrials": "Kleurproeven",
+      "shapeTrials": "Vormproeven",
+      "shape": "Vorm",
+      "color": "Kleur",
+      "timeout": "Time-out",
+      "shapeDiffAccuracy": "Vorm verschil. nauwkeurigheid",
+      "colorDiffAccuracy": "Kleur verschil. nauwkeurigheid",
+      "shapeDiffAvgRt": "Vorm verschil. gemiddelde RT",
+      "colorDiffAvgRt": "Kleur verschil. gem. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Welke kant op?",
+      "thresholdAngle": "Drempelhoek",
+      "title": "Oriëntatie Discriminatie",
+      "threshold": "Drempel",
+      "counterCw": "CCW",
+      "clockwise": "Met de klok mee"
+    },
+    "patternComparison": {
+      "differentTrials": "Verschillende beproevingen",
+      "sameTrials": "Dezelfde beproevingen",
+      "same": "Hetzelfde",
+      "different": "Anders"
+    },
+    "patternRecognition": {
+      "newPatterns": "Nieuwe patronen",
+      "oldPatterns": "Oude patronen",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Bestudeer de patronen zorgvuldig",
+      "memorize": "Onthouden ({{current}}/{{total}})",
+      "getReady": "Maak je klaar...",
+      "testPhaseStarting": "Testfase van start..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Exact juist",
+      "meanAngularError": "Gemiddelde hoekfout",
+      "withinTolerance": "Binnen tolerantie",
+      "title": "Perspectief nemen",
+      "avgErr": "Gem. fout",
+      "youAreAt": "Je bent bij",
+      "facing": "Geconfronteerd",
+      "pointTo": "Wijs naar"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Freq. Drempel",
+      "seq1": "Seq 1",
+      "seq2": "Seq 2",
+      "title": "Foneemdiscriminatie",
+      "thresh": "Dorsen",
+      "sameOrDifferent": "Hetzelfde of anders?",
+      "same": "Hetzelfde",
+      "different": "Anders"
+    },
+    "predictionMotion": {
+      "biasLate": "Vooroordeel (+ = laat)",
+      "meanAbsoluteError": "Gemiddelde absolute fout",
+      "precisionSd": "Precisie (SD)",
+      "title": "Voorspelling beweging",
+      "absError": "Abs. fout",
+      "precision": "Precisie",
+      "responded": "Heeft gereageerd",
+      "tapWhenReachesTarget": "TAP wanneer het het doel bereikt"
+    },
+    "promem": {
+      "ongoingAccuracy": "Voortdurende nauwkeurigheid",
+      "ongoingRt": "Lopende RT",
+      "pmHitRate": "PM-hitpercentage",
+      "pmRt": "PM RT",
+      "pmTargets": "PM-doelen",
+      "title": "Toekomstig geheugen",
+      "ongoing": "Lopend",
+      "pmHits": "PM-hits",
+      "pmMisses": "PM mist",
+      "living": "Levend",
+      "nonLiving": "Niet-levend",
+      "redWordInstruction": "Rood woord = druk"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Afleiderfouten",
+      "literalErrorRate": "Letterlijk foutenpercentage",
+      "literalErrors": "Letterlijke fouten",
+      "title": "Spreekwoordinterpretatie",
+      "literal": "Letterlijk",
+      "litRate": "Verlicht. Beoordeel",
+      "whatDoesThisMean": "Wat betekent dit?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Maak je klaar om te volgen",
+      "meanTimeOnTarget": "Gemiddelde tijd op doel",
+      "meanTrackingError": "Betekende trackingfout",
+      "placeYourFingerOnTheScreen": "Plaats uw vinger op het scherm",
+      "title": "Achtervolging volgen",
+      "timeOnTarget": "Tijd op doel",
+      "error": "Fout",
+      "onTarget": "Op doel",
+      "avgError": "Gem. fout",
+      "improve": "Verbeteren",
+      "improvementT1VsT": "Verbetering T1 versus T",
+      "errorLabel": "Fout",
+      "followGreenTarget": "Volg het groene doel"
+    },
+    "rapidNaming": {
+      "roundComplete": "Rond compleet",
+      "totalErrors": "Totaal aantal fouten",
+      "title": "Snelle naamgeving",
+      "avgSpeed": "Gem. snelheid",
+      "totalTime": "Totale tijd",
+      "round": "Rond",
+      "getReady": "Maak je klaar!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Gem. oplostijd",
+      "solved": "Opgelost",
+      "wrong": "Verkeerd",
+      "placeholder": "Jouw antwoord...",
+      "title": "Rebus-puzzels",
+      "puzzles": "Puzzels",
+      "timeout": "Time-out",
+      "submit": "Verzenden",
+      "answer": "Antwoord"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Gem. oplostijd",
+      "solved": "Opgelost",
+      "placeholder": "Jouw antwoord...",
+      "title": "Externe medewerkers",
+      "timeout": "Time-out",
+      "submit": "Verzenden",
+      "answer": "Antwoord"
+    },
+    "reversalLearning": {
+      "adapt": "Pas je aan",
+      "loseshiftRate": "Verlies-shift-percentage",
+      "score": "Score:",
+      "winstayRate": "Win-verblijftarief",
+      "title": "Omkering leren",
+      "rewards": "Beloningen",
+      "reversals": "Omkeringen",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Gem. proeven tot criterium",
+      "pickACard": "Kies een kaart"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Tel terug met 7",
+      "reproduceThePatternFromMemory": "Reproduceer het patroon uit het geheugen",
+      "title": "Rey complexe figuur",
+      "copy": "Kopieer",
+      "recall": "Terugroepen",
+      "retention": "Retentie",
+      "trial": "Proef",
+      "target": "Doel",
+      "yourCopy": "Jouw exemplaar",
+      "submit": "Verzenden"
+    },
+    "rhythm": {
+      "avgTimingError": "Gem. timingfout",
+      "bestTrialError": "Beste proeffout",
+      "correctTrials": "Correcte beproevingen",
+      "worstTrialError": "Slechtste proeffout",
+      "watchRhythm": "Let op het ritme",
+      "getReady": "Maak je klaar...",
+      "tapTheRhythm": "Tik op het ritme!",
+      "tooFarOff": "Te ver weg!",
+      "tapToReproduce": "Tik om te reproduceren",
+      "beats": "{{count}} slagen",
+      "bestTrial": "Beste proef",
+      "worstTrial": "Slechtste beproeving",
+      "title": "Ritme",
+      "msErr": "mevrouw fout"
+    },
+    "routePlanning": {
+      "time": "Tijd",
+      "title": "Routeplanning",
+      "levels": "Niveaus",
+      "completed": "Voltooid",
+      "avgMoves": "Gem. beweegt",
+      "clear": "Duidelijk",
+      "submit": "Verzenden",
+      "instructions": "Instructies"
+    },
+    "rvp": {
+      "detect357246468": "Detecteren: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Doelsequenties",
+      "fa": "FA",
+      "hitRate": "Hitpercentage",
+      "misses": "Missen",
+      "sequences": "Reeksen"
+    },
+    "sart": {
+      "commissionErrors": "Commissiefouten",
+      "omissionErrors": "Weglatingsfouten",
+      "tapAllDigits": "Tik op alle cijfers behalve 3",
+      "except3": "Behalve3"
+    },
+    "sceneCrasher": {
+      "adds": "Voegt toe",
+      "studyTheScene": "Bestudeer de scène",
+      "swaps": "Wissels",
+      "tapTheNewchangedObject": "Tik op het nieuwe/gewijzigde object"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Valse zinnen",
+      "trueSentences": "Ware zinnen",
+      "byCategory": "Per categorie",
+      "title": "Zinverificatie",
+      "trueRt": "Echte RT",
+      "true": "Waar",
+      "false": "Vals",
+      "pressKey": "Druk op"
+    },
+    "soundSweeps": {
+      "down": "Naar beneden",
+      "downAccuracy": "Nauwkeurigheid",
+      "durationThreshold": "Duurdrempel",
+      "up": "Op",
+      "upAccuracy": "Nauwkeurigheid",
+      "title": "Geluidsveegbewegingen",
+      "threshold": "Drempelwaarde",
+      "upOrDown": "Omhoog of omlaag?"
+    },
+    "sourceMemory": {
+      "color": "Kleur",
+      "colorRecall": "Kleurherinnering",
+      "frame": "Kader",
+      "frameRecall": "Frameherinnering",
+      "getReadyForTheTest": "Maak je klaar voor de test!",
+      "itemRecognition": "Artikelherkenning",
+      "positionRecall": "Positie terugroepen",
+      "sourceAccuracy": "Nauwkeurigheid van de bron",
+      "title": "Brongeheugen",
+      "source": "Bron",
+      "position": "Positie",
+      "word": "Woord",
+      "wasThisWordShown": "Is dit woord getoond?",
+      "bottom": "Onderkant",
+      "blue": "Blauw",
+      "orange": "Oranje",
+      "circle": "Cirkel",
+      "square": "Vierkant"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Geluidsdrempel",
+      "title": "Spraak-in-lawaai",
+      "noise": "Lawaai",
+      "whichWordWasIt": "Welk woord was het?"
+    },
+    "srtt": {
+      "learningEffect": "Leereffect",
+      "learning": "Leren",
+      "block": "Blok"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Kansniveau",
+      "learningDetected": "Leren gedetecteerd",
+      "testPhase": "Testfase",
+      "whichPairLooksMoreFamiliar": "Welk paar ziet er bekender uit?",
+      "title": "Statistisch leren",
+      "learning": "Leren",
+      "watchTheShapes": "Let op de vormen"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Geloofsbias-effect",
+      "conclusion": "Conclusie",
+      "premise1": "Gebouw 1",
+      "premise2": "Gebouw 2",
+      "logicalValidityQuestion": "Is dit logisch geldig?",
+      "valid": "Geldig",
+      "invalid": "Ongeldig"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Afwezige nauwkeurigheid",
+      "presentAccuracy": "Huidige nauwkeurigheid",
+      "title": "Symbool zoeken",
+      "present": "Aanwezig",
+      "absent": "Afwezig",
+      "targets": "Doelstellingen",
+      "searchGroup": "Zoekgroep"
+    },
+    "syncContinuation": {
+      "async": "Asynchroon",
+      "asynchrony": "Asynchronie",
+      "drift": "Afdrijven",
+      "cv": "CV",
+      "title": "Synchronisatie-voortzetting",
+      "meanCv": "Bedoel CV",
+      "tempos": "Tempo's",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Maak je klaar...",
+      "nextTempo": "Volgende tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Correcte resets",
+      "duration": "Duur",
+      "missedCounters": "Gemiste tellers",
+      "prematureResets": "Voortijdige reset",
+      "totalEvents": "Totaal aantal evenementen",
+      "tooEarly": "Te vroeg!",
+      "missed": "Gemist!",
+      "title": "Taak jongleren",
+      "premature": "Voortijdig",
+      "counter": "Teller",
+      "tapCounterInstruction": "Tik op elke teller wanneer deze de drempel bereikt. Laat niets overstromen!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Tweedelingspunt (PSE)",
+      "curveSteepness": "Curve-steilheid",
+      "idealMidpoint": "Ideaal middelpunt",
+      "pse": "PSE",
+      "title": "Tijdelijke tweedeling",
+      "steepness": "Steilheid",
+      "shortOrLong": "Kort of lang?",
+      "trainingPhase": "Trainingsfase",
+      "short": "Kort",
+      "long": "Lang"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Verloopbreedte",
+      "rememberThisDuration": "Onthoud deze duur",
+      "width": "Breedte",
+      "standard": "STANDAARD",
+      "title": "Temporele generalisatie",
+      "hitRate": "Hitpercentage",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Hit Rate (detecteren standaard)",
+      "sameDuration": "Zelfde duur?",
+      "trainingPhase": "Trainingsfase",
+      "same": "Hetzelfde",
+      "different": "Anders"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Drempel SOA",
+      "title": "Textuurdiscriminatie",
+      "threshold": "Drempel"
+    },
+    "timePromem": {
+      "avgTimingError": "Gem. timingfout",
+      "clockChecks": "Klokcontroles",
+      "ongoingAccuracy": "Voortdurende nauwkeurigheid",
+      "ongoingTrials": "Lopende beproevingen",
+      "totalPmPresses": "Totaal aantal PM-persen",
+      "pmAccuracy": "PM-nauwkeurigheid",
+      "pmMisses": "PM mist",
+      "title": "Tijd prospectief",
+      "ongoing": "Lopend",
+      "pmHitsLabel": "PM-hits",
+      "timingErr": "Timingfout",
+      "pmHitsExpected": "PM-hits / verwacht",
+      "pmPresses": "PM-persen",
+      "checkClock": "Controleer de klok",
+      "thirtySecMark": "Jaren '30 Mark"
+    },
+    "toj": {
+      "meanResponseTime": "Gemiddelde responstijd",
+      "temporalResolution": "Tijdelijke resolutie",
+      "title": "Oordeel over de tijdelijke orde",
+      "threshold": "Drempel",
+      "whichCameFirst": "Welke was er eerst?",
+      "leftFirst": "Eerst links",
+      "rightFirst": "Rechts eerst"
+    },
+    "tower": {
+      "budget": "Begroting",
+      "challenge": "Uitdaging",
+      "challengeClassic": "Klassiek",
+      "challengeExpert": "Deskundige",
+      "challengeMemory": "Geheugen",
+      "challengePrecision": "Precisie",
+      "dragDiscAriaLabel": "Sleep de bovenste schijf van peg {{peg}}",
+      "goal": "Doel",
+      "goalHiddenStatus": "Doel verborgen. Gebruik Reveal om het kort weer te geven.",
+      "goalRevealedMessage": "Doel onthuld gedurende 3 seconden.",
+      "hint": "Tip",
+      "hintDescription": "Laat de beste volgende zet zien",
+      "hintMessage": "Tip: verplaats de bovenste schijf van pin {{fromPeg}} naar pin {{toPeg}}.",
+      "hiddenGoalDescription": "Het doel is tijdens het spelen verborgen. Gebruik Reveal als u een korte verversing nodig heeft.",
+      "hiddenGoalTitle": "Geheugen uitdaging",
+      "invalid": "Ongeldig",
+      "moves": "Beweegt",
+      "optimal": "Optimaal",
+      "pegFullMessage": "Dat pootje is vol.",
+      "previewMemoryCountdown": "Onthoud het doel. Begint over {{seconds}}s.",
+      "previewPlanCountdown": "Plan de {{moves}}-move-oplossing. Begint over {{seconds}}s.",
+      "reset": "Opnieuw instellen",
+      "resetDescription": "Begin deze puzzel opnieuw",
+      "resetMessage": "Puzzel opnieuw instellen.",
+      "reveal": "Onthullen",
+      "revealDescription": "Onthul het verborgen doel",
+      "statusOptimalSolve": "Optimaal oplossen. Score {{score}}.",
+      "statusSolvedScore": "Opgelost in {{moves}} zetten (+{{extraMoves}}). Score {{score}}.",
+      "undo": "Ongedaan maken",
+      "undoDescription": "Keer de laatste zet om",
+      "undoneMessage": "Laatste zet ongedaan gemaakt.",
+      "yourPegs": "Jouw pinnen"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Correcte leveringen",
+      "trainsLost": "Treinen verloren",
+      "wrongStation": "Verkeerd station",
+      "title": "Trein van gedachten",
+      "trains": "Treinen",
+      "missed": "Gemist",
+      "scoreLabel": "Scoren",
+      "instructions": "Instructies"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Gem. aantal gebruikte vragen",
+      "title": "Twintig vragen",
+      "avgQuestions": "Gem. vragen",
+      "rounds": "Rondes",
+      "efficiency": "Efficiëntie",
+      "avgQuestionsCorrectOnly": "Gem. vragen (alleen correct)",
+      "questionsLabel": "Vragen",
+      "remaining": "Resterend",
+      "readyToGuess": "Ik ben klaar om te raden!",
+      "tapTheTarget": "Tik op het object waarvan je denkt dat het het doelwit is!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Nuttig gezichtsveld",
+      "visualNoiseMask": "Visueel geluidsmasker",
+      "whatWasInTheCenter": "Wat stond er in het midden?",
+      "whereWasTheTarget": "Waar was het doelwit?",
+      "avgThreshold": "Gem. drempel",
+      "speed": "Snelheid",
+      "accuracy": "Nauwkeurigheid",
+      "central": "Centraal",
+      "peripheral": "Perifeer",
+      "overall": "Over het algemeen",
+      "block": "Blok",
+      "trials": "Proeven",
+      "start": "Begin",
+      "focus": "Focus",
+      "threshold": "Drempel",
+      "stimulus": "Stimulus",
+      "respondFromMemory": "Reageer vanuit je geheugen",
+      "truck": "Vrachtwagen",
+      "choosePeripheralLocation": "Kies een perifere locatie",
+      "currentBlock": "Blokkeer {{n}}",
+      "exposure": "Blootstelling"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Woorden die beginnen met {{letter}}",
+      "title": "Verbale vloeiendheid",
+      "totalWords": "Totaal woorden",
+      "duplicates": "Duplicaten",
+      "letter": "Brief",
+      "round": "Rond",
+      "roundComplete": "Rond compleet",
+      "nextRound": "Volgende ronde",
+      "middotRound": "· Rond"
+    },
+    "vernierAcuity": {
+      "whichSide": "Welke kant?",
+      "title": "Vernier-scherpte",
+      "leftOffset": "Links verschoven",
+      "rightOffset": "Rechtse offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimale strategie",
+      "correct": "Juist!",
+      "wrong": "Verkeerd",
+      "title": "Weervoorspelling",
+      "optimal": "Optimaal",
+      "learningCurve": "Leercurve",
+      "predictTheWeather": "Voorspel het weer",
+      "rain": "Regen"
+    },
+    "wordChain": {
+      "avgResponseTime": "Gem. responstijd",
+      "chain": "Ketting",
+      "longestChain": "Langste keten",
+      "totalCorrect": "Totaal juist",
+      "totalWords": "Totaal woorden",
+      "words": "Woorden",
+      "title": "Woordketen",
+      "longest": "Langste",
+      "avgRt": "Gem. RT",
+      "endsWith": "eindigt met",
+      "chainLabel": "Ketting",
+      "bestLabel": "Beste"
+    },
+    "wordFlow": {
+      "avgWordLength": "Gem. woordlengte",
+      "correct": "Juist",
+      "invalidWords": "Ongeldige woorden",
+      "totalWordsSelected": "Totaal aantal geselecteerde woorden",
+      "validWords": "Geldige woorden",
+      "wordsPerMinute": "Woorden per minuut",
+      "wrong": "Verkeerd",
+      "seeResults": "Zie resultaten",
+      "nextRound": "Volgende ronde ({{current}}/{{total}})",
+      "title": "Verbale vloeiendheid",
+      "validWordsLabel": "Geldige woorden",
+      "wordsPerMinLabel": "Woorden/min",
+      "avgLengthLabel": "Gem. lengte",
+      "invalidLabel": "Ongeldig",
+      "round": "Rond",
+      "selectWordsBelongTo": "Selecteer woorden die erbij horen",
+      "selected": "Geselecteerd"
+    },
+    "wordList": {
+      "avgRtCorrect": "Gem. RT (correct)",
+      "primacyEffect": "Primacy-effect",
+      "recencyEffect": "Recentheidseffect",
+      "studyPhaseRememberEachWord": "Studiefase – onthoud elk woord",
+      "wordsRecalled": "Woorden herinnerd",
+      "title": "Woordenlijst",
+      "serialPositionCurve": "Seriële positiecurve",
+      "wasWordInList": "Stond dit woord in de lijst?",
+      "seenBefore": "Eerder gezien",
+      "newWord": "Nieuw"
+    },
+    "speedSort": {
+      "switchAccuracy": "Nauwkeurigheid van de schakelaar",
+      "switchTrials": "Wissel van proef",
+      "sortByColor": "Sorteer op KLEUR",
+      "sortByShape": "Sorteer op VORM",
+      "sortByNumber": "Sorteer op NUMMER",
+      "ruleChanged": "Regel veranderd!",
+      "binRed": "Rood",
+      "binBlue": "Blauw",
+      "binGreen": "Groen",
+      "binYellow": "Geel",
+      "binCircle": "Cirkel",
+      "binSquare": "Vierkant",
+      "binTriangle": "Driehoek",
+      "binStar": "Ster",
+      "title": "Snelheid sorteren",
+      "switch": "Schakelaars"
+    },
+    "reflex": {
+      "target": "Doel",
+      "lure": "Lokken",
+      "tooSlow": "Te langzaam!",
+      "wrongTarget": "Verkeerd doel!",
+      "tapTargets": "Tik op de groene cirkels!",
+      "hits": "Hits",
+      "misses": "Missen",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Onthoud het lopende totaal...",
+      "title": "Ketenberekening",
+      "stepChains": "{{len}}-stapketens",
+      "start": "Begin",
+      "step": "Stap",
+      "whatIsTheResult": "Wat is het resultaat?"
+    },
+    "alternateUses": {
+      "placeholder": "Typ een gebruik...",
+      "title": "Alternatief gebruik",
+      "totalUses": "Totaal gebruik",
+      "perObject": "Per object",
+      "rounds": "Rondes",
+      "bestObject": "Beste voorwerp",
+      "bestCount": "Beste telling",
+      "noUsesSubmitted": "Geen gebruik ingediend",
+      "timesUp": "De tijd is om!",
+      "nextObject": "Volgend object ({{object}})",
+      "listCreativeUses": "Maak een lijst van creatieve toepassingen voor dit object"
+    },
+    "anagram": {
+      "placeholder": "Typ het woord...",
+      "title": "Anagram",
+      "avgSolve": "Gem. oplossen",
+      "letterWords": "{{len}}-letterwoorden",
+      "submit": "Verzenden"
+    },
+    "facialEmotion": {
+      "happy": "Gelukkig",
+      "sad": "Triest",
+      "angry": "Boos",
+      "fearful": "Angstig",
+      "disgusted": "Walgelijk",
+      "surprised": "Verrast",
+      "lc": "LC",
+      "title": "Gezichtsemotieherkenning",
+      "topConfusions": "Topverwarringen"
+    },
+    "numberSeries": {
+      "easy": "Gemakkelijk",
+      "hard": "Moeilijk"
+    },
+    "chainRecall": {
+      "round": "Rond",
+      "title": "Kettingoproep",
+      "chain": "Ketting",
+      "placeholder": "Tijdelijke aanduiding"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotionele Go/No-Go",
+      "block1CommissionErrors": "Blok 1 commissiefouten",
+      "block2CommissionErrors": "Blok 2 commissiefouten",
+      "goHappy": "Ga = Gelukkig",
+      "goSad": "Ga = verdrietig",
+      "block": "Blok",
+      "go": "Ga"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop-effect",
+      "title": "Kleur haast",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Congruente nauwkeurigheid",
+      "incongruentAccuracy": "Incongruente nauwkeurigheid"
+    },
+    "mirror": {
+      "avgCorrectCells": "Juiste cellen (gem.)",
+      "symmetryType": "Symmetrietype",
+      "title": "Spiegel"
+    },
+    "rhythmTap": {
+      "correctTrials": "Correcte beproevingen",
+      "avgRhythmScore": "Gemiddelde ritmescore",
+      "bestTrialScore": "Beste proefscore",
+      "worstTrialScore": "Slechtste proefscore",
+      "level": "Niveau",
+      "rhythm": "Ritme",
+      "bestTrial": "Beste proef",
+      "worstTrial": "Slechtste beproeving"
+    },
+    "vocalProsody": {
+      "questioning": "Vragen stellen"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Vermenigvuldig",
+      "add": "Toevoegen",
+      "subtract": "Aftrekken",
+      "title": "Rekenkundige snelheid",
+      "score": "Scoren",
+      "solved": "Opgelost",
+      "missed": "Gemist"
+    },
+    "puzzle": {
+      "avgSolveTime": "Gem. oplostijd",
+      "totalMoves": "Totaal aantal bewegingen",
+      "totalErrors": "Totaal aantal fouten",
+      "gridSize": "Rastergrootte",
+      "maxGridReached": "Max. raster bereikt",
+      "maxLevelReached": "Maximaal niveau bereikt",
+      "maxNodesReached": "Max. aantal knooppunten bereikt",
+      "puzzleDetails": "Puzzeldetails",
+      "roundDetails": "Ronde details",
+      "solved": "Opgelost!",
+      "undo": "Ongedaan maken",
+      "reset": "Opnieuw instellen",
+      "check": "Controleer",
+      "moves": "Beweegt",
+      "time": "Tijd",
+      "level": "Niveau",
+      "errors": "Fouten",
+      "score": "Scoren",
+      "grid": "Raster",
+      "crossings": "Oversteekplaatsen",
+      "pearls": "Parels",
+      "clues": "Aanwijzingen",
+      "region": "Regio",
+      "filled": "Gevuld",
+      "cells": "Cellen",
+      "undosLeft": "Resterende ongedaanmakingen",
+      "gems": "Edelstenen",
+      "connected": "Verbonden",
+      "slides": "Dia's",
+      "progress": "Vooruitgang",
+      "rotations": "Rotaties",
+      "puzzle": "Puzzel",
+      "uncovered": "Onbedekt",
+      "colored": "Gekleurd",
+      "violations": "Overtredingen",
+      "blacked": "Zwart gemaakt",
+      "empty": "Leeg",
+      "remaining": "Resterend",
+      "pairs": "Paren",
+      "flips": "Flips",
+      "found": "Gevonden",
+      "balls": "Ballen",
+      "guesses": "Gissingen",
+      "original": "Origineel",
+      "findDifferences": "Zoek verschillen",
+      "totalDrags": "Totale slepen",
+      "totalUndos": "Totaal ongedaan gemaakt",
+      "totalEdgesDrawn": "Totaal getekende randen",
+      "totalLasers": "Totaal lasers",
+      "totalSlides": "Totaal dia's",
+      "totalRotations": "Totaal aantal rotaties",
+      "totalRectangles": "Totaal rechthoeken",
+      "totalScore": "Totaalscore",
+      "avgTime": "Gem. tijd",
+      "cellsCleared": "Cellen gewist",
+      "totalDiffsFound": "Totaal gevonden verschillen",
+      "gemsCollected": "Edelstenen verzameld",
+      "pushBoxesOntoTargets": "Duw alle dozen op doelen",
+      "fireLasersMarkBalls": "Vuur lasers af vanaf de randen en markeer vervolgens de balposities",
+      "revealingAnswer": "Onthullend antwoord...",
+      "checkAnswer": "Controleer antwoord",
+      "pickNumberBelow": "Kies hieronder een getal",
+      "tapCellToAssign": "Tik op een cel om een nummer toe te wijzen",
+      "tapEdgesToPlaceWalls": "Tik op randen om muren te plaatsen. Verdeel in regio's van K.",
+      "ghosts": "Geesten",
+      "vampires": "Vampieren",
+      "zombies": "Zombieën",
+      "dominoes": "Domino's",
+      "islands": "Eilanden",
+      "pegsLeft": "Pinnen links",
+      "bestRemaining": "Beste overgebleven",
+      "puzzlesSolved": "Puzzels opgelost",
+      "flooded": "Overstroomd",
+      "edges": "Randen",
+      "totalPlacements": "Totaal aantal plaatsingen",
+      "totalRemovals": "Totaal aantal verhuizingen",
+      "maxTileReached": "Max. tegel bereikt",
+      "target": "Doel",
+      "placed": "Geplaatst",
+      "totalGuesses": "Totaal gissingen",
+      "guessesLeft": "Gissingen over",
+      "difficulty": "Moeilijkheidsgraad"
+    },
+    "palisade": {
+      "title": "Palissade",
+      "puzzles": "Puzzels",
+      "maxLevel": "Maximaal niveau"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "errors": "Fouten",
+      "avgTime": "Gem. tijd",
+      "erase": "Wissen"
+    },
+    "blackbox": {
+      "title": "Zwarte doos",
+      "puzzles": "Puzzels",
+      "lasers": "Lasers",
+      "avgTime": "Gem. tijd"
+    },
+    "designFluency": {
+      "title": "Ontwerp vloeiendheid",
+      "uniqueDesigns": "Unieke ontwerpen",
+      "duplicates": "Duplicaten",
+      "round": "Rond",
+      "roundComplete": "Rond compleet",
+      "youCreatedDesigns": "Je hebt {{count}} ontwerpen gemaakt",
+      "startRound": "Begin ronde",
+      "instructions": "Instructies",
+      "designs": "Ontwerpen",
+      "clear": "Duidelijk",
+      "addDesign": "Toevoegen"
+    },
+    "signpost": {
+      "title": "Wegwijzer",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "avgTime": "Gem. tijd",
+      "maxGrid": "Maximaal raster"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Niveau",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "undos": "Ongedaan maken",
+      "puzzle": "Puzzel"
+    },
+    "numericalStroop": {
+      "left": "Links",
+      "right": "Juist"
+    },
+    "biologicalMotion": {
+      "title": "Biologische beweging",
+      "noiseDots": "ruis stippen",
+      "whichDirection": "Welke richting?",
+      "left": "Links",
+      "right": "Juist"
+    },
+    "inertia": {
+      "title": "Traagheid",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "gems": "Edelstenen",
+      "moves": "Beweegt"
+    },
+    "waterLevel": {
+      "title": "Waterniveau",
+      "error": "Fout",
+      "tilt": "Kantelen",
+      "waterLine": "Waterlijn?"
+    },
+    "twiddle": {
+      "title": "Twichel",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxGrid": "Maximaal raster"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "errors": "Fouten",
+      "avgTime": "Gem. tijd",
+      "erase": "Wissen"
+    },
+    "rectangles": {
+      "title": "Rechthoeken",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "rectanglesCount": "Rechthoeken",
+      "maxGrid": "Maximaal raster",
+      "cancelSelection": "Selectie annuleren"
+    },
+    "filling": {
+      "title": "Vullen",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "avgTime": "Gem. tijd",
+      "grid": "Raster"
+    },
+    "spacedRetrieval": {
+      "title": "Gespreid ophalen",
+      "studyPair": "Bestudeer dit paar",
+      "waitAndSolve": "Wacht... en los het dan op",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Interval: welke paren?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototypevervorming",
+      "studyPhase": "Studie fase",
+      "testPhase": "Testfase",
+      "yesBelongs": "Ja – hoort erbij",
+      "noRandom": "Nee – Willekeurig"
+    },
+    "motionCoherence": {
+      "title": "Bewegingscoherentie",
+      "threshold": "Drempel",
+      "coherence": "Samenhang",
+      "whichDirection": "Welke richting?"
+    },
+    "cube": {
+      "title": "Kubus",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxLevel": "Maximaal niveau",
+      "cubeFaces": "Kubus gezichten",
+      "moveUp": "Op",
+      "moveLeft": "Links",
+      "moveDown": "Naar beneden",
+      "moveRight": "Juist"
+    },
+    "sameGame": {
+      "title": "Hetzelfde spel",
+      "score": "Scoren",
+      "cleared": "Gewist",
+      "cells": "Cellen",
+      "accuracy": "Nauwkeurigheid"
+    },
+    "crossModalMatching": {
+      "title": "Cross-modale matching",
+      "chance": "Kans",
+      "whichPatternMatchesRhythm": "Welk patroon past bij het ritme?"
+    },
+    "mosaic": {
+      "title": "Mozaïek",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxGrid": "Maximaal raster"
+    },
+    "spotDiff": {
+      "title": "Zoek het verschil",
+      "level": "Niveau",
+      "grid": "Raster",
+      "accuracy": "Nauwkeurigheid",
+      "perfect": "Perfect",
+      "avgTime": "Gem. tijd",
+      "found": "Gevonden"
+    },
+    "lightsOut": {
+      "title": "Licht uit",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxGrid": "Maximaal raster"
+    },
+    "pipeline": {
+      "title": "Pijpleiding",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "rotations": "Rotaties",
+      "avgTime": "Gem. tijd"
+    },
+    "tracks": {
+      "title": "Sporen",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "errors": "Fouten",
+      "avgTime": "Gem. tijd"
+    },
+    "netslide": {
+      "title": "Netschuif",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "slides": "Dia's",
+      "maxGrid": "Maximaal raster"
+    },
+    "cognitiveBias": {
+      "title": "Cognitieve bias-training",
+      "biasResistance": "Bias weerstand",
+      "biased": "Bevooroordeeld",
+      "continue": "Ga door"
+    },
+    "empathicAccuracy": {
+      "title": "Empathische nauwkeurigheid",
+      "emotionId": "Emotie",
+      "avgRatingError": "Gem. beoordelingsfout",
+      "scenarios": "Scenario's",
+      "perfect": "Perfect",
+      "rating": "Beoordeling",
+      "howDoesCharacterFeel": "Hoe voelt het personage?",
+      "rateIntensity": "Beoordeel de intensiteit",
+      "whatEmotion": "Welke emotie?",
+      "yourRating": "Jouw beoordeling",
+      "correct": "Juist",
+      "emotion": "Emotie"
+    },
+    "guess": {
+      "title": "Meesterbrein",
+      "solved": "Opgelost",
+      "guesses": "Gissingen"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxLevel": "Maximaal niveau"
+    },
+    "magnets": {
+      "title": "Magneten",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxLevel": "Maximaal niveau"
+    },
+    "tangram": {
+      "placeAll": "Plaats alle stukken",
+      "solved": "Opgelost!",
+      "notRight": "Niet helemaal juist",
+      "title": "Tangram",
+      "level": "Niveau",
+      "puzzles": "Puzzels",
+      "placements": "Plaatsingen",
+      "removals": "Verhuizingen",
+      "puzzleNumber": "Puzzel {{n}}",
+      "pieces": "Stukken",
+      "targetCells": "Cibel",
+      "dragHint": "Sleep of plaats het stuk op het raster",
+      "selectHint": "Selecteer een stuk",
+      "rotate": "Tourner",
+      "undo": "Annuleer",
+      "check": "Controleer"
+    },
+    "galaxies": {
+      "title": "Sterrenstelsels"
+    },
+    "flood": {
+      "title": "Overstroming"
+    },
+    "pegs": {
+      "title": "Pinnen",
+      "bestPegs": "Beste pinnen"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditieve figuur-grond",
+      "patternPresent": "Patroon aanwezig?",
+      "pattern": "Patroon",
+      "noPattern": "Geen patroon"
+    },
+    "selfOrderedPointing": {
+      "title": "Zelfgeordend wijzen",
+      "maxSpan": "Maximale overspanning",
+      "errors": "Fouten",
+      "round": "Rond",
+      "setOf": "Set van {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Spiegel traceren",
+      "totalErrors": "Totaal aantal fouten",
+      "avgTime": "Gem. tijd",
+      "shapes": "Vormen",
+      "perfect": "Perfect",
+      "improvement": "Verbetering",
+      "errorsMiddot": "fouten ·",
+      "shape": "Vorm",
+      "errors": "Fouten",
+      "xIsMirrored": "X is gespiegeld!"
+    },
+    "clockDrawing": {
+      "title": "Klok tekening",
+      "avgError": "Gem. fout",
+      "setTo": "Instellen op",
+      "submit": "Verzenden"
+    },
+    "cognitiveMap": {
+      "title": "Cognitieve kaart",
+      "explore": "Ontdek",
+      "sRemaining": "S Resterend",
+      "from": "Van",
+      "whichDirectionIs": "Welke richting is"
+    },
+    "sixteen": {
+      "title": "Zestien"
+    },
+    "loopy": {
+      "title": "Loopachtig"
+    },
+    "lightup": {
+      "title": "Licht op"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Maximale tegel",
+      "moves": "Beweegt",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Bruggen",
+      "puzzles": "Puzzels",
+      "maxLevel": "Maximaal niveau",
+      "level": "Niveau"
+    },
+    "net": {
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxGrid": "Maximaal raster"
+    },
+    "flip": {
+      "title": "Omdraaien"
+    },
+    "range": {
+      "title": "Bereik"
+    },
+    "slant": {
+      "title": "Schuin"
+    },
+    "towers": {
+      "title": "Torens",
+      "puzzles": "Puzzels",
+      "avgTime": "Gem. tijd",
+      "erase": "Wissen"
+    },
+    "pearl": {
+      "title": "Parel",
+      "edges": "Randen"
+    },
+    "mapColoring": {
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "moves": "Beweegt",
+      "maxLevel": "Maximaal niveau"
+    },
+    "singles": {
+      "title": "Alleenstaanden"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Ondood",
+      "accuracy": "Nauwkeurigheid",
+      "puzzles": "Puzzels",
+      "avgTime": "Gem. tijd"
+    },
+    "untangle": {
+      "title": "Ontwarren",
+      "drags": "Sleept",
+      "maxNodes": "Maximale knooppunten"
+    },
+    "unruly": {
+      "title": "Onhandelbaar"
+    },
+    "fifteen": {
+      "title": "vijftien"
+    },
+    "tents": {
+      "title": "Tenten"
+    },
+    "mesker": {
+      "pen": "Pen",
+      "stroke": "beroerte",
+      "penPressureHint": "Schrijf met constante pendruk"
+    },
+    "modality": {
+      "position": "Positie",
+      "audio": "Audio"
+    },
+    "validate": "Valideer"
+  },
+  "trace": {
+    "instructions": "Veeg naar N-back-positie. Dubbeltik op dezelfde positie.",
+    "hint": {
+      "validated": "Gevalideerd",
+      "draw": "Teken de letter • Tik om te valideren",
+      "drawWithColor": "Teken de letter • Selecteer kleur • Tik om te valideren",
+      "type": "Typ de letter • Enter om te valideren",
+      "typeWithColor": "Typ de letter • Selecteer kleur • Enter om te valideren",
+      "typeResult": "Typ het resultaat. • Enter om te valideren",
+      "writeResult": "Schrijf het resultaat • Tik om te valideren"
+    },
+    "keyboard": {
+      "letterInput": "Brief",
+      "numberInput": "Nummer"
+    },
+    "arithmetic": {
+      "cueHint": "Onthoud de 2 cijfers",
+      "refresh": "Nieuw"
+    },
+    "hintPosition": "Waar was de stimulus {{n}} beurten geleden?",
+    "hintN0": "Geef de huidige stimulus aan",
+    "warmupHint": "Onthoud de posities. Geen reactie nodig.",
+    "hintDraw": "Teken de letter • Tik om te valideren",
+    "hintDrawWithColor": "Teken de letter • Selecteer kleur • Tik om te valideren",
+    "hintWriteResult": "Schrijf het resultaat • Tik om te valideren",
+    "guide": {
+      "swipeNormal": "Veeg vanaf de laatste positie (N-0) naar de positie van {{n}} stappen geleden (N-{{n}}). Dubbeltik op dezelfde positie.",
+      "swipeSequential": "Veeg stap voor stap van N-0 naar N-{{n}}, waarbij u elke tussenpositie passeert. Dubbeltik op dezelfde positie.",
+      "swipeDynamic": "Veeg volgens de weergegeven regel. Dubbeltik op dezelfde positie.",
+      "tapN0": "Tik op de huidige positie.",
+      "warmup": "Onthoud de posities - geen reactie vereist.",
+      "writeDraw": "Teken de letter die je {{n}} stappen geleden hebt gehoord • Tik om te valideren",
+      "writeDrawColor": "Teken de letter die je {{n}} stappen geleden hebt gehoord • Selecteer de kleur • Tik om te valideren",
+      "writeType": "Typ de letter die je {{n}} stappen geleden hebt gehoord. • Enter om te valideren",
+      "writeTypeColor": "Typ de letter die je {{n}} stappen geleden hebt gehoord • Selecteer de kleur • Enter om te valideren",
+      "writeDrawN0": "Teken de letter die je zojuist hebt gehoord. • Tik om te valideren",
+      "writeDrawColorN0": "Teken de letter die je zojuist hebt gehoord • Selecteer de kleur • Tik om te valideren",
+      "writeTypeN0": "Typ de letter die u zojuist hebt gehoord. • Enter om te valideren",
+      "writeTypeColorN0": "Typ de letter die u zojuist hebt gehoord • Selecteer de kleur • Enter om te valideren",
+      "writeResult": "Schrijf het resultaat • Tik om te valideren",
+      "validated": "Gevalideerd",
+      "holdMindful": "Houd de cel {{seconds}}s vast",
+      "swipeMindful": "Veeg in {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptieve timing",
+      "inputKeyboard": "Toetsenbord",
+      "inputHandwriting": "Handschrift",
+      "writingInput": "Letters/cijfers",
+      "section": {
+        "grid": "Raster",
+        "input": "Invoer",
+        "rhythm": "Ritme",
+        "interface": "Interface",
+        "interfaceNone": "Standaard",
+        "sound": "Geluid"
+      },
+      "isi": "Interval (ISI)",
+      "stimulusDuration": "Stimulusduur",
+      "feedbackDuration": "Feedbackduur",
+      "ruleDisplay": "Regelduur",
+      "blankInterval": "Leeg interval",
+      "showProgressBar": "Voortgangsbalk",
+      "showInstructions": "Instructies in het spel",
+      "arithmeticInterference": "Rekenkundige interferentie",
+      "fullMenu": "Volledig menu",
+      "gridStyle": "Rasterstijl",
+      "gridStyleClassic": "Klassiek",
+      "gridStyleTrace": "Traceren",
+      "guide": {
+        "swipeMindful": "Veeg in {{seconds}}s",
+        "holdMindful": "Houd de cel {{seconds}}s vast"
+      },
+      "feedback": {
+        "gestureDuration": "Gebaar",
+        "holdDuration": "Houd vast",
+        "writingDuration": "Schrijven"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Houd vast",
+      "gestureDuration": "Gebaar",
+      "writingDuration": "Schrijven"
+    },
+    "image": "Vorm",
+    "digits": "Cijfers",
+    "emotions": "Emotie",
+    "words": "Woord",
+    "tones": "Toon",
+    "spatial": "Richting"
+  },
+  "replay": {
+    "title": "Sessie opnieuw afspelen",
+    "play": "Spelen",
+    "pause": "Pauze",
+    "restart": "Opnieuw opstarten",
+    "speed": "Snelheid",
+    "loading": "Sessie laden...",
+    "unavailable": "Herhaling niet beschikbaar voor deze sessie",
+    "backToStats": "Terug naar statistieken",
+    "runStack": {
+      "original": "Origineel",
+      "correction": "Correctie",
+      "delta": "Δ d'",
+      "inProgress": "In uitvoering",
+      "completed": "Voltooid"
+    },
+    "abandon": "Verlaten",
+    "badge": "Opnieuw afspelen",
+    "completionReport": {
+      "backToHome": "Terug",
+      "correctAgain": "Opnieuw corrigeren",
+      "deltaVsOriginal": "versus origineel",
+      "deltaVsParent": "versus vorige run",
+      "falseAlarmsSkipped": "Fouten vermeden",
+      "missesCorrections": "Correcties",
+      "newFalseAlarms": "Nieuwe fouten",
+      "replayAgain": "Opnieuw afspelen",
+      "scoreLabel": "d'score",
+      "title": "Correctie voltooid"
+    },
+    "controls": "Controles",
+    "correction": "Correctie",
+    "finished": "Einde herhaling",
+    "home": "Thuis",
+    "parseError": "Kan sessie niet lezen",
+    "tapSlotToPlace": "Tik op een slot om te plaatsen",
+    "timeline": "Tijdlijn",
+    "focusTimeline": {
+      "open": "Tijdlijn weergeven",
+      "close": "Sluit de tijdlijn",
+      "title": "N-Back-tijdlijn",
+      "fillAll": "Vul alles",
+      "fillCard": "Vul kaart"
+    },
+    "hud": {
+      "counterDisplay": "Tellerweergave",
+      "toggleCounterDisplay": "Tellerweergave schakelen"
+    },
+    "validate": "Valideer"
+  },
+  "recovery": {
+    "title": "Sessie onderbroken",
+    "description": "Er was een sessie bezig. Wilt u hervatten?",
+    "mode": "Modus",
+    "level": "Niveau",
+    "progress": "Vooruitgang",
+    "timeAgo": "Tijd",
+    "resume": "Sessie hervatten",
+    "startFresh": "Begin opnieuw",
+    "staleWarning": "Deze sessie is oud, hervatten kan een uitdaging zijn.",
+    "modes": {
+      "game": "Opleiding",
+      "activeTraining": "Actieve training",
+      "flowTraining": "Dual Place-training",
+      "dualPickTraining": "Dubbele keuze",
+      "traceTraining": "Dubbel spoor"
+    }
+  },
+  "rewards": {
+    "congratulations": "Gefeliciteerd!",
+    "duration": "{{days}} dagen Premium",
+    "lifetimeLabel": "Levenslange toegang",
+    "expiresAt": "Geldig tot {{date}}",
+    "neverExpires": "Verloopt nooit",
+    "continue": "Ga door",
+    "discovery": {
+      "name": "Ontdekkingspas",
+      "description": "7 dagen Premium — Ontdek alle functies"
+    },
+    "engagement": {
+      "name": "Verlovingspas",
+      "description": "1 maand Premium — Uw discipline loont"
+    },
+    "expert": {
+      "name": "Expertpas",
+      "description": "3 maanden Premium — Je bent een echte beoefenaar"
+    },
+    "lifetime": {
+      "name": "Levenslange toegang",
+      "description": "Premium voor altijd — Je beheerst Neurodual"
+    },
+    "xpRemaining": "Resterende XP",
+    "permanentAccessUnlocked": "Permanente toegang ontgrendeld",
+    "reachedTheTop": "Je hebt de top bereikt!"
+  },
+  "progression": {
+    "level": "Niveau {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Volgende niveau",
+    "reached": "Bereikt",
+    "inProgress": "In uitvoering"
+  },
+  "gridlock": {
+    "nextPuzzle": "Volgende puzzel →"
+  }
+}

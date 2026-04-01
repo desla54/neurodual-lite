@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "เส้นทางฝึกฝน",
+    "pageSubtitle": "เลือก จัดระเบียบ และสร้างเส้นทางของคุณ",
+    "enabled": "เปิดใช้เส้นทางฝึกฝน",
+    "description": "30 ขั้นตอนก้าวหน้าจาก N-1 ถึง N-10",
+    "progress": "ความก้าวหน้า",
+    "locked": "ล็อกอยู่",
+    "createJourney": "สร้างเส้นทาง",
+    "viewJourneys": "ดูเส้นทาง",
+    "current": "เส้นทางปัจจุบัน",
+    "myJourneys": "เส้นทางของฉัน",
+    "stage": "ขั้นตอน",
+    "stages": "ขั้นตอน",
+    "stagesShort": "ขั้น",
+    "stageLabels": {
+      "pick": "เลือก",
+      "catch": "จับ",
+      "place": "วาง",
+      "memo": "จำ"
+    },
+    "name": "ชื่อ",
+    "namePlaceholder": "เช่น ท้าทาย N-5",
+    "levels": "ระดับ",
+    "levelRange": "ช่วงระดับ",
+    "levelTo": "ถึง",
+    "createNew": "เส้นทางใหม่",
+    "new": "ใหม่",
+    "defaultCustomName": "เส้นทางของฉัน",
+    "created": "สร้างเส้นทางแล้ว!",
+    "deleted": "ลบเส้นทางแล้ว",
+    "sessionSettings": "ตั้งค่าเซสชัน",
+    "savedStatus": "บันทึกการตั้งค่าแล้ว",
+    "preset": {
+      "easy": "ง่าย",
+      "medium": "แนะนำ",
+      "hard": "ยาก"
+    },
+    "setup": {
+      "title": "เส้นทางและโปรไฟล์",
+      "journey": "เส้นทาง",
+      "journeyNone": "เลือก…",
+      "profile": "โปรไฟล์",
+      "profileNone": "เลือก…",
+      "configure": "กำหนดค่า",
+      "configureNone": "เลือกเส้นทาง",
+      "create": "เส้นทางใหม่",
+      "createDesc": "สร้างเส้นทางใหม่"
+    },
+    "deleteConfirmTitle": "ลบเส้นทางนี้?",
+    "deleteConfirmMessage": "เส้นทาง \"{{name}}\" จะถูกลบอย่างถาวร",
+    "renameTitle": "เปลี่ยนชื่อเส้นทางนี้",
+    "renameMessage": "แก้ไขชื่อของ \"{{name}}\"",
+    "renamed": "เปลี่ยนชื่อเส้นทางแล้ว",
+    "badge": {
+      "simulator": "ตัวจำลอง",
+      "beta": "Beta",
+      "default": "ค่าเริ่มต้น"
+    },
+    "mode": "โหมด",
+    "modeStandard": "เส้นทาง (4 โหมด)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "ตัวจำลอง",
+      "jaeggi": "คลาสสิก",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} เซสชันตรวจสอบ",
+      "needed": "เหลืออีก {{count}} เซสชัน",
+      "excellent": "ยอดเยี่ยม!",
+      "good": "ดี!",
+      "passing": "ผ่าน"
+    },
+    "progression": {
+      "title": "ความก้าวหน้า",
+      "description": "เพื่อไปสู่ระดับถัดไป ต้องทำคะแนนดี:",
+      "excellent": "≥95% → 1 เซสชัน",
+      "good": "≥85% → 2 เซสชัน",
+      "passing": "≥80% → 3 เซสชัน",
+      "rules": "กฎการก้าวหน้า",
+      "jaeggi": {
+        "description": "ตามโมดัลลิตี้ที่อ่อนที่สุด:",
+        "up": "< 3 ข้อผิดพลาด → เลื่อนระดับ",
+        "stay": "3 - 5 ข้อผิดพลาด → คงระดับ",
+        "down": "> 5 ข้อผิดพลาด → ลดระดับ"
+      },
+      "brainworkshop": {
+        "description": "โปรโตคอล Brain Workshop (คะแนน BW):",
+        "up": "≥80% → เลื่อนระดับ",
+        "stay": "50-79% → คงระดับ",
+        "strike": "คะแนน <50% ติดต่อกัน 3 ครั้ง → ลดระดับ"
+      },
+      "hybrid": {
+        "description": "เส้นทางนี้รัน {{trackCount}} เซสชัน Dual Track จากนั้น {{dnbCount}} เซสชัน Dual N-Back ที่ระดับเดียวกัน",
+        "alternation": "ลูปจะเริ่มใหม่ด้วย Dual Track ทุกครั้งที่มีการตัดสินใจ",
+        "authority": "เฉพาะเซสชัน Dual N-Back เท่านั้นที่ตัดสินขึ้น คง หรือลง",
+        "up": "0-1 ข้อผิดพลาด → เลื่อนระดับ",
+        "stay": "2-3 ข้อผิดพลาด → คงที่",
+        "down": "4+ ข้อผิดพลาด → ลดระดับ",
+        "streakRule": "สองเซสชันติดต่อกันในโซนเดียวกันจะเรียกการตัดสินใจ",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "ตรวจสอบแล้ว {{current}}/{{required}}",
+        "stayProgress": "รอ {{current}}/{{required}}",
+        "downProgress": "ไม่ผ่าน {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track ใช้แถบความชำนาญต่อเนื่องสำหรับแต่ละขั้นตอนเป้าหมาย:",
+        "calibration": "การสอบเทียบแรกจะประมาณจำนวนเป้าหมายเริ่มต้นของคุณ",
+        "goodSession": "แต่ละเซสชันที่ดีจะเติมขั้นตอนปัจจุบันเล็กน้อย",
+        "mastery": "เซสชันใกล้สมบูรณ์แบบจะเติมเร็วกว่า เซสชันปกติจะพอประมาณ",
+        "regression": "เซสชันอ่อนอาจทำให้แถบความชำนาญปัจจุบันลดลง",
+        "unlock": "จำนวนเป้าหมายถัดไปจะปลดล็อกเมื่อขั้นตอนปัจจุบันถึง 100% เท่านั้น"
+      }
+    },
+    "switcher": {
+      "open": "เปิดตัวสลับเส้นทาง",
+      "current": "ปัจจุบัน",
+      "showAll": "เส้นทางทั้งหมด",
+      "settings": "ตั้งค่าเส้นทาง"
+    },
+    "previous": "เส้นทางก่อนหน้า",
+    "next": "เส้นทางถัดไป",
+    "calibration": {
+      "title": "เซสชันแรก",
+      "subtitle": "การสอบเทียบสั้นๆ จะกำหนดระดับเริ่มต้นของคุณ หรือคุณสามารถเริ่มที่ระดับ 2 โดยตรง",
+      "skipToN2": "หรือเริ่มที่ N-2",
+      "continueAt": "หรือต่อที่ N-{{level}}",
+      "start": "เริ่มสอบเทียบ",
+      "redo": "สอบเทียบใหม่",
+      "badge": "สอบเทียบ"
+    },
+    "presets": {
+      "currentSlot": "กำหนดเอง",
+      "currentSlotView": "กำหนดเอง",
+      "lockedTitle": "บางตัวเลือกถูกล็อก",
+      "lockedDesc": "เพื่อให้ความก้าวหน้าเปรียบเทียบได้ โมดัลลิตี้ (และตัวเลือกบางอย่าง) ไม่สามารถเปลี่ยนได้หลังจากเริ่มเส้นทางแล้ว"
+    },
+    "completed": {
+      "title": "เส้นทางเสร็จสมบูรณ์!",
+      "subtitle": "ทุกขั้นตอนผ่านการตรวจสอบแล้ว ทำได้ดีมาก!",
+      "continueFree": "ฝึกฝนต่อ"
+    },
+    "report": {
+      "stage": "ขั้นตอน",
+      "level": "ระดับ",
+      "score": "คะแนน",
+      "sessionValidated": "เซสชันผ่านการตรวจสอบ!",
+      "sessionNotValidated": "เซสชันไม่ผ่าน",
+      "minScore": "คะแนนขั้นต่ำที่ต้องการ:",
+      "stageCompleted": "ขั้นตอนเสร็จสมบูรณ์!",
+      "stageUnlocked": "ขั้นตอน {{stage}} ปลดล็อกแล้ว!",
+      "replay": "เล่นซ้ำ",
+      "nextStage": "ขั้นตอนถัดไป",
+      "home": "หน้าหลัก",
+      "hits": "ถูกต้อง",
+      "misses": "พลาด",
+      "falseAlarms": "แจ้งเตือนผิด",
+      "correctRejections": "ปฏิเสธถูกต้อง"
+    }
+  }
+}

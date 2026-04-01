@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "kamusta ang pakiramdam mo",
+      "tired": "Pagod",
+      "normal": "Normal",
+      "energized": "Pinasigla"
+    },
+    "aria": {
+      "trialTimer": "Timer ng pagsubok",
+      "positionMatch": "Tugma sa posisyon",
+      "audioMatch": "Tugma sa audio",
+      "audioLetter": "Audio letter:",
+      "traceGrid": "Trace grid"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "I-toggle ang monitor ng pag-sync",
+      "start": "simulan",
+      "end": "wakas",
+      "pinLabel": "pin",
+      "pinTitle": "I-pin sa screen",
+      "inputLabel": "input",
+      "inputTitle": "I-toggle ang input latency profiling (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "sa",
+      "off": "off",
+      "hideLabel": "magtago",
+      "hideTitle": "Itago (maliban kung syncHud=1 o ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "audio",
+        "expected": "inaasahan"
+      },
+      "labels": {
+        "trial": "pagsubok",
+        "lagShow": "Display lag",
+        "lagHide": "Retard masquage",
+        "winErr": "manalo err",
+        "endRef": "tapusin ang ref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->pinta ang p95",
+        "inputPending": "nakabinbin ang input",
+        "inputSamples": "mga sample ng input",
+        "touchSamples": "mga sample ng touch",
+        "mouseSamples": "mga sample ng mouse",
+        "keyboardSamples": "mga sample ng keyboard",
+        "latestMethod": "pinakabagong (paraan)",
+        "latestModality": "pinakabagong modality",
+        "audioCueMode": "audio cues",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "i-reset ang input profiler"
+    },
+    "hud": {
+      "resume": "Ipagpatuloy",
+      "pause": "I-pause",
+      "quit": "quit",
+      "restart": "I-restart",
+      "spaceToStart": "Space para magsimula",
+      "settings": "Mga setting",
+      "enterToAdvance": "Pumasok para umabante",
+      "trial": "Pagsubok",
+      "muteTexture": "I-mute ang tunog sa background"
+    },
+    "status": {
+      "paused": "Naka-pause"
+    },
+    "completed": "Nakumpleto",
+    "starting": {
+      "getReady": "Humanda ka..."
+    },
+    "quitModal": {
+      "title": "Tumigil sa session?",
+      "message": "Ang iyong pag-unlad ay hindi maliligtas.",
+      "confirm": "quit",
+      "cancel": "Magpatuloy",
+      "close": "Isara"
+    },
+    "controls": {
+      "position": "Posisyon",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Audio at n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Audio",
+      "audio2": "Audio 2",
+      "color": "Kulay",
+      "arithmetic": "Arithmetic",
+      "image": "Hugis"
+    },
+    "arithmetic": {
+      "answer": "Sagot",
+      "clear": "Maaliwalas",
+      "hint": "Keyboard: 0–9 · '-' para sa sign · '.' para sa mga decimal · Backspace upang i-clear"
+    },
+    "navigation": {
+      "back": "Bumalik"
+    },
+    "xp": {
+      "title": "XP kinita",
+      "base": "Base (N-{{level}})",
+      "performance": "Pagganap",
+      "accuracy": "Katumpakan",
+      "streakBonus": "Streak bonus",
+      "dailyBonus": "Una sa araw",
+      "badgeBonus": "Mga badge",
+      "flowBonus": "Dual Place Bonus",
+      "confidenceMultiplier": "Pagtitiwala",
+      "dailyCapReached": "Naabot na ang pang-araw-araw na limitasyon ng XP",
+      "levelReached": "Naabot na ang antas na {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "Na-unlock ang mga bagong badge"
+    },
+    "getReady": "Humanda ka...",
+    "layoutEdit": {
+      "done": "Tapos na",
+      "reset": "I-reset",
+      "instructions": "I-drag ang mga zone upang muling ayusin. Baguhin ang laki gamit ang mga hawakan.",
+      "title": "I-edit ang mode",
+      "cancel": "Kanselahin",
+      "save": "Lock",
+      "editLayout": "I-edit ang layout"
+    },
+    "paused": "Naka-pause",
+    "pressEscapeToResume": "Pindutin ang Escape para ipagpatuloy",
+    "settings": {
+      "editLayout": "I-edit ang layout",
+      "gridAndButtons": "Grid at mga pindutan",
+      "swapPositionAudio": "Magpalit ng Posisyon / Audio",
+      "title": "Mga setting",
+      "quickHint": "Ayusin ang ilang mga setting nang hindi umaalis sa laro.",
+      "quickUnavailable": "Wala pang available na mabilisang setting para sa mode na ito."
+    },
+    "pinkNoiseInfo": "May background na tono ang bawat stimulus. Maaari mong i-customize o i-disable ito sa mga setting ng audio.",
+    "pinkNoiseDismiss": "Magpatuloy",
+    "audioMode": "Audio mode",
+    "cogTask": {
+      "precision": "Katumpakan",
+      "avgRt": "Avg RT",
+      "avgRtShort": "Avg RT",
+      "trials": "Mga pagsubok",
+      "correct": "Tama",
+      "errors": "Mga pagkakamali",
+      "effect": "Epekto",
+      "restart": "I-restart",
+      "home": "Bahay",
+      "performance": "Pagganap",
+      "trialDetail": "Detalye ng pagsubok",
+      "setDetail": "Itakda ang detalye",
+      "roundDetail": "Bilog na detalye",
+      "problemDetail": "Detalye ng problema",
+      "phaseDetail": "Detalye ng yugto",
+      "feedbackCorrect": "Tama",
+      "feedbackIncorrect": "mali",
+      "feedbackTimeout": "Masyadong mabagal!",
+      "preparing": "Humanda ka...",
+      "loading": "Naglo-load...",
+      "left": "Kaliwa",
+      "right": "Tama",
+      "up": "pataas",
+      "down": "Pababa",
+      "congruent": "Kaayon",
+      "incongruent": "Hindi magkatugma",
+      "congruencyEffect": "Epekto ng pagkakatugma",
+      "maxSpan": "Max span",
+      "startingSpan": "Panimulang span",
+      "maxSpanReached": "Naabot ang max span",
+      "longestStreak": "Pinakamahabang tamang guhit",
+      "series": "streak",
+      "avgResponseTime": "Average na oras ng pagtugon",
+      "recall": "Alalahanin",
+      "expected": "Inaasahan",
+      "submit": "Isumite",
+      "cancel": "Kanselahin",
+      "clear": "Maaliwalas",
+      "delete": "DEL",
+      "true": "totoo",
+      "false": "Mali",
+      "target": "Target",
+      "nonTarget": "Hindi target",
+      "distractor": "Distractor",
+      "same": "Pareho",
+      "different": "magkaiba",
+      "identical": "Magkapareho",
+      "mirror": "Salamin",
+      "symmetric": "Symmetric",
+      "asymmetric": "Asymmetric",
+      "symShort": "Si Sym.",
+      "present": "Present",
+      "absent": "Wala",
+      "noTrials": "Walang pagsubok na natapos.",
+      "noSets": "Walang mga set na nakumpleto.",
+      "noRounds": "Walang natapos na round.",
+      "noProblems": "Walang mga problemang nakumpleto.",
+      "noPhases": "Walang mga phase na nakumpleto.",
+      "sets": "Mga set",
+      "rounds": "Mga round",
+      "equations": "Mga equation",
+      "sentences": "Mga pangungusap",
+      "equationAccuracy": "Katumpakan ng equation",
+      "forward": "Pasulong",
+      "backward": "Paatras",
+      "forwardMaxSpan": "Ipasa ang max span",
+      "backwardMaxSpan": "Paatras na max span",
+      "odd": "Kakaiba",
+      "even": "Kahit na",
+      "score": "Puntos",
+      "easy": "Madali",
+      "hard": "Mahirap",
+      "totalTrials": "Kabuuang mga pagsubok",
+      "totalErrors": "Kabuuang mga error",
+      "totalErrShort": "Kabuuang Err.",
+      "hits": "Mga hit",
+      "misses": "Miss",
+      "falseAlarms": "Maling Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Oo",
+      "no": "Hindi",
+      "sessionInterrupted": "Naputol ang session",
+      "reverseOrder": "sa reverse order",
+      "normalOrder": "sa ayos",
+      "lnsInstruction": "Pataas na mga numero, pagkatapos ay mga titik A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Epekto ni Simon",
+        "blue": "Asul",
+        "red": "Pula",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Kinakatawan ang numerong ito",
+        "submit": "Isumite",
+        "rodLabel": "Rod {{n}}",
+        "heavenBead": "Heaven bead (value 5)",
+        "earthBead": "Earth bead (value 1)",
+        "instrBeadTitle": "Paano gumagana ang mga kuwintas",
+        "instrBeadDesc": "Ang bawat baras ay kumakatawan sa isang digit. Ang tuktok na butil (langit) ay nagkakahalaga ng 5. Ang ilalim na butil (lupa) ay nagkakahalaga ng 1 bawat isa. Ilipat ang mga kuwintas patungo sa center bar upang i-activate ang mga ito.",
+        "instrExampleTitle": "Halimbawa: 7",
+        "instrExampleDesc": "7 = langit bead down (5) + 2 earth beads up (2). I-tap o i-drag ang mga kuwintas upang ilipat ang mga ito.",
+        "instrGoalTitle": "Ang iyong layunin",
+        "instrGoalDesc": "May lalabas na numero. Itakda ang mga kuwintas upang kumatawan dito, pagkatapos ay i-tap ang Isumite. Maging tumpak at mabilis!",
+        "startButton": "Magsimula",
+        "settings": "Mga setting",
+        "closeSettings": "Isara ang mga setting",
+        "settingsRods": "Bilang ng mga tungkod",
+        "settingsRodsHint": "Itakda sa pamamagitan ng N-Level sa mga setting ng laro",
+        "settingsTrials": "Mga pagsubok bawat session",
+        "settingsTrialsHint": "Itakda sa pamamagitan ng Mga Pagsubok sa mga setting ng laro",
+        "settingsRange": "Saklaw ng numero"
+      },
+      "stroop": {
+        "pressInkColorButton": "Pindutin ang pindutan na tumutugma sa kulay ng tinta",
+        "redWord": "PULA",
+        "redLabel": "Pula",
+        "blueWord": "BLUE",
+        "blueLabel": "Asul",
+        "greenWord": "BERDE",
+        "greenLabel": "Berde",
+        "yellowWord": "DILAW",
+        "yellowLabel": "Dilaw"
+      },
+      "stroopFlex": {
+        "followRule": "Panuntunan",
+        "ruleInk": "Kulay ng tinta",
+        "ruleWord": "Nakasulat na salita",
+        "pressMatchingRuleButton": "Pindutin ang button na tumutugma sa kasalukuyang panuntunan"
+      },
+      "goNogo": {
+        "goTrials": "Pumunta sa mga pagsubok",
+        "nogoTrials": "Mga pagsubok na No-Go",
+        "hitRate": "Hit rate (Go)",
+        "faRate": "Maling rate ng alarma (No-Go)",
+        "meanRt": "Ang ibig sabihin ng oras ng reaksyon",
+        "sensitivity": "pagiging sensitibo",
+        "press": "Pindutin",
+        "withhold": "Magpigil"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Mean SSD (matagumpay na paghinto)",
+        "ssd": "SSD",
+        "goRt": "Sige RT",
+        "successfulInhibition": "Ang matagumpay na pagsugpo",
+        "stop": "Tumigil ka",
+        "meanGoRt": "Ibig sabihin, oras ng reaksyon ng GO",
+        "ssrtInvalid": "hindi sapat na data",
+        "ssrtNegativeNote": "Negatibo ang SSRT (mean SSD > mean GO RT) — hindi maaasahan ang resulta sa kasalukuyang bilang ng pagsubok."
+      },
+      "pvt": {
+        "rtMedian": "Median RT",
+        "rtMean": "Ibig sabihin RT",
+        "fastest": "Pinakamabilis",
+        "slowest": "Pinakamabagal",
+        "falseStarts": "Maling pagsisimula",
+        "falseStartsShort": "Maling st.",
+        "lapses": "Mga lapses",
+        "mean": "ibig sabihin",
+        "reaction": "Reaksyon",
+        "wait": "Teka...",
+        "pressStimulus": "Maghintay ng stimulus...",
+        "pressAnywhere": "Pindutin kahit saan kapag lumitaw ang counter",
+        "press": "Pindutin!",
+        "tooEarly": "Masyado pang maaga!",
+        "lapsesLabel": "Mga lapses"
+      },
+      "posner": {
+        "cueingEffect": "Epekto ng cueing",
+        "validMeanRt": "Ibig sabihin wastong RT",
+        "invalidMeanRt": "Ibig sabihin hindi wasto ang RT",
+        "validAccuracy": "Wastong katumpakan",
+        "invalidAccuracy": "Di-wastong katumpakan",
+        "validTrials": "Mga wastong pagsubok",
+        "invalidTrials": "Mga di-wastong pagsubok",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Wasto",
+        "invalid": "Di-wasto"
+      },
+      "antisaccade": {
+        "cost": "Gastos ng antisaccade",
+        "proAccuracy": "Pro katumpakan",
+        "antiAccuracy": "Anti katumpakan",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Ibig sabihin pro-saccade RT",
+        "antiMeanRt": "Ibig sabihin anti-saccade RT",
+        "costLabel": "Gastos",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-konteksto",
+        "axAccuracy": "Katumpakan ng AX",
+        "bxFa": "BX false alarm",
+        "ayError": "AY error",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY mali",
+        "cogControl": "Kognitibong kontrol",
+        "target": "Target",
+        "nonTarget": "Hindi target"
+      },
+      "ant": {
+        "scores": "ANT Scores",
+        "alerting": "Nag-aalerto (no-cue − double-cue)",
+        "orienting": "Pag-orient (gitna − spatial)",
+        "executive": "Ehekutibo (hindi kaayon − kaayon)"
+      },
+      "changeDet": {
+        "kCowan": "K Capacity (Cowan)",
+        "sameShort": "Pareho",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "Mga error sa loob ng paghahanap",
+        "betweenErrors": "Mga error sa pagitan ng paghahanap",
+        "totalErrors": "Kabuuang mga error",
+        "errorFree": "Walang error",
+        "foundErrorFree": "Natagpuang walang error!",
+        "errorCount": "{{count}} (mga) error",
+        "tapsLabel": "Mga tapik"
+      },
+      "taskSwitch": {
+        "switchCost": "Gastos ng paglipat",
+        "rtRepeat": "Mean RT (Ulitin)",
+        "rtSwitch": "Mean RT (Lumipat)",
+        "oddEven": "Kakaiba / Kahit",
+        "highLow": "Mataas / Mababa",
+        "title": "Paglipat ng Gawain"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A time",
+        "tmtBTime": "Oras ng TMT-B",
+        "executiveCost": "Gastos ng executive (B − A)",
+        "executiveCostShort": "Gastos ng executive (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Inihahanda ang TMT-B...",
+        "tmtADone": "Tapos na ang TMT-A!",
+        "totalErrors": "Kabuuang mga error",
+        "tmtALabel": "TMT-A: Mga numero",
+        "tmtBLabel": "TMT-B: Mga Numero at Titik",
+        "next": "Susunod",
+        "heroTitle": "Paggawa ng Trail",
+        "alternateHint": "Mga alternatibong numero at titik: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Pinakamabilis na ISI"
+      },
+      "wcst": {
+        "referenceCards": "Mga reference card",
+        "testCard": "Test card",
+        "categories": "Mga kategorya",
+        "categoriesCompleted": "Nakumpleto ang mga kategorya",
+        "perseverativeErrors": "Matiyagang pagkakamali",
+        "persevShort": "Persev.",
+        "avgRt": "Avg. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT sa pamamagitan ng anggulo",
+        "findMatch": "Hanapin ang tugmang hugis",
+        "reference": "Hugis ng sanggunian",
+        "referenceLabel": "Ref.",
+        "candidate": "Kandidato",
+        "distractor": "Iba pa",
+        "mirrorErrors": "Mga salamin",
+        "title": "Pag-ikot ng Kaisipan"
+      },
+      "sternberg": {
+        "rtBySize": "RT ayon sa nakatakdang laki",
+        "title": "Sternberg",
+        "avgRt": "Avg. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT ayon sa nakatakdang laki",
+        "title": "Visual na Paghahanap"
+      },
+      "ospan": {
+        "typeLetters": "I-type ang mga titik sa pagkakasunud-sunod",
+        "trueOrFalse": "Tama o mali?",
+        "processingWarning": "Katumpakan ng equation sa ibaba 85% — ang mga resulta ay maaaring hindi sumasalamin sa tunay na kapasidad ng memorya sa pagtatrabaho"
+      },
+      "readingSpan": {
+        "s0": "Ang araw ay sumisikat sa silangan.",
+        "s1": "Ang mga isda ay nakatira sa mga puno.",
+        "s2": "Ang Paris ay ang kabisera ng France.",
+        "s3": "Ang isang tatsulok ay may apat na gilid.",
+        "s4": "Ang tubig ay kumukulo sa 100 degrees.",
+        "s5": "Ang mga pusa ay mga reptilya.",
+        "s6": "Ang Earth ay umiikot sa Araw.",
+        "s7": "Ang tsokolate ay tumutubo sa mga bato.",
+        "s8": "Ang isang taon ay may labindalawang buwan.",
+        "s9": "Huminga ang mga ibon sa ilalim ng tubig.",
+        "s10": "Puti ang gatas.",
+        "s11": "Ang mga kotse ay nagmamaneho sa mga riles.",
+        "s12": "Ang mga bubuyog ay gumagawa ng pulot.",
+        "s13": "Mainit ang snow.",
+        "s14": "Ang puso ay nagbobomba ng dugo.",
+        "s15": "Ang mga bato ay lumulutang sa tubig.",
+        "s16": "Ang Buwan ang nagbibigay liwanag sa gabi.",
+        "s17": "Ang mga ahas ay may mga paa.",
+        "s18": "Ang kahoy ay lumulutang sa tubig.",
+        "s19": "Malamig ang apoy.",
+        "s20": "Ang mga tao ay may limang pandama.",
+        "s21": "Ang mga gagamba ay may anim na paa.",
+        "s22": "Ang tinapay ay ginawa gamit ang harina.",
+        "s23": "Ang mga balyena ay isda.",
+        "w0": "BAHAY",
+        "w1": "ASO",
+        "w2": "AKLAT",
+        "w3": "BULAKLAK",
+        "w4": "PINTO",
+        "w5": "TABLE",
+        "w6": "PUNO",
+        "w7": "DAAN",
+        "w8": "Ulap",
+        "w9": "BITUIN",
+        "w10": "BEACH",
+        "w11": "niyebe",
+        "w12": "LAMPA",
+        "w13": "ULAN",
+        "w14": "SALAMIN",
+        "w15": "DAMO",
+        "w16": "TRAIN",
+        "w17": "MUNDO",
+        "w18": "ARAW",
+        "w19": "KAGUBATAN",
+        "w20": "ICE",
+        "w21": "LUPA",
+        "w22": "LANGIT",
+        "w23": "BATO",
+        "d0": "UMAGA",
+        "d1": "PUSO",
+        "d2": "TEA",
+        "d3": "DAHON",
+        "d4": "INGAY",
+        "d5": "HALAMAN",
+        "d6": "ANINO",
+        "d7": "BELL",
+        "d8": "TULAY",
+        "d9": "Usok",
+        "d10": "BUHANGIN",
+        "d11": "SABAW",
+        "heroTitle": "Span ng Pagbasa"
+      },
+      "memorizeSequence": "Kabisaduhin ang pagkakasunod-sunod...",
+      "reproduce": "magparami",
+      "span": "Span",
+      "size": "Sukat",
+      "fixateCenter": "Ayusin sa gitna...",
+      "identicalOrMirror": "Magkapareho o Salamin?",
+      "wellInhibited": "Well inhibited!",
+      "badDirection": "Maling direksyon!",
+      "stopMissed": "Itigil ang napalampas!",
+      "falseAlarm": "Maling alarma!",
+      "pressNow": "Pindutin!",
+      "hitBang": "Hit!",
+      "miss": "Miss!",
+      "doNotTouch": "Huwag hawakan!",
+      "whichDirection": "Aling direksyon?",
+      "stopBang": "TIGIL!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Isaulo ang mga titik na ito",
+      "memorizeLetter": "Isaulo ang liham na ito",
+      "memorizeSequenceLetters": "Kabisaduhin ang pagkakasunod-sunod...",
+      "memorizeDigits": "Kabisaduhin ang mga digit...",
+      "memorizeColors": "Kabisaduhin ang mga kulay!",
+      "memorizePosition": "Kabisaduhin ang posisyong ito...",
+      "retainWord": "Tandaan ang salitang ito",
+      "retainNumber": "Tandaan ang numerong ito",
+      "addWithPrevious": "Idagdag sa nauna",
+      "sentenceTrueOrFalse": "Totoo ba ang pangungusap na ito?",
+      "findRedCircle": "Hanapin ang pulang bilog!",
+      "findHiddenToken": "Hanapin ang nakatagong token!",
+      "chooseMatchingCard": "Piliin ang katugmang card",
+      "arrowDirection": "Direksyon ng gitnang arrow?",
+      "attention": "Pansin...",
+      "preparation": "Paghahanda...",
+      "recallLettersInOrder": "Alalahanin ang {{count}} na mga titik sa pagkakasunud-sunod",
+      "recallWordsInOrder": "Alalahanin ang mga salitang {{count}} sa pagkakasunud-sunod",
+      "recallLastLetters": "Alalahanin ang huling {{count}} na mga titik",
+      "typeLastLetters": "I-type ang huling {{count}} titik",
+      "recallPositionsInOrder": "Tandaan: i-tap ang mga posisyon sa pagkakasunud-sunod",
+      "pressEnterToValidate": "Pindutin ang Enter upang patunayan",
+      "pressAnywhereToContinue": "Pindutin kahit saan upang magpatuloy",
+      "temporalPrecision": "Temporal na katumpakan",
+      "estimationPrecision": "Katumpakan ng pagtatantya",
+      "touchStartClockwise": "Pindutin ang start point pagkatapos ay mag-swipe clockwise",
+      "touchAtoB": "Pindutin ang point A pagkatapos ay mag-swipe sa B",
+      "cue": "Cue",
+      "retainCue": "Tandaan ang cue...",
+      "targetOrNot": "Target o Hindi target?",
+      "whereIsTarget": "Nasaan ang target?",
+      "wasLetterInSet": "Nasa set ba ang sulat na ito?",
+      "regular": "regular",
+      "regularity": "Regularidad",
+      "msDeviation": "ms paglihis",
+      "boxes": "mga kahon",
+      "found": "{{count}} nakita",
+      "past": "nakaraan",
+      "tooSlow": "masyadong mabagal",
+      "tooFast": "masyadong mabilis",
+      "timeout": "Masyadong mabagal!",
+      "answer": "Sagot",
+      "dontPress": "Huwag pindutin!",
+      "feedbackWrong": "Mali!",
+      "level": "Antas",
+      "wrong": "mali",
+      "you": "Ikaw",
+      "paused": "I-pause",
+      "instructions": "Mga tagubilin",
+      "selectAnswer": "Pumili ng sagot",
+      "tapTheOddOne": "I-tap ang kakaiba",
+      "pal": {
+        "subtitle": "Pag-aaral ng Pinagsamang Associates",
+        "pairsLearned": "Pares natutunan",
+        "maxSetSize": "Max na Laki ng Set",
+        "totalErrors": "Mga Kabuuang Error",
+        "round": "Bilog",
+        "pairs": "magkapares",
+        "meanRt": "Mean RT (tama)",
+        "studyPhase": "Pag-aaral - kabisaduhin ang mga posisyon",
+        "testPhase": "Nasaan ang hugis na ito?",
+        "studying": "Nag-aaral",
+        "tapBox": "I-tap ang kahon kung saan ipinakita ang hugis na ito"
+      },
+      "visualLogic": {
+        "easy": "Madali",
+        "hard": "Mahirap",
+        "oneRule": "1 tuntunin",
+        "twoRules": "2 tuntunin",
+        "findMissing": "Hanapin ang nawawalang piraso",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Panghuling Lvl",
+        "nextMode": "Susunod na session mode",
+        "adaptive": "Adaptive",
+        "fixed": "Naayos na",
+        "spm": "SPM 60",
+        "level": "Antas",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Aling piraso ang akma sa butas?",
+        "target": "Target"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Pagkiling sa labis na pagpapahalaga",
+        "underestimationBias": "Pagkiling sa underestimation",
+        "noBias": "Walang makabuluhang bias",
+        "avgError": "Avg Error",
+        "overestimations": "Mga overestimations",
+        "underestimations": "Mga underestimations",
+        "avgAbsoluteError": "Avg Ganap na Error",
+        "avgRelativeError": "Avg Relative Error",
+        "cv": "Coefficient of Variation",
+        "watchDemo": "Panoorin ang tagal",
+        "getReady": "Humanda ka...",
+        "holdToReproduce": "Humawak para magparami!",
+        "tooLong": "Masyadong mahaba!",
+        "tooShort": "Masyadong maikli!",
+        "target": "Target",
+        "demoLabel": "Sanggunian",
+        "yourTurn": "Ang iyong turn",
+        "watchInstruction": "Panoorin",
+        "holdInstruction": "Hawakan upang magparami",
+        "heroTitle": "Pagtataya ng Oras"
+      },
+      "puzzleDetails": "Mga detalye ng puzzle",
+      "roundDetails": "Mga bilog na detalye",
+      "stageResults": "Mga Resulta ng Yugto",
+      "recognized": "Kinikilala",
+      "missed": "Nakaligtaan",
+      "win": "manalo",
+      "lose": "Talo",
+      "winBang": "Manalo!",
+      "loseBang": "Talo!",
+      "correctBang": "Tama!",
+      "wrongBang": "Mali!",
+      "completeBang": "Kumpleto na!",
+      "repeatedBang": "Paulit-ulit!",
+      "incompleteBang": "Hindi kumpleto!",
+      "levelCompleteBang": "Level Complete!",
+      "timesUp": "Oras na",
+      "seeResults": "Tingnan ang mga resulta",
+      "nextRound": "Susunod na round",
+      "startBlock": "Simulan ang block",
+      "continue": "Magpatuloy",
+      "patientChoice": "Pagpili ng pasyente",
+      "immediateChoice": "Agad na pagpipilian",
+      "immediate": "Agad-agad",
+      "digitSpan": {
+        "heroTitle": "Digit Span"
+      },
+      "resume": "Ipagpatuloy",
+      "numericalStroop": {
+        "heroTitle": "Numerical Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Paghuhusga ng Line Orientation"
+      },
+      "chain": "Kadena",
+      "undo": "I-undo",
+      "vocalProsody": {
+        "heroTitle": "Vocal Prosody"
+      },
+      "letterNumber": {
+        "title": "Letter-Number Seq.",
+        "expectedAnswer": "Inaasahang sagot"
+      },
+      "patternComparison": {
+        "heroTitle": "Paghahambing ng Pattern"
+      },
+      "speedPack": {
+        "title": "Speed ​​Pack",
+        "whenFoldedWhichTouch": "Kapag nakatiklop, aling mga parisukat ang dumidikit?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Hooper Visual Organization",
+        "whatIsThisObject": "Ano ang bagay na ito?"
+      },
+      "blockDesign": {
+        "heroTitle": "Disenyo ng Block"
+      },
+      "accuracy": "Katumpakan",
+      "avgTime": "Avg. oras",
+      "check": "Suriin",
+      "dualTrace": {
+        "playArea": "Play area"
+      },
+      "paperFolding": {
+        "title": "Pagtitiklop ng Papel",
+        "foldSequenceHolePunch": "Fold sequence at butas na suntok",
+        "whichPatternWhenUnfolded": "Aling pattern kapag nabuksan?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Lexical na Desisyon"
+      },
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxGrid": "Max na grid",
+      "symmetry": "Symmetry",
+      "threshold": "Threshold",
+      "hitRate": "Rate ng hit",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Baguhin ang Detection"
+      },
+      "syllogisms": {
+        "heroTitle": "Silogismo"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Saklaw"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Pagkumpleto ng Pangungusap (Cloze)",
+        "highCloze": "Mataas na cloze",
+        "lowCloze": "Mababang cloze"
+      },
+      "grid": "Grid",
+      "pinballRecall": {
+        "title": "Pinball Recall",
+        "byBounces": "Sa pamamagitan ng mga bounce",
+        "whereDoesItLand": "Saan ito dumarating?"
+      },
+      "mean": "ibig sabihin",
+      "speedup": "Bilis",
+      "memorize": "Isaulo",
+      "time": "Oras",
+      "surfaceDevelopment": {
+        "title": "Pag-unlad ng Ibabaw",
+        "whichEdgeMatches": "Aling gilid ang tumutugma?"
+      },
+      "crowding": {
+        "heroTitle": "Visual Pagsikip",
+        "spacing": "Spacing"
+      },
+      "patternRecognition": {
+        "heroTitle": "Pagkilala sa Pattern"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Pagsubok",
+        "position": "Posisyon",
+        "audio": "Audio"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scene Intruder",
+        "detect": "Detect"
+      },
+      "eyesTest": {
+        "heroTitle": "Pagbabasa ng Isip sa Mata"
+      }
+    },
+    "gridlock": {
+      "undone": "Na-undo ang huling paglipat.",
+      "resetMessage": "Pag-reset ng puzzle.",
+      "hintMessage": "Hint: slide {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Pag-aralan ang board. Magsisimula sa {{seconds}}s.",
+      "challenge": "Hamon",
+      "optimal": "Pinakamainam",
+      "moves": "Gumagalaw",
+      "piece": "Piraso {{id}}",
+      "targetPiece": "Piraso {{id}} (target - pulang kotse)",
+      "challengeClassic": "Classic",
+      "challengePrecision": "Katumpakan",
+      "challengeMemory": "Alaala",
+      "challengeTimed": "Nag-time",
+      "hint": "Pahiwatig",
+      "reset": "I-reset",
+      "undo": "I-undo",
+      "nextPuzzle": "Susunod na palaisipan →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Block 1 Hits",
+      "block2Hits": "Block 2 Hits",
+      "goPositive": "Go = Positibo",
+      "goNegative": "Pumunta = Negatibo",
+      "title": "Affective Go/No-Go",
+      "block1CommissionErrors": "Mga error sa komisyon sa block 1",
+      "block2CommissionErrors": "I-block ang 2 mga error sa komisyon",
+      "block": "I-block",
+      "go": "Pumunta ka"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Mean rate ng paglipat",
+      "meanSwitchesfigure": "Mean switch/figure",
+      "totalSwitches": "Kabuuang mga switch",
+      "title": "Mga Malabong Pigura",
+      "meanSwitches": "Mean Switch",
+      "switchRate": "Rate ng Pagpalit",
+      "figures": "Mga figure",
+      "totalSwitchesLabel": "Kabuuang Mga Lilipat",
+      "duration": "Tagal",
+      "switchesCount": "s | Mga switch:",
+      "switchButton": "Lumipat!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbal correct",
+      "timeout": "Timeout",
+      "title": "Mga pagkakatulad"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Paghahambing ng ANS",
+      "ratio": "ratio",
+      "leftMore": "Naiwan pa",
+      "rightMore": "Tama pa"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Maling rate ng alarma",
+      "grammatical": "Gramatikal",
+      "memorizeTheseStrings": "Kabisaduhin ang mga string na ito",
+      "testPhase": "Yugto ng Pagsubok",
+      "ungrammatical": "Ungrammatical",
+      "learning": "Pag-aaral",
+      "test": "Pagsubok",
+      "title": "Artipisyal na Balarila",
+      "learningPhase": "Pag-aaral",
+      "testIntroText": "Makakakita ka na ngayon ng mga bagong string. Magpasya kung ang bawat isa ay sumusunod sa parehong mga patakaran tulad ng mga string na iyong pinag-aralan.",
+      "startTest": "Simulan ang Pagsusulit",
+      "followsRules": "Sumusunod sa mga tuntunin",
+      "breaksRules": "Lumalabag sa mga panuntunan"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Blink Magnitude",
+      "title": "Mapansing Blink",
+      "blink": "Kumurap",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1st green letter?",
+      "secondGreenLetter": "ika-2 berdeng titik?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Gastos sa pagkuha",
+      "singletonPresent": "Singleton Present",
+      "noSingleton": "Walang Singleton",
+      "title": "Pagkuha ng pansin",
+      "capture": "Kunin",
+      "horizontal": "Pahalang",
+      "vertical": "Patayo"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Binding Window",
+      "title": "Audiovisual Binding",
+      "window": "Bintana",
+      "pssLabel": "PSS (Point of Subjective Simultaneity)",
+      "simultaneousOrNot": "Sabay o hindi?",
+      "simultaneous": "Sabay-sabay",
+      "notSimultaneous": "Hindi sabay-sabay"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Threshold ng Tagal",
+      "reference": "Sanggunian",
+      "weberFraction": "Weber Fraction",
+      "title": "Tagal ng pandinig",
+      "threshold": "Threshold",
+      "weber": "Weber",
+      "whichLonger": "Alin ang mas mahaba?",
+      "firstLonger": "Una mas mahaba",
+      "secondLonger": "Pangalawa mas mahaba"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Inayos ang mga avg na bomba",
+      "avgTimeballoon": "Avg na oras/balloon",
+      "banked": "Nabangko!",
+      "lostEarnings": "Nawalan ng kita!",
+      "overallAvgPumps": "Pangkalahatang avg pump",
+      "popRate": "Pop rate",
+      "totalEarned": "Kabuuang kinita",
+      "balloons": "Mga lobo",
+      "cashed": "Na-cash",
+      "popped": "Nag pop",
+      "adjPumps": "Adj. mga bomba",
+      "pop": "Pop",
+      "pump": "Pump",
+      "cashIn": "Cash In"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Avg na Oras ng Desisyon",
+      "drawBeadsToGatherEvidence": "Gumuhit ng mga butil upang mangalap ng ebidensya",
+      "jtc": "JTC",
+      "title": "Beads Task",
+      "meanDraws": "Avg. gumuhit",
+      "rounds": "Mga round",
+      "jtcRate": "Rate ng JTC",
+      "meanDrawsToDecision": "Mean Draws sa Desisyon",
+      "jtcRateThreshold": "JTC Rate (<{{threshold}} draw)",
+      "round": "Bilog",
+      "jarDescription": "Jar A: 85% berde / Jar B: 85% pula",
+      "itWasJar": "Si Jar iyon",
+      "drawABead": "Gumuhit ng Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Pula"
+    },
+    "binding": {
+      "changedTrials": "Binago ang mga pagsubok",
+      "sameAccuracy": "Parehong katumpakan",
+      "sameTrials": "Parehong mga pagsubok",
+      "title": "Feature Binding",
+      "binding": "Nagbubuklod",
+      "bindingAccuracyChanged": "Baguhin ang katumpakan",
+      "same": "Pareho",
+      "different": "magkaiba"
+    },
+    "blockDesign": {
+      "cells": "Mga cell",
+      "target": "Target",
+      "yourAnswer": "Ang sagot mo",
+      "tapHint": "I-tap para umikot ng mga kulay",
+      "check": "Suriin"
+    },
+    "brixton": {
+      "adapt": "Ibagay",
+      "adaptationCost": "Gastos sa pagbagay",
+      "nonswitchTrials": "Mga pagsubok na hindi lumipat",
+      "switchTrials": "Lumipat ng mga pagsubok"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Tandaan ang mga liham na ito",
+      "selectThe3Letters": "Piliin ang 3 titik",
+      "title": "Brown-Peterson Gawain",
+      "forgetting": "nakakalimot",
+      "sDelay": "S Pagkaantala",
+      "minus3": "Minus3",
+      "delay": "Pagkaantala"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Kalidad ng desisyon",
+      "finalPoints": "Mga huling puntos",
+      "meanBet": "Mean taya",
+      "winRate": "Rate ng panalo",
+      "wins": "Panalo",
+      "title": "Gawain sa Pagsusugal sa Cambridge",
+      "totalPoints": "Kabuuang puntos",
+      "quality": "Kalidad",
+      "rational": "Makatuwiran",
+      "avgBet": "Avg. taya",
+      "trial": "Pagsubok",
+      "whichColorHidesToken": "Aling kulay ang nagtatago ng token?",
+      "youChose": "pinili mo",
+      "howMuchToBet": "Magkano ang taya?"
+    },
+    "cancellation": {
+      "false": "Mali",
+      "target": "Target:",
+      "total": "Kabuuan",
+      "title": "Gawain sa Pagkansela (d2)",
+      "misses": "Miss",
+      "targetDescription": "d na may 2 marka"
+    },
+    "changeBlindness": {
+      "detectionRate": "Rate ng Pagtuklas",
+      "found": "Natagpuan",
+      "meanDetectionTime": "Mean Detection Time",
+      "title": "Baguhin ang Pagkabulag",
+      "missed": "Nakaligtaan",
+      "avgTime": "Avg. oras",
+      "instructions": "Mga tagubilin"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Pinakamahusay na Pagtantiya",
+      "meanScore": "Mean Score",
+      "worstEstimate": "Pinakamasamang Tantya",
+      "inRange": "Magandang tantiya!",
+      "title": "Cognitive Estimation",
+      "meanScoreLabel": "Mean Score",
+      "inRangeLabel": "Nasa Saklaw",
+      "extreme": "Grabe",
+      "scoreLabel": "puntos",
+      "submit": "Isumite"
+    },
+    "common": {
+      "accuracy": "Katumpakan",
+      "bias": "Bias",
+      "falseAlarmRate": "Maling Rate ng Alarm",
+      "hitRate": "Hit Rate",
+      "hits": "Mga hit",
+      "listening": "Nakikinig...",
+      "meanRt": "Ibig sabihin RT",
+      "timedOut": "Nag-time Out",
+      "timedOut2": "Nag-time out",
+      "faRate": "Taux de FA",
+      "paused": "Naka-pause"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Gaano ka kumpiyansa?",
+      "rateYourConfidence": "I-rate ang iyong kumpiyansa",
+      "title": "Pag-calibrate ng Kumpiyansa",
+      "calError": "Error sa pagkakalibrate",
+      "confidence": "Pagtitiwala"
+    },
+    "consequences": {
+      "best": "Pinakamahusay",
+      "nextRound": "Susunod na round...",
+      "time": "Oras",
+      "placeholder": "Mag-type ng resulta...",
+      "title": "Mga kahihinatnan",
+      "totalIdeas": "Kabuuang mga Ideya",
+      "avgPerRound": "Avg. bawat round",
+      "rounds": "Mga round",
+      "noConsequencesListed": "Walang mga kahihinatnan na nakalista",
+      "roundProgress": "Bilog {{current}} / {{total}}",
+      "typeAndPressAdd": "I-type at pindutin ang Add"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Epekto ng Cueing",
+      "newConfigRt": "Bagong Config RT",
+      "oldConfigRt": "Lumang Config RT",
+      "title": "Contextual Cueing",
+      "cueing": "Cueing",
+      "oldRt": "Lumang RT",
+      "newRt": "Bagong RT",
+      "prompt": "Prompt",
+      "left": "Kaliwa",
+      "right": "Tama"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Jitter ng threshold",
+      "title": "Pagsasama ng Contour",
+      "pipeJitter": "| nerbiyos"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Contrast ng threshold",
+      "title": "Contrast Sensitivity",
+      "threshold": "Threshold",
+      "left": "Kaliwa",
+      "right": "Tama"
+    },
+    "cpt": {
+      "nontargets": "Hindi target",
+      "target": "Target",
+      "nonTarget": "Hindi target",
+      "dPrime": "d'",
+      "targetsLetter": "Target na liham",
+      "tapForLetterOnly": "I-tap para sa target na titik lang"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritikal na espasyo",
+      "leftAccuracy": "Kaliwang katumpakan",
+      "rightAccuracy": "Tamang katumpakan"
+    },
+    "cryptogram": {
+      "hints": "Mga pahiwatig",
+      "title": "Cryptogram",
+      "solved": "Nalutas",
+      "time": "Oras",
+      "puzzles": "Mga palaisipan",
+      "puzzle": "Palaisipan",
+      "hint": "Pahiwatig",
+      "clear": "Maaliwalas"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Lugar sa Ilalim ng Kurve",
+      "discountRateK": "Rate ng diskwento (k)",
+      "impulsivityIndex": "Impulsivity index",
+      "title": "Pagkaantala ng Diskwento",
+      "aucPatience": "AUC pasensya",
+      "patient": "pasyente",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "Mga Punto ng Kawalang-interes",
+      "whichPrefer": "Alin ang mas gusto mo?",
+      "today": "Ngayong araw"
+    },
+    "delayedMatching": {
+      "long": "Mahaba",
+      "longDelay68s": "Mahabang pagkaantala (6-8s)",
+      "med": "Med",
+      "mediumDelay46s": "Katamtamang pagkaantala (4-6s)",
+      "short": "Maikli",
+      "shortDelay34s": "Maikling pagkaantala (3-4s)",
+      "title": "Naantala ang Pagtutugma",
+      "delay": "Pagkaantala",
+      "rememberThisPattern": "Tandaan ang pattern na ito",
+      "whichWasIt": "Alin ito?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Pagtuklas ng Alerto",
+      "attendToTheLeftColumn": "Dumalo sa LEFT column",
+      "attendedAccuracy": "Katumpakan (target na channel)",
+      "ignoreTheRightColumn": "Huwag pansinin ang kanang column",
+      "right": "TAMA",
+      "title": "Dichotic na Pakikinig",
+      "attendedAcc": "Dumalo sa katumpakan",
+      "alertDet": "Pag-detect ng alerto",
+      "alerts": "Mga alerto",
+      "selectLeftColumnWords": "Pumili ng mga salita sa kaliwang hanay",
+      "submit": "Isumite",
+      "alertQuestion": "Tanong ng alerto"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Kalimutan ang katumpakan",
+      "forgettingEffect": "Epekto sa paglimot",
+      "newRejection": "Bagong pagtanggi",
+      "rememberAccuracy": "Tandaan ang katumpakan",
+      "title": "Nakadirekta sa Paglimot",
+      "remember": "Tandaan",
+      "forget": "Kalimutan",
+      "round": "Bilog",
+      "word": "salita",
+      "wasThisWordShown": "Ipinakita ba ang salitang ito?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias Score",
+      "congruentAcc": "Katugmang Acc",
+      "congruentRt": "Katugmang RT",
+      "incongruentAcc": "Hindi naaayon sa Acc",
+      "incongruentRt": "Hindi naaayon sa RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Kotse o Truck?",
+      "minDisplayReached": "Naabot ang Min Display",
+      "positionAccuracy": "Katumpakan ng Posisyon",
+      "thresholdDisplay": "Threshold Display",
+      "vehicleAccuracy": "Katumpakan ng Sasakyan",
+      "whereWasTheDiamond": "Nasaan ang brilyante?",
+      "title": "Dobleng Desisyon",
+      "threshold": "Threshold",
+      "bothOk": "Parehong tama",
+      "vehicle": "Sasakyan",
+      "position": "Posisyon",
+      "car": "kotse",
+      "truck": "Truck"
+    },
+    "dsst": {
+      "items": "Mga bagay",
+      "itemsCompleted": "Nakumpleto ang mga item",
+      "speedItemsmin": "Bilis (mga item/min)",
+      "attempts": "Mga pagtatangka",
+      "itemsPerMin": "Mga item / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Gastos sa Dual-Task",
+      "taskANumber": "Gawain A (Numero)",
+      "taskBSymbol": "Gawain B (Simbolo)",
+      "title": "Dalawahang Gawain",
+      "taskA": "Gawain A",
+      "taskB": "Gawain B",
+      "number": "Numero",
+      "symbol": "Simbolo",
+      "up": "pataas",
+      "down": "Pababa"
+    },
+    "dualTime": {
+      "sessionEnPause": "Naka-pause ang session",
+      "votreEstimationSecondes": "Ang iyong pagtatantya (segundo)",
+      "sessionInterrupted": "Naputol ang session",
+      "target": "Target",
+      "estimation": "Pagtataya",
+      "avgTime": "Avg. oras",
+      "avgError": "Avg. pagkakamali",
+      "trials": "Mga pagsubok",
+      "resumeToContinue": "Ipagpatuloy upang magpatuloy",
+      "aimFor": "Layunin ng",
+      "second": "Pangalawa",
+      "howLongDidYouTake": "Gaano ka tagal?"
+    },
+    "dualTrack": {
+      "confirmer": "Kumpirmahin",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Ipagpatuloy upang magpatuloy.",
+      "sessionEnPause": "Naka-pause ang session",
+      "tapezLesCibles": "I-tap ang mga target",
+      "tapezLaCible": "I-tap ang target",
+      "appuyezConfirmer": "Pindutin ang Kumpirmahin",
+      "targetsCountLabel": "{{count}} mga target",
+      "distractorsCountLabel": "{{count}} mga distractor",
+      "roundsCountLabel": "{{count}} mga round",
+      "calibrationRoundsLabel": "{{count}} mga round ng pag-calibrate",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = antas ng kahirapan sa panloob na paglalakbay.",
+      "tierHelpCurrentWithPhase": "Kasalukuyan kang nasa T{{current}} sa {{total}} para sa {{targets}} na mga target. Kasalukuyang yugto: {{phase}}. May natitira pang {{remaining}} (mga) tier bago ang susunod na antas ng target.",
+      "phaseTracking": "Pagsubaybay",
+      "phaseAudio": "Pagsubaybay + audio",
+      "phaseColor": "Pagsubaybay + kulay",
+      "phaseCombined": "Pagsubaybay + audio + kulay",
+      "passLetters": "Mga liham",
+      "passColors": "Mga kulay",
+      "moveInstruction": "Ilipat ang pagtuturo",
+      "moveConfirmBtn": "Ilipat ang pindutan ng kumpirmasyon",
+      "preparingSession": "Inihahanda ang session...",
+      "preparing3dScene": "Inihahanda ang 3D na eksena...",
+      "startJourney": "Simulan ang paglalakbay",
+      "calibrationDescription": "Bago ang unang yugto, ang mas mahabang pagkakalibrate ay magtatantiya sa iyong panimulang antas.",
+      "defaultDescription": "Ang mga bola ay sisindi. Sundin sila habang gumagalaw sila, pagkatapos ay kilalanin sila.",
+      "startCalibration": "Simulan ang pagkakalibrate",
+      "calibrationTitle": "Pag-calibrate",
+      "estimatedStart": "Est. simulan",
+      "roundsAnalyzed": "Sinuri ang mga round",
+      "willStartAt": "Magsisimula sa",
+      "targetsCount": "Mga target",
+      "thenProgress": "pagkatapos ay pag-unlad"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Mean Absolute Error",
+      "ratio": "ratio",
+      "slope": "Slope",
+      "vierordtSlope": "Vierordt Slope",
+      "wait": "Teka...",
+      "title": "Tagal ng Pagpaparami",
+      "meanError": "Mean Error",
+      "meanRatio": "Mean Ratio (ginawa/target)",
+      "holdNow": "HAWAKAN NA",
+      "target": "Target",
+      "error": "Error"
+    },
+    "embeddedFigures": {
+      "fastest": "Pinakamabilis",
+      "found": "Natagpuan",
+      "meanDetectionTime": "Ang ibig sabihin ng oras ng pagtuklas",
+      "slowest": "Pinakamabagal",
+      "title": "Mga Naka-embed na Figure",
+      "missed": "Nakaligtaan",
+      "fastestLabel": "Pinakamabilis",
+      "findThisShape": "Hanapin ang hugis na ito",
+      "memorizeShape": "Kabisaduhin ang hugis...",
+      "foundIt": "Nahanap na!",
+      "giveUp": "Sumuko na"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Mga Maling Alarm",
+      "misses": "Miss",
+      "title": "Emosyonal na N-Balik",
+      "match": "tugma"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutral RT",
+      "positiveRt": "Positibong RT",
+      "threatRt": "Pagbabanta kay RT",
+      "title": "Emosyonal na Stroop",
+      "interference": "Panghihimasok",
+      "interferenceThreatNeutral": "Panghihimasok (Banta − Neutral)"
+    },
+    "eyesTest": {
+      "totalTime": "Kabuuang Oras"
+    },
+    "faceName": {
+      "gain": "Makakuha",
+      "learningImprovement": "Pagpapaunlad ng Pag-aaral",
+      "round1Accuracy": "Katumpakan ng Round 1",
+      "round2Accuracy": "Katumpakan ng Round 2",
+      "whoIsThis": "Sino ito?",
+      "title": "Asosasyon ng Pangalan ng Mukha",
+      "round": "Bilog",
+      "testPhase": "Yugto ng pagsubok"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "bakit naman",
+      "title": "Faux Pas Recognition",
+      "detection": "Pagtuklas",
+      "scenarios": "Mga sitwasyon",
+      "fpFound": "May nakitang faux pas",
+      "control": "Kontrolin",
+      "readyToAnswer": "Handa nang sumagot",
+      "didSomeoneSay": "May nagsabi ba ng hindi dapat?",
+      "whoSaidIt": "Sino ang nagsabi nito?",
+      "whyInappropriate": "Bakit naging hindi nararapat?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Recall Accuracy",
+      "recognitionAccuracy": "Katumpakan ng Pagkilala",
+      "recallPlaceholder": "I-type ang iyong sagot...",
+      "unlikely": "Hindi malamang",
+      "certain": "tiyak",
+      "title": "Pakiramdam ng Alam",
+      "recall": "Alalahanin",
+      "recognition": "Pagkilala",
+      "fokR": "Fok R",
+      "questions": "Mga tanong",
+      "recalled": "Naalala",
+      "recognized": "Kinikilala",
+      "fokSensitivity": "FOK Sensitivity",
+      "submit": "Isumite",
+      "dontKnow": "hindi ko alam",
+      "fokPrompt": "Makikilala mo ba ito?",
+      "selectCorrectAnswer": "Piliin ang tamang sagot",
+      "answer": "Sagot"
+    },
+    "fingerTapping": {
+      "firstTrial": "Unang Pagsubok",
+      "lastTrial": "Huling Pagsubok",
+      "sequence": "Pagkakasunod-sunod",
+      "speedupT1VsT12": "Bilis (T1 vs T12)",
+      "title": "Pag-tap sa daliri"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Avg na Oras ng Paggalaw",
+      "avgThroughput": "Avg Throughput",
+      "title": "Fitts Pag-tap",
+      "throughput": "Throughput",
+      "tapTarget": "I-tap ang naka-highlight na target"
+    },
+    "foreperiod": {
+      "early": "Maaga",
+      "slope": "Slope",
+      "title": "Temporal na Paghahanda",
+      "fpEffectSlope": "FP Effect Slope"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Mga baligtad",
+      "threshold": "Threshold",
+      "tone1": "Tono 1",
+      "tone2": "Tono 2",
+      "weber": "Weber",
+      "weberFraction": "Weber Fraction",
+      "hz": "Hz",
+      "title": "Diskriminasyon sa Dalas",
+      "thresholdLabel": "Threshold",
+      "hzDiff": "Hz diff",
+      "whichWasHigher": "Alin ang mas mataas?",
+      "firstHigher": "Una mas mataas",
+      "secondHigher": "Pangalawa mas mataas"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor patch",
+      "leftAccuracy": "Kaliwang katumpakan",
+      "leftTrials": "Iniwan ang mga pagsubok",
+      "noiseMask": "mask ng ingay",
+      "rightAccuracy": "Tamang katumpakan",
+      "rightTrials": "Mga tamang pagsubok",
+      "thresholdAngle": "Anggulo ng threshold",
+      "title": "Gabor",
+      "threshold": "Threshold",
+      "reversals": "Mga baligtad",
+      "timedOut": "Nag-time out",
+      "left": "Kaliwa",
+      "right": "Tama"
+    },
+    "gameOfDice": {
+      "finalPoints": "Mga huling puntos",
+      "risky": "Mapanganib",
+      "riskyChoices": "Mapanganib na mga pagpipilian",
+      "safe": "Ligtas",
+      "winRate": "Rate ng panalo",
+      "wins": "Panalo",
+      "title": "Laro ng Dice Task",
+      "totalPoints": "Kabuuang puntos",
+      "riskyLabel": "Mapanganib",
+      "roll": "Roll",
+      "chooseYourBet": "Piliin ang iyong taya",
+      "pickNumbers": "Piliin ang iyong mga numero"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Gap o walang gap?",
+      "gapThreshold": "Gap Threshold",
+      "title": "Silence Detection",
+      "noGap": "Walang Gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Nasaan ang tingin?",
+      "direct": "Direkta",
+      "left": "Kaliwa",
+      "right": "Tama",
+      "title": "Direksyon ng titig",
+      "dPrimeDirectGaze": "D Prime Direct gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Bahagi 1 (Pagsisimula)",
+      "part2": "Bahagi 2",
+      "part2Suppression": "Bahagi 2 (Pagpigil)",
+      "suppressionCost": "Gastos sa pagsugpo",
+      "title": "Hayling",
+      "part1": "Bahagi 1",
+      "part2Label": "Bahagi 2",
+      "suppression": "Pagpigil",
+      "obvious": "Obvious naman",
+      "obviousPicksPart2": "Mga halatang pinili (Bahagi 2)",
+      "chooseUnrelated": "Pumili ng hindi nauugnay na salita",
+      "completelyUnrelated": "Ganap na walang kaugnayan",
+      "doNotPickObvious": "HUWAG pumili ng malinaw na salita!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Pagsulong sa susunod na yugto...",
+      "stageComplete": "Kumpleto na ang stage!",
+      "title": "IED Set Shift",
+      "stages": "Mga yugto",
+      "edsCost": "Gastos sa EDS",
+      "stage": "entablado",
+      "correctNeeded": "Tamang kailangan para umasenso"
+    },
+    "informationSampling": {
+      "cost": "Gastos",
+      "free": "Libre",
+      "meanTilesCost": "Mean tile (gastos)",
+      "meanTilesFree": "Mean tile (libre)",
+      "totalCost": "Kabuuang Gastos",
+      "title": "Sampling ng Impormasyon",
+      "tiles": "Mga tile",
+      "tapToReveal": "I-tap para ipakita"
+    },
+    "inspectionTime": {
+      "final": "Pangwakas",
+      "finalDisplayTime": "Panghuling oras ng pagpapakita",
+      "minCorrectIt": "Min correct IT",
+      "threshold": "Threshold",
+      "title": "Oras ng Inspeksyon",
+      "thresholdLabel": "Threshold",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Balanse:",
+      "chooseADeck": "Pumili ng deck",
+      "deckADraws": "Ang Deck A ay gumuhit",
+      "deckBDraws": "Ang Deck B ay gumuhit",
+      "deckCDraws": "Ang Deck C ay gumuhit",
+      "deckDDraws": "Ang Deck D ay gumuhit",
+      "first40Advantageous": "First 40 advantageous",
+      "last40Advantageous": "Huling 40 may pakinabang",
+      "learn": "Matuto",
+      "learningIndex": "Index ng pag-aaral",
+      "title": "Pagsusugal sa Iowa",
+      "advantageousPct": "Advantageous %",
+      "earnings": "Mga kita",
+      "last40": "Huling40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Pagkakalibrate Bias",
+      "meanJol": "Ibig sabihin JOL",
+      "nowTestYourRecall": "Ngayon subukan ang iyong paggunita",
+      "studyComplete": "Tapos na ang pag-aaral",
+      "whatWasPairedWith": "Ano ang ipinares sa...?",
+      "title": "Paghuhukom sa Pag-aaral",
+      "recallAccuracy": "Recall Accuracy",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL Accuracy (Gamma)",
+      "howLikelyRemember": "Gaano kalamang na maaalala mo?",
+      "hiddenAnswer": "Nakatagong sagot"
+    },
+    "judgmentOfRecency": {
+      "close": "Isara",
+      "closeGap13": "Close gap (1-3)",
+      "far": "Malayo",
+      "farGap9": "Malayong agwat (9+)",
+      "mediumGap48": "Katamtamang agwat (4-8)",
+      "title": "Paghuhukom ng Recency",
+      "medium": "Katamtaman",
+      "studyPhaseMemorizeOrder": "Yugto ng Pag-aaral - Isaulo ang pagkakasunud-sunod",
+      "whichMoreRecently": "Alin ang lumabas kamakailan?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Mean RT (hindi mga salita)",
+      "meanRtWords": "Mean RT (mga salita)",
+      "nonwordsAccuracy": "Katumpakan ng hindi mga salita",
+      "wordsAccuracy": "Katumpakan ng mga salita",
+      "word": "salita",
+      "nonword": "Hindi salita"
+    },
+    "maze": {
+      "duration": "Tagal",
+      "optimalSteps": "Mga Pinakamainam na Hakbang",
+      "pathEfficiency": "Path Efficiency",
+      "totalSteps": "Kabuuang Mga Hakbang",
+      "wallHits": "Mga Hit sa Pader",
+      "title": "Maze",
+      "completed": "Nakumpleto",
+      "efficiency": "Kahusayan",
+      "wallHitsLabel": "Mga Hit sa Pader",
+      "steps": "Mga hakbang"
+    },
+    "memobox": {
+      "easy": "Madali",
+      "easy2Boxes": "Madali (2 kahon)",
+      "hard": "Mahirap",
+      "hard4Boxes": "Matigas (4 na kahon)",
+      "medium3Boxes": "Katamtaman (3 kahon)",
+      "title": "Memobox",
+      "rounds": "Mga round",
+      "medium": "Katamtaman",
+      "watchMovements": "Panoorin ang mga galaw...",
+      "howManyBalls": "Ilang bola sa bawat kahon?",
+      "submit": "Isumite",
+      "roundOf": "Round {{current}} ng {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Ano ang cross-section?",
+      "title": "Pagputol ng Kaisipan"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Luma, katulad, o bago?",
+      "patternSeparation": "Paghihiwalay ng Pattern",
+      "sep": "Sep.",
+      "old": "Luma",
+      "similar": "Katulad",
+      "new": "Bago",
+      "ldi": "LDI",
+      "title": "Mnemonic na Diskriminasyon",
+      "hitRateOldDetected": "Hit Rate (Natukoy na ang lumang)",
+      "lureDiscrimination": "Pang-akit na Diskriminasyon (LDI)",
+      "memorize": "Isaulo",
+      "testPhase": "Yugto ng pagsubok"
+    },
+    "multiArmedBandit": {
+      "earnings": "Mga kita:",
+      "pickMachine": "Pumili ng makina",
+      "title": "Multi-Armed Bandit",
+      "totalReward": "Kabuuang gantimpala",
+      "optimal": "Pinakamainam",
+      "regret": "Nanghihinayang",
+      "exploit": "pagsasamantala",
+      "machine": "Makina",
+      "armsExplored": "Arms ginalugad"
+    },
+    "navon": {
+      "globalBigLetter": "Global (malaking liham)",
+      "localSmallLetter": "Lokal (maliit na titik)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Anong MALAKING sulat?",
+      "whatSmallLetter": "Anong MALIIT na sulat?"
+    },
+    "negativePriming": {
+      "controlRt": "Kontrolin ang RT",
+      "nameTheRedShape": "Pangalanan ang pulang hugis",
+      "negativePrimingRt": "Negatibong Priming RT",
+      "positivePrimingRt": "Positibong Priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "Epekto ng NP",
+      "title": "Negatibong Priming",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Pagkiling sa pagtatantya",
+      "linearityRsup2": "Linearity (R²)",
+      "meanAbsoluteError": "Ibig sabihin ganap na error",
+      "tapTheLineToPlaceTheNumber": "I-tap ang linya para ilagay ang numero",
+      "title": "Linya ng Numero",
+      "meanError": "Mean Error",
+      "yourEstimate": "Ang iyong tantiya",
+      "correct": "Tama"
+    },
+    "oddOneOut": {
+      "colorTrials": "Mga pagsubok sa kulay",
+      "shapeTrials": "Hugis pagsubok",
+      "shape": "Hugis",
+      "color": "Kulay",
+      "timeout": "Timeout",
+      "shapeDiffAccuracy": "Pagkakaiba ng hugis. katumpakan",
+      "colorDiffAccuracy": "Diff ng kulay. katumpakan",
+      "shapeDiffAvgRt": "Pagkakaiba ng hugis. avg RT",
+      "colorDiffAvgRt": "Diff ng kulay. avg. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Aling paraan?",
+      "thresholdAngle": "Anggulo ng threshold",
+      "title": "Diskriminasyon sa Oryentasyon",
+      "threshold": "Threshold",
+      "counterCw": "CCW",
+      "clockwise": "Clockwise"
+    },
+    "patternComparison": {
+      "differentTrials": "Iba't ibang pagsubok",
+      "sameTrials": "Parehong mga pagsubok",
+      "same": "Pareho",
+      "different": "magkaiba"
+    },
+    "patternRecognition": {
+      "newPatterns": "Mga bagong pattern",
+      "oldPatterns": "Mga lumang pattern",
+      "old": "LUMANDA",
+      "new": "BAGO",
+      "studyPatterns": "Pag-aralan nang mabuti ang mga pattern",
+      "memorize": "Isaulo ({{current}}/{{total}})",
+      "getReady": "Humanda ka...",
+      "testPhaseStarting": "Magsisimula ang yugto ng pagsubok..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Eksaktong Tama",
+      "meanAngularError": "Mean angular error",
+      "withinTolerance": "Sa loob ng pagpaparaya",
+      "title": "Pagkuha ng Pananaw",
+      "avgErr": "Avg. pagkakamali",
+      "youAreAt": "Ikaw ay nasa",
+      "facing": "Nakaharap",
+      "pointTo": "Ituro sa"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Freq. Threshold",
+      "seq1": "Seq 1",
+      "seq2": "Seq 2",
+      "title": "Diskriminasyon sa Ponema",
+      "thresh": "Thresh",
+      "sameOrDifferent": "Pareho o iba?",
+      "same": "Pareho",
+      "different": "magkaiba"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = huli)",
+      "meanAbsoluteError": "Mean Absolute Error",
+      "precisionSd": "Katumpakan (SD)",
+      "title": "Paggalaw ng Hula",
+      "absError": "Abs. pagkakamali",
+      "precision": "Katumpakan",
+      "responded": "Tumugon",
+      "tapWhenReachesTarget": "TAP kapag naabot nito ang target"
+    },
+    "promem": {
+      "ongoingAccuracy": "Patuloy na katumpakan",
+      "ongoingRt": "Patuloy na RT",
+      "pmHitRate": "PM hit rate",
+      "pmRt": "PM RT",
+      "pmTargets": "Mga target ng PM",
+      "title": "Inaasahan na Memorya",
+      "ongoing": "Patuloy",
+      "pmHits": "PM Hits",
+      "pmMisses": "PM mga Miss",
+      "living": "Buhay",
+      "nonLiving": "Walang buhay",
+      "redWordInstruction": "Pulang salita = pindutin"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Mga Error sa Distractor",
+      "literalErrorRate": "Literal na Rate ng Error",
+      "literalErrors": "Mga Literal na Mali",
+      "title": "Pagpapakahulugan sa Salawikain",
+      "literal": "Literal",
+      "litRate": "Lit. Rate",
+      "whatDoesThisMean": "Ano ang ibig sabihin nito?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Humanda sa pagsunod",
+      "meanTimeOnTarget": "Mean Time on Target",
+      "meanTrackingError": "Ang ibig sabihin ng error sa pagsubaybay",
+      "placeYourFingerOnTheScreen": "Ilagay ang iyong daliri sa screen",
+      "title": "Pagsubaybay sa Pagtugis",
+      "timeOnTarget": "Oras sa target",
+      "error": "Error",
+      "onTarget": "Nasa Target",
+      "avgError": "Avg. pagkakamali",
+      "improve": "Pagbutihin",
+      "improvementT1VsT": "Pagpapabuti ng T1 vs T",
+      "errorLabel": "Error",
+      "followGreenTarget": "Sundin ang berdeng target"
+    },
+    "rapidNaming": {
+      "roundComplete": "Kumpleto na ang round",
+      "totalErrors": "Mga Kabuuang Error",
+      "title": "Mabilis na Pangalan",
+      "avgSpeed": "Avg. bilis",
+      "totalTime": "Kabuuang Oras",
+      "round": "Bilog",
+      "getReady": "Humanda ka!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Avg Solve Time",
+      "solved": "Nalutas",
+      "wrong": "mali",
+      "placeholder": "Ang sagot mo...",
+      "title": "Mga Palaisipan sa Rebus",
+      "puzzles": "Mga palaisipan",
+      "timeout": "Timeout",
+      "submit": "Isumite",
+      "answer": "Sagot"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Avg Solve Time",
+      "solved": "Nalutas",
+      "placeholder": "Ang sagot mo...",
+      "title": "Mga Remote Associate",
+      "timeout": "Timeout",
+      "submit": "Isumite",
+      "answer": "Sagot"
+    },
+    "reversalLearning": {
+      "adapt": "Ibagay",
+      "loseshiftRate": "Lose-Shift Rate",
+      "score": "Iskor:",
+      "winstayRate": "Rate ng Panalo-Pananatili",
+      "title": "Baliktad na Pag-aaral",
+      "rewards": "Mga gantimpala",
+      "reversals": "Mga baligtad",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Avg. pagsubok sa pamantayan",
+      "pickACard": "Pumili ng card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Bilangin pabalik ng 7",
+      "reproduceThePatternFromMemory": "I-reproduce ang pattern mula sa memorya",
+      "title": "Rey Complex na Larawan",
+      "copy": "Kopyahin",
+      "recall": "Alalahanin",
+      "retention": "Pagpapanatili",
+      "trial": "Pagsubok",
+      "target": "Target",
+      "yourCopy": "Iyong kopya",
+      "submit": "Isumite"
+    },
+    "rhythm": {
+      "avgTimingError": "Avg na error sa timing",
+      "bestTrialError": "Pinakamahusay na error sa pagsubok",
+      "correctTrials": "Mga tamang pagsubok",
+      "worstTrialError": "Pinakamalalang trial error",
+      "watchRhythm": "Panoorin ang ritmo",
+      "getReady": "Humanda ka...",
+      "tapTheRhythm": "I-tap ang ritmo!",
+      "tooFarOff": "Masyadong malayo!",
+      "tapToReproduce": "I-tap para magparami",
+      "beats": "{{count}} mga beats",
+      "bestTrial": "Pinakamahusay na pagsubok",
+      "worstTrial": "Pinakamasamang pagsubok",
+      "title": "Ritmo",
+      "msErr": "nagkamali si ms"
+    },
+    "routePlanning": {
+      "time": "Oras",
+      "title": "Pagpaplano ng Ruta",
+      "levels": "Mga antas",
+      "completed": "Nakumpleto",
+      "avgMoves": "Avg. gumagalaw",
+      "clear": "Maaliwalas",
+      "submit": "Isumite",
+      "instructions": "Mga tagubilin"
+    },
+    "rvp": {
+      "detect357246468": "Detect: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Mga Target na Sequence",
+      "fa": "FA",
+      "hitRate": "Rate ng hit",
+      "misses": "Miss",
+      "sequences": "Mga pagkakasunud-sunod"
+    },
+    "sart": {
+      "commissionErrors": "Mga pagkakamali sa komisyon",
+      "omissionErrors": "Mga pagkakamali sa pagtanggal",
+      "tapAllDigits": "I-tap ang lahat ng digit maliban sa 3",
+      "except3": "Maliban sa3"
+    },
+    "sceneCrasher": {
+      "adds": "Nagdadagdag",
+      "studyTheScene": "Pag-aralan ang eksena",
+      "swaps": "Nagpapalitan",
+      "tapTheNewchangedObject": "I-tap ang bago/binagong bagay"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Mga maling pangungusap",
+      "trueSentences": "Mga totoong pangungusap",
+      "byCategory": "Ayon sa Kategorya",
+      "title": "Pagpapatunay ng Pangungusap",
+      "trueRt": "Totoo RT",
+      "true": "totoo",
+      "false": "Mali",
+      "pressKey": "Pindutin"
+    },
+    "soundSweeps": {
+      "down": "Pababa",
+      "downAccuracy": "Down accuracy",
+      "durationThreshold": "Threshold ng Tagal",
+      "up": "pataas",
+      "upAccuracy": "Taas ang katumpakan",
+      "title": "Sound Sweeps",
+      "threshold": "Threshold",
+      "upOrDown": "Pataas o pababa?"
+    },
+    "sourceMemory": {
+      "color": "Kulay",
+      "colorRecall": "Paggunita ng kulay",
+      "frame": "Frame",
+      "frameRecall": "Frame recall",
+      "getReadyForTheTest": "Maghanda para sa pagsusulit!",
+      "itemRecognition": "Pagkilala sa item",
+      "positionRecall": "Paggunita sa posisyon",
+      "sourceAccuracy": "Katumpakan ng pinagmulan",
+      "title": "Pinagmulan Memory",
+      "source": "Pinagmulan",
+      "position": "Posisyon",
+      "word": "salita",
+      "wasThisWordShown": "Ipinakita ba ang salitang ito?",
+      "bottom": "Ibaba",
+      "blue": "Asul",
+      "orange": "Kahel",
+      "circle": "Bilog",
+      "square": "Square"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Threshold ng Ingay",
+      "title": "Speech-in-Noise",
+      "noise": "ingay",
+      "whichWordWasIt": "Aling salita iyon?"
+    },
+    "srtt": {
+      "learningEffect": "Epekto ng pagkatuto",
+      "learning": "Pag-aaral",
+      "block": "I-block"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Antas ng Pagkakataon",
+      "learningDetected": "Natukoy ang Pagkatuto",
+      "testPhase": "Yugto ng Pagsubok",
+      "whichPairLooksMoreFamiliar": "Aling pares ang mukhang mas pamilyar?",
+      "title": "Pag-aaral ng Istatistika",
+      "learning": "Pag-aaral",
+      "watchTheShapes": "Panoorin ang mga hugis"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Epekto ng Bias sa Paniniwala",
+      "conclusion": "Konklusyon",
+      "premise1": "Premise 1",
+      "premise2": "Premise 2",
+      "logicalValidityQuestion": "Ito ba ay lohikal na wasto?",
+      "valid": "Wasto",
+      "invalid": "Di-wasto"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Walang katumpakan",
+      "presentAccuracy": "Katumpakan ng kasalukuyan",
+      "title": "Paghahanap ng Simbolo",
+      "present": "Present",
+      "absent": "Wala",
+      "targets": "Mga target",
+      "searchGroup": "Paghahanap ng pangkat"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "Asynchrony",
+      "drift": "Drift",
+      "cv": "CV",
+      "title": "Pag-sync-Pagpapatuloy",
+      "meanCv": "Ang ibig sabihin ng CV",
+      "tempos": "Tempos",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Humanda...",
+      "nextTempo": "Susunod na tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Tamang Pag-reset",
+      "duration": "Tagal",
+      "missedCounters": "Mga Missed Counter",
+      "prematureResets": "Mga premature reset",
+      "totalEvents": "Kabuuang Mga Kaganapan",
+      "tooEarly": "Masyado pang maaga!",
+      "missed": "Na-miss!",
+      "title": "Gawain Juggling",
+      "premature": "Napaaga",
+      "counter": "Kontra",
+      "tapCounterInstruction": "I-tap ang bawat counter kapag naabot nito ang threshold nito. Huwag hayaang umapaw ang anumang bagay!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Punto ng Bisection (PSE)",
+      "curveSteepness": "Curve Steepness",
+      "idealMidpoint": "Tamang Midpoint",
+      "pse": "PSE",
+      "title": "Temporal na Hati",
+      "steepness": "Katigasan",
+      "shortOrLong": "Maikli o Mahaba?",
+      "trainingPhase": "Yugto ng Pagsasanay",
+      "short": "Maikli",
+      "long": "Mahaba"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Lapad ng Gradient",
+      "rememberThisDuration": "Tandaan ang tagal na ito",
+      "width": "Lapad",
+      "standard": "STANDARD",
+      "title": "Temporal na Paglalahat",
+      "hitRate": "Rate ng hit",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Hit Rate (detect standard)",
+      "sameDuration": "Parehong tagal?",
+      "trainingPhase": "Yugto ng Pagsasanay",
+      "same": "Pareho",
+      "different": "magkaiba"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Threshold SOA",
+      "title": "Diskriminasyon sa Tekstura",
+      "threshold": "Threshold"
+    },
+    "timePromem": {
+      "avgTimingError": "Avg na error sa timing",
+      "clockChecks": "Mga pagsusuri sa orasan",
+      "ongoingAccuracy": "Patuloy na katumpakan",
+      "ongoingTrials": "Patuloy na mga pagsubok",
+      "totalPmPresses": "Kabuuang PM Press",
+      "pmAccuracy": "Katumpakan ng PM",
+      "pmMisses": "Nakakamiss si PM",
+      "title": "Inaasahan ng Panahon",
+      "ongoing": "Patuloy",
+      "pmHitsLabel": "PM hit",
+      "timingErr": "Timing Err",
+      "pmHitsExpected": "PM Hits / Inaasahan",
+      "pmPresses": "Mga PM Press",
+      "checkClock": "Suriin ang orasan",
+      "thirtySecMark": "30s Mark"
+    },
+    "toj": {
+      "meanResponseTime": "Mean Response Time",
+      "temporalResolution": "Temporal na Resolusyon",
+      "title": "Paghuhukom sa Temporal na Order",
+      "threshold": "Threshold",
+      "whichCameFirst": "Alin ang nauna?",
+      "leftFirst": "Umalis muna",
+      "rightFirst": "Tama Una"
+    },
+    "tower": {
+      "budget": "Badyet",
+      "challenge": "Hamon",
+      "challengeClassic": "Classic",
+      "challengeExpert": "Dalubhasa",
+      "challengeMemory": "Alaala",
+      "challengePrecision": "Katumpakan",
+      "dragDiscAriaLabel": "I-drag ang tuktok na disc mula sa peg {{peg}}",
+      "goal": "Layunin",
+      "goalHiddenStatus": "Nakatago ang layunin. Gamitin ang Reveal upang maipakita ito nang maikli.",
+      "goalRevealedMessage": "Inihayag ang layunin sa loob ng 3 segundo.",
+      "hint": "Pahiwatig",
+      "hintDescription": "Ipakita ang pinakamahusay na susunod na galaw",
+      "hintMessage": "Hint: ilipat ang tuktok na disc mula sa peg {{fromPeg}} papunta sa peg {{toPeg}}.",
+      "hiddenGoalDescription": "Ang layunin ay nakatago sa panahon ng paglalaro. Gamitin ang Reveal kapag kailangan mo ng maikling pag-refresh.",
+      "hiddenGoalTitle": "Hamon sa memorya",
+      "invalid": "Di-wasto",
+      "moves": "Gumagalaw",
+      "optimal": "Pinakamainam",
+      "pegFullMessage": "Puno ang peg na yan.",
+      "previewMemoryCountdown": "Isaulo ang layunin. Magsisimula sa {{seconds}}s.",
+      "previewPlanCountdown": "Planuhin ang {{moves}}-move solution. Magsisimula sa {{seconds}}s.",
+      "reset": "I-reset",
+      "resetDescription": "I-restart ang puzzle na ito",
+      "resetMessage": "Pag-reset ng puzzle.",
+      "reveal": "Ibunyag",
+      "revealDescription": "Ibunyag ang nakatagong layunin",
+      "statusOptimalSolve": "Pinakamainam na paglutas. Marka ng {{score}}.",
+      "statusSolvedScore": "Nalutas sa {{moves}} galaw (+{{extraMoves}}). Marka ng {{score}}.",
+      "undo": "I-undo",
+      "undoDescription": "Baliktarin ang huling galaw",
+      "undoneMessage": "Na-undo ang huling paglipat.",
+      "yourPegs": "Iyong mga pegs"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Tamang Paghahatid",
+      "trainsLost": "Nawala ang mga tren",
+      "wrongStation": "Maling istasyon",
+      "title": "Tren ng Pag-iisip",
+      "trains": "Mga tren",
+      "missed": "Nakaligtaan",
+      "scoreLabel": "Puntos",
+      "instructions": "Mga tagubilin"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Mga Avg na Tanong na Ginamit",
+      "title": "Dalawampung Tanong",
+      "avgQuestions": "Avg. mga tanong",
+      "rounds": "Mga round",
+      "efficiency": "Kahusayan",
+      "avgQuestionsCorrectOnly": "Avg. mga tanong (tama lang)",
+      "questionsLabel": "Mga tanong",
+      "remaining": "Natitira",
+      "readyToGuess": "Handa na akong manghula!",
+      "tapTheTarget": "I-tap ang bagay na sa tingin mo ay ang target!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Kapaki-pakinabang na Larangan ng Pananaw",
+      "visualNoiseMask": "Visual noise mask",
+      "whatWasInTheCenter": "Ano ang nasa gitna?",
+      "whereWasTheTarget": "Nasaan ang target?",
+      "avgThreshold": "Avg. threshold",
+      "speed": "Bilis",
+      "accuracy": "Katumpakan",
+      "central": "Central",
+      "peripheral": "Peripheral",
+      "overall": "Sa pangkalahatan",
+      "block": "I-block",
+      "trials": "Mga pagsubok",
+      "start": "Magsimula",
+      "focus": "Focus",
+      "threshold": "Threshold",
+      "stimulus": "Pampasigla",
+      "respondFromMemory": "Tumugon mula sa memorya",
+      "truck": "Truck",
+      "choosePeripheralLocation": "Pumili ng peripheral na lokasyon",
+      "currentBlock": "I-block ang {{n}}",
+      "exposure": "Pagkalantad"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Mga salitang nagsisimula sa {{letter}}",
+      "title": "Verbal Fluency",
+      "totalWords": "Kabuuang mga salita",
+      "duplicates": "Mga duplicate",
+      "letter": "liham",
+      "round": "Bilog",
+      "roundComplete": "Kumpleto na ang round",
+      "nextRound": "Susunod na round",
+      "middotRound": "· Bilog"
+    },
+    "vernierAcuity": {
+      "whichSide": "Aling panig?",
+      "title": "Vernier Acuity",
+      "leftOffset": "Kaliwang offset",
+      "rightOffset": "Tamang offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Pinakamainam na Diskarte",
+      "correct": "Tama!",
+      "wrong": "mali",
+      "title": "Hula ng Panahon",
+      "optimal": "Pinakamainam",
+      "learningCurve": "Learning Curve",
+      "predictTheWeather": "Hulaan ang panahon",
+      "rain": "ulan"
+    },
+    "wordChain": {
+      "avgResponseTime": "Avg na Oras ng Pagtugon",
+      "chain": "Kadena",
+      "longestChain": "Pinakamahabang Kadena",
+      "totalCorrect": "Kabuuang Tama",
+      "totalWords": "Kabuuang mga Salita",
+      "words": "Mga salita",
+      "title": "Kadena ng Salita",
+      "longest": "Pinakamatagal",
+      "avgRt": "Avg. RT",
+      "endsWith": "nagtatapos sa",
+      "chainLabel": "Kadena",
+      "bestLabel": "Pinakamahusay"
+    },
+    "wordFlow": {
+      "avgWordLength": "Avg na haba ng salita",
+      "correct": "Tama",
+      "invalidWords": "Mga di-wastong salita",
+      "totalWordsSelected": "Kabuuang Mga Salita na Napili",
+      "validWords": "Mga wastong salita",
+      "wordsPerMinute": "Mga salita kada minuto",
+      "wrong": "mali",
+      "seeResults": "Tingnan ang mga resulta",
+      "nextRound": "Susunod na round ({{current}}/{{total}})",
+      "title": "Verbal Fluency",
+      "validWordsLabel": "Mga wastong salita",
+      "wordsPerMinLabel": "Mga salita/min",
+      "avgLengthLabel": "Avg. haba",
+      "invalidLabel": "Di-wasto",
+      "round": "Bilog",
+      "selectWordsBelongTo": "Pumili ng mga salitang nabibilang sa",
+      "selected": "Napili"
+    },
+    "wordList": {
+      "avgRtCorrect": "Avg RT (tama)",
+      "primacyEffect": "Pangunahing Epekto",
+      "recencyEffect": "Recency Effect",
+      "studyPhaseRememberEachWord": "Yugto ng pag-aaral - tandaan ang bawat salita",
+      "wordsRecalled": "Mga Salitang Naalala",
+      "title": "Listahan ng mga Salita",
+      "serialPositionCurve": "Serial Position Curve",
+      "wasWordInList": "Nasa listahan ba ang salitang ito?",
+      "seenBefore": "Nakita kanina",
+      "newWord": "Bago"
+    },
+    "speedSort": {
+      "switchAccuracy": "Katumpakan ng paglipat",
+      "switchTrials": "Lumipat ng mga pagsubok",
+      "sortByColor": "Pagbukud-bukurin ayon sa COLOR",
+      "sortByShape": "Pagbukud-bukurin ayon sa SHAPE",
+      "sortByNumber": "Pagbukud-bukurin ayon sa NUMBER",
+      "ruleChanged": "Nagbago ang panuntunan!",
+      "binRed": "Pula",
+      "binBlue": "Asul",
+      "binGreen": "Berde",
+      "binYellow": "Dilaw",
+      "binCircle": "Bilog",
+      "binSquare": "Square",
+      "binTriangle": "Tatsulok",
+      "binStar": "Bituin",
+      "title": "Bilis ng Pag-uuri",
+      "switch": "Mga switch"
+    },
+    "reflex": {
+      "target": "Target",
+      "lure": "Pang-akit",
+      "tooSlow": "Masyadong mabagal!",
+      "wrongTarget": "Maling target!",
+      "tapTargets": "I-tap ang mga berdeng bilog!",
+      "hits": "Mga hit",
+      "misses": "Miss",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Tandaan ang kabuuang tumatakbo...",
+      "title": "Pagkalkula ng Chain",
+      "stepChains": "{{len}}-step chain",
+      "start": "Magsimula",
+      "step": "Hakbang",
+      "whatIsTheResult": "Ano ang resulta?"
+    },
+    "alternateUses": {
+      "placeholder": "Mag-type ng gamit...",
+      "title": "Mga Kahaliling Gamit",
+      "totalUses": "Kabuuang gamit",
+      "perObject": "Bawat bagay",
+      "rounds": "Mga round",
+      "bestObject": "Pinakamahusay na bagay",
+      "bestCount": "Pinakamahusay na bilang",
+      "noUsesSubmitted": "Walang isinumite na paggamit",
+      "timesUp": "Oras na!",
+      "nextObject": "Susunod na Bagay ({{object}})",
+      "listCreativeUses": "Maglista ng mga malikhaing gamit para sa bagay na ito"
+    },
+    "anagram": {
+      "placeholder": "I-type ang salita...",
+      "title": "Anagram",
+      "avgSolve": "Avg. lutasin",
+      "letterWords": "{{len}}-mga salitang titik",
+      "submit": "Isumite"
+    },
+    "facialEmotion": {
+      "happy": "Masaya",
+      "sad": "Malungkot",
+      "angry": "Galit",
+      "fearful": "Nakakatakot",
+      "disgusted": "Naiinis",
+      "surprised": "Nagulat",
+      "lc": "LC",
+      "title": "Pagkilala sa Emosyon sa Mukha",
+      "topConfusions": "Mga nangungunang pagkalito"
+    },
+    "numberSeries": {
+      "easy": "Madali",
+      "hard": "Mahirap"
+    },
+    "chainRecall": {
+      "round": "Bilog",
+      "title": "Chain Recall",
+      "chain": "Kadena",
+      "placeholder": "Placeholder"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emosyonal na Go/No-Go",
+      "block1CommissionErrors": "Mga error sa komisyon sa block 1",
+      "block2CommissionErrors": "I-block ang 2 mga error sa komisyon",
+      "goHappy": "Go = Masaya",
+      "goSad": "Go = Malungkot",
+      "block": "I-block",
+      "go": "Pumunta ka"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Epekto ng stroop",
+      "title": "Color Rush",
+      "congShort": "Sinabi ni Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Katugmang katumpakan",
+      "incongruentAccuracy": "Hindi naaayon sa katumpakan"
+    },
+    "mirror": {
+      "avgCorrectCells": "Mga tamang cell (avg.)",
+      "symmetryType": "Uri ng simetrya",
+      "title": "Salamin"
+    },
+    "rhythmTap": {
+      "correctTrials": "Mga tamang pagsubok",
+      "avgRhythmScore": "Avg na marka ng ritmo",
+      "bestTrialScore": "Pinakamahusay na marka ng pagsubok",
+      "worstTrialScore": "Pinakamasamang marka ng pagsubok",
+      "level": "Antas",
+      "rhythm": "Ritmo",
+      "bestTrial": "Pinakamahusay na pagsubok",
+      "worstTrial": "Pinakamasamang pagsubok"
+    },
+    "vocalProsody": {
+      "questioning": "Nagtatanong"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Paramihin",
+      "add": "Idagdag",
+      "subtract": "Ibawas",
+      "title": "Bilis ng Arithmetic",
+      "score": "Puntos",
+      "solved": "Nalutas",
+      "missed": "Nakaligtaan"
+    },
+    "puzzle": {
+      "avgSolveTime": "Avg solve time",
+      "totalMoves": "Kabuuang mga galaw",
+      "totalErrors": "Kabuuang mga error",
+      "gridSize": "Laki ng grid",
+      "maxGridReached": "Naabot ang max na grid",
+      "maxLevelReached": "Naabot na ang pinakamataas na antas",
+      "maxNodesReached": "Naabot ang mga max na node",
+      "puzzleDetails": "Mga detalye ng puzzle",
+      "roundDetails": "Mga bilog na detalye",
+      "solved": "Solved!",
+      "undo": "I-undo",
+      "reset": "I-reset",
+      "check": "Suriin",
+      "moves": "Gumagalaw",
+      "time": "Oras",
+      "level": "Antas",
+      "errors": "Mga pagkakamali",
+      "score": "Puntos",
+      "grid": "Grid",
+      "crossings": "Mga tawiran",
+      "pearls": "Mga perlas",
+      "clues": "Mga pahiwatig",
+      "region": "Rehiyon",
+      "filled": "Napuno",
+      "cells": "Mga cell",
+      "undosLeft": "Ang natitira pang pag-undo",
+      "gems": "Mga hiyas",
+      "connected": "Nakakonekta",
+      "slides": "Mga slide",
+      "progress": "Pag-unlad",
+      "rotations": "Mga pag-ikot",
+      "puzzle": "Palaisipan",
+      "uncovered": "Walang takip",
+      "colored": "May kulay",
+      "violations": "Mga paglabag",
+      "blacked": "Nakaitim",
+      "empty": "Walang laman",
+      "remaining": "Natitira",
+      "pairs": "Pares",
+      "flips": "Naka-flip",
+      "found": "Natagpuan",
+      "balls": "Mga bola",
+      "guesses": "Mga hula",
+      "original": "Orihinal",
+      "findDifferences": "Maghanap ng mga pagkakaiba",
+      "totalDrags": "Kabuuang pag-drag",
+      "totalUndos": "Kabuuang undos",
+      "totalEdgesDrawn": "Kabuuang mga gilid na iginuhit",
+      "totalLasers": "Kabuuang mga laser",
+      "totalSlides": "Kabuuang mga slide",
+      "totalRotations": "Kabuuang mga pag-ikot",
+      "totalRectangles": "Kabuuang mga parihaba",
+      "totalScore": "Kabuuang iskor",
+      "avgTime": "Avg na oras",
+      "cellsCleared": "Na-clear ang mga cell",
+      "totalDiffsFound": "Nahanap ang kabuuang pagkakaiba",
+      "gemsCollected": "Mga hiyas na nakolekta",
+      "pushBoxesOntoTargets": "Itulak ang lahat ng mga kahon sa mga target",
+      "fireLasersMarkBalls": "Sunog ang mga laser mula sa mga gilid, pagkatapos ay markahan ang mga posisyon ng bola",
+      "revealingAnswer": "Nagbubunyag ng sagot...",
+      "checkAnswer": "Suriin ang Sagot",
+      "pickNumberBelow": "Pumili ng numero sa ibaba",
+      "tapCellToAssign": "Mag-tap ng cell para magtalaga ng numero",
+      "tapEdgesToPlaceWalls": "I-tap ang mga gilid para ilagay ang mga pader. Hatiin sa mga rehiyon ng K.",
+      "ghosts": "Mga multo",
+      "vampires": "Mga bampira",
+      "zombies": "Mga zombie",
+      "dominoes": "Domino",
+      "islands": "mga isla",
+      "pegsLeft": "Naiwan ang Peg",
+      "bestRemaining": "Pinakamahusay na natitira",
+      "puzzlesSolved": "Nalutas ang mga puzzle",
+      "flooded": "Binaha",
+      "edges": "Mga gilid",
+      "totalPlacements": "Kabuuang mga placement",
+      "totalRemovals": "Kabuuang mga pag-alis",
+      "maxTileReached": "Naabot ang maximum na tile",
+      "target": "Target",
+      "placed": "Nakalagay",
+      "totalGuesses": "Kabuuang mga hula",
+      "guessesLeft": "Naiwan ang mga hula",
+      "difficulty": "Kahirapan"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Mga palaisipan",
+      "maxLevel": "Max na antas"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "errors": "Mga pagkakamali",
+      "avgTime": "Avg. oras",
+      "erase": "Burahin"
+    },
+    "blackbox": {
+      "title": "Black Box",
+      "puzzles": "Mga palaisipan",
+      "lasers": "Mga laser",
+      "avgTime": "Avg. oras"
+    },
+    "designFluency": {
+      "title": "Katatasan ng Disenyo",
+      "uniqueDesigns": "Mga natatanging disenyo",
+      "duplicates": "Mga duplicate",
+      "round": "Bilog",
+      "roundComplete": "Kumpleto na ang round",
+      "youCreatedDesigns": "Gumawa ka ng {{count}} mga disenyo",
+      "startRound": "Magsimula sa pag-ikot",
+      "instructions": "Mga tagubilin",
+      "designs": "Mga disenyo",
+      "clear": "Maaliwalas",
+      "addDesign": "Idagdag"
+    },
+    "signpost": {
+      "title": "Signpost",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "avgTime": "Avg. oras",
+      "maxGrid": "Max na grid"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Antas",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "undos": "I-undos",
+      "puzzle": "Palaisipan"
+    },
+    "numericalStroop": {
+      "left": "Kaliwa",
+      "right": "Tama"
+    },
+    "biologicalMotion": {
+      "title": "Biyolohikal na Paggalaw",
+      "noiseDots": "mga tuldok ng ingay",
+      "whichDirection": "Aling direksyon?",
+      "left": "Kaliwa",
+      "right": "Tama"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "gems": "Mga hiyas",
+      "moves": "Gumagalaw"
+    },
+    "waterLevel": {
+      "title": "Antas ng Tubig",
+      "error": "Error",
+      "tilt": "Ikiling",
+      "waterLine": "linya ng tubig?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxGrid": "Max na grid"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "errors": "Mga pagkakamali",
+      "avgTime": "Avg. oras",
+      "erase": "Burahin"
+    },
+    "rectangles": {
+      "title": "Mga parihaba",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "rectanglesCount": "Mga parihaba",
+      "maxGrid": "Max na grid",
+      "cancelSelection": "Kanselahin ang pagpili"
+    },
+    "filling": {
+      "title": "Pagpupuno",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "avgTime": "Avg. oras",
+      "grid": "Grid"
+    },
+    "spacedRetrieval": {
+      "title": "Spaced Retrieval",
+      "studyPair": "Pag-aralan ang pares na ito",
+      "waitAndSolve": "Maghintay... pagkatapos ay malutas",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Interval: anong mga pares?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototype Distortion",
+      "studyPhase": "Yugto ng pag-aaral",
+      "testPhase": "Yugto ng pagsubok",
+      "yesBelongs": "Oo - Pag-aari",
+      "noRandom": "Hindi — Random"
+    },
+    "motionCoherence": {
+      "title": "Pagkakaugnay-ugnay ng Paggalaw",
+      "threshold": "Threshold",
+      "coherence": "Pagkakaugnay-ugnay",
+      "whichDirection": "Aling direksyon?"
+    },
+    "cube": {
+      "title": "Cube",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxLevel": "Max na antas",
+      "cubeFaces": "Mga mukha ng kubo",
+      "moveUp": "pataas",
+      "moveLeft": "Kaliwa",
+      "moveDown": "Pababa",
+      "moveRight": "Tama"
+    },
+    "sameGame": {
+      "title": "Parehong Laro",
+      "score": "Puntos",
+      "cleared": "Na-clear",
+      "cells": "Mga cell",
+      "accuracy": "Katumpakan"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal na Pagtutugma",
+      "chance": "Pagkakataon",
+      "whichPatternMatchesRhythm": "Aling pattern ang tumutugma sa ritmo?"
+    },
+    "mosaic": {
+      "title": "Mosaic",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxGrid": "Max na grid"
+    },
+    "spotDiff": {
+      "title": "Spot the Diff",
+      "level": "Antas",
+      "grid": "Grid",
+      "accuracy": "Katumpakan",
+      "perfect": "Perpekto",
+      "avgTime": "Avg. oras",
+      "found": "Natagpuan"
+    },
+    "lightsOut": {
+      "title": "Patay ang mga Ilaw",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxGrid": "Max na grid"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "rotations": "Mga pag-ikot",
+      "avgTime": "Avg. oras"
+    },
+    "tracks": {
+      "title": "Mga track",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "errors": "Mga pagkakamali",
+      "avgTime": "Avg. oras"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "slides": "Mga slide",
+      "maxGrid": "Max na grid"
+    },
+    "cognitiveBias": {
+      "title": "Pagsasanay sa Cognitive Bias",
+      "biasResistance": "Paglaban sa bias",
+      "biased": "may kinikilingan",
+      "continue": "Magpatuloy"
+    },
+    "empathicAccuracy": {
+      "title": "Empathic Accuracy",
+      "emotionId": "Emosyon",
+      "avgRatingError": "Avg. error sa rating",
+      "scenarios": "Mga sitwasyon",
+      "perfect": "Perpekto",
+      "rating": "Rating",
+      "howDoesCharacterFeel": "Ano ang pakiramdam ng karakter?",
+      "rateIntensity": "I-rate ang intensity",
+      "whatEmotion": "Anong emosyon?",
+      "yourRating": "Ang iyong rating",
+      "correct": "Tama",
+      "emotion": "Emosyon"
+    },
+    "guess": {
+      "title": "Utak",
+      "solved": "Nalutas",
+      "guesses": "Mga hula"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxLevel": "Max na antas"
+    },
+    "magnets": {
+      "title": "Mga magnet",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxLevel": "Max na antas"
+    },
+    "tangram": {
+      "placeAll": "Ilagay ang lahat ng piraso",
+      "solved": "Solved!",
+      "notRight": "Hindi masyadong tama",
+      "title": "Tangram",
+      "level": "Antas",
+      "puzzles": "Mga palaisipan",
+      "placements": "Mga pagkakalagay",
+      "removals": "Mga pagtanggal",
+      "puzzleNumber": "Palaisipan {{n}}",
+      "pieces": "Mga piraso",
+      "targetCells": "Cible",
+      "dragHint": "I-drag o ilagay ang piraso sa grid",
+      "selectHint": "Pumili ng isang piraso",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Suriin"
+    },
+    "galaxies": {
+      "title": "Mga kalawakan"
+    },
+    "flood": {
+      "title": "Baha"
+    },
+    "pegs": {
+      "title": "Mga peg",
+      "bestPegs": "Pinakamahusay na peg"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditory Figure-Ground",
+      "patternPresent": "May pattern?",
+      "pattern": "Pattern",
+      "noPattern": "Walang pattern"
+    },
+    "selfOrderedPointing": {
+      "title": "Self-ordered Pointing",
+      "maxSpan": "Max span",
+      "errors": "Mga pagkakamali",
+      "round": "Bilog",
+      "setOf": "Set ng {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Pagsubaybay sa Salamin",
+      "totalErrors": "Kabuuang mga error",
+      "avgTime": "Avg. oras",
+      "shapes": "Mga hugis",
+      "perfect": "Perpekto",
+      "improvement": "Pagpapabuti",
+      "errorsMiddot": "mga pagkakamali ·",
+      "shape": "Hugis",
+      "errors": "Mga pagkakamali",
+      "xIsMirrored": "Nakasalamin si X!"
+    },
+    "clockDrawing": {
+      "title": "Pagguhit ng Orasan",
+      "avgError": "Avg. pagkakamali",
+      "setTo": "Itakda sa",
+      "submit": "Isumite"
+    },
+    "cognitiveMap": {
+      "title": "Cognitive Map",
+      "explore": "Galugarin",
+      "sRemaining": "S Natitira",
+      "from": "Mula sa",
+      "whichDirectionIs": "Aling direksyon"
+    },
+    "sixteen": {
+      "title": "Labing-anim"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Lumiwanag"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max Tile",
+      "moves": "Gumagalaw",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Mga tulay",
+      "puzzles": "Mga palaisipan",
+      "maxLevel": "Max na antas",
+      "level": "Antas"
+    },
+    "net": {
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxGrid": "Max na grid"
+    },
+    "flip": {
+      "title": "I-flip"
+    },
+    "range": {
+      "title": "Saklaw"
+    },
+    "slant": {
+      "title": "Pahilig"
+    },
+    "towers": {
+      "title": "Mga tore",
+      "puzzles": "Mga palaisipan",
+      "avgTime": "Avg. oras",
+      "erase": "Burahin"
+    },
+    "pearl": {
+      "title": "Perlas",
+      "edges": "Mga gilid"
+    },
+    "mapColoring": {
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "moves": "Gumagalaw",
+      "maxLevel": "Max na antas"
+    },
+    "singles": {
+      "title": "Mga single"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "Katumpakan",
+      "puzzles": "Mga palaisipan",
+      "avgTime": "Avg. oras"
+    },
+    "untangle": {
+      "title": "Alisin",
+      "drags": "Kaladkarin",
+      "maxNodes": "Max Nodes"
+    },
+    "unruly": {
+      "title": "Masungit"
+    },
+    "fifteen": {
+      "title": "labinlima"
+    },
+    "tents": {
+      "title": "Mga tolda"
+    },
+    "mesker": {
+      "pen": "Panulat",
+      "stroke": "Stroke",
+      "penPressureHint": "Sumulat nang may pare-parehong presyon ng panulat"
+    },
+    "modality": {
+      "position": "Posisyon",
+      "audio": "Audio"
+    },
+    "validate": "Patunayan"
+  },
+  "trace": {
+    "instructions": "Mag-swipe sa N-likod na posisyon. I-double tap kung pareho ang posisyon.",
+    "hint": {
+      "validated": "Napatunayan",
+      "draw": "Iguhit ang titik • I-tap para i-validate",
+      "drawWithColor": "Iguhit ang titik • Pumili ng kulay • I-tap para i-validate",
+      "type": "I-type ang liham • Enter para ma-validate",
+      "typeWithColor": "I-type ang titik • Pumili ng kulay • Enter para ma-validate",
+      "typeResult": "I-type ang resulta • Enter para ma-validate",
+      "writeResult": "Isulat ang resulta • I-tap para patunayan"
+    },
+    "keyboard": {
+      "letterInput": "liham",
+      "numberInput": "Numero"
+    },
+    "arithmetic": {
+      "cueHint": "Isaulo ang 2 digit",
+      "refresh": "Bago"
+    },
+    "hintPosition": "Saan lumiliko ang stimulus {{n}} nakaraan?",
+    "hintN0": "Ipahiwatig ang kasalukuyang stimulus",
+    "warmupHint": "Kabisaduhin ang mga posisyon. Walang tugon na kailangan.",
+    "hintDraw": "Iguhit ang titik • I-tap para i-validate",
+    "hintDrawWithColor": "Iguhit ang titik • Pumili ng kulay • I-tap para i-validate",
+    "hintWriteResult": "Isulat ang resulta • I-tap para patunayan",
+    "guide": {
+      "swipeNormal": "Mag-swipe mula sa huling posisyon (N-0) patungo sa posisyon mula {{n}} mga hakbang na nakalipas (N-{{n}}). I-double tap kung pareho ang posisyon.",
+      "swipeSequential": "Mag-swipe nang sunud-sunod mula N-0 hanggang N-{{n}}, na dumadaan sa bawat intermediate na posisyon. I-double tap kung pareho ang posisyon.",
+      "swipeDynamic": "Mag-swipe kasunod ng ipinapakitang panuntunan. I-double tap kung pareho ang posisyon.",
+      "tapN0": "I-tap ang kasalukuyang posisyon.",
+      "warmup": "Kabisaduhin ang mga posisyon — walang kinakailangang tugon.",
+      "writeDraw": "Iguhit ang liham na narinig {{n}} mga hakbang na nakalipas • I-tap para i-validate",
+      "writeDrawColor": "Iguhit ang liham na narinig {{n}} mga hakbang na nakalipas • Piliin ang kulay nito • I-tap para i-validate",
+      "writeType": "I-type ang liham na narinig {{n}} mga hakbang na nakalipas • Enter para ma-validate",
+      "writeTypeColor": "I-type ang liham na narinig {{n}} mga hakbang na nakalipas • Piliin ang kulay nito • Enter para ma-validate",
+      "writeDrawN0": "Iguhit ang liham na narinig mo lang • I-tap para i-validate",
+      "writeDrawColorN0": "Iguhit ang titik na narinig mo lang • Piliin ang kulay nito • I-tap para i-validate",
+      "writeTypeN0": "I-type ang liham na narinig mo lang • Enter para ma-validate",
+      "writeTypeColorN0": "I-type ang liham na narinig mo lang • Piliin ang kulay nito • Enter para ma-validate",
+      "writeResult": "Isulat ang resulta • I-tap para patunayan",
+      "validated": "Napatunayan",
+      "holdMindful": "Hawakan ang cell nang {{seconds}}s",
+      "swipeMindful": "Mag-swipe sa {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptive timing",
+      "inputKeyboard": "Keyboard",
+      "inputHandwriting": "Sulat-kamay",
+      "writingInput": "Mga titik/numero",
+      "section": {
+        "grid": "Grid",
+        "input": "Input",
+        "rhythm": "Ritmo",
+        "interface": "Interface",
+        "interfaceNone": "Pamantayan",
+        "sound": "Tunog"
+      },
+      "isi": "Interval (ISI)",
+      "stimulusDuration": "Tagal ng stimulus",
+      "feedbackDuration": "Tagal ng feedback",
+      "ruleDisplay": "Tagal ng panuntunan",
+      "blankInterval": "Blangkong pagitan",
+      "showProgressBar": "Progress bar",
+      "showInstructions": "Mga in-game na tagubilin",
+      "arithmeticInterference": "Panghihimasok sa aritmetika",
+      "fullMenu": "Buong menu",
+      "gridStyle": "Estilo ng grid",
+      "gridStyleClassic": "Classic",
+      "gridStyleTrace": "Bakas",
+      "guide": {
+        "swipeMindful": "Mag-swipe sa {{seconds}}s",
+        "holdMindful": "Hawakan ang cell nang {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "kilos",
+        "holdDuration": "Hawakan",
+        "writingDuration": "Pagsusulat"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Hawakan",
+      "gestureDuration": "kilos",
+      "writingDuration": "Pagsusulat"
+    },
+    "image": "Hugis",
+    "digits": "Mga Digit",
+    "emotions": "Emosyon",
+    "words": "salita",
+    "tones": "tono",
+    "spatial": "Direksyon"
+  },
+  "replay": {
+    "title": "Replay ng session",
+    "play": "Maglaro",
+    "pause": "I-pause",
+    "restart": "I-restart",
+    "speed": "Bilis",
+    "loading": "Nilo-load ang session...",
+    "unavailable": "Hindi available ang replay para sa session na ito",
+    "backToStats": "Bumalik sa stats",
+    "runStack": {
+      "original": "Orihinal",
+      "correction": "Pagwawasto",
+      "delta": "Δ d'",
+      "inProgress": "Isinasagawa",
+      "completed": "Nakumpleto"
+    },
+    "abandon": "Iwanan",
+    "badge": "I-replay",
+    "completionReport": {
+      "backToHome": "Bumalik",
+      "correctAgain": "Tama ulit",
+      "deltaVsOriginal": "kumpara sa Orihinal",
+      "deltaVsParent": "vs Nakaraang pagtakbo",
+      "falseAlarmsSkipped": "Naiwasan ang mga pagkakamali",
+      "missesCorrections": "Mga pagwawasto",
+      "newFalseAlarms": "Mga bagong error",
+      "replayAgain": "I-replay",
+      "scoreLabel": "d' puntos",
+      "title": "Kumpleto ang pagwawasto"
+    },
+    "controls": "Mga kontrol",
+    "correction": "Pagwawasto",
+    "finished": "Pagtatapos ng replay",
+    "home": "Bahay",
+    "parseError": "Hindi mabasa ang session",
+    "tapSlotToPlace": "Mag-tap ng slot para ilagay",
+    "timeline": "Timeline",
+    "focusTimeline": {
+      "open": "Ipakita ang timeline",
+      "close": "Isara ang timeline",
+      "title": "N-Back Timeline",
+      "fillAll": "Punan lahat",
+      "fillCard": "Punan ang card"
+    },
+    "hud": {
+      "counterDisplay": "Pagpapakita ng counter",
+      "toggleCounterDisplay": "I-toggle ang counter display"
+    },
+    "validate": "Patunayan"
+  },
+  "recovery": {
+    "title": "Naputol ang session",
+    "description": "Isang sesyon ang isinasagawa. Gusto mo bang ipagpatuloy?",
+    "mode": "Mode",
+    "level": "Antas",
+    "progress": "Pag-unlad",
+    "timeAgo": "Oras",
+    "resume": "Ipagpatuloy ang session",
+    "startFresh": "Magsimula ng bago",
+    "staleWarning": "Matanda na ang session na ito, maaaring mahirap ang pagpapatuloy.",
+    "modes": {
+      "game": "Pagsasanay",
+      "activeTraining": "Aktibong pagsasanay",
+      "flowTraining": "Pagsasanay sa Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dalawahang Bakas"
+    }
+  },
+  "rewards": {
+    "congratulations": "Binabati kita!",
+    "duration": "{{days}} araw na Premium",
+    "lifetimeLabel": "Panghabambuhay na pag-access",
+    "expiresAt": "Wasto hanggang {{date}}",
+    "neverExpires": "Hindi kailanman mag-e-expire",
+    "continue": "Magpatuloy",
+    "discovery": {
+      "name": "Discovery pass",
+      "description": "7 araw na Premium — I-explore ang lahat ng feature"
+    },
+    "engagement": {
+      "name": "Engagement Pass",
+      "description": "1 buwang Premium — Magbubunga ang iyong disiplina"
+    },
+    "expert": {
+      "name": "Expert pass",
+      "description": "3 buwang Premium — Isa kang tunay na practitioner"
+    },
+    "lifetime": {
+      "name": "Panghabambuhay na pag-access",
+      "description": "Premium forever — Kabisado mo na ang Neurodual"
+    },
+    "xpRemaining": "XP ang natitira",
+    "permanentAccessUnlocked": "Na-unlock ang permanenteng pag-access",
+    "reachedTheTop": "Naabot mo na ang tuktok!"
+  },
+  "progression": {
+    "level": "Antas {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Susunod na antas",
+    "reached": "Naabot",
+    "inProgress": "Isinasagawa"
+  },
+  "gridlock": {
+    "nextPuzzle": "Susunod na palaisipan →"
+  }
+}

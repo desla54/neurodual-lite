@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Edzésterv",
+    "pageSubtitle": "Válaszd ki, rendezd és hozd létre az utazásaidat",
+    "enabled": "Edzésterv engedélyezése",
+    "description": "30 fokozatos szakasz N-1-től N-10-ig",
+    "progress": "Haladás",
+    "locked": "Zárolva",
+    "createJourney": "Utazás létrehozása",
+    "viewJourneys": "Utazások megtekintése",
+    "current": "Jelenlegi utazás",
+    "myJourneys": "Utazásaim",
+    "stage": "Szakasz",
+    "stages": "szakasz",
+    "stagesShort": "sz.",
+    "stageLabels": {
+      "pick": "Pick",
+      "catch": "Elkapni",
+      "place": "Hely",
+      "memo": "Jegyzet"
+    },
+    "name": "Név",
+    "namePlaceholder": "Pl. N-5 kihívás",
+    "levels": "Szintek",
+    "levelRange": "Szinttartomány",
+    "levelTo": "-ig",
+    "createNew": "Új utazás",
+    "new": "Új",
+    "defaultCustomName": "Saját utazás",
+    "created": "Utazás létrehozva!",
+    "deleted": "Utazás törölve",
+    "sessionSettings": "Munkamenet beállítások",
+    "savedStatus": "Beállítások mentve",
+    "preset": {
+      "easy": "Könnyű",
+      "medium": "Ajánlott",
+      "hard": "Nehéz"
+    },
+    "setup": {
+      "title": "Utazás és profilok",
+      "journey": "Utazás",
+      "journeyNone": "Válassz…",
+      "profile": "Profil",
+      "profileNone": "Válassz…",
+      "configure": "Beállítás",
+      "configureNone": "Válassz utazást",
+      "create": "Új utazás",
+      "createDesc": "Új utazás létrehozása"
+    },
+    "deleteConfirmTitle": "Törlöd ezt az utazást?",
+    "deleteConfirmMessage": "A(z) \"{{name}}\" utazás véglegesen törlésre kerül.",
+    "renameTitle": "Utazás átnevezése",
+    "renameMessage": "Szerkeszd a(z) \"{{name}}\" nevét.",
+    "renamed": "Utazás átnevezve.",
+    "badge": {
+      "simulator": "Szimulátor",
+      "beta": "Béta",
+      "default": "Alapértelmezett"
+    },
+    "mode": "Mód",
+    "modeStandard": "Utazás (4 mód)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Kettős fogás",
+      "dualPlace": "Kettős hely",
+      "dualMemo": "Kettős feljegyzés",
+      "dualPick": "Dual Pick",
+      "simulator": "Szimulátor",
+      "jaeggi": "Klasszikus",
+      "brainWorkshop": "Agyműhely"
+    },
+    "validation": {
+      "sessions": "{{count}} érvényesítő munkamenet",
+      "needed": "{{count}} munkamenet hátravan",
+      "excellent": "Kiváló!",
+      "good": "Jó!",
+      "passing": "Átment"
+    },
+    "progression": {
+      "title": "Haladás",
+      "description": "A következő szintre lépéshez érj el jó pontszámot:",
+      "excellent": "≥95% → 1 munkamenet",
+      "good": "≥85% → 2 munkamenet",
+      "passing": "≥80% → 3 munkamenet",
+      "rules": "Haladási szabályok",
+      "jaeggi": {
+        "description": "A leggyengébb modalitás alapján:",
+        "up": "< 3 hiba → Szintlépés",
+        "stay": "3-5 hiba → Maradás ezen a szinten",
+        "down": "> 5 hiba → Szintcsökkenés"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop protokoll (BW pontszám):",
+        "up": "≥80% → Szintlépés",
+        "stay": "50-79% → Maradás a szinten",
+        "strike": "3 egymást követő <50% pontszám → Szintcsökkenés"
+      },
+      "hybrid": {
+        "description": "Ez az utazás {{trackCount}} Dual Track munkamenetet futtat, majd {{dnbCount}} Dual N-Back munkamenetet ugyanazon a szinten.",
+        "alternation": "A ciklus mindig Dual Track-kel indul újra, amikor döntés születik.",
+        "authority": "Csak a Dual N-Back munkamenetek döntenek a fel, marad vagy le kérdésében.",
+        "up": "0-1 hiba → Szintlépés",
+        "stay": "2-3 hiba → Maradás",
+        "down": "4+ hiba → Szintcsökkenés",
+        "streakRule": "Két egymást követő munkamenet ugyanabban a zónában aktiválja a döntést.",
+        "trackProgress": "Sáv {{current}}/{{required}}",
+        "cleanProgress": "Érvényesítve {{current}}/{{required}}",
+        "stayProgress": "Tartás {{current}}/{{required}}",
+        "downProgress": "Kudarc {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "A Dual Track folyamatos elsajátítási sávot használ minden célszám-szakaszhoz:",
+        "calibration": "Egy első kalibráció megbecsüli az induló célszámodat",
+        "goodSession": "Minden jó munkamenet egy kicsit feltölti a jelenlegi szakaszt",
+        "mastery": "A közel tökéletes munkamenetek gyorsabban töltik, de a normál munkamenetek szerények maradnak",
+        "regression": "A gyenge munkamenetek csökkenthetik is a jelenlegi elsajátítási sávot",
+        "unlock": "A következő célszám csak akkor nyílik meg, ha a jelenlegi szakasz eléri a 100%-ot"
+      }
+    },
+    "switcher": {
+      "open": "Utazásváltó megnyitása",
+      "current": "Jelenlegi",
+      "showAll": "Összes utazás",
+      "settings": "Utazás beállítások"
+    },
+    "previous": "Előző utazás",
+    "next": "Következő utazás",
+    "calibration": {
+      "title": "Első munkamenet",
+      "subtitle": "Egy rövid kalibráció meghatározza a kezdő szintedet, vagy közvetlenül a 2. szinten is kezdhetsz.",
+      "skipToN2": "vagy kezdj N-2 szinten",
+      "continueAt": "vagy folytasd N-{{level}} szinten",
+      "start": "Kalibráció indítása",
+      "redo": "Kalibráció újra",
+      "badge": "Kalibráció"
+    },
+    "presets": {
+      "currentSlot": "Egyéni",
+      "currentSlotView": "Egyéni",
+      "lockedTitle": "Néhány opció zárolva van",
+      "lockedDesc": "A haladás összehasonlíthatósága érdekében a modalitások (és néhány opció) nem módosíthatók az utazás megkezdése után."
+    },
+    "completed": {
+      "title": "Utazás befejezve!",
+      "subtitle": "Minden szakasz érvényesítve. Szép munka!",
+      "continueFree": "Edzés folytatása"
+    },
+    "report": {
+      "stage": "Szakasz",
+      "level": "Szint",
+      "score": "Pontszám",
+      "sessionValidated": "Munkamenet érvényesítve!",
+      "sessionNotValidated": "Munkamenet nem érvényesítve",
+      "minScore": "Minimum szükséges:",
+      "stageCompleted": "Szakasz befejezve!",
+      "stageUnlocked": "{{stage}}. szakasz feloldva!",
+      "replay": "Újrajátszás",
+      "nextStage": "Következő szakasz",
+      "home": "Főoldal",
+      "hits": "Találatok",
+      "misses": "Kihagyások",
+      "falseAlarms": "Téves riasztások",
+      "correctRejections": "Helyes elutasítások"
+    }
+  }
+}

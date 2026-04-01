@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Důslednost",
+      "performance": "Výkon",
+      "resilience": "Odolnost",
+      "exploration": "Průzkum",
+      "milestone": "Milníky",
+      "cognitive": "Kognitivní"
+    },
+    "first_session": {
+      "name": "Probuzený Neuron",
+      "description": "První sezení dokončeno."
+    },
+    "sessions_10": {
+      "name": "sloup (bronzový)",
+      "description": "Dokončeno 10 sezení."
+    },
+    "sessions_25": {
+      "name": "Pilíř (stříbrný)",
+      "description": "Dokončeno 25 sezení."
+    },
+    "marathoner": {
+      "name": "sloup (zlatý)",
+      "description": "Dokončeno 50 sezení."
+    },
+    "streak_3": {
+      "name": "Rodící se rituál",
+      "description": "3denní série."
+    },
+    "streak_7": {
+      "name": "Denní rituál",
+      "description": "7denní série."
+    },
+    "streak_14": {
+      "name": "Ukotvený zvyk",
+      "description": "14denní série."
+    },
+    "streak_30": {
+      "name": "Železná disciplína",
+      "description": "30denní série."
+    },
+    "early_bird": {
+      "name": "Ranní ptáče",
+      "description": "5 různých dnů se zasedáním před 8:00."
+    },
+    "night_owl": {
+      "name": "Noční sova",
+      "description": "5 různých dnů se zasedáním po 22:00."
+    },
+    "brain_n3": {
+      "name": "Ostrý mozek",
+      "description": "Dosáhněte úrovně N-3."
+    },
+    "brain_n4": {
+      "name": "Svalnatý mozek",
+      "description": "Dosáhněte úrovně N-4."
+    },
+    "brain_n5": {
+      "name": "olympijský mozek",
+      "description": "Dosáhněte úrovně N-5."
+    },
+    "brain_n7": {
+      "name": "Kognitivní elita",
+      "description": "Dosáhněte úrovně N-7."
+    },
+    "brain_n10": {
+      "name": "Nadčlověk",
+      "description": "Dosáhněte úrovně N-10."
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "> 90% přesnost při N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Chirurgická přesnost",
+      "description": "> 95% přesnost při N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "laser",
+      "description": "> 98% přesnost při N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Nedotknutelný",
+      "description": "Perfektní relace (0 chyb) při N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Rychlý reflex",
+      "description": "Průměrná reakční doba < 500 ms s přesností ≥ 70 %."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Průměrná reakční doba < 400 ms s přesností ≥ 70 %."
+    },
+    "rt_300": {
+      "name": "Blesk",
+      "description": "Průměrná reakční doba < 300 ms s přesností ≥ 70 %."
+    },
+    "consistent": {
+      "name": "Konzistentní",
+      "description": "Směrodatná odchylka RT < 100 ms (vyžadováno ≥ 10 odpovědí)."
+    },
+    "dprime_master": {
+      "name": "d' Master",
+      "description": "d-prime > 3,0 v relaci."
+    },
+    "dprime_4": {
+      "name": "Expert na SDT",
+      "description": "d-prime > 4,0 v relaci."
+    },
+    "no_pause": {
+      "name": "Nepřerušovaně",
+      "description": "5 po sobě jdoucích relací bez pauzy s přesností ≥75 %."
+    },
+    "steady_hands": {
+      "name": "Pevné ruce",
+      "description": "Žádné falešné vstupy během relace (přesnost ≥ 80 %)."
+    },
+    "zen_master": {
+      "name": "Zenový mistr",
+      "description": "10 sezení, aniž byste kdy skončili."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "O úroveň výš po úrovni dolů."
+    },
+    "persistent": {
+      "name": "Vytrvalý",
+      "description": "3 sezení ve stejný den po neúspěchu."
+    },
+    "second_wind": {
+      "name": "Druhý vítr",
+      "description": "Zlepšete d-prime mezi polovinou 1 a 2 (požadováno d′ ≥ 2,0)."
+    },
+    "plateau_breaker": {
+      "name": "Plateau Breaker",
+      "description": "Pokrok po 10+ sezeních na stejné úrovni."
+    },
+    "no_surrender": {
+      "name": "Žádná kapitulace",
+      "description": "25 sezení bez ukončení."
+    },
+    "ironwill": {
+      "name": "Železná vůle",
+      "description": "50 sezení bez ukončení."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Zvuk > 80 %, ale vizuální < 70 %."
+    },
+    "eagle_eye": {
+      "name": "Orlí oko",
+      "description": "Vizuální > 80 %, ale zvuk < 70 %."
+    },
+    "synchronized": {
+      "name": "Synchronizováno",
+      "description": "Zvukové a vizuální skóre do 5 % (požadováno ≥60 %)."
+    },
+    "dual_master": {
+      "name": "Dvojitý mistr",
+      "description": "Zvukové a vizuální > 85 % ve stejné relaci (≥6 návnad/modalita)."
+    },
+    "dual_elite": {
+      "name": "Duální elita",
+      "description": "Zvukové a vizuální > 90 % ve stejné relaci při N ≥ 3 (≥ 6 návnad/modalita)."
+    },
+    "centurion": {
+      "name": "setník",
+      "description": "Dokončeno 100 sezení."
+    },
+    "sessions_250": {
+      "name": "Legenda (smaragd)",
+      "description": "Dokončeno 250 sezení."
+    },
+    "sessions_500": {
+      "name": "Nesmrtelný (diamant)",
+      "description": "Dokončeno 500 sezení."
+    },
+    "trials_500": {
+      "name": "Praktikující",
+      "description": "Celkem odehráno 500 pokusů."
+    },
+    "trials_1000": {
+      "name": "Trénovaný",
+      "description": "Celkem odehráno 1 000 pokusů."
+    },
+    "trials_5000": {
+      "name": "Kořeněné",
+      "description": "Celkem odehráno 5 000 pokusů."
+    },
+    "trials_10k": {
+      "name": "10 000 zkoušek",
+      "description": "Celkem odehráno 10 000 pokusů."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Celkem odehráno 50 000 pokusů."
+    },
+    "streak_90": {
+      "name": "Bezchybná čtvrť",
+      "description": "90denní série."
+    },
+    "streak_365": {
+      "name": "Perfektní rok",
+      "description": "365denní série."
+    },
+    "veteran": {
+      "name": "veterán",
+      "description": "1 rok používání."
+    },
+    "metronome": {
+      "name": "Metronom",
+      "description": "Rozptyl RT < 50 ms na ≥ 20 studiích (vyžadovány aktivní odpovědi)."
+    },
+    "flow_state": {
+      "name": "State of Grace",
+      "description": "Tok detekovaný v rámci celé relace."
+    },
+    "sang_froid": {
+      "name": "Cool Head",
+      "description": "Žádná chybová kaskáda po chybě (≥70% přesnost)."
+    },
+    "imperturbable": {
+      "name": "Neotřesitelné",
+      "description": "Celá relace bez ztráty zaměření (přesnost ≥ 60 %)."
+    },
+    "comeback_strong": {
+      "name": "Silný návrat",
+      "description": "Překonejte svůj d-prime rekord po 3 a více dnech (d′ ≥ 2,5)."
+    }
+  }
+}

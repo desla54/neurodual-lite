@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Konsistens",
+      "performance": "Ytelse",
+      "resilience": "Spenst",
+      "exploration": "Utforskning",
+      "milestone": "Milepæler",
+      "cognitive": "Kognitiv"
+    },
+    "first_session": {
+      "name": "Oppvåknet nevron",
+      "description": "Første økt fullført."
+    },
+    "sessions_10": {
+      "name": "Søyle (bronse)",
+      "description": "10 økter gjennomført."
+    },
+    "sessions_25": {
+      "name": "Søyle (sølv)",
+      "description": "25 økter gjennomført."
+    },
+    "marathoner": {
+      "name": "Søyle (gull)",
+      "description": "50 økter gjennomført."
+    },
+    "streak_3": {
+      "name": "Et begynnende ritual",
+      "description": "3-dagers rekke."
+    },
+    "streak_7": {
+      "name": "Daglig ritual",
+      "description": "7-dagers rekke."
+    },
+    "streak_14": {
+      "name": "Forankret vane",
+      "description": "14-dagers rekke."
+    },
+    "streak_30": {
+      "name": "Jerndisiplin",
+      "description": "30-dagers rekke."
+    },
+    "early_bird": {
+      "name": "Early Bird",
+      "description": "5 forskjellige dager med økt før kl."
+    },
+    "night_owl": {
+      "name": "Natugle",
+      "description": "5 forskjellige dager med økt etter kl 22.00."
+    },
+    "brain_n3": {
+      "name": "Skarp hjerne",
+      "description": "Nå nivå N-3."
+    },
+    "brain_n4": {
+      "name": "Muskuløs hjerne",
+      "description": "Nå nivå N-4."
+    },
+    "brain_n5": {
+      "name": "Olympisk hjerne",
+      "description": "Nå nivå N-5."
+    },
+    "brain_n7": {
+      "name": "Kognitiv elite",
+      "description": "Nå nivå N-7."
+    },
+    "brain_n10": {
+      "name": "Overmenneskelig",
+      "description": "Nå nivå N-10."
+    },
+    "sniper": {
+      "name": "Snikskytter",
+      "description": "> 90 % nøyaktighet ved N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Kirurgisk presisjon",
+      "description": "> 95 % nøyaktighet ved N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98 % nøyaktighet ved N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Urørlig",
+      "description": "Perfekt økt (0 feil) ved N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Rask refleks",
+      "description": "Gjennomsnittlig reaksjonstid < 500ms med ≥70 % nøyaktighet."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Gjennomsnittlig reaksjonstid < 400ms med ≥70 % nøyaktighet."
+    },
+    "rt_300": {
+      "name": "Lyn",
+      "description": "Gjennomsnittlig reaksjonstid < 300ms med ≥70 % nøyaktighet."
+    },
+    "consistent": {
+      "name": "Konsekvent",
+      "description": "RT-standardavvik < 100ms (≥10 svar kreves)."
+    },
+    "dprime_master": {
+      "name": "d 'mester",
+      "description": "d-prime > 3.0 i en økt."
+    },
+    "dprime_4": {
+      "name": "SDT-ekspert",
+      "description": "d-prime > 4.0 i en økt."
+    },
+    "no_pause": {
+      "name": "Uavbrutt",
+      "description": "5 påfølgende økter uten pause med ≥75 % nøyaktighet."
+    },
+    "steady_hands": {
+      "name": "Stødige hender",
+      "description": "Ingen falske inndata under økten (≥80 % nøyaktighet)."
+    },
+    "zen_master": {
+      "name": "Zen-mester",
+      "description": "10 økter uten noen gang å slutte."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "Nivå opp etter et nivå ned."
+    },
+    "persistent": {
+      "name": "Vedvarende",
+      "description": "3 økter samme dag etter en feil."
+    },
+    "second_wind": {
+      "name": "Andre vind",
+      "description": "Forbedre d-prime mellom halvparten 1 og 2 (d′ ≥ 2,0 nødvendig)."
+    },
+    "plateau_breaker": {
+      "name": "Platåbryter",
+      "description": "Fremgang etter 10+ økter på samme nivå."
+    },
+    "no_surrender": {
+      "name": "Ingen overgivelse",
+      "description": "25 økter uten å slutte."
+    },
+    "ironwill": {
+      "name": "Iron Will",
+      "description": "50 økter uten å slutte."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Lyd > 80 %, men visuell < 70 %."
+    },
+    "eagle_eye": {
+      "name": "Eagle Eye",
+      "description": "Visuelt > 80 %, men lyd < 70 %."
+    },
+    "synchronized": {
+      "name": "Synkronisert",
+      "description": "Lyd- og bilderesultater innenfor 5 % (≥60 % påkrevd)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio OG Visual > 85 % i samme økt (≥6 lokker/modalitet)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio OG Visual > 90 % i samme økt ved N ≥ 3 (≥6 lokker/modalitet)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 økter gjennomført."
+    },
+    "sessions_250": {
+      "name": "Legend (smaragd)",
+      "description": "250 økter gjennomført."
+    },
+    "sessions_500": {
+      "name": "Udødelig (diamant)",
+      "description": "500 økter gjennomført."
+    },
+    "trials_500": {
+      "name": "Utøver",
+      "description": "Totalt 500 forsøk spilt."
+    },
+    "trials_1000": {
+      "name": "Opplært",
+      "description": "Totalt 1000 forsøk spilt."
+    },
+    "trials_5000": {
+      "name": "Krydret",
+      "description": "Totalt 5000 forsøk spilt."
+    },
+    "trials_10k": {
+      "name": "10 000 forsøk",
+      "description": "Totalt 10 000 forsøk spilt."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Totalt 50 000 forsøk spilt."
+    },
+    "streak_90": {
+      "name": "Feilfritt kvartal",
+      "description": "90-dagers rekke."
+    },
+    "streak_365": {
+      "name": "Perfekt år",
+      "description": "365-dagers rekke."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 års bruk."
+    },
+    "metronome": {
+      "name": "Metronomen",
+      "description": "RT-varians < 50ms på ≥20 forsøk (aktive svar kreves)."
+    },
+    "flow_state": {
+      "name": "Nådens tilstand",
+      "description": "Flow oppdaget over en hel økt."
+    },
+    "sang_froid": {
+      "name": "Cool Head",
+      "description": "Ingen feilkaskade etter en feil (≥70 % nøyaktighet)."
+    },
+    "imperturbable": {
+      "name": "Urokkelig",
+      "description": "Full økt uten å miste fokus (≥60 % nøyaktighet)."
+    },
+    "comeback_strong": {
+      "name": "Sterkt comeback",
+      "description": "Slå d-prime-rekorden etter 3+ dager unna (d′ ≥ 2,5)."
+    }
+  }
+}

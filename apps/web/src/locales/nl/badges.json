@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Consistentie",
+      "performance": "Prestatie",
+      "resilience": "Veerkracht",
+      "exploration": "Verkenning",
+      "milestone": "Mijlpalen",
+      "cognitive": "Cognitief"
+    },
+    "first_session": {
+      "name": "Ontwaakt Neuron",
+      "description": "Eerste sessie voltooid."
+    },
+    "sessions_10": {
+      "name": "Pijler (Brons)",
+      "description": "10 sessies voltooid."
+    },
+    "sessions_25": {
+      "name": "Pijler (Zilver)",
+      "description": "25 sessies voltooid."
+    },
+    "marathoner": {
+      "name": "Pijler (Goud)",
+      "description": "50 sessies voltooid."
+    },
+    "streak_3": {
+      "name": "Ontluikend Ritueel",
+      "description": "3-daagse reeks."
+    },
+    "streak_7": {
+      "name": "Dagelijks Ritueel",
+      "description": "7-daagse reeks."
+    },
+    "streak_14": {
+      "name": "Verankerde Gewoonte",
+      "description": "14-daagse reeks."
+    },
+    "streak_30": {
+      "name": "IJzeren Discipline",
+      "description": "30-daagse reeks."
+    },
+    "early_bird": {
+      "name": "Vroege Vogel",
+      "description": "5 verschillende dagen met sessie voor 8 uur 's ochtends."
+    },
+    "night_owl": {
+      "name": "Nachtuil",
+      "description": "5 verschillende dagen met sessie na 22 uur."
+    },
+    "brain_n3": {
+      "name": "Scherp Brein",
+      "description": "Bereik niveau N-3."
+    },
+    "brain_n4": {
+      "name": "Sterk Brein",
+      "description": "Bereik niveau N-4."
+    },
+    "brain_n5": {
+      "name": "Olympisch Brein",
+      "description": "Bereik niveau N-5."
+    },
+    "brain_n7": {
+      "name": "Cognitieve Elite",
+      "description": "Bereik niveau N-7."
+    },
+    "brain_n10": {
+      "name": "Supermens",
+      "description": "Bereik niveau N-10."
+    },
+    "sniper": {
+      "name": "Sluipschutter",
+      "description": "> 90% nauwkeurigheid bij N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Chirurgische Precisie",
+      "description": "> 95% nauwkeurigheid bij N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% nauwkeurigheid bij N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Onaantastbaar",
+      "description": "Perfecte sessie (0 fouten) bij N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Snelle Reflex",
+      "description": "Gemiddelde reactietijd < 500ms met ≥70% nauwkeurigheid."
+    },
+    "flash": {
+      "name": "Flits",
+      "description": "Gemiddelde reactietijd < 400ms met ≥70% nauwkeurigheid."
+    },
+    "rt_300": {
+      "name": "Bliksem",
+      "description": "Gemiddelde reactietijd < 300ms met ≥70% nauwkeurigheid."
+    },
+    "consistent": {
+      "name": "Consistent",
+      "description": "RT standaarddeviatie < 100ms (≥10 reacties vereist)."
+    },
+    "dprime_master": {
+      "name": "d' Meester",
+      "description": "d-prime > 3.0 in een sessie."
+    },
+    "dprime_4": {
+      "name": "SDT Expert",
+      "description": "d-prime > 4.0 in een sessie."
+    },
+    "no_pause": {
+      "name": "Ononderbroken",
+      "description": "5 opeenvolgende sessies zonder pauze met ≥75% nauwkeurigheid."
+    },
+    "steady_hands": {
+      "name": "Vaste Handen",
+      "description": "Geen foute invoer tijdens sessie (≥80% nauwkeurigheid)."
+    },
+    "zen_master": {
+      "name": "Zen Meester",
+      "description": "10 sessies zonder stoppen."
+    },
+    "comeback_kid": {
+      "name": "Comeback Kid",
+      "description": "Level omhoog na een level omlaag."
+    },
+    "persistent": {
+      "name": "Volhardend",
+      "description": "3 sessies op dezelfde dag na een mislukking."
+    },
+    "second_wind": {
+      "name": "Tweede Adem",
+      "description": "Verbeter d-prime tussen helft 1 en 2 (d′ ≥ 2.0 vereist)."
+    },
+    "plateau_breaker": {
+      "name": "Plateaubreker",
+      "description": "Vooruitgang na 10+ sessies op hetzelfde niveau."
+    },
+    "no_surrender": {
+      "name": "Geen Overgave",
+      "description": "25 sessies zonder stoppen."
+    },
+    "ironwill": {
+      "name": "IJzeren Wil",
+      "description": "50 sessies zonder stoppen."
+    },
+    "audiophile": {
+      "name": "Audiofiel",
+      "description": "Audio > 80% maar Visueel < 70%."
+    },
+    "eagle_eye": {
+      "name": "Adelaarsoog",
+      "description": "Visueel > 80% maar Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Gesynchroniseerd",
+      "description": "Audio- en Visuele scores binnen 5% (≥60% vereist)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio EN Visueel > 85% in dezelfde sessie (≥6 vallen/modaliteit)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio EN Visueel > 90% in dezelfde sessie bij N ≥ 3 (≥6 vallen/modaliteit)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 sessies voltooid."
+    },
+    "sessions_250": {
+      "name": "Legende (Smaragd)",
+      "description": "250 sessies voltooid."
+    },
+    "sessions_500": {
+      "name": "Onsterfelijk (Diamant)",
+      "description": "500 sessies voltooid."
+    },
+    "trials_500": {
+      "name": "Beoefenaar",
+      "description": "500 totale pogingen gespeeld."
+    },
+    "trials_1000": {
+      "name": "Getraind",
+      "description": "1.000 totale pogingen gespeeld."
+    },
+    "trials_5000": {
+      "name": "Doorgewinterd",
+      "description": "5.000 totale pogingen gespeeld."
+    },
+    "trials_10k": {
+      "name": "10.000 Pogingen",
+      "description": "10.000 totale pogingen gespeeld."
+    },
+    "trials_50k": {
+      "name": "Titaan",
+      "description": "50.000 totale pogingen gespeeld."
+    },
+    "streak_90": {
+      "name": "Foutloos Kwartaal",
+      "description": "90-daagse reeks."
+    },
+    "streak_365": {
+      "name": "Perfect Jaar",
+      "description": "365-daagse reeks."
+    },
+    "veteran": {
+      "name": "Veteraan",
+      "description": "1 jaar gebruik."
+    },
+    "metronome": {
+      "name": "De Metronoom",
+      "description": "RT-variantie < 50ms op ≥20 pogingen (actieve reacties vereist)."
+    },
+    "flow_state": {
+      "name": "Staat van Genade",
+      "description": "Flow gedetecteerd gedurende een hele sessie."
+    },
+    "sang_froid": {
+      "name": "Koele Kop",
+      "description": "Geen foutcascade na een fout (≥70% nauwkeurigheid)."
+    },
+    "imperturbable": {
+      "name": "Onverstoorbaar",
+      "description": "Volledige sessie zonder focusverlies (≥60% nauwkeurigheid)."
+    },
+    "comeback_strong": {
+      "name": "Sterke Comeback",
+      "description": "Versla je d-prime record na 3+ dagen afwezigheid (d′ ≥ 2.5)."
+    }
+  }
+}

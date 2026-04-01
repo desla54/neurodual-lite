@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Alle rechten voorbehouden.",
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "version": "Versie 3.0 — Laatst bijgewerkt: 2026-03-04",
+      "healthWarning": {
+        "title": "BELANGRIJKE GEZONDHEIDSWAARSCHUWING",
+        "content": "NeuroDual is een app voor cognitieve training en welzijn. <strong>Het is geen medisch hulpmiddel.</strong> Het diagnosticeert, behandelt, geneest of voorkomt geen enkele ziekte. Als je zorgen hebt of ongemak ervaart, stop dan met het gebruik van de app en raadpleeg een zorgprofessional."
+      },
+      "section1": {
+        "title": "1. Doel en Aanvaarding",
+        "content": "Door NeuroDual te downloaden, installeren of gebruiken, aanvaard je onvoorwaardelijk deze Gebruiksvoorwaarden. Als je deze voorwaarden niet aanvaardt, gebruik de applicatie dan niet."
+      },
+      "section2": {
+        "title": "2. Beschrijving van de Dienst",
+        "content": "NeuroDual biedt Dual N-Back werkgeheugentraining, met lokaal gegevensbeheer en synchronisatieopties via een account. De dienst wordt geleverd zoals die is en kan evolueren.",
+        "item1": "Compatibiliteit: web- en mobiele applicaties (afhankelijk van beschikbaarheid).",
+        "item2": "Toegang: sommige functies vereisen een internetverbinding en/of het aanmaken van een account.",
+        "item3": "Updates: we kunnen zonder kennisgeving fixes of updates uitrollen om veiligheids- of prestatieredenen.",
+        "item4": "Advertenties: de gratis mobiele versie kan interstitiële advertenties tonen (Google AdMob). Premium-gebruikers zien geen advertenties."
+      },
+      "section3": {
+        "title": "3. Accounts en Beveiliging",
+        "item1": "Optioneel account aanmaken via e-mail of identiteitsprovider (Google, Apple).",
+        "item2": "Je bent verantwoordelijk voor het vertrouwelijk houden van je inloggegevens en alle acties die met je account worden uitgevoerd.",
+        "item3": "Account- en bijbehorende gegevensverwijdering is beschikbaar vanuit Instellingen.",
+        "item4": "We kunnen een account opschorten of beëindigen bij schending van deze Voorwaarden, fraudepogingen of beveiligingsinbreuken."
+      },
+      "section4": {
+        "title": "4. Gebruiksregels en Beperkingen",
+        "item1": "Omzeil geen beveiligingsmaatregelen of technische beperkingen.",
+        "item2": "Gebruik de applicatie niet voor illegale of schadelijke doeleinden.",
+        "item3": "Probeer geen reverse engineering of ongeautoriseerde inhoudsextractie.",
+        "item4": "Respecteer intellectuele eigendomsrechten op de applicatie en de inhoud ervan."
+      },
+      "section5": {
+        "title": "5. Intellectueel Eigendom",
+        "content": "Alle elementen (tekst, afbeeldingen, geluiden, broncode, logo's) zijn auteursrechtelijk beschermd en blijven eigendom van de uitgever of zijn licentiegevers. Er wordt geen licentie verleend behalve het persoonlijke, niet-exclusieve en niet-overdraagbare recht om de applicatie te gebruiken in overeenstemming met deze Voorwaarden."
+      },
+      "section6": {
+        "title": "6. Beschikbaarheid en Ondersteuning",
+        "content": "De dienst is 24/7 toegankelijk behoudens onderhoud of overmacht. We garanderen geen continue beschikbaarheid of prestaties. Ondersteuning: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. In-app Aankopen / Abonnementen",
+        "content": "Premium-abonnementen zijn beschikbaar: jaarlijks en levenslang (10 jaar). Betalingen worden beheerd door RevenueCat (mobiel) of Lemon Squeezy (web). De <strong>Verkoopvoorwaarden</strong> zijn van toepassing (prijzen, herroeping, verlenging, annulering, terugbetaling) en zijn beschikbaar vóór aankoop."
+      },
+      "section8": {
+        "title": "8. Aansprakelijkheid",
+        "item1": "De dienst wordt geleverd \"zoals die is\" zonder resultaatgarantie.",
+        "item2": "We zijn niet verantwoordelijk voor directe of indirecte schade gerelateerd aan gebruik, verlies van niet-opgeslagen lokale gegevens, of interpretatie van statistieken.",
+        "item3": "Als je ongemak, nadelige effecten of zorgen over je gezondheid ervaart, stop dan met gebruik."
+      },
+      "section9": {
+        "title": "9. Persoonsgegevens",
+        "content": "De verwerking van persoonsgegevens wordt beschreven in het <a>Privacybeleid</a>. Bij tegenstrijdigheid tussen de Voorwaarden en het Privacybeleid inzake gegevenszaken, prevaleert het Privacybeleid."
+      },
+      "section10": {
+        "title": "10. Wijziging van Voorwaarden",
+        "content": "We kunnen deze Voorwaarden wijzigen om juridische, technische of dienstredenen. De bijwerkdatum verschijnt bovenaan het document. Bij substantiële wijzigingen wordt een melding weergegeven in de applicatie."
+      },
+      "section11": {
+        "title": "11. Toepasselijk Recht en Geschillen",
+        "content": "Deze Voorwaarden worden beheerst door Frans recht. Bij geschillen en na minnelijke pogingen kunnen consumentgebruikers gebruikmaken van consumentenmediatie of het Europese platform voor onlinegeschillenbeslechting (ODR). Anders hebben Franse rechtbanken exclusieve bevoegdheid."
+      },
+      "section12": {
+        "title": "12. Contact",
+        "content": "Voor vragen over deze Voorwaarden:"
+      }
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "version": "Versie 3.0 — Laatst bijgewerkt: 2026-03-04",
+      "intro": {
+        "p1": "Dit Privacybeleid beschrijft hoe NeuroDual (\"wij\", \"ons\") je persoonsgegevens verwerkt wanneer je onze mobiele applicatie en website gebruikt.",
+        "p2": "We passen de principes van de Algemene Verordening Gegevensbescherming (AVG) en de Franse Wet Bescherming Persoonsgegevens toe. We geven de voorkeur aan een \"lokaal-eerst\"-architectuur, verkopen of verhuren je gegevens niet en gebruiken doelgroepmetingen om het product te verbeteren."
+      },
+      "section1": {
+        "title": "1. Verwerkingsverantwoordelijke",
+        "responsible": "Verantwoordelijke:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Statutaire zetel:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Frankrijk",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "E-mail:",
+        "dpo": "DPO: AGUILAL Abdeslam (zelfde contactgegevens). Voor vragen over je gegevens, neem contact op via bovenstaand adres."
+      },
+      "section2": {
+        "title": "2. Gegevens die We Verzamelen",
+        "sub1": {
+          "title": "2.1 Door Gebruiker Gegenereerde Gegevens (Lokale Modus)",
+          "content": "Alleen op je apparaat opgeslagen via SQLite zolang je uitgelogd bent:",
+          "item1": "Scores en N-Back-sessiegeschiedenis.",
+          "item2": "Spelconfiguratieïnstellingen.",
+          "item3": "Lokaal profiel (bijnaam, gekozen avatar).",
+          "note": "Deze gegevens passeren niet via onze servers totdat je een account aanmaakt. Als je de app verwijdert, gaan deze gegevens verloren."
+        },
+        "sub2": {
+          "title": "2.2 Accountgegevens (Optioneel)",
+          "content": "Als je een account aanmaakt om je gegevens te synchroniseren:",
+          "item1": "E-mailadres (unieke identificatie).",
+          "item2": "Gebruikers-ID verstrekt door de identiteitsprovider (Google, Apple).",
+          "note": "Deze gegevens worden beheerd via onze authenticatieprovider (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Technische Logs",
+          "content": "Gepseudonimiseerde logs (fouten, synchronisatiestatus, prestaties) voor beveiliging en ondersteuning."
+        },
+        "sub4": {
+          "title": "2.4 Ondersteuningsgegevens",
+          "content": "E-mailuitwisselingen met ondersteuning kunnen je contactgegevens en verzoekinhoud bevatten om te reageren."
+        },
+        "sub5": {
+          "title": "2.5 Monitoring en Foutopsporing",
+          "content": "Technische gegevens (fouten, prestaties, abnormaal gedrag) verzameld via Sentry om de stabiliteit van de applicatie te verbeteren. Gepseudonimiseerde gegevens, geen advertentietargeting."
+        },
+        "sub6": {
+          "title": "2.6 Doelgroepmeting en Productanalyse",
+          "content": "Geanonimiseerde gebruiksgegevens verzameld via PostHog (bezochte pagina's, in-app-acties, apparaattype) om het product te verbeteren. Er worden geen persoonlijk identificeerbare gegevens verzonden. Geen advertentietargeting."
+        },
+        "sub7": {
+          "title": "2.7 Advertenties (Gratis Mobiele Versie)",
+          "content": "De gratis Android-versie toont interstitiële advertenties via Google AdMob. Google kan een advertentie-ID en technische gegevens (apparaattype, taal, advertentie-interacties) verzamelen. Premium-gebruikers worden niet blootgesteld aan advertenties. Meer informatie: Privacybeleid van Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Doeleinden en Rechtsgronden",
+        "content": "We gebruiken je gegevens alleen voor:",
+        "item1": "<strong>Dienstuitvoering</strong> (lokale back-up, statistieken, synchronisatie met meerdere apparaten) — Rechtsgrond: uitvoering van een overeenkomst (Art. 6.1.b AVG).",
+        "item2": "<strong>Beveiliging en fraudepreventie</strong> (technische logging, toegangscontrole) — Rechtsgrond: gerechtvaardigd belang (Art. 6.1.f AVG).",
+        "item3": "<strong>Gebruikersondersteuning</strong> — Rechtsgrond: gerechtvaardigd belang (reageren op verzoeken).",
+        "item4": "<strong>Wettelijke verplichtingen</strong> — Rechtsgrond: wettelijke verplichting (Art. 6.1.c AVG).",
+        "item5": "<strong>Monitoring en foutopsporing</strong> — Rechtsgrond: gerechtvaardigd belang (stabiliteitsverbetering); gepseudonimiseerde gegevens, geen gepersonaliseerde advertenties.",
+        "item6": "<strong>Doelgroepmeting</strong> (geanonimiseerde productanalyse via PostHog) — Rechtsgrond: gerechtvaardigd belang (Art. 6.1.f AVG); geanonimiseerde gegevens.",
+        "note": "Elke wijziging van doeleinden wordt gedocumenteerd in een update van dit beleid.",
+        "item7": "<strong>Advertenties</strong> (weergave van interstitiële advertenties voor gratis mobiele gebruikers) — Rechtsgrond: gerechtvaardigd belang (Art. 6.1.f AVG).",
+        "item8": "<strong>Marketing en nieuwsbrieven</strong> — Rechtsgrond: uitdrukkelijke toestemming (Art. 6.1.a AVG)."
+      },
+      "section4": {
+        "title": "4. Bewaartermijnen",
+        "item1": "<strong>Lokale gegevens:</strong> opgeslagen op je apparaat en verwijderd bij de-installatie of reset.",
+        "item2": "<strong>Account- en gesynchroniseerde gegevens:</strong> bewaard zolang het account actief is. Verwijderd binnen 30 dagen na verzoek tot accountverwijdering.",
+        "item3": "<strong>Technische logs:</strong> maximaal 12 maanden bewaard, daarna automatisch verwijderd.",
+        "item4": "<strong>Monitoring:</strong> gepseudonimiseerde technische gegevens 90 dagen bewaard voor foutopsporing en productverbetering.",
+        "item5": "<strong>Ondersteuningsverzoeken:</strong> 24 maanden bewaard na sluiting van het ticket, daarna verwijderd.",
+        "item6": "<strong>Doelgroepgegevens (PostHog):</strong> geanonimiseerd, 12 maanden bewaard."
+      },
+      "section5": {
+        "title": "5. Ontvangers, Verwerkers en Doorgifte",
+        "content": "Je gegevens kunnen worden verwerkt door de volgende aanbieders:",
+        "item1": "Supabase Inc. (authenticatie en clouddatabase, EU-hosting).",
+        "item2": "Amazon Web Services (Supabase-infrastructuur, EU-regio's).",
+        "item3": "Cloudflare Inc. (hosting van webapplicatie, CDN en beveiliging).",
+        "item4": "Sentry (fout- en prestatiemonitoring; doorgifte buiten de EU geregeld door Standaardcontractbepalingen).",
+        "item5": "RevenueCat Inc. (beheer van mobiele abonnementen en in-app-betalingen; slaat geen creditcardgegevens op).",
+        "note": "Als een nieuwe aanbieder wordt toegevoegd, wordt dit gedeelte bijgewerkt.",
+        "transfers": "<strong>Doorgifte buiten de EU:</strong> wanneer aanbieders buiten de EU betrokken zijn (bijv. Cloudflare, Supabase VS-entiteit, Sentry, RevenueCat, Google AdMob), wordt doorgifte geregeld door de Standaardcontractbepalingen (SCC) van de Europese Commissie of een gelijkwaardig mechanisme.",
+        "item6": "PostHog Inc. (doelgroepmeting en productanalyse; geanonimiseerde gegevens; EU-hosting).",
+        "item7": "Lemon Squeezy (beheer van webbetalingen; slaat geen creditcardgegevens op).",
+        "item8": "Google AdMob (advertentieweergave in gratis mobiele versie; doorgifte buiten de EU geregeld door Standaardcontractbepalingen)."
+      },
+      "section6": {
+        "title": "6. Jouw Rechten",
+        "content": "Op grond van de AVG heb je de volgende rechten:",
+        "item1": "Inzage, rectificatie, wissing.",
+        "item2": "Beperking en bezwaar (afhankelijk van rechtsgrond).",
+        "item3": "Overdraagbaarheid (exporteer je gegevens in JSON of CSV).",
+        "item4": "Intrekking van toestemming (indien van toepassing).",
+        "item5": "Klacht bij de toezichthoudende autoriteit (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Accountverwijdering:</strong> je kunt je account en alle bijbehorende gegevens rechtstreeks verwijderen vanuit de Instellingen van de applicatie. Deze actie is onomkeerbaar.",
+        "exercise": "Om je andere rechten uit te oefenen, neem contact op met <strong>support@neurodual.fr</strong>. Een identiteitsbewijs kan worden gevraagd bij redelijke twijfel. Reactietijd: 1 maand (verlengbaar tot 3 maanden bij complexe gevallen)."
+      },
+      "section7": {
+        "title": "7. Beveiliging",
+        "content": "Versleutelde communicatie (HTTPS/TLS), beperkte beheerderstoegang, machtigingscontroles. Bij een datalek dat waarschijnlijk een risico vormt, worden wettelijke meldingen gedaan (CNIL en getroffen personen)."
+      },
+      "section8": {
+        "title": "8. Cookies en Lokale Opslag",
+        "content": "De applicatie gebruikt SQLite om je voortgang rechtstreeks op je apparaat op te slaan. Er worden alleen essentiële technische cookies (authenticatie, sessie) gebruikt. De gratis mobiele versie gebruikt Google AdMob dat cookies of advertentie-ID's kan plaatsen."
+      },
+      "section9": {
+        "title": "9. Minderjarigen",
+        "content": "NeuroDual is bedoeld voor gebruikers ouder dan 16 jaar. Minderjarigen moeten de applicatie gebruiken onder verantwoordelijkheid van een wettelijke voogd."
+      },
+      "section10": {
+        "title": "10. Wijzigingen",
+        "content": "Elke bijgewerkte versie wordt hier gepubliceerd met de laatste bijwerkdatum. Bij substantiële wijzigingen wordt een melding verstrekt in de applicatie."
+      },
+      "section11": {
+        "title": "11. Contact",
+        "content": "Voor vragen of om je rechten uit te oefenen:",
+        "email": "E-mail: support@neurodual.fr",
+        "responsible": "Verwerkingsverantwoordelijke: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Verkoopvoorwaarden",
+      "version": "Jaarlijkse en levenslange abonnementen — Laatst bijgewerkt: 2026-03-04",
+      "section1": {
+        "title": "1. Doel",
+        "content": "Deze Verkoopvoorwaarden regelen het abonnement op NeuroDual Premium-plannen (jaarlijks en levenslang). Ze vullen de <a1>Gebruiksvoorwaarden</a1> en het <a2>Privacybeleid</a2> aan."
+      },
+      "section2": {
+        "title": "2. Aanbod en Prijzen",
+        "item1": "<strong>Jaarabonnement</strong>: prijs weergegeven vóór betaling (inclusief btw indien van toepassing), jaarlijks automatisch verlengd.",
+        "item2": "<strong>Levenslang abonnement (10 jaar)</strong>: eenmalige betaling die toegang geeft tot premiumfuncties gedurende 10 jaar zonder automatische verlenging.",
+        "item3": "Premium-toegang: cloudsynchronisatie met meerdere apparaten, externe back-ups, toegang tot alle N-niveaus, geavanceerde exports, advertentievrije ervaring, prioriteitsondersteuning.",
+        "item4": "Actuele prijzen zijn beschikbaar op de abonnementspagina in de app en in de winkels (App Store, Google Play).",
+        "item5": "Prijzen kunnen wijzigen; elke wijziging wordt vóór verlenging gecommuniceerd om annulering mogelijk te maken (niet van toepassing op levenslang)."
+      },
+      "section3": {
+        "title": "3. Duur, Verlenging en Annulering",
+        "item1": "<strong>Jaarabonnement</strong>: looptijd van 12 maanden vanaf de abonnementsdatum.",
+        "item2": "<strong>Levenslang abonnement</strong>: looptijd van 10 jaar vanaf de abonnementsdatum, geen verlenging.",
+        "item3": "Verlenging (jaarlijks): automatische verlenging bij elke termijn tenzij van tevoren geannuleerd.",
+        "item4": "Annulering (jaarlijks): op elk moment mogelijk vanuit de app- of winkelinstellingen (App Store, Google Play). Gaat in aan het einde van de huidige periode.",
+        "item5": "Levenslang is niet annuleerbaar maar blijft onderworpen aan het wettelijk herroepingsrecht (zie sectie 5)."
+      },
+      "section4": {
+        "title": "4. Betaling",
+        "item1": "Betalingen worden beheerd door RevenueCat via winkels (App Store, Google Play) of Lemon Squeezy voor web. We slaan je creditcardgegevens niet op.",
+        "item2": "Bij betalingsfouten (terugkerende abonnementen) kan premium-toegang worden opgeschort totdat het is opgelost.",
+        "item3": "Terugbetalingen voor aankopen via App Store of Google Play moeten worden aangevraagd bij de betreffende winkel."
+      },
+      "section5": {
+        "title": "5. Herroepingsrecht",
+        "content": "Digitale dienst geleverd na aankoop. Als je verzoekt om onmiddellijke uitvoering vóór het einde van de wettelijke termijn van 14 dagen, erken je dat je afstand doet van je herroepingsrecht bij volledige levering van de dienst. Zonder uitdrukkelijke afstand kun je het herroepingsrecht uitoefenen binnen 14 dagen na aankoop door te schrijven naar support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Terugbetaling",
+        "content": "Buiten het wettelijk herroepingsrecht zijn reeds gestarte abonnementen niet restitueerbaar, behalve bij dwingende bepalingen of ernstige gebreken toe te schrijven aan de dienst."
+      },
+      "section7": {
+        "title": "7. Wijzigingen van het Aanbod",
+        "content": "Premiumfuncties kunnen evolueren. Verwijdering van een essentiële functie wordt van tevoren gecommuniceerd en, indien van toepassing, met een optie om kosteloos te annuleren vóór de termijn."
+      },
+      "section8": {
+        "title": "8. Persoonsgegevens",
+        "content": "Verwerking van facturerings- en accountgegevens wordt beschreven in het <a>Privacybeleid</a>."
+      },
+      "section9": {
+        "title": "9. Klantenservice",
+        "content": "Voor vragen, terugbetalingen op grond van het herroepingsrecht of klachten:"
+      }
+    },
+    "mentions": {
+      "title": "Juridische kennisgeving",
+      "version": "Laatst bijgewerkt:",
+      "section1": {
+        "title": "1. Uitgever",
+        "company": "Bedrijfsnaam:",
+        "companyValue": "AGUILAL Abdeslam (Eenmanszaak)",
+        "address": "Adres:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Frankrijk",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "E-mail:"
+      },
+      "section2": {
+        "title": "2. Publicatiedirecteur",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-mail:"
+      },
+      "section3": {
+        "title": "3. Hosting",
+        "content": "De NeuroDual-applicatie wordt gehost door:",
+        "webapp": "Webapplicatie",
+        "database": "Database en Authenticatie",
+        "databaseInfra": "Infrastructuur: Amazon Web Services (EU-regio - eu-central-1)",
+        "monitoring": "Monitoring en Foutopsporing",
+        "subscriptions": "Abonnementsbeheer",
+        "analytics": "Doelgroepmeting",
+        "analyticsInfra": "EU-hosting",
+        "advertising": "Advertenties (gratis mobiele versie)",
+        "payments": "Webbetalingen",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Intellectueel Eigendom",
+        "p1": "Alle elementen van de NeuroDual-applicatie (tekst, afbeeldingen, geluiden, broncode, logo's, handelsmerken) zijn beschermd door het auteurs- en merkenrecht. Ongeautoriseerde reproductie, weergave of exploitatie is verboden.",
+        "p2": "De broncode van bepaalde functies maakt gebruik van opensourcebibliotheken waarvan de respectieve licenties worden gerespecteerd."
+      },
+      "section5": {
+        "title": "5. Persoonsgegevens",
+        "content": "De verwerking van persoonsgegevens wordt beschreven in ons <a>Privacybeleid</a>.",
+        "responsible": "Verwerkingsverantwoordelijke:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Bemiddeling en Geschillenbeslechting",
+        "p1": "Overeenkomstig Artikelen L.611-1 en volgende van het Franse Wetboek van Consumentenrecht kunnen consumentgebruikers, bij een onopgelost geschil na eerdere klacht bij onze klantenservice, kosteloos een beroep doen op een consumentenbemiddelaar.",
+        "odr": "Europees platform voor onlinegeschillenbeslechting (ODR):"
+      },
+      "section7": {
+        "title": "7. Juridische Documenten",
+        "privacy": "Privacybeleid",
+        "privacyNote": "(AVG)",
+        "terms": "Gebruiksvoorwaarden",
+        "termsNote": "(GV)",
+        "cgv": "Verkoopvoorwaarden",
+        "cgvNote": "(Verkoop)"
+      },
+      "section8": {
+        "title": "8. Contact",
+        "content": "Voor vragen over deze juridische kennisgeving:",
+        "email": "E-mail:"
+      }
+    }
+  }
+}

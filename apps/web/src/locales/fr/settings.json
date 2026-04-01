@@ -1066,7 +1066,13 @@
       },
       "continueWithout": "Continuer sans compte",
       "createAccount": "Créer un compte",
-      "purchaseSuccess": "Bienvenue dans Premium !"
+      "purchaseSuccess": "Bienvenue dans Premium !",
+      "free": "Mode gratuit",
+      "freeTimeRemaining": "{{time}} restant en mode gratuit",
+      "playedTime": "Temps de jeu",
+      "activationCode": "Code d'activation",
+      "activate": "Activer",
+      "active": "Premium actif"
     },
     "data": {
       "title": "Données",
@@ -1634,9 +1640,5 @@
       "difficultyMedium": "Moyen",
       "difficultyHard": "Difficile"
     }
-  },
-  "subscription": {
-    "free": "Gratuit",
-    "trial": "Essai"
   }
 }

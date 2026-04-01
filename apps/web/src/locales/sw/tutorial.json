@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Mafunzo",
+    "exitConfirm": "Ondoka kwenye mafunzo?",
+    "exitWarning": "Maendeleo yako hayatahifadhiwa.",
+    "continue": "Endelea",
+    "quit": "Ondoka",
+    "stepLabel": "Hatua {{step}}",
+    "previous": "Iliyopita",
+    "restart": "Anzisha upya",
+    "next": "Ijayo",
+    "startGame": "Anza",
+    "progress": "Kihesabu",
+    "tapToContinue": "Gusa ili kuendelea",
+    "controls": {
+      "position": "Nafasi",
+      "audio": "Sauti"
+    },
+    "annotation": {
+      "label": "Maelekezo"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Kazi nzuri. Umefaulu mafunzo.",
+        "stay": "Karibu huko. Fanya mazoezi zaidi na utapata.",
+        "down": "Bado haijathibitishwa. Jaribu tena mafunzo ili kuimarisha misingi."
+      },
+      "header": {
+        "up": "Mafunzo yamekamilika!",
+        "down": "Kagua",
+        "stay": "Karibu!"
+      },
+      "noteMinAssessment": "Kumbuka: Kwa tathmini sahihi zaidi, mafunzo hutathmini angalau majibu 8.",
+      "guidance": {
+        "passed": "Uko tayari kwa mafunzo ya bila malipo.",
+        "failed": "Tunapendekeza ujaribu tena mafunzo haya kabla ya kuendelea na mafunzo."
+      },
+      "correctAnswers": "{{correct}}/{{total}} majibu sahihi",
+      "actions": {
+        "backToHome": "Rudi nyumbani",
+        "retryTutorial": "Jaribu tena mafunzo",
+        "explainLevels": "Elewa viwango vya N (N)",
+        "goToTraining": "Nenda kwenye mafunzo",
+        "continueToTraining": "Endelea na mafunzo"
+      }
+    },
+    "welcome": {
+      "title": "Utangulizi wa mafunzo",
+      "description": "N-Back Mbili inapinga kumbukumbu yako ya kufanya kazi kwa kukuhitaji ufuatilie mitiririko miwili ya habari kwa wakati mmoja: nafasi ya kuona na sauti. Mafunzo haya yanakuongoza hatua kwa hatua.",
+      "button": "Anza mafunzo"
+    },
+    "timeline": {
+      "legend": "Rekodi ya matukio husaidia kulinganisha - inafichwa wakati wa mchezo",
+      "past": "Zamani",
+      "present": "Ipo"
+    },
+    "hub": {
+      "title": "Mafunzo",
+      "subtitle": "Chagua modi ya kujifunza",
+      "basics": {
+        "title": "Misingi",
+        "description": "Jifunze reflex na mdundo wa N-Back ya kawaida ya Dual."
+      },
+      "place": {
+        "title": "Mahali Pawili",
+        "description": "Uwekaji mkuu wa muda kwenye rekodi ya matukio."
+      },
+      "label": {
+        "title": "Chaguo mbili",
+        "description": "Weka kila kichocheo lebo kwa marejeleo yake ya muda (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Ufuatiliaji Mbili",
+        "description": "Jifunze ishara zinazoendelea za kukumbuka kupitia ufuatiliaji."
+      },
+      "memo": {
+        "title": "Memo Mbili",
+        "description": "Unda tena mlolongo kamili kutoka kwa kumbukumbu."
+      },
+      "soroban": {
+        "title": "Ustadi wa Soroban",
+        "description": "Jifunze abacus ya Kijapani hatua kwa hatua kupitia hatua 8 zinazoendelea."
+      }
+    },
+    "place": {
+      "comingSoon": "Mafunzo ya mahali yanatayarishwa",
+      "cardPool": "Kadi zinazopatikana",
+      "slot": "Yanayopangwa",
+      "observe": "Angalia: nafasi kwenye gridi ya taifa na herufi ya sauti.",
+      "buffer": "Kichocheo cha pili. Bafa ya N-back inajaza.",
+      "cardsAppear": "Kadi zinaonekana! Wanawakilisha vichocheo 3 vya mwisho.",
+      "firstDrag": "Bofya kadi iliyotiwa alama, kisha nafasi ya N-2 (ya zamani zaidi).",
+      "timelineExplain": "Ratiba inaonyesha wakati: N-2 = kongwe zaidi, N = sasa.",
+      "positionN1": "Weka nafasi ya kati kwenye slot ya N-1.",
+      "positionN": "Kubwa! Maliza na nafasi ya hivi karibuni zaidi (N slot).",
+      "audioIntro": "Sasa kadi za sauti! Kanuni sawa.",
+      "audioN2": "Weka herufi ya kwanza iliyosikika kwenye nafasi ya N-2.",
+      "audioN1": "Endelea na herufi ya kati (N-1 yanayopangwa).",
+      "audioN": "Maliza kwa herufi ya hivi majuzi zaidi (N yanayopangwa).",
+      "dualIntro": "Jaribio jipya! Weka nafasi NA herufi.",
+      "dualPractice": "Weka kadi zote 6 kwenye nafasi zinazofaa. Chukua wakati wako!",
+      "rhythmExplain": "Katika uchezaji halisi, utakuwa na muda mfupi.",
+      "autonomy": "Zamu yako! Weka kadi zote kwa usahihi.",
+      "conclusion": "Umefanya vizuri! Umefahamu misingi ya Mahali Pawili.",
+      "selectCard": "Chagua kadi, kisha ubofye nafasi yake",
+      "clickSlot": "Bofya nafasi ya kulia ili kuweka kadi",
+      "wrongSlot": "Sio nafasi hiyo! Angalia utaratibu wa muda.",
+      "wrongCard": "Sio kadi hiyo. Tafuta ile inayolingana na yanayopangwa.",
+      "tryAgain": "Jaribu tena! Slot sahihi imeangaziwa."
+    },
+    "memo": {
+      "comingSoon": "Mafunzo ya kumbukumbu yanatengenezwa",
+      "selectPosition": "Chagua nafasi",
+      "selectAudio": "Chagua barua",
+      "clickToRecall": "Bofya nafasi ili kukumbuka thamani",
+      "validate": "Thibitisha",
+      "observeFirst": "Kichocheo cha kwanza. Kariri nafasi na barua!",
+      "observeSecond": "Kichocheo cha pili. Endelea kukariri.",
+      "observeThird": "Kichocheo cha tatu. Bafa imekamilika. Jitayarishe!",
+      "recallIntro": "Gridi hupotea! Kumbuka kutoka kwa kumbukumbu. Bofya nafasi ya N-2.",
+      "firstRecall": "Bofya nafasi ya N-2. Nafasi ya kwanza ilikuwa ipi?",
+      "feedbackExplain": "Kijani = sahihi. Nyekundu = kosa. Unaweza kusahihisha hadi mara 3!",
+      "multiSlot": "Endelea! Kumbuka nafasi N-1 na N.",
+      "newStimulus": "Kichocheo kipya! Dirisha la N-nyuma hubadilika kwa moja.",
+      "windowShift": "Dirisha limehama. N-2 ya zamani inatoka, N mpya inaingia.",
+      "fullPosition": "Kumbuka nafasi zote 3. Zingatia!",
+      "audioIntro": "Kichocheo kipya. Sasa tunaongeza ukumbusho wa sauti!",
+      "firstAudioRecall": "Bofya nafasi ya sauti ya N-2. Barua gani?",
+      "fullAudio": "Endelea na herufi N-1 na N.",
+      "dualIntro": "Katika uchezaji halisi, unakumbuka nafasi NA herufi pamoja.",
+      "dualPractice": "Kumbuka visanduku vyote 6 kisha ubofye Thibitisha.",
+      "correctionExplain": "Ukikosea, bofya tena ili kusahihisha. Upeo mara 3.",
+      "withCorrection": "Ijaribu! Ikiwa umekosea, rekebisha kwa kubofya tena.",
+      "conclusion": "Bora kabisa! Umeweza kukumbuka amilifu. Anzisha kikao!",
+      "wrongAnswer": "Siyo hivyo. Fikiria, ni kichocheo gani kilikuwa wakati huo?",
+      "tryAgain": "Jaribu tena! Bado unaweza kusahihisha.",
+      "maxCorrections": "Marekebisho 3 yamefikiwa. Nafasi hii imefungwa.",
+      "validateHint": "Nafasi zote zimejaa. Bofya Thibitisha!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Karibu kwenye Dual Pick! Jifunze kuainisha kila kichocheo.",
+        "hud": "Juu: maendeleo yako katika mafunzo.",
+        "grid": "Gridi ya taifa imegawanywa katika kanda 3: TOP, KATI, BOTTOM.",
+        "controls": "Vifungo hivi vinaainisha. Nafasi upande wa kushoto, Sauti kulia.",
+        "outro": "Tayari? Wacha tuanze na uainishaji wa nafasi!"
+      },
+      "intro": "Katika Chaguo-Mwili, unaainisha kila kichocheo kwa vigezo viwili: eneo la gridi ya taifa na aina ya sauti.",
+      "gridExplain": "Gridi ya taifa ina kanda 3: TOP (safu ya juu), KATI (katikati), BOTTOM (safu ya chini).",
+      "positionHaut": "Mraba iko juu. Bofya JUU.",
+      "positionMilieu": "Mraba iko katikati. Bofya KATIKATI.",
+      "positionBas": "Mraba iko chini. Bofya CHINI.",
+      "positionRecap": "Kamili! JUU = safu ya juu, KATI = katikati, CHINI = safu ya chini.",
+      "positionPractice": "Zamu yako! Kuainisha nafasi hii.",
+      "soundIntro": "Sasa sauti. Kuna aina mbili: VOWEL (A, E, I, O, U) na KOSONANT (nyingine zote).",
+      "soundVoyelle": "Unasikia A. Ni vokali. Bofya VOWEL.",
+      "soundConsonne": "Unasikia T. Ni konsonanti. Bofya KOSONTI.",
+      "soundRecap": "Kumbuka: A, E, I, O, U = VOWEL. Kila kitu kingine = KOSONTI.",
+      "soundPractice": "Zamu yako! Ainisha sauti hii.",
+      "dualIntro": "Katika uchezaji halisi, unaainisha ZOTE kwa wakati mmoja: nafasi NA sauti.",
+      "dualFirst": "Kuainisha nafasi NA sauti. Chukua wakati wako.",
+      "dualSecond": "Endelea. Nafasi + Sauti.",
+      "dualThird": "Bora kabisa! Moja zaidi kwa mazoezi.",
+      "rhythm": "Katika kikao, weka rhythm ya kawaida. Fluidity huja na mazoezi.",
+      "conclusion": "Umefanya vizuri! Umebobea katika uainishaji. Anzisha kipindi cha Uchaguzi Mbili!",
+      "buttons": {
+        "top": "JUU",
+        "middle": "KATIKATI",
+        "bottom": "CHINI",
+        "vowel": "SAUTI",
+        "consonant": "KOSONTI"
+      },
+      "feedback": {
+        "correctPosition": "Ukanda mzuri!",
+        "correctSound": "Aina nzuri ya sauti!",
+        "wrongPosition": "Sio eneo hilo. Angalia ambapo mraba ulipo.",
+        "wrongSound": "Siyo hivyo. A, E, I, O, U = vokali."
+      }
+    },
+    "trace": {
+      "intro": "Karibu kwenye Dual Trace. Hakuna vitufe hapa: utakumbuka kikamilifu nafasi ya awali kupitia ishara ya kutelezesha kidole.",
+      "observe": "Kariri msimamo huu. Zamu inayofuata, utahitaji kutelezesha kidole kuelekea huko.",
+      "firstSwipe": "Telezesha kidole kwanza! Telezesha kidole chako kuelekea nafasi ya zamu iliyotangulia. Mshale unakuongoza.",
+      "firstAudioMatch": "Barua sawa na zamu iliyopita! Telezesha kidole hadi kwenye nafasi NA uguse mara mbili ili kuashiria ulinganifu wa sauti.",
+      "audioMatch": "Sauti inayolingana imetambuliwa! Telezesha kidole + gusa mara mbili.",
+      "swipe1": "Telezesha kidole kuelekea nafasi ya N-1. Kumbuka ambapo mraba ulikuwa.",
+      "swipe2": "Endelea. Kila kutelezesha kidole huimarisha kumbukumbu yako inayotumika.",
+      "swipe3": "Kukumbuka kwa vitendo kunahitaji zaidi kuliko utambuzi rahisi.",
+      "swipe4": "Endelea kuzingatia. Tazama msimamo kabla ya kutelezesha kidole.",
+      "swipe5": "Bora kabisa! Umemudu ishara ya kukumbuka.",
+      "complete": "Mafunzo yamekamilika. Uko tayari kwa mafunzo ya Dual Trace.",
+      "tapTarget": "Gusa nafasi ya zamu iliyotangulia",
+      "tapTargetAndAudio": "Gusa nafasi inayolengwa, kisha Sauti"
+    },
+    "ui": {
+      "startExercise": "Anza mazoezi",
+      "score": "Alama: {{current}}/{{total}}",
+      "complete": "Kamilisha",
+      "correct": "✓ Sahihi!",
+      "expectedMatch": "✗ Inatarajiwa: Mechi",
+      "expectedNoMatch": "✗ Inatarajiwa: Hakuna mechi",
+      "memorize": "Kariri msimamo...",
+      "memorizeLetter": "Kariri barua...",
+      "matchDetected": "✓ Mechi imetambuliwa!",
+      "noMatch": "✗ Hakuna mechi",
+      "matchExplanation": "Mechi! Hatua {{current}} = Hatua {{previous}}",
+      "exerciseComplete": "Zoezi limekamilika!",
+      "match": "Mechi",
+      "noMatchButton": "Hakuna mechi",
+      "none": "Hakuna",
+      "both": "Zote mbili",
+      "position": "Nafasi",
+      "audio": "Sauti",
+      "posShort": "Pos"
+    },
+    "spotlight": {
+      "hud": "Dashibodi yako: Kiwango cha N-back, kihesabu cha kugeuza na vidhibiti vya kipindi.",
+      "timeline": "Ratiba ya matukio huhifadhi vichocheo 3 vya mwisho ili kusaidia kulinganisha. Katika uchezaji halisi, usaidizi huu umefichwa.",
+      "grid": "Gridi: kila zamu, seli huwaka katika moja ya nafasi 8. Wakati huo huo, barua inasemwa.",
+      "controls": "Vifungo vyako vya kujibu. Bonyeza unapogundua marudio.",
+      "intro": "Karibu! Wacha tugundue kiolesura cha mchezo pamoja.",
+      "continue": "Endelea",
+      "outro": "Sasa hebu tuende kwenye kikao kilichoongozwa. Tazama uhuishaji na ufuate maagizo.",
+      "start": "Anza",
+      "tapToContinue": "Gusa popote ili kuendelea"
+    },
+    "speed": {
+      "label": "Kasi: {{speed}}",
+      "pauseToChange": "Sitisha ili kubadilisha kasi"
+    },
+    "assessment": {
+      "title": "Awamu iliyotathminiwa",
+      "subtitle": "Kuanzia sasa, ni mbio fupi ya kawaida.",
+      "body": "Kasi ni ya kuendelea na hutapata vidokezo vingine. Cheza kama kwenye kikao halisi.",
+      "goal": "Lengo: usahihi wa angalau {{min}}% katika majaribio {{count}}.",
+      "cta": "Twende zetu"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Kuelewa viwango vya N",
+        "desc": "Umejifunza N=2. Hivi ndivyo inavyofanya jumla kutoka N=1 hadi N=4.",
+        "start": "Anza",
+        "done": "Maliza",
+        "skip": "Ruka",
+        "hud": "N = wangapi wanarudi nyuma.",
+        "present": "N = kichocheo cha sasa (kilichopo).",
+        "past": "Linganisha na N-{{n}}.",
+        "pressPosition": "Ikiwa nafasi itajirudia, bonyeza Nafasi.",
+        "pressAudio": "Sauti ikirudia, bonyeza Sauti.",
+        "annotation": {
+          "n1": "N=1: linganisha kichocheo cha sasa (N) na zamu ya awali (N-1).",
+          "n2": "N=2: linganisha kichocheo cha sasa (N) na zamu mbili nyuma (N-2).",
+          "n3": "N=3: linganisha kichocheo cha sasa (N) na zamu tatu nyuma (N-3)."
+        },
+        "outroTitle": "Na kadhalika…",
+        "outroBody": "Ukihamia N=5, utalinganisha na N-5. Kanuni inakaa sawa; umbali tu unaongezeka."
+      }
+    },
+    "annotations": {
+      "intro": "Zingatia: seli huwaka kwenye gridi ya taifa na herufi inazungumzwa kwa wakati mmoja.",
+      "observe": "Kukariri. Ratiba ya matukio hufuatilia vichocheo.",
+      "firstComparison": "Sasa una historia ya kutosha kulinganisha.",
+      "firstPositionMatch": "Nafasi sawa na zamu 2 zilizopita! Linganisha N na N-2 kwenye kalenda ya matukio, kisha ubonyeze Position.",
+      "firstAudioMatch": "Barua sawa na zamu 2 zilizopita! Linganisha N na N-2 kwenye rekodi ya matukio, kisha ubonyeze Sauti.",
+      "firstDualMatch": "Mechi mara mbili! Msimamo NA sauti kurudia. Bonyeza vifungo vyote viwili.",
+      "positionMatch": "Msimamo sawa. Bonyeza Nafasi.",
+      "audioMatch": "Sauti sawa. Bonyeza Sauti.",
+      "dualMatch": "Wote mechi. Bonyeza Msimamo na Sauti.",
+      "noMatch": "Hakuna mechi zamu hii. Endelea kukariri.",
+      "noMatch1": "Hakuna marudio wakati huu. Gusa ili kuendelea.",
+      "noMatch2": "Bado hakuna mechi. Endelea kuzingatia nafasi + mtiririko wa sauti.",
+      "noMatch3": "Hakuna cha kuripoti. Linganisha kila wakati na N-2 kwenye rekodi ya matukio.",
+      "noMatch4": "Hakuna mechi. Kasi inaongezeka sasa.",
+      "noMatch5": "Endelea. Mechi huja bila kutabirika.",
+      "noMatch6": "Hakuna mechi. Endelea, umepata mdundo.",
+      "noMatch7": "Kunyoosha mwisho. Endelea kuzingatia.",
+      "noMatch8": "Karibu kumaliza. Vichocheo vichache zaidi.",
+      "complete": "Hongera! Umefahamu misingi ya Dual N-Back. Je, uko tayari kwa mafunzo?"
+    },
+    "exit": {
+      "confirm": "Ondoka",
+      "title": "Ungependa kuacha mafunzo?",
+      "message": "Maendeleo yako yatahifadhiwa. Unaweza kuendelea baadaye."
+    },
+    "recovery": {
+      "message": "Kipindi kilichokatizwa kilipatikana.",
+      "staleMessage": "Kipindi kilichokatizwa cha zaidi ya dakika 30 zilizopita kilipatikana.",
+      "resume": "Endelea",
+      "startFresh": "Anza upya",
+      "title": "Ungependa kuendelea na mafunzo?"
+    }
+  }
+}

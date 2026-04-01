@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Đã đăng ký bản quyền.",
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "version": "Phiên bản 3.0 — Cập nhật lần cuối: 2026-03-04",
+      "healthWarning": {
+        "title": "CẢNH BÁO SỨC KHỎE QUAN TRỌNG",
+        "content": "NeuroDual là ứng dụng rèn luyện nhận thức và chăm sóc sức khỏe. <strong>Đây không phải thiết bị y tế.</strong> Ứng dụng không chẩn đoán, điều trị, chữa khỏi hoặc phòng ngừa bất kỳ bệnh nào. Nếu bạn có bất kỳ lo ngại nào hoặc cảm thấy khó chịu, hãy ngừng sử dụng ứng dụng và tham khảo ý kiến chuyên gia y tế."
+      },
+      "section1": {
+        "title": "1. Mục đích và Chấp nhận",
+        "content": "Bằng việc tải xuống, cài đặt hoặc sử dụng NeuroDual, bạn chấp nhận vô điều kiện các Điều khoản Dịch vụ này. Nếu bạn không chấp nhận các điều khoản này, vui lòng không sử dụng ứng dụng."
+      },
+      "section2": {
+        "title": "2. Mô tả Dịch vụ",
+        "content": "NeuroDual cung cấp huấn luyện trí nhớ làm việc Dual N-Back, với quản lý dữ liệu cục bộ và tùy chọn đồng bộ hóa qua tài khoản. Dịch vụ được cung cấp nguyên trạng và có thể phát triển.",
+        "item1": "Tương thích: ứng dụng web và di động (tùy thuộc vào tình trạng sẵn có).",
+        "item2": "Truy cập: một số tính năng yêu cầu kết nối internet và/hoặc tạo tài khoản.",
+        "item3": "Cập nhật: chúng tôi có thể triển khai các bản sửa lỗi hoặc cập nhật mà không cần thông báo trước vì lý do bảo mật hoặc hiệu suất.",
+        "item4": "Quảng cáo: phiên bản di động miễn phí có thể hiển thị quảng cáo xen kẽ (Google AdMob). Người dùng Premium không thấy quảng cáo."
+      },
+      "section3": {
+        "title": "3. Tài khoản và Bảo mật",
+        "item1": "Tạo tài khoản tùy chọn qua email hoặc nhà cung cấp danh tính (Google, Apple).",
+        "item2": "Bạn chịu trách nhiệm bảo mật thông tin đăng nhập và tất cả hành động thực hiện với tài khoản của bạn.",
+        "item3": "Xóa tài khoản và dữ liệu liên quan có sẵn trong Cài đặt.",
+        "item4": "Chúng tôi có thể tạm ngưng hoặc chấm dứt tài khoản trong trường hợp vi phạm các Điều khoản này, gian lận hoặc vi phạm bảo mật."
+      },
+      "section4": {
+        "title": "4. Quy tắc và Hạn chế Sử dụng",
+        "item1": "Không vượt qua các biện pháp bảo mật hoặc giới hạn kỹ thuật.",
+        "item2": "Không sử dụng ứng dụng cho mục đích bất hợp pháp hoặc có hại.",
+        "item3": "Không cố gắng dịch ngược hoặc trích xuất nội dung trái phép.",
+        "item4": "Tôn trọng quyền sở hữu trí tuệ đối với ứng dụng và nội dung của nó."
+      },
+      "section5": {
+        "title": "5. Sở hữu Trí tuệ",
+        "content": "Tất cả các yếu tố (văn bản, đồ họa, âm thanh, mã nguồn, logo) được bảo vệ bởi bản quyền và thuộc sở hữu của nhà xuất bản hoặc các bên cấp phép. Không có giấy phép nào được cấp ngoại trừ quyền sử dụng ứng dụng cá nhân, không độc quyền và không thể chuyển nhượng theo các Điều khoản này."
+      },
+      "section6": {
+        "title": "6. Tính khả dụng và Hỗ trợ",
+        "content": "Dịch vụ có thể truy cập 24/7 trừ trường hợp bảo trì hoặc bất khả kháng. Chúng tôi không đảm bảo tính khả dụng hoặc hiệu suất liên tục. Hỗ trợ: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Mua hàng trong Ứng dụng / Đăng ký",
+        "content": "Có sẵn đăng ký Premium: hàng năm và trọn đời (10 năm). Thanh toán được quản lý bởi RevenueCat (di động) hoặc Lemon Squeezy (web). <strong>Điều khoản Bán hàng</strong> được áp dụng (giá cả, rút lui, gia hạn, hủy, hoàn tiền) và có sẵn trước khi mua."
+      },
+      "section8": {
+        "title": "8. Trách nhiệm",
+        "item1": "Dịch vụ được cung cấp \"nguyên trạng\" không bảo đảm kết quả.",
+        "item2": "Chúng tôi không chịu trách nhiệm về các thiệt hại trực tiếp hoặc gián tiếp liên quan đến việc sử dụng, mất dữ liệu cục bộ chưa lưu hoặc giải thích thống kê.",
+        "item3": "Nếu bạn cảm thấy khó chịu, tác dụng phụ hoặc lo ngại về sức khỏe, hãy ngừng sử dụng."
+      },
+      "section9": {
+        "title": "9. Dữ liệu Cá nhân",
+        "content": "Việc xử lý dữ liệu cá nhân được mô tả trong <a>Chính sách bảo mật</a>. Trong trường hợp xung đột giữa Điều khoản và Chính sách bảo mật về vấn đề dữ liệu, Chính sách bảo mật sẽ được ưu tiên."
+      },
+      "section10": {
+        "title": "10. Thay đổi Điều khoản",
+        "content": "Chúng tôi có thể sửa đổi các Điều khoản này vì lý do pháp lý, kỹ thuật hoặc dịch vụ. Ngày cập nhật sẽ xuất hiện ở đầu tài liệu. Trong trường hợp thay đổi đáng kể, thông báo sẽ được hiển thị trong ứng dụng."
+      },
+      "section11": {
+        "title": "11. Luật Áp dụng và Tranh chấp",
+        "content": "Các Điều khoản này được điều chỉnh bởi luật pháp Pháp. Trong trường hợp tranh chấp và sau các nỗ lực hòa giải, người tiêu dùng có thể sử dụng hòa giải tiêu dùng hoặc nền tảng Giải quyết Tranh chấp Trực tuyến (ODR) của châu Âu. Nếu không, tòa án Pháp sẽ có thẩm quyền xét xử độc quyền."
+      },
+      "section12": {
+        "title": "12. Liên hệ",
+        "content": "Mọi câu hỏi liên quan đến các Điều khoản này:"
+      }
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "version": "Phiên bản 3.0 — Cập nhật lần cuối: 2026-03-04",
+      "intro": {
+        "p1": "Chính sách Bảo mật này mô tả cách NeuroDual (\"chúng tôi\") xử lý dữ liệu cá nhân của bạn khi bạn sử dụng ứng dụng di động và trang web của chúng tôi.",
+        "p2": "Chúng tôi áp dụng các nguyên tắc của Quy định Bảo vệ Dữ liệu Chung (GDPR) và Luật Bảo vệ Dữ liệu Pháp. Chúng tôi ưu tiên kiến trúc \"ưu tiên cục bộ\", không bán hoặc cho thuê dữ liệu của bạn và sử dụng đo lường đối tượng để cải thiện sản phẩm."
+      },
+      "section1": {
+        "title": "1. Người kiểm soát Dữ liệu",
+        "responsible": "Người kiểm soát:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Trụ sở đăng ký:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Pháp",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Email:",
+        "dpo": "DPO: AGUILAL Abdeslam (cùng thông tin liên hệ). Mọi câu hỏi về dữ liệu của bạn, hãy liên hệ địa chỉ trên."
+      },
+      "section2": {
+        "title": "2. Dữ liệu Chúng tôi Thu thập",
+        "sub1": {
+          "title": "2.1 Dữ liệu do Người dùng Tạo (Chế độ Cục bộ)",
+          "content": "Chỉ được lưu trữ trên thiết bị của bạn qua SQLite khi bạn chưa đăng nhập:",
+          "item1": "Điểm số và lịch sử phiên N-Back.",
+          "item2": "Cài đặt cấu hình trò chơi.",
+          "item3": "Hồ sơ cục bộ (biệt danh, avatar đã chọn).",
+          "note": "Dữ liệu này không đi qua máy chủ của chúng tôi cho đến khi bạn tạo tài khoản. Nếu bạn gỡ cài đặt ứng dụng, dữ liệu này sẽ bị mất."
+        },
+        "sub2": {
+          "title": "2.2 Dữ liệu Tài khoản (Tùy chọn)",
+          "content": "Nếu bạn tạo tài khoản để đồng bộ dữ liệu:",
+          "item1": "Địa chỉ email (mã định danh duy nhất).",
+          "item2": "ID người dùng do nhà cung cấp danh tính (Google, Apple) cung cấp.",
+          "note": "Dữ liệu này được quản lý thông qua nhà cung cấp xác thực của chúng tôi (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Nhật ký Kỹ thuật",
+          "content": "Nhật ký đã ẩn danh hóa (lỗi, trạng thái đồng bộ, hiệu suất) cho mục đích bảo mật và hỗ trợ."
+        },
+        "sub4": {
+          "title": "2.4 Dữ liệu Hỗ trợ",
+          "content": "Trao đổi email với bộ phận hỗ trợ có thể chứa thông tin liên hệ và nội dung yêu cầu của bạn để phản hồi."
+        },
+        "sub5": {
+          "title": "2.5 Giám sát và Theo dõi Lỗi",
+          "content": "Dữ liệu kỹ thuật (lỗi, hiệu suất, hành vi bất thường) được thu thập qua Sentry để cải thiện tính ổn định của ứng dụng. Dữ liệu đã ẩn danh hóa, không nhắm mục tiêu quảng cáo."
+        },
+        "sub6": {
+          "title": "2.6 Đo lường Đối tượng và Phân tích Sản phẩm",
+          "content": "Dữ liệu sử dụng ẩn danh được thu thập qua PostHog (trang đã truy cập, hành động trong ứng dụng, loại thiết bị) để cải thiện sản phẩm. Không truyền dữ liệu nhận dạng cá nhân. Không nhắm mục tiêu quảng cáo."
+        },
+        "sub7": {
+          "title": "2.7 Quảng cáo (Phiên bản Di động Miễn phí)",
+          "content": "Phiên bản Android miễn phí hiển thị quảng cáo xen kẽ qua Google AdMob. Google có thể thu thập mã nhận dạng quảng cáo và dữ liệu kỹ thuật (loại thiết bị, ngôn ngữ, tương tác quảng cáo). Người dùng Premium không bị tiếp xúc với quảng cáo. Thông tin thêm: Chính sách bảo mật Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Mục đích và Cơ sở Pháp lý",
+        "content": "Chúng tôi chỉ sử dụng dữ liệu của bạn cho:",
+        "item1": "<strong>Vận hành dịch vụ</strong> (sao lưu cục bộ, thống kê, đồng bộ đa thiết bị) — Cơ sở pháp lý: thực hiện hợp đồng (Điều 6.1.b GDPR).",
+        "item2": "<strong>Bảo mật và phòng chống gian lận</strong> (ghi nhật ký kỹ thuật, kiểm soát truy cập) — Cơ sở pháp lý: lợi ích chính đáng (Điều 6.1.f GDPR).",
+        "item3": "<strong>Hỗ trợ người dùng</strong> — Cơ sở pháp lý: lợi ích chính đáng (phản hồi yêu cầu).",
+        "item4": "<strong>Nghĩa vụ pháp lý</strong> — Cơ sở pháp lý: nghĩa vụ pháp lý (Điều 6.1.c GDPR).",
+        "item5": "<strong>Giám sát và theo dõi lỗi</strong> — Cơ sở pháp lý: lợi ích chính đáng (cải thiện tính ổn định); dữ liệu đã ẩn danh hóa, không quảng cáo cá nhân hóa.",
+        "item6": "<strong>Đo lường đối tượng</strong> (phân tích sản phẩm ẩn danh qua PostHog) — Cơ sở pháp lý: lợi ích chính đáng (Điều 6.1.f GDPR); dữ liệu ẩn danh.",
+        "note": "Bất kỳ thay đổi mục đích nào sẽ được ghi nhận trong bản cập nhật chính sách này.",
+        "item7": "<strong>Quảng cáo</strong> (hiển thị quảng cáo xen kẽ cho người dùng di động miễn phí) — Cơ sở pháp lý: lợi ích chính đáng (Điều 6.1.f GDPR).",
+        "item8": "<strong>Tiếp thị và bản tin</strong> — Cơ sở pháp lý: đồng ý rõ ràng (Điều 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Thời hạn Lưu giữ",
+        "item1": "<strong>Dữ liệu cục bộ:</strong> được lưu trữ trên thiết bị của bạn và bị xóa khi gỡ cài đặt hoặc đặt lại.",
+        "item2": "<strong>Tài khoản và dữ liệu đồng bộ:</strong> được giữ lại khi tài khoản đang hoạt động. Bị xóa trong vòng 30 ngày kể từ yêu cầu xóa tài khoản.",
+        "item3": "<strong>Nhật ký kỹ thuật:</strong> được giữ lại tối đa 12 tháng, sau đó tự động bị xóa.",
+        "item4": "<strong>Giám sát:</strong> dữ liệu kỹ thuật đã ẩn danh hóa được giữ lại 90 ngày để theo dõi lỗi và cải thiện sản phẩm.",
+        "item5": "<strong>Yêu cầu hỗ trợ:</strong> được giữ lại 24 tháng sau khi đóng phiếu, sau đó bị xóa.",
+        "item6": "<strong>Dữ liệu đối tượng (PostHog):</strong> ẩn danh, được giữ lại 12 tháng."
+      },
+      "section5": {
+        "title": "5. Người nhận, Bên xử lý và Chuyển giao",
+        "content": "Dữ liệu của bạn có thể được xử lý bởi các nhà cung cấp sau:",
+        "item1": "Supabase Inc. (xác thực và cơ sở dữ liệu đám mây, lưu trữ tại EU).",
+        "item2": "Amazon Web Services (hạ tầng Supabase, vùng EU).",
+        "item3": "Cloudflare Inc. (lưu trữ ứng dụng web, CDN và bảo mật).",
+        "item4": "Sentry (giám sát lỗi và hiệu suất; chuyển giao ngoài EU được điều chỉnh bởi Điều khoản Hợp đồng Tiêu chuẩn).",
+        "item5": "RevenueCat Inc. (quản lý đăng ký di động và thanh toán trong ứng dụng; không lưu trữ dữ liệu thẻ tín dụng).",
+        "note": "Nếu thêm nhà cung cấp mới, phần này sẽ được cập nhật.",
+        "transfers": "<strong>Chuyển giao ngoài EU:</strong> khi có các nhà cung cấp ngoài EU (ví dụ: Cloudflare, Supabase tổ chức Mỹ, Sentry, RevenueCat, Google AdMob), việc chuyển giao được điều chỉnh bởi Điều khoản Hợp đồng Tiêu chuẩn (SCC) của Ủy ban Châu Âu hoặc cơ chế tương đương.",
+        "item6": "PostHog Inc. (đo lường đối tượng và phân tích sản phẩm; dữ liệu ẩn danh; lưu trữ tại EU).",
+        "item7": "Lemon Squeezy (quản lý thanh toán web; không lưu trữ dữ liệu thẻ tín dụng).",
+        "item8": "Google AdMob (hiển thị quảng cáo trên phiên bản di động miễn phí; chuyển giao ngoài EU được điều chỉnh bởi Điều khoản Hợp đồng Tiêu chuẩn)."
+      },
+      "section6": {
+        "title": "6. Quyền của Bạn",
+        "content": "Theo GDPR, bạn có các quyền sau:",
+        "item1": "Truy cập, chỉnh sửa, xóa.",
+        "item2": "Hạn chế và phản đối (tùy thuộc vào cơ sở pháp lý).",
+        "item3": "Khả năng chuyển đổi (xuất dữ liệu của bạn dưới dạng JSON hoặc CSV).",
+        "item4": "Rút lại đồng ý (khi áp dụng).",
+        "item5": "Khiếu nại lên cơ quan giám sát (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Xóa tài khoản:</strong> bạn có thể xóa tài khoản và tất cả dữ liệu liên quan trực tiếp từ Cài đặt ứng dụng. Hành động này không thể hoàn tác.",
+        "exercise": "Để thực hiện các quyền khác, liên hệ <strong>support@neurodual.fr</strong>. Bằng chứng nhận dạng có thể được yêu cầu trong trường hợp nghi ngờ hợp lý. Thời gian phản hồi: 1 tháng (có thể kéo dài đến 3 tháng trong trường hợp phức tạp)."
+      },
+      "section7": {
+        "title": "7. Bảo mật",
+        "content": "Truyền thông mã hóa (HTTPS/TLS), quyền truy cập quản trị viên bị hạn chế, kiểm soát quyền. Trong trường hợp vi phạm dữ liệu có khả năng gây rủi ro, thông báo pháp lý sẽ được thực hiện (CNIL và các cá nhân bị ảnh hưởng)."
+      },
+      "section8": {
+        "title": "8. Cookie và Lưu trữ Cục bộ",
+        "content": "Ứng dụng sử dụng SQLite để lưu trữ tiến trình của bạn trực tiếp trên thiết bị. Chỉ sử dụng cookie kỹ thuật thiết yếu (xác thực, phiên). Phiên bản di động miễn phí sử dụng Google AdMob có thể đặt cookie hoặc mã nhận dạng quảng cáo."
+      },
+      "section9": {
+        "title": "9. Trẻ vị thành niên",
+        "content": "NeuroDual dành cho người dùng trên 16 tuổi. Trẻ vị thành niên phải sử dụng ứng dụng dưới sự giám hộ của người giám hộ hợp pháp."
+      },
+      "section10": {
+        "title": "10. Thay đổi",
+        "content": "Bất kỳ phiên bản cập nhật nào sẽ được đăng tải tại đây kèm ngày cập nhật cuối cùng. Trong trường hợp thay đổi đáng kể, thông báo sẽ được cung cấp trong ứng dụng."
+      },
+      "section11": {
+        "title": "11. Liên hệ",
+        "content": "Mọi câu hỏi hoặc để thực hiện quyền của bạn:",
+        "email": "Email: support@neurodual.fr",
+        "responsible": "Người kiểm soát Dữ liệu: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Điều khoản bán hàng",
+      "version": "Đăng ký hàng năm và trọn đời — Cập nhật lần cuối: 2026-03-04",
+      "section1": {
+        "title": "1. Mục đích",
+        "content": "Các Điều khoản Bán hàng này điều chỉnh việc đăng ký các gói Premium NeuroDual (hàng năm và trọn đời). Chúng bổ sung cho <a1>Điều khoản Dịch vụ</a1> và <a2>Chính sách Bảo mật</a2>."
+      },
+      "section2": {
+        "title": "2. Ưu đãi và Giá cả",
+        "item1": "<strong>Đăng ký hàng năm</strong>: giá hiển thị trước khi thanh toán (bao gồm thuế nếu có), tự động gia hạn mỗi năm.",
+        "item2": "<strong>Đăng ký trọn đời (10 năm)</strong>: thanh toán một lần cấp quyền truy cập tính năng premium trong 10 năm mà không tự động gia hạn.",
+        "item3": "Quyền truy cập Premium: đồng bộ đám mây đa thiết bị, sao lưu từ xa, truy cập tất cả N-level, xuất dữ liệu nâng cao, trải nghiệm không quảng cáo, hỗ trợ ưu tiên.",
+        "item4": "Giá hiện tại có sẵn trên trang đăng ký trong ứng dụng và trên các cửa hàng (App Store, Google Play).",
+        "item5": "Giá có thể thay đổi; bất kỳ sửa đổi nào sẽ được thông báo trước khi gia hạn để cho phép hủy (không áp dụng cho trọn đời)."
+      },
+      "section3": {
+        "title": "3. Thời hạn, Gia hạn và Hủy",
+        "item1": "<strong>Đăng ký hàng năm</strong>: thời hạn 12 tháng kể từ ngày đăng ký.",
+        "item2": "<strong>Đăng ký trọn đời</strong>: thời hạn 10 năm kể từ ngày đăng ký, không gia hạn.",
+        "item3": "Gia hạn (hàng năm): tự động gia hạn vào mỗi kỳ hạn trừ khi hủy trước.",
+        "item4": "Hủy (hàng năm): có thể hủy bất cứ lúc nào từ cài đặt ứng dụng hoặc cửa hàng (App Store, Google Play). Có hiệu lực vào cuối kỳ hiện tại.",
+        "item5": "Trọn đời không thể hủy nhưng vẫn tuân theo quyền rút lui hợp pháp (xem phần 5)."
+      },
+      "section4": {
+        "title": "4. Thanh toán",
+        "item1": "Thanh toán được quản lý bởi RevenueCat qua các cửa hàng (App Store, Google Play) hoặc Lemon Squeezy cho web. Chúng tôi không lưu trữ dữ liệu thẻ tín dụng của bạn.",
+        "item2": "Trong trường hợp thanh toán thất bại (đăng ký định kỳ), quyền truy cập premium có thể bị tạm ngưng cho đến khi giải quyết.",
+        "item3": "Hoàn tiền cho các giao dịch mua qua App Store hoặc Google Play phải được yêu cầu từ cửa hàng tương ứng."
+      },
+      "section5": {
+        "title": "5. Quyền Rút lui",
+        "content": "Dịch vụ kỹ thuật số được cung cấp sau khi mua. Nếu bạn yêu cầu thực hiện ngay trước khi hết thời hạn 14 ngày theo luật, bạn thừa nhận từ bỏ quyền rút lui khi dịch vụ được cung cấp đầy đủ. Nếu không có sự từ bỏ rõ ràng, bạn có thể thực hiện quyền rút lui trong vòng 14 ngày kể từ ngày mua bằng cách viết thư đến support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Hoàn tiền",
+        "content": "Ngoài quyền rút lui hợp pháp, các đăng ký đã bắt đầu không được hoàn tiền trừ các quy định bắt buộc hoặc lỗi nghiêm trọng do dịch vụ gây ra."
+      },
+      "section7": {
+        "title": "7. Thay đổi Ưu đãi",
+        "content": "Tính năng Premium có thể phát triển. Việc loại bỏ tính năng thiết yếu sẽ được thông báo trước và, nếu có thể, kèm tùy chọn hủy miễn phí trước kỳ hạn."
+      },
+      "section8": {
+        "title": "8. Dữ liệu Cá nhân",
+        "content": "Việc xử lý dữ liệu thanh toán và tài khoản được chi tiết trong <a>Chính sách Bảo mật</a>."
+      },
+      "section9": {
+        "title": "9. Dịch vụ Khách hàng",
+        "content": "Mọi câu hỏi, hoàn tiền theo quyền rút lui hoặc khiếu nại:"
+      }
+    },
+    "mentions": {
+      "title": "Thông tin pháp lý",
+      "version": "Cập nhật lần cuối:",
+      "section1": {
+        "title": "1. Nhà xuất bản",
+        "company": "Tên công ty:",
+        "companyValue": "AGUILAL Abdeslam (Doanh nghiệp tư nhân)",
+        "address": "Địa chỉ:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Pháp",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Email:"
+      },
+      "section2": {
+        "title": "2. Giám đốc Xuất bản",
+        "name": "AGUILAL Abdeslam",
+        "email": "Email:"
+      },
+      "section3": {
+        "title": "3. Lưu trữ",
+        "content": "Ứng dụng NeuroDual được lưu trữ bởi:",
+        "webapp": "Ứng dụng Web",
+        "database": "Cơ sở dữ liệu và Xác thực",
+        "databaseInfra": "Hạ tầng: Amazon Web Services (vùng EU - eu-central-1)",
+        "monitoring": "Giám sát và Theo dõi Lỗi",
+        "subscriptions": "Quản lý đăng ký",
+        "analytics": "Đo lường đối tượng",
+        "analyticsInfra": "Lưu trữ tại EU",
+        "advertising": "Quảng cáo (phiên bản di động miễn phí)",
+        "payments": "Thanh toán web",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Sở hữu Trí tuệ",
+        "p1": "Tất cả các yếu tố của ứng dụng NeuroDual (văn bản, đồ họa, âm thanh, mã nguồn, logo, nhãn hiệu) được bảo vệ bởi luật bản quyền và nhãn hiệu. Nghiêm cấm mọi hành vi sao chép, trình bày hoặc khai thác trái phép.",
+        "p2": "Mã nguồn của một số tính năng sử dụng thư viện mã nguồn mở có giấy phép tương ứng được tuân thủ."
+      },
+      "section5": {
+        "title": "5. Dữ liệu Cá nhân",
+        "content": "Việc xử lý dữ liệu cá nhân được mô tả trong <a>Chính sách bảo mật</a> của chúng tôi.",
+        "responsible": "Người kiểm soát Dữ liệu:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Hòa giải và Giải quyết Tranh chấp",
+        "p1": "Theo Điều L.611-1 và tiếp theo của Bộ luật Tiêu dùng Pháp, người tiêu dùng có thể, trong trường hợp tranh chấp chưa được giải quyết sau khiếu nại trước đó đến dịch vụ khách hàng, sử dụng miễn phí hòa giải viên tiêu dùng.",
+        "odr": "Nền tảng Giải quyết Tranh chấp Trực tuyến (ODR) châu Âu:"
+      },
+      "section7": {
+        "title": "7. Tài liệu Pháp lý",
+        "privacy": "Chính sách bảo mật",
+        "privacyNote": "(GDPR)",
+        "terms": "Điều khoản dịch vụ",
+        "termsNote": "(ĐK)",
+        "cgv": "Điều khoản bán hàng",
+        "cgvNote": "(Bán hàng)"
+      },
+      "section8": {
+        "title": "8. Liên hệ",
+        "content": "Mọi câu hỏi liên quan đến thông tin pháp lý này:",
+        "email": "Email:"
+      }
+    }
+  }
+}

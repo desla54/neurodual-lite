@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Träningsväg",
+    "pageSubtitle": "Välj, organisera och skapa dina resor",
+    "enabled": "Aktivera träningsväg",
+    "description": "30 progressiva steg från N-1 till N-10",
+    "progress": "Framsteg",
+    "locked": "Låst",
+    "createJourney": "Skapa resa",
+    "viewJourneys": "Visa resor",
+    "current": "Nuvarande resa",
+    "myJourneys": "Mina resor",
+    "stage": "Steg",
+    "stages": "steg",
+    "stagesShort": "st.",
+    "stageLabels": {
+      "pick": "Välj",
+      "catch": "Fånga",
+      "place": "Placera",
+      "memo": "Memo"
+    },
+    "name": "Namn",
+    "namePlaceholder": "T.ex. N-5 Utmaning",
+    "levels": "Nivåer",
+    "levelRange": "Nivåintervall",
+    "levelTo": "till",
+    "createNew": "Ny resa",
+    "new": "Ny",
+    "defaultCustomName": "Min resa",
+    "created": "Resa skapad!",
+    "deleted": "Resa borttagen",
+    "sessionSettings": "Sessionsinställningar",
+    "savedStatus": "Inställningar sparade",
+    "preset": {
+      "easy": "Lätt",
+      "medium": "Rekommenderad",
+      "hard": "Svår"
+    },
+    "setup": {
+      "title": "Resa & profiler",
+      "journey": "Resa",
+      "journeyNone": "Välj…",
+      "profile": "Profil",
+      "profileNone": "Välj…",
+      "configure": "Konfigurera",
+      "configureNone": "Välj en resa",
+      "create": "Ny resa",
+      "createDesc": "Skapa en ny resa"
+    },
+    "deleteConfirmTitle": "Ta bort den här resan?",
+    "deleteConfirmMessage": "Resan \"{{name}}\" kommer att tas bort permanent.",
+    "renameTitle": "Byt namn på den här resan",
+    "renameMessage": "Redigera namnet på \"{{name}}\".",
+    "renamed": "Resan bytt namn.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Standard"
+    },
+    "mode": "Läge",
+    "modeStandard": "Resa (4 lägen)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klassisk",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} valideringssession(er)",
+      "needed": "{{count}} session(er) kvar",
+      "excellent": "Utmärkt!",
+      "good": "Bra!",
+      "passing": "Godkänd"
+    },
+    "progression": {
+      "title": "Progression",
+      "description": "För att gå vidare till nästa nivå, uppnå ett bra resultat:",
+      "excellent": "≥95% → 1 session",
+      "good": "≥85% → 2 sessioner",
+      "passing": "≥80% → 3 sessioner",
+      "rules": "Progressionsregler",
+      "jaeggi": {
+        "description": "Baserat på den svagaste modaliteten:",
+        "up": "< 3 fel → Nivå upp",
+        "stay": "3 - 5 fel → Stanna på denna nivå",
+        "down": "> 5 fel → Nivå ner"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop-protokoll (BW-poäng):",
+        "up": "≥80% → Nivå upp",
+        "stay": "50-79% → Stanna på nivå",
+        "strike": "3 poäng i rad <50% → Nivå ner"
+      },
+      "hybrid": {
+        "description": "Denna resa kör {{trackCount}} Dual Track-session(er), sedan {{dnbCount}} Dual N-Back-session(er) på samma nivå.",
+        "alternation": "Loopen startar alltid om med Dual Track när ett beslut nås.",
+        "authority": "Bara Dual N-Back-sessioner avgör upp, stanna eller ner.",
+        "up": "0-1 fel → Nivå upp",
+        "stay": "2-3 fel → Stanna",
+        "down": "4+ fel → Nivå ner",
+        "streakRule": "Två sessioner i rad i samma zon utlöser beslutet.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Validerad {{current}}/{{required}}",
+        "stayProgress": "Håll {{current}}/{{required}}",
+        "downProgress": "Misslyckad {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track använder en löpande mästerskapsbar för varje målstadium:",
+        "calibration": "En första kalibrering uppskattar ditt startmålantal",
+        "goodSession": "Varje bra session fyller det nuvarande stadiet lite",
+        "mastery": "Nästan perfekta sessioner fyller snabbare, vanliga sessioner förblir blygsamma",
+        "regression": "Svaga sessioner kan också sänka den nuvarande mästerskapsbaren",
+        "unlock": "Nästa målantal låses upp först när det nuvarande stadiet når 100%"
+      }
+    },
+    "switcher": {
+      "open": "Öppna resväxlare",
+      "current": "Nuvarande",
+      "showAll": "Alla resor",
+      "settings": "Reseinställningar"
+    },
+    "previous": "Föregående resa",
+    "next": "Nästa resa",
+    "calibration": {
+      "title": "Första sessionen",
+      "subtitle": "En kort kalibrering bestämmer din startnivå, eller så kan du börja direkt på nivå 2.",
+      "skipToN2": "eller börja på N-2",
+      "continueAt": "eller fortsätt på N-{{level}}",
+      "start": "Starta kalibrering",
+      "redo": "Gör om kalibrering",
+      "badge": "Kalibrering"
+    },
+    "presets": {
+      "currentSlot": "Anpassad",
+      "currentSlotView": "Anpassad",
+      "lockedTitle": "Vissa alternativ är låsta",
+      "lockedDesc": "För att hålla progressionen jämförbar kan modaliteter (och vissa alternativ) inte ändras efter att resan har startat."
+    },
+    "completed": {
+      "title": "Resan avklarad!",
+      "subtitle": "Alla steg validerade. Bra jobbat!",
+      "continueFree": "Fortsätt träna"
+    },
+    "report": {
+      "stage": "Steg",
+      "level": "Nivå",
+      "score": "Poäng",
+      "sessionValidated": "Session validerad!",
+      "sessionNotValidated": "Session ej validerad",
+      "minScore": "Minimum krävs:",
+      "stageCompleted": "Steg avklarat!",
+      "stageUnlocked": "Steg {{stage}} upplåst!",
+      "replay": "Spela igen",
+      "nextStage": "Nästa steg",
+      "home": "Hem",
+      "hits": "Träffar",
+      "misses": "Missar",
+      "falseAlarms": "Falskt alarm",
+      "correctRejections": "Korrekta avvisningar"
+    }
+  }
+}

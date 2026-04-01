@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "คุณรู้สึกอย่างไร?",
+      "tired": "เหนื่อย",
+      "normal": "ปกติ",
+      "energized": "มีพลัง"
+    },
+    "aria": {
+      "trialTimer": "จับเวลาการทดลอง",
+      "positionMatch": "การจับคู่ตำแหน่ง",
+      "audioMatch": "การจับคู่เสียง",
+      "audioLetter": "จดหมายเสียง:",
+      "traceGrid": "ติดตามตาราง"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "สลับการตรวจสอบการซิงค์",
+      "start": "เริ่มต้น",
+      "end": "สิ้นสุด",
+      "pinLabel": "พิน",
+      "pinTitle": "ปักหมุดบนหน้าจอ",
+      "inputLabel": "อินพุต",
+      "inputTitle": "สลับโปรไฟล์เวลาแฝงอินพุต (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "บน",
+      "off": "ปิด",
+      "hideLabel": "ซ่อน",
+      "hideTitle": "ซ่อน (ยกเว้น syncHud=1 หรือ ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "เสียง",
+        "expected": "คาดหวัง"
+      },
+      "labels": {
+        "trial": "ทดลองใช้",
+        "lagShow": "จอแสดงผลล่าช้า",
+        "lagHide": "ชะลอการมาสก์",
+        "winErr": "ชนะผิดพลาด",
+        "endRef": "สิ้นสุดการอ้างอิง",
+        "visualPreP95": "Visual_prep95",
+        "audioSyncP95": "เสียง_ซิงค์ p95",
+        "visualPostP95": "Visual_postp95",
+        "inputToDispatchP95": "อินพุต -> จัดส่ง p95",
+        "inputToCommitP95": "อินพุต -> กระทำ p95",
+        "inputToPaintP95": "อินพุต -> ทาสี p95",
+        "inputPending": "อินพุตที่รอดำเนินการ",
+        "inputSamples": "ตัวอย่างอินพุต",
+        "touchSamples": "ตัวอย่างสัมผัส",
+        "mouseSamples": "ตัวอย่างเมาส์",
+        "keyboardSamples": "ตัวอย่างคีย์บอร์ด",
+        "latestMethod": "ล่าสุด (วิธีการ)",
+        "latestModality": "กิริยาล่าสุด",
+        "audioCueMode": "สัญญาณเสียง",
+        "audioCodec": "ตัวแปลงสัญญาณ"
+      },
+      "resetInputProfiler": "รีเซ็ตโปรไฟล์อินพุต"
+    },
+    "hud": {
+      "resume": "ดำเนินการต่อ",
+      "pause": "หยุดชั่วคราว",
+      "quit": "เลิก",
+      "restart": "รีสตาร์ท",
+      "spaceToStart": "พื้นที่ที่จะเริ่มต้น",
+      "settings": "การตั้งค่า",
+      "enterToAdvance": "เข้ามาเพื่อก้าวหน้า",
+      "trial": "ทดลอง",
+      "muteTexture": "ปิดเสียงพื้นหลัง"
+    },
+    "status": {
+      "paused": "หยุดชั่วคราว"
+    },
+    "completed": "เสร็จสิ้น",
+    "starting": {
+      "getReady": "เตรียมตัวให้พร้อม..."
+    },
+    "quitModal": {
+      "title": "ออกจากเซสชันใช่ไหม",
+      "message": "ความคืบหน้าของคุณจะไม่ถูกบันทึก",
+      "confirm": "เลิก",
+      "cancel": "ดำเนินการต่อ",
+      "close": "ปิด"
+    },
+    "controls": {
+      "position": "ตำแหน่ง",
+      "position2": "ตำแหน่ง 2",
+      "position3": "ตำแหน่ง 3",
+      "position4": "ตำแหน่ง 4",
+      "visvis": "วิส & เอ็น-วิส",
+      "visaudio": "Vis & n-เสียง",
+      "audiovis": "เสียง & n-vis",
+      "vis1": "วิส 1",
+      "vis2": "วิส 2",
+      "vis3": "วิส 3",
+      "vis4": "วิส 4",
+      "audio": "เสียง",
+      "audio2": "เสียง 2",
+      "color": "สี",
+      "arithmetic": "เลขคณิต",
+      "image": "รูปร่าง"
+    },
+    "arithmetic": {
+      "answer": "ตอบ",
+      "clear": "ชัดเจน",
+      "hint": "แป้นพิมพ์: 0–9 · '-' สำหรับเครื่องหมาย · '.' สำหรับทศนิยม · Backspace เพื่อล้าง"
+    },
+    "navigation": {
+      "back": "กลับ"
+    },
+    "xp": {
+      "title": "XP ที่ได้รับ",
+      "base": "ฐาน (N-{{level}})",
+      "performance": "ประสิทธิภาพ",
+      "accuracy": "ความแม่นยำ",
+      "streakBonus": "โบนัสต่อเนื่อง",
+      "dailyBonus": "แรกของวัน",
+      "badgeBonus": "ป้าย",
+      "flowBonus": "โบนัสตำแหน่งคู่",
+      "confidenceMultiplier": "ความมั่นใจ",
+      "dailyCapReached": "ถึงขีดจำกัด XP รายวันแล้ว",
+      "levelReached": "ถึงระดับ {{level}} แล้ว!"
+    },
+    "badges": {
+      "newUnlocked": "ปลดล็อคป้ายใหม่แล้ว"
+    },
+    "getReady": "เตรียมตัวให้พร้อม...",
+    "layoutEdit": {
+      "done": "เสร็จแล้ว",
+      "reset": "รีเซ็ต",
+      "instructions": "ลากโซนเพื่อเรียงลำดับใหม่ ปรับขนาดโดยใช้ที่จับ",
+      "title": "โหมดแก้ไข",
+      "cancel": "ยกเลิก",
+      "save": "ล็อค",
+      "editLayout": "แก้ไขเค้าโครง"
+    },
+    "paused": "หยุดชั่วคราว",
+    "pressEscapeToResume": "กด Escape เพื่อดำเนินการต่อ",
+    "settings": {
+      "editLayout": "แก้ไขเค้าโครง",
+      "gridAndButtons": "ตารางและปุ่ม",
+      "swapPositionAudio": "สลับตำแหน่ง / เสียง",
+      "title": "การตั้งค่า",
+      "quickHint": "ปรับการตั้งค่าบางอย่างโดยไม่ต้องออกจากเกม",
+      "quickUnavailable": "ยังไม่มีการตั้งค่าด่วนสำหรับโหมดนี้"
+    },
+    "pinkNoiseInfo": "เสียงพื้นหลังจะมาพร้อมกับสิ่งเร้าแต่ละรายการ คุณสามารถปรับแต่งหรือปิดการใช้งานได้ในการตั้งค่าเสียง",
+    "pinkNoiseDismiss": "ดำเนินการต่อ",
+    "audioMode": "โหมดเสียง",
+    "cogTask": {
+      "precision": "ความแม่นยำ",
+      "avgRt": "RT เฉลี่ย",
+      "avgRtShort": "RT เฉลี่ย",
+      "trials": "การทดลอง",
+      "correct": "ถูกต้อง",
+      "errors": "ข้อผิดพลาด",
+      "effect": "เอฟเฟกต์",
+      "restart": "รีสตาร์ท",
+      "home": "บ้าน",
+      "performance": "ประสิทธิภาพ",
+      "trialDetail": "รายละเอียดการทดลอง",
+      "setDetail": "รายละเอียดชุด",
+      "roundDetail": "รายละเอียดรอบ",
+      "problemDetail": "รายละเอียดปัญหา",
+      "phaseDetail": "รายละเอียดเฟส",
+      "feedbackCorrect": "ถูกต้อง",
+      "feedbackIncorrect": "ไม่ถูกต้อง",
+      "feedbackTimeout": "ช้าเกินไป!",
+      "preparing": "เตรียมตัวให้พร้อม...",
+      "loading": "กำลังโหลด...",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง",
+      "up": "ขึ้น",
+      "down": "ลง",
+      "congruent": "สอดคล้องกัน",
+      "incongruent": "ไม่สอดคล้องกัน",
+      "congruencyEffect": "ผลกระทบที่สอดคล้อง",
+      "maxSpan": "ช่วงสูงสุด",
+      "startingSpan": "ช่วงเริ่มต้น",
+      "maxSpanReached": "ถึงช่วงสูงสุดแล้ว",
+      "longestStreak": "แนวที่ถูกต้องที่ยาวที่สุด",
+      "series": "ริ้ว",
+      "avgResponseTime": "เวลาตอบสนองโดยเฉลี่ย",
+      "recall": "จำ",
+      "expected": "คาดว่า",
+      "submit": "ส่ง",
+      "cancel": "ยกเลิก",
+      "clear": "ชัดเจน",
+      "delete": "DEL",
+      "true": "จริง",
+      "false": "เท็จ",
+      "target": "เป้าหมาย",
+      "nonTarget": "ไม่ใช่เป้าหมาย",
+      "distractor": "กวนใจ",
+      "same": "เหมือนกัน",
+      "different": "แตกต่าง",
+      "identical": "เหมือนกัน",
+      "mirror": "กระจกเงา",
+      "symmetric": "สมมาตร",
+      "asymmetric": "ไม่สมมาตร",
+      "symShort": "ซิม",
+      "present": "ปัจจุบัน",
+      "absent": "ขาด",
+      "noTrials": "ไม่มีการทดลองเสร็จสมบูรณ์",
+      "noSets": "ไม่มีชุดใดเสร็จสมบูรณ์",
+      "noRounds": "ไม่มีรอบใดที่เสร็จสมบูรณ์",
+      "noProblems": "ไม่มีปัญหาใดๆ เสร็จสิ้น",
+      "noPhases": "ไม่มีขั้นตอนใดเสร็จสมบูรณ์",
+      "sets": "ชุด",
+      "rounds": "รอบ",
+      "equations": "สมการ",
+      "sentences": "ประโยค",
+      "equationAccuracy": "ความแม่นยำของสมการ",
+      "forward": "ไปข้างหน้า",
+      "backward": "ถอยหลัง",
+      "forwardMaxSpan": "ช่วงสูงสุดไปข้างหน้า",
+      "backwardMaxSpan": "ช่วงสูงสุดย้อนหลัง",
+      "odd": "คี่",
+      "even": "แม้กระทั่ง",
+      "score": "คะแนน",
+      "easy": "ง่าย",
+      "hard": "ยาก",
+      "totalTrials": "การทดลองทั้งหมด",
+      "totalErrors": "ข้อผิดพลาดทั้งหมด",
+      "totalErrShort": "รวมข้อผิดพลาด",
+      "hits": "ฮิต",
+      "misses": "คิดถึง",
+      "falseAlarms": "เท็จอัล",
+      "correctRejections": "คร. เรจ",
+      "yes": "ใช่",
+      "no": "ไม่",
+      "sessionInterrupted": "เซสชันถูกขัดจังหวะ",
+      "reverseOrder": "ในลำดับย้อนกลับ",
+      "normalOrder": "ตามลำดับ",
+      "lnsInstruction": "ตัวเลขจากน้อยไปหามาก ตามด้วยตัวอักษร A-Z",
+      "vs": "เทียบกับ",
+      "simon": {
+        "simonEffect": "ไซม่อนเอฟเฟค",
+        "blue": "สีฟ้า",
+        "red": "สีแดง",
+        "heroTitle": "ไซม่อน"
+      },
+      "soroban": {
+        "target": "เป็นตัวแทนหมายเลขนี้",
+        "submit": "ส่ง",
+        "rodLabel": "ร็อด {{n}}",
+        "heavenBead": "ลูกปัดสวรรค์ (มูลค่า 5)",
+        "earthBead": "เม็ดดิน (ค่า 1)",
+        "instrBeadTitle": "ลูกปัดทำงานอย่างไร",
+        "instrBeadDesc": "แต่ละแท่งแสดงถึงตัวเลข เม็ดบน(สวรรค์)มีค่า5เม็ด เม็ดล่าง(ดิน)มีค่าอย่างละ1เม็ด เลื่อนลูกปัดไปทางแถบตรงกลางเพื่อเปิดใช้งาน",
+        "instrExampleTitle": "ตัวอย่าง: 7",
+        "instrExampleDesc": "7 = ลูกปัดสวรรค์ลง (5) + ลูกปัดดิน 2 เม็ดขึ้น (2) แตะหรือลากลูกปัดเพื่อย้าย",
+        "instrGoalTitle": "เป้าหมายของคุณ",
+        "instrGoalDesc": "ตัวเลขจะปรากฏขึ้น ตั้งลูกปัดเพื่อแสดง จากนั้นแตะส่ง แม่นยำและรวดเร็ว!",
+        "startButton": "เริ่ม",
+        "settings": "การตั้งค่า",
+        "closeSettings": "ปิดการตั้งค่า",
+        "settingsRods": "จำนวนแท่ง",
+        "settingsRodsHint": "ตั้งค่าผ่าน N-Level ในการตั้งค่าเกม",
+        "settingsTrials": "การทดลองต่อเซสชั่น",
+        "settingsTrialsHint": "ตั้งค่าผ่านการทดลองใช้ในการตั้งค่าเกม",
+        "settingsRange": "ช่วงหมายเลข"
+      },
+      "stroop": {
+        "pressInkColorButton": "กดปุ่มให้ตรงกับสีหมึก",
+        "redWord": "RED",
+        "redLabel": "สีแดง",
+        "blueWord": "BLUE",
+        "blueLabel": "สีฟ้า",
+        "greenWord": "GREEN",
+        "greenLabel": "สีเขียว",
+        "yellowWord": "สีเหลือง",
+        "yellowLabel": "สีเหลือง"
+      },
+      "stroopFlex": {
+        "followRule": "กฎ",
+        "ruleInk": "สีหมึก",
+        "ruleWord": "คำที่เขียน",
+        "pressMatchingRuleButton": "กดปุ่มที่ตรงกับกฎปัจจุบัน"
+      },
+      "goNogo": {
+        "goTrials": "ไปทดลอง",
+        "nogoTrials": "การทดลองแบบไม่ต้องไป",
+        "hitRate": "อัตราการเข้าชม (ไป)",
+        "faRate": "อัตราการเตือนที่ผิดพลาด (No-Go)",
+        "meanRt": "เวลาตอบสนองเฉลี่ย",
+        "sensitivity": "ความไว",
+        "press": "กด",
+        "withhold": "ระงับ"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (สัญญาณหยุด RT)",
+        "ssdMean": "Mean SSD (หยุดสำเร็จ)",
+        "ssd": "SSD",
+        "goRt": "ไป RT",
+        "successfulInhibition": "การยับยั้งได้สำเร็จ",
+        "stop": "หยุด",
+        "meanGoRt": "หมายถึงเวลาตอบสนอง GO",
+        "ssrtInvalid": "ข้อมูลไม่เพียงพอ",
+        "ssrtNegativeNote": "SSRT เป็นลบ (หมายถึง SSD > หมายถึง GO RT) — ผลลัพธ์ไม่น่าเชื่อถือด้วยจำนวนการทดลองใช้ปัจจุบัน"
+      },
+      "pvt": {
+        "rtMedian": "ค่ามัธยฐาน RT",
+        "rtMean": "หมายถึง RT",
+        "fastest": "เร็วที่สุด",
+        "slowest": "ช้าที่สุด",
+        "falseStarts": "เริ่มผิด",
+        "falseStartsShort": "เซนต์เท็จ",
+        "lapses": "หมดเวลา",
+        "mean": "หมายถึง",
+        "reaction": "ปฏิกิริยา",
+        "wait": "รอก่อน...",
+        "pressStimulus": "รอกระตุ้น...",
+        "pressAnywhere": "กดที่ใดก็ได้เมื่อตัวนับปรากฏขึ้น",
+        "press": "กด!",
+        "tooEarly": "เร็วเกินไป!",
+        "lapsesLabel": "หมดเวลา"
+      },
+      "posner": {
+        "cueingEffect": "ผลคิว",
+        "validMeanRt": "หมายถึง RT ที่ถูกต้อง",
+        "invalidMeanRt": "หมายถึง RT ที่ไม่ถูกต้อง",
+        "validAccuracy": "ความถูกต้องแม่นยำ",
+        "invalidAccuracy": "ความแม่นยำไม่ถูกต้อง",
+        "validTrials": "การทดลองที่ถูกต้อง",
+        "invalidTrials": "การทดลองที่ไม่ถูกต้อง",
+        "validRtShort": "RT วาล",
+        "invalidRtShort": "RT ใบแจ้งหนี้",
+        "valid": "ถูกต้อง",
+        "invalid": "ไม่ถูกต้อง"
+      },
+      "antisaccade": {
+        "cost": "ค่าต่อต้านแซกเคด",
+        "proAccuracy": "ความแม่นยำระดับโปร",
+        "antiAccuracy": "ต่อต้านความแม่นยำ",
+        "pro": "โปร",
+        "anti": "ต่อต้าน",
+        "proRt": "โปร RT",
+        "antiRt": "ต่อต้าน RT",
+        "proMeanRt": "หมายถึงโปร saccade RT",
+        "antiMeanRt": "ค่าเฉลี่ยต่อต้าน saccade RT",
+        "costLabel": "ราคา",
+        "antiLabel": "ต่อต้าน"
+      },
+      "axCpt": {
+        "dPrime": "d'-บริบท",
+        "axAccuracy": "ความแม่นยำของขวาน",
+        "bxFa": "BX สัญญาณเตือนที่ผิดพลาด",
+        "ayError": "AY ผิดพลาด",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "อ๋อ ผิดพลาด",
+        "cogControl": "การควบคุมการรับรู้",
+        "target": "เป้าหมาย",
+        "nonTarget": "ไม่ใช่เป้าหมาย"
+      },
+      "ant": {
+        "scores": "คะแนนมด",
+        "alerting": "การแจ้งเตือน (ไม่มีคิว - ดับเบิ้ลคิว)",
+        "orienting": "การวางแนว (ศูนย์กลาง - เชิงพื้นที่)",
+        "executive": "ผู้บริหาร (ไม่สอดคล้องกัน - สอดคล้องกัน)"
+      },
+      "changeDet": {
+        "kCowan": "ความจุ K (โคแวน)",
+        "sameShort": "เหมือนกัน",
+        "diffShort": "ความแตกต่าง"
+      },
+      "swm": {
+        "withinErrors": "ข้อผิดพลาดในการค้นหาภายใน",
+        "betweenErrors": "ข้อผิดพลาดระหว่างการค้นหา",
+        "totalErrors": "ข้อผิดพลาดทั้งหมด",
+        "errorFree": "ปราศจากข้อผิดพลาด",
+        "foundErrorFree": "พบข้อผิดพลาด!",
+        "errorCount": "{{count}} ข้อผิดพลาด",
+        "tapsLabel": "ก๊อก"
+      },
+      "taskSwitch": {
+        "switchCost": "ค่าเปลี่ยน",
+        "rtRepeat": "หมายถึง RT (ซ้ำ)",
+        "rtSwitch": "หมายถึง RT (สวิตช์)",
+        "oddEven": "คี่/คู่",
+        "highLow": "สูง / ต่ำ",
+        "title": "การสลับงาน"
+      },
+      "trailMaking": {
+        "tmtATime": "เวลา TMT-A",
+        "tmtBTime": "เวลา TMT-B",
+        "executiveCost": "ต้นทุนผู้บริหาร (B − A)",
+        "executiveCostShort": "ต้นทุนผู้บริหาร (BA)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "ผิดพลาด ก",
+        "errB": "ผิดพลาด บี",
+        "preparingB": "กำลังเตรียม TMT-B...",
+        "tmtADone": "TMT-A เสร็จแล้ว!",
+        "totalErrors": "ข้อผิดพลาดทั้งหมด",
+        "tmtALabel": "TMT-A: ตัวเลข",
+        "tmtBLabel": "TMT-B: ตัวเลขและตัวอักษร",
+        "next": "ถัดไป",
+        "heroTitle": "การสร้างเส้นทาง",
+        "alternateHint": "ตัวเลขและตัวอักษรสำรอง: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ขั้นต่ำของ ISI",
+        "fastestIsi": "ISI ที่เร็วที่สุด"
+      },
+      "wcst": {
+        "referenceCards": "บัตรอ้างอิง",
+        "testCard": "บัตรทดสอบ",
+        "categories": "หมวดหมู่",
+        "categoriesCompleted": "หมวดหมู่เสร็จสมบูรณ์",
+        "perseverativeErrors": "ข้อผิดพลาดที่เพียรพยายาม",
+        "persevShort": "เพอร์เซฟ",
+        "avgRt": "เฉลี่ย RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT ตามมุม",
+        "findMatch": "ค้นหารูปร่างที่ตรงกัน",
+        "reference": "รูปร่างอ้างอิง",
+        "referenceLabel": "อ้างอิง",
+        "candidate": "ผู้สมัคร",
+        "distractor": "อื่นๆ",
+        "mirrorErrors": "กระจกเงา",
+        "title": "การหมุนจิต"
+      },
+      "sternberg": {
+        "rtBySize": "RT ตามขนาดที่ตั้งไว้",
+        "title": "สเติร์นเบิร์ก",
+        "avgRt": "เฉลี่ย RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT ตามขนาดที่ตั้งไว้",
+        "title": "ค้นหาด้วยภาพ"
+      },
+      "ospan": {
+        "typeLetters": "พิมพ์ตัวอักษรตามลำดับ",
+        "trueOrFalse": "จริงหรือเท็จ?",
+        "processingWarning": "ความแม่นยำของสมการต่ำกว่า 85% — ผลลัพธ์อาจไม่สะท้อนถึงความจุหน่วยความจำการทำงานที่แท้จริง"
+      },
+      "readingSpan": {
+        "s0": "พระอาทิตย์ขึ้นทางทิศตะวันออก",
+        "s1": "ปลาอาศัยอยู่ในต้นไม้",
+        "s2": "ปารีสเป็นเมืองหลวงของฝรั่งเศส",
+        "s3": "สามเหลี่ยมมีสี่ด้าน",
+        "s4": "น้ำเดือดที่อุณหภูมิ 100 องศา",
+        "s5": "แมวเป็นสัตว์เลื้อยคลาน",
+        "s6": "โลกโคจรรอบดวงอาทิตย์",
+        "s7": "ช็อคโกแลตเติบโตบนโขดหิน",
+        "s8": "หนึ่งปีมีสิบสองเดือน",
+        "s9": "นกหายใจใต้น้ำ",
+        "s10": "นมเป็นสีขาว",
+        "s11": "รถยนต์ขับบนราง",
+        "s12": "ผึ้งผลิตน้ำผึ้ง",
+        "s13": "หิมะก็ร้อน",
+        "s14": "หัวใจสูบฉีดเลือด",
+        "s15": "หินลอยอยู่บนน้ำ",
+        "s16": "พระจันทร์ส่องสว่างในเวลากลางคืน",
+        "s17": "งูก็มีขา",
+        "s18": "ไม้ลอยอยู่บนน้ำ",
+        "s19": "ไฟก็เย็น",
+        "s20": "มนุษย์มีประสาทสัมผัสทั้งห้า",
+        "s21": "แมงมุมมีหกขา",
+        "s22": "ขนมปังทำด้วยแป้ง",
+        "s23": "ปลาวาฬเป็นปลา",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "ดอกไม้",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "ป่า",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "เช้า",
+        "d1": "HEART",
+        "d2": "ผ้า",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "สวน",
+        "d6": "เงา",
+        "d7": "BELL",
+        "d8": "สะพาน",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "ช่วงการอ่าน"
+      },
+      "memorizeSequence": "จำลำดับ...",
+      "reproduce": "สืบพันธุ์",
+      "span": "ช่วง",
+      "size": "ขนาด",
+      "fixateCenter": "ติดตรงกลาง...",
+      "identicalOrMirror": "เหมือนกันหรือกระจกเงา?",
+      "wellInhibited": "ยับยั้งได้ดี!",
+      "badDirection": "ผิดทิศทาง!",
+      "stopMissed": "หยุดพลาด!",
+      "falseAlarm": "สัญญาณเตือนเท็จ!",
+      "pressNow": "กด!",
+      "hitBang": "ตี!",
+      "miss": "นางสาว!",
+      "doNotTouch": "อย่าสัมผัส!",
+      "whichDirection": "ทิศทางไหน?",
+      "stopBang": "หยุด!",
+      "cueBang": "คิว!",
+      "memorizeLetters": "จำตัวอักษรเหล่านี้",
+      "memorizeLetter": "จดจำจดหมายฉบับนี้",
+      "memorizeSequenceLetters": "จำลำดับ...",
+      "memorizeDigits": "จำเลขได้...",
+      "memorizeColors": "จดจำสี!",
+      "memorizePosition": "จำตำแหน่งนี้ไว้...",
+      "retainWord": "จำคำนี้ไว้.",
+      "retainNumber": "จำหมายเลขนี้ไว้",
+      "addWithPrevious": "เพิ่มด้วยอันที่แล้ว",
+      "sentenceTrueOrFalse": "ประโยคนี้จริงมั้ย?",
+      "findRedCircle": "ค้นหาวงกลมสีแดง!",
+      "findHiddenToken": "ค้นหาโทเค็นที่ซ่อนอยู่!",
+      "chooseMatchingCard": "เลือกไพ่ที่ตรงกัน",
+      "arrowDirection": "ทิศทางของลูกศรกลาง?",
+      "attention": "โปรดทราบ...",
+      "preparation": "การเตรียมการ...",
+      "recallLettersInOrder": "เรียกตัวอักษร {{count}} ตามลำดับ",
+      "recallWordsInOrder": "จำคำ {{count}} ตามลำดับ",
+      "recallLastLetters": "จำตัวอักษร {{count}} ตัวสุดท้าย",
+      "typeLastLetters": "พิมพ์ตัวอักษร {{count}} ตัวสุดท้าย",
+      "recallPositionsInOrder": "เรียกคืน: แตะตำแหน่งตามลำดับ",
+      "pressEnterToValidate": "กด Enter เพื่อตรวจสอบ",
+      "pressAnywhereToContinue": "กดที่ใดก็ได้เพื่อดำเนินการต่อ",
+      "temporalPrecision": "ความแม่นยำชั่วขณะ",
+      "estimationPrecision": "ความแม่นยำในการประมาณค่า",
+      "touchStartClockwise": "แตะจุดเริ่มต้นแล้วปัดตามเข็มนาฬิกา",
+      "touchAtoB": "แตะจุด A จากนั้นปัดไปที่ B",
+      "cue": "คิว",
+      "retainCue": "จำคิว...",
+      "targetOrNot": "เป้าหมายหรือไม่เป้าหมาย?",
+      "whereIsTarget": "เป้าหมายอยู่ที่ไหน?",
+      "wasLetterInSet": "จดหมายฉบับนี้อยู่ในชุดหรือไม่?",
+      "regular": "ปกติ",
+      "regularity": "ความสม่ำเสมอ",
+      "msDeviation": "มิลลิวินาทีส่วนเบี่ยงเบน",
+      "boxes": "กล่อง",
+      "found": "พบ {{count}}",
+      "past": "อดีต",
+      "tooSlow": "ช้าเกินไป",
+      "tooFast": "เร็วเกินไป",
+      "timeout": "ช้าเกินไป!",
+      "answer": "ตอบ",
+      "dontPress": "อย่ากด!",
+      "feedbackWrong": "ผิด!",
+      "level": "ระดับ",
+      "wrong": "ผิด",
+      "you": "คุณ",
+      "paused": "หยุดชั่วคราว",
+      "instructions": "คำแนะนำ",
+      "selectAnswer": "เลือกคำตอบ",
+      "tapTheOddOne": "แตะอันที่แปลกออก",
+      "pal": {
+        "subtitle": "การเรียนรู้ผู้ร่วมงานคู่",
+        "pairsLearned": "คู่ได้เรียนรู้",
+        "maxSetSize": "ขนาดชุดสูงสุด",
+        "totalErrors": "ข้อผิดพลาดทั้งหมด",
+        "round": "รอบ",
+        "pairs": "คู่",
+        "meanRt": "ค่าเฉลี่ย RT (ถูกต้อง)",
+        "studyPhase": "ศึกษา-จดจำตำแหน่ง",
+        "testPhase": "รูปร่างนี้อยู่ที่ไหน?",
+        "studying": "กำลังศึกษาอยู่",
+        "tapBox": "แตะช่องที่แสดงรูปร่างนี้"
+      },
+      "visualLogic": {
+        "easy": "ง่าย",
+        "hard": "ยาก",
+        "oneRule": "1 กฎ",
+        "twoRules": "กฎ 2 ข้อ",
+        "findMissing": "ค้นหาชิ้นส่วนที่หายไป",
+        "maxLevel": "เลเวลสูงสุด",
+        "finalLevel": "เลเวลสุดท้าย",
+        "nextMode": "โหมดเซสชันถัดไป",
+        "adaptive": "ปรับตัวได้",
+        "fixed": "แก้ไขแล้ว",
+        "spm": "เอสพีเอ็ม 60",
+        "level": "ระดับ",
+        "confirm": "วาลิเดอร์"
+      },
+      "tetrisMind": {
+        "findPiece": "ชิ้นไหนเหมาะกับรู?",
+        "target": "เป้าหมาย"
+      },
+      "timeEstimation": {
+        "overestimationBias": "อคติในการประเมินค่าสูงเกินไป",
+        "underestimationBias": "การประเมินอคติต่ำเกินไป",
+        "noBias": "ไม่มีอคติอย่างมีนัยสำคัญ",
+        "avgError": "ข้อผิดพลาดเฉลี่ย",
+        "overestimations": "การประเมินค่าสูงเกินไป",
+        "underestimations": "การประเมินต่ำเกินไป",
+        "avgAbsoluteError": "ข้อผิดพลาดสัมบูรณ์โดยเฉลี่ย",
+        "avgRelativeError": "ข้อผิดพลาดเชิงสัมพันธ์โดยเฉลี่ย",
+        "cv": "ค่าสัมประสิทธิ์การเปลี่ยนแปลง",
+        "watchDemo": "ดูระยะเวลา",
+        "getReady": "เตรียมตัวให้พร้อม...",
+        "holdToReproduce": "กดค้างไว้เพื่อสืบพันธุ์!",
+        "tooLong": "ยาวเกินไป!",
+        "tooShort": "สั้นเกินไป!",
+        "target": "เป้าหมาย",
+        "demoLabel": "อ้างอิง",
+        "yourTurn": "ตาของคุณ",
+        "watchInstruction": "ชม",
+        "holdInstruction": "กดค้างไว้เพื่อสืบพันธุ์",
+        "heroTitle": "การประมาณเวลา"
+      },
+      "puzzleDetails": "รายละเอียดปริศนา",
+      "roundDetails": "รายละเอียดรอบ",
+      "stageResults": "ผลลัพธ์ขั้นตอน",
+      "recognized": "ได้รับการยอมรับ",
+      "missed": "พลาด",
+      "win": "ชนะ",
+      "lose": "แพ้",
+      "winBang": "ชนะ!",
+      "loseBang": "สูญเสีย!",
+      "correctBang": "ถูกต้อง!",
+      "wrongBang": "ผิด!",
+      "completeBang": "สมบูรณ์!",
+      "repeatedBang": "ย้ำ!",
+      "incompleteBang": "ไม่สมบูรณ์!",
+      "levelCompleteBang": "ระดับเสร็จสมบูรณ์!",
+      "timesUp": "หมดเวลาแล้ว",
+      "seeResults": "ดูผลลัพธ์",
+      "nextRound": "รอบต่อไป",
+      "startBlock": "เริ่มบล็อก",
+      "continue": "ดำเนินการต่อ",
+      "patientChoice": "ทางเลือกของผู้ป่วย",
+      "immediateChoice": "ทางเลือกทันที",
+      "immediate": "ทันที",
+      "digitSpan": {
+        "heroTitle": "ช่วงตัวเลข"
+      },
+      "resume": "ดำเนินการต่อ",
+      "numericalStroop": {
+        "heroTitle": "ตัวเลข Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "การตัดสินการวางแนวเส้น"
+      },
+      "chain": "โซ่",
+      "undo": "เลิกทำ",
+      "vocalProsody": {
+        "heroTitle": "ฉันทลักษณ์แกนนำ"
+      },
+      "letterNumber": {
+        "title": "ตัวอักษร-หมายเลขลำดับ",
+        "expectedAnswer": "คำตอบที่คาดหวัง"
+      },
+      "patternComparison": {
+        "heroTitle": "การเปรียบเทียบรูปแบบ"
+      },
+      "speedPack": {
+        "title": "สปีดแพ็ค",
+        "whenFoldedWhichTouch": "เมื่อพับแล้ว สี่เหลี่ยมอันไหนสัมผัสกัน?"
+      },
+      "dotProbe": {
+        "heroTitle": "ดอทโพรบ"
+      },
+      "reflex": {
+        "heroTitle": "สะท้อนกลับ"
+      },
+      "hooperVisual": {
+        "title": "องค์กรภาพฮูเปอร์",
+        "whatIsThisObject": "วัตถุนี้คืออะไร?"
+      },
+      "blockDesign": {
+        "heroTitle": "การออกแบบบล็อก"
+      },
+      "accuracy": "ความแม่นยำ",
+      "avgTime": "เฉลี่ย เวลา",
+      "check": "ตรวจสอบ",
+      "dualTrace": {
+        "playArea": "พื้นที่เล่น"
+      },
+      "paperFolding": {
+        "title": "การพับกระดาษ",
+        "foldSequenceHolePunch": "ลำดับการพับและการเจาะรู",
+        "whichPatternWhenUnfolded": "เมื่อกางออกมารูปแบบไหน?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "การตัดสินใจเกี่ยวกับคำศัพท์"
+      },
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxGrid": "ตารางสูงสุด",
+      "symmetry": "สมมาตร",
+      "threshold": "เกณฑ์",
+      "hitRate": "อัตราการเข้าชม",
+      "faRate": "โตซ์ เดอ เอฟเอ",
+      "changeDetection": {
+        "heroTitle": "การตรวจจับการเปลี่ยนแปลง"
+      },
+      "syllogisms": {
+        "heroTitle": "การอ้างเหตุผล"
+      },
+      "subitizing": {
+        "title": "ซับบิท",
+        "range": "พิสัย"
+      },
+      "jitter": "กระวนกระวายใจ",
+      "sentenceCompletion": {
+        "title": "การเติมประโยคให้สมบูรณ์ (ปิด)",
+        "highCloze": "เสื้อคลุมสูง",
+        "lowCloze": "ปิดบังต่ำ"
+      },
+      "grid": "กริด",
+      "pinballRecall": {
+        "title": "พินบอลเรียกคืน",
+        "byBounces": "โดยการตีกลับ",
+        "whereDoesItLand": "มันลงจอดที่ไหน?"
+      },
+      "mean": "หมายถึง",
+      "speedup": "เร่งความเร็ว",
+      "memorize": "จดจำ",
+      "time": "เวลา",
+      "surfaceDevelopment": {
+        "title": "การพัฒนาพื้นผิว",
+        "whichEdgeMatches": "ขอบไหนตรงกับ?"
+      },
+      "crowding": {
+        "heroTitle": "การมองเห็นฝูงชน",
+        "spacing": "ระยะห่าง"
+      },
+      "patternRecognition": {
+        "heroTitle": "การรับรู้รูปแบบ"
+      },
+      "brixton": {
+        "heroTitle": "บริกซ์ตัน"
+      },
+      "dualMemo": {
+        "trial": "ทดลอง",
+        "position": "ตำแหน่ง",
+        "audio": "เสียง"
+      },
+      "sceneCrasher": {
+        "heroTitle": "ฉากผู้บุกรุก",
+        "detect": "ตรวจจับ"
+      },
+      "eyesTest": {
+        "heroTitle": "อ่านใจในสายตา"
+      }
+    },
+    "gridlock": {
+      "undone": "การย้ายครั้งล่าสุดถูกยกเลิก",
+      "resetMessage": "รีเซ็ตปริศนา",
+      "hintMessage": "คำแนะนำ: เลื่อน {{pieceId}} {{dir}} {{delta}}",
+      "previewCountdown": "ศึกษาบอร์ดครับ. เริ่มใน {{seconds}}วินาที",
+      "challenge": "ความท้าทาย",
+      "optimal": "เหมาะสมที่สุด",
+      "moves": "ย้าย",
+      "piece": "ชิ้น {{id}}",
+      "targetPiece": "ชิ้น {{id}} (เป้าหมาย - รถสีแดง)",
+      "challengeClassic": "คลาสสิค",
+      "challengePrecision": "ความแม่นยำ",
+      "challengeMemory": "หน่วยความจำ",
+      "challengeTimed": "หมดเวลา",
+      "hint": "คำแนะนำ",
+      "reset": "รีเซ็ต",
+      "undo": "เลิกทำ",
+      "nextPuzzle": "ปริศนาต่อไป →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "บล็อก 1 ฮิต",
+      "block2Hits": "บล็อก 2 ฮิต",
+      "goPositive": "ไป = บวก",
+      "goNegative": "ไป = ลบ",
+      "title": "อารมณ์ไป / ไม่ไป",
+      "block1CommissionErrors": "บล็อก 1 ข้อผิดพลาดของค่าคอมมิชชั่น",
+      "block2CommissionErrors": "บล็อก 2 ข้อผิดพลาดของค่าคอมมิชชั่น",
+      "block": "บล็อก",
+      "go": "ไป"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "อัตราการเปลี่ยนเฉลี่ย",
+      "meanSwitchesfigure": "สวิตช์/ตัวเลขเฉลี่ย",
+      "totalSwitches": "สวิตช์ทั้งหมด",
+      "title": "ตัวเลขที่ไม่ชัดเจน",
+      "meanSwitches": "สวิตช์หมายถึง",
+      "switchRate": "อัตราการสลับ",
+      "figures": "ตัวเลข",
+      "totalSwitchesLabel": "สวิตช์ทั้งหมด",
+      "duration": "ระยะเวลา",
+      "switchesCount": "ส | สวิตช์:",
+      "switchButton": "สวิตช์!"
+    },
+    "analogies": {
+      "verbalCorrect": "วาจาถูกต้อง",
+      "timeout": "หมดเวลา",
+      "title": "การเปรียบเทียบ"
+    },
+    "ansComparison": {
+      "weber": "เวเบอร์",
+      "title": "ANS เปรียบเทียบ",
+      "ratio": "อัตราส่วน",
+      "leftMore": "เหลืออีก",
+      "rightMore": "ถูกต้องมากขึ้น"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "อัตราการเตือนที่ผิดพลาด",
+      "grammatical": "ไวยากรณ์",
+      "memorizeTheseStrings": "จดจำสตริงเหล่านี้",
+      "testPhase": "ขั้นตอนการทดสอบ",
+      "ungrammatical": "ไม่ถูกหลักไวยากรณ์",
+      "learning": "การเรียนรู้",
+      "test": "ทดสอบ",
+      "title": "ไวยากรณ์ประดิษฐ์",
+      "learningPhase": "การเรียนรู้",
+      "testIntroText": "ตอนนี้คุณจะเห็นสตริงใหม่ ตัดสินใจว่าแต่ละข้อทำตามกฎเดียวกันกับข้อความที่คุณเพิ่งศึกษาหรือไม่",
+      "startTest": "เริ่มการทดสอบ",
+      "followsRules": "ปฏิบัติตามกฎเกณฑ์",
+      "breaksRules": "ฝ่าฝืนกฎเกณฑ์"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "ขนาดกะพริบ",
+      "title": "กะพริบตาอย่างตั้งใจ",
+      "blink": "กะพริบตา",
+      "t1Acc": "T1 บัญชี",
+      "t2Acc": "T2 บัญชี",
+      "firstGreenLetter": "ตัวอักษรสีเขียวตัวแรก?",
+      "secondGreenLetter": "ตัวอักษรสีเขียวตัวที่ 2?"
+    },
+    "attentionalCapture": {
+      "captureCost": "ต้นทุนการจับภาพ",
+      "singletonPresent": "ซิงเกิลตันปัจจุบัน",
+      "noSingleton": "ไม่มีซิงเกิลตัน",
+      "title": "การจับความสนใจ",
+      "capture": "จับภาพ",
+      "horizontal": "แนวนอน",
+      "vertical": "แนวตั้ง"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "หน้าต่างเข้าเล่ม",
+      "title": "การผูกภาพโสตทัศนูปกรณ์",
+      "window": "หน้าต่าง",
+      "pssLabel": "PSS (จุดพร้อมกันเชิงอัตนัย)",
+      "simultaneousOrNot": "พร้อมกันหรือเปล่า?",
+      "simultaneous": "พร้อมกัน",
+      "notSimultaneous": "ไม่พร้อมกัน"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "เกณฑ์ระยะเวลา",
+      "reference": "อ้างอิง",
+      "weberFraction": "เศษส่วนเวเบอร์",
+      "title": "ระยะเวลาการได้ยิน",
+      "threshold": "เกณฑ์",
+      "weber": "เวเบอร์",
+      "whichLonger": "อันไหนยาวกว่ากัน?",
+      "firstLonger": "แรกอีกต่อไป",
+      "secondLonger": "ที่สองอีกต่อไป"
+    },
+    "bart": {
+      "adjustedAvgPumps": "ปรับปั๊มเฉลี่ยแล้ว",
+      "avgTimeballoon": "เวลาเฉลี่ย/บอลลูน",
+      "banked": "แบงค์!",
+      "lostEarnings": "ขาดทุน!",
+      "overallAvgPumps": "ปั๊มเฉลี่ยโดยรวม",
+      "popRate": "อัตราป๊อป",
+      "totalEarned": "รายได้ทั้งหมด",
+      "balloons": "ลูกโป่ง",
+      "cashed": "เงินสดแล้ว",
+      "popped": "โผล่แล้ว",
+      "adjPumps": "ปรับ ปั๊ม",
+      "pop": "ป๊อป",
+      "pump": "ปั๊ม",
+      "cashIn": "เงินสดเข้า"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "เวลาตัดสินใจเฉลี่ย",
+      "drawBeadsToGatherEvidence": "วาดลูกปัดเพื่อรวบรวมหลักฐาน",
+      "jtc": "JTC",
+      "title": "งานลูกปัด",
+      "meanDraws": "เฉลี่ย เสมอ",
+      "rounds": "รอบ",
+      "jtcRate": "อัตรา JTC",
+      "meanDrawsToDecision": "ค่าเฉลี่ยดึงไปสู่การตัดสินใจ",
+      "jtcRateThreshold": "อัตรา JTC (<{{threshold}} เสมอ)",
+      "round": "รอบ",
+      "jarDescription": "โถ A: สีเขียว 85% / โถ B: สีแดง 85%",
+      "itWasJar": "มันคือจาร์",
+      "drawABead": "วาดลูกปัด",
+      "jarAGreen": "จาร์ เอ กรีน",
+      "jarBRed": "จาร์ บี เรด"
+    },
+    "binding": {
+      "changedTrials": "การทดลองที่เปลี่ยนแปลงไป",
+      "sameAccuracy": "ความแม่นยำเดียวกัน",
+      "sameTrials": "การทดลองเดียวกัน",
+      "title": "การผูกคุณสมบัติ",
+      "binding": "การผูกมัด",
+      "bindingAccuracyChanged": "เปลี่ยนความแม่นยำ",
+      "same": "เหมือนกัน",
+      "different": "แตกต่าง"
+    },
+    "blockDesign": {
+      "cells": "เซลล์",
+      "target": "เป้าหมาย",
+      "yourAnswer": "คำตอบของคุณ",
+      "tapHint": "แตะเพื่อวนสี",
+      "check": "ตรวจสอบ"
+    },
+    "brixton": {
+      "adapt": "ปรับตัว",
+      "adaptationCost": "ค่าใช้จ่ายในการปรับตัว",
+      "nonswitchTrials": "การทดลองแบบไม่เปลี่ยน",
+      "switchTrials": "สลับการทดลองใช้"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "จำจดหมายเหล่านี้",
+      "selectThe3Letters": "เลือกตัวอักษร 3 ตัว",
+      "title": "ภารกิจของบราวน์-ปีเตอร์สัน",
+      "forgetting": "ลืม",
+      "sDelay": "เอส ดีเลย์",
+      "minus3": "ลบ3",
+      "delay": "ความล่าช้า"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "คุณภาพการตัดสินใจ",
+      "finalPoints": "จุดสุดท้าย",
+      "meanBet": "เดิมพันเฉลี่ย",
+      "winRate": "อัตราการชนะ",
+      "wins": "ชนะ",
+      "title": "งานการพนันเคมบริดจ์",
+      "totalPoints": "คะแนนรวม",
+      "quality": "คุณภาพ",
+      "rational": "มีเหตุผล",
+      "avgBet": "เฉลี่ย เดิมพัน",
+      "trial": "ทดลอง",
+      "whichColorHidesToken": "สีอะไรซ่อนโทเค็น?",
+      "youChose": "คุณเลือก",
+      "howMuchToBet": "เดิมพันเท่าไหร่?"
+    },
+    "cancellation": {
+      "false": "เท็จ",
+      "target": "เป้าหมาย:",
+      "total": "รวม",
+      "title": "งานยกเลิก (d2)",
+      "misses": "คิดถึง",
+      "targetDescription": "d มี 2 เครื่องหมาย"
+    },
+    "changeBlindness": {
+      "detectionRate": "อัตราการตรวจจับ",
+      "found": "พบแล้ว",
+      "meanDetectionTime": "เวลาการตรวจจับเฉลี่ย",
+      "title": "เปลี่ยนการตาบอด",
+      "missed": "พลาด",
+      "avgTime": "เฉลี่ย เวลา",
+      "instructions": "คำแนะนำ"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "การประมาณการที่ดีที่สุด",
+      "meanScore": "คะแนนเฉลี่ย",
+      "worstEstimate": "การประมาณการที่เลวร้ายที่สุด",
+      "inRange": "ประมาณการดี!",
+      "title": "การประมาณค่าทางปัญญา",
+      "meanScoreLabel": "คะแนนเฉลี่ย",
+      "inRangeLabel": "อยู่ในช่วง",
+      "extreme": "สุดขีด",
+      "scoreLabel": "คะแนน",
+      "submit": "ส่ง"
+    },
+    "common": {
+      "accuracy": "ความแม่นยำ",
+      "bias": "อคติ",
+      "falseAlarmRate": "อัตราการเตือนที่ผิดพลาด",
+      "hitRate": "อัตราการเข้าชม",
+      "hits": "ฮิต",
+      "listening": "กำลังฟัง...",
+      "meanRt": "หมายถึง RT",
+      "timedOut": "หมดเวลา",
+      "timedOut2": "หมดเวลาแล้ว",
+      "faRate": "โตซ์ เดอ เอฟเอ",
+      "paused": "หยุดชั่วคราว"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "คุณมั่นใจแค่ไหน?",
+      "rateYourConfidence": "ให้คะแนนความมั่นใจของคุณ",
+      "title": "การสอบเทียบความมั่นใจ",
+      "calError": "ข้อผิดพลาดในการสอบเทียบ",
+      "confidence": "ความมั่นใจ"
+    },
+    "consequences": {
+      "best": "ดีที่สุด",
+      "nextRound": "รอบต่อไป...",
+      "time": "เวลา",
+      "placeholder": "พิมพ์ผลที่ตามมา...",
+      "title": "ผลที่ตามมา",
+      "totalIdeas": "รวมไอเดีย",
+      "avgPerRound": "เฉลี่ย ต่อรอบ",
+      "rounds": "รอบ",
+      "noConsequencesListed": "ไม่มีรายการผลที่ตามมา",
+      "roundProgress": "รอบ {{current}} / {{total}}",
+      "typeAndPressAdd": "พิมพ์และกดเพิ่ม"
+    },
+    "contextualCueing": {
+      "cueingEffect": "ผลคิว",
+      "newConfigRt": "RT กำหนดค่าใหม่",
+      "oldConfigRt": "RT การกำหนดค่าเก่า",
+      "title": "การคิวตามบริบท",
+      "cueing": "การคิว",
+      "oldRt": "RT เก่า",
+      "newRt": "ใหม่ RT",
+      "prompt": "พรอมต์",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "เกณฑ์กระวนกระวายใจ",
+      "title": "บูรณาการรูปร่าง",
+      "pipeJitter": "| กระวนกระวายใจ"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "ความคมชัดเกณฑ์",
+      "title": "ความไวของคอนทราสต์",
+      "threshold": "เกณฑ์",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง"
+    },
+    "cpt": {
+      "nontargets": "ไม่ใช่เป้าหมาย",
+      "target": "เป้าหมาย",
+      "nonTarget": "ไม่ใช่เป้าหมาย",
+      "dPrime": "ดี'",
+      "targetsLetter": "จดหมายเป้าหมาย",
+      "tapForLetterOnly": "แตะเพื่อดูตัวอักษรเป้าหมายเท่านั้น"
+    },
+    "crowding": {
+      "criticalSpacing": "ระยะห่างที่สำคัญ",
+      "leftAccuracy": "ความแม่นยำด้านซ้าย",
+      "rightAccuracy": "ความแม่นยำที่ถูกต้อง"
+    },
+    "cryptogram": {
+      "hints": "คำแนะนำ",
+      "title": "การเข้ารหัสลับ",
+      "solved": "แก้ไขแล้ว",
+      "time": "เวลา",
+      "puzzles": "ปริศนา",
+      "puzzle": "ปริศนา",
+      "hint": "คำแนะนำ",
+      "clear": "ชัดเจน"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "พื้นที่ใต้เส้นโค้ง",
+      "discountRateK": "อัตราคิดลด (พัน)",
+      "impulsivityIndex": "ดัชนีแรงกระตุ้น",
+      "title": "ส่วนลดล่าช้า",
+      "aucPatience": "อคส.อดทน.",
+      "patient": "คนไข้",
+      "kRate": "เคเรท",
+      "impuls": "แรงกระตุ้น",
+      "indifferencePoints": "จุดไม่แยแส",
+      "whichPrefer": "คุณชอบอันไหน?",
+      "today": "วันนี้"
+    },
+    "delayedMatching": {
+      "long": "ยาว",
+      "longDelay68s": "ล่าช้านาน (6-8 วินาที)",
+      "med": "ยา",
+      "mediumDelay46s": "ความล่าช้าปานกลาง (4-6 วินาที)",
+      "short": "สั้น",
+      "shortDelay34s": "ความล่าช้าสั้น ๆ (3-4 วินาที)",
+      "title": "การจับคู่ล่าช้า",
+      "delay": "ความล่าช้า",
+      "rememberThisPattern": "จำรูปแบบนี้ไว้",
+      "whichWasIt": "มันคืออะไร?"
+    },
+    "dichoticListening": {
+      "alertDetection": "การตรวจจับการแจ้งเตือน",
+      "attendToTheLeftColumn": "เข้าร่วมคอลัมน์ซ้าย",
+      "attendedAccuracy": "เข้าร่วมความแม่นยำ",
+      "ignoreTheRightColumn": "ละเว้นคอลัมน์ด้านขวา",
+      "right": "RIGHT",
+      "title": "การฟังแบบ Dichotic",
+      "attendedAcc": "เข้าร่วมความถูกต้อง",
+      "alertDet": "การตรวจจับการแจ้งเตือน",
+      "alerts": "การแจ้งเตือน",
+      "selectLeftColumnWords": "เลือกคำในคอลัมน์ด้านซ้าย",
+      "submit": "ส่ง",
+      "alertQuestion": "คำถามแจ้งเตือน"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "ลืมความถูกต้อง",
+      "forgettingEffect": "เอฟเฟกต์การลืม",
+      "newRejection": "การปฏิเสธครั้งใหม่",
+      "rememberAccuracy": "จำแม่นครับ",
+      "title": "กำกับการลืม",
+      "remember": "จำไว้",
+      "forget": "ลืม",
+      "round": "รอบ",
+      "word": "คำพูด",
+      "wasThisWordShown": "คำนี้ถูกแสดงหรือไม่?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "คะแนนอคติความสนใจ",
+      "congruentAcc": "บัญชีที่สอดคล้องกัน",
+      "congruentRt": "สอดคล้องกัน RT",
+      "incongruentAcc": "บัญชีไม่สอดคล้องกัน",
+      "incongruentRt": "RT ไม่สอดคล้องกัน"
+    },
+    "doubleDecision": {
+      "carOrTruck": "รถยนต์หรือรถบรรทุก?",
+      "minDisplayReached": "ถึงการแสดงผลขั้นต่ำแล้ว",
+      "positionAccuracy": "ความแม่นยำของตำแหน่ง",
+      "thresholdDisplay": "การแสดงเกณฑ์",
+      "vehicleAccuracy": "ความแม่นยำของยานพาหนะ",
+      "whereWasTheDiamond": "เพชรอยู่ที่ไหน?",
+      "title": "การตัดสินใจสองครั้ง",
+      "threshold": "เกณฑ์",
+      "bothOk": "ถูกต้องทั้งคู่",
+      "vehicle": "ยานพาหนะ",
+      "position": "ตำแหน่ง",
+      "car": "รถ",
+      "truck": "รถบรรทุก"
+    },
+    "dsst": {
+      "items": "รายการ",
+      "itemsCompleted": "รายการเสร็จสมบูรณ์",
+      "speedItemsmin": "ความเร็ว (รายการ/นาที)",
+      "attempts": "ความพยายาม",
+      "itemsPerMin": "รายการ / นาที"
+    },
+    "dualTask": {
+      "dualtaskCost": "ต้นทุนงานคู่",
+      "taskANumber": "งาน A (หมายเลข)",
+      "taskBSymbol": "งาน B (สัญลักษณ์)",
+      "title": "งานคู่",
+      "taskA": "งาน ก",
+      "taskB": "งานข",
+      "number": "หมายเลข",
+      "symbol": "สัญลักษณ์",
+      "up": "ขึ้น",
+      "down": "ลง"
+    },
+    "dualTime": {
+      "sessionEnPause": "เซสชันหยุดชั่วคราว",
+      "votreEstimationSecondes": "ค่าประมาณของคุณ (วินาที)",
+      "sessionInterrupted": "เซสชันถูกขัดจังหวะ",
+      "target": "เป้าหมาย",
+      "estimation": "การประมาณค่า",
+      "avgTime": "เฉลี่ย เวลา",
+      "avgError": "เฉลี่ย ข้อผิดพลาด",
+      "trials": "การทดลอง",
+      "resumeToContinue": "ดำเนินการต่อเพื่อดำเนินการต่อ",
+      "aimFor": "ตั้งเป้าเพื่อ",
+      "second": "ประการที่สอง",
+      "howLongDidYouTake": "คุณใช้เวลานานเท่าไหร่?"
+    },
+    "dualTrack": {
+      "confirmer": "ยืนยัน",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "ดำเนินการต่อเพื่อดำเนินการต่อ",
+      "sessionEnPause": "เซสชันหยุดชั่วคราว",
+      "tapezLesCibles": "แตะที่เป้าหมาย",
+      "tapezLaCible": "แตะที่เป้าหมาย",
+      "appuyezConfirmer": "กดยืนยัน",
+      "targetsCountLabel": "{{count}} เป้าหมาย",
+      "distractorsCountLabel": "{{count}} สิ่งรบกวนสมาธิ",
+      "roundsCountLabel": "{{count}} รอบ",
+      "calibrationRoundsLabel": "{{count}} รอบการสอบเทียบ",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = ระดับความยากในการเดินทางภายใน",
+      "tierHelpCurrentWithPhase": "ขณะนี้คุณอยู่ที่ T{{current}} จาก {{total}} สำหรับเป้าหมาย {{targets}} เฟสปัจจุบัน: {{phase}} เหลืออีก {{remaining}} ระดับก่อนที่จะถึงระดับเป้าหมายถัดไป",
+      "phaseTracking": "การติดตาม",
+      "phaseAudio": "การติดตาม + เสียง",
+      "phaseColor": "ติดตาม+สี",
+      "phaseCombined": "การติดตาม + เสียง + สี",
+      "passLetters": "จดหมาย",
+      "passColors": "สี",
+      "moveInstruction": "ย้ายคำแนะนำ",
+      "moveConfirmBtn": "ย้ายปุ่มยืนยัน",
+      "preparingSession": "กำลังเตรียมเซสชั่น...",
+      "preparing3dScene": "กำลังเตรียมฉาก 3D...",
+      "startJourney": "เริ่มการเดินทาง",
+      "calibrationDescription": "ก่อนถึงขั้นแรก การสอบเทียบที่นานขึ้นจะประมาณระดับเริ่มต้นของคุณ",
+      "defaultDescription": "ลูกบอลจะสว่างขึ้น ติดตามพวกเขาในขณะที่พวกเขาเคลื่อนไหว จากนั้นระบุพวกเขา",
+      "startCalibration": "เริ่มการสอบเทียบ",
+      "calibrationTitle": "การสอบเทียบ",
+      "estimatedStart": "ประมาณ เริ่มต้น",
+      "roundsAnalyzed": "วิเคราะห์รอบแล้ว",
+      "willStartAt": "จะเริ่มที่",
+      "targetsCount": "เป้าหมาย",
+      "thenProgress": "แล้วก้าวหน้า"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "หมายถึงข้อผิดพลาดสัมบูรณ์",
+      "ratio": "อัตราส่วน",
+      "slope": "ความลาดชัน",
+      "vierordtSlope": "เนินลาดเวียร์ออร์ดท์",
+      "wait": "รอก่อน...",
+      "title": "การสืบพันธุ์ตามระยะเวลา",
+      "meanError": "หมายถึงข้อผิดพลาด",
+      "meanRatio": "อัตราส่วนเฉลี่ย (ผลผลิต/เป้าหมาย)",
+      "holdNow": "กดค้างไว้เลย",
+      "target": "เป้าหมาย",
+      "error": "เกิดข้อผิดพลาด"
+    },
+    "embeddedFigures": {
+      "fastest": "เร็วที่สุด",
+      "found": "พบแล้ว",
+      "meanDetectionTime": "ระยะเวลาการตรวจจับเฉลี่ย",
+      "slowest": "ช้าที่สุด",
+      "title": "ตัวเลขที่ฝัง",
+      "missed": "พลาด",
+      "fastestLabel": "เร็วที่สุด",
+      "findThisShape": "เจอรูปทรงนี้.",
+      "memorizeShape": "จดจำรูปร่าง...",
+      "foundIt": "พบมัน!",
+      "giveUp": "ยอมแพ้"
+    },
+    "emotionalNback": {
+      "falseAlarms": "สัญญาณเตือนเท็จ",
+      "misses": "คิดถึง",
+      "title": "อารมณ์ N-Back",
+      "match": "ตรงกัน"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT เป็นกลาง",
+      "positiveRt": "RT เชิงบวก",
+      "threatRt": "ภัยคุกคาม RT",
+      "title": "สตรัปทางอารมณ์",
+      "interference": "การรบกวน",
+      "interferenceThreatNeutral": "การรบกวน (ภัยคุกคาม - เป็นกลาง)"
+    },
+    "eyesTest": {
+      "totalTime": "เวลาทั้งหมด"
+    },
+    "faceName": {
+      "gain": "ได้รับ",
+      "learningImprovement": "การปรับปรุงการเรียนรู้",
+      "round1Accuracy": "รอบที่ 1 ความแม่นยำ",
+      "round2Accuracy": "รอบที่ 2 ความแม่นยำ",
+      "whoIsThis": "นี่คือใคร?",
+      "title": "สมาคมชื่อหน้า",
+      "round": "รอบ",
+      "testPhase": "ขั้นตอนการทดสอบ"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "ทำไม",
+      "title": "การรับรู้มารยาท Pas",
+      "detection": "การตรวจจับ",
+      "scenarios": "สถานการณ์",
+      "fpFound": "พบมารยาทแล้ว",
+      "control": "การควบคุม",
+      "readyToAnswer": "พร้อมตอบครับ",
+      "didSomeoneSay": "มีคนพูดอะไรบางอย่างที่พวกเขาไม่ควรพูดหรือเปล่า?",
+      "whoSaidIt": "ใครบอกว่ามัน?",
+      "whyInappropriate": "เหตุใดจึงไม่เหมาะสม?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "เรียกคืนความแม่นยำ",
+      "recognitionAccuracy": "ความแม่นยำในการรับรู้",
+      "recallPlaceholder": "พิมพ์คำตอบของคุณ...",
+      "unlikely": "ไม่น่าเป็นไปได้",
+      "certain": "แน่นอน",
+      "title": "ความรู้สึกของการรู้",
+      "recall": "จำ",
+      "recognition": "การยอมรับ",
+      "fokR": "ฟอก อาร์",
+      "questions": "คำถาม",
+      "recalled": "เรียกคืน",
+      "recognized": "ได้รับการยอมรับ",
+      "fokSensitivity": "ความไว FOK",
+      "submit": "ส่ง",
+      "dontKnow": "ไม่รู้",
+      "fokPrompt": "คุณจะรับรู้มันไหม?",
+      "selectCorrectAnswer": "เลือกคำตอบที่ถูกต้อง",
+      "answer": "ตอบ"
+    },
+    "fingerTapping": {
+      "firstTrial": "การทดลองครั้งแรก",
+      "lastTrial": "การทดลองครั้งสุดท้าย",
+      "sequence": "ลำดับ",
+      "speedupT1VsT12": "การเร่งความเร็ว (T1 กับ T12)",
+      "title": "การแตะนิ้ว"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "เวลาการเคลื่อนไหวเฉลี่ย",
+      "avgThroughput": "ปริมาณงานเฉลี่ย",
+      "title": "ฟิตส์ กรีด",
+      "throughput": "ปริมาณงาน",
+      "tapTarget": "แตะเป้าหมายที่ไฮไลต์"
+    },
+    "foreperiod": {
+      "early": "ช่วงต้น",
+      "slope": "ความลาดชัน",
+      "title": "การเตรียมการชั่วคราว",
+      "fpEffectSlope": "ความชันเอฟเฟกต์ FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "การกลับรายการ",
+      "threshold": "เกณฑ์",
+      "tone1": "โทน 1",
+      "tone2": "โทน 2",
+      "weber": "เวเบอร์",
+      "weberFraction": "เศษส่วนเวเบอร์",
+      "hz": "เฮิรตซ์",
+      "title": "การเลือกปฏิบัติทางความถี่",
+      "thresholdLabel": "เกณฑ์",
+      "hzDiff": "ส่วนต่างเฮิร์ตซ์",
+      "whichWasHigher": "อันไหนสูงกว่ากัน?",
+      "firstHigher": "สูงขึ้นก่อน",
+      "secondHigher": "สูงขึ้นเป็นอันดับสอง"
+    },
+    "gabor": {
+      "gaborPatch": "กาบอร์แพทช์",
+      "leftAccuracy": "ความแม่นยำด้านซ้าย",
+      "leftTrials": "ออกจากการทดลอง",
+      "noiseMask": "หน้ากากกันเสียง",
+      "rightAccuracy": "ความแม่นยำที่ถูกต้อง",
+      "rightTrials": "การทดลองที่ถูกต้อง",
+      "thresholdAngle": "มุมเกณฑ์",
+      "title": "กาบอร์",
+      "threshold": "เกณฑ์",
+      "reversals": "การกลับรายการ",
+      "timedOut": "หมดเวลาแล้ว",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง"
+    },
+    "gameOfDice": {
+      "finalPoints": "จุดสุดท้าย",
+      "risky": "เสี่ยง",
+      "riskyChoices": "ทางเลือกที่มีความเสี่ยง",
+      "safe": "ปลอดภัย",
+      "winRate": "อัตราการชนะ",
+      "wins": "ชนะ",
+      "title": "เกมลูกเต๋าภารกิจ",
+      "totalPoints": "คะแนนรวม",
+      "riskyLabel": "เสี่ยง",
+      "roll": "ม้วน",
+      "chooseYourBet": "เลือกเดิมพันของคุณ",
+      "pickNumbers": "เลือกหมายเลขของคุณ"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "ช่องว่างหรือไม่มีช่องว่าง?",
+      "gapThreshold": "เกณฑ์ช่องว่าง",
+      "title": "การตรวจจับความเงียบ",
+      "noGap": "ไม่มีช่องว่าง"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "การจ้องมองอยู่ที่ไหน?",
+      "direct": "โดยตรง",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง",
+      "title": "ทิศทางการจ้องมอง",
+      "dPrimeDirectGaze": "D Prime จ้องมองโดยตรง"
+    },
+    "hayling": {
+      "part1Initiation": "ส่วนที่ 1 (การเริ่มต้น)",
+      "part2": "ส่วนที่ 2",
+      "part2Suppression": "ส่วนที่ 2 (ปราบปราม)",
+      "suppressionCost": "ค่าใช้จ่ายในการปราบปราม",
+      "title": "เฮย์ลิ่ง",
+      "part1": "ส่วนที่ 1",
+      "part2Label": "ส่วนที่ 2",
+      "suppression": "การปราบปราม",
+      "obvious": "ชัดเจน",
+      "obviousPicksPart2": "ตัวเลือกที่ชัดเจน (ตอนที่ 2)",
+      "chooseUnrelated": "เลือกคำที่ไม่เกี่ยวข้อง",
+      "completelyUnrelated": "ไม่เกี่ยวข้องโดยสิ้นเชิง",
+      "doNotPickObvious": "อย่าเลือกคำที่ชัดเจน!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "ก้าวไปสู่ขั้นต่อไป...",
+      "stageComplete": "เวทีเสร็จแล้ว!",
+      "title": "IED ตั้งค่ากะ",
+      "stages": "ขั้นตอน",
+      "edsCost": "ค่าใช้จ่าย EDS",
+      "stage": "เวที",
+      "correctNeeded": "ถูกต้องจำเป็นต้องก้าวหน้า"
+    },
+    "informationSampling": {
+      "cost": "ราคา",
+      "free": "ฟรี",
+      "meanTilesCost": "กระเบื้องเฉลี่ย (ต้นทุน)",
+      "meanTilesFree": "กระเบื้องเฉลี่ย (ฟรี)",
+      "totalCost": "ต้นทุนรวม",
+      "title": "การสุ่มตัวอย่างข้อมูล",
+      "tiles": "กระเบื้อง",
+      "tapToReveal": "แตะเพื่อเปิดเผย"
+    },
+    "inspectionTime": {
+      "final": "สุดท้าย",
+      "finalDisplayTime": "เวลาแสดงครั้งสุดท้าย",
+      "minCorrectIt": "มินถูกต้องไอที",
+      "threshold": "เกณฑ์",
+      "title": "เวลาตรวจสอบ",
+      "thresholdLabel": "เกณฑ์",
+      "minIt": "มิน ไอที"
+    },
+    "iowaGambling": {
+      "balance": "ยอดคงเหลือ:",
+      "chooseADeck": "เลือกสำรับ",
+      "deckADraws": "เด็ค A เสมอ",
+      "deckBDraws": "เด็ค B จั่ว",
+      "deckCDraws": "จั่วสำรับ C",
+      "deckDDraws": "เด็ค D จั่ว",
+      "first40Advantageous": "40 คนแรกได้เปรียบ",
+      "last40Advantageous": "40หลังได้เปรียบ",
+      "learn": "เรียนรู้",
+      "learningIndex": "ดัชนีการเรียนรู้",
+      "title": "การพนันไอโอวา",
+      "advantageousPct": "% ที่ได้เปรียบ",
+      "earnings": "รายได้",
+      "last40": "ล่าสุด40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "อคติการสอบเทียบ",
+      "meanJol": "หมายถึง JOL",
+      "nowTestYourRecall": "ตอนนี้ทดสอบการเรียกคืนของคุณ",
+      "studyComplete": "การศึกษาเสร็จสมบูรณ์",
+      "whatWasPairedWith": "คู่กับ…?",
+      "title": "การตัดสินการเรียนรู้",
+      "recallAccuracy": "เรียกคืนความแม่นยำ",
+      "jolGamma": "โจล แกมมา",
+      "jolAccuracyGamma": "ความแม่นยำของ JOL (แกมมา)",
+      "howLikelyRemember": "คุณจะจำได้มากแค่ไหน?",
+      "hiddenAnswer": "คำตอบที่ซ่อนอยู่"
+    },
+    "judgmentOfRecency": {
+      "close": "ปิด",
+      "closeGap13": "ปิดช่องว่าง (1-3)",
+      "far": "ไกล",
+      "farGap9": "ช่องว่างอันไกลโพ้น (9+)",
+      "mediumGap48": "ช่องว่างปานกลาง (4-8)",
+      "title": "คำพิพากษาความใหม่",
+      "medium": "ปานกลาง",
+      "studyPhaseMemorizeOrder": "ขั้นตอนการศึกษา — จดจำลำดับ",
+      "whichMoreRecently": "ซึ่งปรากฏเมื่อเร็ว ๆ นี้?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Mean RT (ไม่ใช่คำ)",
+      "meanRtWords": "หมายถึง RT (คำ)",
+      "nonwordsAccuracy": "ความแม่นยำที่ไม่ใช่คำพูด",
+      "wordsAccuracy": "ความถูกต้องของคำ",
+      "word": "คำพูด",
+      "nonword": "ไม่ใช่คำพูด"
+    },
+    "maze": {
+      "duration": "ระยะเวลา",
+      "optimalSteps": "ขั้นตอนที่เหมาะสมที่สุด",
+      "pathEfficiency": "ประสิทธิภาพเส้นทาง",
+      "totalSteps": "ขั้นตอนทั้งหมด",
+      "wallHits": "กำแพงฮิต",
+      "title": "เขาวงกต",
+      "completed": "เสร็จสิ้น",
+      "efficiency": "ประสิทธิภาพ",
+      "wallHitsLabel": "กำแพงฮิต",
+      "steps": "ขั้นตอน"
+    },
+    "memobox": {
+      "easy": "ง่าย",
+      "easy2Boxes": "ง่ายๆ (2 กล่อง)",
+      "hard": "ยาก",
+      "hard4Boxes": "ฮาร์ด (4 กล่อง)",
+      "medium3Boxes": "กลาง (3 กล่อง)",
+      "title": "กล่องข้อความ",
+      "rounds": "รอบ",
+      "medium": "ปานกลาง",
+      "watchMovements": "ชมความเคลื่อนไหว...",
+      "howManyBalls": "แต่ละกล่องมีกี่ลูก?",
+      "submit": "ส่ง",
+      "roundOf": "รอบ {{current}} จาก {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "หน้าตัดคืออะไร?",
+      "title": "การตัดจิต"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "เก่า คล้ายกัน หรือใหม่?",
+      "patternSeparation": "การแยกรูปแบบ",
+      "sep": "ก.ย.",
+      "old": "เก่า",
+      "similar": "คล้ายกัน",
+      "new": "ใหม่",
+      "ldi": "LDI",
+      "title": "การเลือกปฏิบัติช่วยในการจำ",
+      "hitRateOldDetected": "อัตราการเข้าชม (ตรวจพบเก่า)",
+      "lureDiscrimination": "การเลือกปฏิบัติในการล่อลวง (LDI)",
+      "memorize": "จดจำ",
+      "testPhase": "ขั้นตอนการทดสอบ"
+    },
+    "multiArmedBandit": {
+      "earnings": "รายได้:",
+      "pickMachine": "เลือกเครื่อง",
+      "title": "โจรหลายอาวุธ",
+      "totalReward": "รางวัลรวม",
+      "optimal": "เหมาะสมที่สุด",
+      "regret": "เสียใจ",
+      "exploit": "หาประโยชน์",
+      "machine": "เครื่อง",
+      "armsExplored": "สำรวจอาวุธแล้ว"
+    },
+    "navon": {
+      "globalBigLetter": "ทั่วโลก (อักษรตัวใหญ่)",
+      "localSmallLetter": "ท้องถิ่น (อักษรตัวเล็ก)",
+      "title": "นาวอน",
+      "globalAdv": "ที่ปรึกษาระดับโลก",
+      "whatBigLetter": "จดหมายตัวใหญ่อะไร?",
+      "whatSmallLetter": "อักษรตัวเล็กอะไร?"
+    },
+    "negativePriming": {
+      "controlRt": "ควบคุม RT",
+      "nameTheRedShape": "ตั้งชื่อรูปร่างสีแดง",
+      "negativePrimingRt": "รองพื้นเชิงลบ RT",
+      "positivePrimingRt": "รองพื้นเชิงบวก RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "เอฟเฟ็กต์เอ็นพี",
+      "title": "รองพื้นเชิงลบ",
+      "ctrlRt": "กดปุ่ม Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "อคติของการประมาณค่า",
+      "linearityRsup2": "ความเป็นเชิงเส้น (R&sup2;)",
+      "meanAbsoluteError": "หมายถึงข้อผิดพลาดแน่นอน",
+      "tapTheLineToPlaceTheNumber": "แตะเส้นเพื่อวางหมายเลข",
+      "title": "เส้นจำนวน",
+      "meanError": "หมายถึงข้อผิดพลาด",
+      "yourEstimate": "ค่าประมาณของคุณ",
+      "correct": "ถูกต้อง"
+    },
+    "oddOneOut": {
+      "colorTrials": "การทดลองสี",
+      "shapeTrials": "ทดลองรูปร่าง",
+      "shape": "รูปร่าง",
+      "color": "สี",
+      "timeout": "หมดเวลา",
+      "shapeDiffAccuracy": "รูปร่างต่างกัน ความแม่นยำ",
+      "colorDiffAccuracy": "ความแตกต่างของสี ความแม่นยำ",
+      "shapeDiffAvgRt": "รูปร่างต่างกัน เฉลี่ย RT",
+      "colorDiffAvgRt": "ความแตกต่างของสี เฉลี่ย RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "ทางไหน?",
+      "thresholdAngle": "มุมเกณฑ์",
+      "title": "การเลือกปฏิบัติในการปฐมนิเทศ",
+      "threshold": "เกณฑ์",
+      "counterCw": "CCW",
+      "clockwise": "ตามเข็มนาฬิกา"
+    },
+    "patternComparison": {
+      "differentTrials": "การทดลองที่แตกต่างกัน",
+      "sameTrials": "การทดลองเดียวกัน",
+      "same": "เหมือนกัน",
+      "different": "แตกต่าง"
+    },
+    "patternRecognition": {
+      "newPatterns": "ลายใหม่ๆ",
+      "oldPatterns": "ลายเก่า",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "ศึกษารูปแบบอย่างรอบคอบ",
+      "memorize": "จดจำ ({{current}}/{{total}})",
+      "getReady": "เตรียมตัวให้พร้อม...",
+      "testPhaseStarting": "เริ่มขั้นตอนการทดสอบ..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "ถูกต้องครับ",
+      "meanAngularError": "ข้อผิดพลาดเชิงมุมเฉลี่ย",
+      "withinTolerance": "อยู่ภายในความอดทน",
+      "title": "การมองมุมมอง",
+      "avgErr": "เฉลี่ย ข้อผิดพลาด",
+      "youAreAt": "คุณอยู่ที่",
+      "facing": "เผชิญหน้า",
+      "pointTo": "ชี้ไปที่"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "ความถี่ เกณฑ์",
+      "seq1": "ลำดับที่ 1",
+      "seq2": "ลำดับที่ 2",
+      "title": "การเลือกปฏิบัติฟอนิม",
+      "thresh": "นวดข้าว",
+      "sameOrDifferent": "เหมือนหรือแตกต่าง?",
+      "same": "เหมือนกัน",
+      "different": "แตกต่าง"
+    },
+    "predictionMotion": {
+      "biasLate": "อคติ (+ = สาย)",
+      "meanAbsoluteError": "หมายถึงข้อผิดพลาดสัมบูรณ์",
+      "precisionSd": "พรีซิชั่น (SD)",
+      "title": "ทำนายการเคลื่อนไหว",
+      "absError": "หน้าท้อง ข้อผิดพลาด",
+      "precision": "ความแม่นยำ",
+      "responded": "ตอบกลับ",
+      "tapWhenReachesTarget": "แตะเมื่อถึงเป้าหมาย"
+    },
+    "promem": {
+      "ongoingAccuracy": "ความถูกต้องอย่างต่อเนื่อง",
+      "ongoingRt": "ต่อเนื่อง RT",
+      "pmHitRate": "อัตราการเข้าชม PM",
+      "pmRt": "PM RT",
+      "pmTargets": "เป้าหมาย PM",
+      "title": "หน่วยความจำในอนาคต",
+      "ongoing": "กำลังดำเนินการอยู่",
+      "pmHits": "PM ฮิต",
+      "pmMisses": "PM คิดถึง",
+      "living": "การใช้ชีวิต",
+      "nonLiving": "ไม่มีชีวิต",
+      "redWordInstruction": "คำสีแดง = กด"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "ข้อผิดพลาดที่ทำให้เสียสมาธิ",
+      "literalErrorRate": "อัตราข้อผิดพลาดตามตัวอักษร",
+      "literalErrors": "ข้อผิดพลาดตามตัวอักษร",
+      "title": "การตีความสุภาษิต",
+      "literal": "ตัวอักษร",
+      "litRate": "สว่าง อัตรา",
+      "whatDoesThisMean": "สิ่งนี้หมายความว่าอย่างไร?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "เตรียมติดตามกันได้เลย",
+      "meanTimeOnTarget": "เวลาเฉลี่ยถึงเป้าหมาย",
+      "meanTrackingError": "หมายถึงข้อผิดพลาดในการติดตาม",
+      "placeYourFingerOnTheScreen": "วางนิ้วของคุณบนหน้าจอ",
+      "title": "การติดตามการแสวงหา",
+      "timeOnTarget": "เวลาถึงเป้าหมาย",
+      "error": "เกิดข้อผิดพลาด",
+      "onTarget": "ตามเป้าหมาย",
+      "avgError": "เฉลี่ย ข้อผิดพลาด",
+      "improve": "ปรับปรุง",
+      "improvementT1VsT": "การปรับปรุง T1 กับ T",
+      "errorLabel": "เกิดข้อผิดพลาด",
+      "followGreenTarget": "ปฏิบัติตามเป้าหมายสีเขียว"
+    },
+    "rapidNaming": {
+      "roundComplete": "รอบเสร็จแล้ว",
+      "totalErrors": "ข้อผิดพลาดทั้งหมด",
+      "title": "การตั้งชื่ออย่างรวดเร็ว",
+      "avgSpeed": "เฉลี่ย ความเร็ว",
+      "totalTime": "เวลาทั้งหมด",
+      "round": "รอบ",
+      "getReady": "เตรียมตัวให้พร้อม!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "เวลาเฉลี่ยในการแก้ปัญหา",
+      "solved": "แก้ไขแล้ว",
+      "wrong": "ผิด",
+      "placeholder": "คำตอบของคุณ...",
+      "title": "ปริศนารีบัส",
+      "puzzles": "ปริศนา",
+      "timeout": "หมดเวลา",
+      "submit": "ส่ง",
+      "answer": "ตอบ"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "เวลาเฉลี่ยในการแก้ปัญหา",
+      "solved": "แก้ไขแล้ว",
+      "placeholder": "คำตอบของคุณ...",
+      "title": "ผู้ร่วมงานระยะไกล",
+      "timeout": "หมดเวลา",
+      "submit": "ส่ง",
+      "answer": "ตอบ"
+    },
+    "reversalLearning": {
+      "adapt": "ปรับตัว",
+      "loseshiftRate": "อัตราการสูญเสียกะ",
+      "score": "คะแนน:",
+      "winstayRate": "อัตราการชนะการเข้าพัก",
+      "title": "การเรียนรู้แบบย้อนกลับ",
+      "rewards": "รางวัล",
+      "reversals": "การกลับรายการ",
+      "persev": "เพอร์เซฟ",
+      "avgTrialsToCriterion": "เฉลี่ย การทดลองตามเกณฑ์",
+      "pickACard": "เลือกการ์ด"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "นับถอยหลังด้วย 7",
+      "reproduceThePatternFromMemory": "สร้างรูปแบบจากหน่วยความจำ",
+      "title": "เรย์คอมเพล็กซ์ฟิกเกอร์",
+      "copy": "คัดลอก",
+      "recall": "จำ",
+      "retention": "การเก็บรักษา",
+      "trial": "ทดลอง",
+      "target": "เป้าหมาย",
+      "yourCopy": "สำเนาของคุณ",
+      "submit": "ส่ง"
+    },
+    "rhythm": {
+      "avgTimingError": "ข้อผิดพลาดเวลาเฉลี่ย",
+      "bestTrialError": "ข้อผิดพลาดการทดลองที่ดีที่สุด",
+      "correctTrials": "การทดลองที่ถูกต้อง",
+      "worstTrialError": "ข้อผิดพลาดการทดลองที่เลวร้ายที่สุด",
+      "watchRhythm": "ดูจังหวะ",
+      "getReady": "เตรียมตัวให้พร้อม...",
+      "tapTheRhythm": "แตะจังหวะ!",
+      "tooFarOff": "ไกลเกินไป!",
+      "tapToReproduce": "แตะเพื่อทำซ้ำ",
+      "beats": "{{count}} ครั้ง",
+      "bestTrial": "การทดลองที่ดีที่สุด",
+      "worstTrial": "การทดลองที่เลวร้ายที่สุด",
+      "title": "จังหวะ",
+      "msErr": "นางสาวผิดพลาด"
+    },
+    "routePlanning": {
+      "time": "เวลา",
+      "title": "การวางแผนเส้นทาง",
+      "levels": "ระดับ",
+      "completed": "เสร็จสิ้น",
+      "avgMoves": "เฉลี่ย ย้าย",
+      "clear": "ชัดเจน",
+      "submit": "ส่ง",
+      "instructions": "คำแนะนำ"
+    },
+    "rvp": {
+      "detect357246468": "ตรวจจับ: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "ลำดับเป้าหมาย",
+      "fa": "FA",
+      "hitRate": "อัตราการเข้าชม",
+      "misses": "คิดถึง",
+      "sequences": "ลำดับ"
+    },
+    "sart": {
+      "commissionErrors": "ข้อผิดพลาดของค่าคอมมิชชัน",
+      "omissionErrors": "ข้อผิดพลาดการละเว้น",
+      "tapAllDigits": "แตะตัวเลขทั้งหมดยกเว้น 3",
+      "except3": "ยกเว้น3"
+    },
+    "sceneCrasher": {
+      "adds": "เพิ่ม",
+      "studyTheScene": "ศึกษาสถานที่เกิดเหตุ",
+      "swaps": "แลกเปลี่ยน",
+      "tapTheNewchangedObject": "แตะวัตถุใหม่/เปลี่ยนแปลง"
+    },
+    "sentenceVerification": {
+      "falseSentences": "ประโยคเท็จ",
+      "trueSentences": "ประโยคที่แท้จริง",
+      "byCategory": "ตามหมวดหมู่",
+      "title": "การตรวจสอบประโยค",
+      "trueRt": "ทรู RT",
+      "true": "จริง",
+      "false": "เท็จ",
+      "pressKey": "กด"
+    },
+    "soundSweeps": {
+      "down": "ลง",
+      "downAccuracy": "ความแม่นยำลดลง",
+      "durationThreshold": "เกณฑ์ระยะเวลา",
+      "up": "ขึ้น",
+      "upAccuracy": "แม่นยำขึ้น",
+      "title": "เสียงกวาด",
+      "threshold": "เกณฑ์",
+      "upOrDown": "ขึ้นหรือลง?"
+    },
+    "sourceMemory": {
+      "color": "สี",
+      "colorRecall": "การเรียกคืนสี",
+      "frame": "กรอบ",
+      "frameRecall": "การเรียกคืนเฟรม",
+      "getReadyForTheTest": "เตรียมตัวให้พร้อมสำหรับการทดสอบ!",
+      "itemRecognition": "การรับรู้รายการ",
+      "positionRecall": "การเรียกคืนตำแหน่ง",
+      "sourceAccuracy": "ความแม่นยำของแหล่งที่มา",
+      "title": "หน่วยความจำต้นทาง",
+      "source": "แหล่งที่มา",
+      "position": "ตำแหน่ง",
+      "word": "คำพูด",
+      "wasThisWordShown": "คำนี้ถูกแสดงหรือไม่?",
+      "bottom": "ก้น",
+      "blue": "สีฟ้า",
+      "orange": "ส้ม",
+      "circle": "วงกลม",
+      "square": "สี่เหลี่ยมจัตุรัส"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "เกณฑ์เสียงรบกวน",
+      "title": "คำพูดในเสียงรบกวน",
+      "noise": "เสียงรบกวน",
+      "whichWordWasIt": "มันเป็นคำไหน?"
+    },
+    "srtt": {
+      "learningEffect": "ผลการเรียนรู้",
+      "learning": "การเรียนรู้",
+      "block": "บล็อก"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "ระดับโอกาส",
+      "learningDetected": "ตรวจพบการเรียนรู้",
+      "testPhase": "ขั้นตอนการทดสอบ",
+      "whichPairLooksMoreFamiliar": "คู่ไหนดูคุ้นเคยมากกว่ากัน?",
+      "title": "การเรียนรู้ทางสถิติ",
+      "learning": "การเรียนรู้",
+      "watchTheShapes": "ดูรูปร่าง"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "ผลของอคติความเชื่อ",
+      "conclusion": "บทสรุป",
+      "premise1": "สถานที่ 1",
+      "premise2": "สถานที่ 2",
+      "logicalValidityQuestion": "สิ่งนี้ถูกต้องตามตรรกะหรือไม่?",
+      "valid": "ถูกต้อง",
+      "invalid": "ไม่ถูกต้อง"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "ขาดความแม่นยำ",
+      "presentAccuracy": "นำเสนอความถูกต้อง",
+      "title": "ค้นหาสัญลักษณ์",
+      "present": "ปัจจุบัน",
+      "absent": "ขาด",
+      "targets": "เป้าหมาย",
+      "searchGroup": "ค้นหากลุ่ม"
+    },
+    "syncContinuation": {
+      "async": "อะซิงก์",
+      "asynchrony": "ไม่ตรงกัน",
+      "drift": "ดริฟท์",
+      "cv": "CV",
+      "title": "ซิงค์ต่อเนื่อง",
+      "meanCv": "หมายถึง CV",
+      "tempos": "เทมโพส",
+      "tempo": "จังหวะ",
+      "ioi": "ไอโออิ",
+      "getReady": "เตรียมตัวให้พร้อม...",
+      "nextTempo": "จังหวะต่อไป..."
+    },
+    "taskJuggling": {
+      "correctResets": "การรีเซ็ตที่ถูกต้อง",
+      "duration": "ระยะเวลา",
+      "missedCounters": "พลาดเคาน์เตอร์",
+      "prematureResets": "รีเซ็ตก่อนกำหนด",
+      "totalEvents": "เหตุการณ์ทั้งหมด",
+      "tooEarly": "เร็วเกินไป!",
+      "missed": "พลาด!",
+      "title": "การเล่นกลงาน",
+      "premature": "คลอดก่อนกำหนด",
+      "counter": "เคาน์เตอร์",
+      "tapCounterInstruction": "แตะแต่ละเคาน์เตอร์เมื่อถึงเกณฑ์ อย่าปล่อยให้ล้น!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "จุดแบ่งส่วน (PSE)",
+      "curveSteepness": "ความชันทางโค้ง",
+      "idealMidpoint": "จุดกึ่งกลางในอุดมคติ",
+      "pse": "PSE",
+      "title": "การแบ่งส่วนชั่วคราว",
+      "steepness": "ความชัน",
+      "shortOrLong": "สั้นหรือยาว?",
+      "trainingPhase": "ขั้นตอนการฝึกอบรม",
+      "short": "สั้น",
+      "long": "ยาว"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "ความกว้างของการไล่ระดับสี",
+      "rememberThisDuration": "จำช่วงเวลานี้ไว้",
+      "width": "ความกว้าง",
+      "standard": "มาตรฐาน",
+      "title": "ลักษณะทั่วไปชั่วคราว",
+      "hitRate": "อัตราการเข้าชม",
+      "faRate": "โตซ์ เดอ เอฟเอ",
+      "hitRateDetectStandard": "อัตราการเข้าชม (ตรวจจับมาตรฐาน)",
+      "sameDuration": "ระยะเวลาเท่ากัน?",
+      "trainingPhase": "ขั้นตอนการฝึกอบรม",
+      "same": "เหมือนกัน",
+      "different": "แตกต่าง"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "SOA เกณฑ์",
+      "title": "การเลือกปฏิบัติพื้นผิว",
+      "threshold": "เกณฑ์"
+    },
+    "timePromem": {
+      "avgTimingError": "ข้อผิดพลาดเวลาเฉลี่ย",
+      "clockChecks": "การตรวจสอบนาฬิกา",
+      "ongoingAccuracy": "ความถูกต้องอย่างต่อเนื่อง",
+      "ongoingTrials": "การทดลองอย่างต่อเนื่อง",
+      "totalPmPresses": "จำนวนการกด PM ทั้งหมด",
+      "pmAccuracy": "ความแม่นยำ PM",
+      "pmMisses": "PMคิดถึง",
+      "title": "เวลาที่คาดหวัง",
+      "ongoing": "กำลังดำเนินการอยู่",
+      "pmHitsLabel": "PM ฮิต",
+      "timingErr": "ข้อผิดพลาดในการกำหนดเวลา",
+      "pmHitsExpected": "PM Hits / ที่คาดไว้",
+      "pmPresses": "PM กด",
+      "checkClock": "ตรวจสอบนาฬิกา",
+      "thirtySecMark": "มาร์ค 30"
+    },
+    "toj": {
+      "meanResponseTime": "เวลาตอบสนองเฉลี่ย",
+      "temporalResolution": "ความละเอียดชั่วคราว",
+      "title": "คำพิพากษาคำสั่งชั่วคราว",
+      "threshold": "เกณฑ์",
+      "whichCameFirst": "อันไหนมาก่อน?",
+      "leftFirst": "ออกไปก่อน",
+      "rightFirst": "ถูกต้องก่อน"
+    },
+    "tower": {
+      "budget": "งบประมาณ",
+      "challenge": "ความท้าทาย",
+      "challengeClassic": "คลาสสิค",
+      "challengeExpert": "ผู้เชี่ยวชาญ",
+      "challengeMemory": "หน่วยความจำ",
+      "challengePrecision": "ความแม่นยำ",
+      "dragDiscAriaLabel": "ลากแผ่นดิสก์ด้านบนจากหมุด {{peg}}",
+      "goal": "เป้าหมาย",
+      "goalHiddenStatus": "เป้าหมายซ่อนอยู่ ใช้ Reveal เพื่อแสดงสั้นๆ",
+      "goalRevealedMessage": "เป้าหมายเปิดเผยเป็นเวลา 3 วินาที",
+      "hint": "คำแนะนำ",
+      "hintDescription": "แสดงการเคลื่อนไหวต่อไปที่ดีที่สุด",
+      "hintMessage": "คำแนะนำ: ย้ายดิสก์ด้านบนจากหมุด {{fromPeg}} ไปยังหมุด {{toPeg}}",
+      "hiddenGoalDescription": "เป้าหมายถูกซ่อนไว้ระหว่างการเล่น ใช้ Reveal เมื่อคุณต้องการรีเฟรชสั้นๆ",
+      "hiddenGoalTitle": "ความท้าทายด้านความจำ",
+      "invalid": "ไม่ถูกต้อง",
+      "moves": "ย้าย",
+      "optimal": "เหมาะสมที่สุด",
+      "pegFullMessage": "หมุดนั้นเต็มแล้ว",
+      "previewMemoryCountdown": "จดจำเป้าหมาย. เริ่มใน {{seconds}}วินาที",
+      "previewPlanCountdown": "วางแผนโซลูชัน {{moves}}-move เริ่มใน {{seconds}}วินาที",
+      "reset": "รีเซ็ต",
+      "resetDescription": "รีสตาร์ทปริศนานี้",
+      "resetMessage": "รีเซ็ตปริศนา",
+      "reveal": "เปิดเผย",
+      "revealDescription": "เผยเป้าหมายที่ซ่อนอยู่",
+      "statusOptimalSolve": "การแก้ปัญหาที่เหมาะสมที่สุด คะแนน {{score}}",
+      "statusSolvedScore": "แก้ไขได้ใน {{moves}} การเคลื่อนไหว (+{{extraMoves}}) คะแนน {{score}}",
+      "undo": "เลิกทำ",
+      "undoDescription": "ย้อนกลับการเคลื่อนไหวครั้งสุดท้าย",
+      "undoneMessage": "การย้ายครั้งล่าสุดถูกยกเลิก",
+      "yourPegs": "หมุดของคุณ"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "การจัดส่งที่ถูกต้อง",
+      "trainsLost": "รถไฟหาย",
+      "wrongStation": "ผิดสถานี",
+      "title": "รถไฟแห่งความคิด",
+      "trains": "รถไฟ",
+      "missed": "พลาด",
+      "scoreLabel": "คะแนน",
+      "instructions": "คำแนะนำ"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "คำถามเฉลี่ยที่ใช้",
+      "title": "ยี่สิบคำถาม",
+      "avgQuestions": "เฉลี่ย คำถาม",
+      "rounds": "รอบ",
+      "efficiency": "ประสิทธิภาพ",
+      "avgQuestionsCorrectOnly": "เฉลี่ย คำถาม (ถูกต้องเท่านั้น)",
+      "questionsLabel": "คำถาม",
+      "remaining": "ที่เหลืออยู่",
+      "readyToGuess": "ฉันพร้อมที่จะเดาแล้ว!",
+      "tapTheTarget": "แตะวัตถุที่คุณคิดว่าเป็นเป้าหมาย!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "มุมมองที่เป็นประโยชน์",
+      "visualNoiseMask": "หน้ากากกันเสียง",
+      "whatWasInTheCenter": "มีอะไรอยู่ตรงกลาง?",
+      "whereWasTheTarget": "เป้าหมายอยู่ที่ไหน?",
+      "avgThreshold": "เฉลี่ย เกณฑ์",
+      "speed": "ความเร็ว",
+      "accuracy": "ความแม่นยำ",
+      "central": "เซ็นทรัล",
+      "peripheral": "อุปกรณ์ต่อพ่วง",
+      "overall": "โดยรวม",
+      "block": "บล็อก",
+      "trials": "การทดลอง",
+      "start": "เริ่ม",
+      "focus": "โฟกัส",
+      "threshold": "เกณฑ์",
+      "stimulus": "สิ่งกระตุ้น",
+      "respondFromMemory": "ตอบกลับจากความทรงจำ",
+      "truck": "รถบรรทุก",
+      "choosePeripheralLocation": "เลือกตำแหน่งอุปกรณ์ต่อพ่วง",
+      "currentBlock": "บล็อก {{n}}",
+      "exposure": "การเปิดรับแสง"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "คำที่ขึ้นต้นด้วย {{letter}}",
+      "title": "ความคล่องแคล่วทางวาจา",
+      "totalWords": "รวมคำ",
+      "duplicates": "ซ้ำกัน",
+      "letter": "จดหมาย",
+      "round": "รอบ",
+      "roundComplete": "รอบเสร็จแล้ว",
+      "nextRound": "รอบต่อไป",
+      "middotRound": "· แบบกลม"
+    },
+    "vernierAcuity": {
+      "whichSide": "ด้านไหน?",
+      "title": "เวอร์เนียร์แอคคิวอิตี้",
+      "leftOffset": "ชดเชยด้านซ้าย",
+      "rightOffset": "ชดเชยขวา",
+      "offset": "ออฟเซ็ต"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "กลยุทธ์ที่เหมาะสมที่สุด",
+      "correct": "ถูกต้อง!",
+      "wrong": "ผิด",
+      "title": "พยากรณ์อากาศ",
+      "optimal": "เหมาะสมที่สุด",
+      "learningCurve": "เส้นโค้งการเรียนรู้",
+      "predictTheWeather": "ทำนายสภาพอากาศ",
+      "rain": "ฝน"
+    },
+    "wordChain": {
+      "avgResponseTime": "เวลาตอบสนองเฉลี่ย",
+      "chain": "โซ่",
+      "longestChain": "ห่วงโซ่ที่ยาวที่สุด",
+      "totalCorrect": "ถูกต้องทั้งหมด",
+      "totalWords": "รวมคำ",
+      "words": "คำพูด",
+      "title": "ห่วงโซ่คำ",
+      "longest": "ยาวที่สุด",
+      "avgRt": "เฉลี่ย RT",
+      "endsWith": "ลงท้ายด้วย",
+      "chainLabel": "โซ่",
+      "bestLabel": "ดีที่สุด"
+    },
+    "wordFlow": {
+      "avgWordLength": "ความยาวคำเฉลี่ย",
+      "correct": "ถูกต้อง",
+      "invalidWords": "คำไม่ถูกต้อง",
+      "totalWordsSelected": "รวมคำที่เลือก",
+      "validWords": "คำที่ถูกต้อง",
+      "wordsPerMinute": "คำต่อนาที",
+      "wrong": "ผิด",
+      "seeResults": "ดูผลลัพธ์",
+      "nextRound": "รอบต่อไป ({{current}}/{{total}})",
+      "title": "ความคล่องแคล่วทางวาจา",
+      "validWordsLabel": "คำที่ถูกต้อง",
+      "wordsPerMinLabel": "คำ/นาที",
+      "avgLengthLabel": "เฉลี่ย ความยาว",
+      "invalidLabel": "ไม่ถูกต้อง",
+      "round": "รอบ",
+      "selectWordsBelongTo": "เลือกคำที่เป็นของ",
+      "selected": "เลือกแล้ว"
+    },
+    "wordList": {
+      "avgRtCorrect": "RT เฉลี่ย (ถูกต้อง)",
+      "primacyEffect": "ไพรมาซีเอฟเฟ็กต์",
+      "recencyEffect": "เอฟเฟกต์ความใหม่",
+      "studyPhaseRememberEachWord": "ขั้นตอนการศึกษา — จำแต่ละคำ",
+      "wordsRecalled": "คำพูดที่จำได้",
+      "title": "รายการคำ",
+      "serialPositionCurve": "เส้นโค้งตำแหน่งอนุกรม",
+      "wasWordInList": "คำนี้อยู่ในรายการหรือไม่?",
+      "seenBefore": "เคยเห็นมาก่อน",
+      "newWord": "ใหม่"
+    },
+    "speedSort": {
+      "switchAccuracy": "สลับความแม่นยำ",
+      "switchTrials": "สลับการทดลองใช้",
+      "sortByColor": "เรียงตามสี",
+      "sortByShape": "จัดเรียงตามรูปร่าง",
+      "sortByNumber": "จัดเรียงตาม NUMBER",
+      "ruleChanged": "กฎเปลี่ยน!",
+      "binRed": "สีแดง",
+      "binBlue": "สีฟ้า",
+      "binGreen": "สีเขียว",
+      "binYellow": "สีเหลือง",
+      "binCircle": "วงกลม",
+      "binSquare": "สี่เหลี่ยมจัตุรัส",
+      "binTriangle": "สามเหลี่ยม",
+      "binStar": "ดาว",
+      "title": "การเรียงลำดับความเร็ว",
+      "switch": "สวิตช์"
+    },
+    "reflex": {
+      "target": "เป้าหมาย",
+      "lure": "ล่อ",
+      "tooSlow": "ช้าเกินไป!",
+      "wrongTarget": "ผิดเป้า!",
+      "tapTargets": "แตะวงกลมสีเขียว!",
+      "hits": "ฮิต",
+      "misses": "คิดถึง",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "จำยอดรวมที่ทำงานอยู่...",
+      "title": "การคำนวณลูกโซ่",
+      "stepChains": "{{len}}-โซ่ขั้น",
+      "start": "เริ่ม",
+      "step": "ขั้นตอน",
+      "whatIsTheResult": "ผลลัพธ์คืออะไร?"
+    },
+    "alternateUses": {
+      "placeholder": "พิมพ์การใช้งาน...",
+      "title": "การใช้ทางเลือกอื่น",
+      "totalUses": "การใช้งานทั้งหมด",
+      "perObject": "ต่อวัตถุ",
+      "rounds": "รอบ",
+      "bestObject": "วัตถุที่ดีที่สุด",
+      "bestCount": "การนับที่ดีที่สุด",
+      "noUsesSubmitted": "ไม่มีการส่งการใช้งาน",
+      "timesUp": "หมดเวลาแล้ว!",
+      "nextObject": "วัตถุถัดไป ({{object}})",
+      "listCreativeUses": "แสดงรายการการใช้งานเชิงสร้างสรรค์สำหรับออบเจ็กต์นี้"
+    },
+    "anagram": {
+      "placeholder": "พิมพ์คำว่า...",
+      "title": "แอนนาแกรม",
+      "avgSolve": "เฉลี่ย แก้ปัญหา",
+      "letterWords": "{{len}}-คำที่เป็นตัวอักษร",
+      "submit": "ส่ง"
+    },
+    "facialEmotion": {
+      "happy": "มีความสุข",
+      "sad": "เศร้า",
+      "angry": "โกรธ",
+      "fearful": "ขี้กลัว",
+      "disgusted": "เบื่อหน่าย",
+      "surprised": "ประหลาดใจ",
+      "lc": "LC",
+      "title": "การรับรู้อารมณ์ใบหน้า",
+      "topConfusions": "ความสับสนยอดนิยม"
+    },
+    "numberSeries": {
+      "easy": "ง่าย",
+      "hard": "ยาก"
+    },
+    "chainRecall": {
+      "round": "รอบ",
+      "title": "การเรียกคืนโซ่",
+      "chain": "โซ่",
+      "placeholder": "ตัวยึดตำแหน่ง"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "อารมณ์ไป / ไม่ไป",
+      "block1CommissionErrors": "บล็อก 1 ข้อผิดพลาดของค่าคอมมิชชั่น",
+      "block2CommissionErrors": "บล็อก 2 ข้อผิดพลาดของค่าคอมมิชชั่น",
+      "goHappy": "ไป = มีความสุข",
+      "goSad": "ไป = เศร้า",
+      "block": "บล็อก",
+      "go": "ไป"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "เอฟเฟกต์สโตรป",
+      "title": "รัชสี",
+      "congShort": "คอง.",
+      "incongShort": "อินกง.",
+      "congruentAccuracy": "ความถูกต้องตรงกัน",
+      "incongruentAccuracy": "ความแม่นยำไม่สอดคล้องกัน"
+    },
+    "mirror": {
+      "avgCorrectCells": "เซลล์ที่ถูกต้อง (เฉลี่ย)",
+      "symmetryType": "ประเภทสมมาตร",
+      "title": "กระจกเงา"
+    },
+    "rhythmTap": {
+      "correctTrials": "การทดลองที่ถูกต้อง",
+      "avgRhythmScore": "คะแนนจังหวะเฉลี่ย",
+      "bestTrialScore": "คะแนนทดลองที่ดีที่สุด",
+      "worstTrialScore": "คะแนนการทดลองที่แย่ที่สุด",
+      "level": "ระดับ",
+      "rhythm": "จังหวะ",
+      "bestTrial": "การทดลองที่ดีที่สุด",
+      "worstTrial": "การทดลองที่เลวร้ายที่สุด"
+    },
+    "vocalProsody": {
+      "questioning": "การตั้งคำถาม"
+    },
+    "arithmeticSpeed": {
+      "multiply": "ทวีคูณ",
+      "add": "เพิ่ม",
+      "subtract": "ลบ",
+      "title": "ความเร็วเลขคณิต",
+      "score": "คะแนน",
+      "solved": "แก้ไขแล้ว",
+      "missed": "พลาด"
+    },
+    "puzzle": {
+      "avgSolveTime": "เวลาเฉลี่ยในการแก้ปัญหา",
+      "totalMoves": "การเคลื่อนไหวทั้งหมด",
+      "totalErrors": "ข้อผิดพลาดทั้งหมด",
+      "gridSize": "ขนาดตาราง",
+      "maxGridReached": "ถึงกริดสูงสุดแล้ว",
+      "maxLevelReached": "ถึงระดับสูงสุดแล้ว",
+      "maxNodesReached": "ถึงจำนวนโหนดสูงสุดแล้ว",
+      "puzzleDetails": "รายละเอียดปริศนา",
+      "roundDetails": "รายละเอียดรอบ",
+      "solved": "แก้แล้ว!",
+      "undo": "เลิกทำ",
+      "reset": "รีเซ็ต",
+      "check": "ตรวจสอบ",
+      "moves": "ย้าย",
+      "time": "เวลา",
+      "level": "ระดับ",
+      "errors": "ข้อผิดพลาด",
+      "score": "คะแนน",
+      "grid": "กริด",
+      "crossings": "ข้าม",
+      "pearls": "ไข่มุก",
+      "clues": "เบาะแส",
+      "region": "ภูมิภาค",
+      "filled": "อิ่มแล้ว",
+      "cells": "เซลล์",
+      "undosLeft": "การเลิกทำที่เหลืออยู่",
+      "gems": "อัญมณี",
+      "connected": "เชื่อมต่อแล้ว",
+      "slides": "สไลด์",
+      "progress": "ความก้าวหน้า",
+      "rotations": "การหมุน",
+      "puzzle": "ปริศนา",
+      "uncovered": "ถูกเปิดเผย",
+      "colored": "สี",
+      "violations": "การละเมิด",
+      "blacked": "ดำคล้ำ",
+      "empty": "ว่างเปล่า",
+      "remaining": "ที่เหลืออยู่",
+      "pairs": "คู่",
+      "flips": "พลิก",
+      "found": "พบแล้ว",
+      "balls": "ลูกบอล",
+      "guesses": "เดา",
+      "original": "ต้นฉบับ",
+      "findDifferences": "ค้นหาความแตกต่าง",
+      "totalDrags": "ลากทั้งหมด",
+      "totalUndos": "ยกเลิกทั้งหมด",
+      "totalEdgesDrawn": "วาดขอบทั้งหมด",
+      "totalLasers": "เลเซอร์ทั้งหมด",
+      "totalSlides": "สไลด์ทั้งหมด",
+      "totalRotations": "การหมุนทั้งหมด",
+      "totalRectangles": "สี่เหลี่ยมทั้งหมด",
+      "totalScore": "คะแนนรวม",
+      "avgTime": "เวลาเฉลี่ย",
+      "cellsCleared": "ล้างเซลล์แล้ว",
+      "totalDiffsFound": "พบความแตกต่างทั้งหมด",
+      "gemsCollected": "รวบรวมอัญมณีแล้ว",
+      "pushBoxesOntoTargets": "ผลักดันกล่องทั้งหมดไปยังเป้าหมาย",
+      "fireLasersMarkBalls": "ยิงเลเซอร์จากขอบ จากนั้นทำเครื่องหมายตำแหน่งลูกบอล",
+      "revealingAnswer": "เผยคำตอบ...",
+      "checkAnswer": "ตรวจสอบคำตอบ",
+      "pickNumberBelow": "เลือกหมายเลขด้านล่าง",
+      "tapCellToAssign": "แตะเซลล์เพื่อกำหนดตัวเลข",
+      "tapEdgesToPlaceWalls": "แตะขอบเพื่อวางผนัง แบ่งออกเป็นภูมิภาคของ K.",
+      "ghosts": "ผี",
+      "vampires": "แวมไพร์",
+      "zombies": "ซอมบี้",
+      "dominoes": "โดมิโน",
+      "islands": "หมู่เกาะ",
+      "pegsLeft": "หมุดซ้าย",
+      "bestRemaining": "เหลือไว้ดีที่สุด",
+      "puzzlesSolved": "ไขปริศนาแล้ว",
+      "flooded": "น้ำท่วม",
+      "edges": "ขอบ",
+      "totalPlacements": "ตำแหน่งทั้งหมด",
+      "totalRemovals": "การลบทั้งหมด",
+      "maxTileReached": "ถึงไทล์สูงสุดแล้ว",
+      "target": "เป้าหมาย",
+      "placed": "วาง",
+      "totalGuesses": "รวมเดา",
+      "guessesLeft": "เดาออกไป",
+      "difficulty": "ความยาก"
+    },
+    "palisade": {
+      "title": "รั้วเหล็ก",
+      "puzzles": "ปริศนา",
+      "maxLevel": "ระดับสูงสุด"
+    },
+    "keen": {
+      "title": "เคนเคน",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "errors": "ข้อผิดพลาด",
+      "avgTime": "เฉลี่ย เวลา",
+      "erase": "ลบ"
+    },
+    "blackbox": {
+      "title": "กล่องดำ",
+      "puzzles": "ปริศนา",
+      "lasers": "เลเซอร์",
+      "avgTime": "เฉลี่ย เวลา"
+    },
+    "designFluency": {
+      "title": "ความคล่องแคล่วในการออกแบบ",
+      "uniqueDesigns": "การออกแบบที่เป็นเอกลักษณ์",
+      "duplicates": "ซ้ำกัน",
+      "round": "รอบ",
+      "roundComplete": "รอบเสร็จแล้ว",
+      "youCreatedDesigns": "คุณสร้างการออกแบบ {{count}}",
+      "startRound": "เริ่มรอบ",
+      "instructions": "คำแนะนำ",
+      "designs": "การออกแบบ",
+      "clear": "ชัดเจน",
+      "addDesign": "เพิ่ม"
+    },
+    "signpost": {
+      "title": "ป้ายบอกทาง",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "avgTime": "เฉลี่ย เวลา",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "sokoban": {
+      "title": "โซโคบัน",
+      "level": "ระดับ",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "undos": "เลิกทำ",
+      "puzzle": "ปริศนา"
+    },
+    "numericalStroop": {
+      "left": "ซ้าย",
+      "right": "ถูกต้อง"
+    },
+    "biologicalMotion": {
+      "title": "การเคลื่อนไหวทางชีวภาพ",
+      "noiseDots": "จุดเสียงรบกวน",
+      "whichDirection": "ทิศทางไหน?",
+      "left": "ซ้าย",
+      "right": "ถูกต้อง"
+    },
+    "inertia": {
+      "title": "ความเฉื่อย",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "gems": "อัญมณี",
+      "moves": "ย้าย"
+    },
+    "waterLevel": {
+      "title": "ระดับน้ำ",
+      "error": "เกิดข้อผิดพลาด",
+      "tilt": "เอียง",
+      "waterLine": "สายน้ำ?"
+    },
+    "twiddle": {
+      "title": "ทวิดเดิล",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "sudoku": {
+      "title": "ซูโดกุ",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "errors": "ข้อผิดพลาด",
+      "avgTime": "เฉลี่ย เวลา",
+      "erase": "ลบ"
+    },
+    "rectangles": {
+      "title": "สี่เหลี่ยม",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "rectanglesCount": "สี่เหลี่ยม",
+      "maxGrid": "ตารางสูงสุด",
+      "cancelSelection": "ยกเลิกการเลือก"
+    },
+    "filling": {
+      "title": "การกรอก",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "avgTime": "เฉลี่ย เวลา",
+      "grid": "กริด"
+    },
+    "spacedRetrieval": {
+      "title": "การดึงข้อมูลแบบเว้นระยะ",
+      "studyPair": "ศึกษาคู่นี้ครับ",
+      "waitAndSolve": "รอ…แล้วค่อยแก้",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "ช่วงเวลา: คู่อะไร?"
+    },
+    "prototypeDistortion": {
+      "title": "การบิดเบือนต้นแบบ",
+      "studyPhase": "ขั้นตอนการศึกษา",
+      "testPhase": "ขั้นตอนการทดสอบ",
+      "yesBelongs": "ใช่ - เป็นของ",
+      "noRandom": "ไม่ — สุ่ม"
+    },
+    "motionCoherence": {
+      "title": "การเชื่อมโยงกันของการเคลื่อนไหว",
+      "threshold": "เกณฑ์",
+      "coherence": "การเชื่อมโยงกัน",
+      "whichDirection": "ทิศทางไหน?"
+    },
+    "cube": {
+      "title": "คิวบ์",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxLevel": "ระดับสูงสุด",
+      "cubeFaces": "ใบหน้าคิวบ์",
+      "moveUp": "ขึ้น",
+      "moveLeft": "ซ้าย",
+      "moveDown": "ลง",
+      "moveRight": "ถูกต้อง"
+    },
+    "sameGame": {
+      "title": "เกมเดียวกัน",
+      "score": "คะแนน",
+      "cleared": "เคลียร์แล้ว",
+      "cells": "เซลล์",
+      "accuracy": "ความแม่นยำ"
+    },
+    "crossModalMatching": {
+      "title": "การจับคู่ข้ามโมดัล",
+      "chance": "โอกาส",
+      "whichPatternMatchesRhythm": "รูปแบบใดตรงกับจังหวะ?"
+    },
+    "mosaic": {
+      "title": "โมเสก",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "spotDiff": {
+      "title": "มองเห็นความแตกต่าง",
+      "level": "ระดับ",
+      "grid": "กริด",
+      "accuracy": "ความแม่นยำ",
+      "perfect": "สมบูรณ์แบบ",
+      "avgTime": "เฉลี่ย เวลา",
+      "found": "พบแล้ว"
+    },
+    "lightsOut": {
+      "title": "ไฟดับ",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "pipeline": {
+      "title": "ไปป์ไลน์",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "rotations": "การหมุน",
+      "avgTime": "เฉลี่ย เวลา"
+    },
+    "tracks": {
+      "title": "แทร็ก",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "errors": "ข้อผิดพลาด",
+      "avgTime": "เฉลี่ย เวลา"
+    },
+    "netslide": {
+      "title": "เน็ตสไลด์",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "slides": "สไลด์",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "cognitiveBias": {
+      "title": "การฝึกอบรมอคติทางปัญญา",
+      "biasResistance": "ความต้านทานอคติ",
+      "biased": "ลำเอียง",
+      "continue": "ดำเนินการต่อ"
+    },
+    "empathicAccuracy": {
+      "title": "ความแม่นยำในการเอาใจใส่",
+      "emotionId": "อารมณ์",
+      "avgRatingError": "เฉลี่ย ข้อผิดพลาดในการให้คะแนน",
+      "scenarios": "สถานการณ์",
+      "perfect": "สมบูรณ์แบบ",
+      "rating": "เรตติ้ง",
+      "howDoesCharacterFeel": "ตัวละครรู้สึกอย่างไร?",
+      "rateIntensity": "ให้คะแนนความเข้มข้น",
+      "whatEmotion": "อารมณ์อะไร?",
+      "yourRating": "คะแนนของคุณ",
+      "correct": "ถูกต้อง",
+      "emotion": "อารมณ์"
+    },
+    "guess": {
+      "title": "ผู้บงการ",
+      "solved": "แก้ไขแล้ว",
+      "guesses": "เดา"
+    },
+    "dominosa": {
+      "title": "โดมิโนซา",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxLevel": "ระดับสูงสุด"
+    },
+    "magnets": {
+      "title": "แม่เหล็ก",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxLevel": "ระดับสูงสุด"
+    },
+    "tangram": {
+      "placeAll": "วางทุกชิ้น",
+      "solved": "แก้แล้ว!",
+      "notRight": "ไม่ถูกต้องนัก",
+      "title": "แทนแกรม",
+      "level": "ระดับ",
+      "puzzles": "ปริศนา",
+      "placements": "ตำแหน่ง",
+      "removals": "การลบออก",
+      "puzzleNumber": "ปริศนา {{n}}",
+      "pieces": "ชิ้น",
+      "targetCells": "ซิเบิล",
+      "dragHint": "ลากหรือวางชิ้นส่วนบนตาราง",
+      "selectHint": "เลือกชิ้น",
+      "rotate": "ทัวร์เนอร์",
+      "undo": "แอนนูเลอร์",
+      "check": "ตรวจสอบ"
+    },
+    "galaxies": {
+      "title": "กาแลคซี่"
+    },
+    "flood": {
+      "title": "น้ำท่วม"
+    },
+    "pegs": {
+      "title": "หมุด",
+      "bestPegs": "หมุดที่ดีที่สุด"
+    },
+    "auditoryFigureGround": {
+      "title": "ภาพการได้ยิน-กราวด์",
+      "patternPresent": "มีแบบไหม?",
+      "pattern": "รูปแบบ",
+      "noPattern": "ไม่มีลวดลาย"
+    },
+    "selfOrderedPointing": {
+      "title": "การชี้คำสั่งด้วยตนเอง",
+      "maxSpan": "ช่วงสูงสุด",
+      "errors": "ข้อผิดพลาด",
+      "round": "รอบ",
+      "setOf": "เซตของ {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "การติดตามกระจก",
+      "totalErrors": "ข้อผิดพลาดทั้งหมด",
+      "avgTime": "เฉลี่ย เวลา",
+      "shapes": "รูปร่าง",
+      "perfect": "สมบูรณ์แบบ",
+      "improvement": "การปรับปรุง",
+      "errorsMiddot": "ข้อผิดพลาด ·",
+      "shape": "รูปร่าง",
+      "errors": "ข้อผิดพลาด",
+      "xIsMirrored": "X ถูกสะท้อน!"
+    },
+    "clockDrawing": {
+      "title": "การวาดภาพนาฬิกา",
+      "avgError": "เฉลี่ย ข้อผิดพลาด",
+      "setTo": "ตั้งเป็น",
+      "submit": "ส่ง"
+    },
+    "cognitiveMap": {
+      "title": "แผนที่ความรู้ความเข้าใจ",
+      "explore": "สำรวจ",
+      "sRemaining": "เอสที่เหลืออยู่",
+      "from": "จาก",
+      "whichDirectionIs": "ทิศทางไหน."
+    },
+    "sixteen": {
+      "title": "สิบหก"
+    },
+    "loopy": {
+      "title": "วนลูป"
+    },
+    "lightup": {
+      "title": "สว่างขึ้น"
+    },
+    "twentyFortyEight": {
+      "maxTile": "แม็กซ์ไทล์",
+      "moves": "ย้าย",
+      "max": "สูงสุด"
+    },
+    "bridges": {
+      "title": "สะพาน",
+      "puzzles": "ปริศนา",
+      "maxLevel": "ระดับสูงสุด",
+      "level": "ระดับ"
+    },
+    "net": {
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxGrid": "ตารางสูงสุด"
+    },
+    "flip": {
+      "title": "พลิก"
+    },
+    "range": {
+      "title": "พิสัย"
+    },
+    "slant": {
+      "title": "เอียง"
+    },
+    "towers": {
+      "title": "หอคอย",
+      "puzzles": "ปริศนา",
+      "avgTime": "เฉลี่ย เวลา",
+      "erase": "ลบ"
+    },
+    "pearl": {
+      "title": "เพิร์ล",
+      "edges": "ขอบ"
+    },
+    "mapColoring": {
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "moves": "ย้าย",
+      "maxLevel": "ระดับสูงสุด"
+    },
+    "singles": {
+      "title": "คนโสด"
+    },
+    "nonogram": {
+      "title": "โนโนแกรม"
+    },
+    "undead": {
+      "title": "อันเดธ",
+      "accuracy": "ความแม่นยำ",
+      "puzzles": "ปริศนา",
+      "avgTime": "เฉลี่ย เวลา"
+    },
+    "untangle": {
+      "title": "แก้ให้หายยุ่ง",
+      "drags": "ลาก",
+      "maxNodes": "โหนดสูงสุด"
+    },
+    "unruly": {
+      "title": "เกเร"
+    },
+    "fifteen": {
+      "title": "สิบห้า"
+    },
+    "tents": {
+      "title": "เต็นท์"
+    },
+    "mesker": {
+      "pen": "ปากกา",
+      "stroke": "โรคหลอดเลือดสมอง",
+      "penPressureHint": "เขียนโดยใช้แรงกดปากกาสม่ำเสมอ"
+    },
+    "modality": {
+      "position": "ตำแหน่ง",
+      "audio": "เสียง"
+    },
+    "validate": "ตรวจสอบ"
+  },
+  "trace": {
+    "instructions": "ปัดไปที่ตำแหน่ง N-back แตะสองครั้งหากตำแหน่งเดียวกัน",
+    "hint": {
+      "validated": "ตรวจสอบแล้ว",
+      "draw": "วาดตัวอักษร • แตะเพื่อตรวจสอบ",
+      "drawWithColor": "วาดตัวอักษร • เลือกสี • แตะเพื่อตรวจสอบ",
+      "type": "พิมพ์ตัวอักษร • Enter เพื่อตรวจสอบ",
+      "typeWithColor": "พิมพ์ตัวอักษร • เลือกสี • Enter เพื่อตรวจสอบ",
+      "typeResult": "พิมพ์ผลลัพธ์ • ป้อนเพื่อตรวจสอบ",
+      "writeResult": "เขียนผลลัพธ์ • แตะเพื่อตรวจสอบ"
+    },
+    "keyboard": {
+      "letterInput": "จดหมาย",
+      "numberInput": "หมายเลข"
+    },
+    "arithmetic": {
+      "cueHint": "จำเลข 2 หลัก",
+      "refresh": "ใหม่"
+    },
+    "hintPosition": "สิ่งกระตุ้น {{n}} เปลี่ยนไปที่ใดแล้ว?",
+    "hintN0": "บ่งชี้ถึงการกระตุ้นในปัจจุบัน",
+    "warmupHint": "จดจำตำแหน่ง ไม่จำเป็นต้องตอบสนอง",
+    "hintDraw": "วาดตัวอักษร • แตะเพื่อตรวจสอบ",
+    "hintDrawWithColor": "วาดตัวอักษร • เลือกสี • แตะเพื่อตรวจสอบ",
+    "hintWriteResult": "เขียนผลลัพธ์ • แตะเพื่อตรวจสอบ",
+    "guide": {
+      "swipeNormal": "ปัดจากตำแหน่งสุดท้าย (N-0) ไปยังตำแหน่งจาก {{n}} ขั้นตอนที่แล้ว (N-{{n}}) แตะสองครั้งหากตำแหน่งเดียวกัน",
+      "swipeSequential": "ปัดทีละขั้นตอนจาก N-0 ถึง N-{{n}} โดยผ่านตำแหน่งกลางแต่ละตำแหน่ง แตะสองครั้งหากตำแหน่งเดียวกัน",
+      "swipeDynamic": "ปัดตามกฎที่แสดง แตะสองครั้งหากตำแหน่งเดียวกัน",
+      "tapN0": "แตะที่ตำแหน่งปัจจุบัน",
+      "warmup": "จดจำตำแหน่ง — ไม่ต้องตอบกลับ",
+      "writeDraw": "วาดตัวอักษรที่ได้ยิน {{n}} ขั้นตอนที่แล้ว • แตะเพื่อตรวจสอบ",
+      "writeDrawColor": "วาดตัวอักษรที่ได้ยิน {{n}} ขั้นตอนที่แล้ว • เลือกสี • แตะเพื่อตรวจสอบ",
+      "writeType": "พิมพ์ตัวอักษรที่ได้ยิน {{n}} ขั้นตอนที่ผ่านมา • Enter เพื่อตรวจสอบ",
+      "writeTypeColor": "พิมพ์ตัวอักษรที่ได้ยิน {{n}} ขั้นตอนที่แล้ว • เลือกสี • ป้อนเพื่อตรวจสอบ",
+      "writeDrawN0": "วาดตัวอักษรที่คุณเพิ่งได้ยิน • แตะเพื่อตรวจสอบ",
+      "writeDrawColorN0": "วาดตัวอักษรที่คุณเพิ่งได้ยิน • เลือกสี • แตะเพื่อตรวจสอบ",
+      "writeTypeN0": "พิมพ์ตัวอักษรที่คุณเพิ่งได้ยิน • Enter เพื่อตรวจสอบ",
+      "writeTypeColorN0": "พิมพ์ตัวอักษรที่คุณเพิ่งได้ยิน • เลือกสี • ป้อนเพื่อตรวจสอบ",
+      "writeResult": "เขียนผลลัพธ์ • แตะเพื่อตรวจสอบ",
+      "validated": "ตรวจสอบแล้ว",
+      "holdMindful": "กดเซลล์ค้างไว้ {{seconds}}s",
+      "swipeMindful": "ปัดนิ้วใน {{seconds}}วินาที"
+    },
+    "settings": {
+      "adaptiveTiming": "จังหวะเวลาแบบปรับตัวได้",
+      "inputKeyboard": "คีย์บอร์ด",
+      "inputHandwriting": "การเขียนด้วยลายมือ",
+      "writingInput": "ตัวอักษร/ตัวเลข",
+      "section": {
+        "grid": "กริด",
+        "input": "อินพุต",
+        "rhythm": "จังหวะ",
+        "interface": "อินเทอร์เฟซ",
+        "interfaceNone": "มาตรฐาน",
+        "sound": "เสียง"
+      },
+      "isi": "ช่วงเวลา (ISI)",
+      "stimulusDuration": "ระยะเวลาของการกระตุ้น",
+      "feedbackDuration": "ระยะเวลาการตอบกลับ",
+      "ruleDisplay": "ระยะเวลาของกฎ",
+      "blankInterval": "ช่วงเวลาว่าง",
+      "showProgressBar": "แถบความคืบหน้า",
+      "showInstructions": "คำแนะนำในเกม",
+      "arithmeticInterference": "การรบกวนทางคณิตศาสตร์",
+      "fullMenu": "เมนูครบครัน",
+      "gridStyle": "สไตล์กริด",
+      "gridStyleClassic": "คลาสสิค",
+      "gridStyleTrace": "ติดตาม",
+      "guide": {
+        "swipeMindful": "ปัดนิ้วใน {{seconds}}วินาที",
+        "holdMindful": "กดเซลล์ค้างไว้ {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "ท่าทาง",
+        "holdDuration": "กดค้างไว้",
+        "writingDuration": "การเขียน"
+      }
+    },
+    "feedback": {
+      "holdDuration": "กดค้างไว้",
+      "gestureDuration": "ท่าทาง",
+      "writingDuration": "การเขียน"
+    },
+    "image": "รูปร่าง",
+    "digits": "ตัวเลข",
+    "emotions": "อารมณ์",
+    "words": "คำพูด",
+    "tones": "โทน",
+    "spatial": "ทิศทาง"
+  },
+  "replay": {
+    "title": "เล่นซ้ำเซสชั่น",
+    "play": "เล่น",
+    "pause": "หยุดชั่วคราว",
+    "restart": "รีสตาร์ท",
+    "speed": "ความเร็ว",
+    "loading": "กำลังโหลดเซสชัน...",
+    "unavailable": "ไม่สามารถเล่นซ้ำได้สำหรับเซสชันนี้",
+    "backToStats": "กลับไปที่สถิติ",
+    "runStack": {
+      "original": "ต้นฉบับ",
+      "correction": "การแก้ไข",
+      "delta": "Δ ดี'",
+      "inProgress": "อยู่ระหว่างดำเนินการ",
+      "completed": "เสร็จสิ้น"
+    },
+    "abandon": "ละทิ้ง",
+    "badge": "เล่นซ้ำ",
+    "completionReport": {
+      "backToHome": "กลับ",
+      "correctAgain": "ถูกต้องอีกครั้ง",
+      "deltaVsOriginal": "เทียบกับต้นฉบับ",
+      "deltaVsParent": "เทียบกับการวิ่งครั้งก่อน",
+      "falseAlarmsSkipped": "หลีกเลี่ยงข้อผิดพลาด",
+      "missesCorrections": "การแก้ไข",
+      "newFalseAlarms": "ข้อผิดพลาดใหม่",
+      "replayAgain": "เล่นซ้ำ",
+      "scoreLabel": "คะแนนนะ",
+      "title": "การแก้ไขเสร็จสมบูรณ์"
+    },
+    "controls": "การควบคุม",
+    "correction": "การแก้ไข",
+    "finished": "สิ้นสุดการเล่นซ้ำ",
+    "home": "บ้าน",
+    "parseError": "ไม่สามารถอ่านเซสชันได้",
+    "tapSlotToPlace": "แตะช่องที่จะวาง",
+    "timeline": "ไทม์ไลน์",
+    "focusTimeline": {
+      "open": "แสดงไทม์ไลน์",
+      "close": "ปิดไทม์ไลน์",
+      "title": "ไทม์ไลน์ N-Back",
+      "fillAll": "เติมให้หมด",
+      "fillCard": "เติมบัตร"
+    },
+    "hud": {
+      "counterDisplay": "เคาน์เตอร์โชว์",
+      "toggleCounterDisplay": "สลับการแสดงตัวนับ"
+    },
+    "validate": "ตรวจสอบ"
+  },
+  "recovery": {
+    "title": "เซสชันถูกขัดจังหวะ",
+    "description": "กำลังดำเนินการเซสชั่น คุณต้องการที่จะดำเนินการต่อหรือไม่?",
+    "mode": "โหมด",
+    "level": "ระดับ",
+    "progress": "ความก้าวหน้า",
+    "timeAgo": "เวลา",
+    "resume": "ดำเนินการต่อเซสชัน",
+    "startFresh": "เริ่มต้นใหม่",
+    "staleWarning": "เซสชันนี้เก่าแล้ว การดำเนินการต่ออาจเป็นเรื่องที่ท้าทาย",
+    "modes": {
+      "game": "การฝึกอบรม",
+      "activeTraining": "การฝึกอบรมเชิงรุก",
+      "flowTraining": "การฝึกอบรมสถานที่คู่",
+      "dualPickTraining": "เลือกคู่",
+      "traceTraining": "ติดตามคู่"
+    }
+  },
+  "rewards": {
+    "congratulations": "ยินดีด้วย!",
+    "duration": "{{days}} วันแบบพรีเมียม",
+    "lifetimeLabel": "เข้าถึงได้ตลอดชีวิต",
+    "expiresAt": "ใช้ได้จนถึง {{date}}",
+    "neverExpires": "ไม่มีวันหมดอายุ",
+    "continue": "ดำเนินการต่อ",
+    "discovery": {
+      "name": "บัตรผ่านดิสคัฟเวอรี่",
+      "description": "พรีเมี่ยม 7 วัน — สำรวจฟีเจอร์ทั้งหมด"
+    },
+    "engagement": {
+      "name": "บัตรผ่านงานหมั้น",
+      "description": "พรีเมี่ยม 1 เดือน — วินัยของคุณได้รับผลตอบแทน"
+    },
+    "expert": {
+      "name": "ผ่านผู้เชี่ยวชาญ",
+      "description": "พรีเมี่ยม 3 เดือน — คุณคือผู้ปฏิบัติงานที่แท้จริง"
+    },
+    "lifetime": {
+      "name": "เข้าถึงได้ตลอดชีวิต",
+      "description": "พรีเมี่ยมตลอดไป — คุณเชี่ยวชาญ Neurodual แล้ว"
+    },
+    "xpRemaining": "XP ที่เหลืออยู่",
+    "permanentAccessUnlocked": "ปลดล็อคการเข้าถึงแบบถาวรแล้ว",
+    "reachedTheTop": "คุณมาถึงจุดสูงสุดแล้ว!"
+  },
+  "progression": {
+    "level": "ระดับ {{level}}",
+    "levelShort": "เลเวล {{level}}",
+    "nextLevel": "ระดับถัดไป",
+    "reached": "ถึงแล้ว",
+    "inProgress": "อยู่ระหว่างดำเนินการ"
+  },
+  "gridlock": {
+    "nextPuzzle": "ปริศนาต่อไป →"
+  }
+}

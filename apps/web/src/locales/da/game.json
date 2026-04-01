@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Hvordan har du det?",
+      "tired": "Træt",
+      "normal": "Normal",
+      "energized": "Energisk"
+    },
+    "aria": {
+      "trialTimer": "Prøvetimer",
+      "positionMatch": "Positionsmatch",
+      "audioMatch": "Lyd match",
+      "audioLetter": "Lydbrev:",
+      "traceGrid": "Sporgitter"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Skift synkroniseringsskærm",
+      "start": "start",
+      "end": "ende",
+      "pinLabel": "pin",
+      "pinTitle": "Pin på skærmen",
+      "inputLabel": "input",
+      "inputTitle": "Skift input latency profilering (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "på",
+      "off": "slukket",
+      "hideLabel": "gemme sig",
+      "hideTitle": "Skjul (medmindre syncHud=1 eller ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "lyd",
+        "expected": "forventet"
+      },
+      "labels": {
+        "trial": "retssag",
+        "lagShow": "Displayforsinkelse",
+        "lagHide": "Retard maske",
+        "winErr": "vind fejl",
+        "endRef": "slut ref",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post s95",
+        "inputToDispatchP95": "input->afsendelse p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->maling p95",
+        "inputPending": "input afventer",
+        "inputSamples": "inputprøver",
+        "touchSamples": "berøringsprøver",
+        "mouseSamples": "museprøver",
+        "keyboardSamples": "tastaturprøver",
+        "latestMethod": "seneste (metode)",
+        "latestModality": "nyeste modalitet",
+        "audioCueMode": "lydsignaler",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "nulstil inputprofiler"
+    },
+    "hud": {
+      "resume": "Genoptag",
+      "pause": "Pause",
+      "quit": "Afslut",
+      "restart": "Genstart",
+      "spaceToStart": "Plads til at starte",
+      "settings": "Indstillinger",
+      "enterToAdvance": "Indtast for at gå videre",
+      "trial": "Retssag",
+      "muteTexture": "Slå baggrundslyden fra"
+    },
+    "status": {
+      "paused": "Pause"
+    },
+    "completed": "Afsluttet",
+    "starting": {
+      "getReady": "Gør dig klar..."
+    },
+    "quitModal": {
+      "title": "Vil du afslutte sessionen?",
+      "message": "Dine fremskridt vil ikke blive gemt.",
+      "confirm": "Afslut",
+      "cancel": "Fortsæt",
+      "close": "Luk"
+    },
+    "controls": {
+      "position": "Stilling",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-lyd",
+      "audiovis": "Audio & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Lyd",
+      "audio2": "Lyd 2",
+      "color": "Farve",
+      "arithmetic": "Aritmetik",
+      "image": "Form"
+    },
+    "arithmetic": {
+      "answer": "Svar",
+      "clear": "Ryd",
+      "hint": "Tastatur: 0–9 · '-' for tegnet · '.' for decimaler · Backspace for at rydde"
+    },
+    "navigation": {
+      "back": "Tilbage"
+    },
+    "xp": {
+      "title": "XP optjent",
+      "base": "Base (N-{{level}})",
+      "performance": "Ydeevne",
+      "accuracy": "Nøjagtighed",
+      "streakBonus": "Streak bonus",
+      "dailyBonus": "Først på dagen",
+      "badgeBonus": "Badges",
+      "flowBonus": "Dobbeltpladsbonus",
+      "confidenceMultiplier": "Tillid",
+      "dailyCapReached": "Daglig XP-grænse nået",
+      "levelReached": "Niveau {{level}} nået!"
+    },
+    "badges": {
+      "newUnlocked": "Nye badges låst op"
+    },
+    "getReady": "Gør dig klar...",
+    "layoutEdit": {
+      "done": "Færdig",
+      "reset": "Nulstil",
+      "instructions": "Træk zoner for at omarrangere. Tilpas størrelse ved hjælp af håndtagene.",
+      "title": "Redigeringstilstand",
+      "cancel": "Annuller",
+      "save": "Lås",
+      "editLayout": "Rediger layout"
+    },
+    "paused": "Pause",
+    "pressEscapeToResume": "Tryk på Escape for at genoptage",
+    "settings": {
+      "editLayout": "Rediger layout",
+      "gridAndButtons": "Gitter og knapper",
+      "swapPositionAudio": "Skift position / lyd",
+      "title": "Indstillinger",
+      "quickHint": "Juster nogle få indstillinger uden at forlade spillet.",
+      "quickUnavailable": "Ingen hurtige indstillinger tilgængelige for denne tilstand endnu."
+    },
+    "pinkNoiseInfo": "En baggrundstone ledsager hver stimulus. Du kan tilpasse eller deaktivere det i lydindstillingerne.",
+    "pinkNoiseDismiss": "Fortsæt",
+    "audioMode": "Lydtilstand",
+    "cogTask": {
+      "precision": "Nøjagtighed",
+      "avgRt": "Gns. RT",
+      "avgRtShort": "Gns. RT",
+      "trials": "Forsøg",
+      "correct": "Korrekt",
+      "errors": "Fejl",
+      "effect": "Effekt",
+      "restart": "Genstart",
+      "home": "Hjem",
+      "performance": "Ydeevne",
+      "trialDetail": "Prøvedetaljer",
+      "setDetail": "Indstil detalje",
+      "roundDetail": "Rund detalje",
+      "problemDetail": "Problemdetaljer",
+      "phaseDetail": "Fase detalje",
+      "feedbackCorrect": "Korrekt",
+      "feedbackIncorrect": "Forkert",
+      "feedbackTimeout": "For langsomt!",
+      "preparing": "Gør dig klar...",
+      "loading": "Indlæser...",
+      "left": "venstre",
+      "right": "Højre",
+      "up": "Op",
+      "down": "Ned",
+      "congruent": "Overensstemmende",
+      "incongruent": "Inkongruent",
+      "congruencyEffect": "Kongruens effekt",
+      "maxSpan": "Max spændvidde",
+      "startingSpan": "Startspænd",
+      "maxSpanReached": "Max span nået",
+      "longestStreak": "Længste korrekte streak",
+      "series": "Streak",
+      "avgResponseTime": "Gennemsnitlig svartid",
+      "recall": "Genkald",
+      "expected": "Forventet",
+      "submit": "Indsend",
+      "cancel": "Annuller",
+      "clear": "Ryd",
+      "delete": "DEL",
+      "true": "Sandt",
+      "false": "Falsk",
+      "target": "Mål",
+      "nonTarget": "Ikke-mål",
+      "distractor": "Distraktor",
+      "same": "Samme",
+      "different": "Forskellige",
+      "identical": "Identisk",
+      "mirror": "Spejl",
+      "symmetric": "Symmetrisk",
+      "asymmetric": "Asymmetrisk",
+      "symShort": "Sym.",
+      "present": "Til stede",
+      "absent": "Fraværende",
+      "noTrials": "Ingen forsøg gennemført.",
+      "noSets": "Ingen sæt afsluttet.",
+      "noRounds": "Ingen runder gennemført.",
+      "noProblems": "Ingen problemer gennemført.",
+      "noPhases": "Ingen faser afsluttet.",
+      "sets": "Sæt",
+      "rounds": "runder",
+      "equations": "Ligninger",
+      "sentences": "Sætninger",
+      "equationAccuracy": "Ligningsnøjagtighed",
+      "forward": "Fremad",
+      "backward": "Baglæns",
+      "forwardMaxSpan": "Frem max span",
+      "backwardMaxSpan": "Baglæns maks. spændvidde",
+      "odd": "Ulige",
+      "even": "Selv",
+      "score": "Score",
+      "easy": "Nemt",
+      "hard": "Hårdt",
+      "totalTrials": "Samlede forsøg",
+      "totalErrors": "Samlede fejl",
+      "totalErrShort": "Total fejl.",
+      "hits": "Hits",
+      "misses": "Savner",
+      "falseAlarms": "Falsk Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Ja",
+      "no": "Nej",
+      "sessionInterrupted": "Session afbrudt",
+      "reverseOrder": "i omvendt rækkefølge",
+      "normalOrder": "i orden",
+      "lnsInstruction": "Tal stigende, derefter bogstaverne A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simon effekt",
+        "blue": "Blå",
+        "red": "Rød",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Repræsenter dette nummer",
+        "submit": "Indsend",
+        "rodLabel": "Stang {{n}}",
+        "heavenBead": "Himmelperle (værdi 5)",
+        "earthBead": "Jordperle (værdi 1)",
+        "instrBeadTitle": "Hvordan perlerne virker",
+        "instrBeadDesc": "Hver stang repræsenterer et ciffer. Den øverste perle (himlen) er 5 værd. De nederste perler (jorden) er 1 værd hver. Flyt perlerne mod midterstangen for at aktivere dem.",
+        "instrExampleTitle": "Eksempel: 7",
+        "instrExampleDesc": "7 = himmelperle ned (5) + 2 jordperler op (2). Tryk eller træk perler for at flytte dem.",
+        "instrGoalTitle": "Dit mål",
+        "instrGoalDesc": "Der vises et nummer. Indstil perlerne til at repræsentere det, og tryk derefter på Send. Vær præcis og hurtig!",
+        "startButton": "Start",
+        "settings": "Indstillinger",
+        "closeSettings": "Luk indstillinger",
+        "settingsRods": "Antal stænger",
+        "settingsRodsHint": "Indstilles via N-Level i spilindstillinger",
+        "settingsTrials": "Prøver pr session",
+        "settingsTrialsHint": "Indstil via Trials i spilindstillinger",
+        "settingsRange": "Nummerinterval"
+      },
+      "stroop": {
+        "pressInkColorButton": "Tryk på knappen, der matcher blækfarven",
+        "redWord": "RØD",
+        "redLabel": "Rød",
+        "blueWord": "BLÅ",
+        "blueLabel": "Blå",
+        "greenWord": "GRØN",
+        "greenLabel": "Grøn",
+        "yellowWord": "GUL",
+        "yellowLabel": "Gul"
+      },
+      "stroopFlex": {
+        "followRule": "Regel",
+        "ruleInk": "Blækfarve",
+        "ruleWord": "Skrevet ord",
+        "pressMatchingRuleButton": "Tryk på knappen, der matcher den aktuelle regel"
+      },
+      "goNogo": {
+        "goTrials": "Gå prøvelser",
+        "nogoTrials": "No-Go forsøg",
+        "hitRate": "Hitrate (Go)",
+        "faRate": "Falsk alarmfrekvens (No-Go)",
+        "meanRt": "Gennemsnitlig reaktionstid",
+        "sensitivity": "følsomhed",
+        "press": "Tryk på",
+        "withhold": "Tilbagehold"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Gennemsnitlig SSD (vellykkede stop)",
+        "ssd": "SSD",
+        "goRt": "Gå RT",
+        "successfulInhibition": "Vellykket hæmning",
+        "stop": "Stop",
+        "meanGoRt": "Gennemsnitlig GO-reaktionstid",
+        "ssrtInvalid": "utilstrækkelige data",
+        "ssrtNegativeNote": "SSRT er negativ (gennemsnitlig SSD > gennemsnitlig GO RT) — resultatet er upålideligt med det aktuelle prøveantal."
+      },
+      "pvt": {
+        "rtMedian": "Median RT",
+        "rtMean": "Gennemsnitlig RT",
+        "fastest": "Hurtigste",
+        "slowest": "Langsomst",
+        "falseStarts": "Falske starter",
+        "falseStartsShort": "Falsk st.",
+        "lapses": "Bortfalder",
+        "mean": "Middel",
+        "reaction": "Reaktion",
+        "wait": "Vent...",
+        "pressStimulus": "Vent på stimulans...",
+        "pressAnywhere": "Tryk hvor som helst, når tælleren vises",
+        "press": "Tryk!",
+        "tooEarly": "For tidligt!",
+        "lapsesLabel": "Bortfalder"
+      },
+      "posner": {
+        "cueingEffect": "Cueing effekt",
+        "validMeanRt": "Gennemsnitlig gyldig RT",
+        "invalidMeanRt": "Gennemsnitlig ugyldig RT",
+        "validAccuracy": "Gyldig nøjagtighed",
+        "invalidAccuracy": "Ugyldig nøjagtighed",
+        "validTrials": "Gyldige forsøg",
+        "invalidTrials": "Ugyldige forsøg",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Gyldig",
+        "invalid": "Ugyldig"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade omkostninger",
+        "proAccuracy": "Pro nøjagtighed",
+        "antiAccuracy": "Anti nøjagtighed",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Gennemsnitlig pro-saccade RT",
+        "antiMeanRt": "Gennemsnitlig anti-saccade RT",
+        "costLabel": "Omkostninger",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-sammenhæng",
+        "axAccuracy": "AX Nøjagtighed",
+        "bxFa": "BX falsk alarm",
+        "ayError": "AY fejl",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY fejl",
+        "cogControl": "Kognitiv kontrol",
+        "target": "Mål",
+        "nonTarget": "Ikke-mål"
+      },
+      "ant": {
+        "scores": "ANT-score",
+        "alerting": "Alarmering (no-cue − double-cue)",
+        "orienting": "Orientering (center - rumlig)",
+        "executive": "Executive (inkongruent − kongruent)"
+      },
+      "changeDet": {
+        "kCowan": "K-kapacitet (Cowan)",
+        "sameShort": "Samme",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "Inden for søgning fejl",
+        "betweenErrors": "Mellem-søgning fejl",
+        "totalErrors": "Samlede fejl",
+        "errorFree": "Fejlfri",
+        "foundErrorFree": "Fundet fejlfrit!",
+        "errorCount": "{{count}} fejl(er)",
+        "tapsLabel": "Haner"
+      },
+      "taskSwitch": {
+        "switchCost": "Skift pris",
+        "rtRepeat": "Gennemsnitlig RT (gentag)",
+        "rtSwitch": "Gennemsnitlig RT (switch)",
+        "oddEven": "Ulige/lige",
+        "highLow": "Høj / Lav",
+        "title": "Opgaveskift"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A tid",
+        "tmtBTime": "TMT-B tid",
+        "executiveCost": "Administrationsomkostninger (B - A)",
+        "executiveCostShort": "Executive cost (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Forbereder TMT-B...",
+        "tmtADone": "TMT-A færdig!",
+        "totalErrors": "Samlede fejl",
+        "tmtALabel": "TMT-A: Tal",
+        "tmtBLabel": "TMT-B: Tal og bogstaver",
+        "next": "Næste",
+        "heroTitle": "Sporfremstilling",
+        "alternateHint": "Alternative tal og bogstaver: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Hurtigste ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referencekort",
+        "testCard": "Testkort",
+        "categories": "Kategorier",
+        "categoriesCompleted": "Kategorier afsluttet",
+        "perseverativeErrors": "Perseverative fejl",
+        "persevShort": "Persev.",
+        "avgRt": "Gns. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT efter vinkel",
+        "findMatch": "Find den matchende form",
+        "reference": "Referenceform",
+        "referenceLabel": "Ref.",
+        "candidate": "Kandidat",
+        "distractor": "Andet",
+        "mirrorErrors": "Spejle",
+        "title": "Mental rotation"
+      },
+      "sternberg": {
+        "rtBySize": "RT efter indstillet størrelse",
+        "title": "Sternberg",
+        "avgRt": "Gns. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT efter indstillet størrelse",
+        "title": "Visuel søgning"
+      },
+      "ospan": {
+        "typeLetters": "Indtast bogstaverne i rækkefølge",
+        "trueOrFalse": "Sandt eller falsk?",
+        "processingWarning": "Ligningsnøjagtighed under 85 % - resultaterne afspejler muligvis ikke ægte arbejdshukommelseskapacitet"
+      },
+      "readingSpan": {
+        "s0": "Solen står op i øst.",
+        "s1": "Fisk lever i træer.",
+        "s2": "Paris er Frankrigs hovedstad.",
+        "s3": "En trekant har fire sider.",
+        "s4": "Vand koger ved 100 grader.",
+        "s5": "Katte er krybdyr.",
+        "s6": "Jorden kredser om Solen.",
+        "s7": "Chokolade vokser på sten.",
+        "s8": "Et år har tolv måneder.",
+        "s9": "Fugle trækker vejret under vandet.",
+        "s10": "Mælk er hvid.",
+        "s11": "Biler kører på skinner.",
+        "s12": "Bier producerer honning.",
+        "s13": "Sneen er varm.",
+        "s14": "Hjertet pumper blod.",
+        "s15": "Sten flyder på vandet.",
+        "s16": "Månen lyser op om natten.",
+        "s17": "Slanger har ben.",
+        "s18": "Træ flyder på vandet.",
+        "s19": "Ild er koldt.",
+        "s20": "Mennesker har fem sanser.",
+        "s21": "Edderkopper har seks ben.",
+        "s22": "Brød er lavet med mel.",
+        "s23": "Hvaler er fisk.",
+        "w0": "HUS",
+        "w1": "HUND",
+        "w2": "BOG",
+        "w3": "BLOMST",
+        "w4": "DØR",
+        "w5": "TABEL",
+        "w6": "TRÆ",
+        "w7": "VEJ",
+        "w8": "SKY",
+        "w9": "STJERNE",
+        "w10": "STRANDEN",
+        "w11": "SNØ",
+        "w12": "LAMPE",
+        "w13": "REGN",
+        "w14": "GLAS",
+        "w15": "GRÆS",
+        "w16": "TRÆN",
+        "w17": "VERDEN",
+        "w18": "SOL",
+        "w19": "SKOV",
+        "w20": "ICE",
+        "w21": "JORD",
+        "w22": "SKY",
+        "w23": "STEN",
+        "d0": "MORGEN",
+        "d1": "HJERTE",
+        "d2": "STOF",
+        "d3": "BLAD",
+        "d4": "STØJ",
+        "d5": "HAVE",
+        "d6": "SKYGE",
+        "d7": "KLOKKE",
+        "d8": "BRO",
+        "d9": "RØG",
+        "d10": "SAND",
+        "d11": "SUPPE",
+        "heroTitle": "Læsespænd"
+      },
+      "memorizeSequence": "Husk rækkefølgen...",
+      "reproduce": "Reproducere",
+      "span": "Spændvidde",
+      "size": "Størrelse",
+      "fixateCenter": "Fastgør på midten...",
+      "identicalOrMirror": "Identisk eller spejl?",
+      "wellInhibited": "Godt hæmmet!",
+      "badDirection": "Forkert retning!",
+      "stopMissed": "Stop savnet!",
+      "falseAlarm": "Falsk alarm!",
+      "pressNow": "Tryk!",
+      "hitBang": "Hit!",
+      "miss": "Frøken!",
+      "doNotTouch": "Rør ikke!",
+      "whichDirection": "Hvilken retning?",
+      "stopBang": "STOP!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Husk disse bogstaver",
+      "memorizeLetter": "Husk dette brev",
+      "memorizeSequenceLetters": "Husk rækkefølgen...",
+      "memorizeDigits": "Husk cifrene...",
+      "memorizeColors": "Husk farverne!",
+      "memorizePosition": "Husk denne position...",
+      "retainWord": "Husk dette ord",
+      "retainNumber": "Husk dette nummer",
+      "addWithPrevious": "Tilføj med det forrige",
+      "sentenceTrueOrFalse": "Er denne sætning sand?",
+      "findRedCircle": "Find den røde cirkel!",
+      "findHiddenToken": "Find det skjulte token!",
+      "chooseMatchingCard": "Vælg det matchende kort",
+      "arrowDirection": "Retning af den midterste pil?",
+      "attention": "Opmærksomhed...",
+      "preparation": "Forberedelse...",
+      "recallLettersInOrder": "Genkald {{count}} bogstaverne i rækkefølge",
+      "recallWordsInOrder": "Genkald {{count}} ordene i rækkefølge",
+      "recallLastLetters": "Genkald de sidste {{count}} bogstaver",
+      "typeLastLetters": "Indtast de sidste {{count}} bogstaver",
+      "recallPositionsInOrder": "Tilbagekaldelse: trykpositioner i rækkefølge",
+      "pressEnterToValidate": "Tryk på Enter for at bekræfte",
+      "pressAnywhereToContinue": "Tryk hvor som helst for at fortsætte",
+      "temporalPrecision": "Tidsmæssig præcision",
+      "estimationPrecision": "Estimationspræcision",
+      "touchStartClockwise": "Tryk på startpunktet, og stryg derefter med uret",
+      "touchAtoB": "Tryk på punkt A og stryg derefter til B",
+      "cue": "Stikord",
+      "retainCue": "Husk signalet...",
+      "targetOrNot": "Mål eller ikke-mål?",
+      "whereIsTarget": "Hvor er målet?",
+      "wasLetterInSet": "Var dette brev med i sættet?",
+      "regular": "regelmæssig",
+      "regularity": "Regelmæssighed",
+      "msDeviation": "ms afvigelse",
+      "boxes": "kasser",
+      "found": "{{count}} fundet",
+      "past": "Fortid",
+      "tooSlow": "for langsomt",
+      "tooFast": "for hurtigt",
+      "timeout": "For langsomt!",
+      "answer": "Svar",
+      "dontPress": "Tryk ikke!",
+      "feedbackWrong": "Forkert!",
+      "level": "Niveau",
+      "wrong": "Forkert",
+      "you": "Dig",
+      "paused": "Pause",
+      "instructions": "Instruktioner",
+      "selectAnswer": "Vælg et svar",
+      "tapTheOddOne": "Tryk den ulige ud",
+      "pal": {
+        "subtitle": "Paired Associates Learning",
+        "pairsLearned": "Par lært",
+        "maxSetSize": "Max sætstørrelse",
+        "totalErrors": "Total fejl",
+        "round": "Runde",
+        "pairs": "par",
+        "meanRt": "Gennemsnitlig RT (korrekt)",
+        "studyPhase": "Studer - husk positionerne",
+        "testPhase": "Hvor var denne form?",
+        "studying": "Studerer",
+        "tapBox": "Tryk på boksen, hvor denne form blev vist"
+      },
+      "visualLogic": {
+        "easy": "Nemt",
+        "hard": "Hårdt",
+        "oneRule": "1 regel",
+        "twoRules": "2 regler",
+        "findMissing": "Find den manglende brik",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Endelig Lvl",
+        "nextMode": "Næste sessionstilstand",
+        "adaptive": "Adaptiv",
+        "fixed": "Fast",
+        "spm": "SPM 60",
+        "level": "Niveau",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Hvilket stykke passer til hullet?",
+        "target": "Mål"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Overestimering bias",
+        "underestimationBias": "Undervurdering bias",
+        "noBias": "Ingen væsentlig bias",
+        "avgError": "Gns. fejl",
+        "overestimations": "Overvurderinger",
+        "underestimations": "Undervurderinger",
+        "avgAbsoluteError": "Gns. absolut fejl",
+        "avgRelativeError": "Gns. relativ fejl",
+        "cv": "Variationskoefficient",
+        "watchDemo": "Se varigheden",
+        "getReady": "Gør dig klar...",
+        "holdToReproduce": "Hold for at reproducere!",
+        "tooLong": "For længe!",
+        "tooShort": "For kort!",
+        "target": "Mål",
+        "demoLabel": "Reference",
+        "yourTurn": "Din tur",
+        "watchInstruction": "Se",
+        "holdInstruction": "Hold for at reproducere",
+        "heroTitle": "Tidsvurdering"
+      },
+      "puzzleDetails": "Puslespil detaljer",
+      "roundDetails": "Runde detaljer",
+      "stageResults": "Etape resultater",
+      "recognized": "Anerkendt",
+      "missed": "Savnet",
+      "win": "Vind",
+      "lose": "Tab",
+      "winBang": "Vind!",
+      "loseBang": "Tab!",
+      "correctBang": "Korrekt!",
+      "wrongBang": "Forkert!",
+      "completeBang": "Fuldstændig!",
+      "repeatedBang": "Gentaget!",
+      "incompleteBang": "Ufuldstændig!",
+      "levelCompleteBang": "Niveau fuldført!",
+      "timesUp": "Tiden er gået",
+      "seeResults": "Se resultater",
+      "nextRound": "Næste runde",
+      "startBlock": "Start blok",
+      "continue": "Fortsæt",
+      "patientChoice": "Patientvalg",
+      "immediateChoice": "Umiddelbart valg",
+      "immediate": "Øjeblikkelig",
+      "digitSpan": {
+        "heroTitle": "Cifferspænd"
+      },
+      "resume": "Genoptag",
+      "numericalStroop": {
+        "heroTitle": "Numerisk Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Bedømmelse af linjeorientering"
+      },
+      "chain": "Kæde",
+      "undo": "Fortryd",
+      "vocalProsody": {
+        "heroTitle": "Vokal prosodi"
+      },
+      "letterNumber": {
+        "title": "Bogstav-Nummer Seq.",
+        "expectedAnswer": "Forventet svar"
+      },
+      "patternComparison": {
+        "heroTitle": "Mønstersammenligning"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "Når foldet, hvilke firkanter rører ved?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Refleks"
+      },
+      "hooperVisual": {
+        "title": "Hooper Visual Organization",
+        "whatIsThisObject": "Hvad er dette objekt?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blok design"
+      },
+      "accuracy": "Nøjagtighed",
+      "avgTime": "Gns. tid",
+      "check": "Tjek",
+      "dualTrace": {
+        "playArea": "Legeområde"
+      },
+      "paperFolding": {
+        "title": "Papirfoldning",
+        "foldSequenceHolePunch": "Folderækkefølge & hulning",
+        "whichPatternWhenUnfolded": "Hvilket mønster når det er udfoldet?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Leksikalsk beslutning"
+      },
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxGrid": "Max gitter",
+      "symmetry": "Symmetri",
+      "threshold": "Tærskel",
+      "hitRate": "Hit rate",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Skift registrering"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogismer"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Rækkevidde"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Sætningsfuldførelse (Cloze)",
+        "highCloze": "Højt lukket",
+        "lowCloze": "Lavt lukket"
+      },
+      "grid": "Gitter",
+      "pinballRecall": {
+        "title": "Pinball tilbagekaldelse",
+        "byBounces": "Ved afvisninger",
+        "whereDoesItLand": "Hvor lander det?"
+      },
+      "mean": "Middel",
+      "speedup": "Speedup",
+      "memorize": "Husk",
+      "time": "Tid",
+      "surfaceDevelopment": {
+        "title": "Overfladeudvikling",
+        "whichEdgeMatches": "Hvilken kant matcher?"
+      },
+      "crowding": {
+        "heroTitle": "Visuel Crowding",
+        "spacing": "Mellemrum"
+      },
+      "patternRecognition": {
+        "heroTitle": "Mønstergenkendelse"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Retssag",
+        "position": "Stilling",
+        "audio": "Lyd"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scene Intruder",
+        "detect": "Opdag"
+      },
+      "eyesTest": {
+        "heroTitle": "At læse sindet i øjnene"
+      }
+    },
+    "gridlock": {
+      "undone": "Sidste træk fortrudt.",
+      "resetMessage": "Puslespil nulstilles.",
+      "hintMessage": "Tip: slide {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Studer tavlen. Starter i {{seconds}}s.",
+      "challenge": "Udfordring",
+      "optimal": "Optimal",
+      "moves": "Bevæger sig",
+      "piece": "Styk {{id}}",
+      "targetPiece": "Stykke {{id}} (mål - rød bil)",
+      "challengeClassic": "Klassisk",
+      "challengePrecision": "Præcision",
+      "challengeMemory": "Hukommelse",
+      "challengeTimed": "Tidsbestemt",
+      "hint": "Tip",
+      "reset": "Nulstil",
+      "undo": "Fortryd",
+      "nextPuzzle": "Næste puslespil →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Blok 1 hits",
+      "block2Hits": "Blok 2 hits",
+      "goPositive": "Gå = Positiv",
+      "goNegative": "Gå = negativ",
+      "title": "Affektive Go/No-Go",
+      "block1CommissionErrors": "Blok 1 kommissionsfejl",
+      "block2CommissionErrors": "Blok 2 kommissionsfejl",
+      "block": "Bloker",
+      "go": "Gå"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Gennemsnitlig omskiftningshastighed",
+      "meanSwitchesfigure": "Middel afbrydere/figur",
+      "totalSwitches": "Total afbrydere",
+      "title": "Tvetydige figurer",
+      "meanSwitches": "Gennemsnitlige kontakter",
+      "switchRate": "Skifthastighed",
+      "figures": "Figurer",
+      "totalSwitchesLabel": "Total Switches",
+      "duration": "Varighed",
+      "switchesCount": "s | Kontakter:",
+      "switchButton": "Skift!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbal korrekt",
+      "timeout": "Timeout",
+      "title": "Analogier"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS sammenligning",
+      "ratio": "Forhold",
+      "leftMore": "Efterlod mere",
+      "rightMore": "Ret mere"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Falsk alarmfrekvens",
+      "grammatical": "Grammatisk",
+      "memorizeTheseStrings": "Husk disse strenge",
+      "testPhase": "Testfase",
+      "ungrammatical": "Ugrammatisk",
+      "learning": "Læring",
+      "test": "Test",
+      "title": "Kunstig grammatik",
+      "learningPhase": "Læring",
+      "testIntroText": "Du vil nu se nye strenge. Beslut om hver enkelt følger de samme regler som de strenge, du lige har studeret.",
+      "startTest": "Start test",
+      "followsRules": "Følger regler",
+      "breaksRules": "Bryder reglerne"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Blink-størrelse",
+      "title": "Opmærksomt blink",
+      "blink": "Blink",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1. grønne bogstav?",
+      "secondGreenLetter": "2. grønne bogstav?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Optag omkostninger",
+      "singletonPresent": "Singleton Til stede",
+      "noSingleton": "Ingen Singleton",
+      "title": "Opmærksom fangst",
+      "capture": "Capture",
+      "horizontal": "Vandret",
+      "vertical": "Lodret"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Bindende vindue",
+      "title": "Audiovisuel binding",
+      "window": "vindue",
+      "pssLabel": "PSS (Point of Subjective Simultaneity)",
+      "simultaneousOrNot": "Samtidig eller ej?",
+      "simultaneous": "Samtidig",
+      "notSimultaneous": "Ikke samtidig"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Varighedstærskel",
+      "reference": "Reference",
+      "weberFraction": "Weber fraktion",
+      "title": "Auditiv varighed",
+      "threshold": "Tærskel",
+      "weber": "Weber",
+      "whichLonger": "Hvilken er længere?",
+      "firstLonger": "Først længere",
+      "secondLonger": "Andet længere"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Justerede gns. pumper",
+      "avgTimeballoon": "Gns. tid/ballon",
+      "banked": "Banket!",
+      "lostEarnings": "Tabt indtjening!",
+      "overallAvgPumps": "Samlet gns. pumper",
+      "popRate": "Pop rate",
+      "totalEarned": "Samlet optjent",
+      "balloons": "Balloner",
+      "cashed": "Indbetalt",
+      "popped": "Poppede",
+      "adjPumps": "Adj. pumper",
+      "pop": "Pop",
+      "pump": "Pumpe",
+      "cashIn": "Kontanter ind"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Gns. beslutningstid",
+      "drawBeadsToGatherEvidence": "Tegn perler for at samle beviser",
+      "jtc": "JTC",
+      "title": "Perler Opgave",
+      "meanDraws": "Gns. trækker",
+      "rounds": "runder",
+      "jtcRate": "JTC sats",
+      "meanDrawsToDecision": "Middel trækker til beslutning",
+      "jtcRateThreshold": "JTC-rate (<{{threshold}} trækninger)",
+      "round": "Runde",
+      "jarDescription": "Krukke A: 85% grøn / Krukke B: 85% rød",
+      "itWasJar": "Det var krukken",
+      "drawABead": "Tegn en perle",
+      "jarAGreen": "Krukke A Grøn",
+      "jarBRed": "Krukke B Rød"
+    },
+    "binding": {
+      "changedTrials": "Ændrede forsøg",
+      "sameAccuracy": "Samme nøjagtighed",
+      "sameTrials": "Samme forsøg",
+      "title": "Funktionsbinding",
+      "binding": "Indbinding",
+      "bindingAccuracyChanged": "Skift nøjagtighed",
+      "same": "Samme",
+      "different": "Forskellige"
+    },
+    "blockDesign": {
+      "cells": "Celler",
+      "target": "Mål",
+      "yourAnswer": "Dit svar",
+      "tapHint": "Tryk for at skifte mellem farver",
+      "check": "Tjek"
+    },
+    "brixton": {
+      "adapt": "Tilpas",
+      "adaptationCost": "Tilpasningsomkostninger",
+      "nonswitchTrials": "Forsøg uden omskifter",
+      "switchTrials": "Skift forsøg"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Husk disse bogstaver",
+      "selectThe3Letters": "Vælg de 3 bogstaver",
+      "title": "Brown-Peterson opgave",
+      "forgetting": "Glemmer",
+      "sDelay": "S Forsinkelse",
+      "minus3": "Minus 3",
+      "delay": "Forsinkelse"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Beslutningskvalitet",
+      "finalPoints": "Sidste point",
+      "meanBet": "Mean bet",
+      "winRate": "Gevinst rate",
+      "wins": "Vinder",
+      "title": "Cambridge Gambling opgave",
+      "totalPoints": "Samlet point",
+      "quality": "Kvalitet",
+      "rational": "Rationel",
+      "avgBet": "Gns. bet",
+      "trial": "Retssag",
+      "whichColorHidesToken": "Hvilken farve skjuler tokenet?",
+      "youChose": "Du valgte",
+      "howMuchToBet": "Hvor meget skal man satse?"
+    },
+    "cancellation": {
+      "false": "Falsk",
+      "target": "Mål:",
+      "total": "I alt",
+      "title": "Annulleringsopgave (d2)",
+      "misses": "Savner",
+      "targetDescription": "d med 2 mærker"
+    },
+    "changeBlindness": {
+      "detectionRate": "Detektionshastighed",
+      "found": "Fundet",
+      "meanDetectionTime": "Gennemsnitlig detektionstid",
+      "title": "Skift blindhed",
+      "missed": "Savnet",
+      "avgTime": "Gns. tid",
+      "instructions": "Instruktioner"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Bedste skøn",
+      "meanScore": "Middelscore",
+      "worstEstimate": "Værste skøn",
+      "inRange": "Godt skøn!",
+      "title": "Kognitiv estimering",
+      "meanScoreLabel": "Middelscore",
+      "inRangeLabel": "I rækkevidde",
+      "extreme": "Ekstrem",
+      "scoreLabel": "score",
+      "submit": "Indsend"
+    },
+    "common": {
+      "accuracy": "Nøjagtighed",
+      "bias": "Bias",
+      "falseAlarmRate": "Falsk alarmfrekvens",
+      "hitRate": "Hitrate",
+      "hits": "Hits",
+      "listening": "Lytter...",
+      "meanRt": "Gennemsnitlig RT",
+      "timedOut": "Timeout",
+      "timedOut2": "Timeout",
+      "faRate": "Taux de FA",
+      "paused": "Pause"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Hvor sikker er du?",
+      "rateYourConfidence": "Bedøm din tillid",
+      "title": "Tillidskalibrering",
+      "calError": "Kalibreringsfejl",
+      "confidence": "Tillid"
+    },
+    "consequences": {
+      "best": "Bedste",
+      "nextRound": "Næste runde...",
+      "time": "Tid",
+      "placeholder": "Skriv en konsekvens...",
+      "title": "Konsekvenser",
+      "totalIdeas": "Totale ideer",
+      "avgPerRound": "Gns. per runde",
+      "rounds": "runder",
+      "noConsequencesListed": "Ingen konsekvenser angivet",
+      "roundProgress": "Rund {{current}} / {{total}}",
+      "typeAndPressAdd": "Skriv og tryk på Tilføj"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Cueing effekt",
+      "newConfigRt": "Ny Config RT",
+      "oldConfigRt": "Gammel Config RT",
+      "title": "Kontekstuel Cueing",
+      "cueing": "Cueing",
+      "oldRt": "Gammel RT",
+      "newRt": "Ny RT",
+      "prompt": "Spørg",
+      "left": "venstre",
+      "right": "Højre"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Tærskeljitter",
+      "title": "Kontur integration",
+      "pipeJitter": "| ryste"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Tærskelkontrast",
+      "title": "Kontrastfølsomhed",
+      "threshold": "Tærskel",
+      "left": "venstre",
+      "right": "Højre"
+    },
+    "cpt": {
+      "nontargets": "Ikke-mål",
+      "target": "Mål",
+      "nonTarget": "Ikke-mål",
+      "dPrime": "d'",
+      "targetsLetter": "Målbogstav",
+      "tapForLetterOnly": "Tryk kun for målbogstavet"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritisk afstand",
+      "leftAccuracy": "Venstre nøjagtighed",
+      "rightAccuracy": "Rigtig nøjagtighed"
+    },
+    "cryptogram": {
+      "hints": "Hints",
+      "title": "Kryptogram",
+      "solved": "Løst",
+      "time": "Tid",
+      "puzzles": "Gåder",
+      "puzzle": "Puslespil",
+      "hint": "Tip",
+      "clear": "Ryd"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Område under kurve",
+      "discountRateK": "Rabatsats (k)",
+      "impulsivityIndex": "Impulsivitetsindeks",
+      "title": "Forsinket rabat",
+      "aucPatience": "AUC tålmodighed",
+      "patient": "Patient",
+      "kRate": "K Sats",
+      "impuls": "Impuls",
+      "indifferencePoints": "Ligegyldighedspunkter",
+      "whichPrefer": "Hvilken foretrækker du?",
+      "today": "I dag"
+    },
+    "delayedMatching": {
+      "long": "Lang",
+      "longDelay68s": "Lang forsinkelse (6-8 s)",
+      "med": "Med",
+      "mediumDelay46s": "Middel forsinkelse (4-6 s)",
+      "short": "Kort",
+      "shortDelay34s": "Kort forsinkelse (3-4 s)",
+      "title": "Forsinket matchning",
+      "delay": "Forsinkelse",
+      "rememberThisPattern": "Husk dette mønster",
+      "whichWasIt": "Hvilken var det?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Alarm Detektion",
+      "attendToTheLeftColumn": "Gå til VENSTRE kolonne",
+      "attendedAccuracy": "Deltog i Accuracy",
+      "ignoreTheRightColumn": "Ignorer den højre kolonne",
+      "right": "HØJRE",
+      "title": "Dikotisk lytning",
+      "attendedAcc": "Deltog nøjagtighed",
+      "alertDet": "Alarmdetektion",
+      "alerts": "Advarsler",
+      "selectLeftColumnWords": "Vælg ord i venstre kolonne",
+      "submit": "Indsend",
+      "alertQuestion": "Alert spørgsmål"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Glem nøjagtighed",
+      "forgettingEffect": "Glemmer effekt",
+      "newRejection": "Nyt afslag",
+      "rememberAccuracy": "Husk nøjagtighed",
+      "title": "Instrueret Forgetting",
+      "remember": "Husk",
+      "forget": "Glem",
+      "round": "Runde",
+      "word": "Ord",
+      "wasThisWordShown": "Blev dette ord vist?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias Score",
+      "congruentAcc": "Overensstemmende Acc",
+      "congruentRt": "Kongruent RT",
+      "incongruentAcc": "Inkongruent Acc",
+      "incongruentRt": "Inkongruent RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "bil eller lastbil?",
+      "minDisplayReached": "Min. visning nået",
+      "positionAccuracy": "Positionsnøjagtighed",
+      "thresholdDisplay": "Tærskelvisning",
+      "vehicleAccuracy": "Køretøjets nøjagtighed",
+      "whereWasTheDiamond": "Hvor var diamanten?",
+      "title": "Dobbelt beslutning",
+      "threshold": "Tærskel",
+      "bothOk": "Begge rigtige",
+      "vehicle": "Køretøj",
+      "position": "Stilling",
+      "car": "Bil",
+      "truck": "Lastbil"
+    },
+    "dsst": {
+      "items": "genstande",
+      "itemsCompleted": "Varer afsluttet",
+      "speedItemsmin": "Hastighed (varer/min)",
+      "attempts": "Forsøg",
+      "itemsPerMin": "Varer / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Dual-Task omkostninger",
+      "taskANumber": "Opgave A (nummer)",
+      "taskBSymbol": "Opgave B (Symbol)",
+      "title": "Dobbelt opgave",
+      "taskA": "Opgave A",
+      "taskB": "Opgave B",
+      "number": "Nummer",
+      "symbol": "Symbol",
+      "up": "Op",
+      "down": "Ned"
+    },
+    "dualTime": {
+      "sessionEnPause": "Session sat på pause",
+      "votreEstimationSecondes": "Dit estimat (sekunder)",
+      "sessionInterrupted": "Session afbrudt",
+      "target": "Mål",
+      "estimation": "Skøn",
+      "avgTime": "Gns. tid",
+      "avgError": "Gns. fejl",
+      "trials": "Forsøg",
+      "resumeToContinue": "Genoptag for at fortsætte",
+      "aimFor": "Sigt efter",
+      "second": "For det andet",
+      "howLongDidYouTake": "Hvor lang tid tog du?"
+    },
+    "dualTrack": {
+      "confirmer": "Bekræft",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Genoptag for at fortsætte.",
+      "sessionEnPause": "Session sat på pause",
+      "tapezLesCibles": "Tryk på målene",
+      "tapezLaCible": "Tryk på målet",
+      "appuyezConfirmer": "Tryk på Bekræft",
+      "targetsCountLabel": "{{count}} mål",
+      "distractorsCountLabel": "{{count}} distraktorer",
+      "roundsCountLabel": "{{count}} runder",
+      "calibrationRoundsLabel": "{{count}} kalibreringsrunder",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = intern rejse sværhedsgrad.",
+      "tierHelpCurrentWithPhase": "Du er i øjeblikket på T{{current}} ud af {{total}} for {{targets}}-mål. Nuværende fase: {{phase}}. Der er {{remaining}} niveau(er) tilbage før det næste målniveau.",
+      "phaseTracking": "Sporing",
+      "phaseAudio": "Sporing + lyd",
+      "phaseColor": "Sporing + farve",
+      "phaseCombined": "Sporing + lyd + farve",
+      "passLetters": "Breve",
+      "passColors": "Farver",
+      "moveInstruction": "Flytteinstruktion",
+      "moveConfirmBtn": "Flyt bekræftelsesknappen",
+      "preparingSession": "Forbereder session...",
+      "preparing3dScene": "Forbereder 3D-scene...",
+      "startJourney": "Start rejsen",
+      "calibrationDescription": "Før den første fase vil en længere kalibrering estimere dit startniveau.",
+      "defaultDescription": "Bolde vil lyse op. Følg dem, mens de bevæger sig, og identificer dem derefter.",
+      "startCalibration": "Start kalibrering",
+      "calibrationTitle": "Kalibrering",
+      "estimatedStart": "Est. start",
+      "roundsAnalyzed": "Runder analyseret",
+      "willStartAt": "Starter kl",
+      "targetsCount": "Mål",
+      "thenProgress": "derefter fremskridt"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Gennemsnitlig absolut fejl",
+      "ratio": "Forhold",
+      "slope": "Hældning",
+      "vierordtSlope": "Vierordt Skrænt",
+      "wait": "Vent...",
+      "title": "Varighed Reproduktion",
+      "meanError": "Gennemsnitlig fejl",
+      "meanRatio": "Gennemsnitsforhold (produceret/mål)",
+      "holdNow": "HOLD NU",
+      "target": "Mål",
+      "error": "Fejl"
+    },
+    "embeddedFigures": {
+      "fastest": "Hurtigste",
+      "found": "Fundet",
+      "meanDetectionTime": "Gennemsnitlig detektionstid",
+      "slowest": "Langsomst",
+      "title": "Indlejrede figurer",
+      "missed": "Savnet",
+      "fastestLabel": "Hurtigste",
+      "findThisShape": "Find denne form",
+      "memorizeShape": "Husk formen...",
+      "foundIt": "Fandt det!",
+      "giveUp": "Giv op"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Falske alarmer",
+      "misses": "Savner",
+      "title": "Følelsesmæssig N-Bag",
+      "match": "Match"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutral RT",
+      "positiveRt": "Positiv RT",
+      "threatRt": "Trussel RT",
+      "title": "Følelsesmæssig Stroop",
+      "interference": "Interferens",
+      "interferenceThreatNeutral": "Interferens (trussel - neutral)"
+    },
+    "eyesTest": {
+      "totalTime": "Samlet tid"
+    },
+    "faceName": {
+      "gain": "Gevinst",
+      "learningImprovement": "Læringsforbedring",
+      "round1Accuracy": "Runde 1 nøjagtighed",
+      "round2Accuracy": "Runde 2 Nøjagtighed",
+      "whoIsThis": "Hvem er det her?",
+      "title": "Ansigtsnavneforeningen",
+      "round": "Runde",
+      "testPhase": "Testfase"
+    },
+    "fauxPas": {
+      "who": "Hvem?",
+      "why": "Hvorfor?",
+      "title": "Faux Pas-genkendelse",
+      "detection": "Detektion",
+      "scenarios": "Scenarier",
+      "fpFound": "Faux pas fundet",
+      "control": "Kontrol",
+      "readyToAnswer": "Klar til at svare",
+      "didSomeoneSay": "Sagde nogen noget, de ikke burde have?",
+      "whoSaidIt": "Hvem sagde det?",
+      "whyInappropriate": "Hvorfor var det upassende?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Genkald nøjagtighed",
+      "recognitionAccuracy": "Genkendelsesnøjagtighed",
+      "recallPlaceholder": "Skriv dit svar...",
+      "unlikely": "Usandsynligt",
+      "certain": "Visse",
+      "title": "Følelse af at vide",
+      "recall": "Genkald",
+      "recognition": "Anerkendelse",
+      "fokR": "Fok R",
+      "questions": "Spørgsmål",
+      "recalled": "Genkaldt",
+      "recognized": "Anerkendt",
+      "fokSensitivity": "FOK Følsomhed",
+      "submit": "Indsend",
+      "dontKnow": "Ved ikke",
+      "fokPrompt": "Vil du genkende det?",
+      "selectCorrectAnswer": "Vælg det rigtige svar",
+      "answer": "Svar"
+    },
+    "fingerTapping": {
+      "firstTrial": "Første Retssag",
+      "lastTrial": "Sidste Retssag",
+      "sequence": "Sekvens",
+      "speedupT1VsT12": "Speedup (T1 vs T12)",
+      "title": "Finger bankende"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Gns. bevægelsestid",
+      "avgThroughput": "Gns. gennemløb",
+      "title": "Passer til tapping",
+      "throughput": "Gennemløb",
+      "tapTarget": "Tryk på det fremhævede mål"
+    },
+    "foreperiod": {
+      "early": "Tidligt",
+      "slope": "Hældning",
+      "title": "Tidlig forberedelse",
+      "fpEffectSlope": "FP Effect Slope"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Tilbageførsler",
+      "threshold": "Tærskel",
+      "tone1": "Tone 1",
+      "tone2": "Tone 2",
+      "weber": "Weber",
+      "weberFraction": "Weber fraktion",
+      "hz": "Hz",
+      "title": "Hyppighedsdiskrimination",
+      "thresholdLabel": "Tærskel",
+      "hzDiff": "Hz diff",
+      "whichWasHigher": "Hvilken var højere?",
+      "firstHigher": "Først højere",
+      "secondHigher": "Anden højere"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor plaster",
+      "leftAccuracy": "Venstre nøjagtighed",
+      "leftTrials": "Forlod forsøg",
+      "noiseMask": "Støj maske",
+      "rightAccuracy": "Rigtig nøjagtighed",
+      "rightTrials": "Rigtige forsøg",
+      "thresholdAngle": "Tærskelvinkel",
+      "title": "Gabor",
+      "threshold": "Tærskel",
+      "reversals": "Tilbageførsler",
+      "timedOut": "Timeout",
+      "left": "venstre",
+      "right": "Højre"
+    },
+    "gameOfDice": {
+      "finalPoints": "Sidste point",
+      "risky": "Risikabelt",
+      "riskyChoices": "Risikable valg",
+      "safe": "Sikker",
+      "winRate": "Gevinst rate",
+      "wins": "Vinder",
+      "title": "Terningspil opgave",
+      "totalPoints": "Samlet point",
+      "riskyLabel": "Risikabelt",
+      "roll": "Rul",
+      "chooseYourBet": "Vælg din indsats",
+      "pickNumbers": "Vælg dine tal"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Gab eller ingen hul?",
+      "gapThreshold": "Gap Tærskel",
+      "title": "Detektion af tavshed",
+      "noGap": "Ingen Gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Hvor var blikket?",
+      "direct": "Direkte",
+      "left": "venstre",
+      "right": "Højre",
+      "title": "Blikretning",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Del 1 (Initiation)",
+      "part2": "Del 2",
+      "part2Suppression": "Del 2 (undertrykkelse)",
+      "suppressionCost": "Undertrykkelsesomkostninger",
+      "title": "Hayling",
+      "part1": "Del 1",
+      "part2Label": "Del 2",
+      "suppression": "Undertrykkelse",
+      "obvious": "Indlysende",
+      "obviousPicksPart2": "Oplagte valg (del 2)",
+      "chooseUnrelated": "Vælg et ikke-relateret ord",
+      "completelyUnrelated": "Fuldstændig uafhængigt",
+      "doNotPickObvious": "Vælg IKKE det åbenlyse ord!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Går videre til næste fase...",
+      "stageComplete": "Etape færdig!",
+      "title": "IED Indstil Shift",
+      "stages": "Stadier",
+      "edsCost": "EDS omkostninger",
+      "stage": "Scene",
+      "correctNeeded": "Korrekt nødvendig for at komme videre"
+    },
+    "informationSampling": {
+      "cost": "Omkostninger",
+      "free": "Gratis",
+      "meanTilesCost": "Gennemsnitlige fliser (omkostninger)",
+      "meanTilesFree": "Gennemsnitlige fliser (gratis)",
+      "totalCost": "Samlede omkostninger",
+      "title": "Informationsprøveudtagning",
+      "tiles": "Fliser",
+      "tapToReveal": "Tryk for at afsløre"
+    },
+    "inspectionTime": {
+      "final": "Finale",
+      "finalDisplayTime": "Endelig visningstid",
+      "minCorrectIt": "Min korrekte IT",
+      "threshold": "Tærskel",
+      "title": "Inspektionstid",
+      "thresholdLabel": "Tærskel",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Saldo:",
+      "chooseADeck": "Vælg et dæk",
+      "deckADraws": "Dæk A trækker",
+      "deckBDraws": "Dæk B trækker",
+      "deckCDraws": "Deck C trækker",
+      "deckDDraws": "Dæk D trækker",
+      "first40Advantageous": "De første 40 fordelagtige",
+      "last40Advantageous": "Sidste 40 fordelagtige",
+      "learn": "Lær",
+      "learningIndex": "Læringsindeks",
+      "title": "Iowa gambling",
+      "advantageousPct": "Fordelagtig %",
+      "earnings": "Indtjening",
+      "last40": "Sidste 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibrering Bias",
+      "meanJol": "Betyder JOL",
+      "nowTestYourRecall": "Test nu din tilbagekaldelse",
+      "studyComplete": "Studiet afsluttet",
+      "whatWasPairedWith": "Hvad blev parret med...?",
+      "title": "Bedømmelse af læring",
+      "recallAccuracy": "Genkald nøjagtighed",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL-nøjagtighed (gamma)",
+      "howLikelyRemember": "Hvor sandsynligt vil du huske det?",
+      "hiddenAnswer": "Skjult svar"
+    },
+    "judgmentOfRecency": {
+      "close": "Luk",
+      "closeGap13": "Luk hul (1-3)",
+      "far": "Langt",
+      "farGap9": "Langt mellemrum (9+)",
+      "mediumGap48": "Mellemrum (4-8)",
+      "title": "Nyhedsdom",
+      "medium": "Medium",
+      "studyPhaseMemorizeOrder": "Studiefase — Husk rækkefølgen",
+      "whichMoreRecently": "Hvilken dukkede op for nylig?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Gennemsnitlig RT (ikke-ord)",
+      "meanRtWords": "Gennemsnitlig RT (ord)",
+      "nonwordsAccuracy": "Ikke-ords nøjagtighed",
+      "wordsAccuracy": "Ords nøjagtighed",
+      "word": "Ord",
+      "nonword": "Ikke-ord"
+    },
+    "maze": {
+      "duration": "Varighed",
+      "optimalSteps": "Optimale skridt",
+      "pathEfficiency": "Stieffektivitet",
+      "totalSteps": "Totale trin",
+      "wallHits": "Væghits",
+      "title": "Labyrint",
+      "completed": "Afsluttet",
+      "efficiency": "Effektivitet",
+      "wallHitsLabel": "Væghits",
+      "steps": "Trin"
+    },
+    "memobox": {
+      "easy": "Nemt",
+      "easy2Boxes": "Nemt (2 kasser)",
+      "hard": "Hårdt",
+      "hard4Boxes": "Hård (4 kasser)",
+      "medium3Boxes": "Medium (3 kasser)",
+      "title": "Memoboks",
+      "rounds": "runder",
+      "medium": "Medium",
+      "watchMovements": "Se bevægelserne...",
+      "howManyBalls": "Hvor mange bolde i hver kasse?",
+      "submit": "Indsend",
+      "roundOf": "Runde {{current}} af {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Hvad er tværsnittet?",
+      "title": "Mental skæring"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Gammelt, lignende eller nyt?",
+      "patternSeparation": "Mønsteradskillelse",
+      "sep": "sep.",
+      "old": "Gamle",
+      "similar": "Lignende",
+      "new": "Ny",
+      "ldi": "LDI",
+      "title": "Mnemonisk diskrimination",
+      "hitRateOldDetected": "Hitrate (gammel registreret)",
+      "lureDiscrimination": "Lokkediskriminering (LDI)",
+      "memorize": "Husk",
+      "testPhase": "Testfase"
+    },
+    "multiArmedBandit": {
+      "earnings": "Indtjening:",
+      "pickMachine": "Vælg en maskine",
+      "title": "Flerarmet bandit",
+      "totalReward": "Samlet belønning",
+      "optimal": "Optimal",
+      "regret": "Beklager",
+      "exploit": "Udbytte",
+      "machine": "Maskine",
+      "armsExplored": "Arme udforsket"
+    },
+    "navon": {
+      "globalBigLetter": "Globalt (stort bogstav)",
+      "localSmallLetter": "Lokal (små bogstaver)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Hvilket STORT bogstav?",
+      "whatSmallLetter": "Hvilket lille bogstav?"
+    },
+    "negativePriming": {
+      "controlRt": "Styr RT",
+      "nameTheRedShape": "Navngiv den røde form",
+      "negativePrimingRt": "Negativ priming RT",
+      "positivePrimingRt": "Positiv priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP effekt",
+      "title": "Negativ priming",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Estimationsbias",
+      "linearityRsup2": "Linearitet (R²)",
+      "meanAbsoluteError": "Gennemsnitlig absolut fejl",
+      "tapTheLineToPlaceTheNumber": "Tryk på linjen for at placere nummeret",
+      "title": "Nummerlinje",
+      "meanError": "Gennemsnitlig fejl",
+      "yourEstimate": "Dit skøn",
+      "correct": "Korrekt"
+    },
+    "oddOneOut": {
+      "colorTrials": "Farveforsøg",
+      "shapeTrials": "Formforsøg",
+      "shape": "Form",
+      "color": "Farve",
+      "timeout": "Timeout",
+      "shapeDiffAccuracy": "Form diff. nøjagtighed",
+      "colorDiffAccuracy": "Farveforskel. nøjagtighed",
+      "shapeDiffAvgRt": "Form diff. gns. RT",
+      "colorDiffAvgRt": "Farveforskel. gns. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Hvilken vej?",
+      "thresholdAngle": "Tærskelvinkel",
+      "title": "Orienteringsdiskrimination",
+      "threshold": "Tærskel",
+      "counterCw": "CCW",
+      "clockwise": "Med uret"
+    },
+    "patternComparison": {
+      "differentTrials": "Forskellige forsøg",
+      "sameTrials": "Samme forsøg",
+      "same": "Samme",
+      "different": "Forskellige"
+    },
+    "patternRecognition": {
+      "newPatterns": "Nye mønstre",
+      "oldPatterns": "Gamle mønstre",
+      "old": "GAMMEL",
+      "new": "NYHED",
+      "studyPatterns": "Studer mønstrene omhyggeligt",
+      "memorize": "Husk ({{current}}/{{total}})",
+      "getReady": "Gør dig klar...",
+      "testPhaseStarting": "Testfase starter..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Præcis Korrekt",
+      "meanAngularError": "Gennemsnitlig vinkelfejl",
+      "withinTolerance": "Inden for tolerance",
+      "title": "Perspektiv at tage",
+      "avgErr": "Gns. fejl",
+      "youAreAt": "Du er kl",
+      "facing": "Vender",
+      "pointTo": "Peg på"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frekv. Tærskel",
+      "seq1": "Seq 1",
+      "seq2": "Seq 2",
+      "title": "Fonemdiskrimination",
+      "thresh": "Tærske",
+      "sameOrDifferent": "Ens eller anderledes?",
+      "same": "Samme",
+      "different": "Forskellige"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = sent)",
+      "meanAbsoluteError": "Gennemsnitlig absolut fejl",
+      "precisionSd": "Præcision (SD)",
+      "title": "Forudsigelsesbevægelse",
+      "absError": "Abs. fejl",
+      "precision": "Præcision",
+      "responded": "svarede",
+      "tapWhenReachesTarget": "TAP, når den når målet"
+    },
+    "promem": {
+      "ongoingAccuracy": "Løbende nøjagtighed",
+      "ongoingRt": "Løbende RT",
+      "pmHitRate": "PM hitrate",
+      "pmRt": "PM RT",
+      "pmTargets": "PM mål",
+      "title": "Prospektiv hukommelse",
+      "ongoing": "Løbende",
+      "pmHits": "PM hits",
+      "pmMisses": "PM frøkener",
+      "living": "Levende",
+      "nonLiving": "Ikke-levende",
+      "redWordInstruction": "Rødt ord = tryk"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Distraktor fejl",
+      "literalErrorRate": "Bogstavelig fejlrate",
+      "literalErrors": "Bogstavelige fejl",
+      "title": "Ordsprogsfortolkning",
+      "literal": "Bogstaveligt",
+      "litRate": "Lit. Bedøm",
+      "whatDoesThisMean": "Hvad betyder det?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Gør dig klar til at følge med",
+      "meanTimeOnTarget": "Gennemsnitlig tid på mål",
+      "meanTrackingError": "Gennemsnitlig sporingsfejl",
+      "placeYourFingerOnTheScreen": "Placer din finger på skærmen",
+      "title": "Forfølgelsessporing",
+      "timeOnTarget": "Tid i mål",
+      "error": "Fejl",
+      "onTarget": "På mål",
+      "avgError": "Gns. fejl",
+      "improve": "Forbedre",
+      "improvementT1VsT": "Forbedring T1 vs. T",
+      "errorLabel": "Fejl",
+      "followGreenTarget": "Følg det grønne mål"
+    },
+    "rapidNaming": {
+      "roundComplete": "Runde færdig",
+      "totalErrors": "Total fejl",
+      "title": "Hurtig navngivning",
+      "avgSpeed": "Gns. hastighed",
+      "totalTime": "Samlet tid",
+      "round": "Runde",
+      "getReady": "Gør dig klar!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Gennemsnitlig løsningstid",
+      "solved": "Løst",
+      "wrong": "Forkert",
+      "placeholder": "Dit svar...",
+      "title": "Rebus puslespil",
+      "puzzles": "Gåder",
+      "timeout": "Timeout",
+      "submit": "Indsend",
+      "answer": "Svar"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Gennemsnitlig løsningstid",
+      "solved": "Løst",
+      "placeholder": "Dit svar...",
+      "title": "Remote Associates",
+      "timeout": "Timeout",
+      "submit": "Indsend",
+      "answer": "Svar"
+    },
+    "reversalLearning": {
+      "adapt": "Tilpas",
+      "loseshiftRate": "Lose-Shift Rate",
+      "score": "Score:",
+      "winstayRate": "Vind-opholdspris",
+      "title": "Omvendt læring",
+      "rewards": "Belønninger",
+      "reversals": "Tilbageførsler",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Gns. forsøg til kriterium",
+      "pickACard": "Vælg et kort"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Tæl tilbage med 7",
+      "reproduceThePatternFromMemory": "Gengiv mønsteret fra hukommelsen",
+      "title": "Rey kompleks figur",
+      "copy": "Kopiér",
+      "recall": "Genkald",
+      "retention": "Fastholdelse",
+      "trial": "Retssag",
+      "target": "Mål",
+      "yourCopy": "Din kopi",
+      "submit": "Indsend"
+    },
+    "rhythm": {
+      "avgTimingError": "Gns. tidsfejl",
+      "bestTrialError": "Bedste prøvefejl",
+      "correctTrials": "Korrekte forsøg",
+      "worstTrialError": "Værste prøvefejl",
+      "watchRhythm": "Hold øje med rytmen",
+      "getReady": "Gør dig klar...",
+      "tapTheRhythm": "Tryk på rytmen!",
+      "tooFarOff": "For langt væk!",
+      "tapToReproduce": "Tryk for at gengive",
+      "beats": "{{count}} beats",
+      "bestTrial": "Bedste forsøg",
+      "worstTrial": "Værste prøvelse",
+      "title": "Rytme",
+      "msErr": "ms fejl"
+    },
+    "routePlanning": {
+      "time": "Tid",
+      "title": "Ruteplanlægning",
+      "levels": "Niveauer",
+      "completed": "Afsluttet",
+      "avgMoves": "Gns. bevæger sig",
+      "clear": "Ryd",
+      "submit": "Indsend",
+      "instructions": "Instruktioner"
+    },
+    "rvp": {
+      "detect357246468": "Registrer: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Målsekvenser",
+      "fa": "FA",
+      "hitRate": "Hit rate",
+      "misses": "Savner",
+      "sequences": "Sekvenser"
+    },
+    "sart": {
+      "commissionErrors": "Kommissionens fejl",
+      "omissionErrors": "Udeladelsesfejl",
+      "tapAllDigits": "Tryk på alle cifre undtagen 3",
+      "except3": "Undtagen 3"
+    },
+    "sceneCrasher": {
+      "adds": "Tilføjer",
+      "studyTheScene": "Studer scenen",
+      "swaps": "Bytter",
+      "tapTheNewchangedObject": "Tryk på det nye/ændrede objekt"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Falske sætninger",
+      "trueSentences": "Sande sætninger",
+      "byCategory": "Efter kategori",
+      "title": "Sætningsbekræftelse",
+      "trueRt": "Ægte RT",
+      "true": "Sandt",
+      "false": "Falsk",
+      "pressKey": "Tryk på"
+    },
+    "soundSweeps": {
+      "down": "Ned",
+      "downAccuracy": "Ned nøjagtighed",
+      "durationThreshold": "Varighedstærskel",
+      "up": "Op",
+      "upAccuracy": "Op præcision",
+      "title": "Sound Sweeps",
+      "threshold": "Tærskel",
+      "upOrDown": "op eller ned?"
+    },
+    "sourceMemory": {
+      "color": "Farve",
+      "colorRecall": "Genkaldelse af farve",
+      "frame": "Ramme",
+      "frameRecall": "Tilbagekaldelse af ramme",
+      "getReadyForTheTest": "Gør dig klar til testen!",
+      "itemRecognition": "Genkendelse af varer",
+      "positionRecall": "Tilbagekaldelse af position",
+      "sourceAccuracy": "Kildens nøjagtighed",
+      "title": "Kildehukommelse",
+      "source": "Kilde",
+      "position": "Stilling",
+      "word": "Ord",
+      "wasThisWordShown": "Blev dette ord vist?",
+      "bottom": "Nederst",
+      "blue": "Blå",
+      "orange": "Orange",
+      "circle": "Cirkel",
+      "square": "Firkantet"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Støjgrænse",
+      "title": "Tale-i-støj",
+      "noise": "Støj",
+      "whichWordWasIt": "Hvilket ord var det?"
+    },
+    "srtt": {
+      "learningEffect": "Læringseffekt",
+      "learning": "Læring",
+      "block": "Bloker"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Chanceniveau",
+      "learningDetected": "Læring opdaget",
+      "testPhase": "Testfase",
+      "whichPairLooksMoreFamiliar": "Hvilket par ser mere bekendt ud?",
+      "title": "Statistisk læring",
+      "learning": "Læring",
+      "watchTheShapes": "Hold øje med formerne"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Belief Bias Effekt",
+      "conclusion": "Konklusion",
+      "premise1": "Forudsætning 1",
+      "premise2": "Forudsætning 2",
+      "logicalValidityQuestion": "Er dette logisk gyldigt?",
+      "valid": "Gyldig",
+      "invalid": "Ugyldig"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Manglende nøjagtighed",
+      "presentAccuracy": "Nuværende nøjagtighed",
+      "title": "Symbolsøgning",
+      "present": "Til stede",
+      "absent": "Fraværende",
+      "targets": "Mål",
+      "searchGroup": "Søg gruppe"
+    },
+    "syncContinuation": {
+      "async": "Asynkron",
+      "asynchrony": "Asynkroni",
+      "drift": "Drift",
+      "cv": "CV",
+      "title": "Synkronisering - Fortsættelse",
+      "meanCv": "Gennemsnitligt CV",
+      "tempos": "Tempo",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Bliv klar...",
+      "nextTempo": "Næste tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Korrekte nulstillinger",
+      "duration": "Varighed",
+      "missedCounters": "Missede tællere",
+      "prematureResets": "For tidlig nulstilling",
+      "totalEvents": "Begivenheder i alt",
+      "tooEarly": "For tidligt!",
+      "missed": "Savnet!",
+      "title": "Opgavejonglering",
+      "premature": "For tidligt",
+      "counter": "Tæller",
+      "tapCounterInstruction": "Tryk på hver tæller, når den når sin tærskel. Lad ikke noget løbe over!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Halvningspunkt (PSE)",
+      "curveSteepness": "Kurvestejlhed",
+      "idealMidpoint": "Ideelt midtpunkt",
+      "pse": "PSE",
+      "title": "Temporal Bisektion",
+      "steepness": "Stejlhed",
+      "shortOrLong": "kort eller lang?",
+      "trainingPhase": "Træningsfase",
+      "short": "Kort",
+      "long": "Lang"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Gradientbredde",
+      "rememberThisDuration": "Husk denne varighed",
+      "width": "Bredde",
+      "standard": "STANDARD",
+      "title": "Temporal generalisering",
+      "hitRate": "Hit rate",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Hitrate (registrer standard)",
+      "sameDuration": "Samme varighed?",
+      "trainingPhase": "Træningsfase",
+      "same": "Samme",
+      "different": "Forskellige"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Tærskel SOA",
+      "title": "Teksturdiskrimination",
+      "threshold": "Tærskel"
+    },
+    "timePromem": {
+      "avgTimingError": "Gns. tidsfejl",
+      "clockChecks": "Urtjekker",
+      "ongoingAccuracy": "Løbende nøjagtighed",
+      "ongoingTrials": "Løbende forsøg",
+      "totalPmPresses": "Samlet PM-tryk",
+      "pmAccuracy": "PM nøjagtighed",
+      "pmMisses": "PM savner",
+      "title": "Tidsperspektiv",
+      "ongoing": "Løbende",
+      "pmHitsLabel": "PM rammer",
+      "timingErr": "Timing Err",
+      "pmHitsExpected": "PM-hits / forventet",
+      "pmPresses": "PM trykker",
+      "checkClock": "Tjek uret",
+      "thirtySecMark": "30'er Mark"
+    },
+    "toj": {
+      "meanResponseTime": "Gennemsnitlig responstid",
+      "temporalResolution": "Tidlig opløsning",
+      "title": "Tidslig ordensdom",
+      "threshold": "Tærskel",
+      "whichCameFirst": "Hvilken kom først?",
+      "leftFirst": "Venstre først",
+      "rightFirst": "Højre først"
+    },
+    "tower": {
+      "budget": "Budget",
+      "challenge": "Udfordring",
+      "challengeClassic": "Klassisk",
+      "challengeExpert": "Ekspert",
+      "challengeMemory": "Hukommelse",
+      "challengePrecision": "Præcision",
+      "dragDiscAriaLabel": "Træk den øverste disk fra pinden {{peg}}",
+      "goal": "Mål",
+      "goalHiddenStatus": "Mål skjult. Brug Reveal for at vise det kort.",
+      "goalRevealedMessage": "Målet afsløret i 3 sekunder.",
+      "hint": "Tip",
+      "hintDescription": "Vis bedste næste træk",
+      "hintMessage": "Tip: flyt den øverste disk fra pinden {{fromPeg}} til pinden {{toPeg}}.",
+      "hiddenGoalDescription": "Målet er skjult under leg. Brug Reveal, når du har brug for en kort opfriskning.",
+      "hiddenGoalTitle": "Hukommelsesudfordring",
+      "invalid": "Ugyldig",
+      "moves": "Bevæger sig",
+      "optimal": "Optimal",
+      "pegFullMessage": "Den pind er fuld.",
+      "previewMemoryCountdown": "Husk målet. Starter i {{seconds}}s.",
+      "previewPlanCountdown": "Planlæg {{moves}}-move-løsningen. Starter i {{seconds}}s.",
+      "reset": "Nulstil",
+      "resetDescription": "Genstart dette puslespil",
+      "resetMessage": "Puslespil nulstilles.",
+      "reveal": "Afsløre",
+      "revealDescription": "Afslør det skjulte mål",
+      "statusOptimalSolve": "Optimal løsning. Score {{score}}.",
+      "statusSolvedScore": "Løst i {{moves}} træk (+{{extraMoves}}). Score {{score}}.",
+      "undo": "Fortryd",
+      "undoDescription": "Vend sidste træk",
+      "undoneMessage": "Sidste træk fortrudt.",
+      "yourPegs": "Dine pinde"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Korrekte leverancer",
+      "trainsLost": "Tog tabt",
+      "wrongStation": "Forkert station",
+      "title": "Tanketog",
+      "trains": "Tog",
+      "missed": "Savnet",
+      "scoreLabel": "Score",
+      "instructions": "Instruktioner"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Gns. brugte spørgsmål",
+      "title": "Tyve spørgsmål",
+      "avgQuestions": "Gns. spørgsmål",
+      "rounds": "runder",
+      "efficiency": "Effektivitet",
+      "avgQuestionsCorrectOnly": "Gns. spørgsmål (kun korrekte)",
+      "questionsLabel": "Spørgsmål",
+      "remaining": "Tilbage",
+      "readyToGuess": "Jeg er klar til at gætte!",
+      "tapTheTarget": "Tryk på det objekt, du tror er målet!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Nyttigt synsfelt",
+      "visualNoiseMask": "Visuel støjmaske",
+      "whatWasInTheCenter": "Hvad var der i midten?",
+      "whereWasTheTarget": "Hvor var målet?",
+      "avgThreshold": "Gns. tærskel",
+      "speed": "Hastighed",
+      "accuracy": "Nøjagtighed",
+      "central": "Centralt",
+      "peripheral": "Perifer",
+      "overall": "Samlet set",
+      "block": "Bloker",
+      "trials": "Forsøg",
+      "start": "Start",
+      "focus": "Fokus",
+      "threshold": "Tærskel",
+      "stimulus": "Stimulus",
+      "respondFromMemory": "Svar fra hukommelsen",
+      "truck": "Lastbil",
+      "choosePeripheralLocation": "Vælg en perifer placering",
+      "currentBlock": "Bloker {{n}}",
+      "exposure": "Eksponering"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Ord der starter med {{letter}}",
+      "title": "Verbal flydende",
+      "totalWords": "Samlede ord",
+      "duplicates": "Dubletter",
+      "letter": "Brev",
+      "round": "Runde",
+      "roundComplete": "Runde færdig",
+      "nextRound": "Næste runde",
+      "middotRound": "· Rund"
+    },
+    "vernierAcuity": {
+      "whichSide": "Hvilken side?",
+      "title": "Vernier Acuity",
+      "leftOffset": "Venstre offset",
+      "rightOffset": "Højre offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimal strategi",
+      "correct": "Korrekt!",
+      "wrong": "Forkert",
+      "title": "Vejrudsigt",
+      "optimal": "Optimal",
+      "learningCurve": "Læringskurve",
+      "predictTheWeather": "Forudsige vejret",
+      "rain": "Regn"
+    },
+    "wordChain": {
+      "avgResponseTime": "Gennemsnitlig responstid",
+      "chain": "Kæde",
+      "longestChain": "Længste kæde",
+      "totalCorrect": "Total korrekt",
+      "totalWords": "Samlede ord",
+      "words": "Ord",
+      "title": "Ordkæde",
+      "longest": "Længst",
+      "avgRt": "Gns. RT",
+      "endsWith": "slutter med",
+      "chainLabel": "Kæde",
+      "bestLabel": "Bedste"
+    },
+    "wordFlow": {
+      "avgWordLength": "Gennemsnitlig ordlængde",
+      "correct": "Korrekt",
+      "invalidWords": "Ugyldige ord",
+      "totalWordsSelected": "Samlet udvalgte ord",
+      "validWords": "Gyldige ord",
+      "wordsPerMinute": "Ord i minuttet",
+      "wrong": "Forkert",
+      "seeResults": "Se resultater",
+      "nextRound": "Næste runde ({{current}}/{{total}})",
+      "title": "Verbal flydende",
+      "validWordsLabel": "Gyldige ord",
+      "wordsPerMinLabel": "Ord/min",
+      "avgLengthLabel": "Gns. længde",
+      "invalidLabel": "Ugyldig",
+      "round": "Runde",
+      "selectWordsBelongTo": "Vælg ord, der hører til",
+      "selected": "Valgt"
+    },
+    "wordList": {
+      "avgRtCorrect": "Gns. RT (korrekt)",
+      "primacyEffect": "Primacy effekt",
+      "recencyEffect": "Nyhedseffekt",
+      "studyPhaseRememberEachWord": "Studiefase - husk hvert ord",
+      "wordsRecalled": "Ord genkaldt",
+      "title": "Ordliste",
+      "serialPositionCurve": "Seriel positionskurve",
+      "wasWordInList": "Var dette ord på listen?",
+      "seenBefore": "Set før",
+      "newWord": "Ny"
+    },
+    "speedSort": {
+      "switchAccuracy": "Skift nøjagtighed",
+      "switchTrials": "Skift forsøg",
+      "sortByColor": "Sorter efter FARVE",
+      "sortByShape": "Sorter efter SHAPE",
+      "sortByNumber": "Sorter efter NUMBER",
+      "ruleChanged": "Regel ændret!",
+      "binRed": "Rød",
+      "binBlue": "Blå",
+      "binGreen": "Grøn",
+      "binYellow": "Gul",
+      "binCircle": "Cirkel",
+      "binSquare": "Firkantet",
+      "binTriangle": "Trekant",
+      "binStar": "Stjerne",
+      "title": "Hastighedssortering",
+      "switch": "Afbrydere"
+    },
+    "reflex": {
+      "target": "Mål",
+      "lure": "Lure",
+      "tooSlow": "For langsomt!",
+      "wrongTarget": "Forkert mål!",
+      "tapTargets": "Tryk på de grønne cirkler!",
+      "hits": "Hits",
+      "misses": "Savner",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Husk det samlede antal...",
+      "title": "Kædeberegning",
+      "stepChains": "{{len}}-trinskæder",
+      "start": "Start",
+      "step": "Trin",
+      "whatIsTheResult": "Hvad er resultatet?"
+    },
+    "alternateUses": {
+      "placeholder": "Indtast en brug...",
+      "title": "Alternative anvendelser",
+      "totalUses": "Samlede anvendelser",
+      "perObject": "Pr objekt",
+      "rounds": "runder",
+      "bestObject": "Bedste objekt",
+      "bestCount": "Bedste tælle",
+      "noUsesSubmitted": "Ingen anvendelser indsendt",
+      "timesUp": "Tiden er gået!",
+      "nextObject": "Næste objekt ({{object}})",
+      "listCreativeUses": "Angiv kreative anvendelser for dette objekt"
+    },
+    "anagram": {
+      "placeholder": "Indtast ordet...",
+      "title": "Anagram",
+      "avgSolve": "Gns. løse",
+      "letterWords": "{{len}}-bogstavsord",
+      "submit": "Indsend"
+    },
+    "facialEmotion": {
+      "happy": "Glad",
+      "sad": "Trist",
+      "angry": "Vred",
+      "fearful": "Frygtelig",
+      "disgusted": "Afskyet",
+      "surprised": "Overrasket",
+      "lc": "LC",
+      "title": "Ansigtsfølelsesgenkendelse",
+      "topConfusions": "Top forvirring"
+    },
+    "numberSeries": {
+      "easy": "Nemt",
+      "hard": "Hårdt"
+    },
+    "chainRecall": {
+      "round": "Runde",
+      "title": "Kædetilbagekaldelse",
+      "chain": "Kæde",
+      "placeholder": "Pladsholder"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Følelsesmæssig Go/No-Go",
+      "block1CommissionErrors": "Blok 1 kommissionsfejl",
+      "block2CommissionErrors": "Blok 2 kommissionsfejl",
+      "goHappy": "Gå = glad",
+      "goSad": "Gå = trist",
+      "block": "Bloker",
+      "go": "Gå"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop effekt",
+      "title": "Farve Rush",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Overensstemmende nøjagtighed",
+      "incongruentAccuracy": "Inkongruent nøjagtighed"
+    },
+    "mirror": {
+      "avgCorrectCells": "Korrekt celler (gennemsnit)",
+      "symmetryType": "Symmetri type",
+      "title": "Spejl"
+    },
+    "rhythmTap": {
+      "correctTrials": "Korrekte forsøg",
+      "avgRhythmScore": "Gennemsnitlig rytmescore",
+      "bestTrialScore": "Bedste prøveresultat",
+      "worstTrialScore": "Dårligste prøveresultat",
+      "level": "Niveau",
+      "rhythm": "Rytme",
+      "bestTrial": "Bedste forsøg",
+      "worstTrial": "Værste prøvelse"
+    },
+    "vocalProsody": {
+      "questioning": "Spørgsmål"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Multiplicer",
+      "add": "Tilføj",
+      "subtract": "Træk fra",
+      "title": "Aritmetisk hastighed",
+      "score": "Score",
+      "solved": "Løst",
+      "missed": "Savnet"
+    },
+    "puzzle": {
+      "avgSolveTime": "Gennemsnitlig løsningstid",
+      "totalMoves": "Samlede træk",
+      "totalErrors": "Samlede fejl",
+      "gridSize": "Gitterstørrelse",
+      "maxGridReached": "Max gitter nået",
+      "maxLevelReached": "Max niveau nået",
+      "maxNodesReached": "Max noder nået",
+      "puzzleDetails": "Puslespil detaljer",
+      "roundDetails": "Runde detaljer",
+      "solved": "Løst!",
+      "undo": "Fortryd",
+      "reset": "Nulstil",
+      "check": "Tjek",
+      "moves": "Bevæger sig",
+      "time": "Tid",
+      "level": "Niveau",
+      "errors": "Fejl",
+      "score": "Score",
+      "grid": "Gitter",
+      "crossings": "Krydsninger",
+      "pearls": "Perler",
+      "clues": "Ledtråde",
+      "region": "Region",
+      "filled": "Fyldt",
+      "cells": "Celler",
+      "undosLeft": "Fortryder tilbage",
+      "gems": "Ædelstene",
+      "connected": "Forbundet",
+      "slides": "Dias",
+      "progress": "Fremskridt",
+      "rotations": "Rotationer",
+      "puzzle": "Puslespil",
+      "uncovered": "Afdækket",
+      "colored": "Farvet",
+      "violations": "Overtrædelser",
+      "blacked": "Sort",
+      "empty": "Tom",
+      "remaining": "Tilbage",
+      "pairs": "Par",
+      "flips": "Flips",
+      "found": "Fundet",
+      "balls": "Bolde",
+      "guesses": "Gæt",
+      "original": "Original",
+      "findDifferences": "Find forskelle",
+      "totalDrags": "Samlede træk",
+      "totalUndos": "Samlede fortrydelser",
+      "totalEdgesDrawn": "Samlede kanter tegnet",
+      "totalLasers": "Totale lasere",
+      "totalSlides": "Total slides",
+      "totalRotations": "Samlede rotationer",
+      "totalRectangles": "Totale rektangler",
+      "totalScore": "Samlet score",
+      "avgTime": "Gns. tid",
+      "cellsCleared": "Celler ryddet",
+      "totalDiffsFound": "Samlede forskelle fundet",
+      "gemsCollected": "Ædelstene samlet",
+      "pushBoxesOntoTargets": "Skub alle kasser på mål",
+      "fireLasersMarkBalls": "Affyr lasere fra kanter, og marker derefter kuglepositioner",
+      "revealingAnswer": "Afslørende svar...",
+      "checkAnswer": "Tjek Svar",
+      "pickNumberBelow": "Vælg et tal nedenfor",
+      "tapCellToAssign": "Tryk på en celle for at tildele et nummer",
+      "tapEdgesToPlaceWalls": "Tryk på kanter for at placere vægge. Opdel i områder af K.",
+      "ghosts": "Spøgelser",
+      "vampires": "Vampyrer",
+      "zombies": "Zombier",
+      "dominoes": "Dominobrikker",
+      "islands": "Øer",
+      "pegsLeft": "Pløkker venstre",
+      "bestRemaining": "Bedst tilbage",
+      "puzzlesSolved": "Gåder løst",
+      "flooded": "Oversvømmet",
+      "edges": "Kanter",
+      "totalPlacements": "Samlede placeringer",
+      "totalRemovals": "Samlede fjernelser",
+      "maxTileReached": "Max flise nået",
+      "target": "Mål",
+      "placed": "Placeret",
+      "totalGuesses": "Totale gæt",
+      "guessesLeft": "Gæt tilbage",
+      "difficulty": "Sværhedsgrad"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Gåder",
+      "maxLevel": "Max niveau"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "errors": "Fejl",
+      "avgTime": "Gns. tid",
+      "erase": "Slet"
+    },
+    "blackbox": {
+      "title": "Black Box",
+      "puzzles": "Gåder",
+      "lasers": "Lasere",
+      "avgTime": "Gns. tid"
+    },
+    "designFluency": {
+      "title": "Design flydende",
+      "uniqueDesigns": "Unikke designs",
+      "duplicates": "Dubletter",
+      "round": "Runde",
+      "roundComplete": "Runde færdig",
+      "youCreatedDesigns": "Du har oprettet {{count}}-designs",
+      "startRound": "Start runde",
+      "instructions": "Instruktioner",
+      "designs": "Designs",
+      "clear": "Ryd",
+      "addDesign": "Tilføj"
+    },
+    "signpost": {
+      "title": "Vejviser",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "avgTime": "Gns. tid",
+      "maxGrid": "Max gitter"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Niveau",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "undos": "Fortryd",
+      "puzzle": "Puslespil"
+    },
+    "numericalStroop": {
+      "left": "venstre",
+      "right": "Højre"
+    },
+    "biologicalMotion": {
+      "title": "Biologisk bevægelse",
+      "noiseDots": "støjprikker",
+      "whichDirection": "Hvilken retning?",
+      "left": "venstre",
+      "right": "Højre"
+    },
+    "inertia": {
+      "title": "Træghed",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "gems": "Ædelstene",
+      "moves": "Bevæger sig"
+    },
+    "waterLevel": {
+      "title": "Vandstand",
+      "error": "Fejl",
+      "tilt": "Tilt",
+      "waterLine": "Vandledning?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxGrid": "Max gitter"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "errors": "Fejl",
+      "avgTime": "Gns. tid",
+      "erase": "Slet"
+    },
+    "rectangles": {
+      "title": "Rektangler",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "rectanglesCount": "Rektangler",
+      "maxGrid": "Max gitter",
+      "cancelSelection": "Annuller valg"
+    },
+    "filling": {
+      "title": "Fyldning",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "avgTime": "Gns. tid",
+      "grid": "Gitter"
+    },
+    "spacedRetrieval": {
+      "title": "Hentning med afstand",
+      "studyPair": "Studer dette par",
+      "waitAndSolve": "Vent... så løs",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Interval: hvilke par?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototype forvrængning",
+      "studyPhase": "Studiefase",
+      "testPhase": "Testfase",
+      "yesBelongs": "Ja - hører til",
+      "noRandom": "Nej - tilfældigt"
+    },
+    "motionCoherence": {
+      "title": "Bevægelsessammenhæng",
+      "threshold": "Tærskel",
+      "coherence": "Sammenhæng",
+      "whichDirection": "Hvilken retning?"
+    },
+    "cube": {
+      "title": "terning",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxLevel": "Max niveau",
+      "cubeFaces": "Kubeansigter",
+      "moveUp": "Op",
+      "moveLeft": "venstre",
+      "moveDown": "Ned",
+      "moveRight": "Højre"
+    },
+    "sameGame": {
+      "title": "Samme spil",
+      "score": "Score",
+      "cleared": "Ryddet",
+      "cells": "Celler",
+      "accuracy": "Nøjagtighed"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal Matching",
+      "chance": "Chance",
+      "whichPatternMatchesRhythm": "Hvilket mønster passer til rytmen?"
+    },
+    "mosaic": {
+      "title": "Mosaik",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxGrid": "Max gitter"
+    },
+    "spotDiff": {
+      "title": "Find forskellen",
+      "level": "Niveau",
+      "grid": "Gitter",
+      "accuracy": "Nøjagtighed",
+      "perfect": "Perfekt",
+      "avgTime": "Gns. tid",
+      "found": "Fundet"
+    },
+    "lightsOut": {
+      "title": "Lys ud",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxGrid": "Max gitter"
+    },
+    "pipeline": {
+      "title": "Rørledning",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "rotations": "Rotationer",
+      "avgTime": "Gns. tid"
+    },
+    "tracks": {
+      "title": "Spor",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "errors": "Fejl",
+      "avgTime": "Gns. tid"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "slides": "Dias",
+      "maxGrid": "Max gitter"
+    },
+    "cognitiveBias": {
+      "title": "Kognitiv bias træning",
+      "biasResistance": "Bias modstand",
+      "biased": "Forudsat",
+      "continue": "Fortsæt"
+    },
+    "empathicAccuracy": {
+      "title": "Empatisk nøjagtighed",
+      "emotionId": "Følelser",
+      "avgRatingError": "Gns. vurderingsfejl",
+      "scenarios": "Scenarier",
+      "perfect": "Perfekt",
+      "rating": "Bedømmelse",
+      "howDoesCharacterFeel": "Hvordan føles karakteren?",
+      "rateIntensity": "Bedøm intensiteten",
+      "whatEmotion": "Hvilken følelse?",
+      "yourRating": "Din vurdering",
+      "correct": "Korrekt",
+      "emotion": "Følelser"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Løst",
+      "guesses": "Gæt"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxLevel": "Max niveau"
+    },
+    "magnets": {
+      "title": "Magneter",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxLevel": "Max niveau"
+    },
+    "tangram": {
+      "placeAll": "Placer alle stykker",
+      "solved": "Løst!",
+      "notRight": "Ikke helt rigtigt",
+      "title": "Tangram",
+      "level": "Niveau",
+      "puzzles": "Gåder",
+      "placements": "Placeringer",
+      "removals": "Fjernelser",
+      "puzzleNumber": "Puslespil {{n}}",
+      "pieces": "Stykker",
+      "targetCells": "Cible",
+      "dragHint": "Træk eller placer brikken på gitteret",
+      "selectHint": "Vælg et stykke",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "Tjek"
+    },
+    "galaxies": {
+      "title": "Galakser"
+    },
+    "flood": {
+      "title": "Oversvømmelse"
+    },
+    "pegs": {
+      "title": "Pløkker",
+      "bestPegs": "Bedste pinde"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditiv Figur-Grund",
+      "patternPresent": "Mønster til stede?",
+      "pattern": "Mønster",
+      "noPattern": "Intet mønster"
+    },
+    "selfOrderedPointing": {
+      "title": "Selvbestilt pege",
+      "maxSpan": "Max spændvidde",
+      "errors": "Fejl",
+      "round": "Runde",
+      "setOf": "Sæt med {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Spejlsporing",
+      "totalErrors": "Samlede fejl",
+      "avgTime": "Gns. tid",
+      "shapes": "Former",
+      "perfect": "Perfekt",
+      "improvement": "Forbedring",
+      "errorsMiddot": "fejl ·",
+      "shape": "Form",
+      "errors": "Fejl",
+      "xIsMirrored": "X er spejlet!"
+    },
+    "clockDrawing": {
+      "title": "Ur tegning",
+      "avgError": "Gns. fejl",
+      "setTo": "Indstil til",
+      "submit": "Indsend"
+    },
+    "cognitiveMap": {
+      "title": "Kognitivt kort",
+      "explore": "Udforsk",
+      "sRemaining": "S Tilbage",
+      "from": "Fra",
+      "whichDirectionIs": "Hvilken retning er"
+    },
+    "sixteen": {
+      "title": "Seksten"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Lys op"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max flise",
+      "moves": "Bevæger sig",
+      "max": "Maks"
+    },
+    "bridges": {
+      "title": "Broer",
+      "puzzles": "Gåder",
+      "maxLevel": "Max niveau",
+      "level": "Niveau"
+    },
+    "net": {
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxGrid": "Max gitter"
+    },
+    "flip": {
+      "title": "Vend"
+    },
+    "range": {
+      "title": "Rækkevidde"
+    },
+    "slant": {
+      "title": "Skrå"
+    },
+    "towers": {
+      "title": "Tårne",
+      "puzzles": "Gåder",
+      "avgTime": "Gns. tid",
+      "erase": "Slet"
+    },
+    "pearl": {
+      "title": "Perle",
+      "edges": "Kanter"
+    },
+    "mapColoring": {
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "moves": "Bevæger sig",
+      "maxLevel": "Max niveau"
+    },
+    "singles": {
+      "title": "Singler"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Udøde",
+      "accuracy": "Nøjagtighed",
+      "puzzles": "Gåder",
+      "avgTime": "Gns. tid"
+    },
+    "untangle": {
+      "title": "Udvikle",
+      "drags": "Trækker",
+      "maxNodes": "Max noder"
+    },
+    "unruly": {
+      "title": "Ustyrlig"
+    },
+    "fifteen": {
+      "title": "Femten"
+    },
+    "tents": {
+      "title": "Telte"
+    },
+    "mesker": {
+      "pen": "Pen",
+      "stroke": "Slagtilfælde",
+      "penPressureHint": "Skriv med konstant pentryk"
+    },
+    "modality": {
+      "position": "Stilling",
+      "audio": "Lyd"
+    },
+    "validate": "Valider"
+  },
+  "trace": {
+    "instructions": "Stryg til N-tilbage-position. Dobbelttryk hvis samme position.",
+    "hint": {
+      "validated": "Valideret",
+      "draw": "Tegn bogstavet • Tryk for at bekræfte",
+      "drawWithColor": "Tegn bogstavet • Vælg farve • Tryk for at bekræfte",
+      "type": "Indtast bogstavet • Enter for at bekræfte",
+      "typeWithColor": "Indtast bogstavet • Vælg farve • Enter for at bekræfte",
+      "typeResult": "Indtast resultatet • Enter for at validere",
+      "writeResult": "Skriv resultatet • Tryk for at validere"
+    },
+    "keyboard": {
+      "letterInput": "Brev",
+      "numberInput": "Nummer"
+    },
+    "arithmetic": {
+      "cueHint": "Husk de 2 cifre",
+      "refresh": "Ny"
+    },
+    "hintPosition": "Hvor var stimulus {{n}} vendinger siden?",
+    "hintN0": "Angiv den aktuelle stimulus",
+    "warmupHint": "Husk holdningerne. Intet svar nødvendigt.",
+    "hintDraw": "Tegn bogstavet • Tryk for at bekræfte",
+    "hintDrawWithColor": "Tegn bogstavet • Vælg farve • Tryk for at bekræfte",
+    "hintWriteResult": "Skriv resultatet • Tryk for at validere",
+    "guide": {
+      "swipeNormal": "Stryg fra den sidste position (N-0) til positionen fra {{n}} trin siden (N-{{n}}). Dobbelttryk hvis samme position.",
+      "swipeSequential": "Stryg trin for trin fra N-0 til N-{{n}}, gennem hver mellemposition. Dobbelttryk hvis samme position.",
+      "swipeDynamic": "Stryg efter den viste regel. Dobbelttryk hvis samme position.",
+      "tapN0": "Tryk på den aktuelle position.",
+      "warmup": "Husk holdningerne - intet svar påkrævet.",
+      "writeDraw": "Tegn bogstavet hørt {{n}} trin siden • Tryk for at validere",
+      "writeDrawColor": "Tegn bogstavet hørte {{n}} trin siden • Vælg dets farve • Tryk for at validere",
+      "writeType": "Indtast bogstavet hørt {{n}} trin siden • Enter for at validere",
+      "writeTypeColor": "Indtast bogstavet hørt {{n}} trin siden • Vælg dets farve • Enter for at validere",
+      "writeDrawN0": "Tegn det bogstav, du lige har hørt • Tryk for at bekræfte",
+      "writeDrawColorN0": "Tegn det bogstav, du lige har hørt • Vælg dets farve • Tryk for at bekræfte",
+      "writeTypeN0": "Indtast det bogstav, du lige har hørt • Enter for at bekræfte",
+      "writeTypeColorN0": "Indtast det bogstav, du lige har hørt • Vælg dets farve • Enter for at bekræfte",
+      "writeResult": "Skriv resultatet • Tryk for at validere",
+      "validated": "Valideret",
+      "holdMindful": "Hold cellen for {{seconds}}s",
+      "swipeMindful": "Swipe i {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptiv timing",
+      "inputKeyboard": "Tastatur",
+      "inputHandwriting": "Håndskrift",
+      "writingInput": "Bogstaver/tal",
+      "section": {
+        "grid": "Gitter",
+        "input": "Input",
+        "rhythm": "Rytme",
+        "interface": "Interface",
+        "interfaceNone": "Standard",
+        "sound": "Lyd"
+      },
+      "isi": "Interval (ISI)",
+      "stimulusDuration": "Stimulans varighed",
+      "feedbackDuration": "Feedback varighed",
+      "ruleDisplay": "Reglens varighed",
+      "blankInterval": "Blankt interval",
+      "showProgressBar": "Fremskridtslinje",
+      "showInstructions": "Instruktioner i spillet",
+      "arithmeticInterference": "Aritmetisk interferens",
+      "fullMenu": "Fuld menu",
+      "gridStyle": "Gitterstil",
+      "gridStyleClassic": "Klassisk",
+      "gridStyleTrace": "Spor",
+      "guide": {
+        "swipeMindful": "Swipe i {{seconds}}s",
+        "holdMindful": "Hold cellen for {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Gestik",
+        "holdDuration": "Hold",
+        "writingDuration": "Skrivning"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Hold",
+      "gestureDuration": "Gestik",
+      "writingDuration": "Skrivning"
+    },
+    "image": "Form",
+    "digits": "Cifre",
+    "emotions": "Følelser",
+    "words": "Ord",
+    "tones": "Tone",
+    "spatial": "Retning"
+  },
+  "replay": {
+    "title": "Genafspilning af session",
+    "play": "Spil",
+    "pause": "Pause",
+    "restart": "Genstart",
+    "speed": "Hastighed",
+    "loading": "Indlæser session...",
+    "unavailable": "Genafspilning er ikke tilgængelig for denne session",
+    "backToStats": "Tilbage til statistik",
+    "runStack": {
+      "original": "Original",
+      "correction": "Rettelse",
+      "delta": "Δ d'",
+      "inProgress": "I gang",
+      "completed": "Afsluttet"
+    },
+    "abandon": "Forlad",
+    "badge": "Genafspilning",
+    "completionReport": {
+      "backToHome": "Tilbage",
+      "correctAgain": "Ret igen",
+      "deltaVsOriginal": "vs original",
+      "deltaVsParent": "vs tidligere løb",
+      "falseAlarmsSkipped": "Fejl undgået",
+      "missesCorrections": "Rettelser",
+      "newFalseAlarms": "Nye fejl",
+      "replayAgain": "Genafspilning",
+      "scoreLabel": "d' score",
+      "title": "Rettelse fuldført"
+    },
+    "controls": "Kontrolelementer",
+    "correction": "Rettelse",
+    "finished": "Slut på gentagelse",
+    "home": "Hjem",
+    "parseError": "Sessionen kunne ikke læses",
+    "tapSlotToPlace": "Tryk på en plads for at placere",
+    "timeline": "Tidslinje",
+    "focusTimeline": {
+      "open": "Vis tidslinje",
+      "close": "Luk tidslinjen",
+      "title": "N-tilbage tidslinje",
+      "fillAll": "Fyld alt",
+      "fillCard": "Fyld kort"
+    },
+    "hud": {
+      "counterDisplay": "Tæller display",
+      "toggleCounterDisplay": "Skift tællervisning"
+    },
+    "validate": "Valider"
+  },
+  "recovery": {
+    "title": "Session afbrudt",
+    "description": "En session var i gang. Vil du genoptage?",
+    "mode": "tilstand",
+    "level": "Niveau",
+    "progress": "Fremskridt",
+    "timeAgo": "Tid",
+    "resume": "Genoptag session",
+    "startFresh": "Start frisk",
+    "staleWarning": "Denne session er gammel, det kan være en udfordring at genoptage.",
+    "modes": {
+      "game": "Træning",
+      "activeTraining": "Aktiv træning",
+      "flowTraining": "Dual Place træning",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dobbelt spor"
+    }
+  },
+  "rewards": {
+    "congratulations": "Tillykke!",
+    "duration": "{{days}} dage Premium",
+    "lifetimeLabel": "Livsvarig adgang",
+    "expiresAt": "Gælder indtil {{date}}",
+    "neverExpires": "Udløber aldrig",
+    "continue": "Fortsæt",
+    "discovery": {
+      "name": "Discovery pass",
+      "description": "7 dage Premium — Udforsk alle funktioner"
+    },
+    "engagement": {
+      "name": "Forlovelsespas",
+      "description": "1 måned Premium — Din disciplin betaler sig"
+    },
+    "expert": {
+      "name": "Ekspertpas",
+      "description": "3 måneders Premium — Du er en sand praktiserende læge"
+    },
+    "lifetime": {
+      "name": "Livsvarig adgang",
+      "description": "Premium for evigt — Du har mestret Neurodual"
+    },
+    "xpRemaining": "XP tilbage",
+    "permanentAccessUnlocked": "Permanent adgang låst op",
+    "reachedTheTop": "Du har nået toppen!"
+  },
+  "progression": {
+    "level": "Niveau {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Næste niveau",
+    "reached": "Nået",
+    "inProgress": "I gang"
+  },
+  "gridlock": {
+    "nextPuzzle": "Næste puslespil →"
+  }
+}

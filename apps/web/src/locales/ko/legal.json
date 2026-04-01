@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "모든 권리 보유.",
+    "terms": {
+      "title": "일반 이용 약관",
+      "version": "버전 3.0 — 최종 업데이트: 2026-03-04",
+      "healthWarning": {
+        "title": "중요 안내: 건강",
+        "content": "NeuroDual은 인지 훈련 및 웰빙 앱입니다. <strong>의료 기기가 아닙니다.</strong> 어떠한 질병도 진단, 치료, 완치 또는 예방하지 않습니다. 의심이나 불편함이 있으면 사용을 중단하고 의료 전문가와 상담하십시오."
+      },
+      "section1": {
+        "title": "1. 목적 및 동의",
+        "content": "NeuroDual을 다운로드, 설치 또는 사용함으로써 본 약관을 무조건 동의한 것으로 간주됩니다. 이 조건에 동의하지 않는 경우 앱을 사용하지 마십시오."
+      },
+      "section2": {
+        "title": "2. 제공되는 서비스",
+        "content": "NeuroDual은 로컬 데이터 관리 및 계정을 통한 동기화 옵션과 함께 Dual N-Back 유형의 작업 기억 훈련을 제공합니다. 서비스는 현재 상태로 제공되며 발전할 수 있습니다.",
+        "item1": "호환성: 웹 및 모바일 애플리케이션(가용성에 따라).",
+        "item2": "접근: 일부 기능은 인터넷 연결 및/또는 계정 생성이 필요합니다.",
+        "item3": "업데이트: 보안 또는 성능상의 이유로 사전 통지 없이 수정이나 변경을 배포할 수 있습니다.",
+        "item4": "광고: 모바일 무료 버전은 전면 광고(Google AdMob)를 표시할 수 있습니다. 프리미엄 사용자는 광고를 보지 않습니다."
+      },
+      "section3": {
+        "title": "3. 계정 및 보안",
+        "item1": "이메일 또는 ID 제공자(Google, Apple)를 통한 선택적 생성.",
+        "item2": "자격 증명의 기밀 유지와 계정으로 수행된 작업에 대한 책임은 사용자에게 있습니다.",
+        "item3": "계정 및 관련 데이터 삭제는 설정에서 가능합니다.",
+        "item4": "본 약관 위반, 사기 시도 또는 보안 위협 시 계정을 정지하거나 종료할 수 있습니다."
+      },
+      "section4": {
+        "title": "4. 이용 규칙 및 금지 사항",
+        "item1": "보안 조치나 기술적 제한을 우회하지 마십시오.",
+        "item2": "앱을 불법적이거나 유해한 목적으로 사용하지 마십시오.",
+        "item3": "리버스 엔지니어링이나 콘텐츠의 무단 추출을 시도하지 마십시오.",
+        "item4": "앱과 콘텐츠에 대한 지적 재산권을 존중하십시오."
+      },
+      "section5": {
+        "title": "5. 지적 재산권",
+        "content": "모든 요소(텍스트, 그래픽, 사운드, 소스 코드, 로고)는 저작권으로 보호되며 발행자 또는 라이선서의 재산입니다. 본 약관에 따라 앱을 사용하는 개인적, 비독점적, 양도 불가능한 권리 외에 어떠한 라이선스도 부여되지 않습니다."
+      },
+      "section6": {
+        "title": "6. 가용성 및 지원",
+        "content": "서비스는 유지보수나 불가항력을 제외하고 24시간 이용 가능합니다. 지속적인 가용성이나 성능을 보장하지 않습니다. 지원: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. 인앱 구매/구독",
+        "content": "프리미엄 구독을 이용할 수 있습니다: 연간 및 평생(10년). 결제는 RevenueCat(모바일) 또는 Lemon Squeezy(웹)에서 관리됩니다. <strong>일반 판매 조건</strong>이 적용됩니다(가격, 철회, 갱신, 해지, 환불). 구매 전 확인 가능합니다."
+      },
+      "section8": {
+        "title": "8. 책임",
+        "item1": "서비스는 결과를 보증하지 않고 \"있는 그대로\" 제공됩니다.",
+        "item2": "사용, 저장되지 않은 로컬 데이터 손실 또는 통계 해석과 관련된 직접적 또는 간접적 손해에 대해 책임지지 않습니다.",
+        "item3": "불편, 부작용 또는 건강에 대한 의심이 있으면 사용을 중단하십시오."
+      },
+      "section9": {
+        "title": "9. 개인 데이터",
+        "content": "개인 데이터 처리는 <a>개인정보 보호정책</a>에 설명되어 있습니다. 약관과 개인정보 보호정책 간에 데이터에 관한 모순이 있는 경우 개인정보 보호정책이 우선합니다."
+      },
+      "section10": {
+        "title": "10. 약관 변경",
+        "content": "법적, 기술적 또는 서비스상의 이유로 약관을 변경할 수 있습니다. 업데이트 날짜는 문서 상단에 표시됩니다. 중대한 변경 시 앱에서 알림이 표시됩니다."
+      },
+      "section11": {
+        "title": "11. 준거법 및 분쟁",
+        "content": "본 약관은 프랑스 법에 의해 규율됩니다. 분쟁 발생 시 우호적 해결 후 소비자는 소비자 중재 또는 EU 온라인 분쟁 해결(ODR) 플랫폼에 호소할 수 있습니다. 그 외에는 프랑스 법원만 관할권을 갖습니다."
+      },
+      "section12": {
+        "title": "12. 연락처",
+        "content": "약관에 관한 문의:"
+      }
+    },
+    "privacy": {
+      "title": "개인정보 보호정책",
+      "version": "버전 3.0 — 최종 업데이트: 2026-03-04",
+      "intro": {
+        "p1": "이 개인정보 보호정책은 NeuroDual(\"우리\", \"우리의\")이 모바일 앱과 웹사이트 사용 시 귀하의 개인 데이터를 어떻게 처리하는지 설명합니다.",
+        "p2": "우리는 GDPR(일반 데이터 보호 규정)과 프랑스 데이터 보호법의 원칙을 적용합니다. \"로컬 우선\" 아키텍처를 채택하고 귀하의 데이터를 판매하거나 대여하지 않으며 제품 개선을 위해 오디언스 측정을 사용합니다."
+      },
+      "section1": {
+        "title": "1. 데이터 관리자",
+        "responsible": "책임자:",
+        "address": "본사 주소:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, 프랑스",
+        "siret": "SIREN:",
+        "email": "이메일:",
+        "dpo": "DPO: AGUILAL Abdeslam (동일 연락처). 데이터에 관한 문의는 위 주소로 연락하십시오.",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "siretValue": "818 474 082"
+      },
+      "section2": {
+        "title": "2. 수집하는 데이터",
+        "sub1": {
+          "title": "2.1 사용자 생성 데이터(로컬 모드)",
+          "content": "로그인하지 않는 동안 SQLite를 통해 기기에만 저장:",
+          "item1": "N-Back 세션의 점수 및 이력.",
+          "item2": "게임 구성 설정.",
+          "item3": "로컬 프로필(닉네임, 선택한 아바타).",
+          "note": "계정을 생성하기 전까지 이 데이터는 서버에 전송되지 않습니다. 삭제 시 손실됩니다."
+        },
+        "sub2": {
+          "title": "2.2 계정 데이터(선택)",
+          "content": "데이터 동기화를 위해 계정을 생성하는 경우:",
+          "item1": "이메일 주소(고유 식별자).",
+          "item2": "ID 제공자(Google, Apple)에서 제공하는 사용자 ID.",
+          "note": "이 데이터는 인증 제공자(Supabase)를 통해 관리됩니다."
+        },
+        "sub3": {
+          "title": "2.3 기술 로그",
+          "content": "보안 및 지원을 위한 가명화 로그(오류, 동기화 상태, 성능)."
+        },
+        "sub4": {
+          "title": "2.4 고객 지원 데이터",
+          "content": "지원팀과의 이메일 교환에는 답변을 위한 연락처 정보와 요청 내용이 포함될 수 있습니다."
+        },
+        "sub5": {
+          "title": "2.5 모니터링 및 오류 추적",
+          "content": "앱 안정성 향상을 위해 Sentry를 통해 수집되는 기술 데이터(오류, 성능, 비정상 행동). 가명화 데이터, 광고 타겟팅 없음."
+        },
+        "sub6": {
+          "title": "2.6 오디언스 측정 및 제품 분석",
+          "content": "제품 개선을 위해 PostHog를 통해 수집되는 익명화 사용 데이터(방문 페이지, 앱 내 작업, 기기 유형). 식별 가능한 개인 데이터는 전송되지 않습니다. 광고 타겟팅 없음."
+        },
+        "sub7": {
+          "title": "2.7 광고(무료 모바일 버전)",
+          "content": "무료 Android 버전은 Google AdMob을 통해 전면 광고를 표시합니다. Google은 광고 식별자 및 기술 데이터(기기 유형, 언어, 광고 상호작용)를 수집할 수 있습니다. 프리미엄 사용자는 광고에 노출되지 않습니다. 자세한 내용: Google Ads 개인정보 보호정책."
+        }
+      },
+      "section3": {
+        "title": "3. 목적 및 법적 근거",
+        "content": "귀하의 데이터는 다음 목적으로만 사용됩니다:",
+        "item1": "<strong>서비스 운영</strong>(로컬 저장, 통계, 다중 기기 동기화) — 법적 근거: 계약 이행(GDPR 제6조 1항 b호).",
+        "item2": "<strong>보안 및 사기 방지</strong>(기술적 로깅, 접근 제어) — 법적 근거: 정당한 이익(GDPR 제6조 1항 f호).",
+        "item3": "<strong>사용자 지원</strong> — 법적 근거: 정당한 이익(요청에 대한 응답).",
+        "item4": "<strong>법적 의무</strong> — 법적 근거: 법적 의무(GDPR 제6조 1항 c호).",
+        "item5": "<strong>모니터링 및 오류 추적</strong> — 법적 근거: 정당한 이익(안정성 향상); 가명화 데이터, 개인화 광고 없음.",
+        "item6": "<strong>오디언스 측정</strong>(PostHog를 통한 익명화 제품 분석) — 법적 근거: 정당한 이익(GDPR 제6조 1항 f호); 익명화 데이터.",
+        "note": "목적의 변경은 본 정책 업데이트에 문서화됩니다.",
+        "item7": "<strong>광고</strong>(모바일 무료 사용자를 위한 전면 광고 표시) — 법적 근거: 정당한 이익(GDPR 제6조 1항 f호).",
+        "item8": "<strong>마케팅 및 뉴스레터</strong> — 법적 근거: 명시적 동의(GDPR 제6조 1항 a호)."
+      },
+      "section4": {
+        "title": "4. 보존 기간",
+        "item1": "<strong>로컬 데이터:</strong> 기기에 저장되며 삭제 또는 초기화 시 제거.",
+        "item2": "<strong>계정 및 동기화 데이터:</strong> 계정이 활성화된 동안 보존. 계정 삭제 요청 후 30일 이내 삭제.",
+        "item3": "<strong>기술 로그:</strong> 최대 12개월 보존 후 자동 삭제.",
+        "item4": "<strong>모니터링:</strong> 오류 추적 및 제품 개선을 위해 가명화 기술 데이터를 90일간 보존.",
+        "item5": "<strong>지원 요청:</strong> 티켓 종료 후 24개월 보존, 이후 삭제.",
+        "item6": "<strong>오디언스 데이터(PostHog):</strong> 익명화, 12개월 보존."
+      },
+      "section5": {
+        "title": "5. 수신자, 위탁 처리자 및 이전",
+        "content": "귀하의 데이터는 다음 제공자에 의해 처리될 수 있습니다:",
+        "item1": "Supabase Inc.(인증 및 클라우드 데이터베이스, EU 호스팅).",
+        "item2": "Amazon Web Services(Supabase 인프라, EU 지역).",
+        "item3": "Cloudflare Inc.(웹 앱 호스팅, CDN 및 보안).",
+        "item4": "Sentry(오류 및 성능 모니터링; EU 외 이전은 표준 계약 조항으로 보호).",
+        "item5": "RevenueCat Inc.(구독 및 모바일 인앱 결제 관리; 카드 데이터 저장 안 함).",
+        "note": "새 제공자 추가 시 이 섹션이 업데이트됩니다.",
+        "transfers": "<strong>EU 외 이전:</strong> EU 외 제공자가 관여하는 경우(예: Cloudflare, Supabase US, Sentry, RevenueCat, Google AdMob), 이전은 유럽 위원회의 표준 계약 조항(SCC) 또는 동등한 메커니즘으로 보호됩니다.",
+        "item6": "PostHog Inc.(오디언스 측정 및 제품 분석; 익명화 데이터; EU 호스팅).",
+        "item7": "Lemon Squeezy(웹 결제 처리; 카드 데이터 저장 안 함).",
+        "item8": "Google AdMob(무료 모바일 버전 광고; EU 외 이전은 표준 계약 조항으로 보호)."
+      },
+      "section6": {
+        "title": "6. 귀하의 권리",
+        "content": "GDPR에 따라 다음 권리가 있습니다:",
+        "item1": "접근, 정정, 삭제.",
+        "item2": "제한 및 이의(법적 근거에 따라).",
+        "item3": "데이터 이동성(JSON 또는 CSV로 내보내기).",
+        "item4": "동의 철회(해당되는 경우).",
+        "item5": "감독 기관(CNIL — <a>cnil.fr</a>)에 불만 제기.",
+        "deletion": "<strong>계정 삭제:</strong> 앱 설정에서 직접 계정과 모든 관련 데이터를 삭제할 수 있습니다. 이 작업은 취소할 수 없습니다.",
+        "exercise": "기타 권리를 행사하려면 <strong>support@neurodual.fr</strong>로 연락하십시오. 합리적 의심 시 신분증을 요청할 수 있습니다. 응답 기한: 1개월(복잡한 경우 3개월까지 연장 가능)."
+      },
+      "section7": {
+        "title": "7. 보안",
+        "content": "암호화 통신(HTTPS/TLS), 관리자 접근 제한, 권한 제어. 위험이 있는 데이터 침해 발생 시 법적 통지(CNIL 및 영향을 받는 개인)가 수행됩니다."
+      },
+      "section8": {
+        "title": "8. 쿠키 및 로컬 저장소",
+        "content": "앱은 SQLite를 사용하여 기기에 직접 진행 상황을 저장합니다. 인증과 세션을 위한 필수 기술 쿠키만 사용됩니다. 무료 모바일 버전은 Google AdMob을 사용하며 쿠키나 광고 식별자를 설정할 수 있습니다."
+      },
+      "section9": {
+        "title": "9. 미성년자",
+        "content": "NeuroDual은 16세 이상의 사용자를 대상으로 합니다. 미성년자는 법정 대리인의 책임 하에 앱을 사용해야 합니다."
+      },
+      "section10": {
+        "title": "10. 변경",
+        "content": "업데이트된 버전은 최종 업데이트 날짜와 함께 여기에 게시됩니다. 중대한 변경 시 앱에서 알림이 제공됩니다."
+      },
+      "section11": {
+        "title": "11. 연락처",
+        "content": "문의 사항이나 권리 행사:",
+        "responsible": "데이터 관리자: AGUILAL Abdeslam",
+        "email": "이메일: support@neurodual.fr"
+      }
+    },
+    "cgv": {
+      "title": "일반 판매 조건 (CGV)",
+      "version": "연간 및 평생 구독 — 최종 업데이트: 2026-03-04",
+      "section1": {
+        "title": "1. 목적",
+        "content": "본 조건은 NeuroDual 프리미엄 구독(연간 및 평생)의 가입을 규율합니다. <a1>이용 약관</a1>과 <a2>개인정보 보호정책</a2>을 보완합니다."
+      },
+      "section2": {
+        "title": "2. 제안 및 가격",
+        "item1": "<strong>연간 구독</strong>: 결제 전 가격 표시(세금 포함 해당 시), 연간 자동 갱신.",
+        "item2": "<strong>평생 구독(10년)</strong>: 자동 갱신 없이 10년간 프리미엄 접근을 위한 일회 결제.",
+        "item3": "프리미엄 접근: 다중 기기 클라우드 동기화, 원격 백업, 모든 N 레벨 접근, 고급 내보내기, 광고 없음, 우선 지원.",
+        "item4": "현재 가격은 앱 구독 페이지와 스토어(App Store, Google Play)에서 확인 가능합니다.",
+        "item5": "가격은 변경될 수 있으며, 변경 시 갱신 전 통지하여 해지를 허용합니다(평생에는 적용되지 않음)."
+      },
+      "section3": {
+        "title": "3. 기간, 갱신 및 해지",
+        "item1": "<strong>연간 구독</strong>: 가입일로부터 12개월.",
+        "item2": "<strong>평생 구독</strong>: 가입일로부터 10년, 갱신 없음.",
+        "item3": "갱신(연간): 사전에 해지하지 않으면 매 만기 시 자동 갱신.",
+        "item4": "해지(연간): 앱이나 스토어 설정(App Store, Google Play)에서 언제든지 가능. 현재 기간 종료 시 적용.",
+        "item5": "평생 구독은 해지할 수 없지만 법정 철회권의 대상입니다(제5조 참조)."
+      },
+      "section4": {
+        "title": "4. 결제",
+        "item1": "결제는 RevenueCat를 통해 스토어(App Store, Google Play) 또는 Lemon Squeezy(웹)에서 관리됩니다. 카드 데이터는 저장하지 않습니다.",
+        "item2": "결제 실패(반복 구독) 시 해결될 때까지 프리미엄 접근이 정지될 수 있습니다.",
+        "item3": "App Store 또는 Google Play를 통한 구매의 환불은 해당 스토어에 요청해야 합니다."
+      },
+      "section5": {
+        "title": "5. 철회권",
+        "content": "구매 후 제공되는 디지털 서비스. 14일 법정 기간 종료 전에 즉시 실행을 요청하면 서비스가 완전히 제공된 시점에서 철회권을 포기한 것으로 인정됩니다. 명시적 포기 없이 구매 후 14일 이내에 support@neurodual.fr로 서면 연락하여 철회권을 행사할 수 있습니다."
+      },
+      "section6": {
+        "title": "6. 환불",
+        "content": "법정 철회권 외에, 이미 시작된 구독은 강제 규정이나 서비스에 귀속되는 심각한 결함이 없는 한 환불되지 않습니다."
+      },
+      "section7": {
+        "title": "7. 서비스 변경",
+        "content": "프리미엄 기능은 발전할 수 있습니다. 핵심 기능의 제거는 사전 통지되며, 필요한 경우 만기 전 무료 해지 옵션이 제공됩니다."
+      },
+      "section8": {
+        "title": "8. 개인 데이터",
+        "content": "청구 및 계정 관련 데이터 처리는 <a>개인정보 보호정책</a>에 상세히 설명되어 있습니다."
+      },
+      "section9": {
+        "title": "9. 고객 서비스",
+        "content": "문의, 철회권 범위 내 환불 또는 불만:"
+      }
+    },
+    "mentions": {
+      "title": "법적 고지",
+      "version": "최종 업데이트:",
+      "section1": {
+        "title": "1. 발행인",
+        "company": "상호명:",
+        "companyValue": "AGUILAL Abdeslam (개인사업자)",
+        "address": "주소:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, 프랑스",
+        "siren": "SIREN:",
+        "email": "이메일:",
+        "sirenValue": "818 474 082"
+      },
+      "section2": {
+        "title": "2. 발행 책임자",
+        "email": "이메일:",
+        "name": "AGUILAL Abdeslam"
+      },
+      "section3": {
+        "title": "3. 호스팅",
+        "content": "NeuroDual 애플리케이션은 다음에서 호스팅됩니다:",
+        "webapp": "웹 애플리케이션",
+        "database": "데이터베이스 및 인증",
+        "databaseInfra": "인프라: Amazon Web Services (EU 리전 - eu-central-1)",
+        "monitoring": "모니터링 및 오류 추적",
+        "subscriptions": "구독 관리",
+        "analytics": "오디언스 측정",
+        "analyticsInfra": "EU 호스팅",
+        "advertising": "광고 (무료 모바일 버전)",
+        "payments": "웹 결제",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+        "admobName": "Google LLC (AdMob)",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "cloudflareName": "Cloudflare, Inc.",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "posthogName": "PostHog, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "supabaseName": "Supabase, Inc."
+      },
+      "section4": {
+        "title": "4. 지적 재산권",
+        "p1": "NeuroDual 애플리케이션의 모든 요소(텍스트, 그래픽, 사운드, 소스 코드, 로고, 상표)는 저작권 및 상표법으로 보호됩니다. 무단 복제, 표시 또는 이용은 금지됩니다.",
+        "p2": "일부 기능의 소스 코드는 오픈소스 라이브러리를 사용하며 해당 라이선스를 준수합니다."
+      },
+      "section5": {
+        "title": "5. 개인 데이터",
+        "content": "개인 데이터 처리는 당사의 <a>개인정보 보호정책</a>에 설명되어 있습니다.",
+        "responsible": "데이터 관리자:",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam",
+        "responsibleValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. 중재 및 분쟁 해결",
+        "p1": "소비자법전 제L.611-1조 이하에 따라, 소비자는 고객 서비스에 사전 불만을 제기한 후 해결되지 않은 분쟁의 경우 무료로 소비자 중재인에게 호소할 수 있습니다.",
+        "odr": "유럽 온라인 분쟁 해결(ODR) 플랫폼:"
+      },
+      "section7": {
+        "title": "7. 법적 문서",
+        "privacy": "개인정보 보호정책",
+        "privacyNote": "(GDPR)",
+        "terms": "일반 이용 약관",
+        "termsNote": "(CGU)",
+        "cgv": "일반 판매 조건",
+        "cgvNote": "(CGV)"
+      },
+      "section8": {
+        "title": "8. 연락처",
+        "content": "법적 고지에 관한 문의:",
+        "email": "이메일:"
+      }
+    }
+  }
+}

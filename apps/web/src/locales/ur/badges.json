@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "استقامت",
+      "performance": "کارکردگی",
+      "resilience": "لچک",
+      "exploration": "دریافت",
+      "milestone": "سنگ میل",
+      "cognitive": "ذہنی"
+    },
+    "first_session": {
+      "name": "بیدار نیوران",
+      "description": "پہلا سیشن مکمل ہوا۔"
+    },
+    "sessions_10": {
+      "name": "ستون (کانسی)",
+      "description": "۱۰ سیشن مکمل ہوئے۔"
+    },
+    "sessions_25": {
+      "name": "ستون (چاندی)",
+      "description": "۲۵ سیشن مکمل ہوئے۔"
+    },
+    "marathoner": {
+      "name": "ستون (سونا)",
+      "description": "۵۰ سیشن مکمل ہوئے۔"
+    },
+    "streak_3": {
+      "name": "ابتدائی عادت",
+      "description": "۳ دن کی سلسلہ بندی۔"
+    },
+    "streak_7": {
+      "name": "روزانہ عادت",
+      "description": "۷ دن کی سلسلہ بندی۔"
+    },
+    "streak_14": {
+      "name": "پختہ عادت",
+      "description": "۱۴ دن کی سلسلہ بندی۔"
+    },
+    "streak_30": {
+      "name": "فولادی نظم",
+      "description": "۳۰ دن کی سلسلہ بندی۔"
+    },
+    "early_bird": {
+      "name": "سحر خیز",
+      "description": "۵ مختلف دنوں میں صبح ۸ بجے سے پہلے سیشن۔"
+    },
+    "night_owl": {
+      "name": "رات کا الّو",
+      "description": "۵ مختلف دنوں میں رات ۱۰ بجے کے بعد سیشن۔"
+    },
+    "brain_n3": {
+      "name": "تیز دماغ",
+      "description": "سطح N-3 تک پہنچیں۔"
+    },
+    "brain_n4": {
+      "name": "مضبوط دماغ",
+      "description": "سطح N-4 تک پہنچیں۔"
+    },
+    "brain_n5": {
+      "name": "اولمپک دماغ",
+      "description": "سطح N-5 تک پہنچیں۔"
+    },
+    "brain_n7": {
+      "name": "ذہنی نخبہ",
+      "description": "سطح N-7 تک پہنچیں۔"
+    },
+    "brain_n10": {
+      "name": "مافوق الفطرت",
+      "description": "سطح N-10 تک پہنچیں۔"
+    },
+    "sniper": {
+      "name": "نشانہ باز",
+      "description": "N ≥ 2 پر ۹۰٪ سے زیادہ درستگی۔"
+    },
+    "accuracy_95": {
+      "name": "جراحی درستگی",
+      "description": "N ≥ 2 پر ۹۵٪ سے زیادہ درستگی۔"
+    },
+    "accuracy_98": {
+      "name": "لیزر",
+      "description": "N ≥ 2 پر ۹۸٪ سے زیادہ درستگی۔"
+    },
+    "untouchable": {
+      "name": "ناقابل شکست",
+      "description": "N ≥ 2 پر مکمل سیشن (۰ غلطیاں)۔"
+    },
+    "rt_500": {
+      "name": "تیز ردعمل",
+      "description": "اوسط ردعمل وقت < 500ms ساتھ ≥70% درستگی۔"
+    },
+    "flash": {
+      "name": "فلیش",
+      "description": "اوسط ردعمل وقت < 400ms ساتھ ≥70% درستگی۔"
+    },
+    "rt_300": {
+      "name": "بجلی",
+      "description": "اوسط ردعمل وقت < 300ms ساتھ ≥70% درستگی۔"
+    },
+    "consistent": {
+      "name": "مستقل",
+      "description": "RT معیاری انحراف < 100ms (≥10 جوابات ضروری)۔"
+    },
+    "dprime_master": {
+      "name": "d' ماسٹر",
+      "description": "ایک سیشن میں d-prime > 3.0۔"
+    },
+    "dprime_4": {
+      "name": "SDT ماہر",
+      "description": "ایک سیشن میں d-prime > 4.0۔"
+    },
+    "no_pause": {
+      "name": "بلا تعطل",
+      "description": "≥75% درستگی کے ساتھ مسلسل ۵ سیشن بغیر وقفے۔"
+    },
+    "steady_hands": {
+      "name": "مضبوط ہاتھ",
+      "description": "سیشن میں کوئی غلط ان پٹ نہیں (≥80% درستگی)۔"
+    },
+    "zen_master": {
+      "name": "ذین ماسٹر",
+      "description": "بغیر چھوڑے ۱۰ سیشن۔"
+    },
+    "comeback_kid": {
+      "name": "واپسی کا ہیرو",
+      "description": "سطح گرنے کے بعد سطح بڑھانا۔"
+    },
+    "persistent": {
+      "name": "ثابت قدم",
+      "description": "ناکامی کے بعد ایک دن میں ۳ سیشن۔"
+    },
+    "second_wind": {
+      "name": "دوسری ہوا",
+      "description": "نصف ۱ اور ۲ کے درمیان d-prime میں بہتری (d′ ≥ 2.0 ضروری)۔"
+    },
+    "plateau_breaker": {
+      "name": "جمود توڑنے والا",
+      "description": "ایک سطح پر ۱۰+ سیشن کے بعد ترقی۔"
+    },
+    "no_surrender": {
+      "name": "ہتھیار نہ ڈالنا",
+      "description": "بغیر چھوڑے ۲۵ سیشن۔"
+    },
+    "ironwill": {
+      "name": "فولادی عزم",
+      "description": "بغیر چھوڑے ۵۰ سیشن۔"
+    },
+    "audiophile": {
+      "name": "سماعت دوست",
+      "description": "آڈیو > 80% لیکن بصری < 70%۔"
+    },
+    "eagle_eye": {
+      "name": "عقاب کی نظر",
+      "description": "بصری > 80% لیکن آڈیو < 70%۔"
+    },
+    "synchronized": {
+      "name": "ہم آہنگ",
+      "description": "آڈیو اور بصری سکور ۵٪ کے اندر (≥60% ضروری)۔"
+    },
+    "dual_master": {
+      "name": "ڈوئل ماسٹر",
+      "description": "ایک سیشن میں آڈیو اور بصری > 85% (≥6 ہدف/قسم)۔"
+    },
+    "dual_elite": {
+      "name": "ڈوئل ایلیٹ",
+      "description": "N ≥ 3 پر ایک سیشن میں آڈیو اور بصری > 90% (≥6 ہدف/قسم)۔"
+    },
+    "centurion": {
+      "name": "سنچورین",
+      "description": "۱۰۰ سیشن مکمل ہوئے۔"
+    },
+    "sessions_250": {
+      "name": "لیجنڈ (زمرد)",
+      "description": "۲۵۰ سیشن مکمل ہوئے۔"
+    },
+    "sessions_500": {
+      "name": "لافانی (ہیرا)",
+      "description": "۵۰۰ سیشن مکمل ہوئے۔"
+    },
+    "trials_500": {
+      "name": "مشق کار",
+      "description": "۵۰۰ ٹرائلز کھیلے۔"
+    },
+    "trials_1000": {
+      "name": "تربیت یافتہ",
+      "description": "۱٬۰۰۰ ٹرائلز کھیلے۔"
+    },
+    "trials_5000": {
+      "name": "تجربہ کار",
+      "description": "۵٬۰۰۰ ٹرائلز کھیلے۔"
+    },
+    "trials_10k": {
+      "name": "۱۰٬۰۰۰ ٹرائلز",
+      "description": "۱۰٬۰۰۰ ٹرائلز کھیلے۔"
+    },
+    "trials_50k": {
+      "name": "ٹائٹن",
+      "description": "۵۰٬۰۰۰ ٹرائلز کھیلے۔"
+    },
+    "streak_90": {
+      "name": "بے عیب سہ ماہی",
+      "description": "۹۰ دن کی سلسلہ بندی۔"
+    },
+    "streak_365": {
+      "name": "کامل سال",
+      "description": "۳۶۵ دن کی سلسلہ بندی۔"
+    },
+    "veteran": {
+      "name": "سابقہ تجربہ کار",
+      "description": "۱ سال کا استعمال۔"
+    },
+    "metronome": {
+      "name": "میٹرونوم",
+      "description": "≥20 ٹرائلز پر RT واریئنس < 50ms (فعال جوابات ضروری)۔"
+    },
+    "flow_state": {
+      "name": "فیض کی حالت",
+      "description": "پورے سیشن میں فلو کی شناخت۔"
+    },
+    "sang_froid": {
+      "name": "ٹھنڈا دماغ",
+      "description": "ایک غلطی کے بعد غلطیوں کا سلسلہ نہیں (≥70% درستگی)۔"
+    },
+    "imperturbable": {
+      "name": "غیر متزلزل",
+      "description": "توجہ کھوئے بغیر مکمل سیشن (≥60% درستگی)۔"
+    },
+    "comeback_strong": {
+      "name": "مضبوط واپسی",
+      "description": "۳+ دن کی غیر حاضری کے بعد d-prime ریکارڈ توڑنا (d′ ≥ 2.5)۔"
+    }
+  }
+}

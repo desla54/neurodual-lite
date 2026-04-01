@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Tutoriál",
+    "exitConfirm": "Ukončit tutoriál?",
+    "exitWarning": "Váš postup nebude uložen.",
+    "continue": "Pokračovat",
+    "quit": "Konec",
+    "stepLabel": "Krok {{step}}",
+    "previous": "Předchozí",
+    "restart": "Restartujte",
+    "next": "Další",
+    "startGame": "Začněte",
+    "progress": "Počítadlo",
+    "tapToContinue": "Pokračujte klepnutím",
+    "controls": {
+      "position": "Pozice",
+      "audio": "Zvuk"
+    },
+    "annotation": {
+      "label": "Instrukce"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Pěkná práce. Prošel jste výukovým programem.",
+        "stay": "Skoro tam. Ještě trochu cviku a půjde ti to.",
+        "down": "Zatím neověřeno. Zopakujte výukový program, abyste posílili základy."
+      },
+      "header": {
+        "up": "Výukový program dokončen!",
+        "down": "Recenze",
+        "stay": "Téměř!"
+      },
+      "noteMinAssessment": "Poznámka: Pro přesnější vyhodnocení posuzují tutoriály alespoň 8 odpovědí.",
+      "guidance": {
+        "passed": "Jste připraveni na bezplatný trénink.",
+        "failed": "Než přejdete k tréninku, doporučujeme znovu vyzkoušet tento tutoriál."
+      },
+      "correctAnswers": "{{correct}}/{{total}} správné odpovědi",
+      "actions": {
+        "backToHome": "Zpátky domů",
+        "retryTutorial": "Zopakujte výukový program",
+        "explainLevels": "Pochopte N úrovní (N)",
+        "goToTraining": "Jděte na trénink",
+        "continueToTraining": "Pokračujte v tréninku"
+      }
+    },
+    "welcome": {
+      "title": "Úvod do školení",
+      "description": "Dual N-Back zpochybňuje vaši pracovní paměť tím, že vyžaduje sledování dvou proudů informací současně: vizuální polohu a zvuk. Tento tutoriál vás provede krok za krokem.",
+      "button": "Spusťte výukový program"
+    },
+    "timeline": {
+      "legend": "Časová osa pomáhá srovnání – je během hry skrytá",
+      "past": "Minulost",
+      "present": "Přítomný"
+    },
+    "hub": {
+      "title": "Tutoriály",
+      "subtitle": "Vyberte režim, který se chcete učit",
+      "basics": {
+        "title": "Základy",
+        "description": "Naučte se reflex a rytmus klasického Dual N-Back."
+      },
+      "place": {
+        "title": "Dvojité místo",
+        "description": "Ovládněte časové umístění na časové ose."
+      },
+      "label": {
+        "title": "Duální výběr",
+        "description": "Označte každý podnět jeho časovou referencí (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Duální trasování",
+        "description": "Naučte se gesta aktivního vyvolání pomocí trasování."
+      },
+      "memo": {
+        "title": "Duální Memo",
+        "description": "Znovu sestavte kompletní sekvenci z paměti."
+      },
+      "soroban": {
+        "title": "Mistrovství Sorobana",
+        "description": "Naučte se japonské počítadlo krok za krokem v 8 progresivních fázích."
+      }
+    },
+    "place": {
+      "comingSoon": "Výukový program pro umístění je ve vývoji",
+      "cardPool": "Dostupné karty",
+      "slot": "Slot",
+      "observe": "Dodržujte: pozici na mřížce a zvukové písmeno.",
+      "buffer": "Druhý podnět. N-back buffer se plní.",
+      "cardsAppear": "Objevují se karty! Představují poslední 3 podněty.",
+      "firstDrag": "Klikněte na označenou kartu a poté na slot N-2 (nejstarší).",
+      "timelineExplain": "Časová osa ukazuje čas: N-2 = nejstarší, N = současný.",
+      "positionN1": "Umístěte střední pozici do slotu N-1.",
+      "positionN": "Skvělé! Dokončete poslední pozicí (N slot).",
+      "audioIntro": "Nyní zvukové karty! Stejný princip.",
+      "audioN2": "Vložte první slyšené písmeno do slotu N-2.",
+      "audioN1": "Pokračujte prostředním písmenem (slot N-1).",
+      "audioN": "Dokončete nejnovějším písmenem (štěrbina N).",
+      "dualIntro": "Nová zkušební verze! Umístěte pozice A písmena.",
+      "dualPractice": "Umístěte všech 6 karet do správných slotů. Nespěchejte!",
+      "rhythmExplain": "Ve skutečné hře budete mít omezený čas.",
+      "autonomy": "Jste na řadě! Všechny karty umístěte správně.",
+      "conclusion": "Výborně! Zvládli jste základy Dual Place.",
+      "selectCard": "Vyberte kartu a klikněte na její slot",
+      "clickSlot": "Klepnutím na pravý slot umístěte kartu",
+      "wrongSlot": "Ne ten slot! Podívejte se na časové pořadí.",
+      "wrongCard": "Ne ta karta. Najděte ten, který odpovídá slotu.",
+      "tryAgain": "Zkuste to znovu! Správný slot je zvýrazněn."
+    },
+    "memo": {
+      "comingSoon": "Memo tutoriál je ve vývoji",
+      "selectPosition": "Vyberte pozici",
+      "selectAudio": "Vyberte písmeno",
+      "clickToRecall": "Kliknutím na slot vyvoláte hodnotu",
+      "validate": "Ověřit",
+      "observeFirst": "První podnět. Zapamatujte si pozici i písmeno!",
+      "observeSecond": "Druhý podnět. Pokračujte v zapamatování.",
+      "observeThird": "Třetí podnět. Vyrovnávací paměť dokončena. Připravte se!",
+      "recallIntro": "Mřížka zmizí! Vyvolat z paměti. Klikněte na slot N-2.",
+      "firstRecall": "Klikněte na slot N-2. Jaká byla první pozice?",
+      "feedbackExplain": "Zelená = správně. Červená = chyba. Opravovat můžete až 3x!",
+      "multiSlot": "Pokračovat! Připomeňte si pozice N-1 a N.",
+      "newStimulus": "Nový podnět! Okno N-back se posune o jednu.",
+      "windowShift": "Okno se posunulo. Stará N-2 vystupuje, nová N vstupuje.",
+      "fullPosition": "Vyvolejte všechny 3 pozice. Soustředit!",
+      "audioIntro": "Nový podnět. Nyní přidáváme audio přivolání!",
+      "firstAudioRecall": "Klikněte na audio slot N-2. Jaké písmeno?",
+      "fullAudio": "Pokračujte písmeny N-1 a N.",
+      "dualIntro": "Ve skutečné hře si vybavíte pozice A písmena dohromady.",
+      "dualPractice": "Vyvolejte všech 6 buněk a klikněte na Ověřit.",
+      "correctionExplain": "Pokud uděláte chybu, klikněte znovu pro opravu. Maximálně 3x.",
+      "withCorrection": "Zkuste to! Pokud se mýlíte, opravte je opětovným kliknutím.",
+      "conclusion": "Výborně! Zvládli jste aktivní vyvolání. Zahájit relaci!",
+      "wrongAnswer": "To není ono. Přemýšlejte, jaký podnět byl v tu chvíli?",
+      "tryAgain": "Zkuste to znovu! Stále můžete opravit.",
+      "maxCorrections": "Dosaženy 3 opravy. Tento slot je uzamčen.",
+      "validateHint": "Všechny sloty jsou obsazeny. Klikněte na Ověřit!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Vítejte v Dual Pick! Naučte se každý podnět klasifikovat.",
+        "hud": "Nahoru: váš pokrok v tutoriálu.",
+        "grid": "Mřížka je rozdělena do 3 zón: TOP, STŘEDNÍ, SPODNÍ.",
+        "controls": "Tato tlačítka klasifikují. Poloha vlevo, zvuk vpravo.",
+        "outro": "Připraveni? Začněme klasifikací pozic!"
+      },
+      "intro": "V Dual Pick klasifikujete každý podnět podle dvou kritérií: mřížkové zóny a typu zvuku.",
+      "gridExplain": "Mřížka má 3 zóny: TOP (horní řada), MIDDLE (uprostřed), BOTTOM (spodní řada).",
+      "positionHaut": "Náměstí je nahoře. Klikněte na TOP.",
+      "positionMilieu": "Náměstí je uprostřed. Klepněte na STŘEDNÍ.",
+      "positionBas": "Čtverec je dole. Klikněte na DOLE.",
+      "positionRecap": "Perfektní! TOP = horní řada, MIDDLE = střed, BOTTOM = spodní řada.",
+      "positionPractice": "Jste na řadě! Klasifikujte tuto pozici.",
+      "soundIntro": "Nyní zvuky. Existují dva typy: HLÁSKA (A, E, I, O, U) a SOUHLÁSKA (všechny ostatní).",
+      "soundVoyelle": "Slyšíte A. Je to samohláska. Klikněte na VOWEL.",
+      "soundConsonne": "Slyšíte T. Je to souhláska. Klepněte na CONSONANT.",
+      "soundRecap": "Pamatujte: A, E, I, O, U = HLÁSKA. Všechno ostatní = SOUHLÁSKA.",
+      "soundPractice": "Jste na řadě! Klasifikujte tento zvuk.",
+      "dualIntro": "Ve skutečné hře klasifikujete OBA současně: pozici A zvuk.",
+      "dualFirst": "Klasifikujte polohu A zvuk. Nespěchejte.",
+      "dualSecond": "Pokračovat. Pozice + Zvuk.",
+      "dualThird": "Výborně! Ještě jeden na procvičení.",
+      "rhythm": "Při sezení udržujte pravidelný rytmus. Tekutost přichází s praxí.",
+      "conclusion": "Výborně! Klasifikaci jste zvládli. Zahajte relaci Dual Pick!",
+      "buttons": {
+        "top": "TOP",
+        "middle": "STŘEDNÍ",
+        "bottom": "DNO",
+        "vowel": "VOWEL",
+        "consonant": "SOUHLÁSKA"
+      },
+      "feedback": {
+        "correctPosition": "Dobrá zóna!",
+        "correctSound": "Dobrý typ zvuku!",
+        "wrongPosition": "Ne ta zóna. Podívejte se, kde je náměstí.",
+        "wrongSound": "To není ono. A, E, I, O, U = samohlásky."
+      }
+    },
+    "trace": {
+      "intro": "Vítejte v Dual Trace. Nejsou zde žádná tlačítka: předchozí pozici si aktivně vybavíte pomocí gesta přejetím.",
+      "observe": "Zapamatujte si tuto pozici. V další zatáčce k ní budete muset přejet prstem.",
+      "firstSwipe": "První přejetí! Posuňte prst směrem k předchozí zatáčce. Šipka vás vede.",
+      "firstAudioMatch": "Stejné písmeno jako v předchozím kole! Přejetím prstem do polohy A dvojitým klepnutím signalizujete shodu zvuku.",
+      "audioMatch": "Byla zjištěna shoda zvuku! Přejetí prstem + dvojité klepnutí.",
+      "swipe1": "Přejeďte prstem směrem k pozici N-1. Vzpomeňte si, kde bylo náměstí.",
+      "swipe2": "Pokračovat. Každé přejetí posílí vaši aktivní paměť.",
+      "swipe3": "Aktivní vyvolání je náročnější než prosté rozpoznání.",
+      "swipe4": "Zůstaňte soustředění. Před přejetím si vizualizujte polohu.",
+      "swipe5": "Výborně! Osvojili jste si gesto odvolání.",
+      "complete": "Výukový program dokončen. Jste připraveni na trénink Dual Trace.",
+      "tapTarget": "Klepněte na pozici předchozí odbočky",
+      "tapTargetAndAudio": "Klepněte na cílovou pozici a poté na Zvuk"
+    },
+    "ui": {
+      "startExercise": "Začněte cvičit",
+      "score": "Skóre: {{current}}/{{total}}",
+      "complete": "Dokončeno",
+      "correct": "✓ Správně!",
+      "expectedMatch": "✗ Očekáváno: Shoda",
+      "expectedNoMatch": "✗ Očekáváno: Žádná shoda",
+      "memorize": "Zapamatujte si polohu...",
+      "memorizeLetter": "Zapamatuj si písmeno...",
+      "matchDetected": "✓ Shoda zjištěna!",
+      "noMatch": "✗ Žádná shoda",
+      "matchExplanation": "Zápas! Krok {{current}} = Krok {{previous}}",
+      "exerciseComplete": "Cvičení dokončeno!",
+      "match": "Shoda",
+      "noMatchButton": "Žádná shoda",
+      "none": "žádný",
+      "both": "Obojí",
+      "position": "Pozice",
+      "audio": "Zvuk",
+      "posShort": "Poz"
+    },
+    "spotlight": {
+      "hud": "Váš přístrojový panel: N-back level, počítadlo otočení a ovládání relace.",
+      "timeline": "Časová osa uchovává poslední 3 podněty pro usnadnění srovnání. V reálném hraní je tato nápověda skrytá.",
+      "grid": "Mřížka: každé otočení se rozsvítí buňka v jedné z 8 pozic. Zároveň se mluví dopis.",
+      "controls": "Tlačítka vaší odpovědi. Stiskněte, když zjistíte opakování.",
+      "intro": "Vítejte! Pojďme společně objevit herní rozhraní.",
+      "continue": "Pokračovat",
+      "outro": "Nyní přejdeme k řízenému sezení. Sledujte animace a postupujte podle pokynů.",
+      "start": "Začněte",
+      "tapToContinue": "Pokračujte klepnutím kamkoli"
+    },
+    "speed": {
+      "label": "Rychlost: {{speed}}",
+      "pauseToChange": "Pauza pro změnu rychlosti"
+    },
+    "assessment": {
+      "title": "Posuzovaná fáze",
+      "subtitle": "Odteď je to krátký klasický běh.",
+      "body": "Tempo je plynulé a už se nedočkáte žádných náznaků. Hrajte jako ve skutečném sezení.",
+      "goal": "Cíl: přesnost alespoň {{min}} % oproti pokusům {{count}}.",
+      "cta": "Jdeme"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Pochopení N úrovní",
+        "desc": "Naučili jste se N=2. Zde je návod, jak zobecňuje z N=1 na N=4.",
+        "start": "Začněte",
+        "done": "Dokončit",
+        "skip": "Přeskočit",
+        "hud": "N = kolik otočí zpět.",
+        "present": "N = aktuální podnět (přítomný).",
+        "past": "Porovnejte s N-{{n}}.",
+        "pressPosition": "Pokud se pozice opakuje, stiskněte Position.",
+        "pressAudio": "Pokud se zvuk opakuje, stiskněte Audio.",
+        "annotation": {
+          "n1": "N=1: porovnejte aktuální podnět (N) s předchozím otočením (N-1).",
+          "n2": "N=2: porovnejte aktuální podnět (N) se dvěma otáčkami zpět (N-2).",
+          "n3": "N=3: porovnejte aktuální podnět (N) se třemi otáčkami zpět (N-3)."
+        },
+        "outroTitle": "A tak dále…",
+        "outroBody": "Pokud přejdete na N=5, srovnáte se s N-5. Pravidlo zůstává stejné; jen se zvětšuje vzdálenost."
+      }
+    },
+    "annotations": {
+      "intro": "Pozor: na mřížce se rozsvítí buňka a současně se vysloví písmeno.",
+      "observe": "Zapamatujte si. Časová osa sleduje podněty.",
+      "firstComparison": "Nyní máte dostatek historie k porovnání.",
+      "firstPositionMatch": "Stejná pozice jako před 2 otáčkami! Porovnejte N a N-2 na časové ose a poté stiskněte Pozice.",
+      "firstAudioMatch": "Stejné písmeno jako před 2 otáčkami! Porovnejte N a N-2 na časové ose a poté stiskněte Zvuk.",
+      "firstDualMatch": "Dvojitý zápas! Opakování obou poloh A zvuku. Stiskněte obě tlačítka.",
+      "positionMatch": "Stejná pozice. Stiskněte Pozice.",
+      "audioMatch": "Stejný zvuk. Stiskněte Audio.",
+      "dualMatch": "Oba se shodují. Stiskněte Pozice a Zvuk.",
+      "noMatch": "V tomto tahu žádný zápas. Pokračujte v zapamatování.",
+      "noMatch1": "Tentokrát žádné opakování. Pokračujte klepnutím.",
+      "noMatch2": "Stále žádný zápas. Soustřeďte se na pozici + tok zvuku.",
+      "noMatch3": "Nic k nahlášení. Vždy porovnávejte s N-2 na časové ose.",
+      "noMatch4": "Žádná shoda. Tempo se teď zrychluje.",
+      "noMatch5": "Pokračovat. Zápasy přicházejí nepředvídatelně.",
+      "noMatch6": "Žádná shoda. Pokračuj, máš rytmus.",
+      "noMatch7": "Závěrečné protažení. Zůstaňte soustředění.",
+      "noMatch8": "Téměř hotovo. Ještě pár podnětů.",
+      "complete": "Gratulujeme! Zvládli jste základy Dual N-Back. Připraveni na trénink?"
+    },
+    "exit": {
+      "confirm": "Konec",
+      "title": "Ukončit tutoriál?",
+      "message": "Váš postup bude uložen. Můžete pokračovat později."
+    },
+    "recovery": {
+      "message": "Byla nalezena přerušená relace.",
+      "staleMessage": "Byla nalezena přerušená relace před více než 30 minutami.",
+      "resume": "Pokračovat",
+      "startFresh": "Začněte znovu",
+      "title": "Obnovit výukový program?"
+    }
+  }
+}

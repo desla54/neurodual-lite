@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "អ្នកមានអារម្មណ៍ដូចម្ដេច?",
+      "tired": "ដេកលក់",
+      "normal": "ទេrmal",
+      "energized": "មានថាមពល"
+    },
+    "aria": {
+      "trialTimer": "កម្មវិធីកំណត់ម៉ោងសាកល្បង",
+      "positionMatch": "ទីតាំង match",
+      "audioMatch": "អូឌីយ៉ូ match",
+      "audioLetter": "អូឌីយ៉ូ letter:",
+      "traceGrid": "ក្រឡាចត្រង្គតាមដាន"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "បិទបើកម៉ូនីទ័រសមកាល",
+      "start": "ចាប់ផ្ដើម",
+      "end": "ចប់",
+      "pinLabel": "ខ្ទាស់",
+      "pinTitle": "ខ្ទាស់នៅអេក្រង់",
+      "inputLabel": "បញ្ចូល",
+      "inputTitle": "បិទបើកការដាក់ profile latency បញ្ចូល (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "បើក",
+      "off": "បិទ",
+      "hideLabel": "លាក់",
+      "hideTitle": "លាក់ (unless syncHud=1 or ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "សម្លេង",
+        "expected": "រំពឹង"
+      },
+      "labels": {
+        "trial": "ការសាកល្បង",
+        "lagShow": "ការពន្យឺតបង្ហាញ",
+        "lagHide": "ការពន្យឺតលាក់",
+        "winErr": "កំហុស win",
+        "endRef": "ឯកសារយោងចប់",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "បញ្ចូលកំពុងរង់ចាំ",
+        "inputSamples": "គំរូបញ្ចូល",
+        "touchSamples": "គំរូប៉ះ",
+        "mouseSamples": "គំរូកណ្ដុរ",
+        "keyboardSamples": "គំរូក្ដារចុច",
+        "latestMethod": "ចុងក្រោយ (វិធីសាស្ត្រ)",
+        "latestModality": "របៀបចុងក្រោយ",
+        "audioCueMode": "ការណែនាំសម្លេង",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "កំណត់ profiler បញ្ចូលឡើងវិញ"
+    },
+    "hud": {
+      "resume": "បន្ត",
+      "pause": "ផ្អាក",
+      "quit": "ចាកចេញ",
+      "restart": "ចាប់ផ្ដើមឡើងវិញ",
+      "spaceToStart": "Space ដើម្បីចាប់ផ្ដើម",
+      "settings": "ការកំណត់",
+      "enterToAdvance": "Enter ដើម្បីបន្ត",
+      "trial": "ការសាកល្បង",
+      "muteTexture": "បិទសំឡេង background sound"
+    },
+    "status": {
+      "paused": "ផ្អាក"
+    },
+    "completed": "បានបញ្ចប់",
+    "starting": {
+      "getReady": "ត្រៀមខ្លួន..."
+    },
+    "quitModal": {
+      "title": "ចាកចេញ session?",
+      "message": "វឌ្ឍនភាពរបស់អ្នកនឹងមិនត្រូវបានរក្សាទុកទេ។",
+      "confirm": "ចាកចេញ",
+      "cancel": "បន្ត",
+      "close": "បិទ"
+    },
+    "controls": {
+      "position": "ទីតាំង",
+      "position2": "ទីតាំង ២",
+      "position3": "ទីតាំង ៣",
+      "position4": "ទីតាំង ៤",
+      "visvis": "មើល & n-មើល",
+      "visaudio": "មើល & n-សម្លេង",
+      "audiovis": "អូឌីយ៉ូ & n-vis",
+      "vis1": "មើល ១",
+      "vis2": "មើល ២",
+      "vis3": "មើល ៣",
+      "vis4": "មើល ៤",
+      "audio": "អូឌីយ៉ូ",
+      "audio2": "អូឌីយ៉ូ 2",
+      "color": "ពណ៌",
+      "arithmetic": "គណិតវិទ្យា",
+      "image": "រូបរាង"
+    },
+    "arithmetic": {
+      "answer": "ចម្លើយ",
+      "clear": "សម្អាត",
+      "hint": "Keyboard: 0–9 · '-' for the sign · '.' for decimals · ត្រឡប់ក្រោយspace to clear"
+    },
+    "navigation": {
+      "back": "ត្រឡប់ក្រោយ"
+    },
+    "xp": {
+      "title": "XP ដែលទទួលបាន",
+      "base": "មូលដ្ឋាន (N-{{level}})",
+      "performance": "ប្រតិបត្តិការ",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "streakBonus": "បោណាស់ខ្សែ",
+      "dailyBonus": "ដំបូងនៃថ្ងៃ",
+      "badgeBonus": "ផ្លាកសញ្ញា",
+      "flowBonus": "បោណាស់ Dual Place",
+      "confidenceMultiplier": "ទំនុកចិត្ត",
+      "dailyCapReached": "ដែនកំណត់ XP ប្រចាំថ្ងៃសម្រេចបាន",
+      "levelReached": "សម្រេចកម្រិត {{level}}!"
+    },
+    "badges": {
+      "newUnlocked": "ផ្លាកសញ្ញាថ្មីត្រូវបានដោះសោ"
+    },
+    "getReady": "ត្រៀមខ្លួន...",
+    "layoutEdit": {
+      "done": "រួចរាល់",
+      "reset": "កំណត់ឡើងវិញ",
+      "instructions": "អូសតំបន់ដើម្បីតម្រៀបឡើងវិញ។ ប្រើដង ដើម្បីផ្លាស់ប្ដូរទំហំ។",
+      "title": "កែប្រែ mode",
+      "cancel": "បោះបង់",
+      "save": "ចាក់សោ",
+      "editLayout": "កែប្រែ layout"
+    },
+    "paused": "ផ្អាក",
+    "pressEscapeToResume": "ចុច Escape ដើម្បីបន្ត",
+    "settings": {
+      "editLayout": "កែប្រែ layout",
+      "gridAndButtons": "ក្រឡា & ប៊ូតុង",
+      "swapPositionAudio": "Swap ទីតាំង / អូឌីយ៉ូ",
+      "title": "ការកំណត់",
+      "quickHint": "កែតម្រូវការកំណត់ពីរបីដោយមិនចាកចេញពីល្បែង។",
+      "quickUnavailable": "ទេ quick settings available for this mode yet."
+    },
+    "pinkNoiseInfo": "សម្លេងផ្ទៃខាងក្រោយអមជាមួយ stimulus នីមួយៗ។ អ្នកអាចប្ដូរឬបិទវាក្នុងការកំណត់សម្លេង។",
+    "pinkNoiseDismiss": "បន្ត",
+    "audioMode": "អូឌីយ៉ូ mode",
+    "cogTask": {
+      "precision": "ភាពត្រឹមត្រូវ",
+      "avgRt": "RT មធ្យម",
+      "avgRtShort": "RT មធ្យម",
+      "trials": "Trial",
+      "correct": "ត្រឹមត្រូវ",
+      "errors": "កំហុស",
+      "effect": "ផលប៉ះពាល់",
+      "restart": "ចាប់ផ្ដើមឡើងវិញ",
+      "home": "ទំព័រដើម",
+      "performance": "ប្រតិបត្តិការ",
+      "trialDetail": "ព័ត៌មានលម្អិតការសាកល្បង",
+      "setDetail": "ព័ត៌មានលម្អិតសំណុំ",
+      "roundDetail": "ព័ត៌មានលម្អិតជុំ",
+      "problemDetail": "ព័ត៌មានលម្អិតបញ្ហា",
+      "phaseDetail": "ព័ត៌មានលម្អិតដំណាក់កាល",
+      "feedbackCorrect": "ត្រឹមត្រូវ",
+      "feedbackIncorrect": "មិនត្រឹមត្រូវ",
+      "feedbackTimeout": "យឺតពេក!",
+      "preparing": "ត្រៀមខ្លួន...",
+      "loading": "កំពុងផ្ទុក...",
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ",
+      "up": "លើ",
+      "down": "ក្រោម",
+      "congruent": "ស្របគ្នា",
+      "incongruent": "មិនស្របគ្នា",
+      "congruencyEffect": "ផលប៉ះពាល់ភាពស្របគ្នា",
+      "maxSpan": "ជួរអតិបរមា",
+      "startingSpan": "ចាប់ផ្តើមing span",
+      "maxSpanReached": "ជួរអតិបរមាសម្រេចបាន",
+      "longestStreak": "ខ្សែត្រឹមត្រូវវែងបំផុត",
+      "series": "ខ្សែ",
+      "avgResponseTime": "មធ្យម response time",
+      "recall": "ចងចាំឡើងវិញ",
+      "expected": "រំពឹងទុក",
+      "submit": "បញ្ជូន",
+      "cancel": "បោះបង់",
+      "clear": "សម្អាត",
+      "delete": "លុប",
+      "true": "ពិត",
+      "false": "មិនពិត",
+      "target": "គោលដៅ",
+      "nonTarget": "ទេn-target",
+      "distractor": "រំខាន",
+      "same": "ដូចគ្នា",
+      "different": "ខុសគ្នា",
+      "identical": "ដូចគ្នា",
+      "mirror": "កញ្ចក់",
+      "symmetric": "ស៊ីមេទ្រី",
+      "asymmetric": "មិនស៊ីមេទ្រី",
+      "symShort": "ស៊ីម",
+      "present": "បច្ចុប្បន្ន",
+      "absent": "អវត្តមាន",
+      "noTrials": "ទេ trials completed.",
+      "noSets": "ទេ sets completed.",
+      "noRounds": "ទេ rounds completed.",
+      "noProblems": "ទេ problems completed.",
+      "noPhases": "ទេ phases completed.",
+      "sets": "សំណុំ",
+      "rounds": "ជុំ",
+      "equations": "សមីការ",
+      "sentences": "ប្រយោគ",
+      "equationAccuracy": "ភាពត្រឹមត្រូវសមីការ",
+      "forward": "មុខ",
+      "backward": "ត្រឡប់ក្រោយward",
+      "forwardMaxSpan": "ជួរអតិបរមាមុខ",
+      "backwardMaxSpan": "ត្រឡប់ក្រោយward max span",
+      "odd": "សេស",
+      "even": "គូ",
+      "score": "ពិន្ទុ",
+      "easy": "ងាយ",
+      "hard": "ពិបាក",
+      "totalTrials": "សរុប trials",
+      "totalErrors": "សរុប errors",
+      "totalErrShort": "សរុប Err.",
+      "hits": "ត្រូវ",
+      "misses": "ខុស",
+      "falseAlarms": "សញ្ញាណមិនពិត",
+      "correctRejections": "ការបដិសេធត្រឹមត្រូវ",
+      "yes": "បាទ/ចាស",
+      "no": "ទេ",
+      "sessionInterrupted": "វគ្គត្រូវបានផ្អាក",
+      "reverseOrder": "តាមលំដាប់បញ្ច្រាស",
+      "normalOrder": "តាមលំដាប់",
+      "lnsInstruction": "លេខតាមលំដាប់កើន បន្ទាប់មកអក្សរ A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "ផលប៉ះពាល់ Simon",
+        "blue": "ខៀវ",
+        "red": "ក្រហម",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "តំណាងលេខនេះ",
+        "submit": "បញ្ជូន",
+        "rodLabel": "របាររៀង {{n}}",
+        "heavenBead": "គ្រាប់មេឃ (តម្លៃ ៥)",
+        "earthBead": "គ្រាប់ដី (តម្លៃ ១)",
+        "instrBeadTitle": "គ្រាប់ដំណើរការយ៉ាងដូចម្ដេច",
+        "instrBeadDesc": "របាររៀងនីមួយៗតំណាងឱ្យខ្ទង់មួយ។ គ្រាប់ខាងលើ (មេឃ) មានតម្លៃ ៥។ គ្រាប់ខាងក្រោម (ដី) មានតម្លៃ ១ ក្នុងមួយ។ ផ្លាស់ទីគ្រាប់ទៅកាន់របារកណ្ដាលដើម្បីធ្វើឱ្យសកម្ម។",
+        "instrExampleTitle": "ឧទាហរណ៍: ៧",
+        "instrExampleDesc": "៧ = គ្រាប់មេឃចុះក្រោម (៥) + គ្រាប់ដី ២ ឡើង (២)។ ចុចឬអូសគ្រាប់ដើម្បីផ្លាស់ទី។",
+        "instrGoalTitle": "គោលដៅរបស់អ្នក",
+        "instrGoalDesc": "លេខមួយនឹងបង្ហាញ។ កំណត់គ្រាប់ដើម្បីតំណាងវា បន្ទាប់មកចុចបញ្ជូន។ សូមជាក់លាក់និងលឿន!",
+        "startButton": "ចាប់ផ្តើម",
+        "settings": "ការកំណត់",
+        "closeSettings": "បិទ settings",
+        "settingsRods": "ចំនួនរបាររៀង",
+        "settingsRodsHint": "កំណត់តាម N-Level ក្នុងការកំណត់ល្បែង",
+        "settingsTrials": "Trial per session",
+        "settingsTrialsHint": "Set via Trial in game settings",
+        "settingsRange": "ជួរលេខ"
+      },
+      "stroop": {
+        "pressInkColorButton": "ចុចប៊ូតុងដែលផ្គូផ្គងពណ៌ទឹក",
+        "redWord": "ក្រហម",
+        "redLabel": "ក្រហម",
+        "blueWord": "ខៀវ",
+        "blueLabel": "ខៀវ",
+        "greenWord": "បៃតង",
+        "greenLabel": "បៃតង",
+        "yellowWord": "លឿង",
+        "yellowLabel": "លឿង"
+      },
+      "stroopFlex": {
+        "followRule": "ច្បាប់",
+        "ruleInk": "ពណ៌ទឹក",
+        "ruleWord": "ពាក្យសរសេរ",
+        "pressMatchingRuleButton": "ចុចប៊ូតុងដែលផ្គូផ្គងច្បាប់បច្ចុប្បន្ន"
+      },
+      "goNogo": {
+        "goTrials": "ការសាកល្បង Go",
+        "nogoTrials": "ទេ-Go trials",
+        "hitRate": "អត្រាត្រូវ (Go)",
+        "faRate": "False alarm rate (ទេ-Go)",
+        "meanRt": "ពេលប្រតិកម្មមធ្យម",
+        "sensitivity": "ភាពរសើប",
+        "press": "ចុច",
+        "withhold": "រក្សា"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (បញ្ឈប់ Signal RT)",
+        "ssdMean": "SSD មធ្យម (ឈប់ជោគជ័យ)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "ការរារាំងជោគជ័យ",
+        "stop": "បញ្ឈប់",
+        "meanGoRt": "RT មធ្យម GO",
+        "ssrtInvalid": "ទិន្នន័យមិនគ្រប់គ្រាន់",
+        "ssrtNegativeNote": "SSRT អវិជ្ជមាន (SSD មធ្យម > GO RT មធ្យម) — លទ្ធផលមិនអាចទុកចិត្តបានជាមួយចំនួនសាកល្បងបច្ចុប្បន្ន។"
+      },
+      "pvt": {
+        "rtMedian": "RT មធ្យមភាគ",
+        "rtMean": "RT មធ្យម",
+        "fastest": "លឿនបំផុត",
+        "slowest": "យឺតបំផុត",
+        "falseStarts": "ចាប់ផ្ដើមខុស",
+        "falseStartsShort": "ចាប់ផ្ដើមខុស",
+        "lapses": "ការភ្លេច",
+        "mean": "មធ្យម",
+        "reaction": "ប្រតិកម្ម",
+        "wait": "រង់ចាំ...",
+        "pressStimulus": "រង់ចាំ stimulus...",
+        "pressAnywhere": "ចុចកន្លែងណាមួយពេលកម្មវិធីរាប់បង្ហាញ",
+        "press": "ចុច!",
+        "tooEarly": "ឆាប់ពេក!",
+        "lapsesLabel": "ការភ្លេច"
+      },
+      "posner": {
+        "cueingEffect": "ផលប៉ះពាល់ការណែនាំ",
+        "validMeanRt": "RT មធ្យមត្រឹមត្រូវ",
+        "invalidMeanRt": "RT មធ្យមមិនត្រឹមត្រូវ",
+        "validAccuracy": "ភាពត្រឹមត្រូវត្រឹមត្រូវ",
+        "invalidAccuracy": "ភាពត្រឹមត្រូវមិនត្រឹមត្រូវ",
+        "validTrials": "ការសាកល្បងត្រឹមត្រូវ",
+        "invalidTrials": "ការសាកល្បងមិនត្រឹមត្រូវ",
+        "validRtShort": "RT ត្រឹមត្រូវ",
+        "invalidRtShort": "RT មិនត្រឹមត្រូវ",
+        "valid": "ត្រឹមត្រូវ",
+        "invalid": "មិនត្រឹមត្រូវ"
+      },
+      "antisaccade": {
+        "cost": "ថ្លៃ antisaccade",
+        "proAccuracy": "ភាពត្រឹមត្រូវប្រូ",
+        "antiAccuracy": "ភាពត្រឹមត្រូវអង់ទី",
+        "pro": "ប្រូ",
+        "anti": "អង់ទី",
+        "proRt": "គាំទ្រ RT",
+        "antiRt": "ប្រឆាំង RT",
+        "proMeanRt": "RT មធ្យម pro-saccade",
+        "antiMeanRt": "RT មធ្យម anti-saccade",
+        "costLabel": "ថ្លៃ",
+        "antiLabel": "អង់ទី"
+      },
+      "axCpt": {
+        "dPrime": "d'-បរិបទ",
+        "axAccuracy": "ភាពត្រឹមត្រូវ AX",
+        "bxFa": "សញ្ញាណមិនពិត BX",
+        "ayError": "កំហុស AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "កំហុស AY",
+        "cogControl": "ការត្រួតពិនិត្យយល់ដឹង",
+        "target": "គោលដៅ",
+        "nonTarget": "ទេn-target"
+      },
+      "ant": {
+        "scores": "ANT ពិន្ទុs",
+        "alerting": "ការជូនដំណឹង (គ្មាន-cue − cue-ទ្វេ)",
+        "orienting": "ការកំណត់ទិស (កណ្ដាល − លំហ)",
+        "executive": "ប្រតិបត្តិ (មិនស្របគ្នា − ស្របគ្នា)"
+      },
+      "changeDet": {
+        "kCowan": "សមត្ថភាព K (Cowan)",
+        "sameShort": "ដូច",
+        "diffShort": "ខុស"
+      },
+      "swm": {
+        "withinErrors": "កំហុសក្នុងការស្វែងរក",
+        "betweenErrors": "កំហុសរវាងការស្វែងរក",
+        "totalErrors": "សរុប errors",
+        "errorFree": "គ្មានកំហុស",
+        "foundErrorFree": "រកឃើញដោយគ្មានកំហុស!",
+        "errorCount": "កំហុស {{count}}",
+        "tapsLabel": "ការចុច"
+      },
+      "taskSwitch": {
+        "switchCost": "ថ្លៃប្ដូរ",
+        "rtRepeat": "RT មធ្យម (ធ្វើម្ដង​ទៀត)",
+        "rtSwitch": "RT មធ្យម (ប្ដូរ)",
+        "oddEven": "សេស / គូ",
+        "highLow": "ខ្ពស់ / ទាប",
+        "title": "ការប្ដូរភារកិច្ច"
+      },
+      "trailMaking": {
+        "tmtATime": "ពេល TMT-A",
+        "tmtBTime": "ពេល TMT-B",
+        "executiveCost": "ថ្លៃប្រតិបត្តិ (B − A)",
+        "executiveCostShort": "ថ្លៃប្រតិបត្តិ (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "កំហុស A",
+        "errB": "កំហុស B",
+        "preparingB": "កំពុងរៀបចំ TMT-B...",
+        "tmtADone": "TMT-A រួចរាល់!",
+        "totalErrors": "សរុប errors",
+        "tmtALabel": "TMT-A: លេខ",
+        "tmtBLabel": "TMT-B: Numbers & អក្សរs",
+        "next": "បន្ទាប់",
+        "heroTitle": "Trail Making",
+        "alternateHint": "ផ្លាស់ប្ដូរលេខនិងអក្សរ: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI អប្បបរមា",
+        "fastestIsi": "ISI លឿនបំផុត"
+      },
+      "wcst": {
+        "referenceCards": "កាតយោង",
+        "testCard": "កាតសាកល្បង",
+        "categories": "ប្រភេទ",
+        "categoriesCompleted": "ប្រភេទបញ្ចប់",
+        "perseverativeErrors": "កំហុសប្រកាន់ខ្ជាប់",
+        "persevShort": "ការប្រកាន់ខ្ជាប់",
+        "avgRt": "RT មធ្យម"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT តាមកោណ",
+        "findMatch": "រករូបរាងផ្គូផ្គង",
+        "reference": "រូបរាងយោង",
+        "referenceLabel": "យោង",
+        "candidate": "បេក្ខភាព",
+        "distractor": "ផ្សេងទៀត",
+        "mirrorErrors": "កញ្ចក់",
+        "title": "ការបង្វិលផ្លូវចិត្ត"
+      },
+      "sternberg": {
+        "rtBySize": "RT តាមទំហំសំណុំ",
+        "title": "Sternberg",
+        "avgRt": "RT មធ្យម"
+      },
+      "visualSearch": {
+        "rtBySize": "RT តាមទំហំសំណុំ",
+        "title": "ការមើលឃើញ ស្វែងរក"
+      },
+      "ospan": {
+        "typeLetters": "វាយអក្សរតាមលំដាប់",
+        "trueOrFalse": "ពិតឬមិនពិត?",
+        "processingWarning": "ភាពត្រឹមត្រូវសមីការក្រោម ៨៥% — លទ្ធផលអាចមិនឆ្លុះបញ្ចាំងសមត្ថភាពចងចាំពិតប្រាកដ"
+      },
+      "readingSpan": {
+        "s0": "ព្រះអាទិត្យរះពីទិសខាងកើត។",
+        "s1": "ត្រីរស់នៅក្នុងដើមឈើ។",
+        "s2": "ប៉ារីសជារាជធានីបារាំង។",
+        "s3": "ត្រីកោណមានជ្រុង ៤។",
+        "s4": "ទឹកពុះនៅ ១០០ ដឺក្រេ។",
+        "s5": "ឆ្មាជាសត្វល្មើស។",
+        "s6": "ផែនដីវិលជុំព្រះអាទិត្យ។",
+        "s7": "សូកូឡារីកនៅលើថ្ម។",
+        "s8": "មួយឆ្នាំមាន ១២ ខែ។",
+        "s9": "សត្វបក្សីដកដង្ហើមក្រោមទឹក។",
+        "s10": "ទឹកដោះគោមានពណ៌ស។",
+        "s11": "ឡានបើកនៅលើផ្លូវដែក។",
+        "s12": "ឃ្មុំផលិតទឹកឃ្មុំ។",
+        "s13": "ព្រិលមានកម្ដៅ។",
+        "s14": "បេះដូងបូមឈាម។",
+        "s15": "ថ្មអណ្ដែតលើទឹក។",
+        "s16": "ព្រះចន្ទបំភ្លឺពេលយប់។",
+        "s17": "ពស់មានជើង។",
+        "s18": "ឈើអណ្ដែតលើទឹក។",
+        "s19": "ភ្លើងមានភាពត្រជាក់។",
+        "s20": "មនុស្សមានប្រសាទ ៥។",
+        "s21": "ពីងពាងមានជើង ៦។",
+        "s22": "នំប៉័ងធ្វើពីម្សៅ។",
+        "s23": "ត្រីបាឡែនជាត្រី។",
+        "w0": "ផ្ទះ",
+        "w1": "ឆ្កែ",
+        "w2": "សៀវភៅ",
+        "w3": "ផ្កា",
+        "w4": "ទ្វារ",
+        "w5": "តុ",
+        "w6": "ដើមឈើ",
+        "w7": "ផ្លូវ",
+        "w8": "ពពក",
+        "w9": "ផ្កាយ",
+        "w10": "ឆ្នេរ",
+        "w11": "ព្រិល",
+        "w12": "ចង្កៀង",
+        "w13": "ភ្លៀង",
+        "w14": "កញ្ចក់",
+        "w15": "ស្មៅ",
+        "w16": "រថភ្លើង",
+        "w17": "ពិភពលោក",
+        "w18": "ព្រះអាទិត្យ",
+        "w19": "ព្រៃ",
+        "w20": "ទឹកកក",
+        "w21": "ផែនដី",
+        "w22": "មេឃ",
+        "w23": "ថ្ម",
+        "d0": "ព្រឹក",
+        "d1": "បេះដូង",
+        "d2": "ក្រណាត់",
+        "d3": "ស្លឹកឈើ",
+        "d4": "សំឡេង",
+        "d5": "សួន",
+        "d6": "ស្រមោល",
+        "d7": "កណ្ដឹង",
+        "d8": "ស្ពាន",
+        "d9": "ផ្សែង",
+        "d10": "ខ្សាច់",
+        "d11": "ស៊ុប",
+        "heroTitle": "ជួរអាន"
+      },
+      "memorizeSequence": "ចងចាំលំដាប់...",
+      "reproduce": "ផលិតឡើងវិញ",
+      "span": "ជួរ",
+      "size": "ទំហំ",
+      "fixateCenter": "សម្លឹងកណ្ដាល...",
+      "identicalOrMirror": "ដូចគ្នាឬកញ្ចក់?",
+      "wellInhibited": "រារាំងបានល្អ!",
+      "badDirection": "ខុស direction!",
+      "stopMissed": "បញ្ឈប់ missed!",
+      "falseAlarm": "សញ្ញាណមិនពិត!",
+      "pressNow": "ចុច!",
+      "hitBang": "ត្រូវ!",
+      "miss": "ខកខាន!",
+      "doNotTouch": "កុំប៉ះ!",
+      "whichDirection": "ទិសណា?",
+      "stopBang": "ឈប់!",
+      "cueBang": "ការណែនាំ!",
+      "memorizeLetters": "ចងចាំអក្សរទាំងនេះ",
+      "memorizeLetter": "ចងចាំអក្សរនេះ",
+      "memorizeSequenceLetters": "ចងចាំលំដាប់...",
+      "memorizeDigits": "ចងចាំលេខ...",
+      "memorizeColors": "ចងចាំពណ៌!",
+      "memorizePosition": "ចងចាំទីតាំងនេះ...",
+      "retainWord": "ចងចាំពាក្យនេះ",
+      "retainNumber": "ចងចាំលេខនេះ",
+      "addWithPrevious": "បូកជាមួយមុន",
+      "sentenceTrueOrFalse": "ប្រយោគនេះពិតទេ?",
+      "findRedCircle": "រករង្វង់ក្រហម!",
+      "findHiddenToken": "រករូបិយប័ណ្ណដែលលាក់!",
+      "chooseMatchingCard": "ជ្រើសរើសកាតផ្គូរផ្គង",
+      "arrowDirection": "ទិសព្រួញកណ្ដាល?",
+      "attention": "យកចិត្តទុកដាក់...",
+      "preparation": "រៀបចំ...",
+      "recallLettersInOrder": "ចងចាំអក្សរ {{count}} តាមលំដាប់",
+      "recallWordsInOrder": "ចងចាំពាក្យ {{count}} តាមលំដាប់",
+      "recallLastLetters": "ចងចាំអក្សរ {{count}} ចុងក្រោយ",
+      "typeLastLetters": "វាយអក្សរ {{count}} ចុងក្រោយ",
+      "recallPositionsInOrder": "ចងចាំ: ចុចទីតាំងតាមលំដាប់",
+      "pressEnterToValidate": "ចុច Enter ដើម្បីបញ្ជាក់",
+      "pressAnywhereToContinue": "ចុចកន្លែងណាមួយដើម្បីបន្ត",
+      "temporalPrecision": "ភាពជាក់លាក់ពេលវេលា",
+      "estimationPrecision": "ភាពជាក់លាក់នៃការប៉ាន់ស្មាន",
+      "touchStartClockwise": "ប៉ះចំណុចចាប់ផ្ដើមបន្ទាប់មកអូសតាមទ្រនិចនាឡិកា",
+      "touchAtoB": "ប៉ះចំណុច A បន្ទាប់មកអូសទៅ B",
+      "cue": "ការណែនាំ",
+      "retainCue": "ចងចាំការណែនាំ...",
+      "targetOrNot": "Target or ទេn-target?",
+      "whereIsTarget": "គោលដៅនៅទីណា?",
+      "wasLetterInSet": "អក្សរនេះនៅក្នុងសំណុំទេ?",
+      "regular": "ធម្មតា",
+      "regularity": "ភាពទៀងទាត់",
+      "msDeviation": "ភាពគម្លាត ms",
+      "boxes": "ប្រអប់",
+      "found": "រកឃើញ {{count}}",
+      "past": "អតីតកាល",
+      "tooSlow": "យឺតពេក",
+      "tooFast": "លឿនពេក",
+      "timeout": "យឺតពេក!",
+      "answer": "ចម្លើយ",
+      "dontPress": "កុំចុច!",
+      "feedbackWrong": "ខុស!",
+      "level": "កម្រិត",
+      "wrong": "ខុស",
+      "you": "អ្នក",
+      "paused": "ផ្អាក",
+      "instructions": "សេចក្ដីណែនាំ",
+      "selectAnswer": "ជ្រើសរើសចម្លើយ",
+      "tapTheOddOne": "ប៉ះមួយសេសចេញ",
+      "pal": {
+        "subtitle": "ការរៀនសមាគមគូ",
+        "pairsLearned": "គូដែលរៀនបាន",
+        "maxSetSize": "ទំហំសំណុំអតិបរមា",
+        "totalErrors": "សរុប Errors",
+        "round": "ជុំ",
+        "pairs": "គូ",
+        "meanRt": "RT មធ្យម (ត្រូវ)",
+        "studyPhase": "រៀន - ចងចាំទីតាំង",
+        "testPhase": "រូបរាងនេះនៅទីណា?",
+        "studying": "កំពុងរៀន",
+        "tapBox": "ចុចប្រអប់ដែលរូបរាងនេះត្រូវបានបង្ហាញ"
+      },
+      "visualLogic": {
+        "easy": "ងាយ",
+        "hard": "ពិបាក",
+        "oneRule": "ច្បាប់ ១",
+        "twoRules": "ច្បាប់ ២",
+        "findMissing": "រកបំណែកដែលបាត់",
+        "maxLevel": "កម្រិតអតិបរមា",
+        "finalLevel": "កម្រិតចុងក្រោយ",
+        "nextMode": "បន្ទាប់ session mode",
+        "adaptive": "សម្រប",
+        "fixed": "ថេរ",
+        "spm": "SPM 60",
+        "level": "កម្រិត",
+        "confirm": "បញ្ជាក់"
+      },
+      "tetrisMind": {
+        "findPiece": "បំណែកណាសមរន្ធ?",
+        "target": "គោលដៅ"
+      },
+      "timeEstimation": {
+        "overestimationBias": "ភាពលម្អៀងប៉ាន់ស្មានលើស",
+        "underestimationBias": "ភាពលម្អៀងប៉ាន់ស្មានក្រោម",
+        "noBias": "ទេ significant bias",
+        "avgError": "កំហុសមធ្យម",
+        "overestimations": "ការប៉ាន់ស្មានលើស",
+        "underestimations": "ការប៉ាន់ស្មានក្រោម",
+        "avgAbsoluteError": "កំហុសដាច់ខាតមធ្យម",
+        "avgRelativeError": "កំហុសទាក់ទងមធ្យម",
+        "cv": "មេគុណប្រែប្រួល",
+        "watchDemo": "មើលរយៈពេល",
+        "getReady": "ត្រៀមខ្លួន...",
+        "holdToReproduce": "សង្កត់ដើម្បីផលិតឡើងវិញ!",
+        "tooLong": "វែងពេក!",
+        "tooShort": "ខ្លីពេក!",
+        "target": "គោលដៅ",
+        "demoLabel": "ឯកសារយោង",
+        "yourTurn": "វេនអ្នក",
+        "watchInstruction": "មើល",
+        "holdInstruction": "សង្កត់ដើម្បីផលិតឡើងវិញ",
+        "heroTitle": "ពេលវេលា Estimation"
+      },
+      "puzzleDetails": "ព័ត៌មានលម្អិតល្បែងផ្គុំ",
+      "roundDetails": "ព័ត៌មានលម្អិតជុំ",
+      "stageResults": "លទ្ធផលដំណាក់កាល",
+      "recognized": "ស្គាល់បាន",
+      "missed": "ខកខាន",
+      "win": "ឈ្នះ",
+      "lose": "ចាញ់",
+      "winBang": "ឈ្នះ!",
+      "loseBang": "ចាញ់!",
+      "correctBang": "ត្រឹមត្រូវ!",
+      "wrongBang": "ខុស!",
+      "completeBang": "បញ្ចប់!",
+      "repeatedBang": "ធ្វើម្ដងទៀត!",
+      "incompleteBang": "មិនពេញលេញ!",
+      "levelCompleteBang": "កម្រិតបញ្ចប់!",
+      "timesUp": "ពេលវេលា's Up",
+      "seeResults": "មើលលទ្ធផល",
+      "nextRound": "បន្ទាប់ round",
+      "startBlock": "ចាប់ផ្តើម block",
+      "continue": "បន្ត",
+      "patientChoice": "ជម្រើសអត់ធ្មត់",
+      "immediateChoice": "ជម្រើសភ្លាមៗ",
+      "immediate": "ភ្លាមៗ",
+      "digitSpan": {
+        "heroTitle": "ជួរលេខ"
+      },
+      "resume": "បន្ត",
+      "numericalStroop": {
+        "heroTitle": "Stroop លេខ"
+      },
+      "lineOrientation": {
+        "heroTitle": "ការវិនិច្ឆ័យទិសបន្ទាត់"
+      },
+      "chain": "ខ្សែ",
+      "undo": "ត្រឡប់",
+      "vocalProsody": {
+        "heroTitle": "សំឡេងវេចនសព្ទ"
+      },
+      "letterNumber": {
+        "title": "អក្សរ-Number Seq.",
+        "expectedAnswer": "ចម្លើយរំពឹង"
+      },
+      "patternComparison": {
+        "heroTitle": "ការប្រៀបធៀបគំរូ"
+      },
+      "speedPack": {
+        "title": "ល្បឿន Pack",
+        "whenFoldedWhichTouch": "ពេលបត់ ការ៉េណាប៉ះគ្នា?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Hooper ការមើលឃើញ Organization",
+        "whatIsThisObject": "វត្ថុនេះជាអ្វី?"
+      },
+      "blockDesign": {
+        "heroTitle": "ការរចនាប្លុក"
+      },
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "avgTime": "ពេលមធ្យម",
+      "check": "ពិនិត្យ",
+      "dualTrace": {
+        "playArea": "លេង area"
+      },
+      "paperFolding": {
+        "title": "ការបត់ក្រដាស",
+        "foldSequenceHolePunch": "លំដាប់បត់ & គោះរន្ធ",
+        "whichPatternWhenUnfolded": "គំរូណាពេលពន្លាត?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "ការសម្រេចពាក្យ"
+      },
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxGrid": "ក្រឡាអតិបរមា",
+      "symmetry": "ស៊ីមេទ្រី",
+      "threshold": "កម្រិត",
+      "hitRate": "អត្រាត្រូវ",
+      "faRate": "អត្រា FA",
+      "changeDetection": {
+        "heroTitle": "ការរកការផ្លាស់ប្ដូរ"
+      },
+      "syllogisms": {
+        "heroTitle": "វិភាគន្យាយ"
+      },
+      "subitizing": {
+        "title": "ការរាប់រហ័ស",
+        "range": "ជួរ"
+      },
+      "jitter": "ការប្រែប្រួល",
+      "sentenceCompletion": {
+        "title": "ការបំពេញប្រយោគ (Cloze)",
+        "highCloze": "Cloze ខ្ពស់",
+        "lowCloze": "Cloze ទាប"
+      },
+      "grid": "ក្រឡា",
+      "pinballRecall": {
+        "title": "Pinball រំលឹកឡើងវិញ",
+        "byBounces": "តាមការផ្ទុះ",
+        "whereDoesItLand": "វាធ្លាក់ទីណា?"
+      },
+      "mean": "មធ្យម",
+      "speedup": "ល្បឿនup",
+      "memorize": "ចងចាំ",
+      "time": "ពេលវេលា",
+      "surfaceDevelopment": {
+        "title": "ការអភិវឌ្ឍផ្ទៃ",
+        "whichEdgeMatches": "គែមណាផ្គូផ្គង?"
+      },
+      "crowding": {
+        "heroTitle": "ការមើលឃើញ Crowding",
+        "spacing": "គម្លាត"
+      },
+      "patternRecognition": {
+        "heroTitle": "ការទទួលស្គាល់គំរូ"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "ការសាកល្បង",
+        "position": "ទីតាំង",
+        "audio": "អូឌីយ៉ូ"
+      },
+      "sceneCrasher": {
+        "heroTitle": "អ្នកឈ្លានពានឈុត",
+        "detect": "រកឃើញ"
+      },
+      "eyesTest": {
+        "heroTitle": "ការអានគំនិតក្នុងភ្នែក"
+      }
+    },
+    "gridlock": {
+      "undone": "ការផ្លាស់ទីចុងក្រោយត្រឡប់។",
+      "resetMessage": "ល្បែងផ្គុំកំណត់ឡើងវិញ។",
+      "hintMessage": "ជំនួយ: រុញ {{pieceId}} {{dir}} {{delta}}។",
+      "previewCountdown": "Study the board. ចាប់ផ្តើមs in {{seconds}}s.",
+      "challenge": "ការប្រកួតប្រជែង",
+      "optimal": "ល្អបំផុត",
+      "moves": "ការផ្លាស់ទី",
+      "piece": "បំណែក {{id}}",
+      "targetPiece": "បំណែក {{id}} (គោលដៅ - ឡានក្រហម)",
+      "challengeClassic": "បុរាណ",
+      "challengePrecision": "ភាពជាក់លាក់",
+      "challengeMemory": "ការចងចាំ",
+      "challengeTimed": "ពេលវេលាd",
+      "hint": "ជំនួយ",
+      "reset": "កំណត់ឡើងវិញ",
+      "undo": "ត្រឡប់",
+      "nextPuzzle": "បន្ទាប់ puzzle →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Block 1 ត្រូវ",
+      "block2Hits": "Block 2 ត្រូវ",
+      "goPositive": "ទៅ = វិជ្ជមាន",
+      "goNegative": "ទៅ = អវិជ្ជមាន",
+      "title": "Affective Go/ទេ-Go",
+      "block1CommissionErrors": "រារាំងកំហុសគណៈកម្មការ 1",
+      "block2CommissionErrors": "រារាំង 2 កំហុសគណៈកម្មាការ",
+      "block": "ទប់ស្កាត់",
+      "go": "ទៅ"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "អត្រាប្តូរមធ្យម",
+      "meanSwitchesfigure": "ការផ្លាស់ប្តូរមធ្យម / រូបភាព",
+      "totalSwitches": "សរុប switches",
+      "title": "តួលេខមិនច្បាស់",
+      "meanSwitches": "ឧបករណ៍ប្តូរមធ្យម",
+      "switchRate": "អត្រាប្តូរ",
+      "figures": "តួលេខ",
+      "totalSwitchesLabel": "សរុប Switches",
+      "duration": "រយៈពេល",
+      "switchesCount": "s | កុងតាក់៖",
+      "switchButton": "ប្តូរ!"
+    },
+    "analogies": {
+      "verbalCorrect": "ពាក្យត្រឹមត្រូវ។",
+      "timeout": "ពេលវេលាout",
+      "title": "អាណាឡូក"
+    },
+    "ansComparison": {
+      "weber": "វេបឺរ",
+      "title": "ការប្រៀបធៀប ANS",
+      "ratio": "សមាមាត្រ",
+      "leftMore": "នៅសល់ច្រើនទៀត",
+      "rightMore": "ត្រឹមត្រូវទៀត។"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "អត្រាការជូនដំណឹងមិនពិត",
+      "grammatical": "វេយ្យាករណ៍",
+      "memorizeTheseStrings": "ចងចាំខ្សែទាំងនេះ",
+      "testPhase": "ដំណាក់កាលសាកល្បង",
+      "ungrammatical": "គ្មានវេយ្យាករណ៍",
+      "learning": "ការរៀន",
+      "test": "សាកល្បង",
+      "title": "វេយ្យាករណ៍សិប្បនិម្មិត",
+      "learningPhase": "ការរៀន",
+      "testIntroText": "ឥឡូវនេះអ្នកនឹងឃើញខ្សែថ្មី។ សម្រេចចិត្តថាតើនីមួយៗអនុវត្តតាមច្បាប់ដូចគ្នានឹងខ្សែអក្សរដែលអ្នកទើបតែសិក្សា។",
+      "startTest": "ចាប់ផ្តើម Test",
+      "followsRules": "អនុវត្តតាមច្បាប់",
+      "breaksRules": "បំពានច្បាប់"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "ទំហំនៃព្រិចភ្នែក",
+      "title": "ព្រិចភ្នែកដោយយកចិត្តទុកដាក់",
+      "blink": "ព្រិចភ្នែក",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "អក្សរបៃតងទី១?",
+      "secondGreenLetter": "អក្សរបៃតងទី២?"
+    },
+    "attentionalCapture": {
+      "captureCost": "ការចំណាយលើការចាប់យក",
+      "singletonPresent": "Singleton បច្ចុប្បន្ន",
+      "noSingleton": "ទេ Singleton",
+      "title": "ការចាប់យកដោយយកចិត្តទុកដាក់",
+      "capture": "ចាប់យក",
+      "horizontal": "ផ្ដេក",
+      "vertical": "បញ្ឈរ"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "ភ្ជាប់បង្អួច",
+      "title": "អូឌីយ៉ូvisual Binding",
+      "window": "បង្អួច",
+      "pssLabel": "PSS (ចំណុចនៃភាពស្របគ្នានៃប្រធានបទ)",
+      "simultaneousOrNot": "ដំណាលគ្នាឬអត់?",
+      "simultaneous": "ក្នុងពេលដំណាលគ្នា។",
+      "notSimultaneous": "ទេt simultaneous"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "រយៈពេល Threshold",
+      "reference": "ឯកសារយោង",
+      "weberFraction": "ប្រភាគ Weber",
+      "title": "Auditory រយៈពេល",
+      "threshold": "កម្រិត",
+      "weber": "វេបឺរ",
+      "whichLonger": "តើមួយណាវែងជាង?",
+      "firstLonger": "ដំបូងយូរជាងនេះ។",
+      "secondLonger": "ទីពីរយូរជាងនេះ។"
+    },
+    "bart": {
+      "adjustedAvgPumps": "ម៉ាស៊ីនបូមមធ្យមដែលបានកែតម្រូវ",
+      "avgTimeballoon": "ពេលវេលាជាមធ្យម/ប៉េងប៉ោង",
+      "banked": "ធនាគារ!",
+      "lostEarnings": "បាត់ចំណូល!",
+      "overallAvgPumps": "ម៉ាស៊ីនបូមទឹកជាមធ្យម",
+      "popRate": "អត្រាប៉ុប",
+      "totalEarned": "សរុប Earned",
+      "balloons": "ប៉េងប៉ោង",
+      "cashed": "សាច់ប្រាក់",
+      "popped": "លេចឡើង",
+      "adjPumps": "គុណនាម ម៉ាស៊ីនបូម",
+      "pop": "ប៉ុប",
+      "pump": "បូម",
+      "cashIn": "សាច់ប្រាក់ចូល"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Avg Decision ពេលវេលា",
+      "drawBeadsToGatherEvidence": "គូរអង្កាំដើម្បីប្រមូលភស្តុតាង",
+      "jtc": "JTC",
+      "title": "ភារកិច្ច Beads",
+      "meanDraws": "មធ្យម គូរ",
+      "rounds": "ជុំ",
+      "jtcRate": "អត្រា JTC",
+      "meanDrawsToDecision": "Mean Draws ទៅនឹងការសម្រេចចិត្ត",
+      "jtcRateThreshold": "អត្រា JTC (<{{threshold}} ស្មើ)",
+      "round": "ជុំ",
+      "jarDescription": "ពាង A: 85% ពណ៌បៃតង / Jar B: 85% ក្រហម",
+      "itWasJar": "វាជា Jar",
+      "drawABead": "គូរអង្កាំ",
+      "jarAGreen": "ពាងបៃតង",
+      "jarBRed": "ពាង B ក្រហម"
+    },
+    "binding": {
+      "changedTrials": "បានផ្លាស់ប្តូរការសាកល្បង",
+      "sameAccuracy": "ភាពត្រឹមត្រូវដូចគ្នា។",
+      "sameTrials": "ការសាកល្បងដូចគ្នា។",
+      "title": "ការភ្ជាប់មុខងារ",
+      "binding": "ការចង",
+      "bindingAccuracyChanged": "ផ្លាស់ប្តូរភាពត្រឹមត្រូវ",
+      "same": "ដូចគ្នា",
+      "different": "ខុសគ្នា"
+    },
+    "blockDesign": {
+      "cells": "កោសិកា",
+      "target": "គោលដៅ",
+      "yourAnswer": "ចម្លើយរបស់អ្នក។",
+      "tapHint": "ចុច​ដើម្បី​រំកិល​ពណ៌",
+      "check": "ពិនិត្យ"
+    },
+    "brixton": {
+      "adapt": "សម្របខ្លួន",
+      "adaptationCost": "ថ្លៃសម្របខ្លួន",
+      "nonswitchTrials": "ទេn-switch trials",
+      "switchTrials": "ការសាកល្បងប្ដូរ"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "ចងចាំអក្សរទាំងនេះ",
+      "selectThe3Letters": "ជ្រើសរើសអក្សរ ៣",
+      "title": "កិច្ចការ Brown-Peterson",
+      "forgetting": "ការភ្លេច",
+      "sDelay": "S ពន្យឺត",
+      "minus3": "ដក៣",
+      "delay": "ពន្យឺត"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "គុណភាពការសម្រេចចិត្ត",
+      "finalPoints": "ពិន្ទុចុងក្រោយ",
+      "meanBet": "ការភ្នាល់មធ្យម",
+      "winRate": "អត្រាឈ្នះ",
+      "wins": "ឈ្នះ",
+      "title": "ល្បែងភ្នាល់ Cambridge",
+      "totalPoints": "សរុប points",
+      "quality": "គុណភាព",
+      "rational": "សមហេតុផល",
+      "avgBet": "ការភ្នាល់មធ្យម",
+      "trial": "ការសាកល្បង",
+      "whichColorHidesToken": "ពណ៌ណាលាក់រូបិយប័ណ្ណ?",
+      "youChose": "អ្នកជ្រើស",
+      "howMuchToBet": "ភ្នាល់ប៉ុន្មាន?"
+    },
+    "cancellation": {
+      "false": "មិនត្រូវ",
+      "target": "គោលដៅ:",
+      "total": "សរុប",
+      "title": "បោះបង់lation Task (d2)",
+      "misses": "ខុស",
+      "targetDescription": "d ដែលមានសញ្ញា ២"
+    },
+    "changeBlindness": {
+      "detectionRate": "អត្រារកឃើញ",
+      "found": "រកឃើញ",
+      "meanDetectionTime": "Mean Detection ពេលវេលា",
+      "title": "ភាពងងឹតនៃការផ្លាស់ប្ដូរ",
+      "missed": "ខកខាន",
+      "avgTime": "ពេលមធ្យម",
+      "instructions": "សេចក្ដីណែនាំ"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "ល្អបំផុត Estimate",
+      "meanScore": "Mean ពិន្ទុ",
+      "worstEstimate": "ការប៉ាន់ស្មានអាក្រក់បំផុត",
+      "inRange": "ការប៉ាន់ស្មានល្អ!",
+      "title": "ការប៉ាន់ស្មានយល់ដឹង",
+      "meanScoreLabel": "Mean ពិន្ទុ",
+      "inRangeLabel": "ក្នុងជួរ",
+      "extreme": "ខ្លាំង",
+      "scoreLabel": "ពិន្ទុ",
+      "submit": "បញ្ជូន"
+    },
+    "common": {
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "bias": "ភាពលម្អៀង",
+      "falseAlarmRate": "អត្រាសញ្ញាណមិនពិត",
+      "hitRate": "អត្រាត្រូវ",
+      "hits": "ត្រូវ",
+      "listening": "កំពុងស្ដាប់...",
+      "meanRt": "RT មធ្យម",
+      "timedOut": "ពេលវេលាd Out",
+      "timedOut2": "ពេលវេលាd out",
+      "faRate": "អត្រា FA",
+      "paused": "ផ្អាក"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "អ្នកមានទំនុកចិត្តប៉ុណ្ណា?",
+      "rateYourConfidence": "វាយតម្លៃទំនុកចិត្តរបស់អ្នក",
+      "title": "ការកែតម្រូវទំនុកចិត្ត",
+      "calError": "កំហុសកែតម្រូវ",
+      "confidence": "ទំនុកចិត្ត"
+    },
+    "consequences": {
+      "best": "ល្អបំផុត",
+      "nextRound": "បន្ទាប់ round...",
+      "time": "ពេលវេលា",
+      "placeholder": "វាយផលវិបាកមួយ...",
+      "title": "ផលវិបាក",
+      "totalIdeas": "សរុប Ideas",
+      "avgPerRound": "មធ្យមក្នុងមួយជុំ",
+      "rounds": "ជុំ",
+      "noConsequencesListed": "ទេ consequences listed",
+      "roundProgress": "ជុំ {{current}} / {{total}}",
+      "typeAndPressAdd": "វាយហើយចុចបន្ថែម"
+    },
+    "contextualCueing": {
+      "cueingEffect": "ផលប៉ះពាល់ការណែនាំ",
+      "newConfigRt": "RT កំណត់រចនាថ្មី",
+      "oldConfigRt": "RT កំណត់រចនាចាស់",
+      "title": "ការណែនាំបរិបទ",
+      "cueing": "ការណែនាំ",
+      "oldRt": "RT ចាស់",
+      "newRt": "RT ថ្មី",
+      "prompt": "ការណែនាំ",
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "កម្រិតរំញ័រ",
+      "title": "ការបញ្ចូលបន្ទាត់គ្រោង",
+      "pipeJitter": "| ការប្រែប្រួល"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "កម្រិតកម្រិតពណ៌",
+      "title": "ភាពរសើបនៃកម្រិតពណ៌",
+      "threshold": "កម្រិត",
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ"
+    },
+    "cpt": {
+      "nontargets": "ទេn-targets",
+      "target": "គោលដៅ",
+      "nonTarget": "ទេn-target",
+      "dPrime": "d'",
+      "targetsLetter": "អក្សរគោលដៅ",
+      "tapForLetterOnly": "ចុចសម្រាប់តែអក្សរគោលដៅ"
+    },
+    "crowding": {
+      "criticalSpacing": "គម្លាតសំខាន់",
+      "leftAccuracy": "ភាពត្រឹមត្រូវឆ្វេង",
+      "rightAccuracy": "ភាពត្រឹមត្រូវស្ដាំ"
+    },
+    "cryptogram": {
+      "hints": "ជំនួយ",
+      "title": "Cryptogram",
+      "solved": "ដោះស្រាយបាន",
+      "time": "ពេលវេលា",
+      "puzzles": "ល្បែងផ្គុំ",
+      "puzzle": "ល្បែងផ្គុំ",
+      "hint": "ជំនួយ",
+      "clear": "សម្អាត"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "ផ្ទៃក្រោមខ្សែកោង",
+      "discountRateK": "អត្រាបញ្ចុះតម្លៃ (k)",
+      "impulsivityIndex": "សន្ទស្សន៍ភាពមិនអត់ធ្មត់",
+      "title": "ការបញ្ចុះតម្លៃពន្យឺត",
+      "aucPatience": "AUC ភាពអត់ធ្មត់",
+      "patient": "អត់ធ្មត់",
+      "kRate": "អត្រា K",
+      "impuls": "ភាពទន់ខ្សោយ",
+      "indifferencePoints": "ចំណុចមិនខ្វល់",
+      "whichPrefer": "អ្នកចូលចិត្តមួយណា?",
+      "today": "ថ្ងៃនេះ"
+    },
+    "delayedMatching": {
+      "long": "វែង",
+      "longDelay68s": "ពន្យឺតវែង (៦-៨វិ)",
+      "med": "មធ្យម",
+      "mediumDelay46s": "ពន្យឺតមធ្យម (៤-៦វិ)",
+      "short": "ខ្លី",
+      "shortDelay34s": "ពន្យឺតខ្លី (៣-៤វិ)",
+      "title": "ការផ្គូផ្គងពន្យឺត",
+      "delay": "ពន្យឺត",
+      "rememberThisPattern": "ចងចាំគំរូនេះ",
+      "whichWasIt": "មួយណាជាវា?"
+    },
+    "dichoticListening": {
+      "alertDetection": "ការរកការជូនដំណឹង",
+      "attendToTheLeftColumn": "យកចិត្តទុកដាក់ជួរឆ្វេង",
+      "attendedAccuracy": "បាន​ចូលរួម​ក្នុង​ភាព​ជាក់លាក់",
+      "ignoreTheRightColumn": "មិនអើពើជួរស្ដាំ",
+      "right": "ស្ដាំ",
+      "title": "ការស្ដាប់បំបែក",
+      "attendedAcc": "ភាពត្រឹមត្រូវដែលយកចិត្ត",
+      "alertDet": "ការរកការជូនដំណឹង",
+      "alerts": "ការជូនដំណឹង",
+      "selectLeftColumnWords": "ជ្រើសរើសពាក្យជួរឆ្វេង",
+      "submit": "បញ្ជូន",
+      "alertQuestion": "សំណួរជូនដំណឹង"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "ភាពត្រឹមត្រូវការភ្លេច",
+      "forgettingEffect": "ផលប៉ះពាល់ការភ្លេច",
+      "newRejection": "ការបដិសេធថ្មី",
+      "rememberAccuracy": "ភាពត្រឹមត្រូវការចងចាំ",
+      "title": "ការភ្លេចដែលបង្គាប់",
+      "remember": "ចងចាំ",
+      "forget": "ភ្លេច",
+      "round": "ជុំ",
+      "word": "ពាក្យ",
+      "wasThisWordShown": "ពាក្យនេះត្រូវបានបង្ហាញទេ?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias ពិន្ទុ",
+      "congruentAcc": "ភាពត្រឹមត្រូវស្រប",
+      "congruentRt": "RT ស្រប",
+      "incongruentAcc": "ភាពត្រឹមត្រូវមិនស្រប",
+      "incongruentRt": "RT មិនស្រប"
+    },
+    "doubleDecision": {
+      "carOrTruck": "ឡានឬឡានធំ?",
+      "minDisplayReached": "ការបង្ហាញអប្បបរមាសម្រេចបាន",
+      "positionAccuracy": "ទីតាំង Accuracy",
+      "thresholdDisplay": "ការបង្ហាញកម្រិត",
+      "vehicleAccuracy": "ភាពត្រឹមត្រូវយានយន្ត",
+      "whereWasTheDiamond": "ពេជ្រនៅទីណា?",
+      "title": "ការសម្រេចចិត្តពីរ",
+      "threshold": "កម្រិត",
+      "bothOk": "ទាំងពីរត្រូវ",
+      "vehicle": "យានយន្ត",
+      "position": "ទីតាំង",
+      "car": "ឡាន",
+      "truck": "ឡានធំ"
+    },
+    "dsst": {
+      "items": "ធាតុ",
+      "itemsCompleted": "ធាតុបញ្ចប់",
+      "speedItemsmin": "ល្បឿន (items/min)",
+      "attempts": "ការព្យាយាម",
+      "itemsPerMin": "ធាតុ / នាទី"
+    },
+    "dualTask": {
+      "dualtaskCost": "ថ្លៃភារកិច្ចពីរ",
+      "taskANumber": "ភារកិច្ច A (លេខ)",
+      "taskBSymbol": "ភារកិច្ច B (និមិត្តសញ្ញា)",
+      "title": "ភារកិច្ចពីរ",
+      "taskA": "ភារកិច្ច A",
+      "taskB": "ភារកិច្ច B",
+      "number": "លេខ",
+      "symbol": "និមិត្តសញ្ញា",
+      "up": "លើ",
+      "down": "ក្រោម"
+    },
+    "dualTime": {
+      "sessionEnPause": "វគ្គផ្អាក",
+      "votreEstimationSecondes": "ការប៉ាន់ស្មានរបស់អ្នក (វិនាទី)",
+      "sessionInterrupted": "វគ្គត្រូវបានផ្អាក",
+      "target": "គោលដៅ",
+      "estimation": "ការប៉ាន់ស្មាន",
+      "avgTime": "ពេលមធ្យម",
+      "avgError": "កំហុសមធ្យម",
+      "trials": "Trial",
+      "resumeToContinue": "បន្ត to continue",
+      "aimFor": "គោលដៅ",
+      "second": "វិនាទី",
+      "howLongDidYouTake": "អ្នកចំណាយពេលប៉ុន្មាន?"
+    },
+    "dualTrack": {
+      "confirmer": "បញ្ជាក់",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "បន្ត to continue.",
+      "sessionEnPause": "វគ្គផ្អាក",
+      "tapezLesCibles": "ចុចគោលដៅទាំងអស់",
+      "tapezLaCible": "ចុចគោលដៅ",
+      "appuyezConfirmer": "Press បញ្ជាក់",
+      "targetsCountLabel": "គោលដៅ {{count}}",
+      "distractorsCountLabel": "ការរំខាន {{count}}",
+      "roundsCountLabel": "ជុំ {{count}}",
+      "calibrationRoundsLabel": "ជុំកែតម្រូវ {{count}}",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = កម្រិតលំបាកផ្លូវក្នុង។",
+      "tierHelpCurrentWithPhase": "អ្នកស្ថិតនៅ T{{current}} ពី {{total}} សម្រាប់គោលដៅ {{targets}}។ ដំណាក់កាលបច្ចុប្បន្ន: {{phase}}។ នៅសល់ {{remaining}} កម្រិតមុននឹងកម្រិតគោលដៅបន្ទាប់។",
+      "phaseTracking": "តាមដាន",
+      "phaseAudio": "តាមដាន + សម្លេង",
+      "phaseColor": "តាមដាន + ពណ៌",
+      "phaseCombined": "តាមដាន + សម្លេង + ពណ៌",
+      "passLetters": "អក្សរs",
+      "passColors": "ពណ៌s",
+      "moveInstruction": "សេចក្ដីណែនាំផ្លាស់ទី",
+      "moveConfirmBtn": "ប៊ូតុងបញ្ជាក់ផ្លាស់ទី",
+      "preparingSession": "កំពុងរៀបចំវគ្គ...",
+      "preparing3dScene": "កំពុងរៀបចំឈុត 3D...",
+      "startJourney": "ចាប់ផ្តើម journey",
+      "calibrationDescription": "មុនដំណាក់កាលដំបូង ការកែតម្រូវវែងជាងនឹងប៉ាន់ស្មានកម្រិតចាប់ផ្ដើមរបស់អ្នក។",
+      "defaultDescription": "បាល់នឹងបំភ្លឺ។ តាមដានពួកវាពេលផ្លាស់ទី បន្ទាប់មកកំណត់ពួកវា។",
+      "startCalibration": "ចាប់ផ្តើម calibration",
+      "calibrationTitle": "ការកែតម្រូវ",
+      "estimatedStart": "ចាប់ផ្ដើមប៉ាន់ស្មាន",
+      "roundsAnalyzed": "ជុំដែលវិភាគ",
+      "willStartAt": "នឹងចាប់ផ្ដើមនៅ",
+      "targetsCount": "គោលដៅ",
+      "thenProgress": "បន្ទាប់មកវិវត្ត"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "កំហុសដាច់ខាតមធ្យម",
+      "ratio": "សមាមាត្រ",
+      "slope": "ជម្រាល",
+      "vierordtSlope": "ជម្រាល Vierordt",
+      "wait": "រង់ចាំ...",
+      "title": "រយៈពេល Reproduction",
+      "meanError": "កំហុសមធ្យម",
+      "meanRatio": "សមាមាត្រមធ្យម (ផលិត/គោលដៅ)",
+      "holdNow": "សង្កត់ឥឡូវ",
+      "target": "គោលដៅ",
+      "error": "កំហុស"
+    },
+    "embeddedFigures": {
+      "fastest": "លឿនបំផុត",
+      "found": "រកឃើញ",
+      "meanDetectionTime": "ពេលរកឃើញមធ្យម",
+      "slowest": "យឺតបំផុត",
+      "title": "រូបរាងលាក់",
+      "missed": "ខកខាន",
+      "fastestLabel": "លឿនបំផុត",
+      "findThisShape": "រករូបរាងនេះ",
+      "memorizeShape": "ចងចាំរូបរាង...",
+      "foundIt": "រកឃើញ!",
+      "giveUp": "ឈប់"
+    },
+    "emotionalNback": {
+      "falseAlarms": "សញ្ញាណមិនពិត",
+      "misses": "ខុស",
+      "title": "Emotional N-ត្រឡប់ក្រោយ",
+      "match": "ផ្គូផ្គង"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT អព្យាក្រឹត",
+      "positiveRt": "RT វិជ្ជមាន",
+      "threatRt": "RT គំរាមកំហែង",
+      "title": "Stroop អារម្មណ៍",
+      "interference": "ការរំខាន",
+      "interferenceThreatNeutral": "ការរំខាន (គំរាមកំហែង − អព្យាក្រឹត)"
+    },
+    "eyesTest": {
+      "totalTime": "សរុប ពេលវេលា"
+    },
+    "faceName": {
+      "gain": "ការកើន",
+      "learningImprovement": "ការកែលម្អការរៀន",
+      "round1Accuracy": "ភាពត្រឹមត្រូវជុំ ១",
+      "round2Accuracy": "ភាពត្រឹមត្រូវជុំ ២",
+      "whoIsThis": "នេះជានរណា?",
+      "title": "ការផ្គូផ្គងមុខ-ឈ្មោះ",
+      "round": "ជុំ",
+      "testPhase": "ដំណាក់កាលតេស្ត"
+    },
+    "fauxPas": {
+      "who": "នរណា?",
+      "why": "ហេតុអ្វី?",
+      "title": "ការទទួលស្គាល់ Faux Pas",
+      "detection": "ការរកឃើញ",
+      "scenarios": "សេណារីយ៉ូ",
+      "fpFound": "រកឃើញ faux pas",
+      "control": "ត្រួតពិនិត្យ",
+      "readyToAnswer": "ត្រៀមខ្លួនឆ្លើយ",
+      "didSomeoneSay": "មាននរណាម្នាក់បាននិយាយអ្វីដែលមិនគួរទេ?",
+      "whoSaidIt": "នរណាបាននិយាយ?",
+      "whyInappropriate": "ហេតុអ្វីមិនសមរម្យ?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "ភាពត្រឹមត្រូវការចងចាំ",
+      "recognitionAccuracy": "ភាពត្រឹមត្រូវការទទួលស្គាល់",
+      "recallPlaceholder": "វាយចម្លើយរបស់អ្នក...",
+      "unlikely": "មិនទំនង",
+      "certain": "ប្រាកដ",
+      "title": "អារម្មណ៍នៃការដឹង",
+      "recall": "ចងចាំឡើងវិញ",
+      "recognition": "ការទទួលស្គាល់",
+      "fokR": "FoK R",
+      "questions": "សំណួរ",
+      "recalled": "ចងចាំបាន",
+      "recognized": "ទទួលស្គាល់បាន",
+      "fokSensitivity": "ភាពរសើប FOK",
+      "submit": "បញ្ជូន",
+      "dontKnow": "មិនដឹង",
+      "fokPrompt": "អ្នកនឹងទទួលស្គាល់វាទេ?",
+      "selectCorrectAnswer": "ជ្រើសរើសចម្លើយត្រឹមត្រូវ",
+      "answer": "ចម្លើយ"
+    },
+    "fingerTapping": {
+      "firstTrial": "ការសាកល្បងដំបូង",
+      "lastTrial": "ការសាកល្បងចុងក្រោយ",
+      "sequence": "លំដាប់",
+      "speedupT1VsT12": "ល្បឿនup (T1 vs T12)",
+      "title": "ការចុចម្រាមដៃ"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Avg Movement ពេលវេលា",
+      "avgThroughput": "ថ្រូពុតមធ្យម",
+      "title": "ការចុច Fitts",
+      "throughput": "ថ្រូពុត",
+      "tapTarget": "ចុចគោលដៅដែលបន្លិច"
+    },
+    "foreperiod": {
+      "early": "មុន",
+      "slope": "ជម្រាល",
+      "title": "ការរៀបចំពេលវេលា",
+      "fpEffectSlope": "ជម្រាលផលប៉ះពាល់ FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "ការបញ្ច្រាស",
+      "threshold": "កម្រិត",
+      "tone1": "សំឡេង ១",
+      "tone2": "សំឡេង ២",
+      "weber": "Weber",
+      "weberFraction": "ភាគ Weber",
+      "hz": "Hz",
+      "title": "ការបែងចែកប្រេកង់",
+      "thresholdLabel": "កម្រិត",
+      "hzDiff": " Hz ខុសគ្នា",
+      "whichWasHigher": "មួយណាខ្ពស់ជាង?",
+      "firstHigher": "ទី១ខ្ពស់ជាង",
+      "secondHigher": "ទី២ខ្ពស់ជាង"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor patch",
+      "leftAccuracy": "ភាពត្រឹមត្រូវឆ្វេង",
+      "leftTrials": "ការសាកល្បងឆ្វេង",
+      "noiseMask": "ទេise mask",
+      "rightAccuracy": "ភាពត្រឹមត្រូវស្ដាំ",
+      "rightTrials": "ការសាកល្បងស្ដាំ",
+      "thresholdAngle": "កម្រិតកោណ",
+      "title": "Gabor",
+      "threshold": "កម្រិត",
+      "reversals": "ការបញ្ច្រាស",
+      "timedOut": "ពេលវេលាd out",
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ"
+    },
+    "gameOfDice": {
+      "finalPoints": "ពិន្ទុចុងក្រោយ",
+      "risky": "ប្រថុយ",
+      "riskyChoices": "ជម្រើសប្រថុយ",
+      "safe": "សុវត្ថិភាព",
+      "winRate": "អត្រាឈ្នះ",
+      "wins": "ឈ្នះ",
+      "title": "ល្បែងឡុកឡាក់",
+      "totalPoints": "សរុប points",
+      "riskyLabel": "ប្រថុយ",
+      "roll": "គ្រវី",
+      "chooseYourBet": "ជ្រើសរើសការភ្នាល់របស់អ្នក",
+      "pickNumbers": "ជ្រើសរើសលេខរបស់អ្នក"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "មានគម្លាតឬគ្មាន?",
+      "gapThreshold": "កម្រិតគម្លាត",
+      "title": "ការរកភាពស្ងាត់",
+      "noGap": "ទេ Gap"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "ការសម្លឹងនៅទីណា?",
+      "direct": "ផ្ទាល់",
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ",
+      "title": "ទិសការសម្លឹង",
+      "dPrimeDirectGaze": "D Prime ការសម្លឹងផ្ទាល់"
+    },
+    "hayling": {
+      "part1Initiation": "ផ្នែក ១ (ចាប់ផ្ដើម)",
+      "part2": "ផ្នែក ២",
+      "part2Suppression": "ផ្នែក ២ (ការបង្រ្កាប)",
+      "suppressionCost": "ថ្លៃការបង្រ្កាប",
+      "title": "Hayling",
+      "part1": "ផ្នែក ១",
+      "part2Label": "ផ្នែក ២",
+      "suppression": "ការបង្រ្កាប",
+      "obvious": "ច្បាស់",
+      "obviousPicksPart2": "ការជ្រើសរើសច្បាស់ (ផ្នែក ២)",
+      "chooseUnrelated": "ជ្រើសរើសពាក្យដែលមិនទាក់ទង ",
+      "completelyUnrelated": "មិនទាក់ទងទាំងស្រុង",
+      "doNotPickObvious": "កុំជ្រើសរើសពាក្យច្បាស់!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "កំពុងទៅដំណាក់កាលបន្ទាប់...",
+      "stageComplete": "ដំណាក់កាលបញ្ចប់!",
+      "title": "IED Set Shift",
+      "stages": "ដំណាក់កាល",
+      "edsCost": "ថ្លៃ EDS",
+      "stage": "ដំណាក់កាល",
+      "correctNeeded": "ត្រឹមត្រូវ needed to advance"
+    },
+    "informationSampling": {
+      "cost": "ថ្លៃ",
+      "free": "ឥតគិតថ្លៃ",
+      "meanTilesCost": "ប្លុកមធ្យម (ថ្លៃ)",
+      "meanTilesFree": "ប្លុកមធ្យម (ឥតគិតថ្លៃ)",
+      "totalCost": "សរុប Cost",
+      "title": "ព័ត៌មានrmation Sampling",
+      "tiles": "ប្លុក",
+      "tapToReveal": "ចុចដើម្បីបង្ហាញ"
+    },
+    "inspectionTime": {
+      "final": "ចុងក្រោយ",
+      "finalDisplayTime": "ពេលបង្ហាញចុងក្រោយ",
+      "minCorrectIt": "IT ត្រឹមត្រូវអប្បបរមា",
+      "threshold": "កម្រិត",
+      "title": "Inspection ពេលវេលា",
+      "thresholdLabel": "កម្រិត",
+      "minIt": "IT អប្បបរមា"
+    },
+    "iowaGambling": {
+      "balance": "សមតុល្យ:",
+      "chooseADeck": "ជ្រើសរើសកាតមួយ",
+      "deckADraws": "ការទាញកាត A",
+      "deckBDraws": "ការទាញកាត B",
+      "deckCDraws": "ការទាញកាត C",
+      "deckDDraws": "ការទាញកាត D",
+      "first40Advantageous": "៤០ ដំបូងមានអត្ថប្រយោជន៍",
+      "last40Advantageous": "៤០ ចុងក្រោយមានអត្ថប្រយោជន៍",
+      "learn": "រៀន",
+      "learningIndex": "សន្ទស្សន៍ការរៀន",
+      "title": "ល្បែង Iowa",
+      "advantageousPct": "% អត្ថប្រយោជន៍",
+      "earnings": "ប្រាក់ចំណូល",
+      "last40": "៤០ ចុងក្រោយ"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "ភាពលម្អៀងកែតម្រូវ",
+      "meanJol": "JOL មធ្យម",
+      "nowTestYourRecall": "ទេw test your recall",
+      "studyComplete": "ការរៀនបញ្ចប់",
+      "whatWasPairedWith": "អ្វីត្រូវបានគូជាមួយ…?",
+      "title": "ការវិនិច្ឆ័យនៃការរៀន",
+      "recallAccuracy": "ភាពត្រឹមត្រូវការចងចាំ",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "ភាពត្រឹមត្រូវ JOL (Gamma)",
+      "howLikelyRemember": "អ្នកនឹងចងចាំបានប៉ុណ្ណា?",
+      "hiddenAnswer": "ចម្លើយលាក់"
+    },
+    "judgmentOfRecency": {
+      "close": "បិទ",
+      "closeGap13": "បិទ gap (1-3)",
+      "far": "ឆ្ងាយ",
+      "farGap9": "គម្លាតឆ្ងាយ (៩+)",
+      "mediumGap48": "គម្លាតមធ្យម (៤-៨)",
+      "title": "ការវិនិច្ឆ័យនៃភាពថ្មីៗ",
+      "medium": "មធ្យម",
+      "studyPhaseMemorizeOrder": "ដំណាក់កាលរៀន — ចងចាំលំដាប់",
+      "whichMoreRecently": "មួយណាបង្ហាញថ្មីជាង?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "RT មធ្យម (មិនមែនពាក្យ)",
+      "meanRtWords": "RT មធ្យម (ពាក្យ)",
+      "nonwordsAccuracy": "ទេn-words accuracy",
+      "wordsAccuracy": "ពាក្យ accuracy",
+      "word": "ពាក្យ",
+      "nonword": "ទេn-word"
+    },
+    "maze": {
+      "duration": "រយៈពេល",
+      "optimalSteps": "ជំហានល្អបំផុត",
+      "pathEfficiency": "ប្រសិទ្ធភាពផ្លូវ",
+      "totalSteps": "សរុប Steps",
+      "wallHits": "Wall ត្រូវ",
+      "title": "Maze",
+      "completed": "បានបញ្ចប់",
+      "efficiency": "ប្រសិទ្ធភាព",
+      "wallHitsLabel": "Wall ត្រូវ",
+      "steps": "ជំហាន"
+    },
+    "memobox": {
+      "easy": "ងាយស្រួល",
+      "easy2Boxes": "ងាយស្រួល (2ប្រអប់)",
+      "hard": "រឹង",
+      "hard4Boxes": "រឹង (4 ប្រអប់)",
+      "medium3Boxes": "មធ្យម (៣ ប្រអប់)",
+      "title": "ប្រអប់ចងចាំ",
+      "rounds": "ជុំ",
+      "medium": "មធ្យម",
+      "watchMovements": "ទស្សនា​ចលនា...",
+      "howManyBalls": "តើមានបាល់ប៉ុន្មានក្នុងប្រអប់នីមួយៗ?",
+      "submit": "ដាក់ស្នើ",
+      "roundOf": "ជុំទី {{current}} នៃ {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "តើផ្នែកឆ្លងកាត់គឺជាអ្វី?",
+      "title": "ការកាត់ផ្លូវចិត្ត"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "ចាស់ ស្រដៀង ឬថ្មី?",
+      "patternSeparation": "ការបំបែកគំរូ",
+      "sep": "បំបែក",
+      "old": "ចាស់",
+      "similar": "ស្រដៀង",
+      "new": "ថ្មី",
+      "ldi": "LDI",
+      "title": "ការបែងចែកការចងចាំ",
+      "hitRateOldDetected": "អត្រាបុក (រកឃើញចាស់)",
+      "lureDiscrimination": "ការបែងចែក Lure (LDI)",
+      "memorize": "ចងចាំ",
+      "testPhase": "ដំណាក់កាលតេស្ត"
+    },
+    "multiArmedBandit": {
+      "earnings": "ប្រាក់ចំណូល:",
+      "pickMachine": "ជ្រើសរើសម៉ាស៊ីន",
+      "title": "ចោរកាំភ្លើងច្រើនដៃ",
+      "totalReward": "សរុប reward",
+      "optimal": "ល្អបំផុត",
+      "regret": "ការសោកស្ដាយ",
+      "exploit": "កេងចំណេញ",
+      "machine": "ម៉ាស៊ីន",
+      "armsExplored": "ដៃដែលស្វែងរក"
+    },
+    "navon": {
+      "globalBigLetter": "សកល (អក្សរធំ)",
+      "localSmallLetter": "មូលដ្ឋាន (អក្សរតូច)",
+      "title": "Navon",
+      "globalAdv": "Adv. សកល",
+      "whatBigLetter": "អក្សរធំអ្វី?",
+      "whatSmallLetter": "អក្សរតូចអ្វី?"
+    },
+    "negativePriming": {
+      "controlRt": "RT ត្រួតពិនិត្យ",
+      "nameTheRedShape": "ដាក់ឈ្មោះរូបរាងក្រហម",
+      "negativePrimingRt": "RT Priming អវិជ្ជមាន",
+      "positivePrimingRt": "RT Priming វិជ្ជមាន",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "ផលប៉ះពាល់ NP",
+      "title": "Priming អវិជ្ជមាន",
+      "ctrlRt": "RT ត្រួតពិនិត្យ"
+    },
+    "numberLine": {
+      "estimationBias": "ភាពលម្អៀងការប៉ាន់ស្មាន",
+      "linearityRsup2": "ភាពត្រង់ (R²)",
+      "meanAbsoluteError": "កំហុសដាច់ខាតមធ្យម",
+      "tapTheLineToPlaceTheNumber": "ចុចបន្ទាត់ដើម្បីដាក់លេខ",
+      "title": "បន្ទាត់លេខ",
+      "meanError": "កំហុសមធ្យម",
+      "yourEstimate": "ការប៉ាន់ស្មានរបស់អ្នក",
+      "correct": "ត្រឹមត្រូវ"
+    },
+    "oddOneOut": {
+      "colorTrials": "ពណ៌ trials",
+      "shapeTrials": "រូបរាង trials",
+      "shape": "រូបរាង",
+      "color": "ពណ៌",
+      "timeout": "ពេលវេលាout",
+      "shapeDiffAccuracy": "រូបរាង diff. accuracy",
+      "colorDiffAccuracy": "ពណ៌ diff. accuracy",
+      "shapeDiffAvgRt": "រូបរាង diff. avg RT",
+      "colorDiffAvgRt": "ពណ៌ diff. avg. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "ទិសណា?",
+      "thresholdAngle": "កម្រិតកោណ",
+      "title": "ការបែងចែកទិស",
+      "threshold": "កម្រិត",
+      "counterCw": "ប្រឆាំងទ្រនិច",
+      "clockwise": "តាមទ្រនិចនាឡិកា"
+    },
+    "patternComparison": {
+      "differentTrials": "ការសាកល្បងខុសគ្នា",
+      "sameTrials": "ការសាកល្បងដូចគ្នា",
+      "same": "ដូចគ្នា",
+      "different": "ខុសគ្នា"
+    },
+    "patternRecognition": {
+      "newPatterns": "គំរូថ្មី",
+      "oldPatterns": "គំរូចាស់",
+      "old": "ចាស់",
+      "new": "ថ្មី",
+      "studyPatterns": "សិក្សាគំរូដោយប្រុងប្រយ័ត្ន",
+      "memorize": "ចងចាំ ({{current}}/{{total}})",
+      "getReady": "ត្រៀមខ្លួន...",
+      "testPhaseStarting": "ដំណាក់កាលតេស្តចាប់ផ្ដើម..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Exact ត្រឹមត្រូវ",
+      "meanAngularError": "កំហុសកោណមធ្យម",
+      "withinTolerance": "ក្នុងកម្រិតអត់ធ្មត់",
+      "title": "ការយល់ទស្សនៈ",
+      "avgErr": "កំហុសមធ្យម",
+      "youAreAt": "អ្នកនៅ ",
+      "facing": "មុខ",
+      "pointTo": "ចង្អុល​ទៅ "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "កម្រិតប្រេកង់",
+      "seq1": "ដំណើរ ១",
+      "seq2": "ដំណើរ ២",
+      "title": "ការបែងចែកសំឡេង",
+      "thresh": "កម្រិត",
+      "sameOrDifferent": "ដូចគ្នាឬខុសគ្នា?",
+      "same": "ដូចគ្នា",
+      "different": "ខុសគ្នា"
+    },
+    "predictionMotion": {
+      "biasLate": "ភាពលម្អៀង (+ = យឺត)",
+      "meanAbsoluteError": "កំហុសដាច់ខាតមធ្យម",
+      "precisionSd": "ភាពជាក់លាក់ (SD)",
+      "title": "ការព្យាករណ៍ចលនា",
+      "absError": "កំហុសដាច់ខាត",
+      "precision": "ភាពជាក់លាក់",
+      "responded": "ឆ្លើយ",
+      "tapWhenReachesTarget": "ចុចពេលវាដល់គោលដៅ"
+    },
+    "promem": {
+      "ongoingAccuracy": "បើកgoing accuracy",
+      "ongoingRt": "បើកgoing RT",
+      "pmHitRate": "អត្រាត្រូវ PM",
+      "pmRt": "PM RT",
+      "pmTargets": "គោលដៅ PM",
+      "title": "អង្គចងចាំអនាគត",
+      "ongoing": "បើកgoing",
+      "pmHits": "PM ត្រូវ",
+      "pmMisses": "PM ខុស",
+      "living": "មានជីវិត",
+      "nonLiving": "ទេn-living",
+      "redWordInstruction": "ពាក្យក្រហម = ចុច"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "កំហុសរំខាន",
+      "literalErrorRate": "អត្រាកំហុសព្យញ្ជនៈ",
+      "literalErrors": "កំហុសព្យញ្ជនៈ",
+      "title": "ការបកស្រាយសុភាសិត",
+      "literal": "ព្យញ្ជនៈ",
+      "litRate": "អត្រាព្យញ្ជនៈ",
+      "whatDoesThisMean": "នេះមានន័យថាអ្វី?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "ត្រៀមខ្លួនតាម",
+      "meanTimeOnTarget": "Mean ពេលវេលា on Target",
+      "meanTrackingError": "កំហុសតាមដានមធ្យម",
+      "placeYourFingerOnTheScreen": "ដាក់ម្រាមដៃលើអេក្រង់",
+      "title": "ការតាមដាន",
+      "timeOnTarget": "ពេលវេលា on target",
+      "error": "កំហុស",
+      "onTarget": "បើក Target",
+      "avgError": "កំហុសមធ្យម",
+      "improve": "កែលម្អ",
+      "improvementT1VsT": "ការកែលម្អ T1 ទល់ T",
+      "errorLabel": "កំហុស",
+      "followGreenTarget": "តាមគោលដៅបៃតង"
+    },
+    "rapidNaming": {
+      "roundComplete": "ជុំបញ្ចប់",
+      "totalErrors": "សរុប Errors",
+      "title": "ការដាក់ឈ្មោះរហ័ស",
+      "avgSpeed": "ល្បឿនមធ្យម",
+      "totalTime": "សរុប ពេលវេលា",
+      "round": "ជុំ",
+      "getReady": "ត្រៀមខ្លួន!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Avg Solve ពេលវេលា",
+      "solved": "ដោះស្រាយបាន",
+      "wrong": "ខុស",
+      "placeholder": "ចម្លើយរបស់អ្នក...",
+      "title": "ល្បែងផ្គុំ Rebus",
+      "puzzles": "ល្បែងផ្គុំ",
+      "timeout": "ពេលវេលាout",
+      "submit": "បញ្ជូន",
+      "answer": "ចម្លើយ"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Avg Solve ពេលវេលា",
+      "solved": "ដោះស្រាយបាន",
+      "placeholder": "ចម្លើយរបស់អ្នក...",
+      "title": "សមាគមឆ្ងាយ",
+      "timeout": "ពេលវេលាout",
+      "submit": "បញ្ជូន",
+      "answer": "ចម្លើយ"
+    },
+    "reversalLearning": {
+      "adapt": "សម្របខ្លួន",
+      "loseshiftRate": "អត្រាចាញ់-ប្ដូរ",
+      "score": "ពិន្ទុ:",
+      "winstayRate": "អត្រាឈ្នះ-ស្ថិត",
+      "title": "ការរៀនបញ្ច្រាស",
+      "rewards": "រង្វាន់",
+      "reversals": "ការបញ្ច្រាស",
+      "persev": "ការប្រកាន់ខ្ជាប់",
+      "avgTrialsToCriterion": "ការសាកល្បងមធ្យមដល់លក្ខណៈវិនិច្ឆ័យ",
+      "pickACard": "ជ្រើសរើសកាតមួយ"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "រាប់ថយក្រោយដោយ ៧",
+      "reproduceThePatternFromMemory": "ផលិតគំរូឡើងវិញពីការចងចាំ",
+      "title": "រូប Rey ស្មុគស្មាញ",
+      "copy": "ចម្លង",
+      "recall": "ចងចាំឡើងវិញ",
+      "retention": "ការរក្សាទុក",
+      "trial": "ការសាកល្បង",
+      "target": "គោលដៅ",
+      "yourCopy": "ច្បាប់ចម្លងរបស់អ្នក",
+      "submit": "បញ្ជូន"
+    },
+    "rhythm": {
+      "avgTimingError": "កំហុសកំណត់ពេលមធ្យម",
+      "bestTrialError": "ល្អបំផុត trial error",
+      "correctTrials": "ត្រឹមត្រូវ trials",
+      "worstTrialError": "កំហុសការសាកល្បងអាក្រក់បំផុត",
+      "watchRhythm": "មើលចង្វាក់",
+      "getReady": "ត្រៀមខ្លួន...",
+      "tapTheRhythm": "ចុចចង្វាក់!",
+      "tooFarOff": "ឆ្ងាយពេក!",
+      "tapToReproduce": "ចុចដើម្បីផលិតឡើងវិញ",
+      "beats": "ប៊ីត {{count}}",
+      "bestTrial": "ល្អបំផុត trial",
+      "worstTrial": "ការសាកល្បងអាក្រក់បំផុត",
+      "title": "ចង្វាក់",
+      "msErr": "កំហុស ms"
+    },
+    "routePlanning": {
+      "time": "ពេលវេលា",
+      "title": "ការរៀបចំផ្លូវ",
+      "levels": "កម្រិត",
+      "completed": "បានបញ្ចប់",
+      "avgMoves": "ការផ្លាស់ទីមធ្យម",
+      "clear": "សម្អាត",
+      "submit": "បញ្ជូន",
+      "instructions": "សេចក្ដីណែនាំ"
+    },
+    "rvp": {
+      "detect357246468": "រកឃើញ: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "ដំណើរគោលដៅ",
+      "fa": "FA",
+      "hitRate": "អត្រាត្រូវ",
+      "misses": "ខុស",
+      "sequences": "ដំណើរ"
+    },
+    "sart": {
+      "commissionErrors": "កំហុស commission",
+      "omissionErrors": "កំហុស omission",
+      "tapAllDigits": "ចុចលេខទាំងអស់លើកលែង ៣",
+      "except3": "លើកលែង៣"
+    },
+    "sceneCrasher": {
+      "adds": "បន្ថែម",
+      "studyTheScene": "សិក្សាឈុត",
+      "swaps": "ការប្ដូរ",
+      "tapTheNewchangedObject": "ចុចវត្ថុថ្មី/ផ្លាស់ប្ដូរ"
+    },
+    "sentenceVerification": {
+      "falseSentences": "ប្រយោគមិនពិត",
+      "trueSentences": "ប្រយោគពិត",
+      "byCategory": "By ប្រភេទ",
+      "title": "ការផ្ទៀងផ្ទាត់ប្រយោគ",
+      "trueRt": "RT ពិត",
+      "true": "ពិត",
+      "false": "មិនពិត",
+      "pressKey": "ចុច "
+    },
+    "soundSweeps": {
+      "down": "ចុះ",
+      "downAccuracy": "ភាពត្រឹមត្រូវចុះ",
+      "durationThreshold": "រយៈពេល Threshold",
+      "up": "ឡើង",
+      "upAccuracy": "ភាពត្រឹមត្រូវឡើង",
+      "title": "សំឡេង Sweeps",
+      "threshold": "កម្រិត",
+      "upOrDown": "ឡើងឬចុះ?"
+    },
+    "sourceMemory": {
+      "color": "ពណ៌",
+      "colorRecall": "ពណ៌ recall",
+      "frame": "ស៊ុម",
+      "frameRecall": "ការចងចាំស៊ុម",
+      "getReadyForTheTest": "ត្រៀមខ្លួនសម្រាប់តេស្ត!",
+      "itemRecognition": "ការទទួលស្គាល់ធាតុ",
+      "positionRecall": "ទីតាំង recall",
+      "sourceAccuracy": "ភាពត្រឹមត្រូវប្រភព",
+      "title": "អង្គចងចាំប្រភព",
+      "source": "ប្រភព",
+      "position": "ទីតាំង",
+      "word": "ពាក្យ",
+      "wasThisWordShown": "ពាក្យនេះត្រូវបានបង្ហាញទេ?",
+      "bottom": "ក្រោម",
+      "blue": "ខៀវ",
+      "orange": "ទឹកក្រូច",
+      "circle": "រង្វង់",
+      "square": "ការ៉េ"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "ទេise Threshold",
+      "title": "Speech-in-ទេise",
+      "noise": "ទេise",
+      "whichWordWasIt": "ពាក្យណាជាវា?"
+    },
+    "srtt": {
+      "learningEffect": "ផលប៉ះពាល់ការរៀន",
+      "learning": "រៀន",
+      "block": "ប្លុក"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "កម្រិតឱកាស",
+      "learningDetected": "រកឃើញការរៀន",
+      "testPhase": "ដំណាក់កាលតេស្ត",
+      "whichPairLooksMoreFamiliar": "គូណាមើលទៅស្គាល់ជាង?",
+      "title": "ការរៀនស្ថិតិ",
+      "learning": "រៀន",
+      "watchTheShapes": "មើលរូបរាង"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "ផលប៉ះពាល់ភាពលម្អៀងជំនឿ",
+      "conclusion": "សេចក្ដីសន្និដ្ឋាន",
+      "premise1": "មូលដ្ឋាន ១",
+      "premise2": "មូលដ្ឋាន ២",
+      "logicalValidityQuestion": "នេះត្រឹមត្រូវតាមតក្កវិជ្ជាទេ?",
+      "valid": "ត្រឹមត្រូវ",
+      "invalid": "មិនត្រឹមត្រូវ"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "ភាពត្រឹមត្រូវអវត្តមាន",
+      "presentAccuracy": "ភាពត្រឹមត្រូវមាន",
+      "title": "Symbol ស្វែងរក",
+      "present": "មាន",
+      "absent": "អវត្តមាន",
+      "targets": "គោលដៅ",
+      "searchGroup": "ស្វែងរក group"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "អសមកាល",
+      "drift": "ការព្រាង",
+      "cv": "CV",
+      "title": "Sync-Continuation",
+      "meanCv": "CV មធ្យម",
+      "tempos": "ល្បឿន",
+      "tempo": "ល្បឿន",
+      "ioi": "IOI",
+      "getReady": "ត្រៀមខ្លួន...",
+      "nextTempo": "បន្ទាប់ tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "ត្រឹមត្រូវ កំណត់ឡើងវិញs",
+      "duration": "រយៈពេល",
+      "missedCounters": "កម្មវិធីរាប់ខកខាន",
+      "prematureResets": "ការកំណត់ឡើងវិញមុនពេល",
+      "totalEvents": "សរុប Events",
+      "tooEarly": "ឆាប់ពេក!",
+      "missed": "ខកខាន!",
+      "title": "ភារកិច្ចច្រើន",
+      "premature": "មុនពេល",
+      "counter": "កម្មវិធីរាប់",
+      "tapCounterInstruction": "ចុចកម្មវិធីរាប់នីមួយៗពេលដល់កម្រិត។ កុំឱ្យលើស!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "ចំណុចចែក (PSE)",
+      "curveSteepness": "ភាពចោត",
+      "idealMidpoint": "ចំណុចកណ្ដាលល្អ",
+      "pse": "PSE",
+      "title": "ការចែកពេលវេលា",
+      "steepness": "ភាពចោត",
+      "shortOrLong": "ខ្លីឬវែង?",
+      "trainingPhase": "ការហ្វឹកហ្វឺន Phase",
+      "short": "ខ្លី",
+      "long": "វែង"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "ទទឹងគម្រៀន",
+      "rememberThisDuration": "ចងចាំរយៈពេលនេះ",
+      "width": "ទទឹង",
+      "standard": "ស្ដង់ដា",
+      "title": "Temporal ទូទៅization",
+      "hitRate": "អត្រាត្រូវ",
+      "faRate": "អត្រា FA",
+      "hitRateDetectStandard": "អត្រាត្រូវ (រកស្តង់ដា)",
+      "sameDuration": "រយៈពេលដូចគ្នា?",
+      "trainingPhase": "ការហ្វឹកហ្វឺន Phase",
+      "same": "ដូចគ្នា",
+      "different": "ខុសគ្នា"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "កម្រិត SOA",
+      "title": "ការបែងចែកវាយនភាព",
+      "threshold": "កម្រិត"
+    },
+    "timePromem": {
+      "avgTimingError": "កំហុសកំណត់ពេលមធ្យម",
+      "clockChecks": "ការពិនិត្យនាឡិកា",
+      "ongoingAccuracy": "បើកgoing accuracy",
+      "ongoingTrials": "បើកgoing trials",
+      "totalPmPresses": "សរុប PM Presses",
+      "pmAccuracy": "ភាពត្រឹមត្រូវ PM",
+      "pmMisses": "ការខកខាន PM",
+      "title": "ពេលវេលា Prospective",
+      "ongoing": "បើកgoing",
+      "pmHitsLabel": "ការត្រូវ PM",
+      "timingErr": "កំហុសពេល",
+      "pmHitsExpected": "PM ត្រូវ / Expected",
+      "pmPresses": "ការចុច PM",
+      "checkClock": "ពិនិត្យនាឡិកា",
+      "thirtySecMark": "សម្គាល់ ៣០វិ"
+    },
+    "toj": {
+      "meanResponseTime": "Mean ចម្លើយ ពេលវេលា",
+      "temporalResolution": "ភាពច្បាស់ពេលវេលា",
+      "title": "ការវិនិច្ឆ័យលំដាប់ពេលវេលា",
+      "threshold": "កម្រិត",
+      "whichCameFirst": "មួយណាមកមុន?",
+      "leftFirst": "ឆ្វេងមុន",
+      "rightFirst": "ស្ដាំមុន"
+    },
+    "tower": {
+      "budget": "ថវិកា",
+      "challenge": "ការប្រកួតប្រជែង",
+      "challengeClassic": "បុរាណ",
+      "challengeExpert": "ជំនាញ",
+      "challengeMemory": "ការចងចាំ",
+      "challengePrecision": "ភាពជាក់លាក់",
+      "dragDiscAriaLabel": "អូសឌីសខាងលើពីខ្នង {{peg}}",
+      "goal": "គោលដៅ",
+      "goalHiddenStatus": "គោលដៅលាក់។ ប្រើបង្ហាញដើម្បីឃើញបណ្ដោះអាសន្ន។",
+      "goalRevealedMessage": "គោលដៅបង្ហាញរយៈពេល ៣ វិនាទី។",
+      "hint": "ជំនួយ",
+      "hintDescription": "បង្ហាញ best next move",
+      "hintMessage": "ជំនួយ: ផ្លាស់ទីឌីសខាងលើពីខ្នង {{fromPeg}} ទៅខ្នង {{toPeg}}។",
+      "hiddenGoalDescription": "គោលដៅលាក់ពេលលេង។ ប្រើបង្ហាញពេលត្រូវការរំលឹកខ្លី។",
+      "hiddenGoalTitle": "បញ្ហាប្រឈមការចងចាំ",
+      "invalid": "មិនត្រឹមត្រូវ",
+      "moves": "ការផ្លាស់ទី",
+      "optimal": "ល្អបំផុត",
+      "pegFullMessage": "ខ្នងនោះពេញ។",
+      "previewMemoryCountdown": "Memorize the goal. ចាប់ផ្តើមs in {{seconds}}s.",
+      "previewPlanCountdown": "Plan the {{moves}}-move solution. ចាប់ផ្តើមs in {{seconds}}s.",
+      "reset": "កំណត់ឡើងវិញ",
+      "resetDescription": "ចាប់ផ្ដើមល្បែងផ្គុំនេះឡើងវិញ",
+      "resetMessage": "ល្បែងផ្គុំកំណត់ឡើងវិញ។",
+      "reveal": "បង្ហាញ",
+      "revealDescription": "បង្ហាញគោលដៅលាក់",
+      "statusOptimalSolve": "Optimal solve. ពិន្ទុ {{score}}.",
+      "statusSolvedScore": "Solved in {{moves}} moves (+{{extraMoves}}). ពិន្ទុ {{score}}.",
+      "undo": "ត្រឡប់",
+      "undoDescription": "បញ្ច្រាសការផ្លាស់ទីចុងក្រោយ",
+      "undoneMessage": "ការផ្លាស់ទីចុងក្រោយត្រឡប់។",
+      "yourPegs": "ខ្នងរបស់អ្នក"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "ត្រឹមត្រូវ Deliveries",
+      "trainsLost": "រថភ្លើងបាត់បង់",
+      "wrongStation": "ខុស station",
+      "title": "គំនិតបន្តបន្ទាប់",
+      "trains": "រថភ្លើង",
+      "missed": "ខកខាន",
+      "scoreLabel": "ពិន្ទុ",
+      "instructions": "សេចក្ដីណែនាំ"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "សំណួរមធ្យមប្រើ",
+      "title": "សំណួរម្ភៃ",
+      "avgQuestions": "សំណួរមធ្យម",
+      "rounds": "ជុំ",
+      "efficiency": "ប្រសិទ្ធភាព",
+      "avgQuestionsCorrectOnly": "សំណួរមធ្យម (ត្រូវតែ)",
+      "questionsLabel": "សំណួរ",
+      "remaining": "នៅសល់",
+      "readyToGuess": "ខ្ញុំត្រៀមទាយ!",
+      "tapTheTarget": "ចុចវត្ថុដែលអ្នកគិតថាជាគោលដៅ!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "វាលមើលដែលមានប្រយោជន៍",
+      "visualNoiseMask": "ការមើលឃើញ noise mask",
+      "whatWasInTheCenter": "អ្វីនៅកណ្ដាល?",
+      "whereWasTheTarget": "គោលដៅនៅទីណា?",
+      "avgThreshold": "កម្រិតមធ្យម",
+      "speed": "ល្បឿន",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "central": "កណ្ដាល",
+      "peripheral": "ក្រៅ",
+      "overall": "សរុប",
+      "block": "ប្លុក",
+      "trials": "Trial",
+      "start": "ចាប់ផ្តើម",
+      "focus": "ផ្ដោត",
+      "threshold": "កម្រិត",
+      "stimulus": "Stimulus",
+      "respondFromMemory": "ឆ្លើយពីការចងចាំ",
+      "truck": "ឡានធំ",
+      "choosePeripheralLocation": "ជ្រើសរើសទីតាំងក្រៅ",
+      "currentBlock": "ប្លុក {{n}}",
+      "exposure": "ការបង្ហាញ"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "ពាក្យ starting with {{letter}}",
+      "title": "ភាពរលូនពាក្យ",
+      "totalWords": "សរុប words",
+      "duplicates": "ស្ទួន",
+      "letter": "អក្សរ",
+      "round": "ជុំ",
+      "roundComplete": "ជុំបញ្ចប់",
+      "nextRound": "បន្ទាប់ round",
+      "middotRound": " · ជុំ"
+    },
+    "vernierAcuity": {
+      "whichSide": "ផ្នែកណា?",
+      "title": "Vernier Acuity",
+      "leftOffset": "គម្លាតឆ្វេង",
+      "rightOffset": "គម្លាតស្ដាំ",
+      "offset": "បិទset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "យុទ្ធសាស្ត្រល្អបំផុត",
+      "correct": "ត្រឹមត្រូវ!",
+      "wrong": "ខុស",
+      "title": "ការព្យាករណ៍អាកាសធាតុ",
+      "optimal": "ល្អបំផុត",
+      "learningCurve": "ខ្សែកោងការរៀន",
+      "predictTheWeather": "ព្យាករណ៍អាកាសធាតុ",
+      "rain": "ភ្លៀង"
+    },
+    "wordChain": {
+      "avgResponseTime": "Avg ចម្លើយ ពេលវេលា",
+      "chain": "ខ្សែ",
+      "longestChain": "ខ្សែវែងបំផុត",
+      "totalCorrect": "សរុប ត្រឹមត្រូវ",
+      "totalWords": "សរុប ពាក្យ",
+      "words": "ពាក្យ",
+      "title": "ខ្សែពាក្យ",
+      "longest": "វែងបំផុត",
+      "avgRt": "RT មធ្យម",
+      "endsWith": "ចប់ដោយ ",
+      "chainLabel": "ខ្សែ",
+      "bestLabel": "ល្អបំផុត"
+    },
+    "wordFlow": {
+      "avgWordLength": "ប្រវែងពាក្យមធ្យម",
+      "correct": "ត្រឹមត្រូវ",
+      "invalidWords": "ពាក្យមិនត្រឹមត្រូវ",
+      "totalWordsSelected": "សរុប ពាក្យ Selected",
+      "validWords": "ពាក្យត្រឹមត្រូវ",
+      "wordsPerMinute": "ពាក្យ per minute",
+      "wrong": "ខុស",
+      "seeResults": "មើលលទ្ធផល",
+      "nextRound": "បន្ទាប់ round ({{current}}/{{total}})",
+      "title": "ភាពរលូនពាក្យ",
+      "validWordsLabel": "ពាក្យត្រឹមត្រូវ",
+      "wordsPerMinLabel": "ពាក្យ/min",
+      "avgLengthLabel": "ប្រវែងមធ្យម",
+      "invalidLabel": "មិនត្រឹមត្រូវ",
+      "round": "ជុំ",
+      "selectWordsBelongTo": "ជ្រើសរើសពាក្យដែលជា",
+      "selected": "បានជ្រើស"
+    },
+    "wordList": {
+      "avgRtCorrect": "RT មធ្យម (ត្រូវ)",
+      "primacyEffect": "ផលប៉ះពាល់ឧត្តម",
+      "recencyEffect": "ផលប៉ះពាល់ថ្មីៗ",
+      "studyPhaseRememberEachWord": "ដំណាក់កាលរិហាន — ចង់ចាំពាក្យនីមួយៗ",
+      "wordsRecalled": "ពាក្យ Recalled",
+      "title": "បញ្ជីពាក្យ",
+      "serialPositionCurve": "Serial ទីតាំង Curve",
+      "wasWordInList": "ពាក្យនេះនៅក្នុងបញ្ជីទេ?",
+      "seenBefore": "ឃើញមុន",
+      "newWord": "ថ្មី"
+    },
+    "speedSort": {
+      "switchAccuracy": "ភាពត្រឹមត្រូវការប្ដូរ",
+      "switchTrials": "ការសាកល្បងប្ដូរ",
+      "sortByColor": "តម្រៀប by COLOR",
+      "sortByShape": "តម្រៀប by SHAPE",
+      "sortByNumber": "តម្រៀប by NUMBER",
+      "ruleChanged": "ច្បាប់ប្ដូរ!",
+      "binRed": "ក្រហម",
+      "binBlue": "ខៀវ",
+      "binGreen": "បៃតង",
+      "binYellow": "លឿង",
+      "binCircle": "រង្វង់",
+      "binSquare": "ការ៉េ",
+      "binTriangle": "ត្រីកោណ",
+      "binStar": "ផ្កាយ",
+      "title": "ល្បឿន តម្រៀប",
+      "switch": "ការប្ដូរ"
+    },
+    "reflex": {
+      "target": "គោលដៅ",
+      "lure": "នុយ",
+      "tooSlow": "យឺតពេក!",
+      "wrongTarget": "ខុស target!",
+      "tapTargets": "ចុចរង្វង់បៃតង!",
+      "hits": "ត្រូវ",
+      "misses": "ខុស",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "ចងចាំផលបូកសរុប...",
+      "title": "ការគណនាខ្សែ",
+      "stepChains": "ខ្សែ {{len}} ជំហាន",
+      "start": "ចាប់ផ្តើម",
+      "step": "ជំហាន",
+      "whatIsTheResult": "លទ្ធផលជាអ្វី?"
+    },
+    "alternateUses": {
+      "placeholder": "វាយ​ប្រើ...",
+      "title": "ការប្រើប្រាស់ជំនួស",
+      "totalUses": "សរុប uses",
+      "perObject": "ក្នុងមួយវត្ថុ",
+      "rounds": "ជុំ",
+      "bestObject": "ល្អបំផុត object",
+      "bestCount": "ល្អបំផុត count",
+      "noUsesSubmitted": "ទេ uses submitted",
+      "timesUp": "ពេលវេលា's up!",
+      "nextObject": "បន្ទាប់ Object ({{object}})",
+      "listCreativeUses": "រាយបញ្ជីការប្រើប្រាស់ច្នៃប្រឌិតសម្រាប់វត្ថុនេះ។"
+    },
+    "anagram": {
+      "placeholder": "វាយពាក្យ...",
+      "title": "អាណាក្រាម",
+      "avgSolve": "មធ្យម ដោះស្រាយ",
+      "letterWords": "{{len}}- ពាក្យអក្សរ",
+      "submit": "ដាក់ស្នើ"
+    },
+    "facialEmotion": {
+      "happy": "រីករាយ",
+      "sad": "ក្រៀមក្រំ",
+      "angry": "ខឹង",
+      "fearful": "ភ័យ",
+      "disgusted": "ខ្ពើម",
+      "surprised": "ភ្ញាក់ផ្អើល",
+      "lc": "LC",
+      "title": "ការទទួលស្គាល់អារម្មណ៍មុខ",
+      "topConfusions": "ការច្រឡំកំពូល"
+    },
+    "numberSeries": {
+      "easy": "ងាយ",
+      "hard": "ពិបាក"
+    },
+    "chainRecall": {
+      "round": "ជុំ",
+      "title": "ការចងចាំខ្សែ",
+      "chain": "ខ្សែ",
+      "placeholder": "កន្លែងដាក់"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotional Go/ទេ-Go",
+      "block1CommissionErrors": "ប្លុក ១ កំហុស commission",
+      "block2CommissionErrors": "ប្លុក ២ កំហុស commission",
+      "goHappy": "ទៅ = រីករាយ",
+      "goSad": "ទៅ = ក្រៀមក្រំ",
+      "block": "ប្លុក",
+      "go": "ទៅ"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "ផលប៉ះពាល់ Stroop",
+      "title": "ពណ៌ Rush",
+      "congShort": "ស្រប",
+      "incongShort": "មិនស្រប",
+      "congruentAccuracy": "ភាពត្រឹមត្រូវស្របគ្នា",
+      "incongruentAccuracy": "ភាពត្រឹមត្រូវមិនស្របគ្នា"
+    },
+    "mirror": {
+      "avgCorrectCells": "ត្រឹមត្រូវ cells (avg.)",
+      "symmetryType": "ប្រភេទស៊ីមេទ្រី",
+      "title": "កញ្ចក់"
+    },
+    "rhythmTap": {
+      "correctTrials": "ត្រឹមត្រូវ trials",
+      "avgRhythmScore": "ពិន្ទុចង្វាក់មធ្យម",
+      "bestTrialScore": "ល្អបំផុត trial score",
+      "worstTrialScore": "ពិន្ទុការសាកល្បងអាក្រក់បំផុត",
+      "level": "កម្រិត",
+      "rhythm": "ចង្វាក់",
+      "bestTrial": "ល្អបំផុត trial",
+      "worstTrial": "ការសាកល្បងអាក្រក់បំផុត"
+    },
+    "vocalProsody": {
+      "questioning": "សួរ"
+    },
+    "arithmeticSpeed": {
+      "multiply": "គុណ",
+      "add": "បន្ថែម",
+      "subtract": "ដក",
+      "title": "Arithmetic ល្បឿន",
+      "score": "ពិន្ទុ",
+      "solved": "ដោះស្រាយ",
+      "missed": "ខកខាន"
+    },
+    "puzzle": {
+      "avgSolveTime": "ពេលដោះស្រាយមធ្យម",
+      "totalMoves": "សរុប moves",
+      "totalErrors": "សរុប errors",
+      "gridSize": "ទំហំក្រឡា",
+      "maxGridReached": "ក្រឡាអតិបរមាសម្រេចបាន",
+      "maxLevelReached": "កម្រិតអតិបរមាសម្រេចបាន",
+      "maxNodesReached": "ថ្នាំងអតិបរមាសម្រេចបាន",
+      "puzzleDetails": "ព័ត៌មានលម្អិតល្បែងផ្គុំ",
+      "roundDetails": "ព័ត៌មានលម្អិតជុំ",
+      "solved": "ដោះស្រាយបាន!",
+      "undo": "ត្រឡប់",
+      "reset": "កំណត់ឡើងវិញ",
+      "check": "ពិនិត្យ",
+      "moves": "ការផ្លាស់ទី",
+      "time": "ពេលវេលា",
+      "level": "កម្រិត",
+      "errors": "កំហុស",
+      "score": "ពិន្ទុ",
+      "grid": "ក្រឡា",
+      "crossings": "ការឆ្លង",
+      "pearls": "គុជ",
+      "clues": "តម្រុយ",
+      "region": "តំបន់",
+      "filled": "បំពេញ",
+      "cells": "ប្រអប់",
+      "undosLeft": "ការត្រឡប់នៅសល់",
+      "gems": "គ្រឿងអលង្ការ",
+      "connected": "ភ្ជាប់",
+      "slides": "ការរុញ",
+      "progress": "វឌ្ឍនភាព",
+      "rotations": "ការបង្វិល",
+      "puzzle": "ល្បែងផ្គុំ",
+      "uncovered": "បើកចំហ",
+      "colored": "ពណ៌ed",
+      "violations": "ការបំពាន",
+      "blacked": "ខ្មៅ",
+      "empty": "ទទេ",
+      "remaining": "នៅសល់",
+      "pairs": "គូ",
+      "flips": "ការត្រឡប់",
+      "found": "រកឃើញ",
+      "balls": "បាល់",
+      "guesses": "ការទាយ",
+      "original": "ដើម",
+      "findDifferences": "រកភាពខុសគ្នា",
+      "totalDrags": "សរុប drags",
+      "totalUndos": "សរុប undos",
+      "totalEdgesDrawn": "សរុប edges drawn",
+      "totalLasers": "សរុប lasers",
+      "totalSlides": "សរុប slides",
+      "totalRotations": "សរុប rotations",
+      "totalRectangles": "សរុប rectangles",
+      "totalScore": "សរុប score",
+      "avgTime": "ពេលមធ្យម",
+      "cellsCleared": "ប្រអប់សម្អាត",
+      "totalDiffsFound": "សរុប diffs found",
+      "gemsCollected": "គ្រឿងអលង្ការប្រមូលបាន",
+      "pushBoxesOntoTargets": "រុញប្រអប់ទាំងអស់ទៅគោលដៅ",
+      "fireLasersMarkBalls": "បាញ់ឡាសែរពីគែម បន្ទាប់មកសម្គាល់ទីតាំងបាល់",
+      "revealingAnswer": "កំពុងបង្ហាញចម្លើយ...",
+      "checkAnswer": "ពិនិត្យចម្លើយ",
+      "pickNumberBelow": "ជ្រើសរើសលេខខាងក្រោម",
+      "tapCellToAssign": "ចុចប្រអប់ដើម្បីដាក់លេខ",
+      "tapEdgesToPlaceWalls": "ចុចគែមដើម្បីដាក់ជញ្ជាំង។ បែងចែកជាតំបន់ K។",
+      "ghosts": "ខ្មោច",
+      "vampires": "វេទមន្ត",
+      "zombies": "ខ្មោចរបស់ណារ៉ាគ",
+      "dominoes": "ដូមីណូ",
+      "islands": "កោះ",
+      "pegsLeft": "ដែកនៅសល់",
+      "bestRemaining": "ល្អបំផុត remaining",
+      "puzzlesSolved": "ល្បែងផ្គុំដោះស្រាយបាន",
+      "flooded": "លិច",
+      "edges": "គែម",
+      "totalPlacements": "សរុប placements",
+      "totalRemovals": "សរុប removals",
+      "maxTileReached": "ប្លុកអតិបរមាសម្រេចបាន",
+      "target": "គោលដៅ",
+      "placed": "ដាក់",
+      "totalGuesses": "សរុប guesses",
+      "guessesLeft": "ការទាយនៅសល់",
+      "difficulty": "ភាពពិបាក"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "ល្បែងផ្គុំ",
+      "maxLevel": "កម្រិតអតិបរមា"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "errors": "កំហុស",
+      "avgTime": "ពេលមធ្យម",
+      "erase": "លុប"
+    },
+    "blackbox": {
+      "title": "ប្រអប់ខ្មៅ",
+      "puzzles": "ល្បែងផ្គុំរូប",
+      "lasers": "ឡាស៊ែរ",
+      "avgTime": "មធ្យម ពេលវេលា"
+    },
+    "designFluency": {
+      "title": "ភាពរលូនក្នុងការរចនា",
+      "uniqueDesigns": "ការរចនាប្លែក",
+      "duplicates": "ស្ទួន",
+      "round": "ជុំ",
+      "roundComplete": "ជុំបញ្ចប់",
+      "youCreatedDesigns": "អ្នកបង្កើតការរចនា {{count}}",
+      "startRound": "ចាប់ផ្តើម round",
+      "instructions": "សេចក្ដីណែនាំ",
+      "designs": "ការរចនា",
+      "clear": "សម្អាត",
+      "addDesign": "បន្ថែម"
+    },
+    "signpost": {
+      "title": "Signpost",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "avgTime": "ពេលមធ្យម",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "កម្រិត",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "undos": "ការត្រឡប់",
+      "puzzle": "ល្បែងផ្គុំ"
+    },
+    "numericalStroop": {
+      "left": "ឆ្វេង",
+      "right": "ស្ដាំ"
+    },
+    "biologicalMotion": {
+      "title": "ចលនាជីវសាស្រ្ត",
+      "noiseDots": "ចំណុចរំខាន",
+      "whichDirection": "ទិសដៅណា?",
+      "left": "ឆ្វេង",
+      "right": "ត្រូវហើយ។"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "gems": "គ្រឿងអលង្ការ",
+      "moves": "ការផ្លាស់ទី"
+    },
+    "waterLevel": {
+      "title": "កម្រិតទឹក",
+      "error": "កំហុស",
+      "tilt": "ទំនោរ",
+      "waterLine": "បន្ទាត់ទឹក?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "errors": "កំហុស",
+      "avgTime": "ពេលមធ្យម",
+      "erase": "លុប"
+    },
+    "rectangles": {
+      "title": "Rectangles",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "rectanglesCount": "ចតុកោណ",
+      "maxGrid": "ក្រឡាអតិបរមា",
+      "cancelSelection": "បោះបង់ selection"
+    },
+    "filling": {
+      "title": "Filling",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "avgTime": "ពេលមធ្យម",
+      "grid": "ក្រឡា"
+    },
+    "spacedRetrieval": {
+      "title": "ការទាញយកដាក់គម្លាត",
+      "studyPair": "សិក្សាគូនេះ",
+      "waitAndSolve": "រង់ចាំ… បន្ទាប់មកដោះស្រាយ",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "ចន្លោះ: គូអ្វី?"
+    },
+    "prototypeDistortion": {
+      "title": "ការបង្ខូចគំរូ",
+      "studyPhase": "ដំណាក់កាលរៀន",
+      "testPhase": "ដំណាក់កាលតេស្ត",
+      "yesBelongs": "បាទ/ចាស — Belongs",
+      "noRandom": "ទេ — Random"
+    },
+    "motionCoherence": {
+      "title": "ភាពស្របគ្នានៃចលនា",
+      "threshold": "កម្រិត",
+      "coherence": "ភាពស្របគ្នា",
+      "whichDirection": "ទិសណា?"
+    },
+    "cube": {
+      "title": "Cube",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxLevel": "កម្រិតអតិបរមា",
+      "cubeFaces": "ផ្ទៃគូប",
+      "moveUp": "លើ",
+      "moveLeft": "ឆ្វេង",
+      "moveDown": "ក្រោម",
+      "moveRight": "ស្ដាំ"
+    },
+    "sameGame": {
+      "title": "Same Game",
+      "score": "ពិន្ទុ",
+      "cleared": "សម្អាតed",
+      "cells": "ប្រអប់",
+      "accuracy": "ភាពត្រឹមត្រូវ"
+    },
+    "crossModalMatching": {
+      "title": "ការផ្គូផ្គងឆ្លងរបៀប",
+      "chance": "ឱកាស",
+      "whichPatternMatchesRhythm": "គំរូណាផ្គូផ្គងចង្វាក់?"
+    },
+    "mosaic": {
+      "title": "Mosaic",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "spotDiff": {
+      "title": "រកភាពខុសគ្នា",
+      "level": "កម្រិត",
+      "grid": "ក្រឡា",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "perfect": "ល្អឥតខ្ចោះ",
+      "avgTime": "ពេលមធ្យម",
+      "found": "រកឃើញ"
+    },
+    "lightsOut": {
+      "title": "ភ្លឺs Out",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "rotations": "ការបង្វិល",
+      "avgTime": "ពេលមធ្យម"
+    },
+    "tracks": {
+      "title": "Tracks",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "errors": "កំហុស",
+      "avgTime": "ពេលមធ្យម"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "slides": "ការរុញ",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "cognitiveBias": {
+      "title": "Cognitive Bias ការហ្វឹកហ្វឺន",
+      "biasResistance": "ការតស៊ូនឹងភាពលម្អៀង",
+      "biased": "លម្អៀង",
+      "continue": "បន្ត"
+    },
+    "empathicAccuracy": {
+      "title": "ភាពត្រឹមត្រូវនៃការយល់ចិត្ត",
+      "emotionId": "អារម្មណ៍",
+      "avgRatingError": "កំហុសវាយតម្លៃមធ្យម",
+      "scenarios": "សេណារីយ៉ូ",
+      "perfect": "ល្អឥតខ្ចោះ",
+      "rating": "ការវាយតម្លៃ",
+      "howDoesCharacterFeel": "តួអង្គមានអារម្មណ៍ដូចម្ដេច?",
+      "rateIntensity": "វាយតម្លៃអាំងតង់ស៊ីតេ",
+      "whatEmotion": "អារម្មណ៍អ្វី?",
+      "yourRating": "ការវាយតម្លៃរបស់អ្នក",
+      "correct": "ត្រឹមត្រូវ",
+      "emotion": "អារម្មណ៍"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "ដោះស្រាយបាន",
+      "guesses": "ការទាយ"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxLevel": "កម្រិតអតិបរមា"
+    },
+    "magnets": {
+      "title": "Magnets",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxLevel": "កម្រិតអតិបរមា"
+    },
+    "tangram": {
+      "placeAll": "ដាក់បំណែកទាំងអស់",
+      "solved": "ដោះស្រាយបាន!",
+      "notRight": "ទេt quite right",
+      "title": "Tangram",
+      "level": "កម្រិត",
+      "puzzles": "ល្បែងផ្គុំ",
+      "placements": "ការដាក់",
+      "removals": "ការដក",
+      "puzzleNumber": "ល្បែងផ្គុំ {{n}}",
+      "pieces": "បំណែក",
+      "targetCells": "គោលដៅ",
+      "dragHint": "អូសឬដាក់បំណែកនៅលើក្រឡា",
+      "selectHint": "ជ្រើសរើសបំណែក",
+      "rotate": "បង្វិល",
+      "undo": "ត្រឡប់",
+      "check": "ពិនិត្យ"
+    },
+    "galaxies": {
+      "title": "Galaxies"
+    },
+    "flood": {
+      "title": "Flood"
+    },
+    "pegs": {
+      "title": "Pegs",
+      "bestPegs": "ល្អបំផុត pegs"
+    },
+    "auditoryFigureGround": {
+      "title": "រូបសំណាក - ដី",
+      "patternPresent": "លំនាំមានវត្តមាន?",
+      "pattern": "លំនាំ",
+      "noPattern": "ទេ pattern"
+    },
+    "selfOrderedPointing": {
+      "title": "ការចង្អុលដោយខ្លួនឯង",
+      "maxSpan": "ជួរអតិបរមា",
+      "errors": "កំហុស",
+      "round": "ជុំ",
+      "setOf": "សំណុំ {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "ការតាមដានកញ្ចក់",
+      "totalErrors": "សរុប errors",
+      "avgTime": "មធ្យម ពេលវេលា",
+      "shapes": "រូបរាងs",
+      "perfect": "ល្អឥតខ្ចោះ",
+      "improvement": "ការកែលម្អ",
+      "errorsMiddot": "កំហុស ·",
+      "shape": "រូបរាង",
+      "errors": "កំហុស",
+      "xIsMirrored": "X ត្រូវបានឆ្លុះបញ្ចាំង!"
+    },
+    "clockDrawing": {
+      "title": "ការគូរនាឡិកា",
+      "avgError": "កំហុសមធ្យម",
+      "setTo": "កំណត់ទៅ ",
+      "submit": "បញ្ជូន"
+    },
+    "cognitiveMap": {
+      "title": "ផែនទីយល់ដឹង",
+      "explore": "ស្វែងរក",
+      "sRemaining": "S នៅសល់",
+      "from": "ពី",
+      "whichDirectionIs": "ទិសណាជា "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "ភ្លឺ Up"
+    },
+    "twentyFortyEight": {
+      "maxTile": "ប្លុកអតិបរមា",
+      "moves": "ការផ្លាស់ទី",
+      "max": "អតិបរមា"
+    },
+    "bridges": {
+      "title": "ស្ពាន",
+      "puzzles": "ល្បែងផ្គុំ",
+      "maxLevel": "កម្រិតអតិបរមា",
+      "level": "កម្រិត"
+    },
+    "net": {
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxGrid": "ក្រឡាអតិបរមា"
+    },
+    "flip": {
+      "title": "Flip"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "Slant"
+    },
+    "towers": {
+      "title": "Towers",
+      "puzzles": "ល្បែងផ្គុំ",
+      "avgTime": "ពេលមធ្យម",
+      "erase": "លុប"
+    },
+    "pearl": {
+      "title": "Pearl",
+      "edges": "គែម"
+    },
+    "mapColoring": {
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "moves": "ការផ្លាស់ទី",
+      "maxLevel": "កម្រិតអតិបរមា"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "ទេnogram"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "ភាពត្រឹមត្រូវ",
+      "puzzles": "ល្បែងផ្គុំ",
+      "avgTime": "ពេលមធ្យម"
+    },
+    "untangle": {
+      "title": "Untangle",
+      "drags": "ការអូស",
+      "maxNodes": "Max ទេdes"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "Fifteen"
+    },
+    "tents": {
+      "title": "Tents"
+    },
+    "mesker": {
+      "pen": "ប៊ិច",
+      "stroke": "ជំងឺដាច់សរសៃឈាមខួរក្បាល",
+      "penPressureHint": "សរសេរដោយសម្ពាធប៊ិចជាប់លាប់"
+    },
+    "modality": {
+      "position": "ទីតាំង",
+      "audio": "អូឌីយ៉ូ"
+    },
+    "validate": "បញ្ជាក់"
+  },
+  "trace": {
+    "instructions": "អូសទៅទីតាំង N-back ។ ចុចពីរដងប្រសិនបើទីតាំងដូចគ្នា។",
+    "hint": {
+      "validated": "មានសុពលភាព",
+      "draw": "គូរអក្សរ • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "drawWithColor": "គូរអក្សរ • ជ្រើសរើសពណ៌ • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "type": "វាយបញ្ចូលអក្សរ • Enter ដើម្បីបញ្ជាក់",
+      "typeWithColor": "វាយអក្សរ • ជ្រើសរើសពណ៌ • បញ្ចូលដើម្បីបញ្ជាក់",
+      "typeResult": "វាយបញ្ចូលលទ្ធផល • បញ្ចូលដើម្បីបញ្ជាក់",
+      "writeResult": "សរសេរលទ្ធផល • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព"
+    },
+    "keyboard": {
+      "letterInput": "អក្សរ",
+      "numberInput": "លេខ"
+    },
+    "arithmetic": {
+      "cueHint": "ចង់ចាំលេខ ២",
+      "refresh": "ថ្មី"
+    },
+    "hintPosition": "តើការជំរុញ {{n}} ពីមុននៅឯណា?",
+    "hintN0": "ចង្អុលបង្ហាញការជំរុញបច្ចុប្បន្ន",
+    "warmupHint": "Memorize the positions. ទេ response needed.",
+    "hintDraw": "គូរអក្សរ • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+    "hintDrawWithColor": "គូរអក្សរ • ជ្រើសរើសពណ៌ • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+    "hintWriteResult": "សរសេរលទ្ធផល • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+    "guide": {
+      "swipeNormal": "អូសពីទីតាំងចុងក្រោយ (N-0) ទៅទីតាំងពី {{n}} ជំហានមុន (N-{{n}})។ ចុចពីរដងប្រសិនបើទីតាំងដូចគ្នា។",
+      "swipeSequential": "អូសមួយជំហានម្ដងៗពី N-0 ទៅ N-{{n}} ឆ្លងកាត់នីមួយៗ។ ចុចពីរដងប្រសិនបើទីតាំងដូចគ្នា។",
+      "swipeDynamic": "អូសតាមប្រប្រង់ដែលបង្ហាញ។ ចុចពីរដងប្រសិនបើទីតាំងដូចគ្នា។",
+      "tapN0": "ចុចលើទីតាំងបច្ចុប្បន្ន។",
+      "warmup": "ចង់ចាំទីតាំង — មិនត្រូវការឆ្លើយទេ។",
+      "writeDraw": "គូរអក្សរដែលបានឮ {{n}} ជំហានមុន • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "writeDrawColor": "គូរអក្សរដែលបានឮ {{n}} ជំហានមុន • ជ្រើសរើសពណ៌របស់វា • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "writeType": "វាយអក្សរដែលបានឮកាលពី {{n}} ជំហានមុន • បញ្ចូលដើម្បីបញ្ជាក់",
+      "writeTypeColor": "វាយអក្សរដែលបានឮកាលពី {{n}} ជំហានមុន • ជ្រើសរើសពណ៌របស់វា • Enter ដើម្បីធ្វើសុពលភាព",
+      "writeDrawN0": "គូរអក្សរដែលអ្នកទើបតែបានឮ • ប៉ះដើម្បីបញ្ជាក់",
+      "writeDrawColorN0": "គូរអក្សរដែលអ្នកទើបតែបានឮ • ជ្រើសរើសពណ៌របស់វា • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "writeTypeN0": "វាយអក្សរដែលអ្នកទើបតែបានឮ • បញ្ចូលដើម្បីបញ្ជាក់",
+      "writeTypeColorN0": "វាយអក្សរដែលអ្នកទើបតែបានឮ • ជ្រើសរើសពណ៌របស់វា • បញ្ចូលដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "writeResult": "សរសេរលទ្ធផល • ប៉ះដើម្បីធ្វើឱ្យមានសុពលភាព",
+      "validated": "បញ្ជាក់ហើយ",
+      "holdMindful": "សង្កត់ប្រអប់ {{seconds}} វិ",
+      "swipeMindful": "អូសក្នុង {{seconds}} វិ"
+    },
+    "settings": {
+      "adaptiveTiming": "ពេលវេលាសម្របខ្លួន",
+      "inputKeyboard": "ក្ដារចុច",
+      "inputHandwriting": "ការសរសេរដោយដៃ",
+      "writingInput": "អក្សរs/numbers",
+      "section": {
+        "grid": "ក្រឡាចត្រង្គ",
+        "input": "បញ្ចូល",
+        "rhythm": "ចង្វាក់",
+        "interface": "ចំណុចប្រទាក់",
+        "interfaceNone": "ស្តង់ដារ",
+        "sound": "សំឡេង"
+      },
+      "isi": "ចន្លោះពេល (ISI)",
+      "stimulusDuration": "រយៈពេលជំរុញ",
+      "feedbackDuration": "មតិត្រឡប់ duration",
+      "ruleDisplay": "រយៈពេលនៃក្បួន",
+      "blankInterval": "ចន្លោះពេលទទេ",
+      "showProgressBar": "វឌ្ឍនភាព bar",
+      "showInstructions": "ការណែនាំក្នុងហ្គេម",
+      "arithmeticInterference": "ការជ្រៀតជ្រែកនព្វន្ធ",
+      "fullMenu": "ម៉ឺនុយពេញ",
+      "gridStyle": "រចនាប័ទ្មក្រឡាចត្រង្គ",
+      "gridStyleClassic": "បុរាណ",
+      "gridStyleTrace": "ដាន",
+      "guide": {
+        "swipeMindful": "អូសក្នុង {{seconds}}s",
+        "holdMindful": "សង្កត់ក្រឡាសម្រាប់ {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "កាយវិការ",
+        "holdDuration": "កាន់",
+        "writingDuration": "ការសរសេរ"
+      }
+    },
+    "feedback": {
+      "holdDuration": "សង្កត់",
+      "gestureDuration": "ការវាយដៃ",
+      "writingDuration": "សរសេរ"
+    },
+    "image": "រូបរាង",
+    "digits": "លេខ",
+    "emotions": "អារម្មណ៍",
+    "words": "ពាក្យ",
+    "tones": "សម្លេង",
+    "spatial": "ទិសដៅ"
+  },
+  "replay": {
+    "title": "ការលេងឡើងវិញវគ្គ",
+    "play": "លេង",
+    "pause": "ផ្អាក",
+    "restart": "ចាប់ផ្ដើមឡើងវិញ",
+    "speed": "ល្បឿន",
+    "loading": "កំពុងដំណើរការវគ្គ...",
+    "unavailable": "ការលេងឡើងវិញមិនមានសម្រាប់វគ្គនេះ",
+    "backToStats": "ត្រឡប់ក្រោយ to stats",
+    "runStack": {
+      "original": "ដើម",
+      "correction": "ត្រឹមត្រូវion",
+      "delta": "Δ d'",
+      "inProgress": "កំពុងដំណើរការ",
+      "completed": "បានបញ្ចប់"
+    },
+    "abandon": "បោះបង់",
+    "badge": "លេងឡើងវិញ",
+    "completionReport": {
+      "backToHome": "ត្រឡប់ក្រោយ",
+      "correctAgain": "ត្រឹមត្រូវ again",
+      "deltaVsOriginal": "ទល់នឹងដើម",
+      "deltaVsParent": "vs មុន run",
+      "falseAlarmsSkipped": "កំហុសជៀសវាង",
+      "missesCorrections": "ត្រឹមត្រូវions",
+      "newFalseAlarms": "កំហុសថ្មី",
+      "replayAgain": "លេងឡើងវិញ",
+      "scoreLabel": "ពិន្ទុ d'",
+      "title": "ត្រឹមត្រូវion complete"
+    },
+    "controls": "ការកំណត់",
+    "correction": "ត្រឹមត្រូវion",
+    "finished": "ចប់ការលេងឡើងវិញ",
+    "home": "ទំព័រដើម",
+    "parseError": "មិនអាចអានវគ្គ",
+    "tapSlotToPlace": "ចុចកន្លែងដើម្បីដាក់",
+    "timeline": "ពេលវេលាline",
+    "focusTimeline": {
+      "open": "បង្ហាញ timeline",
+      "close": "បិទ timeline",
+      "title": "N-ត្រឡប់ក្រោយ ពេលវេលាline",
+      "fillAll": "បំពេញទាំងអស់",
+      "fillCard": "បំពេញកាត"
+    },
+    "hud": {
+      "counterDisplay": "ការបង្ហាញកម្មវិធីរាប់",
+      "toggleCounterDisplay": "បិតបើកការបង្ហាញកម្មវិធីរាប់"
+    },
+    "validate": "បញ្ជាក់"
+  },
+  "recovery": {
+    "title": "វគ្គត្រូវបានផ្អាក",
+    "description": "វគ្គមួយកំពុងដំណើរការ។ តើអ្នកចង់បន្តទេ?",
+    "mode": "របៀប",
+    "level": "កម្រិត",
+    "progress": "វឌ្ឍនភាព",
+    "timeAgo": "ពេលវេលា",
+    "resume": "បន្ត session",
+    "startFresh": "ចាប់ផ្តើម fresh",
+    "staleWarning": "វគ្គនេះចាស់ ការបន្តអាចពិបាក។",
+    "modes": {
+      "game": "ការហ្វឹកហ្វឺន",
+      "activeTraining": "ការហ្វឹកហាតសកម្ម",
+      "flowTraining": "ការហ្វឹកហាត Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dual Trace"
+    }
+  },
+  "rewards": {
+    "congratulations": "អបអរសាទរ!",
+    "duration": "{{days}} ថ្ងៃ Premium",
+    "lifetimeLabel": "ការចូលប្រើហូរជាវិត",
+    "expiresAt": "សុពលភាពដល់ {{date}}",
+    "neverExpires": "មិនផុតកំណត់",
+    "continue": "បន្ត",
+    "discovery": {
+      "name": "ប៉ាសរកឃើញ",
+      "description": "៧ ថ្ងៃ Premium — ស្វែងរកមុខងារទាំងអស់"
+    },
+    "engagement": {
+      "name": "ប៉ាសចូលរួម",
+      "description": "១ ខែ Premium — វិន័យរបស់អ្នកមានផល"
+    },
+    "expert": {
+      "name": "ប៉ាសជំនាញ",
+      "description": "៣ ខែ Premium — អ្នកជាអ្នកហ្វឹកហាតពិតប្រាកដ"
+    },
+    "lifetime": {
+      "name": "ការចូលប្រើហូរជាវិត",
+      "description": "Premium ដរាប — អ្នកបានជំនាញ Neurodual"
+    },
+    "xpRemaining": "XP នៅសល់",
+    "permanentAccessUnlocked": "ការចូលប្រើអចិន្ត្រៃយ៍ដោះសោ",
+    "reachedTheTop": "អ្នកបានដល់កំពូល!"
+  },
+  "progression": {
+    "level": "កម្រិត {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "បន្ទាប់ level",
+    "reached": "សម្រេចបាន",
+    "inProgress": "កំពុងដំណើរការ"
+  },
+  "gridlock": {
+    "nextPuzzle": "បន្ទាប់ puzzle →"
+  }
+}

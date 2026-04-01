@@ -256,75 +256,7 @@
         "settingsRodsHint": "Set via N-Level in game settings",
         "settingsTrials": "Trials per session",
         "settingsTrialsHint": "Set via Trials in game settings",
-        "settingsRange": "Number range",
-        "journey": {
-          "title": "Soroban Mastery",
-          "subtitle": "Learn the Japanese abacus step by step",
-          "stageLabel": "Stage {{n}}",
-          "rods": "rods",
-          "trialsLabel": "Trials",
-          "goalLabel": "Goal",
-          "bestScore": "Best: {{score}}%",
-          "startExercise": "Start Exercise",
-          "enterNumber": "What number is shown?",
-          "backToRoadmap": "Back",
-          "nextStage": "Next stage",
-          "retry": "Retry",
-          "stagePassed": "Stage completed!",
-          "stageNotPassed": "Keep practicing!",
-          "stagePassedHint": "The next stage is now unlocked.",
-          "stageNotPassedHint": "You need {{target}}% to pass.",
-          "stages": {
-            "reading": {
-              "title": "Reading Numbers",
-              "desc": "Learn to read bead positions and identify the value shown",
-              "instrTitle": "Reading the Soroban",
-              "instrDesc": "Look at the beads on each rod. Count the active beads (touching the beam) to determine the number. The heaven bead (top) = 5, each earth bead (bottom) = 1."
-            },
-            "setting": {
-              "title": "Setting Numbers",
-              "desc": "Set the beads to represent a given number",
-              "instrTitle": "Setting Numbers",
-              "instrDesc": "A number appears on screen. Tap or drag the beads to represent it on the soroban, then press Submit."
-            },
-            "directAdd": {
-              "title": "Direct Addition",
-              "desc": "Add small numbers using earth beads only",
-              "instrTitle": "Direct Addition",
-              "instrDesc": "When the result stays below 5, simply push more earth beads toward the beam. For example: 2 + 1 = push one more earth bead up."
-            },
-            "complement5": {
-              "title": "Complement of 5",
-              "desc": "Add numbers that cross the 5 boundary",
-              "instrTitle": "The Friends of 5",
-              "instrDesc": "When adding would exceed 4 earth beads, use the heaven bead. To add 4 to 3: push the heaven bead down (add 5), then remove 1 earth bead (subtract 1). Result: 7."
-            },
-            "complement10": {
-              "title": "Complement of 10",
-              "desc": "Add numbers that carry to the next rod",
-              "instrTitle": "The Friends of 10",
-              "instrDesc": "When a rod would exceed 9, carry 1 to the next rod (add 1 bead on the left) and subtract the complement from 10 on the current rod."
-            },
-            "directSub": {
-              "title": "Simple Subtraction",
-              "desc": "Subtract without borrowing",
-              "instrTitle": "Direct Subtraction",
-              "instrDesc": "Pull earth beads away from the beam to subtract. If the heaven bead is active, you can also raise it to subtract 5."
-            },
-            "subComplement": {
-              "title": "Subtraction with Complements",
-              "desc": "Subtract using 5's and 10's complements",
-              "instrTitle": "Complement Subtraction",
-              "instrDesc": "When you can't subtract directly, borrow from the next rod (subtract 1 from the left) and add the complement of 10 on the current rod."
-            },
-            "multiDigit": {
-              "title": "Multi-digit Operations",
-              "desc": "Perform additions and subtractions with multiple digits",
-              "instrTitle": "Putting It All Together",
-              "instrDesc": "Apply all techniques to multi-digit calculations. Work from right to left, handling carries and borrows as needed."
-            }
-          }
-        }
+        "settingsRange": "Number range"
       },
       "stroop": {
         "pressInkColorButton": "Press the button matching the ink color",
@@ -1256,16 +1188,6 @@
       "calibrationDescription": "Before the first stage, a longer calibration will estimate your starting level.",
       "defaultDescription": "Balls will light up. Follow them while they move, then identify them.",
       "startCalibration": "Start calibration",
-      "wordLabels": {
-        "hand": "hand",
-        "cat": "cat",
-        "moon": "moon",
-        "fire": "fire",
-        "water": "water",
-        "king": "king",
-        "key": "key",
-        "wind": "wind"
-      },
       "calibrationTitle": "Calibration",
       "estimatedStart": "Est. start",
       "roundsAnalyzed": "Rounds analyzed",
@@ -2719,53 +2641,6 @@
     },
     "validate": "Validate"
   },
-  "dualPick": {
-    "position": "Position",
-    "audio": "Audio",
-    "dragLabels": "Drag labels onto the correct stimuli",
-    "settings": {
-      "countdownMode": "Countdown (instead of counter)",
-      "gridScale": "Grid size",
-      "modalityLabels": "Position / Audio labels",
-      "recenterButton": "Recenter button",
-      "showAdaptiveZone": "Show adaptive zone",
-      "showNLevel": "Show N level",
-      "timeLabels": "Present / Past labels",
-      "title": "Display"
-    }
-  },
-  "memo": {
-    "positionPicker": {
-      "title": "Choose the cell"
-    },
-    "audioPicker": {
-      "title": "Choose the letter"
-    }
-  },
-  "flow": {
-    "title": "Dual Place",
-    "description": "Place stimuli in the timeline",
-    "score": "Score",
-    "errors": "Errors",
-    "restart": "Restart",
-    "home": "Home",
-    "past": "Past",
-    "present": "Present",
-    "audio": "Audio",
-    "dragToPlace": "Drag stimuli to the timeline",
-    "position": "Position",
-    "recenter": "Recenter",
-    "settings": {
-      "countdownMode": "Countdown mode",
-      "gridScale": "Grid size",
-      "modalityLabels": "Position / Audio labels",
-      "recenterButton": "Recenter button",
-      "showAdaptiveZone": "Show adaptive zone",
-      "showNLevel": "Show N level",
-      "timeLabels": "Present / Past labels",
-      "title": "Display"
-    }
-  },
   "trace": {
     "instructions": "Swipe to N-back position. Double-tap if same position.",
     "hint": {
@@ -2808,19 +2683,7 @@
       "writeResult": "Write the result • Tap to validate",
       "validated": "Validated",
       "holdMindful": "Hold the cell for {{seconds}}s",
-      "swipeMindful": "Swipe in {{seconds}}s",
-      "short": {
-        "warmup": "Memorize",
-        "swipeNormal": "N-{{n}}",
-        "swipeSequential": "N-0 → N-{{n}}",
-        "swipeDynamic": "Follow the rule",
-        "letter": "Letter N-{{n}}",
-        "letterColor": "Letter + color N-{{n}}",
-        "letterN0": "Current letter",
-        "letterColorN0": "Letter + color",
-        "holdMindful": "Hold {{seconds}}s",
-        "swipeMindful": "Swipe {{seconds}}s"
-      }
+      "swipeMindful": "Swipe in {{seconds}}s"
     },
     "settings": {
       "adaptiveTiming": "Adaptive timing",
@@ -2915,11 +2778,7 @@
     },
     "hud": {
       "counterDisplay": "Counter display",
-      "toggleCounterDisplay": "Toggle counter display",
-      "counterMode": {
-        "progress": "Progress",
-        "remaining": "Remaining"
-      }
+      "toggleCounterDisplay": "Toggle counter display"
     },
     "validate": "Validate"
   },
@@ -2939,24 +2798,6 @@
       "flowTraining": "Dual Place training",
       "dualPickTraining": "Dual Pick",
       "traceTraining": "Dual Trace"
-    }
-  },
-  "replayRecovery": {
-    "title": "Correction in progress",
-    "description": "A correction was in progress. Would you like to resume?",
-    "type": "Type",
-    "trial": "Trial",
-    "time": "Time",
-    "speed": "Speed",
-    "interruptedAgo": "Interrupted {{time}}",
-    "resume": "Resume correction",
-    "abandon": "Abandon",
-    "staleWarning": "This correction is old, resuming might be challenging.",
-    "types": {
-      "tempo": "N-Back",
-      "flow": "Dual Place",
-      "recall": "Dual Memo",
-      "dualPick": "Dual Pick"
     }
   },
   "rewards": {
@@ -2993,18 +2834,7 @@
     "reached": "Reached",
     "inProgress": "In progress"
   },
-  "modes": {
-    "dualTrace": {
-      "name": "Dual Trace"
-    }
-  },
   "gridlock": {
     "nextPuzzle": "Next puzzle →"
-  },
-  "memoryMatch": {
-    "findAllPairs": "Find all pairs",
-    "match": "Match!",
-    "tryAgain": "Try again",
-    "boardComplete": "Board complete!"
   }
 }

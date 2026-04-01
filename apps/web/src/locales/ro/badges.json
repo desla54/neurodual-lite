@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Consecvență",
+      "performance": "Performanţă",
+      "resilience": "Reziliență",
+      "exploration": "Explorare",
+      "milestone": "Repere",
+      "cognitive": "Cognitiv"
+    },
+    "first_session": {
+      "name": "Neuron trezit",
+      "description": "Prima sesiune finalizată."
+    },
+    "sessions_10": {
+      "name": "Stâlp (bronz)",
+      "description": "10 sesiuni finalizate."
+    },
+    "sessions_25": {
+      "name": "Stâlp (argint)",
+      "description": "25 de sesiuni finalizate."
+    },
+    "marathoner": {
+      "name": "Stâlp (aur)",
+      "description": "50 de sesiuni finalizate."
+    },
+    "streak_3": {
+      "name": "Ritualul Nașterii",
+      "description": "serie de 3 zile."
+    },
+    "streak_7": {
+      "name": "Ritual zilnic",
+      "description": "serie de 7 zile."
+    },
+    "streak_14": {
+      "name": "Obiceiul ancorat",
+      "description": "serie de 14 zile."
+    },
+    "streak_30": {
+      "name": "Disciplina de Fier",
+      "description": "serie de 30 de zile."
+    },
+    "early_bird": {
+      "name": "Pasăre timpurie",
+      "description": "5 zile diferite cu sesiune înainte de ora 8."
+    },
+    "night_owl": {
+      "name": "Bufnița de noapte",
+      "description": "5 zile diferite cu sedinta dupa ora 22.00."
+    },
+    "brain_n3": {
+      "name": "Creier ascuțit",
+      "description": "Atinge nivelul N-3."
+    },
+    "brain_n4": {
+      "name": "Creierul muscular",
+      "description": "Atinge nivelul N-4."
+    },
+    "brain_n5": {
+      "name": "Creierul Olimpic",
+      "description": "Atinge nivelul N-5."
+    },
+    "brain_n7": {
+      "name": "Elita cognitivă",
+      "description": "Atinge nivelul N-7."
+    },
+    "brain_n10": {
+      "name": "Supraomenesc",
+      "description": "Atinge nivelul N-10."
+    },
+    "sniper": {
+      "name": "Lunetist",
+      "description": "> 90% precizie la N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Precizie chirurgicală",
+      "description": "> 95% precizie la N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% precizie la N ≥ 2."
+    },
+    "untouchable": {
+      "name": "De neatins",
+      "description": "Sesiune perfectă (0 erori) la N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Reflex rapid",
+      "description": "Timp mediu de reacție < 500 ms cu o precizie ≥70%."
+    },
+    "flash": {
+      "name": "Flash",
+      "description": "Timp mediu de reacție < 400 ms cu o precizie ≥70%."
+    },
+    "rt_300": {
+      "name": "Fulger",
+      "description": "Timp mediu de reacție < 300 ms cu o precizie ≥70%."
+    },
+    "consistent": {
+      "name": "Consecvent",
+      "description": "Abatere standard RT < 100 ms (necesită ≥10 răspunsuri)."
+    },
+    "dprime_master": {
+      "name": "d' Maestru",
+      "description": "d-prime > 3.0 într-o sesiune."
+    },
+    "dprime_4": {
+      "name": "Expert SDT",
+      "description": "d-prime > 4.0 într-o sesiune."
+    },
+    "no_pause": {
+      "name": "Neîntrerupt",
+      "description": "5 sesiuni consecutive fără pauză cu o precizie ≥75%."
+    },
+    "steady_hands": {
+      "name": "Mâini statornice",
+      "description": "Fără intrări false în timpul sesiunii (precizie ≥80%)."
+    },
+    "zen_master": {
+      "name": "Maestru Zen",
+      "description": "10 ședințe fără a renunța vreodată."
+    },
+    "comeback_kid": {
+      "name": "Copilul revenit",
+      "description": "Creșteți nivelul după un nivel scăzut."
+    },
+    "persistent": {
+      "name": "Persistent",
+      "description": "3 sedinte in aceeasi zi dupa un esec."
+    },
+    "second_wind": {
+      "name": "Al doilea vânt",
+      "description": "Îmbunătățiți d-prim între jumătatea 1 și 2 (d′ ≥ 2,0 necesar)."
+    },
+    "plateau_breaker": {
+      "name": "Spărgător de platou",
+      "description": "Progres după 10+ sesiuni la același nivel."
+    },
+    "no_surrender": {
+      "name": "Fără Predare",
+      "description": "25 de ședințe fără a renunța."
+    },
+    "ironwill": {
+      "name": "Voința de Fier",
+      "description": "50 de ședințe fără a renunța."
+    },
+    "audiophile": {
+      "name": "Audiofil",
+      "description": "Audio > 80%, dar vizual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Ochi de vultur",
+      "description": "Vizual > 80% dar audio < 70%."
+    },
+    "synchronized": {
+      "name": "Sincronizat",
+      "description": "Scoruri audio și vizuale în 5% (≥60% necesar)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio ȘI vizual > 85% în aceeași sesiune (≥6 naluci/modalitate)."
+    },
+    "dual_elite": {
+      "name": "Elită dublă",
+      "description": "Audio ȘI vizual > 90% în aceeași sesiune la N ≥ 3 (≥6 naluci/modalitate)."
+    },
+    "centurion": {
+      "name": "centurion",
+      "description": "100 de sesiuni finalizate."
+    },
+    "sessions_250": {
+      "name": "Legendă (smarald)",
+      "description": "250 de sesiuni finalizate."
+    },
+    "sessions_500": {
+      "name": "Nemuritor (Diamant)",
+      "description": "500 de sesiuni finalizate."
+    },
+    "trials_500": {
+      "name": "Practicant",
+      "description": "S-au jucat în total 500 de încercări."
+    },
+    "trials_1000": {
+      "name": "Antrenat",
+      "description": "1.000 de încercări jucate în total."
+    },
+    "trials_5000": {
+      "name": "Condimentat",
+      "description": "S-au jucat în total 5.000 de încercări."
+    },
+    "trials_10k": {
+      "name": "10.000 de încercări",
+      "description": "10.000 de încercări jucate în total."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "S-au jucat în total 50.000 de încercări."
+    },
+    "streak_90": {
+      "name": "Sfertul impecabil",
+      "description": "serie de 90 de zile."
+    },
+    "streak_365": {
+      "name": "Anul perfect",
+      "description": "serie de 365 de zile."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 an de utilizare."
+    },
+    "metronome": {
+      "name": "Metronomul",
+      "description": "Varianta RT < 50 ms pe ≥20 de studii (se sunt necesare răspunsuri active)."
+    },
+    "flow_state": {
+      "name": "Stare de grație",
+      "description": "Flux a fost detectat într-o întreagă sesiune."
+    },
+    "sang_froid": {
+      "name": "Cap rece",
+      "description": "Nicio cascadă de erori după o eroare (precizie ≥70%)."
+    },
+    "imperturbable": {
+      "name": "De neclintit",
+      "description": "Sesiune completă fără pierderea focalizării (precizie ≥60%)."
+    },
+    "comeback_strong": {
+      "name": "Revenire puternică",
+      "description": "Bate-ți recordul d-prime după 3+ zile de plecare (d′ ≥ 2,5)."
+    }
+  }
+}

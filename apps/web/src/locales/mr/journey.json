@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "प्रशिक्षण मार्ग",
+    "pageSubtitle": "तुमचा प्रवास निवडा, व्यवस्थापित करा आणि तयार करा",
+    "enabled": "प्रशिक्षण मार्ग सक्षम करा",
+    "description": "N-1 ते N-10 पर्यंत 30 प्रगतीशील टप्पे",
+    "progress": "प्रगती",
+    "locked": "कुलूपबंद",
+    "createJourney": "एक प्रवास तयार करा",
+    "viewJourneys": "प्रवास पहा",
+    "current": "सध्याचा प्रवास",
+    "myJourneys": "माझे प्रवास",
+    "stage": "स्टेज",
+    "stages": "टप्पे",
+    "stagesShort": "st",
+    "stageLabels": {
+      "pick": "निवडा",
+      "catch": "पकडा",
+      "place": "ठिकाण",
+      "memo": "मेमो"
+    },
+    "name": "नाव",
+    "namePlaceholder": "उदा. N-5 आव्हान",
+    "levels": "स्तर",
+    "levelRange": "पातळी श्रेणी",
+    "levelTo": "करण्यासाठी",
+    "createNew": "नवीन प्रवास",
+    "new": "नवीन",
+    "defaultCustomName": "माझा प्रवास",
+    "created": "प्रवास तयार झाला!",
+    "deleted": "प्रवास हटवला",
+    "sessionSettings": "सत्र सेटिंग्ज",
+    "savedStatus": "सेटिंग्ज सेव्ह केल्या",
+    "preset": {
+      "easy": "सोपे",
+      "medium": "शिफारस केली",
+      "hard": "कठिण"
+    },
+    "setup": {
+      "title": "प्रवास आणि प्रोफाइल",
+      "journey": "प्रवास",
+      "journeyNone": "निवडा…",
+      "profile": "प्रोफाइल",
+      "profileNone": "निवडा…",
+      "configure": "कॉन्फिगर करा",
+      "configureNone": "एक प्रवास निवडा",
+      "create": "नवीन प्रवास",
+      "createDesc": "एक नवीन प्रवास तयार करा"
+    },
+    "deleteConfirmTitle": "हा प्रवास हटवायचा?",
+    "deleteConfirmMessage": "\"{{name}}\" प्रवास कायमचा हटवला जाईल.",
+    "renameTitle": "या प्रवासाचे नाव बदला",
+    "renameMessage": "\"{{name}}\" चे नाव संपादित करा.",
+    "renamed": "प्रवासाचे नाव बदलले.",
+    "badge": {
+      "simulator": "सिम्युलेटर",
+      "beta": "बीटा",
+      "default": "डीफॉल्ट"
+    },
+    "mode": "मोड",
+    "modeStandard": "प्रवास (4 मोड)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "ड्युअल कॅच",
+      "dualPlace": "दुहेरी स्थान",
+      "dualMemo": "ड्युअल मेमो",
+      "dualPick": "ड्युअल पिक",
+      "simulator": "सिम्युलेटर",
+      "jaeggi": "क्लासिक",
+      "brainWorkshop": "मेंदू कार्यशाळा"
+    },
+    "validation": {
+      "sessions": "{{count}} प्रमाणीकरण सत्र(चे)",
+      "needed": "{{count}} सत्र शिल्लक आहे",
+      "excellent": "उत्कृष्ट!",
+      "good": "छान!",
+      "passing": "उत्तीर्ण"
+    },
+    "progression": {
+      "title": "प्रगती",
+      "description": "पुढील स्तरावर जाण्यासाठी, चांगली स्कोअर मिळवा:",
+      "excellent": "≥95% → 1 सत्र",
+      "good": "≥85% → 2 सत्रे",
+      "passing": "≥80% → 3 सत्रे",
+      "rules": "प्रगतीचे नियम",
+      "jaeggi": {
+        "description": "सर्वात कमकुवत पद्धतीवर आधारित:",
+        "up": "< 3 त्रुटी → पातळी वाढवा",
+        "stay": "3 ते 5 त्रुटी → या स्तरावर रहा",
+        "down": "> 5 त्रुटी → पातळी खाली"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop प्रोटोकॉल (BW स्कोअर):",
+        "up": "≥80% → पातळी वर",
+        "stay": "50-79% → पातळीवर रहा",
+        "strike": "3 सलग स्कोअर <50% → पातळी खाली"
+      },
+      "hybrid": {
+        "description": "हा प्रवास {{trackCount}} Dual Track सत्र(से) चालवतो, नंतर {{dnbCount}} ड्युअल N-Back सत्र(से) समान स्तरावर चालतो.",
+        "alternation": "जेव्हाही निर्णय घेतला जातो तेव्हा लूप नेहमी Dual Track सह रीस्टार्ट होतो.",
+        "authority": "फक्त ड्युअल N-Back सत्रे वर, थांबणे किंवा खाली ठरवतात.",
+        "up": "0-1 त्रुटी → पातळी वाढवा",
+        "stay": "2-3 त्रुटी → राहा",
+        "down": "4+ त्रुटी → पातळी खाली",
+        "streakRule": "एकाच झोनमध्ये सलग दोन सत्रे निर्णयाला चालना देतात.",
+        "trackProgress": "{{current}}/{{required}} चा मागोवा घ्या",
+        "cleanProgress": "प्रमाणित {{current}}/{{required}}",
+        "stayProgress": "{{current}}/{{required}} धरा",
+        "downProgress": "फेल {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track प्रत्येक लक्ष्य-गणना स्टेजसाठी सतत मास्टर बार वापरते:",
+        "calibration": "प्रथम कॅलिब्रेशन तुमच्या सुरुवातीच्या लक्ष्य संख्येचा अंदाज लावते",
+        "goodSession": "प्रत्येक चांगले सत्र सध्याच्या टप्प्यात थोडेसे भरते",
+        "mastery": "जवळपास परिपूर्ण सत्रे ते जलद भरतात, परंतु सामान्य सत्रे विनम्र राहतात",
+        "regression": "कमकुवत सत्रांमुळे सध्याचा मास्टरी बारही कमी होऊ शकतो",
+        "unlock": "जेव्हा वर्तमान स्टेज 100% पर्यंत पोहोचते तेव्हाच पुढील लक्ष्य संख्या अनलॉक होते"
+      }
+    },
+    "switcher": {
+      "open": "प्रवास स्विचर उघडा",
+      "current": "चालू",
+      "showAll": "सर्व प्रवास",
+      "settings": "प्रवास सेटिंग्ज"
+    },
+    "previous": "मागील प्रवास",
+    "next": "पुढचा प्रवास",
+    "calibration": {
+      "title": "पहिले सत्र",
+      "subtitle": "एक लहान कॅलिब्रेशन तुमची सुरुवातीची पातळी निश्चित करेल किंवा तुम्ही थेट स्तर 2 वर सुरू करू शकता.",
+      "skipToN2": "किंवा N-2 पासून सुरू करा",
+      "continueAt": "किंवा N-{{level}} वर सुरू ठेवा",
+      "start": "कॅलिब्रेशन सुरू करा",
+      "redo": "कॅलिब्रेशन पुन्हा करा",
+      "badge": "कॅलिब्रेशन"
+    },
+    "presets": {
+      "currentSlot": "सानुकूल",
+      "currentSlotView": "सानुकूल",
+      "lockedTitle": "काही पर्याय लॉक केलेले आहेत",
+      "lockedDesc": "प्रगतीची तुलना करता येण्यासाठी, प्रवास सुरू झाल्यानंतर पद्धती (आणि काही पर्याय) बदलू शकत नाहीत."
+    },
+    "completed": {
+      "title": "प्रवास पूर्ण झाला!",
+      "subtitle": "सर्व टप्पे प्रमाणित. शाब्बास!",
+      "continueFree": "प्रशिक्षण सुरू ठेवा"
+    },
+    "report": {
+      "stage": "स्टेज",
+      "level": "पातळी",
+      "score": "स्कोअर",
+      "sessionValidated": "सत्र प्रमाणित!",
+      "sessionNotValidated": "सत्र प्रमाणित नाही",
+      "minScore": "किमान आवश्यक:",
+      "stageCompleted": "टप्पा पूर्ण झाला!",
+      "stageUnlocked": "स्टेज {{stage}} अनलॉक केले!",
+      "replay": "रिप्ले करा",
+      "nextStage": "पुढचा टप्पा",
+      "home": "घर",
+      "hits": "हिट्स",
+      "misses": "चुकतो",
+      "falseAlarms": "खोटे अलार्म",
+      "correctRejections": "योग्य नकार"
+    }
+  }
+}

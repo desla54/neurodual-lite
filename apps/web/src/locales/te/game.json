@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "మీరు ఎలా ఫీల్ అవుతున్నారు?",
+      "tired": "అలసిపోయింది",
+      "normal": "సాధారణ",
+      "energized": "శక్తివంతమైంది"
+    },
+    "aria": {
+      "trialTimer": "ట్రయల్ టైమర్",
+      "positionMatch": "స్థానం మ్యాచ్",
+      "audioMatch": "ఆడియో మ్యాచ్",
+      "audioLetter": "ఆడియో లేఖ:",
+      "traceGrid": "ట్రేస్ గ్రిడ్"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "సమకాలీకరణ మానిటర్‌ను టోగుల్ చేయండి",
+      "start": "ప్రారంభించండి",
+      "end": "ముగింపు",
+      "pinLabel": "పిన్",
+      "pinTitle": "స్క్రీన్‌పై పిన్ చేయండి",
+      "inputLabel": "ఇన్పుట్",
+      "inputTitle": "ఇన్‌పుట్ లేటెన్సీ ప్రొఫైలింగ్‌ని టోగుల్ చేయండి (స్థానిక నిల్వ ND_INPUT_DEBUG_TIMING)",
+      "on": "న",
+      "off": "ఆఫ్",
+      "hideLabel": "దాచు",
+      "hideTitle": "దాచు (syncHud=1 లేదా ND_AUDIO_DEBUG_TIMING=1 తప్ప)",
+      "endRef": {
+        "audio": "ఆడియో",
+        "expected": "ఊహించబడింది"
+      },
+      "labels": {
+        "trial": "విచారణ",
+        "lagShow": "డిస్ప్లే లాగ్",
+        "lagHide": "రిటార్డ్ మాస్క్వేజ్",
+        "winErr": "తప్పు గెలవండి",
+        "endRef": "ముగింపు ref",
+        "visualPreP95": "దృశ్య_పూర్వ p95",
+        "audioSyncP95": "ఆడియో_సింక్ p95",
+        "visualPostP95": "దృశ్య_పోస్ట్ p95",
+        "inputToDispatchP95": "ఇన్‌పుట్->డిస్పాచ్ p95",
+        "inputToCommitP95": "ఇన్పుట్->కమిట్ p95",
+        "inputToPaintP95": "ఇన్‌పుట్->పెయింట్ p95",
+        "inputPending": "ఇన్‌పుట్ పెండింగ్‌లో ఉంది",
+        "inputSamples": "ఇన్పుట్ నమూనాలు",
+        "touchSamples": "టచ్ నమూనాలు",
+        "mouseSamples": "మౌస్ నమూనాలు",
+        "keyboardSamples": "కీబోర్డ్ నమూనాలు",
+        "latestMethod": "తాజా (పద్ధతి)",
+        "latestModality": "తాజా పద్ధతి",
+        "audioCueMode": "ఆడియో సూచనలు",
+        "audioCodec": "కోడెక్"
+      },
+      "resetInputProfiler": "ఇన్‌పుట్ ప్రొఫైలర్‌ని రీసెట్ చేయండి"
+    },
+    "hud": {
+      "resume": "పునఃప్రారంభించండి",
+      "pause": "పాజ్ చేయండి",
+      "quit": "నిష్క్రమించు",
+      "restart": "పునఃప్రారంభించండి",
+      "spaceToStart": "ప్రారంభించడానికి స్థలం",
+      "settings": "సెట్టింగ్‌లు",
+      "enterToAdvance": "ముందుకు వెళ్లడానికి నమోదు చేయండి",
+      "trial": "విచారణ",
+      "muteTexture": "నేపథ్య ధ్వనిని మ్యూట్ చేయండి"
+    },
+    "status": {
+      "paused": "పాజ్ చేయబడింది"
+    },
+    "completed": "పూర్తయింది",
+    "starting": {
+      "getReady": "సిద్ధంగా ఉండు..."
+    },
+    "quitModal": {
+      "title": "సెషన్ నుండి నిష్క్రమించాలా?",
+      "message": "మీ పురోగతి సేవ్ చేయబడదు.",
+      "confirm": "నిష్క్రమించు",
+      "cancel": "కొనసాగించు",
+      "close": "మూసివేయి"
+    },
+    "controls": {
+      "position": "స్థానం",
+      "position2": "పోస్. 2",
+      "position3": "పోస్. 3",
+      "position4": "పోస్. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-ఆడియో",
+      "audiovis": "ఆడియో & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "ఆడియో",
+      "audio2": "ఆడియో 2",
+      "color": "రంగు",
+      "arithmetic": "అంకగణితం",
+      "image": "ఆకారం"
+    },
+    "arithmetic": {
+      "answer": "సమాధానం",
+      "clear": "క్లియర్",
+      "hint": "కీబోర్డ్: 0–9 · '-' గుర్తు కోసం · '.' దశాంశాల కోసం · క్లియర్ చేయడానికి బ్యాక్‌స్పేస్"
+    },
+    "navigation": {
+      "back": "వెనుకకు"
+    },
+    "xp": {
+      "title": "XP సంపాదించారు",
+      "base": "బేస్ (N-{{level}})",
+      "performance": "ప్రదర్శన",
+      "accuracy": "ఖచ్చితత్వం",
+      "streakBonus": "స్ట్రీక్ బోనస్",
+      "dailyBonus": "మొదటి రోజు",
+      "badgeBonus": "బ్యాడ్జ్‌లు",
+      "flowBonus": "డ్యూయల్ ప్లేస్ బోనస్",
+      "confidenceMultiplier": "విశ్వాసం",
+      "dailyCapReached": "రోజువారీ XP పరిమితిని చేరుకున్నారు",
+      "levelReached": "స్థాయి {{level}} చేరుకుంది!"
+    },
+    "badges": {
+      "newUnlocked": "కొత్త బ్యాడ్జ్‌లు అన్‌లాక్ చేయబడ్డాయి"
+    },
+    "getReady": "సిద్ధంగా ఉండు...",
+    "layoutEdit": {
+      "done": "పూర్తయింది",
+      "reset": "రీసెట్ చేయండి",
+      "instructions": "రీఆర్డర్ చేయడానికి జోన్‌లను లాగండి. హ్యాండిల్స్ ఉపయోగించి పరిమాణాన్ని మార్చండి.",
+      "title": "సవరణ మోడ్",
+      "cancel": "రద్దు చేయి",
+      "save": "తాళం వేయండి",
+      "editLayout": "లేఅవుట్‌ని సవరించండి"
+    },
+    "paused": "పాజ్ చేయబడింది",
+    "pressEscapeToResume": "పునఃప్రారంభించడానికి Escape నొక్కండి",
+    "settings": {
+      "editLayout": "లేఅవుట్‌ని సవరించండి",
+      "gridAndButtons": "గ్రిడ్ & బటన్లు",
+      "swapPositionAudio": "మార్చు స్థానం / ఆడియో",
+      "title": "సెట్టింగ్‌లు",
+      "quickHint": "గేమ్ నుండి నిష్క్రమించకుండానే కొన్ని సెట్టింగ్‌లను సర్దుబాటు చేయండి.",
+      "quickUnavailable": "ఈ మోడ్ కోసం ఇంకా త్వరిత సెట్టింగ్‌లు అందుబాటులో లేవు."
+    },
+    "pinkNoiseInfo": "ప్రతి ఉద్దీపనతో పాటు నేపథ్య టోన్ ఉంటుంది. మీరు దీన్ని ఆడియో సెట్టింగ్‌లలో అనుకూలీకరించవచ్చు లేదా నిలిపివేయవచ్చు.",
+    "pinkNoiseDismiss": "కొనసాగించు",
+    "audioMode": "ఆడియో మోడ్",
+    "cogTask": {
+      "precision": "ఖచ్చితత్వం",
+      "avgRt": "సగటు RT",
+      "avgRtShort": "సగటు RT",
+      "trials": "ట్రయల్స్",
+      "correct": "సరైనది",
+      "errors": "లోపాలు",
+      "effect": "ప్రభావం",
+      "restart": "పునఃప్రారంభించండి",
+      "home": "హోమ్",
+      "performance": "ప్రదర్శన",
+      "trialDetail": "విచారణ వివరాలు",
+      "setDetail": "వివరాలను సెట్ చేయండి",
+      "roundDetail": "రౌండ్ వివరాలు",
+      "problemDetail": "సమస్య వివరాలు",
+      "phaseDetail": "దశ వివరాలు",
+      "feedbackCorrect": "సరైనది",
+      "feedbackIncorrect": "సరికాదు",
+      "feedbackTimeout": "చాలా నెమ్మదిగా!",
+      "preparing": "సిద్ధంగా ఉండు...",
+      "loading": "లోడ్ అవుతోంది...",
+      "left": "ఎడమ",
+      "right": "కుడి",
+      "up": "పైకి",
+      "down": "క్రిందికి",
+      "congruent": "సారూప్యమైన",
+      "incongruent": "అసంగతమైనది",
+      "congruencyEffect": "సారూప్యత ప్రభావం",
+      "maxSpan": "గరిష్ట పరిధి",
+      "startingSpan": "ప్రారంభ వ్యవధి",
+      "maxSpanReached": "గరిష్ట పరిధిని చేరుకుంది",
+      "longestStreak": "పొడవైన సరైన గీత",
+      "series": "స్ట్రీక్",
+      "avgResponseTime": "సగటు ప్రతిస్పందన సమయం",
+      "recall": "గుర్తుచేసుకోండి",
+      "expected": "ఊహించబడింది",
+      "submit": "సమర్పించండి",
+      "cancel": "రద్దు చేయి",
+      "clear": "క్లియర్",
+      "delete": "DEL",
+      "true": "నిజమే",
+      "false": "తప్పు",
+      "target": "లక్ష్యం",
+      "nonTarget": "లక్ష్యం లేనిది",
+      "distractor": "డిస్ట్రాక్టర్",
+      "same": "అదే",
+      "different": "భిన్నమైనది",
+      "identical": "ఒకేలా",
+      "mirror": "అద్దం",
+      "symmetric": "సిమెట్రిక్",
+      "asymmetric": "అసమాన",
+      "symShort": "సిం.",
+      "present": "వర్తమానం",
+      "absent": "గైర్హాజరు",
+      "noTrials": "ట్రయల్స్ ఏవీ పూర్తి కాలేదు.",
+      "noSets": "సెట్లు ఏవీ పూర్తి కాలేదు.",
+      "noRounds": "రౌండ్‌లు ఏవీ పూర్తి కాలేదు.",
+      "noProblems": "సమస్యలు ఏవీ పూర్తి కాలేదు.",
+      "noPhases": "దశలు పూర్తి కాలేదు.",
+      "sets": "సెట్స్",
+      "rounds": "రౌండ్లు",
+      "equations": "సమీకరణాలు",
+      "sentences": "వాక్యాలు",
+      "equationAccuracy": "సమీకరణ ఖచ్చితత్వం",
+      "forward": "ముందుకు",
+      "backward": "వెనుకకు",
+      "forwardMaxSpan": "ఫార్వార్డ్ గరిష్ట పరిధి",
+      "backwardMaxSpan": "వెనుకకు గరిష్ట పరిధి",
+      "odd": "బేసి",
+      "even": "కూడా",
+      "score": "స్కోర్",
+      "easy": "సులువు",
+      "hard": "హార్డ్",
+      "totalTrials": "మొత్తం ట్రయల్స్",
+      "totalErrors": "మొత్తం లోపాలు",
+      "totalErrShort": "మొత్తం తప్పు.",
+      "hits": "హిట్స్",
+      "misses": "మిస్సయింది",
+      "falseAlarms": "తప్పుడు అల్.",
+      "correctRejections": "కోర్. రెజ్.",
+      "yes": "అవును",
+      "no": "నం",
+      "sessionInterrupted": "సెషన్‌కు అంతరాయం ఏర్పడింది",
+      "reverseOrder": "రివర్స్ క్రమంలో",
+      "normalOrder": "క్రమంలో",
+      "lnsInstruction": "సంఖ్యలు ఆరోహణ, ఆపై అక్షరాలు A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "సైమన్ ప్రభావం",
+        "blue": "నీలం",
+        "red": "ఎరుపు",
+        "heroTitle": "సైమన్"
+      },
+      "soroban": {
+        "target": "ఈ సంఖ్యను సూచించండి",
+        "submit": "సమర్పించండి",
+        "rodLabel": "రాడ్ {{n}}",
+        "heavenBead": "హెవెన్ పూస (విలువ 5)",
+        "earthBead": "భూమి పూస (విలువ 1)",
+        "instrBeadTitle": "పూసలు ఎలా పని చేస్తాయి",
+        "instrBeadDesc": "ప్రతి రాడ్ ఒక అంకెను సూచిస్తుంది. ఎగువ పూస (స్వర్గం) విలువ 5. దిగువ పూసలు (భూమి) ఒక్కొక్కటి 1 విలువైనవి. పూసలను సక్రియం చేయడానికి మధ్య పట్టీ వైపుకు తరలించండి.",
+        "instrExampleTitle": "ఉదాహరణ: 7",
+        "instrExampleDesc": "7 = స్వర్గం పూసలు డౌన్ (5) + 2 భూమి పూసలు పైకి (2). పూసలను తరలించడానికి వాటిని నొక్కండి లేదా లాగండి.",
+        "instrGoalTitle": "మీ లక్ష్యం",
+        "instrGoalDesc": "ఒక సంఖ్య కనిపిస్తుంది. పూసలను సూచించడానికి సెట్ చేయండి, ఆపై సమర్పించు నొక్కండి. ఖచ్చితమైన మరియు వేగంగా ఉండండి!",
+        "startButton": "ప్రారంభించండి",
+        "settings": "సెట్టింగ్‌లు",
+        "closeSettings": "సెట్టింగ్‌లను మూసివేయండి",
+        "settingsRods": "రాడ్ల సంఖ్య",
+        "settingsRodsHint": "గేమ్ సెట్టింగ్‌లలో N-స్థాయి ద్వారా సెట్ చేయండి",
+        "settingsTrials": "సెషన్‌కు ట్రయల్స్",
+        "settingsTrialsHint": "గేమ్ సెట్టింగ్‌లలో ట్రయల్స్ ద్వారా సెట్ చేయండి",
+        "settingsRange": "సంఖ్య పరిధి"
+      },
+      "stroop": {
+        "pressInkColorButton": "సిరా రంగుకు సరిపోలే బటన్‌ను నొక్కండి",
+        "redWord": "ఎరుపు",
+        "redLabel": "ఎరుపు",
+        "blueWord": "నీలం",
+        "blueLabel": "నీలం",
+        "greenWord": "ఆకుపచ్చ",
+        "greenLabel": "ఆకుపచ్చ",
+        "yellowWord": "పసుపు",
+        "yellowLabel": "పసుపు"
+      },
+      "stroopFlex": {
+        "followRule": "నియమం",
+        "ruleInk": "ఇంక్ రంగు",
+        "ruleWord": "వ్రాసిన పదం",
+        "pressMatchingRuleButton": "ప్రస్తుత నియమానికి సరిపోలే బటన్‌ను నొక్కండి"
+      },
+      "goNogo": {
+        "goTrials": "ట్రయల్స్ వెళ్ళండి",
+        "nogoTrials": "నో-గో ట్రయల్స్",
+        "hitRate": "హిట్ రేటు (వెళ్లండి)",
+        "faRate": "తప్పుడు అలారం రేట్ (నో-గో)",
+        "meanRt": "సగటు ప్రతిచర్య సమయం",
+        "sensitivity": "సున్నితత్వం",
+        "press": "నొక్కండి",
+        "withhold": "నిలుపుదల"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (స్టాప్ సిగ్నల్ RT)",
+        "ssdMean": "సగటు SSD (విజయవంతమైన స్టాప్‌లు)",
+        "ssd": "SSD",
+        "goRt": "RT వెళ్ళండి",
+        "successfulInhibition": "విజయవంతమైన నిరోధం",
+        "stop": "ఆపు",
+        "meanGoRt": "సగటు GO ప్రతిచర్య సమయం",
+        "ssrtInvalid": "తగినంత డేటా లేదు",
+        "ssrtNegativeNote": "SSRT ప్రతికూలంగా ఉంది (అంటే SSD > సగటు GO RT) — ప్రస్తుత ట్రయల్ కౌంట్‌తో ఫలితం నమ్మదగనిది."
+      },
+      "pvt": {
+        "rtMedian": "మధ్యస్థ RT",
+        "rtMean": "మీన్ RT",
+        "fastest": "అత్యంత వేగవంతమైనది",
+        "slowest": "నెమ్మదిగా",
+        "falseStarts": "తప్పు మొదలవుతుంది",
+        "falseStartsShort": "తప్పుడు సెయింట్.",
+        "lapses": "లాప్స్",
+        "mean": "అర్థం",
+        "reaction": "ప్రతిచర్య",
+        "wait": "వేచి ఉండండి...",
+        "pressStimulus": "ఉద్దీపన కోసం వేచి ఉండండి...",
+        "pressAnywhere": "కౌంటర్ కనిపించినప్పుడు ఎక్కడైనా నొక్కండి",
+        "press": "నొక్కండి!",
+        "tooEarly": "చాలా తొందరగా!",
+        "lapsesLabel": "లాప్స్"
+      },
+      "posner": {
+        "cueingEffect": "క్యూయింగ్ ప్రభావం",
+        "validMeanRt": "సగటు చెల్లుబాటు అయ్యే RT",
+        "invalidMeanRt": "సగటు చెల్లని RT",
+        "validAccuracy": "చెల్లుబాటు అయ్యే ఖచ్చితత్వం",
+        "invalidAccuracy": "చెల్లని ఖచ్చితత్వం",
+        "validTrials": "చెల్లుబాటు అయ్యే ట్రయల్స్",
+        "invalidTrials": "చెల్లని ట్రయల్స్",
+        "validRtShort": "RT వాల్.",
+        "invalidRtShort": "RT ఇన్వి.",
+        "valid": "చెల్లుబాటు అవుతుంది",
+        "invalid": "చెల్లదు"
+      },
+      "antisaccade": {
+        "cost": "యాంటిసాకేడ్ ఖర్చు",
+        "proAccuracy": "ప్రో ఖచ్చితత్వం",
+        "antiAccuracy": "వ్యతిరేక ఖచ్చితత్వం",
+        "pro": "ప్రో",
+        "anti": "వ్యతిరేక",
+        "proRt": "ప్రో RT",
+        "antiRt": "యాంటీ RT",
+        "proMeanRt": "మీన్ ప్రో-సాకేడ్ RT",
+        "antiMeanRt": "మీన్ యాంటీ-సాకేడ్ RT",
+        "costLabel": "ఖర్చు",
+        "antiLabel": "వ్యతిరేక"
+      },
+      "axCpt": {
+        "dPrime": "d'-సందర్భం",
+        "axAccuracy": "AX ఖచ్చితత్వం",
+        "bxFa": "BX తప్పుడు అలారం",
+        "ayError": "AY లోపం",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "ఏయ్ తప్పు",
+        "cogControl": "అభిజ్ఞా నియంత్రణ",
+        "target": "లక్ష్యం",
+        "nonTarget": "లక్ష్యం లేనిది"
+      },
+      "ant": {
+        "scores": "ANT స్కోర్‌లు",
+        "alerting": "హెచ్చరిక (నో-క్యూ - డబుల్-క్యూ)",
+        "orienting": "ఓరియంటింగ్ (మధ్య - ప్రాదేశిక)",
+        "executive": "కార్యనిర్వాహక (అసమానం - సారూప్యత)"
+      },
+      "changeDet": {
+        "kCowan": "కె కెపాసిటీ (కోవన్)",
+        "sameShort": "అదే",
+        "diffShort": "తేడా."
+      },
+      "swm": {
+        "withinErrors": "శోధనలో లోపాలు",
+        "betweenErrors": "మధ్య శోధన లోపాలు",
+        "totalErrors": "మొత్తం లోపాలు",
+        "errorFree": "లోపం లేనిది",
+        "foundErrorFree": "దోష రహితంగా కనుగొనబడింది!",
+        "errorCount": "{{count}} లోపం(లు)",
+        "tapsLabel": "కుళాయిలు"
+      },
+      "taskSwitch": {
+        "switchCost": "స్విచ్ ధర",
+        "rtRepeat": "సగటు RT (పునరావృతం)",
+        "rtSwitch": "సగటు RT (స్విచ్)",
+        "oddEven": "బేసి / సరి",
+        "highLow": "అధిక / తక్కువ",
+        "title": "టాస్క్ మారడం"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A సమయం",
+        "tmtBTime": "TMT-B సమయం",
+        "executiveCost": "ఎగ్జిక్యూటివ్ ఖర్చు (B - A)",
+        "executiveCostShort": "కార్యనిర్వాహక వ్యయం (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "తప్పు ఎ",
+        "errB": "తప్పు బి",
+        "preparingB": "TMT-Bని సిద్ధం చేస్తోంది...",
+        "tmtADone": "TMT-A పూర్తయింది!",
+        "totalErrors": "మొత్తం లోపాలు",
+        "tmtALabel": "TMT-A: సంఖ్యలు",
+        "tmtBLabel": "TMT-B: సంఖ్యలు & అక్షరాలు",
+        "next": "తదుపరి",
+        "heroTitle": "ట్రైల్ మేకింగ్",
+        "alternateHint": "ప్రత్యామ్నాయ సంఖ్యలు మరియు అక్షరాలు: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI నిమి",
+        "fastestIsi": "అత్యంత వేగవంతమైన ISI"
+      },
+      "wcst": {
+        "referenceCards": "సూచన కార్డులు",
+        "testCard": "టెస్ట్ కార్డ్",
+        "categories": "వర్గాలు",
+        "categoriesCompleted": "కేటగిరీలు పూర్తయ్యాయి",
+        "perseverativeErrors": "పట్టుదలతో కూడిన లోపాలు",
+        "persevShort": "పెర్సెవ్.",
+        "avgRt": "సగటు RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "కోణం ద్వారా RT",
+        "findMatch": "సరిపోలే ఆకారాన్ని కనుగొనండి",
+        "reference": "సూచన ఆకారం",
+        "referenceLabel": "Ref.",
+        "candidate": "అభ్యర్థి",
+        "distractor": "ఇతర",
+        "mirrorErrors": "అద్దాలు",
+        "title": "మానసిక భ్రమణం"
+      },
+      "sternberg": {
+        "rtBySize": "సెట్ పరిమాణం ద్వారా RT",
+        "title": "స్టెర్న్‌బర్గ్",
+        "avgRt": "సగటు RT"
+      },
+      "visualSearch": {
+        "rtBySize": "సెట్ పరిమాణం ద్వారా RT",
+        "title": "దృశ్య శోధన"
+      },
+      "ospan": {
+        "typeLetters": "అక్షరాలను క్రమంలో టైప్ చేయండి",
+        "trueOrFalse": "నిజమా అబద్ధమా?",
+        "processingWarning": "సమీకరణ ఖచ్చితత్వం 85% కంటే తక్కువ - ఫలితాలు నిజమైన పని మెమరీ సామర్థ్యాన్ని ప్రతిబింబించకపోవచ్చు"
+      },
+      "readingSpan": {
+        "s0": "సూర్యుడు తూర్పున ఉదయిస్తాడు.",
+        "s1": "చేపలు చెట్లలో నివసిస్తాయి.",
+        "s2": "ఫ్రాన్స్ రాజధాని పారిస్.",
+        "s3": "త్రిభుజానికి నాలుగు భుజాలు ఉంటాయి.",
+        "s4": "నీరు 100 డిగ్రీల వద్ద ఉడకబెట్టింది.",
+        "s5": "పిల్లులు సరీసృపాలు.",
+        "s6": "భూమి సూర్యుని చుట్టూ తిరుగుతుంది.",
+        "s7": "చాక్లెట్ రాళ్లపై పెరుగుతుంది.",
+        "s8": "సంవత్సరానికి పన్నెండు నెలలు ఉంటాయి.",
+        "s9": "పక్షులు నీటి అడుగున ఊపిరి పీల్చుకుంటాయి.",
+        "s10": "పాలు తెల్లగా ఉంటాయి.",
+        "s11": "కార్లు పట్టాలపై నడుస్తాయి.",
+        "s12": "తేనెటీగలు తేనెను ఉత్పత్తి చేస్తాయి.",
+        "s13": "మంచు వేడిగా ఉంది.",
+        "s14": "గుండె రక్తాన్ని పంప్ చేస్తుంది.",
+        "s15": "రాళ్లు నీటిపై తేలుతున్నాయి.",
+        "s16": "చంద్రుడు రాత్రిని వెలిగిస్తాడు.",
+        "s17": "పాములకు కాళ్లు ఉంటాయి.",
+        "s18": "చెక్క నీటిపై తేలుతుంది.",
+        "s19": "అగ్ని చల్లగా ఉంది.",
+        "s20": "మానవులకు ఐదు ఇంద్రియాలు ఉంటాయి.",
+        "s21": "సాలెపురుగులకు ఆరు కాళ్లు ఉంటాయి.",
+        "s22": "రొట్టె పిండితో తయారు చేస్తారు.",
+        "s23": "తిమింగలాలు చేపలు.",
+        "w0": "ఇల్లు",
+        "w1": "కుక్క",
+        "w2": "పుస్తకం",
+        "w3": "ఫ్లవర్",
+        "w4": "తలుపు",
+        "w5": "పట్టిక",
+        "w6": "చెట్టు",
+        "w7": "రోడ్డు",
+        "w8": "మేఘం",
+        "w9": "స్టార్",
+        "w10": "బీచ్",
+        "w11": "మంచు",
+        "w12": "దీపం",
+        "w13": "వర్షం",
+        "w14": "గాజు",
+        "w15": "గడ్డి",
+        "w16": "రైలు",
+        "w17": "ప్రపంచం",
+        "w18": "సూర్యుడు",
+        "w19": "ఫారెస్ట్",
+        "w20": "ICE",
+        "w21": "భూమి",
+        "w22": "స్కై",
+        "w23": "రాయి",
+        "d0": "ఉదయం",
+        "d1": "గుండె",
+        "d2": "ఫాబ్రిక్",
+        "d3": "ఆకు",
+        "d4": "శబ్దం",
+        "d5": "తోట",
+        "d6": "నీడ",
+        "d7": "బెల్",
+        "d8": "వంతెన",
+        "d9": "పొగ",
+        "d10": "ఇసుక",
+        "d11": "సూప్",
+        "heroTitle": "రీడింగ్ స్పాన్"
+      },
+      "memorizeSequence": "క్రమాన్ని గుర్తుంచుకోండి...",
+      "reproduce": "పునరుత్పత్తి",
+      "span": "స్పాన్",
+      "size": "పరిమాణం",
+      "fixateCenter": "కేంద్రంపై ఫిక్స్...",
+      "identicalOrMirror": "ఒకేలా లేదా అద్దమా?",
+      "wellInhibited": "బాగా నిరోధించబడింది!",
+      "badDirection": "దారి తప్పింది!",
+      "stopMissed": "తప్పిన ఆపు!",
+      "falseAlarm": "తప్పుడు అలారం!",
+      "pressNow": "నొక్కండి!",
+      "hitBang": "హిట్!",
+      "miss": "మిస్!",
+      "doNotTouch": "తాకవద్దు!",
+      "whichDirection": "ఏ దిక్కు?",
+      "stopBang": "ఆపు!",
+      "cueBang": "క్యూ!",
+      "memorizeLetters": "ఈ అక్షరాలను గుర్తుంచుకోండి",
+      "memorizeLetter": "ఈ లేఖను గుర్తుంచుకోండి",
+      "memorizeSequenceLetters": "క్రమాన్ని గుర్తుంచుకోండి...",
+      "memorizeDigits": "అంకెలను గుర్తుపెట్టుకోండి...",
+      "memorizeColors": "రంగులను గుర్తుంచుకో!",
+      "memorizePosition": "ఈ స్థితిని గుర్తుంచుకో...",
+      "retainWord": "ఈ మాట గుర్తుంచుకోండి",
+      "retainNumber": "ఈ సంఖ్యను గుర్తుంచుకోండి",
+      "addWithPrevious": "మునుపటి వాటితో జోడించండి",
+      "sentenceTrueOrFalse": "ఈ వాక్యం నిజమేనా?",
+      "findRedCircle": "ఎరుపు వృత్తాన్ని కనుగొనండి!",
+      "findHiddenToken": "దాచిన టోకెన్‌ను కనుగొనండి!",
+      "chooseMatchingCard": "సరిపోలే కార్డ్‌ని ఎంచుకోండి",
+      "arrowDirection": "కేంద్ర బాణం యొక్క దిశ?",
+      "attention": "శ్రద్ధ...",
+      "preparation": "తయారీ...",
+      "recallLettersInOrder": "క్రమంలో {{count}} అక్షరాలను రీకాల్ చేయండి",
+      "recallWordsInOrder": "క్రమంలో {{count}} పదాలను రీకాల్ చేయండి",
+      "recallLastLetters": "చివరి {{count}} అక్షరాలను గుర్తుకు తెచ్చుకోండి",
+      "typeLastLetters": "చివరి {{count}} అక్షరాలను టైప్ చేయండి",
+      "recallPositionsInOrder": "రీకాల్: క్రమంలో స్థానాలను నొక్కండి",
+      "pressEnterToValidate": "ధృవీకరించడానికి ఎంటర్ నొక్కండి",
+      "pressAnywhereToContinue": "కొనసాగించడానికి ఎక్కడైనా నొక్కండి",
+      "temporalPrecision": "తాత్కాలిక ఖచ్చితత్వం",
+      "estimationPrecision": "అంచనా ఖచ్చితత్వం",
+      "touchStartClockwise": "ప్రారంభ బిందువును తాకి, సవ్యదిశలో స్వైప్ చేయండి",
+      "touchAtoB": "పాయింట్ Aని తాకి, ఆపై Bకి స్వైప్ చేయండి",
+      "cue": "క్యూ",
+      "retainCue": "క్యూ గుర్తుంచుకో...",
+      "targetOrNot": "టార్గెట్ లేదా నాన్-టార్గెట్?",
+      "whereIsTarget": "లక్ష్యం ఎక్కడ ఉంది?",
+      "wasLetterInSet": "ఈ లేఖ సెట్‌లో ఉందా?",
+      "regular": "రెగ్యులర్",
+      "regularity": "క్రమబద్ధత",
+      "msDeviation": "ms విచలనం",
+      "boxes": "పెట్టెలు",
+      "found": "{{count}} కనుగొనబడింది",
+      "past": "గతం",
+      "tooSlow": "చాలా నెమ్మదిగా",
+      "tooFast": "చాలా వేగంగా",
+      "timeout": "చాలా నెమ్మదిగా!",
+      "answer": "సమాధానం",
+      "dontPress": "నొక్కకండి!",
+      "feedbackWrong": "తప్పు!",
+      "level": "స్థాయి",
+      "wrong": "తప్పు",
+      "you": "మీరు",
+      "paused": "పాజ్ చేయండి",
+      "instructions": "సూచనలు",
+      "selectAnswer": "సమాధానాన్ని ఎంచుకోండి",
+      "tapTheOddOne": "బేసిని నొక్కండి",
+      "pal": {
+        "subtitle": "పెయిర్డ్ అసోసియేట్స్ లెర్నింగ్",
+        "pairsLearned": "జంటలు నేర్చుకున్నారు",
+        "maxSetSize": "గరిష్ట సెట్ పరిమాణం",
+        "totalErrors": "మొత్తం లోపాలు",
+        "round": "గుండ్రంగా",
+        "pairs": "జతల",
+        "meanRt": "సగటు RT (సరైనది)",
+        "studyPhase": "అధ్యయనం - స్థానాలను గుర్తుంచుకోండి",
+        "testPhase": "ఈ ఆకారం ఎక్కడ ఉంది?",
+        "studying": "చదువుతున్నారు",
+        "tapBox": "ఈ ఆకారం చూపబడిన పెట్టెను నొక్కండి"
+      },
+      "visualLogic": {
+        "easy": "సులువు",
+        "hard": "హార్డ్",
+        "oneRule": "1 నియమం",
+        "twoRules": "2 నియమాలు",
+        "findMissing": "తప్పిపోయిన భాగాన్ని కనుగొనండి",
+        "maxLevel": "గరిష్ట Lvl",
+        "finalLevel": "ఫైనల్ Lvl",
+        "nextMode": "తదుపరి సెషన్ మోడ్",
+        "adaptive": "అనుకూలమైనది",
+        "fixed": "పరిష్కరించబడింది",
+        "spm": "SPM 60",
+        "level": "స్థాయి",
+        "confirm": "వాలిడర్"
+      },
+      "tetrisMind": {
+        "findPiece": "ఏ ముక్క రంధ్రంకు సరిపోతుంది?",
+        "target": "లక్ష్యం"
+      },
+      "timeEstimation": {
+        "overestimationBias": "అతిగా అంచనా పక్షపాతం",
+        "underestimationBias": "తక్కువ అంచనా పక్షపాతం",
+        "noBias": "ముఖ్యమైన పక్షపాతం లేదు",
+        "avgError": "సగటు లోపం",
+        "overestimations": "అతిగా అంచనాలు",
+        "underestimations": "తక్కువ అంచనాలు",
+        "avgAbsoluteError": "సగటు సంపూర్ణ లోపం",
+        "avgRelativeError": "సగటు సాపేక్ష లోపం",
+        "cv": "వైవిధ్యం యొక్క గుణకం",
+        "watchDemo": "వ్యవధిని గమనించండి",
+        "getReady": "సిద్ధంగా ఉండు...",
+        "holdToReproduce": "పునరుత్పత్తి చేయడానికి పట్టుకోండి!",
+        "tooLong": "చాలా పొడవుగా ఉంది!",
+        "tooShort": "చాలా చిన్నది!",
+        "target": "లక్ష్యం",
+        "demoLabel": "సూచన",
+        "yourTurn": "మీ వంతు",
+        "watchInstruction": "చూడండి",
+        "holdInstruction": "పునరుత్పత్తి చేయడానికి పట్టుకోండి",
+        "heroTitle": "సమయం అంచనా"
+      },
+      "puzzleDetails": "పజిల్ వివరాలు",
+      "roundDetails": "రౌండ్ వివరాలు",
+      "stageResults": "దశ ఫలితాలు",
+      "recognized": "గుర్తింపు పొందింది",
+      "missed": "తప్పిపోయింది",
+      "win": "గెలవండి",
+      "lose": "ఓడిపోండి",
+      "winBang": "గెలవండి!",
+      "loseBang": "ఓడిపో!",
+      "correctBang": "కరెక్ట్!",
+      "wrongBang": "తప్పు!",
+      "completeBang": "పూర్తి!",
+      "repeatedBang": "పునరావృతమైంది!",
+      "incompleteBang": "అసంపూర్ణం!",
+      "levelCompleteBang": "స్థాయి పూర్తయింది!",
+      "timesUp": "సమయం ముగిసింది",
+      "seeResults": "ఫలితాలను చూడండి",
+      "nextRound": "తదుపరి రౌండ్",
+      "startBlock": "బ్లాక్ ప్రారంభించండి",
+      "continue": "కొనసాగించు",
+      "patientChoice": "రోగి ఎంపిక",
+      "immediateChoice": "తక్షణ ఎంపిక",
+      "immediate": "వెంటనే",
+      "digitSpan": {
+        "heroTitle": "డిజిట్ స్పాన్"
+      },
+      "resume": "పునఃప్రారంభించండి",
+      "numericalStroop": {
+        "heroTitle": "సంఖ్యా Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "లైన్ ఓరియంటేషన్ యొక్క తీర్పు"
+      },
+      "chain": "చైన్",
+      "undo": "అన్డు",
+      "vocalProsody": {
+        "heroTitle": "స్వర ఛందస్సు"
+      },
+      "letterNumber": {
+        "title": "అక్షరం-సంఖ్య Seq.",
+        "expectedAnswer": "ఊహించిన సమాధానం"
+      },
+      "patternComparison": {
+        "heroTitle": "నమూనా పోలిక"
+      },
+      "speedPack": {
+        "title": "స్పీడ్ ప్యాక్",
+        "whenFoldedWhichTouch": "మడతపెట్టినప్పుడు, ఏ చతురస్రాలు తాకుతాయి?"
+      },
+      "dotProbe": {
+        "heroTitle": "డాట్ ప్రోబ్"
+      },
+      "reflex": {
+        "heroTitle": "రిఫ్లెక్స్"
+      },
+      "hooperVisual": {
+        "title": "హూపర్ విజువల్ ఆర్గనైజేషన్",
+        "whatIsThisObject": "ఈ వస్తువు ఏమిటి?"
+      },
+      "blockDesign": {
+        "heroTitle": "బ్లాక్ డిజైన్"
+      },
+      "accuracy": "ఖచ్చితత్వం",
+      "avgTime": "సగటు సమయం",
+      "check": "తనిఖీ చేయండి",
+      "dualTrace": {
+        "playArea": "ఆట స్థలం"
+      },
+      "paperFolding": {
+        "title": "పేపర్ మడత",
+        "foldSequenceHolePunch": "ఫోల్డ్ సీక్వెన్స్ & హోల్ పంచ్",
+        "whichPatternWhenUnfolded": "విప్పినప్పుడు ఏ నమూనా?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "లెక్సికల్ నిర్ణయం"
+      },
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxGrid": "గరిష్ట గ్రిడ్",
+      "symmetry": "సమరూపత",
+      "threshold": "థ్రెషోల్డ్",
+      "hitRate": "హిట్ రేటు",
+      "faRate": "టాక్స్ డి FA",
+      "changeDetection": {
+        "heroTitle": "గుర్తింపును మార్చండి"
+      },
+      "syllogisms": {
+        "heroTitle": "సిలోజిజమ్స్"
+      },
+      "subitizing": {
+        "title": "ఉపసంహరణ",
+        "range": "పరిధి"
+      },
+      "jitter": "జిట్టర్",
+      "sentenceCompletion": {
+        "title": "వాక్యం పూర్తి (క్లోజ్)",
+        "highCloze": "అధిక క్లోజ్",
+        "lowCloze": "తక్కువ క్లోజ్"
+      },
+      "grid": "గ్రిడ్",
+      "pinballRecall": {
+        "title": "పిన్‌బాల్ రీకాల్",
+        "byBounces": "బౌన్స్ ద్వారా",
+        "whereDoesItLand": "ఎక్కడ దిగుతుంది?"
+      },
+      "mean": "అర్థం",
+      "speedup": "స్పీడప్",
+      "memorize": "గుర్తుపెట్టుకోండి",
+      "time": "సమయం",
+      "surfaceDevelopment": {
+        "title": "ఉపరితల అభివృద్ధి",
+        "whichEdgeMatches": "ఏ అంచు మ్యాచ్ అవుతుంది?"
+      },
+      "crowding": {
+        "heroTitle": "విజువల్ క్రౌడింగ్",
+        "spacing": "అంతరం"
+      },
+      "patternRecognition": {
+        "heroTitle": "నమూనా గుర్తింపు"
+      },
+      "brixton": {
+        "heroTitle": "బ్రిక్స్టన్"
+      },
+      "dualMemo": {
+        "trial": "విచారణ",
+        "position": "స్థానం",
+        "audio": "ఆడియో"
+      },
+      "sceneCrasher": {
+        "heroTitle": "సీన్ ఇంట్రూడర్",
+        "detect": "గుర్తించండి"
+      },
+      "eyesTest": {
+        "heroTitle": "దృష్టిలో మనసును చదవడం"
+      }
+    },
+    "gridlock": {
+      "undone": "చివరి తరలింపు రద్దు చేయబడింది.",
+      "resetMessage": "పజిల్ రీసెట్.",
+      "hintMessage": "సూచన: {{pieceId}} {{dir}} {{delta}} స్లయిడ్.",
+      "previewCountdown": "బోర్డుని అధ్యయనం చేయండి. {{seconds}}లలో ప్రారంభమవుతుంది.",
+      "challenge": "సవాలు",
+      "optimal": "ఆప్టిమల్",
+      "moves": "కదులుతుంది",
+      "piece": "{{id}} ముక్క",
+      "targetPiece": "పీస్ {{id}} (టార్గెట్ - రెడ్ కార్)",
+      "challengeClassic": "క్లాసిక్",
+      "challengePrecision": "ఖచ్చితత్వం",
+      "challengeMemory": "జ్ఞాపకశక్తి",
+      "challengeTimed": "సమయం ముగిసింది",
+      "hint": "సూచన",
+      "reset": "రీసెట్ చేయండి",
+      "undo": "అన్డు",
+      "nextPuzzle": "తదుపరి పజిల్ →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "1 హిట్‌లను బ్లాక్ చేయండి",
+      "block2Hits": "బ్లాక్ 2 హిట్స్",
+      "goPositive": "గో = అనుకూలమైనది",
+      "goNegative": "గో = ప్రతికూల",
+      "title": "ప్రభావిత Go/No-Go",
+      "block1CommissionErrors": "1 కమీషన్ లోపాలను నిరోధించండి",
+      "block2CommissionErrors": "2 కమీషన్ లోపాలను నిరోధించండి",
+      "block": "నిరోధించు",
+      "go": "వెళ్ళు"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "సగటు స్విచ్ రేటు",
+      "meanSwitchesfigure": "మీన్ స్విచ్‌లు/ఫిగర్",
+      "totalSwitches": "మొత్తం స్విచ్‌లు",
+      "title": "అస్పష్టమైన బొమ్మలు",
+      "meanSwitches": "మీన్ స్విచ్‌లు",
+      "switchRate": "స్విచ్ రేట్",
+      "figures": "బొమ్మలు",
+      "totalSwitchesLabel": "మొత్తం స్విచ్‌లు",
+      "duration": "వ్యవధి",
+      "switchesCount": "లు | స్విచ్‌లు:",
+      "switchButton": "మారండి!"
+    },
+    "analogies": {
+      "verbalCorrect": "మౌఖిక సరైనది",
+      "timeout": "గడువు ముగిసింది",
+      "title": "సారూప్యతలు"
+    },
+    "ansComparison": {
+      "weber": "వెబర్",
+      "title": "ANS పోలిక",
+      "ratio": "నిష్పత్తి",
+      "leftMore": "ఇంకా మిగిలింది",
+      "rightMore": "కుడి మరింత"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "తప్పుడు అలారం రేటు",
+      "grammatical": "వ్యాకరణ సంబంధమైనది",
+      "memorizeTheseStrings": "ఈ తీగలను గుర్తుంచుకోండి",
+      "testPhase": "పరీక్ష దశ",
+      "ungrammatical": "వ్యాకరణ రహితమైనది",
+      "learning": "నేర్చుకోవడం",
+      "test": "పరీక్ష",
+      "title": "కృత్రిమ వ్యాకరణం",
+      "learningPhase": "నేర్చుకోవడం",
+      "testIntroText": "మీరు ఇప్పుడు కొత్త స్ట్రింగ్‌లను చూస్తారు. మీరు ఇప్పుడే అధ్యయనం చేసిన స్ట్రింగ్‌ల వలె ప్రతి ఒక్కరు అదే నియమాలను అనుసరిస్తారో లేదో నిర్ణయించండి.",
+      "startTest": "పరీక్షను ప్రారంభించండి",
+      "followsRules": "నిబంధనలను అనుసరిస్తుంది",
+      "breaksRules": "నిబంధనలను ఉల్లంఘిస్తుంది"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "బ్లింక్ మాగ్నిట్యూడ్",
+      "title": "అటెన్షనల్ బ్లింక్",
+      "blink": "బ్లింక్",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "1వ ఆకుపచ్చ అక్షరం?",
+      "secondGreenLetter": "2వ ఆకుపచ్చ అక్షరం?"
+    },
+    "attentionalCapture": {
+      "captureCost": "క్యాప్చర్ ఖర్చు",
+      "singletonPresent": "సింగిల్టన్ ప్రెజెంట్",
+      "noSingleton": "సింగిల్టన్ లేదు",
+      "title": "అటెన్షనల్ క్యాప్చర్",
+      "capture": "సంగ్రహించు",
+      "horizontal": "అడ్డంగా",
+      "vertical": "నిలువు"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "బైండింగ్ విండో",
+      "title": "ఆడియోవిజువల్ బైండింగ్",
+      "window": "విండో",
+      "pssLabel": "PSS (పాయింట్ ఆఫ్ సబ్జెక్టివ్ సిమల్టేనిటీ)",
+      "simultaneousOrNot": "ఏకకాలంలో లేదా?",
+      "simultaneous": "ఏకకాలంలో",
+      "notSimultaneous": "ఏకకాలంలో కాదు"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "వ్యవధి థ్రెషోల్డ్",
+      "reference": "సూచన",
+      "weberFraction": "వెబెర్ భిన్నం",
+      "title": "శ్రవణ వ్యవధి",
+      "threshold": "థ్రెషోల్డ్",
+      "weber": "వెబర్",
+      "whichLonger": "ఏది ఎక్కువ కాలం?",
+      "firstLonger": "ముందుగా ఇక",
+      "secondLonger": "ఇక రెండవది"
+    },
+    "bart": {
+      "adjustedAvgPumps": "సర్దుబాటు చేసిన సగటు పంపులు",
+      "avgTimeballoon": "సగటు సమయం/బెలూన్",
+      "banked": "బ్యాంక్ చేయబడింది!",
+      "lostEarnings": "నష్టపోయిన సంపాదన!",
+      "overallAvgPumps": "మొత్తం సగటు పంపులు",
+      "popRate": "పాప్ రేటు",
+      "totalEarned": "సంపాదించిన మొత్తం",
+      "balloons": "బుడగలు",
+      "cashed": "క్యాష్ చేసుకున్నారు",
+      "popped": "పాప్ చేయబడింది",
+      "adjPumps": "Adj పంపులు",
+      "pop": "పాప్",
+      "pump": "పంపు",
+      "cashIn": "క్యాష్ ఇన్"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "సగటు నిర్ణయ సమయం",
+      "drawBeadsToGatherEvidence": "సాక్ష్యాలను సేకరించడానికి పూసలను గీయండి",
+      "jtc": "JTC",
+      "title": "పూసల టాస్క్",
+      "meanDraws": "సగటు గీస్తాడు",
+      "rounds": "రౌండ్లు",
+      "jtcRate": "JTC రేటు",
+      "meanDrawsToDecision": "మీన్ డ్రాస్ టు డెసిషన్",
+      "jtcRateThreshold": "JTC రేటు (<{{threshold}} డ్రాలు)",
+      "round": "గుండ్రంగా",
+      "jarDescription": "జార్ A: 85% ఆకుపచ్చ / జార్ B: 85% ఎరుపు",
+      "itWasJar": "ఇది జార్",
+      "drawABead": "ఒక పూసను గీయండి",
+      "jarAGreen": "జార్ ఎ గ్రీన్",
+      "jarBRed": "జార్ బి రెడ్"
+    },
+    "binding": {
+      "changedTrials": "మారిన ట్రయల్స్",
+      "sameAccuracy": "అదే ఖచ్చితత్వం",
+      "sameTrials": "అదే ట్రయల్స్",
+      "title": "ఫీచర్ బైండింగ్",
+      "binding": "బైండింగ్",
+      "bindingAccuracyChanged": "ఖచ్చితత్వాన్ని మార్చండి",
+      "same": "అదే",
+      "different": "భిన్నమైనది"
+    },
+    "blockDesign": {
+      "cells": "కణాలు",
+      "target": "లక్ష్యం",
+      "yourAnswer": "మీ సమాధానం",
+      "tapHint": "రంగులను సైకిల్ చేయడానికి నొక్కండి",
+      "check": "తనిఖీ చేయండి"
+    },
+    "brixton": {
+      "adapt": "అనుకూలించండి",
+      "adaptationCost": "అనుసరణ ఖర్చు",
+      "nonswitchTrials": "నాన్-స్విచ్ ట్రయల్స్",
+      "switchTrials": "ట్రయల్స్ మారండి"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "ఈ అక్షరాలను గుర్తుంచుకో",
+      "selectThe3Letters": "3 అక్షరాలను ఎంచుకోండి",
+      "title": "బ్రౌన్-పీటర్సన్ టాస్క్",
+      "forgetting": "మర్చిపోతున్నారు",
+      "sDelay": "S ఆలస్యం",
+      "minus3": "మైనస్3",
+      "delay": "ఆలస్యం"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "నిర్ణయం నాణ్యత",
+      "finalPoints": "చివరి పాయింట్లు",
+      "meanBet": "మీన్ పందెం",
+      "winRate": "విన్ రేటు",
+      "wins": "గెలుస్తుంది",
+      "title": "కేంబ్రిడ్జ్ గ్యాంబ్లింగ్ టాస్క్",
+      "totalPoints": "మొత్తం పాయింట్లు",
+      "quality": "నాణ్యత",
+      "rational": "హేతుబద్ధమైనది",
+      "avgBet": "సగటు పందెం",
+      "trial": "విచారణ",
+      "whichColorHidesToken": "ఏ రంగు టోకెన్‌ను దాచిపెడుతుంది?",
+      "youChose": "మీరు ఎంచుకున్నారు",
+      "howMuchToBet": "ఎంత పందెం వేయాలి?"
+    },
+    "cancellation": {
+      "false": "తప్పు",
+      "target": "లక్ష్యం:",
+      "total": "మొత్తం",
+      "title": "రద్దు టాస్క్ (d2)",
+      "misses": "మిస్సయింది",
+      "targetDescription": "2 మార్కులతో డి"
+    },
+    "changeBlindness": {
+      "detectionRate": "గుర్తింపు రేటు",
+      "found": "దొరికింది",
+      "meanDetectionTime": "మీన్ డిటెక్షన్ సమయం",
+      "title": "అంధత్వాన్ని మార్చుకోండి",
+      "missed": "తప్పిపోయింది",
+      "avgTime": "సగటు సమయం",
+      "instructions": "సూచనలు"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "ఉత్తమ అంచనా",
+      "meanScore": "సగటు స్కోరు",
+      "worstEstimate": "చెత్త అంచనా",
+      "inRange": "మంచి అంచనా!",
+      "title": "అభిజ్ఞా అంచనా",
+      "meanScoreLabel": "సగటు స్కోరు",
+      "inRangeLabel": "రేంజ్ లో",
+      "extreme": "విపరీతమైనది",
+      "scoreLabel": "స్కోర్",
+      "submit": "సమర్పించండి"
+    },
+    "common": {
+      "accuracy": "ఖచ్చితత్వం",
+      "bias": "పక్షపాతం",
+      "falseAlarmRate": "తప్పుడు అలారం రేట్",
+      "hitRate": "హిట్ రేటు",
+      "hits": "హిట్స్",
+      "listening": "వింటూ...",
+      "meanRt": "మీన్ RT",
+      "timedOut": "సమయం ముగిసింది",
+      "timedOut2": "సమయం ముగిసింది",
+      "faRate": "టాక్స్ డి FA",
+      "paused": "పాజ్ చేయబడింది"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "మీరు ఎంత నమ్మకంగా ఉన్నారు?",
+      "rateYourConfidence": "మీ విశ్వాసాన్ని రేట్ చేయండి",
+      "title": "కాన్ఫిడెన్స్ కాలిబ్రేషన్",
+      "calError": "అమరిక లోపం",
+      "confidence": "విశ్వాసం"
+    },
+    "consequences": {
+      "best": "ఉత్తమమైనది",
+      "nextRound": "తదుపరి రౌండ్...",
+      "time": "సమయం",
+      "placeholder": "పర్యవసానాన్ని టైప్ చేయండి...",
+      "title": "పరిణామాలు",
+      "totalIdeas": "మొత్తం ఆలోచనలు",
+      "avgPerRound": "సగటు ప్రతి రౌండ్",
+      "rounds": "రౌండ్లు",
+      "noConsequencesListed": "ఎటువంటి పరిణామాలు జాబితా చేయబడలేదు",
+      "roundProgress": "రౌండ్ {{current}} / {{total}}",
+      "typeAndPressAdd": "టైప్ చేసి యాడ్ నొక్కండి"
+    },
+    "contextualCueing": {
+      "cueingEffect": "క్యూయింగ్ ప్రభావం",
+      "newConfigRt": "కొత్త కాన్ఫిగరేషన్ RT",
+      "oldConfigRt": "పాత కాన్ఫిగరేషన్ RT",
+      "title": "సందర్భోచిత క్యూయింగ్",
+      "cueing": "క్యూయింగ్",
+      "oldRt": "పాత RT",
+      "newRt": "కొత్త RT",
+      "prompt": "ప్రాంప్ట్",
+      "left": "ఎడమ",
+      "right": "కుడి"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "థ్రెషోల్డ్ జిట్టర్",
+      "title": "కాంటౌర్ ఇంటిగ్రేషన్",
+      "pipeJitter": "| వణుకు"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "థ్రెషోల్డ్ కాంట్రాస్ట్",
+      "title": "కాంట్రాస్ట్ సెన్సిటివిటీ",
+      "threshold": "థ్రెషోల్డ్",
+      "left": "ఎడమ",
+      "right": "కుడి"
+    },
+    "cpt": {
+      "nontargets": "లక్ష్యాలు కానివి",
+      "target": "లక్ష్యం",
+      "nonTarget": "లక్ష్యం లేనిది",
+      "dPrime": "d'",
+      "targetsLetter": "లక్ష్య లేఖ",
+      "tapForLetterOnly": "లక్ష్య అక్షరం కోసం మాత్రమే నొక్కండి"
+    },
+    "crowding": {
+      "criticalSpacing": "క్లిష్టమైన అంతరం",
+      "leftAccuracy": "ఎడమ ఖచ్చితత్వం",
+      "rightAccuracy": "సరైన ఖచ్చితత్వం"
+    },
+    "cryptogram": {
+      "hints": "సూచనలు",
+      "title": "క్రిప్టోగ్రామ్",
+      "solved": "పరిష్కరించబడింది",
+      "time": "సమయం",
+      "puzzles": "పజిల్స్",
+      "puzzle": "పజిల్",
+      "hint": "సూచన",
+      "clear": "క్లియర్"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "వక్రరేఖ కింద ప్రాంతం",
+      "discountRateK": "తగ్గింపు రేటు (కె)",
+      "impulsivityIndex": "ఇంపల్సివిటీ సూచిక",
+      "title": "ఆలస్యం తగ్గింపు",
+      "aucPatience": "AUC సహనం",
+      "patient": "రోగి",
+      "kRate": "K రేటు",
+      "impuls": "ప్రేరణలు",
+      "indifferencePoints": "ఉదాసీనత పాయింట్లు",
+      "whichPrefer": "మీరు దేనిని ఇష్టపడతారు?",
+      "today": "ఈరోజు"
+    },
+    "delayedMatching": {
+      "long": "పొడవు",
+      "longDelay68s": "చాలా ఆలస్యం (6-8సె)",
+      "med": "మెడ్",
+      "mediumDelay46s": "మధ్యస్థ ఆలస్యం (4-6సె)",
+      "short": "పొట్టి",
+      "shortDelay34s": "స్వల్ప ఆలస్యం (3-4సె)",
+      "title": "ఆలస్యమైన సరిపోలిక",
+      "delay": "ఆలస్యం",
+      "rememberThisPattern": "ఈ నమూనాను గుర్తుంచుకోండి",
+      "whichWasIt": "అది ఏది?"
+    },
+    "dichoticListening": {
+      "alertDetection": "హెచ్చరిక గుర్తింపు",
+      "attendToTheLeftColumn": "ఎడమ కాలమ్‌కు హాజరవ్వండి",
+      "attendedAccuracy": "ఖచ్చితత్వానికి హాజరయ్యారు",
+      "ignoreTheRightColumn": "కుడి నిలువు వరుసను విస్మరించండి",
+      "right": "కుడి",
+      "title": "డైకోటిక్ లిజనింగ్",
+      "attendedAcc": "ఖచ్చితత్వానికి హాజరయ్యారు",
+      "alertDet": "హెచ్చరిక గుర్తింపు",
+      "alerts": "హెచ్చరికలు",
+      "selectLeftColumnWords": "ఎడమ కాలమ్ పదాలను ఎంచుకోండి",
+      "submit": "సమర్పించండి",
+      "alertQuestion": "హెచ్చరిక ప్రశ్న"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "ఖచ్చితత్వాన్ని మర్చిపో",
+      "forgettingEffect": "ప్రభావం మర్చిపోవడం",
+      "newRejection": "కొత్త తిరస్కరణ",
+      "rememberAccuracy": "ఖచ్చితత్వాన్ని గుర్తుంచుకోండి",
+      "title": "మరచిపోవడానికి దర్శకత్వం వహించారు",
+      "remember": "గుర్తుంచుకోండి",
+      "forget": "మరచిపో",
+      "round": "గుండ్రంగా",
+      "word": "మాట",
+      "wasThisWordShown": "ఈ పదం చూపబడిందా?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "అటెన్షన్ బయాస్ స్కోర్",
+      "congruentAcc": "సమ్మతమైన Acc",
+      "congruentRt": "సమానమైన RT",
+      "incongruentAcc": "అసంగతమైన Acc",
+      "incongruentRt": "అసంగత RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "కారు లేదా ట్రక్?",
+      "minDisplayReached": "కనిష్ట ప్రదర్శన చేరుకుంది",
+      "positionAccuracy": "స్థానం ఖచ్చితత్వం",
+      "thresholdDisplay": "థ్రెషోల్డ్ డిస్ప్లే",
+      "vehicleAccuracy": "వాహన ఖచ్చితత్వం",
+      "whereWasTheDiamond": "వజ్రం ఎక్కడ ఉంది?",
+      "title": "ద్వంద్వ నిర్ణయం",
+      "threshold": "థ్రెషోల్డ్",
+      "bothOk": "రెండూ సరైనవి",
+      "vehicle": "వాహనం",
+      "position": "స్థానం",
+      "car": "కారు",
+      "truck": "ట్రక్"
+    },
+    "dsst": {
+      "items": "వస్తువులు",
+      "itemsCompleted": "అంశాలు పూర్తయ్యాయి",
+      "speedItemsmin": "వేగం (అంశాలు/నిమి)",
+      "attempts": "ప్రయత్నాలు",
+      "itemsPerMin": "అంశాలు / నిమి"
+    },
+    "dualTask": {
+      "dualtaskCost": "డ్యూయల్-టాస్క్ ఖర్చు",
+      "taskANumber": "టాస్క్ A (సంఖ్య)",
+      "taskBSymbol": "టాస్క్ B (చిహ్నం)",
+      "title": "ద్వంద్వ పని",
+      "taskA": "టాస్క్ A",
+      "taskB": "టాస్క్ బి",
+      "number": "సంఖ్య",
+      "symbol": "చిహ్నం",
+      "up": "పైకి",
+      "down": "క్రిందికి"
+    },
+    "dualTime": {
+      "sessionEnPause": "సెషన్ పాజ్ చేయబడింది",
+      "votreEstimationSecondes": "మీ అంచనా (సెకన్లు)",
+      "sessionInterrupted": "సెషన్‌కు అంతరాయం ఏర్పడింది",
+      "target": "లక్ష్యం",
+      "estimation": "అంచనా",
+      "avgTime": "సగటు సమయం",
+      "avgError": "సగటు లోపం",
+      "trials": "ట్రయల్స్",
+      "resumeToContinue": "కొనసాగించడానికి పునఃప్రారంభించండి",
+      "aimFor": "లక్ష్యం",
+      "second": "రెండవది",
+      "howLongDidYouTake": "మీరు ఎంత సమయం తీసుకున్నారు?"
+    },
+    "dualTrack": {
+      "confirmer": "నిర్ధారించండి",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "కొనసాగించడానికి పునఃప్రారంభించండి.",
+      "sessionEnPause": "సెషన్ పాజ్ చేయబడింది",
+      "tapezLesCibles": "లక్ష్యాలను నొక్కండి",
+      "tapezLaCible": "లక్ష్యాన్ని నొక్కండి",
+      "appuyezConfirmer": "నిర్ధారించు నొక్కండి",
+      "targetsCountLabel": "{{count}} లక్ష్యాలు",
+      "distractorsCountLabel": "{{count}} డిస్ట్రాక్టర్లు",
+      "roundsCountLabel": "{{count}} రౌండ్లు",
+      "calibrationRoundsLabel": "{{count}} క్రమాంకనం రౌండ్లు",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = అంతర్గత ప్రయాణ కష్టాల శ్రేణి.",
+      "tierHelpCurrentWithPhase": "మీరు ప్రస్తుతం {{targets}} లక్ష్యాల కోసం {{total}} నుండి T{{current}}లో ఉన్నారు. ప్రస్తుత దశ: {{phase}}. తదుపరి లక్ష్య స్థాయికి ముందు {{remaining}} టైర్(లు) మిగిలి ఉన్నాయి.",
+      "phaseTracking": "ట్రాకింగ్",
+      "phaseAudio": "ట్రాకింగ్ + ఆడియో",
+      "phaseColor": "ట్రాకింగ్ + రంగు",
+      "phaseCombined": "ట్రాకింగ్ + ఆడియో + రంగు",
+      "passLetters": "అక్షరాలు",
+      "passColors": "రంగులు",
+      "moveInstruction": "సూచనలను తరలించండి",
+      "moveConfirmBtn": "కన్ఫర్మ్ బటన్‌ను తరలించండి",
+      "preparingSession": "సెషన్ సిద్ధమవుతోంది...",
+      "preparing3dScene": "3D సన్నివేశాన్ని సిద్ధం చేస్తోంది...",
+      "startJourney": "ప్రయాణం ప్రారంభించండి",
+      "calibrationDescription": "మొదటి దశకు ముందు, సుదీర్ఘ క్రమాంకనం మీ ప్రారంభ స్థాయిని అంచనా వేస్తుంది.",
+      "defaultDescription": "బంతులు వెలిగిపోతాయి. వారు కదులుతున్నప్పుడు వారిని అనుసరించండి, ఆపై వారిని గుర్తించండి.",
+      "startCalibration": "క్రమాంకనం ప్రారంభించండి",
+      "calibrationTitle": "క్రమాంకనం",
+      "estimatedStart": "అంచనా. ప్రారంభించండి",
+      "roundsAnalyzed": "రౌండ్లు విశ్లేషించబడ్డాయి",
+      "willStartAt": "వద్ద ప్రారంభమవుతుంది",
+      "targetsCount": "లక్ష్యాలు",
+      "thenProgress": "అప్పుడు పురోగతి"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "అంటే సంపూర్ణ లోపం",
+      "ratio": "నిష్పత్తి",
+      "slope": "వాలు",
+      "vierordtSlope": "Vierordt వాలు",
+      "wait": "వేచి ఉండండి...",
+      "title": "వ్యవధి పునరుత్పత్తి",
+      "meanError": "మీన్ ఎర్రర్",
+      "meanRatio": "సగటు నిష్పత్తి (ఉత్పత్తి/లక్ష్యం)",
+      "holdNow": "ఇప్పుడు పట్టుకోండి",
+      "target": "లక్ష్యం",
+      "error": "లోపం"
+    },
+    "embeddedFigures": {
+      "fastest": "అత్యంత వేగవంతమైనది",
+      "found": "దొరికింది",
+      "meanDetectionTime": "సగటు గుర్తింపు సమయం",
+      "slowest": "నెమ్మదిగా",
+      "title": "పొందుపరిచిన బొమ్మలు",
+      "missed": "తప్పిపోయింది",
+      "fastestLabel": "అత్యంత వేగవంతమైనది",
+      "findThisShape": "ఈ ఆకారాన్ని కనుగొనండి",
+      "memorizeShape": "ఆకారాన్ని గుర్తుపెట్టుకోండి...",
+      "foundIt": "దొరికింది!",
+      "giveUp": "వదులుకో"
+    },
+    "emotionalNback": {
+      "falseAlarms": "తప్పుడు అలారాలు",
+      "misses": "మిస్సయింది",
+      "title": "భావోద్వేగ N-Back",
+      "match": "మ్యాచ్"
+    },
+    "emotionalStroop": {
+      "neutralRt": "తటస్థ RT",
+      "positiveRt": "సానుకూల RT",
+      "threatRt": "ముప్పు RT",
+      "title": "భావోద్వేగ Stroop",
+      "interference": "జోక్యం",
+      "interferenceThreatNeutral": "జోక్యం (ముప్పు - తటస్థం)"
+    },
+    "eyesTest": {
+      "totalTime": "మొత్తం సమయం"
+    },
+    "faceName": {
+      "gain": "లాభం",
+      "learningImprovement": "లెర్నింగ్ ఇంప్రూవ్‌మెంట్",
+      "round1Accuracy": "రౌండ్ 1 ఖచ్చితత్వం",
+      "round2Accuracy": "రౌండ్ 2 ఖచ్చితత్వం",
+      "whoIsThis": "ఇతను ఎవరు?",
+      "title": "ముఖం-పేరు సంఘం",
+      "round": "గుండ్రంగా",
+      "testPhase": "పరీక్ష దశ"
+    },
+    "fauxPas": {
+      "who": "ఎవరు?",
+      "why": "ఎందుకు?",
+      "title": "ఫాక్స్ పాస్ గుర్తింపు",
+      "detection": "డిటెక్షన్",
+      "scenarios": "దృశ్యాలు",
+      "fpFound": "ఫాక్స్ పాస్ కనుగొనబడింది",
+      "control": "నియంత్రణ",
+      "readyToAnswer": "సమాధానం చెప్పడానికి సిద్ధంగా ఉంది",
+      "didSomeoneSay": "ఉండకూడనిది ఎవరైనా చెప్పారా?",
+      "whoSaidIt": "ఎవరు చెప్పారు?",
+      "whyInappropriate": "అది ఎందుకు తగనిది?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "ఖచ్చితత్వాన్ని రీకాల్ చేయండి",
+      "recognitionAccuracy": "గుర్తింపు ఖచ్చితత్వం",
+      "recallPlaceholder": "మీ సమాధానాన్ని టైప్ చేయండి...",
+      "unlikely": "అవకాశం లేదు",
+      "certain": "ఖచ్చితంగా",
+      "title": "తెలుసుకున్న అనుభూతి",
+      "recall": "గుర్తుచేసుకోండి",
+      "recognition": "గుర్తింపు",
+      "fokR": "ఫోక్ ఆర్",
+      "questions": "ప్రశ్నలు",
+      "recalled": "గుర్తు చేసుకున్నారు",
+      "recognized": "గుర్తింపు పొందింది",
+      "fokSensitivity": "FOK సున్నితత్వం",
+      "submit": "సమర్పించండి",
+      "dontKnow": "తెలియదు",
+      "fokPrompt": "మీరు దానిని గుర్తిస్తారా?",
+      "selectCorrectAnswer": "సరైన సమాధానాన్ని ఎంచుకోండి",
+      "answer": "సమాధానం"
+    },
+    "fingerTapping": {
+      "firstTrial": "మొదటి విచారణ",
+      "lastTrial": "చివరి విచారణ",
+      "sequence": "క్రమం",
+      "speedupT1VsT12": "స్పీడప్ (T1 vs T12)",
+      "title": "ఫింగర్ ట్యాపింగ్"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "సగటు కదలిక సమయం",
+      "avgThroughput": "సగటు నిర్గమాంశ",
+      "title": "ఫిట్స్ ట్యాపింగ్",
+      "throughput": "నిర్గమాంశ",
+      "tapTarget": "హైలైట్ చేసిన లక్ష్యాన్ని నొక్కండి"
+    },
+    "foreperiod": {
+      "early": "ప్రారంభ",
+      "slope": "వాలు",
+      "title": "తాత్కాలిక తయారీ",
+      "fpEffectSlope": "FP ప్రభావం వాలు"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "తిరోగమనాలు",
+      "threshold": "థ్రెషోల్డ్",
+      "tone1": "టోన్ 1",
+      "tone2": "టోన్ 2",
+      "weber": "వెబర్",
+      "weberFraction": "వెబెర్ భిన్నం",
+      "hz": "Hz",
+      "title": "ఫ్రీక్వెన్సీ డిస్క్రిమినేషన్",
+      "thresholdLabel": "థ్రెషోల్డ్",
+      "hzDiff": "Hz తేడా",
+      "whichWasHigher": "ఏది ఎక్కువ?",
+      "firstHigher": "మొదట ఎక్కువ",
+      "secondHigher": "రెండవది ఎక్కువ"
+    },
+    "gabor": {
+      "gaborPatch": "గాబోర్ ప్యాచ్",
+      "leftAccuracy": "ఎడమ ఖచ్చితత్వం",
+      "leftTrials": "ట్రయల్స్ వదిలి",
+      "noiseMask": "నాయిస్ మాస్క్",
+      "rightAccuracy": "సరైన ఖచ్చితత్వం",
+      "rightTrials": "సరైన పరీక్షలు",
+      "thresholdAngle": "థ్రెషోల్డ్ కోణం",
+      "title": "గాబోర్",
+      "threshold": "థ్రెషోల్డ్",
+      "reversals": "తిరోగమనాలు",
+      "timedOut": "సమయం ముగిసింది",
+      "left": "ఎడమ",
+      "right": "కుడి"
+    },
+    "gameOfDice": {
+      "finalPoints": "చివరి పాయింట్లు",
+      "risky": "ప్రమాదకరం",
+      "riskyChoices": "ప్రమాదకర ఎంపికలు",
+      "safe": "సురక్షితమైనది",
+      "winRate": "విన్ రేటు",
+      "wins": "గెలుస్తుంది",
+      "title": "గేమ్ ఆఫ్ డైస్ టాస్క్",
+      "totalPoints": "మొత్తం పాయింట్లు",
+      "riskyLabel": "ప్రమాదకరం",
+      "roll": "రోల్ చేయండి",
+      "chooseYourBet": "మీ పందెం ఎంచుకోండి",
+      "pickNumbers": "మీ సంఖ్యలను ఎంచుకోండి"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "గ్యాప్ లేదా గ్యాప్ లేదా?",
+      "gapThreshold": "గ్యాప్ థ్రెషోల్డ్",
+      "title": "సైలెన్స్ డిటెక్షన్",
+      "noGap": "గ్యాప్ లేదు"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "చూపు ఎక్కడ ఉంది?",
+      "direct": "డైరెక్ట్",
+      "left": "ఎడమ",
+      "right": "కుడి",
+      "title": "చూపుల దిశ",
+      "dPrimeDirectGaze": "D ప్రధాన ప్రత్యక్ష చూపు"
+    },
+    "hayling": {
+      "part1Initiation": "పార్ట్ 1 (దీక్ష)",
+      "part2": "పార్ట్ 2",
+      "part2Suppression": "పార్ట్ 2 (అణచివేత)",
+      "suppressionCost": "అణచివేత ఖర్చు",
+      "title": "హేలింగ్",
+      "part1": "పార్ట్ 1",
+      "part2Label": "పార్ట్ 2",
+      "suppression": "అణచివేత",
+      "obvious": "స్పష్టమైన",
+      "obviousPicksPart2": "స్పష్టమైన ఎంపికలు (పార్ట్ 2)",
+      "chooseUnrelated": "సంబంధం లేని పదాన్ని ఎంచుకోండి",
+      "completelyUnrelated": "పూర్తిగా సంబంధం లేనిది",
+      "doNotPickObvious": "స్పష్టమైన పదాన్ని ఎంచుకోవద్దు!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "తదుపరి దశకు చేరుకుంటోంది...",
+      "stageComplete": "దశ పూర్తయింది!",
+      "title": "IED సెట్ షిఫ్ట్",
+      "stages": "దశలు",
+      "edsCost": "EDS ఖర్చు",
+      "stage": "వేదిక",
+      "correctNeeded": "ముందుకు వెళ్లడానికి సరైనది అవసరం"
+    },
+    "informationSampling": {
+      "cost": "ఖర్చు",
+      "free": "ఉచిత",
+      "meanTilesCost": "మీన్ టైల్స్ (ఖర్చు)",
+      "meanTilesFree": "మీన్ టైల్స్ (ఉచితం)",
+      "totalCost": "మొత్తం ఖర్చు",
+      "title": "సమాచార నమూనా",
+      "tiles": "టైల్స్",
+      "tapToReveal": "బహిర్గతం చేయడానికి నొక్కండి"
+    },
+    "inspectionTime": {
+      "final": "ఫైనల్",
+      "finalDisplayTime": "చివరి ప్రదర్శన సమయం",
+      "minCorrectIt": "కనీస సరైన IT",
+      "threshold": "థ్రెషోల్డ్",
+      "title": "తనిఖీ సమయం",
+      "thresholdLabel": "థ్రెషోల్డ్",
+      "minIt": "కనిష్ట ఐటీ"
+    },
+    "iowaGambling": {
+      "balance": "బ్యాలెన్స్:",
+      "chooseADeck": "ఒక డెక్ ఎంచుకోండి",
+      "deckADraws": "డెక్ A డ్రా చేస్తుంది",
+      "deckBDraws": "డెక్ బి డ్రా",
+      "deckCDraws": "డెక్ సి డ్రా",
+      "deckDDraws": "డెక్ D డ్రా",
+      "first40Advantageous": "మొదటి 40 లాభదాయకం",
+      "last40Advantageous": "చివరి 40 లాభదాయకం",
+      "learn": "నేర్చుకో",
+      "learningIndex": "అభ్యాస సూచిక",
+      "title": "అయోవా జూదం",
+      "advantageousPct": "ప్రయోజనకరమైన %",
+      "earnings": "సంపాదన",
+      "last40": "చివరి 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "అమరిక పక్షపాతం",
+      "meanJol": "JOL అని అర్థం",
+      "nowTestYourRecall": "ఇప్పుడు మీ రీకాల్‌ని పరీక్షించండి",
+      "studyComplete": "చదువు పూర్తయింది",
+      "whatWasPairedWith": "దేనితో జత చేయబడింది…?",
+      "title": "అభ్యాసం యొక్క తీర్పు",
+      "recallAccuracy": "ఖచ్చితత్వాన్ని రీకాల్ చేయండి",
+      "jolGamma": "JOL గామా",
+      "jolAccuracyGamma": "JOL ఖచ్చితత్వం (గామా)",
+      "howLikelyRemember": "మీరు ఎంతవరకు గుర్తుంచుకుంటారు?",
+      "hiddenAnswer": "దాచిన సమాధానం"
+    },
+    "judgmentOfRecency": {
+      "close": "మూసివేయి",
+      "closeGap13": "క్లోజ్ గ్యాప్ (1-3)",
+      "far": "దూరం",
+      "farGap9": "చాలా దూరం (9+)",
+      "mediumGap48": "మీడియం గ్యాప్ (4-8)",
+      "title": "రీసెన్సీ తీర్పు",
+      "medium": "మధ్యస్థం",
+      "studyPhaseMemorizeOrder": "అధ్యయన దశ - క్రమాన్ని గుర్తుంచుకోండి",
+      "whichMoreRecently": "ఏది ఇటీవల కనిపించింది?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "సగటు RT (పదాలు కానివి)",
+      "meanRtWords": "సగటు RT (పదాలు)",
+      "nonwordsAccuracy": "పదాలు కాని ఖచ్చితత్వం",
+      "wordsAccuracy": "పదాల ఖచ్చితత్వం",
+      "word": "మాట",
+      "nonword": "నాన్-వర్డ్"
+    },
+    "maze": {
+      "duration": "వ్యవధి",
+      "optimalSteps": "సరైన దశలు",
+      "pathEfficiency": "మార్గం సమర్థత",
+      "totalSteps": "మొత్తం దశలు",
+      "wallHits": "వాల్ హిట్స్",
+      "title": "చిట్టడవి",
+      "completed": "పూర్తయింది",
+      "efficiency": "సమర్థత",
+      "wallHitsLabel": "వాల్ హిట్స్",
+      "steps": "దశలు"
+    },
+    "memobox": {
+      "easy": "సులువు",
+      "easy2Boxes": "సులభం (2 పెట్టెలు)",
+      "hard": "హార్డ్",
+      "hard4Boxes": "హార్డ్ (4 పెట్టెలు)",
+      "medium3Boxes": "మధ్యస్థం (3 పెట్టెలు)",
+      "title": "మెమోబాక్స్",
+      "rounds": "రౌండ్లు",
+      "medium": "మధ్యస్థం",
+      "watchMovements": "కదలికలను గమనించండి...",
+      "howManyBalls": "ప్రతి పెట్టెలో ఎన్ని బంతులు ఉన్నాయి?",
+      "submit": "సమర్పించండి",
+      "roundOf": "{{total}} యొక్క {{current}} రౌండ్"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "క్రాస్ సెక్షన్ అంటే ఏమిటి?",
+      "title": "మానసిక కట్టింగ్"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "పాత, సారూప్యమా లేదా కొత్తదా?",
+      "patternSeparation": "నమూనా వేరు",
+      "sep": "సెప్టెంబరు.",
+      "old": "పాతది",
+      "similar": "ఇలాంటి",
+      "new": "కొత్తది",
+      "ldi": "LDI",
+      "title": "స్మృతి వివక్ష",
+      "hitRateOldDetected": "హిట్ రేటు (పాతది కనుగొనబడింది)",
+      "lureDiscrimination": "ఎర వివక్ష (LDI)",
+      "memorize": "గుర్తుపెట్టుకోండి",
+      "testPhase": "పరీక్ష దశ"
+    },
+    "multiArmedBandit": {
+      "earnings": "సంపాదన:",
+      "pickMachine": "ఒక యంత్రాన్ని ఎంచుకోండి",
+      "title": "బహుళ సాయుధ బందిపోటు",
+      "totalReward": "మొత్తం రివార్డ్",
+      "optimal": "ఆప్టిమల్",
+      "regret": "విచారం",
+      "exploit": "దోపిడీ చేయండి",
+      "machine": "యంత్రం",
+      "armsExplored": "ఆయుధాలు అన్వేషించారు"
+    },
+    "navon": {
+      "globalBigLetter": "గ్లోబల్ (పెద్ద అక్షరం)",
+      "localSmallLetter": "స్థానిక (చిన్న అక్షరం)",
+      "title": "నవోన్",
+      "globalAdv": "గ్లోబల్ అడ్వా.",
+      "whatBigLetter": "ఏ పెద్ద లేఖ?",
+      "whatSmallLetter": "ఏ చిన్న అక్షరం?"
+    },
+    "negativePriming": {
+      "controlRt": "నియంత్రణ RT",
+      "nameTheRedShape": "ఎరుపు ఆకారానికి పేరు పెట్టండి",
+      "negativePrimingRt": "ప్రతికూల ప్రైమింగ్ RT",
+      "positivePrimingRt": "పాజిటివ్ ప్రైమింగ్ RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP ప్రభావం",
+      "title": "ప్రతికూల ప్రైమింగ్",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "అంచనా పక్షపాతం",
+      "linearityRsup2": "సరళత (R²)",
+      "meanAbsoluteError": "సంపూర్ణ లోపం అని అర్థం",
+      "tapTheLineToPlaceTheNumber": "నంబర్‌ను ఉంచడానికి లైన్‌ను నొక్కండి",
+      "title": "నంబర్ లైన్",
+      "meanError": "మీన్ ఎర్రర్",
+      "yourEstimate": "మీ అంచనా",
+      "correct": "సరైనది"
+    },
+    "oddOneOut": {
+      "colorTrials": "రంగు పరీక్షలు",
+      "shapeTrials": "ఆకృతి ట్రయల్స్",
+      "shape": "ఆకారం",
+      "color": "రంగు",
+      "timeout": "గడువు ముగిసింది",
+      "shapeDiffAccuracy": "ఆకృతి తేడా. ఖచ్చితత్వం",
+      "colorDiffAccuracy": "రంగు తేడా. ఖచ్చితత్వం",
+      "shapeDiffAvgRt": "ఆకృతి తేడా. సగటు RT",
+      "colorDiffAvgRt": "రంగు తేడా. సగటు RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "ఏ దారి?",
+      "thresholdAngle": "థ్రెషోల్డ్ కోణం",
+      "title": "ఓరియెంటేషన్ వివక్ష",
+      "threshold": "థ్రెషోల్డ్",
+      "counterCw": "CCW",
+      "clockwise": "సవ్యదిశలో"
+    },
+    "patternComparison": {
+      "differentTrials": "వివిధ ట్రయల్స్",
+      "sameTrials": "అదే ట్రయల్స్",
+      "same": "అదే",
+      "different": "భిన్నమైనది"
+    },
+    "patternRecognition": {
+      "newPatterns": "కొత్త నమూనాలు",
+      "oldPatterns": "పాత నమూనాలు",
+      "old": "పాతది",
+      "new": "కొత్త",
+      "studyPatterns": "నమూనాలను జాగ్రత్తగా అధ్యయనం చేయండి",
+      "memorize": "గుర్తుంచుకోండి ({{current}}/{{total}})",
+      "getReady": "సిద్ధంగా ఉండు...",
+      "testPhaseStarting": "పరీక్ష దశ ప్రారంభం..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "ఖచ్చితమైన కరెక్ట్",
+      "meanAngularError": "కోణీయ లోపం అని అర్థం",
+      "withinTolerance": "సహనం లోపల",
+      "title": "పెర్స్పెక్టివ్ టేకింగ్",
+      "avgErr": "సగటు లోపం",
+      "youAreAt": "మీరు వద్ద ఉన్నారు",
+      "facing": "ఎదుర్కొంటోంది",
+      "pointTo": "సూచించండి"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "ఫ్రీక్. థ్రెషోల్డ్",
+      "seq1": "సీక్ 1",
+      "seq2": "సీక్ 2",
+      "title": "ఫోన్‌మే వివక్ష",
+      "thresh": "నూర్పిడి",
+      "sameOrDifferent": "ఒకటేనా లేక భిన్నమా?",
+      "same": "అదే",
+      "different": "భిన్నమైనది"
+    },
+    "predictionMotion": {
+      "biasLate": "పక్షపాతం (+ = ఆలస్యం)",
+      "meanAbsoluteError": "అంటే సంపూర్ణ లోపం",
+      "precisionSd": "ఖచ్చితత్వం (SD)",
+      "title": "ప్రిడిక్షన్ మోషన్",
+      "absError": "అబ్స్. లోపం",
+      "precision": "ఖచ్చితత్వం",
+      "responded": "స్పందించారు",
+      "tapWhenReachesTarget": "లక్ష్యాన్ని చేరుకున్నప్పుడు ట్యాప్ చేయండి"
+    },
+    "promem": {
+      "ongoingAccuracy": "కొనసాగుతున్న ఖచ్చితత్వం",
+      "ongoingRt": "కొనసాగుతున్న RT",
+      "pmHitRate": "PM హిట్ రేటు",
+      "pmRt": "PM RT",
+      "pmTargets": "PM లక్ష్యాలు",
+      "title": "ప్రాస్పెక్టివ్ మెమరీ",
+      "ongoing": "కొనసాగుతున్నది",
+      "pmHits": "PM హిట్స్",
+      "pmMisses": "PM మిస్స్",
+      "living": "నివసిస్తున్నారు",
+      "nonLiving": "జీవం లేనిది",
+      "redWordInstruction": "రెడ్ వర్డ్ = ప్రెస్"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "డిస్ట్రాక్టర్ లోపాలు",
+      "literalErrorRate": "లిటరల్ ఎర్రర్ రేట్",
+      "literalErrors": "అక్షర దోషాలు",
+      "title": "సామెత వివరణ",
+      "literal": "లిటరల్",
+      "litRate": "లిట్. రేట్ చేయండి",
+      "whatDoesThisMean": "దీని అర్థం ఏమిటి?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "అనుసరించడానికి సిద్ధంగా ఉండండి",
+      "meanTimeOnTarget": "లక్ష్యంపై సగటు సమయం",
+      "meanTrackingError": "మీన్ ట్రాకింగ్ లోపం",
+      "placeYourFingerOnTheScreen": "మీ వేలిని తెరపై ఉంచండి",
+      "title": "పర్స్యూట్ ట్రాకింగ్",
+      "timeOnTarget": "లక్ష్యంలో సమయం",
+      "error": "లోపం",
+      "onTarget": "ఆన్ టార్గెట్",
+      "avgError": "సగటు లోపం",
+      "improve": "మెరుగుపరచండి",
+      "improvementT1VsT": "మెరుగుదల T1 Vs T",
+      "errorLabel": "లోపం",
+      "followGreenTarget": "ఆకుపచ్చ లక్ష్యాన్ని అనుసరించండి"
+    },
+    "rapidNaming": {
+      "roundComplete": "రౌండ్ పూర్తయింది",
+      "totalErrors": "మొత్తం లోపాలు",
+      "title": "వేగవంతమైన నామకరణం",
+      "avgSpeed": "సగటు వేగం",
+      "totalTime": "మొత్తం సమయం",
+      "round": "గుండ్రంగా",
+      "getReady": "సిద్ధంగా ఉండు!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "సగటు పరిష్కార సమయం",
+      "solved": "పరిష్కరించబడింది",
+      "wrong": "తప్పు",
+      "placeholder": "మీ సమాధానం...",
+      "title": "రెబస్ పజిల్స్",
+      "puzzles": "పజిల్స్",
+      "timeout": "గడువు ముగిసింది",
+      "submit": "సమర్పించండి",
+      "answer": "సమాధానం"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "సగటు పరిష్కార సమయం",
+      "solved": "పరిష్కరించబడింది",
+      "placeholder": "మీ సమాధానం...",
+      "title": "రిమోట్ అసోసియేట్స్",
+      "timeout": "గడువు ముగిసింది",
+      "submit": "సమర్పించండి",
+      "answer": "సమాధానం"
+    },
+    "reversalLearning": {
+      "adapt": "అనుకూలించండి",
+      "loseshiftRate": "లూస్-షిఫ్ట్ రేట్",
+      "score": "స్కోర్:",
+      "winstayRate": "విన్-స్టే రేట్",
+      "title": "రివర్సల్ లెర్నింగ్",
+      "rewards": "బహుమతులు",
+      "reversals": "తిరోగమనాలు",
+      "persev": "పెర్సెవ్",
+      "avgTrialsToCriterion": "సగటు ప్రమాణానికి ట్రయల్స్",
+      "pickACard": "కార్డును ఎంచుకోండి"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "7 ద్వారా వెనుకకు లెక్కించండి",
+      "reproduceThePatternFromMemory": "మెమరీ నుండి నమూనాను పునరుత్పత్తి చేయండి",
+      "title": "రే కాంప్లెక్స్ ఫిగర్",
+      "copy": "కాపీ చేయండి",
+      "recall": "గుర్తుచేసుకోండి",
+      "retention": "ధారణ",
+      "trial": "విచారణ",
+      "target": "లక్ష్యం",
+      "yourCopy": "మీ కాపీ",
+      "submit": "సమర్పించండి"
+    },
+    "rhythm": {
+      "avgTimingError": "సగటు సమయ లోపం",
+      "bestTrialError": "ఉత్తమ ట్రయల్ లోపం",
+      "correctTrials": "సరైన ట్రయల్స్",
+      "worstTrialError": "చెత్త ట్రయల్ లోపం",
+      "watchRhythm": "లయను చూడండి",
+      "getReady": "సిద్ధంగా ఉండు...",
+      "tapTheRhythm": "లయను నొక్కండి!",
+      "tooFarOff": "చాలా దూరం!",
+      "tapToReproduce": "పునరుత్పత్తి చేయడానికి నొక్కండి",
+      "beats": "{{count}} బీట్స్",
+      "bestTrial": "ఉత్తమ విచారణ",
+      "worstTrial": "చెత్త విచారణ",
+      "title": "లయ",
+      "msErr": "ms తప్పు"
+    },
+    "routePlanning": {
+      "time": "సమయం",
+      "title": "రూట్ ప్లానింగ్",
+      "levels": "స్థాయిలు",
+      "completed": "పూర్తయింది",
+      "avgMoves": "సగటు కదులుతుంది",
+      "clear": "క్లియర్",
+      "submit": "సమర్పించండి",
+      "instructions": "సూచనలు"
+    },
+    "rvp": {
+      "detect357246468": "గుర్తించండి: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "టార్గెట్ సీక్వెన్సులు",
+      "fa": "FA",
+      "hitRate": "హిట్ రేటు",
+      "misses": "మిస్సయింది",
+      "sequences": "సీక్వెన్సులు"
+    },
+    "sart": {
+      "commissionErrors": "కమిషన్ లోపాలు",
+      "omissionErrors": "విస్మరణ లోపాలు",
+      "tapAllDigits": "3 మినహా అన్ని అంకెలను నొక్కండి",
+      "except3": "3 మినహా"
+    },
+    "sceneCrasher": {
+      "adds": "జోడిస్తుంది",
+      "studyTheScene": "సన్నివేశాన్ని అధ్యయనం చేయండి",
+      "swaps": "మార్పిడి",
+      "tapTheNewchangedObject": "కొత్త/మార్చబడిన వస్తువును నొక్కండి"
+    },
+    "sentenceVerification": {
+      "falseSentences": "తప్పుడు వాక్యాలు",
+      "trueSentences": "నిజమైన వాక్యాలు",
+      "byCategory": "వర్గం ద్వారా",
+      "title": "వాక్య ధృవీకరణ",
+      "trueRt": "నిజమైన RT",
+      "true": "నిజమే",
+      "false": "తప్పు",
+      "pressKey": "నొక్కండి"
+    },
+    "soundSweeps": {
+      "down": "క్రిందికి",
+      "downAccuracy": "డౌన్ ఖచ్చితత్వం",
+      "durationThreshold": "వ్యవధి థ్రెషోల్డ్",
+      "up": "పైకి",
+      "upAccuracy": "అప్ ఖచ్చితత్వం",
+      "title": "సౌండ్ స్వీప్స్",
+      "threshold": "థ్రెషోల్డ్",
+      "upOrDown": "పైకి లేదా క్రిందికి?"
+    },
+    "sourceMemory": {
+      "color": "రంగు",
+      "colorRecall": "రంగు రీకాల్",
+      "frame": "ఫ్రేమ్",
+      "frameRecall": "ఫ్రేమ్ రీకాల్",
+      "getReadyForTheTest": "పరీక్ష కోసం సిద్ధంగా ఉండండి!",
+      "itemRecognition": "అంశం గుర్తింపు",
+      "positionRecall": "స్థానం రీకాల్",
+      "sourceAccuracy": "మూల ఖచ్చితత్వం",
+      "title": "మూల జ్ఞాపకశక్తి",
+      "source": "మూలం",
+      "position": "స్థానం",
+      "word": "మాట",
+      "wasThisWordShown": "ఈ పదం చూపబడిందా?",
+      "bottom": "దిగువ",
+      "blue": "నీలం",
+      "orange": "నారింజ రంగు",
+      "circle": "సర్కిల్",
+      "square": "చతురస్రం"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "నాయిస్ థ్రెషోల్డ్",
+      "title": "స్పీచ్-ఇన్-నాయిస్",
+      "noise": "శబ్దం",
+      "whichWordWasIt": "అది ఏ పదం?"
+    },
+    "srtt": {
+      "learningEffect": "అభ్యాస ప్రభావం",
+      "learning": "నేర్చుకోవడం",
+      "block": "నిరోధించు"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "అవకాశం స్థాయి",
+      "learningDetected": "నేర్చుకోవడం కనుగొనబడింది",
+      "testPhase": "పరీక్ష దశ",
+      "whichPairLooksMoreFamiliar": "ఏ జంట బాగా సుపరిచితం?",
+      "title": "స్టాటిస్టికల్ లెర్నింగ్",
+      "learning": "నేర్చుకోవడం",
+      "watchTheShapes": "ఆకారాలను చూడండి"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "బిలీఫ్ బయాస్ ఎఫెక్ట్",
+      "conclusion": "తీర్మానం",
+      "premise1": "ఆవరణ 1",
+      "premise2": "ఆవరణ 2",
+      "logicalValidityQuestion": "ఇది తార్కికంగా చెల్లుతుందా?",
+      "valid": "చెల్లుబాటు అవుతుంది",
+      "invalid": "చెల్లదు"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "ఖచ్చితత్వం లేదు",
+      "presentAccuracy": "ప్రస్తుత ఖచ్చితత్వం",
+      "title": "చిహ్న శోధన",
+      "present": "వర్తమానం",
+      "absent": "గైర్హాజరు",
+      "targets": "లక్ష్యాలు",
+      "searchGroup": "శోధన సమూహం"
+    },
+    "syncContinuation": {
+      "async": "సమకాలీకరణ",
+      "asynchrony": "అసమకాలిక",
+      "drift": "డ్రిఫ్ట్",
+      "cv": "CV",
+      "title": "సమకాలీకరణ-కొనసాగింపు",
+      "meanCv": "మీన్ CV",
+      "tempos": "టెంపోలు",
+      "tempo": "టెంపో",
+      "ioi": "Ioi",
+      "getReady": "సిద్ధంగా ఉండండి...",
+      "nextTempo": "తదుపరి టెంపో..."
+    },
+    "taskJuggling": {
+      "correctResets": "సరైన రీసెట్లు",
+      "duration": "వ్యవధి",
+      "missedCounters": "మిస్డ్ కౌంటర్లు",
+      "prematureResets": "అకాల రీసెట్లు",
+      "totalEvents": "మొత్తం ఈవెంట్‌లు",
+      "tooEarly": "చాలా తొందరగా!",
+      "missed": "తప్పింది!",
+      "title": "టాస్క్ జగ్లింగ్",
+      "premature": "అకాల",
+      "counter": "కౌంటర్",
+      "tapCounterInstruction": "ప్రతి కౌంటర్ దాని థ్రెషోల్డ్‌కి చేరుకున్నప్పుడు దాన్ని నొక్కండి. పొంగిపొర్లడానికి వీలు లేదు!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "బైసెక్షన్ పాయింట్ (PSE)",
+      "curveSteepness": "కర్వ్ స్టెప్నెస్",
+      "idealMidpoint": "ఆదర్శ మధ్య బిందువు",
+      "pse": "PSE",
+      "title": "టెంపోరల్ బైసెక్షన్",
+      "steepness": "ఏటవాలు",
+      "shortOrLong": "పొట్టి లేదా పొడవా?",
+      "trainingPhase": "శిక్షణ దశ",
+      "short": "పొట్టి",
+      "long": "పొడవు"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "గ్రేడియంట్ వెడల్పు",
+      "rememberThisDuration": "ఈ వ్యవధిని గుర్తుంచుకోండి",
+      "width": "వెడల్పు",
+      "standard": "ప్రామాణికం",
+      "title": "తాత్కాలిక సాధారణీకరణ",
+      "hitRate": "హిట్ రేటు",
+      "faRate": "టాక్స్ డి FA",
+      "hitRateDetectStandard": "హిట్ రేటు (ప్రమాణాన్ని గుర్తించండి)",
+      "sameDuration": "అదే వ్యవధి?",
+      "trainingPhase": "శిక్షణ దశ",
+      "same": "అదే",
+      "different": "భిన్నమైనది"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "థ్రెషోల్డ్ SOA",
+      "title": "ఆకృతి వివక్ష",
+      "threshold": "థ్రెషోల్డ్"
+    },
+    "timePromem": {
+      "avgTimingError": "సగటు సమయ లోపం",
+      "clockChecks": "గడియారం తనిఖీలు",
+      "ongoingAccuracy": "కొనసాగుతున్న ఖచ్చితత్వం",
+      "ongoingTrials": "కొనసాగుతున్న ట్రయల్స్",
+      "totalPmPresses": "మొత్తం PM ప్రెస్‌లు",
+      "pmAccuracy": "PM ఖచ్చితత్వం",
+      "pmMisses": "PM తప్పిపోయింది",
+      "title": "టైమ్ ప్రాస్పెక్టివ్",
+      "ongoing": "కొనసాగుతున్నది",
+      "pmHitsLabel": "PM హిట్స్",
+      "timingErr": "సమయ లోపం",
+      "pmHitsExpected": "PM హిట్స్ / ఊహించినవి",
+      "pmPresses": "PM ప్రెస్స్",
+      "checkClock": "గడియారాన్ని తనిఖీ చేయండి",
+      "thirtySecMark": "30ల మార్క్"
+    },
+    "toj": {
+      "meanResponseTime": "మీన్ రెస్పాన్స్ టైమ్",
+      "temporalResolution": "తాత్కాలిక రిజల్యూషన్",
+      "title": "తాత్కాలిక ఆర్డర్ తీర్పు",
+      "threshold": "థ్రెషోల్డ్",
+      "whichCameFirst": "ఏది మొదట వచ్చింది?",
+      "leftFirst": "ముందుగా ఎడమ",
+      "rightFirst": "రైట్ ఫస్ట్"
+    },
+    "tower": {
+      "budget": "బడ్జెట్",
+      "challenge": "సవాలు",
+      "challengeClassic": "క్లాసిక్",
+      "challengeExpert": "నిపుణుడు",
+      "challengeMemory": "జ్ఞాపకశక్తి",
+      "challengePrecision": "ఖచ్చితత్వం",
+      "dragDiscAriaLabel": "పెగ్ {{peg}} నుండి టాప్ డిస్క్‌ని లాగండి",
+      "goal": "లక్ష్యం",
+      "goalHiddenStatus": "లక్ష్యం దాచబడింది. క్లుప్తంగా చూపించడానికి రివీల్ ఉపయోగించండి.",
+      "goalRevealedMessage": "3 సెకన్ల పాటు లక్ష్యం వెల్లడైంది.",
+      "hint": "సూచన",
+      "hintDescription": "ఉత్తమ తదుపరి కదలికను చూపించు",
+      "hintMessage": "సూచన: ఎగువ డిస్క్‌ను పెగ్ {{fromPeg}} నుండి పెగ్ {{toPeg}}కి తరలించండి.",
+      "hiddenGoalDescription": "ఆట సమయంలో లక్ష్యం దాగి ఉంటుంది. మీకు చిన్న రిఫ్రెష్ అవసరమైనప్పుడు రివీల్ ఉపయోగించండి.",
+      "hiddenGoalTitle": "మెమరీ ఛాలెంజ్",
+      "invalid": "చెల్లదు",
+      "moves": "కదులుతుంది",
+      "optimal": "ఆప్టిమల్",
+      "pegFullMessage": "ఆ పెగ్ నిండుగా ఉంది.",
+      "previewMemoryCountdown": "లక్ష్యాన్ని గుర్తుంచుకోండి. {{seconds}}లలో ప్రారంభమవుతుంది.",
+      "previewPlanCountdown": "{{moves}}-తరలింపు పరిష్కారాన్ని ప్లాన్ చేయండి. {{seconds}}లలో ప్రారంభమవుతుంది.",
+      "reset": "రీసెట్ చేయండి",
+      "resetDescription": "ఈ పజిల్‌ని పునఃప్రారంభించండి",
+      "resetMessage": "పజిల్ రీసెట్.",
+      "reveal": "బహిర్గతం చేయండి",
+      "revealDescription": "దాచిన లక్ష్యాన్ని బహిర్గతం చేయండి",
+      "statusOptimalSolve": "సరైన పరిష్కారం. స్కోర్ {{score}}.",
+      "statusSolvedScore": "{{moves}} కదలికలలో (+{{extraMoves}}) పరిష్కరించబడింది. స్కోర్ {{score}}.",
+      "undo": "అన్డు",
+      "undoDescription": "చివరి కదలికను రివర్స్ చేయండి",
+      "undoneMessage": "చివరి తరలింపు రద్దు చేయబడింది.",
+      "yourPegs": "మీ పెగ్గులు"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "సరైన డెలివరీలు",
+      "trainsLost": "రైళ్లు పోయాయి",
+      "wrongStation": "తప్పు స్టేషన్",
+      "title": "ఆలోచన రైలు",
+      "trains": "రైళ్లు",
+      "missed": "తప్పిపోయింది",
+      "scoreLabel": "స్కోర్",
+      "instructions": "సూచనలు"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "వాడిన సగటు ప్రశ్నలు",
+      "title": "ఇరవై ప్రశ్నలు",
+      "avgQuestions": "సగటు ప్రశ్నలు",
+      "rounds": "రౌండ్లు",
+      "efficiency": "సమర్థత",
+      "avgQuestionsCorrectOnly": "సగటు ప్రశ్నలు (సరైనవి మాత్రమే)",
+      "questionsLabel": "ప్రశ్నలు",
+      "remaining": "మిగిలింది",
+      "readyToGuess": "నేను ఊహించడానికి సిద్ధంగా ఉన్నాను!",
+      "tapTheTarget": "మీరు లక్ష్యం అనుకున్న వస్తువును నొక్కండి!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "ఉపయోగకరమైన ఫీల్డ్ ఆఫ్ వ్యూ",
+      "visualNoiseMask": "విజువల్ నాయిస్ మాస్క్",
+      "whatWasInTheCenter": "కేంద్రంలో ఏమైంది?",
+      "whereWasTheTarget": "లక్ష్యం ఎక్కడ ఉంది?",
+      "avgThreshold": "సగటు త్రెషోల్డ్",
+      "speed": "వేగం",
+      "accuracy": "ఖచ్చితత్వం",
+      "central": "సెంట్రల్",
+      "peripheral": "పరిధీయ",
+      "overall": "మొత్తంమీద",
+      "block": "నిరోధించు",
+      "trials": "ట్రయల్స్",
+      "start": "ప్రారంభించండి",
+      "focus": "దృష్టి పెట్టండి",
+      "threshold": "థ్రెషోల్డ్",
+      "stimulus": "ఉద్దీపన",
+      "respondFromMemory": "మెమరీ నుండి ప్రతిస్పందించండి",
+      "truck": "ట్రక్",
+      "choosePeripheralLocation": "పరిధీయ స్థానాన్ని ఎంచుకోండి",
+      "currentBlock": "{{n}}ని బ్లాక్ చేయండి",
+      "exposure": "బహిర్గతం"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}}తో ప్రారంభమయ్యే పదాలు",
+      "title": "వెర్బల్ ఫ్లూయెన్సీ",
+      "totalWords": "మొత్తం పదాలు",
+      "duplicates": "నకిలీలు",
+      "letter": "ఉత్తరం",
+      "round": "గుండ్రంగా",
+      "roundComplete": "రౌండ్ పూర్తయింది",
+      "nextRound": "తదుపరి రౌండ్",
+      "middotRound": "· రౌండ్"
+    },
+    "vernierAcuity": {
+      "whichSide": "ఏ వైపు?",
+      "title": "వెర్నియర్ అక్యూటీ",
+      "leftOffset": "ఎడమ ఆఫ్‌సెట్",
+      "rightOffset": "కుడి ఆఫ్‌సెట్",
+      "offset": "ఆఫ్‌సెట్"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "ఆప్టిమల్ స్ట్రాటజీ",
+      "correct": "కరెక్ట్!",
+      "wrong": "తప్పు",
+      "title": "వాతావరణ అంచనా",
+      "optimal": "ఆప్టిమల్",
+      "learningCurve": "లెర్నింగ్ కర్వ్",
+      "predictTheWeather": "వాతావరణాన్ని అంచనా వేయండి",
+      "rain": "వర్షం"
+    },
+    "wordChain": {
+      "avgResponseTime": "సగటు ప్రతిస్పందన సమయం",
+      "chain": "చైన్",
+      "longestChain": "పొడవైన గొలుసు",
+      "totalCorrect": "మొత్తం సరైనది",
+      "totalWords": "మొత్తం పదాలు",
+      "words": "పదాలు",
+      "title": "పద గొలుసు",
+      "longest": "పొడవైనది",
+      "avgRt": "సగటు RT",
+      "endsWith": "తో ముగుస్తుంది",
+      "chainLabel": "చైన్",
+      "bestLabel": "ఉత్తమమైనది"
+    },
+    "wordFlow": {
+      "avgWordLength": "సగటు పద పొడవు",
+      "correct": "సరైనది",
+      "invalidWords": "చెల్లని పదాలు",
+      "totalWordsSelected": "మొత్తం పదాలు ఎంచుకోబడ్డాయి",
+      "validWords": "చెల్లుబాటు అయ్యే పదాలు",
+      "wordsPerMinute": "నిమిషానికి పదాలు",
+      "wrong": "తప్పు",
+      "seeResults": "ఫలితాలను చూడండి",
+      "nextRound": "తదుపరి రౌండ్ ({{current}}/{{total}})",
+      "title": "వెర్బల్ ఫ్లూయెన్సీ",
+      "validWordsLabel": "చెల్లుబాటు అయ్యే పదాలు",
+      "wordsPerMinLabel": "పదాలు/నిమి",
+      "avgLengthLabel": "సగటు పొడవు",
+      "invalidLabel": "చెల్లదు",
+      "round": "గుండ్రంగా",
+      "selectWordsBelongTo": "చెందిన పదాలను ఎంచుకోండి",
+      "selected": "ఎంపిక చేయబడింది"
+    },
+    "wordList": {
+      "avgRtCorrect": "సగటు RT (సరైనది)",
+      "primacyEffect": "ప్రైమసీ ఎఫెక్ట్",
+      "recencyEffect": "రీసెన్సీ ఎఫెక్ట్",
+      "studyPhaseRememberEachWord": "అధ్యయన దశ - ప్రతి పదాన్ని గుర్తుంచుకోండి",
+      "wordsRecalled": "పదాలు గుర్తుకు వచ్చాయి",
+      "title": "పదాల జాబితా",
+      "serialPositionCurve": "సీరియల్ పొజిషన్ కర్వ్",
+      "wasWordInList": "ఈ పదం జాబితాలో ఉందా?",
+      "seenBefore": "ఇంతకు ముందు చూసింది",
+      "newWord": "కొత్తది"
+    },
+    "speedSort": {
+      "switchAccuracy": "స్విచ్ ఖచ్చితత్వం",
+      "switchTrials": "ట్రయల్స్ మారండి",
+      "sortByColor": "COLOR ద్వారా క్రమబద్ధీకరించండి",
+      "sortByShape": "SHAPE ద్వారా క్రమబద్ధీకరించండి",
+      "sortByNumber": "NUMBER ద్వారా క్రమబద్ధీకరించు",
+      "ruleChanged": "రూల్ మారింది!",
+      "binRed": "ఎరుపు",
+      "binBlue": "నీలం",
+      "binGreen": "ఆకుపచ్చ",
+      "binYellow": "పసుపు",
+      "binCircle": "సర్కిల్",
+      "binSquare": "చతురస్రం",
+      "binTriangle": "త్రిభుజం",
+      "binStar": "నక్షత్రం",
+      "title": "స్పీడ్ క్రమబద్ధీకరణ",
+      "switch": "స్విచ్‌లు"
+    },
+    "reflex": {
+      "target": "లక్ష్యం",
+      "lure": "ఎర",
+      "tooSlow": "చాలా నెమ్మదిగా!",
+      "wrongTarget": "తప్పు లక్ష్యం!",
+      "tapTargets": "ఆకుపచ్చ సర్కిల్‌లను నొక్కండి!",
+      "hits": "హిట్స్",
+      "misses": "మిస్సయింది",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "నడుస్తున్న మొత్తం గుర్తుంచుకో...",
+      "title": "చైన్ లెక్కింపు",
+      "stepChains": "{{len}}-దశల గొలుసులు",
+      "start": "ప్రారంభించండి",
+      "step": "దశ",
+      "whatIsTheResult": "ఫలితం ఏమిటి?"
+    },
+    "alternateUses": {
+      "placeholder": "ఉపయోగాన్ని టైప్ చేయండి...",
+      "title": "ప్రత్యామ్నాయ ఉపయోగాలు",
+      "totalUses": "మొత్తం ఉపయోగాలు",
+      "perObject": "ప్రతి వస్తువు",
+      "rounds": "రౌండ్లు",
+      "bestObject": "ఉత్తమ వస్తువు",
+      "bestCount": "ఉత్తమ గణన",
+      "noUsesSubmitted": "ఎటువంటి ఉపయోగాలు సమర్పించబడలేదు",
+      "timesUp": "సమయం ముగిసింది!",
+      "nextObject": "తదుపరి వస్తువు ({{object}})",
+      "listCreativeUses": "ఈ వస్తువు కోసం సృజనాత్మక ఉపయోగాలను జాబితా చేయండి"
+    },
+    "anagram": {
+      "placeholder": "పదాన్ని టైప్ చేయండి...",
+      "title": "అనగ్రామ్",
+      "avgSolve": "సగటు పరిష్కరించండి",
+      "letterWords": "{{len}}-అక్షర పదాలు",
+      "submit": "సమర్పించండి"
+    },
+    "facialEmotion": {
+      "happy": "సంతోషం",
+      "sad": "విచారకరం",
+      "angry": "కోపంగా",
+      "fearful": "భయమేసింది",
+      "disgusted": "అసహ్యం వేసింది",
+      "surprised": "ఆశ్చర్యం వేసింది",
+      "lc": "LC",
+      "title": "ఫేషియల్ ఎమోషన్ రికగ్నిషన్",
+      "topConfusions": "అగ్ర గందరగోళాలు"
+    },
+    "numberSeries": {
+      "easy": "సులువు",
+      "hard": "హార్డ్"
+    },
+    "chainRecall": {
+      "round": "గుండ్రంగా",
+      "title": "చైన్ రీకాల్",
+      "chain": "చైన్",
+      "placeholder": "ప్లేస్‌హోల్డర్"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "భావోద్వేగ Go/No-Go",
+      "block1CommissionErrors": "1 కమీషన్ లోపాలను నిరోధించండి",
+      "block2CommissionErrors": "2 కమీషన్ లోపాలను నిరోధించండి",
+      "goHappy": "గో = సంతోషముగా",
+      "goSad": "గో = విచారకరమైన",
+      "block": "నిరోధించు",
+      "go": "వెళ్ళు"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop ప్రభావం",
+      "title": "రంగు రష్",
+      "congShort": "కాంగ్రెస్",
+      "incongShort": "ఇంకాంగ్.",
+      "congruentAccuracy": "సారూప్య ఖచ్చితత్వం",
+      "incongruentAccuracy": "అసంగతమైన ఖచ్చితత్వం"
+    },
+    "mirror": {
+      "avgCorrectCells": "సరైన కణాలు (సగటు.)",
+      "symmetryType": "సమరూపత రకం",
+      "title": "అద్దం"
+    },
+    "rhythmTap": {
+      "correctTrials": "సరైన ట్రయల్స్",
+      "avgRhythmScore": "సగటు రిథమ్ స్కోర్",
+      "bestTrialScore": "ఉత్తమ ట్రయల్ స్కోర్",
+      "worstTrialScore": "చెత్త ట్రయల్ స్కోర్",
+      "level": "స్థాయి",
+      "rhythm": "లయ",
+      "bestTrial": "ఉత్తమ విచారణ",
+      "worstTrial": "చెత్త విచారణ"
+    },
+    "vocalProsody": {
+      "questioning": "ప్రశ్నిస్తున్నారు"
+    },
+    "arithmeticSpeed": {
+      "multiply": "గుణించండి",
+      "add": "జోడించు",
+      "subtract": "తీసివేయి",
+      "title": "అంకగణిత వేగం",
+      "score": "స్కోర్",
+      "solved": "పరిష్కరించబడింది",
+      "missed": "తప్పిపోయింది"
+    },
+    "puzzle": {
+      "avgSolveTime": "సగటు పరిష్కార సమయం",
+      "totalMoves": "మొత్తం కదలికలు",
+      "totalErrors": "మొత్తం లోపాలు",
+      "gridSize": "గ్రిడ్ పరిమాణం",
+      "maxGridReached": "గరిష్ట గ్రిడ్‌కు చేరుకుంది",
+      "maxLevelReached": "గరిష్ట స్థాయికి చేరుకుంది",
+      "maxNodesReached": "గరిష్ట నోడ్‌లను చేరుకున్నారు",
+      "puzzleDetails": "పజిల్ వివరాలు",
+      "roundDetails": "రౌండ్ వివరాలు",
+      "solved": "పరిష్కరించబడింది!",
+      "undo": "అన్డు",
+      "reset": "రీసెట్ చేయండి",
+      "check": "తనిఖీ చేయండి",
+      "moves": "కదులుతుంది",
+      "time": "సమయం",
+      "level": "స్థాయి",
+      "errors": "లోపాలు",
+      "score": "స్కోర్",
+      "grid": "గ్రిడ్",
+      "crossings": "క్రాసింగ్లు",
+      "pearls": "ముత్యాలు",
+      "clues": "ఆధారాలు",
+      "region": "ప్రాంతం",
+      "filled": "నిండిపోయింది",
+      "cells": "కణాలు",
+      "undosLeft": "అన్డులు మిగిలి ఉన్నాయి",
+      "gems": "రత్నాలు",
+      "connected": "కనెక్ట్ చేయబడింది",
+      "slides": "స్లయిడ్‌లు",
+      "progress": "పురోగతి",
+      "rotations": "భ్రమణాలు",
+      "puzzle": "పజిల్",
+      "uncovered": "అన్కవర్డ్",
+      "colored": "రంగులద్దారు",
+      "violations": "ఉల్లంఘనలు",
+      "blacked": "నల్లబడింది",
+      "empty": "ఖాళీ",
+      "remaining": "మిగిలింది",
+      "pairs": "జతలు",
+      "flips": "ఎగరవేస్తుంది",
+      "found": "దొరికింది",
+      "balls": "బంతులు",
+      "guesses": "అంచనాలు",
+      "original": "అసలైనది",
+      "findDifferences": "తేడాలను కనుగొనండి",
+      "totalDrags": "మొత్తం డ్రాగ్‌లు",
+      "totalUndos": "మొత్తం రద్దులు",
+      "totalEdgesDrawn": "మొత్తం అంచులు గీయబడ్డాయి",
+      "totalLasers": "మొత్తం లేజర్లు",
+      "totalSlides": "మొత్తం స్లయిడ్‌లు",
+      "totalRotations": "మొత్తం భ్రమణాలు",
+      "totalRectangles": "మొత్తం దీర్ఘచతురస్రాలు",
+      "totalScore": "మొత్తం స్కోరు",
+      "avgTime": "సగటు సమయం",
+      "cellsCleared": "సెల్‌లు క్లియర్ చేయబడ్డాయి",
+      "totalDiffsFound": "మొత్తం తేడాలు కనుగొనబడ్డాయి",
+      "gemsCollected": "రత్నాలు సేకరించారు",
+      "pushBoxesOntoTargets": "అన్ని పెట్టెలను లక్ష్యాలపైకి నెట్టండి",
+      "fireLasersMarkBalls": "అంచుల నుండి లేజర్‌లను కాల్చండి, ఆపై బంతి స్థానాలను గుర్తించండి",
+      "revealingAnswer": "సమాధానం వెల్లడిస్తోంది...",
+      "checkAnswer": "సమాధానాన్ని తనిఖీ చేయండి",
+      "pickNumberBelow": "దిగువన ఒక సంఖ్యను ఎంచుకోండి",
+      "tapCellToAssign": "సంఖ్యను కేటాయించడానికి సెల్‌ను నొక్కండి",
+      "tapEdgesToPlaceWalls": "గోడలను ఉంచడానికి అంచులను నొక్కండి. K ప్రాంతాలుగా విభజించండి.",
+      "ghosts": "దయ్యాలు",
+      "vampires": "రక్త పిశాచులు",
+      "zombies": "జాంబీస్",
+      "dominoes": "డొమినోలు",
+      "islands": "దీవులు",
+      "pegsLeft": "పెగ్స్ ఎడమ",
+      "bestRemaining": "ఉత్తమమైనది",
+      "puzzlesSolved": "పజిల్స్ పరిష్కరించబడ్డాయి",
+      "flooded": "వరదలు వచ్చాయి",
+      "edges": "అంచులు",
+      "totalPlacements": "మొత్తం నియామకాలు",
+      "totalRemovals": "మొత్తం తొలగింపులు",
+      "maxTileReached": "గరిష్ఠ టైల్ చేరుకుంది",
+      "target": "లక్ష్యం",
+      "placed": "ఉంచబడింది",
+      "totalGuesses": "మొత్తం అంచనాలు",
+      "guessesLeft": "ఊహలు మిగిలాయి",
+      "difficulty": "కష్టం"
+    },
+    "palisade": {
+      "title": "పాలిసాడే",
+      "puzzles": "పజిల్స్",
+      "maxLevel": "గరిష్ట స్థాయి"
+    },
+    "keen": {
+      "title": "కెన్‌కెన్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "errors": "లోపాలు",
+      "avgTime": "సగటు సమయం",
+      "erase": "తుడిచివేయండి"
+    },
+    "blackbox": {
+      "title": "బ్లాక్ బాక్స్",
+      "puzzles": "పజిల్స్",
+      "lasers": "లేజర్స్",
+      "avgTime": "సగటు సమయం"
+    },
+    "designFluency": {
+      "title": "డిజైన్ ఫ్లూయెన్సీ",
+      "uniqueDesigns": "ప్రత్యేకమైన డిజైన్లు",
+      "duplicates": "నకిలీలు",
+      "round": "గుండ్రంగా",
+      "roundComplete": "రౌండ్ పూర్తయింది",
+      "youCreatedDesigns": "మీరు {{count}} డిజైన్‌లను సృష్టించారు",
+      "startRound": "రౌండ్ ప్రారంభించండి",
+      "instructions": "సూచనలు",
+      "designs": "డిజైన్లు",
+      "clear": "క్లియర్",
+      "addDesign": "జోడించు"
+    },
+    "signpost": {
+      "title": "సైన్పోస్ట్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "avgTime": "సగటు సమయం",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "sokoban": {
+      "title": "సోకోబాన్",
+      "level": "స్థాయి",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "undos": "అన్డుస్",
+      "puzzle": "పజిల్"
+    },
+    "numericalStroop": {
+      "left": "ఎడమ",
+      "right": "కుడి"
+    },
+    "biologicalMotion": {
+      "title": "జీవ చలనం",
+      "noiseDots": "శబ్దం చుక్కలు",
+      "whichDirection": "ఏ దిక్కు?",
+      "left": "ఎడమ",
+      "right": "కుడి"
+    },
+    "inertia": {
+      "title": "జడత్వం",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "gems": "రత్నాలు",
+      "moves": "కదులుతుంది"
+    },
+    "waterLevel": {
+      "title": "నీటి స్థాయి",
+      "error": "లోపం",
+      "tilt": "వంపు",
+      "waterLine": "నీటి లైన్?"
+    },
+    "twiddle": {
+      "title": "ట్విడిల్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "sudoku": {
+      "title": "సుడోకు",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "errors": "లోపాలు",
+      "avgTime": "సగటు సమయం",
+      "erase": "తుడిచివేయండి"
+    },
+    "rectangles": {
+      "title": "దీర్ఘ చతురస్రాలు",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "rectanglesCount": "దీర్ఘ చతురస్రాలు",
+      "maxGrid": "గరిష్ట గ్రిడ్",
+      "cancelSelection": "ఎంపికను రద్దు చేయండి"
+    },
+    "filling": {
+      "title": "నింపడం",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "avgTime": "సగటు సమయం",
+      "grid": "గ్రిడ్"
+    },
+    "spacedRetrieval": {
+      "title": "ఖాళీని తిరిగి పొందడం",
+      "studyPair": "ఈ జంటను అధ్యయనం చేయండి",
+      "waitAndSolve": "వేచి ఉండండి… ఆపై పరిష్కరించండి",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "విరామం: ఏ జంటలు?"
+    },
+    "prototypeDistortion": {
+      "title": "ప్రోటోటైప్ డిస్టార్షన్",
+      "studyPhase": "అధ్యయన దశ",
+      "testPhase": "పరీక్ష దశ",
+      "yesBelongs": "అవును - చెందినది",
+      "noRandom": "కాదు - యాదృచ్ఛిక"
+    },
+    "motionCoherence": {
+      "title": "మోషన్ కోహెరెన్స్",
+      "threshold": "థ్రెషోల్డ్",
+      "coherence": "పొందిక",
+      "whichDirection": "ఏ దిక్కు?"
+    },
+    "cube": {
+      "title": "క్యూబ్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxLevel": "గరిష్ట స్థాయి",
+      "cubeFaces": "క్యూబ్ ముఖాలు",
+      "moveUp": "పైకి",
+      "moveLeft": "ఎడమ",
+      "moveDown": "క్రిందికి",
+      "moveRight": "కుడి"
+    },
+    "sameGame": {
+      "title": "అదే గేమ్",
+      "score": "స్కోర్",
+      "cleared": "క్లియర్ చేయబడింది",
+      "cells": "కణాలు",
+      "accuracy": "ఖచ్చితత్వం"
+    },
+    "crossModalMatching": {
+      "title": "క్రాస్-మోడల్ మ్యాచింగ్",
+      "chance": "అవకాశం",
+      "whichPatternMatchesRhythm": "ఏ నమూనా రిథమ్‌కు సరిపోతుంది?"
+    },
+    "mosaic": {
+      "title": "మొజాయిక్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "spotDiff": {
+      "title": "తేడాను గుర్తించండి",
+      "level": "స్థాయి",
+      "grid": "గ్రిడ్",
+      "accuracy": "ఖచ్చితత్వం",
+      "perfect": "పర్ఫెక్ట్",
+      "avgTime": "సగటు సమయం",
+      "found": "దొరికింది"
+    },
+    "lightsOut": {
+      "title": "లైట్లు ఆరిపోయాయి",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "pipeline": {
+      "title": "పైప్లైన్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "rotations": "భ్రమణాలు",
+      "avgTime": "సగటు సమయం"
+    },
+    "tracks": {
+      "title": "ట్రాక్స్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "errors": "లోపాలు",
+      "avgTime": "సగటు సమయం"
+    },
+    "netslide": {
+      "title": "నెట్‌స్లైడ్",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "slides": "స్లయిడ్‌లు",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "cognitiveBias": {
+      "title": "కాగ్నిటివ్ బయాస్ శిక్షణ",
+      "biasResistance": "పక్షపాత నిరోధకత",
+      "biased": "పక్షపాతం",
+      "continue": "కొనసాగించు"
+    },
+    "empathicAccuracy": {
+      "title": "తాదాత్మ్య ఖచ్చితత్వం",
+      "emotionId": "భావోద్వేగం",
+      "avgRatingError": "సగటు రేటింగ్ లోపం",
+      "scenarios": "దృశ్యాలు",
+      "perfect": "పర్ఫెక్ట్",
+      "rating": "రేటింగ్",
+      "howDoesCharacterFeel": "పాత్ర ఎలా అనిపిస్తుంది?",
+      "rateIntensity": "తీవ్రతను రేట్ చేయండి",
+      "whatEmotion": "ఎలాంటి భావోద్వేగం?",
+      "yourRating": "మీ రేటింగ్",
+      "correct": "సరైనది",
+      "emotion": "భావోద్వేగం"
+    },
+    "guess": {
+      "title": "సూత్రధారి",
+      "solved": "పరిష్కరించబడింది",
+      "guesses": "అంచనాలు"
+    },
+    "dominosa": {
+      "title": "డొమినోసా",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxLevel": "గరిష్ట స్థాయి"
+    },
+    "magnets": {
+      "title": "అయస్కాంతాలు",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxLevel": "గరిష్ట స్థాయి"
+    },
+    "tangram": {
+      "placeAll": "అన్ని ముక్కలను ఉంచండి",
+      "solved": "పరిష్కరించబడింది!",
+      "notRight": "సరిగ్గా లేదు",
+      "title": "తంగ్రామ్",
+      "level": "స్థాయి",
+      "puzzles": "పజిల్స్",
+      "placements": "ప్లేస్‌మెంట్స్",
+      "removals": "తొలగింపులు",
+      "puzzleNumber": "పజిల్ {{n}}",
+      "pieces": "ముక్కలు",
+      "targetCells": "Cible",
+      "dragHint": "ముక్కను లాగండి లేదా గ్రిడ్‌లో ఉంచండి",
+      "selectHint": "ఒక భాగాన్ని ఎంచుకోండి",
+      "rotate": "టూర్నర్",
+      "undo": "యాన్యులర్",
+      "check": "తనిఖీ చేయండి"
+    },
+    "galaxies": {
+      "title": "గెలాక్సీలు"
+    },
+    "flood": {
+      "title": "వరద"
+    },
+    "pegs": {
+      "title": "పెగ్గులు",
+      "bestPegs": "ఉత్తమ పెగ్లు"
+    },
+    "auditoryFigureGround": {
+      "title": "శ్రవణ మూర్తి-గ్రౌండ్",
+      "patternPresent": "ప్రస్తుతం ఉన్న నమూనా?",
+      "pattern": "నమూనా",
+      "noPattern": "నమూనా లేదు"
+    },
+    "selfOrderedPointing": {
+      "title": "స్వీయ-ఆర్డర్ చేసిన పాయింటింగ్",
+      "maxSpan": "గరిష్ట పరిధి",
+      "errors": "లోపాలు",
+      "round": "గుండ్రంగా",
+      "setOf": "{{count}} సెట్"
+    },
+    "mirrorTracing": {
+      "title": "మిర్రర్ ట్రేసింగ్",
+      "totalErrors": "మొత్తం లోపాలు",
+      "avgTime": "సగటు సమయం",
+      "shapes": "ఆకారాలు",
+      "perfect": "పర్ఫెక్ట్",
+      "improvement": "అభివృద్ధి",
+      "errorsMiddot": "లోపాలు ·",
+      "shape": "ఆకారం",
+      "errors": "లోపాలు",
+      "xIsMirrored": "X ప్రతిబింబిస్తుంది!"
+    },
+    "clockDrawing": {
+      "title": "గడియారం డ్రాయింగ్",
+      "avgError": "సగటు లోపం",
+      "setTo": "సెట్",
+      "submit": "సమర్పించండి"
+    },
+    "cognitiveMap": {
+      "title": "కాగ్నిటివ్ మ్యాప్",
+      "explore": "అన్వేషించండి",
+      "sRemaining": "S మిగిలినవి",
+      "from": "నుండి",
+      "whichDirectionIs": "ఏ దిక్కు"
+    },
+    "sixteen": {
+      "title": "పదహారు"
+    },
+    "loopy": {
+      "title": "లూపీ"
+    },
+    "lightup": {
+      "title": "వెలిగించండి"
+    },
+    "twentyFortyEight": {
+      "maxTile": "గరిష్ట టైల్",
+      "moves": "కదులుతుంది",
+      "max": "గరిష్టంగా"
+    },
+    "bridges": {
+      "title": "వంతెనలు",
+      "puzzles": "పజిల్స్",
+      "maxLevel": "గరిష్ట స్థాయి",
+      "level": "స్థాయి"
+    },
+    "net": {
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxGrid": "గరిష్ట గ్రిడ్"
+    },
+    "flip": {
+      "title": "తిప్పండి"
+    },
+    "range": {
+      "title": "పరిధి"
+    },
+    "slant": {
+      "title": "స్లాంట్"
+    },
+    "towers": {
+      "title": "టవర్లు",
+      "puzzles": "పజిల్స్",
+      "avgTime": "సగటు సమయం",
+      "erase": "తుడిచివేయండి"
+    },
+    "pearl": {
+      "title": "ముత్యం",
+      "edges": "అంచులు"
+    },
+    "mapColoring": {
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "moves": "కదులుతుంది",
+      "maxLevel": "గరిష్ట స్థాయి"
+    },
+    "singles": {
+      "title": "సింగిల్స్"
+    },
+    "nonogram": {
+      "title": "నానోగ్రామ్"
+    },
+    "undead": {
+      "title": "మరణించని",
+      "accuracy": "ఖచ్చితత్వం",
+      "puzzles": "పజిల్స్",
+      "avgTime": "సగటు సమయం"
+    },
+    "untangle": {
+      "title": "చిక్కు విప్పు",
+      "drags": "లాగుతుంది",
+      "maxNodes": "గరిష్ట నోడ్స్"
+    },
+    "unruly": {
+      "title": "వికృత"
+    },
+    "fifteen": {
+      "title": "పదిహేను"
+    },
+    "tents": {
+      "title": "గుడారాలు"
+    },
+    "mesker": {
+      "pen": "పెన్",
+      "stroke": "స్ట్రోక్",
+      "penPressureHint": "స్థిరమైన పెన్ ఒత్తిడితో వ్రాయండి"
+    },
+    "modality": {
+      "position": "స్థానం",
+      "audio": "ఆడియో"
+    },
+    "validate": "ధృవీకరించండి"
+  },
+  "trace": {
+    "instructions": "N-వెనుక స్థానానికి స్వైప్ చేయండి. అదే స్థానం ఉంటే రెండుసార్లు నొక్కండి.",
+    "hint": {
+      "validated": "ధృవీకరించబడింది",
+      "draw": "అక్షరాన్ని గీయండి • ధృవీకరించడానికి నొక్కండి",
+      "drawWithColor": "అక్షరాన్ని గీయండి • రంగును ఎంచుకోండి • ధృవీకరించడానికి నొక్కండి",
+      "type": "అక్షరాన్ని టైప్ చేయండి • ధృవీకరించడానికి ఎంటర్ చేయండి",
+      "typeWithColor": "అక్షరాన్ని టైప్ చేయండి • రంగును ఎంచుకోండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "typeResult": "ఫలితాన్ని టైప్ చేయండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "writeResult": "ఫలితాన్ని వ్రాయండి • ధృవీకరించడానికి నొక్కండి"
+    },
+    "keyboard": {
+      "letterInput": "ఉత్తరం",
+      "numberInput": "సంఖ్య"
+    },
+    "arithmetic": {
+      "cueHint": "2 అంకెలను గుర్తుంచుకోండి",
+      "refresh": "కొత్తది"
+    },
+    "hintPosition": "ఉద్దీపన {{n}} ఎక్కడ ఉంది?",
+    "hintN0": "ప్రస్తుత ఉద్దీపనను సూచించండి",
+    "warmupHint": "స్థానాలను గుర్తుంచుకోండి. ప్రతిస్పందన అవసరం లేదు.",
+    "hintDraw": "అక్షరాన్ని గీయండి • ధృవీకరించడానికి నొక్కండి",
+    "hintDrawWithColor": "అక్షరాన్ని గీయండి • రంగును ఎంచుకోండి • ధృవీకరించడానికి నొక్కండి",
+    "hintWriteResult": "ఫలితాన్ని వ్రాయండి • ధృవీకరించడానికి నొక్కండి",
+    "guide": {
+      "swipeNormal": "చివరి స్థానం (N-0) నుండి {{n}} దశల క్రితం (N-{{n}}) నుండి స్థానానికి స్వైప్ చేయండి. అదే స్థానం ఉంటే రెండుసార్లు నొక్కండి.",
+      "swipeSequential": "ప్రతి ఇంటర్మీడియట్ స్థానం గుండా N-0 నుండి N-{{n}}కి దశలవారీగా స్వైప్ చేయండి. అదే స్థానం ఉంటే రెండుసార్లు నొక్కండి.",
+      "swipeDynamic": "ప్రదర్శించబడిన నియమాన్ని అనుసరించి స్వైప్ చేయండి. అదే స్థానం ఉంటే రెండుసార్లు నొక్కండి.",
+      "tapN0": "ప్రస్తుత స్థానంపై నొక్కండి.",
+      "warmup": "స్థానాలను గుర్తుంచుకోండి - ప్రతిస్పందన అవసరం లేదు.",
+      "writeDraw": "{{n}} దశల క్రితం విన్న అక్షరాన్ని గీయండి • ధృవీకరించడానికి నొక్కండి",
+      "writeDrawColor": "{{n}} దశల క్రితం విన్న అక్షరాన్ని గీయండి • దాని రంగును ఎంచుకోండి • ధృవీకరించడానికి నొక్కండి",
+      "writeType": "{{n}} దశల క్రితం విన్న అక్షరాన్ని టైప్ చేయండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "writeTypeColor": "{{n}} దశల క్రితం విన్న అక్షరాన్ని టైప్ చేయండి • దాని రంగును ఎంచుకోండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "writeDrawN0": "మీరు ఇప్పుడే విన్న అక్షరాన్ని గీయండి • ధృవీకరించడానికి నొక్కండి",
+      "writeDrawColorN0": "మీరు ఇప్పుడే విన్న అక్షరాన్ని గీయండి • దాని రంగును ఎంచుకోండి • ధృవీకరించడానికి నొక్కండి",
+      "writeTypeN0": "మీరు ఇప్పుడే విన్న అక్షరాన్ని టైప్ చేయండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "writeTypeColorN0": "మీరు ఇప్పుడే విన్న అక్షరాన్ని టైప్ చేయండి • దాని రంగును ఎంచుకోండి • ధృవీకరించడానికి నమోదు చేయండి",
+      "writeResult": "ఫలితాన్ని వ్రాయండి • ధృవీకరించడానికి నొక్కండి",
+      "validated": "ధృవీకరించబడింది",
+      "holdMindful": "{{seconds}}ల కోసం సెల్‌ను పట్టుకోండి",
+      "swipeMindful": "{{seconds}}లలో స్వైప్ చేయండి"
+    },
+    "settings": {
+      "adaptiveTiming": "అడాప్టివ్ టైమింగ్",
+      "inputKeyboard": "కీబోర్డ్",
+      "inputHandwriting": "చేతివ్రాత",
+      "writingInput": "అక్షరాలు/సంఖ్యలు",
+      "section": {
+        "grid": "గ్రిడ్",
+        "input": "ఇన్పుట్",
+        "rhythm": "లయ",
+        "interface": "ఇంటర్ఫేస్",
+        "interfaceNone": "ప్రామాణికం",
+        "sound": "ధ్వని"
+      },
+      "isi": "ఇంటర్వెల్ (ISI)",
+      "stimulusDuration": "ఉద్దీపన వ్యవధి",
+      "feedbackDuration": "అభిప్రాయ వ్యవధి",
+      "ruleDisplay": "నియమం వ్యవధి",
+      "blankInterval": "ఖాళీ విరామం",
+      "showProgressBar": "ప్రోగ్రెస్ బార్",
+      "showInstructions": "ఆటలో సూచనలు",
+      "arithmeticInterference": "అంకగణిత జోక్యం",
+      "fullMenu": "పూర్తి మెను",
+      "gridStyle": "గ్రిడ్ శైలి",
+      "gridStyleClassic": "క్లాసిక్",
+      "gridStyleTrace": "ట్రేస్ చేయండి",
+      "guide": {
+        "swipeMindful": "{{seconds}}లలో స్వైప్ చేయండి",
+        "holdMindful": "{{seconds}}ల కోసం సెల్‌ను పట్టుకోండి"
+      },
+      "feedback": {
+        "gestureDuration": "సంజ్ఞ",
+        "holdDuration": "పట్టుకోండి",
+        "writingDuration": "రాయడం"
+      }
+    },
+    "feedback": {
+      "holdDuration": "పట్టుకోండి",
+      "gestureDuration": "సంజ్ఞ",
+      "writingDuration": "రాయడం"
+    },
+    "image": "ఆకారం",
+    "digits": "అంకెలు",
+    "emotions": "భావోద్వేగం",
+    "words": "మాట",
+    "tones": "టోన్",
+    "spatial": "దిశ"
+  },
+  "replay": {
+    "title": "సెషన్ రీప్లే",
+    "play": "ఆడండి",
+    "pause": "పాజ్ చేయండి",
+    "restart": "పునఃప్రారంభించండి",
+    "speed": "వేగం",
+    "loading": "సెషన్ లోడ్ అవుతోంది...",
+    "unavailable": "ఈ సెషన్‌కు రీప్లే అందుబాటులో లేదు",
+    "backToStats": "గణాంకాలకు తిరిగి వెళ్ళు",
+    "runStack": {
+      "original": "అసలైనది",
+      "correction": "దిద్దుబాటు",
+      "delta": "Δ d'",
+      "inProgress": "పురోగతిలో ఉంది",
+      "completed": "పూర్తయింది"
+    },
+    "abandon": "విడిచిపెట్టు",
+    "badge": "రీప్లే చేయండి",
+    "completionReport": {
+      "backToHome": "వెనుకకు",
+      "correctAgain": "మళ్ళీ సరి",
+      "deltaVsOriginal": "vs ఒరిజినల్",
+      "deltaVsParent": "vs మునుపటి రన్",
+      "falseAlarmsSkipped": "తప్పులు నివారించబడ్డాయి",
+      "missesCorrections": "దిద్దుబాట్లు",
+      "newFalseAlarms": "కొత్త లోపాలు",
+      "replayAgain": "రీప్లే చేయండి",
+      "scoreLabel": "డి' స్కోరు",
+      "title": "దిద్దుబాటు పూర్తయింది"
+    },
+    "controls": "నియంత్రణలు",
+    "correction": "దిద్దుబాటు",
+    "finished": "రీప్లే ముగింపు",
+    "home": "హోమ్",
+    "parseError": "సెషన్‌ను చదవడం సాధ్యం కాలేదు",
+    "tapSlotToPlace": "ఉంచడానికి స్లాట్‌ను నొక్కండి",
+    "timeline": "కాలక్రమం",
+    "focusTimeline": {
+      "open": "కాలక్రమాన్ని చూపు",
+      "close": "కాలక్రమాన్ని మూసివేయండి",
+      "title": "N-Back కాలక్రమం",
+      "fillAll": "అన్నింటినీ పూరించండి",
+      "fillCard": "కార్డ్ పూరించండి"
+    },
+    "hud": {
+      "counterDisplay": "కౌంటర్ డిస్ప్లే",
+      "toggleCounterDisplay": "కౌంటర్ ప్రదర్శనను టోగుల్ చేయండి"
+    },
+    "validate": "ధృవీకరించండి"
+  },
+  "recovery": {
+    "title": "సెషన్‌కు అంతరాయం ఏర్పడింది",
+    "description": "ఒక సెషన్ ప్రోగ్రెస్‌లో ఉంది. మీరు పునఃప్రారంభించాలనుకుంటున్నారా?",
+    "mode": "మోడ్",
+    "level": "స్థాయి",
+    "progress": "పురోగతి",
+    "timeAgo": "సమయం",
+    "resume": "సెషన్‌ను పునఃప్రారంభించండి",
+    "startFresh": "తాజాగా ప్రారంభించండి",
+    "staleWarning": "ఈ సెషన్ పాతది, పునఃప్రారంభించడం సవాలుగా ఉండవచ్చు.",
+    "modes": {
+      "game": "శిక్షణ",
+      "activeTraining": "క్రియాశీల శిక్షణ",
+      "flowTraining": "డ్యూయల్ ప్లేస్ శిక్షణ",
+      "dualPickTraining": "డ్యూయల్ పిక్",
+      "traceTraining": "ద్వంద్వ ట్రేస్"
+    }
+  },
+  "rewards": {
+    "congratulations": "అభినందనలు!",
+    "duration": "{{days}} రోజుల ప్రీమియం",
+    "lifetimeLabel": "జీవితకాల యాక్సెస్",
+    "expiresAt": "{{date}} వరకు చెల్లుబాటు అవుతుంది",
+    "neverExpires": "ఎప్పటికీ గడువు ముగియదు",
+    "continue": "కొనసాగించు",
+    "discovery": {
+      "name": "డిస్కవరీ పాస్",
+      "description": "7 రోజుల ప్రీమియం - అన్ని ఫీచర్లను అన్వేషించండి"
+    },
+    "engagement": {
+      "name": "ఎంగేజ్‌మెంట్ పాస్",
+      "description": "1 నెల ప్రీమియం - మీ క్రమశిక్షణ చెల్లిస్తుంది"
+    },
+    "expert": {
+      "name": "నిపుణుల పాస్",
+      "description": "3 నెలల ప్రీమియం - మీరు నిజమైన అభ్యాసకుడు"
+    },
+    "lifetime": {
+      "name": "జీవితకాల యాక్సెస్",
+      "description": "ఎప్పటికీ ప్రీమియం — మీరు న్యూరోడ్యువల్‌లో నైపుణ్యం సాధించారు"
+    },
+    "xpRemaining": "XP మిగిలి ఉంది",
+    "permanentAccessUnlocked": "శాశ్వత యాక్సెస్ అన్‌లాక్ చేయబడింది",
+    "reachedTheTop": "మీరు అగ్రస్థానానికి చేరుకున్నారు!"
+  },
+  "progression": {
+    "level": "స్థాయి {{level}}",
+    "levelShort": "ఎల్వి {{level}}",
+    "nextLevel": "తదుపరి స్థాయి",
+    "reached": "చేరుకుంది",
+    "inProgress": "పురోగతిలో ఉంది"
+  },
+  "gridlock": {
+    "nextPuzzle": "తదుపరి పజిల్ →"
+  }
+}

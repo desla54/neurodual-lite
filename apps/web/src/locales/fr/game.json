@@ -256,75 +256,7 @@
         "settingsRodsHint": "Réglable via Niveau N dans les paramètres",
         "settingsTrials": "Essais par session",
         "settingsTrialsHint": "Réglable via Essais dans les paramètres",
-        "settingsRange": "Plage de nombres",
-        "journey": {
-          "title": "Maîtrise du Soroban",
-          "subtitle": "Apprenez le boulier japonais étape par étape",
-          "stageLabel": "Étape {{n}}",
-          "rods": "tiges",
-          "trialsLabel": "Essais",
-          "goalLabel": "Objectif",
-          "bestScore": "Meilleur : {{score}}%",
-          "startExercise": "Commencer l'exercice",
-          "enterNumber": "Quel nombre est affiché ?",
-          "backToRoadmap": "Retour",
-          "nextStage": "Étape suivante",
-          "retry": "Réessayer",
-          "stagePassed": "Étape réussie !",
-          "stageNotPassed": "Continuez à vous entraîner !",
-          "stagePassedHint": "L'étape suivante est maintenant débloquée.",
-          "stageNotPassedHint": "Il faut {{target}}% pour valider.",
-          "stages": {
-            "reading": {
-              "title": "Lire les nombres",
-              "desc": "Apprenez à lire les positions des boules et identifier la valeur affichée",
-              "instrTitle": "Lire le Soroban",
-              "instrDesc": "Observez les boules sur chaque tige. Comptez les boules actives (touchant la barre) pour déterminer le nombre. La boule céleste (haut) = 5, chaque boule terrestre (bas) = 1."
-            },
-            "setting": {
-              "title": "Placer les nombres",
-              "desc": "Placez les boules pour représenter un nombre donné",
-              "instrTitle": "Placer les nombres",
-              "instrDesc": "Un nombre apparaît à l'écran. Touchez ou glissez les boules pour le représenter sur le soroban, puis appuyez sur Valider."
-            },
-            "directAdd": {
-              "title": "Addition directe",
-              "desc": "Additionnez de petits nombres avec les boules terrestres uniquement",
-              "instrTitle": "Addition directe",
-              "instrDesc": "Quand le résultat reste inférieur à 5, poussez simplement plus de boules terrestres vers la barre. Par exemple : 2 + 1 = poussez une boule terrestre de plus."
-            },
-            "complement5": {
-              "title": "Complément à 5",
-              "desc": "Additionnez des nombres qui franchissent la barre des 5",
-              "instrTitle": "Les amis de 5",
-              "instrDesc": "Quand l'addition dépasse 4 boules terrestres, utilisez la boule céleste. Pour ajouter 4 à 3 : abaissez la boule céleste (ajoutez 5), puis retirez 1 boule terrestre (soustrayez 1). Résultat : 7."
-            },
-            "complement10": {
-              "title": "Complément à 10",
-              "desc": "Additionnez des nombres avec retenue vers la tige suivante",
-              "instrTitle": "Les amis de 10",
-              "instrDesc": "Quand une tige dépasserait 9, reportez 1 sur la tige suivante (ajoutez 1 boule à gauche) et soustrayez le complément à 10 sur la tige actuelle."
-            },
-            "directSub": {
-              "title": "Soustraction simple",
-              "desc": "Soustrayez sans emprunt",
-              "instrTitle": "Soustraction directe",
-              "instrDesc": "Éloignez les boules terrestres de la barre pour soustraire. Si la boule céleste est active, vous pouvez aussi la remonter pour soustraire 5."
-            },
-            "subComplement": {
-              "title": "Soustraction avec compléments",
-              "desc": "Soustrayez en utilisant les compléments à 5 et à 10",
-              "instrTitle": "Soustraction par compléments",
-              "instrDesc": "Quand vous ne pouvez pas soustraire directement, empruntez à la tige suivante (soustrayez 1 à gauche) et ajoutez le complément à 10 sur la tige actuelle."
-            },
-            "multiDigit": {
-              "title": "Opérations multi-chiffres",
-              "desc": "Effectuez des additions et soustractions à plusieurs chiffres",
-              "instrTitle": "Tout mettre en pratique",
-              "instrDesc": "Appliquez toutes les techniques aux calculs multi-chiffres. Travaillez de droite à gauche en gérant les retenues et emprunts."
-            }
-          }
-        }
+        "settingsRange": "Plage de nombres"
       },
       "stroop": {
         "pressInkColorButton": "Appuyez sur le bouton de la couleur de l'écriture",
@@ -1256,16 +1188,6 @@
       "calibrationDescription": "Avant la première étape, une calibration plus longue va estimer votre niveau de départ.",
       "defaultDescription": "Des boules vont s'illuminer. Suivez-les pendant qu'elles bougent, puis identifiez-les.",
       "startCalibration": "Démarrer la calibration",
-      "wordLabels": {
-        "hand": "main",
-        "cat": "chat",
-        "moon": "lune",
-        "fire": "feu",
-        "water": "eau",
-        "king": "roi",
-        "key": "clé",
-        "wind": "vent"
-      },
       "calibrationTitle": "Calibration",
       "estimatedStart": "Début estimé",
       "roundsAnalyzed": "Manches analysées",
@@ -2719,53 +2641,6 @@
     },
     "validate": "Validate"
   },
-  "dualPick": {
-    "position": "Position",
-    "audio": "Audio",
-    "dragLabels": "Glisse les étiquettes sur les bons stimuli",
-    "settings": {
-      "countdownMode": "Décompte (au lieu de compteur)",
-      "gridScale": "Taille de la grille",
-      "modalityLabels": "Étiquettes Position / Audio",
-      "recenterButton": "Bouton Recentrer",
-      "showAdaptiveZone": "Afficher zone adaptative",
-      "showNLevel": "Afficher niveau N",
-      "timeLabels": "Étiquettes Présent / Passé",
-      "title": "Affichage"
-    }
-  },
-  "memo": {
-    "positionPicker": {
-      "title": "Choisis la case"
-    },
-    "audioPicker": {
-      "title": "Choisis la lettre"
-    }
-  },
-  "flow": {
-    "title": "Dual Place",
-    "description": "Place les stimuli dans la timeline",
-    "score": "Score",
-    "errors": "Erreurs",
-    "restart": "Recommencer",
-    "home": "Accueil",
-    "past": "Passé",
-    "present": "Présent",
-    "audio": "Audio",
-    "dragToPlace": "Glisse les stimuli vers la ligne du temps",
-    "position": "Position",
-    "recenter": "Recentrer",
-    "settings": {
-      "countdownMode": "Décompte (au lieu de compteur)",
-      "gridScale": "Taille de la grille",
-      "modalityLabels": "Étiquettes Position / Audio",
-      "recenterButton": "Bouton Recentrer",
-      "showAdaptiveZone": "Afficher zone adaptative",
-      "showNLevel": "Afficher niveau N",
-      "timeLabels": "Étiquettes Présent / Passé",
-      "title": "Affichage"
-    }
-  },
   "trace": {
     "instructions": "Glissez vers la position N-back. Faites un double-appui si c'est la même position.",
     "hint": {
@@ -2808,19 +2683,7 @@
       "writeResult": "Écrivez le résultat • Tapez pour valider",
       "validated": "Validé",
       "holdMindful": "Maintenez la cellule pendant {{seconds}}s",
-      "swipeMindful": "Glissez en {{seconds}}s",
-      "short": {
-        "warmup": "Mémorisez",
-        "swipeNormal": "N-{{n}}",
-        "swipeSequential": "N-0 → N-{{n}}",
-        "swipeDynamic": "Suivez la règle",
-        "letter": "Lettre N-{{n}}",
-        "letterColor": "Lettre + couleur N-{{n}}",
-        "letterN0": "Lettre courante",
-        "letterColorN0": "Lettre + couleur",
-        "holdMindful": "Maintien {{seconds}}s",
-        "swipeMindful": "Geste {{seconds}}s"
-      }
+      "swipeMindful": "Glissez en {{seconds}}s"
     },
     "settings": {
       "adaptiveTiming": "Timing adaptatif",
@@ -2915,11 +2778,7 @@
     },
     "hud": {
       "counterDisplay": "Affichage compteur",
-      "toggleCounterDisplay": "Basculer affichage compteur",
-      "counterMode": {
-        "progress": "Progression",
-        "remaining": "Restants"
-      }
+      "toggleCounterDisplay": "Basculer affichage compteur"
     },
     "validate": "Valider"
   },
@@ -2939,24 +2798,6 @@
       "flowTraining": "Entraînement Dual Place",
       "dualPickTraining": "Dual Pick",
       "traceTraining": "Double tracé"
-    }
-  },
-  "replayRecovery": {
-    "title": "Correction en cours",
-    "description": "Une correction était en cours. Voulez-vous la reprendre ?",
-    "type": "Type",
-    "trial": "Essai",
-    "time": "Temps",
-    "speed": "Vitesse",
-    "interruptedAgo": "Interrompue {{time}}",
-    "resume": "Reprendre la correction",
-    "abandon": "Abandonner",
-    "staleWarning": "Cette correction est ancienne, la reprendre pourrait être difficile.",
-    "types": {
-      "tempo": "N-Back",
-      "flow": "Dual Place",
-      "recall": "Dual Memo",
-      "dualPick": "Dual Pick"
     }
   },
   "rewards": {
@@ -2993,18 +2834,7 @@
     "reached": "Atteint",
     "inProgress": "En cours"
   },
-  "modes": {
-    "dualTrace": {
-      "name": "Double tracé"
-    }
-  },
   "gridlock": {
     "nextPuzzle": "Puzzle suivant →"
-  },
-  "memoryMatch": {
-    "findAllPairs": "Trouvez toutes les paires",
-    "match": "Paire trouvée !",
-    "tryAgain": "Réessayez",
-    "boardComplete": "Plateau terminé !"
   }
 }

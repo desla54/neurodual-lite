@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Hogy érzed magad?",
+      "tired": "Fáradt",
+      "normal": "Normál",
+      "energized": "Energikus"
+    },
+    "aria": {
+      "trialTimer": "Próba időzítő",
+      "positionMatch": "Pozíció egyezés",
+      "audioMatch": "Hang egyezés",
+      "audioLetter": "Hangbetű:",
+      "traceGrid": "Nyomrács"
+    },
+    "syncHud": {
+      "shortLabel": "SZINKR.",
+      "toggleTitle": "Szinkronmonitor váltása",
+      "start": "kezdet",
+      "end": "vég",
+      "pinLabel": "rögzítés",
+      "pinTitle": "Rögzítés a képernyőn",
+      "inputLabel": "bemenet",
+      "inputTitle": "Bemeneti késleltetés profilozás váltása (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "be",
+      "off": "ki",
+      "hideLabel": "elrejtés",
+      "hideTitle": "Elrejtés (kivéve ha syncHud=1 vagy ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "hang",
+        "expected": "várt"
+      },
+      "labels": {
+        "trial": "próba",
+        "lagShow": "Megjelenítési késés",
+        "lagHide": "Elrejtési késés",
+        "winErr": "ablak hiba",
+        "endRef": "vég ref.",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "bemenet függő",
+        "inputSamples": "bemeneti minták",
+        "touchSamples": "érintési minták",
+        "mouseSamples": "egér minták",
+        "keyboardSamples": "billentyűzet minták",
+        "latestMethod": "legutóbbi (módszer)",
+        "latestModality": "legutóbbi modalitás",
+        "audioCueMode": "hangjelzések",
+        "audioCodec": "kodek"
+      },
+      "resetInputProfiler": "bemeneti profilozó visszaállítása"
+    },
+    "hud": {
+      "resume": "Folytatás",
+      "pause": "Szünet",
+      "quit": "Kilépés",
+      "restart": "Újraindítás",
+      "spaceToStart": "Szóköz az indításhoz",
+      "settings": "Beállítások",
+      "enterToAdvance": "Enter a továbblépéshez",
+      "trial": "Próba",
+      "muteTexture": "Háttérhang némítása"
+    },
+    "status": {
+      "paused": "Szüneteltetve"
+    },
+    "completed": "Befejezve",
+    "starting": {
+      "getReady": "Felkészülés..."
+    },
+    "quitModal": {
+      "title": "Kilépsz a munkamenetből?",
+      "message": "A haladásod nem lesz mentve.",
+      "confirm": "Kilépés",
+      "cancel": "Folytatás",
+      "close": "Bezárás"
+    },
+    "controls": {
+      "position": "Pozíció",
+      "position2": "Poz. 2",
+      "position3": "Poz. 3",
+      "position4": "Poz. 4",
+      "visvis": "Viz. & n-viz.",
+      "visaudio": "Viz. & n-hang",
+      "audiovis": "Hang & n-viz.",
+      "vis1": "Viz. 1",
+      "vis2": "Viz. 2",
+      "vis3": "Viz. 3",
+      "vis4": "Viz. 4",
+      "audio": "Hang",
+      "audio2": "Hang 2",
+      "color": "Szín",
+      "arithmetic": "Számtan",
+      "image": "Forma"
+    },
+    "arithmetic": {
+      "answer": "Válasz",
+      "clear": "Törlés",
+      "hint": "Billentyűzet: 0–9 · '-' az előjelhez · '.' a tizedesekhez · Backspace a törléshez"
+    },
+    "navigation": {
+      "back": "Vissza"
+    },
+    "xp": {
+      "title": "Szerzett XP",
+      "base": "Alap (N-{{level}})",
+      "performance": "Teljesítmény",
+      "accuracy": "Pontosság",
+      "streakBonus": "Sorozat bónusz",
+      "dailyBonus": "Napi első",
+      "badgeBonus": "Jelvények",
+      "flowBonus": "Dual Place bónusz",
+      "confidenceMultiplier": "Magabiztosság",
+      "dailyCapReached": "Napi XP korlát elérve",
+      "levelReached": "{{level}}. szint elérve!"
+    },
+    "badges": {
+      "newUnlocked": "Új jelvények feloldva"
+    },
+    "getReady": "Készülj...",
+    "layoutEdit": {
+      "done": "Kész",
+      "reset": "Visszaállítás",
+      "instructions": "Húzd a zónákat az átrendezéshez. Méretezd a fogantyúkkal.",
+      "title": "Szerkesztés mód",
+      "cancel": "Mégse",
+      "save": "Zárolás",
+      "editLayout": "Elrendezés szerkesztése"
+    },
+    "paused": "Szünetelve",
+    "pressEscapeToResume": "Nyomd meg az Escape-et a folytatáshoz",
+    "settings": {
+      "editLayout": "Elrendezés szerkesztése",
+      "gridAndButtons": "Rács és gombok",
+      "swapPositionAudio": "Pozíció / Hang csere",
+      "title": "Beállítások",
+      "quickHint": "Állíts be néhány paramétert a játék elhagyása nélkül.",
+      "quickUnavailable": "Ehhez a módhoz még nincsenek gyors beállítások."
+    },
+    "pinkNoiseInfo": "Háttérhang kíséri az egyes ingereket. Testreszabhatod vagy kikapcsolhatod a hangbeállításokban.",
+    "pinkNoiseDismiss": "Folytatás",
+    "audioMode": "Hang mód",
+    "cogTask": {
+      "precision": "Pontosság",
+      "avgRt": "Átl. RV",
+      "avgRtShort": "Átl. RV",
+      "trials": "Próbák",
+      "correct": "Helyes",
+      "errors": "Hibák",
+      "effect": "Hatás",
+      "restart": "Újraindítás",
+      "home": "Főmenü",
+      "performance": "Teljesítmény",
+      "trialDetail": "Próba részletei",
+      "setDetail": "Szett részletei",
+      "roundDetail": "Kör részletei",
+      "problemDetail": "Feladat részletei",
+      "phaseDetail": "Fázis részletei",
+      "feedbackCorrect": "Helyes",
+      "feedbackIncorrect": "Helytelen",
+      "feedbackTimeout": "Túl lassú!",
+      "preparing": "Készülj...",
+      "loading": "Betöltés...",
+      "left": "Bal",
+      "right": "Jobb",
+      "up": "Fel",
+      "down": "Le",
+      "congruent": "Kongruens",
+      "incongruent": "Inkongruens",
+      "congruencyEffect": "Kongruenciahatás",
+      "maxSpan": "Max. terjedelem",
+      "startingSpan": "Kezdő terjedelem",
+      "maxSpanReached": "Max. terjedelem elérve",
+      "longestStreak": "Leghosszabb helyes sorozat",
+      "series": "Sorozat",
+      "avgResponseTime": "Átlagos válaszidő",
+      "recall": "Felidézés",
+      "expected": "Várt",
+      "submit": "Küldés",
+      "cancel": "Mégse",
+      "clear": "Törlés",
+      "delete": "TÖRL",
+      "true": "Igaz",
+      "false": "Hamis",
+      "target": "Célinger",
+      "nonTarget": "Nem célinger",
+      "distractor": "Zavaró inger",
+      "same": "Azonos",
+      "different": "Különböző",
+      "identical": "Azonos",
+      "mirror": "Tükrözött",
+      "symmetric": "Szimmetrikus",
+      "asymmetric": "Aszimmetrikus",
+      "symShort": "Szim.",
+      "present": "Jelen van",
+      "absent": "Nincs jelen",
+      "noTrials": "Nem készültek próbák.",
+      "noSets": "Nem készültek szettek.",
+      "noRounds": "Nem készültek körök.",
+      "noProblems": "Nem készültek feladatok.",
+      "noPhases": "Nem készültek fázisok.",
+      "sets": "Szettek",
+      "rounds": "Körök",
+      "equations": "Egyenletek",
+      "sentences": "Mondatok",
+      "equationAccuracy": "Egyenlet pontosság",
+      "forward": "Előre",
+      "backward": "Hátra",
+      "forwardMaxSpan": "Max. terjedelem előre",
+      "backwardMaxSpan": "Max. terjedelem hátra",
+      "odd": "Páratlan",
+      "even": "Páros",
+      "score": "Pontszám",
+      "easy": "Könnyű",
+      "hard": "Nehéz",
+      "totalTrials": "Összes próba",
+      "totalErrors": "Összes hiba",
+      "totalErrShort": "Össz. hiba",
+      "hits": "Találatok",
+      "misses": "Kihagyások",
+      "falseAlarms": "Tév. riaszt.",
+      "correctRejections": "Hely. elut.",
+      "yes": "Igen",
+      "no": "Nem",
+      "sessionInterrupted": "Munkamenet megszakítva",
+      "reverseOrder": "fordított sorrendben",
+      "normalOrder": "sorrendben",
+      "lnsInstruction": "Számok növekvő sorrendben, majd betűk A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simon-hatás",
+        "blue": "Kék",
+        "red": "Piros",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Ábrázold ezt a számot",
+        "submit": "Küldés",
+        "rodLabel": "Rúd {{n}}",
+        "heavenBead": "Égi gyöngy (érték 5)",
+        "earthBead": "Földi gyöngy (érték 1)",
+        "instrBeadTitle": "Hogyan működnek a gyöngyök",
+        "instrBeadDesc": "Minden rúd egy számjegyet képvisel. A felső gyöngy (égi) 5-öt ér. Az alsó gyöngyök (földi) egyenként 1-et érnek. Mozgasd a gyöngyöket a középső léc felé az aktiváláshoz.",
+        "instrExampleTitle": "Példa: 7",
+        "instrExampleDesc": "7 = égi gyöngy le (5) + 2 földi gyöngy fel (2). Érintsd meg vagy húzd a gyöngyöket a mozgatáshoz.",
+        "instrGoalTitle": "A célod",
+        "instrGoalDesc": "Megjelenik egy szám. Állítsd be a gyöngyöket az ábrázolásához, majd nyomd meg a Küldés gombot. Légy pontos és gyors!",
+        "startButton": "Indítás",
+        "settings": "Beállítások",
+        "closeSettings": "Beállítások bezárása",
+        "settingsRods": "Rudak száma",
+        "settingsRodsHint": "Beállítás az N-szint menüben",
+        "settingsTrials": "Próbák munkamenetenként",
+        "settingsTrialsHint": "Beállítás a Próbák menüben",
+        "settingsRange": "Számtartomány"
+      },
+      "stroop": {
+        "pressInkColorButton": "Nyomd meg a tinta színéhez tartozó gombot",
+        "redWord": "PIROS",
+        "redLabel": "Piros",
+        "blueWord": "KÉK",
+        "blueLabel": "Kék",
+        "greenWord": "ZÖLD",
+        "greenLabel": "Zöld",
+        "yellowWord": "SÁRGA",
+        "yellowLabel": "Sárga"
+      },
+      "stroopFlex": {
+        "followRule": "Szabály",
+        "ruleInk": "Tinta színe",
+        "ruleWord": "Írott szó",
+        "pressMatchingRuleButton": "Nyomd meg az aktuális szabálynak megfelelő gombot"
+      },
+      "goNogo": {
+        "goTrials": "Go próbák",
+        "nogoTrials": "No-Go próbák",
+        "hitRate": "Találati arány (Go)",
+        "faRate": "Téves riasztás arány (No-Go)",
+        "meanRt": "Átlagos reakcióidő",
+        "sensitivity": "érzékenység",
+        "press": "Nyomj",
+        "withhold": "Tartsd vissza"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop jel reakcióidő)",
+        "ssdMean": "Átlag SSD (sikeres megállások)",
+        "ssd": "SSD",
+        "goRt": "Go RV",
+        "successfulInhibition": "Sikeres gátlás",
+        "stop": "Stop",
+        "meanGoRt": "Átlagos GO reakcióidő",
+        "ssrtInvalid": "nem elegendő adat",
+        "ssrtNegativeNote": "Az SSRT negatív (átlag SSD > átlag GO RV) — az eredmény megbízhatatlan a jelenlegi próbaszámmal."
+      },
+      "pvt": {
+        "rtMedian": "Medián RV",
+        "rtMean": "Átlag RV",
+        "fastest": "Leggyorsabb",
+        "slowest": "Leglassabb",
+        "falseStarts": "Korai indulások",
+        "falseStartsShort": "Korai ind.",
+        "lapses": "Kihagyások",
+        "mean": "Átlag",
+        "reaction": "Reakció",
+        "wait": "Várj...",
+        "pressStimulus": "Várd meg az ingert...",
+        "pressAnywhere": "Nyomj bárhova, amikor megjelenik a számláló",
+        "press": "Nyomj!",
+        "tooEarly": "Túl korai!",
+        "lapsesLabel": "Kihagyások"
+      },
+      "posner": {
+        "cueingEffect": "Jelzési hatás",
+        "validMeanRt": "Átlag érvényes RV",
+        "invalidMeanRt": "Átlag érvénytelen RV",
+        "validAccuracy": "Érvényes pontosság",
+        "invalidAccuracy": "Érvénytelen pontosság",
+        "validTrials": "Érvényes próbák",
+        "invalidTrials": "Érvénytelen próbák",
+        "validRtShort": "RV Érv.",
+        "invalidRtShort": "RV Érvtl.",
+        "valid": "Érvényes",
+        "invalid": "Érvénytelen"
+      },
+      "antisaccade": {
+        "cost": "Antiszakkád költség",
+        "proAccuracy": "Pro pontosság",
+        "antiAccuracy": "Anti pontosság",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RV",
+        "antiRt": "Anti RV",
+        "proMeanRt": "Átlag pro-szakkád RV",
+        "antiMeanRt": "Átlag anti-szakkád RV",
+        "costLabel": "Költség",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-kontextus",
+        "axAccuracy": "AX pontosság",
+        "bxFa": "BX téves riasztás",
+        "ayError": "AY hiba",
+        "bxFaShort": "BX TR",
+        "ayErrShort": "AY hiba",
+        "cogControl": "Kognitív kontroll",
+        "target": "Célinger",
+        "nonTarget": "Nem célinger"
+      },
+      "ant": {
+        "scores": "ANT pontszámok",
+        "alerting": "Éberség (jelzés nélkül − dupla jelzés)",
+        "orienting": "Orientáció (központi − téri)",
+        "executive": "Végrehajtó (inkongruens − kongruens)"
+      },
+      "changeDet": {
+        "kCowan": "K kapacitás (Cowan)",
+        "sameShort": "Azonos",
+        "diffShort": "Kül."
+      },
+      "swm": {
+        "withinErrors": "Keresési hibák (belső)",
+        "betweenErrors": "Keresési hibák (külső)",
+        "totalErrors": "Összes hiba",
+        "errorFree": "Hibamentes",
+        "foundErrorFree": "Hibamentesen megtalálva!",
+        "errorCount": "{{count}} hiba",
+        "tapsLabel": "Érintések"
+      },
+      "taskSwitch": {
+        "switchCost": "Váltási költség",
+        "rtRepeat": "Átlag RV (ismétlés)",
+        "rtSwitch": "Átlag RV (váltás)",
+        "oddEven": "Páratlan / Páros",
+        "highLow": "Magas / Alacsony",
+        "title": "Feladatváltás"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A idő",
+        "tmtBTime": "TMT-B idő",
+        "executiveCost": "Végrehajtó költség (B − A)",
+        "executiveCostShort": "Végrehajtó költség (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Hiba A",
+        "errB": "Hiba B",
+        "preparingB": "TMT-B előkészítése...",
+        "tmtADone": "TMT-A kész!",
+        "totalErrors": "Összes hiba",
+        "tmtALabel": "TMT-A: Számok",
+        "tmtBLabel": "TMT-B: Számok és betűk",
+        "next": "Következő",
+        "heroTitle": "Útvonal rajzolás",
+        "alternateHint": "Váltogasd a számokat és betűket: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Leggyorsabb ISI"
+      },
+      "wcst": {
+        "referenceCards": "Referencia kártyák",
+        "testCard": "Teszt kártya",
+        "categories": "Kategóriák",
+        "categoriesCompleted": "Teljesített kategóriák",
+        "perseverativeErrors": "Perszeveratív hibák",
+        "persevShort": "Persz.",
+        "avgRt": "Átl. RV"
+      },
+      "mentalRot": {
+        "rtByAngle": "RV szög szerint",
+        "findMatch": "Találd meg a megfelelő alakzatot",
+        "reference": "Referencia alakzat",
+        "referenceLabel": "Ref.",
+        "candidate": "Jelölt",
+        "distractor": "Egyéb",
+        "mirrorErrors": "Tükrözöttek",
+        "title": "Mentális rotáció"
+      },
+      "sternberg": {
+        "rtBySize": "RV halmazméret szerint",
+        "title": "Sternberg",
+        "avgRt": "Átl. RV"
+      },
+      "visualSearch": {
+        "rtBySize": "RV halmazméret szerint",
+        "title": "Vizuális keresés"
+      },
+      "ospan": {
+        "typeLetters": "Írd be a betűket sorrendben",
+        "trueOrFalse": "Igaz vagy hamis?",
+        "processingWarning": "Az egyenlet pontosság 85% alatt van — az eredmények nem feltétlenül tükrözik a valós munkamemória kapacitást"
+      },
+      "readingSpan": {
+        "s0": "A nap keleten kel fel.",
+        "s1": "A halak fákon élnek.",
+        "s2": "Párizs Franciaország fővárosa.",
+        "s3": "A háromszögnek négy oldala van.",
+        "s4": "A víz 100 fokon forr.",
+        "s5": "A macskák hüllők.",
+        "s6": "A Föld a Nap körül kering.",
+        "s7": "A csokoládé sziklákon nő.",
+        "s8": "Egy évben tizenkét hónap van.",
+        "s9": "A madarak víz alatt lélegeznek.",
+        "s10": "A tej fehér.",
+        "s11": "Az autók sínen közlekednek.",
+        "s12": "A méhek mézet termelnek.",
+        "s13": "A hó forró.",
+        "s14": "A szív vért pumpál.",
+        "s15": "A kövek lebegnek a vízen.",
+        "s16": "A Hold megvilágítja az éjszakát.",
+        "s17": "A kígyóknak lábuk van.",
+        "s18": "A fa lebeg a vízen.",
+        "s19": "A tűz hideg.",
+        "s20": "Az embernek öt érzékszerve van.",
+        "s21": "A pókoknak hat lábuk van.",
+        "s22": "A kenyér lisztből készül.",
+        "s23": "A bálnák halak.",
+        "w0": "HÁZ",
+        "w1": "KUTYA",
+        "w2": "KÖNYV",
+        "w3": "VIRÁG",
+        "w4": "AJTÓ",
+        "w5": "ASZTAL",
+        "w6": "FA",
+        "w7": "ÚT",
+        "w8": "FELHŐ",
+        "w9": "CSILLAG",
+        "w10": "TENGERPART",
+        "w11": "HÓ",
+        "w12": "LÁMPA",
+        "w13": "ESŐ",
+        "w14": "POHÁR",
+        "w15": "FŰ",
+        "w16": "VONAT",
+        "w17": "VILÁG",
+        "w18": "NAP",
+        "w19": "ERDŐ",
+        "w20": "JÉG",
+        "w21": "FÖLD",
+        "w22": "ÉG",
+        "w23": "KŐ",
+        "d0": "REGGEL",
+        "d1": "SZÍV",
+        "d2": "SZÖVET",
+        "d3": "LEVÉL",
+        "d4": "ZAJ",
+        "d5": "KERT",
+        "d6": "ÁRNYÉK",
+        "d7": "HARANG",
+        "d8": "HÍD",
+        "d9": "FÜST",
+        "d10": "HOMOK",
+        "d11": "LEVES",
+        "heroTitle": "Olvasási terjedelem"
+      },
+      "memorizeSequence": "Jegyezd meg a sorozatot...",
+      "reproduce": "Reprodukáld",
+      "span": "Terjedelem",
+      "size": "Méret",
+      "fixateCenter": "Nézz a középpontra...",
+      "identicalOrMirror": "Azonos vagy Tükrözött?",
+      "wellInhibited": "Jól gátolva!",
+      "badDirection": "Rossz irány!",
+      "stopMissed": "Megállás elszalasztva!",
+      "falseAlarm": "Téves riasztás!",
+      "pressNow": "Nyomj!",
+      "hitBang": "Találat!",
+      "miss": "Kihagyás!",
+      "doNotTouch": "Ne nyomj!",
+      "whichDirection": "Melyik irány?",
+      "stopBang": "STOP!",
+      "cueBang": "Jelzés!",
+      "memorizeLetters": "Jegyezd meg ezeket a betűket",
+      "memorizeLetter": "Jegyezd meg ezt a betűt",
+      "memorizeSequenceLetters": "Jegyezd meg a sorozatot...",
+      "memorizeDigits": "Jegyezd meg a számjegyeket...",
+      "memorizeColors": "Jegyezd meg a színeket!",
+      "memorizePosition": "Jegyezd meg ezt a pozíciót...",
+      "retainWord": "Jegyezd meg ezt a szót",
+      "retainNumber": "Jegyezd meg ezt a számot",
+      "addWithPrevious": "Add össze az előzővel",
+      "sentenceTrueOrFalse": "Igaz ez a mondat?",
+      "findRedCircle": "Találd meg a piros kört!",
+      "findHiddenToken": "Találd meg a rejtett zsetont!",
+      "chooseMatchingCard": "Válaszd ki a megfelelő kártyát",
+      "arrowDirection": "A középső nyíl iránya?",
+      "attention": "Figyelem...",
+      "preparation": "Felkészülés...",
+      "recallLettersInOrder": "Idézd fel a {{count}} betűt sorrendben",
+      "recallWordsInOrder": "Idézd fel a {{count}} szót sorrendben",
+      "recallLastLetters": "Idézd fel az utolsó {{count}} betűt",
+      "typeLastLetters": "Írd be az utolsó {{count}} betűt",
+      "recallPositionsInOrder": "Felidézés: érintsd a pozíciókat sorrendben",
+      "pressEnterToValidate": "Nyomd meg az Entert az érvényesítéshez",
+      "pressAnywhereToContinue": "Nyomj bárhova a folytatáshoz",
+      "temporalPrecision": "Időbeli pontosság",
+      "estimationPrecision": "Becslési pontosság",
+      "touchStartClockwise": "Érintsd meg a kezdőpontot, majd húzd az óramutató járásával",
+      "touchAtoB": "Érintsd az A pontot, majd húzd B-re",
+      "cue": "Jelzés",
+      "retainCue": "Jegyezd meg a jelzést...",
+      "targetOrNot": "Célinger vagy nem célinger?",
+      "whereIsTarget": "Hol van a célinger?",
+      "wasLetterInSet": "Ez a betű benne volt a halmazban?",
+      "regular": "szabályos",
+      "regularity": "Szabályosság",
+      "msDeviation": "ms eltérés",
+      "boxes": "dobozok",
+      "found": "{{count}} megtalálva",
+      "past": "Múlt",
+      "tooSlow": "túl lassú",
+      "tooFast": "túl gyors",
+      "timeout": "Túl lassú!",
+      "answer": "Válasz",
+      "dontPress": "Ne nyomj!",
+      "feedbackWrong": "Hibás!",
+      "level": "Szint",
+      "wrong": "Hibás",
+      "you": "Te",
+      "paused": "Szünet",
+      "instructions": "Utasítások",
+      "selectAnswer": "Válassz egy választ",
+      "tapTheOddOne": "Érintsd meg a kilógót",
+      "pal": {
+        "subtitle": "Párosított Társítás Tanulása",
+        "pairsLearned": "Megtanult párok",
+        "maxSetSize": "Max. halmazméret",
+        "totalErrors": "Összes hiba",
+        "round": "Kör",
+        "pairs": "párok",
+        "meanRt": "Átlag RV (helyes)",
+        "studyPhase": "Tanulás - jegyezd meg a pozíciókat",
+        "testPhase": "Hol volt ez az alakzat?",
+        "studying": "Tanulás",
+        "tapBox": "Érintsd meg a dobozt, ahol ez az alakzat volt"
+      },
+      "visualLogic": {
+        "easy": "Könnyű",
+        "hard": "Nehéz",
+        "oneRule": "1 szabály",
+        "twoRules": "2 szabály",
+        "findMissing": "Találd meg a hiányzó darabot",
+        "maxLevel": "Max. sz.",
+        "finalLevel": "Végső sz.",
+        "nextMode": "Következő munkamenet mód",
+        "adaptive": "Adaptív",
+        "fixed": "Rögzített",
+        "spm": "SPM 60",
+        "level": "Szint",
+        "confirm": "Megerősítés"
+      },
+      "tetrisMind": {
+        "findPiece": "Melyik darab illik a lyukba?",
+        "target": "Célinger"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Túlbecslési torzítás",
+        "underestimationBias": "Alulbecslési torzítás",
+        "noBias": "Nincs jelentős torzítás",
+        "avgError": "Átl. hiba",
+        "overestimations": "Túlbecslések",
+        "underestimations": "Alulbecslések",
+        "avgAbsoluteError": "Átl. abszolút hiba",
+        "avgRelativeError": "Átl. relatív hiba",
+        "cv": "Variációs együttható",
+        "watchDemo": "Figyeld az időtartamot",
+        "getReady": "Készülj...",
+        "holdToReproduce": "Tartsd lenyomva a reprodukáláshoz!",
+        "tooLong": "Túl hosszú!",
+        "tooShort": "Túl rövid!",
+        "target": "Célérték",
+        "demoLabel": "Referencia",
+        "yourTurn": "A te sorod",
+        "watchInstruction": "Figyelj",
+        "holdInstruction": "Tartsd lenyomva a reprodukáláshoz",
+        "heroTitle": "Időbecslés"
+      },
+      "puzzleDetails": "Rejtvény részletei",
+      "roundDetails": "Kör részletei",
+      "stageResults": "Szakasz eredményei",
+      "recognized": "Felismerve",
+      "missed": "Kihagyva",
+      "win": "Győzelem",
+      "lose": "Vereség",
+      "winBang": "Győzelem!",
+      "loseBang": "Vereség!",
+      "correctBang": "Helyes!",
+      "wrongBang": "Hibás!",
+      "completeBang": "Kész!",
+      "repeatedBang": "Ismétlés!",
+      "incompleteBang": "Hiányos!",
+      "levelCompleteBang": "Szint teljesítve!",
+      "timesUp": "Lejárt az idő",
+      "seeResults": "Eredmények",
+      "nextRound": "Következő kör",
+      "startBlock": "Blokk indítása",
+      "continue": "Folytatás",
+      "patientChoice": "Türelmes választás",
+      "immediateChoice": "Azonnali választás",
+      "immediate": "Azonnali",
+      "digitSpan": {
+        "heroTitle": "Számterjedelem"
+      },
+      "resume": "Folytatás",
+      "numericalStroop": {
+        "heroTitle": "Numerikus Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Vonalirány megítélése"
+      },
+      "chain": "Lánc",
+      "undo": "Visszavonás",
+      "vocalProsody": {
+        "heroTitle": "Hangszíni Prozódia"
+      },
+      "letterNumber": {
+        "title": "Betű-Szám Sorozat",
+        "expectedAnswer": "Várt válasz"
+      },
+      "patternComparison": {
+        "heroTitle": "Mintaösszehasonlítás"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "Összehajtva mely négyzetek érintkeznek?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "Hooper vizuális szervezés",
+        "whatIsThisObject": "Mi ez a tárgy?"
+      },
+      "blockDesign": {
+        "heroTitle": "Blokk tervezés"
+      },
+      "accuracy": "Pontosság",
+      "avgTime": "Átl. idő",
+      "check": "Ellenőrzés",
+      "dualTrace": {
+        "playArea": "Játéktér"
+      },
+      "paperFolding": {
+        "title": "Papírhajtogatás",
+        "foldSequenceHolePunch": "Hajtási sorrend és lyukasztás",
+        "whichPatternWhenUnfolded": "Milyen minta keletkezik széthajtáskor?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Lexikális döntés"
+      },
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxGrid": "Max. rács",
+      "symmetry": "Szimmetria",
+      "threshold": "Küszöb",
+      "hitRate": "Találati arány",
+      "faRate": "Téves riaszt. arány",
+      "changeDetection": {
+        "heroTitle": "Változásészlelés"
+      },
+      "syllogisms": {
+        "heroTitle": "Szillogizmusok"
+      },
+      "subitizing": {
+        "title": "Szubitizálás",
+        "range": "Tartomány"
+      },
+      "jitter": "Ingadozás",
+      "sentenceCompletion": {
+        "title": "Mondatkiegészítés (Cloze)",
+        "highCloze": "Magas cloze",
+        "lowCloze": "Alacsony cloze"
+      },
+      "grid": "Rács",
+      "pinballRecall": {
+        "title": "Flipper felidézés",
+        "byBounces": "Pattanások szerint",
+        "whereDoesItLand": "Hol ér földet?"
+      },
+      "mean": "Átlag",
+      "speedup": "Gyorsulás",
+      "memorize": "Jegyezd meg",
+      "time": "Idő",
+      "surfaceDevelopment": {
+        "title": "Felületi kifejtés",
+        "whichEdgeMatches": "Melyik él egyezik?"
+      },
+      "crowding": {
+        "heroTitle": "Vizuális zsúfoltság",
+        "spacing": "Térköz"
+      },
+      "patternRecognition": {
+        "heroTitle": "Mintafelismerés"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Próba",
+        "position": "Pozíció",
+        "audio": "Hang"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Jelenetbetolakodó",
+        "detect": "Észlelés"
+      },
+      "eyesTest": {
+        "heroTitle": "Szemekből olvasás"
+      }
+    },
+    "gridlock": {
+      "undone": "Utolsó lépés visszavonva.",
+      "resetMessage": "Rejtvény visszaállítva.",
+      "hintMessage": "Tipp: csúsztasd {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Tanulmányozd a táblát. Kezdés {{seconds}}s múlva.",
+      "challenge": "Kihívás",
+      "optimal": "Optimális",
+      "moves": "Lépések",
+      "piece": "Darab {{id}}",
+      "targetPiece": "Darab {{id}} (cél - piros autó)",
+      "challengeClassic": "Klasszikus",
+      "challengePrecision": "Precíziós",
+      "challengeMemory": "Memória",
+      "challengeTimed": "Időzített",
+      "hint": "Tipp",
+      "reset": "Visszaállítás",
+      "undo": "Visszavonás",
+      "nextPuzzle": "Következő rejtvény →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "1. blokk találatok",
+      "block2Hits": "2. blokk találatok",
+      "goPositive": "Go = Pozitív",
+      "goNegative": "Go = Negatív",
+      "title": "Affektív Go/No-Go",
+      "block1CommissionErrors": "1. blokk hibás nyomások",
+      "block2CommissionErrors": "2. blokk hibás nyomások",
+      "block": "Blokk",
+      "go": "Go"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Átlagos váltási arány",
+      "meanSwitchesfigure": "Átlagos váltás/ábra",
+      "totalSwitches": "Összes váltás",
+      "title": "Kétértelmű ábrák",
+      "meanSwitches": "Átl. váltások",
+      "switchRate": "Váltási arány",
+      "figures": "Ábrák",
+      "totalSwitchesLabel": "Összes váltás",
+      "duration": "Időtartam",
+      "switchesCount": "mp | Váltások:",
+      "switchButton": "Váltás!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbális helyes",
+      "timeout": "Időtúllépés",
+      "title": "Analógiák"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS összehasonlítás",
+      "ratio": "Arány",
+      "leftMore": "Bal több",
+      "rightMore": "Jobb több"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Téves riasztási arány",
+      "grammatical": "Grammatikus",
+      "memorizeTheseStrings": "Jegyezd meg ezeket a szövegeket",
+      "testPhase": "Teszt fázis",
+      "ungrammatical": "Nem grammatikus",
+      "learning": "Tanulás",
+      "test": "Teszt",
+      "title": "Mesterséges grammatika",
+      "learningPhase": "Tanulás",
+      "testIntroText": "Most új szövegek következnek. Döntsd el, hogy mindegyik ugyanazokat a szabályokat követi-e, mint a tanulmányozott szövegek.",
+      "startTest": "Teszt indítása",
+      "followsRules": "Szabálykövető",
+      "breaksRules": "Szabályszegő"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Villanás mértéke",
+      "title": "Figyelmi villanás",
+      "blink": "Villanás",
+      "t1Acc": "C1 pont.",
+      "t2Acc": "C2 pont.",
+      "firstGreenLetter": "1. zöld betű?",
+      "secondGreenLetter": "2. zöld betű?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Megragadási költség",
+      "singletonPresent": "Szingleton jelen",
+      "noSingleton": "Nincs szingleton",
+      "title": "Figyelmi megragadás",
+      "capture": "Megragadás",
+      "horizontal": "Vízszintes",
+      "vertical": "Függőleges"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Kötési ablak",
+      "title": "Audiovizuális kötés",
+      "window": "Ablak",
+      "pssLabel": "PSS (Szubjektív egyidejűség pontja)",
+      "simultaneousOrNot": "Egyidejű vagy sem?",
+      "simultaneous": "Egyidejű",
+      "notSimultaneous": "Nem egyidejű"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Időtartam küszöb",
+      "reference": "Referencia",
+      "weberFraction": "Weber-hányados",
+      "title": "Auditív időtartam",
+      "threshold": "Küszöb",
+      "weber": "Weber",
+      "whichLonger": "Melyik hosszabb?",
+      "firstLonger": "Első hosszabb",
+      "secondLonger": "Második hosszabb"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Módosított átl. pumpálások",
+      "avgTimeballoon": "Átl. idő/lufi",
+      "banked": "Beváltva!",
+      "lostEarnings": "Elveszett nyeremény!",
+      "overallAvgPumps": "Összes átl. pumpálás",
+      "popRate": "Pukkadási arány",
+      "totalEarned": "Összes kereset",
+      "balloons": "Lufik",
+      "cashed": "Beváltott",
+      "popped": "Pukkadt",
+      "adjPumps": "Móds. pump.",
+      "pop": "Pukkadás",
+      "pump": "Pumpálás",
+      "cashIn": "Beváltás"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Átl. döntési idő",
+      "drawBeadsToGatherEvidence": "Húzz gyöngyöket a bizonyíték gyűjtéséhez",
+      "jtc": "JTC",
+      "title": "Gyöngyfeladat",
+      "meanDraws": "Átl. húzások",
+      "rounds": "Körök",
+      "jtcRate": "JTC arány",
+      "meanDrawsToDecision": "Átl. húzások a döntésig",
+      "jtcRateThreshold": "JTC arány (<{{threshold}} húzás)",
+      "round": "Kör",
+      "jarDescription": "A edény: 85% zöld / B edény: 85% piros",
+      "itWasJar": "Ez volt az edény:",
+      "drawABead": "Húzz egy gyöngyöt",
+      "jarAGreen": "A edény zöld",
+      "jarBRed": "B edény piros"
+    },
+    "binding": {
+      "changedTrials": "Megváltozott próbák",
+      "sameAccuracy": "Azonos pontosság",
+      "sameTrials": "Azonos próbák",
+      "title": "Jellemzőkötés",
+      "binding": "Kötés",
+      "bindingAccuracyChanged": "Változás pontosság",
+      "same": "Azonos",
+      "different": "Különböző"
+    },
+    "blockDesign": {
+      "cells": "Cellák",
+      "target": "Célminta",
+      "yourAnswer": "Válaszod",
+      "tapHint": "Érintsd a színváltáshoz",
+      "check": "Ellenőrzés"
+    },
+    "brixton": {
+      "adapt": "Alkalmazkodás",
+      "adaptationCost": "Alkalmazkodási költség",
+      "nonswitchTrials": "Nem-váltás próbák",
+      "switchTrials": "Váltás próbák"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Jegyezd meg ezeket a betűket",
+      "selectThe3Letters": "Válaszd ki a 3 betűt",
+      "title": "Brown-Peterson feladat",
+      "forgetting": "Felejtés",
+      "sDelay": "K. késl.",
+      "minus3": "Mínusz 3",
+      "delay": "Késleltetés"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Döntés minősége",
+      "finalPoints": "Végső pontszám",
+      "meanBet": "Átlag tét",
+      "winRate": "Nyerési arány",
+      "wins": "Győzelmek",
+      "title": "Cambridge Gambling Task",
+      "totalPoints": "Összes pont",
+      "quality": "Minőség",
+      "rational": "Racionális",
+      "avgBet": "Átl. tét",
+      "trial": "Próba",
+      "whichColorHidesToken": "Melyik szín rejti a zsetont?",
+      "youChose": "Te választottad",
+      "howMuchToBet": "Mennyit téssz?"
+    },
+    "cancellation": {
+      "false": "Hamis",
+      "target": "Célinger:",
+      "total": "Összesen",
+      "title": "Kihúzási feladat (d2)",
+      "misses": "Kihagyások",
+      "targetDescription": "d 2 jelöléssel"
+    },
+    "changeBlindness": {
+      "detectionRate": "Észlelési arány",
+      "found": "Megtalálva",
+      "meanDetectionTime": "Átl. észlelési idő",
+      "title": "Változásvakvakság",
+      "missed": "Elszalasztva",
+      "avgTime": "Átl. idő",
+      "instructions": "Utasítások"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Legjobb becslés",
+      "meanScore": "Átlag pontszám",
+      "worstEstimate": "Legrosszabb becslés",
+      "inRange": "Jó becslés!",
+      "title": "Kognitív becslés",
+      "meanScoreLabel": "Átlag pontszám",
+      "inRangeLabel": "Tartományban",
+      "extreme": "Szélsőséges",
+      "scoreLabel": "pontszám",
+      "submit": "Küldés"
+    },
+    "common": {
+      "accuracy": "Pontosság",
+      "bias": "Torzítás",
+      "falseAlarmRate": "Téves riasztási arány",
+      "hitRate": "Találati arány",
+      "hits": "Találatok",
+      "listening": "Hallgatás...",
+      "meanRt": "Átlag RV",
+      "timedOut": "Lejárt az idő",
+      "timedOut2": "Lejárt az idő",
+      "faRate": "Téves riaszt. arány",
+      "paused": "Szünetelve"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Mennyire vagy biztos?",
+      "rateYourConfidence": "Értékeld a magabiztosságodat",
+      "title": "Magabiztosság kalibrálás",
+      "calError": "Kalibrálási hiba",
+      "confidence": "Magabiztosság"
+    },
+    "consequences": {
+      "best": "Legjobb",
+      "nextRound": "Következő kör...",
+      "time": "Idő",
+      "placeholder": "Írj egy következményt...",
+      "title": "Következmények",
+      "totalIdeas": "Összes ötlet",
+      "avgPerRound": "Átl. körönként",
+      "rounds": "Körök",
+      "noConsequencesListed": "Nincsenek következmények",
+      "roundProgress": "{{current}}. kör / {{total}}",
+      "typeAndPressAdd": "Írj és nyomd meg a Hozzáadás gombot"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Jelzési hatás",
+      "newConfigRt": "Új konfig. RV",
+      "oldConfigRt": "Régi konfig. RV",
+      "title": "Kontextuális jelzés",
+      "cueing": "Jelzés",
+      "oldRt": "Régi RV",
+      "newRt": "Új RV",
+      "prompt": "Feladat",
+      "left": "Bal",
+      "right": "Jobb"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Küszöb ingadozás",
+      "title": "Kontúr integráció",
+      "pipeJitter": "| ingadozás"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Küszöb kontraszt",
+      "title": "Kontraszt érzékenység",
+      "threshold": "Küszöb",
+      "left": "Bal",
+      "right": "Jobb"
+    },
+    "cpt": {
+      "nontargets": "Nem-célingerek",
+      "target": "Célinger",
+      "nonTarget": "Nem célinger",
+      "dPrime": "d'",
+      "targetsLetter": "Célbetű",
+      "tapForLetterOnly": "Csak a célbetűre érintsd"
+    },
+    "crowding": {
+      "criticalSpacing": "Kritikus térköz",
+      "leftAccuracy": "Bal pontosság",
+      "rightAccuracy": "Jobb pontosság"
+    },
+    "cryptogram": {
+      "hints": "Tippek",
+      "title": "Kriptogram",
+      "solved": "Megoldva",
+      "time": "Idő",
+      "puzzles": "Rejtvények",
+      "puzzle": "Rejtvény",
+      "hint": "Tipp",
+      "clear": "Törlés"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Görbe alatti terület",
+      "discountRateK": "Diszkont ráta (k)",
+      "impulsivityIndex": "Impulzivitási index",
+      "title": "Késleltetett diszkontálás",
+      "aucPatience": "AUC türelem",
+      "patient": "Türelmes",
+      "kRate": "K ráta",
+      "impuls": "Impulz.",
+      "indifferencePoints": "Közömbösségi pontok",
+      "whichPrefer": "Melyiket választod?",
+      "today": "Ma"
+    },
+    "delayedMatching": {
+      "long": "Hosszú",
+      "longDelay68s": "Hosszú késleltetés (6-8mp)",
+      "med": "Köz.",
+      "mediumDelay46s": "Közepes késleltetés (4-6mp)",
+      "short": "Rövid",
+      "shortDelay34s": "Rövid késleltetés (3-4mp)",
+      "title": "Késleltetett egyeztetés",
+      "delay": "Késleltetés",
+      "rememberThisPattern": "Jegyezd meg ezt a mintát",
+      "whichWasIt": "Melyik volt az?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Riasztás észlelés",
+      "attendToTheLeftColumn": "Figyelj a BAL oszlopra",
+      "attendedAccuracy": "Figyelt pontosság",
+      "ignoreTheRightColumn": "Hagyd figyelmen kívül a jobb oszlopot",
+      "right": "JOBB",
+      "title": "Dichotikus hallgatás",
+      "attendedAcc": "Figyelt pontosság",
+      "alertDet": "Riasztás észlelés",
+      "alerts": "Riasztások",
+      "selectLeftColumnWords": "Válaszd ki a bal oszlop szavait",
+      "submit": "Küldés",
+      "alertQuestion": "Riasztási kérdés"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Felejtési pontosság",
+      "forgettingEffect": "Felejtési hatás",
+      "newRejection": "Új elutasítás",
+      "rememberAccuracy": "Emlékezési pontosság",
+      "title": "Irányított felejtés",
+      "remember": "Emlékezz",
+      "forget": "Felejtsd el",
+      "round": "Kör",
+      "word": "Szó",
+      "wasThisWordShown": "Szerepelt ez a szó?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Figyelmi torzítás pontszám",
+      "congruentAcc": "Kongruens pont.",
+      "congruentRt": "Kongruens RV",
+      "incongruentAcc": "Inkongruens pont.",
+      "incongruentRt": "Inkongruens RV"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Autó vagy teherautó?",
+      "minDisplayReached": "Min. megjelenítés elérve",
+      "positionAccuracy": "Pozíció pontosság",
+      "thresholdDisplay": "Küszöb megjelenítés",
+      "vehicleAccuracy": "Jármű pontosság",
+      "whereWasTheDiamond": "Hol volt a gyémánt?",
+      "title": "Kettős döntés",
+      "threshold": "Küszöb",
+      "bothOk": "Mindkettő helyes",
+      "vehicle": "Jármű",
+      "position": "Pozíció",
+      "car": "Autó",
+      "truck": "Teherautó"
+    },
+    "dsst": {
+      "items": "Elemek",
+      "itemsCompleted": "Befejezett elemek",
+      "speedItemsmin": "Sebesség (elem/perc)",
+      "attempts": "Kísérletek",
+      "itemsPerMin": "Elem / perc"
+    },
+    "dualTask": {
+      "dualtaskCost": "Kettős feladat költsége",
+      "taskANumber": "A feladat (Szám)",
+      "taskBSymbol": "B feladat (Szimbólum)",
+      "title": "Kettős feladat",
+      "taskA": "A feladat",
+      "taskB": "B feladat",
+      "number": "Szám",
+      "symbol": "Szimbólum",
+      "up": "Fel",
+      "down": "Le"
+    },
+    "dualTime": {
+      "sessionEnPause": "Munkamenet szünetelve",
+      "votreEstimationSecondes": "Becslésed (másodperc)",
+      "sessionInterrupted": "Munkamenet megszakítva",
+      "target": "Célérték",
+      "estimation": "Becslés",
+      "avgTime": "Átl. idő",
+      "avgError": "Átl. hiba",
+      "trials": "Próbák",
+      "resumeToContinue": "Folytasd a folytatáshoz",
+      "aimFor": "Célozz rá",
+      "second": "Másodperc",
+      "howLongDidYouTake": "Mennyi ideig tartott?"
+    },
+    "dualTrack": {
+      "confirmer": "Megerősítés",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Folytasd a folytatáshoz.",
+      "sessionEnPause": "Munkamenet szünetelve",
+      "tapezLesCibles": "Érintsd a célpontokat",
+      "tapezLaCible": "Érintsd a célpontot",
+      "appuyezConfirmer": "Nyomd meg a Megerősítést",
+      "targetsCountLabel": "{{count}} célpont",
+      "distractorsCountLabel": "{{count}} zavaró inger",
+      "roundsCountLabel": "{{count}} kör",
+      "calibrationRoundsLabel": "{{count}} kalibrációs kör",
+      "tierValue": "S{{current}}/{{total}}",
+      "tierHelp": "S = belső utazási nehézségi szint.",
+      "tierHelpCurrentWithPhase": "Jelenleg S{{current}}/{{total}} szinten vagy {{targets}} célponttal. Jelenlegi fázis: {{phase}}. Még {{remaining}} szint van hátra a következő célpont szintig.",
+      "phaseTracking": "Követés",
+      "phaseAudio": "Követés + hang",
+      "phaseColor": "Követés + szín",
+      "phaseCombined": "Követés + hang + szín",
+      "passLetters": "Betűk",
+      "passColors": "Színek",
+      "moveInstruction": "Mozgatás utasítás",
+      "moveConfirmBtn": "Megerősítés gomb mozgatása",
+      "preparingSession": "Munkamenet előkészítése...",
+      "preparing3dScene": "3D jelenet előkészítése...",
+      "startJourney": "Utazás indítása",
+      "calibrationDescription": "Az első szakasz előtt egy hosszabb kalibráció becsüli meg a kezdő szintedet.",
+      "defaultDescription": "A labdák felvillannak. Kövesd őket mozgás közben, majd azonosítsd őket.",
+      "startCalibration": "Kalibráció indítása",
+      "calibrationTitle": "Kalibráció",
+      "estimatedStart": "Becsült kezdés",
+      "roundsAnalyzed": "Elemzett körök",
+      "willStartAt": "Indul innen",
+      "targetsCount": "Célpontok",
+      "thenProgress": "majd haladás"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Átl. abszolút hiba",
+      "ratio": "Arány",
+      "slope": "Meredekség",
+      "vierordtSlope": "Vierordt meredekség",
+      "wait": "Várj...",
+      "title": "Időtartam reprodukció",
+      "meanError": "Átl. hiba",
+      "meanRatio": "Átl. arány (előállított/cél)",
+      "holdNow": "TARTSD LENYOMVA",
+      "target": "Célérték",
+      "error": "Hiba"
+    },
+    "embeddedFigures": {
+      "fastest": "Leggyorsabb",
+      "found": "Megtalálva",
+      "meanDetectionTime": "Átl. észlelési idő",
+      "slowest": "Leglassabb",
+      "title": "Rejtett ábrák",
+      "missed": "Elszalasztva",
+      "fastestLabel": "Leggyorsabb",
+      "findThisShape": "Találd meg ezt az alakzatot",
+      "memorizeShape": "Jegyezd meg az alakzatot...",
+      "foundIt": "Megtaláltad!",
+      "giveUp": "Feladom"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Téves riasztások",
+      "misses": "Kihagyások",
+      "title": "Érzelmi N-Back",
+      "match": "Egyezés"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Semleges RV",
+      "positiveRt": "Pozitív RV",
+      "threatRt": "Fenyegető RV",
+      "title": "Érzelmi Stroop",
+      "interference": "Interferencia",
+      "interferenceThreatNeutral": "Interferencia (Fenyegető − Semleges)"
+    },
+    "eyesTest": {
+      "totalTime": "Összes idő"
+    },
+    "faceName": {
+      "gain": "Nyereség",
+      "learningImprovement": "Tanulási javulás",
+      "round1Accuracy": "1. kör pontosság",
+      "round2Accuracy": "2. kör pontosság",
+      "whoIsThis": "Ki ez?",
+      "title": "Arc-név társítás",
+      "round": "Kör",
+      "testPhase": "Teszt fázis"
+    },
+    "fauxPas": {
+      "who": "Ki?",
+      "why": "Miért?",
+      "title": "Faux Pas felismerés",
+      "detection": "Észlelés",
+      "scenarios": "Helyzetek",
+      "fpFound": "Faux pas találva",
+      "control": "Kontroll",
+      "readyToAnswer": "Kész a válaszra",
+      "didSomeoneSay": "Mondott valaki olyat, amit nem kellett volna?",
+      "whoSaidIt": "Ki mondta?",
+      "whyInappropriate": "Miért volt helytelen?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Felidézési pontosság",
+      "recognitionAccuracy": "Felismerési pontosság",
+      "recallPlaceholder": "Írd be a válaszod...",
+      "unlikely": "Valószínűtlen",
+      "certain": "Biztos",
+      "title": "Tudásérzet",
+      "recall": "Felidézés",
+      "recognition": "Felismerés",
+      "fokR": "FOK R",
+      "questions": "Kérdések",
+      "recalled": "Felidézve",
+      "recognized": "Felismerve",
+      "fokSensitivity": "FOK érzékenység",
+      "submit": "Küldés",
+      "dontKnow": "Nem tudom",
+      "fokPrompt": "Fel fogod ismerni?",
+      "selectCorrectAnswer": "Válaszd ki a helyes választ",
+      "answer": "Válasz"
+    },
+    "fingerTapping": {
+      "firstTrial": "Első próba",
+      "lastTrial": "Utolsó próba",
+      "sequence": "Sorozat",
+      "speedupT1VsT12": "Gyorsulás (P1 vs P12)",
+      "title": "Ujjkopogtatás"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Átl. mozgási idő",
+      "avgThroughput": "Átl. áteresztőképesség",
+      "title": "Fitts-féle kopogtatás",
+      "throughput": "Áteresztőkép.",
+      "tapTarget": "Érintsd a kiemelt célpontot"
+    },
+    "foreperiod": {
+      "early": "Korai",
+      "slope": "Meredekség",
+      "title": "Időbeli felkészülés",
+      "fpEffectSlope": "FP hatás meredekség"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Visszafordulások",
+      "threshold": "Küszöb",
+      "tone1": "1. hang",
+      "tone2": "2. hang",
+      "weber": "Weber",
+      "weberFraction": "Weber-hányados",
+      "hz": "Hz",
+      "title": "Frekvencia megkülönböztetés",
+      "thresholdLabel": "Küszöb",
+      "hzDiff": " Hz kül.",
+      "whichWasHigher": "Melyik volt magasabb?",
+      "firstHigher": "Első magasabb",
+      "secondHigher": "Második magasabb"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor-folt",
+      "leftAccuracy": "Bal pontosság",
+      "leftTrials": "Bal próbák",
+      "noiseMask": "Zaj maszk",
+      "rightAccuracy": "Jobb pontosság",
+      "rightTrials": "Jobb próbák",
+      "thresholdAngle": "Küszöb szög",
+      "title": "Gabor",
+      "threshold": "Küszöb",
+      "reversals": "Visszafordulások",
+      "timedOut": "Lejárt az idő",
+      "left": "Bal",
+      "right": "Jobb"
+    },
+    "gameOfDice": {
+      "finalPoints": "Végső pont",
+      "risky": "Kockázatos",
+      "riskyChoices": "Kockázatos választások",
+      "safe": "Biztos",
+      "winRate": "Nyerési arány",
+      "wins": "Győzelmek",
+      "title": "Kockajáték",
+      "totalPoints": "Összes pont",
+      "riskyLabel": "Kockázatos",
+      "roll": "Dobás",
+      "chooseYourBet": "Válaszd ki a tétedet",
+      "pickNumbers": "Válaszd ki a számaidat"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Szünet vagy nincs szünet?",
+      "gapThreshold": "Szünet küszöb",
+      "title": "Csend észlelés",
+      "noGap": "Nincs szünet"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Hol volt a tekintet?",
+      "direct": "Közvetlen",
+      "left": "Bal",
+      "right": "Jobb",
+      "title": "Tekintet irány",
+      "dPrimeDirectGaze": "D Prime közvetlen tekintet"
+    },
+    "hayling": {
+      "part1Initiation": "1. rész (Kezdeményezés)",
+      "part2": "2. rész",
+      "part2Suppression": "2. rész (Elnyomás)",
+      "suppressionCost": "Elnyomási költség",
+      "title": "Hayling",
+      "part1": "1. rész",
+      "part2Label": "2. rész",
+      "suppression": "Elnyomás",
+      "obvious": "Nyilvánvaló",
+      "obviousPicksPart2": "Nyilvánvaló választások (2. rész)",
+      "chooseUnrelated": "Válassz egy nem kapcsolódó szót",
+      "completelyUnrelated": "Teljesen nem kapcsolódó",
+      "doNotPickObvious": "NE válaszd a nyilvánvaló szót!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Továbblépés a következő szakaszra...",
+      "stageComplete": "Szakasz teljesítve!",
+      "title": "IED Set Shift",
+      "stages": "Szakaszok",
+      "edsCost": "EDS költség",
+      "stage": "Szakasz",
+      "correctNeeded": "Helyes válasz szükséges a továbblépéshez"
+    },
+    "informationSampling": {
+      "cost": "Költség",
+      "free": "Ingyenes",
+      "meanTilesCost": "Átl. csempék (költséges)",
+      "meanTilesFree": "Átl. csempék (ingyenes)",
+      "totalCost": "Összes költség",
+      "title": "Információ mintavétel",
+      "tiles": "Csempék",
+      "tapToReveal": "Érintsd a felfedéshez"
+    },
+    "inspectionTime": {
+      "final": "Végső",
+      "finalDisplayTime": "Végső megjelenítési idő",
+      "minCorrectIt": "Min. helyes IT",
+      "threshold": "Küszöb",
+      "title": "Vizsgálati idő",
+      "thresholdLabel": "Küszöb",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Egyenleg:",
+      "chooseADeck": "Válassz egy paklit",
+      "deckADraws": "A pakli húzások",
+      "deckBDraws": "B pakli húzások",
+      "deckCDraws": "C pakli húzások",
+      "deckDDraws": "D pakli húzások",
+      "first40Advantageous": "Első 40 előnyös",
+      "last40Advantageous": "Utolsó 40 előnyös",
+      "learn": "Tanulás",
+      "learningIndex": "Tanulási index",
+      "title": "Iowa Gambling",
+      "advantageousPct": "Előnyös %",
+      "earnings": "Kereset",
+      "last40": "Utolsó 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibrálási torzítás",
+      "meanJol": "Átlag JOL",
+      "nowTestYourRecall": "Most teszteld a felidézésedet",
+      "studyComplete": "Tanulás befejezve",
+      "whatWasPairedWith": "Mi volt a párja…?",
+      "title": "Tanulás megítélése",
+      "recallAccuracy": "Felidézési pontosság",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL pontosság (Gamma)",
+      "howLikelyRemember": "Mennyire valószínű, hogy emlékezni fogsz?",
+      "hiddenAnswer": "Rejtett válasz"
+    },
+    "judgmentOfRecency": {
+      "close": "Közeli",
+      "closeGap13": "Közeli távolság (1-3)",
+      "far": "Távoli",
+      "farGap9": "Távoli távolság (9+)",
+      "mediumGap48": "Közepes távolság (4-8)",
+      "title": "Újkoriság megítélése",
+      "medium": "Közepes",
+      "studyPhaseMemorizeOrder": "Tanulás — Jegyezd meg a sorrendet",
+      "whichMoreRecently": "Melyik jelent meg frissebben?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Átlag RV (nem-szavak)",
+      "meanRtWords": "Átlag RV (szavak)",
+      "nonwordsAccuracy": "Nem-szavak pontossága",
+      "wordsAccuracy": "Szavak pontossága",
+      "word": "Szó",
+      "nonword": "Nem-szó"
+    },
+    "maze": {
+      "duration": "Időtartam",
+      "optimalSteps": "Optimális lépések",
+      "pathEfficiency": "Útvonal hatékonyság",
+      "totalSteps": "Összes lépés",
+      "wallHits": "Falba ütközés",
+      "title": "Labirintus",
+      "completed": "Teljesítve",
+      "efficiency": "Hatékonyság",
+      "wallHitsLabel": "Falba ütközés",
+      "steps": "Lépések"
+    },
+    "memobox": {
+      "easy": "Könnyű",
+      "easy2Boxes": "Könnyű (2 doboz)",
+      "hard": "Nehéz",
+      "hard4Boxes": "Nehéz (4 doboz)",
+      "medium3Boxes": "Közepes (3 doboz)",
+      "title": "Memobox",
+      "rounds": "Körök",
+      "medium": "Közepes",
+      "watchMovements": "Figyeld a mozgásokat...",
+      "howManyBalls": "Hány labda van minden dobozban?",
+      "submit": "Küldés",
+      "roundOf": "{{current}}. kör / {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Mi a keresztmetszet?",
+      "title": "Mentális vágás"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Régi, hasonló vagy új?",
+      "patternSeparation": "Minta szétválasztás",
+      "sep": "Szétv.",
+      "old": "Régi",
+      "similar": "Hasonló",
+      "new": "Új",
+      "ldi": "LDI",
+      "title": "Mnemonikus megkülönböztetés",
+      "hitRateOldDetected": "Találati arány (Régi észlelve)",
+      "lureDiscrimination": "Csali megkülönböztetés (LDI)",
+      "memorize": "Jegyezd meg",
+      "testPhase": "Teszt fázis"
+    },
+    "multiArmedBandit": {
+      "earnings": "Kereset:",
+      "pickMachine": "Válassz egy gépet",
+      "title": "Többkarú bandita",
+      "totalReward": "Összes jutalom",
+      "optimal": "Optimális",
+      "regret": "Veszteség",
+      "exploit": "Kihasználás",
+      "machine": "Gép",
+      "armsExplored": "Feltárt karok"
+    },
+    "navon": {
+      "globalBigLetter": "Globális (nagy betű)",
+      "localSmallLetter": "Lokális (kis betű)",
+      "title": "Navon",
+      "globalAdv": "Glob. előny",
+      "whatBigLetter": "Melyik NAGY betű?",
+      "whatSmallLetter": "Melyik KIS betű?"
+    },
+    "negativePriming": {
+      "controlRt": "Kontroll RV",
+      "nameTheRedShape": "Nevezd meg a piros alakzatot",
+      "negativePrimingRt": "Negatív előfeszítés RV",
+      "positivePrimingRt": "Pozitív előfeszítés RV",
+      "npRt": "NP RV",
+      "ppRt": "PP RV",
+      "npEffect": "NP hatás",
+      "title": "Negatív előfeszítés",
+      "ctrlRt": "Kontr. RV"
+    },
+    "numberLine": {
+      "estimationBias": "Becslési torzítás",
+      "linearityRsup2": "Linearitás (R²)",
+      "meanAbsoluteError": "Átl. abszolút hiba",
+      "tapTheLineToPlaceTheNumber": "Érintsd a vonalat a szám elhelyezéséhez",
+      "title": "Számegyenes",
+      "meanError": "Átl. hiba",
+      "yourEstimate": "Becslésed",
+      "correct": "Helyes"
+    },
+    "oddOneOut": {
+      "colorTrials": "Szín próbák",
+      "shapeTrials": "Alak próbák",
+      "shape": "Alak",
+      "color": "Szín",
+      "timeout": "Időtúllépés",
+      "shapeDiffAccuracy": "Alak diff. pontosság",
+      "colorDiffAccuracy": "Szín kül. pontosság",
+      "shapeDiffAvgRt": "Alak diff. átlagos RT",
+      "colorDiffAvgRt": "Szín kül. átl. RV"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Melyik irányba?",
+      "thresholdAngle": "Küszöb szög",
+      "title": "Tájolás megkülönböztetés",
+      "threshold": "Küszöb",
+      "counterCw": "ÓJE",
+      "clockwise": "Óra járásával"
+    },
+    "patternComparison": {
+      "differentTrials": "Különböző próbák",
+      "sameTrials": "Azonos próbák",
+      "same": "Azonos",
+      "different": "Különböző"
+    },
+    "patternRecognition": {
+      "newPatterns": "Új minták",
+      "oldPatterns": "Régi minták",
+      "old": "RÉGI",
+      "new": "ÚJ",
+      "studyPatterns": "Tanulmányozd figyelmesen a mintákat",
+      "memorize": "Jegyezd meg ({{current}}/{{total}})",
+      "getReady": "Készülj...",
+      "testPhaseStarting": "Teszt fázis indul..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Pontosan helyes",
+      "meanAngularError": "Átl. szöghiba",
+      "withinTolerance": "Tolerancián belül",
+      "title": "Perspektívaváltás",
+      "avgErr": "Átl. hiba",
+      "youAreAt": "Te itt vagy: ",
+      "facing": "Nézed",
+      "pointTo": "Mutass erre: "
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Frekv. küszöb",
+      "seq1": "Sor 1",
+      "seq2": "Sor 2",
+      "title": "Fonéma megkülönböztetés",
+      "thresh": "Küszöb",
+      "sameOrDifferent": "Azonos vagy különböző?",
+      "same": "Azonos",
+      "different": "Különböző"
+    },
+    "predictionMotion": {
+      "biasLate": "Torzítás (+ = késői)",
+      "meanAbsoluteError": "Átl. abszolút hiba",
+      "precisionSd": "Pontosság (SD)",
+      "title": "Mozgásbecslés",
+      "absError": "Absz. hiba",
+      "precision": "Pontosság",
+      "responded": "Válaszolt",
+      "tapWhenReachesTarget": "ÉRINTSD, amikor eléri a célpontot"
+    },
+    "promem": {
+      "ongoingAccuracy": "Folyamatos pontosság",
+      "ongoingRt": "Folyamatos RV",
+      "pmHitRate": "PM találati arány",
+      "pmRt": "PM RV",
+      "pmTargets": "PM célok",
+      "title": "Prospektív memória",
+      "ongoing": "Folyamatos",
+      "pmHits": "PM találatok",
+      "pmMisses": "PM kihagyások",
+      "living": "Élő",
+      "nonLiving": "Élettelen",
+      "redWordInstruction": "Piros szó = nyomj"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Zavaró hibák",
+      "literalErrorRate": "Szó szerinti hibaarány",
+      "literalErrors": "Szó szerinti hibák",
+      "title": "Közmondás értelmezés",
+      "literal": "Szó szerinti",
+      "litRate": "Szósz. arány",
+      "whatDoesThisMean": "Mit jelent ez?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Készülj a követésre",
+      "meanTimeOnTarget": "Átl. időzítés célponton",
+      "meanTrackingError": "Átl. követési hiba",
+      "placeYourFingerOnTheScreen": "Helyezd az ujjad a képernyőre",
+      "title": "Követéses nyomkövetés",
+      "timeOnTarget": "Időzítés célponton",
+      "error": "Hiba",
+      "onTarget": "Célponton",
+      "avgError": "Átl. hiba",
+      "improve": "Javulás",
+      "improvementT1VsT": "Javulás P1 vs P",
+      "errorLabel": "Hiba",
+      "followGreenTarget": "Kövesd a zöld célpontot"
+    },
+    "rapidNaming": {
+      "roundComplete": "Kör befejezve",
+      "totalErrors": "Összes hiba",
+      "title": "Gyors megnevezés",
+      "avgSpeed": "Átl. sebesség",
+      "totalTime": "Összes idő",
+      "round": "Kör",
+      "getReady": "Készülj!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Átl. megoldási idő",
+      "solved": "Megoldva",
+      "wrong": "Hibás",
+      "placeholder": "Válaszod...",
+      "title": "Rejtvények",
+      "puzzles": "Rejtvények",
+      "timeout": "Időtúllépés",
+      "submit": "Küldés",
+      "answer": "Válasz"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Átl. megoldási idő",
+      "solved": "Megoldva",
+      "placeholder": "Válaszod...",
+      "title": "Távoli társítás",
+      "timeout": "Időtúllépés",
+      "submit": "Küldés",
+      "answer": "Válasz"
+    },
+    "reversalLearning": {
+      "adapt": "Alkalmazkodás",
+      "loseshiftRate": "Veszteség-váltás arány",
+      "score": "Pontszám:",
+      "winstayRate": "Nyerés-maradás arány",
+      "title": "Fordított tanulás",
+      "rewards": "Jutalmak",
+      "reversals": "Fordulatok",
+      "persev": "Persz.",
+      "avgTrialsToCriterion": "Átl. próbák a kritériumig",
+      "pickACard": "Válassz egy kártyát"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Számolj visszafelé 7-esével",
+      "reproduceThePatternFromMemory": "Rajzold újra a mintát emlékezetből",
+      "title": "Rey komplex ábra",
+      "copy": "Másolás",
+      "recall": "Felidézés",
+      "retention": "Megtartás",
+      "trial": "Próba",
+      "target": "Célminta",
+      "yourCopy": "A másolatod",
+      "submit": "Küldés"
+    },
+    "rhythm": {
+      "avgTimingError": "Átl. időzítési hiba",
+      "bestTrialError": "Legjobb próba hiba",
+      "correctTrials": "Helyes próbák",
+      "worstTrialError": "Legrosszabb próba hiba",
+      "watchRhythm": "Figyeld a ritmust",
+      "getReady": "Készülj...",
+      "tapTheRhythm": "Kopogtasd a ritmust!",
+      "tooFarOff": "Túl pontatlan!",
+      "tapToReproduce": "Kopogtasd a reprodukáláshoz",
+      "beats": "{{count}} ütés",
+      "bestTrial": "Legjobb próba",
+      "worstTrial": "Legrosszabb próba",
+      "title": "Ritmus",
+      "msErr": "ms hiba"
+    },
+    "routePlanning": {
+      "time": "Idő",
+      "title": "Útvonaltervezés",
+      "levels": "Szintek",
+      "completed": "Teljesítve",
+      "avgMoves": "Átl. lépések",
+      "clear": "Törlés",
+      "submit": "Küldés",
+      "instructions": "Utasítások"
+    },
+    "rvp": {
+      "detect357246468": "Észleld: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Célsorozatok",
+      "fa": "TR",
+      "hitRate": "Találati arány",
+      "misses": "Kihagyások",
+      "sequences": "Sorozatok"
+    },
+    "sart": {
+      "commissionErrors": "Hibás nyomások",
+      "omissionErrors": "Kihagyási hibák",
+      "tapAllDigits": "Érintsd az összes számjegyet a 3 kivételével",
+      "except3": "Kiv.3"
+    },
+    "sceneCrasher": {
+      "adds": "Hozzáadások",
+      "studyTheScene": "Tanulmányozd a jelenetet",
+      "swaps": "Cserék",
+      "tapTheNewchangedObject": "Érintsd az új/megváltozott tárgyat"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Hamis mondatok",
+      "trueSentences": "Igaz mondatok",
+      "byCategory": "Kategória szerint",
+      "title": "Mondatigazolás",
+      "trueRt": "Igaz RV",
+      "true": "Igaz",
+      "false": "Hamis",
+      "pressKey": "Nyomj "
+    },
+    "soundSweeps": {
+      "down": "Le",
+      "downAccuracy": "Le pontosság",
+      "durationThreshold": "Időtartam küszöb",
+      "up": "Fel",
+      "upAccuracy": "Fel pontosság",
+      "title": "Sound Sweeps",
+      "threshold": "Küszöb",
+      "upOrDown": "Fel vagy le?"
+    },
+    "sourceMemory": {
+      "color": "Szín",
+      "colorRecall": "Szín felidézés",
+      "frame": "Keret",
+      "frameRecall": "Keret felidézés",
+      "getReadyForTheTest": "Készülj a tesztre!",
+      "itemRecognition": "Elem felismerés",
+      "positionRecall": "Pozíció felidézés",
+      "sourceAccuracy": "Forrás pontosság",
+      "title": "Forrásmemória",
+      "source": "Forrás",
+      "position": "Pozíció",
+      "word": "Szó",
+      "wasThisWordShown": "Szerepelt ez a szó?",
+      "bottom": "Alul",
+      "blue": "Kék",
+      "orange": "Narancssárga",
+      "circle": "Kör",
+      "square": "Négyzet"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Zaj küszöb",
+      "title": "Beszéd zajban",
+      "noise": "Zaj",
+      "whichWordWasIt": "Melyik szó volt az?"
+    },
+    "srtt": {
+      "learningEffect": "Tanulási hatás",
+      "learning": "Tanulás",
+      "block": "Blokk"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Véletlen szint",
+      "learningDetected": "Tanulás észlelve",
+      "testPhase": "Teszt fázis",
+      "whichPairLooksMoreFamiliar": "Melyik pár tűnik ismerősebbnek?",
+      "title": "Statisztikai tanulás",
+      "learning": "Tanulás",
+      "watchTheShapes": "Figyeld az alakzatokat"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Hiedelem-torzítási hatás",
+      "conclusion": "Következtetés",
+      "premise1": "1. premissza",
+      "premise2": "2. premissza",
+      "logicalValidityQuestion": "Logikailag érvényes?",
+      "valid": "Érvényes",
+      "invalid": "Érvénytelen"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Hiányzó pontosság",
+      "presentAccuracy": "Jelenlévő pontosság",
+      "title": "Szimbólum keresés",
+      "present": "Jelen van",
+      "absent": "Nincs jelen",
+      "targets": "Célok",
+      "searchGroup": "Keresési csoport"
+    },
+    "syncContinuation": {
+      "async": "Aszinkr.",
+      "asynchrony": "Aszinkrónia",
+      "drift": "Eltolódás",
+      "cv": "CV",
+      "title": "Szinkron-folytatás",
+      "meanCv": "Átlag CV",
+      "tempos": "Tempók",
+      "tempo": "Tempó",
+      "ioi": "IOI",
+      "getReady": "Készülj...",
+      "nextTempo": "Következő tempó..."
+    },
+    "taskJuggling": {
+      "correctResets": "Helyes visszaállítások",
+      "duration": "Időtartam",
+      "missedCounters": "Kihagyott számlálók",
+      "prematureResets": "Korai visszaállítások",
+      "totalEvents": "Összes esemény",
+      "tooEarly": "Túl korai!",
+      "missed": "Kihagyva!",
+      "title": "Feladatzsonglőrködés",
+      "premature": "Korai",
+      "counter": "Számláló",
+      "tapCounterInstruction": "Érintsd minden számlálót, amikor eléri a küszöbét. Ne engedd túlcsordulni!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Felezési pont (PSE)",
+      "curveSteepness": "Görbe meredeksége",
+      "idealMidpoint": "Ideális középpont",
+      "pse": "PSE",
+      "title": "Időbeli felezés",
+      "steepness": "Meredekség",
+      "shortOrLong": "Rövid vagy hosszú?",
+      "trainingPhase": "Gyakorlási fázis",
+      "short": "Rövid",
+      "long": "Hosszú"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Gradiens szélesség",
+      "rememberThisDuration": "Jegyezd meg ezt az időtartamot",
+      "width": "Szélesség",
+      "standard": "SZABVÁNY",
+      "title": "Időbeli általánosítás",
+      "hitRate": "Találati arány",
+      "faRate": "Téves riaszt. arány",
+      "hitRateDetectStandard": "Találati arány (szabvány észlelés)",
+      "sameDuration": "Azonos időtartam?",
+      "trainingPhase": "Gyakorlási fázis",
+      "same": "Azonos",
+      "different": "Különböző"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Küszöb SOA",
+      "title": "Textúra megkülönböztetés",
+      "threshold": "Küszöb"
+    },
+    "timePromem": {
+      "avgTimingError": "Átl. időzítési hiba",
+      "clockChecks": "Óra ellenőrzések",
+      "ongoingAccuracy": "Folyamatos pontosság",
+      "ongoingTrials": "Folyamatos próbák",
+      "totalPmPresses": "Összes PM nyomás",
+      "pmAccuracy": "PM pontosság",
+      "pmMisses": "PM kihagyások",
+      "title": "Időalapú prospektív memória",
+      "ongoing": "Folyamatos",
+      "pmHitsLabel": "PM találatok",
+      "timingErr": "Időzítési hiba",
+      "pmHitsExpected": "PM találatok / Várt",
+      "pmPresses": "PM nyomások",
+      "checkClock": "Óra ellen.",
+      "thirtySecMark": "30mp jel"
+    },
+    "toj": {
+      "meanResponseTime": "Átlagos válaszidő",
+      "temporalResolution": "Időbeli felbontás",
+      "title": "Időbeli sorrend megítélése",
+      "threshold": "Küszöb",
+      "whichCameFirst": "Melyik volt előbb?",
+      "leftFirst": "Bal előbb",
+      "rightFirst": "Jobb előbb"
+    },
+    "tower": {
+      "budget": "Keret",
+      "challenge": "Kihívás",
+      "challengeClassic": "Klasszikus",
+      "challengeExpert": "Haladó",
+      "challengeMemory": "Memória",
+      "challengePrecision": "Precíziós",
+      "dragDiscAriaLabel": "Húzd a felső korongot a {{peg}}. cölöpről",
+      "goal": "Cél",
+      "goalHiddenStatus": "Cél rejtve. Használd a Felfedést a rövid megjelenítéshez.",
+      "goalRevealedMessage": "Cél megjelenítve 3 másodpercre.",
+      "hint": "Tipp",
+      "hintDescription": "Legjobb következő lépés mutatása",
+      "hintMessage": "Tipp: mozgasd a felső korongot a {{fromPeg}}. cölöpről a {{toPeg}}. cölöpre.",
+      "hiddenGoalDescription": "A cél rejtve van játék közben. Használd a Felfedést, ha rövid emlékeztetőre van szükséged.",
+      "hiddenGoalTitle": "Memória kihívás",
+      "invalid": "Érvénytelen",
+      "moves": "Lépések",
+      "optimal": "Optimális",
+      "pegFullMessage": "Ez a cölöp tele van.",
+      "previewMemoryCountdown": "Jegyezd meg a célt. Indítás {{seconds}}mp múlva.",
+      "previewPlanCountdown": "Tervezd meg a {{moves}}-lépéses megoldást. Indítás {{seconds}}mp múlva.",
+      "reset": "Visszaállítás",
+      "resetDescription": "Rejtvény újraindítása",
+      "resetMessage": "Rejtvény visszaállítva.",
+      "reveal": "Felfedés",
+      "revealDescription": "Rejtett cél felfedése",
+      "statusOptimalSolve": "Optimális megoldás. Pontszám: {{score}}.",
+      "statusSolvedScore": "Megoldva {{moves}} lépésben (+{{extraMoves}}). Pontszám: {{score}}.",
+      "undo": "Visszavonás",
+      "undoDescription": "Utolsó lépés visszavonása",
+      "undoneMessage": "Utolsó lépés visszavonva.",
+      "yourPegs": "Cölöpjeid"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Helyes kézbesítések",
+      "trainsLost": "Elvesztett vonatok",
+      "wrongStation": "Rossz állomás",
+      "title": "Gondolatvonat",
+      "trains": "Vonatok",
+      "missed": "Kihagyva",
+      "scoreLabel": "Pontszám",
+      "instructions": "Utasítások"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Átl. felhasznált kérdések",
+      "title": "Húsz kérdés",
+      "avgQuestions": "Átl. kérdések",
+      "rounds": "Körök",
+      "efficiency": "Hatékonyság",
+      "avgQuestionsCorrectOnly": "Átl. kérdések (csak helyes)",
+      "questionsLabel": "Kérdések",
+      "remaining": "Hátralévő",
+      "readyToGuess": "Kész vagyok tippelni!",
+      "tapTheTarget": "Érintsd a tárgyat, amelyikről úgy gondolod, a célpont!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Hasznos látómező",
+      "visualNoiseMask": "Vizuális zaj maszk",
+      "whatWasInTheCenter": "Mi volt a középen?",
+      "whereWasTheTarget": "Hol volt a célpont?",
+      "avgThreshold": "Átl. küszöb",
+      "speed": "Sebesség",
+      "accuracy": "Pontosság",
+      "central": "Központi",
+      "peripheral": "Perifériás",
+      "overall": "Összesített",
+      "block": "Blokk",
+      "trials": "Próbák",
+      "start": "Indítás",
+      "focus": "Fókusz",
+      "threshold": "Küszöb",
+      "stimulus": "Inger",
+      "respondFromMemory": "Válaszolj emlékezetből",
+      "truck": "Teherautó",
+      "choosePeripheralLocation": "Válaszd ki a perifériás helyet",
+      "currentBlock": "{{n}}. blokk",
+      "exposure": "Expozíció"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "{{letter}} betűvel kezdődő szavak",
+      "title": "Szóbeli folyékonyság",
+      "totalWords": "Összes szó",
+      "duplicates": "Ismétlődések",
+      "letter": "Betű",
+      "round": "Kör",
+      "roundComplete": "Kör befejezve",
+      "nextRound": "Következő kör",
+      "middotRound": " · Kör"
+    },
+    "vernierAcuity": {
+      "whichSide": "Melyik oldal?",
+      "title": "Vernier élesség",
+      "leftOffset": "Bal eltolás",
+      "rightOffset": "Jobb eltolás",
+      "offset": "Eltolás"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimális stratégia",
+      "correct": "Helyes!",
+      "wrong": "Hibás",
+      "title": "Időjárás-előrejelzés",
+      "optimal": "Optimális",
+      "learningCurve": "Tanulási görbe",
+      "predictTheWeather": "Jósold meg az időjárást",
+      "rain": "Eső"
+    },
+    "wordChain": {
+      "avgResponseTime": "Átl. válaszidő",
+      "chain": "Lánc",
+      "longestChain": "Leghosszabb lánc",
+      "totalCorrect": "Összes helyes",
+      "totalWords": "Összes szó",
+      "words": "Szavak",
+      "title": "Szólánc",
+      "longest": "Leghosszabb",
+      "avgRt": "Átl. RV",
+      "endsWith": "végződik: ",
+      "chainLabel": "Lánc",
+      "bestLabel": "Legjobb"
+    },
+    "wordFlow": {
+      "avgWordLength": "Átl. szóhossz",
+      "correct": "Helyes",
+      "invalidWords": "Érvénytelen szavak",
+      "totalWordsSelected": "Összes kiválasztott szó",
+      "validWords": "Érvényes szavak",
+      "wordsPerMinute": "Szó per perc",
+      "wrong": "Hibás",
+      "seeResults": "Eredmények",
+      "nextRound": "Következő kör ({{current}}/{{total}})",
+      "title": "Szóbeli folyékonyság",
+      "validWordsLabel": "Érvényes szavak",
+      "wordsPerMinLabel": "Szó/perc",
+      "avgLengthLabel": "Átl. hossz",
+      "invalidLabel": "Érvénytelen",
+      "round": "Kör",
+      "selectWordsBelongTo": "Válaszd ki a következő kategóriába tartozó szavakat:",
+      "selected": "Kiválasztva"
+    },
+    "wordList": {
+      "avgRtCorrect": "Átl. RV (helyes)",
+      "primacyEffect": "Elsőbbségi hatás",
+      "recencyEffect": "Újkoriság hatás",
+      "studyPhaseRememberEachWord": "Tanulás — jegyezd meg minden szót",
+      "wordsRecalled": "Felidézett szavak",
+      "title": "Szólista",
+      "serialPositionCurve": "Soros pozíciós görbe",
+      "wasWordInList": "Ez a szó szerepelt a listában?",
+      "seenBefore": "Korábban láttam",
+      "newWord": "Új"
+    },
+    "speedSort": {
+      "switchAccuracy": "Váltási pontosság",
+      "switchTrials": "Váltás próbák",
+      "sortByColor": "Rendezés SZÍN szerint",
+      "sortByShape": "Rendezés ALAK szerint",
+      "sortByNumber": "Rendezés SZÁM szerint",
+      "ruleChanged": "Szabály megváltozott!",
+      "binRed": "Piros",
+      "binBlue": "Kék",
+      "binGreen": "Zöld",
+      "binYellow": "Sárga",
+      "binCircle": "Kör",
+      "binSquare": "Négyzet",
+      "binTriangle": "Háromszög",
+      "binStar": "Csillag",
+      "title": "Gyors rendezés",
+      "switch": "Váltások"
+    },
+    "reflex": {
+      "target": "Célpont",
+      "lure": "Csali",
+      "tooSlow": "Túl lassú!",
+      "wrongTarget": "Rossz célpont!",
+      "tapTargets": "Érintsd a zöld köröket!",
+      "hits": "Találatok",
+      "misses": "Kihagyások",
+      "fa": "TR"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Jegyezd meg a futó összeget...",
+      "title": "Lánc számolás",
+      "stepChains": "{{len}}-lépéses láncok",
+      "start": "Indítás",
+      "step": "Lépés",
+      "whatIsTheResult": "Mi az eredmény?"
+    },
+    "alternateUses": {
+      "placeholder": "Írj egy felhasználást...",
+      "title": "Alternatív felhasználás",
+      "totalUses": "Összes felhasználás",
+      "perObject": "Tárgyonként",
+      "rounds": "Körök",
+      "bestObject": "Legjobb tárgy",
+      "bestCount": "Legjobb szám",
+      "noUsesSubmitted": "Nincs beküldött felhasználás",
+      "timesUp": "Lejárt az idő!",
+      "nextObject": "Következő tárgy ({{object}})",
+      "listCreativeUses": "Sorolj fel kreatív felhasználásokat ehhez a tárgyhoz"
+    },
+    "anagram": {
+      "placeholder": "Írd be a szót...",
+      "title": "Anagramma",
+      "avgSolve": "Átl. megoldás",
+      "letterWords": "{{len}}-betűs szavak",
+      "submit": "Küldés"
+    },
+    "facialEmotion": {
+      "happy": "Boldog",
+      "sad": "Szomorú",
+      "angry": "Dühös",
+      "fearful": "Félős",
+      "disgusted": "Undorodó",
+      "surprised": "Meglepett",
+      "lc": "LC",
+      "title": "Arckifejezés felismerés",
+      "topConfusions": "Leggyakoribb tévesztések"
+    },
+    "numberSeries": {
+      "easy": "Könnyű",
+      "hard": "Nehéz"
+    },
+    "chainRecall": {
+      "round": "Kör",
+      "title": "Lánc felidézés",
+      "chain": "Lánc",
+      "placeholder": "Helyőrző"
+    },
+    "emotionalGoNogo": {
+      "fa": "TR",
+      "title": "Érzelmi Go/No-Go",
+      "block1CommissionErrors": "1. blokk hibás nyomások",
+      "block2CommissionErrors": "2. blokk hibás nyomások",
+      "goHappy": "Go = Boldog",
+      "goSad": "Go = Szomorú",
+      "block": "Blokk",
+      "go": "Go"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop-hatás",
+      "title": "Color Rush",
+      "congShort": "Kong.",
+      "incongShort": "Inkong.",
+      "congruentAccuracy": "Kongruens pontosság",
+      "incongruentAccuracy": "Inkongruens pontosság"
+    },
+    "mirror": {
+      "avgCorrectCells": "Helyes cellák (átl.)",
+      "symmetryType": "Szimmetria típus",
+      "title": "Tükör"
+    },
+    "rhythmTap": {
+      "correctTrials": "Helyes próbák",
+      "avgRhythmScore": "Átl. ritmus pontszám",
+      "bestTrialScore": "Legjobb próba pontszám",
+      "worstTrialScore": "Legrosszabb próba pontszám",
+      "level": "Szint",
+      "rhythm": "Ritmus",
+      "bestTrial": "Legjobb próba",
+      "worstTrial": "Legrosszabb próba"
+    },
+    "vocalProsody": {
+      "questioning": "Kérdező"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Szorzás",
+      "add": "Összeadás",
+      "subtract": "Kivonás",
+      "title": "Számolási sebesség",
+      "score": "Pontszám",
+      "solved": "Megoldva",
+      "missed": "Kihagyva"
+    },
+    "puzzle": {
+      "avgSolveTime": "Átl. megoldási idő",
+      "totalMoves": "Összes lépés",
+      "totalErrors": "Összes hiba",
+      "gridSize": "Rácsméret",
+      "maxGridReached": "Max. rács elérve",
+      "maxLevelReached": "Max. szint elérve",
+      "maxNodesReached": "Max. csomópontok elérve",
+      "puzzleDetails": "Rejtvény részletei",
+      "roundDetails": "Kör részletei",
+      "solved": "Megoldva!",
+      "undo": "Visszavonás",
+      "reset": "Visszaállítás",
+      "check": "Ellenőrzés",
+      "moves": "Lépések",
+      "time": "Idő",
+      "level": "Szint",
+      "errors": "Hibák",
+      "score": "Pontszám",
+      "grid": "Rács",
+      "crossings": "Keresztezések",
+      "pearls": "Gyöngyök",
+      "clues": "Nyomok",
+      "region": "Régió",
+      "filled": "Kitöltve",
+      "cells": "Cellák",
+      "undosLeft": "Visszavonások hátra",
+      "gems": "Drágakövek",
+      "connected": "Összekötve",
+      "slides": "Csúsztatások",
+      "progress": "Haladás",
+      "rotations": "Forgatások",
+      "puzzle": "Rejtvény",
+      "uncovered": "Feltárva",
+      "colored": "Színezve",
+      "violations": "Szabálysértések",
+      "blacked": "Feketítve",
+      "empty": "Üres",
+      "remaining": "Hátralévő",
+      "pairs": "Párok",
+      "flips": "Fordítások",
+      "found": "Megtalálva",
+      "balls": "Labdák",
+      "guesses": "Tippek",
+      "original": "Eredeti",
+      "findDifferences": "Találd meg a különbségeket",
+      "totalDrags": "Összes húzás",
+      "totalUndos": "Összes visszavonás",
+      "totalEdgesDrawn": "Összes élek rajzolva",
+      "totalLasers": "Összes lézer",
+      "totalSlides": "Összes csúsztatás",
+      "totalRotations": "Összes forgatás",
+      "totalRectangles": "Összes téglalap",
+      "totalScore": "Összes pontszám",
+      "avgTime": "Átl. idő",
+      "cellsCleared": "Kitörölt cellák",
+      "totalDiffsFound": "Összes talált különbség",
+      "gemsCollected": "Gyűjtött drágakövek",
+      "pushBoxesOntoTargets": "Told a dobozokat a célokra",
+      "fireLasersMarkBalls": "Lőj lézereket a szélekről, majd jelöld a labda pozíciókat",
+      "revealingAnswer": "Válasz felfedése...",
+      "checkAnswer": "Válasz ellenőrzése",
+      "pickNumberBelow": "Válassz egy számot alulról",
+      "tapCellToAssign": "Érintsd a cellát a szám hozzárendeléséhez",
+      "tapEdgesToPlaceWalls": "Érintsd az éleket a falak elhelyezéséhez. Oszd K méretű régiókra.",
+      "ghosts": "Szellemek",
+      "vampires": "Vámpírok",
+      "zombies": "Zombik",
+      "dominoes": "Dominók",
+      "islands": "Szigetek",
+      "pegsLeft": "Maradék bábuk",
+      "bestRemaining": "Legjobb maradék",
+      "puzzlesSolved": "Megoldott rejtvények",
+      "flooded": "Elárasztva",
+      "edges": "Élek",
+      "totalPlacements": "Összes elhelyezés",
+      "totalRemovals": "Összes eltávolítás",
+      "maxTileReached": "Max. csempe elérve",
+      "target": "Cél",
+      "placed": "Elhelyezve",
+      "totalGuesses": "Összes tipp",
+      "guessesLeft": "Hátralévő tippek",
+      "difficulty": "Nehézség"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Rejtvények",
+      "maxLevel": "Max. szint"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "errors": "Hibák",
+      "avgTime": "Átl. idő",
+      "erase": "Törlés"
+    },
+    "blackbox": {
+      "title": "Black Box",
+      "puzzles": "Rejtvények",
+      "lasers": "Lézerek",
+      "avgTime": "Átl. idő"
+    },
+    "designFluency": {
+      "title": "Tervezési folyékonyság",
+      "uniqueDesigns": "Egyedi tervek",
+      "duplicates": "Ismétlődések",
+      "round": "Kör",
+      "roundComplete": "Kör befejezve",
+      "youCreatedDesigns": "{{count}} tervet készítettél",
+      "startRound": "Kör indítása",
+      "instructions": "Utasítások",
+      "designs": "Tervek",
+      "clear": "Törlés",
+      "addDesign": "Hozzáadás"
+    },
+    "signpost": {
+      "title": "Útjelző",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "avgTime": "Átl. idő",
+      "maxGrid": "Max. rács"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Szint",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "undos": "Visszavonások",
+      "puzzle": "Rejtvény"
+    },
+    "numericalStroop": {
+      "left": "Bal",
+      "right": "Jobb"
+    },
+    "biologicalMotion": {
+      "title": "Biológiai mozgás",
+      "noiseDots": "zajpontok",
+      "whichDirection": "Melyik irány?",
+      "left": "Bal",
+      "right": "Jobb"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "gems": "Drágakövek",
+      "moves": "Lépések"
+    },
+    "waterLevel": {
+      "title": "Vízszint",
+      "error": "Hiba",
+      "tilt": "Dőlés",
+      "waterLine": "Vízszint?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxGrid": "Max. rács"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "errors": "Hibák",
+      "avgTime": "Átl. idő",
+      "erase": "Törlés"
+    },
+    "rectangles": {
+      "title": "Téglalapok",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "rectanglesCount": "Téglalapok",
+      "maxGrid": "Max. rács",
+      "cancelSelection": "Kijelölés megszüntetése"
+    },
+    "filling": {
+      "title": "Kitöltés",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "avgTime": "Átl. idő",
+      "grid": "Rács"
+    },
+    "spacedRetrieval": {
+      "title": "Időzített felidézés",
+      "studyPair": "Tanulmányozd ezt a párt",
+      "waitAndSolve": "Várj… majd old meg",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Intervallum: mely párok?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototípus torzítás",
+      "studyPhase": "Tanulási fázis",
+      "testPhase": "Teszt fázis",
+      "yesBelongs": "Igen — Tartozik",
+      "noRandom": "Nem — Véletlenszerű"
+    },
+    "motionCoherence": {
+      "title": "Mozgás koherencia",
+      "threshold": "Küszöb",
+      "coherence": "Koherencia",
+      "whichDirection": "Melyik irány?"
+    },
+    "cube": {
+      "title": "Kocka",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxLevel": "Max. szint",
+      "cubeFaces": "Kocka lapjai",
+      "moveUp": "Fel",
+      "moveLeft": "Bal",
+      "moveDown": "Le",
+      "moveRight": "Jobb"
+    },
+    "sameGame": {
+      "title": "Same Game",
+      "score": "Pontszám",
+      "cleared": "Kitörölve",
+      "cells": "Cellák",
+      "accuracy": "Pontosság"
+    },
+    "crossModalMatching": {
+      "title": "Keresztmodális egyeztetés",
+      "chance": "Véletlen",
+      "whichPatternMatchesRhythm": "Melyik minta illik a ritmusra?"
+    },
+    "mosaic": {
+      "title": "Mozaik",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxGrid": "Max. rács"
+    },
+    "spotDiff": {
+      "title": "Keresd a különbséget",
+      "level": "Szint",
+      "grid": "Rács",
+      "accuracy": "Pontosság",
+      "perfect": "Tökéletes",
+      "avgTime": "Átl. idő",
+      "found": "Megtalálva"
+    },
+    "lightsOut": {
+      "title": "Lights Out",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxGrid": "Max. rács"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "rotations": "Forgatások",
+      "avgTime": "Átl. idő"
+    },
+    "tracks": {
+      "title": "Pályák",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "errors": "Hibák",
+      "avgTime": "Átl. idő"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "slides": "Csúsztatások",
+      "maxGrid": "Max. rács"
+    },
+    "cognitiveBias": {
+      "title": "Kognitív torzítás tréning",
+      "biasResistance": "Torzítás ellenállás",
+      "biased": "Torzított",
+      "continue": "Folytatás"
+    },
+    "empathicAccuracy": {
+      "title": "Empatikus pontosság",
+      "emotionId": "Érzelem",
+      "avgRatingError": "Átl. értékelési hiba",
+      "scenarios": "Helyzetek",
+      "perfect": "Tökéletes",
+      "rating": "Értékelés",
+      "howDoesCharacterFeel": "Hogyan érzi magát a szereplő?",
+      "rateIntensity": "Értékeld az intenzitást",
+      "whatEmotion": "Milyen érzelem?",
+      "yourRating": "Értékelésed",
+      "correct": "Helyes",
+      "emotion": "Érzelem"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Megoldva",
+      "guesses": "Tippek"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxLevel": "Max. szint"
+    },
+    "magnets": {
+      "title": "Mágnesek",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxLevel": "Max. szint"
+    },
+    "tangram": {
+      "placeAll": "Helyezd el az összes darabot",
+      "solved": "Megoldva!",
+      "notRight": "Nem egészen jó",
+      "title": "Tangram",
+      "level": "Szint",
+      "puzzles": "Rejtvények",
+      "placements": "Elhelyezések",
+      "removals": "Eltávolítások",
+      "puzzleNumber": "{{n}}. rejtvény",
+      "pieces": "Darabok",
+      "targetCells": "Cél",
+      "dragHint": "Húzd vagy helyezd a darabot a rácsra",
+      "selectHint": "Válassz egy darabot",
+      "rotate": "Forgatás",
+      "undo": "Visszavonás",
+      "check": "Ellenőrzés"
+    },
+    "galaxies": {
+      "title": "Galaxisok"
+    },
+    "flood": {
+      "title": "Flood"
+    },
+    "pegs": {
+      "title": "Bábuk",
+      "bestPegs": "Legjobb bábuk"
+    },
+    "auditoryFigureGround": {
+      "title": "Hallási alak-háttér",
+      "patternPresent": "Minta jelen van?",
+      "pattern": "Minta",
+      "noPattern": "Nincs minta"
+    },
+    "selfOrderedPointing": {
+      "title": "Önirányított rámutatás",
+      "maxSpan": "Max. terjedelem",
+      "errors": "Hibák",
+      "round": "Kör",
+      "setOf": "{{count}} elemű halmaz"
+    },
+    "mirrorTracing": {
+      "title": "Tükörrajzolás",
+      "totalErrors": "Összes hiba",
+      "avgTime": "Átl. idő",
+      "shapes": "Alakzatok",
+      "perfect": "Tökéletes",
+      "improvement": "Javulás",
+      "errorsMiddot": "hibák ·",
+      "shape": "Alakzat",
+      "errors": "Hibák",
+      "xIsMirrored": "X tükrözve van!"
+    },
+    "clockDrawing": {
+      "title": "Órarajzolás",
+      "avgError": "Átl. hiba",
+      "setTo": "Állítsd be: ",
+      "submit": "Küldés"
+    },
+    "cognitiveMap": {
+      "title": "Kognitív térkép",
+      "explore": "Felfedezés",
+      "sRemaining": "Hátr.",
+      "from": "Innen",
+      "whichDirectionIs": "Milyen irányba van "
+    },
+    "sixteen": {
+      "title": "Tizenhat"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Light Up"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max. csempe",
+      "moves": "Lépések",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Hidak",
+      "puzzles": "Rejtvények",
+      "maxLevel": "Max. szint",
+      "level": "Szint"
+    },
+    "net": {
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxGrid": "Max. rács"
+    },
+    "flip": {
+      "title": "Flip"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "Slant"
+    },
+    "towers": {
+      "title": "Tornyok",
+      "puzzles": "Rejtvények",
+      "avgTime": "Átl. idő",
+      "erase": "Törlés"
+    },
+    "pearl": {
+      "title": "Pearl",
+      "edges": "Élek"
+    },
+    "mapColoring": {
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "moves": "Lépések",
+      "maxLevel": "Max. szint"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "Pontosság",
+      "puzzles": "Rejtvények",
+      "avgTime": "Átl. idő"
+    },
+    "untangle": {
+      "title": "Kibogozás",
+      "drags": "Húzások",
+      "maxNodes": "Max. csomópontok"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "Tizenöt"
+    },
+    "tents": {
+      "title": "Sátrak"
+    },
+    "mesker": {
+      "pen": "Toll",
+      "stroke": "Vonás",
+      "penPressureHint": "Egyenletes tollnyomással írj"
+    },
+    "modality": {
+      "position": "Pozíció",
+      "audio": "Hang"
+    },
+    "validate": "Érvényesítés"
+  },
+  "trace": {
+    "instructions": "Húzd az N-back pozícióba. Dupla érintés, ha azonos pozíció.",
+    "hint": {
+      "validated": "Érvényesítve",
+      "draw": "Rajzold a betűt • Érintsd az érvényesítéshez",
+      "drawWithColor": "Rajzold a betűt • Válassz színt • Érintsd az érvényesítéshez",
+      "type": "Írd be a betűt • Enter az érvényesítéshez",
+      "typeWithColor": "Írd be a betűt • Válassz színt • Enter az érvényesítéshez",
+      "typeResult": "Írd be az eredményt • Enter az érvényesítéshez",
+      "writeResult": "Írd az eredményt • Érintsd az érvényesítéshez"
+    },
+    "keyboard": {
+      "letterInput": "Betű",
+      "numberInput": "Szám"
+    },
+    "arithmetic": {
+      "cueHint": "Jegyezd meg a 2 számjegyet",
+      "refresh": "Új"
+    },
+    "hintPosition": "Hol volt az inger {{n}} lépéssel ezelőtt?",
+    "hintN0": "Jelöld az aktuális ingert",
+    "warmupHint": "Jegyezd meg a pozíciókat. Nem kell válaszolni.",
+    "hintDraw": "Rajzold a betűt • Érintsd az érvényesítéshez",
+    "hintDrawWithColor": "Rajzold a betűt • Válassz színt • Érintsd az érvényesítéshez",
+    "hintWriteResult": "Írd az eredményt • Érintsd az érvényesítéshez",
+    "guide": {
+      "swipeNormal": "Húzd az utolsó pozícióból (N-0) a {{n}} lépéssel ezelőtti pozícióba (N-{{n}}). Dupla érintés, ha azonos pozíció.",
+      "swipeSequential": "Húzd lépésről lépésre N-0-tól N-{{n}}-ig, áthaladva minden köztes pozíción. Dupla érintés, ha azonos pozíció.",
+      "swipeDynamic": "Húzd a megjelenített szabály szerint. Dupla érintés, ha azonos pozíció.",
+      "tapN0": "Érintsd az aktuális pozíciót.",
+      "warmup": "Jegyezd meg a pozíciókat — nem kell válaszolni.",
+      "writeDraw": "Rajzold a {{n}} lépéssel ezelőtt hallott betűt • Érintsd az érvényesítéshez",
+      "writeDrawColor": "Rajzold a {{n}} lépéssel ezelőtt hallott betűt • Válaszd ki a színét • Érintsd az érvényesítéshez",
+      "writeType": "Írd be a {{n}} lépéssel ezelőtt hallott betűt • Enter az érvényesítéshez",
+      "writeTypeColor": "Írd be a {{n}} lépéssel ezelőtt hallott betűt • Válaszd ki a színét • Enter az érvényesítéshez",
+      "writeDrawN0": "Rajzold az épp hallott betűt • Érintsd az érvényesítéshez",
+      "writeDrawColorN0": "Rajzold az épp hallott betűt • Válaszd ki a színét • Érintsd az érvényesítéshez",
+      "writeTypeN0": "Írd be az épp hallott betűt • Enter az érvényesítéshez",
+      "writeTypeColorN0": "Írd be az épp hallott betűt • Válaszd ki a színét • Enter az érvényesítéshez",
+      "writeResult": "Írd az eredményt • Érintsd az érvényesítéshez",
+      "validated": "Érvényesítve",
+      "holdMindful": "Tartsd a cellát {{seconds}} mp-ig",
+      "swipeMindful": "Húzd {{seconds}} mp alatt"
+    },
+    "settings": {
+      "adaptiveTiming": "Adaptív időzítés",
+      "inputKeyboard": "Billentyűzet",
+      "inputHandwriting": "Kézírás",
+      "writingInput": "Betűk/számok",
+      "section": {
+        "grid": "Rács",
+        "input": "Bemenet",
+        "rhythm": "Ritmus",
+        "interface": "Felület",
+        "interfaceNone": "Alapértelmezett",
+        "sound": "Hang"
+      },
+      "isi": "Intervallum (ISI)",
+      "stimulusDuration": "Inger időtartama",
+      "feedbackDuration": "Visszajelzés időtartama",
+      "ruleDisplay": "Szabály időtartama",
+      "blankInterval": "Üres intervallum",
+      "showProgressBar": "Folyamatjelző",
+      "showInstructions": "Játékbeli utasítások",
+      "arithmeticInterference": "Aritmetikai interferencia",
+      "fullMenu": "Teljes menü",
+      "gridStyle": "Rács stílus",
+      "gridStyleClassic": "Klasszikus",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "Húzd {{seconds}} mp alatt",
+        "holdMindful": "Tartsd a cellát {{seconds}} mp-ig"
+      },
+      "feedback": {
+        "gestureDuration": "Gesztus",
+        "holdDuration": "Tartás",
+        "writingDuration": "Írás"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Tartás",
+      "gestureDuration": "Gesztus",
+      "writingDuration": "Írás"
+    },
+    "image": "Alakzat",
+    "digits": "Számjegyek",
+    "emotions": "Érzelem",
+    "words": "Szó",
+    "tones": "Hang",
+    "spatial": "Irány"
+  },
+  "replay": {
+    "title": "Munkamenet visszajátszás",
+    "play": "Lejátszás",
+    "pause": "Szünet",
+    "restart": "Újraindítás",
+    "speed": "Sebesség",
+    "loading": "Munkamenet betöltése...",
+    "unavailable": "Visszajátszás nem érhető el ehhez a munkamenethez",
+    "backToStats": "Vissza a statisztikákhoz",
+    "runStack": {
+      "original": "Eredeti",
+      "correction": "Javítás",
+      "delta": "Δ d'",
+      "inProgress": "Folyamatban",
+      "completed": "Befejezve"
+    },
+    "abandon": "Feladás",
+    "badge": "Visszajátszás",
+    "completionReport": {
+      "backToHome": "Vissza",
+      "correctAgain": "Ismét helyes",
+      "deltaVsOriginal": "vs Eredeti",
+      "deltaVsParent": "vs Előző futtatás",
+      "falseAlarmsSkipped": "Elkerült hibák",
+      "missesCorrections": "Javítások",
+      "newFalseAlarms": "Új hibák",
+      "replayAgain": "Visszajátszás",
+      "scoreLabel": "d' pontszám",
+      "title": "Javítás befejezve"
+    },
+    "controls": "Vezérlők",
+    "correction": "Javítás",
+    "finished": "Visszajátszás vége",
+    "home": "Főmenü",
+    "parseError": "Munkamenet nem olvasható",
+    "tapSlotToPlace": "Érintsd a helyet az elhelyezéshez",
+    "timeline": "Idővonal",
+    "focusTimeline": {
+      "open": "Idővonal mutatása",
+      "close": "Idővonal bezárása",
+      "title": "N-Back idővonal",
+      "fillAll": "Összes kitöltése",
+      "fillCard": "Kártya kitöltése"
+    },
+    "hud": {
+      "counterDisplay": "Számláló kijelző",
+      "toggleCounterDisplay": "Számláló kijelző váltása"
+    },
+    "validate": "Érvényesítés"
+  },
+  "recovery": {
+    "title": "Munkamenet megszakítva",
+    "description": "Egy munkamenet volt folyamatban. Szeretnéd folytatni?",
+    "mode": "Mód",
+    "level": "Szint",
+    "progress": "Haladás",
+    "timeAgo": "Idő",
+    "resume": "Munkamenet folytatása",
+    "startFresh": "Újrakezdés",
+    "staleWarning": "Ez a munkamenet régi, a folytatás kihívást jelenthet.",
+    "modes": {
+      "game": "Gyakorlás",
+      "activeTraining": "Aktív tréning",
+      "flowTraining": "Dual Place tréning",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dual Trace"
+    }
+  },
+  "rewards": {
+    "congratulations": "Gratulálunk!",
+    "duration": "{{days}} nap Prémium",
+    "lifetimeLabel": "Élethosszig tartó hozzáférés",
+    "expiresAt": "Érvényes: {{date}}-ig",
+    "neverExpires": "Soha nem jár le",
+    "continue": "Folytatás",
+    "discovery": {
+      "name": "Felfedező bérlet",
+      "description": "7 nap Prémium — Fedezd fel az összes funkciót"
+    },
+    "engagement": {
+      "name": "Elkötelezettségi bérlet",
+      "description": "1 hónap Prémium — A fegyelmed meghozza gyümölcsét"
+    },
+    "expert": {
+      "name": "Szakértői bérlet",
+      "description": "3 hónap Prémium — Igazi gyakorló vagy"
+    },
+    "lifetime": {
+      "name": "Élethosszig tartó hozzáférés",
+      "description": "Örökre Prémium — Elsajátítottad a NeuroDualt"
+    },
+    "xpRemaining": "Hátralévő XP",
+    "permanentAccessUnlocked": "Állandó hozzáférés feloldva",
+    "reachedTheTop": "Elérted a csúcsot!"
+  },
+  "progression": {
+    "level": "{{level}}. szint",
+    "levelShort": "Sz. {{level}}",
+    "nextLevel": "Következő szint",
+    "reached": "Elérve",
+    "inProgress": "Folyamatban"
+  },
+  "gridlock": {
+    "nextPuzzle": "Következő rejtvény →"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Tutarlılık",
+      "performance": "Performans",
+      "resilience": "Dayanıklılık",
+      "exploration": "Keşif",
+      "milestone": "Kilometre Taşları",
+      "cognitive": "Bilişsel"
+    },
+    "first_session": {
+      "name": "Uyanan Nöron",
+      "description": "İlk oturum tamamlandı."
+    },
+    "sessions_10": {
+      "name": "Sütun (Bronz)",
+      "description": "10 oturum tamamlandı."
+    },
+    "sessions_25": {
+      "name": "Sütun (Gümüş)",
+      "description": "25 oturum tamamlandı."
+    },
+    "marathoner": {
+      "name": "Sütun (Altın)",
+      "description": "50 oturum tamamlandı."
+    },
+    "streak_3": {
+      "name": "Filizlenen Ritüel",
+      "description": "3 günlük seri."
+    },
+    "streak_7": {
+      "name": "Günlük Ritüel",
+      "description": "7 günlük seri."
+    },
+    "streak_14": {
+      "name": "Yerleşmiş Alışkanlık",
+      "description": "14 günlük seri."
+    },
+    "streak_30": {
+      "name": "Demir Disiplin",
+      "description": "30 günlük seri."
+    },
+    "early_bird": {
+      "name": "Erken Kuş",
+      "description": "Sabah 8'den önce oturum yapılan 5 farklı gün."
+    },
+    "night_owl": {
+      "name": "Gece Kuşu",
+      "description": "Gece 10'dan sonra oturum yapılan 5 farklı gün."
+    },
+    "brain_n3": {
+      "name": "Keskin Beyin",
+      "description": "N-3 seviyesine ulaş."
+    },
+    "brain_n4": {
+      "name": "Güçlü Beyin",
+      "description": "N-4 seviyesine ulaş."
+    },
+    "brain_n5": {
+      "name": "Olimpik Beyin",
+      "description": "N-5 seviyesine ulaş."
+    },
+    "brain_n7": {
+      "name": "Bilişsel Elit",
+      "description": "N-7 seviyesine ulaş."
+    },
+    "brain_n10": {
+      "name": "Süperİnsan",
+      "description": "N-10 seviyesine ulaş."
+    },
+    "sniper": {
+      "name": "Keskin Nişancı",
+      "description": "N ≥ 2'de > %90 doğruluk."
+    },
+    "accuracy_95": {
+      "name": "Cerrahi Hassasiyet",
+      "description": "N ≥ 2'de > %95 doğruluk."
+    },
+    "accuracy_98": {
+      "name": "Lazer",
+      "description": "N ≥ 2'de > %98 doğruluk."
+    },
+    "untouchable": {
+      "name": "Dokunulmaz",
+      "description": "N ≥ 2'de mükemmel oturum (0 hata)."
+    },
+    "rt_500": {
+      "name": "Hızlı Refleks",
+      "description": "≥%70 doğrulukla ortalama tepki süresi < 500ms."
+    },
+    "flash": {
+      "name": "Flaş",
+      "description": "≥%70 doğrulukla ortalama tepki süresi < 400ms."
+    },
+    "rt_300": {
+      "name": "Yıldırım",
+      "description": "≥%70 doğrulukla ortalama tepki süresi < 300ms."
+    },
+    "consistent": {
+      "name": "Tutarlı",
+      "description": "RT standart sapma < 100ms (≥10 yanıt gerekli)."
+    },
+    "dprime_master": {
+      "name": "d' Ustası",
+      "description": "Bir oturumda d-prime > 3.0."
+    },
+    "dprime_4": {
+      "name": "SDT Uzmanı",
+      "description": "Bir oturumda d-prime > 4.0."
+    },
+    "no_pause": {
+      "name": "Kesintisiz",
+      "description": "≥%75 doğrulukla arka arkaya 5 oturum duraklama olmadan."
+    },
+    "steady_hands": {
+      "name": "Sabit Eller",
+      "description": "Oturum sırasında yanlış giriş yok (≥%80 doğruluk)."
+    },
+    "zen_master": {
+      "name": "Zen Ustası",
+      "description": "Hiç bırakmadan 10 oturum."
+    },
+    "comeback_kid": {
+      "name": "Geri Dönen",
+      "description": "Seviye düşüşünden sonra seviye atla."
+    },
+    "persistent": {
+      "name": "Inatçı",
+      "description": "Bir başarısızlıktan sonra aynı gün 3 oturum."
+    },
+    "second_wind": {
+      "name": "İkinci Rüzgâr",
+      "description": "1. ve 2. yarı arasında d-prime iyileştir (d′ ≥ 2.0 gerekli)."
+    },
+    "plateau_breaker": {
+      "name": "Plato Kırıcı",
+      "description": "Aynı seviyede 10+ oturumdan sonra ilerleme."
+    },
+    "no_surrender": {
+      "name": "Teslim Olmaz",
+      "description": "Bırakmadan 25 oturum."
+    },
+    "ironwill": {
+      "name": "Demir İrade",
+      "description": "Bırakmadan 50 oturum."
+    },
+    "audiophile": {
+      "name": "Ses Tutkunu",
+      "description": "Ses > %80 ama Görsel < %70."
+    },
+    "eagle_eye": {
+      "name": "Kartal Gözü",
+      "description": "Görsel > %80 ama Ses < %70."
+    },
+    "synchronized": {
+      "name": "Senkronize",
+      "description": "Ses ve Görsel puanları %5 fark içinde (≥%60 gerekli)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Aynı oturumda Ses VE Görsel > %85 (≥6 tuzak/modalite)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "N ≥ 3'te aynı oturumda Ses VE Görsel > %90 (≥6 tuzak/modalite)."
+    },
+    "centurion": {
+      "name": "Yüzbaşı",
+      "description": "100 oturum tamamlandı."
+    },
+    "sessions_250": {
+      "name": "Efsane (Zümrüt)",
+      "description": "250 oturum tamamlandı."
+    },
+    "sessions_500": {
+      "name": "Ölümsüz (Elmas)",
+      "description": "500 oturum tamamlandı."
+    },
+    "trials_500": {
+      "name": "Uygulayıcı",
+      "description": "Toplam 500 deneme oynandı."
+    },
+    "trials_1000": {
+      "name": "Eğitimli",
+      "description": "Toplam 1.000 deneme oynandı."
+    },
+    "trials_5000": {
+      "name": "Deneyimli",
+      "description": "Toplam 5.000 deneme oynandı."
+    },
+    "trials_10k": {
+      "name": "10.000 Deneme",
+      "description": "Toplam 10.000 deneme oynandı."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Toplam 50.000 deneme oynandı."
+    },
+    "streak_90": {
+      "name": "Kusursuz Çeyrek",
+      "description": "90 günlük seri."
+    },
+    "streak_365": {
+      "name": "Mükemmel Yıl",
+      "description": "365 günlük seri."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 yıllık kullanım."
+    },
+    "metronome": {
+      "name": "Metronom",
+      "description": "≥20 denemede RT varyansı < 50ms (aktif yanıtlar gerekli)."
+    },
+    "flow_state": {
+      "name": "Zarafet Hali",
+      "description": "Tüm oturum boyunca akış tespit edildi."
+    },
+    "sang_froid": {
+      "name": "Soğukkanlı",
+      "description": "Bir hatadan sonra hata dizisi yok (≥%70 doğruluk)."
+    },
+    "imperturbable": {
+      "name": "Sarsılmaz",
+      "description": "Odak kaybetmeden tam oturum (≥%60 doğruluk)."
+    },
+    "comeback_strong": {
+      "name": "Güçlü Dönüş",
+      "description": "3+ gün aradan sonra d-prime rekorunu aş (d′ ≥ 2.5)."
+    }
+  }
+}

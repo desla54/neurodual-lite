@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Miltä sinusta tuntuu?",
+      "tired": "Väsynyt",
+      "normal": "Normaali",
+      "energized": "Energisoitunut"
+    },
+    "aria": {
+      "trialTimer": "Kokeiluajastin",
+      "positionMatch": "Sijoitusottelu",
+      "audioMatch": "Äänen ottelu",
+      "audioLetter": "Äänikirje:",
+      "traceGrid": "Jäljitysverkko"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Kytke synkronointimonitori päälle",
+      "start": "aloita",
+      "end": "loppu",
+      "pinLabel": "pin",
+      "pinTitle": "Kiinnitä näytölle",
+      "inputLabel": "syöttö",
+      "inputTitle": "Vaihda tuloviiveen profilointi (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "päällä",
+      "off": "pois päältä",
+      "hideLabel": "piilottaa",
+      "hideTitle": "Piilota (ellei syncHud=1 tai ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "ääni",
+        "expected": "odotettavissa"
+      },
+      "labels": {
+        "trial": "oikeudenkäyntiä",
+        "lagShow": "Näytön viive",
+        "lagHide": "Retard-masquage",
+        "winErr": "voittaa virhe",
+        "endRef": "loppuviite",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "syöttö->lähetys p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input-> paint p95",
+        "inputPending": "syöttö odottaa",
+        "inputSamples": "syöttönäytteitä",
+        "touchSamples": "kosketusnäytteitä",
+        "mouseSamples": "hiiren näytteitä",
+        "keyboardSamples": "näppäimistönäytteitä",
+        "latestMethod": "uusin (menetelmä)",
+        "latestModality": "uusin modaali",
+        "audioCueMode": "äänimerkkejä",
+        "audioCodec": "koodekki"
+      },
+      "resetInputProfiler": "nollaa tuloprofiili"
+    },
+    "hud": {
+      "resume": "Jatka",
+      "pause": "Tauko",
+      "quit": "Lopeta",
+      "restart": "Käynnistä uudelleen",
+      "spaceToStart": "Tilaa aloittaa",
+      "settings": "Asetukset",
+      "enterToAdvance": "Siirry eteenpäin",
+      "trial": "Oikeudenkäynti",
+      "muteTexture": "Mykistä taustaääni"
+    },
+    "status": {
+      "paused": "Keskeytetty"
+    },
+    "completed": "Valmis",
+    "starting": {
+      "getReady": "Valmistaudu..."
+    },
+    "quitModal": {
+      "title": "Lopetetaanko istunto?",
+      "message": "Edistymistäsi ei tallenneta.",
+      "confirm": "Lopeta",
+      "cancel": "Jatka",
+      "close": "Sulje"
+    },
+    "controls": {
+      "position": "asema",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Ääni & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Ääni",
+      "audio2": "Ääni 2",
+      "color": "Väri",
+      "arithmetic": "Aritmetiikka",
+      "image": "Muoto"
+    },
+    "arithmetic": {
+      "answer": "Vastaa",
+      "clear": "Selkeä",
+      "hint": "Näppäimistö: 0–9 · '-' merkille · '.' desimaalit · Askelpalautin tyhjentääksesi"
+    },
+    "navigation": {
+      "back": "Takaisin"
+    },
+    "xp": {
+      "title": "XP ansaittu",
+      "base": "Perus (N-{{level}})",
+      "performance": "Suorituskyky",
+      "accuracy": "Tarkkuus",
+      "streakBonus": "Putkibonus",
+      "dailyBonus": "Päivän ensimmäinen",
+      "badgeBonus": "Tunnusmerkit",
+      "flowBonus": "Dual Place -bonus",
+      "confidenceMultiplier": "Luottamus",
+      "dailyCapReached": "Päivittäinen XP-raja saavutettu",
+      "levelReached": "Taso {{level}} saavutettu!"
+    },
+    "badges": {
+      "newUnlocked": "Uudet merkit avattu"
+    },
+    "getReady": "Valmistaudu...",
+    "layoutEdit": {
+      "done": "Valmis",
+      "reset": "Nollaa",
+      "instructions": "Järjestä alueet uudelleen vetämällä. Muuta kokoa kahvojen avulla.",
+      "title": "Muokkaustila",
+      "cancel": "Peruuta",
+      "save": "Lukko",
+      "editLayout": "Muokkaa asettelua"
+    },
+    "paused": "Keskeytetty",
+    "pressEscapeToResume": "Jatka painamalla Esc-näppäintä",
+    "settings": {
+      "editLayout": "Muokkaa asettelua",
+      "gridAndButtons": "Ruudukko ja painikkeet",
+      "swapPositionAudio": "Vaihda asentoa / ääntä",
+      "title": "Asetukset",
+      "quickHint": "Säädä muutamia asetuksia poistumatta pelistä.",
+      "quickUnavailable": "Tälle tilalle ei ole vielä saatavilla pika-asetuksia."
+    },
+    "pinkNoiseInfo": "Taustaääni seuraa jokaista ärsykettä. Voit mukauttaa tai poistaa sen käytöstä ääniasetuksissa.",
+    "pinkNoiseDismiss": "Jatka",
+    "audioMode": "Äänitila",
+    "cogTask": {
+      "precision": "Tarkkuus",
+      "avgRt": "Keskim. RT",
+      "avgRtShort": "Keskim. RT",
+      "trials": "Kokeilut",
+      "correct": "oikein",
+      "errors": "Virheet",
+      "effect": "Vaikutus",
+      "restart": "Käynnistä uudelleen",
+      "home": "Kotiin",
+      "performance": "Suorituskyky",
+      "trialDetail": "Kokeen yksityiskohta",
+      "setDetail": "Aseta yksityiskohdat",
+      "roundDetail": "Pyöreä yksityiskohta",
+      "problemDetail": "Ongelman yksityiskohta",
+      "phaseDetail": "Vaiheen yksityiskohdat",
+      "feedbackCorrect": "Oikein",
+      "feedbackIncorrect": "Väärin",
+      "feedbackTimeout": "Liian hidas!",
+      "preparing": "Valmistaudu...",
+      "loading": "Ladataan...",
+      "left": "Vasen",
+      "right": "Oikein",
+      "up": "Ylös",
+      "down": "Alas",
+      "congruent": "Yhdenmukainen",
+      "incongruent": "Epäjohdonmukainen",
+      "congruencyEffect": "Yhdenmukaisuusvaikutus",
+      "maxSpan": "Max jänneväli",
+      "startingSpan": "Aloitusjänne",
+      "maxSpanReached": "Maksimiväli saavutettu",
+      "longestStreak": "Pisin oikea putki",
+      "series": "Viiva",
+      "avgResponseTime": "Keskimääräinen vasteaika",
+      "recall": "Muista",
+      "expected": "Odotettu",
+      "submit": "Lähetä",
+      "cancel": "Peruuta",
+      "clear": "Selkeä",
+      "delete": "DEL",
+      "true": "Totta",
+      "false": "Väärä",
+      "target": "Kohde",
+      "nonTarget": "Ei-kohde",
+      "distractor": "Häiriö",
+      "same": "Sama",
+      "different": "Erilainen",
+      "identical": "Identtinen",
+      "mirror": "Peili",
+      "symmetric": "Symmetrinen",
+      "asymmetric": "Epäsymmetrinen",
+      "symShort": "Sym.",
+      "present": "läsnä",
+      "absent": "Poissa",
+      "noTrials": "Ei kokeita suoritettu.",
+      "noSets": "Ei valmiita sarjoja.",
+      "noRounds": "Ei kierroksia suoritettu.",
+      "noProblems": "Ei ongelmia suoritettu.",
+      "noPhases": "Yksikään vaihe ei ole valmis.",
+      "sets": "Sarjat",
+      "rounds": "Pyöreät",
+      "equations": "Yhtälöt",
+      "sentences": "lauseita",
+      "equationAccuracy": "Yhtälön tarkkuus",
+      "forward": "Eteenpäin",
+      "backward": "Taaksepäin",
+      "forwardMaxSpan": "Eteenpäin max jänneväli",
+      "backwardMaxSpan": "Taaksepäin max jänneväli",
+      "odd": "Outoa",
+      "even": "Jopa",
+      "score": "Pisteet",
+      "easy": "Helppoa",
+      "hard": "Kovaa",
+      "totalTrials": "Kokeilut yhteensä",
+      "totalErrors": "Virheitä yhteensä",
+      "totalErrShort": "Yhteensä Err.",
+      "hits": "Osumat",
+      "misses": "Miss",
+      "falseAlarms": "Väärä Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "Kyllä",
+      "no": "Ei",
+      "sessionInterrupted": "Istunto keskeytetty",
+      "reverseOrder": "käänteisessä järjestyksessä",
+      "normalOrder": "järjestyksessä",
+      "lnsInstruction": "Numerot nousevasti, sitten kirjaimet A-Z",
+      "vs": "vs",
+      "simon": {
+        "simonEffect": "Simon efekti",
+        "blue": "Sininen",
+        "red": "Punainen",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Edustaa tätä numeroa",
+        "submit": "Lähetä",
+        "rodLabel": "Tanko {{n}}",
+        "heavenBead": "Taivashelmi (arvo 5)",
+        "earthBead": "Maahelmi (arvo 1)",
+        "instrBeadTitle": "Kuinka helmet toimivat",
+        "instrBeadDesc": "Jokainen sauva edustaa numeroa. Ylähelmen (taivas) arvo on 5. Alimman helmen (maa) arvo on 1 kpl. Aktivoi helmiä siirtämällä helmiä keskipalkkia kohti.",
+        "instrExampleTitle": "Esimerkki: 7",
+        "instrExampleDesc": "7 = taivaanhelmi alas (5) + 2 maahelmeä ylös (2). Napauta tai vedä helmiä siirtääksesi niitä.",
+        "instrGoalTitle": "Sinun tavoitteesi",
+        "instrGoalDesc": "Näkyviin tulee numero. Aseta helmet edustamaan sitä ja napauta sitten Lähetä. Ole tarkka ja nopea!",
+        "startButton": "Aloita",
+        "settings": "Asetukset",
+        "closeSettings": "Sulje asetukset",
+        "settingsRods": "Tankojen lukumäärä",
+        "settingsRodsHint": "Aseta N-tason kautta peliasetuksissa",
+        "settingsTrials": "Kokeilut per istunto",
+        "settingsTrialsHint": "Aseta kokeiluversiolla pelin asetuksista",
+        "settingsRange": "Numeroalue"
+      },
+      "stroop": {
+        "pressInkColorButton": "Paina musteen väriä vastaavaa painiketta",
+        "redWord": "RED",
+        "redLabel": "Punainen",
+        "blueWord": "BLUE",
+        "blueLabel": "Sininen",
+        "greenWord": "GREEN",
+        "greenLabel": "Vihreä",
+        "yellowWord": "KELTAINEN",
+        "yellowLabel": "Keltainen"
+      },
+      "stroopFlex": {
+        "followRule": "Sääntö",
+        "ruleInk": "Musteen väri",
+        "ruleWord": "Kirjoitettu sana",
+        "pressMatchingRuleButton": "Paina nykyistä sääntöä vastaavaa painiketta"
+      },
+      "goNogo": {
+        "goTrials": "Mene kokeisiin",
+        "nogoTrials": "No-Go-kokeet",
+        "hitRate": "Osumaprosentti (Go)",
+        "faRate": "Väärien hälytysten määrä (ei mene)",
+        "meanRt": "Keskimääräinen reaktioaika",
+        "sensitivity": "herkkyys",
+        "press": "Paina",
+        "withhold": "Pidätä"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "Keskimääräinen SSD (onnistuneet pysähdykset)",
+        "ssd": "SSD",
+        "goRt": "Mene RT:hen",
+        "successfulInhibition": "Onnistunut esto",
+        "stop": "Pysähdy",
+        "meanGoRt": "Keskimääräinen GO-reaktioaika",
+        "ssrtInvalid": "riittämättömät tiedot",
+        "ssrtNegativeNote": "SSRT on negatiivinen (keskiarvo SSD > keskimääräinen GO RT) – tulos ei ole luotettava nykyisellä koemäärällä."
+      },
+      "pvt": {
+        "rtMedian": "Mediaani RT",
+        "rtMean": "Tarkoittaa RT",
+        "fastest": "Nopein",
+        "slowest": "Hitain",
+        "falseStarts": "Vääriä aloituksia",
+        "falseStartsShort": "Väärä st.",
+        "lapses": "Lakkaa",
+        "mean": "Keskiarvo",
+        "reaction": "Reaktio",
+        "wait": "Odota...",
+        "pressStimulus": "Odota virikkeitä...",
+        "pressAnywhere": "Paina mitä tahansa, kun laskuri tulee näkyviin",
+        "press": "Paina!",
+        "tooEarly": "Liian aikaista!",
+        "lapsesLabel": "Lakkaa"
+      },
+      "posner": {
+        "cueingEffect": "Viihdyttävä vaikutus",
+        "validMeanRt": "Keskimääräinen kelvollinen RT",
+        "invalidMeanRt": "Keskimääräinen virheellinen RT",
+        "validAccuracy": "Kelvollinen tarkkuus",
+        "invalidAccuracy": "Virheellinen tarkkuus",
+        "validTrials": "Kelvollisia kokeita",
+        "invalidTrials": "Virheelliset kokeet",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "Voimassa",
+        "invalid": "Virheellinen"
+      },
+      "antisaccade": {
+        "cost": "Antisaccade hinta",
+        "proAccuracy": "Pro tarkkuus",
+        "antiAccuracy": "Anti tarkkuus",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Mean pro-saccade RT",
+        "antiMeanRt": "Keskimääräinen anti-saccade RT",
+        "costLabel": "Kustannukset",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-konteksti",
+        "axAccuracy": "AX tarkkuus",
+        "bxFa": "BX väärä hälytys",
+        "ayError": "AY virhe",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY virhe",
+        "cogControl": "Kognitiivinen ohjaus",
+        "target": "Kohde",
+        "nonTarget": "Ei-kohde"
+      },
+      "ant": {
+        "scores": "ANT Pisteet",
+        "alerting": "Hälytys (no-cue – double-cue)",
+        "orienting": "Suunnistus (keskellä - spatiaalinen)",
+        "executive": "Johtava (epäkongruentti - yhteneväinen)"
+      },
+      "changeDet": {
+        "kCowan": "K-kapasiteetti (Cowan)",
+        "sameShort": "Sama",
+        "diffShort": "Diff."
+      },
+      "swm": {
+        "withinErrors": "Haun sisäiset virheet",
+        "betweenErrors": "Hakuvirheiden välillä",
+        "totalErrors": "Virheitä yhteensä",
+        "errorFree": "Virheetön",
+        "foundErrorFree": "Löytyi virheetöntä!",
+        "errorCount": "{{count}} virhe(tä)",
+        "tapsLabel": "Hanat"
+      },
+      "taskSwitch": {
+        "switchCost": "Vaihtokustannukset",
+        "rtRepeat": "Keskimääräinen RT (toisto)",
+        "rtSwitch": "Keskimääräinen RT (kytkin)",
+        "oddEven": "Pariton / Parillinen",
+        "highLow": "Korkea / matala",
+        "title": "Tehtävän vaihto"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A aika",
+        "tmtBTime": "TMT-B aika",
+        "executiveCost": "Toiminnan kulut (B–A)",
+        "executiveCostShort": "Executive-kulut (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Valmistellaan TMT-B:tä...",
+        "tmtADone": "TMT-A tehty!",
+        "totalErrors": "Virheitä yhteensä",
+        "tmtALabel": "TMT-A: Numerot",
+        "tmtBLabel": "TMT-B: Numerot ja kirjaimet",
+        "next": "Seuraavaksi",
+        "heroTitle": "Polun tekeminen",
+        "alternateHint": "Vaihtoehtoiset numerot ja kirjaimet: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "Nopein ISI"
+      },
+      "wcst": {
+        "referenceCards": "Viitekortit",
+        "testCard": "Testikortti",
+        "categories": "Luokat",
+        "categoriesCompleted": "Luokat valmistuneet",
+        "perseverativeErrors": "Jatkuvat virheet",
+        "persevShort": "Persev.",
+        "avgRt": "Keskim. RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT kulman mukaan",
+        "findMatch": "Etsi sopiva muoto",
+        "reference": "Viitemuoto",
+        "referenceLabel": "Viite.",
+        "candidate": "ehdokas",
+        "distractor": "Muut",
+        "mirrorErrors": "Peilit",
+        "title": "Henkinen kierto"
+      },
+      "sternberg": {
+        "rtBySize": "RT sarjakoon mukaan",
+        "title": "Sternberg",
+        "avgRt": "Keskim. RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT sarjakoon mukaan",
+        "title": "Visuaalinen haku"
+      },
+      "ospan": {
+        "typeLetters": "Kirjoita kirjaimet järjestyksessä",
+        "trueOrFalse": "Totta vai tarua?",
+        "processingWarning": "Yhtälön tarkkuus alle 85 % – tulokset eivät välttämättä vastaa todellista työmuistikapasiteettia"
+      },
+      "readingSpan": {
+        "s0": "Aurinko nousee idästä.",
+        "s1": "Kalat elävät puissa.",
+        "s2": "Pariisi on Ranskan pääkaupunki.",
+        "s3": "Kolmiolla on neljä sivua.",
+        "s4": "Vesi kiehuu 100 asteessa.",
+        "s5": "Kissat ovat matelijoita.",
+        "s6": "Maa kiertää aurinkoa.",
+        "s7": "Suklaa kasvaa kivillä.",
+        "s8": "Vuodessa on kaksitoista kuukautta.",
+        "s9": "Linnut hengittävät veden alla.",
+        "s10": "Maito on valkoista.",
+        "s11": "Autot ajavat kiskoilla.",
+        "s12": "Mehiläiset tuottavat hunajaa.",
+        "s13": "Lumi on kuumaa.",
+        "s14": "Sydän pumppaa verta.",
+        "s15": "Kivet kelluvat veden päällä.",
+        "s16": "Kuu valaisee yön.",
+        "s17": "Käärmeillä on jalat.",
+        "s18": "Puu kelluu veden päällä.",
+        "s19": "Tuli on kylmä.",
+        "s20": "Ihmisellä on viisi aistia.",
+        "s21": "Hämähäkeillä on kuusi jalkaa.",
+        "s22": "Leipä tehdään jauhoista.",
+        "s23": "Valaat ovat kaloja.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "KUKKA",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "METSÄ",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "AAMU",
+        "d1": "HEART",
+        "d2": "KANKAS",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "PUUTARHA",
+        "d6": "VARJO",
+        "d7": "BELL",
+        "d8": "SILTA",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Lukuväli"
+      },
+      "memorizeSequence": "Muista järjestys...",
+      "reproduce": "Toistaa",
+      "span": "Span",
+      "size": "Koko",
+      "fixateCenter": "Kiinnitä keskelle...",
+      "identicalOrMirror": "Identtinen vai peili?",
+      "wellInhibited": "Hyvin estetty!",
+      "badDirection": "Väärä suunta!",
+      "stopMissed": "Stop miss!",
+      "falseAlarm": "Väärä hälytys!",
+      "pressNow": "Paina!",
+      "hitBang": "Osuma!",
+      "miss": "Neiti!",
+      "doNotTouch": "Älä koske!",
+      "whichDirection": "Mihin suuntaan?",
+      "stopBang": "STOP!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Muista nämä kirjaimet",
+      "memorizeLetter": "Muista tämä kirje",
+      "memorizeSequenceLetters": "Muista järjestys...",
+      "memorizeDigits": "Muista numerot...",
+      "memorizeColors": "Muista värit!",
+      "memorizePosition": "Muista tämä asema...",
+      "retainWord": "Muista tämä sana",
+      "retainNumber": "Muista tämä numero",
+      "addWithPrevious": "Lisää edelliseen",
+      "sentenceTrueOrFalse": "Onko tämä lause totta?",
+      "findRedCircle": "Etsi punainen ympyrä!",
+      "findHiddenToken": "Etsi piilotettu merkki!",
+      "chooseMatchingCard": "Valitse vastaava kortti",
+      "arrowDirection": "Keskinuolen suunta?",
+      "attention": "Huomio...",
+      "preparation": "Valmistelu...",
+      "recallLettersInOrder": "Hae {{count}} kirjaimet järjestyksessä",
+      "recallWordsInOrder": "Hae sanat {{count}} järjestyksessä",
+      "recallLastLetters": "Hae viimeiset {{count}} kirjaimet",
+      "typeLastLetters": "Kirjoita viimeiset {{count}} kirjaimet",
+      "recallPositionsInOrder": "Palautus: napauta paikat järjestyksessä",
+      "pressEnterToValidate": "Vahvista painamalla Enter",
+      "pressAnywhereToContinue": "Jatka painamalla mitä tahansa",
+      "temporalPrecision": "Ajallinen tarkkuus",
+      "estimationPrecision": "Arvioinnin tarkkuus",
+      "touchStartClockwise": "Kosketa aloituspistettä ja pyyhkäise sitten myötäpäivään",
+      "touchAtoB": "Kosketa pistettä A ja pyyhkäise sitten kohtaan B",
+      "cue": "Cue",
+      "retainCue": "Muista vihje...",
+      "targetOrNot": "Kohde vai ei-kohde?",
+      "whereIsTarget": "Missä on kohde?",
+      "wasLetterInSet": "Oliko tämä kirje sarjassa?",
+      "regular": "säännöllinen",
+      "regularity": "Säännöllisyys",
+      "msDeviation": "ms poikkeama",
+      "boxes": "laatikot",
+      "found": "{{count}} löytyi",
+      "past": "Mennyt",
+      "tooSlow": "liian hidas",
+      "tooFast": "liian nopeasti",
+      "timeout": "Liian hidas!",
+      "answer": "Vastaa",
+      "dontPress": "Älä paina!",
+      "feedbackWrong": "Väärin!",
+      "level": "Taso",
+      "wrong": "Väärin",
+      "you": "sinä",
+      "paused": "Tauko",
+      "instructions": "Ohjeet",
+      "selectAnswer": "Valitse vastaus",
+      "tapTheOddOne": "Napauta outoa pois",
+      "pal": {
+        "subtitle": "Paired Associates Learning",
+        "pairsLearned": "Parit oppivat",
+        "maxSetSize": "Max setin koko",
+        "totalErrors": "Virheet yhteensä",
+        "round": "Pyöreä",
+        "pairs": "pareja",
+        "meanRt": "Keskimääräinen RT (oikein)",
+        "studyPhase": "Opiskele - muista paikat ulkoa",
+        "testPhase": "Missä tämä muoto oli?",
+        "studying": "Opiskelu",
+        "tapBox": "Napauta ruutua, jossa tämä muoto näytettiin"
+      },
+      "visualLogic": {
+        "easy": "Helppoa",
+        "hard": "Kovaa",
+        "oneRule": "1 sääntö",
+        "twoRules": "2 sääntöä",
+        "findMissing": "Etsi puuttuva pala",
+        "maxLevel": "Max Lvl",
+        "finalLevel": "Lopullinen Lvl",
+        "nextMode": "Seuraava istuntotila",
+        "adaptive": "Mukautuva",
+        "fixed": "Korjattu",
+        "spm": "SPM 60",
+        "level": "Taso",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "Mikä osa sopii reikään?",
+        "target": "Kohde"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Yliarviointiharha",
+        "underestimationBias": "Aliarviointiharha",
+        "noBias": "Ei merkittävää harhaa",
+        "avgError": "Keskimääräinen virhe",
+        "overestimations": "Yliarvioinnit",
+        "underestimations": "Aliarvioinnit",
+        "avgAbsoluteError": "Keskimääräinen absoluuttinen virhe",
+        "avgRelativeError": "Keskimääräinen suhteellinen virhe",
+        "cv": "Variaatiokerroin",
+        "watchDemo": "Katso kesto",
+        "getReady": "Valmistaudu...",
+        "holdToReproduce": "Pidä kiinni lisääntyäksesi!",
+        "tooLong": "Liian pitkä!",
+        "tooShort": "Liian lyhyt!",
+        "target": "Kohde",
+        "demoLabel": "Viite",
+        "yourTurn": "Sinun vuorosi",
+        "watchInstruction": "Katso",
+        "holdInstruction": "Pidä painettuna lisääntyäksesi",
+        "heroTitle": "Aika-arvio"
+      },
+      "puzzleDetails": "Palapelin yksityiskohdat",
+      "roundDetails": "Pyöreät yksityiskohdat",
+      "stageResults": "Vaiheen tulokset",
+      "recognized": "Tunnustettu",
+      "missed": "Jäi väliin",
+      "win": "Voita",
+      "lose": "Häviä",
+      "winBang": "Voittaa!",
+      "loseBang": "Menettää!",
+      "correctBang": "Korjata!",
+      "wrongBang": "Väärin!",
+      "completeBang": "Täydellinen!",
+      "repeatedBang": "Toistettu!",
+      "incompleteBang": "Epätäydellinen!",
+      "levelCompleteBang": "Taso suoritettu!",
+      "timesUp": "Aika on kulunut",
+      "seeResults": "Katso tulokset",
+      "nextRound": "Seuraava kierros",
+      "startBlock": "Aloituslohko",
+      "continue": "Jatka",
+      "patientChoice": "Potilaan valinta",
+      "immediateChoice": "Välitön valinta",
+      "immediate": "Välitön",
+      "digitSpan": {
+        "heroTitle": "Numeroväli"
+      },
+      "resume": "Jatka",
+      "numericalStroop": {
+        "heroTitle": "Numeerinen Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Tuomio linjasuunnasta"
+      },
+      "chain": "Ketju",
+      "undo": "Kumoa",
+      "vocalProsody": {
+        "heroTitle": "Lauluprosodia"
+      },
+      "letterNumber": {
+        "title": "Kirjain-numero Seq.",
+        "expectedAnswer": "Odotettu vastaus"
+      },
+      "patternComparison": {
+        "heroTitle": "Kuvioiden vertailu"
+      },
+      "speedPack": {
+        "title": "Speed Pack",
+        "whenFoldedWhichTouch": "Mitkä neliöt koskettavat taitettuna?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Refleksi"
+      },
+      "hooperVisual": {
+        "title": "Hooperin visuaalinen organisaatio",
+        "whatIsThisObject": "Mikä tämä esine on?"
+      },
+      "blockDesign": {
+        "heroTitle": "Block Design"
+      },
+      "accuracy": "Tarkkuus",
+      "avgTime": "Keskim. aika",
+      "check": "Tarkista",
+      "dualTrace": {
+        "playArea": "Leikkialue"
+      },
+      "paperFolding": {
+        "title": "Paperin taitto",
+        "foldSequenceHolePunch": "Taittojärjestys ja rei'itys",
+        "whichPatternWhenUnfolded": "Mikä kuvio avattaessa?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Leksinen päätös"
+      },
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxGrid": "Max ruudukko",
+      "symmetry": "Symmetria",
+      "threshold": "Kynnys",
+      "hitRate": "Osumaprosentti",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Muutoksen tunnistus"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogismit"
+      },
+      "subitizing": {
+        "title": "Subitisointi",
+        "range": "Alue"
+      },
+      "jitter": "Jitter",
+      "sentenceCompletion": {
+        "title": "Lauseen viimeistely (sulkea)",
+        "highCloze": "Korkea cloze",
+        "lowCloze": "Matala sulku"
+      },
+      "grid": "Ruudukko",
+      "pinballRecall": {
+        "title": "Flipperi muistaa",
+        "byBounces": "Pomppujen mukaan",
+        "whereDoesItLand": "Mihin se laskeutuu?"
+      },
+      "mean": "Keskiarvo",
+      "speedup": "Nopeus",
+      "memorize": "Muista",
+      "time": "Aika",
+      "surfaceDevelopment": {
+        "title": "Pintakehitys",
+        "whichEdgeMatches": "Mikä reuna sopii?"
+      },
+      "crowding": {
+        "heroTitle": "Visuaalinen väkijoukko",
+        "spacing": "Välit"
+      },
+      "patternRecognition": {
+        "heroTitle": "Kuvion tunnistus"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Oikeudenkäynti",
+        "position": "asema",
+        "audio": "Ääni"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Scene Intruder",
+        "detect": "Tunnista"
+      },
+      "eyesTest": {
+        "heroTitle": "Mielen lukeminen silmissä"
+      }
+    },
+    "gridlock": {
+      "undone": "Viimeinen siirto kumottu.",
+      "resetMessage": "Palapelin nollaus.",
+      "hintMessage": "Vihje: liu'uta {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Tutki lautaa. Alkaa {{seconds}}s kuluttua.",
+      "challenge": "Haaste",
+      "optimal": "Optimaalinen",
+      "moves": "Liikkuu",
+      "piece": "Pala {{id}}",
+      "targetPiece": "Pala {{id}} (kohde - punainen auto)",
+      "challengeClassic": "Klassinen",
+      "challengePrecision": "Tarkkuus",
+      "challengeMemory": "Muisti",
+      "challengeTimed": "Ajastettu",
+      "hint": "Vihje",
+      "reset": "Nollaa",
+      "undo": "Kumoa",
+      "nextPuzzle": "Seuraava palapeli →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Lohkon 1 osumia",
+      "block2Hits": "Lohko 2 osumaa",
+      "goPositive": "Mene = positiivinen",
+      "goNegative": "Mene = negatiivinen",
+      "title": "Affective Go/No-Go",
+      "block1CommissionErrors": "Lohkon 1 välitysvirheet",
+      "block2CommissionErrors": "Lohkon 2 välitysvirheitä",
+      "block": "Estä",
+      "go": "Mene"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Keskimääräinen vaihtonopeus",
+      "meanSwitchesfigure": "Keskimääräiset kytkimet/kuva",
+      "totalSwitches": "Kytkimiä yhteensä",
+      "title": "Epäselvät luvut",
+      "meanSwitches": "Keskimääräiset kytkimet",
+      "switchRate": "Vaihtonopeus",
+      "figures": "Kuvat",
+      "totalSwitchesLabel": "Kytkimiä yhteensä",
+      "duration": "Kesto",
+      "switchesCount": "s | Kytkimet:",
+      "switchButton": "Kytkin!"
+    },
+    "analogies": {
+      "verbalCorrect": "Sanallisesti oikein",
+      "timeout": "Aikakatkaisu",
+      "title": "Analogioita"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "ANS-vertailu",
+      "ratio": "Suhde",
+      "leftMore": "Jäi lisää",
+      "rightMore": "Oikein enemmän"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Väärien hälytysten määrä",
+      "grammatical": "Kielioppi",
+      "memorizeTheseStrings": "Muista nämä merkkijonot",
+      "testPhase": "Testivaihe",
+      "ungrammatical": "Epäkielistä",
+      "learning": "Oppiminen",
+      "test": "Testaa",
+      "title": "Keinotekoinen kielioppi",
+      "learningPhase": "Oppiminen",
+      "testIntroText": "Näet nyt uusia merkkijonoja. Päätä, noudattavatko kukin samoja sääntöjä kuin juuri tutkimasi merkkijonot.",
+      "startTest": "Aloita testi",
+      "followsRules": "Noudattaa sääntöjä",
+      "breaksRules": "Rikkoo sääntöjä"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Räpytyksen suuruus",
+      "title": "Huomaavainen vilkku",
+      "blink": "Räpyttää",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "ensimmäinen vihreä kirjain?",
+      "secondGreenLetter": "2. vihreä kirjain?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Kaappauksen kustannukset",
+      "singletonPresent": "Singleton-lahja",
+      "noSingleton": "Ei sinkkuja",
+      "title": "Huomiokaappaus",
+      "capture": "Kaappaa",
+      "horizontal": "Vaakasuora",
+      "vertical": "Pystysuora"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Sitova ikkuna",
+      "title": "Audiovisuaalinen sidonta",
+      "window": "Ikkuna",
+      "pssLabel": "PSS (Point of Subjective Simultaneity)",
+      "simultaneousOrNot": "Samanaikaisesti vai ei?",
+      "simultaneous": "Samanaikainen",
+      "notSimultaneous": "Ei samanaikaisesti"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Keston kynnys",
+      "reference": "Viite",
+      "weberFraction": "Weberin fraktio",
+      "title": "Kuulemisen kesto",
+      "threshold": "Kynnys",
+      "weber": "Weber",
+      "whichLonger": "Kumpi on pidempi?",
+      "firstLonger": "Ensin pidempään",
+      "secondLonger": "Toinen pidempi"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Säädetyt keskimääräiset pumput",
+      "avgTimeballoon": "Keskimääräinen aika/ilmapallo",
+      "banked": "Pankissa!",
+      "lostEarnings": "Menetetyt tulot!",
+      "overallAvgPumps": "Kokonaiskeskimääräiset pumput",
+      "popRate": "Pop-nopeus",
+      "totalEarned": "Ansaittu yhteensä",
+      "balloons": "Ilmapallot",
+      "cashed": "Rahastettu",
+      "popped": "Poksahtanut",
+      "adjPumps": "Adj. pumput",
+      "pop": "Pop",
+      "pump": "Pumppu",
+      "cashIn": "Rahat sisään"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Keskimääräinen päätösaika",
+      "drawBeadsToGatherEvidence": "Piirrä helmiä todisteiden keräämiseksi",
+      "jtc": "JTC",
+      "title": "Helmien tehtävä",
+      "meanDraws": "Keskim. piirtää",
+      "rounds": "Pyöreät",
+      "jtcRate": "JTC Rate",
+      "meanDrawsToDecision": "Keskiarvo vetää päätökseen",
+      "jtcRateThreshold": "JTC Rate (<{{threshold}} arvonta)",
+      "round": "Pyöreä",
+      "jarDescription": "Purkki A: 85 % vihreä / Purkki B: 85 % punainen",
+      "itWasJar": "Se oli Jar",
+      "drawABead": "Piirrä helmi",
+      "jarAGreen": "Purkki Vihreä",
+      "jarBRed": "Purkki B punainen"
+    },
+    "binding": {
+      "changedTrials": "Vaihtuneet kokeet",
+      "sameAccuracy": "Sama tarkkuus",
+      "sameTrials": "Samat koettelemukset",
+      "title": "Ominaisuuden sidonta",
+      "binding": "Sidonta",
+      "bindingAccuracyChanged": "Muuta tarkkuutta",
+      "same": "Sama",
+      "different": "Erilainen"
+    },
+    "blockDesign": {
+      "cells": "Solut",
+      "target": "Kohde",
+      "yourAnswer": "Sinun vastauksesi",
+      "tapHint": "Napauta vaihtaaksesi värejä",
+      "check": "Tarkista"
+    },
+    "brixton": {
+      "adapt": "Sopeutua",
+      "adaptationCost": "Sopeutumiskustannukset",
+      "nonswitchTrials": "Kokeilut ilman vaihtoa",
+      "switchTrials": "Vaihda kokeiluja"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Muista nämä kirjaimet",
+      "selectThe3Letters": "Valitse 3 kirjainta",
+      "title": "Brown-Petersonin tehtävä",
+      "forgetting": "Unohtaminen",
+      "sDelay": "S Viive",
+      "minus3": "Miinus 3",
+      "delay": "Viive"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Päätöksen laatu",
+      "finalPoints": "Viimeiset pisteet",
+      "meanBet": "Keskimääräinen veto",
+      "winRate": "Voittoprosentti",
+      "wins": "Voittoja",
+      "title": "Cambridgen uhkapelitehtävä",
+      "totalPoints": "Pisteitä yhteensä",
+      "quality": "Laatu",
+      "rational": "Rationaalista",
+      "avgBet": "Keskim. veto",
+      "trial": "Oikeudenkäynti",
+      "whichColorHidesToken": "Mikä väri piilottaa merkin?",
+      "youChose": "Sinä valitsit",
+      "howMuchToBet": "Kuinka paljon panostaa?"
+    },
+    "cancellation": {
+      "false": "Väärä",
+      "target": "Kohde:",
+      "total": "Yhteensä",
+      "title": "Peruutustehtävä (d2)",
+      "misses": "Miss",
+      "targetDescription": "d 2 pisteellä"
+    },
+    "changeBlindness": {
+      "detectionRate": "Havaintonopeus",
+      "found": "Löytyi",
+      "meanDetectionTime": "Keskimääräinen havaitsemisaika",
+      "title": "Muuta sokeutta",
+      "missed": "Jäi väliin",
+      "avgTime": "Keskim. aika",
+      "instructions": "Ohjeet"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Paras arvio",
+      "meanScore": "Keskimääräinen pistemäärä",
+      "worstEstimate": "Huonoin arvio",
+      "inRange": "Hyvä arvio!",
+      "title": "Kognitiivinen arvio",
+      "meanScoreLabel": "Keskimääräinen pistemäärä",
+      "inRangeLabel": "Alueella",
+      "extreme": "Äärimmäistä",
+      "scoreLabel": "pisteet",
+      "submit": "Lähetä"
+    },
+    "common": {
+      "accuracy": "Tarkkuus",
+      "bias": "Bias",
+      "falseAlarmRate": "Väärä hälytystaajuus",
+      "hitRate": "Osumaprosentti",
+      "hits": "Osumat",
+      "listening": "Kuuntelee...",
+      "meanRt": "Tarkoittaa RT",
+      "timedOut": "Aikakatkaisu",
+      "timedOut2": "Aikakatkaisu",
+      "faRate": "Taux de FA",
+      "paused": "Keskeytetty"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Kuinka luottavainen olet?",
+      "rateYourConfidence": "Arvioi itseluottamuksesi",
+      "title": "Luottamuskalibrointi",
+      "calError": "Kalibrointivirhe",
+      "confidence": "Luottamus"
+    },
+    "consequences": {
+      "best": "Paras",
+      "nextRound": "Seuraava kierros...",
+      "time": "Aika",
+      "placeholder": "Kirjoita seuraus...",
+      "title": "Seuraukset",
+      "totalIdeas": "Ideoita yhteensä",
+      "avgPerRound": "Keskim. kierrosta kohti",
+      "rounds": "Pyöreät",
+      "noConsequencesListed": "Ei lueteltu seurauksia",
+      "roundProgress": "Kierros {{current}} / {{total}}",
+      "typeAndPressAdd": "Kirjoita ja paina Lisää"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Cueing Effect",
+      "newConfigRt": "Uusi Config RT",
+      "oldConfigRt": "Vanha Config RT",
+      "title": "Kontekstuaalinen viittaus",
+      "cueing": "Kiipeily",
+      "oldRt": "Vanha RT",
+      "newRt": "Uusi RT",
+      "prompt": "Kehote",
+      "left": "Vasen",
+      "right": "Oikein"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Kynnysvärinä",
+      "title": "Ääriviivojen integrointi",
+      "pipeJitter": "| värinää"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Kynnyksen kontrasti",
+      "title": "Kontrastiherkkyys",
+      "threshold": "Kynnys",
+      "left": "Vasen",
+      "right": "Oikein"
+    },
+    "cpt": {
+      "nontargets": "Ei-kohteet",
+      "target": "Kohde",
+      "nonTarget": "Ei-kohde",
+      "dPrime": "d'",
+      "targetsLetter": "Kohdekirjain",
+      "tapForLetterOnly": "Napauta nähdäksesi vain kohdekirjaimen"
+    },
+    "crowding": {
+      "criticalSpacing": "Kriittinen väli",
+      "leftAccuracy": "Vasen tarkkuus",
+      "rightAccuracy": "Oikea tarkkuus"
+    },
+    "cryptogram": {
+      "hints": "Vihjeitä",
+      "title": "Kryptogrammi",
+      "solved": "Ratkaistu",
+      "time": "Aika",
+      "puzzles": "Palapelit",
+      "puzzle": "Palapeli",
+      "hint": "Vihje",
+      "clear": "Selkeä"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Käyrän alla oleva alue",
+      "discountRateK": "Diskonttokorko (k)",
+      "impulsivityIndex": "Impulsiivisuusindeksi",
+      "title": "Viivästynyt alennus",
+      "aucPatience": "AUC kärsivällisyyttä",
+      "patient": "Potilas",
+      "kRate": "K Rate",
+      "impuls": "Impulssit",
+      "indifferencePoints": "Välinpitämättömyyspisteet",
+      "whichPrefer": "Kumpaa pidät enemmän?",
+      "today": "Tänään"
+    },
+    "delayedMatching": {
+      "long": "Pitkä",
+      "longDelay68s": "Pitkä viive (6-8s)",
+      "med": "Med",
+      "mediumDelay46s": "Keskipitkä viive (4-6 s)",
+      "short": "Lyhyt",
+      "shortDelay34s": "Lyhyt viive (3-4s)",
+      "title": "Viivästynyt vastaavuus",
+      "delay": "Viive",
+      "rememberThisPattern": "Muista tämä malli",
+      "whichWasIt": "Mikä se oli?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Hälytyksen tunnistus",
+      "attendToTheLeftColumn": "Tutustu vasempaan sarakkeeseen",
+      "attendedAccuracy": "Osallistunut Tarkkuus",
+      "ignoreTheRightColumn": "Ohita oikea sarake",
+      "right": "RIGHT",
+      "title": "Dikoottinen kuuntelu",
+      "attendedAcc": "Valvottu tarkkuus",
+      "alertDet": "Hälytyksen tunnistus",
+      "alerts": "Hälytykset",
+      "selectLeftColumnWords": "Valitse vasemman sarakkeen sanat",
+      "submit": "Lähetä",
+      "alertQuestion": "Varoittava kysymys"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Unohda tarkkuus",
+      "forgettingEffect": "Unohtava vaikutus",
+      "newRejection": "Uusi hylkäys",
+      "rememberAccuracy": "Muista tarkkuus",
+      "title": "Ohjattu unohtaminen",
+      "remember": "Muista",
+      "forget": "Unohda",
+      "round": "Pyöreä",
+      "word": "sana",
+      "wasThisWordShown": "Näytettiinkö tämä sana?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Attention Bias Score",
+      "congruentAcc": "Congruent Acc",
+      "congruentRt": "Yhdenmukainen RT",
+      "incongruentAcc": "Incongruent Acc",
+      "incongruentRt": "Epäjohdonmukainen RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Auto vai kuorma-auto?",
+      "minDisplayReached": "Minimi näyttö saavutettu",
+      "positionAccuracy": "Asennon tarkkuus",
+      "thresholdDisplay": "Kynnysnäyttö",
+      "vehicleAccuracy": "Ajoneuvon tarkkuus",
+      "whereWasTheDiamond": "Missä timantti oli?",
+      "title": "Kaksoispäätös",
+      "threshold": "Kynnys",
+      "bothOk": "Molemmat oikein",
+      "vehicle": "Ajoneuvo",
+      "position": "asema",
+      "car": "Auto",
+      "truck": "Kuorma-auto"
+    },
+    "dsst": {
+      "items": "Tuotteet",
+      "itemsCompleted": "Kohteet valmiina",
+      "speedItemsmin": "Nopeus (kpl/min)",
+      "attempts": "Yritykset",
+      "itemsPerMin": "Tuotteet / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Kahden tehtävän kustannukset",
+      "taskANumber": "Tehtävä A (numero)",
+      "taskBSymbol": "Tehtävä B (symboli)",
+      "title": "Kaksoistehtävä",
+      "taskA": "Tehtävä A",
+      "taskB": "Tehtävä B",
+      "number": "Numero",
+      "symbol": "Symboli",
+      "up": "Ylös",
+      "down": "Alas"
+    },
+    "dualTime": {
+      "sessionEnPause": "Istunto keskeytetty",
+      "votreEstimationSecondes": "Arviosi (sekuntia)",
+      "sessionInterrupted": "Istunto keskeytetty",
+      "target": "Kohde",
+      "estimation": "Arvio",
+      "avgTime": "Keskim. aika",
+      "avgError": "Keskim. virhe",
+      "trials": "Kokeilut",
+      "resumeToContinue": "Jatka jatkaaksesi",
+      "aimFor": "Tavoittele",
+      "second": "Toinen",
+      "howLongDidYouTake": "Kauanko kesti?"
+    },
+    "dualTrack": {
+      "confirmer": "Vahvista",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Jatka jatkaaksesi.",
+      "sessionEnPause": "Istunto keskeytetty",
+      "tapezLesCibles": "Napauta kohteita",
+      "tapezLaCible": "Napauta kohdetta",
+      "appuyezConfirmer": "Paina Vahvista",
+      "targetsCountLabel": "{{count}} kohteita",
+      "distractorsCountLabel": "{{count}} häiriötekijöitä",
+      "roundsCountLabel": "{{count}} kierrosta",
+      "calibrationRoundsLabel": "{{count}} kalibrointikierrosta",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = matkan sisäinen vaikeustaso.",
+      "tierHelpCurrentWithPhase": "Olet tällä hetkellä T{{current}} / {{total}} {{targets}} kohteissa. Nykyinen vaihe: {{phase}}. Ennen seuraavaa tavoitetasoa on jäljellä {{remaining}} tasoa.",
+      "phaseTracking": "Seuranta",
+      "phaseAudio": "Seuranta + ääni",
+      "phaseColor": "Seuranta + väri",
+      "phaseCombined": "Seuranta + ääni + väri",
+      "passLetters": "Kirjeitä",
+      "passColors": "värit",
+      "moveInstruction": "Siirrä ohje",
+      "moveConfirmBtn": "Siirrä vahvistuspainiketta",
+      "preparingSession": "Valmistellaan istuntoa...",
+      "preparing3dScene": "Valmistellaan 3D-näkymää...",
+      "startJourney": "Aloita matka",
+      "calibrationDescription": "Ennen ensimmäistä vaihetta pidempi kalibrointi arvioi lähtötasosi.",
+      "defaultDescription": "Pallot syttyvät. Seuraa niitä heidän liikkuessaan ja tunnista ne sitten.",
+      "startCalibration": "Aloita kalibrointi",
+      "calibrationTitle": "Kalibrointi",
+      "estimatedStart": "Arvioitu aloita",
+      "roundsAnalyzed": "Kierrokset analysoitu",
+      "willStartAt": "Alkaa klo",
+      "targetsCount": "Tavoitteet",
+      "thenProgress": "sitten edistystä"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Keskimääräinen absoluuttinen virhe",
+      "ratio": "Suhde",
+      "slope": "Kaltevuus",
+      "vierordtSlope": "Vierordtin rinne",
+      "wait": "Odota...",
+      "title": "Kesto Jäljentäminen",
+      "meanError": "Mean Error",
+      "meanRatio": "Keskimääräinen suhde (valmistettu/tavoite)",
+      "holdNow": "PIDÄ NYT",
+      "target": "Kohde",
+      "error": "Virhe"
+    },
+    "embeddedFigures": {
+      "fastest": "Nopein",
+      "found": "Löytyi",
+      "meanDetectionTime": "Keskimääräinen havaitsemisaika",
+      "slowest": "Hitain",
+      "title": "Upotetut hahmot",
+      "missed": "Jäi väliin",
+      "fastestLabel": "Nopein",
+      "findThisShape": "Etsi tämä muoto",
+      "memorizeShape": "Muista muoto...",
+      "foundIt": "Löytyi!",
+      "giveUp": "Luovuta"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Väärät hälytykset",
+      "misses": "Miss",
+      "title": "Emotionaalinen N-back",
+      "match": "Ottelu"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Neutraali RT",
+      "positiveRt": "Positiivinen RT",
+      "threatRt": "Uhka RT",
+      "title": "Emotionaalinen Stroop",
+      "interference": "Häiriö",
+      "interferenceThreatNeutral": "Häiriöt (Uhka – neutraali)"
+    },
+    "eyesTest": {
+      "totalTime": "Kokonaisaika"
+    },
+    "faceName": {
+      "gain": "Voitto",
+      "learningImprovement": "Oppimisen parantaminen",
+      "round1Accuracy": "1. kierroksen tarkkuus",
+      "round2Accuracy": "2. kierroksen tarkkuus",
+      "whoIsThis": "Kuka tämä on?",
+      "title": "Face-Name Association",
+      "round": "Pyöreä",
+      "testPhase": "Testivaihe"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "Miksi?",
+      "title": "Faux Pas -tunnustus",
+      "detection": "Havaitseminen",
+      "scenarios": "Skenaariot",
+      "fpFound": "Faux pass löydetty",
+      "control": "Ohjaus",
+      "readyToAnswer": "Valmiina vastaamaan",
+      "didSomeoneSay": "Sanoiko joku jotain, mitä ei olisi pitänyt?",
+      "whoSaidIt": "Kuka sen sanoi?",
+      "whyInappropriate": "Miksi se oli sopimatonta?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Muista tarkkuus",
+      "recognitionAccuracy": "Tunnistustarkkuus",
+      "recallPlaceholder": "Kirjoita vastauksesi...",
+      "unlikely": "Epätodennäköistä",
+      "certain": "Varma",
+      "title": "Tietämisen tunne",
+      "recall": "Muista",
+      "recognition": "Tunnustus",
+      "fokR": "Fok R",
+      "questions": "Kysymyksiä",
+      "recalled": "Muistutettiin",
+      "recognized": "Tunnustettu",
+      "fokSensitivity": "FOK Herkkyys",
+      "submit": "Lähetä",
+      "dontKnow": "En tiedä",
+      "fokPrompt": "Tunnistatko sen?",
+      "selectCorrectAnswer": "Valitse oikea vastaus",
+      "answer": "Vastaa"
+    },
+    "fingerTapping": {
+      "firstTrial": "Ensimmäinen oikeudenkäynti",
+      "lastTrial": "Viimeinen oikeudenkäynti",
+      "sequence": "Järjestys",
+      "speedupT1VsT12": "Nopeus (T1 vs T12)",
+      "title": "Sormen napauttaminen"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Keskimääräinen liikeaika",
+      "avgThroughput": "Keskimääräinen suorituskyky",
+      "title": "Fitts Tapping",
+      "throughput": "Läpäisykyky",
+      "tapTarget": "Napauta korostettua kohdetta"
+    },
+    "foreperiod": {
+      "early": "Aikaisin",
+      "slope": "Kaltevuus",
+      "title": "Ajallinen valmistelu",
+      "fpEffectSlope": "FP Effect Slope"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Käännökset",
+      "threshold": "Kynnys",
+      "tone1": "Sävy 1",
+      "tone2": "Sävy 2",
+      "weber": "Weber",
+      "weberFraction": "Weberin fraktio",
+      "hz": "Hz",
+      "title": "Taajuussyrjintä",
+      "thresholdLabel": "Kynnys",
+      "hzDiff": "Hz ero",
+      "whichWasHigher": "Kumpi oli korkeampi?",
+      "firstHigher": "Ensin korkeammalle",
+      "secondHigher": "Toiseksi korkeampi"
+    },
+    "gabor": {
+      "gaborPatch": "Gabor laastari",
+      "leftAccuracy": "Vasen tarkkuus",
+      "leftTrials": "Jäi koettelemukset",
+      "noiseMask": "Melun maski",
+      "rightAccuracy": "Oikea tarkkuus",
+      "rightTrials": "Oikeat koettelemukset",
+      "thresholdAngle": "Kynnyskulma",
+      "title": "Gabor",
+      "threshold": "Kynnys",
+      "reversals": "Käännökset",
+      "timedOut": "Aikakatkaisu",
+      "left": "Vasen",
+      "right": "Oikein"
+    },
+    "gameOfDice": {
+      "finalPoints": "Viimeiset pisteet",
+      "risky": "Riskialtista",
+      "riskyChoices": "Riskillisiä valintoja",
+      "safe": "Turvallinen",
+      "winRate": "Voittoprosentti",
+      "wins": "Voittoja",
+      "title": "Peli noppatehtävä",
+      "totalPoints": "Pisteitä yhteensä",
+      "riskyLabel": "Riskialtista",
+      "roll": "Rullaa",
+      "chooseYourBet": "Valitse vetosi",
+      "pickNumbers": "Valitse numerosi"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Aukoa vai ei aukkoa?",
+      "gapThreshold": "Gap Threshold",
+      "title": "Hiljaisuuden tunnistus",
+      "noGap": "Ei aukkoa"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Missä katse oli?",
+      "direct": "Suora",
+      "left": "Vasen",
+      "right": "Oikein",
+      "title": "katseen suunta",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "Osa 1 (Aloitus)",
+      "part2": "Osa 2",
+      "part2Suppression": "Osa 2 (Tukautus)",
+      "suppressionCost": "Tukahdutuskustannukset",
+      "title": "Hayling",
+      "part1": "Osa 1",
+      "part2Label": "Osa 2",
+      "suppression": "Tukahduttaminen",
+      "obvious": "Ilmeistä",
+      "obviousPicksPart2": "Selkeät valinnat (osa 2)",
+      "chooseUnrelated": "Valitse sana, joka ei liity asiaan",
+      "completelyUnrelated": "Täysin riippumaton",
+      "doNotPickObvious": "ÄLÄ valitse ilmeistä sanaa!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Siirrytään seuraavaan vaiheeseen...",
+      "stageComplete": "Vaihe valmis!",
+      "title": "IED Aseta vaihto",
+      "stages": "Vaiheet",
+      "edsCost": "EDS-kustannukset",
+      "stage": "Vaihe",
+      "correctNeeded": "Oikea vaaditaan eteenpäin"
+    },
+    "informationSampling": {
+      "cost": "Kustannukset",
+      "free": "Ilmainen",
+      "meanTilesCost": "Keskimääräiset laatat (hinta)",
+      "meanTilesFree": "Keskimääräiset laatat (ilmainen)",
+      "totalCost": "Kokonaiskustannukset",
+      "title": "Tietojen otos",
+      "tiles": "Laatat",
+      "tapToReveal": "Napauta paljastaaksesi"
+    },
+    "inspectionTime": {
+      "final": "Lopullinen",
+      "finalDisplayTime": "Lopullinen näyttöaika",
+      "minCorrectIt": "Vähintään oikea IT",
+      "threshold": "Kynnys",
+      "title": "Tarkastusaika",
+      "thresholdLabel": "Kynnys",
+      "minIt": "Vähintään IT"
+    },
+    "iowaGambling": {
+      "balance": "Saldo:",
+      "chooseADeck": "Valitse kansi",
+      "deckADraws": "Kansi A tasoittaa",
+      "deckBDraws": "Kansi B tasapeli",
+      "deckCDraws": "Kansi C tasapeli",
+      "deckDDraws": "Deck D tasapeli",
+      "first40Advantageous": "40 ensimmäistä edullista",
+      "last40Advantageous": "Viimeiset 40 edullista",
+      "learn": "Opi",
+      "learningIndex": "Oppimisindeksi",
+      "title": "Iowan uhkapelit",
+      "advantageousPct": "Edullinen %",
+      "earnings": "Tulot",
+      "last40": "Viimeinen 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Kalibrointibias",
+      "meanJol": "Tarkoittaa JOL",
+      "nowTestYourRecall": "Testaa nyt muistisi",
+      "studyComplete": "Tutkimus suoritettu",
+      "whatWasPairedWith": "Mihin yhdistettiin…?",
+      "title": "Oppimisen tuomio",
+      "recallAccuracy": "Muista tarkkuus",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "JOL-tarkkuus (gamma)",
+      "howLikelyRemember": "Kuinka todennäköisesti muistat?",
+      "hiddenAnswer": "Piilotettu vastaus"
+    },
+    "judgmentOfRecency": {
+      "close": "Sulje",
+      "closeGap13": "Pieni väli (1-3)",
+      "far": "Kaukana",
+      "farGap9": "Pitkä ero (9+)",
+      "mediumGap48": "Keskitasoinen ero (4-8)",
+      "title": "Viimeaikaisuuden tuomio",
+      "medium": "Keskikokoinen",
+      "studyPhaseMemorizeOrder": "Tutkimusvaihe – Muista järjestys",
+      "whichMoreRecently": "Kumpi ilmestyi äskettäin?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Keskimääräinen RT (ei-sanat)",
+      "meanRtWords": "Keskimääräinen RT (sanat)",
+      "nonwordsAccuracy": "Ei-sanojen tarkkuus",
+      "wordsAccuracy": "Sanojen tarkkuus",
+      "word": "sana",
+      "nonword": "Ei-sana"
+    },
+    "maze": {
+      "duration": "Kesto",
+      "optimalSteps": "Optimaaliset vaiheet",
+      "pathEfficiency": "Polun tehokkuus",
+      "totalSteps": "Askelia yhteensä",
+      "wallHits": "Seinähitit",
+      "title": "Labyrintti",
+      "completed": "Valmis",
+      "efficiency": "Tehokkuus",
+      "wallHitsLabel": "Seinähitit",
+      "steps": "Vaiheet"
+    },
+    "memobox": {
+      "easy": "Helppoa",
+      "easy2Boxes": "Helppo (2 laatikkoa)",
+      "hard": "Kovaa",
+      "hard4Boxes": "Kova (4 laatikkoa)",
+      "medium3Boxes": "Keskikokoinen (3 laatikkoa)",
+      "title": "Muistilaatikko",
+      "rounds": "Pyöreät",
+      "medium": "Keskikokoinen",
+      "watchMovements": "Katso liikkeitä...",
+      "howManyBalls": "Kuinka monta palloa kussakin laatikossa?",
+      "submit": "Lähetä",
+      "roundOf": "Kierros {{current}} / {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Mikä on poikkileikkaus?",
+      "title": "Henkinen leikkaus"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Vanha, samanlainen vai uusi?",
+      "patternSeparation": "Kuvion erottaminen",
+      "sep": "syyskuu",
+      "old": "Vanha",
+      "similar": "Samanlainen",
+      "new": "Uusi",
+      "ldi": "LDI",
+      "title": "Mnemoninen syrjintä",
+      "hitRateOldDetected": "Osumaprosentti (vanha havaittu)",
+      "lureDiscrimination": "Lure Discrimination (LDI)",
+      "memorize": "Muista",
+      "testPhase": "Testivaihe"
+    },
+    "multiArmedBandit": {
+      "earnings": "Tulot:",
+      "pickMachine": "Valitse kone",
+      "title": "Monikätinen rosvo",
+      "totalReward": "Kokonaispalkinto",
+      "optimal": "Optimaalinen",
+      "regret": "Pahoittelut",
+      "exploit": "Hyödynnä",
+      "machine": "Kone",
+      "armsExplored": "Aseet tutkittu"
+    },
+    "navon": {
+      "globalBigLetter": "Maailmanlaajuinen (iso kirjain)",
+      "localSmallLetter": "Paikallinen (pieni kirjain)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Mikä SUURI kirjain?",
+      "whatSmallLetter": "Mikä PIENI kirjain?"
+    },
+    "negativePriming": {
+      "controlRt": "Ohjaa RT",
+      "nameTheRedShape": "Nimeä punainen muoto",
+      "negativePrimingRt": "Negatiivinen esikäsittely RT",
+      "positivePrimingRt": "Positive Priming RT",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "NP vaikutus",
+      "title": "Negatiivinen pohjustus",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Arviointiharha",
+      "linearityRsup2": "Lineaarisuus (R&sup2;)",
+      "meanAbsoluteError": "Keskimääräinen absoluuttinen virhe",
+      "tapTheLineToPlaceTheNumber": "Aseta numero napauttamalla riviä",
+      "title": "Numerorivi",
+      "meanError": "Mean Error",
+      "yourEstimate": "Sinun arviosi",
+      "correct": "oikein"
+    },
+    "oddOneOut": {
+      "colorTrials": "Värikokeita",
+      "shapeTrials": "Muotokokeet",
+      "shape": "Muoto",
+      "color": "Väri",
+      "timeout": "Aikakatkaisu",
+      "shapeDiffAccuracy": "Muotoero. tarkkuus",
+      "colorDiffAccuracy": "Väriero. tarkkuus",
+      "shapeDiffAvgRt": "Muotoero. keskim. RT",
+      "colorDiffAvgRt": "Väriero. keskim. RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Mihin suuntaan?",
+      "thresholdAngle": "Kynnyskulma",
+      "title": "Suuntautumissyrjintä",
+      "threshold": "Kynnys",
+      "counterCw": "CCW",
+      "clockwise": "Myötäpäivään"
+    },
+    "patternComparison": {
+      "differentTrials": "Erilaisia kokeita",
+      "sameTrials": "Samat koettelemukset",
+      "same": "Sama",
+      "different": "Erilainen"
+    },
+    "patternRecognition": {
+      "newPatterns": "Uusia kuvioita",
+      "oldPatterns": "Vanhat kuviot",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Tutki kuvioita huolellisesti",
+      "memorize": "Muista ({{current}}/{{total}})",
+      "getReady": "Valmistaudu...",
+      "testPhaseStarting": "Testivaihe alkaa..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Aivan oikein",
+      "meanAngularError": "Keskimääräinen kulmavirhe",
+      "withinTolerance": "Toleranssin sisällä",
+      "title": "Perspektiivin ottaminen",
+      "avgErr": "Keskim. virhe",
+      "youAreAt": "Olet osoitteessa",
+      "facing": "Vastakkain",
+      "pointTo": "Osoita"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Taaj. Kynnys",
+      "seq1": "Jakso 1",
+      "seq2": "Jakso 2",
+      "title": "Foneemin syrjintä",
+      "thresh": "Thresh",
+      "sameOrDifferent": "Sama vai erilainen?",
+      "same": "Sama",
+      "different": "Erilainen"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = myöhässä)",
+      "meanAbsoluteError": "Keskimääräinen absoluuttinen virhe",
+      "precisionSd": "Tarkkuus (SD)",
+      "title": "Ennuste liike",
+      "absError": "Abs. virhe",
+      "precision": "Tarkkuus",
+      "responded": "Vastasi",
+      "tapWhenReachesTarget": "TAP kun se saavuttaa tavoitteen"
+    },
+    "promem": {
+      "ongoingAccuracy": "Jatkuva tarkkuus",
+      "ongoingRt": "Jatkuva RT",
+      "pmHitRate": "PM osumaprosentti",
+      "pmRt": "PM RT",
+      "pmTargets": "PM tavoitteet",
+      "title": "Tuleva muisti",
+      "ongoing": "Meneillään",
+      "pmHits": "PM osumia",
+      "pmMisses": "PM Miss",
+      "living": "Eläminen",
+      "nonLiving": "Ei-elävä",
+      "redWordInstruction": "Punainen sana = paina"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Distractorin virheet",
+      "literalErrorRate": "Kirjaimellinen virheprosentti",
+      "literalErrors": "Kirjaimelliset virheet",
+      "title": "Sananlaskun tulkinta",
+      "literal": "Kirjaimellinen",
+      "litRate": "Lit. Rate",
+      "whatDoesThisMean": "Mitä tämä tarkoittaa?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Valmistaudu seuraamaan",
+      "meanTimeOnTarget": "Keskimääräinen tavoite",
+      "meanTrackingError": "Keskimääräinen seurantavirhe",
+      "placeYourFingerOnTheScreen": "Aseta sormesi näytölle",
+      "title": "Takaa-ajan seuranta",
+      "timeOnTarget": "Aika tavoitteessa",
+      "error": "Virhe",
+      "onTarget": "Kohteessa",
+      "avgError": "Keskim. virhe",
+      "improve": "Paranna",
+      "improvementT1VsT": "Parannus T1 vs T",
+      "errorLabel": "Virhe",
+      "followGreenTarget": "Seuraa vihreää tavoitetta"
+    },
+    "rapidNaming": {
+      "roundComplete": "Kierros valmis",
+      "totalErrors": "Virheet yhteensä",
+      "title": "Nopea nimeäminen",
+      "avgSpeed": "Keskim. nopeus",
+      "totalTime": "Kokonaisaika",
+      "round": "Pyöreä",
+      "getReady": "Valmistaudu!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Keskimääräinen ratkaisuaika",
+      "solved": "Ratkaistu",
+      "wrong": "Väärin",
+      "placeholder": "Sinun vastauksesi...",
+      "title": "Rebus palapelit",
+      "puzzles": "Palapelit",
+      "timeout": "Aikakatkaisu",
+      "submit": "Lähetä",
+      "answer": "Vastaa"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Keskimääräinen ratkaisuaika",
+      "solved": "Ratkaistu",
+      "placeholder": "Sinun vastauksesi...",
+      "title": "Etätyökumppanit",
+      "timeout": "Aikakatkaisu",
+      "submit": "Lähetä",
+      "answer": "Vastaa"
+    },
+    "reversalLearning": {
+      "adapt": "Sopeutua",
+      "loseshiftRate": "Lose-Shift Rate",
+      "score": "Pisteet:",
+      "winstayRate": "Win-pysymisprosentti",
+      "title": "Käänteinen oppiminen",
+      "rewards": "Palkinnot",
+      "reversals": "Käännökset",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Keskim. kokeiluja kriteeriin",
+      "pickACard": "Valitse kortti"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Laske 7 taaksepäin",
+      "reproduceThePatternFromMemory": "Toista kuvio muistista",
+      "title": "Reyn monimutkainen figuuri",
+      "copy": "Kopioi",
+      "recall": "Muista",
+      "retention": "Säilytys",
+      "trial": "Oikeudenkäynti",
+      "target": "Kohde",
+      "yourCopy": "Sinun kopiosi",
+      "submit": "Lähetä"
+    },
+    "rhythm": {
+      "avgTimingError": "Keskimääräinen ajoitusvirhe",
+      "bestTrialError": "Paras kokeiluvirhe",
+      "correctTrials": "Oikeat kokeet",
+      "worstTrialError": "Pahin kokeiluvirhe",
+      "watchRhythm": "Tarkkaile rytmiä",
+      "getReady": "Valmistaudu...",
+      "tapTheRhythm": "Napauta rytmiä!",
+      "tooFarOff": "Liian kaukana!",
+      "tapToReproduce": "Napauta kopioidaksesi",
+      "beats": "{{count}} voittaa",
+      "bestTrial": "Paras oikeudenkäynti",
+      "worstTrial": "Huonoin oikeudenkäynti",
+      "title": "Rytmi",
+      "msErr": "ms virhe"
+    },
+    "routePlanning": {
+      "time": "Aika",
+      "title": "Reitin suunnittelu",
+      "levels": "Tasot",
+      "completed": "Valmis",
+      "avgMoves": "Keskim. liikkuu",
+      "clear": "Selkeä",
+      "submit": "Lähetä",
+      "instructions": "Ohjeet"
+    },
+    "rvp": {
+      "detect357246468": "Havaitse: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Kohdesekvenssit",
+      "fa": "FA",
+      "hitRate": "Osumaprosentti",
+      "misses": "Miss",
+      "sequences": "Jaksot"
+    },
+    "sart": {
+      "commissionErrors": "komission virheet",
+      "omissionErrors": "Laiminlyöntivirheet",
+      "tapAllDigits": "Napauta kaikkia numeroita paitsi 3",
+      "except3": "Paitsi 3"
+    },
+    "sceneCrasher": {
+      "adds": "Lisää",
+      "studyTheScene": "Tutki kohtausta",
+      "swaps": "Swapit",
+      "tapTheNewchangedObject": "Napauta uutta/muutettua objektia"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Väärät lauseet",
+      "trueSentences": "Oikeita lauseita",
+      "byCategory": "Kategorian mukaan",
+      "title": "Lauseen vahvistus",
+      "trueRt": "Todellinen RT",
+      "true": "Totta",
+      "false": "Väärä",
+      "pressKey": "Paina"
+    },
+    "soundSweeps": {
+      "down": "Alas",
+      "downAccuracy": "Alhainen tarkkuus",
+      "durationThreshold": "Keston kynnys",
+      "up": "Ylös",
+      "upAccuracy": "Tarkkuus ylöspäin",
+      "title": "Äänipyyhkäisee",
+      "threshold": "Kynnys",
+      "upOrDown": "Ylös vai alas?"
+    },
+    "sourceMemory": {
+      "color": "Väri",
+      "colorRecall": "Värin muistaminen",
+      "frame": "Kehys",
+      "frameRecall": "Kehyksen muistaminen",
+      "getReadyForTheTest": "Valmistaudu testiin!",
+      "itemRecognition": "Kohteen tunnistus",
+      "positionRecall": "Aseman muistaminen",
+      "sourceAccuracy": "Lähteen tarkkuus",
+      "title": "Lähde Muisti",
+      "source": "lähde",
+      "position": "asema",
+      "word": "sana",
+      "wasThisWordShown": "Näytettiinkö tämä sana?",
+      "bottom": "Pohja",
+      "blue": "Sininen",
+      "orange": "Oranssi",
+      "circle": "Ympyrä",
+      "square": "Neliö"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Melukynnys",
+      "title": "Puhe melussa",
+      "noise": "Melu",
+      "whichWordWasIt": "Mikä sana se oli?"
+    },
+    "srtt": {
+      "learningEffect": "Oppimisvaikutus",
+      "learning": "Oppiminen",
+      "block": "Estä"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Mahdollisuuden taso",
+      "learningDetected": "Oppimista havaittu",
+      "testPhase": "Testivaihe",
+      "whichPairLooksMoreFamiliar": "Kumpi pari näyttää tutummalta?",
+      "title": "Tilastollinen oppiminen",
+      "learning": "Oppiminen",
+      "watchTheShapes": "Katso muotoja"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Uskomuksen harhavaikutus",
+      "conclusion": "Johtopäätös",
+      "premise1": "Lähtökohta 1",
+      "premise2": "Lähtökohta 2",
+      "logicalValidityQuestion": "Onko tämä loogisesti pätevää?",
+      "valid": "Voimassa",
+      "invalid": "Virheellinen"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Tarkkuus puuttuu",
+      "presentAccuracy": "Nykyinen tarkkuus",
+      "title": "Symbolihaku",
+      "present": "läsnä",
+      "absent": "Poissa",
+      "targets": "Tavoitteet",
+      "searchGroup": "Etsi ryhmä"
+    },
+    "syncContinuation": {
+      "async": "Asynk",
+      "asynchrony": "Asynkronisuus",
+      "drift": "Drift",
+      "cv": "CV",
+      "title": "Synkronointi-jatkoa",
+      "meanCv": "Keskimääräinen CV",
+      "tempos": "Tempot",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Valmistaudu...",
+      "nextTempo": "Seuraava tempo..."
+    },
+    "taskJuggling": {
+      "correctResets": "Oikeat nollaukset",
+      "duration": "Kesto",
+      "missedCounters": "Jääneet laskurit",
+      "prematureResets": "Ennenaikaiset nollaukset",
+      "totalEvents": "Tapahtumat yhteensä",
+      "tooEarly": "Liian aikaista!",
+      "missed": "Jäin kaipaamaan!",
+      "title": "Tehtävän jongleerausta",
+      "premature": "Ennenaikaista",
+      "counter": "Laskuri",
+      "tapCounterInstruction": "Napauta jokaista laskuria, kun se saavuttaa kynnysarvonsa. Älä anna minkään vuotaa yli!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Bisection Point (PSE)",
+      "curveSteepness": "Käyrän jyrkkyys",
+      "idealMidpoint": "Ihanteellinen keskipiste",
+      "pse": "PSE",
+      "title": "Ajallinen puolittaminen",
+      "steepness": "Jyrkkyys",
+      "shortOrLong": "Lyhyt vai pitkä?",
+      "trainingPhase": "Koulutusvaihe",
+      "short": "Lyhyt",
+      "long": "Pitkä"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Gradientin leveys",
+      "rememberThisDuration": "Muista tämä kesto",
+      "width": "Leveys",
+      "standard": "STANDARDI",
+      "title": "Ajallinen yleistys",
+      "hitRate": "Osumaprosentti",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Osumaprosentti (tunnista standardi)",
+      "sameDuration": "Sama kesto?",
+      "trainingPhase": "Koulutusvaihe",
+      "same": "Sama",
+      "different": "Erilainen"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Kynnys SOA",
+      "title": "Tekstuurien erottelu",
+      "threshold": "Kynnys"
+    },
+    "timePromem": {
+      "avgTimingError": "Keskimääräinen ajoitusvirhe",
+      "clockChecks": "Kellon tarkistukset",
+      "ongoingAccuracy": "Jatkuva tarkkuus",
+      "ongoingTrials": "Jatkuvat kokeet",
+      "totalPmPresses": "PM-painos yhteensä",
+      "pmAccuracy": "PM tarkkuus",
+      "pmMisses": "PM puuttuu",
+      "title": "Tuleva aika",
+      "ongoing": "Meneillään",
+      "pmHitsLabel": "PM osuu",
+      "timingErr": "Ajoitus Err",
+      "pmHitsExpected": "PM osumia / odotettavissa",
+      "pmPresses": "PM painaa",
+      "checkClock": "Tarkista kello",
+      "thirtySecMark": "30-luvun merkki"
+    },
+    "toj": {
+      "meanResponseTime": "Keskimääräinen vasteaika",
+      "temporalResolution": "Ajallinen resoluutio",
+      "title": "Temporal Order -tuomio",
+      "threshold": "Kynnys",
+      "whichCameFirst": "Kumpi tuli ensin?",
+      "leftFirst": "Vasen ensin",
+      "rightFirst": "Oikea ensin"
+    },
+    "tower": {
+      "budget": "Budjetti",
+      "challenge": "Haaste",
+      "challengeClassic": "Klassinen",
+      "challengeExpert": "Asiantuntija",
+      "challengeMemory": "Muisti",
+      "challengePrecision": "Tarkkuus",
+      "dragDiscAriaLabel": "Vedä ylin levy tapista {{peg}}",
+      "goal": "Maali",
+      "goalHiddenStatus": "Tavoite piilotettu. Käytä Reveal näyttääksesi sen lyhyesti.",
+      "goalRevealedMessage": "Maali paljastettiin 3 sekuntia.",
+      "hint": "Vihje",
+      "hintDescription": "Näytä paras seuraava liike",
+      "hintMessage": "Vihje: siirrä ylälevy tapista {{fromPeg}} tappiin {{toPeg}}.",
+      "hiddenGoalDescription": "Maali on piilossa pelin aikana. Käytä Revealia, kun tarvitset lyhyen päivityksen.",
+      "hiddenGoalTitle": "Muistin haaste",
+      "invalid": "Virheellinen",
+      "moves": "Liikkuu",
+      "optimal": "Optimaalinen",
+      "pegFullMessage": "Se naaras on täynnä.",
+      "previewMemoryCountdown": "Muista tavoite. Alkaa {{seconds}}s kuluttua.",
+      "previewPlanCountdown": "Suunnittele {{moves}}-move-ratkaisu. Alkaa {{seconds}}s kuluttua.",
+      "reset": "Nollaa",
+      "resetDescription": "Aloita tämä palapeli uudelleen",
+      "resetMessage": "Palapelin nollaus.",
+      "reveal": "Paljasta",
+      "revealDescription": "Paljasta piilotettu tavoite",
+      "statusOptimalSolve": "Optimaalinen ratkaisu. Pisteet {{score}}.",
+      "statusSolvedScore": "Ratkaistu {{moves}} siirrolla (+{{extraMoves}}). Pisteet {{score}}.",
+      "undo": "Kumoa",
+      "undoDescription": "Peruuta viimeinen liike",
+      "undoneMessage": "Viimeinen siirto kumottu.",
+      "yourPegs": "Sinun tappejasi"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Oikeat toimitukset",
+      "trainsLost": "Junat kadonneet",
+      "wrongStation": "Väärä asema",
+      "title": "Ajatusjuna",
+      "trains": "Junat",
+      "missed": "Jäi väliin",
+      "scoreLabel": "Pisteet",
+      "instructions": "Ohjeet"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Käytettyjen kysymysten keskiarvo",
+      "title": "Kaksikymmentä kysymystä",
+      "avgQuestions": "Keskim. kysymyksiä",
+      "rounds": "Pyöreät",
+      "efficiency": "Tehokkuus",
+      "avgQuestionsCorrectOnly": "Keskim. kysymykset (vain oikeat)",
+      "questionsLabel": "Kysymyksiä",
+      "remaining": "Jäljellä",
+      "readyToGuess": "Olen valmis arvaamaan!",
+      "tapTheTarget": "Napauta kohdetta, jonka luulet olevan kohteena!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Hyödyllinen näkökenttä",
+      "visualNoiseMask": "Visuaalinen melun maski",
+      "whatWasInTheCenter": "Mikä oli keskustassa?",
+      "whereWasTheTarget": "Missä kohde oli?",
+      "avgThreshold": "Keskim. kynnys",
+      "speed": "Nopeus",
+      "accuracy": "Tarkkuus",
+      "central": "Keski",
+      "peripheral": "Oheislaite",
+      "overall": "Kaiken kaikkiaan",
+      "block": "Estä",
+      "trials": "Kokeilut",
+      "start": "Aloita",
+      "focus": "Keskity",
+      "threshold": "Kynnys",
+      "stimulus": "Stimulus",
+      "respondFromMemory": "Vastaa muistista",
+      "truck": "Kuorma-auto",
+      "choosePeripheralLocation": "Valitse reunapaikka",
+      "currentBlock": "Estä {{n}}",
+      "exposure": "Altistuminen"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Sanat, jotka alkavat kirjaimella {{letter}}",
+      "title": "Sanallinen sujuvuus",
+      "totalWords": "Sanoja yhteensä",
+      "duplicates": "Kopiot",
+      "letter": "Kirje",
+      "round": "Pyöreä",
+      "roundComplete": "Kierros valmis",
+      "nextRound": "Seuraava kierros",
+      "middotRound": "· Pyöreä"
+    },
+    "vernierAcuity": {
+      "whichSide": "Kummalle puolelle?",
+      "title": "Vernier Acuity",
+      "leftOffset": "Vasen offset",
+      "rightOffset": "Oikea offset",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Optimaalinen strategia",
+      "correct": "Korjata!",
+      "wrong": "Väärin",
+      "title": "Sääennuste",
+      "optimal": "Optimaalinen",
+      "learningCurve": "Oppimiskäyrä",
+      "predictTheWeather": "Ennusta sää",
+      "rain": "Sade"
+    },
+    "wordChain": {
+      "avgResponseTime": "Keskimääräinen vasteaika",
+      "chain": "Ketju",
+      "longestChain": "Pisin ketju",
+      "totalCorrect": "Täysin oikein",
+      "totalWords": "Sanoja yhteensä",
+      "words": "Sanat",
+      "title": "Sanaketju",
+      "longest": "Pisin",
+      "avgRt": "Keskim. RT",
+      "endsWith": "päättyy",
+      "chainLabel": "Ketju",
+      "bestLabel": "Paras"
+    },
+    "wordFlow": {
+      "avgWordLength": "Sanan keskimääräinen pituus",
+      "correct": "oikein",
+      "invalidWords": "Virheelliset sanat",
+      "totalWordsSelected": "Valitut sanat yhteensä",
+      "validWords": "Päteviä sanoja",
+      "wordsPerMinute": "Sanoja minuutissa",
+      "wrong": "Väärin",
+      "seeResults": "Katso tulokset",
+      "nextRound": "Seuraava kierros ({{current}}/{{total}})",
+      "title": "Sanallinen sujuvuus",
+      "validWordsLabel": "Päteviä sanoja",
+      "wordsPerMinLabel": "Sanat/min",
+      "avgLengthLabel": "Keskim. pituus",
+      "invalidLabel": "Virheellinen",
+      "round": "Pyöreä",
+      "selectWordsBelongTo": "Valitse sanat, jotka kuuluvat",
+      "selected": "Valittu"
+    },
+    "wordList": {
+      "avgRtCorrect": "Keskim. RT (oikein)",
+      "primacyEffect": "Ensisijaisuusvaikutus",
+      "recencyEffect": "Äskettäinen vaikutus",
+      "studyPhaseRememberEachWord": "Opiskeluvaihe – muista jokainen sana",
+      "wordsRecalled": "Sanat muistetaan",
+      "title": "Sanaluettelo",
+      "serialPositionCurve": "Sarjasijaintikäyrä",
+      "wasWordInList": "Oliko tämä sana luettelossa?",
+      "seenBefore": "Ennen nähty",
+      "newWord": "Uusi"
+    },
+    "speedSort": {
+      "switchAccuracy": "Kytkimen tarkkuus",
+      "switchTrials": "Vaihda kokeiluja",
+      "sortByColor": "Lajittele VÄRI",
+      "sortByShape": "Lajittele SHAPE",
+      "sortByNumber": "Lajittele NUMBER",
+      "ruleChanged": "Sääntö muutettu!",
+      "binRed": "Punainen",
+      "binBlue": "Sininen",
+      "binGreen": "Vihreä",
+      "binYellow": "Keltainen",
+      "binCircle": "Ympyrä",
+      "binSquare": "Neliö",
+      "binTriangle": "Kolmio",
+      "binStar": "Tähti",
+      "title": "Nopeus lajittelu",
+      "switch": "Kytkimet"
+    },
+    "reflex": {
+      "target": "Kohde",
+      "lure": "Viehe",
+      "tooSlow": "Liian hidas!",
+      "wrongTarget": "Väärä kohde!",
+      "tapTargets": "Napauta vihreitä ympyröitä!",
+      "hits": "Osumat",
+      "misses": "Miss",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Muista juoksusumma...",
+      "title": "Ketjun laskenta",
+      "stepChains": "{{len}}-askelketjut",
+      "start": "Aloita",
+      "step": "Vaihe",
+      "whatIsTheResult": "Mikä on tulos?"
+    },
+    "alternateUses": {
+      "placeholder": "Kirjoita käyttö...",
+      "title": "Vaihtoehtoiset käyttötavat",
+      "totalUses": "Käyttö yhteensä",
+      "perObject": "Objektia kohden",
+      "rounds": "Pyöreät",
+      "bestObject": "Paras kohde",
+      "bestCount": "Paras laskelma",
+      "noUsesSubmitted": "Käyttötapoja ei ole lähetetty",
+      "timesUp": "Aika on ohi!",
+      "nextObject": "Seuraava objekti ({{object}})",
+      "listCreativeUses": "Luettelo tämän objektin luovista käyttötavoista"
+    },
+    "anagram": {
+      "placeholder": "Kirjoita sana...",
+      "title": "Anagrammi",
+      "avgSolve": "Keskim. ratkaista",
+      "letterWords": "{{len}}-kirjaimia sanoja",
+      "submit": "Lähetä"
+    },
+    "facialEmotion": {
+      "happy": "onnellinen",
+      "sad": "Surullinen",
+      "angry": "Vihainen",
+      "fearful": "Pelottava",
+      "disgusted": "Inhottu",
+      "surprised": "yllättynyt",
+      "lc": "LC",
+      "title": "Kasvojen tunteiden tunnistus",
+      "topConfusions": "Huippusekaannuksia"
+    },
+    "numberSeries": {
+      "easy": "Helppoa",
+      "hard": "Kovaa"
+    },
+    "chainRecall": {
+      "round": "Pyöreä",
+      "title": "Ketjun muistaminen",
+      "chain": "Ketju",
+      "placeholder": "Paikkamerkki"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotionaalinen Go/No-Go",
+      "block1CommissionErrors": "Lohkon 1 välitysvirheet",
+      "block2CommissionErrors": "Lohkon 2 välitysvirheitä",
+      "goHappy": "Mene = onnellinen",
+      "goSad": "Mene = Surullinen",
+      "block": "Estä",
+      "go": "Mene"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop vaikutus",
+      "title": "Väri Rush",
+      "congShort": "Cong.",
+      "incongShort": "Inong.",
+      "congruentAccuracy": "Yhdenmukainen tarkkuus",
+      "incongruentAccuracy": "Epäjohdonmukainen tarkkuus"
+    },
+    "mirror": {
+      "avgCorrectCells": "Oikeat solut (keskimäär.)",
+      "symmetryType": "Symmetrinen tyyppi",
+      "title": "Peili"
+    },
+    "rhythmTap": {
+      "correctTrials": "Oikeat kokeet",
+      "avgRhythmScore": "Keskim. rytmipisteet",
+      "bestTrialScore": "Paras koetulos",
+      "worstTrialScore": "Huonoin koetulos",
+      "level": "Taso",
+      "rhythm": "Rytmi",
+      "bestTrial": "Paras oikeudenkäynti",
+      "worstTrial": "Huonoin oikeudenkäynti"
+    },
+    "vocalProsody": {
+      "questioning": "Kyseenalaistaminen"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Kerro",
+      "add": "Lisää",
+      "subtract": "Vähennä",
+      "title": "Aritmeettinen nopeus",
+      "score": "Pisteet",
+      "solved": "Ratkaistu",
+      "missed": "Jäi väliin"
+    },
+    "puzzle": {
+      "avgSolveTime": "Keskimääräinen ratkaisuaika",
+      "totalMoves": "Liikkeitä yhteensä",
+      "totalErrors": "Virheitä yhteensä",
+      "gridSize": "Ruudukon koko",
+      "maxGridReached": "Enimmäisruudukko saavutettu",
+      "maxLevelReached": "Maksimitaso saavutettu",
+      "maxNodesReached": "Solmujen enimmäismäärä saavutettu",
+      "puzzleDetails": "Palapelin yksityiskohdat",
+      "roundDetails": "Pyöreät yksityiskohdat",
+      "solved": "Ratkaistu!",
+      "undo": "Kumoa",
+      "reset": "Nollaa",
+      "check": "Tarkista",
+      "moves": "Liikkuu",
+      "time": "Aika",
+      "level": "Taso",
+      "errors": "Virheet",
+      "score": "Pisteet",
+      "grid": "Ruudukko",
+      "crossings": "Ylitykset",
+      "pearls": "Helmiä",
+      "clues": "Vihjeitä",
+      "region": "Alue",
+      "filled": "Täytetty",
+      "cells": "Solut",
+      "undosLeft": "Kumouksia jäljellä",
+      "gems": "Jalokivet",
+      "connected": "Yhdistetty",
+      "slides": "Diat",
+      "progress": "Edistyminen",
+      "rotations": "Pyörityksiä",
+      "puzzle": "Palapeli",
+      "uncovered": "Peittämätön",
+      "colored": "Värillinen",
+      "violations": "Rikkomukset",
+      "blacked": "Mustattu",
+      "empty": "Tyhjä",
+      "remaining": "Jäljellä",
+      "pairs": "Parit",
+      "flips": "Flips",
+      "found": "Löytyi",
+      "balls": "Pallot",
+      "guesses": "Arvaa",
+      "original": "Alkuperäinen",
+      "findDifferences": "Etsi eroja",
+      "totalDrags": "Vedot yhteensä",
+      "totalUndos": "Kumoukset yhteensä",
+      "totalEdgesDrawn": "Piirretyt reunat yhteensä",
+      "totalLasers": "Kaikki laserit",
+      "totalSlides": "Diat yhteensä",
+      "totalRotations": "Kaikki kierrokset",
+      "totalRectangles": "Suorakulmioita yhteensä",
+      "totalScore": "Kokonaispisteet",
+      "avgTime": "Keskimääräinen aika",
+      "cellsCleared": "Solut tyhjennetty",
+      "totalDiffsFound": "Kaikki erot löydetty",
+      "gemsCollected": "Jalokivet kerätty",
+      "pushBoxesOntoTargets": "Työnnä kaikki laatikot kohteiden päälle",
+      "fireLasersMarkBalls": "Ammu laserit reunoista ja merkitse pallon paikat",
+      "revealingAnswer": "Paljastava vastaus...",
+      "checkAnswer": "Tarkista vastaus",
+      "pickNumberBelow": "Valitse numero alta",
+      "tapCellToAssign": "Napauta solua määrittääksesi numeron",
+      "tapEdgesToPlaceWalls": "Aseta seinät napauttamalla reunoja. Jaa K:n alueisiin.",
+      "ghosts": "Kummitus",
+      "vampires": "Vampyyrit",
+      "zombies": "Zombeja",
+      "dominoes": "Dominot",
+      "islands": "saaret",
+      "pegsLeft": "Tapit vasemmalla",
+      "bestRemaining": "Paras jäljellä",
+      "puzzlesSolved": "Palapelit ratkaistu",
+      "flooded": "Tulva",
+      "edges": "reunat",
+      "totalPlacements": "Sijoittelut yhteensä",
+      "totalRemovals": "Poistot yhteensä",
+      "maxTileReached": "Laattojen enimmäismäärä saavutettu",
+      "target": "Kohde",
+      "placed": "Sijoitettu",
+      "totalGuesses": "Yhteensä arvauksia",
+      "guessesLeft": "Arvauksia jäi",
+      "difficulty": "Vaikeus"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Palapelit",
+      "maxLevel": "Max taso"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "errors": "Virheet",
+      "avgTime": "Keskim. aika",
+      "erase": "Poista"
+    },
+    "blackbox": {
+      "title": "Musta laatikko",
+      "puzzles": "Palapelit",
+      "lasers": "Laserit",
+      "avgTime": "Keskim. aika"
+    },
+    "designFluency": {
+      "title": "Suunnittelun sujuvuus",
+      "uniqueDesigns": "Ainutlaatuisia malleja",
+      "duplicates": "Kopiot",
+      "round": "Pyöreä",
+      "roundComplete": "Kierros valmis",
+      "youCreatedDesigns": "Loit {{count}} mallia",
+      "startRound": "Aloita kierros",
+      "instructions": "Ohjeet",
+      "designs": "Suunnittelut",
+      "clear": "Selkeä",
+      "addDesign": "Lisää"
+    },
+    "signpost": {
+      "title": "Tienviitta",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "avgTime": "Keskim. aika",
+      "maxGrid": "Max ruudukko"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Taso",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "undos": "Kumoa",
+      "puzzle": "Palapeli"
+    },
+    "numericalStroop": {
+      "left": "Vasen",
+      "right": "Oikein"
+    },
+    "biologicalMotion": {
+      "title": "Biologinen liike",
+      "noiseDots": "melupisteitä",
+      "whichDirection": "Mihin suuntaan?",
+      "left": "Vasen",
+      "right": "Oikein"
+    },
+    "inertia": {
+      "title": "Inertia",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "gems": "Jalokivet",
+      "moves": "Liikkuu"
+    },
+    "waterLevel": {
+      "title": "Veden taso",
+      "error": "Virhe",
+      "tilt": "Kallistus",
+      "waterLine": "Vesijohto?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxGrid": "Max ruudukko"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "errors": "Virheet",
+      "avgTime": "Keskim. aika",
+      "erase": "Poista"
+    },
+    "rectangles": {
+      "title": "Suorakulmiot",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "rectanglesCount": "Suorakulmiot",
+      "maxGrid": "Max ruudukko",
+      "cancelSelection": "Peruuta valinta"
+    },
+    "filling": {
+      "title": "Täyttö",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "avgTime": "Keskim. aika",
+      "grid": "Ruudukko"
+    },
+    "spacedRetrieval": {
+      "title": "Väliaikainen haku",
+      "studyPair": "Tutki tätä paria",
+      "waitAndSolve": "Odota… ja ratkaise sitten",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Intervalli: mitkä parit?"
+    },
+    "prototypeDistortion": {
+      "title": "Prototyypin vääristymä",
+      "studyPhase": "Opintojakso",
+      "testPhase": "Testivaihe",
+      "yesBelongs": "Kyllä - kuuluu",
+      "noRandom": "Ei - Satunnainen"
+    },
+    "motionCoherence": {
+      "title": "Liikkeen johdonmukaisuus",
+      "threshold": "Kynnys",
+      "coherence": "Johdonmukaisuus",
+      "whichDirection": "Mihin suuntaan?"
+    },
+    "cube": {
+      "title": "Kuutio",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxLevel": "Max taso",
+      "cubeFaces": "Kuution kasvot",
+      "moveUp": "Ylös",
+      "moveLeft": "Vasen",
+      "moveDown": "Alas",
+      "moveRight": "Oikein"
+    },
+    "sameGame": {
+      "title": "Sama peli",
+      "score": "Pisteet",
+      "cleared": "Tyhjennetty",
+      "cells": "Solut",
+      "accuracy": "Tarkkuus"
+    },
+    "crossModalMatching": {
+      "title": "Cross-Modal Matching",
+      "chance": "Mahdollisuus",
+      "whichPatternMatchesRhythm": "Mikä kuvio sopii rytmiin?"
+    },
+    "mosaic": {
+      "title": "Mosaiikki",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxGrid": "Max ruudukko"
+    },
+    "spotDiff": {
+      "title": "Huomaa ero",
+      "level": "Taso",
+      "grid": "Ruudukko",
+      "accuracy": "Tarkkuus",
+      "perfect": "Täydellinen",
+      "avgTime": "Keskim. aika",
+      "found": "Löytyi"
+    },
+    "lightsOut": {
+      "title": "Valot pois",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxGrid": "Max ruudukko"
+    },
+    "pipeline": {
+      "title": "Putkilinja",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "rotations": "Pyörityksiä",
+      "avgTime": "Keskim. aika"
+    },
+    "tracks": {
+      "title": "Kappaleet",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "errors": "Virheet",
+      "avgTime": "Keskim. aika"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "slides": "Diat",
+      "maxGrid": "Max ruudukko"
+    },
+    "cognitiveBias": {
+      "title": "Kognitiivinen bias koulutus",
+      "biasResistance": "Bias-vastus",
+      "biased": "Puolueellinen",
+      "continue": "Jatka"
+    },
+    "empathicAccuracy": {
+      "title": "Empaattinen tarkkuus",
+      "emotionId": "Tunne",
+      "avgRatingError": "Keskim. luokitusvirhe",
+      "scenarios": "Skenaariot",
+      "perfect": "Täydellinen",
+      "rating": "Luokitus",
+      "howDoesCharacterFeel": "Miltä hahmosta tuntuu?",
+      "rateIntensity": "Arvioi intensiteetti",
+      "whatEmotion": "Mikä tunne?",
+      "yourRating": "Sinun arviosi",
+      "correct": "oikein",
+      "emotion": "Tunne"
+    },
+    "guess": {
+      "title": "Mastermind",
+      "solved": "Ratkaistu",
+      "guesses": "Arvaa"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxLevel": "Max taso"
+    },
+    "magnets": {
+      "title": "Magneetit",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxLevel": "Max taso"
+    },
+    "tangram": {
+      "placeAll": "Aseta kaikki osat",
+      "solved": "Ratkaistu!",
+      "notRight": "Ei aivan oikein",
+      "title": "Tangram",
+      "level": "Taso",
+      "puzzles": "Palapelit",
+      "placements": "Sijoittelut",
+      "removals": "Poistot",
+      "puzzleNumber": "Palapeli {{n}}",
+      "pieces": "Kappaleita",
+      "targetCells": "Kaapeli",
+      "dragHint": "Vedä tai aseta pala ruudukolle",
+      "selectHint": "Valitse pala",
+      "rotate": "Tourner",
+      "undo": "Anuler",
+      "check": "Tarkista"
+    },
+    "galaxies": {
+      "title": "Galaksit"
+    },
+    "flood": {
+      "title": "Tulva"
+    },
+    "pegs": {
+      "title": "Tapit",
+      "bestPegs": "Parhaat tapit"
+    },
+    "auditoryFigureGround": {
+      "title": "Kuulohahmo-maa",
+      "patternPresent": "Malli läsnä?",
+      "pattern": "kuvio",
+      "noPattern": "Ei kuviota"
+    },
+    "selfOrderedPointing": {
+      "title": "Itse tilattu osoitin",
+      "maxSpan": "Max jänneväli",
+      "errors": "Virheet",
+      "round": "Pyöreä",
+      "setOf": "Sarja {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Peilin jäljitys",
+      "totalErrors": "Virheitä yhteensä",
+      "avgTime": "Keskim. aika",
+      "shapes": "Muodot",
+      "perfect": "Täydellinen",
+      "improvement": "Parantaminen",
+      "errorsMiddot": "virheet ·",
+      "shape": "Muoto",
+      "errors": "Virheet",
+      "xIsMirrored": "X on peilattu!"
+    },
+    "clockDrawing": {
+      "title": "Kellon piirustus",
+      "avgError": "Keskim. virhe",
+      "setTo": "Aseta",
+      "submit": "Lähetä"
+    },
+    "cognitiveMap": {
+      "title": "Kognitiivinen kartta",
+      "explore": "Tutki",
+      "sRemaining": "S Jäljellä",
+      "from": "From",
+      "whichDirectionIs": "Kumpi suunta on"
+    },
+    "sixteen": {
+      "title": "Kuusitoista"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Sytytä"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Max laatta",
+      "moves": "Liikkuu",
+      "max": "Max"
+    },
+    "bridges": {
+      "title": "Sillat",
+      "puzzles": "Palapelit",
+      "maxLevel": "Max taso",
+      "level": "Taso"
+    },
+    "net": {
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxGrid": "Max ruudukko"
+    },
+    "flip": {
+      "title": "Käännä"
+    },
+    "range": {
+      "title": "Alue"
+    },
+    "slant": {
+      "title": "Viistot"
+    },
+    "towers": {
+      "title": "Tornit",
+      "puzzles": "Palapelit",
+      "avgTime": "Keskim. aika",
+      "erase": "Poista"
+    },
+    "pearl": {
+      "title": "Helmi",
+      "edges": "reunat"
+    },
+    "mapColoring": {
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "moves": "Liikkuu",
+      "maxLevel": "Max taso"
+    },
+    "singles": {
+      "title": "Sinkkuja"
+    },
+    "nonogram": {
+      "title": "Ei-grammi"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "Tarkkuus",
+      "puzzles": "Palapelit",
+      "avgTime": "Keskim. aika"
+    },
+    "untangle": {
+      "title": "Selvittää",
+      "drags": "Vetää",
+      "maxNodes": "Max solmut"
+    },
+    "unruly": {
+      "title": "kuriton"
+    },
+    "fifteen": {
+      "title": "Viisitoista"
+    },
+    "tents": {
+      "title": "Teltat"
+    },
+    "mesker": {
+      "pen": "Kynä",
+      "stroke": "Aivohalvaus",
+      "penPressureHint": "Kirjoita tasaisella kynäpaineella"
+    },
+    "modality": {
+      "position": "asema",
+      "audio": "Ääni"
+    },
+    "validate": "Vahvista"
+  },
+  "trace": {
+    "instructions": "Pyyhkäise N-taka-asentoon. Kaksoisnapauta, jos sijainti on sama.",
+    "hint": {
+      "validated": "Vahvistettu",
+      "draw": "Piirrä kirjain • Vahvista napauttamalla",
+      "drawWithColor": "Piirrä kirjain • Valitse väri • Vahvista napauttamalla",
+      "type": "Kirjoita kirjain • Vahvista Enter",
+      "typeWithColor": "Kirjoita kirjain • Valitse väri • Vahvista Enter",
+      "typeResult": "Kirjoita tulos • Vahvista painamalla Enter",
+      "writeResult": "Kirjoita tulos • Vahvista napauttamalla"
+    },
+    "keyboard": {
+      "letterInput": "Kirje",
+      "numberInput": "Numero"
+    },
+    "arithmetic": {
+      "cueHint": "Muista 2 numeroa",
+      "refresh": "Uusi"
+    },
+    "hintPosition": "Missä ärsyke {{n}} kääntyi sitten?",
+    "hintN0": "Ilmoita nykyinen ärsyke",
+    "warmupHint": "Muista paikat. Vastausta ei tarvita.",
+    "hintDraw": "Piirrä kirjain • Vahvista napauttamalla",
+    "hintDrawWithColor": "Piirrä kirjain • Valitse väri • Vahvista napauttamalla",
+    "hintWriteResult": "Kirjoita tulos • Vahvista napauttamalla",
+    "guide": {
+      "swipeNormal": "Pyyhkäise viimeisestä paikasta (N-0) kohtaan {{n}} askelta sitten (N-{{n}}). Kaksoisnapauta, jos sijainti on sama.",
+      "swipeSequential": "Pyyhkäise vaihe vaiheelta kohdasta N-0 kohtaan N-{{n}} kulkien jokaisen väliasennon läpi. Kaksoisnapauta, jos sijainti on sama.",
+      "swipeDynamic": "Pyyhkäise näytön sääntöä noudattaen. Kaksoisnapauta, jos sijainti on sama.",
+      "tapN0": "Napauta nykyistä sijaintia.",
+      "warmup": "Muista paikat – vastausta ei tarvita.",
+      "writeDraw": "Piirrä {{n}} askelta sitten kuultu kirjain • Vahvista napauttamalla",
+      "writeDrawColor": "Piirrä {{n}} askelta sitten kuultu kirjain • Valitse sen väri • Vahvista napauttamalla",
+      "writeType": "Kirjoita kuultu kirjain {{n}} askelta sitten • Vahvista painamalla Enter",
+      "writeTypeColor": "Kirjoita {{n}} askelta sitten kuultu kirjain • Valitse sen väri • Vahvista painamalla Enter",
+      "writeDrawN0": "Piirrä juuri kuulemasi kirjain • Vahvista napauttamalla",
+      "writeDrawColorN0": "Piirrä juuri kuulemasi kirjain • Valitse sen väri • Vahvista napauttamalla",
+      "writeTypeN0": "Kirjoita juuri kuulemasi kirjain • Vahvista painamalla",
+      "writeTypeColorN0": "Kirjoita juuri kuulemasi kirjain • Valitse sen väri • Vahvista painamalla Enter",
+      "writeResult": "Kirjoita tulos • Vahvista napauttamalla",
+      "validated": "Vahvistettu",
+      "holdMindful": "Pidä solua {{seconds}}s",
+      "swipeMindful": "Pyyhkäise {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Mukautuva ajoitus",
+      "inputKeyboard": "Näppäimistö",
+      "inputHandwriting": "Käsiala",
+      "writingInput": "Kirjaimet/numerot",
+      "section": {
+        "grid": "Ruudukko",
+        "input": "Syöte",
+        "rhythm": "Rytmi",
+        "interface": "Käyttöliittymä",
+        "interfaceNone": "Vakio",
+        "sound": "Ääni"
+      },
+      "isi": "Intervalli (ISI)",
+      "stimulusDuration": "Stimulin kesto",
+      "feedbackDuration": "Palautteen kesto",
+      "ruleDisplay": "Säännön kesto",
+      "blankInterval": "Tyhjä väli",
+      "showProgressBar": "Edistymispalkki",
+      "showInstructions": "Pelin sisäiset ohjeet",
+      "arithmeticInterference": "Aritmeettinen häiriö",
+      "fullMenu": "Täysi menu",
+      "gridStyle": "Ruudukkotyyli",
+      "gridStyleClassic": "Klassinen",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "Pyyhkäise {{seconds}}s",
+        "holdMindful": "Pidä solua {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Ele",
+        "holdDuration": "Pidä",
+        "writingDuration": "Kirjoittaminen"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Pidä",
+      "gestureDuration": "Ele",
+      "writingDuration": "Kirjoittaminen"
+    },
+    "image": "Muoto",
+    "digits": "Numerot",
+    "emotions": "Tunne",
+    "words": "sana",
+    "tones": "Sävy",
+    "spatial": "Suunta"
+  },
+  "replay": {
+    "title": "Istunnon toisto",
+    "play": "Pelaa",
+    "pause": "Tauko",
+    "restart": "Käynnistä uudelleen",
+    "speed": "Nopeus",
+    "loading": "Ladataan istuntoa...",
+    "unavailable": "Toisto ei ole käytettävissä tälle istunnolle",
+    "backToStats": "Takaisin tilastoihin",
+    "runStack": {
+      "original": "Alkuperäinen",
+      "correction": "Korjaus",
+      "delta": "Δ d'",
+      "inProgress": "Käynnissä",
+      "completed": "Valmis"
+    },
+    "abandon": "Hylkää",
+    "badge": "Toista",
+    "completionReport": {
+      "backToHome": "Takaisin",
+      "correctAgain": "Taas oikein",
+      "deltaVsOriginal": "vs alkuperäinen",
+      "deltaVsParent": "vs edellinen juoksu",
+      "falseAlarmsSkipped": "Virheiltä vältyttiin",
+      "missesCorrections": "Korjaukset",
+      "newFalseAlarms": "Uusia virheitä",
+      "replayAgain": "Toista",
+      "scoreLabel": "d' pisteet",
+      "title": "Korjaus valmis"
+    },
+    "controls": "Säätimet",
+    "correction": "Korjaus",
+    "finished": "Toiston loppu",
+    "home": "Kotiin",
+    "parseError": "Istuntoa ei voi lukea",
+    "tapSlotToPlace": "Aseta paikka napauttamalla paikkaa",
+    "timeline": "Aikajana",
+    "focusTimeline": {
+      "open": "Näytä aikajana",
+      "close": "Sulje aikajana",
+      "title": "N-takaisin aikajana",
+      "fillAll": "Täytä kaikki",
+      "fillCard": "Täytä kortti"
+    },
+    "hud": {
+      "counterDisplay": "Laskurin näyttö",
+      "toggleCounterDisplay": "Vaihtaa laskurin näyttöä"
+    },
+    "validate": "Vahvista"
+  },
+  "recovery": {
+    "title": "Istunto keskeytetty",
+    "description": "Istunto oli meneillään. Haluatko jatkaa?",
+    "mode": "tila",
+    "level": "Taso",
+    "progress": "Edistyminen",
+    "timeAgo": "Aika",
+    "resume": "Jatka istuntoa",
+    "startFresh": "Aloita tuoreesta",
+    "staleWarning": "Tämä istunto on vanha, ja sen jatkaminen voi olla haastavaa.",
+    "modes": {
+      "game": "Koulutus",
+      "activeTraining": "Aktiivinen koulutus",
+      "flowTraining": "Dual Place -koulutus",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dual Trace"
+    }
+  },
+  "rewards": {
+    "congratulations": "Onnittelut!",
+    "duration": "{{days}} päivää Premium",
+    "lifetimeLabel": "Elinikäinen pääsy",
+    "expiresAt": "Voimassa {{date}} asti",
+    "neverExpires": "Ei koskaan vanhene",
+    "continue": "Jatka",
+    "discovery": {
+      "name": "Discovery pass",
+      "description": "7 päivää Premium – Tutustu kaikkiin ominaisuuksiin"
+    },
+    "engagement": {
+      "name": "Kihlauspassi",
+      "description": "1 kuukauden palkkio – kurinalaisuudestasi on hyötyä"
+    },
+    "expert": {
+      "name": "Asiantuntijapassi",
+      "description": "3 kuukauden Premium - Olet todellinen harjoittaja"
+    },
+    "lifetime": {
+      "name": "Elinikäinen pääsy",
+      "description": "Premium forever – Olet hallinnut Neuroduaalin"
+    },
+    "xpRemaining": "XP jäljellä",
+    "permanentAccessUnlocked": "Pysyvä käyttöoikeus avattu",
+    "reachedTheTop": "Olet saavuttanut huipulle!"
+  },
+  "progression": {
+    "level": "Taso {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Seuraava taso",
+    "reached": "Saavutettu",
+    "inProgress": "Käynnissä"
+  },
+  "gridlock": {
+    "nextPuzzle": "Seuraava palapeli →"
+  }
+}

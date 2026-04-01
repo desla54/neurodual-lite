@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "Konsistensi",
+      "performance": "Prestasi",
+      "resilience": "Ketahanan",
+      "exploration": "Penerokaan",
+      "milestone": "Pencapaian",
+      "cognitive": "Kognitif"
+    },
+    "first_session": {
+      "name": "Neuron Terjaga",
+      "description": "Sesi pertama selesai."
+    },
+    "sessions_10": {
+      "name": "Tiang (Gangsa)",
+      "description": "10 sesi selesai."
+    },
+    "sessions_25": {
+      "name": "Tiang (Perak)",
+      "description": "25 sesi selesai."
+    },
+    "marathoner": {
+      "name": "Tiang (Emas)",
+      "description": "50 sesi selesai."
+    },
+    "streak_3": {
+      "name": "Ritual Permulaan",
+      "description": "Rentetan 3 hari."
+    },
+    "streak_7": {
+      "name": "Ritual Harian",
+      "description": "Rentetan 7 hari."
+    },
+    "streak_14": {
+      "name": "Tabiat Kukuh",
+      "description": "Rentetan 14 hari."
+    },
+    "streak_30": {
+      "name": "Disiplin Besi",
+      "description": "Rentetan 30 hari."
+    },
+    "early_bird": {
+      "name": "Si Awal",
+      "description": "5 hari berbeza dengan sesi sebelum 8 pagi."
+    },
+    "night_owl": {
+      "name": "Burung Hantu Malam",
+      "description": "5 hari berbeza dengan sesi selepas 10 malam."
+    },
+    "brain_n3": {
+      "name": "Otak Tajam",
+      "description": "Capai tahap N-3."
+    },
+    "brain_n4": {
+      "name": "Otak Kuat",
+      "description": "Capai tahap N-4."
+    },
+    "brain_n5": {
+      "name": "Otak Olimpik",
+      "description": "Capai tahap N-5."
+    },
+    "brain_n7": {
+      "name": "Elit Kognitif",
+      "description": "Capai tahap N-7."
+    },
+    "brain_n10": {
+      "name": "Manusia Super",
+      "description": "Capai tahap N-10."
+    },
+    "sniper": {
+      "name": "Penembak Tepat",
+      "description": "> 90% ketepatan pada N ≥ 2."
+    },
+    "accuracy_95": {
+      "name": "Ketepatan Pembedahan",
+      "description": "> 95% ketepatan pada N ≥ 2."
+    },
+    "accuracy_98": {
+      "name": "Laser",
+      "description": "> 98% ketepatan pada N ≥ 2."
+    },
+    "untouchable": {
+      "name": "Tidak Tersentuh",
+      "description": "Sesi sempurna (0 ralat) pada N ≥ 2."
+    },
+    "rt_500": {
+      "name": "Refleks Pantas",
+      "description": "Purata masa tindak balas < 500ms dengan ≥70% ketepatan."
+    },
+    "flash": {
+      "name": "Kilat",
+      "description": "Purata masa tindak balas < 400ms dengan ≥70% ketepatan."
+    },
+    "rt_300": {
+      "name": "Petir",
+      "description": "Purata masa tindak balas < 300ms dengan ≥70% ketepatan."
+    },
+    "consistent": {
+      "name": "Konsisten",
+      "description": "Sisihan piawai RT < 100ms (≥10 respons diperlukan)."
+    },
+    "dprime_master": {
+      "name": "Master d'",
+      "description": "d-prime > 3.0 dalam sesi."
+    },
+    "dprime_4": {
+      "name": "Pakar SDT",
+      "description": "d-prime > 4.0 dalam sesi."
+    },
+    "no_pause": {
+      "name": "Tanpa Gangguan",
+      "description": "5 sesi berturut-turut tanpa jeda dengan ≥75% ketepatan."
+    },
+    "steady_hands": {
+      "name": "Tangan Stabil",
+      "description": "Tiada input salah semasa sesi (≥80% ketepatan)."
+    },
+    "zen_master": {
+      "name": "Master Zen",
+      "description": "10 sesi tanpa berhenti."
+    },
+    "comeback_kid": {
+      "name": "Si Comeback",
+      "description": "Naik tahap selepas turun tahap."
+    },
+    "persistent": {
+      "name": "Gigih",
+      "description": "3 sesi pada hari yang sama selepas kegagalan."
+    },
+    "second_wind": {
+      "name": "Angin Kedua",
+      "description": "Tingkatkan d-prime antara separuh 1 dan 2 (d′ ≥ 2.0 diperlukan)."
+    },
+    "plateau_breaker": {
+      "name": "Pemecah Plato",
+      "description": "Maju selepas 10+ sesi pada tahap yang sama."
+    },
+    "no_surrender": {
+      "name": "Pantang Undur",
+      "description": "25 sesi tanpa berhenti."
+    },
+    "ironwill": {
+      "name": "Tekad Besi",
+      "description": "50 sesi tanpa berhenti."
+    },
+    "audiophile": {
+      "name": "Pencinta Audio",
+      "description": "Audio > 80% tetapi Visual < 70%."
+    },
+    "eagle_eye": {
+      "name": "Mata Helang",
+      "description": "Visual > 80% tetapi Audio < 70%."
+    },
+    "synchronized": {
+      "name": "Segerak",
+      "description": "Skor Audio dan Visual dalam lingkungan 5% (≥60% diperlukan)."
+    },
+    "dual_master": {
+      "name": "Dual Master",
+      "description": "Audio DAN Visual > 85% dalam sesi yang sama (≥6 perangkap/modaliti)."
+    },
+    "dual_elite": {
+      "name": "Dual Elite",
+      "description": "Audio DAN Visual > 90% dalam sesi yang sama pada N ≥ 3 (≥6 perangkap/modaliti)."
+    },
+    "centurion": {
+      "name": "Centurion",
+      "description": "100 sesi selesai."
+    },
+    "sessions_250": {
+      "name": "Lagenda (Zamrud)",
+      "description": "250 sesi selesai."
+    },
+    "sessions_500": {
+      "name": "Abadi (Berlian)",
+      "description": "500 sesi selesai."
+    },
+    "trials_500": {
+      "name": "Pengamal",
+      "description": "Jumlah 500 percubaan dimainkan."
+    },
+    "trials_1000": {
+      "name": "Terlatih",
+      "description": "Jumlah 1,000 percubaan dimainkan."
+    },
+    "trials_5000": {
+      "name": "Berpengalaman",
+      "description": "Jumlah 5,000 percubaan dimainkan."
+    },
+    "trials_10k": {
+      "name": "10,000 Percubaan",
+      "description": "Jumlah 10,000 percubaan dimainkan."
+    },
+    "trials_50k": {
+      "name": "Titan",
+      "description": "Jumlah 50,000 percubaan dimainkan."
+    },
+    "streak_90": {
+      "name": "Suku Tahun Sempurna",
+      "description": "Rentetan 90 hari."
+    },
+    "streak_365": {
+      "name": "Tahun Sempurna",
+      "description": "Rentetan 365 hari."
+    },
+    "veteran": {
+      "name": "Veteran",
+      "description": "1 tahun penggunaan."
+    },
+    "metronome": {
+      "name": "Metronom",
+      "description": "Varians RT < 50ms pada ≥20 percubaan (respons aktif diperlukan)."
+    },
+    "flow_state": {
+      "name": "Keadaan Anugerah",
+      "description": "Flow dikesan sepanjang sesi."
+    },
+    "sang_froid": {
+      "name": "Kepala Sejuk",
+      "description": "Tiada lata ralat selepas kesilapan (≥70% ketepatan)."
+    },
+    "imperturbable": {
+      "name": "Tidak Tergugat",
+      "description": "Sesi penuh tanpa hilang fokus (≥60% ketepatan)."
+    },
+    "comeback_strong": {
+      "name": "Comeback Kuat",
+      "description": "Pecahkan rekod d-prime selepas 3+ hari berehat (d′ ≥ 2.5)."
+    }
+  }
+}

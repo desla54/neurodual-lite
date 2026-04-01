@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Πώς αισθάνεσαι;",
+      "tired": "Κουρασμένος",
+      "normal": "Κανονικά",
+      "energized": "Γεμάτος ενέργεια"
+    },
+    "aria": {
+      "trialTimer": "Δοκιμαστικό χρονόμετρο",
+      "positionMatch": "Ταίριασμα θέσης",
+      "audioMatch": "Ταίριασμα ήχου",
+      "audioLetter": "Ηχητική επιστολή:",
+      "traceGrid": "Πλέγμα ιχνών"
+    },
+    "syncHud": {
+      "shortLabel": "ΣΥΓΧΡΟΝΙΣΜΟΣ",
+      "toggleTitle": "Εναλλαγή οθόνης συγχρονισμού",
+      "start": "έναρξη",
+      "end": "τέλος",
+      "pinLabel": "καρφίτσα",
+      "pinTitle": "Καρφίτσωμα στην οθόνη",
+      "inputLabel": "εισαγωγή",
+      "inputTitle": "Εναλλαγή προφίλ λανθάνοντος χρόνου εισαγωγής (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "επάνω",
+      "off": "εκτός λειτουργίας",
+      "hideLabel": "κρύψου",
+      "hideTitle": "Απόκρυψη (εκτός εάν syncHud=1 ή ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "ήχου",
+        "expected": "αναμενόμενο"
+      },
+      "labels": {
+        "trial": "δίκη",
+        "lagShow": "Καθυστέρηση εμφάνισης",
+        "lagHide": "Καθυστέρηση μασάζ",
+        "winErr": "νίκη λάθος",
+        "endRef": "τέλος αναφ",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "εισαγωγή σε εκκρεμότητα",
+        "inputSamples": "δείγματα εισόδου",
+        "touchSamples": "δείγματα αφής",
+        "mouseSamples": "δείγματα ποντικιού",
+        "keyboardSamples": "δείγματα πληκτρολογίου",
+        "latestMethod": "πιο πρόσφατη (μέθοδος)",
+        "latestModality": "τελευταία μέθοδος",
+        "audioCueMode": "ηχητικές ενδείξεις",
+        "audioCodec": "κωδικοποιητής"
+      },
+      "resetInputProfiler": "επαναφορά προφίλ εισόδου"
+    },
+    "hud": {
+      "resume": "Συνέχιση",
+      "pause": "Παύση",
+      "quit": "Έξοδος",
+      "restart": "Επανεκκίνηση",
+      "spaceToStart": "Πλήκτρο Space για έναρξη",
+      "settings": "Ρυθμίσεις",
+      "enterToAdvance": "Enter για προχώρηση",
+      "trial": "Δοκιμή",
+      "muteTexture": "Σίγαση ήχου φόντου"
+    },
+    "status": {
+      "paused": "Σε παύση"
+    },
+    "completed": "Ολοκληρωμένο",
+    "starting": {
+      "getReady": "Ετοιμάσου..."
+    },
+    "quitModal": {
+      "title": "Αποχώρηση από τη συνεδρία;",
+      "message": "Η πρόοδός σου δεν θα αποθηκευτεί.",
+      "confirm": "Έξοδος",
+      "cancel": "Συνέχεια",
+      "close": "Κλείσιμο"
+    },
+    "controls": {
+      "position": "Θέση",
+      "position2": "Θέση 2",
+      "position3": "Θέση 3",
+      "position4": "Θέση 4",
+      "visvis": "Οπτ. & n-οπτ.",
+      "visaudio": "Οπτ. & n-ήχος",
+      "audiovis": "Ήχος & n-vis",
+      "vis1": "Οπτ. 1",
+      "vis2": "Οπτ. 2",
+      "vis3": "Οπτ. 3",
+      "vis4": "Οπτ. 4",
+      "audio": "Ήχος",
+      "audio2": "Ήχος 2",
+      "color": "Χρώμα",
+      "arithmetic": "Αριθμητική",
+      "image": "Σχήμα"
+    },
+    "arithmetic": {
+      "answer": "Απάντηση",
+      "clear": "Καθαρισμός",
+      "hint": "Πληκτρολόγιο: 0–9 · '-' για το σύμβολο · '.' για δεκαδικά · Backspace για διαγραφή"
+    },
+    "navigation": {
+      "back": "Πίσω"
+    },
+    "xp": {
+      "title": "XP που κέρδισες",
+      "base": "Βάση (N-{{level}})",
+      "performance": "Απόδοση",
+      "accuracy": "Ακρίβεια",
+      "streakBonus": "Μπόνους σερί",
+      "dailyBonus": "Πρώτο της ημέρας",
+      "badgeBonus": "Σήματα",
+      "flowBonus": "Μπόνους διπλής θέσης",
+      "confidenceMultiplier": "Εμπιστοσύνη",
+      "dailyCapReached": "Ημερήσιο όριο XP",
+      "levelReached": "Το επίπεδο {{level}} έφτασε!"
+    },
+    "badges": {
+      "newUnlocked": "Νέα σήματα ξεκλειδώθηκαν"
+    },
+    "getReady": "Ετοιμάσου...",
+    "layoutEdit": {
+      "done": "Ολοκληρώθηκε",
+      "reset": "Επαναφορά",
+      "instructions": "Σύρετε ζώνες για αναδιάταξη. Αλλάξτε το μέγεθος χρησιμοποιώντας τις λαβές.",
+      "title": "Λειτουργία επεξεργασίας",
+      "cancel": "Ακύρωση",
+      "save": "Κλείδωμα",
+      "editLayout": "Επεξεργασία διάταξης"
+    },
+    "paused": "Σε παύση",
+    "pressEscapeToResume": "Πατήστε Escape για συνέχιση",
+    "settings": {
+      "editLayout": "Επεξεργασία διάταξης",
+      "gridAndButtons": "Πλέγμα & κουμπιά",
+      "swapPositionAudio": "Εναλλαγή θέσης / ήχου",
+      "title": "Ρυθμίσεις",
+      "quickHint": "Προσαρμόστε μερικές ρυθμίσεις χωρίς να φύγετε από το παιχνίδι.",
+      "quickUnavailable": "Δεν υπάρχουν ακόμη διαθέσιμες γρήγορες ρυθμίσεις για αυτήν τη λειτουργία."
+    },
+    "pinkNoiseInfo": "Ένας τόνος φόντου συνοδεύει κάθε ερέθισμα. Μπορείτε να το προσαρμόσετε ή να το απενεργοποιήσετε στις ρυθμίσεις ήχου.",
+    "pinkNoiseDismiss": "Συνέχεια",
+    "audioMode": "Λειτουργία ήχου",
+    "cogTask": {
+      "precision": "Ακρίβεια",
+      "avgRt": "Μέσο RT",
+      "avgRtShort": "Μέσο RT",
+      "trials": "Δοκιμές",
+      "correct": "Σωστό",
+      "errors": "Σφάλματα",
+      "effect": "Επίδραση",
+      "restart": "Επανεκκίνηση",
+      "home": "Αρχική",
+      "performance": "Απόδοση",
+      "trialDetail": "Λεπτομέρεια δοκιμής",
+      "setDetail": "Σετ λεπτομέρειας",
+      "roundDetail": "Στρογγυλή λεπτομέρεια",
+      "problemDetail": "Λεπτομέρεια προβλήματος",
+      "phaseDetail": "Λεπτομέρεια φάσης",
+      "feedbackCorrect": "Σωστό",
+      "feedbackIncorrect": "Λάθος",
+      "feedbackTimeout": "Πολύ αργά!",
+      "preparing": "Ετοιμάσου...",
+      "loading": "Φόρτωση...",
+      "left": "Αριστερά",
+      "right": "Δεξιά",
+      "up": "Πάνω",
+      "down": "Κάτω",
+      "congruent": "Σύμφωνο",
+      "incongruent": "Ασύμφωνο",
+      "congruencyEffect": "Επίδραση συνάφειας",
+      "maxSpan": "Μέγιστο εύρος",
+      "startingSpan": "Περιθώριο εκκίνησης",
+      "maxSpanReached": "Έφτασε το μέγιστο εύρος",
+      "longestStreak": "Το μεγαλύτερο σωστό σερί",
+      "series": "Σερί",
+      "avgResponseTime": "Μέσος χρόνος απόκρισης",
+      "recall": "Ανάκληση",
+      "expected": "Αναμενόμενο",
+      "submit": "Υποβολή",
+      "cancel": "Ακύρωση",
+      "clear": "Καθαρισμός",
+      "delete": "ΔΕΛ",
+      "true": "Σωστό",
+      "false": "Λάθος",
+      "target": "Στόχος",
+      "nonTarget": "Μη στόχος",
+      "distractor": "Αποσπαστής",
+      "same": "Ίδιο",
+      "different": "Διαφορετικό",
+      "identical": "Πανομοιότυπο",
+      "mirror": "Καθρέφτης",
+      "symmetric": "Συμμετρικό",
+      "asymmetric": "Ασύμμετρο",
+      "symShort": "Συμ.",
+      "present": "Παρόν",
+      "absent": "Απόν",
+      "noTrials": "Δεν ολοκληρώθηκαν δοκιμές.",
+      "noSets": "Δεν ολοκληρώθηκαν σετ.",
+      "noRounds": "Δεν ολοκληρώθηκαν γύροι.",
+      "noProblems": "Δεν ολοκληρώθηκαν προβλήματα.",
+      "noPhases": "Καμία φάση δεν ολοκληρώθηκε.",
+      "sets": "Σετ",
+      "rounds": "Γύροι",
+      "equations": "Εξισώσεις",
+      "sentences": "Προτάσεις",
+      "equationAccuracy": "Ακρίβεια εξίσωσης",
+      "forward": "Εμπρός",
+      "backward": "Πίσω",
+      "forwardMaxSpan": "Εμπρός μέγιστο εύρος",
+      "backwardMaxSpan": "Μέγιστο άνοιγμα προς τα πίσω",
+      "odd": "Μονός",
+      "even": "Ζυγός",
+      "score": "Σκορ",
+      "easy": "Εύκολο",
+      "hard": "Δύσκολο",
+      "totalTrials": "Συνολικές δοκιμές",
+      "totalErrors": "Συνολικά σφάλματα",
+      "totalErrShort": "Συνολικό Σφάλμα.",
+      "hits": "Επιτυχίες",
+      "misses": "Παραλείψεις",
+      "falseAlarms": "Λάθος Αλ.",
+      "correctRejections": "Διορθ. Rej.",
+      "yes": "Ναι",
+      "no": "Όχι",
+      "sessionInterrupted": "Η συνεδρία διακόπηκε",
+      "reverseOrder": "με αντίστροφη σειρά",
+      "normalOrder": "κατά σειρά",
+      "lnsInstruction": "Αύξοντες αριθμοί και μετά γράμματα Α-Ζ",
+      "vs": "εν.",
+      "simon": {
+        "simonEffect": "Εφέ Simon",
+        "blue": "Μπλε",
+        "red": "Κόκκινο",
+        "heroTitle": "Σάιμον"
+      },
+      "soroban": {
+        "target": "Αντιπροσωπεύστε αυτόν τον αριθμό",
+        "submit": "Υποβολή",
+        "rodLabel": "Ράβδος {{n}}",
+        "heavenBead": "Heaven bead (τιμή 5)",
+        "earthBead": "Χάντρα γης (τιμή 1)",
+        "instrBeadTitle": "Πώς λειτουργούν οι χάντρες",
+        "instrBeadDesc": "Κάθε ράβδος αντιπροσωπεύει ένα ψηφίο. Η επάνω χάντρα (ουρανός) αξίζει 5. Οι κάτω χάντρες (γη) αξίζουν 1 η καθεμία. Μετακινήστε τις χάντρες προς την κεντρική μπάρα για να τις ενεργοποιήσετε.",
+        "instrExampleTitle": "Παράδειγμα: 7",
+        "instrExampleDesc": "7 = χάντρα ουρανού κάτω (5) + 2 χάντρες γης επάνω (2). Πατήστε ή σύρετε τις χάντρες για να τις μετακινήσετε.",
+        "instrGoalTitle": "Ο στόχος σας",
+        "instrGoalDesc": "Θα εμφανιστεί ένας αριθμός. Ρυθμίστε τις χάντρες να το αντιπροσωπεύουν και, στη συνέχεια, πατήστε Υποβολή. Να είστε ακριβείς και γρήγοροι!",
+        "startButton": "Έναρξη",
+        "settings": "Ρυθμίσεις",
+        "closeSettings": "Κλείστε τις ρυθμίσεις",
+        "settingsRods": "Αριθμός ράβδων",
+        "settingsRodsHint": "Ρυθμίστε μέσω N-Level στις ρυθμίσεις παιχνιδιού",
+        "settingsTrials": "Δοκιμές ανά συνεδρία",
+        "settingsTrialsHint": "Ρύθμιση μέσω Δοκιμών στις ρυθμίσεις παιχνιδιού",
+        "settingsRange": "Εύρος αριθμών"
+      },
+      "stroop": {
+        "pressInkColorButton": "Πατήστε το κουμπί που ταιριάζει με το χρώμα του μελανιού",
+        "redWord": "ΚΟΚΚΙΝΟ",
+        "redLabel": "Κόκκινο",
+        "blueWord": "ΜΠΛΕ",
+        "blueLabel": "Μπλε",
+        "greenWord": "ΠΡΑΣΙΝΟ",
+        "greenLabel": "Πράσινο",
+        "yellowWord": "ΚΙΤΡΙΝΟ",
+        "yellowLabel": "Κίτρινο"
+      },
+      "stroopFlex": {
+        "followRule": "Κανόνας",
+        "ruleInk": "Χρώμα μελανιού",
+        "ruleWord": "Γραπτή λέξη",
+        "pressMatchingRuleButton": "Πατήστε το κουμπί που ταιριάζει με τον τρέχοντα κανόνα"
+      },
+      "goNogo": {
+        "goTrials": "Πήγαινε δοκιμές",
+        "nogoTrials": "Δοκιμές No-Go",
+        "hitRate": "Ποσοστό επιτυχίας (Μετάβαση)",
+        "faRate": "Ποσοστό ψευδούς συναγερμού (No-Go)",
+        "meanRt": "Μέσος χρόνος αντίδρασης",
+        "sensitivity": "ευαισθησία",
+        "press": "Πατήστε",
+        "withhold": "Παρακράτηση"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Σήμα διακοπής RT)",
+        "ssdMean": "Μέση SSD (επιτυχείς στάσεις)",
+        "ssd": "SSD",
+        "goRt": "Πηγαίνετε RT",
+        "successfulInhibition": "Επιτυχής αναστολή",
+        "stop": "Σταμάτα",
+        "meanGoRt": "Μέσος χρόνος αντίδρασης GO",
+        "ssrtInvalid": "ανεπαρκή στοιχεία",
+        "ssrtNegativeNote": "Το SSRT είναι αρνητικό (μέση SSD > μέση GO RT) — το αποτέλεσμα είναι αναξιόπιστο με τον τρέχοντα αριθμό δοκιμών."
+      },
+      "pvt": {
+        "rtMedian": "Διάμεσος RT",
+        "rtMean": "Μέσο RT",
+        "fastest": "Ο πιο γρήγορος",
+        "slowest": "Πιο αργό",
+        "falseStarts": "Ψεύτικες εκκινήσεις",
+        "falseStartsShort": "Ψεύτικος στ.",
+        "lapses": "Λάθη",
+        "mean": "Μέσος",
+        "reaction": "Αντίδραση",
+        "wait": "Περίμενε...",
+        "pressStimulus": "Περιμένετε ερέθισμα...",
+        "pressAnywhere": "Πατήστε οπουδήποτε όταν εμφανιστεί ο μετρητής",
+        "press": "Πατήστε!",
+        "tooEarly": "Πολύ νωρίς!",
+        "lapsesLabel": "Λάθη"
+      },
+      "posner": {
+        "cueingEffect": "Φαινόμενο υπόδειξης",
+        "validMeanRt": "Μέση έγκυρη RT",
+        "invalidMeanRt": "Μέσος μη έγκυρος RT",
+        "validAccuracy": "Έγκυρη ακρίβεια",
+        "invalidAccuracy": "Μη έγκυρη ακρίβεια",
+        "validTrials": "Έγκυρες δοκιμές",
+        "invalidTrials": "Μη έγκυρες δοκιμές",
+        "validRtShort": "ΧΑ Έγκ.",
+        "invalidRtShort": "ΧΑ Μη-έγκ.",
+        "valid": "Ισχύει",
+        "invalid": "Μη έγκυρο"
+      },
+      "antisaccade": {
+        "cost": "Κόστος Antisaccade",
+        "proAccuracy": "Επαγγελματική ακρίβεια",
+        "antiAccuracy": "Κατά της ακρίβειας",
+        "pro": "Pro",
+        "anti": "Αντι",
+        "proRt": "ΧΑ Pro",
+        "antiRt": "ΧΑ Anti",
+        "proMeanRt": "Μέση RT υπέρ της σακκαδικής",
+        "antiMeanRt": "Μέσος όρος αντι-σακαδικής RT",
+        "costLabel": "Κόστος",
+        "antiLabel": "Αντι"
+      },
+      "axCpt": {
+        "dPrime": "δ'-πλαίσιο",
+        "axAccuracy": "Ακρίβεια AX",
+        "bxFa": "BX ψευδής συναγερμός",
+        "ayError": "Σφάλμα AY",
+        "bxFaShort": "BX ΨΣ",
+        "ayErrShort": "AY λάθος",
+        "cogControl": "Γνωστικός έλεγχος",
+        "target": "Στόχος",
+        "nonTarget": "Μη στόχος"
+      },
+      "ant": {
+        "scores": "Παρτιτούρες ANT",
+        "alerting": "Ειδοποίηση (no-cue − double-cue)",
+        "orienting": "Προσανατολισμός (κέντρο - χωρικός)",
+        "executive": "Εκτελεστικό (incongruent − congruent)"
+      },
+      "changeDet": {
+        "kCowan": "Χωρητικότητα K (Cowan)",
+        "sameShort": "Ίδιο",
+        "diffShort": "Διαφ."
+      },
+      "swm": {
+        "withinErrors": "Σφάλματα εντός αναζήτησης",
+        "betweenErrors": "Σφάλματα μεταξύ αναζήτησης",
+        "totalErrors": "Συνολικά σφάλματα",
+        "errorFree": "Χωρίς σφάλματα",
+        "foundErrorFree": "Βρέθηκε χωρίς σφάλματα!",
+        "errorCount": "Σφάλμα(α) {{count}}",
+        "tapsLabel": "βρύσες"
+      },
+      "taskSwitch": {
+        "switchCost": "Κόστος διακόπτη",
+        "rtRepeat": "Μέση τιμή RT (Επανάληψη)",
+        "rtSwitch": "Μέσο RT (διακόπτης)",
+        "oddEven": "Μονός / Ζυγός",
+        "highLow": "Υψηλό / Χαμηλό",
+        "title": "Εναλλαγή εργασιών"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-A ώρα",
+        "tmtBTime": "Ώρα TMT-B",
+        "executiveCost": "Εκτελεστικό κόστος (B − A)",
+        "executiveCostShort": "Εκτελεστικό κόστος (B-A)",
+        "tmtA": "ΤΜΤ-Α",
+        "tmtB": "TMT-B",
+        "errA": "Λάθος. Α",
+        "errB": "Λάθος. Β",
+        "preparingB": "Προετοιμασία TMT-B...",
+        "tmtADone": "TMT-A έγινε!",
+        "totalErrors": "Συνολικά σφάλματα",
+        "tmtALabel": "TMT-A: Αριθμοί",
+        "tmtBLabel": "TMT-B: Αριθμοί & Γράμματα",
+        "next": "Επόμενο",
+        "heroTitle": "Κατασκευή μονοπατιών",
+        "alternateHint": "Εναλλακτικοί αριθμοί και γράμματα: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI ελάχ",
+        "fastestIsi": "Το πιο γρήγορο ISI"
+      },
+      "wcst": {
+        "referenceCards": "Κάρτες αναφοράς",
+        "testCard": "Κάρτα δοκιμής",
+        "categories": "Κατηγορίες",
+        "categoriesCompleted": "Ολοκληρώθηκαν οι κατηγορίες",
+        "perseverativeErrors": "Επίμονα λάθη",
+        "persevShort": "Επίμ.",
+        "avgRt": "Μέσος όρος RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT κατά γωνία",
+        "findMatch": "Βρείτε το αντίστοιχο σχήμα",
+        "reference": "Σχήμα αναφοράς",
+        "referenceLabel": "Αναφ.",
+        "candidate": "Υποψήφιος",
+        "distractor": "Άλλο",
+        "mirrorErrors": "Καθρέφτες",
+        "title": "Νοητική Περιστροφή"
+      },
+      "sternberg": {
+        "rtBySize": "RT κατά μέγεθος συνόλου",
+        "title": "Sternberg",
+        "avgRt": "Μέσος όρος RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT κατά μέγεθος συνόλου",
+        "title": "Οπτική αναζήτηση"
+      },
+      "ospan": {
+        "typeLetters": "Πληκτρολογήστε τα γράμματα με τη σειρά",
+        "trueOrFalse": "Σωστό ή ψέμα;",
+        "processingWarning": "Ακρίβεια εξίσωσης κάτω από 85% — τα αποτελέσματα ενδέχεται να μην αντικατοπτρίζουν την πραγματική χωρητικότητα της μνήμης εργασίας"
+      },
+      "readingSpan": {
+        "s0": "Ο ήλιος ανατέλλει στην ανατολή.",
+        "s1": "Τα ψάρια ζουν στα δέντρα.",
+        "s2": "Το Παρίσι είναι η πρωτεύουσα της Γαλλίας.",
+        "s3": "Ένα τρίγωνο έχει τέσσερις πλευρές.",
+        "s4": "Το νερό βράζει στους 100 βαθμούς.",
+        "s5": "Οι γάτες είναι ερπετά.",
+        "s6": "Η Γη περιφέρεται γύρω από τον Ήλιο.",
+        "s7": "Η σοκολάτα φυτρώνει σε βράχους.",
+        "s8": "Ένας χρόνος έχει δώδεκα μήνες.",
+        "s9": "Τα πουλιά αναπνέουν κάτω από το νερό.",
+        "s10": "Το γάλα είναι λευκό.",
+        "s11": "Τα αυτοκίνητα κινούνται σε ράγες.",
+        "s12": "Οι μέλισσες παράγουν μέλι.",
+        "s13": "Το χιόνι είναι ζεστό.",
+        "s14": "Η καρδιά αντλεί αίμα.",
+        "s15": "Πέτρες επιπλέουν στο νερό.",
+        "s16": "Η Σελήνη φωτίζει τη νύχτα.",
+        "s17": "Τα φίδια έχουν πόδια.",
+        "s18": "Το ξύλο επιπλέει στο νερό.",
+        "s19": "Η φωτιά είναι κρύα.",
+        "s20": "Οι άνθρωποι έχουν πέντε αισθήσεις.",
+        "s21": "Οι αράχνες έχουν έξι πόδια.",
+        "s22": "Το ψωμί γίνεται με αλεύρι.",
+        "s23": "Οι φάλαινες είναι ψάρια.",
+        "w0": "ΣΠΙΤΙ",
+        "w1": "ΣΚΥΛΟΣ",
+        "w2": "ΒΙΒΛΙΟ",
+        "w3": "ΛΟΥΛΟΥΔΙ",
+        "w4": "ΠΟΡΤΑ",
+        "w5": "ΤΡΑΠΕΖΙ",
+        "w6": "ΔΕΝΤΡΟ",
+        "w7": "ΔΡΟΜΟΣ",
+        "w8": "ΣΥΝΝΕΦΟ",
+        "w9": "ΑΣΤΕΡΙ",
+        "w10": "ΠΑΡΑΛΙΑ",
+        "w11": "ΧΙΟΝΙ",
+        "w12": "ΛΑΜΠΑ",
+        "w13": "ΒΡΟΧΗ",
+        "w14": "ΓΥΑΛΙ",
+        "w15": "ΧΟΡΤΑΡΙ",
+        "w16": "ΤΡΕΝΟ",
+        "w17": "ΚΟΣΜΟΣ",
+        "w18": "ΗΛΙΟΣ",
+        "w19": "ΔΑΣΟΣ",
+        "w20": "ΠΑΓΟΣ",
+        "w21": "ΓΗ",
+        "w22": "ΟΥΡΑΝΟΣ",
+        "w23": "ΠΕΤΡΑ",
+        "d0": "ΠΡΩΙ",
+        "d1": "ΚΑΡΔΙΑ",
+        "d2": "ΥΦΑΣΜΑ",
+        "d3": "ΦΥΛΛΟ",
+        "d4": "ΘΟΡΥΒΟΣ",
+        "d5": "ΚΗΠΟΣ",
+        "d6": "ΣΚΙΑ",
+        "d7": "ΚΟΥΔΟΥΝΙ",
+        "d8": "ΓΕΦΥΡΑ",
+        "d9": "ΚΑΠΝΟΣ",
+        "d10": "ΑΜΜΟΣ",
+        "d11": "ΣΟΥΠΑ",
+        "heroTitle": "Διάρκεια ανάγνωσης"
+      },
+      "memorizeSequence": "Απομνημόνευση της σειράς...",
+      "reproduce": "Αναπαραγωγή",
+      "span": "Εύρος",
+      "size": "Μέγεθος",
+      "fixateCenter": "Στερεώστε στο κέντρο...",
+      "identicalOrMirror": "Πανομοιότυπο ή Καθρέφτης;",
+      "wellInhibited": "Καλά αναστέλλεται!",
+      "badDirection": "Λάθος κατεύθυνση!",
+      "stopMissed": "Σταματήστε να χάσετε!",
+      "falseAlarm": "Ψευδές σήμα συναγερμού!",
+      "pressNow": "Τύπος!",
+      "hitBang": "Επιτυχία!",
+      "miss": "Δεσποινίδα!",
+      "doNotTouch": "Μην αγγίζετε!",
+      "whichDirection": "Ποια κατεύθυνση;",
+      "stopBang": "ΣΤΑΣΗ!",
+      "cueBang": "Σύνθημα!",
+      "memorizeLetters": "Απομνημονεύστε αυτά τα γράμματα",
+      "memorizeLetter": "Απομνημονεύστε αυτό το γράμμα",
+      "memorizeSequenceLetters": "Απομνημόνευση της σειράς...",
+      "memorizeDigits": "Απομνημονεύστε τα ψηφία...",
+      "memorizeColors": "Απομνημονεύστε τα χρώματα!",
+      "memorizePosition": "Απομνημόνευση αυτής της θέσης...",
+      "retainWord": "Θυμηθείτε αυτή τη λέξη",
+      "retainNumber": "Θυμηθείτε αυτόν τον αριθμό",
+      "addWithPrevious": "Προσθέστε με το προηγούμενο",
+      "sentenceTrueOrFalse": "Είναι αλήθεια αυτή η πρόταση;",
+      "findRedCircle": "Βρείτε τον κόκκινο κύκλο!",
+      "findHiddenToken": "Βρείτε το κρυμμένο διακριτικό!",
+      "chooseMatchingCard": "Επιλέξτε την κάρτα που ταιριάζει",
+      "arrowDirection": "Κατεύθυνση του κεντρικού βέλους;",
+      "attention": "Προσοχή...",
+      "preparation": "Προετοιμασία...",
+      "recallLettersInOrder": "Θυμηθείτε τα γράμματα {{count}} με τη σειρά",
+      "recallWordsInOrder": "Θυμηθείτε τις λέξεις {{count}} με τη σειρά",
+      "recallLastLetters": "Θυμηθείτε τα τελευταία γράμματα {{count}}",
+      "typeLastLetters": "Πληκτρολογήστε τα τελευταία γράμματα {{count}}",
+      "recallPositionsInOrder": "Ανάκληση: πατήστε τις θέσεις με τη σειρά",
+      "pressEnterToValidate": "Πατήστε Enter για επικύρωση",
+      "pressAnywhereToContinue": "Πατήστε οπουδήποτε για να συνεχίσετε",
+      "temporalPrecision": "Χρονική ακρίβεια",
+      "estimationPrecision": "Ακρίβεια εκτίμησης",
+      "touchStartClockwise": "Αγγίξτε το σημείο έναρξης και μετά σύρετε δεξιόστροφα",
+      "touchAtoB": "Αγγίξτε το σημείο Α και μετά σύρετε στο Β",
+      "cue": "Σήμα",
+      "retainCue": "Θυμηθείτε το σύνθημα...",
+      "targetOrNot": "Στόχος ή μη στόχος;",
+      "whereIsTarget": "Πού είναι ο στόχος;",
+      "wasLetterInSet": "Ήταν αυτό το γράμμα στο σετ;",
+      "regular": "τακτική",
+      "regularity": "Κανονικότητα",
+      "msDeviation": "ms απόκλιση",
+      "boxes": "κουτιά",
+      "found": "Βρέθηκε το {{count}}",
+      "past": "Παρελθόν",
+      "tooSlow": "πολύ αργό",
+      "tooFast": "πολύ γρήγορα",
+      "timeout": "Πολύ αργά!",
+      "answer": "Απάντηση",
+      "dontPress": "Μην πιέζετε!",
+      "feedbackWrong": "Λανθασμένος!",
+      "level": "Επίπεδο",
+      "wrong": "Λάθος",
+      "you": "Εσύ",
+      "paused": "Παύση",
+      "instructions": "Οδηγίες",
+      "selectAnswer": "Επιλέξτε μια απάντηση",
+      "tapTheOddOne": "Αγγίξτε το περίεργο",
+      "pal": {
+        "subtitle": "Μάθηση Συσχετισμένων Ζευγών",
+        "pairsLearned": "Τα ζευγάρια έμαθαν",
+        "maxSetSize": "Μέγιστο μέγεθος σετ",
+        "totalErrors": "Συνολικά σφάλματα",
+        "round": "Στρογγυλό",
+        "pairs": "ζεύγη",
+        "meanRt": "Μέση τιμή RT (σωστό)",
+        "studyPhase": "Μελέτη - απομνημόνευση των θέσεων",
+        "testPhase": "Πού ήταν αυτό το σχήμα;",
+        "studying": "Μελετώντας",
+        "tapBox": "Πατήστε το πλαίσιο όπου εμφανίστηκε αυτό το σχήμα"
+      },
+      "visualLogic": {
+        "easy": "Εύκολο",
+        "hard": "Δύσκολο",
+        "oneRule": "1 κανόνας",
+        "twoRules": "2 κανόνες",
+        "findMissing": "Βρείτε το κομμάτι που λείπει",
+        "maxLevel": "Μέγ. Επ.",
+        "finalLevel": "Τελικός Lvl",
+        "nextMode": "Λειτουργία επόμενης συνεδρίας",
+        "adaptive": "Προσαρμοστικό",
+        "fixed": "Διορθώθηκε",
+        "spm": "SPM 60",
+        "level": "Επίπεδο",
+        "confirm": "Επιβεβαίωση"
+      },
+      "tetrisMind": {
+        "findPiece": "Ποιο κομμάτι ταιριάζει στην τρύπα;",
+        "target": "Στόχος"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Προκατάληψη υπερεκτίμησης",
+        "underestimationBias": "Προκατάληψη υποεκτίμησης",
+        "noBias": "Καμία σημαντική προκατάληψη",
+        "avgError": "Μέσο σφάλμα",
+        "overestimations": "Υπερεκτιμήσεις",
+        "underestimations": "Υποτιμήσεις",
+        "avgAbsoluteError": "Μέσο απόλυτο σφάλμα",
+        "avgRelativeError": "Μέσο σχετικό σφάλμα",
+        "cv": "Συντελεστής Διακύμανσης",
+        "watchDemo": "Παρακολουθήστε τη διάρκεια",
+        "getReady": "Ετοιμάσου...",
+        "holdToReproduce": "Κρατήστε για αναπαραγωγή!",
+        "tooLong": "Υπερμηκής!",
+        "tooShort": "Πολύ σύντομη!",
+        "target": "Στόχος",
+        "demoLabel": "Αναφορά",
+        "yourTurn": "Η σειρά σου",
+        "watchInstruction": "Παρακολουθήστε",
+        "holdInstruction": "Κρατήστε για αναπαραγωγή",
+        "heroTitle": "Εκτίμηση χρόνου"
+      },
+      "puzzleDetails": "Λεπτομέρειες παζλ",
+      "roundDetails": "Στρογγυλές λεπτομέρειες",
+      "stageResults": "Αποτελέσματα Σταδίων",
+      "recognized": "Αναγνωρισμένος",
+      "missed": "Χάθηκε",
+      "win": "Κερδίστε",
+      "lose": "Χάστε",
+      "winBang": "Κερδίστε!",
+      "loseBang": "Χάνω!",
+      "correctBang": "Σωστός!",
+      "wrongBang": "Λανθασμένος!",
+      "completeBang": "Ολοκληρώθηκε!",
+      "repeatedBang": "Αλλεπάλληλος!",
+      "incompleteBang": "Ατελής!",
+      "levelCompleteBang": "Επίπεδο Ολοκληρώθηκε!",
+      "timesUp": "Ο χρόνος τελειώνει",
+      "seeResults": "Δείτε αποτελέσματα",
+      "nextRound": "Επόμενος γύρος",
+      "startBlock": "Έναρξη μπλοκ",
+      "continue": "Συνέχεια",
+      "patientChoice": "Επιλογή ασθενούς",
+      "immediateChoice": "Άμεση επιλογή",
+      "immediate": "Άμεση",
+      "digitSpan": {
+        "heroTitle": "Διάστημα ψηφίων"
+      },
+      "resume": "Συνέχιση",
+      "numericalStroop": {
+        "heroTitle": "Αριθμητικό Stroop"
+      },
+      "lineOrientation": {
+        "heroTitle": "Κρίση Προσανατολισμού Γραμμών"
+      },
+      "chain": "Αλυσίδα",
+      "undo": "Αναίρεση",
+      "vocalProsody": {
+        "heroTitle": "Φωνητική Προσωδία"
+      },
+      "letterNumber": {
+        "title": "Επιστολή-Αριθμός Ακολουθ.",
+        "expectedAnswer": "Αναμενόμενη απάντηση"
+      },
+      "patternComparison": {
+        "heroTitle": "Σύγκριση προτύπων"
+      },
+      "speedPack": {
+        "title": "Πακέτο ταχύτητας",
+        "whenFoldedWhichTouch": "Όταν είναι διπλωμένο, ποια τετράγωνα αγγίζουν;"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Αντανακλαστικό"
+      },
+      "hooperVisual": {
+        "title": "Οπτικός Οργανισμός Hooper",
+        "whatIsThisObject": "Τι είναι αυτό το αντικείμενο;"
+      },
+      "blockDesign": {
+        "heroTitle": "Σχεδιασμός μπλοκ"
+      },
+      "accuracy": "Ακρίβεια",
+      "avgTime": "Μέσος όρος χρόνο",
+      "check": "Έλεγχος",
+      "dualTrace": {
+        "playArea": "Χώρος παιχνιδιού"
+      },
+      "paperFolding": {
+        "title": "Αναδίπλωση χαρτιού",
+        "foldSequenceHolePunch": "Ακολουθία δίπλωσης & διάτρηση οπών",
+        "whichPatternWhenUnfolded": "Ποιο μοτίβο όταν ξεδιπλωθεί;"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Λεξική Απόφαση"
+      },
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxGrid": "Μέγιστο πλέγμα",
+      "symmetry": "Συμμετρία",
+      "threshold": "Κατώφλι",
+      "hitRate": "Ποσοστό επιτυχίας",
+      "faRate": "Ποσ. ΨΣ",
+      "changeDetection": {
+        "heroTitle": "Ανίχνευση αλλαγής"
+      },
+      "syllogisms": {
+        "heroTitle": "Συλλογισμοί"
+      },
+      "subitizing": {
+        "title": "Υποκατηγορία",
+        "range": "Εύρος"
+      },
+      "jitter": "Διακύμανση",
+      "sentenceCompletion": {
+        "title": "Συμπλήρωση πρότασης (Κλείσιμο)",
+        "highCloze": "Ψηλό κλείσιμο",
+        "lowCloze": "Χαμηλό κλείσιμο"
+      },
+      "grid": "Πλέγμα",
+      "pinballRecall": {
+        "title": "Ανάκληση φλίπερ",
+        "byBounces": "Με αναπηδήσεις",
+        "whereDoesItLand": "Πού προσγειώνεται;"
+      },
+      "mean": "Μέσος",
+      "speedup": "Επιτάχυνση",
+      "memorize": "Απομνημόνευση",
+      "time": "Χρόνος",
+      "surfaceDevelopment": {
+        "title": "Ανάπτυξη Επιφανειών",
+        "whichEdgeMatches": "Ποια άκρη ταιριάζει;"
+      },
+      "crowding": {
+        "heroTitle": "Οπτικός συνωστισμός",
+        "spacing": "Διάστημα"
+      },
+      "patternRecognition": {
+        "heroTitle": "Αναγνώριση προτύπων"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Δοκιμή",
+        "position": "Θέση",
+        "audio": "Ήχος"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Σκηνικός εισβολέας",
+        "detect": "Ανίχνευση"
+      },
+      "eyesTest": {
+        "heroTitle": "Διαβάζοντας το μυαλό στα μάτια"
+      }
+    },
+    "gridlock": {
+      "undone": "Η τελευταία κίνηση αναιρέθηκε.",
+      "resetMessage": "Επαναφορά παζλ.",
+      "hintMessage": "Συμβουλή: διαφάνεια {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Μελετήστε τον πίνακα. Ξεκινά σε {{seconds}}.",
+      "challenge": "Πρόκληση",
+      "optimal": "Βέλτιστη",
+      "moves": "Κινήσεις",
+      "piece": "Τεμάχιο {{id}}",
+      "targetPiece": "Τεμάχιο {{id}} (στόχος - κόκκινο αυτοκίνητο)",
+      "challengeClassic": "Κλασικό",
+      "challengePrecision": "Ακρίβεια",
+      "challengeMemory": "Μνήμη",
+      "challengeTimed": "Χρονομετρημένο",
+      "hint": "Υπόδειξη",
+      "reset": "Επαναφορά",
+      "undo": "Αναίρεση",
+      "nextPuzzle": "Επόμενο παζλ →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Επισκέψεις μπλοκ 1",
+      "block2Hits": "Επισκέψεις μπλοκ 2",
+      "goPositive": "Go = Θετικό",
+      "goNegative": "Go = Αρνητικό",
+      "title": "Συναισθηματικό Go/No-Go",
+      "block1CommissionErrors": "Μπλοκ 1 σφάλματα προμήθειας",
+      "block2CommissionErrors": "Μπλοκ 2 σφάλματα προμήθειας",
+      "block": "Αποκλεισμός",
+      "go": "Πήγαινε"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Μέσος ρυθμός μεταγωγής",
+      "meanSwitchesfigure": "Μέσος διακόπτης/σχήμα",
+      "totalSwitches": "Σύνολο διακοπτών",
+      "title": "Διφορούμενα στοιχεία",
+      "meanSwitches": "Μέσοι διακόπτες",
+      "switchRate": "Ρυθμός μεταγωγής",
+      "figures": "Φιγούρες",
+      "totalSwitchesLabel": "Σύνολο Διακόπτες",
+      "duration": "Διάρκεια",
+      "switchesCount": "s | Διακόπτες:",
+      "switchButton": "Διακόπτης!"
+    },
+    "analogies": {
+      "verbalCorrect": "Λεκτική σωστή",
+      "timeout": "Λήξη χρόνου",
+      "title": "Αναλογίες"
+    },
+    "ansComparison": {
+      "weber": "Ο Βέμπερ",
+      "title": "ANS Σύγκριση",
+      "ratio": "Αναλογία",
+      "leftMore": "Έφυγε κι άλλο",
+      "rightMore": "Σωστά περισσότερο"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Ποσοστό ψευδούς συναγερμού",
+      "grammatical": "Γραμματική",
+      "memorizeTheseStrings": "Απομνημονεύστε αυτές τις χορδές",
+      "testPhase": "Φάση δοκιμής",
+      "ungrammatical": "Μη γραμματικός",
+      "learning": "Μάθηση",
+      "test": "Δοκιμή",
+      "title": "Τεχνητή Γραμματική",
+      "learningPhase": "Μάθηση",
+      "testIntroText": "Τώρα θα δείτε νέες χορδές. Αποφασίστε αν το καθένα ακολουθεί τους ίδιους κανόνες με τις χορδές που μόλις μελετήσατε.",
+      "startTest": "Έναρξη δοκιμής",
+      "followsRules": "Ακολουθεί κανόνες",
+      "breaksRules": "Παραβιάζει τους κανόνες"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Μέγεθος αναλαμπής",
+      "title": "Προσεκτικό βλέμμα",
+      "blink": "Αναβοσβήνει",
+      "t1Acc": "T1 Λογ",
+      "t2Acc": "Τ2 Λογ",
+      "firstGreenLetter": "1ο πράσινο γράμμα;",
+      "secondGreenLetter": "2ο πράσινο γράμμα;"
+    },
+    "attentionalCapture": {
+      "captureCost": "Κόστος λήψης",
+      "singletonPresent": "Singleton Παρόν",
+      "noSingleton": "Όχι Σίνγκλετον",
+      "title": "Προσοχή Λήψη",
+      "capture": "Λήψη",
+      "horizontal": "Οριζόντιο",
+      "vertical": "Κάθετο"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Παράθυρο βιβλιοδεσίας",
+      "title": "Οπτικοακουστικό δέσιμο",
+      "window": "Παράθυρο",
+      "pssLabel": "PSS (Σημείο Υποκειμενικού Ταυτόχρονου)",
+      "simultaneousOrNot": "Ταυτόχρονη ή όχι;",
+      "simultaneous": "Ταυτόχρονη",
+      "notSimultaneous": "Όχι ταυτόχρονα"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Όριο Διάρκειας",
+      "reference": "Αναφορά",
+      "weberFraction": "Κλάσμα Weber",
+      "title": "Ακουστική Διάρκεια",
+      "threshold": "Κατώφλι",
+      "weber": "Ο Βέμπερ",
+      "whichLonger": "Ποιο είναι μεγαλύτερο;",
+      "firstLonger": "Πρώτα περισσότερο",
+      "secondLonger": "Δεύτερο περισσότερο"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Ρυθμισμένες μέσες αντλίες",
+      "avgTimeballoon": "Μέσος χρόνος/μπαλόνι",
+      "banked": "Τραπεζικά!",
+      "lostEarnings": "Χαμένα κέρδη!",
+      "overallAvgPumps": "Συνολικά μέσες αντλίες",
+      "popRate": "Ποσοστό σκασίμ.",
+      "totalEarned": "Σύνολο κερδών",
+      "balloons": "Μπαλόνια",
+      "cashed": "Εξαργυρωμένα",
+      "popped": "Έσκασε",
+      "adjPumps": "Επίθ. αντλίες",
+      "pop": "Σκάσιμο",
+      "pump": "Αντλία",
+      "cashIn": "Εξαργύρωση"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Μέσος χρόνος απόφασης",
+      "drawBeadsToGatherEvidence": "Σχεδιάστε χάντρες για να συγκεντρώσετε στοιχεία",
+      "jtc": "JTC",
+      "title": "Εργασία με χάντρες",
+      "meanDraws": "Μέσος όρος κληρώνει",
+      "rounds": "Γύροι",
+      "jtcRate": "Ποσοστό JTC",
+      "meanDrawsToDecision": "Το μέσο προσελκύει την απόφαση",
+      "jtcRateThreshold": "Ποσοστό JTC (<{{threshold}} κληρώσεις)",
+      "round": "Στρογγυλό",
+      "jarDescription": "Βάζο Α: 85% πράσινο / Βάζο Β: 85% κόκκινο",
+      "itWasJar": "Ήταν ο Τζάρ",
+      "drawABead": "Σχεδιάστε μια χάντρα",
+      "jarAGreen": "Βάζο Α Πράσινο",
+      "jarBRed": "Βάζο Β Κόκκινο"
+    },
+    "binding": {
+      "changedTrials": "Άλλαξαν δοκιμές",
+      "sameAccuracy": "Ίδια ακρίβεια",
+      "sameTrials": "Ίδιες δοκιμές",
+      "title": "Δέσμευση χαρακτηριστικών",
+      "binding": "Δεσμευτικό",
+      "bindingAccuracyChanged": "Αλλαγή ακρίβειας",
+      "same": "Ίδιο",
+      "different": "Διαφορετικό"
+    },
+    "blockDesign": {
+      "cells": "Κύτταρα",
+      "target": "Στόχος",
+      "yourAnswer": "Η απάντησή σας",
+      "tapHint": "Πατήστε για κύκλο χρωμάτων",
+      "check": "Έλεγχος"
+    },
+    "brixton": {
+      "adapt": "Προσαρμόστε",
+      "adaptationCost": "Κόστος προσαρμογής",
+      "nonswitchTrials": "Δοκιμές χωρίς διακόπτη",
+      "switchTrials": "Εναλλαγή δοκιμών"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Θυμηθείτε αυτά τα γράμματα",
+      "selectThe3Letters": "Επιλέξτε τα 3 γράμματα",
+      "title": "Εργασία Brown-Peterson",
+      "forgetting": "Ξεχνώντας",
+      "sDelay": "S Καθυστέρηση",
+      "minus3": "Μείον 3",
+      "delay": "Καθυστέρηση"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Ποιότητα απόφασης",
+      "finalPoints": "Τελικά σημεία",
+      "meanBet": "Μέσο στοίχημα",
+      "winRate": "Ποσοστό νίκης",
+      "wins": "Κερδίζει",
+      "title": "Cambridge Gambling Task",
+      "totalPoints": "Σύνολο πόντων",
+      "quality": "Ποιότητα",
+      "rational": "Ορθολογικά",
+      "avgBet": "Μέσος όρος στοίχημα",
+      "trial": "Δοκιμή",
+      "whichColorHidesToken": "Ποιο χρώμα κρύβει το διακριτικό;",
+      "youChose": "εσύ επέλεξες",
+      "howMuchToBet": "Πόσο να στοιχηματίσετε;"
+    },
+    "cancellation": {
+      "false": "Λάθος",
+      "target": "Στόχος:",
+      "total": "Σύνολο",
+      "title": "Εργασία ακύρωσης (d2)",
+      "misses": "Παραλείψεις",
+      "targetDescription": "d με 2 βαθμούς"
+    },
+    "changeBlindness": {
+      "detectionRate": "Ρυθμός ανίχνευσης",
+      "found": "Βρέθηκε",
+      "meanDetectionTime": "Μέσος χρόνος ανίχνευσης",
+      "title": "Αλλαγή Τύφλωσης",
+      "missed": "Χάθηκε",
+      "avgTime": "Μέσος όρος χρόνο",
+      "instructions": "Οδηγίες"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Καλύτερη εκτίμηση",
+      "meanScore": "Μέση βαθμολογία",
+      "worstEstimate": "Η χειρότερη εκτίμηση",
+      "inRange": "Καλή εκτίμηση!",
+      "title": "Γνωστική Εκτίμηση",
+      "meanScoreLabel": "Μέση βαθμολογία",
+      "inRangeLabel": "Στο Range",
+      "extreme": "Ακραίο",
+      "scoreLabel": "σκορ",
+      "submit": "Υποβολή"
+    },
+    "common": {
+      "accuracy": "Ακρίβεια",
+      "bias": "Μεροληψία",
+      "falseAlarmRate": "Ρυθμός ψευδούς συναγερμού",
+      "hitRate": "Ποσοστό χτυπήματος",
+      "hits": "Επιτυχίες",
+      "listening": "Ακούγοντας...",
+      "meanRt": "Μέσο RT",
+      "timedOut": "Λήξη χρονικού ορίου",
+      "timedOut2": "Λήξη χρονικού ορίου",
+      "faRate": "Ποσ. ΨΣ",
+      "paused": "Σε παύση"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Πόσο σίγουρος είσαι;",
+      "rateYourConfidence": "Βαθμολογήστε την εμπιστοσύνη σας",
+      "title": "Βαθμονόμηση εμπιστοσύνης",
+      "calError": "Σφάλμα βαθμονόμησης",
+      "confidence": "Εμπιστοσύνη"
+    },
+    "consequences": {
+      "best": "Το καλύτερο",
+      "nextRound": "Επόμενος γύρος...",
+      "time": "Χρόνος",
+      "placeholder": "Πληκτρολογήστε μια συνέπεια...",
+      "title": "Συνέπειες",
+      "totalIdeas": "Συνολικές Ιδέες",
+      "avgPerRound": "Μέσος όρος ανά γύρο",
+      "rounds": "Γύροι",
+      "noConsequencesListed": "Δεν αναφέρονται συνέπειες",
+      "roundProgress": "Στρογγυλό {{current}} / {{total}}",
+      "typeAndPressAdd": "Πληκτρολογήστε και πατήστε Προσθήκη"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Φαινόμενο Cueing",
+      "newConfigRt": "Νέα διαμόρφωση RT",
+      "oldConfigRt": "Παλιά διαμόρφωση RT",
+      "title": "Πλαισιακή Υπόδειξη",
+      "cueing": "Υπόδειξη",
+      "oldRt": "Παλιό RT",
+      "newRt": "Νέο RT",
+      "prompt": "Προτροπή",
+      "left": "Αριστερά",
+      "right": "Δεξιά"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Τρέμουλο κατωφλίου",
+      "title": "Ενσωμάτωση περιγράμματος",
+      "pipeJitter": "| τρέμουλο"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Αντίθεση κατωφλίου",
+      "title": "Ευαισθησία αντίθεσης",
+      "threshold": "Κατώφλι",
+      "left": "Αριστερά",
+      "right": "Δεξιά"
+    },
+    "cpt": {
+      "nontargets": "Μη στόχοι",
+      "target": "Στόχος",
+      "nonTarget": "Μη στόχος",
+      "dPrime": "δ'",
+      "targetsLetter": "Επιστολή στόχος",
+      "tapForLetterOnly": "Πατήστε μόνο για το γράμμα-στόχο"
+    },
+    "crowding": {
+      "criticalSpacing": "Κρίσιμη απόσταση",
+      "leftAccuracy": "Αριστερή ακρίβεια",
+      "rightAccuracy": "Σωστή ακρίβεια"
+    },
+    "cryptogram": {
+      "hints": "Συμβουλές",
+      "title": "Κρυπτογράφημα",
+      "solved": "Λύθηκε",
+      "time": "Χρόνος",
+      "puzzles": "Παζλ",
+      "puzzle": "Παζλ",
+      "hint": "Υπόδειξη",
+      "clear": "Καθαρισμός"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Περιοχή κάτω από την καμπύλη",
+      "discountRateK": "Επιτόκιο έκπτωσης (k)",
+      "impulsivityIndex": "Δείκτης παρορμητικότητας",
+      "title": "Καθυστερημένη έκπτωση",
+      "aucPatience": "AUC υπομονή",
+      "patient": "Ασθενής",
+      "kRate": "Ρυθμός K",
+      "impuls": "Παρορμήσεις",
+      "indifferencePoints": "Σημεία Αδιαφορίας",
+      "whichPrefer": "Εσείς ποιο προτιμάτε;",
+      "today": "Σήμερα"
+    },
+    "delayedMatching": {
+      "long": "Μακρύς",
+      "longDelay68s": "Μεγάλη καθυστέρηση (6-8 δ.)",
+      "med": "Μεσ.",
+      "mediumDelay46s": "Μεσαία καθυστέρηση (4-6 δευτ.)",
+      "short": "Σύντομη",
+      "shortDelay34s": "Μικρή καθυστέρηση (3-4 δευτερόλεπτα)",
+      "title": "Καθυστερημένη αντιστοίχιση",
+      "delay": "Καθυστέρηση",
+      "rememberThisPattern": "Θυμηθείτε αυτό το μοτίβο",
+      "whichWasIt": "Ποιο ήταν;"
+    },
+    "dichoticListening": {
+      "alertDetection": "Ανίχνευση ειδοποίησης",
+      "attendToTheLeftColumn": "Παρακολουθήστε τη στήλη ΑΡΙΣΤΕΡΑ",
+      "attendedAccuracy": "Ακρίβεια παρακολούθησης",
+      "ignoreTheRightColumn": "Αγνοήστε τη δεξιά στήλη",
+      "right": "ΣΩΣΤΟ",
+      "title": "Διχωτική Ακρόαση",
+      "attendedAcc": "Ακρίβεια παρακολούθησης",
+      "alertDet": "Ανίχνευση ειδοποίησης",
+      "alerts": "Ειδοποιήσεις",
+      "selectLeftColumnWords": "Επιλέξτε λέξεις της αριστερής στήλης",
+      "submit": "Υποβολή",
+      "alertQuestion": "Ερώτηση συναγερμού"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Ξεχάστε την ακρίβεια",
+      "forgettingEffect": "Εφέ λήθης",
+      "newRejection": "Νέα απόρριψη",
+      "rememberAccuracy": "Θυμηθείτε την ακρίβεια",
+      "title": "Σκηνοθετημένη Λήθη",
+      "remember": "Θυμηθείτε",
+      "forget": "Ξεχάστε",
+      "round": "Στρογγυλό",
+      "word": "Λέξη",
+      "wasThisWordShown": "Εμφανίστηκε αυτή η λέξη;"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Βαθμολογία μεροληψίας προσοχής",
+      "congruentAcc": "Ακρ. Σύμφ.",
+      "congruentRt": "Σύμφωνο RT",
+      "incongruentAcc": "Ασυμφωνία Λογ",
+      "incongruentRt": "Ασύμφωνη RT"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Αυτοκίνητο ή Φορτηγό;",
+      "minDisplayReached": "Ελάχιστη εμφάνιση",
+      "positionAccuracy": "Ακρίβεια θέσης",
+      "thresholdDisplay": "Εμφάνιση κατωφλίου",
+      "vehicleAccuracy": "Ακρίβεια οχήματος",
+      "whereWasTheDiamond": "Πού ήταν το διαμάντι;",
+      "title": "Διπλή απόφαση",
+      "threshold": "Κατώφλι",
+      "bothOk": "Σωστά και τα δύο",
+      "vehicle": "Όχημα",
+      "position": "Θέση",
+      "car": "Αυτοκίνητο",
+      "truck": "Φορτηγό"
+    },
+    "dsst": {
+      "items": "Είδη",
+      "itemsCompleted": "Τα στοιχεία ολοκληρώθηκαν",
+      "speedItemsmin": "Ταχύτητα (στοιχεία/λεπτό)",
+      "attempts": "Προσπάθειες",
+      "itemsPerMin": "Είδη / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Κόστος διπλής εργασίας",
+      "taskANumber": "Εργασία Α (Αριθμός)",
+      "taskBSymbol": "Εργασία Β (Σύμβολο)",
+      "title": "Διπλή εργασία",
+      "taskA": "Εργασία Α",
+      "taskB": "Εργασία Β",
+      "number": "Αριθμός",
+      "symbol": "Σύμβολο",
+      "up": "Πάνω",
+      "down": "Κάτω"
+    },
+    "dualTime": {
+      "sessionEnPause": "Η συνεδρία διακόπηκε",
+      "votreEstimationSecondes": "Η εκτίμησή σας (δευτερόλεπτα)",
+      "sessionInterrupted": "Η συνεδρία διακόπηκε",
+      "target": "Στόχος",
+      "estimation": "Εκτίμηση",
+      "avgTime": "Μέσος όρος χρόνο",
+      "avgError": "Μέσος όρος σφάλμα",
+      "trials": "Δοκιμές",
+      "resumeToContinue": "Συνέχιση για συνέχεια",
+      "aimFor": "Στόχος για",
+      "second": "Δεύτερον",
+      "howLongDidYouTake": "Πόσο καιρό πήρες;"
+    },
+    "dualTrack": {
+      "confirmer": "Επιβεβαίωση",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Συνέχιση για συνέχεια.",
+      "sessionEnPause": "Η συνεδρία διακόπηκε",
+      "tapezLesCibles": "Πατήστε τους στόχους",
+      "tapezLaCible": "Πατήστε τον στόχο",
+      "appuyezConfirmer": "Πατήστε Επιβεβαίωση",
+      "targetsCountLabel": "Στόχοι {{count}}",
+      "distractorsCountLabel": "{{count}} αποσπάσματα της προσοχής",
+      "roundsCountLabel": "{{count}} γύρους",
+      "calibrationRoundsLabel": "Στρογγυλοί βαθμονόμησης {{count}}",
+      "tierValue": "Ε{{current}}/{{total}}",
+      "tierHelp": "T = επίπεδο δυσκολίας εσωτερικού ταξιδιού.",
+      "tierHelpCurrentWithPhase": "Αυτήν τη στιγμή βρίσκεστε σε T{{current}} από {{total}} για στόχους {{targets}}. Τρέχουσα φάση: {{phase}}. Απομένουν βαθμίδες {{remaining}} πριν από το επόμενο επίπεδο στόχου.",
+      "phaseTracking": "Παρακολούθηση",
+      "phaseAudio": "Παρακολούθηση + ήχος",
+      "phaseColor": "Παρακολούθηση + χρώμα",
+      "phaseCombined": "Παρακολούθηση + ήχος + χρώμα",
+      "passLetters": "Γράμματα",
+      "passColors": "Χρώματα",
+      "moveInstruction": "Οδηγία μετακίνησης",
+      "moveConfirmBtn": "Μετακίνηση κουμπιού επιβεβαίωσης",
+      "preparingSession": "Προετοιμασία συνεδρίας...",
+      "preparing3dScene": "Προετοιμασία τρισδιάστατης σκηνής...",
+      "startJourney": "Ξεκινήστε το ταξίδι",
+      "calibrationDescription": "Πριν από το πρώτο στάδιο, μια μεγαλύτερη βαθμονόμηση θα εκτιμήσει το αρχικό σας επίπεδο.",
+      "defaultDescription": "Οι μπάλες θα ανάψουν. Ακολουθήστε τους ενώ κινούνται και στη συνέχεια αναγνωρίστε τους.",
+      "startCalibration": "Ξεκινήστε τη βαθμονόμηση",
+      "calibrationTitle": "Βαθμονόμηση",
+      "estimatedStart": "Εκτιμ. έναρξη",
+      "roundsAnalyzed": "Αναλύθηκαν γύροι",
+      "willStartAt": "Θα ξεκινήσει στις",
+      "targetsCount": "Στόχοι",
+      "thenProgress": "μετά πρόοδος"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Μέσο απόλυτο σφάλμα",
+      "ratio": "Αναλογία",
+      "slope": "Κλίση",
+      "vierordtSlope": "Κλίση Vierordt",
+      "wait": "Περίμενε...",
+      "title": "Διάρκεια Αναπαραγωγή",
+      "meanError": "Μέσο σφάλμα",
+      "meanRatio": "Μέση αναλογία (παραγωγή/στόχος)",
+      "holdNow": "ΚΡΑΤΗΣΤΕ ΤΩΡΑ",
+      "target": "Στόχος",
+      "error": "Σφάλμα"
+    },
+    "embeddedFigures": {
+      "fastest": "Ο πιο γρήγορος",
+      "found": "Βρέθηκε",
+      "meanDetectionTime": "Μέσος χρόνος ανίχνευσης",
+      "slowest": "Πιο αργό",
+      "title": "Ενσωματωμένες φιγούρες",
+      "missed": "Χάθηκε",
+      "fastestLabel": "Ο πιο γρήγορος",
+      "findThisShape": "Βρείτε αυτό το σχήμα",
+      "memorizeShape": "Απομνημονεύστε το σχήμα...",
+      "foundIt": "Το βρήκα!",
+      "giveUp": "Παραιτηθείτε"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Ψευδοσυναγερμοί",
+      "misses": "Παραλείψεις",
+      "title": "Συναισθηματική N-Back",
+      "match": "Ταίριασμα"
+    },
+    "emotionalStroop": {
+      "neutralRt": "Ουδέτερο RT",
+      "positiveRt": "Θετικό RT",
+      "threatRt": "Απειλή RT",
+      "title": "Συναισθηματικό Stroop",
+      "interference": "Παρεμβάσεις",
+      "interferenceThreatNeutral": "Παρεμβολή (Απειλή – Ουδέτερη)"
+    },
+    "eyesTest": {
+      "totalTime": "Συνολικός χρόνος"
+    },
+    "faceName": {
+      "gain": "Κέρδος",
+      "learningImprovement": "Βελτίωση Μάθησης",
+      "round1Accuracy": "Γύρος 1 Ακρίβεια",
+      "round2Accuracy": "Γύρος 2 Ακρίβεια",
+      "whoIsThis": "Ποιος είναι αυτός;",
+      "title": "Σύλλογος Face-Name",
+      "round": "Στρογγυλό",
+      "testPhase": "Δοκιμαστική φάση"
+    },
+    "fauxPas": {
+      "who": "Ποιος;",
+      "why": "Γιατί;",
+      "title": "Αναγνώριση Faux Pas",
+      "detection": "Ανίχνευση",
+      "scenarios": "Σενάρια",
+      "fpFound": "Faux pas βρέθηκε",
+      "control": "Έλεγχος",
+      "readyToAnswer": "Έτοιμος να απαντήσει",
+      "didSomeoneSay": "Είπε κάποιος κάτι που δεν έπρεπε;",
+      "whoSaidIt": "Ποιος το είπε;",
+      "whyInappropriate": "Γιατί ήταν ακατάλληλο;"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Ακρίβεια ανάκλησης",
+      "recognitionAccuracy": "Ακρίβεια αναγνώρισης",
+      "recallPlaceholder": "Πληκτρολογήστε την απάντησή σας...",
+      "unlikely": "απίθανο",
+      "certain": "Βέβαιο",
+      "title": "Αίσθημα Γνώσης",
+      "recall": "Ανάκληση",
+      "recognition": "Αναγνώριση",
+      "fokR": "Φοκ Ρ",
+      "questions": "Ερωτήσεις",
+      "recalled": "Υπενθύμισε",
+      "recognized": "Αναγνωρισμένος",
+      "fokSensitivity": "Ευαισθησία FOK",
+      "submit": "Υποβολή",
+      "dontKnow": "Δεν ξέρω",
+      "fokPrompt": "Θα το αναγνωρίσετε;",
+      "selectCorrectAnswer": "Επιλέξτε τη σωστή απάντηση",
+      "answer": "Απάντηση"
+    },
+    "fingerTapping": {
+      "firstTrial": "Πρώτη Δίκη",
+      "lastTrial": "Τελευταία Δίκη",
+      "sequence": "Ακολουθία",
+      "speedupT1VsT12": "Επιτάχυνση (T1 vs T12)",
+      "title": "Χτύπημα με το δάχτυλο"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Μέσος χρόνος κίνησης",
+      "avgThroughput": "Μέση απόδοση",
+      "title": "Ταιριάζει με το χτύπημα",
+      "throughput": "Διακίνηση",
+      "tapTarget": "Πατήστε τον επισημασμένο στόχο"
+    },
+    "foreperiod": {
+      "early": "Νωρίς",
+      "slope": "Κλίση",
+      "title": "Προσωρινή Προετοιμασία",
+      "fpEffectSlope": "Κλίση εφέ FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Ανατροπές",
+      "threshold": "Κατώφλι",
+      "tone1": "Τόνος 1",
+      "tone2": "Τόνος 2",
+      "weber": "Ο Βέμπερ",
+      "weberFraction": "Κλάσμα Weber",
+      "hz": "Hz",
+      "title": "Διακρίσεις συχνότητας",
+      "thresholdLabel": "Κατώφλι",
+      "hzDiff": "Hz διαφορά",
+      "whichWasHigher": "Ποιο ήταν υψηλότερο;",
+      "firstHigher": "Πρώτα ψηλότερα",
+      "secondHigher": "Δεύτερο υψηλότερο"
+    },
+    "gabor": {
+      "gaborPatch": "Μπάλωμα Gabor",
+      "leftAccuracy": "Αριστερή ακρίβεια",
+      "leftTrials": "Αριστερά δοκιμαστικά",
+      "noiseMask": "Μάσκα θορύβου",
+      "rightAccuracy": "Σωστή ακρίβεια",
+      "rightTrials": "Σωστές δοκιμασίες",
+      "thresholdAngle": "Γωνία κατωφλίου",
+      "title": "Gabor",
+      "threshold": "Κατώφλι",
+      "reversals": "Ανατροπές",
+      "timedOut": "Λήξη χρονικού ορίου",
+      "left": "Αριστερά",
+      "right": "Δεξιά"
+    },
+    "gameOfDice": {
+      "finalPoints": "Τελικά σημεία",
+      "risky": "Επικίνδυνο",
+      "riskyChoices": "Επικίνδυνες επιλογές",
+      "safe": "Ασφαλής",
+      "winRate": "Ποσοστό νίκης",
+      "wins": "Κερδίζει",
+      "title": "Παιχνίδι Ζαριών",
+      "totalPoints": "Σύνολο πόντων",
+      "riskyLabel": "Επικίνδυνο",
+      "roll": "Ρολό",
+      "chooseYourBet": "Επιλέξτε το στοίχημά σας",
+      "pickNumbers": "Διάλεξε τους αριθμούς σου"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Κενό ή κανένα κενό;",
+      "gapThreshold": "Κατώφλι κενού",
+      "title": "Ανίχνευση σιωπής",
+      "noGap": "Κανένα κενό"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Πού ήταν το βλέμμα;",
+      "direct": "Άμεση",
+      "left": "Αριστερά",
+      "right": "Δεξιά",
+      "title": "Κατεύθυνση Βλέμματος",
+      "dPrimeDirectGaze": "D Prime Άμεσο Βλέμμα"
+    },
+    "hayling": {
+      "part1Initiation": "Μέρος 1 (Έναρξη)",
+      "part2": "Μέρος 2",
+      "part2Suppression": "Μέρος 2 (Καταστολή)",
+      "suppressionCost": "Κόστος καταστολής",
+      "title": "Hayling",
+      "part1": "Μέρος 1",
+      "part2Label": "Μέρος 2",
+      "suppression": "Καταστολή",
+      "obvious": "Προφανές",
+      "obviousPicksPart2": "Προφανείς επιλογές (Μέρος 2)",
+      "chooseUnrelated": "Επιλέξτε μια άσχετη λέξη",
+      "completelyUnrelated": "Εντελώς άσχετο",
+      "doNotPickObvious": "ΜΗΝ διαλέξετε την προφανή λέξη!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Προχωρώντας στο επόμενο στάδιο...",
+      "stageComplete": "Το στάδιο ολοκληρώθηκε!",
+      "title": "IED Set Shift",
+      "stages": "Στάδια",
+      "edsCost": "Κόστος EDS",
+      "stage": "Στάδιο",
+      "correctNeeded": "Χρειάζεται σωστή για να προχωρήσετε"
+    },
+    "informationSampling": {
+      "cost": "Κόστος",
+      "free": "Δωρεάν",
+      "meanTilesCost": "Μέσος όρος πλακιδίων (κόστος)",
+      "meanTilesFree": "Μέση πλακάκια (δωρεάν)",
+      "totalCost": "Συνολικό Κόστος",
+      "title": "Δειγματοληψία πληροφοριών",
+      "tiles": "Πλακάκια",
+      "tapToReveal": "Πατήστε για αποκάλυψη"
+    },
+    "inspectionTime": {
+      "final": "Τελικός",
+      "finalDisplayTime": "Τελικός χρόνος εμφάνισης",
+      "minCorrectIt": "Ελάχιστη σωστή πληροφορική",
+      "threshold": "Κατώφλι",
+      "title": "Χρόνος Επιθεώρησης",
+      "thresholdLabel": "Κατώφλι",
+      "minIt": "Ελάχιστο IT"
+    },
+    "iowaGambling": {
+      "balance": "Υπόλοιπο:",
+      "chooseADeck": "Επιλέξτε ένα κατάστρωμα",
+      "deckADraws": "Το κατάστρωμα Α κληρώνει",
+      "deckBDraws": "Το κατάστρωμα Β κληρώνει",
+      "deckCDraws": "Το κατάστρωμα Γ κληρώνει",
+      "deckDDraws": "Το κατάστρωμα Δ κληρώνει",
+      "first40Advantageous": "Τα πρώτα 40 συμφέρουν",
+      "last40Advantageous": "Τα τελευταία 40 συμφέρουν",
+      "learn": "Μάθετε",
+      "learningIndex": "Ευρετήριο μάθησης",
+      "title": "Τυχερά παιχνίδια της Αϊόβα",
+      "advantageousPct": "πλεονεκτικό %",
+      "earnings": "Κέρδη",
+      "last40": "Τελευταία 40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Προκατάληψη βαθμονόμησης",
+      "meanJol": "Εννοώ JOL",
+      "nowTestYourRecall": "Τώρα δοκιμάστε την ανάκλησή σας",
+      "studyComplete": "Η μελέτη ολοκληρώθηκε",
+      "whatWasPairedWith": "Τι συνδυάστηκε με…;",
+      "title": "Κρίση της Μάθησης",
+      "recallAccuracy": "Ακρίβεια ανάκλησης",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Ακρίβεια JOL (Γάμμα)",
+      "howLikelyRemember": "Πόσο πιθανό θα θυμάστε;",
+      "hiddenAnswer": "Κρυφή απάντηση"
+    },
+    "judgmentOfRecency": {
+      "close": "Κλείσιμο",
+      "closeGap13": "Κοντινό κενό (1-3)",
+      "far": "Μακριά",
+      "farGap9": "Μεγάλη διαφορά (9+)",
+      "mediumGap48": "Μεσαία διαφορά (4-8)",
+      "title": "Απόφαση της Πρόσφατης",
+      "medium": "Μεσαίο",
+      "studyPhaseMemorizeOrder": "Φάση μελέτης — Απομνημονεύστε την παραγγελία",
+      "whichMoreRecently": "Ποιο εμφανίστηκε πιο πρόσφατα;"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Μέσος όρος RT (όχι λέξεις)",
+      "meanRtWords": "Μέσος όρος RT (λέξεις)",
+      "nonwordsAccuracy": "Ακρίβεια χωρίς λέξεις",
+      "wordsAccuracy": "Ακρίβεια λέξεων",
+      "word": "Λέξη",
+      "nonword": "Μη λέξη"
+    },
+    "maze": {
+      "duration": "Διάρκεια",
+      "optimalSteps": "Βέλτιστα βήματα",
+      "pathEfficiency": "Αποτελεσματικότητα διαδρομής",
+      "totalSteps": "Σύνολο Βημάτων",
+      "wallHits": "Επιτυχίες τοίχου",
+      "title": "Λαβύρινθος",
+      "completed": "Ολοκληρωμένο",
+      "efficiency": "Αποτελεσματικότητα",
+      "wallHitsLabel": "Επιτυχίες τοίχου",
+      "steps": "Βήματα"
+    },
+    "memobox": {
+      "easy": "Εύκολο",
+      "easy2Boxes": "Εύκολο (2 κουτιά)",
+      "hard": "Δύσκολο",
+      "hard4Boxes": "Σκληρό (4 κουτιά)",
+      "medium3Boxes": "Μεσαίο (3 κουτιά)",
+      "title": "Memobox",
+      "rounds": "Γύροι",
+      "medium": "Μεσαίο",
+      "watchMovements": "Παρακολουθήστε τις κινήσεις...",
+      "howManyBalls": "Πόσες μπάλες σε κάθε κουτί;",
+      "submit": "Υποβολή",
+      "roundOf": "Στρογγυλό {{current}} από {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Ποια είναι η διατομή;",
+      "title": "Ψυχική κοπή"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Παλιό, παρόμοιο ή νέο;",
+      "patternSeparation": "Διαχωρισμός μοτίβων",
+      "sep": "Σεπτ.",
+      "old": "Παλιά",
+      "similar": "Παρόμοια",
+      "new": "Νέο",
+      "ldi": "LDI",
+      "title": "Μνημονική Διάκριση",
+      "hitRateOldDetected": "Ποσοστό επιτυχίας (Εντοπίστηκε παλιό)",
+      "lureDiscrimination": "Δέλεαρ Διακρίσεις (LDI)",
+      "memorize": "Απομνημόνευση",
+      "testPhase": "Δοκιμαστική φάση"
+    },
+    "multiArmedBandit": {
+      "earnings": "Κέρδη:",
+      "pickMachine": "Διάλεξε μια μηχανή",
+      "title": "Πολύοπλος Ληστής",
+      "totalReward": "Συνολική ανταμοιβή",
+      "optimal": "Βέλτιστη",
+      "regret": "λύπη",
+      "exploit": "Εκμετάλλευση",
+      "machine": "Μηχανή",
+      "armsExplored": "Όπλα εξερευνημένα"
+    },
+    "navon": {
+      "globalBigLetter": "Παγκόσμιο (μεγάλο γράμμα)",
+      "localSmallLetter": "Τοπικό (μικρό γράμμα)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Τι ΜΕΓΑΛΟ γράμμα;",
+      "whatSmallLetter": "Τι ΜΙΚΡΟ γράμμα;"
+    },
+    "negativePriming": {
+      "controlRt": "Έλεγχος RT",
+      "nameTheRedShape": "Ονομάστε το κόκκινο σχήμα",
+      "negativePrimingRt": "Αρνητική εκκίνηση RT",
+      "positivePrimingRt": "Θετική εκκίνηση RT",
+      "npRt": "ΧΑ ΑΠ",
+      "ppRt": "ΧΑ ΘΠ",
+      "npEffect": "Εφέ NP",
+      "title": "Αρνητικό αστάρωμα",
+      "ctrlRt": "ΧΑ Ελέγχ."
+    },
+    "numberLine": {
+      "estimationBias": "Μεροληψία εκτίμησης",
+      "linearityRsup2": "Γραμμικότητα (R²)",
+      "meanAbsoluteError": "Μέσο απόλυτο σφάλμα",
+      "tapTheLineToPlaceTheNumber": "Πατήστε τη γραμμή για να τοποθετήσετε τον αριθμό",
+      "title": "Αριθμητική Γραμμή",
+      "meanError": "Μέσο σφάλμα",
+      "yourEstimate": "Η εκτίμησή σας",
+      "correct": "Σωστό"
+    },
+    "oddOneOut": {
+      "colorTrials": "Δοκιμές χρωμάτων",
+      "shapeTrials": "Δοκιμές σχήματος",
+      "shape": "Σχήμα",
+      "color": "Χρώμα",
+      "timeout": "Λήξη χρόνου",
+      "shapeDiffAccuracy": "Διαφορά σχήματος. ακρίβεια",
+      "colorDiffAccuracy": "Διαφορά χρώματος. ακρίβεια",
+      "shapeDiffAvgRt": "Διαφορά σχήματος. μέσο RT",
+      "colorDiffAvgRt": "Διαφορά χρώματος. μέσος όρος RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "Με ποιον τρόπο;",
+      "thresholdAngle": "Γωνία κατωφλίου",
+      "title": "Προσανατολισμός Διακρίσεις",
+      "threshold": "Κατώφλι",
+      "counterCw": "ΑΩΔ",
+      "clockwise": "Δεξιόστροφα"
+    },
+    "patternComparison": {
+      "differentTrials": "Διαφορετικές δοκιμές",
+      "sameTrials": "Ίδιες δοκιμές",
+      "same": "Ίδιο",
+      "different": "Διαφορετικό"
+    },
+    "patternRecognition": {
+      "newPatterns": "Νέα μοτίβα",
+      "oldPatterns": "Παλιά μοτίβα",
+      "old": "ΠΑΛΙΑ",
+      "new": "ΝΕΟ",
+      "studyPatterns": "Μελετήστε προσεκτικά τα μοτίβα",
+      "memorize": "Απομνημόνευση ({{current}}/{{total}})",
+      "getReady": "Ετοιμάσου...",
+      "testPhaseStarting": "Έναρξη δοκιμαστικής φάσης..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Ακριβώς Σωστό",
+      "meanAngularError": "Μέσο γωνιακό σφάλμα",
+      "withinTolerance": "Μέσα στην ανοχή",
+      "title": "Λήψη Προοπτικής",
+      "avgErr": "Μέσος όρος σφάλμα",
+      "youAreAt": "Είστε στο",
+      "facing": "Αντιμετωπίζοντας",
+      "pointTo": "Δείξτε προς"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Συχν. Κατώφλι",
+      "seq1": "Ακολουθία 1",
+      "seq2": "Ακολουθία 2",
+      "title": "Διάκριση Φωνημάτων",
+      "thresh": "Αλωνίζω",
+      "sameOrDifferent": "Ίδιο ή διαφορετικό;",
+      "same": "Ίδιο",
+      "different": "Διαφορετικό"
+    },
+    "predictionMotion": {
+      "biasLate": "Προκατάληψη (+ = αργά)",
+      "meanAbsoluteError": "Μέσο απόλυτο σφάλμα",
+      "precisionSd": "Ακρίβεια (SD)",
+      "title": "Κίνηση Πρόβλεψης",
+      "absError": "Abs. σφάλμα",
+      "precision": "Ακρίβεια",
+      "responded": "Απάντησε",
+      "tapWhenReachesTarget": "ΠΑΤΗΣΤΕ όταν φτάσει στο στόχο"
+    },
+    "promem": {
+      "ongoingAccuracy": "Συνεχής ακρίβεια",
+      "ongoingRt": "Σε εξέλιξη RT",
+      "pmHitRate": "Ποσοστό επιτυχίας PM",
+      "pmRt": "ΧΑ ΠΜ",
+      "pmTargets": "Στόχοι PM",
+      "title": "Προοπτική Μνήμη",
+      "ongoing": "Σε εξέλιξη",
+      "pmHits": "Επιτ. ΠΜ",
+      "pmMisses": "PM Δεσποινίς",
+      "living": "Ζώντας",
+      "nonLiving": "Μη ζωντανός",
+      "redWordInstruction": "Κόκκινη λέξη = πάτημα"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Σφάλματα Distractor",
+      "literalErrorRate": "Ποσοστό κυριολεκτικού σφάλματος",
+      "literalErrors": "Κυριολεκτικά λάθη",
+      "title": "Παροιμία Ερμηνεία",
+      "literal": "Κυριολεκτικά",
+      "litRate": "Αναμμένο. Βαθμολογήστε",
+      "whatDoesThisMean": "Τι σημαίνει αυτό;"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Ετοιμαστείτε να ακολουθήσετε",
+      "meanTimeOnTarget": "Μέση ώρα στο στόχο",
+      "meanTrackingError": "Μέσο σφάλμα παρακολούθησης",
+      "placeYourFingerOnTheScreen": "Τοποθετήστε το δάχτυλό σας στην οθόνη",
+      "title": "Παρακολούθηση καταδίωξης",
+      "timeOnTarget": "Χρόνος στο στόχο",
+      "error": "Σφάλμα",
+      "onTarget": "Στο στόχο",
+      "avgError": "Μέσος όρος σφάλμα",
+      "improve": "Βελτιώστε",
+      "improvementT1VsT": "Βελτίωση T1 εναντίον T",
+      "errorLabel": "Σφάλμα",
+      "followGreenTarget": "Ακολουθήστε τον πράσινο στόχο"
+    },
+    "rapidNaming": {
+      "roundComplete": "Στρογγυλή πλήρης",
+      "totalErrors": "Συνολικά σφάλματα",
+      "title": "Ταχεία ονομασία",
+      "avgSpeed": "Μέσος όρος ταχύτητα",
+      "totalTime": "Συνολικός χρόνος",
+      "round": "Στρογγυλό",
+      "getReady": "Ετοιμαστείτε!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Μέσος χρόνος επίλυσης",
+      "solved": "Λύθηκε",
+      "wrong": "Λάθος",
+      "placeholder": "Η απάντησή σας...",
+      "title": "Παζλ Rebus",
+      "puzzles": "Παζλ",
+      "timeout": "Λήξη χρόνου",
+      "submit": "Υποβολή",
+      "answer": "Απάντηση"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Μέσος χρόνος επίλυσης",
+      "solved": "Λύθηκε",
+      "placeholder": "Η απάντησή σας...",
+      "title": "Απομακρυσμένοι Συνεργάτες",
+      "timeout": "Λήξη χρόνου",
+      "submit": "Υποβολή",
+      "answer": "Απάντηση"
+    },
+    "reversalLearning": {
+      "adapt": "Προσαρμόστε",
+      "loseshiftRate": "Ποσοστό απώλειας μετατόπισης",
+      "score": "Βαθμολογία:",
+      "winstayRate": "Ποσοστό Win-Stay",
+      "title": "Εκμάθηση αντιστροφής",
+      "rewards": "Ανταμοιβές",
+      "reversals": "Ανατροπές",
+      "persev": "Επίμ.",
+      "avgTrialsToCriterion": "Μέσος όρος δοκιμές σε κριτήριο",
+      "pickACard": "Διάλεξε μια κάρτα"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Μετρήστε αντίστροφα κατά 7",
+      "reproduceThePatternFromMemory": "Αναπαράγετε το μοτίβο από τη μνήμη",
+      "title": "Σύνθετη εικόνα Rey",
+      "copy": "Αντιγραφή",
+      "recall": "Ανάκληση",
+      "retention": "Διατήρηση",
+      "trial": "Δοκιμή",
+      "target": "Στόχος",
+      "yourCopy": "Το αντίγραφό σας",
+      "submit": "Υποβολή"
+    },
+    "rhythm": {
+      "avgTimingError": "Μέσο σφάλμα χρονισμού",
+      "bestTrialError": "Το καλύτερο δοκιμαστικό λάθος",
+      "correctTrials": "Σωστές δοκιμές",
+      "worstTrialError": "Το χειρότερο δοκιμαστικό λάθος",
+      "watchRhythm": "Παρακολουθήστε τον ρυθμό",
+      "getReady": "Ετοιμάσου...",
+      "tapTheRhythm": "Πατήστε τον ρυθμό!",
+      "tooFarOff": "Πολύ μακριά!",
+      "tapToReproduce": "Πατήστε για αναπαραγωγή",
+      "beats": "Χτυπήματα {{count}}",
+      "bestTrial": "Καλύτερη δοκιμή",
+      "worstTrial": "Η χειρότερη δοκιμή",
+      "title": "Ρυθμός",
+      "msErr": "ms λάθος"
+    },
+    "routePlanning": {
+      "time": "Χρόνος",
+      "title": "Σχεδιασμός Διαδρομών",
+      "levels": "Επίπεδα",
+      "completed": "Ολοκληρωμένο",
+      "avgMoves": "Μέσος όρος κινείται",
+      "clear": "Καθαρισμός",
+      "submit": "Υποβολή",
+      "instructions": "Οδηγίες"
+    },
+    "rvp": {
+      "detect357246468": "Ανίχνευση: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Ακολουθίες στόχων",
+      "fa": "ΨΣ",
+      "hitRate": "Ποσοστό επιτυχίας",
+      "misses": "Παραλείψεις",
+      "sequences": "Ακολουθίες"
+    },
+    "sart": {
+      "commissionErrors": "Λάθη της Επιτροπής",
+      "omissionErrors": "Σφάλματα παράλειψης",
+      "tapAllDigits": "Πατήστε όλα τα ψηφία εκτός από το 3",
+      "except3": "Εκτός 3"
+    },
+    "sceneCrasher": {
+      "adds": "Προσθέτει",
+      "studyTheScene": "Μελετήστε τη σκηνή",
+      "swaps": "Ανταλλαγές",
+      "tapTheNewchangedObject": "Πατήστε το νέο/αλλαγμένο αντικείμενο"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Ψεύτικες προτάσεις",
+      "trueSentences": "Αληθινές προτάσεις",
+      "byCategory": "Ανά Κατηγορία",
+      "title": "Επαλήθευση πρότασης",
+      "trueRt": "Αληθινό RT",
+      "true": "Σωστό",
+      "false": "Λάθος",
+      "pressKey": "Πατήστε"
+    },
+    "soundSweeps": {
+      "down": "Κάτω",
+      "downAccuracy": "Κάτω η ακρίβεια",
+      "durationThreshold": "Όριο Διάρκειας",
+      "up": "Πάνω",
+      "upAccuracy": "Αυξημένη ακρίβεια",
+      "title": "Sound Sweeps",
+      "threshold": "Κατώφλι",
+      "upOrDown": "Πάνω ή κάτω;"
+    },
+    "sourceMemory": {
+      "color": "Χρώμα",
+      "colorRecall": "Ανάκληση χρώματος",
+      "frame": "Πλαίσιο",
+      "frameRecall": "Ανάκληση πλαισίου",
+      "getReadyForTheTest": "Ετοιμαστείτε για το τεστ!",
+      "itemRecognition": "Αναγνώριση αντικειμένου",
+      "positionRecall": "Ανάκληση θέσης",
+      "sourceAccuracy": "Ακρίβεια πηγής",
+      "title": "Μνήμη πηγής",
+      "source": "Πηγή",
+      "position": "Θέση",
+      "word": "Λέξη",
+      "wasThisWordShown": "Εμφανίστηκε αυτή η λέξη;",
+      "bottom": "Κάτω",
+      "blue": "Μπλε",
+      "orange": "Πορτοκαλί",
+      "circle": "Κύκλος",
+      "square": "Πλατεία"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Κατώφλι θορύβου",
+      "title": "Ομιλία σε Θόρυβο",
+      "noise": "Θόρυβος",
+      "whichWordWasIt": "Ποια λέξη ήταν;"
+    },
+    "srtt": {
+      "learningEffect": "Μαθησιακό αποτέλεσμα",
+      "learning": "Μάθηση",
+      "block": "Αποκλεισμός"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Επίπεδο Ευκαιρίας",
+      "learningDetected": "Εντοπίστηκε μάθηση",
+      "testPhase": "Φάση δοκιμής",
+      "whichPairLooksMoreFamiliar": "Ποιο ζευγάρι φαίνεται πιο οικείο;",
+      "title": "Στατιστική Μάθηση",
+      "learning": "Μάθηση",
+      "watchTheShapes": "Παρακολουθήστε τα σχήματα"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Επίδραση μεροληψίας πεποιθήσεων",
+      "conclusion": "Συμπέρασμα",
+      "premise1": "Προϋπόθεση 1",
+      "premise2": "Προϋπόθεση 2",
+      "logicalValidityQuestion": "Ισχύει λογικά αυτό;",
+      "valid": "Ισχύει",
+      "invalid": "Μη έγκυρο"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Απουσία ακρίβειας",
+      "presentAccuracy": "Παρούσα ακρίβεια",
+      "title": "Αναζήτηση συμβόλων",
+      "present": "Παρόν",
+      "absent": "Απόν",
+      "targets": "Στόχοι",
+      "searchGroup": "Αναζήτηση ομάδας"
+    },
+    "syncContinuation": {
+      "async": "Ασύγ",
+      "asynchrony": "Ασύγχρονη",
+      "drift": "Ολίσθηση",
+      "cv": "βιογραφικό",
+      "title": "Συγχρονισμός-Συνέχεια",
+      "meanCv": "Μέσο βιογραφικό",
+      "tempos": "Τέμπος",
+      "tempo": "Τέμπο",
+      "ioi": "IOI",
+      "getReady": "Ετοιμαστείτε...",
+      "nextTempo": "Επόμενος ρυθμός..."
+    },
+    "taskJuggling": {
+      "correctResets": "Σωστή επαναφορά",
+      "duration": "Διάρκεια",
+      "missedCounters": "Χαμένα μετρητές",
+      "prematureResets": "Πρόωρες επαναφορές",
+      "totalEvents": "Σύνολο συμβάντων",
+      "tooEarly": "Πολύ νωρίς!",
+      "missed": "Χάθηκε!",
+      "title": "Εναλλαγή Εργασιών",
+      "premature": "Πρόωρα",
+      "counter": "Μετρητής",
+      "tapCounterInstruction": "Αγγίξτε κάθε μετρητή όταν φτάσει στο κατώφλι του. Μην αφήσετε κανένα να ξεχειλίσει!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Σημείο Διχοτόμησης (PSE)",
+      "curveSteepness": "Απότομη καμπύλη",
+      "idealMidpoint": "Ιδανικό μέσο σημείο",
+      "pse": "PSE",
+      "title": "Χρονική Διχοτόμηση",
+      "steepness": "Απότομο",
+      "shortOrLong": "Κοντό ή Μακρύ;",
+      "trainingPhase": "Εκπαιδευτική Φάση",
+      "short": "Σύντομη",
+      "long": "Μακρύς"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Πλάτος κλίσης",
+      "rememberThisDuration": "Θυμηθείτε αυτή τη διάρκεια",
+      "width": "Πλάτος",
+      "standard": "ΠΡΟΤΥΠΟ",
+      "title": "Χρονική γενίκευση",
+      "hitRate": "Ποσοστό επιτυχίας",
+      "faRate": "Ποσ. ΨΣ",
+      "hitRateDetectStandard": "Ποσοστό επιτυχίας (τυπική ανίχνευση)",
+      "sameDuration": "Ίδια διάρκεια;",
+      "trainingPhase": "Εκπαιδευτική Φάση",
+      "same": "Ίδιο",
+      "different": "Διαφορετικό"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Κατώφλι SOA",
+      "title": "Διακρίσεις υφής",
+      "threshold": "Κατώφλι"
+    },
+    "timePromem": {
+      "avgTimingError": "Μέσο σφάλμα χρονισμού",
+      "clockChecks": "Έλεγχοι ρολογιών",
+      "ongoingAccuracy": "Συνεχής ακρίβεια",
+      "ongoingTrials": "Σε εξέλιξη δοκιμές",
+      "totalPmPresses": "Σύνολο πιεστηρίων PM",
+      "pmAccuracy": "Ακρίβεια PM",
+      "pmMisses": "PM χάνει",
+      "title": "Προοπτική χρόνου",
+      "ongoing": "Σε εξέλιξη",
+      "pmHitsLabel": "PM χτυπήματα",
+      "timingErr": "Λάθος χρονισμού",
+      "pmHitsExpected": "Επισκέψεις PM / Αναμενόμενα",
+      "pmPresses": "Πιεστήρια PM",
+      "checkClock": "Ελέγξτε το ρολόι",
+      "thirtySecMark": "Σημ. 30δ"
+    },
+    "toj": {
+      "meanResponseTime": "Μέσος χρόνος απόκρισης",
+      "temporalResolution": "Χρονικό ψήφισμα",
+      "title": "Προσωρινή Διαταγή Κρίση",
+      "threshold": "Κατώφλι",
+      "whichCameFirst": "Ποιο ήρθε πρώτο;",
+      "leftFirst": "Πρώτα αριστερά",
+      "rightFirst": "Σωστά πρώτα"
+    },
+    "tower": {
+      "budget": "Προϋπολογισμός",
+      "challenge": "Πρόκληση",
+      "challengeClassic": "Κλασικό",
+      "challengeExpert": "Εμπειρογνώμονας",
+      "challengeMemory": "Μνήμη",
+      "challengePrecision": "Ακρίβεια",
+      "dragDiscAriaLabel": "Σύρετε τον επάνω δίσκο από το peg {{peg}}",
+      "goal": "Στόχος",
+      "goalHiddenStatus": "Ο στόχος κρύφτηκε. Χρησιμοποιήστε το Reveal για να το εμφανίσετε σύντομα.",
+      "goalRevealedMessage": "Το γκολ αποκαλύφθηκε για 3 δευτερόλεπτα.",
+      "hint": "Υπόδειξη",
+      "hintDescription": "Εμφάνιση καλύτερης επόμενης κίνησης",
+      "hintMessage": "Συμβουλή: μετακινήστε τον επάνω δίσκο από το μανταλάκι {{fromPeg}} στο μανταλάκι {{toPeg}}.",
+      "hiddenGoalDescription": "Το γκολ κρύβεται κατά τη διάρκεια του παιχνιδιού. Χρησιμοποιήστε το Reveal όταν χρειάζεστε μια σύντομη ανανέωση.",
+      "hiddenGoalTitle": "Πρόκληση μνήμης",
+      "invalid": "Μη έγκυρο",
+      "moves": "Κινήσεις",
+      "optimal": "Βέλτιστη",
+      "pegFullMessage": "Αυτό το μανταλάκι είναι γεμάτο.",
+      "previewMemoryCountdown": "Απομνημόνευση του στόχου. Ξεκινά σε {{seconds}}.",
+      "previewPlanCountdown": "Σχεδιάστε τη λύση {{moves}}-move. Ξεκινά σε {{seconds}}.",
+      "reset": "Επαναφορά",
+      "resetDescription": "Επανεκκινήστε αυτό το παζλ",
+      "resetMessage": "Επαναφορά παζλ.",
+      "reveal": "Αποκάλυψη",
+      "revealDescription": "Αποκαλύψτε τον κρυμμένο στόχο",
+      "statusOptimalSolve": "Βέλτιστη επίλυση. Βαθμολογία {{score}}.",
+      "statusSolvedScore": "Λύνεται σε κινήσεις {{moves}} (+{{extraMoves}}). Βαθμολογία {{score}}.",
+      "undo": "Αναίρεση",
+      "undoDescription": "Αντίστροφη τελευταία κίνηση",
+      "undoneMessage": "Η τελευταία κίνηση αναιρέθηκε.",
+      "yourPegs": "Τα μανταλάκια σου"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Σωστές παραδόσεις",
+      "trainsLost": "Χάθηκαν τρένα",
+      "wrongStation": "Λάθος σταθμός",
+      "title": "Τρένο της σκέψης",
+      "trains": "τρένα",
+      "missed": "Χάθηκε",
+      "scoreLabel": "Σκορ",
+      "instructions": "Οδηγίες"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Μέσος όρος ερωτήσεων που χρησιμοποιούνται",
+      "title": "Είκοσι Ερωτήσεις",
+      "avgQuestions": "Μέσος όρος ερωτήσεις",
+      "rounds": "Γύροι",
+      "efficiency": "Αποτελεσματικότητα",
+      "avgQuestionsCorrectOnly": "Μέσος όρος ερωτήσεις (μόνο σωστά)",
+      "questionsLabel": "Ερωτήσεις",
+      "remaining": "Απομένουν",
+      "readyToGuess": "Είμαι έτοιμος να μαντέψω!",
+      "tapTheTarget": "Πατήστε το αντικείμενο που πιστεύετε ότι είναι ο στόχος!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Χρήσιμο οπτικό πεδίο",
+      "visualNoiseMask": "Μάσκα οπτικού θορύβου",
+      "whatWasInTheCenter": "Τι ήταν στο κέντρο;",
+      "whereWasTheTarget": "Πού ήταν ο στόχος;",
+      "avgThreshold": "Μέσος όρος κατώφλι",
+      "speed": "Ταχύτητα",
+      "accuracy": "Ακρίβεια",
+      "central": "Κεντρικό",
+      "peripheral": "Περιφερειακό",
+      "overall": "Συνολικά",
+      "block": "Αποκλεισμός",
+      "trials": "Δοκιμές",
+      "start": "Έναρξη",
+      "focus": "Εστίαση",
+      "threshold": "Κατώφλι",
+      "stimulus": "Ερέθισμα",
+      "respondFromMemory": "Απάντηση από μνήμης",
+      "truck": "Φορτηγό",
+      "choosePeripheralLocation": "Επιλέξτε περιφερειακή τοποθεσία",
+      "currentBlock": "Μπλοκ {{n}}",
+      "exposure": "Έκθεση"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Λέξεις που ξεκινούν με {{letter}}",
+      "title": "Λεκτική ευχέρεια",
+      "totalWords": "Σύνολο λέξεων",
+      "duplicates": "Αντίγραφα",
+      "letter": "Επιστολή",
+      "round": "Στρογγυλό",
+      "roundComplete": "Στρογγυλή πλήρης",
+      "nextRound": "Επόμενος γύρος",
+      "middotRound": "· Στρογγυλό"
+    },
+    "vernierAcuity": {
+      "whichSide": "Ποια πλευρά;",
+      "title": "Οξύτητα Vernier",
+      "leftOffset": "Αριστερά μετατόπιση",
+      "rightOffset": "Δεξιά μετατόπιση",
+      "offset": "Μετατόπιση"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Βέλτιστη Στρατηγική",
+      "correct": "Σωστό!",
+      "wrong": "Λάθος",
+      "title": "Πρόβλεψη καιρού",
+      "optimal": "Βέλτιστη",
+      "learningCurve": "Καμπύλη μάθησης",
+      "predictTheWeather": "Προβλέψτε τον καιρό",
+      "rain": "Βροχή"
+    },
+    "wordChain": {
+      "avgResponseTime": "Μέσος χρόνος απόκρισης",
+      "chain": "Αλυσίδα",
+      "longestChain": "Μακρύτερη Αλυσίδα",
+      "totalCorrect": "Απόλυτο Σωστό",
+      "totalWords": "Σύνολο Λέξεων",
+      "words": "Λέξεις",
+      "title": "Αλυσίδα λέξεων",
+      "longest": "Το μεγαλύτερο",
+      "avgRt": "Μέσος όρος RT",
+      "endsWith": "τελειώνει με",
+      "chainLabel": "Αλυσίδα",
+      "bestLabel": "Το καλύτερο"
+    },
+    "wordFlow": {
+      "avgWordLength": "Μέσο μήκος λέξης",
+      "correct": "Σωστό",
+      "invalidWords": "Άκυρες λέξεις",
+      "totalWordsSelected": "Σύνολο επιλεγμένων λέξεων",
+      "validWords": "Έγκυρες λέξεις",
+      "wordsPerMinute": "Λέξεις ανά λεπτό",
+      "wrong": "Λάθος",
+      "seeResults": "Δείτε αποτελέσματα",
+      "nextRound": "Επόμενος γύρος ({{current}}/{{total}})",
+      "title": "Λεκτική ευχέρεια",
+      "validWordsLabel": "Έγκυρες λέξεις",
+      "wordsPerMinLabel": "Λέξεις/λεπτό",
+      "avgLengthLabel": "Μέσος όρος μήκος",
+      "invalidLabel": "Μη έγκυρο",
+      "round": "Στρογγυλό",
+      "selectWordsBelongTo": "Επιλέξτε λέξεις που ανήκουν",
+      "selected": "Επιλεγμένο"
+    },
+    "wordList": {
+      "avgRtCorrect": "Μέσο RT (σωστό)",
+      "primacyEffect": "Εφέ υπεροχής",
+      "recencyEffect": "Εφέ πρόσφατου",
+      "studyPhaseRememberEachWord": "Φάση μελέτης — θυμηθείτε κάθε λέξη",
+      "wordsRecalled": "Λέξεις που ανακαλούνται",
+      "title": "Λίστα λέξεων",
+      "serialPositionCurve": "Καμπύλη σειριακής θέσης",
+      "wasWordInList": "Ήταν αυτή η λέξη στη λίστα;",
+      "seenBefore": "Είδα πριν",
+      "newWord": "Νέο"
+    },
+    "speedSort": {
+      "switchAccuracy": "Ακρίβεια διακόπτη",
+      "switchTrials": "Εναλλαγή δοκιμών",
+      "sortByColor": "Ταξινόμηση κατά ΧΡΩΜΑ",
+      "sortByShape": "Ταξινόμηση κατά SHAPE",
+      "sortByNumber": "Ταξινόμηση κατά NUMBER",
+      "ruleChanged": "Ο κανόνας άλλαξε!",
+      "binRed": "Κόκκινο",
+      "binBlue": "Μπλε",
+      "binGreen": "Πράσινο",
+      "binYellow": "Κίτρινο",
+      "binCircle": "Κύκλος",
+      "binSquare": "Πλατεία",
+      "binTriangle": "Τρίγωνο",
+      "binStar": "Αστέρι",
+      "title": "Ταξινόμηση ταχύτητας",
+      "switch": "Διακόπτες"
+    },
+    "reflex": {
+      "target": "Στόχος",
+      "lure": "Δέλεαρ",
+      "tooSlow": "Πολύ αργά!",
+      "wrongTarget": "Λάθος στόχος!",
+      "tapTargets": "Πατήστε τους πράσινους κύκλους!",
+      "hits": "Επιτυχίες",
+      "misses": "Παραλείψεις",
+      "fa": "ΨΣ"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Θυμηθείτε το σύνολο των τρεχόντων...",
+      "title": "Υπολογισμός Αλυσίδας",
+      "stepChains": "Αλυσίδες βημάτων {{len}}",
+      "start": "Έναρξη",
+      "step": "Βήμα",
+      "whatIsTheResult": "Ποιο είναι το αποτέλεσμα;"
+    },
+    "alternateUses": {
+      "placeholder": "Πληκτρολογήστε μια χρήση...",
+      "title": "Εναλλακτικές χρήσεις",
+      "totalUses": "Συνολικές χρήσεις",
+      "perObject": "Ανά αντικείμενο",
+      "rounds": "Γύροι",
+      "bestObject": "Το καλύτερο αντικείμενο",
+      "bestCount": "Το καλύτερο μέτρημα",
+      "noUsesSubmitted": "Δεν υποβλήθηκαν χρήσεις",
+      "timesUp": "Ο χρόνος τελειώνει!",
+      "nextObject": "Επόμενο αντικείμενο ({{object}})",
+      "listCreativeUses": "Καταχωρίστε τις χρήσεις δημιουργικού για αυτό το αντικείμενο"
+    },
+    "anagram": {
+      "placeholder": "Πληκτρολογήστε τη λέξη...",
+      "title": "Αναγραμματισμός",
+      "avgSolve": "Μέσος όρος λύσει",
+      "letterWords": "Λέξεις με γράμματα {{len}}",
+      "submit": "Υποβολή"
+    },
+    "facialEmotion": {
+      "happy": "Ευτυχισμένος",
+      "sad": "Θλιβερό",
+      "angry": "Θυμωμένος",
+      "fearful": "Φοβισμένος",
+      "disgusted": "Αηδιασμένος",
+      "surprised": "Έκπληκτος",
+      "lc": "LC",
+      "title": "Αναγνώριση συναισθημάτων προσώπου",
+      "topConfusions": "Κορυφαία μπερδέματα"
+    },
+    "numberSeries": {
+      "easy": "Εύκολο",
+      "hard": "Δύσκολο"
+    },
+    "chainRecall": {
+      "round": "Στρογγυλό",
+      "title": "Ανάκληση αλυσίδας",
+      "chain": "Αλυσίδα",
+      "placeholder": "Κενό"
+    },
+    "emotionalGoNogo": {
+      "fa": "ΨΣ",
+      "title": "Συναισθηματική Go/No-Go",
+      "block1CommissionErrors": "Μπλοκ 1 σφάλματα προμήθειας",
+      "block2CommissionErrors": "Μπλοκ 2 σφάλματα προμήθειας",
+      "goHappy": "Πάω = Ευτυχισμένος",
+      "goSad": "Πάω = Θλιβερό",
+      "block": "Αποκλεισμός",
+      "go": "Πήγαινε"
+    },
+    "timeEstimation": {
+      "cv": "βιογραφικό"
+    },
+    "colorRush": {
+      "stroopEffect": "Εφέ Stroop",
+      "title": "Color Rush",
+      "congShort": "Σύμφ.",
+      "incongShort": "Ασύμφ.",
+      "congruentAccuracy": "Σύμφωνη ακρίβεια",
+      "incongruentAccuracy": "Ασυμβίβαστη ακρίβεια"
+    },
+    "mirror": {
+      "avgCorrectCells": "Σωστά κελιά (μέσος όρος)",
+      "symmetryType": "Τύπος συμμετρίας",
+      "title": "Καθρέφτης"
+    },
+    "rhythmTap": {
+      "correctTrials": "Σωστές δοκιμές",
+      "avgRhythmScore": "Μέση βαθμολογία ρυθμού",
+      "bestTrialScore": "Καλύτερη βαθμολογία δοκιμής",
+      "worstTrialScore": "Το χειρότερο αποτέλεσμα δοκιμής",
+      "level": "Επίπεδο",
+      "rhythm": "Ρυθμός",
+      "bestTrial": "Καλύτερη δοκιμή",
+      "worstTrial": "Η χειρότερη δοκιμή"
+    },
+    "vocalProsody": {
+      "questioning": "αμφισβήτηση"
+    },
+    "arithmeticSpeed": {
+      "multiply": "Πολλαπλασιάστε",
+      "add": "Προσθήκη",
+      "subtract": "Αφαιρέστε",
+      "title": "Αριθμητική Ταχύτητα",
+      "score": "Σκορ",
+      "solved": "Λύθηκε",
+      "missed": "Χάθηκε"
+    },
+    "puzzle": {
+      "avgSolveTime": "Μέσος χρόνος επίλυσης",
+      "totalMoves": "Συνολικές κινήσεις",
+      "totalErrors": "Συνολικά σφάλματα",
+      "gridSize": "Μέγεθος πλέγματος",
+      "maxGridReached": "Έφτασε το μέγιστο πλέγμα",
+      "maxLevelReached": "Επιτεύχθηκε το μέγιστο επίπεδο",
+      "maxNodesReached": "Ο μέγιστος κόμβος έφτασε",
+      "puzzleDetails": "Λεπτομέρειες παζλ",
+      "roundDetails": "Στρογγυλές λεπτομέρειες",
+      "solved": "Λύθηκε!",
+      "undo": "Αναίρεση",
+      "reset": "Επαναφορά",
+      "check": "Έλεγχος",
+      "moves": "Κινήσεις",
+      "time": "Χρόνος",
+      "level": "Επίπεδο",
+      "errors": "Σφάλματα",
+      "score": "Σκορ",
+      "grid": "Πλέγμα",
+      "crossings": "Διαβάσεις",
+      "pearls": "Μαργαριτάρια",
+      "clues": "Ενδείξεις",
+      "region": "Περιφέρεια",
+      "filled": "Γέμισε",
+      "cells": "Κύτταρα",
+      "undosLeft": "Αναίρεση απομένει",
+      "gems": "Πολύτιμοι λίθοι",
+      "connected": "Συνδεδεμένος",
+      "slides": "Διαφάνειες",
+      "progress": "Πρόοδος",
+      "rotations": "Περιστροφές",
+      "puzzle": "Παζλ",
+      "uncovered": "Ακάλυπτος",
+      "colored": "Έγχρωμο",
+      "violations": "Παραβιάσεις",
+      "blacked": "Μαυρισμένος",
+      "empty": "Άδειο",
+      "remaining": "Απομένουν",
+      "pairs": "Ζεύγη",
+      "flips": "Αναποδογυρίσματα",
+      "found": "Βρέθηκε",
+      "balls": "Μπάλες",
+      "guesses": "Εικασίες",
+      "original": "Πρωτότυπο",
+      "findDifferences": "Βρείτε διαφορές",
+      "totalDrags": "Συνολικές συρσεις",
+      "totalUndos": "Συνολική αναίρεση",
+      "totalEdgesDrawn": "Συνολικά τραβηγμένα άκρα",
+      "totalLasers": "Ολικά λέιζερ",
+      "totalSlides": "Συνολικές διαφάνειες",
+      "totalRotations": "Συνολικές περιστροφές",
+      "totalRectangles": "Συνολικά ορθογώνια",
+      "totalScore": "Συνολική βαθμολογία",
+      "avgTime": "Μέσος χρόνος",
+      "cellsCleared": "Τα κύτταρα καθαρίστηκαν",
+      "totalDiffsFound": "Βρέθηκαν συνολικές διαφορές",
+      "gemsCollected": "Πολύτιμοι λίθοι που συλλέγονται",
+      "pushBoxesOntoTargets": "Σπρώξτε όλα τα κουτιά σε στόχους",
+      "fireLasersMarkBalls": "Εκτοξεύστε λέιζερ από τις άκρες και, στη συνέχεια, σημειώστε τις θέσεις της μπάλας",
+      "revealingAnswer": "Αποκαλυπτική απάντηση...",
+      "checkAnswer": "Ελέγξτε την απάντηση",
+      "pickNumberBelow": "Επιλέξτε έναν αριθμό παρακάτω",
+      "tapCellToAssign": "Πατήστε ένα κελί για να εκχωρήσετε έναν αριθμό",
+      "tapEdgesToPlaceWalls": "Χτυπήστε τις άκρες για να τοποθετήσετε τοίχους. Χωρίστε σε περιοχές του Κ.",
+      "ghosts": "Φαντάσματα",
+      "vampires": "Βαμπίρ",
+      "zombies": "Ζόμπι",
+      "dominoes": "Ντόμινο",
+      "islands": "νησιά",
+      "pegsLeft": "Αριστερά μανταλάκια",
+      "bestRemaining": "Το καλύτερο που απομένει",
+      "puzzlesSolved": "Λύθηκαν γρίφοι",
+      "flooded": "Πλημμυρισμένος",
+      "edges": "Ακμές",
+      "totalPlacements": "Συνολικές τοποθετήσεις",
+      "totalRemovals": "Συνολικές αφαιρέσεις",
+      "maxTileReached": "Επιτεύχθηκε το μέγιστο πλακίδιο",
+      "target": "Στόχος",
+      "placed": "Τοποθετήθηκε",
+      "totalGuesses": "Συνολικές εικασίες",
+      "guessesLeft": "Εικασίες αριστερά",
+      "difficulty": "Δυσκολία"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Παζλ",
+      "maxLevel": "Μέγιστο επίπεδο"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "errors": "Σφάλματα",
+      "avgTime": "Μέσος όρος χρόνο",
+      "erase": "Διαγραφή"
+    },
+    "blackbox": {
+      "title": "Μαύρο κουτί",
+      "puzzles": "Παζλ",
+      "lasers": "Λέιζερ",
+      "avgTime": "Μέσος όρος χρόνο"
+    },
+    "designFluency": {
+      "title": "Σχεδιαστική ευφράδεια",
+      "uniqueDesigns": "Μοναδικά σχέδια",
+      "duplicates": "Αντίγραφα",
+      "round": "Στρογγυλό",
+      "roundComplete": "Στρογγυλή πλήρης",
+      "youCreatedDesigns": "Δημιουργήσατε σχέδια {{count}}",
+      "startRound": "Έναρξη γύρου",
+      "instructions": "Οδηγίες",
+      "designs": "Σχέδια",
+      "clear": "Καθαρισμός",
+      "addDesign": "Προσθήκη"
+    },
+    "signpost": {
+      "title": "Πινακίδα",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "avgTime": "Μέσος όρος χρόνο",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "sokoban": {
+      "title": "Σοκόμπαν",
+      "level": "Επίπεδο",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "undos": "Αναίρεση",
+      "puzzle": "Παζλ"
+    },
+    "numericalStroop": {
+      "left": "Αριστερά",
+      "right": "Δεξιά"
+    },
+    "biologicalMotion": {
+      "title": "Βιολογική Κίνηση",
+      "noiseDots": "κουκκίδες θορύβου",
+      "whichDirection": "Ποια κατεύθυνση;",
+      "left": "Αριστερά",
+      "right": "Δεξιά"
+    },
+    "inertia": {
+      "title": "Αδράνεια",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "gems": "Πολύτιμοι λίθοι",
+      "moves": "Κινήσεις"
+    },
+    "waterLevel": {
+      "title": "Επίπεδο Νερού",
+      "error": "Σφάλμα",
+      "tilt": "Κλίση",
+      "waterLine": "Γραμμή νερού;"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "sudoku": {
+      "title": "Σουντόκου",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "errors": "Σφάλματα",
+      "avgTime": "Μέσος όρος χρόνο",
+      "erase": "Διαγραφή"
+    },
+    "rectangles": {
+      "title": "Ορθογώνια",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "rectanglesCount": "Ορθογώνια",
+      "maxGrid": "Μέγιστο πλέγμα",
+      "cancelSelection": "Ακύρωση επιλογής"
+    },
+    "filling": {
+      "title": "Γέμισμα",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "avgTime": "Μέσος όρος φορά",
+      "grid": "Πλέγμα"
+    },
+    "spacedRetrieval": {
+      "title": "Ανάκτηση διαστήματος",
+      "studyPair": "Μελετήστε αυτό το ζευγάρι",
+      "waitAndSolve": "Περίμενε… μετά λύσε",
+      "equalsQuestion": "= ;",
+      "intervalWhatPairs": "Διάστημα: τι ζευγάρια;"
+    },
+    "prototypeDistortion": {
+      "title": "Παραμόρφωση πρωτοτύπου",
+      "studyPhase": "Φάση μελέτης",
+      "testPhase": "Δοκιμαστική φάση",
+      "yesBelongs": "Ναι — Ανήκει",
+      "noRandom": "Όχι — Τυχαία"
+    },
+    "motionCoherence": {
+      "title": "Συνοχή κίνησης",
+      "threshold": "Κατώφλι",
+      "coherence": "Συνοχή",
+      "whichDirection": "Ποια κατεύθυνση;"
+    },
+    "cube": {
+      "title": "Κύβος",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxLevel": "Μέγιστο επίπεδο",
+      "cubeFaces": "Πρόσωπα κύβου",
+      "moveUp": "Πάνω",
+      "moveLeft": "Αριστερά",
+      "moveDown": "Κάτω",
+      "moveRight": "Δεξιά"
+    },
+    "sameGame": {
+      "title": "Ίδιο Παιχνίδι",
+      "score": "Σκορ",
+      "cleared": "Καθαρίστηκε",
+      "cells": "Κύτταρα",
+      "accuracy": "Ακρίβεια"
+    },
+    "crossModalMatching": {
+      "title": "Διατροπική Αντιστοίχιση",
+      "chance": "Ευκαιρία",
+      "whichPatternMatchesRhythm": "Ποιο μοτίβο ταιριάζει με το ρυθμό;"
+    },
+    "mosaic": {
+      "title": "Μωσαϊκό",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "spotDiff": {
+      "title": "Εντοπίστε τη διαφορά",
+      "level": "Επίπεδο",
+      "grid": "Πλέγμα",
+      "accuracy": "Ακρίβεια",
+      "perfect": "Τέλεια",
+      "avgTime": "Μέσος όρος χρόνο",
+      "found": "Βρέθηκε"
+    },
+    "lightsOut": {
+      "title": "Τα φώτα σβήνουν",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "pipeline": {
+      "title": "Αγωγός",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "rotations": "Περιστροφές",
+      "avgTime": "Μέσος όρος χρόνο"
+    },
+    "tracks": {
+      "title": "Κομμάτια",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "errors": "Σφάλματα",
+      "avgTime": "Μέσος όρος χρόνο"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "slides": "Διαφάνειες",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "cognitiveBias": {
+      "title": "Εκπαίδευση Γνωστικής Προκατάληψης",
+      "biasResistance": "Αντοχή στην προκατάληψη",
+      "biased": "Προκατειλημμένος",
+      "continue": "Συνέχεια"
+    },
+    "empathicAccuracy": {
+      "title": "Ενσυναίσθηση Ακρίβεια",
+      "emotionId": "Συγκίνηση",
+      "avgRatingError": "Μέσος όρος σφάλμα βαθμολογίας",
+      "scenarios": "Σενάρια",
+      "perfect": "Τέλεια",
+      "rating": "Βαθμολογία",
+      "howDoesCharacterFeel": "Πώς νιώθει ο χαρακτήρας;",
+      "rateIntensity": "Βαθμολογήστε την ένταση",
+      "whatEmotion": "Τι συναίσθημα;",
+      "yourRating": "Η βαθμολογία σας",
+      "correct": "Σωστό",
+      "emotion": "Συγκίνηση"
+    },
+    "guess": {
+      "title": "Εγκέφαλος",
+      "solved": "Λύθηκε",
+      "guesses": "Εικασίες"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxLevel": "Μέγιστο επίπεδο"
+    },
+    "magnets": {
+      "title": "Μαγνήτες",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxLevel": "Μέγιστο επίπεδο"
+    },
+    "tangram": {
+      "placeAll": "Τοποθετήστε όλα τα κομμάτια",
+      "solved": "Λύθηκε!",
+      "notRight": "Όχι πολύ σωστά",
+      "title": "Τάνγκραμ",
+      "level": "Επίπεδο",
+      "puzzles": "Παζλ",
+      "placements": "Τοποθετήσεις",
+      "removals": "Μετακομίσεις",
+      "puzzleNumber": "Παζλ {{n}}",
+      "pieces": "Κομμάτια",
+      "targetCells": "Στόχος",
+      "dragHint": "Σύρετε ή τοποθετήστε το κομμάτι στο πλέγμα",
+      "selectHint": "Επιλέξτε ένα κομμάτι",
+      "rotate": "Τουρνέρ",
+      "undo": "Ακυρωτής",
+      "check": "Έλεγχος"
+    },
+    "galaxies": {
+      "title": "Γαλαξίες"
+    },
+    "flood": {
+      "title": "Πλημμύρα"
+    },
+    "pegs": {
+      "title": "μανταλάκια",
+      "bestPegs": "Τα καλύτερα μανταλάκια"
+    },
+    "auditoryFigureGround": {
+      "title": "Ακουστικό Σχήμα-Γείωση",
+      "patternPresent": "Παρόν μοτίβο;",
+      "pattern": "Μοτίβο",
+      "noPattern": "Χωρίς μοτίβο"
+    },
+    "selfOrderedPointing": {
+      "title": "Αυτο-παραγγελία κατάδειξης",
+      "maxSpan": "Μέγιστο εύρος",
+      "errors": "Σφάλματα",
+      "round": "Στρογγυλό",
+      "setOf": "Σετ {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Ιχνηλάτηση Καθρέπτη",
+      "totalErrors": "Συνολικά σφάλματα",
+      "avgTime": "Μέσος όρος χρόνο",
+      "shapes": "Σχήματα",
+      "perfect": "Τέλεια",
+      "improvement": "Βελτίωση",
+      "errorsMiddot": "λάθη ·",
+      "shape": "Σχήμα",
+      "errors": "Σφάλματα",
+      "xIsMirrored": "Το Χ καθρεφτίζεται!"
+    },
+    "clockDrawing": {
+      "title": "Σχέδιο ρολογιού",
+      "avgError": "Μέσος όρος σφάλμα",
+      "setTo": "Ρύθμιση σε",
+      "submit": "Υποβολή"
+    },
+    "cognitiveMap": {
+      "title": "Γνωστικός Χάρτης",
+      "explore": "Εξερευνήστε",
+      "sRemaining": "S Απομένει",
+      "from": "Από",
+      "whichDirectionIs": "Ποια κατεύθυνση είναι"
+    },
+    "sixteen": {
+      "title": "Δεκαέξι"
+    },
+    "loopy": {
+      "title": "Loopy"
+    },
+    "lightup": {
+      "title": "Ανάβει"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Μέγ. Πλακίδιο",
+      "moves": "Κινήσεις",
+      "max": "Μέγ"
+    },
+    "bridges": {
+      "title": "Γέφυρες",
+      "puzzles": "Παζλ",
+      "maxLevel": "Μέγιστο επίπεδο",
+      "level": "Επίπεδο"
+    },
+    "net": {
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxGrid": "Μέγιστο πλέγμα"
+    },
+    "flip": {
+      "title": "Αναστροφή"
+    },
+    "range": {
+      "title": "Εύρος"
+    },
+    "slant": {
+      "title": "Κλίση"
+    },
+    "towers": {
+      "title": "Πύργους",
+      "puzzles": "Παζλ",
+      "avgTime": "Μέσος όρος χρόνο",
+      "erase": "Διαγραφή"
+    },
+    "pearl": {
+      "title": "Μαργαριτάρι",
+      "edges": "Ακμές"
+    },
+    "mapColoring": {
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "moves": "Κινήσεις",
+      "maxLevel": "Μέγιστο επίπεδο"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Απέθανος",
+      "accuracy": "Ακρίβεια",
+      "puzzles": "Παζλ",
+      "avgTime": "Μέσος όρος χρόνο"
+    },
+    "untangle": {
+      "title": "Ξεμπερδέψου",
+      "drags": "Σέρνει",
+      "maxNodes": "Μέγ. Κόμβοι"
+    },
+    "unruly": {
+      "title": "Ατίθασο"
+    },
+    "fifteen": {
+      "title": "Δεκαπέντε"
+    },
+    "tents": {
+      "title": "Τέντες"
+    },
+    "mesker": {
+      "pen": "Στυλό",
+      "stroke": "Εγκεφαλικό επεισόδιο",
+      "penPressureHint": "Γράψτε με σταθερή πίεση στυλό"
+    },
+    "modality": {
+      "position": "Θέση",
+      "audio": "Ήχος"
+    },
+    "validate": "Επικύρωση"
+  },
+  "trace": {
+    "instructions": "Σύρετε στη θέση N-back. Πατήστε δύο φορές στην ίδια θέση.",
+    "hint": {
+      "validated": "Επικυρώθηκε",
+      "draw": "Σχεδιάστε το γράμμα • Πατήστε για επικύρωση",
+      "drawWithColor": "Σχεδιάστε το γράμμα • Επιλέξτε χρώμα • Πατήστε για επικύρωση",
+      "type": "Πληκτρολογήστε το γράμμα • Enter για επικύρωση",
+      "typeWithColor": "Πληκτρολογήστε το γράμμα • Επιλέξτε χρώμα • Enter για επικύρωση",
+      "typeResult": "Πληκτρολογήστε το αποτέλεσμα • Enter για επικύρωση",
+      "writeResult": "Γράψτε το αποτέλεσμα • Πατήστε για επικύρωση"
+    },
+    "keyboard": {
+      "letterInput": "Επιστολή",
+      "numberInput": "Αριθμός"
+    },
+    "arithmetic": {
+      "cueHint": "Απομνημονεύστε τα 2 ψηφία",
+      "refresh": "Νέο"
+    },
+    "hintPosition": "Πού ήταν το ερέθισμα {{n}} στρέφεται πριν;",
+    "hintN0": "Υποδείξτε το τρέχον ερέθισμα",
+    "warmupHint": "Απομνημονεύστε τις θέσεις. Δεν χρειάζεται απάντηση.",
+    "hintDraw": "Σχεδιάστε το γράμμα • Πατήστε για επικύρωση",
+    "hintDrawWithColor": "Σχεδιάστε το γράμμα • Επιλέξτε χρώμα • Πατήστε για επικύρωση",
+    "hintWriteResult": "Γράψτε το αποτέλεσμα • Πατήστε για επικύρωση",
+    "guide": {
+      "swipeNormal": "Σύρετε από την τελευταία θέση (N-0) στη θέση από {{n}} βήματα πριν (N-{{n}}). Πατήστε δύο φορές στην ίδια θέση.",
+      "swipeSequential": "Σύρετε βήμα προς βήμα από το N-0 στο N-{{n}}, περνώντας από κάθε ενδιάμεση θέση. Πατήστε δύο φορές στην ίδια θέση.",
+      "swipeDynamic": "Σύρετε ακολουθώντας τον κανόνα που εμφανίζεται. Πατήστε δύο φορές στην ίδια θέση.",
+      "tapN0": "Πατήστε στην τρέχουσα θέση.",
+      "warmup": "Απομνημονεύστε τις θέσεις — δεν απαιτείται απάντηση.",
+      "writeDraw": "Σχεδιάστε το γράμμα που ακούστηκε {{n}} πριν από βήματα • Πατήστε για επικύρωση",
+      "writeDrawColor": "Σχεδιάστε το γράμμα που ακούστηκε {{n}} πριν από βήματα • Επιλέξτε το χρώμα του • Πατήστε για επικύρωση",
+      "writeType": "Πληκτρολογήστε το γράμμα που ακούστηκε {{n}} πριν από βήματα • Enter για επικύρωση",
+      "writeTypeColor": "Πληκτρολογήστε το γράμμα που ακούσατε {{n}} πριν από βήματα • Επιλέξτε το χρώμα του • Enter για επικύρωση",
+      "writeDrawN0": "Σχεδιάστε το γράμμα που μόλις ακούσατε • Πατήστε για επικύρωση",
+      "writeDrawColorN0": "Σχεδιάστε το γράμμα που μόλις ακούσατε • Επιλέξτε το χρώμα του • Πατήστε για επικύρωση",
+      "writeTypeN0": "Πληκτρολογήστε το γράμμα που μόλις ακούσατε • Enter για επικύρωση",
+      "writeTypeColorN0": "Πληκτρολογήστε το γράμμα που μόλις ακούσατε • Επιλέξτε το χρώμα του • Enter για επικύρωση",
+      "writeResult": "Γράψτε το αποτέλεσμα • Πατήστε για επικύρωση",
+      "validated": "Επικυρώθηκε",
+      "holdMindful": "Κρατήστε το κελί για {{seconds}}",
+      "swipeMindful": "Σύρετε σε {{seconds}}"
+    },
+    "settings": {
+      "adaptiveTiming": "Προσαρμοστικός χρονισμός",
+      "inputKeyboard": "Πληκτρολόγιο",
+      "inputHandwriting": "Χειρόγραφο",
+      "writingInput": "Γράμματα/αριθμοί",
+      "section": {
+        "grid": "Πλέγμα",
+        "input": "Εισαγωγή",
+        "rhythm": "Ρυθμός",
+        "interface": "Διασύνδεση",
+        "interfaceNone": "Τυπικό",
+        "sound": "Ήχος"
+      },
+      "isi": "Διάστημα (ISI)",
+      "stimulusDuration": "Διάρκεια ερεθίσματος",
+      "feedbackDuration": "Διάρκεια ανατροφοδότησης",
+      "ruleDisplay": "Διάρκεια κανόνα",
+      "blankInterval": "Κενό διάστημα",
+      "showProgressBar": "Μπάρα προόδου",
+      "showInstructions": "Οδηγίες εντός του παιχνιδιού",
+      "arithmeticInterference": "Αριθμητική παρέμβαση",
+      "fullMenu": "Πλήρες μενού",
+      "gridStyle": "Στυλ πλέγματος",
+      "gridStyleClassic": "Κλασικό",
+      "gridStyleTrace": "Ίχνος",
+      "guide": {
+        "swipeMindful": "Σύρετε σε {{seconds}}",
+        "holdMindful": "Κρατήστε το κελί για {{seconds}}"
+      },
+      "feedback": {
+        "gestureDuration": "χειρονομία",
+        "holdDuration": "Κρατήστε",
+        "writingDuration": "Γράψιμο"
+      }
+    },
+    "feedback": {
+      "holdDuration": "Κρατήστε",
+      "gestureDuration": "χειρονομία",
+      "writingDuration": "Γράψιμο"
+    },
+    "image": "Σχήμα",
+    "digits": "Ψηφία",
+    "emotions": "Συγκίνηση",
+    "words": "Λέξη",
+    "tones": "Τόνος",
+    "spatial": "Κατεύθυνση"
+  },
+  "replay": {
+    "title": "Επανάληψη συνεδρίας",
+    "play": "Παίξε",
+    "pause": "Παύση",
+    "restart": "Επανεκκίνηση",
+    "speed": "Ταχύτητα",
+    "loading": "Φόρτωση συνεδρίας...",
+    "unavailable": "Η επανάληψη δεν είναι διαθέσιμη για αυτήν την περίοδο λειτουργίας",
+    "backToStats": "Επιστροφή στα στατιστικά",
+    "runStack": {
+      "original": "Πρωτότυπο",
+      "correction": "Διόρθωση",
+      "delta": "Δ δ'",
+      "inProgress": "Σε εξέλιξη",
+      "completed": "Ολοκληρωμένο"
+    },
+    "abandon": "Εγκαταλείψτε",
+    "badge": "Αναπαραγωγή",
+    "completionReport": {
+      "backToHome": "Πίσω",
+      "correctAgain": "Διορθώστε ξανά",
+      "deltaVsOriginal": "εν. Αρχικού",
+      "deltaVsParent": "έναντι Προηγούμενης εκτέλεσης",
+      "falseAlarmsSkipped": "Αποφεύχθηκαν σφάλματα",
+      "missesCorrections": "Διορθώσεις",
+      "newFalseAlarms": "Νέα λάθη",
+      "replayAgain": "Αναπαραγωγή",
+      "scoreLabel": "δ' σκορ",
+      "title": "Η διόρθωση ολοκληρώθηκε"
+    },
+    "controls": "Έλεγχοι",
+    "correction": "Διόρθωση",
+    "finished": "Τέλος επανάληψης",
+    "home": "Αρχική",
+    "parseError": "Δεν είναι δυνατή η ανάγνωση της συνεδρίας",
+    "tapSlotToPlace": "Πατήστε μια υποδοχή για τοποθέτηση",
+    "timeline": "Χρονολόγιο",
+    "focusTimeline": {
+      "open": "Εμφάνιση χρονολογίου",
+      "close": "Κλείσιμο χρονολογίου",
+      "title": "Χρονολόγιο N-Back",
+      "fillAll": "Γεμίστε όλα",
+      "fillCard": "Γεμίστε την κάρτα"
+    },
+    "hud": {
+      "counterDisplay": "Οθόνη μετρητή",
+      "toggleCounterDisplay": "Εναλλαγή εμφάνισης μετρητή"
+    },
+    "validate": "Επικύρωση"
+  },
+  "recovery": {
+    "title": "Η συνεδρία διακόπηκε",
+    "description": "Μια συνεδρία ήταν σε εξέλιξη. Θέλετε να συνεχίσετε;",
+    "mode": "Λειτουργία",
+    "level": "Επίπεδο",
+    "progress": "Πρόοδος",
+    "timeAgo": "Χρόνος",
+    "resume": "Συνέχιση συνεδρίας",
+    "startFresh": "Ξεκινήστε φρέσκο",
+    "staleWarning": "Αυτή η συνεδρία είναι παλιά, η συνέχιση μπορεί να είναι δύσκολη.",
+    "modes": {
+      "game": "Εξάσκηση",
+      "activeTraining": "Ενεργητική εκπαίδευση",
+      "flowTraining": "Εκπαίδευση Dual Place",
+      "dualPickTraining": "Διπλή επιλογή",
+      "traceTraining": "Διπλό ίχνος"
+    }
+  },
+  "rewards": {
+    "congratulations": "Συγχαρητήρια!",
+    "duration": "{{days}} ημέρες Premium",
+    "lifetimeLabel": "Δια βίου πρόσβαση",
+    "expiresAt": "Ισχύει μέχρι {{date}}",
+    "neverExpires": "Δεν λήγει ποτέ",
+    "continue": "Συνέχεια",
+    "discovery": {
+      "name": "Πάσο Discovery",
+      "description": "7 ημέρες Premium — Εξερευνήστε όλες τις δυνατότητες"
+    },
+    "engagement": {
+      "name": "Πάσο αρραβώνων",
+      "description": "1 μήνας Premium — Η πειθαρχία σας αποδίδει"
+    },
+    "expert": {
+      "name": "Πιστοποιητικό εμπειρογνωμοσύνης",
+      "description": "3 μήνες Premium — Είστε αληθινός ασκούμενος"
+    },
+    "lifetime": {
+      "name": "Δια βίου πρόσβαση",
+      "description": "Premium forever — Έχετε κατακτήσει το Neurodual"
+    },
+    "xpRemaining": "Απομένουν XP",
+    "permanentAccessUnlocked": "Μόνιμη πρόσβαση ξεκλείδωτη",
+    "reachedTheTop": "Φτάσατε στην κορυφή!"
+  },
+  "progression": {
+    "level": "Επίπεδο {{level}}",
+    "levelShort": "Επ. {{level}}",
+    "nextLevel": "Επόμενο επίπεδο",
+    "reached": "Έφτασε",
+    "inProgress": "Σε εξέλιξη"
+  },
+  "gridlock": {
+    "nextPuzzle": "Επόμενο παζλ →"
+  }
+}

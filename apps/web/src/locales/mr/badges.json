@@ -1,0 +1,232 @@
+{
+  "badges": {
+    "categories": {
+      "consistency": "सुसंगतता",
+      "performance": "कामगिरी",
+      "resilience": "लवचिकता",
+      "exploration": "अन्वेषण",
+      "milestone": "टप्पे",
+      "cognitive": "संज्ञानात्मक"
+    },
+    "first_session": {
+      "name": "जागृत न्यूरॉन",
+      "description": "पहिले सत्र पूर्ण झाले."
+    },
+    "sessions_10": {
+      "name": "स्तंभ (कांस्य)",
+      "description": "10 सत्रे पूर्ण झाली."
+    },
+    "sessions_25": {
+      "name": "स्तंभ (चांदी)",
+      "description": "25 सत्रे पूर्ण झाली."
+    },
+    "marathoner": {
+      "name": "स्तंभ (सोने)",
+      "description": "50 सत्रे पूर्ण झाली."
+    },
+    "streak_3": {
+      "name": "नवजात विधी",
+      "description": "3-दिवसीय स्ट्रीक."
+    },
+    "streak_7": {
+      "name": "रोजचा विधी",
+      "description": "7-दिवसांचा सिलसिला."
+    },
+    "streak_14": {
+      "name": "नांगरलेली सवय",
+      "description": "14-दिवसांचा सिलसिला."
+    },
+    "streak_30": {
+      "name": "लोखंडी शिस्त",
+      "description": "30-दिवसांचा सिलसिला."
+    },
+    "early_bird": {
+      "name": "अर्ली बर्ड",
+      "description": "सकाळी 8 च्या आधी सत्रासह 5 भिन्न दिवस."
+    },
+    "night_owl": {
+      "name": "रात्रीचा घुबड",
+      "description": "रात्री 10 नंतर सत्रासह 5 भिन्न दिवस."
+    },
+    "brain_n3": {
+      "name": "तीक्ष्ण मेंदू",
+      "description": "N-3 स्तरावर पोहोचा."
+    },
+    "brain_n4": {
+      "name": "स्नायुंचा मेंदू",
+      "description": "N-4 स्तरावर पोहोचा."
+    },
+    "brain_n5": {
+      "name": "ऑलिंपिक मेंदू",
+      "description": "N-5 स्तरावर पोहोचा."
+    },
+    "brain_n7": {
+      "name": "संज्ञानात्मक एलिट",
+      "description": "N-7 स्तरावर पोहोचा."
+    },
+    "brain_n10": {
+      "name": "अतिमानवी",
+      "description": "N-10 स्तरावर पोहोचा."
+    },
+    "sniper": {
+      "name": "स्निपर",
+      "description": "> N ≥ 2 वर 90% अचूकता."
+    },
+    "accuracy_95": {
+      "name": "सर्जिकल अचूकता",
+      "description": "> N ≥ 2 वर 95% अचूकता."
+    },
+    "accuracy_98": {
+      "name": "लेसर",
+      "description": "> N ≥ 2 वर 98% अचूकता."
+    },
+    "untouchable": {
+      "name": "अस्पृश्य",
+      "description": "N ≥ 2 वर परिपूर्ण सत्र (0 त्रुटी)."
+    },
+    "rt_500": {
+      "name": "द्रुत प्रतिक्षेप",
+      "description": "≥70% अचूकतेसह सरासरी प्रतिक्रिया वेळ < 500ms."
+    },
+    "flash": {
+      "name": "फ्लॅश",
+      "description": "≥70% अचूकतेसह सरासरी प्रतिक्रिया वेळ < 400ms."
+    },
+    "rt_300": {
+      "name": "विजा",
+      "description": "≥70% अचूकतेसह सरासरी प्रतिक्रिया वेळ <300ms."
+    },
+    "consistent": {
+      "name": "सुसंगत",
+      "description": "RT मानक विचलन < 100ms (≥10 प्रतिसाद आवश्यक)."
+    },
+    "dprime_master": {
+      "name": "डी' मास्टर",
+      "description": "d-prime > 3.0 एका सत्रात."
+    },
+    "dprime_4": {
+      "name": "SDT तज्ञ",
+      "description": "d-prime > 4.0 एका सत्रात."
+    },
+    "no_pause": {
+      "name": "अविरत",
+      "description": "≥75% अचूकतेसह विराम न देता सलग 5 सत्रे."
+    },
+    "steady_hands": {
+      "name": "स्थिर हात",
+      "description": "सत्रादरम्यान कोणतेही खोटे इनपुट नाहीत (≥80% अचूकता)."
+    },
+    "zen_master": {
+      "name": "झेन मास्टर",
+      "description": "कधीही न सोडता 10 सत्रे."
+    },
+    "comeback_kid": {
+      "name": "कमबॅक किड",
+      "description": "एक पातळी खाली केल्यानंतर स्तर वर."
+    },
+    "persistent": {
+      "name": "सतत",
+      "description": "अयशस्वी झाल्यानंतर त्याच दिवशी 3 सत्रे."
+    },
+    "second_wind": {
+      "name": "दुसरा वारा",
+      "description": "अर्धा 1 आणि 2 दरम्यान d-प्राइम सुधारा (d′ ≥ 2.0 आवश्यक)."
+    },
+    "plateau_breaker": {
+      "name": "पठार तोडणारा",
+      "description": "समान स्तरावर 10+ सत्रांनंतर प्रगती."
+    },
+    "no_surrender": {
+      "name": "शरणागती नाही",
+      "description": "न सोडता 25 सत्रे."
+    },
+    "ironwill": {
+      "name": "लोखंडी इच्छा",
+      "description": "न सोडता 50 सत्रे."
+    },
+    "audiophile": {
+      "name": "ऑडिओफाइल",
+      "description": "ऑडिओ > 80% परंतु व्हिज्युअल <70%."
+    },
+    "eagle_eye": {
+      "name": "गरुड डोळा",
+      "description": "व्हिज्युअल > 80% परंतु ऑडिओ <70%."
+    },
+    "synchronized": {
+      "name": "समक्रमित",
+      "description": "5% च्या आत ऑडिओ आणि व्हिज्युअल स्कोअर (≥60% आवश्यक)."
+    },
+    "dual_master": {
+      "name": "ड्युअल मास्टर",
+      "description": "त्याच सत्रात ऑडिओ आणि व्हिज्युअल > 85% (≥6 lures/modality)."
+    },
+    "dual_elite": {
+      "name": "ड्युअल एलिट",
+      "description": "त्याच सत्रात ऑडिओ आणि व्हिज्युअल > 90% N ≥ 3 (≥6 lures/modality)."
+    },
+    "centurion": {
+      "name": "सेंच्युरियन",
+      "description": "100 सत्रे पूर्ण झाली."
+    },
+    "sessions_250": {
+      "name": "दंतकथा (पन्ना)",
+      "description": "250 सत्रे पूर्ण झाली."
+    },
+    "sessions_500": {
+      "name": "अमर (हिरा)",
+      "description": "500 सत्रे पूर्ण झाली."
+    },
+    "trials_500": {
+      "name": "अभ्यासक",
+      "description": "एकूण 500 चाचण्या खेळल्या."
+    },
+    "trials_1000": {
+      "name": "प्रशिक्षित",
+      "description": "एकूण 1,000 चाचण्या खेळल्या."
+    },
+    "trials_5000": {
+      "name": "अनुभवी",
+      "description": "एकूण 5,000 चाचण्या खेळल्या गेल्या."
+    },
+    "trials_10k": {
+      "name": "10,000 चाचण्या",
+      "description": "एकूण 10,000 चाचण्या खेळल्या."
+    },
+    "trials_50k": {
+      "name": "टायटन",
+      "description": "एकूण 50,000 चाचण्या खेळल्या गेल्या."
+    },
+    "streak_90": {
+      "name": "निर्दोष क्वार्टर",
+      "description": "90-दिवसांचा सिलसिला."
+    },
+    "streak_365": {
+      "name": "परिपूर्ण वर्ष",
+      "description": "365-दिवसांचा सिलसिला."
+    },
+    "veteran": {
+      "name": "अनुभवी",
+      "description": "वापराचे 1 वर्ष."
+    },
+    "metronome": {
+      "name": "मेट्रोनोम",
+      "description": "≥20 चाचण्यांवर RT भिन्नता < 50ms (सक्रिय प्रतिसाद आवश्यक)."
+    },
+    "flow_state": {
+      "name": "ग्रेस राज्य",
+      "description": "संपूर्ण सत्रात प्रवाह आढळला."
+    },
+    "sang_froid": {
+      "name": "मस्त डोकं",
+      "description": "त्रुटी नंतर कोणतीही त्रुटी कॅस्केड नाही (≥70% अचूकता)."
+    },
+    "imperturbable": {
+      "name": "अचल",
+      "description": "फोकस न गमावता पूर्ण सत्र (≥60% अचूकता)."
+    },
+    "comeback_strong": {
+      "name": "जोरदार कमबॅक",
+      "description": "3+ दिवसांनंतर (d′ ≥ 2.5) तुमच्या डी-प्राइम रेकॉर्डला मारा."
+    }
+  }
+}

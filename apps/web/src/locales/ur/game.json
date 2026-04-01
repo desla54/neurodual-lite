@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "آپ کیسا محسوس کر رہے ہیں؟",
+      "tired": "تھکا ہوا",
+      "normal": "عام",
+      "energized": "توانا"
+    },
+    "aria": {
+      "trialTimer": "ٹرائل ٹائمر",
+      "positionMatch": "پوزیشن مماثلت",
+      "audioMatch": "آڈیو مماثلت",
+      "audioLetter": "آڈیو حرف:",
+      "traceGrid": "ٹریس گرڈ"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "سنک مانیٹر ٹوگل کریں",
+      "start": "شروع",
+      "end": "اختتام",
+      "pinLabel": "pin",
+      "pinTitle": "اسکرین پر پن کریں",
+      "inputLabel": "input",
+      "inputTitle": "ان پٹ لیٹنسی پروفائلنگ ٹوگل کریں (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "آن",
+      "off": "آف",
+      "hideLabel": "چھپائیں",
+      "hideTitle": "چھپائیں (جب تک syncHud=1 یا ND_AUDIO_DEBUG_TIMING=1 نہ ہو)",
+      "endRef": {
+        "audio": "آڈیو",
+        "expected": "متوقع"
+      },
+      "labels": {
+        "trial": "ٹرائل",
+        "lagShow": "ڈسپلے تاخیر",
+        "lagHide": "چھپانے کی تاخیر",
+        "winErr": "ونڈو غلطی",
+        "endRef": "اختتام حوالہ",
+        "visualPreP95": "visual_pre p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->dispatch p95",
+        "inputToCommitP95": "input->commit p95",
+        "inputToPaintP95": "input->paint p95",
+        "inputPending": "زیر التوا ان پٹ",
+        "inputSamples": "ان پٹ نمونے",
+        "touchSamples": "ٹچ نمونے",
+        "mouseSamples": "ماؤس نمونے",
+        "keyboardSamples": "کی بورڈ نمونے",
+        "latestMethod": "تازہ ترین (طریقہ)",
+        "latestModality": "تازہ ترین موڈیلٹی",
+        "audioCueMode": "آڈیو اشارے",
+        "audioCodec": "ترمیز"
+      },
+      "resetInputProfiler": "ان پٹ پروفائلر ری سیٹ کریں"
+    },
+    "hud": {
+      "resume": "دوبارہ شروع کریں",
+      "pause": "وقفہ",
+      "quit": "باہر نکلیں",
+      "restart": "دوبارہ شروع",
+      "spaceToStart": "شروع کرنے کے لیے Space دبائیں",
+      "settings": "ترتیبات",
+      "enterToAdvance": "آگے بڑھنے کے لیے Enter دبائیں",
+      "trial": "ٹرائل",
+      "muteTexture": "پس منظر کی آواز بند کریں"
+    },
+    "status": {
+      "paused": "موقوف"
+    },
+    "completed": "مکمل",
+    "starting": {
+      "getReady": "تیار ہو جائیں..."
+    },
+    "quitModal": {
+      "title": "کیا آپ سیشن چھوڑنا چاہتے ہیں؟",
+      "message": "آپ کی پیشرفت محفوظ نہیں ہوگی۔",
+      "confirm": "باہر نکلیں",
+      "cancel": "جاری رکھیں",
+      "close": "بند کریں"
+    },
+    "controls": {
+      "position": "پوزیشن",
+      "position2": "پوزیشن 2",
+      "position3": "پوزیشن 3",
+      "position4": "پوزیشن 4",
+      "visvis": "بصری & n-بصری",
+      "visaudio": "بصری & n-آڈیو",
+      "audiovis": "آڈیو & n-بصری",
+      "vis1": "بصری 1",
+      "vis2": "بصری 2",
+      "vis3": "بصری 3",
+      "vis4": "بصری 4",
+      "audio": "آڈیو",
+      "audio2": "آڈیو 2",
+      "color": "رنگ",
+      "arithmetic": "حساب",
+      "image": "شکل"
+    },
+    "arithmetic": {
+      "answer": "جواب",
+      "clear": "صاف کریں",
+      "hint": "کی بورڈ: 0-9 · '-' نشان کے لیے · '.' اعشاریہ کے لیے · Backspace مٹانے کے لیے"
+    },
+    "navigation": {
+      "back": "واپس"
+    },
+    "xp": {
+      "title": "حاصل شدہ XP",
+      "base": "بنیاد (N-{{level}})",
+      "performance": "کارکردگی",
+      "accuracy": "درستگی",
+      "streakBonus": "سلسلے کا بونس",
+      "dailyBonus": "دن کا پہلا",
+      "badgeBonus": "بیجز",
+      "flowBonus": "انعام Dual Place",
+      "confidenceMultiplier": "اعتماد",
+      "dailyCapReached": "روزانہ XP حد تک پہنچ گئی",
+      "levelReached": "لیول {{level}} تک پہنچ گئے!"
+    },
+    "badges": {
+      "newUnlocked": "نئے بیجز حاصل ہوئے"
+    },
+    "getReady": "تیار ہو جائیں...",
+    "layoutEdit": {
+      "done": "ہو گیا",
+      "reset": "ری سیٹ",
+      "instructions": "ترتیب بدلنے کے لیے زونز کو گھسیٹیں۔ ہینڈلز سے سائز تبدیل کریں۔",
+      "title": "ترمیمی موڈ",
+      "cancel": "منسوخ",
+      "save": "قفل",
+      "editLayout": "لے آؤٹ تبدیل کریں"
+    },
+    "paused": "موقوف",
+    "pressEscapeToResume": "دوبارہ شروع کرنے کے لیے Escape دبائیں",
+    "settings": {
+      "editLayout": "لے آؤٹ تبدیل کریں",
+      "gridAndButtons": "گرڈ اور بٹن",
+      "swapPositionAudio": "پوزیشن / آڈیو تبدیل کریں",
+      "title": "ترتیبات",
+      "quickHint": "کھیل چھوڑے بغیر چند ترتیبات تبدیل کریں۔",
+      "quickUnavailable": "اس موڈ کے لیے ابھی تک فوری ترتیبات دستیاب نہیں ہیں۔"
+    },
+    "pinkNoiseInfo": "ہر محرک کے ساتھ ایک پس منظر کی آواز بجتی ہے۔ آپ اسے آڈیو ترتیبات میں تبدیل یا غیر فعال کر سکتے ہیں۔",
+    "pinkNoiseDismiss": "جاری رکھیں",
+    "audioMode": "وضع آڈیو",
+    "cogTask": {
+      "precision": "درستگی",
+      "avgRt": "اوسط RT",
+      "avgRtShort": "اوسط RT",
+      "trials": "ٹرائلز",
+      "correct": "درست",
+      "errors": "غلطیاں",
+      "effect": "اثر",
+      "restart": "دوبارہ شروع",
+      "home": "ہوم",
+      "performance": "کارکردگی",
+      "trialDetail": "تفصيل ٹرائلز",
+      "setDetail": "سیٹ تفصیلات",
+      "roundDetail": "تفاصيل راؤنڈز",
+      "problemDetail": "مسئلے کی تفصیلات",
+      "phaseDetail": "مرحلے کی تفصیلات",
+      "feedbackCorrect": "درست",
+      "feedbackIncorrect": "غلطی",
+      "feedbackTimeout": "بہت سست!",
+      "preparing": "تیار ہو جائیں...",
+      "loading": "لوڈ ہو رہا ہے...",
+      "left": "بائیں",
+      "right": "دائیں",
+      "up": "اوپر",
+      "down": "نیچے",
+      "congruent": "متوافق",
+      "incongruent": "غير متوافق",
+      "congruencyEffect": "مطابقت اثر",
+      "maxSpan": "أقصى مدت",
+      "startingSpan": "شروع ہونے والا دورانیہ",
+      "maxSpanReached": "تم بلوغ أقصى مدت",
+      "longestStreak": "أطول سلسلہ درست",
+      "series": "سلسلہ",
+      "avgResponseTime": "اوسط ردعمل وقت",
+      "recall": "واپسی",
+      "expected": "المتوقع",
+      "submit": "جمع کرائیں",
+      "cancel": "منسوخ",
+      "clear": "صاف کریں",
+      "delete": "حذف",
+      "true": "درست",
+      "false": "غلطی",
+      "target": "ہدف",
+      "nonTarget": "غیر ہدف",
+      "distractor": "مشتّت",
+      "same": "یکساں",
+      "different": "مختلف",
+      "identical": "مماثل",
+      "mirror": "معكوس",
+      "symmetric": "یکساں",
+      "asymmetric": "غير یکساں",
+      "symShort": "Sym۔",
+      "present": "موجود",
+      "absent": "غیر موجود",
+      "noTrials": "لم تُكمل أي ٹرائل.",
+      "noSets": "لم تُكمل أي سیٹ.",
+      "noRounds": "لم تُكمل أي راؤنڈ.",
+      "noProblems": "نہیں problems مکمل۔",
+      "noPhases": "نہیں مراحل مکمل۔",
+      "sets": "سیٹس",
+      "rounds": "راؤنڈز",
+      "equations": "مساواتیں",
+      "sentences": "جملے",
+      "equationAccuracy": "درستگی المعادلات",
+      "forward": "آگے",
+      "backward": "پیچھے",
+      "forwardMaxSpan": "أقصى مدت أمامي",
+      "backwardMaxSpan": "أقصى مدت عكسي",
+      "odd": "طاق",
+      "even": "جفت",
+      "score": "سکور",
+      "easy": "آسان",
+      "hard": "مشکل",
+      "totalTrials": "کل ٹرائلز",
+      "totalErrors": "کل غلطیاں",
+      "totalErrShort": "کل غلطیاں",
+      "hits": "ہٹس",
+      "misses": "مسز",
+      "falseAlarms": "False Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "ہاں",
+      "no": "نہیں",
+      "sessionInterrupted": "سیشن میں خلل",
+      "reverseOrder": "بترتیب عكسي",
+      "normalOrder": "بترتیب",
+      "lnsInstruction": "نمبرز ascending, پھر حروف ایک-Z",
+      "vs": "ضد",
+      "simon": {
+        "simonEffect": "تأثير Simon",
+        "blue": "نیلا",
+        "red": "سرخ",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "ظاہر کریں یہ نمبر",
+        "submit": "جمع کرائیں",
+        "rodLabel": "کالم {{n}}",
+        "heavenBead": "آسمانی دانہ (قدر 5)",
+        "earthBead": "زمینی دانہ (قدر 1)",
+        "instrBeadTitle": "كيف تعمل دانےات",
+        "instrBeadDesc": "ہر کالم ایک ہندسہ ظاہر کرتا ہے۔ اوپر کا دانہ (آسمانی) 5 کے برابر ہے۔ نیچے کے دانے (زمینی) ہر ایک 1 کے برابر ہیں۔ دانوں کو فعال کرنے کے لیے درمیانی پٹی کی طرف لے جائیں۔",
+        "instrExampleTitle": "مثال: 7",
+        "instrExampleDesc": "7 = آسمانی دانہ نیچے (5) + 2 زمینی دانے اوپر (2)۔ دانوں کو حرکت دینے کے لیے ٹیپ یا گھسیٹیں۔",
+        "instrGoalTitle": "آپ کا مقصد",
+        "instrGoalDesc": "ایک نمبر ظاہر ہوگا۔ اسے ظاہر کرنے کے لیے دانے سیٹ کریں، پھر جمع کرائیں دبائیں۔ درست اور تیز رہیں!",
+        "startButton": "شروع",
+        "settings": "ترتیبات",
+        "closeSettings": "ترتیبات بند کریں",
+        "settingsRods": "کالموں کی تعداد",
+        "settingsRodsHint": "طے via N-لیول میں کھیل ترتیبات",
+        "settingsTrials": "ٹرائلز لكل سیشن",
+        "settingsTrialsHint": "طے via ٹرائلز میں کھیل ترتیبات",
+        "settingsRange": "نمبر رینج"
+      },
+      "stroop": {
+        "pressInkColorButton": "اضغط زر رنگ الحبر",
+        "redWord": "سرخ",
+        "redLabel": "سرخ",
+        "blueWord": "نیلا",
+        "blueLabel": "نیلا",
+        "greenWord": "سبز",
+        "greenLabel": "سبز",
+        "yellowWord": "پیلا",
+        "yellowLabel": "پیلا"
+      },
+      "stroopFlex": {
+        "followRule": "قاعدہ",
+        "ruleInk": "رنگ الحبر",
+        "ruleWord": "لفظ المكتوبة",
+        "pressMatchingRuleButton": "موجودہ قاعدے سے مماثل بٹن دبائیں"
+      },
+      "goNogo": {
+        "goTrials": "ٹرائلز Go",
+        "nogoTrials": "ٹرائلز No-Go",
+        "hitRate": "معدل الہٹ (Go)",
+        "faRate": "جھوٹے الارم کی شرح (نہیں-جائیں)",
+        "meanRt": "اوسط ردعمل وقت",
+        "sensitivity": "حساسیت",
+        "press": "دبائیں",
+        "withhold": "امتنع"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (Stop Signal RT)",
+        "ssdMean": "اوسط SSD (رکناات الناجحة)",
+        "ssd": "SSD",
+        "goRt": "Go RT",
+        "successfulInhibition": "کامیاب روک تھام",
+        "stop": "رکیں",
+        "meanGoRt": "اوسط زمن ردعمل GO",
+        "ssrtInvalid": "insufficient ڈیٹا",
+        "ssrtNegativeNote": "SSRT منفی ہے (اوسط SSD > اوسط GO RT) — موجودہ ٹرائل تعداد کے ساتھ نتیجہ ناقابل اعتماد۔"
+      },
+      "pvt": {
+        "rtMedian": "وسطی RT",
+        "rtMean": "اوسط RT",
+        "fastest": "الأسرع",
+        "slowest": "الأبطأ",
+        "falseStarts": "جھوٹ starts",
+        "falseStartsShort": "جھوٹ st۔",
+        "lapses": "هفوات",
+        "mean": "اوسط",
+        "reaction": "ردعمل",
+        "wait": "Wait۔۔۔",
+        "pressStimulus": "Wait کے لیے محرک۔۔۔",
+        "pressAnywhere": "جب کاؤنٹر ظاہر ہو تو کہیں بھی دبائیں",
+        "press": "دبائیں!",
+        "tooEarly": "بہت جلدی!",
+        "lapsesLabel": "هفوات"
+      },
+      "posner": {
+        "cueingEffect": "تأثير اشارہ",
+        "validMeanRt": "اوسط ردعمل وقت الصالح",
+        "invalidMeanRt": "مطلب غلط RT",
+        "validAccuracy": "درستگی صالحة",
+        "invalidAccuracy": "درستگی غير صالحة",
+        "validTrials": "ٹرائلز صالحة",
+        "invalidTrials": "ٹرائلز غير صالحة",
+        "validRtShort": "RT Val۔",
+        "invalidRtShort": "RT Inv۔",
+        "valid": "درست",
+        "invalid": "غلط"
+      },
+      "antisaccade": {
+        "cost": "تكلفة مضاد حرکت الإرادية",
+        "proAccuracy": "درستگی مع حرکت",
+        "antiAccuracy": "درستگی ضد حرکت",
+        "pro": "مع",
+        "anti": "ضد",
+        "proRt": "ز.إ. مع",
+        "antiRt": "ز.إ. ضد",
+        "proMeanRt": "اوسط زمن ردعمل Pro-saccade",
+        "antiMeanRt": "اوسط زمن ردعمل Anti-saccade",
+        "costLabel": "التكلفة",
+        "antiLabel": "مضاد"
+      },
+      "axCpt": {
+        "dPrime": "d'-context",
+        "axAccuracy": "درستگی AX",
+        "bxFa": "جھوٹا الارم BX",
+        "ayError": "غلطی AY",
+        "bxFaShort": "BX إ.ك.",
+        "ayErrShort": "AY غلطی",
+        "cogControl": "کنٹرول المعرفي",
+        "target": "ہدف",
+        "nonTarget": "غیر ہدف"
+      },
+      "ant": {
+        "scores": "ANT سکورز",
+        "alerting": "Alerting (نہیں-اشارہ − دگنا-اشارہ)",
+        "orienting": "Orienting (مرکز − مکانی)",
+        "executive": "التنفيذي (غير متوافق − متوافق)"
+      },
+      "changeDet": {
+        "kCowan": "سعة K (Cowan)",
+        "sameShort": "یکساں",
+        "diffShort": "Diff۔"
+      },
+      "swm": {
+        "withinErrors": "غلطیاں داخل البحث",
+        "betweenErrors": "غلطیاں بين عمليات البحث",
+        "totalErrors": "کل غلطیاں",
+        "errorFree": "بدون غلطیاں",
+        "foundErrorFree": "وُجد بدون غلطیاں!",
+        "errorCount": "{{count}} غلطی (غلطیاں)",
+        "tapsLabel": "اللمسات"
+      },
+      "taskSwitch": {
+        "switchCost": "تكلفة تبدیل",
+        "rtRepeat": "اوسط ز.إ. (دہرانا)",
+        "rtSwitch": "اوسط ز.إ. (تبدیل)",
+        "oddEven": "طاق / جفت",
+        "highLow": "اونچا / کم",
+        "title": "Task Switching"
+      },
+      "trailMaking": {
+        "tmtATime": "TMT-ایک وقت",
+        "tmtBTime": "TMT-B وقت",
+        "executiveCost": "Executive cost (B − ایک)",
+        "executiveCostShort": "Executive cost (B-ایک)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "غلطیاں A",
+        "errB": "غلطیاں B",
+        "preparingB": "Preparing TMT-B۔۔۔",
+        "tmtADone": "TMT-ایک ہو گیا!",
+        "totalErrors": "کل غلطیاں",
+        "tmtALabel": "TMT-ایک: نمبرز",
+        "tmtBLabel": "TMT-B: نمبرز & حروف",
+        "next": "اگلا",
+        "heroTitle": "Trail Making",
+        "alternateHint": "بدّل بين نمبرز وحروف: 1-A-2-B-…"
+      },
+      "pasat": {
+        "isiMin": "ISI أدنى",
+        "fastestIsi": "أسرع فاصل بين المحفزات (ISI)"
+      },
+      "wcst": {
+        "referenceCards": "البطاقات حوالہية",
+        "testCard": "بطاقة ٹیسٹ",
+        "categories": "زمرے",
+        "categoriesCompleted": "الفئات المکملة",
+        "perseverativeErrors": "غلطیاں المثابرة",
+        "persevShort": "Persev۔",
+        "avgRt": "اوسط وقت الرد"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT سے زاویہ",
+        "findMatch": "اعثر على الشکل المماثل",
+        "reference": "الشکل حوالہي",
+        "referenceLabel": "حوالہ",
+        "candidate": "مرشح",
+        "distractor": "دیگر",
+        "mirrorErrors": "انعكاسات",
+        "title": "الدوران الذهني"
+      },
+      "sternberg": {
+        "rtBySize": "ز.إ. حسب سائز سیٹ",
+        "title": "Sternberg",
+        "avgRt": "اوسط وقت الرد"
+      },
+      "visualSearch": {
+        "rtBySize": "ز.إ. حسب سائز سیٹ",
+        "title": "البحث البصری"
+      },
+      "ospan": {
+        "typeLetters": "حروف ترتیب سے ٹائپ کریں",
+        "trueOrFalse": "سچ یا جھوٹ؟",
+        "processingWarning": "مساوات درستگی < 85% — نتائج حقیقی ورکنگ میموری کی صلاحیت کی عکاسی نہیں کر سکتے"
+      },
+      "readingSpan": {
+        "s0": "سورج مشرق سے طلوع ہوتا ہے۔",
+        "s1": "مچھلیاں درختوں پر رہتی ہیں۔",
+        "s2": "پیرس فرانس کا دارالحکومت ہے۔",
+        "s3": "مثلث کے چار اطراف ہوتے ہیں۔",
+        "s4": "پانی 100 ڈگری پر ابلتا ہے۔",
+        "s5": "بلیاں رینگنے والے جانور ہیں۔",
+        "s6": "زمین سورج کے گرد گھومتی ہے۔",
+        "s7": "چاکلیٹ چٹانوں پر اگتی ہے۔",
+        "s8": "ایک سال میں بارہ مہینے ہوتے ہیں۔",
+        "s9": "پرندے پانی کے نیچے سانس لیتے ہیں۔",
+        "s10": "دودھ سفید ہوتا ہے۔",
+        "s11": "گاڑیاں پٹریوں پر چلتی ہیں۔",
+        "s12": "شہد کی مکھیاں شہد بناتی ہیں۔",
+        "s13": "برف گرم ہوتی ہے۔",
+        "s14": "دل خون پمپ کرتا ہے۔",
+        "s15": "پتھر پانی پر تیرتے ہیں۔",
+        "s16": "چاند رات کو روشن کرتا ہے۔",
+        "s17": "سانپوں کی ٹانگیں ہوتی ہیں۔",
+        "s18": "لکڑی پانی پر تیرتی ہے۔",
+        "s19": "آگ ٹھنڈی ہوتی ہے۔",
+        "s20": "انسان کے پانچ حواس ہوتے ہیں۔",
+        "s21": "مکڑیوں کی چھ ٹانگیں ہوتی ہیں۔",
+        "s22": "روٹی آٹے سے بنتی ہے۔",
+        "s23": "وہیل مچھلیاں ہیں۔",
+        "w0": "گھر",
+        "w1": "کتا",
+        "w2": "کتاب",
+        "w3": "پھول",
+        "w4": "دروازہ",
+        "w5": "میز",
+        "w6": "درخت",
+        "w7": "سڑک",
+        "w8": "بادل",
+        "w9": "ستارہ",
+        "w10": "ساحل",
+        "w11": "برف",
+        "w12": "چراغ",
+        "w13": "بارش",
+        "w14": "شیشہ",
+        "w15": "گھاس",
+        "w16": "ٹرین",
+        "w17": "دنیا",
+        "w18": "سورج",
+        "w19": "جنگل",
+        "w20": "برف",
+        "w21": "زمین",
+        "w22": "آسمان",
+        "w23": "پتھر",
+        "d0": "صبح",
+        "d1": "دل",
+        "d2": "کپڑا",
+        "d3": "پتا",
+        "d4": "شور",
+        "d5": "باغ",
+        "d6": "سایہ",
+        "d7": "گھنٹی",
+        "d8": "پل",
+        "d9": "دھواں",
+        "d10": "ریت",
+        "d11": "سوپ",
+        "heroTitle": "مدت پڑھنا"
+      },
+      "memorizeSequence": "ترتیب یاد کریں...",
+      "reproduce": "دوبارہ پیدا کریں",
+      "span": "مدت",
+      "size": "سائز",
+      "fixateCenter": "مرکز پر نظر جمائیں...",
+      "identicalOrMirror": "یکساں یا آئینہ؟",
+      "wellInhibited": "اچھی روک تھام!",
+      "badDirection": "غلط سمت!",
+      "stopMissed": "سٹاپ چھوٹ گیا!",
+      "falseAlarm": "جھوٹا الارم!",
+      "pressNow": "دبائیں!",
+      "hitBang": "ہٹ!",
+      "miss": "مس!",
+      "doNotTouch": "مت چھوئیں!",
+      "whichDirection": "کس سمت؟",
+      "stopBang": "رکیں!",
+      "cueBang": "اشارہ!",
+      "memorizeLetters": "یہ حروف یاد کریں",
+      "memorizeLetter": "یہ حرف یاد کریں",
+      "memorizeSequenceLetters": "ترتیب یاد کریں...",
+      "memorizeDigits": "ہندسے یاد کریں...",
+      "memorizeColors": "رنگ یاد کریں!",
+      "memorizePosition": "یہ پوزیشن یاد کریں...",
+      "retainWord": "یہ لفظ یاد رکھیں",
+      "retainNumber": "یہ نمبر یاد رکھیں",
+      "addWithPrevious": "پچھلے کے ساتھ جوڑیں",
+      "sentenceTrueOrFalse": "کیا یہ جملہ سچ ہے؟",
+      "findRedCircle": "سرخ دائرہ تلاش کریں!",
+      "findHiddenToken": "چھپا ہوا ٹوکن تلاش کریں!",
+      "chooseMatchingCard": "مماثل کارڈ چنیں",
+      "arrowDirection": "مرکزی تیر کی سمت؟",
+      "attention": "توجہ...",
+      "preparation": "Preparation۔۔۔",
+      "recallLettersInOrder": "تذكّر حروف الـ {{count}} بترتیب",
+      "recallWordsInOrder": "تذكّر الفاظ الـ {{count}} بترتیب",
+      "recallLastLetters": "آخری {{count}} حروف یاد کریں",
+      "typeLastLetters": "آخری {{count}} حروف ٹائپ کریں",
+      "recallPositionsInOrder": "یاد: ٹیپ positions ترتیب سے",
+      "pressEnterToValidate": "اضغط Enter للتصدیق",
+      "pressAnywhereToContinue": "دبائیں anywhere کو جاری رکھیں",
+      "temporalPrecision": "درستگی الزمنية",
+      "estimationPrecision": "درستگی اندازہ",
+      "touchStartClockwise": "شروع نقطے کو چھوئیں پھر گھڑی کی سمت سوائپ کریں",
+      "touchAtoB": "ٹچ نقطہ ایک پھر سوائپ کو B",
+      "cue": "اشارہ",
+      "retainCue": "احتفظ بالإبیج...",
+      "targetOrNot": "ہدف أم غير ہدف؟",
+      "whereIsTarget": "أين ہدف؟",
+      "wasLetterInSet": "کیا یہ حرف سیٹ میں تھا؟",
+      "regular": "باقاعدہ",
+      "regularity": "الانتظام",
+      "msDeviation": "مللي ثانية انحراف",
+      "boxes": "صناديق",
+      "found": "{{count}} ملا",
+      "past": "ماضٍ",
+      "tooSlow": "سست جداً",
+      "tooFast": "تیز جداً",
+      "timeout": "بہت سست!",
+      "answer": "جواب",
+      "dontPress": "Don't دبائیں!",
+      "feedbackWrong": "غلطی!",
+      "level": "لیول",
+      "wrong": "غلط",
+      "you": "آپ",
+      "paused": "وقفہ",
+      "instructions": "ہدایات",
+      "selectAnswer": "اختر جواب",
+      "tapTheOddOne": "بے جوڑ کو ٹیپ کریں",
+      "pal": {
+        "subtitle": "السیکھنا بالترابط الزوجي",
+        "pairsLearned": "جوڑے سیکھی ہوئی",
+        "maxSetSize": "سائز الأقصى",
+        "totalErrors": "کل غلطیاں",
+        "round": "راؤنڈ",
+        "pairs": "جوڑے",
+        "meanRt": "زمن رد الفعل (درست)",
+        "studyPhase": "Study - memorize positions",
+        "testPhase": "أين كان هذا الشکل؟",
+        "studying": "حفظ",
+        "tapBox": "اس خانے کو ٹیپ کریں جہاں یہ شکل دکھائی گئی تھی"
+      },
+      "visualLogic": {
+        "easy": "آسان",
+        "hard": "مشکل",
+        "oneRule": "1 قاعدہ",
+        "twoRules": "2 قواعد",
+        "findMissing": "أوجد القطعة گم شدہ",
+        "maxLevel": "اعلیٰ لیول",
+        "finalLevel": "لیول النهائي",
+        "nextMode": "وضع سیشن التالية",
+        "adaptive": "Adaptive",
+        "fixed": "فکسڈ",
+        "spm": "SPM 60",
+        "level": "لیول",
+        "confirm": "Valider"
+      },
+      "tetrisMind": {
+        "findPiece": "کون سا ٹکڑا سوراخ میں فٹ ہوتا ہے؟",
+        "target": "ہدف"
+      },
+      "timeEstimation": {
+        "overestimationBias": "جھکاؤ للمبالغة",
+        "underestimationBias": "کم تخمینہ تعصب",
+        "noBias": "لا يوجد جھکاؤ ملحوظ",
+        "avgError": "اوسط غلطی",
+        "overestimations": "مبالغات",
+        "underestimations": "اندازہات أقل من الفعلي",
+        "avgAbsoluteError": "اوسط غلطی المطلق",
+        "avgRelativeError": "اوسط غلطی النسبي",
+        "cv": "معامل تضاد",
+        "watchDemo": "شاهد دورانیہ",
+        "getReady": "تیار ہو جائیں...",
+        "holdToReproduce": "اضغط مطولاً للدہرانا!",
+        "tooLong": "بہت لمبا!",
+        "tooShort": "بہت مختصر!",
+        "target": "ہدف",
+        "demoLabel": "حوالہ",
+        "yourTurn": "آپ کا turn",
+        "watchInstruction": "دیکھیں",
+        "holdInstruction": "اضغط مطولاً للدہرانا",
+        "heroTitle": "اندازہ وقت"
+      },
+      "puzzleDetails": "پہیلی تفصیلات",
+      "roundDetails": "تفاصيل راؤنڈ",
+      "stageResults": "مرحلہ نتائج",
+      "recognized": "معترف به",
+      "missed": "چھوٹا",
+      "win": "فوز",
+      "lose": "خسارة",
+      "winBang": "فوز!",
+      "loseBang": "خسارة!",
+      "correctBang": "درست!",
+      "wrongBang": "غلطی!",
+      "completeBang": "مکمل!",
+      "repeatedBang": "مكرر!",
+      "incompleteBang": "غير مکمل!",
+      "levelCompleteBang": "اكتمل لیول!",
+      "timesUp": "وقت ختم",
+      "seeResults": "دیکھیں نتائج",
+      "nextRound": "راؤنڈ التالية",
+      "startBlock": "شروع بلاک",
+      "continue": "جاری رکھیں",
+      "patientChoice": "انتخاب صبور",
+      "immediateChoice": "انتخاب فوري",
+      "immediate": "فوري",
+      "digitSpan": {
+        "heroTitle": "Digit Span"
+      },
+      "resume": "دوبارہ شروع کریں",
+      "numericalStroop": {
+        "heroTitle": "Stroop عددي"
+      },
+      "lineOrientation": {
+        "heroTitle": "لائن اورینٹیشن کا فیصلہ"
+      },
+      "chain": "سلسلہ",
+      "undo": "واپس",
+      "vocalProsody": {
+        "heroTitle": "التنغيم آڈیوي"
+      },
+      "letterNumber": {
+        "title": "حرف-نمبر Seq۔",
+        "expectedAnswer": "جواب المتوقعة"
+      },
+      "patternComparison": {
+        "heroTitle": "موازنہ النمونے"
+      },
+      "speedPack": {
+        "title": "حزمة رفتار",
+        "whenFoldedWhichTouch": "جب folded, کون سا squares ٹچ؟"
+      },
+      "dotProbe": {
+        "heroTitle": "المسبار الانتباهي"
+      },
+      "reflex": {
+        "heroTitle": "Reflex"
+      },
+      "hooperVisual": {
+        "title": "تنظيم هوبر البصری",
+        "whatIsThisObject": "کیا ہے یہ شے؟"
+      },
+      "blockDesign": {
+        "heroTitle": "بلاک Design"
+      },
+      "accuracy": "درستگی",
+      "avgTime": "اوسط وقت",
+      "check": "جانچیں",
+      "dualTrace": {
+        "playArea": "کھیلیں علاقہ"
+      },
+      "paperFolding": {
+        "title": "طيّ الورق",
+        "foldSequenceHolePunch": "ترتیب الطي والثقب",
+        "whichPatternWhenUnfolded": "ما نمونہ عند الفتح؟"
+      },
+      "lexicalDecision": {
+        "heroTitle": "فیصلہ المعجمي"
+      },
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxGrid": "سب سے بڑا گرڈ",
+      "symmetry": "التماثل",
+      "threshold": "حد",
+      "hitRate": "ہٹ ریٹ",
+      "faRate": "FA شرح",
+      "changeDetection": {
+        "heroTitle": "كشف تبدیلی"
+      },
+      "syllogisms": {
+        "heroTitle": "Syllogisms"
+      },
+      "subitizing": {
+        "title": "Subitizing",
+        "range": "Range"
+      },
+      "jitter": "الارتعاش",
+      "sentenceCompletion": {
+        "title": "جملہ تکمیل (Cloze)",
+        "highCloze": "اونچا cloze",
+        "lowCloze": "کم cloze"
+      },
+      "grid": "گرڈ",
+      "pinballRecall": {
+        "title": "یاد الفليبر",
+        "byBounces": "سے bounces",
+        "whereDoesItLand": "جہاں کرتا ہے یہ land؟"
+      },
+      "mean": "اوسط",
+      "speedup": "التسارع",
+      "memorize": "احفظ",
+      "time": "وقت",
+      "surfaceDevelopment": {
+        "title": "تطوير السطح",
+        "whichEdgeMatches": "کون سا کنارا مماثلتیں؟"
+      },
+      "crowding": {
+        "heroTitle": "الازدحام البصری",
+        "spacing": "التباعد"
+      },
+      "patternRecognition": {
+        "heroTitle": "پیٹرن کی پہچان"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "ٹرائل",
+        "position": "پوزیشن",
+        "audio": "آڈیو"
+      },
+      "sceneCrasher": {
+        "heroTitle": "منظر Intruder",
+        "detect": "پہچانیں"
+      },
+      "eyesTest": {
+        "heroTitle": "پڑھنا في العيون"
+      }
+    },
+    "gridlock": {
+      "undone": "آخری حرکت undone۔",
+      "resetMessage": "تمت ری سیٹ اللغز.",
+      "hintMessage": "اشارہ: حرّك {{pieceId}} بسمت {{dir}} بمقدار {{delta}}.",
+      "previewCountdown": "Study بورڈ۔ Starts میں {{seconds}}s۔",
+      "challenge": "چیلنج",
+      "optimal": "بہترین",
+      "moves": "حرکات",
+      "piece": "ٹکڑا {{id}}",
+      "targetPiece": "قطعة {{id}} (ہدف - السيارة الحمراء)",
+      "challengeClassic": "کلاسیکی",
+      "challengePrecision": "درستگی",
+      "challengeMemory": "یادداشت",
+      "challengeTimed": "موقوت",
+      "hint": "اشارہ",
+      "reset": "ری سیٹ",
+      "undo": "واپس",
+      "nextPuzzle": "اگلا پہیلی →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "الكتلة 1 — ہٹس",
+      "block2Hits": "الكتلة 2 — ہٹس",
+      "goPositive": "جائیں = مثبت",
+      "goNegative": "جائیں = منفی",
+      "title": "Affective جائیں/نہیں-جائیں",
+      "block1CommissionErrors": "غلطیاں کارکردگی سیٹ 1",
+      "block2CommissionErrors": "غلطیاں کارکردگی سیٹ 2",
+      "block": "بلاک",
+      "go": "جائیں"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "اوسط معدل تبدیل",
+      "meanSwitchesfigure": "اوسط تبدیلات/شکل",
+      "totalSwitches": "کل تبدیلات",
+      "title": "الأشكال الملتبسة",
+      "meanSwitches": "اوسط تبدیلات",
+      "switchRate": "معدل تبدیل",
+      "figures": "الأشكال",
+      "totalSwitchesLabel": "کل تبدیلات",
+      "duration": "دورانیہ",
+      "switchesCount": "ث | تبدیلات:",
+      "switchButton": "بدّل!"
+    },
+    "analogies": {
+      "verbalCorrect": "لفظي درست",
+      "timeout": "وقت ختم",
+      "title": "Analogies"
+    },
+    "ansComparison": {
+      "weber": "ويبر",
+      "title": "موازنہ ANS",
+      "ratio": "النسبة",
+      "leftMore": "البائیں أكثر",
+      "rightMore": "الدائیں أكثر"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "جھوٹے الارم کی شرح",
+      "grammatical": "نحوي",
+      "memorizeTheseStrings": "احفظ هذه السلاسل",
+      "testPhase": "مرحلة ٹیسٹ",
+      "ungrammatical": "غير نحوي",
+      "learning": "سیکھنا",
+      "test": "Test",
+      "title": "القواعد الاصطناعية",
+      "learningPhase": "سیکھنا",
+      "testIntroText": "آپ گا اب دیکھیں نیا strings۔ Decide اگر ہر one follows یکساں قواعد کے طور پر strings آپ بس studied۔",
+      "startTest": "ابدأ ٹیسٹ",
+      "followsRules": "Follows قواعد",
+      "breaksRules": "وقفے قواعد"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "سائز پلک جھپکنا",
+      "title": "پلک جھپکنا الانتباهي",
+      "blink": "الومضة",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "الحرف السبز پہلا؟",
+      "secondGreenLetter": "دوسرا سبز خط؟"
+    },
+    "attentionalCapture": {
+      "captureCost": "تكلفة الالتقاط",
+      "singletonPresent": "عنصر فردي موجود",
+      "noSingleton": "نہیں Singleton",
+      "title": "الاستحواذ الانتباهي",
+      "capture": "الالتقاط",
+      "horizontal": "افقی",
+      "vertical": "عمودی"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "نافذة الربط",
+      "title": "الربط السمعي البصری",
+      "window": "Window",
+      "pssLabel": "PSS (پوائنٹ التزامن الذاتي)",
+      "simultaneousOrNot": "Simultaneous یا نہیں؟",
+      "simultaneous": "Simultaneous",
+      "notSimultaneous": "نہیں simultaneous"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "حد دورانیہ",
+      "reference": "حوالہ",
+      "weberFraction": "كسر ويبر",
+      "title": "دورانیہ السمعية",
+      "threshold": "حد",
+      "weber": "Weber",
+      "whichLonger": "کون سا ہے لمبا؟",
+      "firstLonger": "پہلا أطول",
+      "secondLonger": "دوسرا لمبا"
+    },
+    "bart": {
+      "adjustedAvgPumps": "ایڈجسٹ شدہ اوسط پمپ",
+      "avgTimeballoon": "اوسط وقت/بارنگ",
+      "banked": "تم الادخار!",
+      "lostEarnings": "خسارة الأرباح!",
+      "overallAvgPumps": "مجموعی طور پر اوسط پمپ",
+      "popRate": "پھٹنا شرح",
+      "totalEarned": "کل الأرباح",
+      "balloons": "غبارہات",
+      "cashed": "محصّل",
+      "popped": "انفجر",
+      "adjPumps": "Adj۔ pumps",
+      "pop": "پھٹنا",
+      "pump": "Pump",
+      "cashIn": "Cash میں"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "اوسط وقت فیصلہ",
+      "drawBeadsToGatherEvidence": "اسحب دانے لجمع ثبوت",
+      "jtc": "JTC",
+      "title": "موتیوں کا ٹاسک",
+      "meanDraws": "اوسط السحب",
+      "rounds": "راؤنڈز",
+      "jtcRate": "JTC شرح",
+      "meanDrawsToDecision": "اوسط السحوبات حتى فیصلہ",
+      "jtcRateThreshold": "JTC شرح (<{{threshold}} draws)",
+      "round": "راؤنڈ",
+      "jarDescription": "Jar ایک: 85% سبز / Jar B: 85% سرخ",
+      "itWasJar": "یہ تھا Jar",
+      "drawABead": "Draw A Bead",
+      "jarAGreen": "Jar A Green",
+      "jarBRed": "Jar B Red"
+    },
+    "binding": {
+      "changedTrials": "ٹرائلز المتغيرة",
+      "sameAccuracy": "درستگی المتشابه",
+      "sameTrials": "ٹرائلز المتشابهة",
+      "title": "خصوصیت Binding",
+      "binding": "الربط",
+      "bindingAccuracyChanged": "درستگی تبدیلی",
+      "same": "یکساں",
+      "different": "مختلف"
+    },
+    "blockDesign": {
+      "cells": "خانے",
+      "target": "ہدف",
+      "yourAnswer": "آپ کا جواب",
+      "tapHint": "اضغط لتغيير الرنگ",
+      "check": "جانچیں"
+    },
+    "brixton": {
+      "adapt": "ڈھالیں",
+      "adaptationCost": "تكلفة التكيّف",
+      "nonswitchTrials": "ٹرائلز بدون تبدیل",
+      "switchTrials": "ٹرائلز مع تبدیل"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "تذكّر هذه حروف",
+      "selectThe3Letters": "اختر حروف الثلاثة",
+      "title": "Brown-Peterson Task",
+      "forgetting": "بھولنا",
+      "sDelay": "S Delay",
+      "minus3": "Minus3",
+      "delay": "تأخير"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "فیصلے کا معیار",
+      "finalPoints": "آخری پوائنٹس",
+      "meanBet": "اوسط شرط",
+      "winRate": "جیت کی شرح",
+      "wins": "جیتیں",
+      "title": "مهمة جوا كامبريدج",
+      "totalPoints": "کل پوائنٹس",
+      "quality": "معیار",
+      "rational": "معقول",
+      "avgBet": "اوسط شرط",
+      "trial": "ٹرائل",
+      "whichColorHidesToken": "کون سا رنگ ٹوکن چھپاتا ہے؟",
+      "youChose": "آپ نے چنا",
+      "howMuchToBet": "کتنی شرط لگائیں؟"
+    },
+    "cancellation": {
+      "false": "غلطی",
+      "target": "ہدف:",
+      "total": "کل",
+      "title": "مهمة منسوخی (d2)",
+      "misses": "مسز",
+      "targetDescription": "d کے ساتھ 2 marks"
+    },
+    "changeBlindness": {
+      "detectionRate": "پہچان کی شرح",
+      "found": "ملا",
+      "meanDetectionTime": "اوسط پہچان وقت",
+      "title": "العمى عن تبدیلی",
+      "missed": "چھوٹا",
+      "avgTime": "اوسط وقت",
+      "instructions": "ہدایات"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "بہترین اندازہ",
+      "meanScore": "اوسط سکور",
+      "worstEstimate": "بدترین اندازہ",
+      "inRange": "اچھا اندازہ!",
+      "title": "اندازہ المعرفي",
+      "meanScoreLabel": "اوسط سکور",
+      "inRangeLabel": "حد میں",
+      "extreme": "انتہائی",
+      "scoreLabel": "سکور",
+      "submit": "جمع کرائیں"
+    },
+    "common": {
+      "accuracy": "درستگی",
+      "bias": "جھکاؤ",
+      "falseAlarmRate": "جھوٹے الارم کی شرح",
+      "hitRate": "ہٹ ریٹ",
+      "hits": "ہٹس",
+      "listening": "سن رہے ہیں...",
+      "meanRt": "اوسط RT",
+      "timedOut": "وقت ختم ہو گیا",
+      "timedOut2": "وقت ختم ہو گیا",
+      "faRate": "FA شرح",
+      "paused": "موقوف"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "آپ کو کتنا اعتماد ہے؟",
+      "rateYourConfidence": "اپنے اعتماد کی درجہ بندی کریں",
+      "title": "معايرة اعتماد",
+      "calError": "کیلیبریشن غلطی",
+      "confidence": "اعتماد"
+    },
+    "consequences": {
+      "best": "بہترین",
+      "nextRound": "اگلا راؤنڈ...",
+      "time": "وقت",
+      "placeholder": "ایک نتیجہ ٹائپ کریں...",
+      "title": "العواقب",
+      "totalIdeas": "کل خیالات",
+      "avgPerRound": "اوسط فی راؤنڈ",
+      "rounds": "راؤنڈز",
+      "noConsequencesListed": "کوئی نتائج درج نہیں",
+      "roundProgress": "راؤنڈ {{current}} / {{total}}",
+      "typeAndPressAdd": "ٹائپ کریں اور شامل دبائیں"
+    },
+    "contextualCueing": {
+      "cueingEffect": "اشارے کا اثر",
+      "newConfigRt": "زمن ردعمل تكوين نیا",
+      "oldConfigRt": "زمن ردعمل تكوين قديم",
+      "title": "اشارہ السياقي",
+      "cueing": "اشارہ",
+      "oldRt": "زمن ردعمل قديم",
+      "newRt": "زمن ردعمل نیا",
+      "prompt": "اشارہ",
+      "left": "بائیں",
+      "right": "دائیں"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "حد جِٹر",
+      "title": "تكامل الخطوط محیطية",
+      "pipeJitter": "| اهتزاز"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "حد تضاد",
+      "title": "حساسیت تضاد",
+      "threshold": "حد",
+      "left": "بائیں",
+      "right": "دائیں"
+    },
+    "cpt": {
+      "nontargets": "غير اہداف",
+      "target": "ہدف",
+      "nonTarget": "غیر ہدف",
+      "dPrime": "d'",
+      "targetsLetter": "الحرف المستہدف",
+      "tapForLetterOnly": "ٹیپ کے لیے ہدف حرف صرف"
+    },
+    "crowding": {
+      "criticalSpacing": "اہم spacing",
+      "leftAccuracy": "درستگی البائیں",
+      "rightAccuracy": "درستگی الدائیں"
+    },
+    "cryptogram": {
+      "hints": "اشارہات",
+      "title": "كريبتوغرام",
+      "solved": "حل ہو گیا",
+      "time": "وقت",
+      "puzzles": "پہیلیاں",
+      "puzzle": "پہیلی",
+      "hint": "اشارہ",
+      "clear": "صاف کریں"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "علاقہ نیچے Curve",
+      "discountRateK": "معدل رعایت (k)",
+      "impulsivityIndex": "Impulsivity فہرست",
+      "title": "رعایت الزمني",
+      "aucPatience": "AUC الصبر",
+      "patient": "صبور",
+      "kRate": "K Rate",
+      "impuls": "Impuls",
+      "indifferencePoints": "پوائنٹس اللامبالاة",
+      "whichPrefer": "کون سا کریں آپ prefer؟",
+      "today": "آج"
+    },
+    "delayedMatching": {
+      "long": "لمبا",
+      "longDelay68s": "لمبا delay (6-8s)",
+      "med": "اوسط",
+      "mediumDelay46s": "تأخير اوسط (4-6 ثوانٍ)",
+      "short": "مختصر",
+      "shortDelay34s": "مختصر delay (3-4s)",
+      "title": "مماثلت المؤجلة",
+      "delay": "تأخير",
+      "rememberThisPattern": "تذكر هذا نمونہ",
+      "whichWasIt": "کون سا تھا یہ؟"
+    },
+    "dichoticListening": {
+      "alertDetection": "الرٹ پہچان",
+      "attendToTheLeftColumn": "توجہ دیں کو بائیں کالم",
+      "attendedAccuracy": "درستگی چینل المنتبه إليها",
+      "ignoreTheRightColumn": "نظرانداز کریں دائیں کالم",
+      "right": "دائیں",
+      "title": "Dichotic سن رہے ہیں",
+      "attendedAcc": "درستگی الانتباه",
+      "alertDet": "الرٹ پہچان",
+      "alerts": "التنبيهات",
+      "selectLeftColumnWords": "منتخب کریں بائیں کالم الفاظ",
+      "submit": "جمع کرائیں",
+      "alertQuestion": "الرٹ question"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "درستگی بھولنا",
+      "forgettingEffect": "تأثير بھولنا",
+      "newRejection": "رفض النیا",
+      "rememberAccuracy": "درستگی التذكر",
+      "title": "بھولنا الموجّه",
+      "remember": "یاد رکھیں",
+      "forget": "بھول جائیں",
+      "round": "راؤنڈ",
+      "word": "لفظ",
+      "wasThisWordShown": "هل ظهرت هذه لفظ؟"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "سکور انحياز الانتباه",
+      "congruentAcc": "درستگی متوافقة",
+      "congruentRt": "زمن ردعمل المتوافق",
+      "incongruentAcc": "درستگی غير متوافقة",
+      "incongruentRt": "زمن ردعمل غير المتوافق"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Car یا Truck؟",
+      "minDisplayReached": "Min ڈسپلے Reached",
+      "positionAccuracy": "درستگی پوزیشن",
+      "thresholdDisplay": "تھریشولڈ ڈسپلے",
+      "vehicleAccuracy": "درستگی المركبة",
+      "whereWasTheDiamond": "جہاں تھا diamond؟",
+      "title": "فیصلہ مزدوج",
+      "threshold": "حد",
+      "bothOk": "كلاهما درست",
+      "vehicle": "مركبة",
+      "position": "پوزیشن",
+      "car": "سيارة",
+      "truck": "شاحنة"
+    },
+    "dsst": {
+      "items": "چیزیں",
+      "itemsCompleted": "عناصر مکملة",
+      "speedItemsmin": "رفتار (عناصر/دقيقة)",
+      "attempts": "ٹرائلز",
+      "itemsPerMin": "چیزیں / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Dual-کام Cost",
+      "taskANumber": "کام ایک (نمبر)",
+      "taskBSymbol": "کام B (Symbol)",
+      "title": "Dual Task",
+      "taskA": "Task A",
+      "taskB": "Task B",
+      "number": "نمبر",
+      "symbol": "الرمز",
+      "up": "اوپر",
+      "down": "نیچے"
+    },
+    "dualTime": {
+      "sessionEnPause": "سیشن میں خلل ٹائمرًا",
+      "votreEstimationSecondes": "اندازہك (بالثواني)",
+      "sessionInterrupted": "سیشن میں خلل",
+      "target": "ہدف",
+      "estimation": "اندازہ",
+      "avgTime": "اوسط وقت",
+      "avgError": "اوسط غلطی",
+      "trials": "ٹرائلز",
+      "resumeToContinue": "استأنف للجاری رکھیں",
+      "aimFor": "استہدف",
+      "second": "Second",
+      "howLongDidYouTake": "كم استغرقت من وقت؟"
+    },
+    "dualTrack": {
+      "confirmer": "تصدیق کریں",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "استأنف للجاری رکھیں.",
+      "sessionEnPause": "سیشن میں خلل ٹائمرًا",
+      "tapezLesCibles": "انقر على الاہداف",
+      "tapezLaCible": "انقر على ہدف",
+      "appuyezConfirmer": "اضغط على تصدیق",
+      "targetsCountLabel": "{{count}} اہداف",
+      "distractorsCountLabel": "{{count}} مشتتات",
+      "roundsCountLabel": "{{count}} راؤنڈز",
+      "calibrationRoundsLabel": "{{count}} راؤنڈ معايرة",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = لیول مشکل الداخلي للمسار.",
+      "tierHelpCurrentWithPhase": "آپ ہیں فی الحال پر T{{current}} باہر کا {{total}} کے لیے {{targets}} اہداف۔ موجودہ مرحلہ: {{phase}}۔ There ہیں {{remaining}} tier(s) بائیں پہلے اگلا ہدف لیول۔",
+      "phaseTracking": "ٹریکنگ",
+      "phaseAudio": "تتبّع + آواز",
+      "phaseColor": "تتبّع + رنگ",
+      "phaseCombined": "تتبّع + آواز + رنگ",
+      "passLetters": "حروف",
+      "passColors": "رنگ",
+      "moveInstruction": "حرکت instruction",
+      "moveConfirmBtn": "حرّك زر التصدیق",
+      "preparingSession": "جارٍ تحضير سیشن...",
+      "preparing3dScene": "Preparing 3D منظر۔۔۔",
+      "startJourney": "شروع سفر",
+      "calibrationDescription": "پہلے پہلا مرحلہ, ایک لمبا کیلیبریشن گا estimate آپ کا شروع لیول۔",
+      "defaultDescription": "Balls گا لائٹ اوپر۔ Follow ان جبکہ وہ حرکت, پھر شناخت کریں ان۔",
+      "startCalibration": "شروع کیلیبریشن",
+      "calibrationTitle": "کیلیبریشن",
+      "estimatedStart": "Est۔ شروع",
+      "roundsAnalyzed": "راؤنڈز تم تجزیہها",
+      "willStartAt": "گا شروع پر",
+      "targetsCount": "اہداف",
+      "thenProgress": "ثم الپیشرفت"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "اوسط غلطی المطلق",
+      "ratio": "النسبة",
+      "slope": "جھکاؤ",
+      "vierordtSlope": "جھکاؤ فيروردت",
+      "wait": "Wait۔۔۔",
+      "title": "إعادة إنتاج دورانیہ الزمنية",
+      "meanError": "اوسط غلطی",
+      "meanRatio": "النسبة الاوسطة (منتج/ہدف)",
+      "holdNow": "HOLD اب",
+      "target": "ہدف",
+      "error": "غلطی"
+    },
+    "embeddedFigures": {
+      "fastest": "الأسرع",
+      "found": "ملا",
+      "meanDetectionTime": "اوسط وقت دریافت",
+      "slowest": "الأبطأ",
+      "title": "الأشكال المخفية",
+      "missed": "چھوٹا",
+      "fastestLabel": "الأسرع",
+      "findThisShape": "اعثر على هذا الشکل",
+      "memorizeShape": "احفظ الشکل…",
+      "foundIt": "ملا یہ!",
+      "giveUp": "دیں اوپر"
+    },
+    "emotionalNback": {
+      "falseAlarms": "جھوٹے الارم",
+      "misses": "مسز",
+      "title": "N-Back انفعالي",
+      "match": "مماثلت"
+    },
+    "emotionalStroop": {
+      "neutralRt": "زمن ردعمل محايد",
+      "positiveRt": "زمن ردعمل إيجابي",
+      "threatRt": "زمن ردعمل خطرہ",
+      "title": "Stroop عاطفي",
+      "interference": "التداخل",
+      "interferenceThreatNeutral": "Interference (خطرے − Neutral)"
+    },
+    "eyesTest": {
+      "totalTime": "وقت سبي"
+    },
+    "faceName": {
+      "gain": "مكسب",
+      "learningImprovement": "تحسن السیکھنا",
+      "round1Accuracy": "درستگی راؤنڈ 1",
+      "round2Accuracy": "درستگی راؤنڈ 2",
+      "whoIsThis": "جو ہے یہ؟",
+      "title": "ربط چہرہ بنام",
+      "round": "راؤنڈ",
+      "testPhase": "مرحلة ٹیسٹ"
+    },
+    "fauxPas": {
+      "who": "جو؟",
+      "why": "کیوں؟",
+      "title": "Faux Pas شناخت",
+      "detection": "پہچان",
+      "scenarios": "السيناريوهات",
+      "fpFound": "غلط پاس پایا",
+      "control": "کنٹرول",
+      "readyToAnswer": "جاهز للجواب",
+      "didSomeoneSay": "کیا someone کہیں something وہ shouldn't ہیں؟",
+      "whoSaidIt": "جو said یہ؟",
+      "whyInappropriate": "کیوں تھا یہ inappropriate؟"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "درستگی واپسی",
+      "recognitionAccuracy": "درستگی التعرف",
+      "recallPlaceholder": "قسم آپ کا جواب۔۔۔",
+      "unlikely": "غیر ممکن",
+      "certain": "Certain",
+      "title": "Feeling کا جاننا",
+      "recall": "واپسی",
+      "recognition": "شناخت",
+      "fokR": "Fok R",
+      "questions": "Questions",
+      "recalled": "Recalled",
+      "recognized": "Recognized",
+      "fokSensitivity": "حساسیت FOK",
+      "submit": "جمع کرائیں",
+      "dontKnow": "Don't جانیں",
+      "fokPrompt": "گا آپ recognize یہ؟",
+      "selectCorrectAnswer": "اختر جواب الدرست",
+      "answer": "جواب"
+    },
+    "fingerTapping": {
+      "firstTrial": "ٹرائل پہلاى",
+      "lastTrial": "ٹرائل آخریة",
+      "sequence": "ترتیب",
+      "speedupT1VsT12": "التسارع (T1 مقابل T12)",
+      "title": "نقر الأصابع"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "اوسط وقت حرکت",
+      "avgThroughput": "اوسط الإنتاجية",
+      "title": "نقر Fitts",
+      "throughput": "الإنتاجية",
+      "tapTarget": "اضغط على ہدف المميّز"
+    },
+    "foreperiod": {
+      "early": "جلدی",
+      "slope": "جھکاؤ",
+      "title": "وقتی Preparation",
+      "fpEffectSlope": "ایف پی اثر ڈھال"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "انعكاسات",
+      "threshold": "حد",
+      "tone1": "النغمة 1",
+      "tone2": "النغمة 2",
+      "weber": "ويبر",
+      "weberFraction": "كسر ويبر",
+      "hz": "Hz",
+      "title": "تمیز التردد",
+      "thresholdLabel": "حد",
+      "hzDiff": "Hz diff",
+      "whichWasHigher": "أيهما كان اوپر؟",
+      "firstHigher": "پہلا اوپر",
+      "secondHigher": "الثاني اوپر"
+    },
+    "gabor": {
+      "gaborPatch": "رقعة غابور",
+      "leftAccuracy": "درستگی البائیں",
+      "leftTrials": "ٹرائلز البائیں",
+      "noiseMask": "شور mask",
+      "rightAccuracy": "درستگی الدائیں",
+      "rightTrials": "ٹرائلز الدائیں",
+      "thresholdAngle": "الزاوية حد",
+      "title": "Gabor",
+      "threshold": "حد",
+      "reversals": "الانعكاسات",
+      "timedOut": "وقت ختم ہو گیا",
+      "left": "بائیں",
+      "right": "دائیں"
+    },
+    "gameOfDice": {
+      "finalPoints": "آخری پوائنٹس",
+      "risky": "خطرناک",
+      "riskyChoices": "خطرناک choices",
+      "safe": "محفوظ",
+      "winRate": "جیت کی شرح",
+      "wins": "جیتیں",
+      "title": "کھیل کا Dice کام",
+      "totalPoints": "کل پوائنٹس",
+      "riskyLabel": "خطرناک",
+      "roll": "ارمِ",
+      "chooseYourBet": "Choose آپ کا bet",
+      "pickNumbers": "Pick آپ کا نمبرز"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "فرق یا نہیں فرق؟",
+      "gapThreshold": "حد الفجوة",
+      "title": "Silence پہچان",
+      "noGap": "نہیں فرق"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "جہاں تھا gaze؟",
+      "direct": "Direct",
+      "left": "بائیں",
+      "right": "دائیں",
+      "title": "سمت النظر",
+      "dPrimeDirectGaze": "D Prime Direct Gaze"
+    },
+    "hayling": {
+      "part1Initiation": "حصہ 1 (Initiation)",
+      "part2": "حصہ 2",
+      "part2Suppression": "حصہ 2 (Suppression)",
+      "suppressionCost": "تكلفة الكبت",
+      "title": "Hayling",
+      "part1": "حصہ 1",
+      "part2Label": "حصہ 2",
+      "suppression": "الكبت",
+      "obvious": "واضح",
+      "obviousPicksPart2": "انتخابات واضحة (الجزء 2)",
+      "chooseUnrelated": "اختر لفظ غير مرتبطة ",
+      "completelyUnrelated": "مکمل طور پر unrelated",
+      "doNotPickObvious": "لا تختر لفظ الواضحة!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Advancing کو اگلا مرحلہ۔۔۔",
+      "stageComplete": "مرحلہ مکمل!",
+      "title": "IED Set Shift",
+      "stages": "مراحل",
+      "edsCost": "تكلفة EDS",
+      "stage": "مرحلہ",
+      "correctNeeded": "الدرست المطلوبة للپیشرفت"
+    },
+    "informationSampling": {
+      "cost": "التكلفة",
+      "free": "مفت",
+      "meanTilesCost": "اوسط المربعات (مدفوع)",
+      "meanTilesFree": "اوسط المربعات (مفت)",
+      "totalCost": "التكلفة سبية",
+      "title": "معلومات Sampling",
+      "tiles": "البلاطات",
+      "tapToReveal": "ٹیپ کو reveal"
+    },
+    "inspectionTime": {
+      "final": "آخری",
+      "finalDisplayTime": "آخری ڈسپلے وقت",
+      "minCorrectIt": "أقل وقت فحص درست",
+      "threshold": "حد",
+      "title": "Inspection وقت",
+      "thresholdLabel": "حد",
+      "minIt": "Min یہ"
+    },
+    "iowaGambling": {
+      "balance": "الرصيد:",
+      "chooseADeck": "اختر سیٹ بطاقات",
+      "deckADraws": "سحوبات سیٹ أ",
+      "deckBDraws": "سحوبات سیٹ ب",
+      "deckCDraws": "سحوبات سیٹ ج",
+      "deckDDraws": "سحوبات سیٹ د",
+      "first40Advantageous": "پہلا 40 advantageous",
+      "last40Advantageous": "آخری 40 advantageous",
+      "learn": "سیکھیں",
+      "learningIndex": "سیکھنا فہرست",
+      "title": "مقامرة أيوا",
+      "advantageousPct": "النسبة المفيدة",
+      "earnings": "الأرباح",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "کیلیبریشن جھکاؤ",
+      "meanJol": "اوسط JOL",
+      "nowTestYourRecall": "اب ٹیسٹ آپ کا یاد",
+      "studyComplete": "الدراسة مکملة",
+      "whatWasPairedWith": "کیا تھا paired کے ساتھ…؟",
+      "title": "سیکھنے کا فیصلہ",
+      "recallAccuracy": "درستگی واپسی",
+      "jolGamma": "JOL غاما",
+      "jolAccuracyGamma": "درستگی JOL (غاما)",
+      "howLikelyRemember": "کیسے ممکنہ گا آپ یاد رکھیں؟",
+      "hiddenAnswer": "جواب المخفية"
+    },
+    "judgmentOfRecency": {
+      "close": "بند کریں",
+      "closeGap13": "بند کریں فرق (1-3)",
+      "far": "بعيد",
+      "farGap9": "Far فرق (9+)",
+      "mediumGap48": "فجوة اوسطة (4-8)",
+      "title": "Judgment کا Recency",
+      "medium": "درمیانہ",
+      "studyPhaseMemorizeOrder": "مرحلة الدراسة — احفظ ترتیب",
+      "whichMoreRecently": "کون سا ظاہر ہوا مزید حال ہی میں؟"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "اوسط ردعمل وقت (لا-كلمات)",
+      "meanRtWords": "اوسط ردعمل وقت (كلمات)",
+      "nonwordsAccuracy": "درستگی اللا-كلمات",
+      "wordsAccuracy": "درستگی الفاظ",
+      "word": "لفظ",
+      "nonword": "Non-word"
+    },
+    "maze": {
+      "duration": "دورانیہ",
+      "optimalSteps": "بہترین Steps",
+      "pathEfficiency": "كفاءة سفر",
+      "totalSteps": "کل الخطوات",
+      "wallHits": "Wall ہٹس",
+      "title": "Maze",
+      "completed": "مکمل",
+      "efficiency": "الكفاءة",
+      "wallHitsLabel": "Wall ہٹس",
+      "steps": "Steps"
+    },
+    "memobox": {
+      "easy": "آسان",
+      "easy2Boxes": "آسان (صندوقان)",
+      "hard": "مشکل",
+      "hard4Boxes": "مشکل (4 صناديق)",
+      "medium3Boxes": "اوسط (3 صناديق)",
+      "title": "Memobox",
+      "rounds": "راؤنڈز",
+      "medium": "درمیانہ",
+      "watchMovements": "شاهد حرکات…",
+      "howManyBalls": "کیسے بہت balls میں ہر box؟",
+      "submit": "جمع کرائیں",
+      "roundOf": "راؤنڈ {{current}} من {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "کیا ہے cross-حصہ؟",
+      "title": "القطع الذهني"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "پرانی, ملتا جلتا, یا نیا؟",
+      "patternSeparation": "پیٹرن علیحدگی",
+      "sep": "Sep۔",
+      "old": "پرانی",
+      "similar": "ملتا جلتا",
+      "new": "نیا",
+      "ldi": "LDI",
+      "title": "تمیز الذاكري",
+      "hitRateOldDetected": "معدل الہٹ (القديم المكتشف)",
+      "lureDiscrimination": "تمیز الطُعم (LDI)",
+      "memorize": "احفظ",
+      "testPhase": "مرحلة ٹیسٹ"
+    },
+    "multiArmedBandit": {
+      "earnings": "الأرباح:",
+      "pickMachine": "Pick ایک machine",
+      "title": "قاطع الطريق متعدد الأذرع",
+      "totalReward": "کل انعام",
+      "optimal": "بہترین",
+      "regret": "الندم",
+      "exploit": "الاستغلال",
+      "machine": "الآلة",
+      "armsExplored": "الأذرع المستكشفة"
+    },
+    "navon": {
+      "globalBigLetter": "عالمی (بڑا حرف)",
+      "localSmallLetter": "مقامی (چھوٹا حرف)",
+      "title": "نافون",
+      "globalAdv": "عالمی Adv۔",
+      "whatBigLetter": "کیا بڑا حرف؟",
+      "whatSmallLetter": "کیا چھوٹا حرف؟"
+    },
+    "negativePriming": {
+      "controlRt": "زمن ردعمل کنٹرول",
+      "nameTheRedShape": "سرخ شکل کا نام بتائیں",
+      "negativePrimingRt": "زمن ردعمل للتمهيد السلبي",
+      "positivePrimingRt": "زمن ردعمل للتمهيد الإيجابي",
+      "npRt": "NP RT",
+      "ppRt": "زمن رد فعل PP",
+      "npEffect": "NP اثر",
+      "title": "منفی Priming",
+      "ctrlRt": "زمن ردعمل حوالہي"
+    },
+    "numberLine": {
+      "estimationBias": "انحياز اندازہ",
+      "linearityRsup2": "الخطية (R²)",
+      "meanAbsoluteError": "اوسط غلطی المطلق",
+      "tapTheLineToPlaceTheNumber": "ٹیپ line کو جگہ نمبر",
+      "title": "نمبر Line",
+      "meanError": "اوسط غلطی",
+      "yourEstimate": "اندازہك",
+      "correct": "درست"
+    },
+    "oddOneOut": {
+      "colorTrials": "ٹرائلز رنگ",
+      "shapeTrials": "ٹرائلز الشکل",
+      "shape": "شکل",
+      "color": "رنگ",
+      "timeout": "وقت ختم",
+      "shapeDiffAccuracy": "درستگی اختلاف الشکل",
+      "colorDiffAccuracy": "درستگی فرق رنگ",
+      "shapeDiffAvgRt": "شکل diff۔ avg RT",
+      "colorDiffAvgRt": "رنگ کا فرق۔ اوسط RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "أي سمت؟",
+      "thresholdAngle": "الزاوية حد",
+      "title": "واقفیت کی تفریق",
+      "threshold": "حد",
+      "counterCw": "عكس عقارب الساعة",
+      "clockwise": "بسمت عقارب الساعة"
+    },
+    "patternComparison": {
+      "differentTrials": "ٹرائلز مختلفة",
+      "sameTrials": "ٹرائلز المتشابهة",
+      "same": "یکساں",
+      "different": "مختلف"
+    },
+    "patternRecognition": {
+      "newPatterns": "نمونے نئی",
+      "oldPatterns": "نمونے قديمة",
+      "old": "پرانی",
+      "new": "نیا",
+      "studyPatterns": "ادرس النمونے بعناية",
+      "memorize": "احفظ ({{current}}/{{total}})",
+      "getReady": "تیار ہو جائیں...",
+      "testPhaseStarting": "مرحلة ٹیسٹ تبدأ..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "درست تمامًا",
+      "meanAngularError": "اوسط غلطی الزاوي",
+      "withinTolerance": "اندر tolerance",
+      "title": "Perspective لینا",
+      "avgErr": "اوسط غلطی",
+      "youAreAt": "آپ ہیں پر",
+      "facing": "Facing",
+      "pointTo": "نقطہ کو"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "حد التردد",
+      "seq1": "ترتیب 1",
+      "seq2": "ترتیب 2",
+      "title": "تمیز الفونيمات",
+      "thresh": "Thresh",
+      "sameOrDifferent": "یکساں یا مختلف؟",
+      "same": "یکساں",
+      "different": "مختلف"
+    },
+    "predictionMotion": {
+      "biasLate": "جھکاؤ (+ = دیر سے)",
+      "meanAbsoluteError": "اوسط غلطی المطلق",
+      "precisionSd": "درستگی (انحراف معیاري)",
+      "title": "توقع حرکت",
+      "absError": "غلطی المطلق",
+      "precision": "درستگی",
+      "responded": "تمت ردعمل",
+      "tapWhenReachesTarget": "اضغط عند وصوله للہدف"
+    },
+    "promem": {
+      "ongoingAccuracy": "درستگی المهمة المستمرة",
+      "ongoingRt": "زمن ردعمل المهمة الجارية",
+      "pmHitRate": "معدل ہٹ PM",
+      "pmRt": "زمن رد فعل PM",
+      "pmTargets": "اہداف PM",
+      "title": "الیادداشت الاستشرافية",
+      "ongoing": "جاري",
+      "pmHits": "ہٹس PM",
+      "pmMisses": "مسز PM",
+      "living": "Living",
+      "nonLiving": "غير حي",
+      "redWordInstruction": "لفظ حمراء = اضغط"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "غلطیاں مشتتات",
+      "literalErrorRate": "معدل الغلطیاں الحرفية",
+      "literalErrors": "غلطیاں حرفية",
+      "title": "تفسير الأمثال",
+      "literal": "حرفي",
+      "litRate": "Lit۔ شرح",
+      "whatDoesThisMean": "کیا کرتا ہے یہ مطلب؟"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "تیار ہو جائیں للجاری رکھیں",
+      "meanTimeOnTarget": "اوسط وقت على ہدف",
+      "meanTrackingError": "اوسط غلطی ٹریکنگ",
+      "placeYourFingerOnTheScreen": "جگہ آپ کا finger پر اسکرین",
+      "title": "ٹریکنگ البصری",
+      "timeOnTarget": "وقت على ہدف",
+      "error": "غلطی",
+      "onTarget": "على ہدف",
+      "avgError": "اوسط غلطی",
+      "improve": "Improve",
+      "improvementT1VsT": "بہتری T1 Vs T",
+      "errorLabel": "غلطی",
+      "followGreenTarget": "اتبع ہدف السبز"
+    },
+    "rapidNaming": {
+      "roundComplete": "راؤنڈ مکملة",
+      "totalErrors": "کل غلطیاں",
+      "title": "التسمية التیزة",
+      "avgSpeed": "اوسط رفتار",
+      "totalTime": "وقت سبي",
+      "round": "راؤنڈ",
+      "getReady": "تیار ہو جائیں!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "اوسط وقت الحل",
+      "solved": "حل ہو گیا",
+      "wrong": "غلط",
+      "placeholder": "آپ کا جواب۔۔۔",
+      "title": "Rebus Puzzles",
+      "puzzles": "پہیلیاں",
+      "timeout": "وقت ختم",
+      "submit": "جمع کرائیں",
+      "answer": "جواب"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "اوسط وقت الحل",
+      "solved": "حل ہو گیا",
+      "placeholder": "آپ کا جواب۔۔۔",
+      "title": "الترابطات البعيدة",
+      "timeout": "وقت ختم",
+      "submit": "جمع کرائیں",
+      "answer": "جواب"
+    },
+    "reversalLearning": {
+      "adapt": "ڈھالیں",
+      "loseshiftRate": "معدل تبدیل بعد الخسارة",
+      "score": "سکور:",
+      "winstayRate": "Win-رہیں شرح",
+      "title": "السیکھنا بالانعكاس",
+      "rewards": "انعامات",
+      "reversals": "الانعكاسات",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "اوسط ٹرائلز للمعیار",
+      "pickACard": "Pick a card"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "شمار backwards سے 7",
+      "reproduceThePatternFromMemory": "دوبارہ پیدا کریں نمونہ سے یادداشت",
+      "title": "شکل ري",
+      "copy": "کاپی کریں",
+      "recall": "واپسی",
+      "retention": "الاحتفاظ",
+      "trial": "ٹرائل",
+      "target": "ہدف",
+      "yourCopy": "آپ کا نقل کریں",
+      "submit": "جمع کرائیں"
+    },
+    "rhythm": {
+      "avgTimingError": "اوسط غلطی التوقيت",
+      "bestTrialError": "أفضل غلطی ٹرائل",
+      "correctTrials": "ٹرائلز الدرست",
+      "worstTrialError": "أسوأ غلطی ٹرائل",
+      "watchRhythm": "دیکھیں تال",
+      "getReady": "تیار ہو جائیں...",
+      "tapTheRhythm": "ٹیپ تال!",
+      "tooFarOff": "بہت far off!",
+      "tapToReproduce": "ٹیپ کو دوبارہ پیدا کریں",
+      "beats": "{{count}} نبضة زمنية",
+      "bestTrial": "أفضل ٹرائل",
+      "worstTrial": "أسوأ ٹرائل",
+      "title": "تال",
+      "msErr": "غلطی مللي ثانية"
+    },
+    "routePlanning": {
+      "time": "وقت",
+      "title": "تخطيط سفر",
+      "levels": "لیولز",
+      "completed": "مکمل",
+      "avgMoves": "اوسط حرکات",
+      "clear": "صاف کریں",
+      "submit": "جمع کرائیں",
+      "instructions": "ہدایات"
+    },
+    "rvp": {
+      "detect357246468": "پہچانیں: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "ترتیبات المستہدفة",
+      "fa": "FA",
+      "hitRate": "ہٹ ریٹ",
+      "misses": "مسز",
+      "sequences": "ترتیبات"
+    },
+    "sart": {
+      "commissionErrors": "غلطیاں الإقدام",
+      "omissionErrors": "غلطیاں چھوٹ",
+      "tapAllDigits": "ٹیپ سب ہندسے except 3",
+      "except3": "Except3"
+    },
+    "sceneCrasher": {
+      "adds": "جوڑتا ہے",
+      "studyTheScene": "Study منظر",
+      "swaps": "مبادلات",
+      "tapTheNewchangedObject": "اضغط على الشيء النیا/المتغير"
+    },
+    "sentenceVerification": {
+      "falseSentences": "جھوٹ sentences",
+      "trueSentences": "جمل درست",
+      "byCategory": "حسب زمرہ",
+      "title": "جملہ Verification",
+      "trueRt": "زمن ردعمل درست",
+      "true": "درست",
+      "false": "غلطی",
+      "pressKey": "دبائیں"
+    },
+    "soundSweeps": {
+      "down": "نیچے",
+      "downAccuracy": "درستگی التنازلي",
+      "durationThreshold": "حد دورانیہ",
+      "up": "اوپر",
+      "upAccuracy": "درستگی اوپر",
+      "title": "صاف کریں آڈیو",
+      "threshold": "حد",
+      "upOrDown": "اوپر یا نیچے؟"
+    },
+    "sourceMemory": {
+      "color": "رنگ",
+      "colorRecall": "استذكار رنگ",
+      "frame": "الإطار",
+      "frameRecall": "Frame یاد",
+      "getReadyForTheTest": "تیار ہو جائیں للٹیسٹ!",
+      "itemRecognition": "چیز شناخت",
+      "positionRecall": "یاد پوزیشن",
+      "sourceAccuracy": "درستگی ذریعہ",
+      "title": "یادداشت ذریعہ",
+      "source": "ذریعہ",
+      "position": "پوزیشن",
+      "word": "لفظ",
+      "wasThisWordShown": "هل ظهرت هذه لفظ؟",
+      "bottom": "نیچے",
+      "blue": "نیلا",
+      "orange": "نارنجی",
+      "circle": "دائرہ",
+      "square": "مربع"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "حد الضوضاء",
+      "title": "سبام في الضوضاء",
+      "noise": "شور",
+      "whichWordWasIt": "ما لفظ؟"
+    },
+    "srtt": {
+      "learningEffect": "تأثير السیکھنا",
+      "learning": "سیکھنا",
+      "block": "بلاک"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "لیول الصدفة",
+      "learningDetected": "تم كشف السیکھنا",
+      "testPhase": "مرحلة ٹیسٹ",
+      "whichPairLooksMoreFamiliar": "کون سا جوڑا looks مزید familiar؟",
+      "title": "السیکھنا الإحصائي",
+      "learning": "سیکھنا",
+      "watchTheShapes": "دیکھیں شکلیں"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Belief جھکاؤ اثر",
+      "conclusion": "نتیجہ",
+      "premise1": "المقدمة 1",
+      "premise2": "المقدمة 2",
+      "logicalValidityQuestion": "هل هذا درست منطقيًا؟",
+      "valid": "درست",
+      "invalid": "غلط"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "درستگی الغياب",
+      "presentAccuracy": "درستگی الحضور",
+      "title": "Symbol تلاش",
+      "present": "موجود",
+      "absent": "غیر موجود",
+      "targets": "اہداف",
+      "searchGroup": "سیٹ البحث"
+    },
+    "syncContinuation": {
+      "async": "غير متزامن",
+      "asynchrony": "عدم التزامن",
+      "drift": "انجراف",
+      "cv": "CV",
+      "title": "Sync-Continuation",
+      "meanCv": "اوسط CV",
+      "tempos": "الإيقاعات",
+      "tempo": "الإيقاع",
+      "ioi": "Ioi",
+      "getReady": "تیار ہو جائیں…",
+      "nextTempo": "اگلا tempo۔۔۔"
+    },
+    "taskJuggling": {
+      "correctResets": "إعادات تعيين درست",
+      "duration": "دورانیہ",
+      "missedCounters": "عدّادات گم شدہ",
+      "prematureResets": "إعادات تعيين مبكرة",
+      "totalEvents": "کل الأحداث",
+      "tooEarly": "بہت جلدی!",
+      "missed": "چھوٹا!",
+      "title": "کام Juggling",
+      "premature": "سابق لأوانه",
+      "counter": "العداد",
+      "tapCounterInstruction": "ٹیپ ہر counter جب یہ reaches اس کا حد۔ Don't دیں کوئی overflow!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "پوائنٹ التنصيف (PSE)",
+      "curveSteepness": "حدة المنحنى",
+      "idealMidpoint": "پوائنٹ الوسط البہترینة",
+      "pse": "PSE",
+      "title": "وقتی Bisection",
+      "steepness": "الانحدار",
+      "shortOrLong": "مختصر یا لمبا؟",
+      "trainingPhase": "مرحلة تربیت",
+      "short": "مختصر",
+      "long": "لمبا"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "عرض التدرج",
+      "rememberThisDuration": "تذكّر هذه دورانیہ",
+      "width": "العرض",
+      "standard": "STANDARD",
+      "title": "وقتی Generalization",
+      "hitRate": "ہٹ ریٹ",
+      "faRate": "FA شرح",
+      "hitRateDetectStandard": "معدل الہٹ (كشف معیار)",
+      "sameDuration": "نفس دورانیہ؟",
+      "trainingPhase": "مرحلة تربیت",
+      "same": "یکساں",
+      "different": "مختلف"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "حد SOA",
+      "title": "تمیز الملمس",
+      "threshold": "حد"
+    },
+    "timePromem": {
+      "avgTimingError": "اوسط غلطی التوقيت",
+      "clockChecks": "گھڑی checks",
+      "ongoingAccuracy": "درستگی المهمة المستمرة",
+      "ongoingTrials": "ٹرائلز الجارية",
+      "totalPmPresses": "کل ضغطات الیادداشت المستقبلية",
+      "pmAccuracy": "درستگی PM",
+      "pmMisses": "غلطیاں PM",
+      "title": "وقت Prospective",
+      "ongoing": "جاري",
+      "pmHitsLabel": "نجاحات الیادداشت المستقبلية",
+      "timingErr": "غلطی التوقيت",
+      "pmHitsExpected": "ہٹس PM / المتوقعة",
+      "pmPresses": "ضغطات PM",
+      "checkClock": "جانچیں گھڑی",
+      "thirtySecMark": "30 سیکنڈ نشان"
+    },
+    "toj": {
+      "meanResponseTime": "اوسط ردعمل کا وقت",
+      "temporalResolution": "درستگی الزمنية",
+      "title": "الحكم على ترتیب الزمني",
+      "threshold": "حد",
+      "whichCameFirst": "کون سا آیا پہلا؟",
+      "leftFirst": "البائیں أولاً",
+      "rightFirst": "الدائیں أولاً"
+    },
+    "tower": {
+      "budget": "الميزانية",
+      "challenge": "چیلنج",
+      "challengeClassic": "کلاسیکی",
+      "challengeExpert": "ماہر",
+      "challengeMemory": "یادداشت",
+      "challengePrecision": "درستگی",
+      "dragDiscAriaLabel": "گھسیٹیں اوپر disc سے peg {{peg}}",
+      "goal": "ہدف",
+      "goalHiddenStatus": "مقصد چھپی۔ استعمال کریں Reveal کو دکھائیں یہ briefly۔",
+      "goalRevealedMessage": "مقصد revealed کے لیے 3 seconds۔",
+      "hint": "اشارہ",
+      "hintDescription": "دکھائیں بہترین اگلا حرکت",
+      "hintMessage": "اشارہ: حرکت اوپر disc سے peg {{fromPeg}} کو peg {{toPeg}}۔",
+      "hiddenGoalDescription": "مقصد ہے چھپی دوران کھیلیں۔ استعمال کریں Reveal جب آپ ضرورت ایک مختصر تازہ کریں۔",
+      "hiddenGoalTitle": "تحدي الیادداشت",
+      "invalid": "غلط",
+      "moves": "حرکات",
+      "optimal": "بہترین",
+      "pegFullMessage": "وہ peg ہے مکمل۔",
+      "previewMemoryCountdown": "Memorize مقصد۔ Starts میں {{seconds}}s۔",
+      "previewPlanCountdown": "Plan {{moves}}-حرکت solution۔ Starts میں {{seconds}}s۔",
+      "reset": "ری سیٹ",
+      "resetDescription": "دوبارہ شروع یہ پہیلی",
+      "resetMessage": "تمت ری سیٹ اللغز.",
+      "reveal": "كشف",
+      "revealDescription": "كشف ہدف المخفي",
+      "statusOptimalSolve": "حل بہترین. سکور {{score}}.",
+      "statusSolvedScore": "حل ہو گیا میں {{moves}} حرکات (+{{extraMoves}})۔ سکور {{score}}۔",
+      "undo": "واپس",
+      "undoDescription": "آخری حرکت کو ریورس کریں۔",
+      "undoneMessage": "آخری حرکت undone۔",
+      "yourPegs": "آپ کا pegs"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "عمليات تسليم درست",
+      "trainsLost": "قطارات گم شدہ",
+      "wrongStation": "غلط station",
+      "title": "ترتیب الأفكار",
+      "trains": "القطارات",
+      "missed": "چھوٹا",
+      "scoreLabel": "سکور",
+      "instructions": "ہدایات"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "اوسط الأسئلة المستخدمة",
+      "title": "عشرون سؤالاً",
+      "avgQuestions": "اوسط الأسئلة",
+      "rounds": "راؤنڈز",
+      "efficiency": "الكفاءة",
+      "avgQuestionsCorrectOnly": "اوسط الأسئلة (الدرست فقط)",
+      "questionsLabel": "أسئلة",
+      "remaining": "المتبقي",
+      "readyToGuess": "I'm ready کو guess!",
+      "tapTheTarget": "ٹیپ شے آپ سوچیں ہے ہدف!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Useful Field کا View",
+      "visualNoiseMask": "قناع الضوضاء البصری",
+      "whatWasInTheCenter": "کیا تھا میں مرکز؟",
+      "whereWasTheTarget": "أين كان ہدف؟",
+      "avgThreshold": "اوسط حد",
+      "speed": "رفتار",
+      "accuracy": "درستگی",
+      "central": "مركزي",
+      "peripheral": "محیطي",
+      "overall": "الکل",
+      "block": "بلاک",
+      "trials": "ٹرائلز",
+      "start": "شروع",
+      "focus": "توجہ",
+      "threshold": "حد",
+      "stimulus": "محرک",
+      "respondFromMemory": "یادداشت سے جواب دیں۔",
+      "truck": "شاحنة",
+      "choosePeripheralLocation": "اختر پوزیشن محیطي",
+      "currentBlock": "بلاک {{n}}",
+      "exposure": "التعرض"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "الفاظ شروع کے ساتھ {{letter}}",
+      "title": "لفظی روانی",
+      "totalWords": "کل الفاظ",
+      "duplicates": "مكررات",
+      "letter": "حرف",
+      "round": "راؤنڈ",
+      "roundComplete": "راؤنڈ مکملة",
+      "nextRound": "راؤنڈ التالية",
+      "middotRound": " · راؤنڈ"
+    },
+    "vernierAcuity": {
+      "whichSide": "کون سا طرف؟",
+      "title": "حدة فيرنييه",
+      "leftOffset": "إزاحة بائیں",
+      "rightOffset": "إزاحة دائیں",
+      "offset": "الإزاحة"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "بہترین حکمت عملی",
+      "correct": "درست!",
+      "wrong": "غلط",
+      "title": "پیشگوئی بموسم",
+      "optimal": "بہترین",
+      "learningCurve": "منحنى السیکھنا",
+      "predictTheWeather": "توقع موسم",
+      "rain": "المطر"
+    },
+    "wordChain": {
+      "avgResponseTime": "اوسط ردعمل کا وقت",
+      "chain": "سلسلہ",
+      "longestChain": "أطول سلسلہ",
+      "totalCorrect": "کل الدرست",
+      "totalWords": "کل الفاظ",
+      "words": "الفاظ",
+      "title": "Word Chain",
+      "longest": "Longest",
+      "avgRt": "اوسط وقت الرد",
+      "endsWith": "ends کے ساتھ",
+      "chainLabel": "سلسلہ",
+      "bestLabel": "بہترین"
+    },
+    "wordFlow": {
+      "avgWordLength": "اوسط طول لفظ",
+      "correct": "درست",
+      "invalidWords": "غلط الفاظ",
+      "totalWordsSelected": "کل الفاظ المختارة",
+      "validWords": "درست الفاظ",
+      "wordsPerMinute": "الفاظ فی minute",
+      "wrong": "غلط",
+      "seeResults": "دیکھیں نتائج",
+      "nextRound": "راؤنڈ التالية ({{current}}/{{total}})",
+      "title": "لفظی روانی",
+      "validWordsLabel": "درست الفاظ",
+      "wordsPerMinLabel": "الفاظ/min",
+      "avgLengthLabel": "اوسط الطول",
+      "invalidLabel": "غلط",
+      "round": "راؤنڈ",
+      "selectWordsBelongTo": "منتخب کریں الفاظ وہ belong کو",
+      "selected": "محدد"
+    },
+    "wordList": {
+      "avgRtCorrect": "اوسط ردعمل وقت (درست)",
+      "primacyEffect": "تأثير پہلاوية",
+      "recencyEffect": "Recency اثر",
+      "studyPhaseRememberEachWord": "Study مرحلہ — یاد رکھیں ہر لفظ",
+      "wordsRecalled": "الفاظ Recalled",
+      "title": "Word List",
+      "serialPositionCurve": "منحنى پوزیشن ترتیبي",
+      "wasWordInList": "تھا یہ لفظ میں فہرست؟",
+      "seenBefore": "Seen پہلے",
+      "newWord": "نیا"
+    },
+    "speedSort": {
+      "switchAccuracy": "درستگی تبدیل",
+      "switchTrials": "ٹرائلز مع تبدیل",
+      "sortByColor": "رتّب حسب رنگ",
+      "sortByShape": "رتّب حسب الشکل",
+      "sortByNumber": "رتّب حسب نمبر",
+      "ruleChanged": "قاعدہ changed!",
+      "binRed": "سرخ",
+      "binBlue": "نیلا",
+      "binGreen": "سبز",
+      "binYellow": "پیلا",
+      "binCircle": "دائرہ",
+      "binSquare": "مربع",
+      "binTriangle": "مثلث",
+      "binStar": "نجمة",
+      "title": "فرز تیز",
+      "switch": "تبدیلات"
+    },
+    "reflex": {
+      "target": "ہدف",
+      "lure": "لالچ",
+      "tooSlow": "بہت سست!",
+      "wrongTarget": "ہدف خاطئ!",
+      "tapTargets": "ٹیپ سبز circles!",
+      "hits": "ہٹس",
+      "misses": "مسز",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "یاد رکھیں running کل۔۔۔",
+      "title": "حساب المترتیب",
+      "stepChains": "{{len}}-قدم سلسلے",
+      "start": "شروع",
+      "step": "قدم",
+      "whatIsTheResult": "ما سکور؟"
+    },
+    "alternateUses": {
+      "placeholder": "قسم ایک استعمال کریں۔۔۔",
+      "title": "الاستخدامات البديلة",
+      "totalUses": "کل الاستخدامات",
+      "perObject": "فی شے",
+      "rounds": "راؤنڈز",
+      "bestObject": "بہترین شے",
+      "bestCount": "بہترین شمار",
+      "noUsesSubmitted": "نہیں uses submitted",
+      "timesUp": "وقت ختم!",
+      "nextObject": "اگلا شے ({{object}})",
+      "listCreativeUses": "فہرست creative uses کے لیے یہ شے"
+    },
+    "anagram": {
+      "placeholder": "اكتب لفظ...",
+      "title": "أناغرام",
+      "avgSolve": "اوسط الحل",
+      "letterWords": "{{len}}-حرف الفاظ",
+      "submit": "جمع کرائیں"
+    },
+    "facialEmotion": {
+      "happy": "سعيد",
+      "sad": "حزين",
+      "angry": "غاضب",
+      "fearful": "خائف",
+      "disgusted": "مشمئز",
+      "surprised": "متفاجئ",
+      "lc": "LC",
+      "title": "التعرف على المشاعر چہرہية",
+      "topConfusions": "اوپر confusions"
+    },
+    "numberSeries": {
+      "easy": "آسان",
+      "hard": "مشکل"
+    },
+    "chainRecall": {
+      "round": "راؤنڈ",
+      "title": "سلسلہ یاد",
+      "chain": "سلسلہ",
+      "placeholder": "عنصر نائب"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emotional جائیں/نہیں-جائیں",
+      "block1CommissionErrors": "غلطیاں کارکردگی سیٹ 1",
+      "block2CommissionErrors": "غلطیاں کارکردگی سیٹ 2",
+      "goHappy": "Go = Happy",
+      "goSad": "Go = Sad",
+      "block": "بلاک",
+      "go": "جائیں"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Stroop اثر",
+      "title": "اندفاع الرنگ",
+      "congShort": "Cong۔",
+      "incongShort": "Incong۔",
+      "congruentAccuracy": "درستگی المتوافق",
+      "incongruentAccuracy": "درستگی غير متوافقة"
+    },
+    "mirror": {
+      "avgCorrectCells": "خلايا درست (اوسط)",
+      "symmetryType": "Symmetry قسم",
+      "title": "مرآة"
+    },
+    "rhythmTap": {
+      "correctTrials": "ٹرائلز الدرست",
+      "avgRhythmScore": "اوسط سکور الإيقاع",
+      "bestTrialScore": "أفضل ٹرائل",
+      "worstTrialScore": "أسوأ ٹرائل",
+      "level": "لیول",
+      "rhythm": "تال",
+      "bestTrial": "أفضل ٹرائل",
+      "worstTrial": "أسوأ ٹرائل"
+    },
+    "vocalProsody": {
+      "questioning": "استفهام"
+    },
+    "arithmeticSpeed": {
+      "multiply": "ضرب",
+      "add": "شامل کریں",
+      "subtract": "گھٹائیں",
+      "title": "حساب التیز",
+      "score": "سکور",
+      "solved": "حل ہو گیا",
+      "missed": "چھوٹا"
+    },
+    "puzzle": {
+      "avgSolveTime": "اوسط وقت الحل",
+      "totalMoves": "کل حرکات",
+      "totalErrors": "کل غلطیاں",
+      "gridSize": "گرڈ سائز",
+      "maxGridReached": "سب سے بڑا گرڈ reached",
+      "maxLevelReached": "لیول الأقصى بلغ",
+      "maxNodesReached": "وصلت للحد الأقصى من العقد",
+      "puzzleDetails": "پہیلی تفصیلات",
+      "roundDetails": "تفاصيل راؤنڈ",
+      "solved": "حل ہو گیا!",
+      "undo": "واپس",
+      "reset": "ری سیٹ",
+      "check": "جانچیں",
+      "moves": "حرکات",
+      "time": "وقت",
+      "level": "لیول",
+      "errors": "غلطیاں",
+      "score": "سکور",
+      "grid": "گرڈ",
+      "crossings": "تقاطعات",
+      "pearls": "لآلئ",
+      "clues": "أدلة",
+      "region": "علاقہ",
+      "filled": "مملوء",
+      "cells": "خانے",
+      "undosLeft": "واپسات متبقية",
+      "gems": "جواهر",
+      "connected": "متصل",
+      "slides": "انزلاقات",
+      "progress": "پیشرفت",
+      "rotations": "Rotations",
+      "puzzle": "پہیلی",
+      "uncovered": "مكشوف",
+      "colored": "مرنگ",
+      "violations": "Violations",
+      "blacked": "مسوّد",
+      "empty": "خالی",
+      "remaining": "متبقي",
+      "pairs": "جوڑے",
+      "flips": "تقليبات",
+      "found": "ملا",
+      "balls": "كرات",
+      "guesses": "تخمينات",
+      "original": "اصلی",
+      "findDifferences": "ابحث عن الاختلافات",
+      "totalDrags": "کل عمليات السحب",
+      "totalUndos": "واپسات کلة",
+      "totalEdgesDrawn": "کل edges drawn",
+      "totalLasers": "ليزر کل",
+      "totalSlides": "کل الانزلاقات",
+      "totalRotations": "دورات کلة",
+      "totalRectangles": "مستطيلات کلة",
+      "totalScore": "مجموع پوائنٹس",
+      "avgTime": "اوسط وقت",
+      "cellsCleared": "خانے cleared",
+      "totalDiffsFound": "اختلافات کلة",
+      "gemsCollected": "جواهر مجمعة",
+      "pushBoxesOntoTargets": "دھکیلیں سب boxes onto اہداف",
+      "fireLasersMarkBalls": "Fire lasers سے edges, پھر mark ball positions",
+      "revealingAnswer": "كشف جواب...",
+      "checkAnswer": "تحقق من جواب",
+      "pickNumberBelow": "اختر نمبراً أدناه",
+      "tapCellToAssign": "المس خلية لتعيين نمبر",
+      "tapEdgesToPlaceWalls": "ٹیپ edges کو جگہ walls۔ Divide میں regions کا K۔",
+      "ghosts": "أشباح",
+      "vampires": "Vampires",
+      "zombies": "Zombies",
+      "dominoes": "دومينو",
+      "islands": "جزر",
+      "pegsLeft": "Pegs بائیں",
+      "bestRemaining": "أفضل سکور متبقية",
+      "puzzlesSolved": "پہیلیاں محلولة",
+      "flooded": "مغمور",
+      "edges": "حواف",
+      "totalPlacements": "تنسيب کل",
+      "totalRemovals": "إزالات کلة",
+      "maxTileReached": "تم بلوغ أقصى بلاطة",
+      "target": "ہدف",
+      "placed": "رکھا",
+      "totalGuesses": "کل ٹرائلز",
+      "guessesLeft": "Guesses بائیں",
+      "difficulty": "مشکل"
+    },
+    "palisade": {
+      "title": "سياج",
+      "puzzles": "پہیلیاں",
+      "maxLevel": "اعلیٰ لیول"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "errors": "غلطیاں",
+      "avgTime": "اوسط وقت",
+      "erase": "صاف کریں"
+    },
+    "blackbox": {
+      "title": "سیاہ Box",
+      "puzzles": "پہیلیاں",
+      "lasers": "الليزر",
+      "avgTime": "اوسط وقت"
+    },
+    "designFluency": {
+      "title": "طلاقة التصميم",
+      "uniqueDesigns": "منفرد ڈیزائن",
+      "duplicates": "مكررات",
+      "round": "راؤنڈ",
+      "roundComplete": "راؤنڈ مکملة",
+      "youCreatedDesigns": "آپ created {{count}} ڈیزائن",
+      "startRound": "ابدأ راؤنڈ",
+      "instructions": "ہدایات",
+      "designs": "ڈیزائن",
+      "clear": "صاف کریں",
+      "addDesign": "شامل کریں"
+    },
+    "signpost": {
+      "title": "لافتات",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "avgTime": "اوسط وقت",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "لیول",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "undos": "الواپسات",
+      "puzzle": "پہیلی"
+    },
+    "numericalStroop": {
+      "left": "بائیں",
+      "right": "دائیں"
+    },
+    "biologicalMotion": {
+      "title": "حرکت البيولوجية",
+      "noiseDots": "پوائنٹس ضوضاء",
+      "whichDirection": "کس سمت؟",
+      "left": "بائیں",
+      "right": "دائیں"
+    },
+    "inertia": {
+      "title": "قصور",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "gems": "الأحجار الكريمة",
+      "moves": "حرکات"
+    },
+    "waterLevel": {
+      "title": "لیول الماء",
+      "error": "غلطی",
+      "tilt": "جھکاؤ",
+      "waterLine": "Water line؟"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "sudoku": {
+      "title": "سودوكو",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "errors": "غلطیاں",
+      "avgTime": "اوسط وقت",
+      "erase": "صاف کریں"
+    },
+    "rectangles": {
+      "title": "مستطيلات",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "rectanglesCount": "مستطيلات",
+      "maxGrid": "سب سے بڑا گرڈ",
+      "cancelSelection": "منسوخ چیلنجد"
+    },
+    "filling": {
+      "title": "ملء",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "avgTime": "اوسط وقت",
+      "grid": "گرڈ"
+    },
+    "spacedRetrieval": {
+      "title": "واپسی المتباعد",
+      "studyPair": "Study یہ جوڑا",
+      "waitAndSolve": "Wait… پھر solve",
+      "equalsQuestion": "= ؟",
+      "intervalWhatPairs": "Interval: کیا جوڑے؟"
+    },
+    "prototypeDistortion": {
+      "title": "تشويه النموذج پہلاي",
+      "studyPhase": "Study مرحلہ",
+      "testPhase": "مرحلة ٹیسٹ",
+      "yesBelongs": "ہاں — Belongs",
+      "noRandom": "لا — بے ترتیب"
+    },
+    "motionCoherence": {
+      "title": "ہم آہنگی حرکت",
+      "threshold": "حد",
+      "coherence": "ہم آہنگی",
+      "whichDirection": "کس سمت؟"
+    },
+    "cube": {
+      "title": "مكعب",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxLevel": "اعلیٰ لیول",
+      "cubeFaces": "أچہرہ المكعب",
+      "moveUp": "اوپر",
+      "moveLeft": "بائیں",
+      "moveDown": "نیچے",
+      "moveRight": "دائیں"
+    },
+    "sameGame": {
+      "title": "یکساں کھیل",
+      "score": "سکور",
+      "cleared": "تم الصاف کریں",
+      "cells": "خانے",
+      "accuracy": "درستگی"
+    },
+    "crossModalMatching": {
+      "title": "مماثلت عبر الحواس",
+      "chance": "فرصة",
+      "whichPatternMatchesRhythm": "أي نمونہ يطابق الإيقاع؟"
+    },
+    "mosaic": {
+      "title": "فسيفساء",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "spotDiff": {
+      "title": "تلاش کریں Diff",
+      "level": "لیول",
+      "grid": "گرڈ",
+      "accuracy": "درستگی",
+      "perfect": "بالکل درست",
+      "avgTime": "اوسط وقت",
+      "found": "ملا"
+    },
+    "lightsOut": {
+      "title": "Lights باہر",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "rotations": "الدورانات",
+      "avgTime": "اوسط وقت"
+    },
+    "tracks": {
+      "title": "سكك",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "errors": "غلطیاں",
+      "avgTime": "اوسط وقت"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "slides": "الشرائح",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "cognitiveBias": {
+      "title": "تربیت جھکاؤات المعرفية",
+      "biasResistance": "مقاومة جھکاؤ",
+      "biased": "مجھکاؤ",
+      "continue": "جاری رکھیں"
+    },
+    "empathicAccuracy": {
+      "title": "درستگی التعاطفية",
+      "emotionId": "العاطفة",
+      "avgRatingError": "اوسط غلطی تشخیص",
+      "scenarios": "السيناريوهات",
+      "perfect": "بالکل درست",
+      "rating": "تشخیص",
+      "howDoesCharacterFeel": "کیسے کرتا ہے character feel؟",
+      "rateIntensity": "شرح intensity",
+      "whatEmotion": "کیا emotion؟",
+      "yourRating": "تشخیصك",
+      "correct": "درست",
+      "emotion": "العاطفة"
+    },
+    "guess": {
+      "title": "ماسترمايند",
+      "solved": "حل ہو گیا",
+      "guesses": "التخمينات"
+    },
+    "dominosa": {
+      "title": "دومينوسا",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxLevel": "اعلیٰ لیول"
+    },
+    "magnets": {
+      "title": "مغناطيس",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxLevel": "اعلیٰ لیول"
+    },
+    "tangram": {
+      "placeAll": "جگہ سب ٹکڑے",
+      "solved": "حل ہو گیا!",
+      "notRight": "ليس درستاً تماماً",
+      "title": "Tangram",
+      "level": "لیول",
+      "puzzles": "پہیلیاں",
+      "placements": "التوضيعات",
+      "removals": "الإزالات",
+      "puzzleNumber": "پہیلی {{n}}",
+      "pieces": "ٹکڑے",
+      "targetCells": "Cible",
+      "dragHint": "گھسیٹیں یا جگہ ٹکڑا پر گرڈ",
+      "selectHint": "منتخب کریں ایک ٹکڑا",
+      "rotate": "Tourner",
+      "undo": "Annuler",
+      "check": "جانچیں"
+    },
+    "galaxies": {
+      "title": "مجرات"
+    },
+    "flood": {
+      "title": "فيضان"
+    },
+    "pegs": {
+      "title": "سوليتير",
+      "bestPegs": "بہترین pegs"
+    },
+    "auditoryFigureGround": {
+      "title": "الشکل والخلفية السمعية",
+      "patternPresent": "هل يوجد نمونہ؟",
+      "pattern": "نمونہ",
+      "noPattern": "لا نمونہ"
+    },
+    "selfOrderedPointing": {
+      "title": "الإبیج الذاتية ترتیب",
+      "maxSpan": "أقصى مدت",
+      "errors": "غلطیاں",
+      "round": "راؤنڈ",
+      "setOf": "سیٹ من {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "ڈرائنگ بالمرآة",
+      "totalErrors": "کل غلطیاں",
+      "avgTime": "اوسط وقت",
+      "shapes": "شکلیں",
+      "perfect": "بالکل درست",
+      "improvement": "بہتری",
+      "errorsMiddot": "غلطیاں ·",
+      "shape": "شکل",
+      "errors": "غلطیاں",
+      "xIsMirrored": "X ہے mirrored!"
+    },
+    "clockDrawing": {
+      "title": "ڈرائنگ الساعة",
+      "avgError": "اوسط غلطی",
+      "setTo": "طے کو",
+      "submit": "جمع کرائیں"
+    },
+    "cognitiveMap": {
+      "title": "الخريطة المعرفية",
+      "explore": "دریافت کریں",
+      "sRemaining": "S Remaining",
+      "from": "سے",
+      "whichDirectionIs": "في أي سمت "
+    },
+    "sixteen": {
+      "title": "Sixteen"
+    },
+    "loopy": {
+      "title": "حلقة"
+    },
+    "lightup": {
+      "title": "لائٹ اوپر"
+    },
+    "twentyFortyEight": {
+      "maxTile": "اوپر بلاطة",
+      "moves": "حرکات",
+      "max": "زیادہ سے زیادہ"
+    },
+    "bridges": {
+      "title": "جسور",
+      "puzzles": "پہیلیاں",
+      "maxLevel": "اعلیٰ لیول",
+      "level": "لیول"
+    },
+    "net": {
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxGrid": "سب سے بڑا گرڈ"
+    },
+    "flip": {
+      "title": "قلب"
+    },
+    "range": {
+      "title": "Range"
+    },
+    "slant": {
+      "title": "مائل"
+    },
+    "towers": {
+      "title": "أبراج",
+      "puzzles": "پہیلیاں",
+      "avgTime": "اوسط وقت",
+      "erase": "صاف کریں"
+    },
+    "pearl": {
+      "title": "لؤلؤ",
+      "edges": "الحواف"
+    },
+    "mapColoring": {
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "moves": "حرکات",
+      "maxLevel": "اعلیٰ لیول"
+    },
+    "singles": {
+      "title": "Singles"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "أموات أحياء",
+      "accuracy": "درستگی",
+      "puzzles": "پہیلیاں",
+      "avgTime": "اوسط وقت"
+    },
+    "untangle": {
+      "title": "فك التشابك",
+      "drags": "السحب",
+      "maxNodes": "أقصى عقد"
+    },
+    "unruly": {
+      "title": "Unruly"
+    },
+    "fifteen": {
+      "title": "لعبة 15"
+    },
+    "tents": {
+      "title": "خيام"
+    },
+    "mesker": {
+      "pen": "القلم",
+      "stroke": "الخط",
+      "penPressureHint": "Write کے ساتھ consistent pen pressure"
+    },
+    "modality": {
+      "position": "پوزیشن",
+      "audio": "آڈیو"
+    },
+    "validate": "تصدیق التدرست"
+  },
+  "trace": {
+    "instructions": "سوائپ کو N-back پوزیشن۔ دگنا-ٹیپ اگر یکساں پوزیشن۔",
+    "hint": {
+      "validated": "تم التصدیق",
+      "draw": "اڈرائنگ الحرف • انقر للتصدیق",
+      "drawWithColor": "بنائیں حرف • منتخب کریں رنگ • ٹیپ کو توثیق کریں",
+      "type": "اكتب الحرف • Enter للتصدیق",
+      "typeWithColor": "قسم حرف • منتخب کریں رنگ • Enter کو توثیق کریں",
+      "typeResult": "اكتب سکور • Enter للتصدیق",
+      "writeResult": "اكتب سکور • انقر للتصدیق"
+    },
+    "keyboard": {
+      "letterInput": "حرف",
+      "numberInput": "نمبر"
+    },
+    "arithmetic": {
+      "cueHint": "احفظ نمبرين",
+      "refresh": "نیا"
+    },
+    "hintPosition": "جہاں تھا محرک {{n}} turns ago؟",
+    "hintN0": "ظاہر کرنا موجودہ محرک",
+    "warmupHint": "Memorize positions۔ نہیں جواب ضرورت۔",
+    "hintDraw": "اڈرائنگ الحرف • انقر للتصدیق",
+    "hintDrawWithColor": "بنائیں حرف • منتخب کریں رنگ • ٹیپ کو توثیق کریں",
+    "hintWriteResult": "اكتب سکور • انقر للتصدیق",
+    "guide": {
+      "swipeNormal": "سوائپ سے آخری پوزیشن (N-0) کو پوزیشن سے {{n}} steps ago (N-{{n}})۔ دگنا-ٹیپ اگر یکساں پوزیشن۔",
+      "swipeSequential": "سوائپ قدم سے قدم سے N-0 کو N-{{n}}, passing ذریعے ہر intermediate پوزیشن۔ دگنا-ٹیپ اگر یکساں پوزیشن۔",
+      "swipeDynamic": "سوائپ اگلا displayed قاعدہ۔ دگنا-ٹیپ اگر یکساں پوزیشن۔",
+      "tapN0": "ٹیپ پر موجودہ پوزیشن۔",
+      "warmup": "Memorize positions — نہیں جواب ضروری۔",
+      "writeDraw": "بنائیں حرف heard {{n}} steps ago • ٹیپ کو توثیق کریں",
+      "writeDrawColor": "بنائیں حرف heard {{n}} steps ago • منتخب کریں اس کا رنگ • ٹیپ کو توثیق کریں",
+      "writeType": "قسم حرف heard {{n}} steps ago • Enter کو توثیق کریں",
+      "writeTypeColor": "قسم حرف heard {{n}} steps ago • منتخب کریں اس کا رنگ • Enter کو توثیق کریں",
+      "writeDrawN0": "بنائیں حرف آپ بس heard • ٹیپ کو توثیق کریں",
+      "writeDrawColorN0": "بنائیں حرف آپ بس heard • منتخب کریں اس کا رنگ • ٹیپ کو توثیق کریں",
+      "writeTypeN0": "قسم حرف آپ بس heard • Enter کو توثیق کریں",
+      "writeTypeColorN0": "قسم حرف آپ بس heard • منتخب کریں اس کا رنگ • Enter کو توثیق کریں",
+      "writeResult": "اكتب سکور • انقر للتصدیق",
+      "validated": "تم التصدیق",
+      "holdMindful": "Hold خانہ کے لیے {{seconds}}s",
+      "swipeMindful": "سوائپ میں {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "اڈاپٹو وقت",
+      "inputKeyboard": "کی بورڈ",
+      "inputHandwriting": "لکھنا الدستیة",
+      "writingInput": "حروف/نمبرز",
+      "section": {
+        "grid": "گرڈ",
+        "input": "الإدخال",
+        "rhythm": "تال",
+        "interface": "الواجهة",
+        "interfaceNone": "معیاری",
+        "sound": "آڈیو"
+      },
+      "isi": "الفاصل الزمني (ISI)",
+      "stimulusDuration": "محرک دورانیہ",
+      "feedbackDuration": "دورانیہ التغذية الراجعة",
+      "ruleDisplay": "قاعدہ دورانیہ",
+      "blankInterval": "فاصل فارغ",
+      "showProgressBar": "پیشرفت بار",
+      "showInstructions": "ہدایات اللعب",
+      "arithmeticInterference": "حساب interference",
+      "fullMenu": "مکمل menu",
+      "gridStyle": "نمونہ گرڈ",
+      "gridStyleClassic": "کلاسیکی",
+      "gridStyleTrace": "Trace",
+      "guide": {
+        "swipeMindful": "سوائپ میں {{seconds}}s",
+        "holdMindful": "Hold خانہ کے لیے {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "الإيماءة",
+        "holdDuration": "الضغط المستمر",
+        "writingDuration": "لکھنا"
+      }
+    },
+    "feedback": {
+      "holdDuration": "ضغط",
+      "gestureDuration": "إيماءة",
+      "writingDuration": "لکھنا"
+    },
+    "image": "شکل",
+    "digits": "Digits",
+    "emotions": "العاطفة",
+    "words": "لفظ",
+    "tones": "Tone",
+    "spatial": "سمت"
+  },
+  "replay": {
+    "title": "إعادة عرض سیشن",
+    "play": "کھیلیں",
+    "pause": "وقفہ",
+    "restart": "دوبارہ شروع",
+    "speed": "رفتار",
+    "loading": "جاري تحجھکاؤ سیشن...",
+    "unavailable": "Replay غیر دستیاب کے لیے یہ سیشن",
+    "backToStats": "واپس کو stats",
+    "runStack": {
+      "original": "اصلی",
+      "correction": "التدرست",
+      "delta": "Δ d'",
+      "inProgress": "قيد الپیشرفت",
+      "completed": "مکمل"
+    },
+    "abandon": "الباہر نکلیں",
+    "badge": "إعادة",
+    "completionReport": {
+      "backToHome": "واپس",
+      "correctAgain": "درست دوبارہ",
+      "deltaVsOriginal": "vs اصلی",
+      "deltaVsParent": "مقابل ٹرائل السابقة",
+      "falseAlarmsSkipped": "غلطیاں تم تجنبها",
+      "missesCorrections": "غلطیوں کی تصحیح",
+      "newFalseAlarms": "غلطیاں نئی",
+      "replayAgain": "مراجعة",
+      "scoreLabel": "سکور التدرست",
+      "title": "اكتمل التدرست"
+    },
+    "controls": "کنٹرول",
+    "correction": "التدرست",
+    "finished": "اختتام کا replay",
+    "home": "ہوم",
+    "parseError": "تعذر قراءة سیشن",
+    "tapSlotToPlace": "ٹیپ ایک slot کو جگہ",
+    "timeline": "ٹائم لائن",
+    "focusTimeline": {
+      "open": "عرض ٹائم لائن",
+      "close": "بند کریں ٹائم لائن",
+      "title": "N-Back ٹائم لائن",
+      "fillAll": "ملء سب",
+      "fillCard": "Fill کارڈ"
+    },
+    "hud": {
+      "counterDisplay": "Counter ڈسپلے",
+      "toggleCounterDisplay": "تبدیل عرض العداد"
+    },
+    "validate": "تصدیق التدرست"
+  },
+  "recovery": {
+    "title": "سیشن میں خلل",
+    "description": "ایک سیشن تھا میں پیشرفت۔ گا آپ like کو دوبارہ شروع کریں؟",
+    "mode": "موڈ",
+    "level": "لیول",
+    "progress": "پیشرفت",
+    "timeAgo": "وقت",
+    "resume": "دوبارہ شروع سیشن",
+    "startFresh": "البدء من نیا",
+    "staleWarning": "یہ سیشن ہے پرانی, resuming ہو سکتا ہے be challenging۔",
+    "modes": {
+      "game": "تربیت",
+      "activeTraining": "تربیت النشط",
+      "flowTraining": "تربیت Dual Place",
+      "dualPickTraining": "Dual Pick",
+      "traceTraining": "Dual Trace"
+    }
+  },
+  "rewards": {
+    "congratulations": "تهانينا!",
+    "duration": "{{days}} دن Premium",
+    "lifetimeLabel": "وصول دائم",
+    "expiresAt": "درست تک {{date}}",
+    "neverExpires": "کبھی نہیں expires",
+    "continue": "جاری رکھیں",
+    "discovery": {
+      "name": "تصريح دریافت",
+      "description": "7 دن Premium — دریافت کریں سب خصوصیات"
+    },
+    "engagement": {
+      "name": "Engagement گزریں",
+      "description": "1 مہینہ Premium — آپ کا discipline pays off"
+    },
+    "expert": {
+      "name": "تصريح الماہر",
+      "description": "3 مہینے Premium — آپ ہیں ایک سچ practitioner"
+    },
+    "lifetime": {
+      "name": "وصول دائم",
+      "description": "Premium مدت الحياة — أتقنت Neurodual"
+    },
+    "xpRemaining": "XP المتبقية",
+    "permanentAccessUnlocked": "Permanent access ان لاک ہو گیا",
+    "reachedTheTop": "آپ've reached اوپر!"
+  },
+  "progression": {
+    "level": "لیول {{level}}",
+    "levelShort": "Lv۔ {{level}}",
+    "nextLevel": "لیول التالي",
+    "reached": "تم الوصول",
+    "inProgress": "قيد الپیشرفت"
+  },
+  "gridlock": {
+    "nextPuzzle": "اگلا پہیلی →"
+  }
+}

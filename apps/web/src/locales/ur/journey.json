@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "تربیتی راستہ",
+    "pageSubtitle": "اپنے سفر منتخب، ترتیب اور تخلیق کریں",
+    "enabled": "تربیتی راستہ فعال کریں",
+    "description": "N-1 سے N-10 تک ۳۰ ترقی پذیر مراحل",
+    "progress": "پیش رفت",
+    "locked": "مقفل",
+    "createJourney": "سفر بنائیں",
+    "viewJourneys": "سفر دیکھیں",
+    "current": "موجودہ سفر",
+    "myJourneys": "میرے سفر",
+    "stage": "مرحلہ",
+    "stages": "مراحل",
+    "stagesShort": "مر.",
+    "stageLabels": {
+      "pick": "چنو",
+      "catch": "پکڑو",
+      "place": "جگہ",
+      "memo": "میمو"
+    },
+    "name": "نام",
+    "namePlaceholder": "مثلاً N-5 چیلنج",
+    "levels": "سطحیں",
+    "levelRange": "سطح کی حد",
+    "levelTo": "تک",
+    "createNew": "نیا سفر",
+    "new": "نیا",
+    "defaultCustomName": "میرا سفر",
+    "created": "سفر بن گیا!",
+    "deleted": "سفر حذف ہو گیا",
+    "sessionSettings": "سیشن کی ترتیبات",
+    "savedStatus": "ترتیبات محفوظ ہو گئیں",
+    "preset": {
+      "easy": "آسان",
+      "medium": "تجویز کردہ",
+      "hard": "مشکل"
+    },
+    "setup": {
+      "title": "سفر اور پروفائلز",
+      "journey": "سفر",
+      "journeyNone": "منتخب کریں…",
+      "profile": "پروفائل",
+      "profileNone": "منتخب کریں…",
+      "configure": "ترتیب دیں",
+      "configureNone": "ایک سفر منتخب کریں",
+      "create": "نیا سفر",
+      "createDesc": "نیا سفر بنائیں"
+    },
+    "deleteConfirmTitle": "یہ سفر حذف کریں؟",
+    "deleteConfirmMessage": "سفر \"{{name}}\" مستقل طور پر حذف ہو جائے گا۔",
+    "renameTitle": "اس سفر کا نام تبدیل کریں",
+    "renameMessage": "\"{{name}}\" کا نام تبدیل کریں۔",
+    "renamed": "سفر کا نام تبدیل ہو گیا۔",
+    "badge": {
+      "simulator": "سمیولیٹر",
+      "beta": "بیٹا",
+      "default": "ڈیفالٹ"
+    },
+    "mode": "موڈ",
+    "modeStandard": "سفر (۴ موڈز)",
+    "modeDnb": "ڈی این بی",
+    "modeBw": "بی ڈبلیو",
+    "modes": {
+      "dualCatch": "دوہری کیچ",
+      "dualPlace": "دوہری جگہ",
+      "dualMemo": "ڈوئل میمو",
+      "dualPick": "دوہری انتخاب",
+      "simulator": "سمیولیٹر",
+      "jaeggi": "کلاسک",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} تصدیقی سیشن",
+      "needed": "{{count}} سیشن باقی",
+      "excellent": "شاندار!",
+      "good": "اچھا!",
+      "passing": "پاس"
+    },
+    "progression": {
+      "title": "پیش رفت",
+      "description": "اگلی سطح تک پہنچنے کے لیے اچھا سکور حاصل کریں:",
+      "excellent": "≥95% → ۱ سیشن",
+      "good": "≥85% → ۲ سیشن",
+      "passing": "≥80% → ۳ سیشن",
+      "rules": "پیش رفت کے قواعد",
+      "jaeggi": {
+        "description": "سب سے کمزور قسم کی بنیاد پر:",
+        "up": "< 3 غلطیاں → سطح اوپر",
+        "stay": "3 سے 5 غلطیاں → اسی سطح پر رہیں",
+        "down": "> 5 غلطیاں → سطح نیچے"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop پروٹوکول (BW سکور):",
+        "up": "≥80% → سطح اوپر",
+        "stay": "50-79% → سطح پر رہیں",
+        "strike": "مسلسل 3 سکور <50% → سطح نیچے"
+      },
+      "hybrid": {
+        "description": "یہ سفر {{trackCount}} Dual Track سیشن اور پھر {{dnbCount}} Dual N-Back سیشن اسی سطح پر چلاتا ہے۔",
+        "alternation": "لوپ ہمیشہ Dual Track سے دوبارہ شروع ہوتا ہے جب بھی فیصلہ ہوتا ہے۔",
+        "authority": "صرف Dual N-Back سیشن اوپر، رکنے یا نیچے کا فیصلہ کرتے ہیں۔",
+        "up": "0-1 غلطی → سطح اوپر",
+        "stay": "2-3 غلطیاں → رکیں",
+        "down": "4+ غلطیاں → سطح نیچے",
+        "streakRule": "ایک ہی زون میں مسلسل دو سیشن فیصلہ کو متحرک کرتے ہیں۔",
+        "trackProgress": "{{current}}/{{required}} کو ٹریک کریں۔",
+        "cleanProgress": "تصدیق شدہ {{current}}/{{required}}",
+        "stayProgress": "برقرار {{current}}/{{required}}",
+        "downProgress": "ناکام {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track ہر ہدف شمار مرحلے کے لیے مسلسل مہارت بار استعمال کرتا ہے:",
+        "calibration": "پہلی کیلیبریشن آپ کا ابتدائی ہدف شمار تخمینہ لگاتی ہے",
+        "goodSession": "ہر اچھا سیشن موجودہ مرحلے کو تھوڑا بھرتا ہے",
+        "mastery": "تقریباً کامل سیشن تیزی سے بھرتے ہیں، لیکن عام سیشن معمولی رہتے ہیں",
+        "regression": "کمزور سیشن موجودہ مہارت بار کو نیچے بھی لا سکتے ہیں",
+        "unlock": "اگلا ہدف شمار صرف اس وقت کھلتا ہے جب موجودہ مرحلہ 100% تک پہنچ جائے"
+      }
+    },
+    "switcher": {
+      "open": "سفر سوئچر کھولیں",
+      "current": "موجودہ",
+      "showAll": "تمام سفر",
+      "settings": "سفر کی ترتیبات"
+    },
+    "previous": "پچھلا سفر",
+    "next": "اگلا سفر",
+    "calibration": {
+      "title": "پہلا سیشن",
+      "subtitle": "ایک مختصر کیلیبریشن آپ کی ابتدائی سطح طے کرے گی، یا آپ سیدھے سطح ۲ سے شروع کر سکتے ہیں۔",
+      "skipToN2": "یا N-2 سے شروع کریں",
+      "continueAt": "یا N-{{level}} سے جاری رکھیں",
+      "start": "کیلیبریشن شروع کریں",
+      "redo": "کیلیبریشن دوبارہ کریں",
+      "badge": "کیلیبریشن"
+    },
+    "presets": {
+      "currentSlot": "حسب ضرورت",
+      "currentSlotView": "حسب ضرورت",
+      "lockedTitle": "کچھ آپشنز مقفل ہیں",
+      "lockedDesc": "پیش رفت کو قابل موازنہ رکھنے کے لیے، قسمیں (اور کچھ آپشنز) سفر شروع ہونے کے بعد تبدیل نہیں ہو سکتیں۔"
+    },
+    "completed": {
+      "title": "سفر مکمل!",
+      "subtitle": "تمام مراحل تصدیق شدہ۔ شاباش!",
+      "continueFree": "تربیت جاری رکھیں"
+    },
+    "report": {
+      "stage": "مرحلہ",
+      "level": "سطح",
+      "score": "سکور",
+      "sessionValidated": "سیشن تصدیق شدہ!",
+      "sessionNotValidated": "سیشن تصدیق نہیں ہوا",
+      "minScore": "کم از کم ضرورت:",
+      "stageCompleted": "مرحلہ مکمل!",
+      "stageUnlocked": "مرحلہ {{stage}} کھل گیا!",
+      "replay": "دوبارہ کھیلیں",
+      "nextStage": "اگلا مرحلہ",
+      "home": "ہوم",
+      "hits": "اصابتیں",
+      "misses": "چوکیں",
+      "falseAlarms": "جھوٹے الارم",
+      "correctRejections": "درست ردیں"
+    }
+  }
+}

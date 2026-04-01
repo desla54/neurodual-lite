@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Všechna práva vyhrazena.",
+    "terms": {
+      "title": "Podmínky služby",
+      "version": "Verze 3.0 — Poslední aktualizace: 2026-03-04",
+      "healthWarning": {
+        "title": "IMPORTANT HEALTH WARNING",
+        "content": "NeuroDual je kognitivní tréninková a wellness aplikace. <strong>Nejedná se o zdravotnický prostředek.</strong> Nediagnostikuje, neléčí, neléčí ani nepředchází žádné nemoci. Máte-li jakékoli obavy nebo nepohodlí, přestaňte aplikaci používat a poraďte se se zdravotníkem."
+      },
+      "section1": {
+        "title": "1. Účel a přijetí",
+        "content": "Stažením, instalací nebo používáním NeuroDual bezpodmínečně přijímáte tyto Podmínky služby. Pokud tyto podmínky nepřijímáte, aplikaci prosím nepoužívejte."
+      },
+      "section2": {
+        "title": "2. Service Description",
+        "content": "NeuroDual poskytuje trénink pracovní paměti Dual N-Back s možností místní správy dat a synchronizace prostřednictvím účtu. Služba je poskytována tak, jak je, a může se vyvíjet.",
+        "item1": "Kompatibilita: webové a mobilní aplikace (v závislosti na dostupnosti).",
+        "item2": "Přístup: některé funkce vyžadují připojení k internetu a/nebo vytvoření účtu.",
+        "item3": "Aktualizace: Opravy nebo aktualizace můžeme nasadit bez upozornění z důvodu bezpečnosti nebo výkonu.",
+        "item4": "Reklama: bezplatná mobilní verze může zobrazovat vsunuté reklamy (Google AdMob). Prémioví uživatelé nevidí žádnou reklamu."
+      },
+      "section3": {
+        "title": "3. Accounts and Security",
+        "item1": "Volitelné vytvoření účtu prostřednictvím e-mailu nebo poskytovatele identity (Google, Apple).",
+        "item2": "Jste odpovědní za zachování důvěrnosti svých přihlašovacích údajů a všech akcí prováděných s vaším účtem.",
+        "item3": "Smazání účtu a souvisejících dat je dostupné v Nastavení.",
+        "item4": "V případě porušení těchto podmínek, pokusů o podvod nebo porušení bezpečnosti můžeme účet pozastavit nebo ukončit."
+      },
+      "section4": {
+        "title": "4. Pravidla a omezení použití",
+        "item1": "Neobcházejte bezpečnostní opatření ani technická omezení.",
+        "item2": "Nepoužívejte aplikaci pro nezákonné nebo škodlivé účely.",
+        "item3": "Nepokoušejte se o zpětné inženýrství nebo neoprávněnou extrakci obsahu.",
+        "item4": "Respektujte práva duševního vlastnictví k aplikaci a jejímu obsahu."
+      },
+      "section5": {
+        "title": "5. Intellectual Property",
+        "content": "Všechny prvky (text, grafika, zvuky, zdrojový kód, loga) jsou chráněny autorským právem a zůstávají majetkem vydavatele nebo jeho poskytovatelů licencí. Není udělena žádná licence kromě osobního, nevýhradního a nepřevoditelného práva používat aplikaci v souladu s těmito podmínkami."
+      },
+      "section6": {
+        "title": "6. Dostupnost a podpora",
+        "content": "Služba je dostupná 24 hodin denně, 7 dní v týdnu s výhradou údržby nebo vyšší moci. Nezaručujeme nepřetržitou dostupnost ani výkon. Podpora: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Nákupy/předplatné v aplikaci",
+        "content": "K dispozici je prémiové předplatné: roční a doživotní (10 let). Platby spravuje RevenueCat (mobil) nebo Lemon Squeezy (web). Platí <strong>Podmínky prodeje</strong> (cena, zrušení, obnovení, zrušení, vrácení peněz) a jsou k dispozici před nákupem."
+      },
+      "section8": {
+        "title": "8. Liability",
+        "item1": "Služba je poskytována „tak jak je“ bez záruky na výsledky.",
+        "item2": "Neneseme odpovědnost za přímé nebo nepřímé škody související s používáním, ztrátou neuložených místních dat nebo interpretací statistik.",
+        "item3": "Pokud zaznamenáte nepohodlí, nežádoucí účinky nebo obavy o své zdraví, přestaňte používat."
+      },
+      "section9": {
+        "title": "9. Personal Data",
+        "content": "Zpracování osobních údajů je popsáno v <a>Zásadách ochrany osobních údajů</a>. V případě rozporu mezi Podmínkami a Zásadami ochrany osobních údajů v záležitostech týkajících se údajů mají přednost Zásady ochrany osobních údajů."
+      },
+      "section10": {
+        "title": "10. Changes to Terms",
+        "content": "Tyto Podmínky můžeme upravit z právních, technických nebo servisních důvodů. Datum aktualizace se zobrazí v horní části dokumentu. V případě podstatných změn se v aplikaci zobrazí upozornění."
+      },
+      "section11": {
+        "title": "11. Rozhodné právo a spory",
+        "content": "Tyto podmínky se řídí francouzským právem. V případě sporu a po smírných pokusech mohou spotřebitelští uživatelé využít spotřebitelskou mediaci nebo platformu European Online Dispute Resolution (ODR). V opačném případě budou mít výlučnou pravomoc francouzské soudy."
+      },
+      "section12": {
+        "title": "12. Contact",
+        "content": "Máte-li jakékoli dotazy týkající se těchto podmínek:"
+      }
+    },
+    "privacy": {
+      "title": "Zásady ochrany osobních údajů",
+      "version": "Verze 3.0 — Poslední aktualizace: 2026-03-04",
+      "intro": {
+        "p1": "Tyto zásady ochrany osobních údajů popisují, jak společnost NeuroDual („my“, „naše“, „nás“) zpracovává vaše osobní údaje, když používáte naši mobilní aplikaci a web.",
+        "p2": "Uplatňujeme zásady obecného nařízení o ochraně osobních údajů (GDPR) a francouzského zákona o ochraně osobních údajů. Upřednostňujeme architekturu „na prvním místě“, neprodáváme ani nepronajímáme vaše data a ke zlepšení produktu používáme měření publika."
+      },
+      "section1": {
+        "title": "1. Správce údajů",
+        "responsible": "Ovladač:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Sídlo:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Francie",
+        "siret": "SIRÉNA:",
+        "siretValue": "818 474 082",
+        "email": "E-mail:",
+        "dpo": "DPO: AGUILAL Abdeslam (stejný kontakt). V případě jakýchkoli dotazů ohledně vašich údajů se obraťte na výše uvedenou adresu."
+      },
+      "section2": {
+        "title": "2. Údaje, které shromažďujeme",
+        "sub1": {
+          "title": "2.1 Data generovaná uživateli (místní režim)",
+          "content": "Uložené pouze ve vašem zařízení prostřednictvím SQLite, dokud zůstanete odhlášeni:",
+          "item1": "Skóre a historie relace N-Back.",
+          "item2": "Nastavení konfigurace hry.",
+          "item3": "Místní profil (přezdívka, zvolený avatar).",
+          "note": "Tyto údaje neprocházejí našimi servery, dokud si nevytvoříte účet. Pokud aplikaci odinstalujete, tato data budou ztracena."
+        },
+        "sub2": {
+          "title": "2.2 Údaje o účtu (volitelné)",
+          "content": "Pokud si vytvoříte účet pro synchronizaci dat:",
+          "item1": "E-mailová adresa (jedinečný identifikátor).",
+          "item2": "ID uživatele poskytnuté poskytovatelem identity (Google, Apple).",
+          "note": "Tato data jsou spravována prostřednictvím našeho poskytovatele autentizace (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Technické deníky",
+          "content": "Pseudonymizované protokoly (chyby, stav synchronizace, výkon) pro zabezpečení a podporu."
+        },
+        "sub4": {
+          "title": "2.4 Podpůrná data",
+          "content": "E-mailové výměny s podporou mohou obsahovat vaše kontaktní údaje a obsah požadavků, abyste mohli odpovědět."
+        },
+        "sub5": {
+          "title": "2.5 Monitorování a sledování chyb",
+          "content": "Technická data (chyby, výkon, abnormální chování) shromážděná prostřednictvím Sentry za účelem zlepšení stability aplikace. Pseudonymizovaná data, žádné cílení reklamy."
+        },
+        "sub6": {
+          "title": "2.6 Měření publika a produktová analýza",
+          "content": "Anonymizované údaje o používání shromážděné prostřednictvím PostHog (navštívené stránky, akce v aplikaci, typ zařízení) za účelem vylepšení produktu. Nejsou přenášeny žádné osobní údaje. Žádné cílení reklamy."
+        },
+        "sub7": {
+          "title": "2.7 Reklama (bezplatná mobilní verze)",
+          "content": "Bezplatná verze pro Android zobrazuje vsunuté reklamy prostřednictvím Google AdMob. Google může shromažďovat reklamní identifikátor a technické údaje (typ zařízení, jazyk, interakce s reklamou). Prémioví uživatelé nejsou vystaveni reklamě. Další informace: Zásady ochrany osobních údajů Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Účely a právní základy",
+        "content": "Vaše údaje používáme pouze pro:",
+        "item1": "<strong>Provoz služby</strong> (místní zálohování, statistiky, synchronizace mezi více zařízeními) — Právní základ: plnění smlouvy (článek 6.1.b GDPR).",
+        "item2": "<strong>Bezpečnost a prevence podvodů</strong> (technické protokolování, kontrola přístupu) — Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f GDPR).",
+        "item3": "<strong>Uživatelská podpora</strong> — Právní základ: oprávněný zájem (reagování na požadavky).",
+        "item4": "<strong>Právní povinnosti</strong> — Právní základ: právní povinnost (čl. 6 odst. 1 písm. c GDPR).",
+        "item5": "<strong>Monitorování a sledování chyb</strong> — Právní základ: oprávněný zájem (zlepšení stability); pseudonymizovaná data, žádná personalizovaná reklama.",
+        "item6": "<strong>Měření publika</strong> (anonymizovaná produktová analytika prostřednictvím PostHog) — Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f GDPR); anonymizovaná data.",
+        "note": "Jakákoli změna účelu bude zdokumentována v aktualizaci těchto zásad.",
+        "item7": "<strong>Reklama</strong> (zobrazování vsunutých reklam pro bezplatné mobilní uživatele) — Právní základ: oprávněný zájem (článek 6.1 písm. f GDPR).",
+        "item8": "<strong>Marketing a zpravodaje</strong> — Právní základ: výslovný souhlas (čl. 6 odst. 1 písm. a) GDPR)."
+      },
+      "section4": {
+        "title": "4. Doba uchování",
+        "item1": "<strong>Místní data:</strong> uložena ve vašem zařízení a smazána po odinstalaci nebo resetování.",
+        "item2": "<strong>Účet a synchronizovaná data:</strong> uchována, dokud je účet aktivní. Smazáno do 30 dnů od žádosti o smazání účtu.",
+        "item3": "<strong>Technické protokoly:</strong> uchovány po dobu maximálně 12 měsíců, poté budou automaticky smazány.",
+        "item4": "<strong>Monitorování:</strong> pseudonymizovaná technická data uchovávaná po dobu 90 dnů za účelem sledování chyb a zlepšování produktu.",
+        "item5": "<strong>Žádosti o podporu:</strong> uchovány 24 měsíců po uzavření tiketu, poté smazány.",
+        "item6": "<strong>Údaje o publiku (PostHog):</strong> anonymizované, uchovávané po dobu 12 měsíců."
+      },
+      "section5": {
+        "title": "5. Příjemci, zpracovatelé a převody",
+        "content": "Vaše údaje mohou zpracovávat následující poskytovatelé:",
+        "item1": "Supabase Inc. (ověřovací a cloudová databáze, EU hosting).",
+        "item2": "Amazon Web Services (infrastruktura Supabase, regiony EU).",
+        "item3": "Cloudflare Inc. (hosting webových aplikací, CDN a zabezpečení).",
+        "item4": "Sentry (monitorování chyb a výkonu; převody mimo EU se řídí standardními smluvními doložkami).",
+        "item5": "RevenueCat Inc. (mobilní předplatné a správa plateb v aplikaci; neukládá údaje o kreditních kartách).",
+        "note": "Pokud bude přidán nový poskytovatel, bude tato sekce aktualizována.",
+        "transfers": "<strong>Převody mimo EU:</strong> pokud jsou zapojeni poskytovatelé mimo EU (např. Cloudflare, subjekt Supabase USA, Sentry, RevenueCat, Google AdMob), převody se řídí standardními smluvními doložkami Evropské komise (SCC) nebo ekvivalentním mechanismem.",
+        "item6": "PostHog Inc. (měření publika a produktová analytika; anonymizovaná data; EU hosting).",
+        "item7": "Lemon Squeezy (správa webových plateb; neukládá údaje o kreditních kartách).",
+        "item8": "Google AdMob (zobrazování reklam v bezplatné mobilní verzi; převody mimo EU se řídí standardními smluvními doložkami)."
+      },
+      "section6": {
+        "title": "6. Vaše práva",
+        "content": "Podle GDPR máte následující práva:",
+        "item1": "Přístup, oprava, vymazání.",
+        "item2": "Omezení a námitka (v závislosti na právním základu).",
+        "item3": "Přenositelnost (exportujte svá data ve formátu JSON nebo CSV).",
+        "item4": "Odvolání souhlasu (pokud je to relevantní).",
+        "item5": "Stížnost u dozorového úřadu (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Smazání účtu:</strong> svůj účet a všechna související data můžete smazat přímo v Nastavení aplikace. Tato akce je nevratná.",
+        "exercise": "Chcete-li uplatnit svá další práva, kontaktujte <strong>support@neurodual.fr</strong>. V případě důvodných pochybností může být požadován doklad totožnosti. Doba odezvy: 1 měsíc (ve složitých případech lze prodloužit na 3 měsíce)."
+      },
+      "section7": {
+        "title": "7. Bezpečnost",
+        "content": "Šifrovaná komunikace (HTTPS/TLS), omezený přístup správce, kontroly oprávnění. V případě narušení dat, které pravděpodobně představuje riziko, budou učiněna právní oznámení (CNIL a dotčené osoby)."
+      },
+      "section8": {
+        "title": "8. Soubory cookie a místní úložiště",
+        "content": "Aplikace používá SQLite k ukládání vašeho pokroku přímo na vašem zařízení. Používají se pouze nezbytné technické soubory cookie (autentizace, relace). Bezplatná mobilní verze využívá Google AdMob, který může nastavovat soubory cookie nebo reklamní identifikátory."
+      },
+      "section9": {
+        "title": "9. Nezletilí",
+        "content": "NeuroDual je určen pro uživatele starší 16 let. Nezletilí musí aplikaci používat na odpovědnost zákonného zástupce."
+      },
+      "section10": {
+        "title": "10. Změny",
+        "content": "Každá aktualizovaná verze bude zveřejněna zde s datem poslední aktualizace. V případě podstatných změn bude v přihlášce uvedeno upozornění."
+      },
+      "section11": {
+        "title": "11. Kontakt",
+        "content": "V případě jakýchkoli dotazů nebo uplatnění vašich práv:",
+        "email": "E-mail: support@neurodual.fr",
+        "responsible": "Správce údajů: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Podmínky prodeje",
+      "version": "Roční a doživotní předplatné — Poslední aktualizace: 2026-03-04",
+      "section1": {
+        "title": "1. Účel",
+        "content": "Tyto podmínky prodeje upravují předplatné prémiových plánů NeuroDual (roční a doživotní). Doplňují <a1>smluvní podmínky</a1> a <a2>zásady ochrany soukromí</a2>."
+      },
+      "section2": {
+        "title": "2. Nabídka a ceny",
+        "item1": "<strong>Roční předplatné</strong>: cena zobrazená před platbou (včetně případné daně), automaticky obnovovaná každý rok.",
+        "item2": "<strong>Doživotní předplatné (10 let)</strong>: jednorázová platba poskytující přístup k prémiovým funkcím na 10 let bez automatického obnovení.",
+        "item3": "Prémiový přístup: cloudová synchronizace více zařízení, vzdálené zálohy, přístup ke všem úrovním N, pokročilé exporty, prostředí bez reklam, prioritní podpora.",
+        "item4": "Aktuální ceny jsou k dispozici na stránce předplatného v aplikaci a v obchodech (App Store, Google Play).",
+        "item5": "Ceny se mohou změnit; jakákoli změna je sdělena před obnovením, aby bylo možné zrušení (nevztahuje se na životnost)."
+      },
+      "section3": {
+        "title": "3. Doba trvání, obnovení a zrušení",
+        "item1": "<strong>Roční předplatné</strong>: 12 měsíců od data předplatného.",
+        "item2": "<strong>Doživotní předplatné</strong>: 10 let od data předplatného, bez obnovení.",
+        "item3": "Obnovení (roční): automatické obnovení v každém termínu, pokud není předem zrušeno.",
+        "item4": "Zrušení (roční): možné kdykoli z aplikace nebo nastavení obchodu (App Store, Google Play). Vstoupí v platnost na konci aktuálního období.",
+        "item5": "Doživotní nelze zrušit, ale nadále podléhá zákonnému právu na odstoupení od smlouvy (viz část 5)."
+      },
+      "section4": {
+        "title": "4. Platba",
+        "item1": "Platby spravuje RevenueCat prostřednictvím obchodů (App Store, Google Play) nebo Lemon Squeezy pro web. Neukládáme údaje o vaší kreditní kartě.",
+        "item2": "V případě selhání platby (opakované předplatné) může být prémiový přístup pozastaven až do vyřešení.",
+        "item3": "O vrácení peněz za nákupy prostřednictvím App Store nebo Google Play je třeba požádat v příslušném obchodě."
+      },
+      "section5": {
+        "title": "5. Právo na odstoupení od smlouvy",
+        "content": "Digitální služba poskytovaná po zakoupení. Pokud požádáte o okamžité provedení před koncem 14denní zákonné lhůty, potvrzujete, že se vzdáváte svého práva na odstoupení od smlouvy po dodání kompletní služby. Bez výslovného zřeknutí se můžete uplatnit právo na odstoupení od smlouvy do 14 dnů od nákupu zasláním písemné zprávy na adresu support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Vrácení peněz",
+        "content": "Mimo zákonné právo na odstoupení od smlouvy se již zahájená předplatná nevrací, s výjimkou povinných ustanovení nebo závažných vad, které lze přičíst službě."
+      },
+      "section7": {
+        "title": "7. Změny nabídky",
+        "content": "Prémiové funkce se mohou vyvíjet. Jakékoli odstranění základní funkce bude sděleno předem a případně s možností bezplatného zrušení před termínem."
+      },
+      "section8": {
+        "title": "8. Osobní údaje",
+        "content": "Zpracování fakturačních údajů a údajů o účtu je podrobně popsáno v <a>Zásadách ochrany osobních údajů</a>."
+      },
+      "section9": {
+        "title": "9. Zákaznický servis",
+        "content": "V případě jakýchkoli dotazů, vrácení peněz v rámci práva na odstoupení od smlouvy nebo stížností:"
+      }
+    },
+    "mentions": {
+      "title": "Právní upozornění",
+      "version": "Poslední aktualizace:",
+      "section1": {
+        "title": "1. Vydavatel",
+        "company": "Název společnosti:",
+        "companyValue": "AGUILAL Abdeslam (jediný vlastník)",
+        "address": "adresa:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Francie",
+        "siren": "SIRÉNA:",
+        "sirenValue": "818 474 082",
+        "email": "E-mail:"
+      },
+      "section2": {
+        "title": "2. Ředitel publikace",
+        "name": "AGUILAL Abdeslam",
+        "email": "E-mail:"
+      },
+      "section3": {
+        "title": "3. Hosting",
+        "content": "Hostitelem aplikace NeuroDual je:",
+        "webapp": "Webová aplikace",
+        "database": "Databáze a autentizace",
+        "databaseInfra": "Infrastruktura: Amazon Web Services (region EU – eu-central-1)",
+        "monitoring": "Monitorování a sledování chyb",
+        "subscriptions": "Správa předplatného",
+        "analytics": "Měření sledovanosti",
+        "analyticsInfra": "EU hosting",
+        "advertising": "Reklama (bezplatná mobilní verze)",
+        "payments": "Webové platby",
+        "cloudflareName": "Společnost Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Společnost Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Funkční software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "Společnost RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "Společnost PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Duševní vlastnictví",
+        "p1": "Všechny prvky aplikace NeuroDual (text, grafika, zvuky, zdrojový kód, loga, ochranné známky) jsou chráněny autorským právem a zákonem o ochranných známkách. Jakákoli neoprávněná reprodukce, reprezentace nebo využití je zakázáno.",
+        "p2": "Zdrojový kód určitých funkcí používá knihovny s otevřeným zdrojovým kódem, jejichž příslušné licence jsou respektovány."
+      },
+      "section5": {
+        "title": "5. Osobní údaje",
+        "content": "Zpracování osobních údajů je popsáno v našich <a>Zásadách ochrany osobních údajů</a>.",
+        "responsible": "Správce údajů:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediace a řešení sporů",
+        "p1": "V souladu s články L.611-1 a násl. francouzského spotřebitelského zákoníku se spotřebitelští uživatelé mohou v případě nevyřešeného sporu po předchozí stížnosti na náš zákaznický servis bezplatně obrátit na spotřebitelského zprostředkovatele.",
+        "odr": "Evropská platforma pro online řešení sporů (ODR):"
+      },
+      "section7": {
+        "title": "7. Právní dokumenty",
+        "privacy": "Zásady ochrany osobních údajů",
+        "privacyNote": "(GDPR)",
+        "terms": "Podmínky služby",
+        "termsNote": "(ToS)",
+        "cgv": "Podmínky prodeje",
+        "cgvNote": "(prodeje)"
+      },
+      "section8": {
+        "title": "8. Kontakt",
+        "content": "Máte-li jakékoli dotazy týkající se tohoto právního upozornění:",
+        "email": "E-mail:"
+      }
+    }
+  }
+}

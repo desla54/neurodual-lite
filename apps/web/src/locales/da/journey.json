@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Træningsvej",
+    "pageSubtitle": "Vælg, organiser og skab dine rejser",
+    "enabled": "Aktiver træningssti",
+    "description": "30 progressive stadier fra N-1 til N-10",
+    "progress": "Fremskridt",
+    "locked": "Låst",
+    "createJourney": "Skab en rejse",
+    "viewJourneys": "Se rejser",
+    "current": "Nuværende rejse",
+    "myJourneys": "Mine rejser",
+    "stage": "Scene",
+    "stages": "etaper",
+    "stagesShort": "st.",
+    "stageLabels": {
+      "pick": "Vælg",
+      "catch": "Fangst",
+      "place": "Sted",
+      "memo": "Memo"
+    },
+    "name": "Navn",
+    "namePlaceholder": "F.eks. N-5 udfordring",
+    "levels": "Niveauer",
+    "levelRange": "Niveauområde",
+    "levelTo": "til",
+    "createNew": "Ny rejse",
+    "new": "Ny",
+    "defaultCustomName": "Min rejse",
+    "created": "Rejsen er skabt!",
+    "deleted": "Rejsen er slettet",
+    "sessionSettings": "Sessionsindstillinger",
+    "savedStatus": "Indstillinger gemt",
+    "preset": {
+      "easy": "Nemt",
+      "medium": "Anbefales",
+      "hard": "Hårdt"
+    },
+    "setup": {
+      "title": "Rejse & profiler",
+      "journey": "Rejse",
+      "journeyNone": "Vælg...",
+      "profile": "Profil",
+      "profileNone": "Vælg...",
+      "configure": "Konfigurer",
+      "configureNone": "Vælg en rejse",
+      "create": "Ny rejse",
+      "createDesc": "Skab en ny rejse"
+    },
+    "deleteConfirmTitle": "Vil du slette denne rejse?",
+    "deleteConfirmMessage": "Rejsen \"{{name}}\" slettes permanent.",
+    "renameTitle": "Omdøb denne rejse",
+    "renameMessage": "Rediger navnet på \"{{name}}\".",
+    "renamed": "Rejsen omdøbt.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Standard"
+    },
+    "mode": "tilstand",
+    "modeStandard": "Rejse (4 tilstande)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dobbelt fangst",
+      "dualPlace": "Dobbelt sted",
+      "dualMemo": "Dobbelt Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klassisk",
+      "brainWorkshop": "Hjerneværksted"
+    },
+    "validation": {
+      "sessions": "{{count}} validerende session(er)",
+      "needed": "{{count}}-session(er) tilbage",
+      "excellent": "Fremragende!",
+      "good": "Godt!",
+      "passing": "Bestået"
+    },
+    "progression": {
+      "title": "Progression",
+      "description": "For at gå videre til næste niveau, opnå en god score:",
+      "excellent": "≥95 % → 1 session",
+      "good": "≥85 % → 2 sessioner",
+      "passing": "≥80% → 3 sessioner",
+      "rules": "Progressionsregler",
+      "jaeggi": {
+        "description": "Baseret på den svageste modalitet:",
+        "up": "< 3 fejl → Niveau op",
+        "stay": "3 til 5 fejl → Bliv på dette niveau",
+        "down": "> 5 fejl → Niveau ned"
+      },
+      "brainworkshop": {
+        "description": "Brain Workshop-protokol (BW-score):",
+        "up": "≥80% → Niveau op",
+        "stay": "50-79 % → Hold dig på niveau",
+        "strike": "3 på hinanden følgende scoringer <50 % → Niveau ned"
+      },
+      "hybrid": {
+        "description": "Denne rejse kører {{trackCount}} Dual Track-session(er), derefter {{dnbCount}} Dual N-Back-session(er) på samme niveau.",
+        "alternation": "Sløjfen starter altid igen med Dual Track, hver gang der træffes en beslutning.",
+        "authority": "Kun Dual N-Back-sessioner bestemmer op, forbliv eller ned.",
+        "up": "0-1 fejl → Niveau op",
+        "stay": "2-3 fejl → Ophold",
+        "down": "4+ fejl → Niveau ned",
+        "streakRule": "To sessioner i træk i samme zone udløser beslutningen.",
+        "trackProgress": "Spor {{current}}/{{required}}",
+        "cleanProgress": "Valideret {{current}}/{{required}}",
+        "stayProgress": "Hold {{current}}/{{required}}",
+        "downProgress": "Fejl i {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track bruger en kontinuerlig beherskelsesbjælke for hvert måloptællingstrin:",
+        "calibration": "En første kalibrering estimerer dit startmål",
+        "goodSession": "Hver god session fylder den aktuelle fase lidt",
+        "mastery": "Næsten perfekte sessioner fylder det hurtigere, men almindelige sessioner forbliver beskedne",
+        "regression": "Svage sessioner kan også få den aktuelle mastery bar til at gå ned",
+        "unlock": "Den næste måltælling låses kun op, når den nuværende fase når 100 %"
+      }
+    },
+    "switcher": {
+      "open": "Åbn rejseomskifter",
+      "current": "Nuværende",
+      "showAll": "Alle rejser",
+      "settings": "Rejseindstillinger"
+    },
+    "previous": "Tidligere rejse",
+    "next": "Næste rejse",
+    "calibration": {
+      "title": "Første session",
+      "subtitle": "En kort kalibrering bestemmer dit startniveau, eller du kan starte direkte på niveau 2.",
+      "skipToN2": "eller start ved N-2",
+      "continueAt": "eller fortsæt på N-{{level}}",
+      "start": "Start kalibrering",
+      "redo": "Gentag kalibrering",
+      "badge": "Kalibrering"
+    },
+    "presets": {
+      "currentSlot": "Brugerdefineret",
+      "currentSlotView": "Brugerdefineret",
+      "lockedTitle": "Nogle muligheder er låst",
+      "lockedDesc": "For at holde progressionen sammenlignelig kan modaliteter (og nogle få muligheder) ikke ændres, efter at rejsen er startet."
+    },
+    "completed": {
+      "title": "Rejsen gennemført!",
+      "subtitle": "Alle stadier valideret. Godt gået!",
+      "continueFree": "Fortsæt træningen"
+    },
+    "report": {
+      "stage": "Scene",
+      "level": "Niveau",
+      "score": "Score",
+      "sessionValidated": "Session valideret!",
+      "sessionNotValidated": "Session ikke valideret",
+      "minScore": "Minimum påkrævet:",
+      "stageCompleted": "Etape afsluttet!",
+      "stageUnlocked": "Stage {{stage}} låst op!",
+      "replay": "Genafspilning",
+      "nextStage": "Næste etape",
+      "home": "Hjem",
+      "hits": "Hits",
+      "misses": "Savner",
+      "falseAlarms": "Falske alarmer",
+      "correctRejections": "Korrekte afslag"
+    }
+  }
+}

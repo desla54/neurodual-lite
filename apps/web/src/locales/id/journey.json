@@ -1,0 +1,167 @@
+{
+  "journey": {
+    "title": "Jalur latihan",
+    "pageSubtitle": "Pilih, atur, dan buat perjalananmu",
+    "enabled": "Aktifkan jalur latihan",
+    "description": "30 tahap progresif dari N-1 ke N-10",
+    "progress": "Progres",
+    "locked": "Terkunci",
+    "createJourney": "Buat perjalanan",
+    "viewJourneys": "Lihat perjalanan",
+    "current": "Perjalanan saat ini",
+    "myJourneys": "Perjalananku",
+    "stage": "Tahap",
+    "stages": "tahap",
+    "stagesShort": "thp.",
+    "stageLabels": {
+      "pick": "Pilih",
+      "catch": "Tangkap",
+      "place": "Tempatkan",
+      "memo": "Memo"
+    },
+    "name": "Nama",
+    "namePlaceholder": "Cth. Tantangan N-5",
+    "levels": "Level",
+    "levelRange": "Rentang level",
+    "levelTo": "ke",
+    "createNew": "Perjalanan baru",
+    "new": "Baru",
+    "defaultCustomName": "Perjalananku",
+    "created": "Perjalanan dibuat!",
+    "deleted": "Perjalanan dihapus",
+    "sessionSettings": "Pengaturan sesi",
+    "savedStatus": "Pengaturan disimpan",
+    "preset": {
+      "easy": "Mudah",
+      "medium": "Direkomendasikan",
+      "hard": "Sulit"
+    },
+    "setup": {
+      "title": "Perjalanan & profil",
+      "journey": "Perjalanan",
+      "journeyNone": "Pilih…",
+      "profile": "Profil",
+      "profileNone": "Pilih…",
+      "configure": "Konfigurasi",
+      "configureNone": "Pilih perjalanan",
+      "create": "Perjalanan baru",
+      "createDesc": "Buat perjalanan baru"
+    },
+    "deleteConfirmTitle": "Hapus perjalanan ini?",
+    "deleteConfirmMessage": "Perjalanan \"{{name}}\" akan dihapus secara permanen.",
+    "renameTitle": "Ganti nama perjalanan ini",
+    "renameMessage": "Edit nama \"{{name}}\".",
+    "renamed": "Perjalanan diganti namanya.",
+    "badge": {
+      "simulator": "Simulator",
+      "beta": "Beta",
+      "default": "Default"
+    },
+    "mode": "Mode",
+    "modeStandard": "Perjalanan (4 mode)",
+    "modeDnb": "DNB",
+    "modeBw": "BW",
+    "modes": {
+      "dualCatch": "Dual Catch",
+      "dualPlace": "Dual Place",
+      "dualMemo": "Dual Memo",
+      "dualPick": "Dual Pick",
+      "simulator": "Simulator",
+      "jaeggi": "Klasik",
+      "brainWorkshop": "Brain Workshop"
+    },
+    "validation": {
+      "sessions": "{{count}} sesi validasi",
+      "needed": "{{count}} sesi tersisa",
+      "excellent": "Luar biasa!",
+      "good": "Bagus!",
+      "passing": "Lulus"
+    },
+    "progression": {
+      "title": "Progresi",
+      "description": "Untuk naik ke level berikutnya, raih skor bagus:",
+      "excellent": "≥95% → 1 sesi",
+      "good": "≥85% → 2 sesi",
+      "passing": "≥80% → 3 sesi",
+      "rules": "Aturan progresi",
+      "jaeggi": {
+        "description": "Berdasarkan modalitas terlemah:",
+        "up": "< 3 kesalahan → Naik level",
+        "stay": "3 - 5 kesalahan → Tetap di level ini",
+        "down": "> 5 kesalahan → Turun level"
+      },
+      "brainworkshop": {
+        "description": "Protokol Brain Workshop (skor BW):",
+        "up": "≥80% → Naik level",
+        "stay": "50-79% → Tetap di level",
+        "strike": "3 skor berturut-turut <50% → Turun level"
+      },
+      "hybrid": {
+        "description": "Perjalanan ini menjalankan {{trackCount}} sesi Dual Track, lalu {{dnbCount}} sesi Dual N-Back di level yang sama.",
+        "alternation": "Loop selalu dimulai ulang dengan Dual Track setiap kali keputusan tercapai.",
+        "authority": "Hanya sesi Dual N-Back yang menentukan naik, tetap, atau turun.",
+        "up": "0-1 kesalahan → Naik level",
+        "stay": "2-3 kesalahan → Tetap",
+        "down": "4+ kesalahan → Turun level",
+        "streakRule": "Dua sesi berturut-turut di zona yang sama memicu keputusan.",
+        "trackProgress": "Track {{current}}/{{required}}",
+        "cleanProgress": "Tervalidasi {{current}}/{{required}}",
+        "stayProgress": "Tahan {{current}}/{{required}}",
+        "downProgress": "Gagal {{current}}/{{required}}"
+      },
+      "dualTrack": {
+        "description": "Dual Track menggunakan bilah penguasaan berkelanjutan untuk setiap tahap jumlah target:",
+        "calibration": "Kalibrasi pertama memperkirakan jumlah target awalmu",
+        "goodSession": "Setiap sesi bagus mengisi tahap saat ini sedikit",
+        "mastery": "Sesi hampir sempurna mengisi lebih cepat, sesi biasa tetap sederhana",
+        "regression": "Sesi lemah juga bisa menurunkan bilah penguasaan saat ini",
+        "unlock": "Jumlah target berikutnya hanya terbuka saat tahap saat ini mencapai 100%"
+      }
+    },
+    "switcher": {
+      "open": "Buka pengalih perjalanan",
+      "current": "Saat ini",
+      "showAll": "Semua perjalanan",
+      "settings": "Pengaturan perjalanan"
+    },
+    "previous": "Perjalanan sebelumnya",
+    "next": "Perjalanan berikutnya",
+    "calibration": {
+      "title": "Sesi pertama",
+      "subtitle": "Kalibrasi singkat akan menentukan level awalmu, atau kamu bisa langsung mulai di level 2.",
+      "skipToN2": "atau mulai di N-2",
+      "continueAt": "atau lanjut di N-{{level}}",
+      "start": "Mulai kalibrasi",
+      "redo": "Ulangi kalibrasi",
+      "badge": "Kalibrasi"
+    },
+    "presets": {
+      "currentSlot": "Kustom",
+      "currentSlotView": "Kustom",
+      "lockedTitle": "Beberapa opsi terkunci",
+      "lockedDesc": "Untuk menjaga progresi tetap dapat dibandingkan, modalitas (dan beberapa opsi) tidak bisa diubah setelah perjalanan dimulai."
+    },
+    "completed": {
+      "title": "Perjalanan selesai!",
+      "subtitle": "Semua tahap tervalidasi. Kerja bagus!",
+      "continueFree": "Lanjut latihan"
+    },
+    "report": {
+      "stage": "Tahap",
+      "level": "Level",
+      "score": "Skor",
+      "sessionValidated": "Sesi divalidasi!",
+      "sessionNotValidated": "Sesi tidak tervalidasi",
+      "minScore": "Minimum yang diperlukan:",
+      "stageCompleted": "Tahap selesai!",
+      "stageUnlocked": "Tahap {{stage}} terbuka!",
+      "replay": "Ulangi",
+      "nextStage": "Tahap berikutnya",
+      "home": "Beranda",
+      "hits": "Tepat",
+      "misses": "Terlewat",
+      "falseAlarms": "Alarm palsu",
+      "correctRejections": "Penolakan benar"
+    }
+  }
+}

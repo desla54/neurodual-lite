@@ -1,0 +1,327 @@
+{
+  "legal": {
+    "footer": "Hak cipta dilindungi.",
+    "terms": {
+      "title": "Ketentuan layanan",
+      "version": "Versi 3.0 — Terakhir diperbarui: 2026-03-04",
+      "healthWarning": {
+        "title": "PERINGATAN KESEHATAN PENTING",
+        "content": "NeuroDual adalah aplikasi latihan kognitif dan kesehatan. <strong>Ini bukan perangkat medis.</strong> Aplikasi ini tidak mendiagnosis, mengobati, menyembuhkan, atau mencegah penyakit apa pun. Jika kamu punya kekhawatiran atau merasa tidak nyaman, hentikan penggunaan aplikasi dan konsultasikan dengan profesional kesehatan."
+      },
+      "section1": {
+        "title": "1. Tujuan dan Penerimaan",
+        "content": "Dengan mengunduh, memasang, atau menggunakan NeuroDual, kamu menerima tanpa syarat Ketentuan Layanan ini. Jika kamu tidak menerima ketentuan ini, mohon jangan gunakan aplikasi."
+      },
+      "section2": {
+        "title": "2. Deskripsi Layanan",
+        "content": "NeuroDual menyediakan latihan memori kerja Dual N-Back, dengan manajemen data lokal dan opsi sinkronisasi melalui akun. Layanan diberikan apa adanya dan dapat berkembang.",
+        "item1": "Kompatibilitas: aplikasi web dan seluler (tergantung ketersediaan).",
+        "item2": "Akses: beberapa fitur memerlukan koneksi internet dan/atau pembuatan akun.",
+        "item3": "Pembaruan: kami dapat menerapkan perbaikan atau pembaruan tanpa pemberitahuan untuk alasan keamanan atau performa.",
+        "item4": "Iklan: versi seluler gratis dapat menampilkan iklan interstisial (Google AdMob). Pengguna Premium tidak melihat iklan."
+      },
+      "section3": {
+        "title": "3. Akun dan Keamanan",
+        "item1": "Pembuatan akun opsional melalui email atau penyedia identitas (Google, Apple).",
+        "item2": "Kamu bertanggung jawab menjaga kerahasiaan kredensial dan semua tindakan yang dilakukan dengan akunmu.",
+        "item3": "Penghapusan akun dan data terkait tersedia dari Pengaturan.",
+        "item4": "Kami dapat menangguhkan atau mengakhiri akun dalam kasus pelanggaran Ketentuan ini, percobaan penipuan, atau pelanggaran keamanan."
+      },
+      "section4": {
+        "title": "4. Aturan dan Batasan Penggunaan",
+        "item1": "Jangan melewati langkah keamanan atau batasan teknis.",
+        "item2": "Jangan gunakan aplikasi untuk tujuan ilegal atau berbahaya.",
+        "item3": "Jangan mencoba rekayasa balik atau ekstraksi konten tanpa izin.",
+        "item4": "Hormati hak kekayaan intelektual atas aplikasi dan kontennya."
+      },
+      "section5": {
+        "title": "5. Kekayaan Intelektual",
+        "content": "Semua elemen (teks, grafis, suara, kode sumber, logo) dilindungi hak cipta dan tetap menjadi milik penerbit atau pemberi lisensinya. Tidak ada lisensi yang diberikan kecuali hak pribadi, non-eksklusif, dan tidak dapat dipindahtangankan untuk menggunakan aplikasi sesuai Ketentuan ini."
+      },
+      "section6": {
+        "title": "6. Ketersediaan dan Dukungan",
+        "content": "Layanan dapat diakses 24/7 kecuali pemeliharaan atau keadaan kahar. Kami tidak menjamin ketersediaan atau performa berkelanjutan. Dukungan: support@neurodual.fr."
+      },
+      "section7": {
+        "title": "7. Pembelian Dalam Aplikasi / Langganan",
+        "content": "Langganan Premium tersedia: tahunan dan seumur hidup (10 tahun). Pembayaran dikelola oleh RevenueCat (seluler) atau Lemon Squeezy (web). <strong>Ketentuan Penjualan</strong> berlaku (harga, penarikan, perpanjangan, pembatalan, pengembalian dana) dan tersedia sebelum pembelian."
+      },
+      "section8": {
+        "title": "8. Tanggung Jawab",
+        "item1": "Layanan diberikan \"apa adanya\" tanpa jaminan hasil.",
+        "item2": "Kami tidak bertanggung jawab atas kerugian langsung atau tidak langsung terkait penggunaan, kehilangan data lokal yang tidak disimpan, atau interpretasi statistik.",
+        "item3": "Jika kamu merasa tidak nyaman, mengalami efek samping, atau khawatir tentang kesehatanmu, hentikan penggunaan."
+      },
+      "section9": {
+        "title": "9. Data Pribadi",
+        "content": "Pemrosesan data pribadi dijelaskan dalam <a>Kebijakan privasi</a>. Jika ada konflik antara Ketentuan dan Kebijakan privasi mengenai masalah data, Kebijakan privasi yang berlaku."
+      },
+      "section10": {
+        "title": "10. Perubahan Ketentuan",
+        "content": "Kami dapat mengubah Ketentuan ini untuk alasan hukum, teknis, atau layanan. Tanggal pembaruan akan muncul di bagian atas dokumen. Jika ada perubahan substansial, notifikasi akan ditampilkan di aplikasi."
+      },
+      "section11": {
+        "title": "11. Hukum yang Berlaku dan Sengketa",
+        "content": "Ketentuan ini diatur oleh hukum Prancis. Dalam kasus sengketa dan setelah upaya damai, pengguna konsumen dapat menggunakan mediasi konsumen atau platform Penyelesaian Sengketa Online (ODR) Eropa. Jika tidak, pengadilan Prancis memiliki yurisdiksi eksklusif."
+      },
+      "section12": {
+        "title": "12. Kontak",
+        "content": "Untuk pertanyaan apa pun mengenai Ketentuan ini:"
+      }
+    },
+    "privacy": {
+      "title": "Kebijakan privasi",
+      "version": "Versi 3.0 — Terakhir diperbarui: 2026-03-04",
+      "intro": {
+        "p1": "Kebijakan Privasi ini menjelaskan bagaimana NeuroDual (\"kami\") memproses data pribadimu saat kamu menggunakan aplikasi seluler dan situs web kami.",
+        "p2": "Kami menerapkan prinsip-prinsip Peraturan Perlindungan Data Umum (GDPR) dan Undang-Undang Perlindungan Data Prancis. Kami mengutamakan arsitektur \"lokal-pertama\", tidak menjual atau menyewakan datamu, dan menggunakan pengukuran audiens untuk meningkatkan produk."
+      },
+      "section1": {
+        "title": "1. Pengendali Data",
+        "responsible": "Pengendali:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "address": "Kantor terdaftar:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Prancis",
+        "siret": "SIREN:",
+        "siretValue": "818 474 082",
+        "email": "Email:",
+        "dpo": "DPO: AGUILAL Abdeslam (kontak yang sama). Untuk pertanyaan tentang datamu, hubungi alamat di atas."
+      },
+      "section2": {
+        "title": "2. Data yang Kami Kumpulkan",
+        "sub1": {
+          "title": "2.1 Data yang Dibuat Pengguna (Mode Lokal)",
+          "content": "Disimpan hanya di perangkatmu melalui SQLite saat kamu belum masuk:",
+          "item1": "Skor dan riwayat sesi N-Back.",
+          "item2": "Pengaturan konfigurasi permainan.",
+          "item3": "Profil lokal (nama panggilan, avatar yang dipilih).",
+          "note": "Data ini tidak melewati server kami sampai kamu membuat akun. Jika kamu menghapus aplikasi, data ini akan hilang."
+        },
+        "sub2": {
+          "title": "2.2 Data Akun (Opsional)",
+          "content": "Jika kamu membuat akun untuk menyinkronkan datamu:",
+          "item1": "Alamat email (pengenal unik).",
+          "item2": "ID pengguna yang disediakan oleh penyedia identitas (Google, Apple).",
+          "note": "Data ini dikelola melalui penyedia autentikasi kami (Supabase)."
+        },
+        "sub3": {
+          "title": "2.3 Log Teknis",
+          "content": "Log dengan nama samaran (kesalahan, status sinkronisasi, performa) untuk keamanan dan dukungan."
+        },
+        "sub4": {
+          "title": "2.4 Data Dukungan",
+          "content": "Pertukaran email dengan dukungan dapat berisi detail kontakmu dan konten permintaan untuk merespons."
+        },
+        "sub5": {
+          "title": "2.5 Pemantauan dan Pelacakan Kesalahan",
+          "content": "Data teknis (kesalahan, performa, perilaku abnormal) dikumpulkan melalui Sentry untuk meningkatkan stabilitas aplikasi. Data dengan nama samaran, tanpa penargetan iklan."
+        },
+        "sub6": {
+          "title": "2.6 Pengukuran Audiens dan Analitik Produk",
+          "content": "Data penggunaan anonim dikumpulkan melalui PostHog (halaman yang dikunjungi, tindakan dalam aplikasi, jenis perangkat) untuk meningkatkan produk. Tidak ada data identifikasi pribadi yang dikirimkan. Tanpa penargetan iklan."
+        },
+        "sub7": {
+          "title": "2.7 Iklan (Versi Seluler Gratis)",
+          "content": "Versi Android gratis menampilkan iklan interstisial melalui Google AdMob. Google dapat mengumpulkan pengidentifikasi iklan dan data teknis (jenis perangkat, bahasa, interaksi iklan). Pengguna Premium tidak terpapar iklan. Informasi lebih lanjut: Kebijakan privasi Google Ads."
+        }
+      },
+      "section3": {
+        "title": "3. Tujuan dan Dasar Hukum",
+        "content": "Kami menggunakan datamu hanya untuk:",
+        "item1": "<strong>Operasi layanan</strong> (cadangan lokal, statistik, sinkronisasi multi-perangkat) — Dasar hukum: pelaksanaan kontrak (Pasal 6.1.b GDPR).",
+        "item2": "<strong>Keamanan dan pencegahan penipuan</strong> (pencatatan teknis, kontrol akses) — Dasar hukum: kepentingan sah (Pasal 6.1.f GDPR).",
+        "item3": "<strong>Dukungan pengguna</strong> — Dasar hukum: kepentingan sah (merespons permintaan).",
+        "item4": "<strong>Kewajiban hukum</strong> — Dasar hukum: kewajiban hukum (Pasal 6.1.c GDPR).",
+        "item5": "<strong>Pemantauan dan pelacakan kesalahan</strong> — Dasar hukum: kepentingan sah (peningkatan stabilitas); data dengan nama samaran, tanpa iklan personal.",
+        "item6": "<strong>Pengukuran audiens</strong> (analitik produk anonim melalui PostHog) — Dasar hukum: kepentingan sah (Pasal 6.1.f GDPR); data anonim.",
+        "note": "Perubahan tujuan apa pun akan didokumentasikan dalam pembaruan kebijakan ini.",
+        "item7": "<strong>Periklanan</strong> (tampilan iklan interstisial untuk pengguna seluler gratis) — Dasar hukum: kepentingan sah (Pasal 6.1.f GDPR).",
+        "item8": "<strong>Pemasaran dan buletin</strong> — Dasar hukum: persetujuan eksplisit (Pasal 6.1.a GDPR)."
+      },
+      "section4": {
+        "title": "4. Masa Penyimpanan",
+        "item1": "<strong>Data lokal:</strong> disimpan di perangkatmu dan dihapus saat penghapusan atau reset.",
+        "item2": "<strong>Akun dan data yang disinkronkan:</strong> disimpan selama akun aktif. Dihapus dalam 30 hari sejak permintaan penghapusan akun.",
+        "item3": "<strong>Log teknis:</strong> disimpan maksimal 12 bulan, kemudian dihapus otomatis.",
+        "item4": "<strong>Pemantauan:</strong> data teknis dengan nama samaran disimpan 90 hari untuk pelacakan kesalahan dan peningkatan produk.",
+        "item5": "<strong>Permintaan dukungan:</strong> disimpan 24 bulan setelah penutupan tiket, kemudian dihapus.",
+        "item6": "<strong>Data audiens (PostHog):</strong> anonim, disimpan 12 bulan."
+      },
+      "section5": {
+        "title": "5. Penerima, Pemroses, dan Transfer",
+        "content": "Datamu dapat diproses oleh penyedia berikut:",
+        "item1": "Supabase Inc. (autentikasi dan database cloud, hosting EU).",
+        "item2": "Amazon Web Services (infrastruktur Supabase, wilayah EU).",
+        "item3": "Cloudflare Inc. (hosting aplikasi web, CDN, dan keamanan).",
+        "item4": "Sentry (pemantauan kesalahan dan performa; transfer non-EU diatur oleh Klausul Kontrak Standar).",
+        "item5": "RevenueCat Inc. (manajemen langganan seluler dan pembayaran dalam aplikasi; tidak menyimpan data kartu kredit).",
+        "note": "Jika penyedia baru ditambahkan, bagian ini akan diperbarui.",
+        "transfers": "<strong>Transfer non-EU:</strong> ketika penyedia di luar EU terlibat (misalnya Cloudflare, Supabase entitas AS, Sentry, RevenueCat, Google AdMob), transfer diatur oleh Klausul Kontrak Standar (SCC) Komisi Eropa atau mekanisme setara.",
+        "item6": "PostHog Inc. (pengukuran audiens dan analitik produk; data anonim; hosting EU).",
+        "item7": "Lemon Squeezy (manajemen pembayaran web; tidak menyimpan data kartu kredit).",
+        "item8": "Google AdMob (tampilan iklan di versi seluler gratis; transfer non-EU diatur oleh Klausul Kontrak Standar)."
+      },
+      "section6": {
+        "title": "6. Hakmu",
+        "content": "Berdasarkan GDPR, kamu memiliki hak berikut:",
+        "item1": "Akses, perbaikan, penghapusan.",
+        "item2": "Pembatasan dan keberatan (tergantung dasar hukum).",
+        "item3": "Portabilitas (ekspor datamu dalam format JSON atau CSV).",
+        "item4": "Penarikan persetujuan (jika berlaku).",
+        "item5": "Pengaduan ke otoritas pengawas (CNIL — <a>cnil.fr</a>).",
+        "deletion": "<strong>Penghapusan akun:</strong> kamu dapat menghapus akun dan semua data terkait langsung dari Pengaturan aplikasi. Tindakan ini tidak dapat dibatalkan.",
+        "exercise": "Untuk menggunakan hak lainnya, hubungi <strong>support@neurodual.fr</strong>. Bukti identitas dapat diminta dalam kasus keraguan yang wajar. Waktu respons: 1 bulan (dapat diperpanjang hingga 3 bulan untuk kasus kompleks)."
+      },
+      "section7": {
+        "title": "7. Keamanan",
+        "content": "Komunikasi terenkripsi (HTTPS/TLS), akses administrator terbatas, kontrol izin. Dalam kasus pelanggaran data yang kemungkinan menimbulkan risiko, notifikasi hukum akan dilakukan (CNIL dan individu yang terdampak)."
+      },
+      "section8": {
+        "title": "8. Cookie dan Penyimpanan Lokal",
+        "content": "Aplikasi menggunakan SQLite untuk menyimpan kemajuanmu langsung di perangkat. Hanya cookie teknis esensial (autentikasi, sesi) yang digunakan. Versi seluler gratis menggunakan Google AdMob yang dapat menyetel cookie atau pengidentifikasi iklan."
+      },
+      "section9": {
+        "title": "9. Anak di Bawah Umur",
+        "content": "NeuroDual ditujukan untuk pengguna berusia 16 tahun ke atas. Anak di bawah umur harus menggunakan aplikasi di bawah tanggung jawab wali yang sah."
+      },
+      "section10": {
+        "title": "10. Perubahan",
+        "content": "Versi terbaru akan dipublikasikan di sini dengan tanggal pembaruan terakhir. Jika ada perubahan substansial, notifikasi akan diberikan di aplikasi."
+      },
+      "section11": {
+        "title": "11. Kontak",
+        "content": "Untuk pertanyaan atau menggunakan hakmu:",
+        "email": "Email: support@neurodual.fr",
+        "responsible": "Pengendali Data: AGUILAL Abdeslam"
+      }
+    },
+    "cgv": {
+      "title": "Ketentuan penjualan",
+      "version": "Langganan tahunan dan seumur hidup — Terakhir diperbarui: 2026-03-04",
+      "section1": {
+        "title": "1. Tujuan",
+        "content": "Ketentuan Penjualan ini mengatur langganan paket NeuroDual Premium (tahunan dan seumur hidup). Melengkapi <a1>Ketentuan Layanan</a1> dan <a2>Kebijakan Privasi</a2>."
+      },
+      "section2": {
+        "title": "2. Penawaran dan Harga",
+        "item1": "<strong>Langganan tahunan</strong>: harga ditampilkan sebelum pembayaran (termasuk pajak jika berlaku), diperpanjang otomatis setiap tahun.",
+        "item2": "<strong>Langganan seumur hidup (10 tahun)</strong>: pembayaran satu kali memberikan akses ke fitur premium selama 10 tahun tanpa perpanjangan otomatis.",
+        "item3": "Akses Premium: sinkronisasi cloud multi-perangkat, cadangan jarak jauh, akses semua N-level, ekspor lanjutan, pengalaman bebas iklan, dukungan prioritas.",
+        "item4": "Harga terkini tersedia di halaman langganan dalam aplikasi dan di toko (App Store, Google Play).",
+        "item5": "Harga dapat berubah; perubahan apa pun dikomunikasikan sebelum perpanjangan untuk memungkinkan pembatalan (tidak berlaku untuk seumur hidup)."
+      },
+      "section3": {
+        "title": "3. Durasi, Perpanjangan, dan Pembatalan",
+        "item1": "<strong>Langganan tahunan</strong>: durasi 12 bulan dari tanggal langganan.",
+        "item2": "<strong>Langganan seumur hidup</strong>: durasi 10 tahun dari tanggal langganan, tanpa perpanjangan.",
+        "item3": "Perpanjangan (tahunan): perpanjangan otomatis setiap periode kecuali dibatalkan terlebih dahulu.",
+        "item4": "Pembatalan (tahunan): dapat dilakukan kapan saja dari pengaturan aplikasi atau toko (App Store, Google Play). Berlaku pada akhir periode saat ini.",
+        "item5": "Seumur hidup tidak dapat dibatalkan tetapi tetap tunduk pada hak penarikan hukum (lihat bagian 5)."
+      },
+      "section4": {
+        "title": "4. Pembayaran",
+        "item1": "Pembayaran dikelola oleh RevenueCat melalui toko (App Store, Google Play) atau Lemon Squeezy untuk web. Kami tidak menyimpan data kartu kreditmu.",
+        "item2": "Dalam kasus kegagalan pembayaran (langganan berulang), akses premium dapat ditangguhkan sampai diselesaikan.",
+        "item3": "Pengembalian dana untuk pembelian melalui App Store atau Google Play harus diminta dari toko terkait."
+      },
+      "section5": {
+        "title": "5. Hak Penarikan",
+        "content": "Layanan digital disediakan setelah pembelian. Jika kamu meminta pelaksanaan segera sebelum akhir periode 14 hari menurut hukum, kamu mengakui melepaskan hak penarikanmu setelah layanan sepenuhnya diberikan. Tanpa pelepasan tegas, kamu dapat menggunakan hak penarikan dalam 14 hari sejak pembelian dengan menulis ke support@neurodual.fr."
+      },
+      "section6": {
+        "title": "6. Pengembalian Dana",
+        "content": "Di luar hak penarikan hukum, langganan yang sudah dimulai tidak dapat dikembalikan kecuali untuk ketentuan wajib atau cacat besar yang disebabkan oleh layanan."
+      },
+      "section7": {
+        "title": "7. Perubahan Penawaran",
+        "content": "Fitur Premium dapat berkembang. Penghapusan fitur penting akan dikomunikasikan terlebih dahulu dan, jika berlaku, dengan opsi pembatalan tanpa biaya sebelum periode berakhir."
+      },
+      "section8": {
+        "title": "8. Data Pribadi",
+        "content": "Pemrosesan data penagihan dan akun dijelaskan dalam <a>Kebijakan Privasi</a>."
+      },
+      "section9": {
+        "title": "9. Layanan Pelanggan",
+        "content": "Untuk pertanyaan, pengembalian dana berdasarkan hak penarikan, atau keluhan:"
+      }
+    },
+    "mentions": {
+      "title": "Informasi hukum",
+      "version": "Terakhir diperbarui:",
+      "section1": {
+        "title": "1. Penerbit",
+        "company": "Nama perusahaan:",
+        "companyValue": "AGUILAL Abdeslam (Usaha perseorangan)",
+        "address": "Alamat:",
+        "addressValue": "49 rue Landreloup, 45000 Orléans, Prancis",
+        "siren": "SIREN:",
+        "sirenValue": "818 474 082",
+        "email": "Email:"
+      },
+      "section2": {
+        "title": "2. Direktur Publikasi",
+        "name": "AGUILAL Abdeslam",
+        "email": "Email:"
+      },
+      "section3": {
+        "title": "3. Hosting",
+        "content": "Aplikasi NeuroDual dihosting oleh:",
+        "webapp": "Aplikasi Web",
+        "database": "Database dan Autentikasi",
+        "databaseInfra": "Infrastruktur: Amazon Web Services (wilayah EU - eu-central-1)",
+        "monitoring": "Pemantauan dan Pelacakan Kesalahan",
+        "subscriptions": "Manajemen langganan",
+        "analytics": "Pengukuran audiens",
+        "analyticsInfra": "Hosting EU",
+        "advertising": "Periklanan (versi seluler gratis)",
+        "payments": "Pembayaran web",
+        "cloudflareName": "Cloudflare, Inc.",
+        "cloudflareAddress": "101 Townsend Street, San Francisco, CA 94107, USA",
+        "supabaseName": "Supabase, Inc.",
+        "supabaseAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "sentryName": "Functional Software, Inc. (Sentry)",
+        "sentryAddress": "132 Hawthorne Street, San Francisco, CA 94107, USA",
+        "revenuecatName": "RevenueCat, Inc.",
+        "revenuecatAddress": "548 Market St PMB 72296, San Francisco, CA 94104, USA",
+        "lemonsqueezyName": "Lemon Squeezy (Lemonsqueezy, Inc.)",
+        "lemonsqueezyAddress": "222 S Main St, Suite 500, Salt Lake City, UT 84101, USA",
+        "posthogName": "PostHog, Inc.",
+        "posthogAddress": "2261 Market Street #4008, San Francisco, CA 94114, USA",
+        "admobName": "Google LLC (AdMob)",
+        "admobAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA"
+      },
+      "section4": {
+        "title": "4. Kekayaan Intelektual",
+        "p1": "Semua elemen aplikasi NeuroDual (teks, grafis, suara, kode sumber, logo, merek dagang) dilindungi oleh hukum hak cipta dan merek dagang. Reproduksi, representasi, atau eksploitasi tanpa izin dilarang.",
+        "p2": "Kode sumber beberapa fitur menggunakan pustaka sumber terbuka yang lisensinya dihormati."
+      },
+      "section5": {
+        "title": "5. Data Pribadi",
+        "content": "Pemrosesan data pribadi dijelaskan dalam <a>Kebijakan privasi</a> kami.",
+        "responsible": "Pengendali Data:",
+        "responsibleValue": "AGUILAL Abdeslam",
+        "dpo": "DPO:",
+        "dpoValue": "AGUILAL Abdeslam"
+      },
+      "section6": {
+        "title": "6. Mediasi dan Penyelesaian Sengketa",
+        "p1": "Sesuai Pasal L.611-1 dan seterusnya dari Kode Konsumen Prancis, pengguna konsumen dapat, dalam kasus sengketa yang belum terselesaikan setelah keluhan sebelumnya ke layanan pelanggan kami, menggunakan mediator konsumen secara gratis.",
+        "odr": "Platform Penyelesaian Sengketa Online (ODR) Eropa:"
+      },
+      "section7": {
+        "title": "7. Dokumen Hukum",
+        "privacy": "Kebijakan privasi",
+        "privacyNote": "(GDPR)",
+        "terms": "Ketentuan layanan",
+        "termsNote": "(KL)",
+        "cgv": "Ketentuan penjualan",
+        "cgvNote": "(Penjualan)"
+      },
+      "section8": {
+        "title": "8. Kontak",
+        "content": "Untuk pertanyaan mengenai informasi hukum ini:",
+        "email": "Email:"
+      }
+    }
+  }
+}

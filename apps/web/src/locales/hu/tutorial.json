@@ -1,0 +1,293 @@
+{
+  "tutorial": {
+    "title": "Bemutató",
+    "exitConfirm": "Kilépsz a bemutatóból?",
+    "exitWarning": "A haladásod nem lesz mentve.",
+    "continue": "Folytatás",
+    "quit": "Kilépés",
+    "stepLabel": "{{step}}. lépés",
+    "previous": "Előző",
+    "restart": "Újraindítás",
+    "next": "Következő",
+    "startGame": "Indítás",
+    "progress": "Számláló",
+    "tapToContinue": "Koppints a folytatáshoz",
+    "controls": {
+      "position": "Pozíció",
+      "audio": "Hang"
+    },
+    "annotation": {
+      "label": "Utasítás"
+    },
+    "report": {
+      "statusMessage": {
+        "up": "Szép munka. Teljesítetted a bemutatót.",
+        "stay": "Majdnem sikerült. Egy kis gyakorlás és meglesz.",
+        "down": "Még nem érvényesítve. Próbáld újra a bemutatót az alapok megerősítéséhez."
+      },
+      "header": {
+        "up": "Bemutató befejezve!",
+        "down": "Áttekintés",
+        "stay": "Majdnem!"
+      },
+      "noteMinAssessment": "Megjegyzés: A pontosabb kiértékelés érdekében a bemutatók legalább 8 választ értékelnek.",
+      "guidance": {
+        "passed": "Készen állsz a szabad edzésre.",
+        "failed": "Javasoljuk, hogy próbáld újra ezt a bemutatót az edzés megkezdése előtt."
+      },
+      "correctAnswers": "{{correct}}/{{total}} helyes válasz",
+      "actions": {
+        "backToHome": "Vissza a főoldalra",
+        "retryTutorial": "Bemutató újra",
+        "explainLevels": "N szintek megértése (N)",
+        "goToTraining": "Ugrás az edzéshez",
+        "continueToTraining": "Tovább az edzéshez"
+      }
+    },
+    "welcome": {
+      "title": "Bevezetés az edzésbe",
+      "description": "A Dual N-Back a munkamemóriádat edzi azzal, hogy egyszerre két információfolyamot kell követned: egy vizuális pozíciót és egy hangot. Ez a bemutató lépésről lépésre vezet végig.",
+      "button": "Bemutató indítása"
+    },
+    "timeline": {
+      "legend": "Az idővonal segíti az összehasonlítást – játék közben el van rejtve",
+      "past": "Múlt",
+      "present": "Jelen"
+    },
+    "hub": {
+      "title": "Bemutatók",
+      "subtitle": "Válassz módot a tanuláshoz",
+      "basics": {
+        "title": "Az alapok",
+        "description": "Tanuld meg a klasszikus Dual N-Back reflexeit és ritmusát."
+      },
+      "place": {
+        "title": "Kettős hely",
+        "description": "Sajátítsd el az időbeli elhelyezést az idővonalon."
+      },
+      "label": {
+        "title": "Dual Pick",
+        "description": "Címkézd fel minden ingert az időbeli hivatkozásával (N, N-1, N-2)."
+      },
+      "trace": {
+        "title": "Dual Trace",
+        "description": "Tanuld meg az aktív felidézés gesztusait rajzolással."
+      },
+      "memo": {
+        "title": "Kettős feljegyzés",
+        "description": "Építsd újra a teljes sorozatot emlékezetből."
+      },
+      "soroban": {
+        "title": "Soroban elsajátítás",
+        "description": "Tanuld meg a japán abakuszt lépésről lépésre 8 fokozatos szakaszban."
+      }
+    },
+    "place": {
+      "comingSoon": "A Place bemutató fejlesztés alatt áll",
+      "cardPool": "Elérhető kártyák",
+      "slot": "Hely",
+      "observe": "Figyeld meg: egy pozíció a rácson és egy hangbetű.",
+      "buffer": "Második inger. Az N-back puffer feltöltődik.",
+      "cardsAppear": "Kártyák jelentek meg! Az utolsó 3 ingert képviselik.",
+      "firstDrag": "Kattints a jelölt kártyára, majd az N-2 helyre (a legrégebbi).",
+      "timelineExplain": "Az idővonal az időt mutatja: N-2 = legrégebbi, N = jelen.",
+      "positionN1": "Helyezd a középső pozíciót az N-1 helyre.",
+      "positionN": "Nagyszerű! Fejezd be a legutóbbi pozícióval (N hely).",
+      "audioIntro": "Most a hangkártyák! Ugyanaz az elv.",
+      "audioN2": "Helyezd az első hallott betűt az N-2 helyre.",
+      "audioN1": "Folytasd a középső betűvel (N-1 hely).",
+      "audioN": "Fejezd be a legutóbbi betűvel (N hely).",
+      "dualIntro": "Új próba! Helyezd el a pozíciókat ÉS a betűket.",
+      "dualPractice": "Helyezd el mind a 6 kártyát a megfelelő helyre. Szánj rá időt!",
+      "rhythmExplain": "Valódi játékban korlátozott időd lesz.",
+      "autonomy": "Te jössz! Helyezd el az összes kártyát helyesen.",
+      "conclusion": "Szép munka! Elsajátítottad a Dual Place alapjait.",
+      "selectCard": "Válassz kártyát, majd kattints a helyére",
+      "clickSlot": "Kattints a megfelelő helyre a kártya elhelyezéséhez",
+      "wrongSlot": "Nem az a hely! Nézd meg az időrendi sorrendet.",
+      "wrongCard": "Nem az a kártya. Keresd meg a helyhez illőt.",
+      "tryAgain": "Próbáld újra! A helyes hely ki van emelve."
+    },
+    "memo": {
+      "comingSoon": "A Memo bemutató fejlesztés alatt áll",
+      "selectPosition": "Válaszd ki a pozíciót",
+      "selectAudio": "Válaszd ki a betűt",
+      "clickToRecall": "Kattints egy helyre az érték felidézéséhez",
+      "validate": "Érvényesítés",
+      "observeFirst": "Első inger. Jegyezd meg a pozíciót ÉS a betűt!",
+      "observeSecond": "Második inger. Folytasd a memorizálást.",
+      "observeThird": "Harmadik inger. Puffer teljes. Készülj!",
+      "recallIntro": "A rács eltűnik! Idézd fel emlékezetből. Kattints az N-2 helyre.",
+      "firstRecall": "Kattints az N-2 helyre. Mi volt az első pozíció?",
+      "feedbackExplain": "Zöld = helyes. Piros = hiba. Legfeljebb 3-szor javíthatsz!",
+      "multiSlot": "Folytasd! Idézd fel az N-1 és N pozíciókat.",
+      "newStimulus": "Új inger! Az N-back ablak eggyel eltolódik.",
+      "windowShift": "Az ablak eltolódott. A régi N-2 kilép, az új N belép.",
+      "fullPosition": "Idézd fel mind a 3 pozíciót. Koncentrálj!",
+      "audioIntro": "Új inger. Most a hangfelidézést adjuk hozzá!",
+      "firstAudioRecall": "Kattints a hang N-2 helyre. Melyik betű volt?",
+      "fullAudio": "Folytasd az N-1 és N betűkkel.",
+      "dualIntro": "Valódi játékban pozíciókat ÉS betűket is felidézel egyszerre.",
+      "dualPractice": "Idézd fel mind a 6 cellát, majd kattints az Érvényesítésre.",
+      "correctionExplain": "Ha hibázol, kattints újra a javításhoz. Maximum 3-szor.",
+      "withCorrection": "Próbáld ki! Ha tévedtél, javíts újra kattintással.",
+      "conclusion": "Kiváló! Elsajátítottad az aktív felidézést. Indíts egy munkamenetet!",
+      "wrongAnswer": "Nem az. Gondolkodj, melyik inger volt abban a pillanatban?",
+      "tryAgain": "Próbáld újra! Még javíthatsz.",
+      "maxCorrections": "3 javítás elérve. Ez a hely zárolva van.",
+      "validateHint": "Minden hely kitöltve. Kattints az Érvényesítésre!"
+    },
+    "pick": {
+      "spotlight": {
+        "intro": "Üdvözlünk a Dual Pick-ben! Tanuld meg az ingerek osztályozását.",
+        "hud": "Fent: a bemutatóban való haladásod.",
+        "grid": "A rács 3 zónára van osztva: FELSŐ, KÖZÉPSŐ, ALSÓ.",
+        "controls": "Ezek az osztályozó gombok. Pozíció balra, Hang jobbra.",
+        "outro": "Készen állsz? Kezdjük a pozíció osztályozásával!"
+      },
+      "intro": "A Dual Pick-ben minden ingert két szempont szerint osztályozol: rácszon és hangtípus.",
+      "gridExplain": "A rácsnak 3 zónája van: FELSŐ (felső sor), KÖZÉPSŐ (közép), ALSÓ (alsó sor).",
+      "positionHaut": "A négyzet fent van. Kattints a FELSŐ-re.",
+      "positionMilieu": "A négyzet középen van. Kattints a KÖZÉPSŐ-re.",
+      "positionBas": "A négyzet lent van. Kattints az ALSÓ-ra.",
+      "positionRecap": "Tökéletes! FELSŐ = felső sor, KÖZÉPSŐ = közép, ALSÓ = alsó sor.",
+      "positionPractice": "Te jössz! Osztályozd ezt a pozíciót.",
+      "soundIntro": "Most a hangok. Két típus van: MAGÁNHANGZÓ (A, E, I, O, U) és MÁSSALHANGZÓ (minden más).",
+      "soundVoyelle": "A-t hallasz. Ez magánhangzó. Kattints a MAGÁNHANGZÓ-ra.",
+      "soundConsonne": "T-t hallasz. Ez mássalhangzó. Kattints a MÁSSALHANGZÓ-ra.",
+      "soundRecap": "Jegyezd meg: A, E, I, O, U = MAGÁNHANGZÓ. Minden más = MÁSSALHANGZÓ.",
+      "soundPractice": "Te jössz! Osztályozd ezt a hangot.",
+      "dualIntro": "Valódi játékban MINDKETTŐT egyszerre osztályozod: pozíciót ÉS hangot.",
+      "dualFirst": "Osztályozd a pozíciót ÉS a hangot. Szánj rá időt.",
+      "dualSecond": "Folytasd. Pozíció + Hang.",
+      "dualThird": "Kiváló! Még egy a gyakorláshoz.",
+      "rhythm": "Munkamenet közben tartsd a ritmust. A gördülékenység gyakorlással jön.",
+      "conclusion": "Szép munka! Elsajátítottad az osztályozást. Indíts egy Dual Pick munkamenetet!",
+      "buttons": {
+        "top": "FELSŐ",
+        "middle": "KÖZÉPSŐ",
+        "bottom": "ALSÓ",
+        "vowel": "MAGÁNHANGZÓ",
+        "consonant": "MÁSSALHANGZÓ"
+      },
+      "feedback": {
+        "correctPosition": "Jó zóna!",
+        "correctSound": "Jó hangtípus!",
+        "wrongPosition": "Nem az a zóna. Nézd, hol van a négyzet.",
+        "wrongSound": "Nem az. A, E, I, O, U = magánhangzók."
+      }
+    },
+    "trace": {
+      "intro": "Üdvözlünk a Dual Trace-ben. Itt nincsenek gombok: az előző pozíciót egy húzás gesztussal idézed fel aktívan.",
+      "observe": "Jegyezd meg ezt a pozíciót. A következő körben feléje kell húznod.",
+      "firstSwipe": "Első húzás! Húzd az ujjadat az előző kör pozíciója felé. A nyíl segít.",
+      "firstAudioMatch": "Ugyanaz a betű, mint az előző körben! Húzz a pozíció felé ÉS dupla koppintással jelezd a hang egyezést.",
+      "audioMatch": "Hang egyezés észlelve! Húzás + dupla koppintás.",
+      "swipe1": "Húzz az N-1 pozíció felé. Emlékezz, hol volt a négyzet.",
+      "swipe2": "Folytasd. Minden húzás erősíti az aktív memóriádat.",
+      "swipe3": "Az aktív felidézés igényesebb, mint az egyszerű felismerés.",
+      "swipe4": "Maradj koncentrált. Képzeld el a pozíciót húzás előtt.",
+      "swipe5": "Kiváló! Elsajátítottad a felidézés gesztust.",
+      "complete": "Bemutató kész. Készen állsz a Dual Trace edzésre.",
+      "tapTarget": "Koppints az előző kör pozíciójára",
+      "tapTargetAndAudio": "Koppints a célpozícióra, majd a Hangra"
+    },
+    "ui": {
+      "startExercise": "Gyakorlat indítása",
+      "score": "Pontszám: {{current}}/{{total}}",
+      "complete": "Kész",
+      "correct": "✓ Helyes!",
+      "expectedMatch": "✗ Várt: Egyezés",
+      "expectedNoMatch": "✗ Várt: Nincs egyezés",
+      "memorize": "Jegyezd meg a pozíciót...",
+      "memorizeLetter": "Jegyezd meg a betűt...",
+      "matchDetected": "✓ Egyezés észlelve!",
+      "noMatch": "✗ Nincs egyezés",
+      "matchExplanation": "Egyezés! {{current}}. lépés = {{previous}}. lépés",
+      "exerciseComplete": "Gyakorlat kész!",
+      "match": "Egyezés",
+      "noMatchButton": "Nincs egyezés",
+      "none": "Egyik sem",
+      "both": "Mindkettő",
+      "position": "Pozíció",
+      "audio": "Hang",
+      "posShort": "Poz"
+    },
+    "spotlight": {
+      "hud": "Az irányítópultod: N-back szint, körszámláló és munkamenet vezérlők.",
+      "timeline": "Az idővonal az utolsó 3 ingert tartja az összehasonlítás segítésére. Valódi játékban ez a segítség rejtett.",
+      "grid": "A rács: minden körben egy cella kigyullad a 8 pozíció egyikén. Ezzel egyidőben egy betű hangzik el.",
+      "controls": "A válaszgombjaid. Nyomd meg, ha ismétlődést észlelsz.",
+      "intro": "Üdvözlünk! Fedezzük fel együtt a játék felületét.",
+      "continue": "Folytatás",
+      "outro": "Most térjünk át egy vezetett munkamenetre. Figyeld az animációkat és kövesd az utasításokat.",
+      "start": "Indítás",
+      "tapToContinue": "Koppints bárhová a folytatáshoz"
+    },
+    "speed": {
+      "label": "Sebesség: {{speed}}",
+      "pauseToChange": "Szüneteltesd a sebesség módosításához"
+    },
+    "assessment": {
+      "title": "Értékelt fázis",
+      "subtitle": "Mostantól egy rövid klasszikus futás következik.",
+      "body": "A tempó folyamatos, és nem kapsz több segítséget. Játssz úgy, mint egy valódi munkamenetben.",
+      "goal": "Cél: legalább {{min}}% pontosság {{count}} próba alatt.",
+      "cta": "Rajta"
+    },
+    "postlude": {
+      "levels": {
+        "title": "Az N szintek megértése",
+        "desc": "N=2-t tanultad. Így általánosítható N=1-től N=4-ig.",
+        "start": "Indítás",
+        "done": "Befejezés",
+        "skip": "Kihagyás",
+        "hud": "N = hány körrel vissza.",
+        "present": "N = a jelenlegi inger (jelen).",
+        "past": "Hasonlítsd össze N-{{n}}-nel.",
+        "pressPosition": "Ha a pozíció ismétlődik, nyomd meg a Pozíciót.",
+        "pressAudio": "Ha a hang ismétlődik, nyomd meg a Hangot.",
+        "annotation": {
+          "n1": "N=1: hasonlítsd össze a jelenlegi ingert (N) az előző körrel (N-1).",
+          "n2": "N=2: hasonlítsd össze a jelenlegi ingert (N) a két körrel korábbival (N-2).",
+          "n3": "N=3: hasonlítsd össze a jelenlegi ingert (N) a három körrel korábbival (N-3)."
+        },
+        "outroTitle": "És így tovább…",
+        "outroBody": "Ha N=5-re lépsz, N-5-tel hasonlítasz össze. A szabály ugyanaz marad; csak a távolság növekszik."
+      }
+    },
+    "annotations": {
+      "intro": "Figyeld meg: egy cella kigyullad a rácson, és egy betű hangzik el egyidejűleg.",
+      "observe": "Memorízáld. Az idővonal nyomon követi az ingereket.",
+      "firstComparison": "Most már elég előzményed van az összehasonlításhoz.",
+      "firstPositionMatch": "Ugyanaz a pozíció, mint 2 körrel ezelőtt! Hasonlítsd össze N-t és N-2-t az idővonalon, majd nyomd meg a Pozíciót.",
+      "firstAudioMatch": "Ugyanaz a betű, mint 2 körrel ezelőtt! Hasonlítsd össze N-t és N-2-t az idővonalon, majd nyomd meg a Hangot.",
+      "firstDualMatch": "Dupla egyezés! A pozíció ÉS a hang is ismétlődik. Nyomd meg mindkét gombot.",
+      "positionMatch": "Ugyanaz a pozíció. Nyomd meg a Pozíciót.",
+      "audioMatch": "Ugyanaz a hang. Nyomd meg a Hangot.",
+      "dualMatch": "Mindkettő egyezik. Nyomd meg a Pozíciót és a Hangot.",
+      "noMatch": "Nincs egyezés ebben a körben. Folytasd a memorizálást.",
+      "noMatch1": "Nincs ismétlődés ezúttal. Koppints a folytatáshoz.",
+      "noMatch2": "Még mindig nincs egyezés. Maradj fókuszban a pozíció + hang folyamra.",
+      "noMatch3": "Nincs jelenteni való. Mindig N-2-vel hasonlíts össze az idővonalon.",
+      "noMatch4": "Nincs egyezés. A tempó most felgyorsul.",
+      "noMatch5": "Folytasd. Az egyezések kiszámíthatatlanul jönnek.",
+      "noMatch6": "Nincs egyezés. Hajrá, megvan a ritmusod.",
+      "noMatch7": "Utolsó szakasz. Maradj fókuszban.",
+      "noMatch8": "Majdnem kész. Még néhány inger.",
+      "complete": "Gratulálunk! Elsajátítottad a Dual N-Back alapjait. Készen állsz az edzésre?"
+    },
+    "exit": {
+      "confirm": "Kilépés",
+      "title": "Kilépsz a bemutatóból?",
+      "message": "A haladásod mentve lesz. Később folytathatod."
+    },
+    "recovery": {
+      "message": "Megszakított munkamenet található.",
+      "staleMessage": "Több mint 30 perces megszakított munkamenet található.",
+      "resume": "Folytatás",
+      "startFresh": "Újrakezdés",
+      "title": "Folytatod a bemutatót?"
+    }
+  }
+}

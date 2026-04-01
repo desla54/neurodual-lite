@@ -1,0 +1,2840 @@
+{
+  "game": {
+    "energyLevel": {
+      "title": "Apa perasaan awak?",
+      "tired": "Penat",
+      "normal": "Biasalah",
+      "energized": "Bertenaga"
+    },
+    "aria": {
+      "trialTimer": "Pemasa percubaan",
+      "positionMatch": "Perlawanan kedudukan",
+      "audioMatch": "Padanan audio",
+      "audioLetter": "Surat audio:",
+      "traceGrid": "Jejak grid"
+    },
+    "syncHud": {
+      "shortLabel": "SYNC",
+      "toggleTitle": "Togol monitor penyegerakan",
+      "start": "mulakan",
+      "end": "tamat",
+      "pinLabel": "pin",
+      "pinTitle": "Semat pada skrin",
+      "inputLabel": "input",
+      "inputTitle": "Togol pemprofilan kependaman input (localStorage ND_INPUT_DEBUG_TIMING)",
+      "on": "pada",
+      "off": "dimatikan",
+      "hideLabel": "bersembunyi",
+      "hideTitle": "Sembunyikan (melainkan syncHud=1 atau ND_AUDIO_DEBUG_TIMING=1)",
+      "endRef": {
+        "audio": "audio",
+        "expected": "dijangka"
+      },
+      "labels": {
+        "trial": "perbicaraan",
+        "lagShow": "Paparan ketinggalan",
+        "lagHide": "Melambatkan topeng",
+        "winErr": "menang err",
+        "endRef": "akhir ref",
+        "visualPreP95": "visual_pra p95",
+        "audioSyncP95": "audio_sync p95",
+        "visualPostP95": "visual_post p95",
+        "inputToDispatchP95": "input->penghantaran p95",
+        "inputToCommitP95": "input->komit p95",
+        "inputToPaintP95": "input->cat p95",
+        "inputPending": "input belum selesai",
+        "inputSamples": "sampel input",
+        "touchSamples": "sampel sentuh",
+        "mouseSamples": "sampel tetikus",
+        "keyboardSamples": "sampel papan kekunci",
+        "latestMethod": "terkini (kaedah)",
+        "latestModality": "modaliti terkini",
+        "audioCueMode": "isyarat audio",
+        "audioCodec": "codec"
+      },
+      "resetInputProfiler": "set semula input profiler"
+    },
+    "hud": {
+      "resume": "Sambung semula",
+      "pause": "Jeda",
+      "quit": "Berhenti",
+      "restart": "Mulakan semula",
+      "spaceToStart": "Ruang untuk bermula",
+      "settings": "tetapan",
+      "enterToAdvance": "Masuk untuk maju",
+      "trial": "Perbicaraan",
+      "muteTexture": "Redamkan bunyi latar belakang"
+    },
+    "status": {
+      "paused": "Dijeda"
+    },
+    "completed": "Selesai",
+    "starting": {
+      "getReady": "Bersedialah..."
+    },
+    "quitModal": {
+      "title": "Berhenti sesi?",
+      "message": "Kemajuan anda tidak akan disimpan.",
+      "confirm": "Berhenti",
+      "cancel": "teruskan",
+      "close": "tutup"
+    },
+    "controls": {
+      "position": "kedudukan",
+      "position2": "Pos. 2",
+      "position3": "Pos. 3",
+      "position4": "Pos. 4",
+      "visvis": "Vis & n-vis",
+      "visaudio": "Vis & n-audio",
+      "audiovis": "Audio & n-vis",
+      "vis1": "Vis. 1",
+      "vis2": "Vis. 2",
+      "vis3": "Vis. 3",
+      "vis4": "Vis. 4",
+      "audio": "Audio",
+      "audio2": "Audio 2",
+      "color": "warna",
+      "arithmetic": "Aritmetik",
+      "image": "bentuk"
+    },
+    "arithmetic": {
+      "answer": "Jawab",
+      "clear": "Jelas",
+      "hint": "Papan kekunci: 0–9 · '-' untuk tanda · '.' untuk perpuluhan · Ruang belakang untuk mengosongkan"
+    },
+    "navigation": {
+      "back": "belakang"
+    },
+    "xp": {
+      "title": "XP diperolehi",
+      "base": "Pangkalan (N-{{level}})",
+      "performance": "Prestasi",
+      "accuracy": "Ketepatan",
+      "streakBonus": "Bonus rentak",
+      "dailyBonus": "Hari pertama",
+      "badgeBonus": "Lencana",
+      "flowBonus": "Bonus Dwi Tempat",
+      "confidenceMultiplier": "Keyakinan",
+      "dailyCapReached": "Had XP harian dicapai",
+      "levelReached": "Tahap {{level}} dicapai!"
+    },
+    "badges": {
+      "newUnlocked": "Lencana baharu dibuka kuncinya"
+    },
+    "getReady": "Bersedialah...",
+    "layoutEdit": {
+      "done": "Selesai",
+      "reset": "Tetapkan semula",
+      "instructions": "Seret zon untuk menyusun semula. Ubah saiz menggunakan pemegang.",
+      "title": "Mod edit",
+      "cancel": "Batal",
+      "save": "Kunci",
+      "editLayout": "Edit reka letak"
+    },
+    "paused": "Dijeda",
+    "pressEscapeToResume": "Tekan Escape untuk menyambung semula",
+    "settings": {
+      "editLayout": "Edit reka letak",
+      "gridAndButtons": "Grid & butang",
+      "swapPositionAudio": "Tukar Kedudukan / Audio",
+      "title": "tetapan",
+      "quickHint": "Laraskan beberapa tetapan tanpa meninggalkan permainan.",
+      "quickUnavailable": "Tiada tetapan pantas tersedia untuk mod ini lagi."
+    },
+    "pinkNoiseInfo": "Nada latar mengiringi setiap rangsangan. Anda boleh menyesuaikan atau melumpuhkannya dalam tetapan audio.",
+    "pinkNoiseDismiss": "teruskan",
+    "audioMode": "Mod audio",
+    "cogTask": {
+      "precision": "Ketepatan",
+      "avgRt": "Purata RT",
+      "avgRtShort": "Purata RT",
+      "trials": "Percubaan",
+      "correct": "Betul",
+      "errors": "Kesilapan",
+      "effect": "Kesan",
+      "restart": "Mulakan semula",
+      "home": "Rumah",
+      "performance": "Prestasi",
+      "trialDetail": "Perincian percubaan",
+      "setDetail": "Tetapkan butiran",
+      "roundDetail": "Perincian bulat",
+      "problemDetail": "Perincian masalah",
+      "phaseDetail": "Perincian fasa",
+      "feedbackCorrect": "Betul",
+      "feedbackIncorrect": "tak betul",
+      "feedbackTimeout": "Terlalu lambat!",
+      "preparing": "Bersedialah...",
+      "loading": "Memuatkan...",
+      "left": "kiri",
+      "right": "Betul",
+      "up": "Naik",
+      "down": "Bawah",
+      "congruent": "Kongruen",
+      "incongruent": "tidak selaras",
+      "congruencyEffect": "Kesan keselarasan",
+      "maxSpan": "Jangka maksimum",
+      "startingSpan": "Rentang permulaan",
+      "maxSpanReached": "Jangka maksimum dicapai",
+      "longestStreak": "Contengan betul paling lama",
+      "series": "coretan",
+      "avgResponseTime": "Purata masa tindak balas",
+      "recall": "Ingat kembali",
+      "expected": "Dijangka",
+      "submit": "Hantar",
+      "cancel": "Batal",
+      "clear": "Jelas",
+      "delete": "DEL",
+      "true": "betul",
+      "false": "palsu",
+      "target": "Sasaran",
+      "nonTarget": "Bukan sasaran",
+      "distractor": "Pengganggu",
+      "same": "sama",
+      "different": "Berbeza",
+      "identical": "sama",
+      "mirror": "Cermin",
+      "symmetric": "simetri",
+      "asymmetric": "Tidak simetri",
+      "symShort": "Sym.",
+      "present": "Hadir",
+      "absent": "tidak hadir",
+      "noTrials": "Tiada percubaan selesai.",
+      "noSets": "Tiada set selesai.",
+      "noRounds": "Tiada pusingan selesai.",
+      "noProblems": "Tiada masalah selesai.",
+      "noPhases": "Tiada fasa selesai.",
+      "sets": "set",
+      "rounds": "Pusingan",
+      "equations": "Persamaan",
+      "sentences": "Ayat",
+      "equationAccuracy": "Ketepatan persamaan",
+      "forward": "ke hadapan",
+      "backward": "ke belakang",
+      "forwardMaxSpan": "Rentang maks hadapan",
+      "backwardMaxSpan": "Rentang maks ke belakang",
+      "odd": "ganjil",
+      "even": "Malah",
+      "score": "skor",
+      "easy": "Mudah",
+      "hard": "Keras",
+      "totalTrials": "Jumlah percubaan",
+      "totalErrors": "Jumlah ralat",
+      "totalErrShort": "Jumlah Err.",
+      "hits": "Hits",
+      "misses": "Rindu",
+      "falseAlarms": "Palsu Al.",
+      "correctRejections": "Corr. Rej.",
+      "yes": "ya",
+      "no": "Tidak",
+      "sessionInterrupted": "Sesi terganggu",
+      "reverseOrder": "dalam susunan terbalik",
+      "normalOrder": "mengikut tertib",
+      "lnsInstruction": "Nombor menaik, kemudian huruf A-Z",
+      "vs": "lwn",
+      "simon": {
+        "simonEffect": "Kesan Simon",
+        "blue": "Biru",
+        "red": "Merah",
+        "heroTitle": "Simon"
+      },
+      "soroban": {
+        "target": "Wakili nombor ini",
+        "submit": "Hantar",
+        "rodLabel": "Batang {{n}}",
+        "heavenBead": "Manik syurga (nilai 5)",
+        "earthBead": "Manik bumi (nilai 1)",
+        "instrBeadTitle": "Bagaimana manik berfungsi",
+        "instrBeadDesc": "Setiap rod mewakili satu digit. Manik atas (syurga) bernilai 5. Manik bawah (bumi) bernilai 1 setiap satu. Gerakkan manik ke arah bar tengah untuk mengaktifkannya.",
+        "instrExampleTitle": "Contoh: 7",
+        "instrExampleDesc": "7 = manik syurga ke bawah (5) + 2 manik bumi ke atas (2). Ketik atau seret manik untuk mengalihkannya.",
+        "instrGoalTitle": "Matlamat anda",
+        "instrGoalDesc": "Satu nombor akan muncul. Tetapkan manik untuk mewakilinya, kemudian ketik Serah. Jadilah tepat dan pantas!",
+        "startButton": "Mulakan",
+        "settings": "tetapan",
+        "closeSettings": "Tutup tetapan",
+        "settingsRods": "Bilangan batang",
+        "settingsRodsHint": "Tetapkan melalui N-Level dalam tetapan permainan",
+        "settingsTrials": "Percubaan setiap sesi",
+        "settingsTrialsHint": "Tetapkan melalui Percubaan dalam tetapan permainan",
+        "settingsRange": "Julat nombor"
+      },
+      "stroop": {
+        "pressInkColorButton": "Tekan butang yang sepadan dengan warna dakwat",
+        "redWord": "RED",
+        "redLabel": "Merah",
+        "blueWord": "BLUE",
+        "blueLabel": "Biru",
+        "greenWord": "GREEN",
+        "greenLabel": "hijau",
+        "yellowWord": "KUNING",
+        "yellowLabel": "kuning"
+      },
+      "stroopFlex": {
+        "followRule": "peraturan",
+        "ruleInk": "Warna dakwat",
+        "ruleWord": "Perkataan bertulis",
+        "pressMatchingRuleButton": "Tekan butang yang sepadan dengan peraturan semasa"
+      },
+      "goNogo": {
+        "goTrials": "Pergi percubaan",
+        "nogoTrials": "Percubaan No-Go",
+        "hitRate": "Kadar pukulan (Pergi)",
+        "faRate": "Kadar penggera palsu (Tidak Pergi)",
+        "meanRt": "Masa tindak balas min",
+        "sensitivity": "sensitiviti",
+        "press": "Tekan",
+        "withhold": "menahan"
+      },
+      "stopSignal": {
+        "ssrt": "SSRT",
+        "ssrtFull": "SSRT (RT Isyarat Henti)",
+        "ssdMean": "Min SSD (berjaya berhenti)",
+        "ssd": "SSD",
+        "goRt": "Pergi RT",
+        "successfulInhibition": "Perencatan yang berjaya",
+        "stop": "Berhenti",
+        "meanGoRt": "Purata masa tindak balas GO",
+        "ssrtInvalid": "data tidak mencukupi",
+        "ssrtNegativeNote": "SSRT adalah negatif (min SSD > min GO RT) — keputusan tidak boleh dipercayai dengan kiraan percubaan semasa."
+      },
+      "pvt": {
+        "rtMedian": "Median RT",
+        "rtMean": "Maksud RT",
+        "fastest": "Terpantas",
+        "slowest": "Paling perlahan",
+        "falseStarts": "Permulaan palsu",
+        "falseStartsShort": "Jalan palsu",
+        "lapses": "luput",
+        "mean": "Min",
+        "reaction": "Reaksi",
+        "wait": "tunggu...",
+        "pressStimulus": "Tunggu rangsangan...",
+        "pressAnywhere": "Tekan di mana-mana apabila kaunter muncul",
+        "press": "Tekan!",
+        "tooEarly": "Terlalu awal!",
+        "lapsesLabel": "luput"
+      },
+      "posner": {
+        "cueingEffect": "Kesan isyarat",
+        "validMeanRt": "Min RT yang sah",
+        "invalidMeanRt": "Min RT tidak sah",
+        "validAccuracy": "Ketepatan yang sah",
+        "invalidAccuracy": "Ketepatan tidak sah",
+        "validTrials": "Percubaan yang sah",
+        "invalidTrials": "Percubaan tidak sah",
+        "validRtShort": "RT Val.",
+        "invalidRtShort": "RT Inv.",
+        "valid": "sah",
+        "invalid": "Tidak sah"
+      },
+      "antisaccade": {
+        "cost": "Kos antisaccade",
+        "proAccuracy": "Ketepatan pro",
+        "antiAccuracy": "Anti ketepatan",
+        "pro": "Pro",
+        "anti": "Anti",
+        "proRt": "Pro RT",
+        "antiRt": "Anti RT",
+        "proMeanRt": "Min RT pro-saccade",
+        "antiMeanRt": "Maksud RT anti-saccade",
+        "costLabel": "kos",
+        "antiLabel": "Anti"
+      },
+      "axCpt": {
+        "dPrime": "d'-konteks",
+        "axAccuracy": "Ketepatan AX",
+        "bxFa": "Penggera palsu BX",
+        "ayError": "ralat AY",
+        "bxFaShort": "BX FA",
+        "ayErrShort": "AY silap",
+        "cogControl": "Kawalan kognitif",
+        "target": "Sasaran",
+        "nonTarget": "Bukan sasaran"
+      },
+      "ant": {
+        "scores": "Skor SEMUT",
+        "alerting": "Makluman (tiada-kiu − dua-kiu)",
+        "orienting": "Mengorientasikan (pusat − ruang)",
+        "executive": "Eksekutif (tidak kongruen − kongruen)"
+      },
+      "changeDet": {
+        "kCowan": "Kapasiti K (Cowan)",
+        "sameShort": "sama",
+        "diffShort": "Perbezaan."
+      },
+      "swm": {
+        "withinErrors": "Ralat dalam carian",
+        "betweenErrors": "Ralat antara carian",
+        "totalErrors": "Jumlah ralat",
+        "errorFree": "Tanpa ralat",
+        "foundErrorFree": "Ditemui tanpa ralat!",
+        "errorCount": "{{count}} ralat",
+        "tapsLabel": "Ketik"
+      },
+      "taskSwitch": {
+        "switchCost": "Kos pertukaran",
+        "rtRepeat": "Min RT (Ulangan)",
+        "rtSwitch": "Min RT (Tukar)",
+        "oddEven": "Ganjil / Genap",
+        "highLow": "Tinggi / Rendah",
+        "title": "Penukaran Tugas"
+      },
+      "trailMaking": {
+        "tmtATime": "Masa TMT-A",
+        "tmtBTime": "Masa TMT-B",
+        "executiveCost": "Kos eksekutif (B − A)",
+        "executiveCostShort": "Kos eksekutif (B-A)",
+        "tmtA": "TMT-A",
+        "tmtB": "TMT-B",
+        "errA": "Err. A",
+        "errB": "Err. B",
+        "preparingB": "Menyediakan TMT-B...",
+        "tmtADone": "TMT-A selesai!",
+        "totalErrors": "Jumlah ralat",
+        "tmtALabel": "TMT-A: Nombor",
+        "tmtBLabel": "TMT-B: Nombor & Huruf",
+        "next": "Seterusnya",
+        "heroTitle": "Membuat Jejak",
+        "alternateHint": "Nombor dan huruf ganti: 1-A-2-B-..."
+      },
+      "pasat": {
+        "isiMin": "ISI min",
+        "fastestIsi": "ISI terpantas"
+      },
+      "wcst": {
+        "referenceCards": "Kad rujukan",
+        "testCard": "Kad ujian",
+        "categories": "Kategori",
+        "categoriesCompleted": "Kategori selesai",
+        "perseverativeErrors": "Kesilapan yang berterusan",
+        "persevShort": "Persev.",
+        "avgRt": "Purata RT"
+      },
+      "mentalRot": {
+        "rtByAngle": "RT mengikut sudut",
+        "findMatch": "Cari bentuk yang sepadan",
+        "reference": "Bentuk rujukan",
+        "referenceLabel": "Ruj.",
+        "candidate": "calon",
+        "distractor": "Lain-lain",
+        "mirrorErrors": "Cermin",
+        "title": "Putaran Mental"
+      },
+      "sternberg": {
+        "rtBySize": "RT mengikut saiz set",
+        "title": "Sternberg",
+        "avgRt": "Purata RT"
+      },
+      "visualSearch": {
+        "rtBySize": "RT mengikut saiz set",
+        "title": "Carian Visual"
+      },
+      "ospan": {
+        "typeLetters": "Taip huruf mengikut urutan",
+        "trueOrFalse": "Betul atau palsu?",
+        "processingWarning": "Ketepatan persamaan di bawah 85% — keputusan mungkin tidak menggambarkan kapasiti memori kerja sebenar"
+      },
+      "readingSpan": {
+        "s0": "Matahari terbit di timur.",
+        "s1": "Ikan hidup dalam pokok.",
+        "s2": "Paris ialah ibu negara Perancis.",
+        "s3": "Segitiga mempunyai empat sisi.",
+        "s4": "Air mendidih pada 100 darjah.",
+        "s5": "Kucing adalah reptilia.",
+        "s6": "Bumi mengorbit Matahari.",
+        "s7": "Coklat tumbuh di atas batu.",
+        "s8": "Setahun ada dua belas bulan.",
+        "s9": "Burung bernafas di bawah air.",
+        "s10": "Susu berwarna putih.",
+        "s11": "Kereta dipandu di atas rel.",
+        "s12": "Lebah menghasilkan madu.",
+        "s13": "Salji panas.",
+        "s14": "Jantung mengepam darah.",
+        "s15": "Batu terapung di atas air.",
+        "s16": "Bulan menerangi malam.",
+        "s17": "Ular mempunyai kaki.",
+        "s18": "Kayu terapung di atas air.",
+        "s19": "Api sejuk.",
+        "s20": "Manusia mempunyai lima deria.",
+        "s21": "Labah-labah mempunyai enam kaki.",
+        "s22": "Roti dibuat dengan tepung.",
+        "s23": "Paus adalah ikan.",
+        "w0": "HOUSE",
+        "w1": "DOG",
+        "w2": "BOOK",
+        "w3": "BUNGA",
+        "w4": "DOOR",
+        "w5": "TABLE",
+        "w6": "TREE",
+        "w7": "ROAD",
+        "w8": "CLOUD",
+        "w9": "STAR",
+        "w10": "BEACH",
+        "w11": "SNOW",
+        "w12": "LAMP",
+        "w13": "RAIN",
+        "w14": "GLASS",
+        "w15": "GRASS",
+        "w16": "TRAIN",
+        "w17": "WORLD",
+        "w18": "SUN",
+        "w19": "HUTAN",
+        "w20": "ICE",
+        "w21": "EARTH",
+        "w22": "SKY",
+        "w23": "STONE",
+        "d0": "PAGI",
+        "d1": "HEART",
+        "d2": "FABRIK",
+        "d3": "LEAF",
+        "d4": "NOISE",
+        "d5": "TAMAN",
+        "d6": "BAYANG",
+        "d7": "BELL",
+        "d8": "JAMBATAN",
+        "d9": "SMOKE",
+        "d10": "SAND",
+        "d11": "SOUP",
+        "heroTitle": "Jangka Membaca"
+      },
+      "memorizeSequence": "Menghafal urutan...",
+      "reproduce": "Membiak",
+      "span": "Span",
+      "size": "Saiz",
+      "fixateCenter": "Lekapkan di tengah...",
+      "identicalOrMirror": "Sama atau Cermin?",
+      "wellInhibited": "Terhalang dengan baik!",
+      "badDirection": "Salah arah!",
+      "stopMissed": "Berhenti terlepas!",
+      "falseAlarm": "Penggera palsu!",
+      "pressNow": "Tekan!",
+      "hitBang": "Pukul!",
+      "miss": "Cik!",
+      "doNotTouch": "jangan sentuh!",
+      "whichDirection": "arah mana?",
+      "stopBang": "BERHENTI!",
+      "cueBang": "Cue!",
+      "memorizeLetters": "Hafal huruf-huruf ini",
+      "memorizeLetter": "Hafal surat ini",
+      "memorizeSequenceLetters": "Menghafal urutan...",
+      "memorizeDigits": "Hafal sifir...",
+      "memorizeColors": "Menghafal warna!",
+      "memorizePosition": "Hafal kedudukan ini...",
+      "retainWord": "Ingat perkataan ini",
+      "retainNumber": "Ingat nombor ini",
+      "addWithPrevious": "Tambah dengan sebelumnya",
+      "sentenceTrueOrFalse": "Adakah ayat ini benar?",
+      "findRedCircle": "Cari bulatan merah!",
+      "findHiddenToken": "Cari token tersembunyi!",
+      "chooseMatchingCard": "Pilih kad yang sepadan",
+      "arrowDirection": "Arah anak panah tengah?",
+      "attention": "Perhatian...",
+      "preparation": "Persediaan...",
+      "recallLettersInOrder": "Ingat kembali huruf {{count}} mengikut urutan",
+      "recallWordsInOrder": "Ingat {{count}} perkataan mengikut urutan",
+      "recallLastLetters": "Ingat {{count}} huruf terakhir",
+      "typeLastLetters": "Taipkan {{count}} huruf terakhir",
+      "recallPositionsInOrder": "Ingat: ketik kedudukan mengikut urutan",
+      "pressEnterToValidate": "Tekan Enter untuk mengesahkan",
+      "pressAnywhereToContinue": "Tekan di mana-mana untuk meneruskan",
+      "temporalPrecision": "Ketepatan sementara",
+      "estimationPrecision": "Ketepatan anggaran",
+      "touchStartClockwise": "Sentuh titik mula kemudian leret mengikut arah jam",
+      "touchAtoB": "Sentuh titik A kemudian leret ke B",
+      "cue": "isyarat",
+      "retainCue": "Ingat isyarat...",
+      "targetOrNot": "Sasaran atau Bukan sasaran?",
+      "whereIsTarget": "Di manakah sasaran?",
+      "wasLetterInSet": "Adakah surat ini ada dalam set?",
+      "regular": "biasa",
+      "regularity": "Keteraturan",
+      "msDeviation": "sisihan ms",
+      "boxes": "kotak",
+      "found": "{{count}} ditemui",
+      "past": "lalu",
+      "tooSlow": "terlalu perlahan",
+      "tooFast": "terlalu pantas",
+      "timeout": "Terlalu lambat!",
+      "answer": "Jawab",
+      "dontPress": "Jangan tekan!",
+      "feedbackWrong": "salah!",
+      "level": "Tahap",
+      "wrong": "salah",
+      "you": "awak",
+      "paused": "jeda",
+      "instructions": "Arahan",
+      "selectAnswer": "Pilih jawapan",
+      "tapTheOddOne": "Ketik yang ganjil keluar",
+      "pal": {
+        "subtitle": "Pembelajaran Rakan Bersekutu Berpasangan",
+        "pairsLearned": "Pasangan dipelajari",
+        "maxSetSize": "Saiz Set Maks",
+        "totalErrors": "Jumlah Ralat",
+        "round": "Bulat",
+        "pairs": "berpasangan",
+        "meanRt": "Min RT (betul)",
+        "studyPhase": "Belajar - menghafal jawatan",
+        "testPhase": "Di manakah bentuk ini?",
+        "studying": "belajar",
+        "tapBox": "Ketik kotak di mana bentuk ini ditunjukkan"
+      },
+      "visualLogic": {
+        "easy": "Mudah",
+        "hard": "Keras",
+        "oneRule": "1 peraturan",
+        "twoRules": "2 peraturan",
+        "findMissing": "Cari bahagian yang hilang",
+        "maxLevel": "Lvl Maks",
+        "finalLevel": "Lvl Akhir",
+        "nextMode": "Mod sesi seterusnya",
+        "adaptive": "Adaptif",
+        "fixed": "tetap",
+        "spm": "SPM 60",
+        "level": "Tahap",
+        "confirm": "Lebih sah"
+      },
+      "tetrisMind": {
+        "findPiece": "Bahagian mana yang sesuai dengan lubang?",
+        "target": "Sasaran"
+      },
+      "timeEstimation": {
+        "overestimationBias": "Bias anggaran berlebihan",
+        "underestimationBias": "Bias memandang rendah",
+        "noBias": "Tiada berat sebelah yang ketara",
+        "avgError": "Ralat Purata",
+        "overestimations": "Anggaran berlebihan",
+        "underestimations": "Pandangan rendah",
+        "avgAbsoluteError": "Purata Ralat Mutlak",
+        "avgRelativeError": "Purata Ralat Relatif",
+        "cv": "Pekali Variasi",
+        "watchDemo": "Tonton tempohnya",
+        "getReady": "Bersedialah...",
+        "holdToReproduce": "Tahan untuk membiak!",
+        "tooLong": "Terlalu lama!",
+        "tooShort": "Terlalu pendek!",
+        "target": "Sasaran",
+        "demoLabel": "Rujukan",
+        "yourTurn": "Giliran awak",
+        "watchInstruction": "Tonton",
+        "holdInstruction": "Tahan untuk membiak",
+        "heroTitle": "Anggaran Masa"
+      },
+      "puzzleDetails": "Butiran teka-teki",
+      "roundDetails": "Butiran bulat",
+      "stageResults": "Keputusan Peringkat",
+      "recognized": "Diiktiraf",
+      "missed": "terlepas",
+      "win": "Menang",
+      "lose": "Kalah",
+      "winBang": "Menang!",
+      "loseBang": "Kalah!",
+      "correctBang": "Betul!",
+      "wrongBang": "salah!",
+      "completeBang": "Lengkap!",
+      "repeatedBang": "Diulang!",
+      "incompleteBang": "tak lengkap!",
+      "levelCompleteBang": "Tahap Lengkap!",
+      "timesUp": "Masa Tamat",
+      "seeResults": "Lihat hasil",
+      "nextRound": "Pusingan seterusnya",
+      "startBlock": "Mulakan blok",
+      "continue": "teruskan",
+      "patientChoice": "Pilihan pesakit",
+      "immediateChoice": "Pilihan segera",
+      "immediate": "serta merta",
+      "digitSpan": {
+        "heroTitle": "Span Digit"
+      },
+      "resume": "Sambung semula",
+      "numericalStroop": {
+        "heroTitle": "Stroop berangka"
+      },
+      "lineOrientation": {
+        "heroTitle": "Penghakiman Orientasi Garisan"
+      },
+      "chain": "rantai",
+      "undo": "Buat asal",
+      "vocalProsody": {
+        "heroTitle": "Prosodi Vokal"
+      },
+      "letterNumber": {
+        "title": "Huruf-Nombor Seq.",
+        "expectedAnswer": "Jawapan yang dijangkakan"
+      },
+      "patternComparison": {
+        "heroTitle": "Perbandingan Corak"
+      },
+      "speedPack": {
+        "title": "Pek Kelajuan",
+        "whenFoldedWhichTouch": "Apabila dilipat, petak manakah yang disentuh?"
+      },
+      "dotProbe": {
+        "heroTitle": "Dot Probe"
+      },
+      "reflex": {
+        "heroTitle": "Refleks"
+      },
+      "hooperVisual": {
+        "title": "Organisasi Visual Hooper",
+        "whatIsThisObject": "Apakah objek ini?"
+      },
+      "blockDesign": {
+        "heroTitle": "Reka Bentuk Blok"
+      },
+      "accuracy": "Ketepatan",
+      "avgTime": "Purata masa",
+      "check": "Semak",
+      "dualTrace": {
+        "playArea": "Kawasan permainan"
+      },
+      "paperFolding": {
+        "title": "Lipatan Kertas",
+        "foldSequenceHolePunch": "Urutan lipatan & penebuk lubang",
+        "whichPatternWhenUnfolded": "Corak yang manakah apabila dibuka?"
+      },
+      "lexicalDecision": {
+        "heroTitle": "Keputusan Leksikal"
+      },
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxGrid": "Grid maks",
+      "symmetry": "simetri",
+      "threshold": "Ambang",
+      "hitRate": "Kadar pukulan",
+      "faRate": "Taux de FA",
+      "changeDetection": {
+        "heroTitle": "Pengesanan Perubahan"
+      },
+      "syllogisms": {
+        "heroTitle": "Silogisme"
+      },
+      "subitizing": {
+        "title": "Subbitizing",
+        "range": "Julat"
+      },
+      "jitter": "Kegelisahan",
+      "sentenceCompletion": {
+        "title": "Pengisian Ayat (Cloze)",
+        "highCloze": "Kloze tinggi",
+        "lowCloze": "Kloze rendah"
+      },
+      "grid": "Grid",
+      "pinballRecall": {
+        "title": "Ingat Pinball",
+        "byBounces": "Secara lantunan",
+        "whereDoesItLand": "Di mana ia mendarat?"
+      },
+      "mean": "Min",
+      "speedup": "Kelajuan",
+      "memorize": "Menghafal",
+      "time": "Masa",
+      "surfaceDevelopment": {
+        "title": "Pembangunan Permukaan",
+        "whichEdgeMatches": "Tepi mana yang sepadan?"
+      },
+      "crowding": {
+        "heroTitle": "Kesesakan Visual",
+        "spacing": "Jarak"
+      },
+      "patternRecognition": {
+        "heroTitle": "Pengecaman Corak"
+      },
+      "brixton": {
+        "heroTitle": "Brixton"
+      },
+      "dualMemo": {
+        "trial": "Perbicaraan",
+        "position": "kedudukan",
+        "audio": "Audio"
+      },
+      "sceneCrasher": {
+        "heroTitle": "Penceroboh Adegan",
+        "detect": "Kesan"
+      },
+      "eyesTest": {
+        "heroTitle": "Membaca Minda di Mata"
+      }
+    },
+    "gridlock": {
+      "undone": "Pergerakan terakhir dibatalkan.",
+      "resetMessage": "Set semula teka-teki.",
+      "hintMessage": "Petunjuk: slaid {{pieceId}} {{dir}} {{delta}}.",
+      "previewCountdown": "Kaji papan. Bermula dalam {{seconds}}s.",
+      "challenge": "Cabaran",
+      "optimal": "Optimum",
+      "moves": "Bergerak",
+      "piece": "Sekeping {{id}}",
+      "targetPiece": "Sekeping {{id}} (sasaran - kereta merah)",
+      "challengeClassic": "Klasik",
+      "challengePrecision": "Ketepatan",
+      "challengeMemory": "Ingatan",
+      "challengeTimed": "Ditetapkan masa",
+      "hint": "Petunjuk",
+      "reset": "Tetapkan semula",
+      "undo": "Buat asal",
+      "nextPuzzle": "Teka-teki seterusnya →"
+    },
+    "affectiveGoNogo": {
+      "block1Hits": "Hit Blok 1",
+      "block2Hits": "Pukulan Blok 2",
+      "goPositive": "Pergi = Positif",
+      "goNegative": "Pergi = Negatif",
+      "title": "Afektif Go/No-Go",
+      "block1CommissionErrors": "Ralat komisen blok 1",
+      "block2CommissionErrors": "Ralat komisen blok 2",
+      "block": "Sekat",
+      "go": "Pergi"
+    },
+    "ambiguousFigures": {
+      "meanSwitchRate": "Kadar suis min",
+      "meanSwitchesfigure": "Min suis/angka",
+      "totalSwitches": "Jumlah suis",
+      "title": "Angka Ambik",
+      "meanSwitches": "Suis Min",
+      "switchRate": "Kadar Tukar",
+      "figures": "Angka",
+      "totalSwitchesLabel": "Jumlah Suis",
+      "duration": "Tempoh",
+      "switchesCount": "s | Suis:",
+      "switchButton": "Tukar!"
+    },
+    "analogies": {
+      "verbalCorrect": "Verbal betul",
+      "timeout": "tamat masa",
+      "title": "Analogi"
+    },
+    "ansComparison": {
+      "weber": "Weber",
+      "title": "Perbandingan ANS",
+      "ratio": "Nisbah",
+      "leftMore": "Tinggal lagi",
+      "rightMore": "Betul lagi"
+    },
+    "artificialGrammar": {
+      "falseAlarmRate": "Kadar penggera palsu",
+      "grammatical": "Tatabahasa",
+      "memorizeTheseStrings": "Menghafal rentetan ini",
+      "testPhase": "Fasa Ujian",
+      "ungrammatical": "Tidak gramatis",
+      "learning": "Pembelajaran",
+      "test": "Ujian",
+      "title": "Tatabahasa Buatan",
+      "learningPhase": "Pembelajaran",
+      "testIntroText": "Anda kini akan melihat rentetan baharu. Tentukan sama ada setiap satu mengikut peraturan yang sama seperti rentetan yang baru anda pelajari.",
+      "startTest": "Mulakan Ujian",
+      "followsRules": "Ikut peraturan",
+      "breaksRules": "Melanggar peraturan"
+    },
+    "attentionalBlink": {
+      "blinkMagnitude": "Berkelip Magnitud",
+      "title": "Kelip Perhatian",
+      "blink": "Kejap",
+      "t1Acc": "T1 Acc",
+      "t2Acc": "T2 Acc",
+      "firstGreenLetter": "huruf hijau pertama?",
+      "secondGreenLetter": "huruf hijau ke-2?"
+    },
+    "attentionalCapture": {
+      "captureCost": "Kos Tangkapan",
+      "singletonPresent": "Singleton Hadir",
+      "noSingleton": "Tiada Singleton",
+      "title": "Tangkapan Perhatian",
+      "capture": "Tangkap",
+      "horizontal": "Mendatar",
+      "vertical": "Menegak"
+    },
+    "audiovisualBinding": {
+      "bindingWindow": "Tetingkap Mengikat",
+      "title": "Pengikat Audiovisual",
+      "window": "Tingkap",
+      "pssLabel": "PSS (Titik Keselarasan Subjektif)",
+      "simultaneousOrNot": "Serentak atau tidak?",
+      "simultaneous": "Serentak",
+      "notSimultaneous": "Bukan serentak"
+    },
+    "auditoryDuration": {
+      "durationThreshold": "Ambang Tempoh",
+      "reference": "Rujukan",
+      "weberFraction": "Pecahan Weber",
+      "title": "Tempoh Auditori",
+      "threshold": "Ambang",
+      "weber": "Weber",
+      "whichLonger": "Yang mana lebih panjang?",
+      "firstLonger": "Pertama lebih lama",
+      "secondLonger": "Kedua lagi"
+    },
+    "bart": {
+      "adjustedAvgPumps": "Purata pam dilaraskan",
+      "avgTimeballoon": "Purata masa/belon",
+      "banked": "Dibankkan!",
+      "lostEarnings": "Pendapatan hilang!",
+      "overallAvgPumps": "Purata pam keseluruhan",
+      "popRate": "Kadar pop",
+      "totalEarned": "Jumlah Perolehan",
+      "balloons": "belon",
+      "cashed": "Ditunai",
+      "popped": "Muncul",
+      "adjPumps": "Adj. pam",
+      "pop": "Pop",
+      "pump": "Pam",
+      "cashIn": "Masuk Tunai"
+    },
+    "beadsTask": {
+      "avgDecisionTime": "Purata Masa Keputusan",
+      "drawBeadsToGatherEvidence": "Lukis manik untuk mengumpul bukti",
+      "jtc": "JTC",
+      "title": "Tugasan Manik",
+      "meanDraws": "Purata cabutan",
+      "rounds": "Pusingan",
+      "jtcRate": "Kadar JTC",
+      "meanDrawsToDecision": "Purata Keputusan",
+      "jtcRateThreshold": "Kadar JTC (<{{threshold}} cabutan)",
+      "round": "Bulat",
+      "jarDescription": "Balang A: 85% hijau / Balang B: 85% merah",
+      "itWasJar": "Ia adalah Jar",
+      "drawABead": "Lukiskan Manik",
+      "jarAGreen": "Balang A Hijau",
+      "jarBRed": "Balang B Merah"
+    },
+    "binding": {
+      "changedTrials": "Percubaan yang diubah",
+      "sameAccuracy": "Ketepatan yang sama",
+      "sameTrials": "Percubaan yang sama",
+      "title": "Mengikat Ciri",
+      "binding": "Mengikat",
+      "bindingAccuracyChanged": "Tukar ketepatan",
+      "same": "sama",
+      "different": "Berbeza"
+    },
+    "blockDesign": {
+      "cells": "sel",
+      "target": "Sasaran",
+      "yourAnswer": "Jawapan awak",
+      "tapHint": "Ketik untuk mengitar warna",
+      "check": "Semak"
+    },
+    "brixton": {
+      "adapt": "Menyesuaikan diri",
+      "adaptationCost": "Kos penyesuaian",
+      "nonswitchTrials": "Percubaan bukan suis",
+      "switchTrials": "Tukar percubaan"
+    },
+    "brownPeterson": {
+      "rememberTheseLetters": "Ingat surat-surat ini",
+      "selectThe3Letters": "Pilih 3 huruf",
+      "title": "Tugas Brown-Peterson",
+      "forgetting": "terlupa",
+      "sDelay": "S Kelewatan",
+      "minus3": "Tolak3",
+      "delay": "kelewatan"
+    },
+    "cambridgeGambling": {
+      "decisionQuality": "Kualiti keputusan",
+      "finalPoints": "Mata akhir",
+      "meanBet": "Bermaksud pertaruhan",
+      "winRate": "Kadar kemenangan",
+      "wins": "Menang",
+      "title": "Tugas Perjudian Cambridge",
+      "totalPoints": "Jumlah mata",
+      "quality": "Kualiti",
+      "rational": "Rasional",
+      "avgBet": "Purata pertaruhan",
+      "trial": "Perbicaraan",
+      "whichColorHidesToken": "Warna yang manakah menyembunyikan token?",
+      "youChose": "awak pilih",
+      "howMuchToBet": "Berapa banyak untuk bertaruh?"
+    },
+    "cancellation": {
+      "false": "palsu",
+      "target": "Sasaran:",
+      "total": "Jumlah",
+      "title": "Tugas Pembatalan (d2)",
+      "misses": "Rindu",
+      "targetDescription": "d dengan 2 markah"
+    },
+    "changeBlindness": {
+      "detectionRate": "Kadar Pengesanan",
+      "found": "Dijumpai",
+      "meanDetectionTime": "Purata Masa Pengesanan",
+      "title": "Tukar Buta",
+      "missed": "terlepas",
+      "avgTime": "Purata masa",
+      "instructions": "Arahan"
+    },
+    "cognitiveEstimation": {
+      "bestEstimate": "Anggaran Terbaik",
+      "meanScore": "Skor Min",
+      "worstEstimate": "Anggaran Terburuk",
+      "inRange": "Anggaran yang baik!",
+      "title": "Anggaran Kognitif",
+      "meanScoreLabel": "Skor Min",
+      "inRangeLabel": "Dalam Julat",
+      "extreme": "melampau",
+      "scoreLabel": "skor",
+      "submit": "Hantar"
+    },
+    "common": {
+      "accuracy": "Ketepatan",
+      "bias": "berat sebelah",
+      "falseAlarmRate": "Kadar Penggera Palsu",
+      "hitRate": "Kadar Hit",
+      "hits": "Hits",
+      "listening": "Mendengar...",
+      "meanRt": "Maksud RT",
+      "timedOut": "Tamat Masa",
+      "timedOut2": "Tamat masa",
+      "faRate": "Taux de FA",
+      "paused": "Dijeda"
+    },
+    "confidenceCalibration": {
+      "howConfidentAreYou": "Sejauh mana keyakinan anda?",
+      "rateYourConfidence": "Nilai keyakinan anda",
+      "title": "Penentukuran Keyakinan",
+      "calError": "Ralat penentukuran",
+      "confidence": "Keyakinan"
+    },
+    "consequences": {
+      "best": "Terbaik",
+      "nextRound": "Pusingan seterusnya...",
+      "time": "Masa",
+      "placeholder": "Taipkan akibat...",
+      "title": "Akibat",
+      "totalIdeas": "Jumlah Idea",
+      "avgPerRound": "Purata setiap pusingan",
+      "rounds": "Pusingan",
+      "noConsequencesListed": "Tiada akibat yang disenaraikan",
+      "roundProgress": "Bulat {{current}} / {{total}}",
+      "typeAndPressAdd": "Taip dan tekan Tambah"
+    },
+    "contextualCueing": {
+      "cueingEffect": "Kesan Cueing",
+      "newConfigRt": "RT Konfigurasi Baharu",
+      "oldConfigRt": "RT Konfigurasi Lama",
+      "title": "Petunjuk Kontekstual",
+      "cueing": "isyarat",
+      "oldRt": "RT lama",
+      "newRt": "RT baharu",
+      "prompt": "Prompt",
+      "left": "kiri",
+      "right": "Betul"
+    },
+    "contourIntegration": {
+      "thresholdJitter": "Jitter ambang",
+      "title": "Integrasi Kontur",
+      "pipeJitter": "| gelisah"
+    },
+    "contrastSensitivity": {
+      "thresholdContrast": "Kontras ambang",
+      "title": "Kepekaan Kontras",
+      "threshold": "Ambang",
+      "left": "kiri",
+      "right": "Betul"
+    },
+    "cpt": {
+      "nontargets": "Bukan sasaran",
+      "target": "Sasaran",
+      "nonTarget": "Bukan sasaran",
+      "dPrime": "d'",
+      "targetsLetter": "Surat sasaran",
+      "tapForLetterOnly": "Ketik untuk huruf sasaran sahaja"
+    },
+    "crowding": {
+      "criticalSpacing": "Jarak kritikal",
+      "leftAccuracy": "Ketepatan kiri",
+      "rightAccuracy": "Ketepatan yang betul"
+    },
+    "cryptogram": {
+      "hints": "Petunjuk",
+      "title": "Kriptogram",
+      "solved": "Selesai",
+      "time": "Masa",
+      "puzzles": "Teka-teki",
+      "puzzle": "Teka-teki",
+      "hint": "Petunjuk",
+      "clear": "Jelas"
+    },
+    "delayDiscounting": {
+      "areaUnderCurve": "Kawasan Di Bawah Lengkung",
+      "discountRateK": "Kadar diskaun (k)",
+      "impulsivityIndex": "Indeks impulsif",
+      "title": "Penangguhan Diskaun",
+      "aucPatience": "Kesabaran AUC",
+      "patient": "sabar",
+      "kRate": "K Kadar",
+      "impuls": "Impuls",
+      "indifferencePoints": "Titik Acuh tak acuh",
+      "whichPrefer": "Mana yang anda lebih suka?",
+      "today": "Hari ini"
+    },
+    "delayedMatching": {
+      "long": "Panjang",
+      "longDelay68s": "Kelewatan lama (6-8s)",
+      "med": "Med",
+      "mediumDelay46s": "Kelewatan sederhana (4-6s)",
+      "short": "pendek",
+      "shortDelay34s": "Kelewatan singkat (3-4s)",
+      "title": "Padanan Tertunda",
+      "delay": "kelewatan",
+      "rememberThisPattern": "Ingat corak ini",
+      "whichWasIt": "Yang mana tadi?"
+    },
+    "dichoticListening": {
+      "alertDetection": "Pengesanan Makluman",
+      "attendToTheLeftColumn": "Hadiri lajur KIRI",
+      "attendedAccuracy": "Ketepatan Dihadiri",
+      "ignoreTheRightColumn": "Abaikan lajur kanan",
+      "right": "RIGHT",
+      "title": "Mendengar Dikotik",
+      "attendedAcc": "Ketepatan yang dihadiri",
+      "alertDet": "Pengesanan amaran",
+      "alerts": "Makluman",
+      "selectLeftColumnWords": "Pilih perkataan lajur kiri",
+      "submit": "Hantar",
+      "alertQuestion": "Soalan makluman"
+    },
+    "directedForgetting": {
+      "forgetAccuracy": "Lupakan ketepatan",
+      "forgettingEffect": "Kesan lupa",
+      "newRejection": "Penolakan baru",
+      "rememberAccuracy": "Ingat ketepatan",
+      "title": "Diarah Lupa",
+      "remember": "Ingat",
+      "forget": "lupa",
+      "round": "Bulat",
+      "word": "Firman",
+      "wasThisWordShown": "Adakah perkataan ini ditunjukkan?"
+    },
+    "dotProbe": {
+      "attentionBiasScore": "Skor Bias Perhatian",
+      "congruentAcc": "Acc kongruen",
+      "congruentRt": "RT yang kongruen",
+      "incongruentAcc": "Acc yang tidak selaras",
+      "incongruentRt": "RT yang tidak selaras"
+    },
+    "doubleDecision": {
+      "carOrTruck": "Kereta atau Lori?",
+      "minDisplayReached": "Paparan Min Dicapai",
+      "positionAccuracy": "Ketepatan Kedudukan",
+      "thresholdDisplay": "Paparan Ambang",
+      "vehicleAccuracy": "Ketepatan Kenderaan",
+      "whereWasTheDiamond": "Di manakah berlian itu?",
+      "title": "Keputusan Berganda",
+      "threshold": "Ambang",
+      "bothOk": "Kedua-duanya betul",
+      "vehicle": "kenderaan",
+      "position": "kedudukan",
+      "car": "kereta",
+      "truck": "Lori"
+    },
+    "dsst": {
+      "items": "barang",
+      "itemsCompleted": "Item selesai",
+      "speedItemsmin": "Kelajuan (item/min)",
+      "attempts": "Percubaan",
+      "itemsPerMin": "Item / min"
+    },
+    "dualTask": {
+      "dualtaskCost": "Kos Dwi-Tugas",
+      "taskANumber": "Tugasan A (Nombor)",
+      "taskBSymbol": "Tugasan B (Simbol)",
+      "title": "Tugas Ganda",
+      "taskA": "Tugasan A",
+      "taskB": "Tugasan B",
+      "number": "Nombor",
+      "symbol": "Simbol",
+      "up": "Naik",
+      "down": "Bawah"
+    },
+    "dualTime": {
+      "sessionEnPause": "Sesi dijeda",
+      "votreEstimationSecondes": "Anggaran anda (saat)",
+      "sessionInterrupted": "Sesi terganggu",
+      "target": "Sasaran",
+      "estimation": "Anggaran",
+      "avgTime": "Purata masa",
+      "avgError": "Purata kesilapan",
+      "trials": "Percubaan",
+      "resumeToContinue": "Sambung semula untuk meneruskan",
+      "aimFor": "Matlamat untuk",
+      "second": "Kedua",
+      "howLongDidYouTake": "Berapa lama anda ambil?"
+    },
+    "dualTrack": {
+      "confirmer": "sahkan",
+      "dualTrack": "Dual Track",
+      "reprenezPourContinuer": "Sambung semula untuk meneruskan.",
+      "sessionEnPause": "Sesi dijeda",
+      "tapezLesCibles": "Ketik sasaran",
+      "tapezLaCible": "Ketik sasaran",
+      "appuyezConfirmer": "Tekan Sahkan",
+      "targetsCountLabel": "{{count}} sasaran",
+      "distractorsCountLabel": "{{count}} pengganggu",
+      "roundsCountLabel": "{{count}} pusingan",
+      "calibrationRoundsLabel": "{{count}} pusingan penentukuran",
+      "tierValue": "T{{current}}/{{total}}",
+      "tierHelp": "T = peringkat kesukaran perjalanan dalaman.",
+      "tierHelpCurrentWithPhase": "Anda kini berada di T{{current}} daripada {{total}} untuk {{targets}} sasaran. Fasa semasa: {{phase}}. Terdapat {{remaining}} peringkat yang tinggal sebelum tahap sasaran seterusnya.",
+      "phaseTracking": "Penjejakan",
+      "phaseAudio": "Penjejakan + audio",
+      "phaseColor": "Penjejakan + warna",
+      "phaseCombined": "Penjejakan + audio + warna",
+      "passLetters": "surat",
+      "passColors": "warna",
+      "moveInstruction": "Arahan bergerak",
+      "moveConfirmBtn": "Alih butang pengesahan",
+      "preparingSession": "Sesi penyediaan...",
+      "preparing3dScene": "Menyediakan pemandangan 3D...",
+      "startJourney": "Mulakan perjalanan",
+      "calibrationDescription": "Sebelum peringkat pertama, penentukuran yang lebih panjang akan menganggarkan tahap permulaan anda.",
+      "defaultDescription": "Bola akan menyala. Ikuti mereka semasa mereka bergerak, kemudian kenal pasti mereka.",
+      "startCalibration": "Mulakan penentukuran",
+      "calibrationTitle": "Penentukuran",
+      "estimatedStart": "Anggaran mulakan",
+      "roundsAnalyzed": "Pusingan dianalisis",
+      "willStartAt": "Akan bermula pada",
+      "targetsCount": "Sasaran",
+      "thenProgress": "kemudian maju"
+    },
+    "durationReproduction": {
+      "meanAbsoluteError": "Min Ralat Mutlak",
+      "ratio": "Nisbah",
+      "slope": "Cerun",
+      "vierordtSlope": "Cerun Vierordt",
+      "wait": "tunggu...",
+      "title": "Tempoh Pengeluaran semula",
+      "meanError": "Min Ralat",
+      "meanRatio": "Nisbah Min (dihasilkan/sasaran)",
+      "holdNow": "TAHAN SEKARANG",
+      "target": "Sasaran",
+      "error": "ralat"
+    },
+    "embeddedFigures": {
+      "fastest": "Terpantas",
+      "found": "Dijumpai",
+      "meanDetectionTime": "Masa pengesanan min",
+      "slowest": "Paling perlahan",
+      "title": "Angka Terbenam",
+      "missed": "terlepas",
+      "fastestLabel": "Terpantas",
+      "findThisShape": "Cari bentuk ini",
+      "memorizeShape": "Menghafal bentuk...",
+      "foundIt": "jumpa!",
+      "giveUp": "mengalah"
+    },
+    "emotionalNback": {
+      "falseAlarms": "Penggera Palsu",
+      "misses": "Rindu",
+      "title": "Emosi N-Kembali",
+      "match": "Perlawanan"
+    },
+    "emotionalStroop": {
+      "neutralRt": "RT neutral",
+      "positiveRt": "RT positif",
+      "threatRt": "RT ugutan",
+      "title": "Stroop Emosi",
+      "interference": "Gangguan",
+      "interferenceThreatNeutral": "Gangguan (Ancaman − Neutral)"
+    },
+    "eyesTest": {
+      "totalTime": "Jumlah Masa"
+    },
+    "faceName": {
+      "gain": "Keuntungan",
+      "learningImprovement": "Penambahbaikan Pembelajaran",
+      "round1Accuracy": "Ketepatan Pusingan 1",
+      "round2Accuracy": "Ketepatan Pusingan 2",
+      "whoIsThis": "Siapakah ini?",
+      "title": "Persatuan Nama Muka",
+      "round": "Bulat",
+      "testPhase": "Fasa ujian"
+    },
+    "fauxPas": {
+      "who": "WHO?",
+      "why": "kenapa?",
+      "title": "Pengiktirafan Faux Pas",
+      "detection": "Pengesanan",
+      "scenarios": "Senario",
+      "fpFound": "Kesalahan palsu ditemui",
+      "control": "Kawalan",
+      "readyToAnswer": "Bersedia menjawab",
+      "didSomeoneSay": "Adakah seseorang mengatakan sesuatu yang tidak sepatutnya mereka katakan?",
+      "whoSaidIt": "Siapa yang cakap?",
+      "whyInappropriate": "Mengapa ia tidak sesuai?"
+    },
+    "feelingOfKnowing": {
+      "recallAccuracy": "Ingat Ketepatan",
+      "recognitionAccuracy": "Ketepatan Pengiktirafan",
+      "recallPlaceholder": "Taip jawapan anda...",
+      "unlikely": "Tidak mungkin",
+      "certain": "pasti",
+      "title": "Perasaan Mengetahui",
+      "recall": "Ingat kembali",
+      "recognition": "Pengiktirafan",
+      "fokR": "Fok R",
+      "questions": "Soalan",
+      "recalled": "Teringat semula",
+      "recognized": "Diiktiraf",
+      "fokSensitivity": "Sensitiviti FOK",
+      "submit": "Hantar",
+      "dontKnow": "tak tahu",
+      "fokPrompt": "Adakah anda akan mengenalinya?",
+      "selectCorrectAnswer": "Pilih jawapan yang betul",
+      "answer": "Jawab"
+    },
+    "fingerTapping": {
+      "firstTrial": "Percubaan Pertama",
+      "lastTrial": "Percubaan Terakhir",
+      "sequence": "Urutan",
+      "speedupT1VsT12": "Kelajuan (T1 lwn T12)",
+      "title": "Mengetik Jari"
+    },
+    "fittsTapping": {
+      "avgMovementTime": "Purata Masa Pergerakan",
+      "avgThroughput": "Purata Throughput",
+      "title": "Fitts Tapping",
+      "throughput": "Throughput",
+      "tapTarget": "Ketik sasaran yang diserlahkan"
+    },
+    "foreperiod": {
+      "early": "awal",
+      "slope": "Cerun",
+      "title": "Persediaan Sementara",
+      "fpEffectSlope": "Cerun Kesan FP"
+    },
+    "frequencyDiscrimination": {
+      "reversals": "Pembalikan",
+      "threshold": "Ambang",
+      "tone1": "Nada 1",
+      "tone2": "Nada 2",
+      "weber": "Weber",
+      "weberFraction": "Pecahan Weber",
+      "hz": "Hz",
+      "title": "Diskriminasi Kekerapan",
+      "thresholdLabel": "Ambang",
+      "hzDiff": "Perbezaan Hz",
+      "whichWasHigher": "Yang mana lebih tinggi?",
+      "firstHigher": "Pertama lebih tinggi",
+      "secondHigher": "Kedua lebih tinggi"
+    },
+    "gabor": {
+      "gaborPatch": "Tampalan Gabor",
+      "leftAccuracy": "Ketepatan kiri",
+      "leftTrials": "Meninggalkan percubaan",
+      "noiseMask": "Topeng bunyi bising",
+      "rightAccuracy": "Ketepatan yang betul",
+      "rightTrials": "Percubaan yang betul",
+      "thresholdAngle": "Sudut ambang",
+      "title": "Gabor",
+      "threshold": "Ambang",
+      "reversals": "Pembalikan",
+      "timedOut": "Tamat masa",
+      "left": "kiri",
+      "right": "Betul"
+    },
+    "gameOfDice": {
+      "finalPoints": "Mata akhir",
+      "risky": "berisiko",
+      "riskyChoices": "Pilihan berisiko",
+      "safe": "selamat",
+      "winRate": "Kadar kemenangan",
+      "wins": "Menang",
+      "title": "Tugasan Permainan Dadu",
+      "totalPoints": "Jumlah mata",
+      "riskyLabel": "berisiko",
+      "roll": "gulung",
+      "chooseYourBet": "Pilih pertaruhan anda",
+      "pickNumbers": "Pilih nombor anda"
+    },
+    "gapDetection": {
+      "gapOrNoGap": "Jurang atau tiada jurang?",
+      "gapThreshold": "Ambang Jurang",
+      "title": "Pengesanan Senyap",
+      "noGap": "Tiada Jurang"
+    },
+    "gazeDirection": {
+      "whereWasTheGaze": "Di manakah pandangan itu?",
+      "direct": "Langsung",
+      "left": "kiri",
+      "right": "Betul",
+      "title": "Arah Pandangan",
+      "dPrimeDirectGaze": "D Pandangan Langsung Perdana"
+    },
+    "hayling": {
+      "part1Initiation": "Bahagian 1 (Permulaan)",
+      "part2": "Bahagian 2",
+      "part2Suppression": "Bahagian 2 (Penindasan)",
+      "suppressionCost": "Kos Penindasan",
+      "title": "Hayling",
+      "part1": "Bahagian 1",
+      "part2Label": "Bahagian 2",
+      "suppression": "Penindasan",
+      "obvious": "Jelas",
+      "obviousPicksPart2": "Pilihan yang jelas (Bahagian 2)",
+      "chooseUnrelated": "Pilih perkataan yang tidak berkaitan",
+      "completelyUnrelated": "Tidak berkaitan sama sekali",
+      "doNotPickObvious": "JANGAN pilih perkataan yang jelas!"
+    },
+    "iedSetShift": {
+      "advancingToNextStage": "Maju ke peringkat seterusnya...",
+      "stageComplete": "Pentas selesai!",
+      "title": "Anjakan Set IED",
+      "stages": "peringkat",
+      "edsCost": "Kos EDS",
+      "stage": "pentas",
+      "correctNeeded": "Betul diperlukan untuk maju"
+    },
+    "informationSampling": {
+      "cost": "kos",
+      "free": "Percuma",
+      "meanTilesCost": "Jubin min (kos)",
+      "meanTilesFree": "Jubin min (percuma)",
+      "totalCost": "Jumlah Kos",
+      "title": "Persampelan Maklumat",
+      "tiles": "jubin",
+      "tapToReveal": "Ketik untuk mendedahkan"
+    },
+    "inspectionTime": {
+      "final": "Akhir",
+      "finalDisplayTime": "Masa paparan akhir",
+      "minCorrectIt": "Min betul IT",
+      "threshold": "Ambang",
+      "title": "Masa Pemeriksaan",
+      "thresholdLabel": "Ambang",
+      "minIt": "Min IT"
+    },
+    "iowaGambling": {
+      "balance": "Baki:",
+      "chooseADeck": "Pilih dek",
+      "deckADraws": "Dek A cabutan",
+      "deckBDraws": "Cabutan dek B",
+      "deckCDraws": "Cabutan dek C",
+      "deckDDraws": "Dek D melukis",
+      "first40Advantageous": "40 pertama berfaedah",
+      "last40Advantageous": "40 terakhir berfaedah",
+      "learn": "Belajar",
+      "learningIndex": "Indeks pembelajaran",
+      "title": "Perjudian Iowa",
+      "advantageousPct": "% berfaedah",
+      "earnings": "Pendapatan",
+      "last40": "Last40"
+    },
+    "judgmentOfLearning": {
+      "calibrationBias": "Bias Penentukuran",
+      "meanJol": "Bermaksud JOL",
+      "nowTestYourRecall": "Sekarang uji ingatan anda",
+      "studyComplete": "Pengajian selesai",
+      "whatWasPairedWith": "Apa yang digandingkan dengan…?",
+      "title": "Penghakiman Pembelajaran",
+      "recallAccuracy": "Ingat Ketepatan",
+      "jolGamma": "JOL Gamma",
+      "jolAccuracyGamma": "Ketepatan JOL (Gamma)",
+      "howLikelyRemember": "Berapa kemungkinan anda akan ingat?",
+      "hiddenAnswer": "Jawapan tersembunyi"
+    },
+    "judgmentOfRecency": {
+      "close": "tutup",
+      "closeGap13": "Tutup jurang (1-3)",
+      "far": "Jauh",
+      "farGap9": "Jurang jauh (9+)",
+      "mediumGap48": "Jurang sederhana (4-8)",
+      "title": "Penghakiman Kebaruan",
+      "medium": "Sederhana",
+      "studyPhaseMemorizeOrder": "Fasa Belajar — Menghafal pesanan",
+      "whichMoreRecently": "Yang mana muncul lebih baru-baru ini?"
+    },
+    "lexicalDecision": {
+      "meanRtNonwords": "Min RT (bukan perkataan)",
+      "meanRtWords": "Min RT (perkataan)",
+      "nonwordsAccuracy": "Ketepatan bukan perkataan",
+      "wordsAccuracy": "Ketepatan perkataan",
+      "word": "Firman",
+      "nonword": "Bukan perkataan"
+    },
+    "maze": {
+      "duration": "Tempoh",
+      "optimalSteps": "Langkah Optimum",
+      "pathEfficiency": "Kecekapan Laluan",
+      "totalSteps": "Jumlah Langkah",
+      "wallHits": "Hentakan Dinding",
+      "title": "Maze",
+      "completed": "Selesai",
+      "efficiency": "Kecekapan",
+      "wallHitsLabel": "Hentakan Dinding",
+      "steps": "Langkah"
+    },
+    "memobox": {
+      "easy": "Mudah",
+      "easy2Boxes": "Mudah (2 kotak)",
+      "hard": "Keras",
+      "hard4Boxes": "Keras (4 kotak)",
+      "medium3Boxes": "Sederhana (3 kotak)",
+      "title": "Kotak memo",
+      "rounds": "Pusingan",
+      "medium": "Sederhana",
+      "watchMovements": "Perhatikan pergerakan...",
+      "howManyBalls": "Berapakah bilangan bola dalam setiap kotak?",
+      "submit": "Hantar",
+      "roundOf": "Pusingan {{current}} daripada {{total}}"
+    },
+    "mentalCutting": {
+      "whatIsTheCrosssection": "Apakah keratan rentas?",
+      "title": "Pemotongan Mental"
+    },
+    "mnemonicDiscrimination": {
+      "oldSimilarOrNew": "Lama, serupa, atau baru?",
+      "patternSeparation": "Pemisahan Corak",
+      "sep": "Sep.",
+      "old": "Lama",
+      "similar": "serupa",
+      "new": "baru",
+      "ldi": "LDI",
+      "title": "Diskriminasi Mnemonik",
+      "hitRateOldDetected": "Kadar Hit (Lama dikesan)",
+      "lureDiscrimination": "Diskriminasi Pikat (LDI)",
+      "memorize": "Menghafal",
+      "testPhase": "Fasa ujian"
+    },
+    "multiArmedBandit": {
+      "earnings": "Pendapatan:",
+      "pickMachine": "Pilih mesin",
+      "title": "Penyamun Pelbagai Bersenjata",
+      "totalReward": "Jumlah ganjaran",
+      "optimal": "Optimum",
+      "regret": "Menyesal",
+      "exploit": "mengeksploitasi",
+      "machine": "Mesin",
+      "armsExplored": "Senjata diterokai"
+    },
+    "navon": {
+      "globalBigLetter": "Global (surat besar)",
+      "localSmallLetter": "Tempatan (huruf kecil)",
+      "title": "Navon",
+      "globalAdv": "Global Adv.",
+      "whatBigLetter": "Surat BESAR apa?",
+      "whatSmallLetter": "Surat KECIL apa?"
+    },
+    "negativePriming": {
+      "controlRt": "Kawalan RT",
+      "nameTheRedShape": "Namakan bentuk merah itu",
+      "negativePrimingRt": "RT Priming Negatif",
+      "positivePrimingRt": "RT Priming Positif",
+      "npRt": "NP RT",
+      "ppRt": "PP RT",
+      "npEffect": "Kesan NP",
+      "title": "Priming Negatif",
+      "ctrlRt": "Ctrl RT"
+    },
+    "numberLine": {
+      "estimationBias": "Bias anggaran",
+      "linearityRsup2": "Kelinearan (R&sup2;)",
+      "meanAbsoluteError": "Min ralat mutlak",
+      "tapTheLineToPlaceTheNumber": "Ketik baris untuk meletakkan nombor",
+      "title": "Garis Nombor",
+      "meanError": "Min Ralat",
+      "yourEstimate": "Anggaran anda",
+      "correct": "Betul"
+    },
+    "oddOneOut": {
+      "colorTrials": "Percubaan warna",
+      "shapeTrials": "Percubaan bentuk",
+      "shape": "bentuk",
+      "color": "warna",
+      "timeout": "tamat masa",
+      "shapeDiffAccuracy": "Perbezaan bentuk. ketepatan",
+      "colorDiffAccuracy": "Perbezaan warna. ketepatan",
+      "shapeDiffAvgRt": "Perbezaan bentuk. purata RT",
+      "colorDiffAvgRt": "Perbezaan warna. purata RT"
+    },
+    "orientationDiscrimination": {
+      "whichWay": "jalan mana?",
+      "thresholdAngle": "Sudut ambang",
+      "title": "Diskriminasi Orientasi",
+      "threshold": "Ambang",
+      "counterCw": "CCW",
+      "clockwise": "ikut arah jam"
+    },
+    "patternComparison": {
+      "differentTrials": "Percubaan yang berbeza",
+      "sameTrials": "Percubaan yang sama",
+      "same": "sama",
+      "different": "Berbeza"
+    },
+    "patternRecognition": {
+      "newPatterns": "Corak baru",
+      "oldPatterns": "Corak lama",
+      "old": "OLD",
+      "new": "NEW",
+      "studyPatterns": "Kaji corak dengan teliti",
+      "memorize": "Menghafal ({{current}}/{{total}})",
+      "getReady": "Bersedialah...",
+      "testPhaseStarting": "Fasa ujian bermula..."
+    },
+    "perspectiveTaking": {
+      "exactCorrect": "Tepat Betul",
+      "meanAngularError": "Min ralat sudut",
+      "withinTolerance": "Dalam toleransi",
+      "title": "Pengambilan Perspektif",
+      "avgErr": "Purata kesilapan",
+      "youAreAt": "Anda berada di",
+      "facing": "Menghadap",
+      "pointTo": "Tunjuk ke"
+    },
+    "phonemeDiscrimination": {
+      "freqThreshold": "Kekerapan Ambang",
+      "seq1": "Seq 1",
+      "seq2": "Seq 2",
+      "title": "Diskriminasi Fonem",
+      "thresh": "Thresh",
+      "sameOrDifferent": "Sama atau berbeza?",
+      "same": "sama",
+      "different": "Berbeza"
+    },
+    "predictionMotion": {
+      "biasLate": "Bias (+ = lewat)",
+      "meanAbsoluteError": "Min Ralat Mutlak",
+      "precisionSd": "Kepersisan (SD)",
+      "title": "Usul Ramalan",
+      "absError": "Abs. kesilapan",
+      "precision": "Ketepatan",
+      "responded": "Dijawab",
+      "tapWhenReachesTarget": "TAP apabila ia mencapai sasaran"
+    },
+    "promem": {
+      "ongoingAccuracy": "Ketepatan berterusan",
+      "ongoingRt": "RT yang sedang berjalan",
+      "pmHitRate": "Kadar pukulan PM",
+      "pmRt": "PM RT",
+      "pmTargets": "sasaran PM",
+      "title": "Ingatan Bakal",
+      "ongoing": "Sedang berlangsung",
+      "pmHits": "PM Hits",
+      "pmMisses": "PM Rindu",
+      "living": "hidup",
+      "nonLiving": "Tidak bernyawa",
+      "redWordInstruction": "Perkataan merah = tekan"
+    },
+    "proverbInterpretation": {
+      "distractorErrors": "Ralat Pengganggu",
+      "literalErrorRate": "Kadar Ralat Tersurat",
+      "literalErrors": "Kesilapan Tersurat",
+      "title": "Tafsiran Peribahasa",
+      "literal": "literal",
+      "litRate": "Menyala. Kadar",
+      "whatDoesThisMean": "Apakah maksud ini?"
+    },
+    "pursuitTracking": {
+      "getReadyToFollow": "Bersedia untuk mengikuti",
+      "meanTimeOnTarget": "Min Masa pada Sasaran",
+      "meanTrackingError": "Min ralat penjejakan",
+      "placeYourFingerOnTheScreen": "Letakkan jari anda pada skrin",
+      "title": "Penjejakan Mengejar",
+      "timeOnTarget": "Masa tepat sasaran",
+      "error": "ralat",
+      "onTarget": "Pada Sasaran",
+      "avgError": "Purata kesilapan",
+      "improve": "perbaiki",
+      "improvementT1VsT": "Penambahbaikan T1 Vs T",
+      "errorLabel": "ralat",
+      "followGreenTarget": "Ikut sasaran hijau"
+    },
+    "rapidNaming": {
+      "roundComplete": "Pusingan lengkap",
+      "totalErrors": "Jumlah Ralat",
+      "title": "Penamaan Cepat",
+      "avgSpeed": "Purata kelajuan",
+      "totalTime": "Jumlah Masa",
+      "round": "Bulat",
+      "getReady": "Bersedialah!"
+    },
+    "rebusPuzzles": {
+      "avgSolveTime": "Purata Masa Penyelesaian",
+      "solved": "Selesai",
+      "wrong": "salah",
+      "placeholder": "Jawapan awak...",
+      "title": "Teka-teki Rebus",
+      "puzzles": "Teka-teki",
+      "timeout": "tamat masa",
+      "submit": "Hantar",
+      "answer": "Jawab"
+    },
+    "remoteAssociates": {
+      "avgSolveTime": "Purata Masa Penyelesaian",
+      "solved": "Selesai",
+      "placeholder": "Jawapan awak...",
+      "title": "Rakan Bersekutu Jauh",
+      "timeout": "tamat masa",
+      "submit": "Hantar",
+      "answer": "Jawab"
+    },
+    "reversalLearning": {
+      "adapt": "Menyesuaikan diri",
+      "loseshiftRate": "Kadar Hilang Anjakan",
+      "score": "Markah:",
+      "winstayRate": "Kadar Win-Stay",
+      "title": "Pembelajaran Pembalikan",
+      "rewards": "Ganjaran",
+      "reversals": "Pembalikan",
+      "persev": "Persev",
+      "avgTrialsToCriterion": "Purata percubaan kepada kriteria",
+      "pickACard": "Pilih kad"
+    },
+    "reyFigure": {
+      "countBackwardsBy7": "Kira ke belakang sebanyak 7",
+      "reproduceThePatternFromMemory": "Menghasilkan semula corak daripada ingatan",
+      "title": "Rajah Kompleks Rey",
+      "copy": "salin",
+      "recall": "Ingat kembali",
+      "retention": "Pengekalan",
+      "trial": "Perbicaraan",
+      "target": "Sasaran",
+      "yourCopy": "Salinan anda",
+      "submit": "Hantar"
+    },
+    "rhythm": {
+      "avgTimingError": "Ralat pemasaan purata",
+      "bestTrialError": "Ralat percubaan terbaik",
+      "correctTrials": "Percubaan yang betul",
+      "worstTrialError": "Ralat percubaan paling teruk",
+      "watchRhythm": "Tonton irama",
+      "getReady": "Bersedialah...",
+      "tapTheRhythm": "Ketik irama!",
+      "tooFarOff": "Terlalu jauh!",
+      "tapToReproduce": "Ketik untuk menghasilkan semula",
+      "beats": "{{count}} rentak",
+      "bestTrial": "Percubaan terbaik",
+      "worstTrial": "Percubaan paling teruk",
+      "title": "Irama",
+      "msErr": "ms err"
+    },
+    "routePlanning": {
+      "time": "Masa",
+      "title": "Perancangan Laluan",
+      "levels": "Tahap",
+      "completed": "Selesai",
+      "avgMoves": "Purata bergerak",
+      "clear": "Jelas",
+      "submit": "Hantar",
+      "instructions": "Arahan"
+    },
+    "rvp": {
+      "detect357246468": "Kesan: 3-5-7, 2-4-6, 4-6-8",
+      "targetSequences": "Urutan Sasaran",
+      "fa": "FA",
+      "hitRate": "Kadar pukulan",
+      "misses": "Rindu",
+      "sequences": "Urutan"
+    },
+    "sart": {
+      "commissionErrors": "Kesilapan komisen",
+      "omissionErrors": "Kesilapan peninggalan",
+      "tapAllDigits": "Ketik semua digit kecuali 3",
+      "except3": "Kecuali3"
+    },
+    "sceneCrasher": {
+      "adds": "Menambah",
+      "studyTheScene": "Kaji tempat kejadian",
+      "swaps": "Pertukaran",
+      "tapTheNewchangedObject": "Ketik objek baharu/diubah"
+    },
+    "sentenceVerification": {
+      "falseSentences": "Ayat palsu",
+      "trueSentences": "Ayat yang benar",
+      "byCategory": "Mengikut Kategori",
+      "title": "Pengesahan Ayat",
+      "trueRt": "RT yang betul",
+      "true": "betul",
+      "false": "palsu",
+      "pressKey": "Tekan"
+    },
+    "soundSweeps": {
+      "down": "Bawah",
+      "downAccuracy": "Ketepatan bawah",
+      "durationThreshold": "Ambang Tempoh",
+      "up": "Naik",
+      "upAccuracy": "Ketepatan",
+      "title": "Sapuan Bunyi",
+      "threshold": "Ambang",
+      "upOrDown": "Atas atau bawah?"
+    },
+    "sourceMemory": {
+      "color": "warna",
+      "colorRecall": "Ingat warna",
+      "frame": "Bingkai",
+      "frameRecall": "Ingat semula bingkai",
+      "getReadyForTheTest": "Bersedia untuk ujian!",
+      "itemRecognition": "Pengecaman item",
+      "positionRecall": "Imbas kembali kedudukan",
+      "sourceAccuracy": "Ketepatan sumber",
+      "title": "Memori Sumber",
+      "source": "Sumber",
+      "position": "kedudukan",
+      "word": "Firman",
+      "wasThisWordShown": "Adakah perkataan ini ditunjukkan?",
+      "bottom": "Bawah",
+      "blue": "Biru",
+      "orange": "Jingga",
+      "circle": "Bulatan",
+      "square": "Segi empat"
+    },
+    "speechInNoise": {
+      "noiseThreshold": "Ambang Bunyi",
+      "title": "Pertuturan-dalam-Bunyi",
+      "noise": "bising",
+      "whichWordWasIt": "Perkataan yang manakah itu?"
+    },
+    "srtt": {
+      "learningEffect": "Kesan pembelajaran",
+      "learning": "Pembelajaran",
+      "block": "Sekat"
+    },
+    "statisticalLearning": {
+      "chanceLevel": "Tahap Peluang",
+      "learningDetected": "Pembelajaran Dikesan",
+      "testPhase": "Fasa Ujian",
+      "whichPairLooksMoreFamiliar": "Pasangan mana yang kelihatan lebih dikenali?",
+      "title": "Pembelajaran Statistik",
+      "learning": "Pembelajaran",
+      "watchTheShapes": "Perhatikan bentuk"
+    },
+    "syllogisms": {
+      "beliefBiasEffect": "Kesan Bias Kepercayaan",
+      "conclusion": "Kesimpulan",
+      "premise1": "Premis 1",
+      "premise2": "Premis 2",
+      "logicalValidityQuestion": "Adakah ini sah secara logik?",
+      "valid": "sah",
+      "invalid": "Tidak sah"
+    },
+    "symbolSearch": {
+      "absentAccuracy": "Ketepatan tidak hadir",
+      "presentAccuracy": "Ketepatan hadir",
+      "title": "Carian Simbol",
+      "present": "Hadir",
+      "absent": "tidak hadir",
+      "targets": "Sasaran",
+      "searchGroup": "Kumpulan carian"
+    },
+    "syncContinuation": {
+      "async": "Async",
+      "asynchrony": "Asynchrony",
+      "drift": "hanyut",
+      "cv": "CV",
+      "title": "Sync-Sambungan",
+      "meanCv": "Min CV",
+      "tempos": "Tempos",
+      "tempo": "Tempo",
+      "ioi": "Ioi",
+      "getReady": "Bersedia...",
+      "nextTempo": "Tempo seterusnya..."
+    },
+    "taskJuggling": {
+      "correctResets": "Tetapan Semula Betul",
+      "duration": "Tempoh",
+      "missedCounters": "Kaunter Terlepas",
+      "prematureResets": "Tetapan semula pramatang",
+      "totalEvents": "Jumlah Peristiwa",
+      "tooEarly": "Terlalu awal!",
+      "missed": "terlepas!",
+      "title": "Tugasan Juggling",
+      "premature": "pramatang",
+      "counter": "Kaunter",
+      "tapCounterInstruction": "Ketik setiap kaunter apabila ia mencapai ambangnya. Jangan biarkan apa-apa melimpah!"
+    },
+    "temporalBisection": {
+      "bisectionPointPse": "Titik Pembahagian (PSE)",
+      "curveSteepness": "Kecuraman Lengkung",
+      "idealMidpoint": "Titik Tengah Ideal",
+      "pse": "PSE",
+      "title": "Pembahagian Temporal",
+      "steepness": "Kecuraman",
+      "shortOrLong": "Pendek atau Panjang?",
+      "trainingPhase": "Fasa Latihan",
+      "short": "pendek",
+      "long": "Panjang"
+    },
+    "temporalGeneralization": {
+      "gradientWidth": "Lebar Kecerunan",
+      "rememberThisDuration": "Ingat tempoh ini",
+      "width": "Lebar",
+      "standard": "STANDARD",
+      "title": "Generalisasi sementara",
+      "hitRate": "Kadar pukulan",
+      "faRate": "Taux de FA",
+      "hitRateDetectStandard": "Kadar Hit (kesan standard)",
+      "sameDuration": "Tempoh yang sama?",
+      "trainingPhase": "Fasa Latihan",
+      "same": "sama",
+      "different": "Berbeza"
+    },
+    "textureDiscrimination": {
+      "thresholdSoa": "Ambang SOA",
+      "title": "Diskriminasi Tekstur",
+      "threshold": "Ambang"
+    },
+    "timePromem": {
+      "avgTimingError": "Ralat pemasaan purata",
+      "clockChecks": "Pemeriksaan jam",
+      "ongoingAccuracy": "Ketepatan berterusan",
+      "ongoingTrials": "Percubaan yang berterusan",
+      "totalPmPresses": "Jumlah Tekan PM",
+      "pmAccuracy": "Ketepatan PM",
+      "pmMisses": "PM rindu",
+      "title": "Bakal Masa",
+      "ongoing": "Sedang berlangsung",
+      "pmHitsLabel": "PM kena",
+      "timingErr": "Masa Err",
+      "pmHitsExpected": "PM Hit / Dijangka",
+      "pmPresses": "Tekan PM",
+      "checkClock": "Semak jam",
+      "thirtySecMark": "Markah 30an"
+    },
+    "toj": {
+      "meanResponseTime": "Min Masa Tindak Balas",
+      "temporalResolution": "Resolusi Temporal",
+      "title": "Penghakiman Perintah Sementara",
+      "threshold": "Ambang",
+      "whichCameFirst": "Yang mana dahulu?",
+      "leftFirst": "Kiri Dahulu",
+      "rightFirst": "Betul Pertama"
+    },
+    "tower": {
+      "budget": "Bajet",
+      "challenge": "Cabaran",
+      "challengeClassic": "Klasik",
+      "challengeExpert": "pakar",
+      "challengeMemory": "Ingatan",
+      "challengePrecision": "Ketepatan",
+      "dragDiscAriaLabel": "Seret cakera atas dari pasak {{peg}}",
+      "goal": "Matlamat",
+      "goalHiddenStatus": "Matlamat disembunyikan. Gunakan Reveal untuk menunjukkannya secara ringkas.",
+      "goalRevealedMessage": "Matlamat didedahkan selama 3 saat.",
+      "hint": "Petunjuk",
+      "hintDescription": "Tunjukkan langkah seterusnya yang terbaik",
+      "hintMessage": "Petunjuk: alihkan cakera atas dari pasak {{fromPeg}} ke pasak {{toPeg}}.",
+      "hiddenGoalDescription": "Gol disembunyikan semasa bermain. Gunakan Reveal apabila anda memerlukan muat semula pendek.",
+      "hiddenGoalTitle": "Cabaran ingatan",
+      "invalid": "Tidak sah",
+      "moves": "Bergerak",
+      "optimal": "Optimum",
+      "pegFullMessage": "Pasak itu penuh.",
+      "previewMemoryCountdown": "Menghafal matlamat. Bermula dalam {{seconds}}s.",
+      "previewPlanCountdown": "Rancang penyelesaian {{moves}}-move. Bermula dalam {{seconds}}s.",
+      "reset": "Tetapkan semula",
+      "resetDescription": "Mulakan semula teka-teki ini",
+      "resetMessage": "Set semula teka-teki.",
+      "reveal": "Dedahkan",
+      "revealDescription": "Dedahkan matlamat tersembunyi",
+      "statusOptimalSolve": "Penyelesaian yang optimum. Skor {{score}}.",
+      "statusSolvedScore": "Menyelesaikan dalam {{moves}} bergerak (+{{extraMoves}}). Skor {{score}}.",
+      "undo": "Buat asal",
+      "undoDescription": "Balikkan langkah terakhir",
+      "undoneMessage": "Pergerakan terakhir dibatalkan.",
+      "yourPegs": "pasak awak"
+    },
+    "trainOfThought": {
+      "correctDeliveries": "Penghantaran Betul",
+      "trainsLost": "Kereta api hilang",
+      "wrongStation": "salah stesen",
+      "title": "Keretapi Pemikiran",
+      "trains": "Kereta api",
+      "missed": "terlepas",
+      "scoreLabel": "skor",
+      "instructions": "Arahan"
+    },
+    "twentyQuestions": {
+      "avgQuestionsUsed": "Purata Soalan Digunakan",
+      "title": "Dua Puluh Soalan",
+      "avgQuestions": "Purata soalan",
+      "rounds": "Pusingan",
+      "efficiency": "Kecekapan",
+      "avgQuestionsCorrectOnly": "Purata soalan (betul sahaja)",
+      "questionsLabel": "Soalan",
+      "remaining": "yang tinggal",
+      "readyToGuess": "Saya bersedia untuk meneka!",
+      "tapTheTarget": "Ketik objek yang anda fikir adalah sasaran!"
+    },
+    "ufov": {
+      "usefulFieldOfView": "Medan Pandangan Berguna",
+      "visualNoiseMask": "Topeng bunyi visual",
+      "whatWasInTheCenter": "Apa yang ada di tengah?",
+      "whereWasTheTarget": "Di manakah sasarannya?",
+      "avgThreshold": "Purata ambang",
+      "speed": "Kelajuan",
+      "accuracy": "Ketepatan",
+      "central": "Pusat",
+      "peripheral": "persisian",
+      "overall": "Keseluruhannya",
+      "block": "Sekat",
+      "trials": "Percubaan",
+      "start": "Mulakan",
+      "focus": "Fokus",
+      "threshold": "Ambang",
+      "stimulus": "Rangsangan",
+      "respondFromMemory": "Balas dari ingatan",
+      "truck": "Lori",
+      "choosePeripheralLocation": "Pilih lokasi persisian",
+      "currentBlock": "Sekat {{n}}",
+      "exposure": "Pendedahan"
+    },
+    "verbalFluency": {
+      "wordsStartingWith": "Perkataan bermula dengan {{letter}}",
+      "title": "Kefasihan Lisan",
+      "totalWords": "Jumlah perkataan",
+      "duplicates": "Pendua",
+      "letter": "surat",
+      "round": "Bulat",
+      "roundComplete": "Pusingan lengkap",
+      "nextRound": "Pusingan seterusnya",
+      "middotRound": "· Bulat"
+    },
+    "vernierAcuity": {
+      "whichSide": "sebelah mana?",
+      "title": "Ketajaman Vernier",
+      "leftOffset": "Kiri mengimbangi",
+      "rightOffset": "Offset kanan",
+      "offset": "Offset"
+    },
+    "weatherPrediction": {
+      "optimalStrategy": "Strategi Optimum",
+      "correct": "Betul!",
+      "wrong": "salah",
+      "title": "Ramalan Cuaca",
+      "optimal": "Optimum",
+      "learningCurve": "Keluk Pembelajaran",
+      "predictTheWeather": "Ramalkan cuaca",
+      "rain": "hujan"
+    },
+    "wordChain": {
+      "avgResponseTime": "Purata Masa Respons",
+      "chain": "rantai",
+      "longestChain": "Rantaian Terpanjang",
+      "totalCorrect": "Jumlah Betul",
+      "totalWords": "Jumlah Perkataan",
+      "words": "perkataan",
+      "title": "Rantaian Perkataan",
+      "longest": "paling lama",
+      "avgRt": "Purata RT",
+      "endsWith": "berakhir dengan",
+      "chainLabel": "rantai",
+      "bestLabel": "Terbaik"
+    },
+    "wordFlow": {
+      "avgWordLength": "Purata panjang perkataan",
+      "correct": "Betul",
+      "invalidWords": "Perkataan tidak sah",
+      "totalWordsSelected": "Jumlah Perkataan yang Dipilih",
+      "validWords": "Perkataan yang sah",
+      "wordsPerMinute": "Perkataan seminit",
+      "wrong": "salah",
+      "seeResults": "Lihat hasil",
+      "nextRound": "Pusingan seterusnya ({{current}}/{{total}})",
+      "title": "Kefasihan Lisan",
+      "validWordsLabel": "Perkataan yang sah",
+      "wordsPerMinLabel": "Perkataan/min",
+      "avgLengthLabel": "Purata panjang",
+      "invalidLabel": "Tidak sah",
+      "round": "Bulat",
+      "selectWordsBelongTo": "Pilih perkataan yang tergolong dalam",
+      "selected": "Dipilih"
+    },
+    "wordList": {
+      "avgRtCorrect": "Purata RT (betul)",
+      "primacyEffect": "Kesan Keutamaan",
+      "recencyEffect": "Kesan Kekinian",
+      "studyPhaseRememberEachWord": "Fasa belajar — ingat setiap perkataan",
+      "wordsRecalled": "Kata-kata Diingat",
+      "title": "Senarai Perkataan",
+      "serialPositionCurve": "Keluk Kedudukan Bersiri",
+      "wasWordInList": "Adakah perkataan ini dalam senarai?",
+      "seenBefore": "Dilihat sebelum ini",
+      "newWord": "baru"
+    },
+    "speedSort": {
+      "switchAccuracy": "Ketepatan suis",
+      "switchTrials": "Tukar percubaan",
+      "sortByColor": "Isih mengikut WARNA",
+      "sortByShape": "Isih mengikut SHAPE",
+      "sortByNumber": "Isih mengikut NUMBER",
+      "ruleChanged": "Peraturan berubah!",
+      "binRed": "Merah",
+      "binBlue": "Biru",
+      "binGreen": "hijau",
+      "binYellow": "kuning",
+      "binCircle": "Bulatan",
+      "binSquare": "Segi empat",
+      "binTriangle": "Segi tiga",
+      "binStar": "Bintang",
+      "title": "Isih Kelajuan",
+      "switch": "Suis"
+    },
+    "reflex": {
+      "target": "Sasaran",
+      "lure": "Memikat",
+      "tooSlow": "Terlalu lambat!",
+      "wrongTarget": "Salah sasaran!",
+      "tapTargets": "Ketik bulatan hijau!",
+      "hits": "Hits",
+      "misses": "Rindu",
+      "fa": "FA"
+    },
+    "chainCalculation": {
+      "rememberTotal": "Ingat jumlah larian...",
+      "title": "Pengiraan Rantai",
+      "stepChains": "{{len}}-rantaian langkah",
+      "start": "Mulakan",
+      "step": "Langkah",
+      "whatIsTheResult": "Apakah keputusannya?"
+    },
+    "alternateUses": {
+      "placeholder": "Taip kegunaan...",
+      "title": "Kegunaan Ganti",
+      "totalUses": "Jumlah kegunaan",
+      "perObject": "Setiap objek",
+      "rounds": "Pusingan",
+      "bestObject": "Objek terbaik",
+      "bestCount": "Kiraan terbaik",
+      "noUsesSubmitted": "Tiada kegunaan diserahkan",
+      "timesUp": "Masa sudah tamat!",
+      "nextObject": "Objek Seterusnya ({{object}})",
+      "listCreativeUses": "Senaraikan kegunaan kreatif untuk objek ini"
+    },
+    "anagram": {
+      "placeholder": "Taip perkataan...",
+      "title": "Anagram",
+      "avgSolve": "Purata selesaikan",
+      "letterWords": "{{len}}-perkataan huruf",
+      "submit": "Hantar"
+    },
+    "facialEmotion": {
+      "happy": "gembira",
+      "sad": "Sedih",
+      "angry": "marah",
+      "fearful": "Takut",
+      "disgusted": "jijik",
+      "surprised": "Terkejut",
+      "lc": "LC",
+      "title": "Pengecaman Emosi Muka",
+      "topConfusions": "Kekeliruan teratas"
+    },
+    "numberSeries": {
+      "easy": "Mudah",
+      "hard": "Keras"
+    },
+    "chainRecall": {
+      "round": "Bulat",
+      "title": "Recall Rantaian",
+      "chain": "rantai",
+      "placeholder": "Pemegang tempat"
+    },
+    "emotionalGoNogo": {
+      "fa": "FA",
+      "title": "Emosi Go/No-Go",
+      "block1CommissionErrors": "Ralat komisen blok 1",
+      "block2CommissionErrors": "Ralat komisen blok 2",
+      "goHappy": "Pergi = Gembira",
+      "goSad": "Pergi = Sedih",
+      "block": "Sekat",
+      "go": "Pergi"
+    },
+    "timeEstimation": {
+      "cv": "CV"
+    },
+    "colorRush": {
+      "stroopEffect": "Kesan stroop",
+      "title": "Tergesa-gesa Warna",
+      "congShort": "Cong.",
+      "incongShort": "Incong.",
+      "congruentAccuracy": "Ketepatan kongruen",
+      "incongruentAccuracy": "Ketepatan yang tidak selaras"
+    },
+    "mirror": {
+      "avgCorrectCells": "Sel yang betul (purata)",
+      "symmetryType": "Jenis simetri",
+      "title": "Cermin"
+    },
+    "rhythmTap": {
+      "correctTrials": "Percubaan yang betul",
+      "avgRhythmScore": "Purata skor irama",
+      "bestTrialScore": "Skor percubaan terbaik",
+      "worstTrialScore": "Skor percubaan paling teruk",
+      "level": "Tahap",
+      "rhythm": "Irama",
+      "bestTrial": "Percubaan terbaik",
+      "worstTrial": "Percubaan paling teruk"
+    },
+    "vocalProsody": {
+      "questioning": "Bersoal jawab"
+    },
+    "arithmeticSpeed": {
+      "multiply": "gandakan",
+      "add": "Tambah",
+      "subtract": "Tolak",
+      "title": "Kelajuan Aritmetik",
+      "score": "skor",
+      "solved": "Selesai",
+      "missed": "terlepas"
+    },
+    "puzzle": {
+      "avgSolveTime": "Purata masa penyelesaian",
+      "totalMoves": "Jumlah pergerakan",
+      "totalErrors": "Jumlah ralat",
+      "gridSize": "Saiz grid",
+      "maxGridReached": "Grid maks dicapai",
+      "maxLevelReached": "Tahap maks dicapai",
+      "maxNodesReached": "Nod maksimum dicapai",
+      "puzzleDetails": "Butiran teka-teki",
+      "roundDetails": "Butiran bulat",
+      "solved": "Selesai!",
+      "undo": "Buat asal",
+      "reset": "Tetapkan semula",
+      "check": "Semak",
+      "moves": "Bergerak",
+      "time": "Masa",
+      "level": "Tahap",
+      "errors": "Kesilapan",
+      "score": "skor",
+      "grid": "Grid",
+      "crossings": "lintasan",
+      "pearls": "mutiara",
+      "clues": "Petunjuk",
+      "region": "Wilayah",
+      "filled": "terisi",
+      "cells": "sel",
+      "undosLeft": "Buat asal yang tinggal",
+      "gems": "permata",
+      "connected": "Bersambung",
+      "slides": "Slaid",
+      "progress": "Kemajuan",
+      "rotations": "Putaran",
+      "puzzle": "Teka-teki",
+      "uncovered": "Terbongkar",
+      "colored": "Berwarna",
+      "violations": "Pelanggaran",
+      "blacked": "dihitamkan",
+      "empty": "kosong",
+      "remaining": "yang tinggal",
+      "pairs": "berpasangan",
+      "flips": "Terbalik",
+      "found": "Dijumpai",
+      "balls": "bola",
+      "guesses": "meneka",
+      "original": "Asal",
+      "findDifferences": "Cari perbezaan",
+      "totalDrags": "Jumlah seretan",
+      "totalUndos": "Jumlah batal",
+      "totalEdgesDrawn": "Jumlah tepi yang dilukis",
+      "totalLasers": "Jumlah laser",
+      "totalSlides": "Jumlah slaid",
+      "totalRotations": "Jumlah putaran",
+      "totalRectangles": "Jumlah segi empat tepat",
+      "totalScore": "Jumlah markah",
+      "avgTime": "Purata masa",
+      "cellsCleared": "Sel dibersihkan",
+      "totalDiffsFound": "Jumlah perbezaan ditemui",
+      "gemsCollected": "Permata dikumpul",
+      "pushBoxesOntoTargets": "Tolak semua kotak ke sasaran",
+      "fireLasersMarkBalls": "Api laser dari tepi, kemudian tandakan kedudukan bola",
+      "revealingAnswer": "Mendedahkan jawapan...",
+      "checkAnswer": "Semak Jawapan",
+      "pickNumberBelow": "Pilih nombor di bawah",
+      "tapCellToAssign": "Ketik sel untuk menetapkan nombor",
+      "tapEdgesToPlaceWalls": "Ketik tepi untuk meletakkan dinding. Bahagikan kepada kawasan K.",
+      "ghosts": "hantu",
+      "vampires": "pontianak",
+      "zombies": "zombi",
+      "dominoes": "Domino",
+      "islands": "Kepulauan",
+      "pegsLeft": "Pasak Kiri",
+      "bestRemaining": "Terbaik yang tinggal",
+      "puzzlesSolved": "Teka-teki diselesaikan",
+      "flooded": "banjir",
+      "edges": "Tepi",
+      "totalPlacements": "Jumlah penempatan",
+      "totalRemovals": "Jumlah penyingkiran",
+      "maxTileReached": "Jubin maksimum dicapai",
+      "target": "Sasaran",
+      "placed": "diletakkan",
+      "totalGuesses": "Jumlah tekaan",
+      "guessesLeft": "tekaan kiri",
+      "difficulty": "Kesukaran"
+    },
+    "palisade": {
+      "title": "Palisade",
+      "puzzles": "Teka-teki",
+      "maxLevel": "Tahap maks"
+    },
+    "keen": {
+      "title": "KenKen",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "errors": "Kesilapan",
+      "avgTime": "Purata masa",
+      "erase": "Padam"
+    },
+    "blackbox": {
+      "title": "Kotak Hitam",
+      "puzzles": "Teka-teki",
+      "lasers": "Laser",
+      "avgTime": "Purata masa"
+    },
+    "designFluency": {
+      "title": "Kelancaran Reka Bentuk",
+      "uniqueDesigns": "Reka bentuk yang unik",
+      "duplicates": "Pendua",
+      "round": "Bulat",
+      "roundComplete": "Pusingan lengkap",
+      "youCreatedDesigns": "Anda telah mencipta {{count}} reka bentuk",
+      "startRound": "Mulakan pusingan",
+      "instructions": "Arahan",
+      "designs": "Reka bentuk",
+      "clear": "Jelas",
+      "addDesign": "Tambah"
+    },
+    "signpost": {
+      "title": "Tiang penunjuk arah",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "avgTime": "Purata masa",
+      "maxGrid": "Grid maks"
+    },
+    "sokoban": {
+      "title": "Sokoban",
+      "level": "Tahap",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "undos": "Buat asal",
+      "puzzle": "Teka-teki"
+    },
+    "numericalStroop": {
+      "left": "kiri",
+      "right": "Betul"
+    },
+    "biologicalMotion": {
+      "title": "Gerakan Biologi",
+      "noiseDots": "titik bunyi",
+      "whichDirection": "arah mana?",
+      "left": "kiri",
+      "right": "Betul"
+    },
+    "inertia": {
+      "title": "Inersia",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "gems": "permata",
+      "moves": "Bergerak"
+    },
+    "waterLevel": {
+      "title": "Paras Air",
+      "error": "ralat",
+      "tilt": "Condongkan",
+      "waterLine": "Tali air?"
+    },
+    "twiddle": {
+      "title": "Twiddle",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxGrid": "Grid maks"
+    },
+    "sudoku": {
+      "title": "Sudoku",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "errors": "Kesilapan",
+      "avgTime": "Purata masa",
+      "erase": "Padam"
+    },
+    "rectangles": {
+      "title": "segi empat tepat",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "rectanglesCount": "segi empat tepat",
+      "maxGrid": "Grid maks",
+      "cancelSelection": "Batalkan pemilihan"
+    },
+    "filling": {
+      "title": "Pengisian",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "avgTime": "Purata masa",
+      "grid": "Grid"
+    },
+    "spacedRetrieval": {
+      "title": "Retrieval Berjarak",
+      "studyPair": "Kaji pasangan ini",
+      "waitAndSolve": "Tunggu… kemudian selesaikan",
+      "equalsQuestion": "= ?",
+      "intervalWhatPairs": "Selang: pasangan apa?"
+    },
+    "prototypeDistortion": {
+      "title": "Penyelewengan Prototaip",
+      "studyPhase": "Fasa pengajian",
+      "testPhase": "Fasa ujian",
+      "yesBelongs": "Ya - Milik",
+      "noRandom": "Tidak — Rawak"
+    },
+    "motionCoherence": {
+      "title": "Keselarasan Gerakan",
+      "threshold": "Ambang",
+      "coherence": "Kesepaduan",
+      "whichDirection": "arah mana?"
+    },
+    "cube": {
+      "title": "kiub",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxLevel": "Tahap maks",
+      "cubeFaces": "Muka kiub",
+      "moveUp": "Naik",
+      "moveLeft": "kiri",
+      "moveDown": "Bawah",
+      "moveRight": "Betul"
+    },
+    "sameGame": {
+      "title": "Permainan yang sama",
+      "score": "skor",
+      "cleared": "Dikosongkan",
+      "cells": "sel",
+      "accuracy": "Ketepatan"
+    },
+    "crossModalMatching": {
+      "title": "Padanan Silang Modal",
+      "chance": "Peluang",
+      "whichPatternMatchesRhythm": "Corak yang manakah sesuai dengan irama?"
+    },
+    "mosaic": {
+      "title": "Mozek",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxGrid": "Grid maks"
+    },
+    "spotDiff": {
+      "title": "Spot the Diff",
+      "level": "Tahap",
+      "grid": "Grid",
+      "accuracy": "Ketepatan",
+      "perfect": "Sempurna",
+      "avgTime": "Purata masa",
+      "found": "Dijumpai"
+    },
+    "lightsOut": {
+      "title": "Lampu Padam",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxGrid": "Grid maks"
+    },
+    "pipeline": {
+      "title": "Saluran paip",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "rotations": "Putaran",
+      "avgTime": "Purata masa"
+    },
+    "tracks": {
+      "title": "Trek",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "errors": "Kesilapan",
+      "avgTime": "Purata masa"
+    },
+    "netslide": {
+      "title": "Netslide",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "slides": "Slaid",
+      "maxGrid": "Grid maks"
+    },
+    "cognitiveBias": {
+      "title": "Latihan Bias Kognitif",
+      "biasResistance": "Rintangan berat sebelah",
+      "biased": "berat sebelah",
+      "continue": "teruskan"
+    },
+    "empathicAccuracy": {
+      "title": "Ketepatan Empatik",
+      "emotionId": "emosi",
+      "avgRatingError": "Purata ralat penilaian",
+      "scenarios": "Senario",
+      "perfect": "Sempurna",
+      "rating": "Penilaian",
+      "howDoesCharacterFeel": "Bagaimana perasaan watak itu?",
+      "rateIntensity": "Nilaikan keamatan",
+      "whatEmotion": "emosi apa?",
+      "yourRating": "Penilaian anda",
+      "correct": "Betul",
+      "emotion": "emosi"
+    },
+    "guess": {
+      "title": "Dalang",
+      "solved": "Selesai",
+      "guesses": "meneka"
+    },
+    "dominosa": {
+      "title": "Dominosa",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxLevel": "Tahap maks"
+    },
+    "magnets": {
+      "title": "Magnet",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxLevel": "Tahap maks"
+    },
+    "tangram": {
+      "placeAll": "Letakkan semua kepingan",
+      "solved": "Selesai!",
+      "notRight": "Tidak betul",
+      "title": "Tangram",
+      "level": "Tahap",
+      "puzzles": "Teka-teki",
+      "placements": "Penempatan",
+      "removals": "Penyingkiran",
+      "puzzleNumber": "Teka-teki {{n}}",
+      "pieces": "Kepingan",
+      "targetCells": "Cible",
+      "dragHint": "Seret atau letakkan kepingan pada grid",
+      "selectHint": "Pilih sekeping",
+      "rotate": "Pelancong",
+      "undo": "Annuler",
+      "check": "Semak"
+    },
+    "galaxies": {
+      "title": "galaksi"
+    },
+    "flood": {
+      "title": "Banjir"
+    },
+    "pegs": {
+      "title": "Pasak",
+      "bestPegs": "Pasak terbaik"
+    },
+    "auditoryFigureGround": {
+      "title": "Auditori Figure-Ground",
+      "patternPresent": "Corak hadir?",
+      "pattern": "Corak",
+      "noPattern": "Tiada corak"
+    },
+    "selfOrderedPointing": {
+      "title": "Tunjuk Tertib Sendiri",
+      "maxSpan": "Jangka maksimum",
+      "errors": "Kesilapan",
+      "round": "Bulat",
+      "setOf": "Set daripada {{count}}"
+    },
+    "mirrorTracing": {
+      "title": "Pengesanan Cermin",
+      "totalErrors": "Jumlah ralat",
+      "avgTime": "Purata masa",
+      "shapes": "bentuk",
+      "perfect": "Sempurna",
+      "improvement": "Penambahbaikan",
+      "errorsMiddot": "kesilapan ·",
+      "shape": "bentuk",
+      "errors": "Kesilapan",
+      "xIsMirrored": "X dicerminkan!"
+    },
+    "clockDrawing": {
+      "title": "Lukisan Jam",
+      "avgError": "Purata kesilapan",
+      "setTo": "Tetapkan kepada",
+      "submit": "Hantar"
+    },
+    "cognitiveMap": {
+      "title": "Peta Kognitif",
+      "explore": "Teroka",
+      "sRemaining": "S Baki",
+      "from": "daripada",
+      "whichDirectionIs": "Arah mana"
+    },
+    "sixteen": {
+      "title": "Enam belas"
+    },
+    "loopy": {
+      "title": "Bergelombang"
+    },
+    "lightup": {
+      "title": "Menyala"
+    },
+    "twentyFortyEight": {
+      "maxTile": "Jubin Maks",
+      "moves": "Bergerak",
+      "max": "Maks"
+    },
+    "bridges": {
+      "title": "Jambatan",
+      "puzzles": "Teka-teki",
+      "maxLevel": "Tahap maks",
+      "level": "Tahap"
+    },
+    "net": {
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxGrid": "Grid maks"
+    },
+    "flip": {
+      "title": "selak"
+    },
+    "range": {
+      "title": "Julat"
+    },
+    "slant": {
+      "title": "senget"
+    },
+    "towers": {
+      "title": "Menara",
+      "puzzles": "Teka-teki",
+      "avgTime": "Purata masa",
+      "erase": "Padam"
+    },
+    "pearl": {
+      "title": "Mutiara",
+      "edges": "Tepi"
+    },
+    "mapColoring": {
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "moves": "Bergerak",
+      "maxLevel": "Tahap maks"
+    },
+    "singles": {
+      "title": "Bujang"
+    },
+    "nonogram": {
+      "title": "Nonogram"
+    },
+    "undead": {
+      "title": "Undead",
+      "accuracy": "Ketepatan",
+      "puzzles": "Teka-teki",
+      "avgTime": "Purata masa"
+    },
+    "untangle": {
+      "title": "Leraikan",
+      "drags": "Seret",
+      "maxNodes": "Nod Maks"
+    },
+    "unruly": {
+      "title": "Tidak terkawal"
+    },
+    "fifteen": {
+      "title": "lima belas"
+    },
+    "tents": {
+      "title": "khemah"
+    },
+    "mesker": {
+      "pen": "Pen",
+      "stroke": "Strok",
+      "penPressureHint": "Tulis dengan tekanan pen yang konsisten"
+    },
+    "modality": {
+      "position": "kedudukan",
+      "audio": "Audio"
+    },
+    "validate": "Sahkan"
+  },
+  "trace": {
+    "instructions": "Leret ke kedudukan N-belakang. Ketik dua kali jika kedudukan yang sama.",
+    "hint": {
+      "validated": "Disahkan",
+      "draw": "Lukis huruf • Ketik untuk mengesahkan",
+      "drawWithColor": "Lukis huruf • Pilih warna • Ketik untuk mengesahkan",
+      "type": "Taip huruf • Enter untuk mengesahkan",
+      "typeWithColor": "Taip huruf • Pilih warna • Masukkan untuk mengesahkan",
+      "typeResult": "Taipkan keputusan • Masukkan untuk mengesahkan",
+      "writeResult": "Tulis keputusan • Ketik untuk mengesahkan"
+    },
+    "keyboard": {
+      "letterInput": "surat",
+      "numberInput": "Nombor"
+    },
+    "arithmetic": {
+      "cueHint": "Menghafal 2 digit",
+      "refresh": "baru"
+    },
+    "hintPosition": "Di manakah rangsangan {{n}} bertukar yang lalu?",
+    "hintN0": "Nyatakan rangsangan semasa",
+    "warmupHint": "Menghafal jawatan. Tiada respons diperlukan.",
+    "hintDraw": "Lukis huruf • Ketik untuk mengesahkan",
+    "hintDrawWithColor": "Lukis huruf • Pilih warna • Ketik untuk mengesahkan",
+    "hintWriteResult": "Tulis keputusan • Ketik untuk mengesahkan",
+    "guide": {
+      "swipeNormal": "Leret dari kedudukan terakhir (N-0) ke kedudukan dari {{n}} langkah yang lalu (N-{{n}}). Ketik dua kali jika kedudukan yang sama.",
+      "swipeSequential": "Leret langkah demi langkah dari N-0 ke N-{{n}}, melalui setiap kedudukan perantaraan. Ketik dua kali jika kedudukan yang sama.",
+      "swipeDynamic": "Leret mengikut peraturan yang dipaparkan. Ketik dua kali jika kedudukan yang sama.",
+      "tapN0": "Ketik pada kedudukan semasa.",
+      "warmup": "Menghafal kedudukan - tiada respons diperlukan.",
+      "writeDraw": "Lukis huruf yang didengar {{n}} langkah yang lalu • Ketik untuk mengesahkan",
+      "writeDrawColor": "Lukis huruf yang didengar {{n}} langkah yang lalu • Pilih warnanya • Ketik untuk mengesahkan",
+      "writeType": "Taip surat yang didengar {{n}} langkah yang lalu • Enter untuk mengesahkan",
+      "writeTypeColor": "Taip huruf yang didengar {{n}} langkah yang lalu • Pilih warnanya • Enter untuk mengesahkan",
+      "writeDrawN0": "Lukis huruf yang baru anda dengar • Ketik untuk mengesahkan",
+      "writeDrawColorN0": "Lukis huruf yang baru anda dengar • Pilih warnanya • Ketik untuk mengesahkan",
+      "writeTypeN0": "Taip surat yang baru anda dengar • Enter untuk mengesahkan",
+      "writeTypeColorN0": "Taip huruf yang baru anda dengar • Pilih warnanya • Enter untuk mengesahkan",
+      "writeResult": "Tulis keputusan • Ketik untuk mengesahkan",
+      "validated": "Disahkan",
+      "holdMindful": "Pegang sel selama {{seconds}}s",
+      "swipeMindful": "Leret dalam {{seconds}}s"
+    },
+    "settings": {
+      "adaptiveTiming": "Masa penyesuaian",
+      "inputKeyboard": "papan kekunci",
+      "inputHandwriting": "Tulisan tangan",
+      "writingInput": "Huruf/nombor",
+      "section": {
+        "grid": "Grid",
+        "input": "Input",
+        "rhythm": "Irama",
+        "interface": "Antara muka",
+        "interfaceNone": "Standard",
+        "sound": "Bunyi"
+      },
+      "isi": "Selang (ISI)",
+      "stimulusDuration": "Tempoh rangsangan",
+      "feedbackDuration": "Tempoh maklum balas",
+      "ruleDisplay": "Tempoh peraturan",
+      "blankInterval": "Selang kosong",
+      "showProgressBar": "Bar kemajuan",
+      "showInstructions": "Arahan dalam permainan",
+      "arithmeticInterference": "Gangguan aritmetik",
+      "fullMenu": "Menu penuh",
+      "gridStyle": "Gaya grid",
+      "gridStyleClassic": "Klasik",
+      "gridStyleTrace": "Jejak",
+      "guide": {
+        "swipeMindful": "Leret dalam {{seconds}}s",
+        "holdMindful": "Pegang sel selama {{seconds}}s"
+      },
+      "feedback": {
+        "gestureDuration": "Isyarat",
+        "holdDuration": "tahan",
+        "writingDuration": "Menulis"
+      }
+    },
+    "feedback": {
+      "holdDuration": "tahan",
+      "gestureDuration": "Isyarat",
+      "writingDuration": "Menulis"
+    },
+    "image": "bentuk",
+    "digits": "Digit",
+    "emotions": "emosi",
+    "words": "Firman",
+    "tones": "nada",
+    "spatial": "Arah"
+  },
+  "replay": {
+    "title": "Sesi ulang tayang",
+    "play": "Main",
+    "pause": "jeda",
+    "restart": "Mulakan semula",
+    "speed": "Kelajuan",
+    "loading": "Sesi memuatkan...",
+    "unavailable": "Main semula tidak tersedia untuk sesi ini",
+    "backToStats": "Kembali ke statistik",
+    "runStack": {
+      "original": "Asal",
+      "correction": "Pembetulan",
+      "delta": "Δ d'",
+      "inProgress": "Sedang berlangsung",
+      "completed": "Selesai"
+    },
+    "abandon": "tinggalkan",
+    "badge": "Main semula",
+    "completionReport": {
+      "backToHome": "belakang",
+      "correctAgain": "Betul lagi",
+      "deltaVsOriginal": "lwn Asal",
+      "deltaVsParent": "lwn larian sebelumnya",
+      "falseAlarmsSkipped": "Ralat dielakkan",
+      "missesCorrections": "Pembetulan",
+      "newFalseAlarms": "Ralat baharu",
+      "replayAgain": "Main semula",
+      "scoreLabel": "skor d'",
+      "title": "Pembetulan selesai"
+    },
+    "controls": "Kawalan",
+    "correction": "Pembetulan",
+    "finished": "Tamat tayangan semula",
+    "home": "Rumah",
+    "parseError": "Sesi tidak dapat membaca",
+    "tapSlotToPlace": "Ketik slot untuk meletakkan",
+    "timeline": "Garis masa",
+    "focusTimeline": {
+      "open": "Tunjukkan garis masa",
+      "close": "Tutup garis masa",
+      "title": "Garis Masa N-Back",
+      "fillAll": "Isi semua",
+      "fillCard": "Isi kad"
+    },
+    "hud": {
+      "counterDisplay": "Paparan kaunter",
+      "toggleCounterDisplay": "Togol paparan kaunter"
+    },
+    "validate": "Sahkan"
+  },
+  "recovery": {
+    "title": "Sesi terganggu",
+    "description": "Sesi sedang berlangsung. Adakah anda ingin menyambung semula?",
+    "mode": "Mod",
+    "level": "Tahap",
+    "progress": "Kemajuan",
+    "timeAgo": "Masa",
+    "resume": "Sambung semula sesi",
+    "startFresh": "Mulakan dengan segar",
+    "staleWarning": "Sesi ini sudah lama, menyambung semula mungkin mencabar.",
+    "modes": {
+      "game": "Latihan",
+      "activeTraining": "Latihan aktif",
+      "flowTraining": "Latihan Dwi Tempat",
+      "dualPickTraining": "Pilihan Ganda",
+      "traceTraining": "Jejak Dwi"
+    }
+  },
+  "rewards": {
+    "congratulations": "tahniah!",
+    "duration": "{{days}} hari Premium",
+    "lifetimeLabel": "Akses seumur hidup",
+    "expiresAt": "Sah sehingga {{date}}",
+    "neverExpires": "Tidak pernah luput",
+    "continue": "teruskan",
+    "discovery": {
+      "name": "Pas penemuan",
+      "description": "Premium 7 hari — Teroka semua ciri"
+    },
+    "engagement": {
+      "name": "Pas Pertunangan",
+      "description": "Premium 1 bulan — Disiplin anda membuahkan hasil"
+    },
+    "expert": {
+      "name": "Pas pakar",
+      "description": "Premium 3 bulan — Anda seorang pengamal sejati"
+    },
+    "lifetime": {
+      "name": "Akses seumur hidup",
+      "description": "Premium selamanya — Anda telah menguasai Neurodual"
+    },
+    "xpRemaining": "XP yang tinggal",
+    "permanentAccessUnlocked": "Akses kekal dibuka",
+    "reachedTheTop": "Anda telah mencapai puncak!"
+  },
+  "progression": {
+    "level": "Tahap {{level}}",
+    "levelShort": "Lv. {{level}}",
+    "nextLevel": "Peringkat seterusnya",
+    "reached": "Dicapai",
+    "inProgress": "Sedang berlangsung"
+  },
+  "gridlock": {
+    "nextPuzzle": "Teka-teki seterusnya →"
+  }
+}
