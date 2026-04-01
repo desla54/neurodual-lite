@@ -32,18 +32,45 @@ const NOOP_AUTH_STATE: AuthState = { status: 'unauthenticated' };
 const noopAuthAdapter: AuthPort = {
   getState: () => NOOP_AUTH_STATE,
   subscribe: () => () => {},
-  signUp: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
-  signIn: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
-  signInWithGoogle: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
-  signInWithApple: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
+  signUp: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
+  signIn: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
+  signInWithGoogle: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
+  signInWithApple: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
   signOut: async () => {},
-  refreshSession: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
+  refreshSession: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
   validateSession: async () => false,
-  resetPassword: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
-  updatePassword: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
-  updateProfile: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
+  resetPassword: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
+  updatePassword: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
+  updateProfile: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
   getAccessToken: async () => null,
-  deleteAccount: async () => ({ success: false, error: { code: 'unknown' as const, message: 'Auth not available in Lite' } }),
+  deleteAccount: async () => ({
+    success: false,
+    error: { code: 'unknown' as const, message: 'Auth not available in Lite' },
+  }),
 } as unknown as AuthPort;
 
 let authAdapter: AuthPort = noopAuthAdapter;

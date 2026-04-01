@@ -4599,14 +4599,14 @@ const LITE_MODES = new Set<GameMode>([
   'dual-mix',
 ]);
 
-export const GAME_MODES: GameModeConfig[] = BASE_GAME_MODES
-  .filter((mode) => LITE_MODES.has(mode.value))
-  .map((mode) => ({
-    ...mode,
-    section: GAME_MODE_SECTION_BY_MODE[mode.value],
-    reliability: getReliabilityForGameMode(mode.value),
-    tier: getModeTier(mode.value),
-  }));
+export const GAME_MODES: GameModeConfig[] = BASE_GAME_MODES.filter((mode) =>
+  LITE_MODES.has(mode.value),
+).map((mode) => ({
+  ...mode,
+  section: GAME_MODE_SECTION_BY_MODE[mode.value],
+  reliability: getReliabilityForGameMode(mode.value),
+  tier: getModeTier(mode.value),
+}));
 
 export const TRAINING_CATEGORIES = MODE_CATEGORIES.filter((c) => c.section === 'training');
 export const TEST_CATEGORIES = MODE_CATEGORIES.filter((c) => c.section === 'test');

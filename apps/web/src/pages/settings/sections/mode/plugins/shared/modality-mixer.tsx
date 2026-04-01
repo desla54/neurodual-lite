@@ -42,7 +42,12 @@ const CORE_MODALITIES: ModalityDef[] = [
   // Brain Workshop combination modalities
   { id: 'visvis', icon: LinkSimple, labelKey: 'common.visvis', color: 'bg-sky-500' },
   { id: 'visaudio', icon: LinkSimpleHorizontal, labelKey: 'common.visaudio', color: 'bg-teal-500' },
-  { id: 'audiovis', icon: LinkSimpleHorizontal, labelKey: 'common.audiovis', color: 'bg-indigo-500' },
+  {
+    id: 'audiovis',
+    icon: LinkSimpleHorizontal,
+    labelKey: 'common.audiovis',
+    color: 'bg-indigo-500',
+  },
 ];
 
 /** Added modalities — not present in original Brain Workshop */
@@ -53,7 +58,6 @@ const EXTRA_MODALITIES: ModalityDef[] = [
   { id: 'words', icon: TextAa, labelKey: 'common.words', color: 'bg-lime-500' },
   { id: 'tones', icon: MusicNotes, labelKey: 'common.tones', color: 'bg-violet-500' },
 ];
-
 
 function ModalityButton({
   item,
@@ -88,21 +92,29 @@ function ModalityButton({
       } ${isDisabled && !isLockedOn ? 'opacity-40 cursor-not-allowed pointer-events-none' : ''} ${isLockedOn ? 'cursor-default pointer-events-none' : ''}`}
     >
       {showActive && (
-        <div className={`absolute inset-0 rounded-xl border-2 opacity-20 ${item.color.replace('bg-', 'border-')}`} />
+        <div
+          className={`absolute inset-0 rounded-xl border-2 opacity-20 ${item.color.replace('bg-', 'border-')}`}
+        />
       )}
       {isLinked && (
         <div className="absolute top-2 left-2 opacity-50">
           <LinkSimple size={10} weight="bold" />
         </div>
       )}
-      <div className={`p-3 rounded-full transition-colors duration-300 ${
-        showActive ? `${item.color} text-white shadow-md` : 'bg-muted-foreground/20 text-muted-foreground'
-      }`}>
+      <div
+        className={`p-3 rounded-full transition-colors duration-300 ${
+          showActive
+            ? `${item.color} text-white shadow-md`
+            : 'bg-muted-foreground/20 text-muted-foreground'
+        }`}
+      >
         <Icon size={24} weight="regular" />
       </div>
-      <span className={`text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${
-        showActive ? 'text-foreground' : 'text-muted-foreground'
-      }`}>
+      <span
+        className={`text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${
+          showActive ? 'text-foreground' : 'text-muted-foreground'
+        }`}
+      >
         {t(item.labelKey)}
       </span>
       {showActive && (
@@ -146,7 +158,9 @@ export function ModalityMixer({
 
   return (
     <div className="space-y-4">
-      <div className={`grid w-full ${coreItems.length === 2 ? 'grid-cols-2 gap-5' : 'grid-cols-3 gap-3'}`}>
+      <div
+        className={`grid w-full ${coreItems.length === 2 ? 'grid-cols-2 gap-5' : 'grid-cols-3 gap-3'}`}
+      >
         {coreItems.map(renderItem)}
       </div>
 
@@ -155,9 +169,7 @@ export function ModalityMixer({
           <div className="text-[10px] font-bold text-muted-foreground/50 uppercase tracking-widest text-center pt-1">
             {t('settings.modalities.extra', 'Added modalities (not in original version)')}
           </div>
-          <div className="grid w-full grid-cols-3 gap-3">
-            {extraItems.map(renderItem)}
-          </div>
+          <div className="grid w-full grid-cols-3 gap-3">{extraItems.map(renderItem)}</div>
         </>
       )}
     </div>

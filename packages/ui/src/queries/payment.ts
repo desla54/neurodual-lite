@@ -39,7 +39,10 @@ const noopPaymentAdapter: PaymentPort = {
   isAvailable: () => false,
   getProducts: async () => [],
   getCustomerInfo: async () => DEFAULT_CUSTOMER_INFO,
-  purchase: async () => ({ success: false as const, errorMessage: 'Payments not available in Lite' }),
+  purchase: async () => ({
+    success: false as const,
+    errorMessage: 'Payments not available in Lite',
+  }),
   restorePurchases: async () => DEFAULT_CUSTOMER_INFO,
   subscribe: () => () => {},
   setUserId: async () => {},

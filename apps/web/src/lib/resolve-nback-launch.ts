@@ -1,7 +1,5 @@
 import type { ResolvedPlayIntent } from './play-intent';
-import {
-  DUAL_TRACK_DNB_HYBRID_MODE_ID,
-} from '@neurodual/logic';
+import { DUAL_TRACK_DNB_HYBRID_MODE_ID } from '@neurodual/logic';
 
 export interface NbackJourneyConfigSnapshot {
   readonly journeyId?: string;
@@ -51,7 +49,7 @@ export function resolveNbackLaunch(params: {
       : undefined;
   const isHybridJourney = journeyGameMode === DUAL_TRACK_DNB_HYBRID_MODE_ID;
 
-  let journeyStageId =
+  const journeyStageId =
     params.playIntent.journeyStageId ??
     (shouldUseJourneyContext ? params.journeyStateCurrentStage : undefined);
 
@@ -83,7 +81,7 @@ export function resolveNbackLaunch(params: {
   // Authoritative N-level from the play intent (set by the action that triggered
   // navigation). When present, this takes priority over re-deriving from
   // stageId + startLevel, which can be inconsistent after startLevel expansion.
-  let journeyNLevel: number | undefined =
+  const journeyNLevel: number | undefined =
     typeof params.playIntent.journeyNLevel === 'number' &&
     Number.isFinite(params.playIntent.journeyNLevel)
       ? params.playIntent.journeyNLevel

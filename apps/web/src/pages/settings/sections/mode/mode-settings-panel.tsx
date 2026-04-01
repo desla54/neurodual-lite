@@ -30,11 +30,7 @@ import {
   useSessionSummariesCountQuery,
 } from '@neurodual/ui';
 import { CaretDown, Gauge } from '@phosphor-icons/react';
-import {
-  gameModeRegistry,
-  type ConfigurableSettingKey,
-  type ModalityId,
-} from '@neurodual/logic';
+import { gameModeRegistry, type ConfigurableSettingKey, type ModalityId } from '@neurodual/logic';
 import {
   FREE_TRAINING_QUAD_PRESET_ID,
   FREE_TRAINING_RECOMMENDED_PRESET_ID,
@@ -52,7 +48,9 @@ import { useJourneyStateWithContext } from '../../../../lib/journey-stubs';
 
 // Stub for removed dual-track-settings
 type DualTrackResolvedIdentityMode = string;
-function normalizeDualTrackResolvedSettings(..._args: unknown[]): any { return {}; }
+function normalizeDualTrackResolvedSettings(..._args: unknown[]): any {
+  return {};
+}
 const hybridStrategy = {} as any;
 import { SettingsSegmentedControl, UpgradeDialog } from '../../components';
 import { FreeTrainingPresetSelector } from './free-training-preset-selector';
@@ -513,8 +511,14 @@ export function ModeSettingsPanel({
     alphaEnabled && (extensions.renderMode === 'webgl' || extensions.renderMode === 'webgl3d')
       ? extensions.renderMode
       : 'dom';
-  const hybridTrackSessionsPerBlock = (activeJourneyStrategyConfig as any)?.trackSessionsPerBlock ?? (modeSettings as any)?.hybridTrackSessionsPerBlock ?? 3;
-  const hybridDnbSessionsPerBlock = (activeJourneyStrategyConfig as any)?.dnbSessionsPerBlock ?? (modeSettings as any)?.hybridDnbSessionsPerBlock ?? 3;
+  const hybridTrackSessionsPerBlock =
+    (activeJourneyStrategyConfig as any)?.trackSessionsPerBlock ??
+    (modeSettings as any)?.hybridTrackSessionsPerBlock ??
+    3;
+  const hybridDnbSessionsPerBlock =
+    (activeJourneyStrategyConfig as any)?.dnbSessionsPerBlock ??
+    (modeSettings as any)?.hybridDnbSessionsPerBlock ??
+    3;
   const updateHybridTrackSessionsPerBlock = (value: number) =>
     setJourneyStrategyConfig(activeJourneyId, {
       hybrid: {
@@ -644,7 +648,8 @@ export function ModeSettingsPanel({
         s.validatingSessions > 0 ||
         s.bestScore !== null ||
         (typeof s.progressPct === 'number' && s.progressPct > 0),
-    ) || false;
+    ) ||
+    false;
   const lockModalities = isJourneyScope && journeyHasProgress;
   const preserveJourneyPresetKeys =
     lockModalities && isBrainWorkshop
@@ -1047,9 +1052,7 @@ export function ModeSettingsPanel({
                           hiddenModalities={[
                             ...(hideColorModality ? ['color'] : []),
                             ...(hideImageModality ? ['image'] : []),
-                            ...(isBrainWorkshopComboEnforced
-                              ? ['arithmetic']
-                              : []),
+                            ...(isBrainWorkshopComboEnforced ? ['arithmetic'] : []),
                             ...(!isBrainWorkshop || isBrainWorkshopComboEnforced
                               ? ['visvis', 'visaudio', 'audiovis']
                               : []),
@@ -1784,7 +1787,6 @@ export function ModeSettingsPanel({
                   {!isTower &&
                     !isGridlock &&
                     !isStroop &&
-                    !isStroopFlex &&
                     !isFlanker &&
                     !isPasat &&
                     !isMentalRotation &&

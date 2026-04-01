@@ -1,7 +1,4 @@
-import {
-  createProgressionAdapter,
-  getPersistencePort,
-} from '@neurodual/infra';
+import { createProgressionAdapter, getPersistencePort } from '@neurodual/infra';
 import type { ReactNode } from 'react';
 import { useMountEffect } from '@neurodual/ui';
 

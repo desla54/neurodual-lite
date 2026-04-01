@@ -64,8 +64,8 @@ const ISI_MS = 500;
 
 type Phase =
   | 'idle'
-  | 'nback-stimulus'   // showing position + playing audio (timed)
-  | 'nback-response'   // grid empty, user responds + presses Next
+  | 'nback-stimulus' // showing position + playing audio (timed)
+  | 'nback-response' // grid empty, user responds + presses Next
   | 'stroop-fixation'
   | 'stroop-stimulus'
   | 'stroop-feedback'
@@ -144,7 +144,7 @@ function generateNBackSequence(length: number, nLevel: number): NBackStimulus[] 
     } else {
       audio = SOUNDS[Math.floor(Math.random() * SOUNDS.length)]!;
       if (i >= nLevel && audio === seq[i - nLevel]!.audio) {
-        const idx = SOUNDS.indexOf(audio as typeof SOUNDS[number]);
+        const idx = SOUNDS.indexOf(audio as (typeof SOUNDS)[number]);
         audio = SOUNDS[(idx + 1) % SOUNDS.length]!;
       }
     }
@@ -160,7 +160,10 @@ function generateNBackSequence(length: number, nLevel: number): NBackStimulus[] 
 
 const COLOR_IDS: ColorId[] = ['red', 'blue', 'green', 'yellow'];
 
-function generateStroopTrials(count: number, colors: { id: ColorId; word: string }[]): StroopTrial[] {
+function generateStroopTrials(
+  count: number,
+  colors: { id: ColorId; word: string }[],
+): StroopTrial[] {
   const baseTrials: Omit<StroopTrial, 'rule'>[] = [];
   const half = Math.floor(count / 2);
 
@@ -194,10 +197,18 @@ function generateStroopTrials(count: number, colors: { id: ColorId; word: string
 // =============================================================================
 
 const PIECE_CSS_VARS: Record<string, string> = {
-  A: '--woven-incorrect', B: '--woven-blue', C: '--woven-correct',
-  D: '--woven-amber', E: '--woven-purple', F: '--woven-cyan',
-  G: '--woven-magenta', H: '--woven-orange', I: '--woven-blue',
-  J: '--woven-purple', K: '--woven-correct', L: '--woven-amber',
+  A: '--woven-incorrect',
+  B: '--woven-blue',
+  C: '--woven-correct',
+  D: '--woven-amber',
+  E: '--woven-purple',
+  F: '--woven-cyan',
+  G: '--woven-magenta',
+  H: '--woven-orange',
+  I: '--woven-blue',
+  J: '--woven-purple',
+  K: '--woven-correct',
+  L: '--woven-amber',
 };
 
 function getPieceColor(id: string): string {
@@ -209,7 +220,8 @@ function getPieceBorderColor(id: string): string {
 
 function computeDeltaRange(board: GridlockBoard, pieceId: string) {
   const validMoves = listValidMoves(board);
-  let minDelta = 0, maxDelta = 0;
+  let minDelta = 0,
+    maxDelta = 0;
   for (const move of validMoves) {
     if (move.pieceId === pieceId) {
       if (move.delta < minDelta) minDelta = move.delta;
@@ -235,19 +247,27 @@ export function DualMixTrainingPage() {
   const { audio } = useAppPorts();
   const colorModalityTheme = useSettingsStore((s) => s.ui.colorModalityTheme);
 
-  const modeSettings = useSettingsStore((s) => s.modes['dual-mix'] as Record<string, unknown> | undefined) ?? {};
-  const nLevel = typeof (modeSettings as any).nLevel === 'number' ? (modeSettings as any).nLevel : 2;
-  const totalRounds = typeof (modeSettings as any).trialsCount === 'number'
-    ? Math.max(5, Math.min(30, (modeSettings as any).trialsCount)) : 10;
+  const modeSettings =
+    useSettingsStore((s) => s.modes['dual-mix'] as Record<string, unknown> | undefined) ?? {};
+  const nLevel =
+    typeof (modeSettings as any).nLevel === 'number' ? (modeSettings as any).nLevel : 2;
+  const totalRounds =
+    typeof (modeSettings as any).trialsCount === 'number'
+      ? Math.max(5, Math.min(30, (modeSettings as any).trialsCount))
+      : 10;
 
   const COLORS = useMemo(
-    () => COLOR_IDS.map((id) => {
-      const resolved = resolveThemeColor(id, colorModalityTheme);
-      return {
-        id, cssVar: WOVEN_COLORS[resolved].cssVar, twClass: WOVEN_COLORS[resolved].bg,
-        word: t(`game.cogTask.stroop.${id}Word`), label: t(`game.cogTask.stroop.${id}Label`),
-      };
-    }),
+    () =>
+      COLOR_IDS.map((id) => {
+        const resolved = resolveThemeColor(id, colorModalityTheme);
+        return {
+          id,
+          cssVar: WOVEN_COLORS[resolved].cssVar,
+          twClass: WOVEN_COLORS[resolved].bg,
+          word: t(`game.cogTask.stroop.${id}Word`),
+          label: t(`game.cogTask.stroop.${id}Label`),
+        };
+      }),
     [t, colorModalityTheme],
   );
 
@@ -289,32 +309,40 @@ export function DualMixTrainingPage() {
   const [fadeKey, setFadeKey] = useState(0);
 
   useMountEffect(() => {
-    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   });
 
   const clearTimer = useCallback(() => {
-    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
   }, []);
 
   // --- N-Back: show stimulus (timed) → response phase (manual advance) ---
-  const startNBackStimulus = useCallback((r: number) => {
-    setPressedPosition(false);
-    setPressedAudio(false);
-    setFadeKey((k) => k + 1);
-    setPhase('nback-stimulus');
+  const startNBackStimulus = useCallback(
+    (r: number) => {
+      setPressedPosition(false);
+      setPressedAudio(false);
+      setFadeKey((k) => k + 1);
+      setPhase('nback-stimulus');
 
-    // Play audio letter
-    const seq = nbackSeqRef.current;
-    const stimulus = seq[r + nLevel];
-    if (stimulus) {
-      audio.play(stimulus.audio as Sound);
-    }
+      // Play audio letter
+      const seq = nbackSeqRef.current;
+      const stimulus = seq[r + nLevel];
+      if (stimulus) {
+        audio.play(stimulus.audio as Sound);
+      }
 
-    // After stimulus duration, switch to response phase (grid blank)
-    timerRef.current = setTimeout(() => {
-      setPhase('nback-response');
-    }, NBACK_STIMULUS_MS);
-  }, [nLevel, audio]);
+      // After stimulus duration, switch to response phase (grid blank)
+      timerRef.current = setTimeout(() => {
+        setPhase('nback-response');
+      }, NBACK_STIMULUS_MS);
+    },
+    [nLevel, audio],
+  );
 
   // User presses "Next" after responding to N-Back
   const handleNBackNext = useCallback(() => {
@@ -324,12 +352,17 @@ export function DualMixTrainingPage() {
     const idx = round + nLevel;
     const isPositionTarget = idx >= nLevel && seq[idx]!.position === seq[round]!.position;
     const isAudioTarget = idx >= nLevel && seq[idx]!.audio === seq[round]!.audio;
-    setNbackResults((prev) => [...prev, {
-      isPositionTarget, isAudioTarget,
-      pressedPosition, pressedAudio,
-      positionCorrect: pressedPosition === isPositionTarget,
-      audioCorrect: pressedAudio === isAudioTarget,
-    }]);
+    setNbackResults((prev) => [
+      ...prev,
+      {
+        isPositionTarget,
+        isAudioTarget,
+        pressedPosition,
+        pressedAudio,
+        positionCorrect: pressedPosition === isPositionTarget,
+        audioCorrect: pressedAudio === isAudioTarget,
+      },
+    ]);
     startStroopFixation(round);
   }, [phase, round, nLevel, pressedPosition, pressedAudio, clearTimer]);
 
@@ -346,7 +379,16 @@ export function DualMixTrainingPage() {
           stroopRespondedRef.current = true;
           const trial = stroopTrialsRef.current[r];
           if (trial) {
-            setStroopResults((prev) => [...prev, { trial, response: null, correct: false, rt: STROOP_STIMULUS_TIMEOUT_MS, timedOut: true }]);
+            setStroopResults((prev) => [
+              ...prev,
+              {
+                trial,
+                response: null,
+                correct: false,
+                rt: STROOP_STIMULUS_TIMEOUT_MS,
+                timedOut: true,
+              },
+            ]);
           }
           setLastStroopFeedback(false);
           setPhase('stroop-feedback');
@@ -362,14 +404,21 @@ export function DualMixTrainingPage() {
     setPhase('gridlock-move');
   }, []);
 
-  const advanceAfterGridlock = useCallback((r: number) => {
-    setPhase('round-isi');
-    timerRef.current = setTimeout(() => {
-      const next = r + 1;
-      if (next >= totalRounds) { setPhase('finished'); }
-      else { setRound(next); startNBackStimulus(next); }
-    }, ISI_MS);
-  }, [totalRounds, startNBackStimulus]);
+  const advanceAfterGridlock = useCallback(
+    (r: number) => {
+      setPhase('round-isi');
+      timerRef.current = setTimeout(() => {
+        const next = r + 1;
+        if (next >= totalRounds) {
+          setPhase('finished');
+        } else {
+          setRound(next);
+          startNBackStimulus(next);
+        }
+      }, ISI_MS);
+    },
+    [totalRounds, startNBackStimulus],
+  );
 
   // --- Initialize ---
   useEffect(() => {
@@ -403,36 +452,45 @@ export function DualMixTrainingPage() {
   }, [nbackActive, haptic]);
 
   // --- Stroop response ---
-  const handleStroopResponse = useCallback((colorId: ColorId) => {
-    if (phase !== 'stroop-stimulus' || stroopRespondedRef.current) return;
-    stroopRespondedRef.current = true;
-    haptic.vibrate(30);
-    clearTimer();
-    const rt = performance.now() - stroopStimulusStartRef.current;
-    const trial = stroopTrialsRef.current[round];
-    if (!trial) return;
-    const expected = trial.rule === 'ink' ? trial.inkColor : trial.wordColor;
-    const correct = colorId === expected;
-    setStroopResults((prev) => [...prev, { trial, response: colorId, correct, rt, timedOut: false }]);
-    setLastStroopFeedback(correct);
-    setPhase('stroop-feedback');
-    timerRef.current = setTimeout(() => startGridlockMove(), STROOP_FEEDBACK_MS);
-  }, [phase, round, haptic, clearTimer, startGridlockMove]);
+  const handleStroopResponse = useCallback(
+    (colorId: ColorId) => {
+      if (phase !== 'stroop-stimulus' || stroopRespondedRef.current) return;
+      stroopRespondedRef.current = true;
+      haptic.vibrate(30);
+      clearTimer();
+      const rt = performance.now() - stroopStimulusStartRef.current;
+      const trial = stroopTrialsRef.current[round];
+      if (!trial) return;
+      const expected = trial.rule === 'ink' ? trial.inkColor : trial.wordColor;
+      const correct = colorId === expected;
+      setStroopResults((prev) => [
+        ...prev,
+        { trial, response: colorId, correct, rt, timedOut: false },
+      ]);
+      setLastStroopFeedback(correct);
+      setPhase('stroop-feedback');
+      timerRef.current = setTimeout(() => startGridlockMove(), STROOP_FEEDBACK_MS);
+    },
+    [phase, round, haptic, clearTimer, startGridlockMove],
+  );
 
   // --- Gridlock move ---
-  const handleGridlockMove = useCallback((move: GridlockMove) => {
-    if (!gridlockMoveAllowedRef.current) return;
-    gridlockMoveAllowedRef.current = false;
-    const newBoard = applyMove(gridlockBoard, move);
-    if (!newBoard) return;
-    setGridlockTotalMoves((n) => n + 1);
-    setGridlockBoard(newBoard);
-    if (isWon(newBoard)) {
-      setGridlockPuzzlesSolved((n) => n + 1);
-      setTimeout(() => setGridlockBoard(pickRandomPuzzle()), 300);
-    }
-    advanceAfterGridlock(round);
-  }, [gridlockBoard, round, advanceAfterGridlock]);
+  const handleGridlockMove = useCallback(
+    (move: GridlockMove) => {
+      if (!gridlockMoveAllowedRef.current) return;
+      gridlockMoveAllowedRef.current = false;
+      const newBoard = applyMove(gridlockBoard, move);
+      if (!newBoard) return;
+      setGridlockTotalMoves((n) => n + 1);
+      setGridlockBoard(newBoard);
+      if (isWon(newBoard)) {
+        setGridlockPuzzlesSolved((n) => n + 1);
+        setTimeout(() => setGridlockBoard(pickRandomPuzzle()), 300);
+      }
+      advanceAfterGridlock(round);
+    },
+    [gridlockBoard, round, advanceAfterGridlock],
+  );
 
   // --- Gridlock drag (window events, same pattern as gridlock-training) ---
   const dragStateRef = useRef<DragState | null>(null);
@@ -482,20 +540,22 @@ export function DualMixTrainingPage() {
       const d = dragStateRef.current;
       if (!d || e.pointerId !== activePointerId) return;
       const cellSize = getCellSize();
-      const raw = d.orientation === 'H'
-        ? (e.clientX - d.startClientX) / cellSize
-        : (e.clientY - d.startClientY) / cellSize;
+      const raw =
+        d.orientation === 'H'
+          ? (e.clientX - d.startClientX) / cellSize
+          : (e.clientY - d.startClientY) / cellSize;
       const clamped = Math.max(d.minDelta, Math.min(d.maxDelta, Math.round(raw)));
-      setDragState((cur) => cur ? { ...cur, cellDelta: clamped } : cur);
+      setDragState((cur) => (cur ? { ...cur, cellDelta: clamped } : cur));
     };
 
     const onUp = (e: PointerEvent) => {
       const d = dragStateRef.current;
       if (!d || e.pointerId !== activePointerId) return;
       const cellSize = getCellSize();
-      const raw = d.orientation === 'H'
-        ? (e.clientX - d.startClientX) / cellSize
-        : (e.clientY - d.startClientY) / cellSize;
+      const raw =
+        d.orientation === 'H'
+          ? (e.clientX - d.startClientX) / cellSize
+          : (e.clientY - d.startClientY) / cellSize;
       const finalDelta = Math.max(d.minDelta, Math.min(d.maxDelta, Math.round(raw)));
       setDragState(null);
       if (finalDelta !== 0) {
@@ -538,17 +598,27 @@ export function DualMixTrainingPage() {
     const nPosCorrect = nbackResults.filter((r) => r.positionCorrect).length;
     const nAudCorrect = nbackResults.filter((r) => r.audioCorrect).length;
     const nTotal = nbackResults.length;
-    const nbackAcc = nTotal > 0 ? Math.round(((nPosCorrect + nAudCorrect) / (nTotal * 2)) * 100) : 0;
+    const nbackAcc =
+      nTotal > 0 ? Math.round(((nPosCorrect + nAudCorrect) / (nTotal * 2)) * 100) : 0;
 
     const stroopCorrect = stroopResults.filter((r) => r.correct).length;
-    const stroopAcc = stroopResults.length > 0 ? Math.round((stroopCorrect / stroopResults.length) * 100) : 0;
+    const stroopAcc =
+      stroopResults.length > 0 ? Math.round((stroopCorrect / stroopResults.length) * 100) : 0;
     const stroopRTs = stroopResults.filter((r) => !r.timedOut).map((r) => r.rt);
-    const stroopAvgRT = stroopRTs.length > 0 ? Math.round(stroopRTs.reduce((a, b) => a + b, 0) / stroopRTs.length) : 0;
+    const stroopAvgRT =
+      stroopRTs.length > 0
+        ? Math.round(stroopRTs.reduce((a, b) => a + b, 0) / stroopRTs.length)
+        : 0;
 
     return {
-      nbackAcc, nPosCorrect, nAudCorrect, nTotal,
-      stroopAcc, stroopAvgRT,
-      gridlockMoves: gridlockTotalMoves, gridlockSolved: gridlockPuzzlesSolved,
+      nbackAcc,
+      nPosCorrect,
+      nAudCorrect,
+      nTotal,
+      stroopAcc,
+      stroopAvgRT,
+      gridlockMoves: gridlockTotalMoves,
+      gridlockSolved: gridlockPuzzlesSolved,
       durationMs: Date.now() - sessionStartMsRef.current,
     };
   }, [phase, nbackResults, stroopResults, gridlockTotalMoves, gridlockPuzzlesSolved]);
@@ -559,19 +629,31 @@ export function DualMixTrainingPage() {
   const inkCss = currentStroopTrial
     ? `hsl(${COLORS.find((c) => c.id === currentStroopTrial.inkColor)?.cssVar})`
     : undefined;
-  const ruleLabel = currentStroopTrial?.rule === 'word'
-    ? t('game.cogTask.stroopFlex.ruleWord') : t('game.cogTask.stroopFlex.ruleInk');
+  const ruleLabel =
+    currentStroopTrial?.rule === 'word'
+      ? t('game.cogTask.stroopFlex.ruleWord')
+      : t('game.cogTask.stroopFlex.ruleInk');
 
   const microTaskLabel =
-    (phase === 'nback-stimulus' || phase === 'nback-response') ? `N-Back (N-${nLevel})` :
-    phase.startsWith('stroop') ? 'Stroop Flex' :
-    phase === 'gridlock-move' ? 'Gridlock' : null;
+    phase === 'nback-stimulus' || phase === 'nback-response'
+      ? `N-Back (N-${nLevel})`
+      : phase.startsWith('stroop')
+        ? 'Stroop Flex'
+        : phase === 'gridlock-move'
+          ? 'Gridlock'
+          : null;
 
-  const progressIndex = phase === 'finished' ? totalRounds * 3 : round * 3 + (
-    (phase === 'nback-stimulus' || phase === 'nback-response') ? 0 :
-    phase.startsWith('stroop') ? 1 :
-    phase === 'gridlock-move' ? 2 : 0
-  );
+  const progressIndex =
+    phase === 'finished'
+      ? totalRounds * 3
+      : round * 3 +
+        (phase === 'nback-stimulus' || phase === 'nback-response'
+          ? 0
+          : phase.startsWith('stroop')
+            ? 1
+            : phase === 'gridlock-move'
+              ? 2
+              : 0);
 
   // --- Render: Finished ---
   if (phase === 'finished' && summary) {
@@ -584,27 +666,66 @@ export function DualMixTrainingPage() {
           </p>
           <div className="w-full max-w-sm space-y-4">
             <div className="rounded-xl border border-border/50 bg-card/80 p-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">N-Back</h3>
-              <div className="flex justify-between"><span className="text-sm">Position</span><span className="text-sm font-mono font-bold">{summary.nPosCorrect}/{summary.nTotal}</span></div>
-              <div className="flex justify-between"><span className="text-sm">Audio</span><span className="text-sm font-mono font-bold">{summary.nAudCorrect}/{summary.nTotal}</span></div>
-              <div className="flex justify-between mt-1 pt-1 border-t border-border/30"><span className="text-sm font-semibold">Combined</span><span className="text-sm font-mono font-bold">{summary.nbackAcc}%</span></div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                N-Back
+              </h3>
+              <div className="flex justify-between">
+                <span className="text-sm">Position</span>
+                <span className="text-sm font-mono font-bold">
+                  {summary.nPosCorrect}/{summary.nTotal}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Audio</span>
+                <span className="text-sm font-mono font-bold">
+                  {summary.nAudCorrect}/{summary.nTotal}
+                </span>
+              </div>
+              <div className="flex justify-between mt-1 pt-1 border-t border-border/30">
+                <span className="text-sm font-semibold">Combined</span>
+                <span className="text-sm font-mono font-bold">{summary.nbackAcc}%</span>
+              </div>
             </div>
             <div className="rounded-xl border border-border/50 bg-card/80 p-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Stroop Flex</h3>
-              <div className="flex justify-between"><span className="text-sm">Accuracy</span><span className="text-sm font-mono font-bold">{summary.stroopAcc}%</span></div>
-              <div className="flex justify-between"><span className="text-sm">Mean RT</span><span className="text-sm font-mono font-bold">{summary.stroopAvgRT} ms</span></div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                Stroop Flex
+              </h3>
+              <div className="flex justify-between">
+                <span className="text-sm">Accuracy</span>
+                <span className="text-sm font-mono font-bold">{summary.stroopAcc}%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Mean RT</span>
+                <span className="text-sm font-mono font-bold">{summary.stroopAvgRT} ms</span>
+              </div>
             </div>
             <div className="rounded-xl border border-border/50 bg-card/80 p-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Gridlock</h3>
-              <div className="flex justify-between"><span className="text-sm">Moves</span><span className="text-sm font-mono font-bold">{summary.gridlockMoves}</span></div>
-              <div className="flex justify-between"><span className="text-sm">Puzzles solved</span><span className="text-sm font-mono font-bold">{summary.gridlockSolved}</span></div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                Gridlock
+              </h3>
+              <div className="flex justify-between">
+                <span className="text-sm">Moves</span>
+                <span className="text-sm font-mono font-bold">{summary.gridlockMoves}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Puzzles solved</span>
+                <span className="text-sm font-mono font-bold">{summary.gridlockSolved}</span>
+              </div>
             </div>
           </div>
           <div className="flex gap-3">
-            <button type="button" onClick={handleRestart} className="rounded-xl bg-foreground px-6 py-3 text-sm font-semibold text-background active:scale-95 transition-transform">
+            <button
+              type="button"
+              onClick={handleRestart}
+              className="rounded-xl bg-foreground px-6 py-3 text-sm font-semibold text-background active:scale-95 transition-transform"
+            >
               {t('game.report.playAgain', 'Play Again')}
             </button>
-            <button type="button" onClick={() => navigate('/')} className="rounded-xl border border-border px-6 py-3 text-sm font-semibold text-foreground active:scale-95 transition-transform">
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="rounded-xl border border-border px-6 py-3 text-sm font-semibold text-foreground active:scale-95 transition-transform"
+            >
               {t('game.report.backHome', 'Home')}
             </button>
           </div>
@@ -629,8 +750,12 @@ export function DualMixTrainingPage() {
       <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
         {microTaskLabel && (
           <div className="flex items-center justify-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{microTaskLabel}</span>
-            <span className="text-xs text-muted-foreground/60 font-mono">{round + 1}/{totalRounds}</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              {microTaskLabel}
+            </span>
+            <span className="text-xs text-muted-foreground/60 font-mono">
+              {round + 1}/{totalRounds}
+            </span>
           </div>
         )}
       </div>
@@ -656,11 +781,7 @@ export function DualMixTrainingPage() {
 
             {/* ═══ N-Back Response (grid blank, user responds + Next) ═══ */}
             {phase === 'nback-response' && (
-              <Grid
-                activePosition={null}
-                showStimulus={false}
-                className="w-full h-full"
-              />
+              <Grid activePosition={null} showStimulus={false} className="w-full h-full" />
             )}
 
             {/* ═══ Stroop ═══ */}
@@ -672,176 +793,189 @@ export function DualMixTrainingPage() {
                 <div className="rounded-full border border-woven-border/70 bg-woven-bg/80 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.24em] text-woven-text-muted">
                   {t('game.cogTask.stroopFlex.followRule')}: {ruleLabel}
                 </div>
-                <span className="select-none text-5xl font-black tracking-tight sm:text-6xl" style={{ color: inkCss }}>
+                <span
+                  className="select-none text-5xl font-black tracking-tight sm:text-6xl"
+                  style={{ color: inkCss }}
+                >
                   {currentStroopTrial.word}
                 </span>
               </div>
             )}
             {phase === 'stroop-feedback' && (
-              <span className={cn('select-none text-3xl font-black', lastStroopFeedback ? 'text-woven-correct' : 'text-woven-incorrect')}>
-                {lastStroopFeedback ? t('game.cogTask.feedbackCorrect') : t('game.cogTask.feedbackIncorrect')}
+              <span
+                className={cn(
+                  'select-none text-3xl font-black',
+                  lastStroopFeedback ? 'text-woven-correct' : 'text-woven-incorrect',
+                )}
+              >
+                {lastStroopFeedback
+                  ? t('game.cogTask.feedbackCorrect')
+                  : t('game.cogTask.feedbackIncorrect')}
               </span>
             )}
 
             {/* ═══ Gridlock (exact copy from gridlock-training.tsx) ═══ */}
-            {phase === 'gridlock-move' && (() => {
-              const board = gridlockBoard;
-              return (
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="relative w-[85%] max-w-[320px] sm:max-w-[380px]">
-                    <div
-                      ref={boardContainerRef}
-                      className="relative aspect-square w-full overflow-hidden rounded-2xl border border-woven-border bg-woven-surface"
-                      style={{ touchAction: 'none' }}
-                    >
-                      <CanvasWeave opacity={0.06} className="stroke-neutral-400" />
+            {phase === 'gridlock-move' &&
+              (() => {
+                const board = gridlockBoard;
+                return (
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <div className="relative w-[85%] max-w-[320px] sm:max-w-[380px]">
+                      <div
+                        ref={boardContainerRef}
+                        className="relative aspect-square w-full overflow-hidden rounded-2xl border border-woven-border bg-woven-surface"
+                        style={{ touchAction: 'none' }}
+                      >
+                        <CanvasWeave opacity={0.06} className="stroke-neutral-400" />
 
-                      {/* Grid lines */}
-                      <div className="absolute inset-0 z-[1]">
-                        {Array.from({ length: BOARD_SIZE - 1 }, (_, i) => (
-                          <div
-                            key={`h-${i}`}
-                            className="absolute left-0 right-0 border-t border-woven-border/30"
-                            style={{ top: `${((i + 1) / BOARD_SIZE) * 100}%` }}
-                          />
-                        ))}
-                        {Array.from({ length: BOARD_SIZE - 1 }, (_, i) => (
-                          <div
-                            key={`v-${i}`}
-                            className="absolute top-0 bottom-0 border-l border-woven-border/30"
-                            style={{ left: `${((i + 1) / BOARD_SIZE) * 100}%` }}
-                          />
-                        ))}
-                      </div>
-
-                      {/* Wall cells */}
-                      <div className="absolute inset-0 z-[3]">
-                        {Array.from(board.walls).map((wallIdx) => {
-                          const row = Math.floor(wallIdx / BOARD_SIZE);
-                          const col = wallIdx % BOARD_SIZE;
-                          const cellPercent = 100 / BOARD_SIZE;
-                          return (
+                        {/* Grid lines */}
+                        <div className="absolute inset-0 z-[1]">
+                          {Array.from({ length: BOARD_SIZE - 1 }, (_, i) => (
                             <div
-                              key={wallIdx}
-                              className="absolute rounded-sm bg-woven-text/10"
-                              style={{
-                                left: `calc(${col * cellPercent}% + 2px)`,
-                                top: `calc(${row * cellPercent}% + 2px)`,
-                                width: `calc(${cellPercent}% - 4px)`,
-                                height: `calc(${cellPercent}% - 4px)`,
-                              }}
+                              key={`h-${i}`}
+                              className="absolute left-0 right-0 border-t border-woven-border/30"
+                              style={{ top: `${((i + 1) / BOARD_SIZE) * 100}%` }}
                             />
-                          );
-                        })}
-                      </div>
-
-                      {/* Pieces */}
-                      <div className="absolute inset-0 z-[5]">
-                        {board.pieces.map((piece) => {
-                          const isDragging = dragState?.pieceId === piece.id;
-                          const color = getPieceColor(piece.id);
-                          const cellPercent = 100 / BOARD_SIZE;
-
-                          let displayCol = piece.col;
-                          let displayRow = piece.row;
-                          if (isDragging && dragState) {
-                            if (piece.orientation === 'H') {
-                              displayCol += dragState.cellDelta;
-                            } else {
-                              displayRow += dragState.cellDelta;
-                            }
-                          }
-
-                          const widthCells = piece.orientation === 'H' ? piece.length : 1;
-                          const heightCells = piece.orientation === 'V' ? piece.length : 1;
-                          const padding = 3;
-
-                          return (
+                          ))}
+                          {Array.from({ length: BOARD_SIZE - 1 }, (_, i) => (
                             <div
-                              key={piece.id}
-                              role="button"
-                              tabIndex={-1}
-                              className={cn(
-                                'absolute select-none cursor-grab active:cursor-grabbing',
-                                isDragging && 'z-20',
-                              )}
-                              style={{
-                                left: `${displayCol * cellPercent}%`,
-                                top: `${displayRow * cellPercent}%`,
-                                width: `${widthCells * cellPercent}%`,
-                                height: `${heightCells * cellPercent}%`,
-                                padding: `${padding}px`,
-                                transition: isDragging ? 'none' : 'left 0.15s ease-out, top 0.15s ease-out',
-                              }}
-                              onPointerDown={(event) => handlePiecePointerDown(event, piece.id)}
-                            >
+                              key={`v-${i}`}
+                              className="absolute top-0 bottom-0 border-l border-woven-border/30"
+                              style={{ left: `${((i + 1) / BOARD_SIZE) * 100}%` }}
+                            />
+                          ))}
+                        </div>
+
+                        {/* Wall cells */}
+                        <div className="absolute inset-0 z-[3]">
+                          {Array.from(board.walls).map((wallIdx) => {
+                            const row = Math.floor(wallIdx / BOARD_SIZE);
+                            const col = wallIdx % BOARD_SIZE;
+                            const cellPercent = 100 / BOARD_SIZE;
+                            return (
                               <div
+                                key={wallIdx}
+                                className="absolute rounded-sm bg-woven-text/10"
+                                style={{
+                                  left: `calc(${col * cellPercent}% + 2px)`,
+                                  top: `calc(${row * cellPercent}% + 2px)`,
+                                  width: `calc(${cellPercent}% - 4px)`,
+                                  height: `calc(${cellPercent}% - 4px)`,
+                                }}
+                              />
+                            );
+                          })}
+                        </div>
+
+                        {/* Pieces */}
+                        <div className="absolute inset-0 z-[5]">
+                          {board.pieces.map((piece) => {
+                            const isDragging = dragState?.pieceId === piece.id;
+                            const color = getPieceColor(piece.id);
+                            const cellPercent = 100 / BOARD_SIZE;
+
+                            let displayCol = piece.col;
+                            let displayRow = piece.row;
+                            if (isDragging && dragState) {
+                              if (piece.orientation === 'H') {
+                                displayCol += dragState.cellDelta;
+                              } else {
+                                displayRow += dragState.cellDelta;
+                              }
+                            }
+
+                            const widthCells = piece.orientation === 'H' ? piece.length : 1;
+                            const heightCells = piece.orientation === 'V' ? piece.length : 1;
+                            const padding = 3;
+
+                            return (
+                              <div
+                                key={piece.id}
+                                role="button"
+                                tabIndex={-1}
                                 className={cn(
-                                  'flex h-full w-full items-center justify-center rounded-lg border-2 shadow-sm',
-                                  isDragging && 'shadow-lg ring-2 ring-white/30',
+                                  'absolute select-none cursor-grab active:cursor-grabbing',
+                                  isDragging && 'z-20',
                                 )}
                                 style={{
-                                  backgroundColor: color,
-                                  borderColor: getPieceBorderColor(piece.id),
+                                  left: `${displayCol * cellPercent}%`,
+                                  top: `${displayRow * cellPercent}%`,
+                                  width: `${widthCells * cellPercent}%`,
+                                  height: `${heightCells * cellPercent}%`,
+                                  padding: `${padding}px`,
+                                  transition: isDragging
+                                    ? 'none'
+                                    : 'left 0.15s ease-out, top 0.15s ease-out',
                                 }}
+                                onPointerDown={(event) => handlePiecePointerDown(event, piece.id)}
                               >
-                                {/* Grip lines */}
                                 <div
                                   className={cn(
-                                    'flex gap-[2px]',
-                                    piece.orientation === 'H' ? 'flex-col' : 'flex-row',
+                                    'flex h-full w-full items-center justify-center rounded-lg border-2 shadow-sm',
+                                    isDragging && 'shadow-lg ring-2 ring-white/30',
                                   )}
+                                  style={{
+                                    backgroundColor: color,
+                                    borderColor: getPieceBorderColor(piece.id),
+                                  }}
                                 >
-                                  {[0, 1, 2].map((i) => (
-                                    <div
-                                      key={i}
-                                      className="rounded-full bg-white/25"
-                                      style={{
-                                        width: piece.orientation === 'H' ? 12 : 2,
-                                        height: piece.orientation === 'H' ? 2 : 12,
-                                      }}
-                                    />
-                                  ))}
+                                  {/* Grip lines */}
+                                  <div
+                                    className={cn(
+                                      'flex gap-[2px]',
+                                      piece.orientation === 'H' ? 'flex-col' : 'flex-row',
+                                    )}
+                                  >
+                                    {[0, 1, 2].map((i) => (
+                                      <div
+                                        key={i}
+                                        className="rounded-full bg-white/25"
+                                        style={{
+                                          width: piece.orientation === 'H' ? 12 : 2,
+                                          height: piece.orientation === 'H' ? 2 : 12,
+                                        }}
+                                      />
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Exit marker — fully outside the grid */}
-                    <div
-                      className="absolute z-10 flex items-center"
-                      style={{
-                        top: `${(2 / BOARD_SIZE) * 100}%`,
-                        left: '100%',
-                        width: '16px',
-                        height: `${(1 / BOARD_SIZE) * 100}%`,
-                      }}
-                    >
+                      {/* Exit marker — fully outside the grid */}
                       <div
-                        className="flex h-full w-full items-center justify-center rounded-r-lg border-y-2 border-r-2"
+                        className="absolute z-10 flex items-center"
                         style={{
-                          backgroundColor: 'hsl(var(--woven-correct) / 0.18)',
-                          borderColor: 'hsl(var(--woven-correct) / 0.7)',
+                          top: `${(2 / BOARD_SIZE) * 100}%`,
+                          left: '100%',
+                          width: '16px',
+                          height: `${(1 / BOARD_SIZE) * 100}%`,
                         }}
                       >
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-                          <path
-                            d="M1 1L7 7L1 13"
-                            stroke="hsl(var(--woven-correct))"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                        <div
+                          className="flex h-full w-full items-center justify-center rounded-r-lg border-y-2 border-r-2"
+                          style={{
+                            backgroundColor: 'hsl(var(--woven-correct) / 0.18)',
+                            borderColor: 'hsl(var(--woven-correct) / 0.7)',
+                          }}
+                        >
+                          <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                            <path
+                              d="M1 1L7 7L1 13"
+                              stroke="hsl(var(--woven-correct))"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })()}
+                );
+              })()}
 
             {/* ISI / Paused / Idle */}
             {(phase === 'round-isi' || phase === 'idle') && (
@@ -881,7 +1015,9 @@ export function DualMixTrainingPage() {
         )}
 
         {/* Stroop: 4 color buttons */}
-        {(phase === 'stroop-stimulus' || phase === 'stroop-fixation' || phase === 'stroop-feedback') && (
+        {(phase === 'stroop-stimulus' ||
+          phase === 'stroop-fixation' ||
+          phase === 'stroop-feedback') && (
           <div className="grid w-full max-w-[360px] grid-cols-2 gap-3 sm:max-w-[420px] animate-in fade-in duration-200">
             {COLORS.map((c) => (
               <button

@@ -42,6 +42,7 @@ const FIXATION_MS = 500;
 const FEEDBACK_MS = 300;
 const ISI_MIN_MS = 900;
 const ISI_MAX_MS = 1300;
+const BUFFER_ISI_MS = 3000;
 const EMPTY_MODE_SETTINGS: Readonly<Record<string, unknown>> = Object.freeze({});
 
 function getJitteredItiMs(): number {
@@ -173,6 +174,16 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       ? Math.max(1500, Math.min(6000, Math.round(v)))
       : STIMULUS_TIMEOUT_MS;
   })();
+  const nLevel = (() => {
+    if (!isFlex) return 1;
+    const v = (modeSettings as Record<string, unknown>)['nLevel'];
+    return typeof v === 'number' && Number.isFinite(v)
+      ? Math.max(1, Math.min(9, Math.round(v)))
+      : 1;
+  })();
+  /** Number of buffer trials at the start (observe only, no response expected). */
+  const bufferCount = nLevel - 1;
+
   const [runSeed, setRunSeed] = useState(0);
   const trials = useMemo(
     () => generateTrials(totalTrials, COLORS, variant),
@@ -195,6 +206,8 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     };
   });
 
+  const isBufferTrial = useCallback((idx: number) => idx < bufferCount, [bufferCount]);
+
   const startTrial = useCallback(
     (idx: number) => {
       if (idx >= trials.length) {
@@ -204,6 +217,18 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       setTrialIndex(idx);
       setPhase('fixation');
       respondedRef.current = false;
+
+      // Buffer trials (first nLevel-1): show stimulus then auto-advance, no response expected
+      if (isBufferTrial(idx)) {
+        timerRef.current = setTimeout(() => {
+          setPhase('stimulus');
+          timerRef.current = setTimeout(() => {
+            setPhase('isi');
+            timerRef.current = setTimeout(() => startTrial(idx + 1), BUFFER_ISI_MS);
+          }, stimulusTimeoutMs);
+        }, FIXATION_MS);
+        return;
+      }
 
       timerRef.current = setTimeout(() => {
         setPhase('stimulus');
@@ -250,7 +275,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         }, stimulusTimeoutMs);
       }, FIXATION_MS);
     },
-    [trials, variant, stimulusTimeoutMs],
+    [trials, variant, stimulusTimeoutMs, isBufferTrial],
   );
 
   useEffect(() => {
@@ -267,7 +292,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     track('session_started', {
       session_id: emitterRef.current.sessionId,
       mode: 'cognitive-task',
-      n_level: 1,
+      n_level: nLevel,
       modalities: ['visual'],
       play_context: 'free',
     });
@@ -290,6 +315,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const handleResponse = useCallback(
     (colorId: ColorId) => {
       if (phase !== 'stimulus' || respondedRef.current) return;
+      if (isBufferTrial(trialIndex)) return; // buffer trials don't accept responses
       respondedRef.current = true;
       haptic.vibrate(30);
       if (timerRef.current) clearTimeout(timerRef.current);
@@ -297,7 +323,10 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       const rt = performance.now() - stimulusStartRef.current;
       const trial = trials[trialIndex];
       if (!trial) return;
-      const expectedResponse = trial.rule === 'ink' ? trial.inkColor : trial.wordColor;
+      // N-back: evaluate the stimulus from (nLevel-1) trials ago with the current rule
+      const targetTrial = bufferCount > 0 ? trials[trialIndex - bufferCount] : trial;
+      if (!targetTrial) return;
+      const expectedResponse = trial.rule === 'ink' ? targetTrial.inkColor : targetTrial.wordColor;
       const correct = colorId === expectedResponse;
       const result: TrialResult = { trial, response: colorId, correct, rt, timedOut: false };
 
@@ -327,7 +356,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         timerRef.current = setTimeout(() => startTrial(trialIndex + 1), getJitteredItiMs());
       }, FEEDBACK_MS);
     },
-    [haptic, phase, startTrial, trialIndex, trials, variant],
+    [haptic, phase, startTrial, trialIndex, trials, variant, isBufferTrial, bufferCount],
   );
 
   const summary = useMemo(() => {
@@ -384,7 +413,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     track('session_completed', {
       session_id: emitterRef.current.sessionId,
       mode: variant,
-      n_level: 1,
+      n_level: nLevel,
       modalities: ['position'],
       duration_ms: durationMs,
       ups: summary.accuracy,
@@ -417,7 +446,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     track('session_abandoned', {
       session_id: emitterRef.current.sessionId,
       mode: variant,
-      n_level: 1,
+      n_level: nLevel,
       trials_completed: results.length,
       total_trials: totalTrials,
       progress_pct: Math.round((results.length / Math.max(1, totalTrials)) * 100),
@@ -433,7 +462,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       session_id: emitterRef.current.sessionId,
       action: 'play_again',
       mode: variant,
-      n_level: 1,
+      n_level: nLevel,
       play_context: 'free',
     });
     if (timerRef.current) {
@@ -500,18 +529,24 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     currentTrial?.rule === 'word'
       ? t('game.cogTask.stroopFlex.ruleWord')
       : t('game.cogTask.stroopFlex.ruleInk');
+  const isCurrentBuffer = isBufferTrial(trialIndex);
   const statusLine =
     phase === 'paused'
       ? {
           text: t('game.status.paused'),
           tone: 'muted' as StatusTone,
         }
-      : {
-          text: isFlex
-            ? t('game.cogTask.stroopFlex.pressMatchingRuleButton')
-            : t('game.cogTask.stroop.pressInkColorButton'),
-          tone: 'default' as StatusTone,
-        };
+      : isCurrentBuffer
+        ? {
+            text: t('game.cogTask.stroopFlex.observe', 'Observe'),
+            tone: 'muted' as StatusTone,
+          }
+        : {
+            text: isFlex
+              ? t('game.cogTask.stroopFlex.pressMatchingRuleButton')
+              : t('game.cogTask.stroop.pressInkColorButton'),
+            tone: 'default' as StatusTone,
+          };
 
   return (
     <div className="game-page-shell">
@@ -548,7 +583,9 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
               <div className="flex flex-col items-center gap-4 px-4 text-center">
                 {isFlex && (
                   <div className="rounded-full border border-woven-border/70 bg-woven-bg/80 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.24em] text-woven-text-muted">
-                    {t('game.cogTask.stroopFlex.followRule')}: {ruleLabel}
+                    {isCurrentBuffer
+                      ? t('game.cogTask.stroopFlex.observe', 'Observe')
+                      : `${t('game.cogTask.stroopFlex.followRule')}: ${ruleLabel}`}
                   </div>
                 )}
                 <span
@@ -599,12 +636,12 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
               <button
                 key={c.id}
                 type="button"
-                disabled={phase !== 'stimulus'}
+                disabled={phase !== 'stimulus' || isCurrentBuffer}
                 onClick={() => handleResponse(c.id)}
                 className={cn(
                   'rounded-xl border border-white/20 py-4 text-base font-bold text-white transition-all active:scale-95 touch-manipulation',
                   c.twClass,
-                  phase !== 'stimulus' ? 'opacity-40' : 'opacity-100',
+                  phase !== 'stimulus' || isCurrentBuffer ? 'opacity-40' : 'opacity-100',
                 )}
               >
                 <span

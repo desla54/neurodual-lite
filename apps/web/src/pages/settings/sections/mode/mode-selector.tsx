@@ -2,7 +2,7 @@
  * Game mode selector — simple grid for NeuroDual Lite (5 modes)
  */
 
-import { type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, Play } from '@phosphor-icons/react';
 import { BetaBadge, Section } from '@neurodual/ui';
@@ -76,7 +76,12 @@ export function GameModeSelector({
                   <Check size={14} weight="bold" className="text-primary" />
                 </div>
               )}
-              <div className={cn('flex h-10 w-10 items-center justify-center rounded-full', mode.bgClass)}>
+              <div
+                className={cn(
+                  'flex h-10 w-10 items-center justify-center rounded-full',
+                  mode.bgClass,
+                )}
+              >
                 <Icon size={22} weight="duotone" className={mode.colorClass} />
               </div>
               <div className="flex flex-col items-center gap-0.5">

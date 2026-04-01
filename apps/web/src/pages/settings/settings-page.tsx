@@ -24,9 +24,7 @@ import {
 import { SettingsMobileNav } from './components';
 
 // Lazy load sections for code splitting
-const JourneySection = lazy(() =>
-  Promise.resolve({ default: () => null as any }),
-);
+const JourneySection = lazy(() => Promise.resolve({ default: () => null as any }));
 const ModeSection = lazy(() => import('./sections/mode').then((m) => ({ default: m.ModeSection })));
 const VisualSection = lazy(() =>
   import('./sections/visual').then((m) => ({ default: m.VisualSection })),

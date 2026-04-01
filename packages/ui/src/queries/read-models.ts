@@ -25,4 +25,3 @@ export function getProfileReadModel(): ProfileReadModel {
   }
   return profileReadModelInstance;
 }
-

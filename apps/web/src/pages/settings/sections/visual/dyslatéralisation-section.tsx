@@ -62,8 +62,10 @@ export function DyslateralisationSection(): ReactNode {
     [traceModeSettings],
   );
   const traceExtensions = resolvedTraceMode.spec.extensions as unknown as TraceExtensions;
-  const traceMirrorSwipe = (traceExtensions as any)?.['dyslatéralisation']?.['mirrorSwipe'] ?? false;
-  const traceMirrorAxis = (traceExtensions as any)?.['dyslatéralisation']?.['mirrorAxis'] ?? 'horizontal';
+  const traceMirrorSwipe =
+    (traceExtensions as any)?.['dyslatéralisation']?.['mirrorSwipe'] ?? false;
+  const traceMirrorAxis =
+    (traceExtensions as any)?.['dyslatéralisation']?.['mirrorAxis'] ?? 'horizontal';
 
   const setTraceMirrorSwipe = (enabled: boolean) => {
     setModeSettingFor('dual-trace', 'dyslatMirrorSwipe', enabled);

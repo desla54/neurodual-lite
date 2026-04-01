@@ -118,8 +118,6 @@ export const logger = {
     }
 
     // Sentry removed in Lite — error logging is local-only
-    if (false) {
-    }
   },
 
   /**

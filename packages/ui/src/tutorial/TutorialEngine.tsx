@@ -896,7 +896,6 @@ export function TutorialEngine({
   const handlePause = useCallback(() => send({ type: 'PAUSE' }), [send]);
   const handleResume = useCallback(() => send({ type: 'RESUME' }), [send]);
 
-
   const targetRefMap = useMemo(
     () =>
       ({
@@ -1184,20 +1183,20 @@ export function TutorialEngine({
             )}
           >
             {/* NeuroDual Lite: Only classic (dual-catch) controls */}
-              <div
-                className={cn(
-                  'w-full flex justify-center',
-                  // Classic page doesn't add extra horizontal padding here.
-                  isAssessment ? '' : 'px-4',
-                )}
-              >
-                <GameControls
-                  disabled={isWaiting || (!isResponse && !isAssessment)}
-                  scale={isAssessment ? 1.0 : Math.min(1, layout.buttonScale)}
-                  controls={gameControls}
-                  width={isAssessment ? assessmentGridSize : layout.gridSize}
-                />
-              </div>
+            <div
+              className={cn(
+                'w-full flex justify-center',
+                // Classic page doesn't add extra horizontal padding here.
+                isAssessment ? '' : 'px-4',
+              )}
+            >
+              <GameControls
+                disabled={isWaiting || (!isResponse && !isAssessment)}
+                scale={isAssessment ? 1.0 : Math.min(1, layout.buttonScale)}
+                controls={gameControls}
+                width={isAssessment ? assessmentGridSize : layout.gridSize}
+              />
+            </div>
           </div>
 
           {showAssessmentGate && (

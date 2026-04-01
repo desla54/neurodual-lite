@@ -116,7 +116,9 @@ export function buildSessionSummariesWhere(
     } else if (filters.mode === 'Libre') {
       clauses.push(`play_context = 'free'`);
       if (filters.freeModeFilter !== 'all') {
-        const expected = resolveGameModeIdsForStatsMode(filters.freeModeFilter as Parameters<typeof resolveGameModeIdsForStatsMode>[0]);
+        const expected = resolveGameModeIdsForStatsMode(
+          filters.freeModeFilter as Parameters<typeof resolveGameModeIdsForStatsMode>[0],
+        );
         if (!expected || expected.length === 0) {
           clauses.push('1 = 0');
         } else {
@@ -126,7 +128,9 @@ export function buildSessionSummariesWhere(
         }
       }
     } else {
-      const expected = resolveGameModeIdsForStatsMode(filters.mode as Parameters<typeof resolveGameModeIdsForStatsMode>[0]);
+      const expected = resolveGameModeIdsForStatsMode(
+        filters.mode as Parameters<typeof resolveGameModeIdsForStatsMode>[0],
+      );
       if (!expected || expected.length === 0) {
         clauses.push('1 = 0');
       } else {

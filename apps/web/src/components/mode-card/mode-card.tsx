@@ -475,21 +475,19 @@ export function ModeCard({
 
           {/* ═══ ZONE 9: CHART 2 ═══ */}
           {chart2 && (
-            <>
-              <div className="px-2 py-6">
-                <div className="mb-4">
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    {chart2.title}
-                  </div>
-                  {chart2.description && (
-                    <div className="mt-1 text-[11px] text-muted-foreground italic">
-                      {chart2.description}
-                    </div>
-                  )}
+            <div className="px-2 py-6">
+              <div className="mb-4">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                  {chart2.title}
                 </div>
-                {chart2.content}
+                {chart2.description && (
+                  <div className="mt-1 text-[11px] text-muted-foreground italic">
+                    {chart2.description}
+                  </div>
+                )}
               </div>
-            </>
+              {chart2.content}
+            </div>
           )}
 
           {/* ═══ EXTRA ═══ */}

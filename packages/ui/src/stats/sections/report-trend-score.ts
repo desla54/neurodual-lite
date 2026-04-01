@@ -104,7 +104,14 @@ export function getHistoryTrendScore(
     case 'brainworkshop': {
       if (Object.keys(session.byModality).length > 0) {
         const aggregated = aggregateRawStats(session.byModality);
-        return Math.round(computeBrainWorkshopScoreFromRaw(aggregated.hits, aggregated.correctRejections, aggregated.falseAlarms, aggregated.misses));
+        return Math.round(
+          computeBrainWorkshopScoreFromRaw(
+            aggregated.hits,
+            aggregated.correctRejections,
+            aggregated.falseAlarms,
+            aggregated.misses,
+          ),
+        );
       }
       if (typeof session.upsScore === 'number' && Number.isFinite(session.upsScore)) {
         return session.upsScore;

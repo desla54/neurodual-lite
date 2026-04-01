@@ -283,7 +283,7 @@ export const GsapTimeline = forwardRef<GsapTimelineHandle, GsapTimelineProps>(fu
       } else {
         // Check if structure exists
         let wrapper = posContent.firstElementChild;
-        if (!wrapper || !wrapper.classList.contains('mini-grid-wrapper')) {
+        if (!wrapper?.classList.contains('mini-grid-wrapper')) {
           // Create structure once using safe DOM API
           while (posContent.firstChild) {
             posContent.removeChild(posContent.firstChild);
@@ -317,7 +317,7 @@ export const GsapTimeline = forwardRef<GsapTimelineHandle, GsapTimelineProps>(fu
         }
       } else {
         let wrapper = audioContent.firstElementChild;
-        if (!wrapper || !wrapper.classList.contains('mini-letter-wrapper')) {
+        if (!wrapper?.classList.contains('mini-letter-wrapper')) {
           // Create structure using safe DOM API
           while (audioContent.firstChild) {
             audioContent.removeChild(audioContent.firstChild);
