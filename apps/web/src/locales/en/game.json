@@ -273,7 +273,27 @@
         "followRule": "Rule",
         "ruleInk": "Ink color",
         "ruleWord": "Written word",
-        "pressMatchingRuleButton": "Press the button matching the current rule"
+        "pressMatchingRuleButton": "Press the button matching the current rule",
+        "intro": {
+          "title1": "Your brain reads automatically.",
+          "body1": "See the word BLUE written in red? Your brain wants to say \"blue\" — but the correct answer is the ink color: red. This conflict is the Stroop effect, and training it strengthens your focus.",
+          "title2": "Sometimes the rule flips.",
+          "body2ink": "Most trials: answer the ink color (ignore the word).",
+          "body2word": "Every 4th trial: answer the written word (ignore the ink).",
+          "body2badge": "A badge above the word tells you which rule applies.",
+          "title3": "Level {{n}}: respond to {{n}} trials back.",
+          "body3": "Don't answer what you see now — answer what you saw {{n}} turns ago, using the current rule. The first {{buffer}} trials are \"Observe\": just watch, no response needed.",
+          "title4": "Tip: look at the rule badge first.",
+          "body4": "When a new trial appears, glance at the rule badge before the word. This helps your brain prepare the right response. Speed comes with practice.",
+          "title5": "Ready?",
+          "body5": "{{trials}} trials · ~{{duration}} min",
+          "start": "Start",
+          "next": "Next",
+          "skip": "Skip intro",
+          "ruleExample": "Rule",
+          "inkLabel": "Ink color",
+          "wordLabel": "Written word"
+        }
       },
       "goNogo": {
         "goTrials": "Go trials",

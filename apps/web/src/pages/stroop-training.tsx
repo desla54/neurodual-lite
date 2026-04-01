@@ -6,6 +6,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { StroopFlexIntro } from '../components/game/stroop-flex-intro';
 import {
   cn,
   CanvasWeave,
@@ -191,6 +192,20 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   /** Number of buffer trials at the start (observe only, no response expected). */
   const bufferCount = nLevel - 1;
 
+  // ── Intro state (Stroop Flex only) ──
+  const introSeenKey = `stroopFlexIntroSeen_n${nLevel}`;
+  const forceIntro = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('intro') === '1';
+  const [showIntro, setShowIntro] = useState(() => {
+    if (!isFlex) return false;
+    if (forceIntro) return true;
+    try { return localStorage.getItem(introSeenKey) !== 'true'; }
+    catch { return true; }
+  });
+  const handleIntroDone = useCallback(() => {
+    setShowIntro(false);
+    try { localStorage.setItem(introSeenKey, 'true'); } catch {}
+  }, [introSeenKey]);
+
   const [runSeed, setRunSeed] = useState(0);
   const trials = useMemo(
     () => generateTrials(totalTrials, COLORS, variant),
@@ -286,6 +301,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   );
 
   useEffect(() => {
+    if (showIntro) return; // wait for intro to complete
     if (startedSeedRef.current === runSeed) return;
     startedSeedRef.current = runSeed;
     sessionStartMsRef.current = Date.now();
@@ -557,6 +573,16 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
 
   return (
     <div className="game-page-shell">
+      {/* Stroop Flex intro overlay */}
+      {showIntro && isFlex && (
+        <StroopFlexIntro
+          nLevel={nLevel}
+          totalTrials={totalTrials}
+          colors={COLORS}
+          onComplete={handleIntroDone}
+        />
+      )}
+
       <CognitiveTaskHUD
         trialIndex={trialIndex}
         totalTrials={totalTrials}
