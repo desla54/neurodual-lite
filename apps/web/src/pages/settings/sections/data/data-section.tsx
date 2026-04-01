@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import {
   ArrowsClockwise,
-  ChartBar,
   DownloadSimple,
   Trash,
   UploadSimple,
@@ -25,7 +24,6 @@ import {
 } from '@neurodual/ui';
 import { SessionHistoryExportSchema } from '@neurodual/logic';
 import { ConfirmationDialog } from '../../../../components/confirmation-dialog';
-import { useSettingsStore } from '../../../../stores/settings-store';
 
 export function DataSection(): ReactNode {
   const { t } = useTranslation();
@@ -37,10 +35,6 @@ export function DataSection(): ReactNode {
   const exportSessionsMutation = useExportSessions();
   const importSessionsMutation = useImportSessions();
   const deleteAllDataMutation = useDeleteAllData();
-
-  // Anonymous stats sharing
-  const shareAnonymousStats = useSettingsStore((s) => s.ui.shareAnonymousStats);
-  const setShareAnonymousStats = useSettingsStore((s) => s.setShareAnonymousStats);
 
   // Export/Import state
   const [isExporting, setIsExporting] = useState(false);
@@ -303,53 +297,13 @@ export function DataSection(): ReactNode {
           </div>
         </Section>
 
-        <Section title={t('settings.data.shareTitle', 'Anonymous sharing')}>
-          {/* Anonymous Stats Sharing Card */}
-          <Card>
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3 min-w-0 flex-1">
-                <div className="p-2.5 rounded-2xl shrink-0 bg-violet-50 text-violet-600">
-                  <ChartBar size={20} weight="regular" />
-                </div>
-                <div className="min-w-0">
-                  <div className="font-bold text-foreground">
-                    {t('settings.data.shareTitle', 'Anonymous sharing')}
-                  </div>
-                  <div className="text-xs text-muted-foreground font-medium mt-0.5">
-                    {t(
-                      'settings.data.shareDesc',
-                      'Contribute to leaderboards and comparisons (anonymized data)',
-                    )}
-                  </div>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShareAnonymousStats(!shareAnonymousStats)}
-                className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full p-0.5 leading-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
-                  shareAnonymousStats ? 'bg-primary' : 'bg-secondary'
-                }`}
-                role="switch"
-                aria-checked={shareAnonymousStats}
-                aria-label={t('settings.data.shareTitle', 'Anonymous sharing')}
-              >
-                <span
-                  className={`block h-5 w-5 rounded-full bg-white shadow-sm transition-transform ${
-                    shareAnonymousStats ? 'translate-x-5' : 'translate-x-0'
-                  }`}
-                />
-              </button>
-            </div>
-          </Card>
-        </Section>
-
         <Section title={t('settings.data.resetTitle', 'Reset my data')}>
           <div className="space-y-3">
             {/* Reset Data Card */}
             <Card>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-3 min-w-0 flex-1">
-                  <div className="p-2.5 rounded-2xl shrink-0 bg-amber-50 text-amber-600">
+                  <div className="p-2.5 rounded-2xl shrink-0 bg-destructive/10 text-destructive">
                     <ArrowsClockwise size={20} weight="regular" />
                   </div>
                   <div className="min-w-0">
@@ -364,7 +318,7 @@ export function DataSection(): ReactNode {
                 <button
                   type="button"
                   onClick={() => setShowResetDialog(true)}
-                  className="w-full sm:w-auto px-4 py-2 rounded-xl text-sm font-bold bg-amber-50 text-amber-600 hover:bg-amber-100 transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 rounded-xl text-sm font-bold bg-destructive text-white hover:bg-destructive/90 transition-colors"
                 >
                   {t('settings.data.resetButton', 'Reset')}
                 </button>
@@ -417,7 +371,7 @@ export function DataSection(): ReactNode {
           confirmLabel={t('settings.data.confirmReset')}
           loadingLabel={t('settings.data.deleting')}
           confirmIcon={<ArrowsClockwise size={18} weight="regular" />}
-          variant="warning"
+          variant="destructive"
         />
       )}
 
