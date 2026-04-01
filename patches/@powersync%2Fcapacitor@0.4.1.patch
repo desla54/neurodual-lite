@@ -1,0 +1,14 @@
+diff --git a/package.json b/package.json
+index 0125ef0dcde0ed45fde47b1e2f02e3c3f54360ff..a5ace7ace9b48c320d53bfec0585517d78637a09 100644
+--- a/package.json
++++ b/package.json
+@@ -32,7 +32,8 @@
+         "types": "./dist/plugin.d.cts",
+         "default": "./dist/plugin.cjs"
+       }
+-    }
++    },
++    "./package.json": "./package.json"
+   },
+   "author": "POWERSYNC",
+   "license": "Apache-2.0",
