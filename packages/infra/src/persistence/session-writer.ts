@@ -114,14 +114,21 @@ function projectEventsToSummary(
     | undefined;
 
   if (importedEvent) {
-    return enrichWithContext(projectImportedSessionToSummaryInput(importedEvent, userId), gameEvents);
+    return enrichWithContext(
+      projectImportedSessionToSummaryInput(importedEvent, userId),
+      gameEvents,
+    );
   }
   if (gameEvents.some((e) => e.type === 'SESSION_ENDED')) {
     const raw = projectTempoSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
     return raw ? enrichWithContext(raw, gameEvents) : null;
   }
   if (gameEvents.some((e) => e.type === 'RECALL_SESSION_ENDED')) {
-    const raw = projectRecallSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
+    const raw = projectRecallSessionToSummaryInput({
+      sessionId,
+      sessionEvents: gameEvents,
+      userId,
+    });
     return raw ? enrichWithContext(raw, gameEvents) : null;
   }
   if (gameEvents.some((e) => e.type === 'FLOW_SESSION_ENDED')) {
@@ -129,7 +136,11 @@ function projectEventsToSummary(
     return raw ? enrichWithContext(raw, gameEvents) : null;
   }
   if (gameEvents.some((e) => e.type === 'DUAL_PICK_SESSION_ENDED')) {
-    const raw = projectDualPickSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
+    const raw = projectDualPickSessionToSummaryInput({
+      sessionId,
+      sessionEvents: gameEvents,
+      userId,
+    });
     return raw ? enrichWithContext(raw, gameEvents) : null;
   }
   if (gameEvents.some((e) => e.type === 'TRACE_SESSION_ENDED')) {
@@ -181,9 +192,12 @@ function projectCognitiveTaskSummary(
 
   const totalHits = typeof metrics['hits'] === 'number' ? metrics['hits'] : correctTrials;
   const totalMisses =
-    typeof metrics['misses'] === 'number' ? metrics['misses'] : Math.max(0, totalTrials - correctTrials);
+    typeof metrics['misses'] === 'number'
+      ? metrics['misses']
+      : Math.max(0, totalTrials - correctTrials);
   const totalFa = typeof metrics['falseAlarms'] === 'number' ? metrics['falseAlarms'] : 0;
-  const totalCr = typeof metrics['correctRejections'] === 'number' ? metrics['correctRejections'] : 0;
+  const totalCr =
+    typeof metrics['correctRejections'] === 'number' ? metrics['correctRejections'] : 0;
   const meanRtMs = endEvent['meanRtMs'];
   const avgResponseTimeMs =
     typeof meanRtMs === 'number' && meanRtMs > 0 ? Math.round(meanRtMs) : undefined;
@@ -233,16 +247,22 @@ type SqlExecutor = {
 
 async function updateStreak(tx: SqlExecutor, eventDate: string): Promise<void> {
   // Read current state
-  const result = await tx.execute(
+  const result = (await tx.execute(
     "SELECT current_streak, best_streak, last_active_date FROM streak_projection WHERE id = '1'",
-  ) as { rows?: { current_streak: number; best_streak: number; last_active_date: string | null }[] };
+  )) as {
+    rows?: { current_streak: number; best_streak: number; last_active_date: string | null }[];
+  };
   const rows = (result as unknown as { rows?: unknown[] }).rows as
     | { current_streak: number; best_streak: number; last_active_date: string | null }[]
     | undefined;
   const row = rows?.[0];
 
   const current = row
-    ? { currentStreak: row.current_streak ?? 0, bestStreak: row.best_streak ?? 0, lastActiveDate: row.last_active_date ?? null }
+    ? {
+        currentStreak: row.current_streak ?? 0,
+        bestStreak: row.best_streak ?? 0,
+        lastActiveDate: row.last_active_date ?? null,
+      }
     : { currentStreak: 0, bestStreak: 0, lastActiveDate: null };
 
   const next = computeStreak(current, eventDate);
@@ -286,10 +306,10 @@ async function updateNLevel(
   if (nLevel === undefined || accuracy === undefined) return;
 
   const key = `${userId}:${nLevel}`;
-  const result = await tx.execute(
+  const result = (await tx.execute(
     'SELECT strikes_below_50, strikes_above_80, recommended_level FROM n_level_projection WHERE id = ?',
     [key],
-  ) as unknown;
+  )) as unknown;
   const rows = (result as { rows?: unknown[] }).rows as
     | { strikes_below_50: number; strikes_above_80: number; recommended_level: number }[]
     | undefined;
@@ -301,7 +321,15 @@ async function updateNLevel(
   await tx.execute(
     `INSERT OR IGNORE INTO n_level_projection (id, user_id, n_level, strikes_below_50, strikes_above_80, recommended_level, last_updated)
      VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    [key, userId, nLevel, next.strikes_below_50, next.strikes_above_80, next.recommended_level, eventDate],
+    [
+      key,
+      userId,
+      nLevel,
+      next.strikes_below_50,
+      next.strikes_above_80,
+      next.recommended_level,
+      eventDate,
+    ],
   );
   await tx.execute(
     `UPDATE n_level_projection
@@ -311,12 +339,10 @@ async function updateNLevel(
   );
 }
 
-async function updateUserStats(
-  tx: SqlExecutor,
-  summary: SessionSummaryInput,
-): Promise<void> {
+async function updateUserStats(tx: SqlExecutor, summary: SessionSummaryInput): Promise<void> {
   const userId = summary.userId ?? 'local';
-  const isCompleted = summary.reason === undefined || summary.reason === null || summary.reason === 'completed';
+  const isCompleted =
+    summary.reason === undefined || summary.reason === null || summary.reason === 'completed';
   const createdAtStr = summary.createdAt.toISOString();
 
   const sessionsDelta = isCompleted ? 1 : 0;
@@ -330,14 +356,19 @@ async function updateUserStats(
   const lastCreatedAt = isCompleted ? createdAtStr : null;
 
   const trialCount = hitsDelta + missesDelta + faDelta + crDelta;
-  const upsSum = isCompleted && summary.upsScore != null && trialCount > 0 ? summary.upsScore * trialCount : 0;
+  const upsSum =
+    isCompleted && summary.upsScore != null && trialCount > 0 ? summary.upsScore * trialCount : 0;
   const upsTrial = isCompleted && summary.upsScore != null && trialCount > 0 ? trialCount : 0;
 
   const abandonedDelta = summary.reason === 'abandoned' ? 1 : 0;
   const totalTrialsDelta = summary.trialsCount ?? 0;
   let totalXpDelta = 0;
   const xpBd = summary.xpBreakdown;
-  if (xpBd && typeof xpBd === 'object' && typeof (xpBd as Record<string, unknown>)['total'] === 'number') {
+  if (
+    xpBd &&
+    typeof xpBd === 'object' &&
+    typeof (xpBd as Record<string, unknown>)['total'] === 'number'
+  ) {
     totalXpDelta = (xpBd as Record<string, unknown>)['total'] as number;
   }
 
@@ -369,12 +400,28 @@ async function updateUserStats(
        profile_sessions_count  = profile_sessions_count + ?
      WHERE id = ?`,
     [
-      sessionsDelta, durationDelta, maxNLevel, maxNLevel,
-      upsSum, upsTrial, hitsDelta, missesDelta, faDelta, crDelta,
-      lastCreatedAt, lastNLevel, lastCreatedAt, lastCreatedAt,
-      abandonedDelta, totalTrialsDelta, totalXpDelta,
-      createdAtStr, createdAtStr,
-      earlyMorningDelta, lateNightDelta, profileSessionsDelta,
+      sessionsDelta,
+      durationDelta,
+      maxNLevel,
+      maxNLevel,
+      upsSum,
+      upsTrial,
+      hitsDelta,
+      missesDelta,
+      faDelta,
+      crDelta,
+      lastCreatedAt,
+      lastNLevel,
+      lastCreatedAt,
+      lastCreatedAt,
+      abandonedDelta,
+      totalTrialsDelta,
+      totalXpDelta,
+      createdAtStr,
+      createdAtStr,
+      earlyMorningDelta,
+      lateNightDelta,
+      profileSessionsDelta,
       userId,
     ],
   );
@@ -389,12 +436,26 @@ async function updateUserStats(
         early_morning_sessions, late_night_sessions, profile_sessions_count)
      VALUES (?,?,?,?,0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     [
-      userId, userId, sessionsDelta, durationDelta,
-      maxNLevel, lastNLevel, lastCreatedAt,
-      upsSum, upsTrial,
-      hitsDelta, missesDelta, faDelta, crDelta,
-      abandonedDelta, totalTrialsDelta, totalXpDelta, createdAtStr,
-      earlyMorningDelta, lateNightDelta, profileSessionsDelta,
+      userId,
+      userId,
+      sessionsDelta,
+      durationDelta,
+      maxNLevel,
+      lastNLevel,
+      lastCreatedAt,
+      upsSum,
+      upsTrial,
+      hitsDelta,
+      missesDelta,
+      faDelta,
+      crDelta,
+      abandonedDelta,
+      totalTrialsDelta,
+      totalXpDelta,
+      createdAtStr,
+      earlyMorningDelta,
+      lateNightDelta,
+      profileSessionsDelta,
     ],
   );
 
@@ -420,13 +481,31 @@ async function updateUserStats(
            rt_sum    = rt_sum + ?,
            rt_count  = rt_count + ?
          WHERE id = ?`,
-        [hits, misses, fa, cr, avgRT > 0 && rtCount > 0 ? avgRT * rtCount : 0, avgRT > 0 && rtCount > 0 ? rtCount : 0, modId],
+        [
+          hits,
+          misses,
+          fa,
+          cr,
+          avgRT > 0 && rtCount > 0 ? avgRT * rtCount : 0,
+          avgRT > 0 && rtCount > 0 ? rtCount : 0,
+          modId,
+        ],
       );
       await tx.execute(
         `INSERT OR IGNORE INTO user_modality_stats_projection
            (id, user_id, modality, hits_sum, misses_sum, fa_sum, cr_sum, rt_sum, rt_count)
          VALUES (?,?,?,?,?,?,?,?,?)`,
-        [modId, userId, mod, hits, misses, fa, cr, avgRT > 0 && rtCount > 0 ? avgRT * rtCount : 0, avgRT > 0 && rtCount > 0 ? rtCount : 0],
+        [
+          modId,
+          userId,
+          mod,
+          hits,
+          misses,
+          fa,
+          cr,
+          avgRT > 0 && rtCount > 0 ? avgRT * rtCount : 0,
+          avgRT > 0 && rtCount > 0 ? rtCount : 0,
+        ],
       );
     }
   }
@@ -490,7 +569,8 @@ export function createSessionWriter(deps: SessionWriterDeps) {
       return { sessionId, summary: null, wasAbandoned: false };
     }
 
-    const isCompleted = summary.reason === undefined || summary.reason === null || summary.reason === 'completed';
+    const isCompleted =
+      summary.reason === undefined || summary.reason === null || summary.reason === 'completed';
     const eventDate = summary.createdAt.toISOString().substring(0, 10);
     const now = new Date().toISOString();
 

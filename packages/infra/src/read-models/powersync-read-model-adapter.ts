@@ -1,13 +1,13 @@
 import type { AbstractPowerSyncDatabase, QueryParam } from '@powersync/web';
 
-import {
-  type JourneyConfig,
-  type JourneyState,
-  type SessionSummariesCursor,
-  type SessionSummariesFilters,
-  type ReadModelPort,
-  type ReadModelSnapshot,
-  type Subscribable,
+import type {
+  JourneyConfig,
+  JourneyState,
+  SessionSummariesCursor,
+  SessionSummariesFilters,
+  ReadModelPort,
+  ReadModelSnapshot,
+  Subscribable,
 } from '@neurodual/logic';
 
 import { getPowerSyncDatabase, isPowerSyncInitialized, openPowerSyncDatabase } from '../powersync';

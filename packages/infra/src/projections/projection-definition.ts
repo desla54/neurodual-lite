@@ -20,9 +20,13 @@ export interface ProjectedEvent {
 export interface ProjectionDefinition {
   readonly id: string;
   readonly version: number;
-  readonly canHandle: Set<string>;
+  readonly canHandle: ReadonlySet<string>;
   handle(events: readonly ProjectedEvent[], db: AbstractPowerSyncDatabase): Promise<void>;
   truncate(db: AbstractPowerSyncDatabase): Promise<void>;
+  /** Called before a batch of handle() calls during catch-up replay. */
+  beginBatch?(): void;
+  /** Called after all handle() calls in a batch to flush accumulated state. */
+  endBatch?(db: AbstractPowerSyncDatabase): Promise<void>;
 }
 
 export const DEFAULT_PARTITION = 'global';

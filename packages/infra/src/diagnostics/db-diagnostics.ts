@@ -265,7 +265,8 @@ export async function collectDbDiagnostics(): Promise<DbDiagnostics | null> {
     user_resets_count: userResetsCount,
     session_in_progress_events_count: sessionInProgressCount,
     processed_commands_count: processedCommandsCount,
-    emt_subscriptions_count: (emtTableCounts as Record<string, number>)['emt_subscriptions_count'] ?? 0,
+    emt_subscriptions_count:
+      (emtTableCounts as Record<string, number>)['emt_subscriptions_count'] ?? 0,
     user_stats_projection_count: userStatsCount,
     user_modality_stats_projection_count: userModalityStatsCount,
     streak_projection_count: streakProjectionCount,

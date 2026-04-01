@@ -40,7 +40,9 @@ export function requireJourneySnapshotFromEvents(events: readonly unknown[]): {
     throw new Error('[SessionEventHelpers] Missing session start event');
   }
   if (start['playContext'] !== 'journey') {
-    throw new Error('[SessionEventHelpers] requireJourneySnapshotFromEvents for non-journey session');
+    throw new Error(
+      '[SessionEventHelpers] requireJourneySnapshotFromEvents for non-journey session',
+    );
   }
 
   const stageId = start['journeyStageId'];

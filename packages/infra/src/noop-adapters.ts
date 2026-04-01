@@ -31,7 +31,12 @@ export const freeSubscriptionAdapter: SubscriptionPort = {
   getSubscriptionStatus: () => 'free',
   onSubscriptionChange: () => ({ unsubscribe: () => {} }),
   subscribe: () => () => {},
-  getState: () => ({ status: 'free', hasPremiumAccess: true, canAccessNLevel: () => true, canSyncToCloud: false }),
+  getState: () => ({
+    status: 'free',
+    hasPremiumAccess: true,
+    canAccessNLevel: () => true,
+    canSyncToCloud: false,
+  }),
 } as unknown as SubscriptionPort;
 
 /** Sync adapter that never syncs */

@@ -16,10 +16,7 @@ async function countLocalEventsForUser(db: AbstractPowerSyncDatabase): Promise<n
   return countAllSessionEvents(db);
 }
 
-async function getUserSessionIds(
-  db: AbstractPowerSyncDatabase,
-  userId: string,
-): Promise<string[]> {
+async function getUserSessionIds(db: AbstractPowerSyncDatabase, userId: string): Promise<string[]> {
   try {
     const rows = await db.getAll<{ session_id: string }>(
       `SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?`,

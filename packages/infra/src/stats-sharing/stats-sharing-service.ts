@@ -14,7 +14,13 @@
 function isSupabaseConfigured(): boolean {
   return false;
 }
-function getSupabase(): { functions: { invoke: <T = unknown>(...args: unknown[]) => Promise<{ data: T | null; error: { message: string } | null }> } } {
+function getSupabase(): {
+  functions: {
+    invoke: <T = unknown>(
+      ...args: unknown[]
+    ) => Promise<{ data: T | null; error: { message: string } | null }>;
+  };
+} {
   throw new Error('Supabase is not configured');
 }
 

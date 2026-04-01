@@ -54,11 +54,7 @@ function createMockPersistence(state: MockState): PersistencePort {
       !sql.includes('COUNT')
     ) {
       const sessionIds = Array.from(
-        new Set(
-          state.summaries
-            .filter((s) => s.user_id === 'local')
-            .map((s) => s.session_id),
-        ),
+        new Set(state.summaries.filter((s) => s.user_id === 'local').map((s) => s.session_id)),
       );
       return { rows: sessionIds.map((session_id) => ({ session_id })) };
     }
@@ -72,11 +68,7 @@ function createMockPersistence(state: MockState): PersistencePort {
     ) {
       const userId = String(params[0] ?? '');
       const sessionIds = Array.from(
-        new Set(
-          state.summaries
-            .filter((s) => s.user_id === userId)
-            .map((s) => s.session_id),
-        ),
+        new Set(state.summaries.filter((s) => s.user_id === userId).map((s) => s.session_id)),
       );
       return { rows: sessionIds.map((session_id) => ({ session_id })) };
     }
@@ -142,9 +134,7 @@ function createMockPersistence(state: MockState): PersistencePort {
       const authenticatedUserId = String(params[1] ?? newUserId);
 
       const sessionIds = new Set(
-        state.summaries
-          .filter((s) => s.user_id === authenticatedUserId)
-          .map((s) => s.session_id),
+        state.summaries.filter((s) => s.user_id === authenticatedUserId).map((s) => s.session_id),
       );
 
       for (const summary of state.summaries) {

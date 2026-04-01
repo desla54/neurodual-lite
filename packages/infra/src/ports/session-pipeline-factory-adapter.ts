@@ -1,8 +1,4 @@
-import type {
-  BadgeHistorySnapshot,
-  GameEvent,
-  SessionPipelineFactoryPort,
-} from '@neurodual/logic';
+import type { BadgeHistorySnapshot, GameEvent, SessionPipelineFactoryPort } from '@neurodual/logic';
 import { SESSION_START_EVENT_TYPES } from '@neurodual/logic';
 import {
   SessionEndPipelineAdapter,

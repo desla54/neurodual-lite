@@ -57,7 +57,6 @@ import { getWatchdogContext, withWatchdogContext } from './diagnostics/freeze-wa
 import { createPowerSyncReadModelAdapter } from './read-models/powersync-read-model-adapter';
 import { createDirectCommandBus } from './persistence/direct-command-bus';
 
-
 // =============================================================================
 // Infra-only Port Extension
 // =============================================================================

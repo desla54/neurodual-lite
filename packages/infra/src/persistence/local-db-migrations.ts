@@ -217,11 +217,18 @@ const MIGRATIONS: readonly DbMigration[] = [
     name: 'split-session-in-progress-blob-into-rows',
     up: async (context) => {
       const targetObjectType = await context.getObjectType('session_in_progress_events');
+      const legacyObjectType = await context.getObjectType('session_in_progress');
+
+      // Neither table exists (e.g. fresh install on Lite where session_in_progress_events
+      // was removed from the PowerSync schema) — nothing to migrate.
+      if (targetObjectType === null && legacyObjectType === null) {
+        return;
+      }
+
       if (targetObjectType === null) {
         throw new Error('[Migrations] session_in_progress_events is missing after schema update.');
       }
 
-      const legacyObjectType = await context.getObjectType('session_in_progress');
       if (legacyObjectType === null) {
         return;
       }

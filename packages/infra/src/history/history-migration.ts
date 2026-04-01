@@ -16,10 +16,7 @@ import { sql } from 'drizzle-orm';
 import { drizzleAll, drizzleRun } from '../db/drizzle';
 import { historyLog } from '../logger';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
-import {
-  countAllSessionEvents,
-  getDistinctSessionIds,
-} from '../persistence/session-queries';
+import { countAllSessionEvents, getDistinctSessionIds } from '../persistence/session-queries';
 
 // ---------------------------------------------------------------------------
 // Inline stubs replacing es-emmett helpers
@@ -40,10 +37,7 @@ async function getLocalOwnerSessionIds(db: AbstractPowerSyncDatabase): Promise<s
   }
 }
 
-async function getUserSessionIds(
-  db: AbstractPowerSyncDatabase,
-  userId: string,
-): Promise<string[]> {
+async function getUserSessionIds(db: AbstractPowerSyncDatabase, userId: string): Promise<string[]> {
   try {
     const rows = await db.getAll<{ session_id: string }>(
       `SELECT DISTINCT session_id FROM session_summaries WHERE user_id = ?`,

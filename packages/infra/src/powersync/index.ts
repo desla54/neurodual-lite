@@ -12,7 +12,10 @@ export {
   type PowerSyncRuntimeState,
 } from './database';
 
-export { createPowerSyncPersistenceAdapter, PowerSyncPersistenceAdapter } from './powersync-persistence-adapter';
+export {
+  createPowerSyncPersistenceAdapter,
+  PowerSyncPersistenceAdapter,
+} from './powersync-persistence-adapter';
 export { PowerSyncAppSchema as AppSchema } from './schema';
 export { isLikelyFatalPowerSyncStorageError, isLikelyClosedPowerSyncError } from './runtime-policy';
 export type { WebPowerSyncVfs } from './types';

@@ -37,9 +37,29 @@ import { insertSessionSummaryFromEvent } from './history-projection';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 // Event-watcher stubs inlined (no-ops after ES removal)
 const getActivePowerSyncWatchSubscriptions = () => 0;
-const watchUserDeletedSessions = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _callback: (rows: Array<{ id: string; session_id: string; [key: string]: unknown }>) => void): (() => void) => () => {};
-const watchUserEventSignalsByTypes = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _types: readonly string[], _optionsOrCallback?: unknown, _callback?: (rows: unknown[]) => void): (() => void) => () => {};
-const watchUserResets = (_db: AbstractPowerSyncDatabase, _userIds: string | readonly string[], _callback: (rows: Array<{ reset_at?: string; [key: string]: unknown }>) => void): (() => void) => () => {};
+const watchUserDeletedSessions =
+  (
+    _db: AbstractPowerSyncDatabase,
+    _userIds: string | readonly string[],
+    _callback: (rows: Array<{ id: string; session_id: string; [key: string]: unknown }>) => void,
+  ): (() => void) =>
+  () => {};
+const watchUserEventSignalsByTypes =
+  (
+    _db: AbstractPowerSyncDatabase,
+    _userIds: string | readonly string[],
+    _types: readonly string[],
+    _optionsOrCallback?: unknown,
+    _callback?: (rows: unknown[]) => void,
+  ): (() => void) =>
+  () => {};
+const watchUserResets =
+  (
+    _db: AbstractPowerSyncDatabase,
+    _userIds: string | readonly string[],
+    _callback: (rows: Array<{ reset_at?: string; [key: string]: unknown }>) => void,
+  ): (() => void) =>
+  () => {};
 import { createEventReader } from '../events/event-reader';
 import {
   getSessionEvents as getSessionEventsFromEmmettSql,

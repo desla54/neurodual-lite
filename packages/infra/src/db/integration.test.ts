@@ -68,9 +68,9 @@ class TestSQLiteAdapter {
       events = this.getSession(options.sessionId);
     } else {
       // Load all sessions
-      const rows = this.db
-        .prepare('SELECT events_json FROM session_events')
-        .all() as { events_json: string }[];
+      const rows = this.db.prepare('SELECT events_json FROM session_events').all() as {
+        events_json: string;
+      }[];
       events = rows.flatMap((r) => JSON.parse(r.events_json) as GameEvent[]);
     }
 
@@ -83,9 +83,9 @@ class TestSQLiteAdapter {
   }
 
   count(): number {
-    const rows = this.db
-      .prepare('SELECT events_json FROM session_events')
-      .all() as { events_json: string }[];
+    const rows = this.db.prepare('SELECT events_json FROM session_events').all() as {
+      events_json: string;
+    }[];
     return rows.reduce((sum, r) => {
       const parsed = JSON.parse(r.events_json) as unknown[];
       return sum + parsed.length;

@@ -28,10 +28,7 @@ export interface EventRow {
 // Core Read: session_events
 // =============================================================================
 
-function parseSessionEventsJson(
-  eventsJson: string,
-  sessionId: string,
-): EventRow[] {
+function parseSessionEventsJson(eventsJson: string, sessionId: string): EventRow[] {
   const rawEvents = JSON.parse(eventsJson) as Record<string, unknown>[];
   return rawEvents.map((e, i) => ({
     id: typeof e['id'] === 'string' ? (e['id'] as string) : `${sessionId}:${i}`,
@@ -55,7 +52,9 @@ export async function getSessionEvents(
     if (rows.length > 0 && rows[0]?.events_json) {
       return parseSessionEventsJson(rows[0].events_json, sessionId);
     }
-  } catch { /* empty */ }
+  } catch {
+    /* empty */
+  }
   return [];
 }
 
@@ -75,7 +74,9 @@ export async function countSessionEvents(
     if (rows.length > 0 && rows[0]?.events_json) {
       return (JSON.parse(rows[0].events_json) as unknown[]).length;
     }
-  } catch { /* empty */ }
+  } catch {
+    /* empty */
+  }
   return 0;
 }
 
@@ -83,7 +84,9 @@ export async function countAllSessionEvents(db: AbstractPowerSyncDatabase): Prom
   try {
     const rows = await db.getAll<{ c: number }>('SELECT COUNT(*) as c FROM session_events');
     return rows[0]?.c ?? 0;
-  } catch { return 0; }
+  } catch {
+    return 0;
+  }
 }
 
 export async function getSessionUserId(
@@ -97,12 +100,17 @@ export async function getSessionUserId(
       [sessionId],
     );
     if (rows[0]?.user_id) return rows[0].user_id;
-  } catch { /* fallback */ }
+  } catch {
+    /* fallback */
+  }
 
   // Try session_events
   const events = await getSessionEvents(db, sessionId);
   for (const e of events) {
-    const payload = typeof e.payload === 'string' ? JSON.parse(e.payload) as Record<string, unknown> : e.payload;
+    const payload =
+      typeof e.payload === 'string'
+        ? (JSON.parse(e.payload) as Record<string, unknown>)
+        : e.payload;
     const uid = payload['userId'];
     if (typeof uid === 'string' && uid.trim().length > 0) return uid.trim();
   }
@@ -111,9 +119,13 @@ export async function getSessionUserId(
 
 export async function getDistinctSessionIds(db: AbstractPowerSyncDatabase): Promise<string[]> {
   try {
-    const rows = await db.getAll<{ session_id: string }>('SELECT DISTINCT session_id FROM session_events');
+    const rows = await db.getAll<{ session_id: string }>(
+      'SELECT DISTINCT session_id FROM session_events',
+    );
     return rows.map((r) => r.session_id);
-  } catch { return []; }
+  } catch {
+    return [];
+  }
 }
 
 // =============================================================================
@@ -194,7 +206,9 @@ export async function findMissingSessionSummaries(
         [sid],
       );
       if ((row?.c ?? 0) === 0) missing.push(sid);
-    } catch { /* empty */ }
+    } catch {
+      /* empty */
+    }
   }
   return missing;
 }
@@ -212,9 +226,7 @@ export async function getLatestSessionEndEvent(
   const endEvents = events.filter((e) => endTypes.includes(e.type));
   if (endEvents.length === 0) return null;
   // Return the one with the highest timestamp
-  return endEvents.reduce((latest, e) =>
-    e.timestamp > latest.timestamp ? e : latest,
-  );
+  return endEvents.reduce((latest, e) => (e.timestamp > latest.timestamp ? e : latest));
 }
 
 /**
@@ -276,7 +288,11 @@ export async function deleteSessionEventsById(
   tx: any,
   sessionId: string,
 ): Promise<void> {
-  try { await tx.execute('DELETE FROM session_events WHERE session_id = ?', [sessionId]); } catch { /* */ }
+  try {
+    await tx.execute('DELETE FROM session_events WHERE session_id = ?', [sessionId]);
+  } catch {
+    /* */
+  }
 }
 
 // =============================================================================

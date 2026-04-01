@@ -483,11 +483,32 @@ describe('Bench › 4. getSession cost (bottleneck projection)', () => {
         sessionIds.push(sessionId);
 
         const events: Record<string, unknown>[] = [];
-        events.push({ id: crypto.randomUUID(), type: 'SESSION_STARTED', sessionId, timestamp: Date.now(), schemaVersion: 1, nLevel: 2 });
+        events.push({
+          id: crypto.randomUUID(),
+          type: 'SESSION_STARTED',
+          sessionId,
+          timestamp: Date.now(),
+          schemaVersion: 1,
+          nLevel: 2,
+        });
         for (let e = 0; e < eventsPerSession - 2; e++) {
-          events.push({ id: crypto.randomUUID(), type: 'TRIAL_PRESENTED', sessionId, timestamp: Date.now(), schemaVersion: 1, trialIndex: e });
+          events.push({
+            id: crypto.randomUUID(),
+            type: 'TRIAL_PRESENTED',
+            sessionId,
+            timestamp: Date.now(),
+            schemaVersion: 1,
+            trialIndex: e,
+          });
         }
-        events.push({ id: crypto.randomUUID(), type: 'SESSION_ENDED', sessionId, timestamp: Date.now(), schemaVersion: 1, reason: 'completed' });
+        events.push({
+          id: crypto.randomUUID(),
+          type: 'SESSION_ENDED',
+          sessionId,
+          timestamp: Date.now(),
+          schemaVersion: 1,
+          reason: 'completed',
+        });
 
         db.writeSession(sessionId, events);
       }
