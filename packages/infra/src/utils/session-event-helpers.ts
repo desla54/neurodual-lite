@@ -1,3 +1,8 @@
+/**
+ * Session event helpers — pure utility functions for extracting data from raw event arrays.
+ * Extracted from es-emmett/session-event-utils.ts during ES removal.
+ */
+
 import { SESSION_START_EVENT_TYPES, type JourneyMeta } from '@neurodual/logic';
 
 export function findSessionStartEvent(events: readonly unknown[]): Record<string, unknown> | null {
@@ -32,12 +37,10 @@ export function requireJourneySnapshotFromEvents(events: readonly unknown[]): {
 } {
   const start = findSessionStartEvent(events);
   if (!start) {
-    throw new Error('[SessionEndWorkflowRunner] Missing session start event');
+    throw new Error('[SessionEventHelpers] Missing session start event');
   }
   if (start['playContext'] !== 'journey') {
-    throw new Error(
-      '[SessionEndWorkflowRunner] requireJourneySnapshotFromEvents for non-journey session',
-    );
+    throw new Error('[SessionEventHelpers] requireJourneySnapshotFromEvents for non-journey session');
   }
 
   const stageId = start['journeyStageId'];
@@ -46,13 +49,13 @@ export function requireJourneySnapshotFromEvents(events: readonly unknown[]): {
   const targetLevel = start['journeyTargetLevel'];
 
   if (typeof stageId !== 'number') {
-    throw new Error('[SessionEndWorkflowRunner] Missing journeyStageId');
+    throw new Error('[SessionEventHelpers] Missing journeyStageId');
   }
   if (typeof journeyId !== 'string' || journeyId.trim().length === 0) {
-    throw new Error('[SessionEndWorkflowRunner] Missing journeyId');
+    throw new Error('[SessionEventHelpers] Missing journeyId');
   }
   if (typeof startLevel !== 'number' || typeof targetLevel !== 'number') {
-    throw new Error('[SessionEndWorkflowRunner] Missing journeyStartLevel/journeyTargetLevel');
+    throw new Error('[SessionEventHelpers] Missing journeyStartLevel/journeyTargetLevel');
   }
 
   const journeyGameMode =

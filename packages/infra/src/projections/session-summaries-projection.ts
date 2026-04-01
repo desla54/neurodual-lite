@@ -33,19 +33,12 @@ import {
   projectRecallSessionToSummaryInput,
   projectTempoSessionToSummaryInput,
   projectTraceSessionToSummaryInput,
-  projectTimeSessionToSummaryInput,
-  projectTrackSessionToSummaryInput,
-  projectCorsiSessionToSummaryInput,
   projectOspanSessionToSummaryInput,
-  projectRunningSpanSessionToSummaryInput,
-  projectPasatSessionToSummaryInput,
-  projectSwmSessionToSummaryInput,
 } from '@neurodual/logic';
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import { SESSION_SUMMARIES_PROJECTION_VERSION } from '../history/history-projection';
 import { cleanupAbandonedSessionById } from '../history/abandoned-cleanup';
-import { rebuildJourneyProjection, type RebuildJourneyConfig } from './journey-state-projection';
-import { getPlayContextFromEvents } from '../es-emmett/session-event-utils';
+import { getPlayContextFromEvents } from '../utils/session-event-helpers';
 import { nowMs, yieldIfOverBudget } from '../utils/yield-to-main';
 import type { ProjectedEvent, ProjectionDefinition } from './projection-definition';
 import { sessionStreamEqualsSql } from '../es-emmett/stream-id';
@@ -381,9 +374,18 @@ function resolveUserId(events: readonly StoredSessionEvent[]): string {
   return 'local';
 }
 
+interface JourneyRebuildConfig {
+  journeyId: string;
+  userId: string;
+  startLevel: number;
+  targetLevel: number;
+  gameMode?: string;
+  strategyConfig?: Record<string, unknown>;
+}
+
 function extractJourneyRebuildConfig(
   events: readonly StoredSessionEvent[],
-): RebuildJourneyConfig | null {
+): JourneyRebuildConfig | null {
   for (const e of events) {
     if (!SESSION_START_TYPES.has(e.t)) continue;
     const d = e.d;
@@ -569,30 +571,8 @@ async function finalizeSession(
   } else if (gameEvents.some((e) => e.type === 'TRACE_SESSION_ENDED')) {
     const raw = projectTraceSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
     if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'TIME_SESSION_ENDED')) {
-    const raw = projectTimeSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'MOT_SESSION_ENDED')) {
-    const raw = projectTrackSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'CORSI_SESSION_ENDED')) {
-    const raw = projectCorsiSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
   } else if (gameEvents.some((e) => e.type === 'OSPAN_SESSION_ENDED')) {
     const raw = projectOspanSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'RUNNING_SPAN_SESSION_ENDED')) {
-    const raw = projectRunningSpanSessionToSummaryInput({
-      sessionId,
-      sessionEvents: gameEvents,
-      userId,
-    });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'PASAT_SESSION_ENDED')) {
-    const raw = projectPasatSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
-    if (raw) summary = enrichWithContext(raw, gameEvents);
-  } else if (gameEvents.some((e) => e.type === 'SWM_SESSION_ENDED')) {
-    const raw = projectSwmSessionToSummaryInput({ sessionId, sessionEvents: gameEvents, userId });
     if (raw) summary = enrichWithContext(raw, gameEvents);
   } else if (gameEvents.some((e) => e.type === 'COGNITIVE_TASK_SESSION_ENDED')) {
     // Generic cognitive task — build summary from the ended event
@@ -1181,21 +1161,13 @@ export function createSessionSummariesProjectionDefinition(
   // and flushed once via endBatch() instead of being written per handle() call.
   let batchMode = false;
   let pendingSummaries: SessionSummaryInput[] = [];
-  let pendingJourneyRebuildConfigs = new Map<string, RebuildJourneyConfig>();
+  let pendingJourneyRebuildConfigs = new Map<string, JourneyRebuildConfig>();
 
   async function rebuildAffectedProjections(
-    db: AbstractPowerSyncDatabase,
-    journeyRebuildConfigs: ReadonlyMap<string, RebuildJourneyConfig>,
+    _db: AbstractPowerSyncDatabase,
+    _journeyRebuildConfigs: ReadonlyMap<string, JourneyRebuildConfig>,
   ): Promise<void> {
-    if (journeyRebuildConfigs.size > 0) {
-      for (const config of journeyRebuildConfigs.values()) {
-        try {
-          await rebuildJourneyProjection(db, config);
-        } catch (err) {
-          console.warn(`[session-summaries] Journey rebuild failed for ${config.journeyId}`, err);
-        }
-      }
-    }
+    // Journey projection rebuild removed (journey module deleted)
   }
 
   return {
@@ -1246,7 +1218,7 @@ export function createSessionSummariesProjectionDefinition(
       const inProgressMap = await loadSessionsInProgress(db, sessionIds);
 
       const summariesToInsert: SessionSummaryInput[] = [];
-      const journeyRebuildConfigs = new Map<string, RebuildJourneyConfig>();
+      const journeyRebuildConfigs = new Map<string, JourneyRebuildConfig>();
       const writer: SessionSummaryWriter = {
         insert: async (summary) => {
           summariesToInsert.push(summary);

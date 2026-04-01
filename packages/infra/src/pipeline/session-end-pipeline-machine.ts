@@ -22,7 +22,6 @@
 
 import { setup, assign, fromPromise, createActor, type SnapshotFrom } from 'xstate';
 import type {
-  AttemptResult,
   BadgeHistorySnapshot,
   JourneyContext,
   JourneyMeta,
@@ -33,21 +32,17 @@ import type {
   PipelineStage,
   PersistedPipelineState,
   SessionCompletionWithXPResult,
-  XPContextInput,
   SessionHistoryItem,
   UnlockedBadge,
 } from '@neurodual/logic';
 import {
   SESSION_START_EVENT_TYPES,
   SessionCompletionProjector,
-  projectProgressionFromSessions,
   UserProgression,
   calculatePipelineProgress,
-  journeyTransitionRecordToContext,
-  buildJourneyTransitionRecord,
 } from '@neurodual/logic';
 import { pipelineLog } from '../logger';
-import { requireJourneySnapshotFromEvents } from '../es-emmett/session-event-utils';
+import { requireJourneySnapshotFromEvents } from '../utils/session-event-helpers';
 
 // =============================================================================
 // Types
@@ -125,7 +120,7 @@ export interface PipelineDependencies {
     stageId: number,
     result: SessionCompletionWithXPResult,
     journeyMeta: JourneyMeta,
-  ) => Promise<AttemptResult | null>;
+  ) => Promise<Record<string, unknown> | null>;
 
   // Cloud sync (optional)
   syncToCloud?: (sessionId: string) => Promise<void>;
@@ -178,9 +173,6 @@ interface ProjectSummaryResult {
 }
 
 const PERSIST_EVENTS_TIMEOUT_MS = 15000;
-const ENSURE_SUMMARY_PROJECTED_TIMEOUT_MS = 10000;
-const ENSURE_PROFILE_PROJECTED_TIMEOUT_MS = 10000;
-const PROJECT_SUMMARY_DEP_TIMEOUT_MS = 3000;
 
 // SESSION_START_EVENT_TYPES imported from @neurodual/logic
 
@@ -230,35 +222,7 @@ async function withTimeout<T>(
   }
 }
 
-async function loadProjectSummaryDependency<T>(params: {
-  sessionId: string;
-  label: string;
-  load: () => Promise<T>;
-  fallback: T;
-}): Promise<T> {
-  const { sessionId, label, load, fallback } = params;
-  const startedAt = performance.now();
-  try {
-    const value = await withTimeout(
-      load(),
-      PROJECT_SUMMARY_DEP_TIMEOUT_MS,
-      `[Pipeline] project_summary ${label} timeout after ${PROJECT_SUMMARY_DEP_TIMEOUT_MS}ms (session=${sessionId})`,
-    );
-    const elapsedMs = performance.now() - startedAt;
-    if (elapsedMs > 25) {
-      pipelineLog.warn(
-        `[Pipeline TIMING] project_summary ${label} slow: ${Math.round(elapsedMs)}ms (session=${sessionId})`,
-      );
-    }
-    return value;
-  } catch (error) {
-    pipelineLog.warn(
-      `[Pipeline] project_summary ${label} failed, using fallback (session=${sessionId})`,
-      error,
-    );
-    return fallback;
-  }
-}
+// loadProjectSummaryDependency removed — DirectCommandBus handles projections inline.
 
 // =============================================================================
 // XState Machine Definition
@@ -393,7 +357,9 @@ export const pipelineMachine = setup({
         `[Pipeline] Persisting ${events.length} events for ${completionInput.sessionId}`,
       );
 
-      // Skip if no events (some modes like Trace don't have events array)
+      // DirectCommandBus.handle(SESSION/END) already wrote session_summaries + all projections.
+      // persistEvents here is a no-op for events (they're in the command bus cache).
+      // We only call it to trigger the SESSION/END handle if it hasn't been called yet.
       if (events.length > 0) {
         await withTimeout(
           input.deps.persistEvents(completionInput.sessionId, events),
@@ -402,7 +368,7 @@ export const pipelineMachine = setup({
         );
       }
 
-      // Save recovery state
+      // Save recovery state (lightweight)
       const sanitizedInput = input.deps.getSessionEvents
         ? sanitizePipelineInputForRecovery(input.input)
         : input.input;
@@ -414,43 +380,13 @@ export const pipelineMachine = setup({
         updatedAt: new Date().toISOString(),
       });
 
-      // Ensure the session_summaries row exists before the report reads progression/stats.
-      // On fresh Android installs, the local-only table can materialize slightly later.
-      const ensureSummaryProjected = input.deps.ensureSummaryProjected;
-      if (ensureSummaryProjected) {
-        const ensureStart = performance.now();
-        pipelineLog.info(
-          `[Pipeline] ensureSummaryProjected: projecting summary for ${completionInput.sessionId}`,
-        );
-        await withTimeout(
-          ensureSummaryProjected(completionInput.sessionId),
-          ENSURE_SUMMARY_PROJECTED_TIMEOUT_MS,
-          `[Pipeline] ensureSummaryProjected timeout after ${ENSURE_SUMMARY_PROJECTED_TIMEOUT_MS}ms (session=${completionInput.sessionId})`,
-        );
-        const ensureMs = performance.now() - ensureStart;
-        pipelineLog.info(
-          `[Pipeline] ensureSummaryProjected: done for ${completionInput.sessionId} (${Math.round(ensureMs)}ms)`,
-        );
-      }
-
-      const ensureProfileProjected = input.deps.ensureProfileProjected;
-      if (ensureProfileProjected) {
-        const ensureStart = performance.now();
-        await withTimeout(
-          ensureProfileProjected(completionInput),
-          ENSURE_PROFILE_PROJECTED_TIMEOUT_MS,
-          `[Pipeline] ensureProfileProjected timeout after ${ENSURE_PROFILE_PROJECTED_TIMEOUT_MS}ms (session=${completionInput.sessionId})`,
-        );
-        const ensureMs = performance.now() - ensureStart;
-        pipelineLog.info(
-          `[Pipeline] ensureProfileProjected: done for ${completionInput.sessionId} (${Math.round(ensureMs)}ms)`,
-        );
-      }
+      // Skip ensureSummaryProjected and ensureProfileProjected — DirectCommandBus
+      // already wrote session_summaries and projections atomically.
 
       const totalMs = performance.now() - t0;
       if (totalMs > 25) {
         pipelineLog.warn(
-          `[Pipeline TIMING] persist_events slow: ${Math.round(totalMs)}ms (session=${completionInput.sessionId})`,
+          `[Pipeline TIMING] persist_events: ${Math.round(totalMs)}ms (session=${completionInput.sessionId})`,
         );
       }
 
@@ -465,203 +401,24 @@ export const pipelineMachine = setup({
         if (!input.input) throw new Error('No input');
 
         const { completionInput } = input.input;
-        const skipHeavyXpReads = completionInput.mode === 'track';
-        const timings: Record<string, number> = {};
-        let stepStart = performance.now();
 
-        pipelineLog.debug(`[Pipeline] Projecting summary for ${completionInput.sessionId}`);
-        pipelineLog.debug('[Pipeline TIMING] Starting projectSummary...');
+        // DirectCommandBus already wrote session_summaries + all projections at SESSION/END.
+        // Return a minimal result without heavy DB reads.
+        const completionResult = SessionCompletionProjector.projectWithXP(completionInput, {
+          streakDays: 1,
+          isFirstOfDay: true,
+          sessionsToday: 0,
+          existingBadgeIds: [],
+        });
+        if (!completionResult) throw new Error('Failed to project completion');
 
-        // Load XP context
-        stepStart = performance.now();
-        const progressionPromise = skipHeavyXpReads
-          ? Promise.resolve(null)
-          : loadProjectSummaryDependency({
-              sessionId: completionInput.sessionId,
-              label: 'getProgression',
-              load: () => input.deps.getProgression(),
-              fallback: null,
-            });
-        const existingBadgesPromise = skipHeavyXpReads
-          ? Promise.resolve([] as UnlockedBadge[])
-          : loadProjectSummaryDependency({
-              sessionId: completionInput.sessionId,
-              label: 'getBadges',
-              load: () => input.deps.getBadges(),
-              fallback: [] as UnlockedBadge[],
-            });
-        const badgeHistoryPromise = skipHeavyXpReads
-          ? Promise.resolve(null)
-          : loadProjectSummaryDependency({
-              sessionId: completionInput.sessionId,
-              label: 'getBadgeHistory',
-              load: () =>
-                input.deps.getBadgeHistory ? input.deps.getBadgeHistory() : Promise.resolve(null),
-              fallback: null,
-            });
-        const sessionsPromise =
-          skipHeavyXpReads || !input.deps.getSessions
-            ? Promise.resolve([] as SessionHistoryItem[])
-            : loadProjectSummaryDependency({
-                sessionId: completionInput.sessionId,
-                label: 'getSessions',
-                load: () => input.deps.getSessions?.() ?? Promise.resolve([]),
-                fallback: [] as SessionHistoryItem[],
-              });
-        const [progressionData, existingBadges, badgeHistory] = await Promise.all([
-          progressionPromise,
-          existingBadgesPromise,
-          badgeHistoryPromise,
-        ]);
-        timings['1_loadData'] = performance.now() - stepStart;
-        pipelineLog.debug(`[Pipeline TIMING] 1_loadData: ${timings['1_loadData'].toFixed(0)}ms`);
-
-        stepStart = performance.now();
-        let completedSessions: SessionHistoryItem[] = [];
-        let progressionBeforeSession = progressionData;
-        let streakDays = 1;
-        let isFirstOfDay = true;
-        let sessionsToday = 0;
-
-        if (badgeHistory) {
-          streakDays = Math.max(1, badgeHistory.currentStreak);
-          sessionsToday = Math.max(0, badgeHistory.sessionsToday);
-          isFirstOfDay = sessionsToday === 0;
-        } else if (input.deps.getSessions && !skipHeavyXpReads) {
-          const sessions = await sessionsPromise;
-          const sessionsBeforeCurrent = sessions.filter((s) => s.id !== completionInput.sessionId);
-          completedSessions = sessionsBeforeCurrent.filter((s) => s.reason === 'completed');
-          const hasCurrentSessionAlreadyProjected =
-            sessionsBeforeCurrent.length !== sessions.length;
-          progressionBeforeSession =
-            progressionData && !hasCurrentSessionAlreadyProjected
-              ? progressionData
-              : projectProgressionFromSessions(sessionsBeforeCurrent);
-          // Streak computation moved to UnifiedProjectionManager
-          // For XP context, use 1 as default (first session of a potential streak)
-          streakDays = 1;
-          isFirstOfDay = isFirstSessionOfDay(completedSessions);
-          sessionsToday = countSessionsToday(completedSessions);
-        }
-        timings['2_filterSessions'] = performance.now() - stepStart;
-        pipelineLog.debug(
-          `[Pipeline TIMING] 2_prepareContext: ${timings['2_filterSessions'].toFixed(0)}ms (${completedSessions.length} completed fallback)`,
-        );
-
-        // Build XP context (same logic as useSessionCompletion)
-        stepStart = performance.now();
-        const xpContext: XPContextInput = {
-          streakDays,
-          isFirstOfDay,
-          sessionsToday,
-          existingBadgeIds: existingBadges.map((b) => b.badgeId),
-          badgeHistory: badgeHistory
-            ? {
-                currentStreak: badgeHistory.currentStreak,
-                bestStreak: badgeHistory.bestStreak,
-                earlyMorningDays: badgeHistory.earlyMorningDays,
-                lateNightDays: badgeHistory.lateNightDays,
-                maxNLevel: badgeHistory.maxNLevel,
-                bestDPrime: badgeHistory.bestDPrime,
-                daysSinceLastSession: badgeHistory.daysSinceLastSession,
-              }
-            : undefined,
-          sessionHistory: completedSessions.length > 0 ? completedSessions : undefined,
-          currentProgression: progressionBeforeSession
-            ? {
-                totalXP: progressionBeforeSession.totalXP,
-                completedSessions: progressionBeforeSession.completedSessions,
-                abandonedSessions: progressionBeforeSession.abandonedSessions,
-                totalTrials: progressionBeforeSession.totalTrials,
-                firstSessionAt: progressionBeforeSession.firstSessionAt,
-                earlyMorningSessions: progressionBeforeSession.earlyMorningSessions,
-                lateNightSessions: progressionBeforeSession.lateNightSessions,
-                comebackCount: progressionBeforeSession.comebackCount,
-                persistentDays: progressionBeforeSession.persistentDays,
-                plateausBroken: progressionBeforeSession.plateausBroken,
-                uninterruptedSessionsStreak:
-                  progressionBeforeSession.uninterruptedSessionsStreak ?? 0,
-              }
-            : undefined,
+        const prog = UserProgression.empty();
+        return {
+          result: completionResult,
+          leveledUp: false,
+          newLevel: prog.level,
+          updatedProgression: null,
         };
-        timings['3_buildXPContext'] = performance.now() - stepStart;
-        pipelineLog.debug(
-          `[Pipeline TIMING] 3_buildXPContext: ${timings['3_buildXPContext'].toFixed(0)}ms`,
-        );
-
-        // Project result (PURE)
-        stepStart = performance.now();
-        const result = SessionCompletionProjector.projectWithXP(completionInput, xpContext);
-        timings['4_projectWithXP'] = performance.now() - stepStart;
-        pipelineLog.debug(
-          `[Pipeline TIMING] 4_projectWithXP: ${timings['4_projectWithXP'].toFixed(0)}ms`,
-        );
-
-        if (!result) {
-          throw new Error('Failed to project session completion');
-        }
-
-        // Calculate level info
-        stepStart = performance.now();
-        const progressionBase = progressionBeforeSession ?? {
-          totalXP: 0,
-          completedSessions: 0,
-          abandonedSessions: 0,
-          totalTrials: 0,
-          firstSessionAt: null,
-          earlyMorningSessions: 0,
-          lateNightSessions: 0,
-          comebackCount: 0,
-          persistentDays: 0,
-          plateausBroken: 0,
-          uninterruptedSessionsStreak: 0,
-        };
-        const previousLevel = progressionBeforeSession
-          ? UserProgression.fromRecord(
-              {
-                ...progressionBase,
-                uninterruptedSessionsStreak: progressionBase.uninterruptedSessionsStreak ?? 0,
-              },
-              existingBadges,
-            ).level
-          : 1;
-        timings['5_calculateLevel'] = performance.now() - stepStart;
-        pipelineLog.debug(
-          `[Pipeline TIMING] 5_calculateLevel: ${timings['5_calculateLevel'].toFixed(0)}ms`,
-        );
-
-        const hour = new Date().getHours();
-        const isEarlyMorning = hour >= 5 && hour < 7;
-        const isLateNight = hour >= 23 || hour < 5;
-
-        const updatedProgression = {
-          totalXP: progressionBase.totalXP + result.xpBreakdown.total,
-          completedSessions: progressionBase.completedSessions + 1,
-          abandonedSessions: progressionBase.abandonedSessions,
-          totalTrials: progressionBase.totalTrials + result.summary.totalTrials,
-          firstSessionAt: progressionBase.firstSessionAt ?? new Date(),
-          earlyMorningSessions: progressionBase.earlyMorningSessions + (isEarlyMorning ? 1 : 0),
-          lateNightSessions: progressionBase.lateNightSessions + (isLateNight ? 1 : 0),
-          comebackCount: progressionBase.comebackCount,
-          persistentDays: xpContext.streakDays,
-          plateausBroken: progressionBase.plateausBroken,
-          uninterruptedSessionsStreak: progressionBase.uninterruptedSessionsStreak ?? 0,
-        };
-
-        stepStart = performance.now();
-        const newLevel = UserProgression.fromRecord(updatedProgression, existingBadges).level;
-        const leveledUp = newLevel > previousLevel;
-        timings['6_newLevel'] = performance.now() - stepStart;
-        pipelineLog.debug(`[Pipeline TIMING] 6_newLevel: ${timings['6_newLevel'].toFixed(0)}ms`);
-
-        // Update recovery state
-        const totalTime = Object.values(timings).reduce((a, b) => a + b, 0);
-        pipelineLog.debug(
-          `[Pipeline TIMING] TOTAL projectSummary: ${totalTime.toFixed(0)}ms`,
-          timings,
-        );
-
-        return { result, leveledUp, newLevel, updatedProgression };
       },
     ),
 
@@ -736,16 +493,9 @@ export const pipelineMachine = setup({
       );
       if (!attempt) return null;
 
-      const journeyTransition = buildJourneyTransitionRecord({
-        stageId,
-        journeyMeta,
-        attempt,
-      });
-      if (!journeyTransition) return null;
-
-      return journeyTransitionRecordToContext(
-        journeyTransition as unknown as Parameters<typeof journeyTransitionRecordToContext>[0],
-      );
+      // Journey transition context is no longer derived here (journey module removed).
+      // Return null to skip journey context enrichment.
+      return null;
     }),
 
     // =========================================================================
@@ -1152,33 +902,8 @@ export const pipelineMachine = setup({
 // Machine type for external use
 type PipelineMachineSnapshot = SnapshotFrom<typeof pipelineMachine>;
 
-// =============================================================================
-// Helper Functions (copied from useSessionCompletion)
-// =============================================================================
-
-function isFirstSessionOfDay(history: SessionHistoryItem[]): boolean {
-  if (history.length === 0) return true;
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  return !history.some((s) => {
-    const sessionDate = new Date(s.createdAt);
-    sessionDate.setHours(0, 0, 0, 0);
-    return sessionDate.getTime() === today.getTime();
-  });
-}
-
-function countSessionsToday(history: SessionHistoryItem[]): number {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  return history.filter((s) => {
-    const sessionDate = new Date(s.createdAt);
-    sessionDate.setHours(0, 0, 0, 0);
-    return sessionDate.getTime() === today.getTime();
-  }).length;
-}
+// Helper functions (isFirstSessionOfDay, countSessionsToday) removed —
+// DirectCommandBus handles XP/badge computation inline.
 
 // =============================================================================
 // Adapter Class (implements SessionEndPipelinePort)

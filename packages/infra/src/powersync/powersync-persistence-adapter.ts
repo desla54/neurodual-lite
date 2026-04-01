@@ -410,6 +410,34 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
 
   async getSession(sessionId: string): Promise<StoredEvent[]> {
     const db = await this.ensureReady();
+
+    // Try session_events (new direct-write path) first
+    try {
+      const seRows = await db.getAll<{ events_json: string; created_at: string }>(
+        'SELECT events_json, created_at FROM session_events WHERE session_id = ? LIMIT 1',
+        [sessionId],
+      );
+      if (seRows.length > 0 && seRows[0]?.events_json) {
+        const rawEvents = JSON.parse(seRows[0].events_json) as Record<string, unknown>[];
+        const createdAt = seRows[0].created_at ?? new Date().toISOString();
+        return rawEvents.map((e, i) => ({
+          id: typeof e['id'] === 'string' ? (e['id'] as string) : `${sessionId}:${i}`,
+          user_id: typeof e['userId'] === 'string' ? (e['userId'] as string) : null,
+          session_id: sessionId,
+          type: String(e['type'] ?? ''),
+          timestamp: typeof e['timestamp'] === 'number' ? (e['timestamp'] as number) : 0,
+          payload: e,
+          created_at: createdAt,
+          updated_at: createdAt,
+          deleted: false,
+          synced: false,
+        }));
+      }
+    } catch {
+      // Fallback to emt_messages below
+    }
+
+    // Fallback: read from emt_messages (legacy data)
     const rows = await getSessionEvents(db, sessionId);
     return rows.map((r) => parseStoredEventRow(r as unknown as Record<string, unknown>));
   }
@@ -843,29 +871,34 @@ export class PowerSyncPersistenceAdapter implements PersistencePort {
       return null;
     }
 
-    // Parse Emmett event format
+    // Parse event format (new session_events or legacy emt_messages)
     let data: Record<string, unknown>;
-    try {
-      const parsed = JSON.parse(row.message_data);
-      data = (parsed.data as Record<string, unknown>) ?? parsed;
-    } catch {
-      data = {};
+    if (row.message_data) {
+      try {
+        const parsed = JSON.parse(row.message_data);
+        data = (parsed.data as Record<string, unknown>) ?? parsed;
+      } catch {
+        data = typeof row.payload === 'object' ? (row.payload as Record<string, unknown>) : {};
+      }
+    } else {
+      data = typeof row.payload === 'object' ? (row.payload as Record<string, unknown>) : {};
     }
 
-    // Extract sessionId from stream_id (format: "session:sessionId")
-    const sessionId = parseSessionIdFromStreamId(row.stream_id) ?? row.stream_id;
+    const sessionId = row.stream_id
+      ? (parseSessionIdFromStreamId(row.stream_id) ?? row.session_id)
+      : row.session_id;
 
     const payload = data;
 
     return {
-      id: row.message_id,
+      id: row.message_id ?? row.id,
       user_id: (payload['userId'] as string | undefined) ?? null,
-      session_id: sessionId,
-      type: row.message_type,
+      session_id: sessionId ?? '',
+      type: row.message_type ?? row.type,
       timestamp: (payload['timestamp'] as number) ?? Date.now(),
       payload,
-      created_at: row.created,
-      updated_at: row.created,
+      created_at: row.created ?? row.created_at ?? '',
+      updated_at: row.created ?? row.created_at ?? '',
       deleted: false,
       synced: true,
     };

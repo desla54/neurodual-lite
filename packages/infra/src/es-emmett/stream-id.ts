@@ -1,3 +1,7 @@
+/**
+ * Stream ID helpers — kept from original for backward compatibility with SQL queries.
+ */
+
 export const SESSION_STREAM_PREFIX = 'session:';
 export const LEGACY_SESSION_STREAM_PREFIX = 'training:session:';
 

@@ -63,26 +63,18 @@ export {
   computeStreak,
   computeNLevel,
 } from './projections/projection-manager';
+// Projection processor and engine have been removed (replaced by direct writes).
+// Re-export stub types for backward compatibility.
 export {
-  toProjectedEvent,
-  type ProjectionCatchUpReport,
-} from './projections/projection-processor';
-/** @deprecated Use getConfiguredProcessorEngine instead */
-export {
-  getProjectionProcessor,
-  resetProjectionProcessor,
-  type ProjectionProcessor,
-} from './projections/projection-processor';
-export type {
-  ProjectedEvent,
-  ProjectionDefinition,
-} from './projections/projection-definition';
-export {
-  getConfiguredProcessorEngine,
+  getProcessorEngine as getConfiguredProcessorEngine,
   resetProcessorEngine,
   invalidateProcessorEngineCache,
   type ProcessorEngine,
-} from './projections/configured-engine';
+} from './es-emmett/processor-engine';
+export type {
+  ProcessorEvent as ProjectedEvent,
+  ProcessorDefinition as ProjectionDefinition,
+} from './es-emmett/processor-definition';
 export {
   applyBaselineDirectly,
   applyProfileSessionDirectly,
@@ -179,12 +171,6 @@ export {
 export type { InfraAdapters, InfraPersistencePort } from './adapters';
 export type { ProfileReadModel } from './read-models/profile-read-model';
 export { createProfileReadModel } from './read-models/profile-read-model';
-export type {
-  JourneyReadModel,
-  JourneyReadModelResult,
-  NextJourneySession,
-} from './read-models/journey-read-model';
-export { createJourneyReadModel } from './read-models/journey-read-model';
 
 // Factory functions for individual adapters (with injection)
 export { createHistoryAdapter, setupHistoryPowerSyncWatch } from './history/history-adapter';
@@ -207,9 +193,6 @@ export {
 export { createProfileAdapter } from './profile/profile-adapter';
 export { createSettingsAdapter } from './settings/settings-adapter';
 export { createAlgorithmStateAdapter } from './algorithm-state/algorithm-state-adapter';
-
-// Journey (Training Path)
-export { createJourneyAdapter } from './journey';
 
 // Stats
 export type {

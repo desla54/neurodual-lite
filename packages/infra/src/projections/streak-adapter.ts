@@ -9,7 +9,7 @@
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
 import type { StreakInfo } from '@neurodual/logic';
 import { streakStateToInfo, type StreakState } from './streak-projection';
-import { getConfiguredProcessorEngine } from './configured-engine';
+import { getProcessorEngine as getConfiguredProcessorEngine } from '../es-emmett/processor-engine';
 
 // =============================================================================
 // Streak Adapter

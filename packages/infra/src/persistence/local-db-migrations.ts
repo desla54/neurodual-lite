@@ -526,6 +526,109 @@ const MIGRATIONS: readonly DbMigration[] = [
       );
     },
   },
+  {
+    version: 19,
+    name: 'create-session-events-table',
+    up: async (context) => {
+      // session_events stores raw events as a JSON blob per session.
+      // PowerSync schema already declares this table; this migration ensures
+      // the table exists for databases created before the schema update.
+      await context.safeExecSql(
+        `CREATE TABLE IF NOT EXISTS session_events (
+           id TEXT PRIMARY KEY NOT NULL,
+           session_id TEXT NOT NULL,
+           events_json TEXT NOT NULL,
+           created_at TEXT NOT NULL
+         )`,
+      );
+      await context.safeExecSql(
+        `CREATE INDEX IF NOT EXISTS session_events_session_id_idx ON session_events(session_id)`,
+      );
+    },
+  },
+  {
+    version: 20,
+    name: 'backfill-session-events-from-emt-messages',
+    up: async (context) => {
+      // Migrate existing session data from emt_messages to session_events.
+      // This is a read-only operation on emt_messages — no data is deleted.
+      // If it fails, replay is broken for old sessions but history/stats remain intact.
+      const hasEmtMessages = await context.tableExists('emt_messages');
+      const hasSessionEvents = await context.tableExists('session_events');
+      if (!hasEmtMessages || !hasSessionEvents) return;
+
+      try {
+        // Get distinct session IDs from emt_messages (session streams)
+        const sessionRows = await context.persistence.query<{ sid: string }>(
+          `SELECT DISTINCT
+             CASE
+               WHEN stream_id LIKE 'training:session:%' THEN SUBSTR(stream_id, 19)
+               WHEN stream_id LIKE 'session:%' THEN SUBSTR(stream_id, 9)
+               ELSE stream_id
+             END as sid
+           FROM emt_messages
+           WHERE message_kind = 'E' AND is_archived = 0
+             AND (stream_id LIKE 'session:%' OR stream_id LIKE 'training:session:%')`,
+        );
+
+        for (const { sid } of sessionRows.rows) {
+          if (!sid || sid.trim().length === 0) continue;
+
+          // Skip if already migrated
+          const existing = await context.persistence.query<{ c: number }>(
+            'SELECT COUNT(*) as c FROM session_events WHERE session_id = ?',
+            [sid],
+          );
+          if ((existing.rows[0]?.c ?? 0) > 0) continue;
+
+          // Read all events for this session, ordered by stream position
+          const eventRows = await context.persistence.query<{
+            message_type: string;
+            message_data: string;
+            created: string;
+          }>(
+            `SELECT message_type, message_data, created
+             FROM emt_messages
+             WHERE message_kind = 'E' AND is_archived = 0
+               AND (stream_id = 'session:' || ? OR stream_id = 'training:session:' || ?)
+             ORDER BY CAST(stream_position AS INTEGER) ASC`,
+            [sid, sid],
+          );
+
+          if (eventRows.rows.length === 0) continue;
+
+          // Parse events and build JSON blob
+          const events: Record<string, unknown>[] = [];
+          let createdAt = new Date().toISOString();
+          for (const row of eventRows.rows) {
+            try {
+              const envelope = JSON.parse(row.message_data) as Record<string, unknown>;
+              const data = (envelope['data'] as Record<string, unknown>) ?? envelope;
+              events.push({
+                ...data,
+                type: row.message_type,
+              });
+              if (row.created) createdAt = row.created;
+            } catch {
+              // Skip corrupted events
+            }
+          }
+
+          if (events.length === 0) continue;
+
+          // Write to session_events
+          await context.safeExecSql(
+            `INSERT OR IGNORE INTO session_events (id, session_id, events_json, created_at)
+             VALUES (?, ?, ?, ?)`,
+            [sid, sid, JSON.stringify(events), createdAt],
+          );
+        }
+      } catch (error) {
+        // Best-effort: log but don't block startup
+        console.warn('[Migrations] backfill-session-events failed (non-fatal)', error);
+      }
+    },
+  },
 ];
 
 function validateMigrations(migrations: readonly DbMigration[]): void {

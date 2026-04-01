@@ -22,8 +22,6 @@ import {
 } from './instrumented-persistence';
 import { runLocalDbMigrations } from './local-db-migrations';
 import { wipeLocalDeviceData } from '../lifecycle/local-data-wipe';
-import { rebuildMissingSessionSummaries } from '../history/history-projection';
-import { rebuildStaleJourneyProjections } from '../projections/journey-projection-maintenance';
 import { countLocalUserEvents } from '../es-emmett/event-queries';
 
 const IS_DEV =
@@ -389,78 +387,9 @@ export async function setupPersistence(): Promise<PowerSyncPersistencePort> {
       // 4. Inject persistence for system event writer (removes global persistence dependency).
       g.__NEURODUAL_PERSISTENCE_STAGE__ = 'configurePorts';
       setSystemEventWriterPersistence(persistencePort);
-      // Read-model projections (including session_summaries) are owned by ProjectionProcessor.
 
-      // 5. Projection maintenance pass (checkpointed).
-      // Schedule in idle time to avoid blocking startup.
-      if (!g.__NEURODUAL_PROJECTION_MAINTENANCE_SCHEDULED__) {
-        g.__NEURODUAL_PROJECTION_MAINTENANCE_SCHEDULED__ = true;
-
-        const schedule = (fn: () => void) => {
-          const ric = (
-            globalThis as unknown as {
-              requestIdleCallback?: (cb: () => void, options?: { timeout?: number }) => void;
-            }
-          ).requestIdleCallback;
-          if (typeof ric === 'function') {
-            ric(fn, { timeout: 5000 });
-            return;
-          }
-          setTimeout(fn, 0);
-        };
-
-        schedule(() => {
-          void (async () => {
-            // Ensure projections are up to date.
-            // If a projection definition version changed, this triggers an automatic replay.
-            try {
-              const { getConfiguredProcessorEngine } = await import(
-                '../projections/configured-engine'
-              );
-              const psDb = await (persistencePort as PowerSyncPersistencePort).getPowerSyncDb();
-              const engine = getConfiguredProcessorEngine(psDb, { persistence: persistencePort });
-              const report = await engine.ensureUpToDate();
-              if (report.replayed.length > 0) {
-                persistenceLog.info(
-                  `[Persistence] Projection replay: ${report.replayed.join(', ')} (${report.totalEventsProcessed} events)`,
-                );
-              }
-              if (report.caughtUp.length > 0) {
-                persistenceLog.debug(
-                  `[Persistence] Projection catch-up: ${report.caughtUp.join(', ')} (${report.totalEventsProcessed} events)`,
-                );
-              }
-              const repairedSummaries = await rebuildMissingSessionSummaries(persistencePort);
-              if (repairedSummaries > 0) {
-                persistenceLog.info(
-                  `[Persistence] Rebuilt ${repairedSummaries} missing session summary/projection row(s)`,
-                );
-              }
-              // After projections are up to date, rebuild stale journey projections
-              // if JOURNEY_RULES_VERSION was bumped.
-              try {
-                const psDb2 = await (persistencePort as PowerSyncPersistencePort).getPowerSyncDb();
-                const rebuilt = await rebuildStaleJourneyProjections(psDb2);
-                if (rebuilt > 0) {
-                  persistenceLog.info(
-                    `[Persistence] Rebuilt ${rebuilt} stale journey projection(s)`,
-                  );
-                }
-              } catch (rebuildError) {
-                persistenceLog.warn(
-                  '[Persistence] Journey projection rebuild failed (ignored)',
-                  rebuildError,
-                );
-              }
-            } catch (error) {
-              persistenceLog.warn(
-                '[Persistence] Projection ensureUpToDate failed (ignored)',
-                error,
-              );
-            }
-          })();
-        });
-      }
+      // Note: Projection maintenance (ProcessorEngine.ensureUpToDate) has been removed.
+      // The DirectCommandBus now writes all read-model tables atomically at session end.
 
       g.__NEURODUAL_PERSISTENCE_INITIALIZED__ = true;
       // Avoid expensive full-table COUNT() at startup.

@@ -27,7 +27,6 @@ import {
   type PersistencePort,
   type SyncPort,
   type SessionEndReportModel,
-  type JourneyState,
   // Migration
   migrateAndValidateEvent,
   migrateAndValidateEventBatch,
@@ -43,8 +42,6 @@ import {
   watchUserEventSignalsByTypes,
   watchUserResets,
 } from '../powersync/event-watcher';
-import { deriveJourneyContextFromState } from '@neurodual/logic';
-import { rebuildJourneyProjection } from '../projections/journey-state-projection';
 import { createEventReader } from '../events/event-reader';
 import {
   getSessionEvents as getSessionEventsFromEmmettSql,
@@ -300,109 +297,6 @@ export function createHistoryAdapter(
       // i18n happens in the app layer, but spec displayName is a better fallback than raw IDs.
       gameModeLabelResolver: (gameMode) => getModeName(gameMode) || gameMode,
     });
-
-    // If journeyContext is missing (no JOURNEY_TRANSITION_DECIDED event — post-refactoring),
-    // derive it from journey_state_projection. This uses the CURRENT projected state
-    // (rebuilt with latest rules), so historical reports auto-adapt when rules change.
-    if (report && !report.journeyContext && report.journeyId && report.journeyStageId) {
-      historyLog.debug(
-        `[HistoryReport] Deriving journeyContext for session=${sessionId} journeyId=${report.journeyId} stageId=${report.journeyStageId}`,
-      );
-      try {
-        const row = await persistence.query(
-          `SELECT state_json, journey_game_mode FROM journey_state_projection WHERE journey_id = ? LIMIT 1`,
-          [report.journeyId],
-        );
-        const stateRow = row.rows?.[0] as
-          | { state_json: string; journey_game_mode?: string }
-          | undefined;
-        historyLog.debug(
-          `[HistoryReport] journey_state_projection row: ${stateRow ? 'found' : 'NOT FOUND'}`,
-        );
-
-        // On-demand rebuild: if the projection row is missing, build it now.
-        // This handles the case where the deferred startup rebuild hasn't run yet
-        // or where a session was completed before the projection mechanism existed.
-        if (!stateRow) {
-          historyLog.info(
-            `[HistoryReport] On-demand rebuild of journey_state_projection for journeyId=${report.journeyId}`,
-          );
-          try {
-            const psDb = await requirePowerSyncDb(persistence);
-            // Extract journey levels from the events we already loaded
-            const startEvent = events.find(
-              (e) =>
-                typeof e === 'object' &&
-                e !== null &&
-                'journeyStartLevel' in e &&
-                typeof (e as Record<string, unknown>)['journeyStartLevel'] === 'number',
-            ) as Record<string, unknown> | undefined;
-            const startLevel =
-              typeof startEvent?.['journeyStartLevel'] === 'number'
-                ? (startEvent['journeyStartLevel'] as number)
-                : 1;
-            const targetLevel =
-              typeof startEvent?.['journeyTargetLevel'] === 'number'
-                ? (startEvent['journeyTargetLevel'] as number)
-                : 5;
-            const journeyGameMode =
-              typeof startEvent?.['journeyGameMode'] === 'string'
-                ? (startEvent['journeyGameMode'] as string)
-                : report.gameMode;
-            const userId =
-              typeof startEvent?.['userId'] === 'string'
-                ? (startEvent['userId'] as string)
-                : 'local';
-
-            const builtState = await rebuildJourneyProjection(psDb, {
-              journeyId: report.journeyId,
-              userId,
-              startLevel,
-              targetLevel,
-              gameMode: journeyGameMode,
-            });
-
-            const derived = deriveJourneyContextFromState({
-              journeyState: builtState,
-              sessionStageId: report.journeyStageId,
-              sessionNLevel: report.nLevel,
-              journeyId: report.journeyId,
-              journeyGameMode,
-            });
-            if (derived) {
-              return { ...report, journeyContext: derived };
-            }
-          } catch (rebuildErr) {
-            historyLog.warn(
-              '[HistoryReport] On-demand journey projection rebuild failed',
-              rebuildErr,
-            );
-          }
-        }
-
-        if (stateRow?.state_json) {
-          const journeyState = safeJsonParse<JourneyState | null>(stateRow.state_json, null);
-          if (!journeyState) return report;
-          const derived = deriveJourneyContextFromState({
-            journeyState,
-            sessionStageId: report.journeyStageId,
-            sessionNLevel: report.nLevel,
-            journeyId: report.journeyId,
-            journeyGameMode: stateRow.journey_game_mode ?? undefined,
-          });
-          historyLog.debug(`[HistoryReport] derived journeyContext: ${derived ? 'OK' : 'null'}`);
-          if (derived) {
-            return { ...report, journeyContext: derived };
-          }
-        }
-      } catch (err) {
-        historyLog.warn('[HistoryReport] Failed to derive journeyContext from projection', err);
-      }
-    } else if (report && !report.journeyContext) {
-      historyLog.debug(
-        `[HistoryReport] No journey markers: journeyId=${report.journeyId} journeyStageId=${report.journeyStageId}`,
-      );
-    }
 
     return report;
   }
@@ -762,8 +656,8 @@ export function setupHistoryPowerSyncWatch(
       const report = await withWatchdogStepAsync(
         `PowerSyncWatch.ensureProjectionsUpToDate(${reason})`,
         async () => {
-          const { getConfiguredProcessorEngine } = await import('../projections/configured-engine');
-          const engine = getConfiguredProcessorEngine(db, { persistence });
+          const { getProcessorEngine } = await import('../es-emmett/processor-engine');
+          const engine = getProcessorEngine();
           if (options?.invalidateCache) {
             engine.invalidateCache();
           }

@@ -238,6 +238,22 @@ const session_in_progress_events = new Table(
   },
 );
 
+// Session events archive (local-only) — stores raw events as JSON blob per session.
+// Used by replay and history adapters. Replaces per-event rows in emt_messages.
+const session_events = new Table(
+  {
+    session_id: column.text,
+    events_json: column.text,
+    created_at: column.text,
+  },
+  {
+    localOnly: true,
+    indexes: {
+      session_id_idx: ['session_id'],
+    },
+  },
+);
+
 // Running stats totals per user (all completed sessions, local-only)
 const user_stats_projection = new Table(
   {
@@ -546,6 +562,7 @@ export const PowerSyncAppSchema = new Schema({
   processed_commands,
   session_in_progress_events,
   session_summaries,
+  session_events,
   replay_runs,
   replay_events,
   // Projection tables (Phase 3)

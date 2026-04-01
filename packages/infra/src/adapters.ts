@@ -6,7 +6,7 @@
  */
 
 import type { AbstractPowerSyncDatabase } from '@powersync/web';
-import type { EmmettEventStore } from './es-emmett/powersync-emmett-event-store';
+// EmmettEventStore type removed — direct writes via DirectCommandBus
 import type {
   ActivityStats,
   AlgorithmStatePort,
@@ -18,7 +18,6 @@ import type {
   PlaceConfidenceStats,
   FocusStats,
   HistoryPort,
-  JourneyPort,
   ModalityStatsRow,
   ModalityTimingStats,
   ModeBreakdown,
@@ -39,21 +38,16 @@ import type {
   SyncPort,
   UPSStats,
   ZoneStats,
-  JourneyState,
 } from '@neurodual/logic';
 import {
-  ALTERNATING_JOURNEY_FIRST_MODE,
   browserClock,
   cryptoRandom,
   createSeededRandom,
-  createEmptyJourneyState,
   createEmptyProfile,
-  isSimulatorMode,
 } from '@neurodual/logic';
 import { audioService, type Voice, type Language } from './audio/audio-service';
 import { createAlgorithmStateAdapter } from './algorithm-state/algorithm-state-adapter';
 import { createHistoryAdapter } from './history/history-adapter';
-import { createJourneyAdapter } from './journey/journey-adapter';
 import { createProfileAdapter } from './profile/profile-adapter';
 import { createProgressionAdapter } from './progression/progression-adapter';
 import { createSettingsAdapter } from './settings/settings-adapter';
@@ -61,9 +55,8 @@ import { logSessionToDev } from './dev-logger';
 import { createProfileReadModel, type ProfileReadModel } from './read-models/profile-read-model';
 import { getWatchdogContext, withWatchdogContext } from './diagnostics/freeze-watchdog';
 import { createPowerSyncReadModelAdapter } from './read-models/powersync-read-model-adapter';
-import { createCommandBus } from './es-emmett/command-bus';
-import { supabaseAuthAdapter } from './supabase';
-import { safeJsonParse } from './db/sql-helpers';
+import { createDirectCommandBus } from './persistence/direct-command-bus';
+
 
 // =============================================================================
 // Infra-only Port Extension
@@ -75,11 +68,6 @@ import { safeJsonParse } from './db/sql-helpers';
  */
 export interface InfraPersistencePort extends PersistencePort {
   getPowerSyncDb(): Promise<AbstractPowerSyncDatabase>;
-  /**
-   * Get the Emmett event store for indexed event reads.
-   * Returns null if not yet initialized (during early startup).
-   */
-  getEventStore(): Promise<EmmettEventStore | null>;
 }
 
 // =============================================================================
@@ -176,7 +164,6 @@ export { createSeededRandom };
  */
 export interface InfraAdapters {
   history: HistoryPort;
-  journey: JourneyPort;
   profile: ProfilePort;
   progression: ProgressionPort;
   readModels: ReadModelPort;
@@ -193,59 +180,10 @@ export interface CreateAdaptersOptions {
    * Errors are ignored since background sync will catch up later.
    */
   syncPort?: SyncPort;
-}
-
-function getReadModelUserIds(userId: string | null): string[] {
-  return userId ? [userId, 'local'] : ['local'];
-}
-
-function createEmptyProjectedJourneyState(config: {
-  readonly startLevel: number;
-  readonly targetLevel: number;
-  readonly gameMode?: string;
-}) {
-  const empty = createEmptyJourneyState(
-    config.targetLevel,
-    config.startLevel,
-    isSimulatorMode(config.gameMode),
-  );
-  if (config.gameMode === 'dual-track-dnb-hybrid') {
-    empty.nextSessionGameMode = ALTERNATING_JOURNEY_FIRST_MODE;
-  }
-  return empty;
-}
-
-async function readProjectedJourneyState(
-  persistence: InfraPersistencePort,
-  config: {
-    readonly journeyId: string;
-    readonly startLevel: number;
-    readonly targetLevel: number;
-    readonly gameMode?: string;
-  },
-  userId: string | null,
-) {
-  const journeyId = config.journeyId.trim();
-  const empty = createEmptyProjectedJourneyState(config);
-  if (journeyId.length === 0) return empty;
-
-  const db = await persistence.getPowerSyncDb();
-  const effectiveUserIds = getReadModelUserIds(userId);
-  const placeholders = effectiveUserIds.map(() => '?').join(', ');
-  const preferredUserId = userId ?? 'local';
-  const row = await db.getOptional<{ state_json: string | null }>(
-    `SELECT state_json
-       FROM journey_state_projection
-      WHERE journey_id = ?
-        AND user_id IN (${placeholders})
-      ORDER BY CASE WHEN user_id = ? THEN 0 ELSE 1 END, updated_at DESC
-      LIMIT 1`,
-    [journeyId, ...effectiveUserIds, preferredUserId],
-  );
-
-  if (!row?.state_json) return empty;
-
-  return safeJsonParse<JourneyState>(row.state_json, empty);
+  /**
+   * Optional pre-built CommandBusPort. If omitted, falls back to Emmett CommandBus.
+   */
+  commandBus?: CommandBusPort;
 }
 
 async function yieldToMain(): Promise<void> {
@@ -326,42 +264,12 @@ export function createAdapters(
   persistence: InfraPersistencePort,
   options?: CreateAdaptersOptions,
 ): InfraAdapters {
-  const getActiveReadModelUserId = (): string | null => {
-    const authState = supabaseAuthAdapter.getState();
-    return authState.status === 'authenticated' ? authState.session.user.id : null;
-  };
-
-  // Create a lazy eventStore wrapper that defers getEventStore() until first readStream call
-  const lazyEventStore = {
-    readStream: async (args: {
-      streamId: { aggregateType: string; aggregateId: string };
-      fromVersion?: bigint;
-      maxCount?: bigint;
-    }) => {
-      const eventStore = await persistence.getEventStore();
-      if (!eventStore) {
-        // Return empty result if eventStore not available (fallback to SQL in history-adapter)
-        return {
-          currentStreamVersion: 0n,
-          streamExists: false,
-          events: [],
-        };
-      }
-      return eventStore.readStream(args);
-    },
-  };
-
   const history = createHistoryAdapter(persistence, {
     syncPort: options?.syncPort,
-    eventStore: lazyEventStore,
   });
   const readModels = createPowerSyncReadModelAdapter();
   return {
     history,
-    journey: createJourneyAdapter(history, {
-      getProjectedState: async (config) =>
-        readProjectedJourneyState(persistence, config, getActiveReadModelUserId()),
-    }),
     profile: createProfileAdapter(persistence),
     progression: createProgressionAdapter(persistence),
     readModels,
@@ -369,7 +277,7 @@ export function createAdapters(
     stats: createLazyStatsAdapter(persistence),
     settings: createSettingsAdapter(persistence),
     algorithmState: createAlgorithmStateAdapter(persistence),
-    commandBus: createCommandBus(persistence),
+    commandBus: options?.commandBus ?? createDirectCommandBus({ db: null as never }),
   };
 }
 
@@ -381,11 +289,6 @@ export async function createAdaptersAsync(
   persistence: InfraPersistencePort,
   options?: CreateAdaptersOptions,
 ): Promise<InfraAdapters> {
-  const getActiveReadModelUserId = (): string | null => {
-    const authState = supabaseAuthAdapter.getState();
-    return authState.status === 'authenticated' ? authState.session.user.id : null;
-  };
-
   const baseContext = getWatchdogContext() ?? 'createAdapters';
 
   // Granular timing for debugging freezes - logs if any step takes > 100ms
@@ -407,43 +310,14 @@ export async function createAdaptersAsync(
     return withWatchdogContext(`${baseContext}:${name}`, () => timedCreate(name, fn));
   };
 
-  // Create a lazy eventStore wrapper that defers getEventStore() until first readStream call
-  const lazyEventStore = {
-    readStream: async (args: {
-      streamId: { aggregateType: string; aggregateId: string };
-      fromVersion?: bigint;
-      maxCount?: bigint;
-    }) => {
-      const eventStore = await persistence.getEventStore();
-      if (!eventStore) {
-        // Return empty result if eventStore not available (fallback to SQL in history-adapter)
-        return {
-          currentStreamVersion: 0n,
-          streamExists: false,
-          events: [],
-        };
-      }
-      return eventStore.readStream(args);
-    },
-  };
-
   const history = step('createHistoryAdapter', () =>
     createHistoryAdapter(persistence, {
       syncPort: options?.syncPort,
-      eventStore: lazyEventStore,
     }),
   );
   await yieldToMain();
 
   const readModels = step('createReadModelsAdapter', () => createPowerSyncReadModelAdapter());
-  await yieldToMain();
-
-  const journey = step('createJourneyAdapter', () =>
-    createJourneyAdapter(history, {
-      getProjectedState: async (config) =>
-        readProjectedJourneyState(persistence, config, getActiveReadModelUserId()),
-    }),
-  );
   await yieldToMain();
 
   const profile = step('createProfileAdapter', () => createProfileAdapter(persistence));
@@ -473,7 +347,6 @@ export async function createAdaptersAsync(
 
   return {
     history,
-    journey,
     profile,
     progression,
     readModels,
@@ -481,7 +354,10 @@ export async function createAdaptersAsync(
     stats,
     settings,
     algorithmState,
-    commandBus: createCommandBus(persistence),
+    commandBus: await (async () => {
+      const db = await persistence.getPowerSyncDb();
+      return createDirectCommandBus({ db });
+    })(),
   };
 }
 
@@ -519,22 +395,6 @@ export function createNoopInfraAdapters(): InfraAdapters {
     // Noop should NOT be considered ready: it indicates persistence/read-models are not wired yet.
     isReady: () => false,
     setReady: () => {},
-  };
-
-  const noopJourney: JourneyPort = {
-    getJourneyState: async () => createEmptyJourneyState(),
-    recordAttempt: async () => ({
-      isValidating: false,
-      score: 0,
-      strategy: 'balanced' as const,
-      totalValidatingSessions: 0,
-      sessionsRemaining: 1,
-      stageCompleted: false,
-      nextStageUnlocked: null,
-      nextPlayableStage: null,
-    }),
-    getStageDefinition: () => undefined,
-    getCurrentStageDefinition: async () => null,
   };
 
   const emptyProfile = createEmptyProfile(NOOP_USER_ID);
@@ -676,10 +536,8 @@ export function createNoopInfraAdapters(): InfraAdapters {
   const maxLevelStore = staticStore(maxLevelSnapshot);
 
   const noopReadModels: ReadModelPort = {
-    journeyState: (config, _userId) => {
-      const isSimulator = isSimulatorMode(config.gameMode);
-      const state = createEmptyJourneyState(config.targetLevel, config.startLevel, isSimulator);
-      const snapshot = { data: state, isPending: false, error: null };
+    journeyState: () => {
+      const snapshot = { data: {} as any, isPending: false, error: null };
       return {
         subscribe: () => () => {},
         getSnapshot: () => snapshot,
@@ -726,7 +584,6 @@ export function createNoopInfraAdapters(): InfraAdapters {
 
   return {
     history: noopHistory,
-    journey: noopJourney,
     profile: noopProfile,
     progression: noopProgression,
     readModels: noopReadModels,
