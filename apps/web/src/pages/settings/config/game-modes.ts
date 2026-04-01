@@ -4448,3 +4448,16 @@ const LABEL_KEY_BY_MODE = new Map<string, string>(GAME_MODES.map((m) => [m.value
 export function getModeLabelKey(mode: string): string | undefined {
   return LABEL_KEY_BY_MODE.get(mode);
 }
+
+const SHORT_LABEL_BY_MODE: Record<string, string> = {
+  'stroop-flex': 'SF',
+  'dualnback-classic': 'DNB',
+  'sim-brainworkshop': 'BW',
+  'ospan': 'OS',
+  'gridlock': 'GL',
+  'dual-mix': 'MIX',
+};
+
+export function getModeShortLabel(mode: string): string | undefined {
+  return SHORT_LABEL_BY_MODE[mode];
+}
