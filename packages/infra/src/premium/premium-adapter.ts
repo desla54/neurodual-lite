@@ -147,10 +147,7 @@ export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
     notify();
   }
 
-  async function verifyWithServer(
-    code: string,
-    did: string,
-  ): Promise<void> {
+  async function verifyWithServer(code: string, did: string): Promise<void> {
     const res = await fetch(
       `${deps.apiUrl}/verify?code=${encodeURIComponent(code)}&deviceId=${encodeURIComponent(did)}`,
     );

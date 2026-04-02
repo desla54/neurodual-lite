@@ -288,14 +288,10 @@ function CalendarDayCell({ cell }: { cell: DayCellInfo }): ReactNode {
         'relative aspect-square flex flex-col items-center justify-center rounded-lg transition-all text-xs',
         GLASS_SHADOW_SM,
         // States
-        cellState === 'completed' &&
-          'bg-emerald-500/25 border border-emerald-500/50',
-        cellState === 'current' &&
-          'bg-card border-2 border-primary ring-1 ring-primary/40',
-        cellState === 'has-training' &&
-          'bg-card border border-border/50',
-        cellState === 'empty' &&
-          'bg-card border border-border/50',
+        cellState === 'completed' && 'bg-emerald-500/25 border border-emerald-500/50',
+        cellState === 'current' && 'bg-card border-2 border-primary ring-1 ring-primary/40',
+        cellState === 'has-training' && 'bg-card border border-border/50',
+        cellState === 'empty' && 'bg-card border border-border/50',
         cellState === 'outside' && 'opacity-40 bg-card border border-border/20',
       )}
       title={minutes > 0 ? `${minutes} min` : undefined}

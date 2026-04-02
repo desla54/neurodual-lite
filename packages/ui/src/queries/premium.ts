@@ -45,10 +45,15 @@ function getDeviceId(): string {
     try {
       const parsed = JSON.parse(stored);
       if (parsed.deviceId) return parsed.deviceId;
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
   }
   const id = crypto.randomUUID();
-  localStorage.setItem('nd_premium', JSON.stringify({ deviceId: id, activationCode: null, isPremium: false }));
+  localStorage.setItem(
+    'nd_premium',
+    JSON.stringify({ deviceId: id, activationCode: null, isPremium: false }),
+  );
   return id;
 }
 
@@ -82,11 +87,14 @@ async function directActivate(code: string): Promise<ActivationResult> {
 
     // Save locally
     const normalizedCode = code.trim().toUpperCase();
-    localStorage.setItem('nd_premium', JSON.stringify({
-      deviceId,
-      activationCode: normalizedCode,
-      isPremium: true,
-    }));
+    localStorage.setItem(
+      'nd_premium',
+      JSON.stringify({
+        deviceId,
+        activationCode: normalizedCode,
+        isPremium: true,
+      }),
+    );
 
     return {
       success: true,
@@ -129,7 +137,9 @@ export function usePremiumState(): UseQueryResult<PremiumState> {
                 activationCode: parsed.activationCode,
               };
             }
-          } catch { /* ignore */ }
+          } catch {
+            /* ignore */
+          }
         }
         return createDefaultPremiumState();
       }
@@ -204,17 +214,13 @@ export function useVerifyPremium(): UseMutationResult<PremiumState, Error, void>
 // Listener Wiring
 // =============================================================================
 
-export function setupPremiumListener(
-  queryClient: ReturnType<typeof useQueryClient>,
-): () => void {
+export function setupPremiumListener(queryClient: ReturnType<typeof useQueryClient>): () => void {
   if (!premiumAdapter) return () => {};
   return premiumAdapter.subscribe(() => {
     queryClient.invalidateQueries({ queryKey: premiumKeys.all });
   });
 }
 
-export function invalidatePremiumQueries(
-  queryClient: ReturnType<typeof useQueryClient>,
-): void {
+export function invalidatePremiumQueries(queryClient: ReturnType<typeof useQueryClient>): void {
   queryClient.invalidateQueries({ queryKey: premiumKeys.all });
 }

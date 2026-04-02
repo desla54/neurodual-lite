@@ -48,9 +48,11 @@ import { useJourneyStateWithContext } from '../../../../lib/journey-stubs';
 
 // Stub for removed dual-track-settings
 type DualTrackResolvedIdentityMode = string;
+// biome-ignore lint/suspicious/noExplicitAny: stub for removed dual-track-settings
 function normalizeDualTrackResolvedSettings(..._args: unknown[]): any {
   return {};
 }
+// biome-ignore lint/suspicious/noExplicitAny: stub for removed dual-track-settings
 const hybridStrategy = {} as any;
 import { SettingsSegmentedControl, UpgradeDialog } from '../../components';
 import { FreeTrainingPresetSelector } from './free-training-preset-selector';
@@ -513,11 +515,15 @@ export function ModeSettingsPanel({
       ? extensions.renderMode
       : 'dom';
   const hybridTrackSessionsPerBlock =
+    // biome-ignore lint/suspicious/noExplicitAny: legacy strategy config shape
     (activeJourneyStrategyConfig as any)?.trackSessionsPerBlock ??
+    // biome-ignore lint/suspicious/noExplicitAny: legacy mode settings shape
     (modeSettings as any)?.hybridTrackSessionsPerBlock ??
     3;
   const hybridDnbSessionsPerBlock =
+    // biome-ignore lint/suspicious/noExplicitAny: legacy strategy config shape
     (activeJourneyStrategyConfig as any)?.dnbSessionsPerBlock ??
+    // biome-ignore lint/suspicious/noExplicitAny: legacy mode settings shape
     (modeSettings as any)?.hybridDnbSessionsPerBlock ??
     3;
   const updateHybridTrackSessionsPerBlock = (value: number) =>
@@ -688,6 +694,7 @@ export function ModeSettingsPanel({
   const journeyHasProgress =
     journeyState?.currentStage > 1 ||
     journeyState?.stages?.some(
+      // biome-ignore lint/suspicious/noExplicitAny: JourneyState stage shape
       (s: any) =>
         s.validatingSessions > 0 ||
         s.bestScore !== null ||

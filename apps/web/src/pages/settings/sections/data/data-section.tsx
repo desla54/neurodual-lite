@@ -5,12 +5,7 @@
 import { useState, useRef, useCallback, useEffect, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
-import {
-  ArrowsClockwise,
-  DownloadSimple,
-  Trash,
-  UploadSimple,
-} from '@phosphor-icons/react';
+import { ArrowsClockwise, DownloadSimple, Trash, UploadSimple } from '@phosphor-icons/react';
 import {
   Card,
   Section,

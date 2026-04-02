@@ -32,7 +32,13 @@ export interface PurchaseResult {
 
 export interface PurchaseError {
   readonly success: false;
-  readonly error: 'not_available' | 'cancelled' | 'already_owned' | 'network_error' | 'store_error' | 'max_activations';
+  readonly error:
+    | 'not_available'
+    | 'cancelled'
+    | 'already_owned'
+    | 'network_error'
+    | 'store_error'
+    | 'max_activations';
 }
 
 export type PurchaseOutcome = PurchaseResult | PurchaseError;
@@ -113,7 +119,7 @@ export function createPurchaseService(deps: PurchaseServiceDeps) {
       };
     }
 
-    const code = data.code!;
+    const code = data.code ?? '';
     await deps.onActivated(code);
 
     return {

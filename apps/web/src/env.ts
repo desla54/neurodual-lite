@@ -145,7 +145,6 @@ export function validateProductionEnv(): void {
       errors.push('VITE_SUPABASE_ANON_KEY is required in production');
     }
 
-
     if (errors.length > 0) {
       throw new Error(`Missing required environment variables:\n${errors.join('\n')}`);
     }

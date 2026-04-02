@@ -164,8 +164,9 @@ export function StatsPage(): ReactNode {
     !SHOW_STATS_CONTEXT_SUBFILTERS && (mode === 'Journey' || mode === 'Libre') ? 'all' : mode;
 
   // Latest played mode among supported stats modes (for smart tab switching)
-  const { gameMode: latestStatsGameMode } =
-    useLatestStatsGameModeQuery(STATS_SUPPORTED_GAME_MODE_IDS);
+  const { gameMode: latestStatsGameMode } = useLatestStatsGameModeQuery(
+    STATS_SUPPORTED_GAME_MODE_IDS,
+  );
 
   // Tab (validated)
   const activeTab: TabValue = VALID_TABS.includes(storedTab as TabValue)
@@ -419,7 +420,9 @@ export function StatsPage(): ReactNode {
       legacyJourneyModeSettings: scopedSettings,
     });
   }, [journeyIdForFreshness, journeyModeSettingsByJourneyId, savedJourneys]);
+  // biome-ignore lint/suspicious/noExplicitAny: stub for removed journey state
   const currentJourneyState = null as any;
+  // biome-ignore lint/suspicious/noExplicitAny: stub for removed journey next session
   const currentNextJourneySession = null as any;
 
   const { journeyIds: journeyIdsFromDb } = useAvailableJourneyIdsQuery();
@@ -1106,11 +1109,9 @@ export function StatsPage(): ReactNode {
                           }}
                           onReplay={() => navigate(`/replay/${selectedSessionId}${runIdQuery}`)}
                           onCorrect={
-                            [
-                              'dualnback-classic',
-                              'sim-brainworkshop',
-                              'custom',
-                            ].includes(reportData.gameMode ?? '')
+                            ['dualnback-classic', 'sim-brainworkshop', 'custom'].includes(
+                              reportData.gameMode ?? '',
+                            )
                               ? () => navigate(`/replay/${selectedSessionId}${interactiveQuery}`)
                               : undefined
                           }

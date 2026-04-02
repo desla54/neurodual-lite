@@ -1682,7 +1682,9 @@ describe('N-Level Progression - Determinism', () => {
 
 describe('N-Level Progression - Mode Consistency', () => {
   it('P145: Jaeggi strategy detected for dualnback-classic', () => {
-    expect(detectScoringStrategy('dualnback-classic', 'dualnback-classic')).toBe('dualnback-classic');
+    expect(detectScoringStrategy('dualnback-classic', 'dualnback-classic')).toBe(
+      'dualnback-classic',
+    );
   });
 
   it('P146: Jaeggi strategy detected', () => {

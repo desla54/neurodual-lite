@@ -70,10 +70,7 @@ function asString(v: unknown): string | null {
   return null;
 }
 
-function normalizeInputMethod(
-  inputMethod: string | null,
-  buttonPositionX: number | null,
-): string {
+function normalizeInputMethod(inputMethod: string | null, buttonPositionX: number | null): string {
   if (inputMethod && inputMethod.length > 0) return inputMethod;
   if (buttonPositionX !== null) return 'mouse';
   return 'keyboard';
@@ -118,10 +115,7 @@ async function loadEventsForSessions(
 // =============================================================================
 
 export function createEventStatsReader(queryPort: SQLQueryPort) {
-  async function getFilteredSessionIds(
-    cteSql: string,
-    cteParams: unknown[],
-  ): Promise<string[]> {
+  async function getFilteredSessionIds(cteSql: string, cteParams: unknown[]): Promise<string[]> {
     const result = await queryPort.query<{ session_id: string }>(
       `${cteSql} SELECT session_id FROM filtered_session_ids`,
       cteParams,
@@ -129,9 +123,7 @@ export function createEventStatsReader(queryPort: SQLQueryPort) {
     return result.rows.map((r) => r.session_id);
   }
 
-  async function getResponseEvents(
-    sessionIds: readonly string[],
-  ): Promise<ResponseEventRow[]> {
+  async function getResponseEvents(sessionIds: readonly string[]): Promise<ResponseEventRow[]> {
     const sessions = await loadEventsForSessions(queryPort, sessionIds);
     const rows: ResponseEventRow[] = [];
 
@@ -178,7 +170,8 @@ export function createEventStatsReader(queryPort: SQLQueryPort) {
         rows.push({
           sessionId,
           trialIndex: asNumber(trial?.['index'] ?? e['trialIndex']),
-          isPositionTarget: trial?.['isPositionTarget'] === true || trial?.['isPositionTarget'] === 1,
+          isPositionTarget:
+            trial?.['isPositionTarget'] === true || trial?.['isPositionTarget'] === 1,
           isAudioTarget:
             trial?.['isSoundTarget'] === true ||
             trial?.['isSoundTarget'] === 1 ||

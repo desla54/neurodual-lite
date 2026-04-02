@@ -131,8 +131,10 @@ export function HomePage(): ReactNode {
   const modeSettings =
     useSettingsStore((s) => s.modes[currentMode as keyof typeof s.modes]) ?? EMPTY_SETTINGS;
   const setModeSetting = useSettingsStore((s) => s.setModeSetting);
-  const currentModeNLevel = (modeSettings as { nLevel?: number }).nLevel ?? 2;
-  const currentModeTrialsCount = (modeSettings as { trialsCount?: number }).trialsCount ?? 20;
+  const currentModeNLevel =
+    ((modeSettings as Record<string, unknown>)['nLevel'] as number | undefined) ?? 2;
+  const currentModeTrialsCount =
+    ((modeSettings as Record<string, unknown>)['trialsCount'] as number | undefined) ?? 20;
   const selectedModeConfig = modeConfigMap.get(currentMode);
 
   // Per-mode quick settings capabilities
@@ -861,7 +863,7 @@ export function HomePage(): ReactNode {
             <button
               type="button"
               onClick={handleLaunchMode}
-              className="flex flex-col items-center gap-0.5 px-5 py-2.5 rounded-2xl bg-foreground text-background shadow-lg active:scale-[0.98] transition-transform"
+              className="flex flex-col items-center gap-0.5 min-w-[calc(33.333vw-1rem)] px-5 py-3.5 rounded-2xl bg-foreground text-background shadow-lg active:scale-[0.98] transition-transform"
             >
               {selectedStageDef ? (
                 <>
@@ -876,17 +878,20 @@ export function HomePage(): ReactNode {
                       })()}
                     </span>
                     <span className="text-sm font-semibold whitespace-nowrap text-background">
-                      {t('home.journey.stageLabel', 'Étape {{id}} · N-{{n}}', {
-                        id: selectedStageDef.stageId,
-                        n: selectedStageDef.nLevel,
-                      })}
+                      {t(
+                        JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.labelKey ?? 'home.journey.neurodualMix',
+                        JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.label ?? 'Parcours',
+                      )}
                     </span>
                     <span className="shrink-0 p-1 rounded-full bg-background/20">
                       <Play size={16} weight="fill" className="text-background" />
                     </span>
                   </div>
                   <span className="text-[10px] text-background/60 font-mono">
-                    {JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.label ?? 'Parcours'}
+                    {t('home.journey.stageLabel', 'Étape {{id}} · N-{{n}}', {
+                      id: selectedStageDef.stageId,
+                      n: selectedStageDef.nLevel,
+                    })}
                   </span>
                 </>
               ) : selectedModeConfig ? (

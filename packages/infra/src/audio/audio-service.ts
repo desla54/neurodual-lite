@@ -1783,7 +1783,7 @@ export class AudioService {
     const nodes: { osc: OscillatorNode; gain: GainNode }[] = [];
 
     for (let i = 0; i < steps.length; i++) {
-      const value = steps[i]!;
+      const value = steps[i] as (typeof steps)[number];
       const urgency = (3 - value) / 3;
       const velocity = 0.07 + urgency * 0.035;
       const freq = noteByStep[value];
@@ -1806,8 +1806,16 @@ export class AudioService {
       osc.stop(startAt + dur + 0.05);
 
       osc.onended = () => {
-        try { osc.disconnect(); } catch { /* ignore */ }
-        try { gain.disconnect(); } catch { /* ignore */ }
+        try {
+          osc.disconnect();
+        } catch {
+          /* ignore */
+        }
+        try {
+          gain.disconnect();
+        } catch {
+          /* ignore */
+        }
       };
 
       nodes.push({ osc, gain });
@@ -1815,9 +1823,21 @@ export class AudioService {
 
     return () => {
       for (const { osc, gain } of nodes) {
-        try { osc.stop(); } catch { /* already stopped */ }
-        try { osc.disconnect(); } catch { /* ignore */ }
-        try { gain.disconnect(); } catch { /* ignore */ }
+        try {
+          osc.stop();
+        } catch {
+          /* already stopped */
+        }
+        try {
+          osc.disconnect();
+        } catch {
+          /* ignore */
+        }
+        try {
+          gain.disconnect();
+        } catch {
+          /* ignore */
+        }
       }
     };
   }

@@ -1404,7 +1404,7 @@ describe('SessionProjector - Property Tests', () => {
             const events = generateSession(sessionId, nLevel, trials, true);
             const summary = SessionProjector.project(events);
 
-            if (!summary || !summary.tempoConfidence) return true;
+            if (!summary?.tempoConfidence) return true;
 
             const tc = summary.tempoConfidence;
             const c = tc.components;

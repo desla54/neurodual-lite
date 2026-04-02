@@ -246,12 +246,15 @@ function buildTiersForTargetCount(
   preset: DualTrackJourneyPreset,
 ): readonly FullTierRow[] {
   const phases = PRESET_PHASES[preset];
+  // biome-ignore lint/style/noNonNullAssertion: fallback key always exists
   const baseRamp = BASE_RAMPS[targetCount] ?? BASE_RAMPS[DUAL_TRACK_MIN_TARGET_COUNT]!;
   const tiers: FullTierRow[] = [];
 
   for (let phaseIdx = 0; phaseIdx < phases.length; phaseIdx++) {
+    // biome-ignore lint/style/noNonNullAssertion: loop bounded by phases.length
     const identityMode = phases[phaseIdx]!;
     for (let tierInPhase = 0; tierInPhase < DUAL_TRACK_TIERS_PER_PHASE; tierInPhase++) {
+      // biome-ignore lint/style/noNonNullAssertion: loop bounded by DUAL_TRACK_TIERS_PER_PHASE
       const ramp = baseRamp[tierInPhase]!;
       tiers.push({
         phaseIndex: phaseIdx,

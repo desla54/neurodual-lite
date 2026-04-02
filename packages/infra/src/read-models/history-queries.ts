@@ -22,6 +22,7 @@ import {
   resolveGameModeIdsForStatsMode,
   type SessionSummariesCursor,
   type SessionSummariesFilters,
+  type StatsModeFilter,
 } from '@neurodual/logic';
 
 // Keep list queries on the denormalized CSV column only.
@@ -163,7 +164,9 @@ function buildSessionSummariesFilterConditions(
     } else if (filters.mode === 'Libre') {
       conditions.push(eq(sessionSummaries.play_context, 'free'));
       if (filters.freeModeFilter !== 'all') {
-        const gameModeIds = resolveGameModeIdsForStatsMode(filters.freeModeFilter as any);
+        const gameModeIds = resolveGameModeIdsForStatsMode(
+          filters.freeModeFilter as StatsModeFilter,
+        );
         if (gameModeIds.length === 0) {
           conditions.push(sql`1 = 0`);
         } else {
@@ -171,7 +174,7 @@ function buildSessionSummariesFilterConditions(
         }
       }
     } else {
-      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode as any);
+      const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode as StatsModeFilter);
       if (gameModeIds.length === 0) {
         conditions.push(sql`1 = 0`);
       } else {

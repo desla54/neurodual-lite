@@ -494,9 +494,7 @@ export async function rebuildCalibrationProfile(
     session_id: string;
     events_json: string;
     created_at: string;
-  }>(
-    `SELECT session_id, events_json, created_at FROM session_events ORDER BY created_at ASC`,
-  );
+  }>(`SELECT session_id, events_json, created_at FROM session_events ORDER BY created_at ASC`);
 
   const relevantTypes = new Set([
     'CALIBRATION_BASELINE_SET',
@@ -544,9 +542,10 @@ export async function rebuildCalibrationProfile(
         ) {
           continue;
         }
-        const eventUserId = (typeof e['userId'] === 'string' && e['userId'].trim().length > 0)
-          ? e['userId'].trim()
-          : sessionUserId;
+        const eventUserId =
+          typeof e['userId'] === 'string' && e['userId'].trim().length > 0
+            ? e['userId'].trim()
+            : sessionUserId;
         if (eventUserId !== userId) continue;
       }
 

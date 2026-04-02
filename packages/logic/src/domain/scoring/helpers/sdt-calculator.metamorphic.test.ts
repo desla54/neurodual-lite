@@ -1326,7 +1326,7 @@ describe('SDT Metamorphic - 7. Compositional Relations', () => {
         fc.array(fc.double({ min: -3, max: 3, noNaN: true }), { minLength: 1, maxLength: 5 }),
         (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const min = SDTCalculator.calculateMinDPrime(stats);
           const avg = SDTCalculator.calculateAverageDPrime(stats);
           return min <= avg + 1e-9;
@@ -1837,7 +1837,7 @@ describe('SDT Metamorphic - 9. Ratio Preservation', () => {
         fc.array(fc.double({ min: -3, max: 3, noNaN: true }), { minLength: 2, maxLength: 5 }),
         (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const min = SDTCalculator.calculateMinDPrime(stats);
           const avg = SDTCalculator.calculateAverageDPrime(stats);
           const max = Math.max(...dPrimes);

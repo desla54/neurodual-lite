@@ -205,7 +205,11 @@ function StartingCountdown({
   return (
     <p className="text-sm text-muted-foreground animate-in fade-in duration-200">
       {getReadyText}
-      <AnimatedCountdownDigits prepDelayMs={prepDelayMs} onCountdownSecond={onCountdownSecond} scheduleAudio={scheduleAudio} />
+      <AnimatedCountdownDigits
+        prepDelayMs={prepDelayMs}
+        onCountdownSecond={onCountdownSecond}
+        scheduleAudio={scheduleAudio}
+      />
     </p>
   );
 }
@@ -2076,7 +2080,6 @@ function GameplayContent({
             }
             betaEnabled={betaScoringEnabled}
           />
-
         </div>
       </div>
     );

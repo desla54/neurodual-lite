@@ -30,8 +30,6 @@ function mapGameModeToModeFilter(gameMode: SessionEndReportModel['gameMode']): M
       return 'PASAT';
     case 'swm':
       return 'SWM';
-    case 'dualnback-classic':
-      return 'DualnbackClassic';
     case 'sim-brainworkshop':
       return 'BrainWorkshop';
     case 'custom':

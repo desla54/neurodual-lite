@@ -474,6 +474,7 @@ function buildFilteredSessionsWhere(filters: StatsFilters): FilteredSessionsWher
     if (filters.mode === 'Libre') {
       conditions.push(FREE_SESSION_SQL);
     } else {
+      // biome-ignore lint/suspicious/noExplicitAny: ModeType broader than StatsModeFilter
       const gameModeIds = resolveGameModeIdsForStatsMode(filters.mode as any);
       if (gameModeIds.length > 0) {
         const { sql: inClause, params: inParams } = buildInClause([...gameModeIds]);
@@ -1640,6 +1641,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
               r.normalizedInputMethod === inputMethodFilter,
           )
           .map((r) => {
+            // biome-ignore lint/style/noNonNullAssertion: filtered upstream to have rt
             const legacyRt = r.rt!;
             const capturedAtMs = r.capturedAtMs;
             const stimulusShownAtMs = r.stimulusShownAtMs;
@@ -1739,6 +1741,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
               r.inputToDispatchMs >= 0 &&
               r.inputToDispatchMs <= 60000,
           )
+          // biome-ignore lint/style/noNonNullAssertion: filtered to have inputToDispatchMs
           .map((r) => r.inputToDispatchMs!);
         const inputToPaintValues = pipelineEvents
           .filter(
@@ -1748,6 +1751,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
               Number.isFinite(r.inputToPaintMs) &&
               r.inputToPaintMs >= 0,
           )
+          // biome-ignore lint/style/noNonNullAssertion: filtered to have inputToPaintMs
           .map((r) => r.inputToPaintMs!);
 
         // TRIAL_PRESENTED drift values
@@ -1994,8 +1998,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
         if (!row.sessionId) continue;
         if (typeof row.trialIndex !== 'number' || !Number.isFinite(row.trialIndex)) continue;
 
-        const sessionTrials =
-          trialsBySession.get(row.sessionId) ?? new Map<number, TrialTargets>();
+        const sessionTrials = trialsBySession.get(row.sessionId) ?? new Map<number, TrialTargets>();
         sessionTrials.set(row.trialIndex, {
           position: row.isPositionTarget,
           audio: row.isAudioTarget,
@@ -2039,7 +2042,7 @@ function createStatsAdapterWithQuery(query: QueryFn, eventReader: EventStatsRead
         if (!Number.isFinite(rtMs) || rtMs <= 0 || rtMs > 30000) continue;
 
         const sessionTrials = trialsBySession.get(row.sessionId);
-        if (!sessionTrials || !sessionTrials.has(row.trialIndex)) continue;
+        if (!sessionTrials?.has(row.trialIndex)) continue;
 
         const sessionRts =
           rtsBySession.get(row.sessionId) ?? new Map<number, ResponseRtByModality>();

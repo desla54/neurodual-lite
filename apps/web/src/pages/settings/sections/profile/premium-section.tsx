@@ -5,8 +5,23 @@
 
 import { type ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, Section, usePremiumState, useActivateCode, useDeactivateDevice, useVerifyPremium } from '@neurodual/ui';
-import { Check, Warning, Devices, Trash, ArrowClockwise, CreditCard, ArrowCounterClockwise } from '@phosphor-icons/react';
+import {
+  Card,
+  Section,
+  usePremiumState,
+  useActivateCode,
+  useDeactivateDevice,
+  useVerifyPremium,
+} from '@neurodual/ui';
+import {
+  Check,
+  Warning,
+  Devices,
+  Trash,
+  ArrowClockwise,
+  CreditCard,
+  ArrowCounterClockwise,
+} from '@phosphor-icons/react';
 import { FREE_PLAYTIME_MS } from '@neurodual/logic';
 import { usePurchaseService } from '@/hooks/use-purchase-service';
 
@@ -96,22 +111,28 @@ export function PremiumSection(): ReactNode {
         <div className="flex items-center gap-3">
           <div
             className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-              isPremium
-                ? 'bg-emerald-500/10 text-emerald-500'
-                : 'bg-amber-500/10 text-amber-500'
+              isPremium ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
             }`}
           >
             {isPremium ? <Check size={20} weight="bold" /> : <Warning size={20} weight="bold" />}
           </div>
           <div className="flex-1">
             <div className="font-bold text-foreground">
-              {isPremium ? t('settings.premium.active', 'Premium actif') : t('settings.premium.free', 'Mode gratuit')}
+              {isPremium
+                ? t('settings.premium.active', 'Premium actif')
+                : t('settings.premium.free', 'Mode gratuit')}
             </div>
             <div className="text-xs text-muted-foreground">
               {isPremium
-                ? t('settings.premium.lifetimeAccess', 'Acc\u00e8s \u00e0 vie \u2014 toutes les fonctionnalit\u00e9s d\u00e9bloqu\u00e9es')
+                ? t(
+                    'settings.premium.lifetimeAccess',
+                    'Acc\u00e8s \u00e0 vie \u2014 toutes les fonctionnalit\u00e9s d\u00e9bloqu\u00e9es',
+                  )
                 : totalPlaytimeMs >= FREE_PLAYTIME_MS
-                  ? t('settings.premium.freeTimeExhausted', 'Temps gratuit \u00e9puis\u00e9 \u2014 niveau 3+ verrouill\u00e9')
+                  ? t(
+                      'settings.premium.freeTimeExhausted',
+                      'Temps gratuit \u00e9puis\u00e9 \u2014 niveau 3+ verrouill\u00e9',
+                    )
                   : t('settings.premium.freeTimeRemaining', '{{time}} restant en mode gratuit', {
                       time: formatTime(remainingMs),
                     })}
@@ -124,7 +145,9 @@ export function PremiumSection(): ReactNode {
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>{t('settings.premium.playedTime', 'Temps de jeu')}</span>
-              <span>{formatTime(totalPlaytimeMs)} / {formatTime(FREE_PLAYTIME_MS)}</span>
+              <span>
+                {formatTime(totalPlaytimeMs)} / {formatTime(FREE_PLAYTIME_MS)}
+              </span>
             </div>
             <div className="h-2 bg-background rounded-full overflow-hidden">
               <div
@@ -164,9 +187,7 @@ export function PremiumSection(): ReactNode {
                 ? t('common.loading', 'Chargement...')
                 : t('settings.premium.restorePurchases', 'Restaurer les achats')}
             </button>
-            {purchaseError && (
-              <p className="text-xs text-red-500">{purchaseError}</p>
-            )}
+            {purchaseError && <p className="text-xs text-red-500">{purchaseError}</p>}
           </div>
         )}
 
@@ -205,7 +226,10 @@ export function PremiumSection(): ReactNode {
                   ? t('settings.premium.invalidCode', 'Code invalide')
                   : activateMutation.data.error === 'max_activations'
                     ? t('settings.premium.maxActivations', "Nombre maximum d'appareils atteint (3)")
-                    : t('settings.premium.networkError', 'Erreur r\u00e9seau \u2014 v\u00e9rifiez votre connexion')}
+                    : t(
+                        'settings.premium.networkError',
+                        'Erreur r\u00e9seau \u2014 v\u00e9rifiez votre connexion',
+                      )}
               </p>
             )}
           </div>
@@ -228,7 +252,10 @@ export function PremiumSection(): ReactNode {
                 className="p-1.5 text-muted-foreground hover:text-primary transition-colors"
                 title={t('settings.premium.refresh', 'Rafra\u00eechir')}
               >
-                <ArrowClockwise size={14} className={verifyMutation.isPending ? 'animate-spin' : ''} />
+                <ArrowClockwise
+                  size={14}
+                  className={verifyMutation.isPending ? 'animate-spin' : ''}
+                />
               </button>
             </div>
             <div className="space-y-1.5">
@@ -256,9 +283,7 @@ export function PremiumSection(): ReactNode {
               <div className="text-xs text-muted-foreground">
                 {t('settings.premium.yourCode', 'Votre code')}
               </div>
-              <div className="font-mono text-sm text-foreground">
-                {premiumState.activationCode}
-              </div>
+              <div className="font-mono text-sm text-foreground">{premiumState.activationCode}</div>
             </div>
             <button
               type="button"

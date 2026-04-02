@@ -631,8 +631,18 @@ describe('UPS Edge Cases - Full Pipeline', () => {
     it('gaming flag correctly marks ineligible', () => {
       const perfectData = { hits: 100, misses: 0, falseAlarms: 0, correctRejections: 100 };
 
-      const notGaming = UnifiedScoreCalculator.calculateTempo('dualnback-classic', perfectData, [], false);
-      const gaming = UnifiedScoreCalculator.calculateTempo('dualnback-classic', perfectData, [], true);
+      const notGaming = UnifiedScoreCalculator.calculateTempo(
+        'dualnback-classic',
+        perfectData,
+        [],
+        false,
+      );
+      const gaming = UnifiedScoreCalculator.calculateTempo(
+        'dualnback-classic',
+        perfectData,
+        [],
+        true,
+      );
 
       expect(notGaming.journeyEligible).toBe(true);
       expect(gaming.journeyEligible).toBe(false);
@@ -879,11 +889,15 @@ describe('UPS Edge Cases - Scoring Strategy Correctness', () => {
     it('geometric mean = 0 when either rate is 0', () => {
       // Zero hit rate (all misses)
       const zeroHitRate = { hits: 0, misses: 10, falseAlarms: 0, correctRejections: 10 };
-      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroHitRate, 'dualnback-classic')).toBe(0);
+      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroHitRate, 'dualnback-classic')).toBe(
+        0,
+      );
 
       // Zero CR rate (all false alarms)
       const zeroCRRate = { hits: 10, misses: 0, falseAlarms: 10, correctRejections: 0 };
-      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroCRRate, 'dualnback-classic')).toBe(0);
+      expect(UnifiedScoreCalculator.calculateTempoAccuracy(zeroCRRate, 'dualnback-classic')).toBe(
+        0,
+      );
     });
 
     it('geometric mean < arithmetic mean (for unequal rates)', () => {
@@ -981,7 +995,10 @@ describe('UPS Edge Cases - Scoring Strategy Correctness', () => {
       // Conservative: rarely responds, few hits but also few FA
       const conservative = { hits: 5, misses: 95, falseAlarms: 5, correctRejections: 95 };
 
-      const sdtAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(conservative, 'dualnback-classic');
+      const sdtAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+        conservative,
+        'dualnback-classic',
+      );
       const jaeggiAccuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
         conservative,
         'dualnback-classic',

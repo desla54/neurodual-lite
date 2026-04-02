@@ -73,7 +73,6 @@ export const queryKeys = {
     all: ['subscription'] as const,
     state: () => [...queryKeys.subscription.all, 'state'] as const,
   },
-
 } as const;
 
 export type QueryKeys = typeof queryKeys;

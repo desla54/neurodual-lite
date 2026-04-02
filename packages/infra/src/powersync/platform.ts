@@ -113,6 +113,7 @@ export async function createPowerSyncDatabase(options?: {
 
   if (platform === 'capacitor-native') {
     const { PowerSyncDatabase: CapacitorPowerSyncDatabase } = await import(
+      // biome-ignore lint/suspicious/noExplicitAny: dynamic import path not in TS module map
       '@powersync/capacitor' as any
     );
     // Use Capacitor-native SQLite for iOS/Android

@@ -283,7 +283,9 @@ export function SpotlightOverlay({
       { scale: 1, duration: 0.35, ease: 'back.out(3)' },
     );
 
-    return () => { tween.kill(); };
+    return () => {
+      tween.kill();
+    };
   }, [currentIndex, phase]);
 
   // ── Resize handling ──
@@ -322,6 +324,7 @@ export function SpotlightOverlay({
     (internalIdx: number) => {
       const realIdx = internalIdx - introOffset;
       if (realIdx >= 0 && realIdx < steps.length) {
+        // biome-ignore lint/style/noNonNullAssertion: bounds checked above
         onStepChange?.(realIdx, steps[realIdx]!.id);
       }
     },
@@ -340,7 +343,12 @@ export function SpotlightOverlay({
       // Transition from no-target → target: do reveal animation
       if (wasNoTarget && nextHasTarget) {
         if (calloutRef.current) {
-          gsap.to(calloutRef.current, { opacity: 0, y: -8, duration: CALLOUT_EXIT_DURATION, ease: 'power2.in' });
+          gsap.to(calloutRef.current, {
+            opacity: 0,
+            y: -8,
+            duration: CALLOUT_EXIT_DURATION,
+            ease: 'power2.in',
+          });
         }
         if (overlayBgRef.current) {
           gsap.to(overlayBgRef.current, {
@@ -413,7 +421,11 @@ export function SpotlightOverlay({
         tl.to(calloutRef.current, { opacity: 0, y: -8, duration: 0.2, ease: 'power2.in' }, 0);
       }
       if (spotlightRef.current) {
-        tl.to(spotlightRef.current, { opacity: 0, scale: 1.08, duration: 0.3, ease: 'power2.in' }, 0.05);
+        tl.to(
+          spotlightRef.current,
+          { opacity: 0, scale: 1.08, duration: 0.3, ease: 'power2.in' },
+          0.05,
+        );
       }
       if (glowRef.current) {
         tl.to(glowRef.current, { opacity: 0, duration: 0.2, ease: 'power2.in' }, 0);
@@ -474,14 +486,14 @@ export function SpotlightOverlay({
 
     const padding = SPOTLIGHT_PADDING + 24;
     const viewportH = window.innerHeight;
-    const belowTop = spotlightRect!.bottom + padding;
+    const belowTop = (spotlightRect?.bottom ?? 0) + padding;
     const canFitBelow = belowTop + CALLOUT_EST_HEIGHT_PX < viewportH - 80;
 
     if (canFitBelow) {
       return { top: `${belowTop}px`, left: VIEWPORT_MARGIN_PX, right: VIEWPORT_MARGIN_PX };
     }
     return {
-      bottom: `${viewportH - spotlightRect!.top + padding}px`,
+      bottom: `${viewportH - (spotlightRect?.top ?? 0) + padding}px`,
       left: VIEWPORT_MARGIN_PX,
       right: VIEWPORT_MARGIN_PX,
     };

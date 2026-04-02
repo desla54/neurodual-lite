@@ -651,7 +651,7 @@ describe('N-Level Consistency - Property Tests', () => {
         // Buffer trials should be exactly 0 to nLevel-1
         for (let i = 0; i < nLevel; i++) {
           const trial = block.trials[i];
-          if (!trial || !trial.isBuffer) {
+          if (!trial?.isBuffer) {
             return false;
           }
         }

@@ -2316,7 +2316,7 @@ describe('SDT Math Properties - 9. Additional Invariants', () => {
         fc.array(fc.double({ min: -5, max: 5, noNaN: true }), { minLength: 1, maxLength: 10 }),
         (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           return (
             SDTCalculator.calculateMinDPrime(stats) <=
             SDTCalculator.calculateAverageDPrime(stats) + 1e-9

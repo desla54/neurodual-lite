@@ -49,7 +49,7 @@ export function CustomTooltip({
   labelFormatter,
   hideLabel,
 }: CustomTooltipProps) {
-  if (!active || !payload || !payload.length) {
+  if (!active || !payload?.length) {
     return null;
   }
 

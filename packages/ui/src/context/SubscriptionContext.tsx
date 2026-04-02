@@ -63,8 +63,8 @@ export function useHasCloudSync(): boolean {
  */
 export function useCanAccessNLevel(nLevel: number): boolean {
   const isPremium = useIsPremium();
-  if (isPremium) return true;
   const { data } = usePremiumState();
+  if (isPremium) return true;
   if (!data) return true;
   if (nLevel < 3) return true;
   return !data.isFreeTimeExhausted;

@@ -625,7 +625,7 @@ export function useLatestJourneySessionQuery(journeyId: string | null): {
       LatestJourneySessionRowSchema,
       'useLatestJourneySessionQuery',
     )[0];
-    if (!row || !row.created_at || row.n_level == null) return null;
+    if (!row?.created_at || row.n_level == null) return null;
     const createdAt = parseSqlDate(row.created_at);
     if (!createdAt) return null;
     return { id: row.session_id, createdAt, nLevel: Number(row.n_level) };

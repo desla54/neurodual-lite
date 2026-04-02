@@ -6,6 +6,7 @@
  * Uses a short delay on re-read to ensure the observer has written the update first.
  */
 
+// biome-ignore lint/style/noRestrictedImports: reactive re-fetch on journeyId/pipeline changes requires useEffect
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { JourneyState } from '@neurodual/logic';
 import { usePipelineState } from '@neurodual/ui';

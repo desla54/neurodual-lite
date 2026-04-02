@@ -262,6 +262,7 @@ function resolveFreeActions(
   }
 
   const deduped = uniqueLevels(actions);
+  // biome-ignore lint/style/noNonNullAssertion: deduped always has at least one element
   const fallbackAction = deduped[0]!;
   const primaryAction =
     tone === 'stay'
@@ -316,6 +317,7 @@ export function runIndicatorPipeline(
         journeyDecision: journeyDecision as string | undefined,
         journeySessionRole: journeySessionRole as string | undefined,
         hybridProgress: ctx.hybridProgress,
+        // biome-ignore lint/suspicious/noExplicitAny: explanation shape varies by post-processor
         explanation: explanation as any,
       };
       const postResult = cfg.postProcess(postCtx);

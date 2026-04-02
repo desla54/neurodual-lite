@@ -112,11 +112,21 @@ function applyLevelDown(state: JourneyState, stageId: number, _gameMode?: string
   const updatedStages: JourneyStageProgress[] = state.stages.map((s) => {
     // Re-open previous stage
     if (s.stageId === prevStageId) {
-      return { ...s, status: 'unlocked', progressPct: 0, validatingSessions: 0 } satisfies JourneyStageProgress;
+      return {
+        ...s,
+        status: 'unlocked',
+        progressPct: 0,
+        validatingSessions: 0,
+      } satisfies JourneyStageProgress;
     }
     // Lock current stage
     if (s.stageId === stageId) {
-      return { ...s, status: 'locked', progressPct: 0, validatingSessions: 0 } satisfies JourneyStageProgress;
+      return {
+        ...s,
+        status: 'locked',
+        progressPct: 0,
+        validatingSessions: 0,
+      } satisfies JourneyStageProgress;
     }
     return s;
   });
@@ -235,8 +245,8 @@ export function applyJaeggiSession(
     }
   } else {
     // Fallback: use accuracy
-    if (result.accuracy >= 0.90) decision = 'up';
-    else if (result.accuracy < 0.50) decision = 'down';
+    if (result.accuracy >= 0.9) decision = 'up';
+    else if (result.accuracy < 0.5) decision = 'down';
   }
 
   const score = Math.round(result.accuracy * 100);

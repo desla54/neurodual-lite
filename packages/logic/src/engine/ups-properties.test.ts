@@ -1213,7 +1213,10 @@ describe('6. Reaction Time Properties', () => {
 describe('7. D-Prime to Accuracy Conversion', () => {
   it('7.1 Perfect discrimination gives high accuracy', () => {
     const perfectData = { hits: 50, misses: 0, falseAlarms: 0, correctRejections: 50 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(perfectData, 'dualnback-classic');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+      perfectData,
+      'dualnback-classic',
+    );
     expect(accuracy).toBe(100);
   });
 
@@ -1226,13 +1229,19 @@ describe('7. D-Prime to Accuracy Conversion', () => {
 
   it('7.3 No discrimination (all miss, all FA) gives 0', () => {
     const noDiscrimData = { hits: 0, misses: 50, falseAlarms: 50, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(noDiscrimData, 'dualnback-classic');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+      noDiscrimData,
+      'dualnback-classic',
+    );
     expect(accuracy).toBe(0);
   });
 
   it('7.4 High hit rate with high FA gives moderate accuracy', () => {
     const highBothData = { hits: 45, misses: 5, falseAlarms: 30, correctRejections: 20 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(highBothData, 'dualnback-classic');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+      highBothData,
+      'dualnback-classic',
+    );
     expect(accuracy).toBeGreaterThan(30);
     expect(accuracy).toBeLessThan(80);
   });
@@ -1240,7 +1249,10 @@ describe('7. D-Prime to Accuracy Conversion', () => {
   it('7.5 Geometric mean punishes extreme behavior', () => {
     // All hits but all FA (always pressing)
     const alwaysPress = { hits: 50, misses: 0, falseAlarms: 50, correctRejections: 0 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(alwaysPress, 'dualnback-classic');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+      alwaysPress,
+      'dualnback-classic',
+    );
     expect(accuracy).toBe(0);
   });
 
@@ -2468,7 +2480,10 @@ describe('15. Edge Cases and Special Values', () => {
 
   it('15.4 Handles single trial (hit + CR)', () => {
     const singleTrial = { hits: 1, misses: 0, falseAlarms: 0, correctRejections: 1 };
-    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(singleTrial, 'dualnback-classic');
+    const accuracy = UnifiedScoreCalculator.calculateTempoAccuracy(
+      singleTrial,
+      'dualnback-classic',
+    );
     expect(accuracy).toBe(100); // Both rates are 1.0
   });
 

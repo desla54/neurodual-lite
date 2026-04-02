@@ -28,7 +28,14 @@ describe('Journey Projector', () => {
           timestamp: i + 1,
         }));
 
-        const state = projectJourneyFromHistory(sessions, 3, 2, journeyId, true, 'dualnback-classic');
+        const state = projectJourneyFromHistory(
+          sessions,
+          3,
+          2,
+          journeyId,
+          true,
+          'dualnback-classic',
+        );
 
         expect(state.currentStage).toBe(2);
         expect(state.stages[0]?.status).toBe('completed');

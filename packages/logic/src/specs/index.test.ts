@@ -241,7 +241,9 @@ describe('specs/index', () => {
       expect(config.trialsCount).toBe(DualnbackClassicSpec.defaults.trialsCount);
       expect(config.targetProbability).toBe(DualnbackClassicSpec.generation.targetProbability);
       expect(config.intervalSeconds).toBe(DualnbackClassicSpec.timing.intervalMs / 1000);
-      expect(config.stimulusDurationSeconds).toBe(DualnbackClassicSpec.timing.stimulusDurationMs / 1000);
+      expect(config.stimulusDurationSeconds).toBe(
+        DualnbackClassicSpec.timing.stimulusDurationMs / 1000,
+      );
     });
 
     it('should handle lureProbability default', () => {

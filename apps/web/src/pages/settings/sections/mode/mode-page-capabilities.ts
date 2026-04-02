@@ -27,10 +27,7 @@ export function getModePageCapabilities(
     inlineBaseSettings: isStroop || isFlanker,
     hasTempo: isBrainWorkshop || isCustom,
     hasGenerator: isBrainWorkshop || isCustom,
-    hasAdvanced:
-      isGridlock ||
-      isBrainWorkshop ||
-      (alphaEnabled && isDualnbackClassic),
+    hasAdvanced: isGridlock || isBrainWorkshop || (alphaEnabled && isDualnbackClassic),
   };
 }
 

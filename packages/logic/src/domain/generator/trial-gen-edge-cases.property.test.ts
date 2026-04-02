@@ -1105,7 +1105,7 @@ describe('Aggressive Bug Hunting: Cross-Check Invariants', () => {
           console.log(
             `POTENTIAL BUG: ${violations.length} violations found for seed "${seed}", nLevel=${nLevel}`,
           );
-          violations.slice(0, 3).forEach((v) => console.log(`  - ${v}`));
+          for (const v of violations.slice(0, 3)) console.log(`  - ${v}`);
           return false;
         }
 

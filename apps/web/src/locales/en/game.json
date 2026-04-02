@@ -273,6 +273,7 @@
         "followRule": "Rule",
         "ruleInk": "Ink color",
         "ruleWord": "Written word",
+        "observe": "Memorize",
         "pressMatchingRuleButton": "Press the button matching the current rule",
         "intro": {
           "title1": "Your brain reads automatically.",

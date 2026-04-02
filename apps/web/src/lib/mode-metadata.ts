@@ -1069,9 +1069,5 @@ export function getModeForRoute(route: string): GameModeId | undefined {
  * Check if a mode uses tempo-style session (GameSessionMachine)
  */
 export function isTempoMode(modeId: GameModeId): boolean {
-  return (
-    modeId === 'dualnback-classic' ||
-    modeId === 'sim-brainworkshop' ||
-    modeId === 'custom'
-  );
+  return modeId === 'dualnback-classic' || modeId === 'sim-brainworkshop' || modeId === 'custom';
 }

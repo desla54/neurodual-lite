@@ -14,7 +14,13 @@ import { useSettingsStore } from '../../stores';
 import { CognitiveQuickSettingsOverlay } from './CognitiveQuickSettingsOverlay';
 
 /** Modes that expose an N-level setting (used for HUD badge). */
-const MODES_WITH_NLEVEL = new Set(['stroop-flex', 'gridlock', 'dualnback-classic', 'sim-brainworkshop', 'dual-mix']);
+const MODES_WITH_NLEVEL = new Set([
+  'stroop-flex',
+  'gridlock',
+  'dualnback-classic',
+  'sim-brainworkshop',
+  'dual-mix',
+]);
 
 export interface CognitiveTaskHUDProps {
   /** Mode label badge (e.g. "PASAT", "Empan 4"). Auto-resolved from route if omitted. */
@@ -83,18 +89,17 @@ export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
 
   // Toggleable label: N-level by default, mode short name on tap
   const shortName = inferredMode ? getModeShortLabel(inferredMode) : undefined;
-  const flipLabel = nLevel != null
-    ? (
-        <button
-          type="button"
-          onClick={() => setShowModeName((v) => !v)}
-          className={HUD_BADGE}
-          data-capture-badge="game-hud"
-        >
-          {showModeName && shortName ? shortName : `N-${nLevel}`}
-        </button>
-      )
-    : undefined;
+  const flipLabel =
+    nLevel != null ? (
+      <button
+        type="button"
+        onClick={() => setShowModeName((v) => !v)}
+        className={HUD_BADGE}
+        data-capture-badge="game-hud"
+      >
+        {showModeName && shortName ? shortName : `N-${nLevel}`}
+      </button>
+    ) : undefined;
 
   return (
     <>

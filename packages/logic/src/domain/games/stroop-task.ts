@@ -56,10 +56,11 @@ export interface TrialResult {
 
 /**
  * Generate a balanced set of Stroop trials.
- * - First half: congruent trials (word and ink match)
- * - Second half: incongruent trials (word and ink differ)
+ *
+ * - 50% congruent / 50% incongruent
+ * - Classic stroop: all ink-rule
+ * - Stroop-flex: 50% ink-rule, 50% word-rule (shuffled)
  * - Shuffled via Fisher-Yates
- * - For stroop-flex: every 4th trial uses "word" rule; rest use "ink"
  */
 export function generateTrials(
   count: number,
@@ -67,46 +68,48 @@ export function generateTrials(
   variant: StroopModeId = 'stroop',
   rng: () => number = Math.random,
 ): StroopTrial[] {
-  const baseTrials: Omit<StroopTrial, 'rule'>[] = [];
-  const half = Math.floor(count / 2);
+  const isFlex = variant === 'stroop-flex';
 
-  // Congruent trials
-  for (let i = 0; i < half; i++) {
-    const idx = i % colorWords.length;
-    const c = colorWords[idx];
-    if (!c) continue;
-    baseTrials.push({ word: c.word, inkColor: c.id, wordColor: c.id, congruent: true });
+  // Assign rules: 50/50 ink/word for flex, all ink for classic
+  const rules: StroopRule[] = [];
+  if (isFlex) {
+    const halfWord = Math.floor(count / 2);
+    for (let i = 0; i < halfWord; i++) rules.push('word');
+    for (let i = halfWord; i < count; i++) rules.push('ink');
+    for (let i = rules.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [rules[i]!, rules[j]!] = [rules[j]!, rules[i]!];
+    }
   }
 
-  // Incongruent trials
-  for (let i = 0; i < count - half; i++) {
-    const wordIdx = i % colorWords.length;
-    let inkIdx = (wordIdx + 1 + (i % (colorWords.length - 1))) % colorWords.length;
-    if (inkIdx === wordIdx) inkIdx = (inkIdx + 1) % colorWords.length;
-    const wordC = colorWords[wordIdx];
-    const inkC = colorWords[inkIdx];
-    if (!wordC || !inkC) continue;
-    baseTrials.push({
-      word: wordC.word,
-      inkColor: inkC.id,
-      wordColor: wordC.id,
-      congruent: false,
-    });
+  const trials: StroopTrial[] = [];
+  const half = Math.floor(count / 2);
+  let congruentCount = 0;
+
+  for (let i = 0; i < count; i++) {
+    const rule: StroopRule = isFlex ? rules[i]! : 'ink';
+
+    if (congruentCount < half) {
+      const c = colorWords[i % colorWords.length]!;
+      trials.push({ word: c.word, inkColor: c.id, wordColor: c.id, congruent: true, rule });
+      congruentCount++;
+    } else {
+      const wordIdx = i % colorWords.length;
+      let inkIdx = (wordIdx + 1 + Math.floor(rng() * (colorWords.length - 1))) % colorWords.length;
+      if (inkIdx === wordIdx) inkIdx = (inkIdx + 1) % colorWords.length;
+      const wordC = colorWords[wordIdx]!;
+      const inkC = colorWords[inkIdx]!;
+      trials.push({ word: wordC.word, inkColor: inkC.id, wordColor: wordC.id, congruent: false, rule });
+    }
   }
 
   // Fisher-Yates shuffle
-  for (let i = baseTrials.length - 1; i > 0; i--) {
+  for (let i = trials.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
-    const a = baseTrials[i];
-    const b = baseTrials[j];
-    if (!a || !b) continue;
-    [baseTrials[i], baseTrials[j]] = [b, a];
+    [trials[i]!, trials[j]!] = [trials[j]!, trials[i]!];
   }
 
-  return baseTrials.map((trial, index) => ({
-    ...trial,
-    rule: variant === 'stroop-flex' && index % 4 === 0 ? 'word' : 'ink',
-  }));
+  return trials;
 }
 
 // =============================================================================

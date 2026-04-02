@@ -143,12 +143,7 @@ export function NeurodualQueryProvider({
         cleanup();
       }
     };
-  }, [
-    adapters.auth,
-    adapters.subscription,
-    adapters.sync,
-    queryClient,
-  ]);
+  }, [adapters.auth, adapters.subscription, adapters.sync, queryClient]);
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -537,6 +537,7 @@ export function createNoopInfraAdapters(): InfraAdapters {
 
   const noopReadModels: ReadModelPort = {
     journeyState: () => {
+      // biome-ignore lint/suspicious/noExplicitAny: noop stub with minimal shape
       const snapshot = { data: {} as any, isPending: false, error: null };
       return {
         subscribe: () => () => {},

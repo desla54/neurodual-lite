@@ -274,7 +274,7 @@ describe('SDTCalculator - Bounds Invariants', () => {
       fc.assert(
         fc.property(fc.array(dPrimeArb, { minLength: 1, maxLength: 10 }), (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const avg = SDTCalculator.calculateAverageDPrime(stats);
           return Number.isFinite(avg) && avg >= -5 && avg <= 5;
         }),
@@ -286,7 +286,7 @@ describe('SDTCalculator - Bounds Invariants', () => {
       fc.assert(
         fc.property(fc.array(dPrimeArb, { minLength: 1, maxLength: 10 }), (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const min = SDTCalculator.calculateMinDPrime(stats);
           return Number.isFinite(min) && min >= -5 && min <= 5;
         }),
@@ -525,7 +525,7 @@ describe('SDTCalculator - Consistency Invariants', () => {
       fc.assert(
         fc.property(fc.array(dPrimeArb, { minLength: 1, maxLength: 10 }), (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const min = SDTCalculator.calculateMinDPrime(stats);
           const avg = SDTCalculator.calculateAverageDPrime(stats);
           return min <= avg + 1e-9;
@@ -538,7 +538,7 @@ describe('SDTCalculator - Consistency Invariants', () => {
       fc.assert(
         fc.property(fc.array(dPrimeArb, { minLength: 1, maxLength: 10 }), (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const min = SDTCalculator.calculateMinDPrime(stats);
           const expectedMin = Math.min(...dPrimes);
           return Math.abs(min - expectedMin) < 1e-9;
@@ -551,7 +551,7 @@ describe('SDTCalculator - Consistency Invariants', () => {
       fc.assert(
         fc.property(fc.array(dPrimeArb, { minLength: 1, maxLength: 10 }), (dPrimes) => {
           const stats: Record<string, ModalityStats> = {};
-          dPrimes.forEach((d, i) => (stats[`m${i}`] = { dPrime: d } as ModalityStats));
+          for (const [i, d] of dPrimes.entries()) stats[`m${i}`] = { dPrime: d } as ModalityStats;
           const avg = SDTCalculator.calculateAverageDPrime(stats);
           const expectedAvg = dPrimes.reduce((a, b) => a + b, 0) / dPrimes.length;
           return Math.abs(avg - expectedAvg) < 1e-9;

@@ -302,7 +302,13 @@ describe('Tempo Accuracy Property Tests', () => {
         positiveInt,
         (hits, misses, fa, cr, extraCR) => {
           const acc1 = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, cr);
-          const acc2 = computeSpecDrivenTempoAccuracy('dualnback-classic', hits, misses, fa, cr + extraCR);
+          const acc2 = computeSpecDrivenTempoAccuracy(
+            'dualnback-classic',
+            hits,
+            misses,
+            fa,
+            cr + extraCR,
+          );
           expect(acc2).toBeGreaterThanOrEqual(acc1 - 0.001);
         },
       ),

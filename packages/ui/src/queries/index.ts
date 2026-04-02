@@ -163,7 +163,6 @@ export { useDailyPlaytimeGate, type DailyPlaytimeGate } from './daily-playtime-g
 // Realtime integration (auth only)
 export { invalidateAfterLogin, invalidateAfterLogout } from './realtime';
 
-
 // Pipeline queries (XState-based session completion)
 export {
   setPipelineAdapter,

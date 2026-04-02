@@ -290,7 +290,16 @@ export type GameMode =
   | 'range'
   | 'cube'
   | 'netslide'
-  | 'flip';
+  | 'flip'
+  // --- Legacy DNB variants ---
+  | 'dual-memo'
+  | 'dual-place'
+  | 'dual-pick'
+  | 'dual-trace'
+  | 'dual-time'
+  | 'dual-track'
+  | 'corsi-block'
+  | 'pasat';
 
 export type GameModeSection = 'training' | 'test';
 
@@ -540,6 +549,14 @@ export const MODE_LINE_COLORS: Record<GameMode, string> = {
   netslide: '#14b8a6',
   flip: '#f43f5e',
   'speed-pack': 'bg-indigo-400',
+  'dual-memo': 'bg-violet-400',
+  'dual-place': 'bg-teal-400',
+  'dual-pick': 'bg-sky-400',
+  'dual-trace': 'bg-amber-400',
+  'dual-time': 'bg-rose-400',
+  'dual-track': 'bg-indigo-400',
+  'corsi-block': 'bg-orange-400',
+  pasat: 'bg-lime-400',
 };
 
 /** Mode-specific colors for banners - with dark mode support */
@@ -1909,6 +1926,54 @@ export const MODE_COLORS: Record<
     border: 'border-rose-200 dark:border-rose-500/30',
     text: 'text-rose-700 dark:text-rose-300',
     textLight: 'text-rose-600 dark:text-rose-400',
+  },
+  'dual-memo': {
+    bg: 'bg-violet-50 dark:bg-violet-500/10',
+    border: 'border-violet-200 dark:border-violet-500/30',
+    text: 'text-violet-700 dark:text-violet-300',
+    textLight: 'text-violet-600 dark:text-violet-400',
+  },
+  'dual-place': {
+    bg: 'bg-teal-50 dark:bg-teal-500/10',
+    border: 'border-teal-200 dark:border-teal-500/30',
+    text: 'text-teal-700 dark:text-teal-300',
+    textLight: 'text-teal-600 dark:text-teal-400',
+  },
+  'dual-pick': {
+    bg: 'bg-sky-50 dark:bg-sky-500/10',
+    border: 'border-sky-200 dark:border-sky-500/30',
+    text: 'text-sky-700 dark:text-sky-300',
+    textLight: 'text-sky-600 dark:text-sky-400',
+  },
+  'dual-trace': {
+    bg: 'bg-amber-50 dark:bg-amber-500/10',
+    border: 'border-amber-200 dark:border-amber-500/30',
+    text: 'text-amber-700 dark:text-amber-300',
+    textLight: 'text-amber-600 dark:text-amber-400',
+  },
+  'dual-time': {
+    bg: 'bg-rose-50 dark:bg-rose-500/10',
+    border: 'border-rose-200 dark:border-rose-500/30',
+    text: 'text-rose-700 dark:text-rose-300',
+    textLight: 'text-rose-600 dark:text-rose-400',
+  },
+  'dual-track': {
+    bg: 'bg-indigo-50 dark:bg-indigo-500/10',
+    border: 'border-indigo-200 dark:border-indigo-500/30',
+    text: 'text-indigo-700 dark:text-indigo-300',
+    textLight: 'text-indigo-600 dark:text-indigo-400',
+  },
+  'corsi-block': {
+    bg: 'bg-orange-50 dark:bg-orange-500/10',
+    border: 'border-orange-200 dark:border-orange-500/30',
+    text: 'text-orange-700 dark:text-orange-300',
+    textLight: 'text-orange-600 dark:text-orange-400',
+  },
+  pasat: {
+    bg: 'bg-lime-50 dark:bg-lime-500/10',
+    border: 'border-lime-200 dark:border-lime-500/30',
+    text: 'text-lime-700 dark:text-lime-300',
+    textLight: 'text-lime-600 dark:text-lime-400',
   },
 };
 
@@ -3985,10 +4050,7 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
 ];
 
 /** Modes featured at the top of the selector as "Essentials" */
-export const ESSENTIAL_MODES: readonly GameMode[] = [
-  'dualnback-classic',
-  'sim-brainworkshop',
-];
+export const ESSENTIAL_MODES: readonly GameMode[] = ['dualnback-classic', 'sim-brainworkshop'];
 
 export interface ModeCategory {
   readonly labelKey: string;
@@ -4001,11 +4063,7 @@ export const MODE_CATEGORIES: readonly ModeCategory[] = [
   {
     labelKey: 'settings.gameMode.categoryDualNBack',
     section: 'training',
-    modes: [
-      'dualnback-classic',
-      'sim-brainworkshop',
-      'custom',
-    ],
+    modes: ['dualnback-classic', 'sim-brainworkshop', 'custom', 'dual-mix'],
   },
   {
     labelKey: 'settings.gameMode.categorySpeedTime',
@@ -4453,8 +4511,8 @@ const SHORT_LABEL_BY_MODE: Record<string, string> = {
   'stroop-flex': 'SF',
   'dualnback-classic': 'DNB',
   'sim-brainworkshop': 'BW',
-  'ospan': 'OS',
-  'gridlock': 'GL',
+  ospan: 'OS',
+  gridlock: 'GL',
   'dual-mix': 'MIX',
 };
 

@@ -24,6 +24,7 @@ import {
 import { SettingsMobileNav } from './components';
 
 // Lazy load sections for code splitting
+// biome-ignore lint/suspicious/noExplicitAny: stub component for removed journey section
 const JourneySection = lazy(() => Promise.resolve({ default: () => null as any }));
 const ModeSection = lazy(() => import('./sections/mode').then((m) => ({ default: m.ModeSection })));
 const VisualSection = lazy(() =>

@@ -148,7 +148,9 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
 
   const premium = useMemo<PremiumPort>(() => {
     return createPremiumAdapter({
-      apiUrl: import.meta.env.VITE_ACTIVATION_API_URL || 'https://neurodual-activation-api.abdeslam-aguilal.workers.dev',
+      apiUrl:
+        import.meta.env.VITE_ACTIVATION_API_URL ||
+        'https://neurodual-activation-api.abdeslam-aguilal.workers.dev',
       getSetting: async (key) => localStorage.getItem(`nd_${key}`),
       setSetting: async (key, value) => localStorage.setItem(`nd_${key}`, value),
       getTotalPlaytimeMs: async () => {
