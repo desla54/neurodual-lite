@@ -122,7 +122,7 @@ export function NavBar(): ReactNode {
       const targetEl = navItems[activeMobileIndex];
       if (!targetEl) return;
 
-      const indicatorWidth = indicator.offsetWidth || 28;
+      const indicatorWidth = indicator.offsetWidth || 40;
       const x = Math.round(targetEl.offsetLeft + (targetEl.offsetWidth - indicatorWidth) / 2);
 
       gsap.killTweensOf(indicator);
@@ -328,7 +328,7 @@ export function NavBar(): ReactNode {
           {/* Sliding indicator — pill that follows the active tab */}
           <div
             ref={indicatorRef}
-            className="absolute left-0 bottom-1.5 w-7 h-1 rounded-full bg-primary/60 pointer-events-none will-change-transform"
+            className="absolute left-0 bottom-1 w-10 h-1.5 rounded-full bg-primary pointer-events-none will-change-transform"
             style={{ opacity: 0 }}
             aria-hidden="true"
           />

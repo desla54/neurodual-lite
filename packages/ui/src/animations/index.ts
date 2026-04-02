@@ -28,7 +28,6 @@ export {
 export {
   PageTransitionProvider,
   usePageTransition,
-  usePageTransitionRegister,
   useTransitionDirection,
   useHasPageTransition,
   type TransitionDirection,

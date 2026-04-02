@@ -2,22 +2,23 @@
  * useTransitionNavigate
  *
  * Animated navigation hook that wraps React Router's navigate()
- * with coordinated exit/enter page transitions using GSAP.
+ * with direction-aware enter transitions using GSAP.
+ *
+ * Instead of a sequential exit→navigate→enter flow (which causes a visible
+ * flash), we navigate immediately and let the new page's <PageTransition>
+ * handle the enter animation. React unmounts the old page instantly,
+ * the new page fades/slides in — no gap, no flash.
  *
  * Direction options:
- * - 'push' (default): forward navigation — old slides left, new slides from right
- * - 'back': backward navigation — old slides right, new slides from left
- * - 'modal': modal presentation — old scales down, new slides up
- * - 'fade': crossfade — both fade
- *
- * Falls back to instant navigation when:
- * - User prefers reduced motion
- * - A transition is already in progress
+ * - 'push': forward — new slides from right
+ * - 'back': backward — new slides from left
+ * - 'modal': modal — new scales up
+ * - 'fade': crossfade
  */
 
 import { useCallback } from 'react';
 import { useNavigate, type To, type NavigateOptions } from 'react-router';
-import { usePageTransition, prefersReducedMotion, type TransitionDirection } from '@neurodual/ui';
+import { usePageTransition, type TransitionDirection } from '@neurodual/ui';
 
 export interface TransitionNavigateOptions extends NavigateOptions {
   direction?: TransitionDirection;
@@ -25,7 +26,7 @@ export interface TransitionNavigateOptions extends NavigateOptions {
 
 export function useTransitionNavigate() {
   const navigate = useNavigate();
-  const { triggerExit, setTransitionDirection, isTransitioning } = usePageTransition();
+  const { setTransitionDirection } = usePageTransition();
 
   const transitionNavigate = useCallback(
     (to: To | number, options?: TransitionNavigateOptions) => {
@@ -37,20 +38,12 @@ export function useTransitionNavigate() {
 
       const { direction = 'push', ...navOptions } = options ?? {};
 
-      // Fall back to instant navigation if reduced motion or already transitioning
-      if (prefersReducedMotion() || isTransitioning) {
-        navigate(to, navOptions);
-        return;
-      }
-
-      // Set direction, trigger exit, then navigate
+      // Set direction so the next PageTransition reads it for enter animation
       setTransitionDirection(direction);
-      triggerExit().then(() => {
-        navigate(to, navOptions);
-      });
+      navigate(to, navOptions);
     },
-    [navigate, triggerExit, setTransitionDirection, isTransitioning],
+    [navigate, setTransitionDirection],
   );
 
-  return { transitionNavigate, isTransitioning };
+  return { transitionNavigate };
 }

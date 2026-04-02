@@ -1,16 +1,19 @@
 /**
  * PageTransition Component
  *
- * Wraps page content to animate enter/exit transitions using GSAP.
+ * Wraps page content to animate enter transitions using GSAP.
  * Reads transition direction from context for direction-aware
  * enter animations (push/back/modal/fade).
+ *
+ * No exit animation — navigation is instant and React unmounts
+ * the old page. Only the enter animation plays, preventing flashes.
  */
 
-import { type ReactNode, useRef, useLayoutEffect, useState, useEffect } from 'react';
+import { type ReactNode, useRef, useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
 import { PRESETS, prefersReducedMotion } from './config';
 import { cn } from '../lib/utils';
-import { usePageTransitionRegister, useTransitionDirection } from './page-transition-context';
+import { useTransitionDirection } from './page-transition-context';
 import type { TransitionDirection } from './page-transition-context';
 
 export interface PageTransitionProps {
@@ -46,13 +49,7 @@ export function PageTransition({
 }: PageTransitionProps): ReactNode {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isReady, setIsReady] = useState(!animateOnMount);
-  const registerContainer = usePageTransitionRegister();
   const contextDirection = useTransitionDirection();
-
-  useEffect(() => {
-    registerContainer(containerRef.current);
-    return () => registerContainer(null);
-  }, [registerContainer]);
 
   useLayoutEffect(() => {
     if (!animateOnMount) return;
@@ -68,7 +65,6 @@ export function PageTransition({
     const dirConfig =
       contextDirection !== 'default' ? DIRECTION_ENTERS[contextDirection] : undefined;
     const fallback = VARIANTS[variant] ?? VARIANTS['default'];
-    // varConfig is always defined (fallback guaranteed), so safe to destructure
     const { from, to } = (dirConfig ?? fallback) as { from: gsap.TweenVars; to: gsap.TweenVars };
 
     const customEnter = enter ?? {};
