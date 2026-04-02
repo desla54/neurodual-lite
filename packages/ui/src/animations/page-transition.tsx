@@ -23,18 +23,18 @@ export interface PageTransitionProps {
 
 const DIRECTION_ENTERS: Record<TransitionDirection, { from: gsap.TweenVars; to: gsap.TweenVars }> =
   {
-    push: { from: { opacity: 0, xPercent: 5 }, to: { opacity: 1, xPercent: 0 } },
-    back: { from: { opacity: 0, xPercent: -5 }, to: { opacity: 1, xPercent: 0 } },
-    modal: { from: { opacity: 0, y: 24, scale: 0.98 }, to: { opacity: 1, y: 0, scale: 1 } },
+    push: { from: { opacity: 0, xPercent: 3 }, to: { opacity: 1, xPercent: 0 } },
+    back: { from: { opacity: 0, xPercent: -3 }, to: { opacity: 1, xPercent: 0 } },
+    modal: { from: { opacity: 0, y: 18, scale: 0.985 }, to: { opacity: 1, y: 0, scale: 1 } },
     fade: { from: { opacity: 0 }, to: { opacity: 1 } },
-    default: { from: { opacity: 0, y: 16 }, to: { opacity: 1, y: 0 } },
+    default: { from: { opacity: 0, y: 10 }, to: { opacity: 1, y: 0 } },
   };
 
 const VARIANTS: Record<string, { from: gsap.TweenVars; to: gsap.TweenVars }> = {
-  default: { from: { opacity: 0, y: 16 }, to: { opacity: 1, y: 0 } },
+  default: { from: { opacity: 0, y: 10 }, to: { opacity: 1, y: 0 } },
   fade: { from: { opacity: 0 }, to: { opacity: 1 } },
-  'slide-up': { from: { opacity: 0, y: 24 }, to: { opacity: 1, y: 0 } },
-  scale: { from: { opacity: 0, scale: 0.96 }, to: { opacity: 1, scale: 1 } },
+  'slide-up': { from: { opacity: 0, y: 18 }, to: { opacity: 1, y: 0 } },
+  scale: { from: { opacity: 0, scale: 0.975 }, to: { opacity: 1, scale: 1 } },
 };
 
 export function PageTransition({
@@ -72,13 +72,15 @@ export function PageTransition({
     const { from, to } = (dirConfig ?? fallback) as { from: gsap.TweenVars; to: gsap.TweenVars };
 
     const customEnter = enter ?? {};
+    gsap.killTweensOf(el);
     gsap.set(el, { ...from, ...customEnter });
 
     const tween = gsap.to(el, {
       ...to,
       duration: PRESETS.pageEnter.duration,
       ease: PRESETS.pageEnter.ease,
-      delay: 0.04,
+      overwrite: 'auto',
+      force3D: true,
       clearProps: 'opacity,xPercent,y,scale',
       onComplete: () => setIsReady(true),
     });

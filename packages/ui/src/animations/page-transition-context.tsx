@@ -73,8 +73,11 @@ export function PageTransitionProvider({ children }: { children: ReactNode }): R
     const anim = EXIT_ANIMATIONS[transitionDirection] ?? EXIT_ANIMATIONS.default;
 
     return new Promise((resolve) => {
+      gsap.killTweensOf(el);
       gsap.to(el, {
         ...anim,
+        overwrite: 'auto',
+        force3D: true,
         onComplete: () => {
           setIsTransitioning(false);
           resolve();

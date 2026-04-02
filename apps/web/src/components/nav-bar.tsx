@@ -80,6 +80,8 @@ export function NavBar(): ReactNode {
 
   // Sliding indicator ref for mobile bottom nav
   const indicatorRef = useRef<HTMLDivElement>(null);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
+  const indicatorReadyRef = useRef(false);
 
   const resolvePrimaryTabPath = useCallback(
     (tab: PrimaryNavTab) => rememberedTabPaths[tab] ?? PRIMARY_TAB_DEFAULT_PATHS[tab],
@@ -103,33 +105,83 @@ export function NavBar(): ReactNode {
     return mobileLinks.findIndex(({ tab }) => isPrimaryTabActive(pathname, tab));
   }, [pathname]);
 
+  const syncMobileIndicator = useCallback(
+    (animate: boolean) => {
+      const indicator = indicatorRef.current;
+      const container = mobileNavRef.current;
+      if (!indicator || !container || activeMobileIndex < 0) {
+        if (indicator) {
+          gsap.killTweensOf(indicator);
+          gsap.set(indicator, { opacity: 0, x: 0 });
+        }
+        indicatorReadyRef.current = false;
+        return;
+      }
+
+      const navItems = container.querySelectorAll<HTMLElement>('[data-nav-tab]');
+      const targetEl = navItems[activeMobileIndex];
+      if (!targetEl) return;
+
+      const indicatorWidth = indicator.offsetWidth || 28;
+      const x = Math.round(targetEl.offsetLeft + (targetEl.offsetWidth - indicatorWidth) / 2);
+
+      gsap.killTweensOf(indicator);
+
+      if (!indicatorReadyRef.current || !animate) {
+        gsap.set(indicator, {
+          x,
+          opacity: 1,
+          force3D: true,
+        });
+        indicatorReadyRef.current = true;
+        return;
+      }
+
+      gsap.to(indicator, {
+        x,
+        opacity: 1,
+        duration: 0.24,
+        ease: 'power3.out',
+        overwrite: 'auto',
+        force3D: true,
+      });
+    },
+    [activeMobileIndex],
+  );
+
   // Animate indicator to the active tab position
   useLayoutEffect(() => {
-    const indicator = indicatorRef.current;
-    if (!indicator || activeMobileIndex < 0) {
-      indicator && gsap.set(indicator, { opacity: 0 });
-      return;
-    }
+    syncMobileIndicator(indicatorReadyRef.current);
+  }, [syncMobileIndicator]);
 
-    // Find the active nav item element
-    const container = indicator.parentElement;
+  useLayoutEffect(() => {
+    const container = mobileNavRef.current;
     if (!container) return;
 
-    const navItems = container.querySelectorAll<HTMLElement>('[data-nav-tab]');
-    const targetEl = navItems[activeMobileIndex];
-    if (!targetEl) return;
+    const scheduleSync = () => {
+      window.requestAnimationFrame(() => syncMobileIndicator(false));
+    };
 
-    const containerRect = container.getBoundingClientRect();
-    const targetRect = targetEl.getBoundingClientRect();
-    const x = targetRect.left - containerRect.left + targetRect.width / 2 - 14;
+    const resizeObserver =
+      typeof ResizeObserver !== 'undefined' ? new ResizeObserver(scheduleSync) : null;
+    resizeObserver?.observe(container);
 
-    gsap.to(indicator, {
-      x,
-      opacity: 1,
-      duration: 0.3,
-      ease: 'power2.out',
-    });
-  }, [activeMobileIndex]);
+    const viewport = window.visualViewport;
+    window.addEventListener('resize', scheduleSync);
+    viewport?.addEventListener('resize', scheduleSync);
+    window.addEventListener('orientationchange', scheduleSync);
+
+    if ('fonts' in document) {
+      void document.fonts.ready.then(scheduleSync);
+    }
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener('resize', scheduleSync);
+      viewport?.removeEventListener('resize', scheduleSync);
+      window.removeEventListener('orientationchange', scheduleSync);
+    };
+  }, [syncMobileIndicator]);
 
   // Handle mobile tab click with transition + haptic
   const handleMobileTabClick = useCallback(
@@ -237,7 +289,10 @@ export function NavBar(): ReactNode {
           </NavLink>
         )}
 
-        <div className="relative flex items-center justify-evenly w-full p-2 bg-woven-surface border border-woven-border/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full pointer-events-auto overflow-hidden">
+        <div
+          ref={mobileNavRef}
+          className="relative flex items-center justify-evenly w-full p-2 bg-woven-surface border border-woven-border/50 shadow-[0_2px_16px_-2px_hsl(var(--woven-border)/0.25)] rounded-full pointer-events-auto overflow-hidden"
+        >
           {/* Weave texture background - tighter grid for mobile */}
           <svg
             data-nav-weave="true"
@@ -273,7 +328,7 @@ export function NavBar(): ReactNode {
           {/* Sliding indicator — pill that follows the active tab */}
           <div
             ref={indicatorRef}
-            className="absolute bottom-1.5 w-7 h-1 rounded-full bg-primary/50 pointer-events-none"
+            className="absolute left-0 bottom-1.5 w-7 h-1 rounded-full bg-primary/60 pointer-events-none will-change-transform"
             style={{ opacity: 0 }}
             aria-hidden="true"
           />
@@ -295,9 +350,9 @@ export function NavBar(): ReactNode {
                   handleMobileTabClick(e, href);
                 }}
                 className={cn(
-                  'relative flex flex-col items-center justify-center w-14 h-14 rounded-full transition duration-200 active:scale-[0.92]',
+                  'relative flex flex-col items-center justify-center w-14 h-14 rounded-full transition-[background-color,color,transform] duration-200 active:scale-[0.94]',
                   isActive
-                    ? 'bg-primary text-primary-foreground shadow-soft font-bold'
+                    ? 'bg-primary text-primary-foreground font-semibold'
                     : 'text-muted-foreground hover:bg-muted/50',
                   isSpotlighted &&
                     !isActive &&
