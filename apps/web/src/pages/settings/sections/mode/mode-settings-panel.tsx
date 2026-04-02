@@ -590,7 +590,8 @@ export function ModeSettingsPanel({
     })),
   );
   const scopedModeSettings = modeSettings as Record<string, unknown>;
-  const traceIsiMs = (scopedModeSettings['traceIsiMs'] as number | undefined) ?? legacyTraceUi.traceIsiMs;
+  const traceIsiMs =
+    (scopedModeSettings['traceIsiMs'] as number | undefined) ?? legacyTraceUi.traceIsiMs;
   const traceStimulusDurationMs =
     (scopedModeSettings['traceStimulusDurationMs'] as number | undefined) ??
     legacyTraceUi.traceStimulusDurationMs;
@@ -606,9 +607,13 @@ export function ModeSettingsPanel({
     (scopedModeSettings['traceAdaptiveTimingEnabled'] as boolean | undefined) ??
     legacyTraceUi.traceAdaptiveTimingEnabled;
   const traceWritingInputMethod =
-    (scopedModeSettings['traceWritingInputMethod'] as 'auto' | 'keyboard' | 'handwriting' | undefined) ??
-    legacyTraceUi.traceWritingInputMethod;
-  const setTraceIsiMs = (value: number) => setModeSetting('traceIsiMs', Math.max(1500, Math.min(10000, value)));
+    (scopedModeSettings['traceWritingInputMethod'] as
+      | 'auto'
+      | 'keyboard'
+      | 'handwriting'
+      | undefined) ?? legacyTraceUi.traceWritingInputMethod;
+  const setTraceIsiMs = (value: number) =>
+    setModeSetting('traceIsiMs', Math.max(1500, Math.min(10000, value)));
   const setTraceStimulusDurationMs = (value: number) =>
     setModeSetting('traceStimulusDurationMs', Math.max(200, Math.min(5000, value)));
   const setTraceFeedbackDurationMs = (value: number) =>
@@ -641,16 +646,17 @@ export function ModeSettingsPanel({
   // Mode helpers
   const canConfigure = (key: ConfigurableSettingKey) => configurableSettings.includes(key);
   const isAuto = mode === 'dualnback-classic';
-  const isDualMemo = mode === 'dual-memo';
-  const isDualPlace = mode === 'dual-place';
-  const isDualPick = mode === 'dual-pick';
-  const isDualTrace = mode === 'dual-trace';
-  const isDualTime = mode === 'dual-time';
-  const isDualTrack = mode === 'dual-track';
+  // Dead game modes (removed from GameMode union) — always false
+  const isDualMemo = false as boolean;
+  const isDualPlace = false as boolean;
+  const isDualPick = false as boolean;
+  const isDualTrace = false as boolean;
+  const isDualTime = false as boolean;
+  const isDualTrack = false as boolean;
   const isUfov = mode === 'ufov';
   const isTower = mode === 'tower';
   const isGridlock = mode === 'gridlock';
-  const isCorsiBlock = mode === 'corsi-block';
+  const isCorsiBlock = false as boolean; // dead mode
   const isDigitSpan = mode === 'digit-span';
   const isMemoryMatch = mode === 'memory-match';
   const isLightsOut = mode === 'lights-out';
@@ -663,7 +669,7 @@ export function ModeSettingsPanel({
   const isSimon = mode === 'simon';
   const isAnt = mode === 'ant';
   const isWcst = mode === 'wcst';
-  const isPasat = mode === 'pasat';
+  const isPasat = false as boolean; // dead mode
   const isMentalRotation = mode === 'mental-rotation';
   const isVisualSearch = mode === 'visual-search';
   const isTangram = mode === 'tangram';
