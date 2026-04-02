@@ -91,21 +91,6 @@ export function DyslateralisationSection(): ReactNode {
     ? t(selectedModeConfig.labelKey)
     : t('settings.dyslatéralisation.title');
 
-  const traceAxisLabel =
-    traceMirrorAxis === 'horizontal'
-      ? t('settings.dyslatéralisation.axisHorizontal')
-      : traceMirrorAxis === 'vertical'
-        ? t('settings.dyslatéralisation.axisVertical')
-        : t('settings.dyslatéralisation.axisDynamic');
-  const traceSubtitle = traceMirrorSwipe
-    ? `${t('common.on')} · ${traceAxisLabel}`
-    : t('common.off');
-  const flowSubtitle = placeExtensions.mirrorTimeline
-    ? placeExtensions.mirrorOnlyMode
-      ? `${t('common.on')} · ${t('settings.dyslatéralisation.mirrorOnly')}`
-      : t('common.on')
-    : t('common.off');
-
   const stroopSubtitle = stroopDyslatEnabled ? t('common.on') : t('common.off');
 
   const goToSettings = () => {
