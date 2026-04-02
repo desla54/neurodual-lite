@@ -131,8 +131,8 @@ export function HomePage(): ReactNode {
   const modeSettings =
     useSettingsStore((s) => s.modes[currentMode as keyof typeof s.modes]) ?? EMPTY_SETTINGS;
   const setModeSetting = useSettingsStore((s) => s.setModeSetting);
-  const currentModeNLevel = (modeSettings as any).nLevel ?? 2;
-  const currentModeTrialsCount = (modeSettings as any).trialsCount ?? 20;
+  const currentModeNLevel = (modeSettings as { nLevel?: number }).nLevel ?? 2;
+  const currentModeTrialsCount = (modeSettings as { trialsCount?: number }).trialsCount ?? 20;
   const selectedModeConfig = modeConfigMap.get(currentMode);
 
   // Per-mode quick settings capabilities
@@ -328,9 +328,7 @@ export function HomePage(): ReactNode {
               <div className="home-card-typography p-5 space-y-5">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-                    {modeConfigMap.get(currentMode)?.labelKey
-                      ? t(modeConfigMap.get(currentMode)!.labelKey)
-                      : currentMode}
+                    {selectedModeConfig?.labelKey ? t(selectedModeConfig.labelKey) : currentMode}
                   </h2>
                   <button
                     type="button"
