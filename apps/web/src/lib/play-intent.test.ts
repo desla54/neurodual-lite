@@ -220,13 +220,13 @@ describe('play-intent', () => {
     ).toBe('synergy');
   });
 
-  it('promotes free mode to journey when a journey snapshot already exists', () => {
+  it('keeps free mode explicit even when a journey snapshot exists', () => {
     expect(
       resolveSessionPlayMode({
         requestedPlayMode: 'free',
         hasJourneySnapshot: true,
       }),
-    ).toBe('journey');
+    ).toBe('free');
 
     expect(
       resolveSessionPlayMode({

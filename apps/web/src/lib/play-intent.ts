@@ -188,13 +188,15 @@ export function resolveSessionJourneyId(input: ResolveSessionJourneyIdInput): st
  * Resolve the concrete play mode to persist on a session.
  *
  * Calibration and synergy are explicit contexts and must never be collapsed to
- * free mode. Journey snapshots still force journey mode when the caller only
- * requested free mode but a journey continuation is already in-flight.
+ * free mode. Explicit free launches stay free even if a stale journey snapshot
+ * exists elsewhere in memory or recovery state.
  */
 export function resolveSessionPlayMode(input: {
   readonly requestedPlayMode: PlayMode;
   readonly hasJourneySnapshot: boolean;
 }): PlayMode {
+  void input.hasJourneySnapshot;
+
   if (
     input.requestedPlayMode === 'calibration' ||
     input.requestedPlayMode === 'synergy' ||
@@ -203,7 +205,7 @@ export function resolveSessionPlayMode(input: {
     return input.requestedPlayMode;
   }
 
-  if (input.requestedPlayMode === 'journey' || input.hasJourneySnapshot) {
+  if (input.requestedPlayMode === 'journey') {
     return 'journey';
   }
 
