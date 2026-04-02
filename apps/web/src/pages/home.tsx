@@ -20,17 +20,14 @@ import {
   useChallenge20Query,
   useIsPremium,
 } from '@neurodual/ui';
-import {
-  formatLocalDayKey,
-  generateJourneyStages,
-  JOURNEY_MAX_LEVEL,
-} from '@neurodual/logic';
+import { formatLocalDayKey, generateJourneyStages, JOURNEY_MAX_LEVEL } from '@neurodual/logic';
 import { type ReactNode, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CaretLeft, CaretRight, GearSix, Play } from '@phosphor-icons/react';
-import { useNavigate } from 'react-router';
 import { OspanMeasureButton } from '../components/profile/ospan-measure-button';
 import { isChallengeValidatedToday } from '../lib/challenge-feedback';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
+import { useHaptic } from '../hooks/use-haptic';
 
 import {
   DUALNBACK_CLASSIC_JOURNEY_ID,
@@ -74,10 +71,10 @@ const JOURNEY_OPTIONS = [
   },
 ] as const;
 
-
 export function HomePage(): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
+  const haptic = useHaptic();
   const hasPremium = useIsPremium();
   const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
@@ -104,7 +101,8 @@ export function HomePage(): ReactNode {
   const activeJourney = useSettingsStore((s) =>
     s.savedJourneys.find((j) => j.id === activeJourneyId),
   );
-  const journeyStartLevel = activeJourney?.startLevel ?? (activeJourneyId === NEURODUAL_MIX_JOURNEY_ID ? 1 : 2);
+  const journeyStartLevel =
+    activeJourney?.startLevel ?? (activeJourneyId === NEURODUAL_MIX_JOURNEY_ID ? 1 : 2);
   const journeyTargetLevel = activeJourney?.targetLevel ?? 5;
   const journeyGameMode =
     JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.gameMode ?? 'dualnback-classic';
@@ -209,6 +207,7 @@ export function HomePage(): ReactNode {
   };
 
   const handleLaunchMode = () => {
+    haptic.impact('medium');
     if (selectedStageDef) {
       // Launch journey stage — resolve composite modes (neurodual-mix) to a concrete game mode
       const concreteMode =
@@ -216,7 +215,7 @@ export function HomePage(): ReactNode {
         (journeyGameMode === 'neurodual-mix' ? 'stroop-flex' : journeyGameMode);
       const route = getRouteForMode(concreteMode as GameModeId);
       setCurrentMode(concreteMode as GameModeId);
-      navigate(route === '/nback' ? `/nback?mode=${concreteMode}` : route, {
+      transitionNavigate(route === '/nback' ? `/nback?mode=${concreteMode}` : route, {
         state: createJourneyPlayIntent(selectedStageDef.stageId, activeJourneyId ?? undefined, {
           gameModeId: concreteMode,
           journeyStartLevel,
@@ -224,12 +223,14 @@ export function HomePage(): ReactNode {
           journeyGameModeId: journeyGameMode,
           journeyNLevel: selectedStageDef.nLevel,
         }),
+        direction: 'push',
       });
       return;
     }
     const route = getRouteForMode(currentMode as GameModeId);
-    navigate(route === '/nback' ? `/nback?mode=${currentMode}` : route, {
+    transitionNavigate(route === '/nback' ? `/nback?mode=${currentMode}` : route, {
       state: createFreePlayIntent(currentMode as GameModeId),
+      direction: 'push',
     });
   };
 
@@ -422,7 +423,7 @@ export function HomePage(): ReactNode {
                 <div className="flex justify-center pt-1">
                   <button
                     type="button"
-                    onClick={() => navigate('/settings/mode')}
+                    onClick={() => transitionNavigate('/settings/mode', { direction: 'push' })}
                     className="home-footer-pill"
                   >
                     {t('home.allSettings', 'Tous les réglages')}
@@ -478,20 +479,38 @@ export function HomePage(): ReactNode {
                         {journeyGameMode === 'dualnback-classic' && (
                           <>
                             <p className="font-semibold text-foreground">
-                              {t('journey.progression.jaeggi.description', 'Based on your weakest modality:')}
+                              {t(
+                                'journey.progression.jaeggi.description',
+                                'Based on your weakest modality:',
+                              )}
                             </p>
                             <ul className="space-y-2 list-none pl-0">
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 font-bold shrink-0">↑</span>
-                                <span>{t('journey.progression.jaeggi.up', 'Fewer than 3 errors → Level up')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.jaeggi.up',
+                                    'Fewer than 3 errors → Level up',
+                                  )}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-amber-500 font-bold shrink-0">→</span>
-                                <span>{t('journey.progression.jaeggi.stay', '3 to 5 errors → Stay at this level')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.jaeggi.stay',
+                                    '3 to 5 errors → Stay at this level',
+                                  )}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-destructive font-bold shrink-0">↓</span>
-                                <span>{t('journey.progression.jaeggi.down', 'More than 5 errors → Level down')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.jaeggi.down',
+                                    'More than 5 errors → Level down',
+                                  )}
+                                </span>
                               </li>
                             </ul>
                           </>
@@ -499,20 +518,35 @@ export function HomePage(): ReactNode {
                         {journeyGameMode === 'sim-brainworkshop' && (
                           <>
                             <p className="font-semibold text-foreground">
-                              {t('journey.progression.brainworkshop.description', 'Brain Workshop protocol:')}
+                              {t(
+                                'journey.progression.brainworkshop.description',
+                                'Brain Workshop protocol:',
+                              )}
                             </p>
                             <ul className="space-y-2 list-none pl-0">
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 font-bold shrink-0">↑</span>
-                                <span>{t('journey.progression.brainworkshop.up', '80% or higher → Level up')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.brainworkshop.up',
+                                    '80% or higher → Level up',
+                                  )}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-amber-500 font-bold shrink-0">→</span>
-                                <span>{t('journey.progression.brainworkshop.stay', '50% to 79% → Stay')}</span>
+                                <span>
+                                  {t('journey.progression.brainworkshop.stay', '50% to 79% → Stay')}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-destructive font-bold shrink-0">↓</span>
-                                <span>{t('journey.progression.brainworkshop.strike', '3 scores in a row under 50% → Level down')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.brainworkshop.strike',
+                                    '3 scores in a row under 50% → Level down',
+                                  )}
+                                </span>
                               </li>
                             </ul>
                           </>
@@ -520,20 +554,38 @@ export function HomePage(): ReactNode {
                         {journeyGameMode === 'neurodual-mix' && (
                           <>
                             <p className="font-semibold text-foreground">
-                              {t('journey.progression.neurodualMix.description', 'NeuroDual Mix — DNB Classic + Stroop Flex:')}
+                              {t(
+                                'journey.progression.neurodualMix.description',
+                                'NeuroDual Mix — DNB Classic + Stroop Flex:',
+                              )}
                             </p>
                             <ul className="space-y-2 list-none pl-0">
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 font-bold shrink-0">↑</span>
-                                <span>{t('journey.progression.neurodualMix.fill', 'Each session with 85%+ accuracy fills the stage by 10%')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.neurodualMix.fill',
+                                    'Each session with 85%+ accuracy fills the stage by 10%',
+                                  )}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-amber-500 font-bold shrink-0">→</span>
-                                <span>{t('journey.progression.neurodualMix.both', 'Both DNB Classic and Stroop Flex sessions count')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.neurodualMix.both',
+                                    'Both DNB Classic and Stroop Flex sessions count',
+                                  )}
+                                </span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-primary font-bold shrink-0">✓</span>
-                                <span>{t('journey.progression.neurodualMix.unlock', 'At 100%, the next N-level unlocks')}</span>
+                                <span>
+                                  {t(
+                                    'journey.progression.neurodualMix.unlock',
+                                    'At 100%, the next N-level unlocks',
+                                  )}
+                                </span>
                               </li>
                             </ul>
                           </>

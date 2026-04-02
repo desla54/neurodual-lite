@@ -1,15 +1,7 @@
 /**
- * Animation System
- *
- * Centralized animation utilities for consistent motion across the app.
- *
- * - config: Duration, easing, and preset constants
- * - PageTransition: Animate page enter/exit
- * - useStagger: Animate lists with staggered timing
- * - useButtonAnimation: Press/release feedback for buttons
+ * Animation System — centralized animation utilities for consistent motion.
  */
 
-// Config and constants
 export {
   DURATION,
   EASE,
@@ -22,10 +14,8 @@ export {
   withReducedMotion,
 } from './config';
 
-// Components
 export { PageTransition, type PageTransitionProps } from './page-transition';
 
-// Hooks
 export { useStagger, getStaggerConfig, type UseStaggerOptions } from './use-stagger';
 export {
   useButtonAnimation,
@@ -35,10 +25,11 @@ export {
   type UseRippleOptions,
 } from './use-button-animation';
 
-// Page transition context
 export {
   PageTransitionProvider,
   usePageTransition,
   usePageTransitionRegister,
+  useTransitionDirection,
   useHasPageTransition,
+  type TransitionDirection,
 } from './page-transition-context';

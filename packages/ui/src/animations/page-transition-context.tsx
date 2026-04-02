@@ -4,10 +4,8 @@
  * Manages coordinated enter/exit animations for page transitions.
  * Uses GSAP for smooth, performant transitions.
  *
- * Usage:
- * 1. Wrap your app with <PageTransitionProvider>
- * 2. Use <AnimatedOutlet> instead of <Outlet>
- * 3. Use useTransitionNavigate() for animated navigation
+ * Supports direction-aware transitions (push/back/modal/fade) for
+ * a native mobile app feel.
  */
 
 import { createContext, useContext, useRef, useCallback, useState, type ReactNode } from 'react';
@@ -18,13 +16,14 @@ import { prefersReducedMotion, DURATION, EASE } from './config';
 // Types
 // =============================================================================
 
+export type TransitionDirection = 'push' | 'back' | 'modal' | 'fade' | 'default';
+
 interface PageTransitionContextValue {
-  /** Trigger exit animation and return a promise that resolves when done */
   triggerExit: () => Promise<void>;
-  /** Register the current page container for animation */
   registerContainer: (el: HTMLDivElement | null) => void;
-  /** Whether a transition is in progress */
   isTransitioning: boolean;
+  transitionDirection: TransitionDirection;
+  setTransitionDirection: (dir: TransitionDirection) => void;
 }
 
 // =============================================================================
@@ -34,49 +33,66 @@ interface PageTransitionContextValue {
 const PageTransitionContext = createContext<PageTransitionContextValue | null>(null);
 
 // =============================================================================
+// Exit animation presets per direction
+// =============================================================================
+
+const EXIT_ANIMATIONS: Record<TransitionDirection, gsap.TweenVars> = {
+  push: { opacity: 0, xPercent: -5, duration: DURATION.fast, ease: EASE.in },
+  back: { opacity: 0, xPercent: 5, duration: DURATION.fast, ease: EASE.in },
+  modal: { opacity: 0, scale: 0.97, y: 8, duration: DURATION.fast, ease: EASE.in },
+  fade: { opacity: 0, duration: DURATION.fast, ease: EASE.in },
+  default: { opacity: 0, y: -12, scale: 0.98, duration: DURATION.fast, ease: EASE.in },
+};
+
+// =============================================================================
 // Provider
 // =============================================================================
 
-interface PageTransitionProviderProps {
-  children: ReactNode;
-}
-
-export function PageTransitionProvider({ children }: PageTransitionProviderProps): ReactNode {
+export function PageTransitionProvider({ children }: { children: ReactNode }): ReactNode {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [transitionDirection, setTransitionDirectionState] =
+    useState<TransitionDirection>('default');
 
   const registerContainer = useCallback((el: HTMLDivElement | null) => {
     containerRef.current = el;
+  }, []);
+
+  const setTransitionDirection = useCallback((dir: TransitionDirection) => {
+    setTransitionDirectionState(dir);
   }, []);
 
   const triggerExit = useCallback(async (): Promise<void> => {
     const el = containerRef.current;
     if (!el) return;
 
-    // Skip animation if user prefers reduced motion
-    if (prefersReducedMotion()) {
-      return;
-    }
+    if (prefersReducedMotion()) return;
 
     setIsTransitioning(true);
 
+    const anim = EXIT_ANIMATIONS[transitionDirection] ?? EXIT_ANIMATIONS.default;
+
     return new Promise((resolve) => {
       gsap.to(el, {
-        opacity: 0,
-        y: -12,
-        scale: 0.98,
-        duration: DURATION.fast,
-        ease: EASE.in,
+        ...anim,
         onComplete: () => {
           setIsTransitioning(false);
           resolve();
         },
       });
     });
-  }, []);
+  }, [transitionDirection]);
 
   return (
-    <PageTransitionContext.Provider value={{ triggerExit, registerContainer, isTransitioning }}>
+    <PageTransitionContext.Provider
+      value={{
+        triggerExit,
+        registerContainer,
+        isTransitioning,
+        transitionDirection,
+        setTransitionDirection,
+      }}
+    >
       {children}
     </PageTransitionContext.Provider>
   );
@@ -86,10 +102,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
 // Hooks
 // =============================================================================
 
-/**
- * Access page transition context.
- * Must be used within PageTransitionProvider.
- */
+/** Full context — throws if no provider */
 export function usePageTransition(): PageTransitionContextValue {
   const ctx = useContext(PageTransitionContext);
   if (!ctx) {
@@ -98,19 +111,19 @@ export function usePageTransition(): PageTransitionContextValue {
   return ctx;
 }
 
-/**
- * Hook for pages to register themselves for animation.
- * Returns a ref callback to attach to the page container.
- */
+/** Register container ref for exit animations — no-op without provider */
 export function usePageTransitionRegister(): (el: HTMLDivElement | null) => void {
   const ctx = useContext(PageTransitionContext);
-  // If no provider, return no-op (graceful fallback)
   return ctx?.registerContainer ?? (() => {});
 }
 
-/**
- * Check if page transition context is available.
- */
+/** Read current transition direction — returns 'default' without provider */
+export function useTransitionDirection(): TransitionDirection {
+  const ctx = useContext(PageTransitionContext);
+  return ctx?.transitionDirection ?? 'default';
+}
+
+/** Check if page transition context is available */
 export function useHasPageTransition(): boolean {
   return useContext(PageTransitionContext) !== null;
 }

@@ -16,10 +16,13 @@ import {
   Trophy,
   X,
 } from '@phosphor-icons/react';
-import { type ReactNode, useCallback, useMemo, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router';
+import gsap from 'gsap';
 import { useAlphaEnabled } from '../hooks/use-beta-features';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
+import { useHaptic } from '../hooks/use-haptic';
 
 import { settingsNavGroups, getSectionIcon } from '../pages/settings/config';
 import {
@@ -71,6 +74,13 @@ export function NavBar(): ReactNode {
   const rememberedTabPaths = useNavigationMemoryStore((s) => s.lastPrimaryTabPath);
   const lastNonSettingsPrimaryTab = useNavigationMemoryStore((s) => s.lastNonSettingsPrimaryTab);
 
+  // Animated navigation + haptic for tab switching
+  const { transitionNavigate } = useTransitionNavigate();
+  const haptic = useHaptic();
+
+  // Sliding indicator ref for mobile bottom nav
+  const indicatorRef = useRef<HTMLDivElement>(null);
+
   const resolvePrimaryTabPath = useCallback(
     (tab: PrimaryNavTab) => rememberedTabPaths[tab] ?? PRIMARY_TAB_DEFAULT_PATHS[tab],
     [rememberedTabPaths],
@@ -87,6 +97,49 @@ export function NavBar(): ReactNode {
       items: group.items.filter((item) => !item.alphaOnly || isAlphaEnabled),
     }));
   }, [isAlphaEnabled]);
+
+  // Resolve active tab index for mobile bottom nav indicator animation
+  const activeMobileIndex = useMemo(() => {
+    return mobileLinks.findIndex(({ tab }) => isPrimaryTabActive(pathname, tab));
+  }, [pathname]);
+
+  // Animate indicator to the active tab position
+  useLayoutEffect(() => {
+    const indicator = indicatorRef.current;
+    if (!indicator || activeMobileIndex < 0) {
+      indicator && gsap.set(indicator, { opacity: 0 });
+      return;
+    }
+
+    // Find the active nav item element
+    const container = indicator.parentElement;
+    if (!container) return;
+
+    const navItems = container.querySelectorAll<HTMLElement>('[data-nav-tab]');
+    const targetEl = navItems[activeMobileIndex];
+    if (!targetEl) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const targetRect = targetEl.getBoundingClientRect();
+    const x = targetRect.left - containerRect.left + targetRect.width / 2 - 14;
+
+    gsap.to(indicator, {
+      x,
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power2.out',
+    });
+  }, [activeMobileIndex]);
+
+  // Handle mobile tab click with transition + haptic
+  const handleMobileTabClick = useCallback(
+    (e: React.MouseEvent, href: string) => {
+      e.preventDefault();
+      haptic.selectionChanged();
+      transitionNavigate(href, { direction: 'fade' });
+    },
+    [haptic, transitionNavigate],
+  );
 
   // Detect if we're on settings page
   const isSettingsPage = pathname === '/settings' || pathname.startsWith('/settings/');
@@ -217,6 +270,14 @@ export function NavBar(): ReactNode {
             ))}
           </svg>
 
+          {/* Sliding indicator — pill that follows the active tab */}
+          <div
+            ref={indicatorRef}
+            className="absolute bottom-1.5 w-7 h-1 rounded-full bg-primary/50 pointer-events-none"
+            style={{ opacity: 0 }}
+            aria-hidden="true"
+          />
+
           {mobileLinks.map(({ tab, icon: Icon, labelKey }) => {
             const href = resolvePrimaryTabPath(tab);
             const isActive = isPrimaryTabActive(pathname, tab);
@@ -227,7 +288,12 @@ export function NavBar(): ReactNode {
               <NavLink
                 key={href}
                 to={href}
-                onClick={isTutorial && showTutorialSpotlight ? dismissSpotlight : undefined}
+                data-nav-tab={tab}
+                onClick={(e) => {
+                  if (isTutorial && showTutorialSpotlight) dismissSpotlight();
+                  if (isActive) return; // Already on this tab
+                  handleMobileTabClick(e, href);
+                }}
                 className={cn(
                   'relative flex flex-col items-center justify-center w-14 h-14 rounded-full transition duration-200 active:scale-[0.92]',
                   isActive
