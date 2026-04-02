@@ -79,7 +79,7 @@ export function HomePage(): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const hasPremium = useIsPremium();
-  const currentMode = useSettingsStore((s) => s.currentMode);
+  const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
   // Challenge
@@ -98,7 +98,7 @@ export function HomePage(): ReactNode {
   const setChallengeHasProgress = useSettingsStore((s) => s.setChallengeHasProgress);
 
   // Parcours
-  const activeJourneyId = useSettingsStore((s) => s.ui.activeJourneyId);
+  const activeJourneyId = useSettingsStore((s) => s.journeyUi.selectedJourneyId);
   const activateJourney = useSettingsStore((s) => s.activateJourney);
   const updateActiveJourneyLevels = useSettingsStore((s) => s.updateActiveJourneyLevels);
   const activeJourney = useSettingsStore((s) =>

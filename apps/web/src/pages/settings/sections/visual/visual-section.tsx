@@ -63,7 +63,7 @@ export function VisualSection(): ReactNode {
   const setStringArtPoints = useSettingsStore((s) => s.setStringArtPoints);
   const setGridScale = useSettingsStore((s) => s.setGridScale);
   const setControlsScale = useSettingsStore((s) => s.setControlsScale);
-  const currentMode = useSettingsStore((s) => s.currentMode);
+  const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const effectiveMode = gameModeRegistry.has(currentMode) ? currentMode : 'dualnback-classic';
   const modeSettings = useSettingsStore((s) => s.modes[effectiveMode]);
   const fileInputRef = useRef<HTMLInputElement>(null);

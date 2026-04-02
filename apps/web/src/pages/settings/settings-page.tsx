@@ -76,7 +76,7 @@ export function SettingsPage(): ReactNode {
     subSection?: string;
   }>();
   const navigate = useNavigate();
-  const currentMode = useSettingsStore((s) => s.currentMode);
+  const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
   useEffect(() => {

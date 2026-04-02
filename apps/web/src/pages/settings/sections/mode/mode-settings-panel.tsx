@@ -281,12 +281,12 @@ export function ModeSettingsPanel({
 
   // Journey context (active journey only)
   const { state: journeyState } = useJourneyStateWithContext();
-  const activeJourneyId = useSettingsStore((s) => s.ui.activeJourneyId);
+  const activeJourneyId = useSettingsStore((s) => s.journeyUi.selectedJourneyId);
   const activeJourneyGameMode = useSettingsStore(
-    (s) => s.savedJourneys.find((j) => j.id === s.ui.activeJourneyId)?.gameMode,
+    (s) => s.savedJourneys.find((j) => j.id === s.journeyUi.selectedJourneyId)?.gameMode,
   );
   const activeJourneyStrategyConfig = useSettingsStore(
-    (s) => s.savedJourneys.find((j) => j.id === s.ui.activeJourneyId)?.strategyConfig,
+    (s) => s.savedJourneys.find((j) => j.id === s.journeyUi.selectedJourneyId)?.strategyConfig,
   );
   const journeyActivePresetId = useSettingsStore(
     (s) => s.ui.journeyActivePresetIdByJourneyId[activeJourneyId],

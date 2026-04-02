@@ -93,7 +93,6 @@ import { useHaptic, useHapticTrigger } from '../hooks/use-haptic';
 import { useAudioPrewarm } from '../hooks/use-audio-prewarm';
 import { useKeyboardControls } from '../hooks/use-keyboard-controls';
 import { useCursorTrackingPort } from '../hooks/use-cursor-tracking-port';
-import { useJourneyActivation } from '../hooks/use-journey-activation';
 import { useJourneyStageRedirect } from '../hooks/use-journey-stage-redirect';
 import { useNbackInputTelemetry } from '../hooks/use-nback-input-telemetry';
 import { useNbackReportRuntime } from '../hooks/use-nback-report-runtime';
@@ -330,8 +329,7 @@ function DualNBackGamePage({
   });
 
   const journeyConfigForGame = useJourneyConfigSafe();
-  const activeJourneyIdFromStore = useSettingsStore((s) => s.ui.activeJourneyId);
-  const activateJourney = useSettingsStore((s) => s.activateJourney);
+  const activeJourneyIdFromStore = useSettingsStore((s) => s.journeyUi.selectedJourneyId);
   const activeJourney = useSettingsStore(
     useShallow(
       (
@@ -677,11 +675,6 @@ function DualNBackGamePage({
     effectiveJourneyStageId < journeyState?.currentStage;
 
   const cursorPositionPort = useCursorTrackingPort();
-  useJourneyActivation({
-    journeyId: resolvedJourneyIdForSession,
-    activeJourneyId: activeJourneyIdFromStore,
-    activateJourney,
-  });
   useRecoveredSessionReset({
     recoveredState,
     sessionRef,

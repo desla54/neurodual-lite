@@ -1305,8 +1305,8 @@ export const useSettingsStore = create<SettingsState>()(
       set((state) => ({
         modes: {
           ...state.modes,
-          [state.currentMode]: {
-            ...state.modes[state.currentMode],
+          [state.freeTraining.selectedModeId]: {
+            ...state.modes[state.freeTraining.selectedModeId],
             [key]: value,
           },
         },
@@ -2408,7 +2408,7 @@ export const useSettingsStore = create<SettingsState>()(
 
         const newJourneys = state.savedJourneys.filter((j) => j.id !== id);
         // If deleting active journey, switch to default
-        const isActive = state.ui.activeJourneyId === id;
+        const isActive = state.journeyUi.selectedJourneyId === id;
         const defaultJourney = newJourneys.find((j) => j.isDefault) ?? newJourneys[0];
 
         return {
@@ -2460,12 +2460,12 @@ export const useSettingsStore = create<SettingsState>()(
 
     getActiveJourney: () => {
       const state = get();
-      return state.savedJourneys.find((j) => j.id === state.ui.activeJourneyId);
+      return state.savedJourneys.find((j) => j.id === state.journeyUi.selectedJourneyId);
     },
 
     updateActiveJourneyLevels: (startLevel, targetLevel) => {
       set((state) => {
-        const activeId = state.ui.activeJourneyId;
+        const activeId = state.journeyUi.selectedJourneyId;
         const clampedStart = Math.max(1, Math.min(10, startLevel));
         const clampedTarget = Math.max(clampedStart, Math.min(10, targetLevel));
 
@@ -2503,7 +2503,7 @@ export const useSettingsStore = create<SettingsState>()(
         );
 
         const nextUi =
-          state.ui.activeJourneyId === normalizedId
+          state.journeyUi.selectedJourneyId === normalizedId
             ? {
                 ...state.ui,
                 journeyStartLevel: nextStartLevel,

@@ -31,7 +31,7 @@ export function GameModeSelector({
   stickyExtra,
 }: GameModeSelectorProps): ReactNode {
   const { t } = useTranslation();
-  const currentMode = useSettingsStore((s) => s.currentMode) as GameMode;
+  const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId) as GameMode;
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
   const visibleModes = sectionFilter

@@ -61,11 +61,11 @@ startLagSampler();
 function useJourneyConfig(): JourneyConfig {
   const snapshot = useSettingsStore(
     useShallow((s) => {
-      const activeJourney = s.savedJourneys.find((j) => j.id === s.ui.activeJourneyId);
+      const activeJourney = s.savedJourneys.find((j) => j.id === s.journeyUi.selectedJourneyId);
       return {
-        activeJourneyId: s.ui.activeJourneyId,
+        activeJourneyId: s.journeyUi.selectedJourneyId,
         activeJourney,
-        legacyJourneyModeSettings: s.ui.journeyModeSettingsByJourneyId[s.ui.activeJourneyId],
+        legacyJourneyModeSettings: s.ui.journeyModeSettingsByJourneyId[s.journeyUi.selectedJourneyId],
       };
     }),
   );

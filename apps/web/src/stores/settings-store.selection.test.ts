@@ -36,12 +36,34 @@ describe('settings-store selection slices', () => {
     expect(state.freeTraining.selectedModeId).toBe('gridlock');
   });
 
+  it('routes generic mode setting writes through the freeTraining selection slice', () => {
+    useSettingsStore.setState({
+      currentMode: 'dualnback-classic' as GameModeId,
+      freeTraining: { selectedModeId: 'gridlock' as GameModeId },
+    });
+
+    useSettingsStore.getState().setModeSetting('nLevel' as never, 9 as never);
+
+    const state = useSettingsStore.getState();
+    expect((state.modes['gridlock'] as Record<string, unknown>)['nLevel']).toBe(9);
+    expect((state.modes['dualnback-classic'] as Record<string, unknown>)['nLevel']).not.toBe(9);
+  });
+
   it('mirrors activateJourney into the journeyUi selection slice', () => {
     useSettingsStore.getState().activateJourney('sim-brainworkshop-journey');
 
     const state = useSettingsStore.getState();
     expect(state.ui.activeJourneyId).toBe('sim-brainworkshop-journey');
     expect(state.journeyUi.selectedJourneyId).toBe('sim-brainworkshop-journey');
+  });
+
+  it('resolves getActiveJourney from the journeyUi selection slice', () => {
+    useSettingsStore.setState({
+      journeyUi: { selectedJourneyId: 'sim-brainworkshop-journey' },
+      ui: { ...useSettingsStore.getState().ui, activeJourneyId: 'dualnback-classic-journey' },
+    });
+
+    expect(useSettingsStore.getState().getActiveJourney()?.id).toBe('sim-brainworkshop-journey');
   });
 
   it('loads selection slices from persisted settings with backward compatibility', () => {

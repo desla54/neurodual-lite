@@ -163,7 +163,7 @@ export function ModeSection(): ReactNode {
   const navigate = useNavigate();
   const { subSection } = useParams<{ subSection?: string }>();
   const alphaEnabled = useAlphaEnabled();
-  const currentMode = useSettingsStore((s) => s.currentMode) as GameMode;
+  const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId) as GameMode;
   const [showUpgradeDialog, setShowUpgradeDialog] = useState(false);
   const page: ModePage = isModeSubPage(subSection) ? subSection : 'root';
 
