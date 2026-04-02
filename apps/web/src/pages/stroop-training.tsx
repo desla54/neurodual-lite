@@ -194,16 +194,23 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
 
   // ── Intro state (Stroop Flex only) ──
   const introSeenKey = `stroopFlexIntroSeen_n${nLevel}`;
-  const forceIntro = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('intro') === '1';
+  const forceIntro =
+    typeof window !== 'undefined' &&
+    new URLSearchParams(window.location.search).get('intro') === '1';
   const [showIntro, setShowIntro] = useState(() => {
     if (!isFlex) return false;
     if (forceIntro) return true;
-    try { return localStorage.getItem(introSeenKey) !== 'true'; }
-    catch { return true; }
+    try {
+      return localStorage.getItem(introSeenKey) !== 'true';
+    } catch {
+      return true;
+    }
   });
   const handleIntroDone = useCallback(() => {
     setShowIntro(false);
-    try { localStorage.setItem(introSeenKey, 'true'); } catch {}
+    try {
+      localStorage.setItem(introSeenKey, 'true');
+    } catch {}
   }, [introSeenKey]);
 
   const [runSeed, setRunSeed] = useState(0);
@@ -214,7 +221,9 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const [trialIndex, setTrialIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
   const [results, setResults] = useState<TrialResult[]>([]);
-  const [lastFeedback, setLastFeedback] = useState<{ correct: boolean; reason?: string } | null>(null);
+  const [lastFeedback, setLastFeedback] = useState<{ correct: boolean; reason?: string } | null>(
+    null,
+  );
   const [showQuitModal, setShowQuitModal] = useState(false);
   const stimulusStartRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -269,7 +278,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
               timedOut: true,
             };
             setResults((prev) => [...prev, result]);
-            setLastFeedback(false);
+            setLastFeedback({ correct: false });
             setPhase('feedback');
 
             buildTrialEvent(
@@ -354,7 +363,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       const result: TrialResult = { trial, response: colorId, correct, rt, timedOut: false };
 
       setResults((prev) => [...prev, result]);
-      setLastFeedback(correct);
+      setLastFeedback({ correct });
       setPhase('feedback');
 
       buildTrialEvent(
@@ -561,11 +570,15 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         }
       : isCurrentBuffer
         ? {
-            text: isFlex && nLevel > 1
-              ? (trialIndex === 0
-                ? t('game.cogTask.stroopFlex.memorizeFirst', 'Memorize — you\'ll respond next turn')
-                : t('game.cogTask.stroopFlex.memorize', 'Memorize'))
-              : t('game.cogTask.stroopFlex.observe', 'Observe'),
+            text:
+              isFlex && nLevel > 1
+                ? trialIndex === 0
+                  ? t(
+                      'game.cogTask.stroopFlex.memorizeFirst',
+                      "Memorize — you'll respond next turn",
+                    )
+                  : t('game.cogTask.stroopFlex.memorize', 'Memorize')
+                : t('game.cogTask.stroopFlex.observe', 'Observe'),
             tone: 'muted' as StatusTone,
           }
         : isFlex
