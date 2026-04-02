@@ -55,6 +55,7 @@ const hybridStrategy = {} as any;
 import { SettingsSegmentedControl, UpgradeDialog } from '../../components';
 import { FreeTrainingPresetSelector } from './free-training-preset-selector';
 import { JourneyPresetSelector } from './journey-preset-selector';
+import { useShallow } from 'zustand/react/shallow';
 
 const EMPTY_SETTINGS_OBJECT: Record<string, unknown> = {};
 const BRAINWORKSHOP_COMBO_MODALITIES = ['position', 'audio', 'color', 'image'] as const;
@@ -569,20 +570,57 @@ export function ModeSettingsPanel({
   const setArithmeticInterferenceVariant = (
     variant: 'simple' | 'color-cue-2step' | 'grid-cue-chain',
   ) => setModeSetting('arithmeticInterferenceVariant', variant);
-  const traceIsiMs = useSettingsStore((s) => s.ui.traceIsiMs);
-  const setTraceIsiMs = useSettingsStore((s) => s.setTraceIsiMs);
-  const traceStimulusDurationMs = useSettingsStore((s) => s.ui.traceStimulusDurationMs);
-  const setTraceStimulusDurationMs = useSettingsStore((s) => s.setTraceStimulusDurationMs);
-  const traceFeedbackDurationMs = useSettingsStore((s) => s.ui.traceFeedbackDurationMs);
-  const setTraceFeedbackDurationMs = useSettingsStore((s) => s.setTraceFeedbackDurationMs);
-  const traceRuleDisplayMs = useSettingsStore((s) => s.ui.traceRuleDisplayMs);
-  const setTraceRuleDisplayMs = useSettingsStore((s) => s.setTraceRuleDisplayMs);
-  const traceIntervalMs = useSettingsStore((s) => s.ui.traceIntervalMs);
-  const setTraceIntervalMs = useSettingsStore((s) => s.setTraceIntervalMs);
-  const traceAdaptiveTimingEnabled = useSettingsStore((s) => s.ui.traceAdaptiveTimingEnabled);
-  const setTraceAdaptiveTimingEnabled = useSettingsStore((s) => s.setTraceAdaptiveTimingEnabled);
-  const traceWritingInputMethod = useSettingsStore((s) => s.ui.traceWritingInputMethod);
-  const setTraceWritingInputMethod = useSettingsStore((s) => s.setTraceWritingInputMethod);
+  const legacyTraceUi: {
+    traceIsiMs: number;
+    traceStimulusDurationMs: number;
+    traceFeedbackDurationMs: number;
+    traceRuleDisplayMs: number;
+    traceIntervalMs: number;
+    traceAdaptiveTimingEnabled: boolean;
+    traceWritingInputMethod: 'auto' | 'keyboard' | 'handwriting';
+  } = useSettingsStore(
+    useShallow((s) => ({
+      traceIsiMs: s.ui.traceIsiMs,
+      traceStimulusDurationMs: s.ui.traceStimulusDurationMs,
+      traceFeedbackDurationMs: s.ui.traceFeedbackDurationMs,
+      traceRuleDisplayMs: s.ui.traceRuleDisplayMs,
+      traceIntervalMs: s.ui.traceIntervalMs,
+      traceAdaptiveTimingEnabled: s.ui.traceAdaptiveTimingEnabled,
+      traceWritingInputMethod: s.ui.traceWritingInputMethod,
+    })),
+  );
+  const scopedModeSettings = modeSettings as Record<string, unknown>;
+  const traceIsiMs = (scopedModeSettings['traceIsiMs'] as number | undefined) ?? legacyTraceUi.traceIsiMs;
+  const traceStimulusDurationMs =
+    (scopedModeSettings['traceStimulusDurationMs'] as number | undefined) ??
+    legacyTraceUi.traceStimulusDurationMs;
+  const traceFeedbackDurationMs =
+    (scopedModeSettings['traceFeedbackDurationMs'] as number | undefined) ??
+    legacyTraceUi.traceFeedbackDurationMs;
+  const traceRuleDisplayMs =
+    (scopedModeSettings['traceRuleDisplayMs'] as number | undefined) ??
+    legacyTraceUi.traceRuleDisplayMs;
+  const traceIntervalMs =
+    (scopedModeSettings['traceIntervalMs'] as number | undefined) ?? legacyTraceUi.traceIntervalMs;
+  const traceAdaptiveTimingEnabled =
+    (scopedModeSettings['traceAdaptiveTimingEnabled'] as boolean | undefined) ??
+    legacyTraceUi.traceAdaptiveTimingEnabled;
+  const traceWritingInputMethod =
+    (scopedModeSettings['traceWritingInputMethod'] as 'auto' | 'keyboard' | 'handwriting' | undefined) ??
+    legacyTraceUi.traceWritingInputMethod;
+  const setTraceIsiMs = (value: number) => setModeSetting('traceIsiMs', Math.max(1500, Math.min(10000, value)));
+  const setTraceStimulusDurationMs = (value: number) =>
+    setModeSetting('traceStimulusDurationMs', Math.max(200, Math.min(5000, value)));
+  const setTraceFeedbackDurationMs = (value: number) =>
+    setModeSetting('traceFeedbackDurationMs', Math.max(200, Math.min(3000, value)));
+  const setTraceRuleDisplayMs = (value: number) =>
+    setModeSetting('traceRuleDisplayMs', Math.max(200, Math.min(3000, value)));
+  const setTraceIntervalMs = (value: number) =>
+    setModeSetting('traceIntervalMs', Math.max(0, Math.min(2000, value)));
+  const setTraceAdaptiveTimingEnabled = (enabled: boolean) =>
+    setModeSetting('traceAdaptiveTimingEnabled', enabled);
+  const setTraceWritingInputMethod = (value: 'auto' | 'keyboard' | 'handwriting') =>
+    setModeSetting('traceWritingInputMethod', value);
 
   // Computed values
   const nLevel = resolvedMode.spec.defaults.nLevel;
