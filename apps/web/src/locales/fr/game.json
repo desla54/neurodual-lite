@@ -281,8 +281,8 @@
           "body2ink": "La plupart du temps : réponds à la couleur de l'encre (ignore le mot).",
           "body2word": "Tous les 4 essais : réponds au mot écrit (ignore la couleur).",
           "body2badge": "Un badge au-dessus du mot t'indique quelle règle appliquer.",
-          "title3": "Niveau {{n}} : réponds à {{n}} essais en arrière.",
-          "body3": "Ne réponds pas à ce que tu vois maintenant — réponds à ce que tu as vu il y a {{n}} tours, avec la règle actuelle. Les {{buffer}} premiers essais sont « Observe » : regarde, pas besoin de répondre.",
+          "title3": "Niveau {{n}} : réponds pour le stimulus précédent.",
+          "body3": "À ce niveau, ne réponds pas à ce que tu vois maintenant. Applique la règle actuelle à ce que tu as vu il y a {{buffer}} tour(s). Les {{buffer}} premier(s) essai(s) sont « Mémorise » : regarde et retiens, tu répondras à partir du suivant.",
           "title4": "Astuce : regarde d'abord le badge.",
           "body4": "Quand un nouvel essai apparaît, jette un œil au badge de règle avant de regarder le mot. Ça aide ton cerveau à préparer la bonne réponse. La vitesse viendra avec la pratique.",
           "title5": "Prêt ?",
@@ -293,7 +293,12 @@
           "ruleExample": "Règle",
           "inkLabel": "Couleur de l'encre",
           "wordLabel": "Mot écrit"
-        }
+        },
+        "feedbackWrongInk": "Incorrect — c'était le mot, pas l'encre",
+        "feedbackWrongWord": "Incorrect — c'était l'encre, pas le mot",
+        "feedbackRuleChanged": "Incorrect — la règle vient de changer",
+        "memorize": "Mémorise",
+        "memorizeFirst": "Mémorise — tu répondras au tour suivant"
       },
       "goNogo": {
         "goTrials": "Essais Go",

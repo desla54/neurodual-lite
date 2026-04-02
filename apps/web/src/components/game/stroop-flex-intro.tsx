@@ -159,36 +159,45 @@ export function StroopFlexIntro({
             <h2 className="text-xl font-bold text-foreground">
               {t(`${i}.title3`, { n: nLevel })}
             </h2>
-            {/* Visual: simple N-back timeline */}
-            <div className="flex items-end gap-2">
-              {Array.from({ length: nLevel + 1 }, (_, idx) => {
-                const isTarget = idx === 0;
-                const isCurrent = idx === nLevel;
-                return (
-                  <div key={idx} className="flex flex-col items-center gap-1">
-                    <span className="text-[10px] font-mono text-muted-foreground/70">
-                      {isCurrent ? 'N' : `N-${nLevel - idx}`}
-                    </span>
-                    <div
-                      className={cn(
-                        'flex h-12 w-12 items-center justify-center rounded-lg border text-lg font-bold',
-                        isTarget
-                          ? 'border-fuchsia-500 bg-fuchsia-500/20 text-fuchsia-400'
-                          : isCurrent
-                            ? 'border-border bg-muted/50 text-muted-foreground'
-                            : 'border-border/40 bg-muted/20 text-muted-foreground/50',
-                      )}
+            {/* Visual: concrete example with 2 turns */}
+            <div className="flex flex-col items-center gap-4">
+              {/* Turn 1: Memorize */}
+              <div className="flex items-center gap-3">
+                <span className="w-16 text-right text-xs font-bold text-muted-foreground/70">
+                  Tour 1
+                </span>
+                <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-amber-400/60 bg-amber-500/15">
+                  <span
+                    className="text-2xl font-black"
+                    style={{ color: `hsl(${redColor?.cssVar})` }}
+                  >
+                    {blueColor?.word?.slice(0, 4) ?? 'BLEU'}
+                  </span>
+                </div>
+                <span className="text-xs text-amber-400 font-bold">← Mémorise</span>
+              </div>
+              {/* Turn 2: Respond to turn 1 */}
+              <div className="flex items-center gap-3">
+                <span className="w-16 text-right text-xs font-bold text-muted-foreground/70">
+                  Tour 2
+                </span>
+                <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-border/40 bg-muted/20">
+                  <span className="text-2xl font-black text-muted-foreground/40">
+                    ...
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs text-fuchsia-400 font-bold">→ Réponds pour</span>
+                  <div className="flex h-8 w-8 items-center justify-center rounded border border-fuchsia-500/60 bg-fuchsia-500/15">
+                    <span
+                      className="text-sm font-black"
+                      style={{ color: `hsl(${redColor?.cssVar})` }}
                     >
-                      {isTarget ? '?' : isCurrent ? '👁' : '·'}
-                    </div>
-                    {isTarget && (
-                      <span className="text-[10px] font-bold text-fuchsia-400">
-                        ↑ {t(`${i}.ruleExample`)}
-                      </span>
-                    )}
+                      {blueColor?.word?.slice(0, 2) ?? 'BL'}
+                    </span>
                   </div>
-                );
-              })}
+                </div>
+              </div>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
               {t(`${i}.body3`, { n: nLevel, buffer: bufferCount })}

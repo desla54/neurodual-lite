@@ -214,7 +214,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const [trialIndex, setTrialIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
   const [results, setResults] = useState<TrialResult[]>([]);
-  const [lastFeedback, setLastFeedback] = useState<boolean | null>(null);
+  const [lastFeedback, setLastFeedback] = useState<{ correct: boolean; reason?: string } | null>(null);
   const [showQuitModal, setShowQuitModal] = useState(false);
   const stimulusStartRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -561,15 +561,19 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         }
       : isCurrentBuffer
         ? {
-            text: t('game.cogTask.stroopFlex.observe', 'Observe'),
+            text: isFlex && nLevel > 1
+              ? (trialIndex === 0
+                ? t('game.cogTask.stroopFlex.memorizeFirst', 'Memorize — you\'ll respond next turn')
+                : t('game.cogTask.stroopFlex.memorize', 'Memorize'))
+              : t('game.cogTask.stroopFlex.observe', 'Observe'),
             tone: 'muted' as StatusTone,
           }
-        : {
-            text: isFlex
-              ? t('game.cogTask.stroopFlex.pressMatchingRuleButton')
-              : t('game.cogTask.stroop.pressInkColorButton'),
-            tone: 'default' as StatusTone,
-          };
+        : isFlex
+          ? { text: '', tone: 'muted' as StatusTone }
+          : {
+              text: t('game.cogTask.stroop.pressInkColorButton'),
+              tone: 'default' as StatusTone,
+            };
 
   return (
     <div className="game-page-shell">
