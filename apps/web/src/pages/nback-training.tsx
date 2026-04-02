@@ -123,14 +123,14 @@ import {
   nextSessionToPlayIntent,
   resolvePlayIntent,
   resolveSessionPlayMode,
-  resolveSessionJourneyId,
   type PlayIntentState,
   type PlayMode,
 } from '../lib/play-intent';
 import { getJourneyAnalyticsProps, buildReportActionPayload } from '../lib/analytics-journey-props';
 import { useSynergyStore } from '../stores/synergy-store';
 import { resolveReportJourneyAction } from '../lib/report-journey-action';
-import { resolveNbackLaunch } from '../lib/resolve-nback-launch';
+import { resolveNbackLaunch, type ResolvedNbackLaunch } from '../lib/resolve-nback-launch';
+import { resolveNbackRuntimeContext } from '../lib/nback-runtime-context';
 import { buildResolvedNbackModeSettings } from '../lib/synergy-nback-settings';
 import { getStatsPresetForReport } from '../lib/stats-preset';
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
@@ -225,7 +225,7 @@ export function NbackTrainingPage(): ReactNode {
   const journeyConfig = useJourneyConfigSafe();
   const routerState = location.state as PlayIntentState | null;
   const playIntent = resolvePlayIntent(routerState);
-  const playMode: PlayMode =
+  const requestedPlayMode: PlayMode =
     routerState?.playMode === 'calibration' || routerState?.playMode === 'profile'
       ? routerState.playMode
       : playIntent.playMode;
@@ -246,7 +246,7 @@ export function NbackTrainingPage(): ReactNode {
   );
 
   const settingsMode = useSettingsStore((s) => s.currentMode);
-  const launch = resolveNbackLaunch({
+  const baseLaunch = resolveNbackLaunch({
     playIntent,
     journeyStateCurrentStage: journeyState?.currentStage,
     journeyStateNextSessionGameMode: journeyState?.nextSessionGameMode,
@@ -254,25 +254,21 @@ export function NbackTrainingPage(): ReactNode {
     activeJourney: activeJourneyFromStore,
     settingsMode,
   });
-  const journeyStageId = launch.journeyStageId;
-  const journeyId = launch.journeyId;
-  const journeyNLevel = launch.journeyNLevel;
-  // Force Brain Workshop for calibration/profile: classic dual n-back only supports
-  // position+audio, but the cognitive profile needs all 9 modalities.
-  const effectiveMode = (
-    playMode === 'calibration' || playMode === 'profile'
-      ? 'sim-brainworkshop'
-      : launch.effectiveMode
-  ) as typeof settingsMode;
+  const requestedLaunch: ResolvedNbackLaunch = {
+    ...baseLaunch,
+    // Force Brain Workshop for calibration/profile: classic dual n-back only supports
+    // position+audio, but the cognitive profile needs all 9 modalities.
+    effectiveMode:
+      requestedPlayMode === 'calibration' || requestedPlayMode === 'profile'
+        ? 'sim-brainworkshop'
+        : baseLaunch.effectiveMode,
+  };
 
   return (
     <DualNBackGamePage
-      playMode={playMode}
-      journeyStageId={journeyStageId}
-      journeyId={journeyId}
-      journeyNLevel={journeyNLevel}
-      effectiveMode={effectiveMode}
-      journeyStrategyConfig={
+      requestedPlayMode={requestedPlayMode}
+      requestedLaunch={requestedLaunch}
+      requestedJourneyStrategyConfig={
         playIntent.journeyStrategyConfig ??
         journeyConfig?.strategyConfig ??
         activeJourneyFromStore?.strategyConfig
@@ -286,21 +282,15 @@ export function NbackTrainingPage(): ReactNode {
 // =============================================================================
 
 interface DualNBackGamePageProps {
-  playMode: PlayMode;
-  journeyStageId?: number;
-  journeyId?: string;
-  journeyNLevel?: number;
-  effectiveMode: string;
-  journeyStrategyConfig?: JourneyStrategyConfig;
+  requestedPlayMode: PlayMode;
+  requestedLaunch: ResolvedNbackLaunch;
+  requestedJourneyStrategyConfig?: JourneyStrategyConfig;
 }
 
 function DualNBackGamePage({
-  playMode,
-  journeyStageId,
-  journeyId,
-  journeyNLevel,
-  effectiveMode,
-  journeyStrategyConfig,
+  requestedPlayMode,
+  requestedLaunch,
+  requestedJourneyStrategyConfig,
 }: DualNBackGamePageProps): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -338,18 +328,10 @@ function DualNBackGamePage({
     sessionRecovery,
     persistence,
   });
-  const recoveredPlayMode: PlayMode | undefined = recoveredState?.playMode;
-  const effectivePlayMode = recoveredPlayMode ?? playMode;
-  const effectiveJourneyStageId = recoveredState?.journeyStageId ?? journeyStageId;
 
-  // Get journey config from context (single source of truth for gameMode)
-  const shouldUseJourneyContext = effectivePlayMode === 'journey';
   const journeyConfigForGame = useJourneyConfigSafe();
   const activeJourneyIdFromStore = useSettingsStore((s) => s.ui.activeJourneyId);
   const activateJourney = useSettingsStore((s) => s.activateJourney);
-  const activeJourneyId = shouldUseJourneyContext
-    ? (journeyId ?? journeyConfigForGame?.journeyId ?? activeJourneyIdFromStore ?? null)
-    : null;
   const activeJourney = useSettingsStore(
     useShallow(
       (
@@ -362,11 +344,10 @@ function DualNBackGamePage({
             gameMode?: string;
             startLevel: number;
             targetLevel: number;
+            strategyConfig?: JourneyStrategyConfig;
           }
         | undefined => {
-        const lookupId = shouldUseJourneyContext
-          ? (journeyId ?? journeyConfigForGame?.journeyId ?? s.ui.activeJourneyId)
-          : undefined;
+        const lookupId = requestedLaunch.journeyId ?? journeyConfigForGame?.journeyId ?? s.ui.activeJourneyId;
         const journey = s.savedJourneys.find((j) => j.id === lookupId);
         return journey
           ? {
@@ -376,36 +357,32 @@ function DualNBackGamePage({
               gameMode: journey.gameMode,
               startLevel: journey.startLevel,
               targetLevel: journey.targetLevel,
+              strategyConfig: journey.strategyConfig,
             }
           : undefined;
       },
     ),
   );
-  const resolvedJourneyIdForSession = resolveSessionJourneyId({
-    playMode: effectivePlayMode,
-    recoveredJourneyId: recoveredState?.journeyId,
-    routeJourneyId: journeyId,
-    activeJourneyId: activeJourneyId ?? activeJourneyIdFromStore,
-    configJourneyId: journeyConfigForGame?.journeyId,
+  const runtimeContext = resolveNbackRuntimeContext({
+    requestedPlayMode,
+    requestedLaunch,
+    requestedJourneyStrategyConfig,
+    recoveredState,
+    journeyConfig: journeyConfigForGame,
+    activeJourney,
+    activeJourneyIdFromStore,
   });
-  if (effectivePlayMode === 'journey' && typeof resolvedJourneyIdForSession !== 'string') {
-    throw new Error('[NbackTrainingPage] journeyId is required when playMode="journey"');
-  }
-  const journeyGameMode = shouldUseJourneyContext
-    ? (activeJourney?.gameMode ?? journeyConfigForGame?.gameMode)
-    : undefined;
-  const journeyTargetLevel = shouldUseJourneyContext
-    ? (activeJourney?.targetLevel ??
-      journeyConfigForGame?.targetLevel ??
-      journeyState?.targetLevel ??
-      5)
-    : 5;
-  const journeyStartLevel = shouldUseJourneyContext
-    ? (activeJourney?.startLevel ??
-      journeyConfigForGame?.startLevel ??
-      journeyState?.startLevel ??
-      1)
-    : 1;
+  const effectivePlayMode = runtimeContext.effectivePlayMode;
+  const effectiveJourneyStageId = runtimeContext.journeyStageId;
+  const activeJourneyId = runtimeContext.activeJourneyId;
+  const resolvedJourneyIdForSession = runtimeContext.resolvedJourneyIdForSession;
+  const journeyGameMode = runtimeContext.journeyGameMode;
+  const journeyTargetLevel = runtimeContext.journeyTargetLevel;
+  const journeyStartLevel = runtimeContext.journeyStartLevel;
+  const journeyNLevel = runtimeContext.journeyNLevel;
+  const effectiveMode = runtimeContext.effectiveMode;
+  const shouldUseJourneySettings = runtimeContext.shouldUseJourneySettings;
+  const journeyStrategyConfig = runtimeContext.journeyStrategyConfig;
   const isSimulatorJourney = !!journeyGameMode;
   // Get last adaptive session d' for session initialization (Dual Tempo mode only)
   const lastAdaptiveDPrime = useLastAdaptiveDPrime();
@@ -465,10 +442,6 @@ function DualNBackGamePage({
   const [pendingAutoStart, setPendingAutoStart] = useState(false);
 
   // Settings: UI partagée + settings spécifiques au mode effectif
-  const shouldUseJourneySettings =
-    effectivePlayMode === 'journey' &&
-    isSimulatorJourney &&
-    typeof resolvedJourneyIdForSession === 'string';
   const modeSettings = useSettingsStore((s) => {
     if (shouldUseJourneySettings && typeof resolvedJourneyIdForSession === 'string') {
       return s.ui.journeyModeSettingsByJourneyId[resolvedJourneyIdForSession];
@@ -583,11 +556,18 @@ function DualNBackGamePage({
     () =>
       buildResolvedNbackModeSettings({
         modeSettings,
+        recoveredConfig: recoveredState?.config
+          ? {
+              nLevel: recoveredState.config.nLevel,
+              trialsCount: recoveredState.config.trialsCount,
+              activeModalities: recoveredState.config.activeModalities,
+            }
+          : undefined,
         journeyNLevel,
         synergyConfig,
         calibrationConfig: calibrationNbackConfig,
       }),
-    [journeyNLevel, modeSettings, synergyConfig, calibrationNbackConfig],
+    [journeyNLevel, modeSettings, synergyConfig, calibrationNbackConfig, recoveredState?.config],
   );
 
   const resolvedMode = useMemo(() => {
@@ -691,10 +671,10 @@ function DualNBackGamePage({
     !sessionRef.current &&
     !recoveryLoading &&
     journeyState?.isActive &&
-    typeof journeyStageId === 'number' &&
+    typeof effectiveJourneyStageId === 'number' &&
     typeof journeyState?.currentStage === 'number' &&
-    journeyStageId !== journeyState?.currentStage &&
-    journeyStageId < journeyState?.currentStage;
+    effectiveJourneyStageId !== journeyState?.currentStage &&
+    effectiveJourneyStageId < journeyState?.currentStage;
 
   const cursorPositionPort = useCursorTrackingPort();
   useJourneyActivation({

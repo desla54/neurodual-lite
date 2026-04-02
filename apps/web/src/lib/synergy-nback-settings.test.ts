@@ -44,4 +44,21 @@ describe('buildResolvedNbackModeSettings', () => {
       expect(resolved.activeModalities).toEqual([modality]);
     }
   });
+
+  it('prefers recovered session config over current mode settings', () => {
+    const resolved = buildResolvedNbackModeSettings({
+      modeSettings: { activeModalities: ['position', 'audio'], nLevel: 2, trialsCount: 24 },
+      recoveredConfig: {
+        activeModalities: ['color'],
+        nLevel: 6,
+        trialsCount: 18,
+      },
+    });
+
+    expect(resolved).toEqual({
+      activeModalities: ['color'],
+      nLevel: 6,
+      trialsCount: 18,
+    });
+  });
 });

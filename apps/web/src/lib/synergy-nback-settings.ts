@@ -1,4 +1,4 @@
-import type { ModeSettings } from '@neurodual/logic';
+import type { BlockConfig, ModeSettings } from '@neurodual/logic';
 import type { SynergyConfig } from '../stores/synergy-store';
 
 /**
@@ -18,6 +18,12 @@ export interface CalibrationNbackConfig {
   readonly nbackModalities: readonly string[];
 }
 
+export interface RecoveredNbackConfig {
+  readonly nLevel: BlockConfig['nLevel'];
+  readonly trialsCount: BlockConfig['trialsCount'];
+  readonly activeModalities: BlockConfig['activeModalities'];
+}
+
 export function buildResolvedNbackModeSettings(input: {
   readonly modeSettings?: ModeSettings | undefined;
   readonly journeyNLevel?: number | undefined;
@@ -25,8 +31,15 @@ export function buildResolvedNbackModeSettings(input: {
     | Pick<SynergyConfig, 'nbackModality' | 'nbackNLevel' | 'nbackTrialsCount'>
     | undefined;
   readonly calibrationConfig?: CalibrationNbackConfig | undefined;
+  readonly recoveredConfig?: RecoveredNbackConfig | undefined;
 }): ModeSettings {
-  const merged: ModeSettings = { ...(input.modeSettings ?? {}) };
+  const merged: ModeSettings = input.recoveredConfig
+    ? {
+        nLevel: input.recoveredConfig.nLevel,
+        trialsCount: input.recoveredConfig.trialsCount,
+        activeModalities: [...input.recoveredConfig.activeModalities],
+      }
+    : { ...(input.modeSettings ?? {}) };
 
   // Calibration mode: fully overrides settings, no free-mode leakage
   if (input.calibrationConfig) {

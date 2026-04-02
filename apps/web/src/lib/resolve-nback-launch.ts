@@ -1,5 +1,5 @@
 import type { ResolvedPlayIntent } from './play-intent';
-import { DUAL_TRACK_DNB_HYBRID_MODE_ID } from '@neurodual/logic';
+import { DUAL_TRACK_DNB_HYBRID_MODE_ID, generateJourneyStages } from '@neurodual/logic';
 
 export interface NbackJourneyConfigSnapshot {
   readonly journeyId?: string;
@@ -26,6 +26,60 @@ export interface ResolvedNbackLaunch {
   readonly effectiveMode: string;
 }
 
+function resolveJourneyStageId(input: {
+  readonly requestedStageId?: number;
+  readonly projectedStageId?: number;
+  readonly startLevel: number;
+  readonly targetLevel: number;
+  readonly gameMode?: string;
+}): number | undefined {
+  const stageDefinitions = generateJourneyStages(
+    input.targetLevel,
+    input.startLevel,
+    true,
+    input.gameMode,
+  );
+  if (stageDefinitions.length === 0) return undefined;
+
+  const rawStageId = input.requestedStageId ?? input.projectedStageId;
+  if (typeof rawStageId !== 'number' || !Number.isFinite(rawStageId)) {
+    return undefined;
+  }
+
+  const clampedIndex = Math.min(
+    stageDefinitions.length - 1,
+    Math.max(0, Math.trunc(rawStageId) - 1),
+  );
+  return stageDefinitions[clampedIndex]?.stageId;
+}
+
+function resolveJourneyStageNLevel(input: {
+  readonly explicitJourneyNLevel?: number;
+  readonly journeyStageId?: number;
+  readonly startLevel: number;
+  readonly targetLevel: number;
+  readonly gameMode?: string;
+}): number | undefined {
+  if (
+    typeof input.explicitJourneyNLevel === 'number' &&
+    Number.isFinite(input.explicitJourneyNLevel)
+  ) {
+    return input.explicitJourneyNLevel;
+  }
+
+  if (typeof input.journeyStageId !== 'number' || !Number.isFinite(input.journeyStageId)) {
+    return undefined;
+  }
+
+  const stageDefinitions = generateJourneyStages(
+    input.targetLevel,
+    input.startLevel,
+    true,
+    input.gameMode,
+  );
+  return stageDefinitions.find((stage) => stage.stageId === input.journeyStageId)?.nLevel;
+}
+
 export function resolveNbackLaunch(params: {
   readonly playIntent: ResolvedPlayIntent;
   readonly journeyStateCurrentStage?: number;
@@ -50,16 +104,6 @@ export function resolveNbackLaunch(params: {
   const isHybridJourney = journeyGameMode === DUAL_TRACK_DNB_HYBRID_MODE_ID;
   const isCompositeJourney = journeyGameMode === 'neurodual-mix';
 
-  const journeyStageId =
-    params.playIntent.journeyStageId ??
-    (shouldUseJourneyContext ? params.journeyStateCurrentStage : undefined);
-
-  const journeyId =
-    params.playIntent.journeyId ??
-    (shouldUseJourneyContext
-      ? (params.activeJourney?.id ?? params.journeyConfig?.journeyId)
-      : undefined);
-
   const journeyTargetLevel = shouldUseJourneyContext
     ? (params.playIntent.journeyTargetLevel ??
       params.activeJourney?.targetLevel ??
@@ -74,19 +118,36 @@ export function resolveNbackLaunch(params: {
       1)
     : 1;
 
+  const journeyStageId = shouldUseJourneyContext
+    ? resolveJourneyStageId({
+        requestedStageId: params.playIntent.journeyStageId,
+        projectedStageId: params.journeyStateCurrentStage,
+        startLevel: journeyStartLevel,
+        targetLevel: journeyTargetLevel,
+        gameMode: journeyGameMode,
+      })
+    : undefined;
+
+  const journeyId =
+    params.playIntent.journeyId ??
+    (shouldUseJourneyContext
+      ? (params.activeJourney?.id ?? params.journeyConfig?.journeyId)
+      : undefined);
+
   let effectiveMode =
     typeof params.playIntent.gameModeId === 'string'
       ? params.playIntent.gameModeId
       : params.settingsMode;
 
-  // Authoritative N-level from the play intent (set by the action that triggered
-  // navigation). When present, this takes priority over re-deriving from
-  // stageId + startLevel, which can be inconsistent after startLevel expansion.
-  const journeyNLevel: number | undefined =
-    typeof params.playIntent.journeyNLevel === 'number' &&
-    Number.isFinite(params.playIntent.journeyNLevel)
-      ? params.playIntent.journeyNLevel
-      : undefined;
+  const journeyNLevel = shouldUseJourneyContext
+    ? resolveJourneyStageNLevel({
+        explicitJourneyNLevel: params.playIntent.journeyNLevel,
+        journeyStageId,
+        startLevel: journeyStartLevel,
+        targetLevel: journeyTargetLevel,
+        gameMode: journeyGameMode,
+      })
+    : undefined;
 
   if (
     shouldUseJourneyContext &&
