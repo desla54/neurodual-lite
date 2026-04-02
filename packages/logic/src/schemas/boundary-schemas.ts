@@ -106,6 +106,16 @@ export const SavedJourneySchema = z
 /** Settings data from cloud - flexible structure */
 export const SettingsDataSchema = z.object({
   currentMode: z.string(),
+  freeTraining: z
+    .object({
+      selectedModeId: z.string(),
+    })
+    .optional(),
+  journeyUi: z
+    .object({
+      selectedJourneyId: z.string(),
+    })
+    .optional(),
   savedJourneys: z.array(SavedJourneySchema).default([]),
   modes: z.record(z.string(), z.record(z.string(), z.unknown())),
   ui: z.record(z.string(), z.unknown()),

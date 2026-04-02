@@ -20,6 +20,12 @@
  */
 export interface UserSettings {
   readonly currentMode: string;
+  readonly freeTraining?: {
+    readonly selectedModeId: string;
+  };
+  readonly journeyUi?: {
+    readonly selectedJourneyId: string;
+  };
   readonly savedJourneys: readonly SavedJourney[];
   readonly modes: Record<string, Record<string, unknown>>;
   readonly ui: UISettings;

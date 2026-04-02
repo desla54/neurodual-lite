@@ -534,6 +534,14 @@ export interface UISettings {
   calibrationMaxLevel: number;
 }
 
+export interface FreeTrainingSelectionState {
+  selectedModeId: GameModeId;
+}
+
+export interface JourneyUiSelectionState {
+  selectedJourneyId: string;
+}
+
 /**
  * State complet du store
  */
@@ -544,8 +552,12 @@ export interface SettingsState {
   /** Timestamp (ms) of last local settings change — used for LWW cloud sync. */
   _settingsUpdatedAt: number;
 
-  // Mode actif
+  // Legacy/current free-training mode (kept temporarily for backward compatibility)
   currentMode: GameModeId;
+
+  // Explicit UI selection slices
+  freeTraining: FreeTrainingSelectionState;
+  journeyUi: JourneyUiSelectionState;
 
   // Saved journeys
   savedJourneys: SavedJourney[];
@@ -1278,12 +1290,15 @@ export const useSettingsStore = create<SettingsState>()(
     _initialized: false,
     _settingsUpdatedAt: 0,
     currentMode: FALLBACK_STABLE_MODE,
+    freeTraining: { selectedModeId: FALLBACK_STABLE_MODE },
+    journeyUi: { selectedJourneyId: DEFAULT_UI_SETTINGS.activeJourneyId },
     savedJourneys: [...DEFAULT_JOURNEYS],
     modes: getDefaultModeSettings(),
     ui: DEFAULT_UI_SETTINGS,
 
     // Actions - Mode
-    setCurrentMode: (mode) => set({ currentMode: mode }),
+    setCurrentMode: (mode) =>
+      set({ currentMode: mode, freeTraining: { selectedModeId: mode } }),
 
     // Actions - Mode Settings
     setModeSetting: (key, value) =>
@@ -1309,7 +1324,7 @@ export const useSettingsStore = create<SettingsState>()(
 
     getModeSettings: (modeId) => {
       const state = get();
-      const id = modeId ?? state.currentMode;
+      const id = modeId ?? state.freeTraining.selectedModeId;
       return state.modes[id] ?? EMPTY_MODE_SETTINGS;
     },
 
@@ -2398,6 +2413,10 @@ export const useSettingsStore = create<SettingsState>()(
 
         return {
           savedJourneys: newJourneys,
+          journeyUi:
+            isActive && defaultJourney
+              ? { selectedJourneyId: defaultJourney.id }
+              : state.journeyUi,
           ui:
             isActive && defaultJourney
               ? {
@@ -2426,6 +2445,9 @@ export const useSettingsStore = create<SettingsState>()(
         if (!journey) return state;
 
         return {
+          journeyUi: {
+            selectedJourneyId: normalizedId,
+          },
           ui: {
             ...state.ui,
             activeJourneyId: normalizedId,
@@ -2709,11 +2731,16 @@ export const useSettingsStore = create<SettingsState>()(
         const migratedJourneys = mergedJourneys.map((journey) =>
           migrateJourneyWithStrategy(journey, mergedUi.journeyModeSettingsByJourneyId[journey.id]),
         );
-        const persistedCurrentMode = (settings.currentMode as GameModeId) ?? state.currentMode;
+        const raw = settings as unknown as Record<string, unknown>;
+        const persistedFreeTrainingMode =
+          (raw['freeTraining'] as { selectedModeId?: GameModeId } | undefined)?.selectedModeId;
+        const persistedJourneyUiId =
+          (raw['journeyUi'] as { selectedJourneyId?: string } | undefined)?.selectedJourneyId;
+        const persistedCurrentMode =
+          persistedFreeTrainingMode ?? ((settings.currentMode as GameModeId) ?? state.currentMode);
         const guarded = applyFeatureAccessGuards(persistedCurrentMode, migratedJourneys, mergedUi);
 
         // Restore persisted LWW timestamp (defaults to 0 for pre-existing data)
-        const raw = settings as unknown as Record<string, unknown>;
         const persistedUpdatedAt =
           typeof raw['_settingsUpdatedAt'] === 'number' ? (raw['_settingsUpdatedAt'] as number) : 0;
 
@@ -2721,12 +2748,23 @@ export const useSettingsStore = create<SettingsState>()(
           _initialized: true,
           _settingsUpdatedAt: persistedUpdatedAt,
           currentMode: guarded.currentMode,
+          freeTraining: {
+            selectedModeId: guarded.currentMode,
+          },
+          journeyUi: {
+            selectedJourneyId:
+              persistedJourneyUiId ?? guarded.ui.activeJourneyId ?? state.journeyUi.selectedJourneyId,
+          },
           savedJourneys: migratedJourneys,
           modes: {
             ...state.modes,
             ...(settings.modes as Record<GameModeId, ModeSettings>),
           },
-          ui: guarded.ui,
+          ui: {
+            ...guarded.ui,
+            activeJourneyId:
+              persistedJourneyUiId ?? guarded.ui.activeJourneyId ?? state.journeyUi.selectedJourneyId,
+          },
         };
       });
     },
@@ -2744,6 +2782,8 @@ let unsubscribePersistence: (() => void) | null = null;
 unsubscribePersistence = useSettingsStore.subscribe(
   (state) => ({
     currentMode: state.currentMode,
+    freeTraining: state.freeTraining,
+    journeyUi: state.journeyUi,
     savedJourneys: state.savedJourneys,
     modes: state.modes,
     ui: state.ui,
@@ -2755,6 +2795,8 @@ unsubscribePersistence = useSettingsStore.subscribe(
     // Skip if nothing changed
     if (
       current.currentMode === prev.currentMode &&
+      current.freeTraining === prev.freeTraining &&
+      current.journeyUi === prev.journeyUi &&
       current.savedJourneys === prev.savedJourneys &&
       current.modes === prev.modes &&
       current.ui === prev.ui
@@ -2772,11 +2814,13 @@ unsubscribePersistence = useSettingsStore.subscribe(
       _settingsAdapter
         .saveSettings({
           currentMode: state.currentMode,
+          freeTraining: state.freeTraining,
+          journeyUi: state.journeyUi,
           savedJourneys: state.savedJourneys,
           modes: state.modes as Record<string, Record<string, unknown>>,
           ui: state.ui,
-          _settingsUpdatedAt: now,
-        } as unknown as UserSettings)
+          _settingsUpdatedAt: state._settingsUpdatedAt,
+        } as UserSettings)
         .catch((err: unknown) => {
           console.error('[SettingsStore] Failed to save settings:', err);
         });
@@ -2868,10 +2912,12 @@ export async function initSettingsStore(settingsAdapter: SettingsPort): Promise<
           useSettingsStore.setState({ ui: nextUi });
           await settingsAdapter.saveSettings({
             currentMode: state.currentMode,
+            freeTraining: state.freeTraining,
+            journeyUi: state.journeyUi,
             savedJourneys: state.savedJourneys,
             modes: state.modes as Record<string, Record<string, unknown>>,
             ui: nextUi,
-          });
+          } as UserSettings);
         }
       }
 
@@ -2921,11 +2967,18 @@ export async function initSettingsStore(settingsAdapter: SettingsPort): Promise<
 
       await settingsAdapter.saveSettings({
         currentMode: state.currentMode,
+        freeTraining: state.freeTraining,
+        journeyUi: state.journeyUi,
         savedJourneys: state.savedJourneys,
         modes: state.modes as Record<string, Record<string, unknown>>,
         ui: uiWithDomainLanguage,
+      } as UserSettings);
+      useSettingsStore.setState({
+        _initialized: true,
+        freeTraining: { selectedModeId: state.currentMode },
+        journeyUi: { selectedJourneyId: state.ui.activeJourneyId },
+        ui: uiWithDomainLanguage,
       });
-      useSettingsStore.setState({ _initialized: true, ui: uiWithDomainLanguage });
     }
   } catch (err) {
     console.error('[SettingsStore] Failed to init settings:', err);
@@ -2940,7 +2993,7 @@ export async function initSettingsStore(settingsAdapter: SettingsPort): Promise<
 
 /** Hook pour obtenir les settings du mode actif */
 export const useCurrentModeSettings = () => {
-  return useSettingsStore((s) => s.modes[s.currentMode] ?? EMPTY_MODE_SETTINGS);
+  return useSettingsStore((s) => s.modes[s.freeTraining.selectedModeId] ?? EMPTY_MODE_SETTINGS);
 };
 
 /** Hook pour obtenir les settings du parcours (scopés par journeyId). */
