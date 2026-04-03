@@ -20,6 +20,7 @@ import { type ReactNode, useCallback, useLayoutEffect, useMemo, useRef, useState
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { useAlphaEnabled } from '../hooks/use-beta-features';
 import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useHaptic } from '../hooks/use-haptic';
@@ -149,10 +150,10 @@ export function NavBar(): ReactNode {
     [activeMobileIndex],
   );
 
-  // Animate indicator to the active tab position
-  useLayoutEffect(() => {
+  // Animate indicator to the active tab position (useGSAP for auto-cleanup)
+  useGSAP(() => {
     syncMobileIndicator(indicatorReadyRef.current);
-  }, [syncMobileIndicator]);
+  }, { dependencies: [syncMobileIndicator], scope: mobileNavRef });
 
   useLayoutEffect(() => {
     const container = mobileNavRef.current;

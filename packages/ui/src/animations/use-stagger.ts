@@ -4,6 +4,9 @@
  * Animates a list of elements with staggered timing.
  * Perfect for lists, grids, and sequential content reveals.
  *
+ * Uses useGSAP() from @gsap/react for automatic gsap.context()
+ * cleanup and React 18 Strict Mode safety.
+ *
  * Usage:
  * ```tsx
  * function MyList({ items }) {
@@ -19,8 +22,9 @@
  * ```
  */
 
-import { type RefObject, useLayoutEffect } from 'react';
+import { type RefObject } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { DURATION, EASE, STAGGER, prefersReducedMotion } from './config';
 import { profileDevEffectSync } from '../debug/dev-effect-profiler';
 
@@ -69,46 +73,47 @@ export function useStagger(
     deps = [],
   } = options;
 
-  useLayoutEffect(() => {
-    return profileDevEffectSync(`useStagger(${selector})`, () => {
-      const container = containerRef.current;
-      if (!container) return;
+  useGSAP(
+    () => {
+      return profileDevEffectSync(`useStagger(${selector})`, () => {
+        const container = containerRef.current;
+        if (!container) return;
 
-      // Prepend :scope to selectors starting with > (child combinator)
-      const validSelector = selector.startsWith('>') ? `:scope ${selector}` : selector;
-      const items = container.querySelectorAll(validSelector);
-      if (items.length === 0) return;
+        // Prepend :scope to selectors starting with > (child combinator)
+        const validSelector = selector.startsWith('>') ? `:scope ${selector}` : selector;
+        const items = container.querySelectorAll(validSelector);
+        if (items.length === 0) return;
 
-      // Skip animation if user prefers reduced motion
-      if (prefersReducedMotion()) {
-        gsap.set(items, { opacity: 1, y: 0, scale: 1 });
-        return;
-      }
+        // Skip animation if user prefers reduced motion
+        if (prefersReducedMotion()) {
+          gsap.set(items, { opacity: 1, y: 0, scale: 1 });
+          return;
+        }
 
-      // Set initial state
-      gsap.set(items, {
-        opacity: fromOpacity,
-        y: fromY,
-        scale: fromScale,
+        // Set initial state
+        gsap.set(items, {
+          opacity: fromOpacity,
+          y: fromY,
+          scale: fromScale,
+        });
+
+        // Animate with stagger
+        gsap.to(items, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration,
+          ease,
+          stagger: delay,
+          delay: startDelay,
+        });
       });
-
-      // Animate with stagger
-      const tween = gsap.to(items, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration,
-        ease,
-        stagger: delay,
-        delay: startDelay,
-      });
-
-      return () => {
-        tween.kill();
-      };
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selector, delay, duration, fromY, fromOpacity, fromScale, ease, startDelay, once, ...deps]);
+    },
+    {
+      dependencies: [selector, delay, duration, fromY, fromOpacity, fromScale, ease, startDelay, once, ...deps],
+      scope: containerRef,
+    },
+  );
 }
 
 /**
