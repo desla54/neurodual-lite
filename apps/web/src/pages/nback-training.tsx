@@ -349,7 +349,8 @@ function DualNBackGamePage({
             strategyConfig?: JourneyStrategyConfig;
           }
         | undefined => {
-        const lookupId = requestedLaunch.journeyId ?? journeyConfigForGame?.journeyId ?? s.ui.activeJourneyId;
+        const lookupId =
+          requestedLaunch.journeyId ?? journeyConfigForGame?.journeyId ?? s.ui.activeJourneyId;
         const journey = s.savedJourneys.find((j) => j.id === lookupId);
         return journey
           ? {
@@ -2600,11 +2601,20 @@ function GameplayContent({
               : { gridArea: 'controls' }
         }
       >
-        {/* Message (end of block) */}
-        {message ? (
-          <div className="text-center text-muted-foreground text-sm max-w-[300px]">{message}</div>
-        ) : (
-          <div className="w-full flex flex-col items-center gap-4 pb-3 sm:pb-2">
+        <div className="w-full flex flex-col items-center gap-4 pb-3 sm:pb-2 min-h-[190px]">
+          <div className="flex min-h-[2.75rem] items-center justify-center px-4">
+            {message ? (
+              <div className="text-center text-muted-foreground text-sm max-w-[300px]">
+                {message}
+              </div>
+            ) : null}
+          </div>
+
+          <div
+            className={`w-full flex flex-col items-center gap-4 ${
+              message ? 'invisible pointer-events-none' : ''
+            }`}
+          >
             {effectiveModalities.includes('arithmetic') &&
               (phase === 'stimulus' || phase === 'waiting' || phase === 'paused') && (
                 <ArithmeticKeypad
@@ -2643,13 +2653,13 @@ function GameplayContent({
               />
             )}
 
-            {!message && controlShortcutHint && (
+            {controlShortcutHint && (
               <p className="text-center text-xs text-muted-foreground/60 hidden lg:block">
                 {controlShortcutHint}
               </p>
             )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* ========== PER-BUTTON ABSOLUTE RENDERING ========== */}

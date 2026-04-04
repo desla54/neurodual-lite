@@ -49,6 +49,8 @@ export interface CognitiveTaskHUDProps {
   settingsMenuTitle?: string;
   /** Optional extra action rendered before quit (e.g. context menu) */
   extraAction?: ReactNode;
+  /** Optional explicit N-level override for modes that resolve it outside the shared registry. */
+  overrideNLevel?: number | null;
 }
 
 export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
@@ -65,6 +67,7 @@ export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
   settingsMenuContent,
   settingsMenuTitle,
   extraAction,
+  overrideNLevel,
 }: CognitiveTaskHUDProps): ReactNode {
   const { t } = useTranslation();
   const location = useLocation();
@@ -81,6 +84,9 @@ export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
 
   // Read nLevel from the mode inferred from the current route
   const nLevel = useSettingsStore((s) => {
+    if (typeof overrideNLevel === 'number' && Number.isFinite(overrideNLevel)) {
+      return overrideNLevel;
+    }
     if (!inferredMode || !MODES_WITH_NLEVEL.has(inferredMode)) return null;
     const ms = s.modes[inferredMode as keyof typeof s.modes];
     const v = (ms as Record<string, unknown> | undefined)?.['nLevel'];

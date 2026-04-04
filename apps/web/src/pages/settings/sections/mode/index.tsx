@@ -39,6 +39,7 @@ import { useIsReady } from '../../../../providers';
 import { useHapticTrigger } from '../../../../hooks/use-haptic';
 import { useAnalytics } from '../../../../hooks/use-analytics';
 import { useModeGates } from '../../../../hooks/use-mode-gates';
+import { DualMixSettingsCard } from './dual-mix-settings-card';
 
 // Lazy load mode-specific settings for code splitting
 const ModeSettingsPanel = lazy(() =>
@@ -204,6 +205,7 @@ export function ModeSection(): ReactNode {
     selectedPresetId === FREE_TRAINING_QUAD_PRESET_ID;
 
   const isDualnbackClassic = currentMode === 'dualnback-classic';
+  const isDualMix = currentMode === 'dual-mix';
   const supportsModeSettings = gameModeRegistry.has(currentMode);
   const capabilities = useMemo(
     () => getModePageCapabilities(currentMode, alphaEnabled),
@@ -352,7 +354,13 @@ export function ModeSection(): ReactNode {
       </Section>
 
       {/* Mode-specific Settings */}
-      {isDualnbackClassic ? null : !supportsModeSettings ? (
+      {isDualnbackClassic ? null : isDualMix ? (
+        <Section title={t('settings.config.main')}>
+          <Card>
+            <DualMixSettingsCard />
+          </Card>
+        </Section>
+      ) : !supportsModeSettings ? (
         <Section title={t('settings.config.main')}>
           <Card>
             <div className="space-y-2">

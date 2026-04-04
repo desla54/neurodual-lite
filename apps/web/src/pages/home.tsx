@@ -134,7 +134,8 @@ export function HomePage(): ReactNode {
   const currentModeNLevel =
     ((modeSettings as Record<string, unknown>)['nLevel'] as number | undefined) ?? 2;
   const currentModeTrialsCount =
-    ((modeSettings as Record<string, unknown>)['trialsCount'] as number | undefined) ?? 20;
+    ((modeSettings as Record<string, unknown>)['trialsCount'] as number | undefined) ??
+    (currentMode === 'dual-mix' ? 10 : 20);
   const selectedModeConfig = modeConfigMap.get(currentMode);
 
   // Per-mode quick settings capabilities
@@ -180,13 +181,13 @@ export function HomePage(): ReactNode {
         return {
           hasNLevel: true,
           nMin: 1,
-          nMax: 20,
+          nMax: 9,
           nDefault: 2,
           hasTrials: true,
-          tMin: 10,
+          tMin: 5,
           tMax: 60,
           tStep: 5,
-          tDefault: 20,
+          tDefault: 10,
         };
       default: // dualnback-classic, sim-brainworkshop
         return {
@@ -879,7 +880,8 @@ export function HomePage(): ReactNode {
                     </span>
                     <span className="text-sm font-semibold whitespace-nowrap text-background">
                       {t(
-                        JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.labelKey ?? 'home.journey.neurodualMix',
+                        JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.labelKey ??
+                          'home.journey.neurodualMix',
                         JOURNEY_OPTIONS.find((o) => o.id === activeJourneyId)?.label ?? 'Parcours',
                       )}
                     </span>

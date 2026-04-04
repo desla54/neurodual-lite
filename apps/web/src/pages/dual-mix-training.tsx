@@ -52,9 +52,15 @@ import { useSettingsStore } from '../stores';
 
 const BOARD_SIZE = 6;
 const GRID_POSITIONS = 9;
+const DUAL_MIX_DEFAULT_LEVEL = 2;
+const DUAL_MIX_MIN_LEVEL = 1;
+const DUAL_MIX_MAX_LEVEL = 9;
+const DUAL_MIX_DEFAULT_ROUNDS = 10;
+const DUAL_MIX_MIN_ROUNDS = 5;
+const DUAL_MIX_MAX_ROUNDS = 60;
 const NBACK_STIMULUS_MS = 2500; // How long position + audio are shown
-const STROOP_FIXATION_MS = 400;
-const STROOP_STIMULUS_TIMEOUT_MS = 2500;
+const STROOP_BASE_FIXATION_MS = 400;
+const STROOP_BASE_STIMULUS_TIMEOUT_MS = 2500;
 const STROOP_FEEDBACK_MS = 300;
 const ISI_MS = 500;
 
@@ -116,6 +122,25 @@ interface DragState {
   orientation: 'H' | 'V';
   minDelta: number;
   maxDelta: number;
+}
+
+interface StroopTiming {
+  fixationMs: number;
+  stimulusTimeoutMs: number;
+}
+
+function deriveStroopTiming(nLevel: number): StroopTiming {
+  const levelOffset = Math.max(0, nLevel - 1);
+  return {
+    fixationMs: Math.max(250, STROOP_BASE_FIXATION_MS - levelOffset * 20),
+    stimulusTimeoutMs: Math.max(1000, STROOP_BASE_STIMULUS_TIMEOUT_MS - levelOffset * 150),
+  };
+}
+
+function getPerformanceBand(score: number): { label: string; tone: string } {
+  if (score >= 85) return { label: 'Strong', tone: 'text-woven-correct' };
+  if (score >= 70) return { label: 'Solid', tone: 'text-woven-amber' };
+  return { label: 'Needs work', tone: 'text-woven-incorrect' };
 }
 
 // =============================================================================
@@ -250,11 +275,24 @@ export function DualMixTrainingPage() {
   const modeSettings =
     useSettingsStore((s) => s.modes['dual-mix'] as Record<string, unknown> | undefined) ?? {};
   const nLevel =
-    typeof (modeSettings as any).nLevel === 'number' ? (modeSettings as any).nLevel : 2;
+    typeof modeSettings['nLevel'] === 'number'
+      ? Math.max(
+          DUAL_MIX_MIN_LEVEL,
+          Math.min(DUAL_MIX_MAX_LEVEL, Math.round(modeSettings['nLevel'])),
+        )
+      : DUAL_MIX_DEFAULT_LEVEL;
   const totalRounds =
-    typeof (modeSettings as any).trialsCount === 'number'
-      ? Math.max(5, Math.min(30, (modeSettings as any).trialsCount))
-      : 10;
+    typeof modeSettings['trialsCount'] === 'number'
+      ? Math.max(
+          DUAL_MIX_MIN_ROUNDS,
+          Math.min(DUAL_MIX_MAX_ROUNDS, Math.round(modeSettings['trialsCount'])),
+        )
+      : DUAL_MIX_DEFAULT_ROUNDS;
+  const includeGridlock =
+    typeof modeSettings['dualMixIncludeGridlock'] === 'boolean'
+      ? modeSettings['dualMixIncludeGridlock']
+      : true;
+  const stroopTiming = useMemo(() => deriveStroopTiming(nLevel), [nLevel]);
 
   const COLORS = useMemo(
     () =>
@@ -307,6 +345,7 @@ export function DualMixTrainingPage() {
 
   // Fade key
   const [fadeKey, setFadeKey] = useState(0);
+  const pausedPhaseRef = useRef<Exclude<Phase, 'paused'> | null>(null);
 
   useMountEffect(() => {
     return () => {
@@ -344,6 +383,66 @@ export function DualMixTrainingPage() {
     [nLevel, audio],
   );
 
+  const startGridlockMove = useCallback(() => {
+    gridlockMoveAllowedRef.current = true;
+    setFadeKey((k) => k + 1);
+    setPhase('gridlock-move');
+  }, []);
+
+  const advanceAfterRound = useCallback(
+    (r: number) => {
+      setPhase('round-isi');
+      timerRef.current = setTimeout(() => {
+        const next = r + 1;
+        if (next >= totalRounds) {
+          setPhase('finished');
+        } else {
+          setRound(next);
+          startNBackStimulus(next);
+        }
+      }, ISI_MS);
+    },
+    [totalRounds, startNBackStimulus],
+  );
+
+  // --- Stroop (auto-timed) ---
+  const startStroopFixation = useCallback(
+    (r: number) => {
+      stroopRespondedRef.current = false;
+      setFadeKey((k) => k + 1);
+      setPhase('stroop-fixation');
+      timerRef.current = setTimeout(() => {
+        setPhase('stroop-stimulus');
+        stroopStimulusStartRef.current = performance.now();
+        timerRef.current = setTimeout(() => {
+          if (!stroopRespondedRef.current) {
+            stroopRespondedRef.current = true;
+            const trial = stroopTrialsRef.current[r];
+            if (trial) {
+              setStroopResults((prev) => [
+                ...prev,
+                {
+                  trial,
+                  response: null,
+                  correct: false,
+                  rt: stroopTiming.stimulusTimeoutMs,
+                  timedOut: true,
+                },
+              ]);
+            }
+            setLastStroopFeedback(false);
+            setPhase('stroop-feedback');
+            timerRef.current = setTimeout(
+              () => (includeGridlock ? startGridlockMove() : advanceAfterRound(r)),
+              STROOP_FEEDBACK_MS,
+            );
+          }
+        }, stroopTiming.stimulusTimeoutMs);
+      }, stroopTiming.fixationMs);
+    },
+    [advanceAfterRound, includeGridlock, startGridlockMove, stroopTiming],
+  );
+
   // User presses "Next" after responding to N-Back
   const handleNBackNext = useCallback(() => {
     if (phase !== 'nback-response') return;
@@ -364,61 +463,7 @@ export function DualMixTrainingPage() {
       },
     ]);
     startStroopFixation(round);
-  }, [phase, round, nLevel, pressedPosition, pressedAudio, clearTimer]);
-
-  // --- Stroop (auto-timed) ---
-  const startStroopFixation = useCallback((r: number) => {
-    stroopRespondedRef.current = false;
-    setFadeKey((k) => k + 1);
-    setPhase('stroop-fixation');
-    timerRef.current = setTimeout(() => {
-      setPhase('stroop-stimulus');
-      stroopStimulusStartRef.current = performance.now();
-      timerRef.current = setTimeout(() => {
-        if (!stroopRespondedRef.current) {
-          stroopRespondedRef.current = true;
-          const trial = stroopTrialsRef.current[r];
-          if (trial) {
-            setStroopResults((prev) => [
-              ...prev,
-              {
-                trial,
-                response: null,
-                correct: false,
-                rt: STROOP_STIMULUS_TIMEOUT_MS,
-                timedOut: true,
-              },
-            ]);
-          }
-          setLastStroopFeedback(false);
-          setPhase('stroop-feedback');
-          timerRef.current = setTimeout(() => startGridlockMove(), STROOP_FEEDBACK_MS);
-        }
-      }, STROOP_STIMULUS_TIMEOUT_MS);
-    }, STROOP_FIXATION_MS);
-  }, []);
-
-  const startGridlockMove = useCallback(() => {
-    gridlockMoveAllowedRef.current = true;
-    setFadeKey((k) => k + 1);
-    setPhase('gridlock-move');
-  }, []);
-
-  const advanceAfterGridlock = useCallback(
-    (r: number) => {
-      setPhase('round-isi');
-      timerRef.current = setTimeout(() => {
-        const next = r + 1;
-        if (next >= totalRounds) {
-          setPhase('finished');
-        } else {
-          setRound(next);
-          startNBackStimulus(next);
-        }
-      }, ISI_MS);
-    },
-    [totalRounds, startNBackStimulus],
-  );
+  }, [clearTimer, nLevel, phase, pressedAudio, pressedPosition, round, startStroopFixation]);
 
   // --- Initialize ---
   useEffect(() => {
@@ -469,9 +514,12 @@ export function DualMixTrainingPage() {
       ]);
       setLastStroopFeedback(correct);
       setPhase('stroop-feedback');
-      timerRef.current = setTimeout(() => startGridlockMove(), STROOP_FEEDBACK_MS);
+      timerRef.current = setTimeout(
+        () => (includeGridlock ? startGridlockMove() : advanceAfterRound(round)),
+        STROOP_FEEDBACK_MS,
+      );
     },
-    [phase, round, haptic, clearTimer, startGridlockMove],
+    [advanceAfterRound, clearTimer, haptic, includeGridlock, phase, round, startGridlockMove],
   );
 
   // --- Gridlock move ---
@@ -487,9 +535,9 @@ export function DualMixTrainingPage() {
         setGridlockPuzzlesSolved((n) => n + 1);
         setTimeout(() => setGridlockBoard(pickRandomPuzzle()), 300);
       }
-      advanceAfterGridlock(round);
+      advanceAfterRound(round);
     },
-    [gridlockBoard, round, advanceAfterGridlock],
+    [advanceAfterRound, gridlockBoard, round],
   );
 
   // --- Gridlock drag (window events, same pattern as gridlock-training) ---
@@ -576,18 +624,34 @@ export function DualMixTrainingPage() {
   // --- Pause ---
   const handleTogglePause = useCallback(() => {
     if (phase === 'paused') {
-      startNBackStimulus(round);
+      const pausedPhase = pausedPhaseRef.current;
+      if (pausedPhase === 'nback-response') {
+        setPhase('nback-response');
+      } else if (
+        pausedPhase === 'stroop-fixation' ||
+        pausedPhase === 'stroop-stimulus' ||
+        pausedPhase === 'stroop-feedback'
+      ) {
+        startStroopFixation(round);
+      } else if (pausedPhase === 'gridlock-move') {
+        startGridlockMove();
+      } else {
+        startNBackStimulus(round);
+      }
     } else if (phase !== 'idle' && phase !== 'finished') {
+      pausedPhaseRef.current = phase;
       clearTimer();
       stroopRespondedRef.current = true;
       gridlockMoveAllowedRef.current = false;
+      setDragState(null);
       setPhase('paused');
     }
-  }, [phase, round, clearTimer, startNBackStimulus]);
+  }, [clearTimer, phase, round, startGridlockMove, startNBackStimulus, startStroopFixation]);
 
   // --- Restart ---
   const handleRestart = useCallback(() => {
     clearTimer();
+    pausedPhaseRef.current = null;
     setPhase('idle');
     setRunSeed((s) => s + 1);
   }, [clearTimer]);
@@ -609,6 +673,12 @@ export function DualMixTrainingPage() {
       stroopRTs.length > 0
         ? Math.round(stroopRTs.reduce((a, b) => a + b, 0) / stroopRTs.length)
         : 0;
+    const gridlockScore = includeGridlock
+      ? Math.min(100, gridlockPuzzlesSolved * 25 + Math.max(0, 30 - gridlockTotalMoves))
+      : null;
+    const overallScore = includeGridlock
+      ? Math.round((nbackAcc + stroopAcc + (gridlockScore ?? 0)) / 3)
+      : Math.round((nbackAcc + stroopAcc) / 2);
 
     return {
       nbackAcc,
@@ -619,9 +689,18 @@ export function DualMixTrainingPage() {
       stroopAvgRT,
       gridlockMoves: gridlockTotalMoves,
       gridlockSolved: gridlockPuzzlesSolved,
+      gridlockScore,
+      overallScore,
       durationMs: Date.now() - sessionStartMsRef.current,
     };
-  }, [phase, nbackResults, stroopResults, gridlockTotalMoves, gridlockPuzzlesSolved]);
+  }, [
+    gridlockPuzzlesSolved,
+    gridlockTotalMoves,
+    includeGridlock,
+    nbackResults,
+    phase,
+    stroopResults,
+  ]);
 
   // --- Current data ---
   const currentStimulus = nbackSeqRef.current[round + nLevel];
@@ -636,24 +715,15 @@ export function DualMixTrainingPage() {
 
   const microTaskLabel =
     phase === 'nback-stimulus' || phase === 'nback-response'
-      ? `N-Back (N-${nLevel})`
+      ? 'N-Back'
       : phase.startsWith('stroop')
         ? 'Stroop Flex'
         : phase === 'gridlock-move'
           ? 'Gridlock'
           : null;
-
-  const progressIndex =
-    phase === 'finished'
-      ? totalRounds * 3
-      : round * 3 +
-        (phase === 'nback-stimulus' || phase === 'nback-response'
-          ? 0
-          : phase.startsWith('stroop')
-            ? 1
-            : phase === 'gridlock-move'
-              ? 2
-              : 0);
+  const overallBand = summary ? getPerformanceBand(summary.overallScore) : null;
+  const nbackBand = summary ? getPerformanceBand(summary.nbackAcc) : null;
+  const stroopBand = summary ? getPerformanceBand(summary.stroopAcc) : null;
 
   // --- Render: Finished ---
   if (phase === 'finished' && summary) {
@@ -662,8 +732,19 @@ export function DualMixTrainingPage() {
         <div className="flex-1 flex flex-col items-center justify-center gap-6 px-4 py-8">
           <h1 className="text-2xl font-bold text-foreground">Dual Mix</h1>
           <p className="text-sm text-muted-foreground">
-            {totalRounds} rounds · N-{nLevel} · {Math.round(summary.durationMs / 1000)}s
+            {totalRounds} rounds · N-{nLevel} · {includeGridlock ? '3 tasks' : '2 tasks'} ·{' '}
+            {Math.round(summary.durationMs / 1000)}s
           </p>
+          {overallBand && (
+            <div className="rounded-xl border border-border/50 bg-card px-4 py-3 text-center">
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                Overall
+              </div>
+              <div className={`mt-1 text-lg font-black ${overallBand.tone}`}>
+                {overallBand.label} · {summary.overallScore}%
+              </div>
+            </div>
+          )}
           <div className="w-full max-w-sm space-y-4">
             <div className="rounded-xl border border-border/50 bg-card p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
@@ -685,6 +766,9 @@ export function DualMixTrainingPage() {
                 <span className="text-sm font-semibold">Combined</span>
                 <span className="text-sm font-mono font-bold">{summary.nbackAcc}%</span>
               </div>
+              {nbackBand && (
+                <p className={`mt-2 text-xs font-semibold ${nbackBand.tone}`}>{nbackBand.label}</p>
+              )}
             </div>
             <div className="rounded-xl border border-border/50 bg-card p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
@@ -698,20 +782,33 @@ export function DualMixTrainingPage() {
                 <span className="text-sm">Mean RT</span>
                 <span className="text-sm font-mono font-bold">{summary.stroopAvgRT} ms</span>
               </div>
+              {stroopBand && (
+                <p className={`mt-2 text-xs font-semibold ${stroopBand.tone}`}>
+                  {stroopBand.label}
+                </p>
+              )}
             </div>
-            <div className="rounded-xl border border-border/50 bg-card p-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
-                Gridlock
-              </h3>
-              <div className="flex justify-between">
-                <span className="text-sm">Moves</span>
-                <span className="text-sm font-mono font-bold">{summary.gridlockMoves}</span>
+            {includeGridlock && (
+              <div className="rounded-xl border border-border/50 bg-card p-4">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                  Gridlock
+                </h3>
+                <div className="flex justify-between">
+                  <span className="text-sm">Moves</span>
+                  <span className="text-sm font-mono font-bold">{summary.gridlockMoves}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm">Puzzles solved</span>
+                  <span className="text-sm font-mono font-bold">{summary.gridlockSolved}</span>
+                </div>
+                {summary.gridlockScore !== null && (
+                  <div className="flex justify-between mt-1 pt-1 border-t border-border/30">
+                    <span className="text-sm font-semibold">Session score</span>
+                    <span className="text-sm font-mono font-bold">{summary.gridlockScore}%</span>
+                  </div>
+                )}
               </div>
-              <div className="flex justify-between">
-                <span className="text-sm">Puzzles solved</span>
-                <span className="text-sm font-mono font-bold">{summary.gridlockSolved}</span>
-              </div>
-            </div>
+            )}
           </div>
           <div className="flex gap-3">
             <button
@@ -738,27 +835,16 @@ export function DualMixTrainingPage() {
   return (
     <div className="game-page-shell">
       <CognitiveTaskHUD
-        trialIndex={progressIndex}
-        totalTrials={totalRounds * 3}
+        label="Dual Mix"
+        sublabel={microTaskLabel ?? undefined}
+        overrideNLevel={nLevel}
+        trialIndex={phase === 'finished' ? totalRounds : round}
+        totalTrials={totalRounds}
         onQuit={() => setShowQuitModal(true)}
         isPaused={phase === 'paused'}
         canPause={phase !== 'idle' && phase !== 'finished'}
         onTogglePause={handleTogglePause}
       />
-
-      {/* Micro-task indicator */}
-      <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
-        {microTaskLabel && (
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-              {microTaskLabel}
-            </span>
-            <span className="text-xs text-muted-foreground/60 font-mono">
-              {round + 1}/{totalRounds}
-            </span>
-          </div>
-        )}
-      </div>
 
       {/* Central stage */}
       <div className="game-page-stage">
