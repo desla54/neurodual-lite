@@ -191,12 +191,20 @@ export function PremiumSection(): ReactNode {
           </div>
         )}
 
-        {/* Web: Activation code input */}
-        {!isPremium && !isNative && (
+        {/* Activation code input */}
+        {!isPremium && (
           <div className="space-y-2">
             <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
               {t('settings.premium.activationCode', "Code d'activation")}
             </label>
+            {isNative && (
+              <p className="text-xs text-muted-foreground">
+                {t(
+                  'settings.premium.haveCodeHelp',
+                  'Vous avez deja un code ou un achat externe ? Activez-le ici.',
+                )}
+              </p>
+            )}
             <div className="flex gap-2">
               <input
                 type="text"

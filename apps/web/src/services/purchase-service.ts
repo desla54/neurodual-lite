@@ -51,6 +51,18 @@ export interface PurchaseServiceDeps {
   readonly onActivated: (code: string) => Promise<void>;
 }
 
+interface StoreValidationPayload {
+  readonly store: 'google' | 'apple';
+  readonly productId: string;
+  readonly deviceId: string;
+  readonly deviceName: string;
+  readonly transactionId?: string;
+  readonly purchaseToken?: string;
+  readonly orderId?: string;
+  readonly receipt?: string;
+  readonly jwsRepresentation?: string;
+}
+
 let _nativePurchases: NativePurchasesModule | null = null;
 
 async function getNativePurchases(): Promise<NativePurchasesModule> {
@@ -90,19 +102,11 @@ export function createPurchaseService(deps: PurchaseServiceDeps) {
     }
   }
 
-  async function sendToWorker(
-    transactionId: string,
-    store: 'google' | 'apple',
-  ): Promise<PurchaseOutcome> {
+  async function sendToWorker(payload: StoreValidationPayload): Promise<PurchaseOutcome> {
     const res = await fetch(`${deps.apiUrl}/purchase`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        transactionId,
-        store,
-        deviceId: deps.getDeviceId(),
-        deviceName: deps.getDeviceName(),
-      }),
+      body: JSON.stringify(payload),
     });
 
     const data = (await res.json()) as {
@@ -151,13 +155,22 @@ export function createPurchaseService(deps: PurchaseServiceDeps) {
 
       const platform = Capacitor.getPlatform();
       const store = platform === 'ios' ? 'apple' : 'google';
-      const transactionId = result.transactionId;
 
-      if (!transactionId) {
+      if (!result.transactionId) {
         return { success: false, error: 'store_error' };
       }
 
-      return await sendToWorker(transactionId, store);
+      return await sendToWorker({
+        store,
+        productId: result.productIdentifier,
+        deviceId: deps.getDeviceId(),
+        deviceName: deps.getDeviceName(),
+        transactionId: result.transactionId,
+        purchaseToken: result.purchaseToken,
+        orderId: result.orderId,
+        receipt: result.receipt,
+        jwsRepresentation: result.jwsRepresentation,
+      });
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes('cancel') || msg.includes('Cancel')) {
@@ -203,7 +216,17 @@ export function createPurchaseService(deps: PurchaseServiceDeps) {
       const platform = Capacitor.getPlatform();
       const store = platform === 'ios' ? 'apple' : 'google';
 
-      return await sendToWorker(premiumPurchase.transactionId, store);
+      return await sendToWorker({
+        store,
+        productId: premiumPurchase.productIdentifier,
+        deviceId: deps.getDeviceId(),
+        deviceName: deps.getDeviceName(),
+        transactionId: premiumPurchase.transactionId,
+        purchaseToken: premiumPurchase.purchaseToken,
+        orderId: premiumPurchase.orderId,
+        receipt: premiumPurchase.receipt,
+        jwsRepresentation: premiumPurchase.jwsRepresentation,
+      });
     } catch {
       return { success: false, error: 'network_error' };
     }

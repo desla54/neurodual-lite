@@ -31,6 +31,7 @@ interface PremiumSettings {
   activationCode: string | null;
   deviceId: string;
   isPremium: boolean;
+  grantType?: 'activation_code' | 'legacy_migration';
 }
 
 // =============================================================================
@@ -46,6 +47,8 @@ export interface PremiumAdapterDeps {
   setSetting: (key: string, value: string) => Promise<void>;
   /** Query total playtime from session_summaries */
   getTotalPlaytimeMs: () => Promise<number>;
+  /** Detect whether this install should receive the one-time legacy lifetime migration */
+  shouldGrantLegacyLifetime?: () => Promise<boolean>;
 }
 
 export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
@@ -100,6 +103,51 @@ export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
     await deps.setSetting(SETTINGS_KEY, JSON.stringify(settings));
   }
 
+  async function claimLegacyMigrationCode(did: string): Promise<boolean> {
+    try {
+      const res = await fetch(`${deps.apiUrl}/legacy-migrate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          deviceId: did,
+          deviceName: navigator.userAgent.slice(0, 60),
+        }),
+      });
+
+      const data = (await res.json()) as {
+        success?: boolean;
+        code?: string;
+        activationsUsed?: number;
+        devices?: DeviceActivation[];
+      };
+
+      if (!res.ok || !data.success || !data.code) {
+        return false;
+      }
+
+      const activationCode = data.code.trim().toUpperCase();
+      await saveSettings({
+        activationCode,
+        deviceId: did,
+        isPremium: true,
+        grantType: 'legacy_migration',
+      });
+
+      updateState({
+        isPremium: true,
+        activationCode,
+        devices: data.devices ?? [],
+        activationsUsed: data.activationsUsed ?? 1,
+        remainingFreeTimeMs: FREE_PLAYTIME_MS,
+        isFreeTimeExhausted: false,
+      });
+
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
   async function refreshPlaytime(): Promise<void> {
     const totalMs = await deps.getTotalPlaytimeMs();
     const remaining = currentState.isPremium
@@ -115,13 +163,25 @@ export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
 
   async function initialize(): Promise<void> {
     const did = await getOrCreateDeviceId();
-    const settings = await loadSettings();
+    let settings = await loadSettings();
 
-    if (settings?.isPremium && settings.activationCode) {
+    if (!settings?.isPremium && deps.shouldGrantLegacyLifetime) {
+      try {
+        const shouldGrant = await deps.shouldGrantLegacyLifetime();
+        if (shouldGrant) {
+          await claimLegacyMigrationCode(did);
+          settings = await loadSettings();
+        }
+      } catch {
+        // Ignore eligibility probe failures and continue with regular initialization.
+      }
+    }
+
+    if (settings?.isPremium) {
       currentState = {
         ...currentState,
         isPremium: true,
-        activationCode: settings.activationCode,
+        activationCode: settings.activationCode ?? null,
       };
     }
 
@@ -228,6 +288,7 @@ export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
           activationCode: normalizedCode,
           deviceId: did,
           isPremium: true,
+          grantType: 'activation_code',
         });
 
         updateState({
@@ -274,6 +335,7 @@ export function createPremiumAdapter(deps: PremiumAdapterDeps): PremiumPort {
             activationCode: null,
             deviceId: did,
             isPremium: false,
+            grantType: 'activation_code',
           });
 
           updateState({

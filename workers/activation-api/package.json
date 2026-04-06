@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "legacy:count": "wrangler d1 execute neurodual-activations --remote --command \"SELECT COUNT(*) AS issued_codes FROM codes WHERE source = 'legacy_migration';\"",
+    "legacy:stats": "wrangler d1 execute neurodual-activations --remote --command \"SELECT COUNT(*) AS issued_codes, MIN(created_at) AS first_issued_at, MAX(created_at) AS last_issued_at FROM codes WHERE source = 'legacy_migration';\""
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250327.0",

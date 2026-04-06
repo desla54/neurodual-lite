@@ -56,14 +56,31 @@ android {
     }
     buildTypes {
         debug {
-            applicationIdSuffix ".dev"
-            versionNameSuffix "-dev"
+            def debugAppIdSuffix = project.findProperty("ndDebugAppIdSuffix")
+            if (debugAppIdSuffix == null) {
+                debugAppIdSuffix = ".dev"
+            }
+
+            def debugVersionSuffix = project.findProperty("ndDebugVersionSuffix")
+            if (debugVersionSuffix == null) {
+                debugVersionSuffix = debugAppIdSuffix ? "-dev" : ""
+            }
+
+            def debugPackageName = "com.neurodual.app${debugAppIdSuffix}"
+            def debugAppName = debugAppIdSuffix ? "NeuroDual Dev" : "NeuroDual"
+
+            if (debugAppIdSuffix) {
+                applicationIdSuffix debugAppIdSuffix
+            }
+            if (debugVersionSuffix) {
+                versionNameSuffix debugVersionSuffix
+            }
 
             // Keep the dev build installable alongside the Play Store app and easy to spot.
-            resValue "string", "app_name", "NeuroDual Dev"
-            resValue "string", "title_activity_main", "NeuroDual Dev"
-            resValue "string", "package_name", "com.neurodual.app.dev"
-            resValue "string", "custom_url_scheme", "com.neurodual.app.dev"
+            resValue "string", "app_name", debugAppName
+            resValue "string", "title_activity_main", debugAppName
+            resValue "string", "package_name", debugPackageName
+            resValue "string", "custom_url_scheme", debugPackageName
         }
         release {
             minifyEnabled true

@@ -164,6 +164,40 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
           return 0;
         }
       },
+      shouldGrantLegacyLifetime: async () => {
+        if (!persistence) return false;
+        try {
+          const [storedPremiumSettings, sessionCount, settingsCount] = await Promise.all([
+            Promise.resolve(localStorage.getItem('nd_premium')),
+            persistence.query<{ count: number }>(
+              'SELECT COUNT(*) as count FROM session_summaries',
+            ),
+            persistence.query<{ count: number }>('SELECT COUNT(*) as count FROM settings'),
+          ]);
+
+          if (storedPremiumSettings) {
+            try {
+              const parsed = JSON.parse(storedPremiumSettings) as {
+                isPremium?: boolean;
+                activationCode?: string | null;
+                grantType?: string;
+              };
+
+              if (parsed.isPremium || parsed.activationCode || parsed.grantType) {
+                return false;
+              }
+            } catch {
+              // Ignore corrupted local premium state and continue probing legacy eligibility.
+            }
+          }
+
+          const hasHistory = (sessionCount.rows[0]?.count ?? 0) > 0;
+          const hasSettings = (settingsCount.rows[0]?.count ?? 0) > 0;
+          return hasHistory || hasSettings;
+        } catch {
+          return false;
+        }
+      },
     });
   }, [persistence]);
 
