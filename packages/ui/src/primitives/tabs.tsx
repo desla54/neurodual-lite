@@ -81,20 +81,24 @@ const TabsTrigger = forwardRef<
 });
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
-const TabsContent = forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content
-    ref={ref}
-    className={cn(
-      'mt-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-      props['data-no-animate'] !== 'true' && 'animate-in fade-in-50 slide-in-from-bottom-2',
-      className,
-    )}
-    {...props}
-  />
-));
+type TabsContentProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> & {
+  'data-no-animate'?: 'true' | 'false';
+};
+
+const TabsContent = forwardRef<React.ElementRef<typeof TabsPrimitive.Content>, TabsContentProps>(
+  ({ className, 'data-no-animate': dataNoAnimate, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn(
+        'mt-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+        dataNoAnimate !== 'true' && 'animate-in fade-in-50 slide-in-from-bottom-2',
+        className,
+      )}
+      data-no-animate={dataNoAnimate}
+      {...props}
+    />
+  ),
+);
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
 export { Tabs, TabsContent, TabsList, TabsTrigger };

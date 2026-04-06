@@ -93,13 +93,7 @@ export function PageTransition({
   );
 
   return (
-    <div
-      ref={containerRef}
-      className={cn(
-        className,
-        animateOnMount && !isReady && 'invisible',
-      )}
-    >
+    <div ref={containerRef} className={cn(className, animateOnMount && !isReady && 'invisible')}>
       {children}
     </div>
   );

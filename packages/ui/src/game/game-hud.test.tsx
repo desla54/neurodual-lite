@@ -11,13 +11,7 @@ describe('GameHUD', () => {
   });
 
   it('uses the explicit progress count for the progress bar width', () => {
-    const { container } = render(
-      <GameHUD
-        trialIndex={2}
-        totalTrials={20}
-        onQuit={() => {}}
-      />,
-    );
+    const { container } = render(<GameHUD trialIndex={2} totalTrials={20} onQuit={() => {}} />);
 
     const fill = Array.from(container.getElementsByTagName('div')).find(
       (element) => element.getAttribute('data-capture-progress') === 'fill',

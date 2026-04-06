@@ -107,8 +107,6 @@ export function toShellNavigationKind(direction: TransitionDirection): ShellNavi
       return 'back';
     case 'modal':
       return 'modal';
-    case 'fade':
-    case 'default':
     default:
       return 'tab';
   }

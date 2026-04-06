@@ -899,13 +899,6 @@ export function StatsPage(): ReactNode {
                         }
                       : undefined;
 
-                    const runIdQuery = selectedRunId
-                      ? `?runId=${encodeURIComponent(selectedRunId)}`
-                      : '';
-                    const interactiveQuery = selectedRunId
-                      ? `?mode=interactive&runId=${encodeURIComponent(selectedRunId)}`
-                      : '?mode=interactive';
-
                     // Notice "session plus récente" pour les parcours
                     const reportSessionJourneyId =
                       reportWithComputedJourney.journeyId ??
@@ -1118,19 +1111,6 @@ export function StatsPage(): ReactNode {
                             setStatsFreeModeFilter('all');
                             closeDetailModal();
                           }}
-                          onReplay={() =>
-                            transitionNavigate(`/replay/${selectedSessionId}${runIdQuery}`)
-                          }
-                          onCorrect={
-                            ['dualnback-classic', 'sim-brainworkshop', 'custom'].includes(
-                              reportData.gameMode ?? '',
-                            )
-                              ? () =>
-                                  transitionNavigate(
-                                    `/replay/${selectedSessionId}${interactiveQuery}`,
-                                  )
-                              : undefined
-                          }
                           showMobileCloseButton={false}
                           betaEnabled={betaEnabled}
                           journeyNotice={effectiveJourneyNotice}

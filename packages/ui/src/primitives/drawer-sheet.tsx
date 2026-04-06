@@ -66,7 +66,7 @@ export function DrawerSheet({ trigger, title, srTitle, children }: DrawerSheetPr
           style={
             !isTop ? { bottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' } : undefined
           }
-          className={`fixed z-50 mx-auto flex max-w-lg flex-col rounded-2xl border border-white/15 bg-card/95 shadow-[0_8px_32px_rgba(0,0,0,0.12),0_2px_8px_rgba(0,0,0,0.08)] backdrop-blur-2xl backdrop-saturate-150 outline-none [&::after]:!hidden ${
+          className={`fixed z-50 mx-auto flex max-w-lg flex-col rounded-2xl border border-white/15 bg-card shadow-[0_8px_32px_rgba(0,0,0,0.12),0_2px_8px_rgba(0,0,0,0.08)] outline-none [&::after]:!hidden ${
             isTop ? 'top-3 left-3 right-3' : 'left-3 right-3'
           }`}
         >

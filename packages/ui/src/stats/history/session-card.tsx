@@ -132,10 +132,11 @@ export const SessionCard = memo(function SessionCard({
   const isRecent = Date.now() - session.createdAt.getTime() < 24 * 60 * 60 * 1000;
   const isDualTrackCalibration = session.generator === 'dual-track-calibration';
   const dualnbackErrorRatePercent = computeDualnbackClassicErrorRatePercent(session);
+  const upsTemporarilyHidden = session.gameMode === 'dual-mix';
 
   // UPS score (beta feature)
   const upsScore = session.upsScore ?? Math.round(session.unifiedMetrics.accuracy * 100);
-  const upsDisplay = betaEnabled ? String(upsScore) : '—';
+  const upsDisplay = betaEnabled && !upsTemporarilyHidden ? String(upsScore) : '—';
   const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isLongPress = useRef(false);
   const longPressCancelled = useRef(false);

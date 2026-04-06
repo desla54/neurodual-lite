@@ -286,6 +286,7 @@ export function RunStackCard({
     originalByModality ?? {},
     fallbackAccuracy,
   );
+  const upsTemporarilyHidden = sessionMeta.mode === 'dual-mix';
 
   const modeScoreDisplay = (() => {
     // Loading state for correction tabs (report fetch still in progress)
@@ -390,7 +391,9 @@ export function RunStackCard({
   })();
 
   const upsDisplayValue =
-    betaEnabled && Number.isFinite(activeScore) ? String(Math.round(activeScore)) : '—';
+    betaEnabled && !upsTemporarilyHidden && Number.isFinite(activeScore)
+      ? String(Math.round(activeScore))
+      : '—';
 
   // Handle tab click - just activate the tab
   const handleTabClick = useCallback((runId: string | null) => {

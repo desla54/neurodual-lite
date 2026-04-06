@@ -22,7 +22,7 @@
  * ```
  */
 
-import { type RefObject } from 'react';
+import type { RefObject } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { DURATION, EASE, STAGGER, prefersReducedMotion } from './config';
@@ -110,7 +110,18 @@ export function useStagger(
       });
     },
     {
-      dependencies: [selector, delay, duration, fromY, fromOpacity, fromScale, ease, startDelay, once, ...deps],
+      dependencies: [
+        selector,
+        delay,
+        duration,
+        fromY,
+        fromOpacity,
+        fromScale,
+        ease,
+        startDelay,
+        once,
+        ...deps,
+      ],
       scope: containerRef,
     },
   );
