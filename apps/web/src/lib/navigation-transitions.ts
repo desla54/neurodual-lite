@@ -51,10 +51,7 @@ export function consumeShellNavigationTransition(): ShellNavigationKind | null {
 function isSettingsSubPage(pathname: string): boolean {
   const normalized = normalizePathname(pathname);
   if (!normalized.startsWith('/settings/')) return false;
-  const parts = normalized
-    .slice('/settings/'.length)
-    .split('/')
-    .filter(Boolean);
+  const parts = normalized.slice('/settings/'.length).split('/').filter(Boolean);
   return parts.length > 1;
 }
 

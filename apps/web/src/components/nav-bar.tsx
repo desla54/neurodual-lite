@@ -83,6 +83,9 @@ export function NavBar(): ReactNode {
   const indicatorRef = useRef<HTMLDivElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const indicatorReadyRef = useRef(false);
+  const desktopIndicatorRef = useRef<HTMLDivElement>(null);
+  const desktopNavRef = useRef<HTMLDivElement>(null);
+  const desktopIndicatorReadyRef = useRef(false);
 
   const resolvePrimaryTabPath = useCallback(
     (tab: PrimaryNavTab) => rememberedTabPaths[tab] ?? PRIMARY_TAB_DEFAULT_PATHS[tab],
@@ -105,6 +108,13 @@ export function NavBar(): ReactNode {
   const activeMobileIndex = useMemo(() => {
     return mobileLinks.findIndex(({ tab }) => isPrimaryTabActive(pathname, tab));
   }, [pathname]);
+  const activeDesktopTab = useMemo(() => {
+    const desktopLinks = [...mainLinks, settingsLink];
+    return desktopLinks.find(({ tab }) => isPrimaryTabActive(pathname, tab))?.tab ?? null;
+  }, [pathname]);
+
+  // Detect if we're on settings page
+  const isSettingsPage = pathname === '/settings' || pathname.startsWith('/settings/');
 
   const syncMobileIndicator = useCallback(
     (animate: boolean) => {
@@ -147,7 +157,7 @@ export function NavBar(): ReactNode {
         y,
         autoAlpha: 1,
         scale: 1,
-        duration: 0.22,
+        duration: 0.3,
         ease: 'power3.out',
         overwrite: 'auto',
         force3D: true,
@@ -156,10 +166,126 @@ export function NavBar(): ReactNode {
     [activeMobileIndex],
   );
 
+  const animateMobileIndicatorToElement = useCallback((targetEl: HTMLElement) => {
+    const indicator = indicatorRef.current;
+    if (!indicator) return;
+
+    const indicatorWidth = indicator.offsetWidth || 48;
+    const indicatorHeight = indicator.offsetHeight || 48;
+    const x = Math.round(targetEl.offsetLeft + (targetEl.offsetWidth - indicatorWidth) / 2);
+    const y = Math.round(targetEl.offsetTop + (targetEl.offsetHeight - indicatorHeight) / 2);
+
+    gsap.killTweensOf(indicator);
+
+    if (!indicatorReadyRef.current) {
+      gsap.set(indicator, { autoAlpha: 1, scale: 1, force3D: true });
+      indicatorReadyRef.current = true;
+    }
+
+    gsap.to(indicator, {
+      x,
+      y,
+      autoAlpha: 1,
+      scale: 1,
+      duration: 0.3,
+      ease: 'power3.out',
+      overwrite: 'auto',
+      force3D: true,
+    });
+  }, []);
+
+  const syncDesktopIndicator = useCallback(
+    (animate: boolean) => {
+      const indicator = desktopIndicatorRef.current;
+      const container = desktopNavRef.current;
+
+      if (!indicator || !container || isSettingsPage || !activeDesktopTab) {
+        if (indicator) {
+          gsap.killTweensOf(indicator);
+          gsap.set(indicator, { autoAlpha: 0, x: 0, y: 0, scale: 0.96 });
+        }
+        desktopIndicatorReadyRef.current = false;
+        return;
+      }
+
+      const targetEl = container.querySelector<HTMLElement>(`[data-desktop-nav-tab="${activeDesktopTab}"]`);
+      if (!targetEl) return;
+
+      const x = Math.round(targetEl.offsetLeft);
+      const y = Math.round(targetEl.offsetTop);
+      const width = Math.round(targetEl.offsetWidth);
+      const height = Math.round(targetEl.offsetHeight);
+
+      gsap.killTweensOf(indicator);
+
+      if (!desktopIndicatorReadyRef.current || !animate) {
+        gsap.set(indicator, {
+          x,
+          y,
+          width,
+          height,
+          autoAlpha: 1,
+          scale: 1,
+          force3D: true,
+        });
+        desktopIndicatorReadyRef.current = true;
+        return;
+      }
+
+      gsap.to(indicator, {
+        x,
+        y,
+        width,
+        height,
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.32,
+        ease: 'power3.out',
+        overwrite: 'auto',
+        force3D: true,
+      });
+    },
+    [activeDesktopTab, isSettingsPage],
+  );
+
+  const animateDesktopIndicatorToElement = useCallback((targetEl: HTMLElement) => {
+    const indicator = desktopIndicatorRef.current;
+    if (!indicator || isSettingsPage) return;
+
+    const x = Math.round(targetEl.offsetLeft);
+    const y = Math.round(targetEl.offsetTop);
+    const width = Math.round(targetEl.offsetWidth);
+    const height = Math.round(targetEl.offsetHeight);
+
+    gsap.killTweensOf(indicator);
+
+    if (!desktopIndicatorReadyRef.current) {
+      gsap.set(indicator, { autoAlpha: 1, scale: 1, force3D: true });
+      desktopIndicatorReadyRef.current = true;
+    }
+
+    gsap.to(indicator, {
+      x,
+      y,
+      width,
+      height,
+      autoAlpha: 1,
+      scale: 1,
+      duration: 0.32,
+      ease: 'power3.out',
+      overwrite: 'auto',
+      force3D: true,
+    });
+  }, [isSettingsPage]);
+
   // Animate indicator to the active tab position (useGSAP for auto-cleanup)
   useGSAP(() => {
     syncMobileIndicator(indicatorReadyRef.current);
   }, { dependencies: [syncMobileIndicator], scope: mobileNavRef });
+
+  useGSAP(() => {
+    syncDesktopIndicator(desktopIndicatorReadyRef.current);
+  }, { dependencies: [syncDesktopIndicator], scope: desktopNavRef });
 
   useLayoutEffect(() => {
     const container = mobileNavRef.current;
@@ -190,18 +316,50 @@ export function NavBar(): ReactNode {
     };
   }, [syncMobileIndicator]);
 
+  useLayoutEffect(() => {
+    const container = desktopNavRef.current;
+    if (!container) return;
+
+    const scheduleSync = () => {
+      window.requestAnimationFrame(() => syncDesktopIndicator(false));
+    };
+
+    const resizeObserver =
+      typeof ResizeObserver !== 'undefined' ? new ResizeObserver(scheduleSync) : null;
+    resizeObserver?.observe(container);
+
+    window.addEventListener('resize', scheduleSync);
+
+    if ('fonts' in document) {
+      void document.fonts.ready.then(scheduleSync);
+    }
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener('resize', scheduleSync);
+    };
+  }, [syncDesktopIndicator]);
+
   // Handle mobile tab click with transition + haptic
   const handleMobileTabClick = useCallback(
-    (e: React.MouseEvent, href: string) => {
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault();
+      animateMobileIndicatorToElement(e.currentTarget);
       haptic.selectionChanged();
       transitionNavigate(href);
     },
-    [haptic, transitionNavigate],
+    [animateMobileIndicatorToElement, haptic, transitionNavigate],
   );
 
-  // Detect if we're on settings page
-  const isSettingsPage = pathname === '/settings' || pathname.startsWith('/settings/');
+  const handleDesktopTabClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      animateDesktopIndicatorToElement(e.currentTarget);
+      haptic.selectionChanged();
+      transitionNavigate(href);
+    },
+    [animateDesktopIndicatorToElement, haptic, transitionNavigate],
+  );
 
   // Extract current settings section from URL (e.g., /settings/journey → "journey")
   const currentSettingsSection = pathname.startsWith('/settings/')
@@ -348,9 +506,9 @@ export function NavBar(): ReactNode {
             const label = t(labelKey);
             return (
               <NavLink
-                key={href}
-                to={href}
-                data-nav-tab={tab}
+                    key={href}
+                    to={href}
+                    data-nav-tab={tab}
                 onClick={(e) => {
                   if (isTutorial && showTutorialSpotlight) dismissSpotlight();
                   if (isActive) return; // Already on this tab
@@ -571,7 +729,13 @@ export function NavBar(): ReactNode {
             </div>
 
             {/* Main Links */}
-            <div className="flex flex-col gap-2 w-full px-3 flex-1 relative z-10">
+            <div ref={desktopNavRef} className="flex flex-col gap-2 w-full px-3 flex-1 relative z-10">
+              <div
+                ref={desktopIndicatorRef}
+                className="absolute left-0 top-0 rounded-2xl bg-primary shadow-soft pointer-events-none will-change-transform"
+                style={{ opacity: 0, visibility: 'hidden' }}
+                aria-hidden="true"
+              />
               {mainLinks.map(({ tab, labelKey, icon: Icon }) => {
                 const href = resolvePrimaryTabPath(tab);
                 const isActive = isPrimaryTabActive(pathname, tab);
@@ -582,9 +746,14 @@ export function NavBar(): ReactNode {
                   <NavLink
                     key={href}
                     to={href}
-                    onClick={isTutorial && showTutorialSpotlight ? dismissSpotlight : undefined}
+                    data-desktop-nav-tab={tab}
+                    onClick={(e) => {
+                      if (isTutorial && showTutorialSpotlight) dismissSpotlight();
+                      if (isActive) return;
+                      handleDesktopTabClick(e, href);
+                    }}
                     className={cn(
-                      'block relative',
+                      'block relative z-10',
                       isSpotlighted &&
                         !isActive &&
                         'ring-2 ring-primary ring-offset-2 ring-offset-background rounded-2xl',
@@ -599,7 +768,7 @@ export function NavBar(): ReactNode {
                           ? 'w-full justify-start gap-3 px-4 h-14'
                           : 'justify-center w-14 h-14',
                         isActive
-                          ? 'bg-primary text-primary-foreground shadow-soft'
+                          ? 'bg-transparent text-primary-foreground'
                           : 'text-muted-foreground hover:bg-secondary/60',
                       )}
                     >
@@ -664,9 +833,14 @@ export function NavBar(): ReactNode {
 
               <NavLink
                 to={resolvePrimaryTabPath(settingsLink.tab)}
-                className="block"
+                className="block relative z-10"
+                data-desktop-nav-tab={settingsLink.tab}
                 aria-label={t(settingsLink.labelKey)}
                 aria-current={isPrimaryTabActive(pathname, settingsLink.tab) ? 'page' : undefined}
+                onClick={(e) => {
+                  if (isPrimaryTabActive(pathname, settingsLink.tab)) return;
+                  handleDesktopTabClick(e, resolvePrimaryTabPath(settingsLink.tab));
+                }}
               >
                 <div
                   className={cn(
@@ -675,7 +849,7 @@ export function NavBar(): ReactNode {
                       ? 'w-full justify-start gap-3 px-4 h-14'
                       : 'justify-center w-14 h-14',
                     isPrimaryTabActive(pathname, settingsLink.tab)
-                      ? 'bg-primary text-primary-foreground shadow-soft'
+                      ? 'bg-transparent text-primary-foreground'
                       : 'text-muted-foreground hover:bg-secondary/60',
                   )}
                 >

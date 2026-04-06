@@ -35,14 +35,17 @@ import {
   type OspanSessionMachineAction,
 } from '@neurodual/logic';
 import { ArrowClockwise, House, Check, X, ListChecks, ChartBar } from '@phosphor-icons/react';
+import { useLocation } from 'react-router';
 import { useHaptic } from '../hooks/use-haptic';
 import { useAnalytics } from '../hooks/use-analytics';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useAppPorts, useCommandBus } from '../providers';
 
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
 import { GameQuitModal } from '../components/game/game-quit-modal';
 import { useTranslation } from 'react-i18next';
+import { resolveNavigationOrigin } from '../lib/navigation-origin';
 import {
   type CogTaskEventEmitter,
   getTemporalContext,
@@ -87,6 +90,8 @@ function materializeOspanEvent(
 
 export function OspanTrainingPage() {
   const { t } = useTranslation();
+  const location = useLocation();
+  const { transitionNavigate } = useTransitionNavigate();
   const haptic = useHaptic();
   const { track } = useAnalytics();
   const commandBus = useCommandBus();
@@ -190,7 +195,7 @@ export function OspanTrainingPage() {
       if (completionDraft?.reason === 'abandoned') {
         emitter.events = [];
         void cleanupAbandonedSession(persistence, emitter.sessionId).catch(() => {});
-        window.history.back();
+        transitionNavigate(resolveNavigationOrigin(location.state));
         return;
       }
 
@@ -261,7 +266,7 @@ export function OspanTrainingPage() {
         })();
       }
     },
-    [complete, persistence, track, startSpan, t],
+    [complete, location.state, persistence, startSpan, t, track, transitionNavigate],
   );
 
   const applyMachineAction = useCallback(
@@ -859,7 +864,7 @@ export function OspanTrainingPage() {
                         n_level: startSpan,
                         play_context: 'free',
                       });
-                      window.history.back();
+                      transitionNavigate(resolveNavigationOrigin(location.state));
                     }}
                     className="flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-surface text-muted-foreground transition-all hover:text-foreground active:scale-[0.98]"
                   >

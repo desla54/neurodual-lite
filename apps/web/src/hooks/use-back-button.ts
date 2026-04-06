@@ -13,7 +13,6 @@
 import { useEffectEvent } from 'react';
 import { useMountEffect } from '@neurodual/ui';
 import { useNavigate, useLocation } from 'react-router';
-import { armShellNavigationTransition } from '../lib/navigation-transitions';
 
 /**
  * Pages where back button is blocked (active game sessions).
@@ -66,14 +65,12 @@ export function useBackButton(): void {
 
       // Can go back in history -> navigate back
       if (canGoBack || window.history.length > 1) {
-        armShellNavigationTransition('back');
         navigate(-1);
         return;
       }
 
       // Fallback: not at root but no history -> go to home
       if (pathname !== '/') {
-        armShellNavigationTransition('modal');
         navigate('/', { replace: true });
         return;
       }

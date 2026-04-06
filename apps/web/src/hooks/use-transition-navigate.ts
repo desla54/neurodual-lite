@@ -2,59 +2,37 @@
  * useTransitionNavigate
  *
  * Centralized app navigation hook.
- *
- * It classifies each navigation intent (tab, push/back, modal),
- * arms the shell-level transition state, and still exposes the
- * transition direction through context for any legacy consumers.
- *
- * Direction options:
- * - 'push': forward stack navigation
- * - 'back': backward stack navigation
- * - 'modal': fullscreen / cover transition
- * - 'fade': tab-like handoff
+ * Keeps the callsite API stable while route transitions are handled by SSGOI.
  */
 
 import { useCallback } from 'react';
 import { useLocation, useNavigate, type To, type NavigateOptions } from 'react-router';
-import { usePageTransition, type TransitionDirection } from '@neurodual/ui';
-import {
-  armShellNavigationTransition,
-  inferTransitionDirection,
-  normalizePathname,
-  toShellNavigationKind,
-} from '../lib/navigation-transitions';
+import type { TransitionDirection } from '@neurodual/ui';
+import { attachNavigationOrigin } from '../lib/navigation-origin';
 
 export interface TransitionNavigateOptions extends NavigateOptions {
   direction?: TransitionDirection;
 }
 
 export function useTransitionNavigate() {
-  const location = useLocation();
   const navigate = useNavigate();
-  const { setTransitionDirection } = usePageTransition();
+  const location = useLocation();
 
   const transitionNavigate = useCallback(
     (to: To | number, options?: TransitionNavigateOptions) => {
-      // Handle back navigation (number argument) — no animation
+      const { direction, ...navOptions } = options ?? {};
       if (typeof to === 'number') {
         navigate(to);
         return;
       }
-
-      const { direction: explicitDirection, ...navOptions } = options ?? {};
-      const nextPathname =
-        typeof to === 'string'
-          ? normalizePathname(to.split('?')[0]?.split('#')[0] ?? '/')
-          : normalizePathname(to.pathname ?? location.pathname);
-      const direction =
-        explicitDirection ?? inferTransitionDirection(location.pathname, nextPathname);
-      const shellKind = toShellNavigationKind(direction);
-
-      setTransitionDirection(direction);
-      armShellNavigationTransition(shellKind);
-      navigate(to, navOptions);
+      const currentPath = `${location.pathname}${location.search}${location.hash}`;
+      const state =
+        direction === 'modal'
+          ? attachNavigationOrigin(navOptions.state, currentPath)
+          : navOptions.state;
+      navigate(to, { ...navOptions, state });
     },
-    [location.pathname, navigate, setTransitionDirection],
+    [location.hash, location.pathname, location.search, navigate],
   );
 
   return { transitionNavigate };

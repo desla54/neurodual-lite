@@ -17,33 +17,55 @@ import { StatsPage } from './pages/stats';
 import { SettingsPage } from './pages/settings';
 import { TutorialHubPage } from './pages/tutorial-hub';
 
+const loadNbackTrainingPage = () =>
+  import('./pages/nback-training').then((m) => ({ default: m.NbackTrainingPage }));
+const loadStroopTrainingPage = () =>
+  import('./pages/stroop-training').then((m) => ({ default: m.StroopTrainingPage }));
+const loadStroopFlexTrainingPage = () =>
+  import('./pages/stroop-training').then((m) => ({ default: m.StroopFlexTrainingPage }));
+const loadOspanTrainingPage = () =>
+  import('./pages/ospan-training').then((m) => ({ default: m.OspanTrainingPage }));
+const loadGridlockTrainingPage = () =>
+  import('./pages/gridlock-training').then((m) => ({ default: m.GridlockTrainingPage }));
+const loadDualMixTrainingPage = () =>
+  import('./pages/dual-mix-training').then((m) => ({ default: m.DualMixTrainingPage }));
+const loadOspanMeasurePage = () =>
+  import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage }));
+const loadTutorialGuidedPage = () =>
+  import('./pages/tutorial-guided').then((m) => ({ default: m.TutorialGuidedPage }));
+
 // Lazy load training pages — only the 3 kept modes
-const NbackTrainingPage = lazy(() =>
-  import('./pages/nback-training').then((m) => ({ default: m.NbackTrainingPage })),
-);
-const StroopTrainingPage = lazy(() =>
-  import('./pages/stroop-training').then((m) => ({ default: m.StroopTrainingPage })),
-);
-const StroopFlexTrainingPage = lazy(() =>
-  import('./pages/stroop-training').then((m) => ({ default: m.StroopFlexTrainingPage })),
-);
-const OspanTrainingPage = lazy(() =>
-  import('./pages/ospan-training').then((m) => ({ default: m.OspanTrainingPage })),
-);
-const GridlockTrainingPage = lazy(() =>
-  import('./pages/gridlock-training').then((m) => ({ default: m.GridlockTrainingPage })),
-);
-const DualMixTrainingPage = lazy(() =>
-  import('./pages/dual-mix-training').then((m) => ({ default: m.DualMixTrainingPage })),
-);
-const OspanMeasurePage = lazy(() =>
-  import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage })),
-);
+const NbackTrainingPage = lazy(loadNbackTrainingPage);
+const StroopTrainingPage = lazy(loadStroopTrainingPage);
+const StroopFlexTrainingPage = lazy(loadStroopFlexTrainingPage);
+const OspanTrainingPage = lazy(loadOspanTrainingPage);
+const GridlockTrainingPage = lazy(loadGridlockTrainingPage);
+const DualMixTrainingPage = lazy(loadDualMixTrainingPage);
+const OspanMeasurePage = lazy(loadOspanMeasurePage);
 
 // Tutorial session stays lazy — it's full-screen and heavier than the hub.
-const TutorialGuidedPage = lazy(() =>
-  import('./pages/tutorial-guided').then((m) => ({ default: m.TutorialGuidedPage })),
-);
+const TutorialGuidedPage = lazy(loadTutorialGuidedPage);
+
+let fullscreenPreloadPromise: Promise<unknown> | null = null;
+
+export function preloadFullscreenRoutes(): Promise<unknown> {
+  if (fullscreenPreloadPromise) {
+    return fullscreenPreloadPromise;
+  }
+
+  fullscreenPreloadPromise = Promise.allSettled([
+    loadNbackTrainingPage(),
+    loadStroopTrainingPage(),
+    loadStroopFlexTrainingPage(),
+    loadOspanTrainingPage(),
+    loadGridlockTrainingPage(),
+    loadDualMixTrainingPage(),
+    loadOspanMeasurePage(),
+    loadTutorialGuidedPage(),
+  ]);
+
+  return fullscreenPreloadPromise;
+}
 
 // Minimal loading fallback
 function PageLoader() {

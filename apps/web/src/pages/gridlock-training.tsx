@@ -59,6 +59,7 @@ import {
 } from '@neurodual/ui';
 import { ArrowClockwise, ArrowCounterClockwise, Check, Lightbulb } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router';
 
 import { GameQuitModal } from '../components/game';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
@@ -75,6 +76,7 @@ import {
   type CogTaskEventEmitter,
 } from '../lib/cognitive-task-events';
 import { buildReportActionPayload } from '../lib/analytics-journey-props';
+import { resolveNavigationOrigin } from '../lib/navigation-origin';
 import { getStatsPresetForReport } from '../lib/stats-preset';
 import { useAppPorts, useCommandBus } from '../providers';
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
@@ -166,6 +168,7 @@ function computeDeltaRange(
 
 export function GridlockTrainingPage() {
   const { t } = useTranslation();
+  const location = useLocation();
   const { transitionNavigate } = useTransitionNavigate();
   const haptic = useHaptic();
   const { track } = useAnalytics();
@@ -709,8 +712,8 @@ export function GridlockTrainingPage() {
     });
     emitterRef.current.events = [];
     void cleanupAbandonedSession(persistence, emitterRef.current.sessionId).catch(() => {});
-    window.history.back();
-  }, [clearTimers, persistence, results.length, totalPuzzles, track]);
+    transitionNavigate(resolveNavigationOrigin(location.state));
+  }, [clearTimers, location.state, persistence, results.length, totalPuzzles, track, transitionNavigate]);
 
   const handleRestart = useCallback(() => {
     track('report_action_clicked', {
@@ -890,7 +893,7 @@ export function GridlockTrainingPage() {
             onBackToHome={async () => {
               track('report_action_clicked', buildReportActionPayload(stableReport, 'home'));
               await maybeShowAd();
-              window.history.back();
+              transitionNavigate(resolveNavigationOrigin(location.state));
             }}
             onGoToStats={(report) => {
               track('report_action_clicked', buildReportActionPayload(report, 'go_to_stats'));

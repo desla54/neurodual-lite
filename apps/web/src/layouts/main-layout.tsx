@@ -3,14 +3,15 @@
  * Uses Woven Ink design system with global canvas texture.
  */
 
-import { cn, CanvasWeave, PageTransitionProvider, useMountEffect } from '@neurodual/ui';
+import { cn, CanvasWeave, useMountEffect } from '@neurodual/ui';
+import { Ssgoi, SsgoiTransition } from '@ssgoi/react';
+import { fade, sheet, snap } from '@ssgoi/react/view-transitions';
 import { useEffect, useRef, type ReactNode } from 'react';
 import { Navigate, useLocation, useOutlet } from 'react-router';
 import { CommandPalette } from '../components/command-palette';
 import { NavBar } from '../components/nav-bar';
 import { GlobalProfileButton } from '../components/profile';
 import { PWAInstallButton } from '../components/pwa-install-button';
-import { RouteTransitionShell } from '../components/route-transition-shell';
 import { SessionRecoveryGate } from '../components/session-recovery';
 import { useBackButton } from '../hooks/use-back-button';
 import { useModeGates } from '../hooks/use-mode-gates';
@@ -21,6 +22,51 @@ import {
   getPrimaryTabForPath,
   useNavigationMemoryStore,
 } from '../stores/navigation-memory-store';
+import { preloadFullscreenRoutes } from '../router';
+
+const APP_SHELL_ROUTE_ORDER = ['/', '/stats', '/social', '/tutorial', '/settings'] as const;
+
+const appShellTransitions = APP_SHELL_ROUTE_ORDER.flatMap((from, fromIndex) =>
+  APP_SHELL_ROUTE_ORDER.slice(fromIndex + 1).map((to) => ({
+    from,
+    to,
+    transition: snap({ direction: 'left' }),
+    symmetric: true,
+  })),
+);
+
+const ssgoiConfig = {
+  defaultTransition: fade(),
+  transitions: [
+    ...appShellTransitions,
+    {
+      from: '/settings',
+      to: '/settings/*',
+      transition: snap({ direction: 'left' }),
+      symmetric: true,
+    },
+    { from: '*', to: '/nback', transition: sheet({ direction: 'enter' }) },
+    { from: '/nback', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/stroop', transition: sheet({ direction: 'enter' }) },
+    { from: '/stroop', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/stroop-flex', transition: sheet({ direction: 'enter' }) },
+    { from: '/stroop-flex', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/ospan', transition: sheet({ direction: 'enter' }) },
+    { from: '/ospan', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/gridlock', transition: sheet({ direction: 'enter' }) },
+    { from: '/gridlock', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/dual-mix', transition: sheet({ direction: 'enter' }) },
+    { from: '/dual-mix', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/ospan-measure', transition: sheet({ direction: 'enter' }) },
+    { from: '/ospan-measure', to: '*', transition: sheet({ direction: 'exit' }) },
+    { from: '*', to: '/tutorial/*', transition: sheet({ direction: 'enter' }) },
+    { from: '/tutorial/*', to: '*', transition: sheet({ direction: 'exit' }) },
+  ],
+};
+
+function useSsgoiPathname(): string {
+  return useLocation().pathname;
+}
 
 export function MainLayout(): ReactNode {
   const location = useLocation();
@@ -43,6 +89,20 @@ export function MainLayout(): ReactNode {
     return () => {
       window.history.scrollRestoration = previous;
     };
+  });
+
+  useMountEffect(() => {
+    const preload = () => {
+      void preloadFullscreenRoutes();
+    };
+
+    if (typeof window.requestIdleCallback === 'function') {
+      const handle = window.requestIdleCallback(preload, { timeout: 1200 });
+      return () => window.cancelIdleCallback?.(handle);
+    }
+
+    const timeoutId = window.setTimeout(preload, 300);
+    return () => window.clearTimeout(timeoutId);
   });
 
   useMountEffect(() => {
@@ -141,10 +201,12 @@ export function MainLayout(): ReactNode {
   const isMeskerPage = location.pathname === '/mesker';
   const isProfilePage = location.pathname === '/profile';
   const isVisualLogicTutorial = location.pathname === '/visual-logic-tutorial';
+  const isViewportManagedFullscreen = location.pathname === '/ospan-measure';
   const routeModeId = getModeForRoute(location.pathname);
   const isLockedModeRoute = routeModeId != null && !isModePlayable(routeModeId);
   const isFullscreenPage =
     FULLSCREEN_PATHS.has(location.pathname) ||
+    isViewportManagedFullscreen ||
     isReplayPage ||
     isActiveTutorialPage ||
     isBetaTutorialPage ||
@@ -159,7 +221,7 @@ export function MainLayout(): ReactNode {
 
   return (
     <SessionRecoveryGate>
-      <PageTransitionProvider>
+      <Ssgoi config={ssgoiConfig} usePathname={useSsgoiPathname}>
         <div className="flex flex-col h-dvh bg-woven-bg overflow-hidden relative pt-safe ps-safe pe-safe">
           {/* Global Woven Canvas texture - fixed background for entire app */}
           <div className="fixed inset-0 z-0 pointer-events-none opacity-30 md:opacity-50">
@@ -203,15 +265,33 @@ export function MainLayout(): ReactNode {
               )}
               {isFullscreenPage ? (
                 <div className="fullscreen-route-content flex flex-1 flex-col">
-                  <RouteTransitionShell routeKey={scrollMemoryKey}>{outlet}</RouteTransitionShell>
+                  {isViewportManagedFullscreen ? (
+                    outlet
+                  ) : (
+                    <SsgoiTransition
+                      key={scrollMemoryKey}
+                      id={location.pathname}
+                      className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col overflow-hidden"
+                      data-route-key={scrollMemoryKey}
+                    >
+                      {outlet}
+                    </SsgoiTransition>
+                  )}
                 </div>
               ) : (
-                <RouteTransitionShell routeKey={scrollMemoryKey}>{outlet}</RouteTransitionShell>
+                <SsgoiTransition
+                  key={scrollMemoryKey}
+                  id={location.pathname}
+                  className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col min-h-0"
+                  data-route-key={scrollMemoryKey}
+                >
+                  {outlet}
+                </SsgoiTransition>
               )}
             </div>
           </main>
         </div>
-      </PageTransitionProvider>
+      </Ssgoi>
     </SessionRecoveryGate>
   );
 }
