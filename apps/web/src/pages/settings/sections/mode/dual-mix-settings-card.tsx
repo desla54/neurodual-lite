@@ -120,11 +120,7 @@ export function DualMixSettingsCard(): ReactNode {
         )}
         checked={manualAdvance}
         onChange={(value) =>
-          setModeSettingFor(
-            'dual-mix',
-            'dualMixManualAdvance' as never,
-            value as never,
-          )
+          setModeSettingFor('dual-mix', 'dualMixManualAdvance' as never, value as never)
         }
       />
     </CardShell>

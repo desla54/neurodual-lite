@@ -12,8 +12,8 @@ export function SocialPage(): ReactNode {
   const { t } = useTranslation();
 
   return (
-    <div className="flex min-h-full flex-1 items-center justify-center">
-      <div className="mx-auto w-full max-w-md px-4 text-center">
+    <div className="w-full px-4 pt-24 pb-8 md:pt-16 md:pb-10">
+      <div className="mx-auto w-full max-w-md text-center">
         {/* Coming soon card */}
         <div className="surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--border)/0.15)]">
           {/* Header with icon */}

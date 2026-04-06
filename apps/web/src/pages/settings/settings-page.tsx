@@ -7,13 +7,13 @@
  * - App: Language, Personalization, Notifications, Accessibility, About
  */
 
-import { type ComponentType, type ReactNode, lazy, useEffect } from 'react';
-import { SuspenseFade } from '../../components/suspense-fade';
+import { Suspense, type ComponentType, type ReactNode, lazy, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { ArrowLeft } from '@phosphor-icons/react';
 import { useTransitionNavigate } from '../../hooks/use-transition-navigate';
 import { useSettingsStore } from '../../stores';
+import { resolveNavigationOrigin } from '../../lib/navigation-origin';
 import {
   DEFAULT_TEST_MODE,
   DEFAULT_TRAINING_MODE,
@@ -76,6 +76,7 @@ export function SettingsPage(): ReactNode {
     section?: string;
     subSection?: string;
   }>();
+  const location = useLocation();
   const { transitionNavigate } = useTransitionNavigate();
   const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
@@ -95,7 +96,7 @@ export function SettingsPage(): ReactNode {
   // Render the appropriate section based on URL
   const renderSection = (): ReactNode => {
     return (
-      <SuspenseFade fallback={<SectionSkeleton />}>
+      <Suspense fallback={<SectionSkeleton />}>
         {(() => {
           switch (section) {
             case 'journey':
@@ -126,7 +127,7 @@ export function SettingsPage(): ReactNode {
               return <JourneySection />;
           }
         })()}
-      </SuspenseFade>
+      </Suspense>
     );
   };
 
@@ -159,6 +160,7 @@ export function SettingsPage(): ReactNode {
   const subPageSubtitle = subPageSubtitleEntry
     ? t(subPageSubtitleEntry[0], subPageSubtitleEntry[1])
     : t(sectionTitle);
+  const subPageBackTarget = resolveNavigationOrigin(location.state, `/settings/${section}`);
 
   return (
     <div className={pagePaddingClassName}>
@@ -167,9 +169,7 @@ export function SettingsPage(): ReactNode {
         {isSubPage ? (
           <button
             type="button"
-            onClick={() =>
-              transitionNavigate(`/settings/${section}`, { replace: true, direction: 'back' })
-            }
+            onClick={() => transitionNavigate(subPageBackTarget, { replace: true, direction: 'back' })}
             className="shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground/10 text-foreground hover:bg-foreground/15 active:scale-[0.97] transition-all"
             aria-label={t('common.back')}
           >
@@ -195,9 +195,7 @@ export function SettingsPage(): ReactNode {
         <div className="hidden md:flex items-center gap-3 min-w-0">
           <button
             type="button"
-            onClick={() =>
-              transitionNavigate(`/settings/${section}`, { replace: true, direction: 'back' })
-            }
+            onClick={() => transitionNavigate(subPageBackTarget, { replace: true, direction: 'back' })}
             className="shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground/10 text-foreground hover:bg-foreground/15 active:scale-[0.97] transition-all"
             aria-label={t('common.back')}
           >

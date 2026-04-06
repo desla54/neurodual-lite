@@ -1297,8 +1297,7 @@ export const useSettingsStore = create<SettingsState>()(
     ui: DEFAULT_UI_SETTINGS,
 
     // Actions - Mode
-    setCurrentMode: (mode) =>
-      set({ currentMode: mode, freeTraining: { selectedModeId: mode } }),
+    setCurrentMode: (mode) => set({ currentMode: mode, freeTraining: { selectedModeId: mode } }),
 
     // Actions - Mode Settings
     setModeSetting: (key, value) =>
@@ -2414,9 +2413,7 @@ export const useSettingsStore = create<SettingsState>()(
         return {
           savedJourneys: newJourneys,
           journeyUi:
-            isActive && defaultJourney
-              ? { selectedJourneyId: defaultJourney.id }
-              : state.journeyUi,
+            isActive && defaultJourney ? { selectedJourneyId: defaultJourney.id } : state.journeyUi,
           ui:
             isActive && defaultJourney
               ? {
@@ -2732,12 +2729,14 @@ export const useSettingsStore = create<SettingsState>()(
           migrateJourneyWithStrategy(journey, mergedUi.journeyModeSettingsByJourneyId[journey.id]),
         );
         const raw = settings as unknown as Record<string, unknown>;
-        const persistedFreeTrainingMode =
-          (raw['freeTraining'] as { selectedModeId?: GameModeId } | undefined)?.selectedModeId;
-        const persistedJourneyUiId =
-          (raw['journeyUi'] as { selectedJourneyId?: string } | undefined)?.selectedJourneyId;
+        const persistedFreeTrainingMode = (
+          raw['freeTraining'] as { selectedModeId?: GameModeId } | undefined
+        )?.selectedModeId;
+        const persistedJourneyUiId = (
+          raw['journeyUi'] as { selectedJourneyId?: string } | undefined
+        )?.selectedJourneyId;
         const persistedCurrentMode =
-          persistedFreeTrainingMode ?? ((settings.currentMode as GameModeId) ?? state.currentMode);
+          persistedFreeTrainingMode ?? (settings.currentMode as GameModeId) ?? state.currentMode;
         const guarded = applyFeatureAccessGuards(persistedCurrentMode, migratedJourneys, mergedUi);
 
         // Restore persisted LWW timestamp (defaults to 0 for pre-existing data)
@@ -2753,7 +2752,9 @@ export const useSettingsStore = create<SettingsState>()(
           },
           journeyUi: {
             selectedJourneyId:
-              persistedJourneyUiId ?? guarded.ui.activeJourneyId ?? state.journeyUi.selectedJourneyId,
+              persistedJourneyUiId ??
+              guarded.ui.activeJourneyId ??
+              state.journeyUi.selectedJourneyId,
           },
           savedJourneys: migratedJourneys,
           modes: {
@@ -2763,7 +2764,9 @@ export const useSettingsStore = create<SettingsState>()(
           ui: {
             ...guarded.ui,
             activeJourneyId:
-              persistedJourneyUiId ?? guarded.ui.activeJourneyId ?? state.journeyUi.selectedJourneyId,
+              persistedJourneyUiId ??
+              guarded.ui.activeJourneyId ??
+              state.journeyUi.selectedJourneyId,
           },
         };
       });

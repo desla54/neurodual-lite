@@ -28,7 +28,9 @@ afterEach(() => {
 
 describe('trace settings scopes', () => {
   it('stores free-training dual trace timing in the mode settings namespace', () => {
-    useSettingsStore.getState().setModeSettingFor('dual-trace', 'traceIsiMs' as never, 3100 as never);
+    useSettingsStore
+      .getState()
+      .setModeSettingFor('dual-trace', 'traceIsiMs' as never, 3100 as never);
 
     const state = useSettingsStore.getState();
     expect((state.modes['dual-trace'] as Record<string, unknown>)['traceIsiMs']).toBe(3100);
@@ -36,19 +38,22 @@ describe('trace settings scopes', () => {
   });
 
   it('stores journey dual trace timing in the journey settings namespace', () => {
-    useSettingsStore.getState().setJourneyModeSetting(
-      'sim-brainworkshop-journey',
-      'traceIsiMs' as never,
-      4200 as never,
-    );
+    useSettingsStore
+      .getState()
+      .setJourneyModeSetting('sim-brainworkshop-journey', 'traceIsiMs' as never, 4200 as never);
 
     const state = useSettingsStore.getState();
     expect(
-      (state.ui.journeyModeSettingsByJourneyId['sim-brainworkshop-journey'] as Record<string, unknown>)[
-        'traceIsiMs'
-      ],
+      (
+        state.ui.journeyModeSettingsByJourneyId['sim-brainworkshop-journey'] as Record<
+          string,
+          unknown
+        >
+      )['traceIsiMs'],
     ).toBe(4200);
-    expect((state.modes['dual-trace'] as Record<string, unknown> | undefined)?.['traceIsiMs']).toBeUndefined();
+    expect(
+      (state.modes['dual-trace'] as Record<string, unknown> | undefined)?.['traceIsiMs'],
+    ).toBeUndefined();
     expect(state.ui.traceIsiMs).toBe(initialState.ui.traceIsiMs);
   });
 });

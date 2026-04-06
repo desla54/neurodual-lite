@@ -5,10 +5,9 @@
  * with the mode-specific settings panel.
  */
 
-import { type ReactNode, lazy, useEffect, useMemo, useState } from 'react';
-import { SuspenseFade } from '../../../../components/suspense-fade';
+import { Suspense, type ReactNode, lazy, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { Button, Card, Hatching, InfoSheet, Section } from '@neurodual/ui';
 import { CaretRight, Faders, Lock, Play, Timer } from '@phosphor-icons/react';
 import { gameModeRegistry } from '@neurodual/logic';
@@ -23,6 +22,7 @@ import { GameModeSelector } from './mode-selector';
 import type { GameMode } from '../../config';
 import { getRouteForMode } from '../../../../lib/mode-metadata';
 import { createFreePlayIntent } from '../../../../lib/play-intent';
+import { attachNavigationOrigin } from '../../../../lib/navigation-origin';
 import { FreeTrainingPresetSelector } from './free-training-preset-selector';
 import { GAME_MODES } from '../../config';
 import { NLevelSelect } from './plugins/shared';
@@ -163,7 +163,7 @@ function isModeSubPage(value: string | undefined): value is ModeSubPage {
 
 export function ModeSection(): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const location = useLocation();
   const { transitionNavigate } = useTransitionNavigate();
   const { subSection } = useParams<{ subSection?: string }>();
   const alphaEnabled = useAlphaEnabled();
@@ -223,25 +223,25 @@ export function ModeSection(): ReactNode {
 
   useEffect(() => {
     if (subSection && !isModeSubPage(subSection)) {
-      navigate('/settings/mode', { replace: true });
+      transitionNavigate('/settings/mode', { replace: true });
     }
-  }, [navigate, subSection]);
+  }, [subSection, transitionNavigate]);
 
   useEffect(() => {
     if (!isDualnbackClassic) return;
     if (page === 'mode' || page === 'root') return;
-    navigate('/settings/mode', { replace: true });
-  }, [isDualnbackClassic, navigate, page]);
+    transitionNavigate('/settings/mode', { replace: true });
+  }, [isDualnbackClassic, page, transitionNavigate]);
 
   useEffect(() => {
     if (page === 'root' || page === 'mode') return;
     if (!supportsModeSettings) {
-      navigate('/settings/mode', { replace: true });
+      transitionNavigate('/settings/mode', { replace: true });
       return;
     }
     if (supportsModeSubPage(currentMode, page, alphaEnabled)) return;
-    navigate('/settings/mode', { replace: true });
-  }, [alphaEnabled, currentMode, navigate, page, supportsModeSettings]);
+    transitionNavigate('/settings/mode', { replace: true });
+  }, [alphaEnabled, currentMode, page, supportsModeSettings, transitionNavigate]);
 
   const classicNLevel = useSettingsStore((s) => {
     const value = s.modes['dualnback-classic']?.nLevel;
@@ -250,9 +250,12 @@ export function ModeSection(): ReactNode {
   const setModeSettingFor = useSettingsStore((s) => s.setModeSettingFor);
 
   const navigateToPage = (nextPage: ModePage, replace = false) => {
+    const currentPath = `${location.pathname}${location.search}${location.hash}`;
+    const state = nextPage === 'root' ? undefined : attachNavigationOrigin(undefined, currentPath);
     transitionNavigate(nextPage === 'root' ? '/settings/mode' : `/settings/mode/${nextPage}`, {
       replace,
       direction: nextPage === 'root' ? 'back' : 'push',
+      state,
     });
   };
 
@@ -298,9 +301,9 @@ export function ModeSection(): ReactNode {
   if (page === 'base' || page === 'tempo' || page === 'generator' || page === 'advanced') {
     return (
       <div className="space-y-6">
-        <SuspenseFade fallback={<ModeSettingsSkeleton />}>
+        <Suspense fallback={<ModeSettingsSkeleton />}>
           <ModeSettingsPanel mode={currentMode} showPresets={false} forcedTab={page} />
-        </SuspenseFade>
+        </Suspense>
         <ModeQuickLaunchFooter mode={currentMode} />
       </div>
     );
@@ -410,9 +413,9 @@ export function ModeSection(): ReactNode {
           }
         >
           {inlineBaseSettings ? (
-            <SuspenseFade fallback={<ModeSettingsSkeleton />}>
+            <Suspense fallback={<ModeSettingsSkeleton />}>
               <ModeSettingsPanel mode={currentMode} showPresets={false} forcedTab="base" />
-            </SuspenseFade>
+            </Suspense>
           ) : (
             <Card className="space-y-0" padding="none">
               <div className="divide-y divide-border px-4">

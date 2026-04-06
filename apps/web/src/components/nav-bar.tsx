@@ -166,34 +166,6 @@ export function NavBar(): ReactNode {
     [activeMobileIndex],
   );
 
-  const animateMobileIndicatorToElement = useCallback((targetEl: HTMLElement) => {
-    const indicator = indicatorRef.current;
-    if (!indicator) return;
-
-    const indicatorWidth = indicator.offsetWidth || 48;
-    const indicatorHeight = indicator.offsetHeight || 48;
-    const x = Math.round(targetEl.offsetLeft + (targetEl.offsetWidth - indicatorWidth) / 2);
-    const y = Math.round(targetEl.offsetTop + (targetEl.offsetHeight - indicatorHeight) / 2);
-
-    gsap.killTweensOf(indicator);
-
-    if (!indicatorReadyRef.current) {
-      gsap.set(indicator, { autoAlpha: 1, scale: 1, force3D: true });
-      indicatorReadyRef.current = true;
-    }
-
-    gsap.to(indicator, {
-      x,
-      y,
-      autoAlpha: 1,
-      scale: 1,
-      duration: 0.3,
-      ease: 'power3.out',
-      overwrite: 'auto',
-      force3D: true,
-    });
-  }, []);
-
   const syncDesktopIndicator = useCallback(
     (animate: boolean) => {
       const indicator = desktopIndicatorRef.current;
@@ -208,7 +180,9 @@ export function NavBar(): ReactNode {
         return;
       }
 
-      const targetEl = container.querySelector<HTMLElement>(`[data-desktop-nav-tab="${activeDesktopTab}"]`);
+      const targetEl = container.querySelector<HTMLElement>(
+        `[data-desktop-nav-tab="${activeDesktopTab}"]`,
+      );
       if (!targetEl) return;
 
       const x = Math.round(targetEl.offsetLeft);
@@ -248,51 +222,39 @@ export function NavBar(): ReactNode {
     [activeDesktopTab, isSettingsPage],
   );
 
-  const animateDesktopIndicatorToElement = useCallback((targetEl: HTMLElement) => {
-    const indicator = desktopIndicatorRef.current;
-    if (!indicator || isSettingsPage) return;
-
-    const x = Math.round(targetEl.offsetLeft);
-    const y = Math.round(targetEl.offsetTop);
-    const width = Math.round(targetEl.offsetWidth);
-    const height = Math.round(targetEl.offsetHeight);
-
-    gsap.killTweensOf(indicator);
-
-    if (!desktopIndicatorReadyRef.current) {
-      gsap.set(indicator, { autoAlpha: 1, scale: 1, force3D: true });
-      desktopIndicatorReadyRef.current = true;
-    }
-
-    gsap.to(indicator, {
-      x,
-      y,
-      width,
-      height,
-      autoAlpha: 1,
-      scale: 1,
-      duration: 0.32,
-      ease: 'power3.out',
-      overwrite: 'auto',
-      force3D: true,
-    });
-  }, [isSettingsPage]);
-
   // Animate indicator to the active tab position (useGSAP for auto-cleanup)
-  useGSAP(() => {
-    syncMobileIndicator(indicatorReadyRef.current);
-  }, { dependencies: [syncMobileIndicator], scope: mobileNavRef });
+  useGSAP(
+    () => {
+      syncMobileIndicator(indicatorReadyRef.current);
+    },
+    { dependencies: [syncMobileIndicator], scope: mobileNavRef },
+  );
 
-  useGSAP(() => {
-    syncDesktopIndicator(desktopIndicatorReadyRef.current);
-  }, { dependencies: [syncDesktopIndicator], scope: desktopNavRef });
+  useGSAP(
+    () => {
+      syncDesktopIndicator(desktopIndicatorReadyRef.current);
+    },
+    { dependencies: [syncDesktopIndicator], scope: desktopNavRef },
+  );
+
+  // Sidebar expansion state (hover with delay + pin)
+  const [isHovered, setIsHovered] = useState(false);
+  const isPinned = useSettingsStore((s) => s.ui.sidebarPinned);
+  const setSidebarPinned = useSettingsStore((s) => s.setSidebarPinned);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isExpanded = isHovered || isPinned;
 
   useLayoutEffect(() => {
     const container = mobileNavRef.current;
     if (!container) return;
 
+    let frameId = 0;
     const scheduleSync = () => {
-      window.requestAnimationFrame(() => syncMobileIndicator(false));
+      if (frameId !== 0) return;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        syncMobileIndicator(false);
+      });
     };
 
     const resizeObserver =
@@ -309,6 +271,9 @@ export function NavBar(): ReactNode {
     }
 
     return () => {
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId);
+      }
       resizeObserver?.disconnect();
       window.removeEventListener('resize', scheduleSync);
       viewport?.removeEventListener('resize', scheduleSync);
@@ -320,13 +285,15 @@ export function NavBar(): ReactNode {
     const container = desktopNavRef.current;
     if (!container) return;
 
+    let frameId = 0;
+    let timeoutId = 0;
     const scheduleSync = () => {
-      window.requestAnimationFrame(() => syncDesktopIndicator(false));
+      if (frameId !== 0) return;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        syncDesktopIndicator(false);
+      });
     };
-
-    const resizeObserver =
-      typeof ResizeObserver !== 'undefined' ? new ResizeObserver(scheduleSync) : null;
-    resizeObserver?.observe(container);
 
     window.addEventListener('resize', scheduleSync);
 
@@ -334,31 +301,38 @@ export function NavBar(): ReactNode {
       void document.fonts.ready.then(scheduleSync);
     }
 
+    timeoutId = window.setTimeout(() => {
+      syncDesktopIndicator(false);
+    }, 320);
+
     return () => {
-      resizeObserver?.disconnect();
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId);
+      }
+      if (timeoutId !== 0) {
+        window.clearTimeout(timeoutId);
+      }
       window.removeEventListener('resize', scheduleSync);
     };
-  }, [syncDesktopIndicator]);
+  }, [isExpanded, syncDesktopIndicator]);
 
   // Handle mobile tab click with transition + haptic
   const handleMobileTabClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault();
-      animateMobileIndicatorToElement(e.currentTarget);
       haptic.selectionChanged();
       transitionNavigate(href);
     },
-    [animateMobileIndicatorToElement, haptic, transitionNavigate],
+    [haptic, transitionNavigate],
   );
 
   const handleDesktopTabClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault();
-      animateDesktopIndicatorToElement(e.currentTarget);
       haptic.selectionChanged();
       transitionNavigate(href);
     },
-    [animateDesktopIndicatorToElement, haptic, transitionNavigate],
+    [haptic, transitionNavigate],
   );
 
   // Extract current settings section from URL (e.g., /settings/journey → "journey")
@@ -385,14 +359,6 @@ export function NavBar(): ReactNode {
   const dismissSpotlight = () => {
     setTutorialCompleted(true);
   };
-
-  // Sidebar expansion state (hover with delay + pin)
-  const [isHovered, setIsHovered] = useState(false);
-  const isPinned = useSettingsStore((s) => s.ui.sidebarPinned);
-  const setSidebarPinned = useSettingsStore((s) => s.setSidebarPinned);
-  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const isExpanded = isHovered || isPinned;
 
   const handleMouseEnter = useCallback(() => {
     // Clear any pending close timeout
@@ -506,9 +472,9 @@ export function NavBar(): ReactNode {
             const label = t(labelKey);
             return (
               <NavLink
-                    key={href}
-                    to={href}
-                    data-nav-tab={tab}
+                key={href}
+                to={href}
+                data-nav-tab={tab}
                 onClick={(e) => {
                   if (isTutorial && showTutorialSpotlight) dismissSpotlight();
                   if (isActive) return; // Already on this tab
@@ -729,7 +695,10 @@ export function NavBar(): ReactNode {
             </div>
 
             {/* Main Links */}
-            <div ref={desktopNavRef} className="flex flex-col gap-2 w-full px-3 flex-1 relative z-10">
+            <div
+              ref={desktopNavRef}
+              className="flex flex-col gap-2 w-full px-3 flex-1 relative z-10"
+            >
               <div
                 ref={desktopIndicatorRef}
                 className="absolute left-0 top-0 rounded-2xl bg-primary shadow-soft pointer-events-none will-change-transform"

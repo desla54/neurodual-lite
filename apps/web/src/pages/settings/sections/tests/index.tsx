@@ -7,10 +7,9 @@
  * - base/tempo/generator/advanced: forced settings sub-pages
  */
 
-import { type ReactNode, lazy, useEffect, useMemo, useState } from 'react';
-import { SuspenseFade } from '../../../../components/suspense-fade';
+import { Suspense, type ReactNode, lazy, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { Button, Card, Hatching, Section } from '@neurodual/ui';
 import { CaretRight, Faders, Lock, Play, Timer } from '@phosphor-icons/react';
 import { gameModeRegistry } from '@neurodual/logic';
@@ -30,6 +29,7 @@ import { useModeGates } from '../../../../hooks/use-mode-gates';
 import { useDailyPlaytimeGate } from '@neurodual/ui';
 import { UpgradeDialog } from '../../components';
 import { useTransitionNavigate } from '../../../../hooks/use-transition-navigate';
+import { attachNavigationOrigin } from '../../../../lib/navigation-origin';
 
 const ModeSettingsPanel = lazy(() =>
   import('../mode/mode-settings-panel').then((m) => {
@@ -150,7 +150,7 @@ function isTestSubPage(value: string | undefined): value is ModeSubPage {
 
 export function TestsSection(): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const location = useLocation();
   const { transitionNavigate } = useTransitionNavigate();
   const { subSection } = useParams<{ subSection?: string }>();
   const alphaEnabled = useAlphaEnabled();
@@ -168,24 +168,27 @@ export function TestsSection(): ReactNode {
 
   useEffect(() => {
     if (subSection && !isTestSubPage(subSection)) {
-      navigate('/settings/tests', { replace: true });
+      transitionNavigate('/settings/tests', { replace: true });
     }
-  }, [navigate, subSection]);
+  }, [subSection, transitionNavigate]);
 
   useEffect(() => {
     if (page === 'root' || page === 'mode') return;
     if (!supportsModeSettings) {
-      navigate('/settings/tests', { replace: true });
+      transitionNavigate('/settings/tests', { replace: true });
       return;
     }
     if (supportsModeSubPage(currentMode, page, alphaEnabled)) return;
-    navigate('/settings/tests', { replace: true });
-  }, [alphaEnabled, currentMode, navigate, page, supportsModeSettings]);
+    transitionNavigate('/settings/tests', { replace: true });
+  }, [alphaEnabled, currentMode, page, supportsModeSettings, transitionNavigate]);
 
   const navigateToPage = (nextPage: TestPage, replace = false) => {
+    const currentPath = `${location.pathname}${location.search}${location.hash}`;
+    const state = nextPage === 'root' ? undefined : attachNavigationOrigin(undefined, currentPath);
     transitionNavigate(nextPage === 'root' ? '/settings/tests' : `/settings/tests/${nextPage}`, {
       replace,
       direction: nextPage === 'root' ? 'back' : 'push',
+      state,
     });
   };
 
@@ -222,9 +225,9 @@ export function TestsSection(): ReactNode {
   if (page === 'base' || page === 'tempo' || page === 'generator' || page === 'advanced') {
     return (
       <div className="space-y-6">
-        <SuspenseFade fallback={<SettingsSkeleton />}>
+        <Suspense fallback={<SettingsSkeleton />}>
           <ModeSettingsPanel mode={currentMode} showPresets={false} forcedTab={page} />
-        </SuspenseFade>
+        </Suspense>
         <TestQuickLaunchFooter mode={currentMode} />
       </div>
     );
@@ -258,9 +261,9 @@ export function TestsSection(): ReactNode {
       {/* Mode-specific settings — always inline for tests */}
       {supportsModeSettings ? (
         <Section title={t(navigationCopy.sectionTitle, navigationCopy.sectionTitleDefault)}>
-          <SuspenseFade fallback={<SettingsSkeleton />}>
+          <Suspense fallback={<SettingsSkeleton />}>
             <ModeSettingsPanel mode={currentMode} showPresets={false} forcedTab="base" />
-          </SuspenseFade>
+          </Suspense>
         </Section>
       ) : null}
 

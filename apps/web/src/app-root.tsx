@@ -65,7 +65,8 @@ function useJourneyConfig(): JourneyConfig {
       return {
         activeJourneyId: s.journeyUi.selectedJourneyId,
         activeJourney,
-        legacyJourneyModeSettings: s.ui.journeyModeSettingsByJourneyId[s.journeyUi.selectedJourneyId],
+        legacyJourneyModeSettings:
+          s.ui.journeyModeSettingsByJourneyId[s.journeyUi.selectedJourneyId],
       };
     }),
   );

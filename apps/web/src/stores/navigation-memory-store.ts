@@ -11,6 +11,13 @@ export const PRIMARY_TAB_DEFAULT_PATHS: Record<PrimaryNavTab, string> = {
   settings: '/settings',
 };
 
+function normalizeRememberedPrimaryTabPath(tab: PrimaryNavTab, path: string): string {
+  if (tab === 'tutorial' && path.startsWith('/tutorial/')) {
+    return PRIMARY_TAB_DEFAULT_PATHS.tutorial;
+  }
+  return path;
+}
+
 interface NavigationMemoryState {
   scrollPositions: Record<string, number>;
   lastPrimaryTabPath: Partial<Record<PrimaryNavTab, string>>;
@@ -56,7 +63,8 @@ export const useNavigationMemoryStore = create<NavigationMemoryState>((set) => (
     }),
   rememberPrimaryTabPath: (tab, path) =>
     set((state) => {
-      const shouldKeepPath = state.lastPrimaryTabPath[tab] === path;
+      const normalizedPath = normalizeRememberedPrimaryTabPath(tab, path);
+      const shouldKeepPath = state.lastPrimaryTabPath[tab] === normalizedPath;
       const nextLastNonSettingsPrimaryTab =
         tab === 'settings' ? state.lastNonSettingsPrimaryTab : tab;
       if (shouldKeepPath && nextLastNonSettingsPrimaryTab === state.lastNonSettingsPrimaryTab) {
@@ -65,7 +73,7 @@ export const useNavigationMemoryStore = create<NavigationMemoryState>((set) => (
       return {
         lastPrimaryTabPath: {
           ...state.lastPrimaryTabPath,
-          [tab]: path,
+          [tab]: normalizedPath,
         },
         lastNonSettingsPrimaryTab: nextLastNonSettingsPrimaryTab,
       };

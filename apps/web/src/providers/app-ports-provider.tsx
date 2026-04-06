@@ -169,9 +169,7 @@ export function AppPortsProvider({ children }: { children: ReactNode }): ReactNo
         try {
           const [storedPremiumSettings, sessionCount, settingsCount] = await Promise.all([
             Promise.resolve(localStorage.getItem('nd_premium')),
-            persistence.query<{ count: number }>(
-              'SELECT COUNT(*) as count FROM session_summaries',
-            ),
+            persistence.query<{ count: number }>('SELECT COUNT(*) as count FROM session_summaries'),
             persistence.query<{ count: number }>('SELECT COUNT(*) as count FROM settings'),
           ]);
 

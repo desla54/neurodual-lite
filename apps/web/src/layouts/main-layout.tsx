@@ -5,7 +5,7 @@
 
 import { cn, CanvasWeave, useMountEffect } from '@neurodual/ui';
 import { Ssgoi, SsgoiTransition } from '@ssgoi/react';
-import { fade, sheet, snap } from '@ssgoi/react/view-transitions';
+import { fade, sheet } from '@ssgoi/react/view-transitions';
 import { useEffect, useRef, type ReactNode } from 'react';
 import { Navigate, useLocation, useOutlet } from 'react-router';
 import { CommandPalette } from '../components/command-palette';
@@ -24,27 +24,16 @@ import {
 } from '../stores/navigation-memory-store';
 import { preloadFullscreenRoutes } from '../router';
 
-const APP_SHELL_ROUTE_ORDER = ['/', '/stats', '/social', '/tutorial', '/settings'] as const;
-
-const appShellTransitions = APP_SHELL_ROUTE_ORDER.flatMap((from, fromIndex) =>
-  APP_SHELL_ROUTE_ORDER.slice(fromIndex + 1).map((to) => ({
-    from,
-    to,
-    transition: snap({ direction: 'left' }),
-    symmetric: true,
-  })),
-);
-
 const ssgoiConfig = {
-  defaultTransition: fade(),
-  transitions: [
-    ...appShellTransitions,
-    {
-      from: '/settings',
-      to: '/settings/*',
-      transition: snap({ direction: 'left' }),
-      symmetric: true,
+  defaultTransition: fade({
+    physics: {
+      spring: {
+        stiffness: 260,
+        damping: 28,
+      },
     },
+  }),
+  transitions: [
     { from: '*', to: '/nback', transition: sheet({ direction: 'enter' }) },
     { from: '/nback', to: '*', transition: sheet({ direction: 'exit' }) },
     { from: '*', to: '/stroop', transition: sheet({ direction: 'enter' }) },
@@ -245,7 +234,7 @@ export function MainLayout(): ReactNode {
           >
             <div
               className={cn(
-                'flex-1 flex flex-col w-full mx-auto relative',
+                'flex-1 min-h-full flex flex-col w-full mx-auto relative',
                 !isFullscreenPage && 'max-w-4xl px-4',
               )}
             >
@@ -271,7 +260,7 @@ export function MainLayout(): ReactNode {
                     <SsgoiTransition
                       key={scrollMemoryKey}
                       id={location.pathname}
-                      className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col overflow-hidden"
+                      className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col min-h-full overflow-hidden"
                       data-route-key={scrollMemoryKey}
                     >
                       {outlet}
@@ -282,7 +271,7 @@ export function MainLayout(): ReactNode {
                 <SsgoiTransition
                   key={scrollMemoryKey}
                   id={location.pathname}
-                  className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col min-h-0"
+                  className="app-route-surface app-route-layer route-transition-shell relative flex flex-1 flex-col min-h-full"
                   data-route-key={scrollMemoryKey}
                 >
                   {outlet}
