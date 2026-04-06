@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
 import { generateContextualMessageData } from '@neurodual/logic';
-import { CanvasWeave, GameControls, Grid, UnifiedSessionReport, cn } from '@neurodual/ui';
+import { CanvasWeave, GameControls, Grid, HUD_BADGE, UnifiedSessionReport, cn } from '@neurodual/ui';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AnimatedCountdownDigits } from '../components/game/animated-countdown-digits';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
 import { DualMixGridlockBoard } from '../components/game/dual-mix-gridlock-board';
 import { GameQuitModal } from '../components/game/game-quit-modal';
+import { SessionStartingCountdown } from '../components/game/session-starting-countdown';
 import { useHaptic } from '../hooks/use-haptic';
 import { useDualMixSession } from '../hooks/use-dual-mix-session';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
@@ -16,31 +16,7 @@ import { getStatsPresetForReport } from '../lib/stats-preset';
 import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useSettingsStore } from '../stores';
 import { translateContextualMessage } from '../utils/contextual-message';
-
-function StartingCountdown({
-  phase,
-  getReadyText,
-  scheduleAudio,
-}: {
-  phase: string;
-  getReadyText: string;
-  scheduleAudio?: (prepDelayMs: number) => () => void;
-}): ReactNode {
-  if (phase !== 'starting' && phase !== 'countdown') return null;
-  if (phase === 'starting') {
-    return <p className="text-sm text-muted-foreground">{getReadyText}</p>;
-  }
-
-  return (
-    <p className="text-sm text-muted-foreground">
-      {getReadyText}{' '}
-      <AnimatedCountdownDigits
-        prepDelayMs={DUAL_MIX_PREP_DELAY_MS}
-        scheduleAudio={scheduleAudio}
-      />
-    </p>
-  );
-}
+import { TimerIcon } from '@phosphor-icons/react';
 
 export function DualMixTrainingPage(): ReactNode {
   const { t } = useTranslation();
@@ -81,6 +57,24 @@ export function DualMixTrainingPage(): ReactNode {
     submitStroopResponse,
     submitGridlockMove,
   } = useDualMixSession();
+  const displayedRoundCount =
+    phase === 'idle' || phase === 'starting' || phase === 'countdown'
+      ? 0
+      : Math.min(totalRounds, round + 1);
+  const completedRoundCount =
+    phase === 'idle' ||
+    phase === 'starting' ||
+    phase === 'countdown' ||
+    phase === 'nback-stimulus' ||
+    phase === 'nback-response' ||
+    phase === 'stroop-fixation' ||
+    phase === 'stroop-stimulus' ||
+    phase === 'stroop-feedback' ||
+    phase === 'gridlock-move' ||
+    phase === 'paused'
+      ? Math.min(totalRounds, round)
+      : Math.min(totalRounds, round + 1);
+  const hudTrialIndex = completedRoundCount > 0 ? completedRoundCount - 1 : -1;
 
   if (phase === 'finished' && summary && completionReport) {
     const contextMessage = translateContextualMessage(
@@ -132,8 +126,20 @@ export function DualMixTrainingPage(): ReactNode {
       <CognitiveTaskHUD
         label={modeLabel}
         overrideNLevel={nLevel}
-        trialIndex={round}
+        trialIndex={hudTrialIndex}
         totalTrials={totalRounds}
+        customTrialCounter={
+          <div className={cn(HUD_BADGE, 'gap-1')} data-capture-badge="game-hud">
+            <TimerIcon size={12} weight="bold" className="text-woven-text-muted" />
+            <span className="text-[15px] tabular-nums tracking-tight">
+              {String(displayedRoundCount).padStart(2, '0')}
+            </span>
+            <span className="text-woven-text-muted"> / </span>
+            <span className="text-[15px] tabular-nums tracking-tight">
+              {String(totalRounds).padStart(2, '0')}
+            </span>
+          </div>
+        }
         onQuit={() => setShowQuitModal(true)}
         isPaused={phase === 'paused'}
         canPause={canPause || phase === 'paused'}
@@ -141,10 +147,12 @@ export function DualMixTrainingPage(): ReactNode {
       />
 
       <div className="flex h-10 items-center justify-center px-4 text-center">
-        <StartingCountdown
+        <SessionStartingCountdown
           phase={phase}
+          prepDelayMs={DUAL_MIX_PREP_DELAY_MS}
           getReadyText={t('game.starting.getReady', 'Get ready')}
           scheduleAudio={(prepDelayMs) => audio.scheduleCountdownTicks?.(prepDelayMs) ?? (() => {})}
+          className="text-sm text-muted-foreground"
         />
       </div>
 

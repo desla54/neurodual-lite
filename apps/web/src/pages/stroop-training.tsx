@@ -20,6 +20,7 @@ import {
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
 import { GameQuitModal } from '../components/game/game-quit-modal';
 import { StroopSessionReport } from '../components/reports/stroop-session-report';
+import { SessionStartingCountdown } from '../components/game/session-starting-countdown';
 import { useHaptic } from '../hooks/use-haptic';
 import { useAnalytics } from '../hooks/use-analytics';
 import { useAlphaEnabled } from '../hooks/use-beta-features';
@@ -27,18 +28,21 @@ import { useAppPorts, useCommandBus } from '../providers';
 
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router';
 import {
   type CogTaskEventEmitter,
   buildStartEvent,
   buildTrialEvent,
   buildEndEvent,
 } from '../lib/cognitive-task-events';
+import { resolveNavigationOrigin } from '../lib/navigation-origin';
 import { useSettingsStore } from '../stores';
 import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 
 const DEFAULT_TOTAL_TRIALS = 96;
 const MIN_TOTAL_TRIALS = 5;
 const MAX_TOTAL_TRIALS = 160;
+const PREP_DELAY_MS = 4000;
 const STIMULUS_TIMEOUT_MS = 2500;
 const FIXATION_MS = 500;
 const FEEDBACK_MS = 300;
@@ -58,7 +62,16 @@ const RT_MAX_MS = 2500; // inattention
 type StroopModeId = 'stroop' | 'stroop-flex';
 type ColorId = 'red' | 'blue' | 'green' | 'yellow';
 type StroopRule = 'ink' | 'word';
-type Phase = 'idle' | 'fixation' | 'stimulus' | 'feedback' | 'isi' | 'paused' | 'finished';
+type Phase =
+  | 'idle'
+  | 'starting'
+  | 'countdown'
+  | 'fixation'
+  | 'stimulus'
+  | 'feedback'
+  | 'isi'
+  | 'paused'
+  | 'finished';
 type StatusTone = 'default' | 'muted';
 
 const COLOR_IDS: ColorId[] = ['red', 'blue', 'green', 'yellow'];
@@ -130,6 +143,7 @@ function generateTrials(
 
 function StroopPage({ variant }: { variant: StroopModeId }) {
   const { t } = useTranslation();
+  const location = useLocation();
   const { transitionNavigate } = useTransitionNavigate();
   const isFlex = variant === 'stroop-flex';
   const modeLabel = isFlex ? t('settings.gameMode.stroopFlex') : t('settings.gameMode.stroop');
@@ -163,7 +177,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   const haptic = useHaptic();
   const { track } = useAnalytics();
   const commandBus = useCommandBus();
-  const { platformInfo, persistence } = useAppPorts();
+  const { audio, platformInfo, persistence } = useAppPorts();
   const { complete } = useSessionCompletion({});
   const userId = useEffectiveUserId();
 
@@ -225,6 +239,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   );
   const [trialIndex, setTrialIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
+  const [isStarting, setIsStarting] = useState(false);
   const [results, setResults] = useState<TrialResult[]>([]);
   const [lastFeedback, setLastFeedback] = useState<{ correct: boolean; reason?: string } | null>(
     null,
@@ -315,31 +330,77 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
   );
 
   useEffect(() => {
-    if (showIntro) return; // wait for intro to complete
+    if (showIntro) return;
     if (startedSeedRef.current === runSeed) return;
     startedSeedRef.current = runSeed;
-    sessionStartMsRef.current = Date.now();
-    buildStartEvent(emitterRef.current, variant, platformInfo, {
-      trialsCount: totalTrials,
-      fixationMs: FIXATION_MS,
-      stimulusDurationMs: stimulusTimeoutMs,
-      itiMinMs: ISI_MIN_MS,
-      itiMaxMs: ISI_MAX_MS,
-    });
-    track('session_started', {
-      session_id: emitterRef.current.sessionId,
-      mode: 'cognitive-task',
-      n_level: nLevel,
-      modalities: ['visual'],
-      play_context: 'free',
-    });
-    startTrial(0);
-  }, [platformInfo, runSeed, startTrial, stimulusTimeoutMs, totalTrials, variant]);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setTrialIndex(0);
+    setPhase('idle');
+    setIsStarting(false);
+    setResults([]);
+    setLastFeedback(null);
+    respondedRef.current = false;
+  }, [runSeed, showIntro]);
+
+  const startSession = useCallback(() => {
+    if (showIntro || phase !== 'idle' || isStarting) return;
+    setIsStarting(true);
+    setPhase('starting');
+    haptic.vibrate(30);
+
+    void audio
+      .init()
+      .catch(() => {})
+      .finally(() => {
+        sessionStartMsRef.current = Date.now();
+        buildStartEvent(emitterRef.current, variant, platformInfo, {
+          trialsCount: totalTrials,
+          fixationMs: FIXATION_MS,
+          stimulusDurationMs: stimulusTimeoutMs,
+          itiMinMs: ISI_MIN_MS,
+          itiMaxMs: ISI_MAX_MS,
+        });
+        track('session_started', {
+          session_id: emitterRef.current.sessionId,
+          mode: 'cognitive-task',
+          n_level: nLevel,
+          modalities: ['visual'],
+          play_context: 'free',
+        });
+        setIsStarting(false);
+        setPhase('countdown');
+        timerRef.current = setTimeout(() => {
+          timerRef.current = null;
+          startTrial(0);
+        }, PREP_DELAY_MS);
+      });
+  }, [
+    audio,
+    haptic,
+    isStarting,
+    nLevel,
+    phase,
+    platformInfo,
+    showIntro,
+    startTrial,
+    stimulusTimeoutMs,
+    totalTrials,
+    track,
+    variant,
+  ]);
 
   const handleTogglePause = useCallback(() => {
     if (phase === 'paused') {
       startTrial(trialIndex);
-    } else if (phase !== 'idle' && phase !== 'finished') {
+    } else if (
+      phase !== 'idle' &&
+      phase !== 'starting' &&
+      phase !== 'countdown' &&
+      phase !== 'finished'
+    ) {
       if (timerRef.current) {
         clearTimeout(timerRef.current);
         timerRef.current = null;
@@ -491,8 +552,8 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     });
     emitterRef.current.events = [];
     void cleanupAbandonedSession(persistence, emitterRef.current.sessionId).catch(() => {});
-    window.history.back();
-  }, [persistence, results.length, totalTrials, track, variant]);
+    transitionNavigate(resolveNavigationOrigin(location.state));
+  }, [location.state, persistence, results.length, totalTrials, track, transitionNavigate, variant]);
 
   const handleRestart = useCallback(() => {
     track('report_action_clicked', {
@@ -567,12 +628,23 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       ? t('game.cogTask.stroopFlex.ruleWord')
       : t('game.cogTask.stroopFlex.ruleInk');
   const isCurrentBuffer = isBufferTrial(trialIndex);
+  const visibleTotalTrials = Math.max(0, totalTrials - bufferCount);
+  const currentScoredTrial =
+    phase === 'idle' || phase === 'starting' || phase === 'countdown'
+      ? 0
+      : Math.max(0, trialIndex - bufferCount + (isCurrentBuffer ? 0 : 1));
+  const hudTrialIndex = currentScoredTrial > 0 ? currentScoredTrial - 1 : -1;
   const statusLine =
     phase === 'paused'
       ? {
           text: t('game.status.paused'),
           tone: 'muted' as StatusTone,
         }
+      : phase === 'starting' || phase === 'countdown'
+        ? {
+            text: '',
+            tone: 'muted' as StatusTone,
+          }
       : isCurrentBuffer
         ? {
             text:
@@ -606,11 +678,16 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       )}
 
       <CognitiveTaskHUD
-        trialIndex={trialIndex}
-        totalTrials={totalTrials}
+        trialIndex={hudTrialIndex}
+        totalTrials={visibleTotalTrials}
         onQuit={() => setShowQuitModal(true)}
         isPaused={phase === 'paused'}
-        canPause={phase !== 'idle' && phase !== 'finished'}
+        canPause={
+          phase !== 'idle' &&
+          phase !== 'starting' &&
+          phase !== 'countdown' &&
+          phase !== 'finished'
+        }
         onTogglePause={handleTogglePause}
         settingsMenuTitle={modeLabel}
         settingsMenuContent={
@@ -635,14 +712,24 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
       />
 
       <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
-        <p
-          className={cn(
-            'text-sm font-medium transition-colors',
-            statusLine.tone === 'default' ? 'text-woven-text' : 'text-woven-text-muted',
-          )}
-        >
-          {statusLine.text}
-        </p>
+        {phase === 'starting' || phase === 'countdown' ? (
+          <SessionStartingCountdown
+            phase={phase}
+            prepDelayMs={PREP_DELAY_MS}
+            getReadyText={t('game.starting.getReady', 'Get ready')}
+            scheduleAudio={(prepDelayMs) => audio.scheduleCountdownTicks?.(prepDelayMs) ?? (() => {})}
+            className="text-sm text-woven-text-muted"
+          />
+        ) : (
+          <p
+            className={cn(
+              'text-sm font-medium transition-colors',
+              statusLine.tone === 'default' ? 'text-woven-text' : 'text-woven-text-muted',
+            )}
+          >
+            {statusLine.text}
+          </p>
+        )}
       </div>
 
       <div className="game-page-stage">
@@ -694,9 +781,37 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
               </span>
             )}
             {phase === 'idle' && (
-              <span className="select-none text-xl text-woven-text-muted">
-                {t('game.cogTask.preparing')}
-              </span>
+              <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
+                <button
+                  type="button"
+                  onClick={startSession}
+                  disabled={isStarting}
+                  className={cn(
+                    'w-16 h-16 rounded-full bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200 flex items-center justify-center transition-transform duration-100 hover:scale-105 active:scale-95 pointer-events-auto touch-manipulation will-change-transform',
+                    isStarting && 'opacity-60',
+                  )}
+                  data-capture-control="grid-play-button"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-8 h-8 text-white dark:text-neutral-900 ml-1"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            )}
+            {(phase === 'starting' || phase === 'countdown') && (
+              <div className="text-center">
+                <span className="block text-[11px] font-bold uppercase tracking-[0.28em] text-woven-text-muted">
+                  {modeLabel}
+                </span>
+                <span className="mt-2 block select-none text-xl text-woven-text-muted">
+                  {t('game.starting.getReady', 'Get ready')}
+                </span>
+              </div>
             )}
           </div>
         </div>

@@ -52,7 +52,7 @@ import {
   SyncHUD,
 } from '../components/game';
 import { BugReportModal } from '../components/bug-report/bug-report-modal';
-import { AnimatedCountdownDigits } from '../components/game/animated-countdown-digits';
+import { SessionStartingCountdown } from '../components/game/session-starting-countdown';
 import {
   HeadphonesIcon,
   SpeakerSlashIcon,
@@ -163,56 +163,6 @@ function buildSynergyTempoConfigSignature(input: {
     input.trialsCount,
     [...input.activeModalities].join(','),
   ].join('|');
-}
-
-// =============================================================================
-// Starting Countdown Component
-// =============================================================================
-
-/**
- * Displays a countdown message when game is in countdown phase.
- * Shows "Préparez-vous... 3, 2, 1, 0" with numbers appearing progressively.
- *
- * SPEC-DRIVEN: Uses prepDelayMs from spec to calculate step timing.
- * For 4000ms: step changes at 1000ms (→"2"), 2000ms (→"1"), 3000ms (→"0").
- */
-function StartingCountdown({
-  phase,
-  prepDelayMs,
-  getReadyText,
-  onCountdownSecond,
-  scheduleAudio,
-}: {
-  phase: string;
-  prepDelayMs: number;
-  getReadyText: string;
-  onCountdownSecond?: (value: 3 | 2 | 1 | 0) => void;
-  /** Pre-schedule countdown sounds via Web Audio (jitter-free) */
-  scheduleAudio?: (prepDelayMs: number) => () => void;
-}): React.ReactNode {
-  // Show during starting (audio init) or countdown phase
-  if (phase !== 'starting' && phase !== 'countdown') {
-    return null;
-  }
-
-  if (phase === 'starting') {
-    return (
-      <p className="text-sm text-muted-foreground animate-in fade-in duration-200">
-        {getReadyText}
-      </p>
-    );
-  }
-
-  return (
-    <p className="text-sm text-muted-foreground animate-in fade-in duration-200">
-      {getReadyText}
-      <AnimatedCountdownDigits
-        prepDelayMs={prepDelayMs}
-        onCountdownSecond={onCountdownSecond}
-        scheduleAudio={scheduleAudio}
-      />
-    </p>
-  );
 }
 
 // =============================================================================
@@ -1276,9 +1226,15 @@ function GameplayContent({
   const safeTotalTrials = Math.max(0, totalTrials);
   const clampedTrialIndex =
     safeTotalTrials > 0 ? Math.min(Math.max(trialIndex, 0), safeTotalTrials - 1) : 0;
-  const displayedTrial = safeTotalTrials > 0 ? clampedTrialIndex + 1 : 0;
-  const consumedTrials = Math.min(safeTotalTrials, clampedTrialIndex + (trial ? 1 : 0));
-  const remainingTrials = Math.max(0, safeTotalTrials - consumedTrials);
+  const visibleBufferTrials = Math.min(Math.max(nLevel, 0), safeTotalTrials);
+  const visibleTotalTrials = Math.max(0, safeTotalTrials - visibleBufferTrials);
+  const displayedTrial = trial && !trial.isBuffer ? trial.index - visibleBufferTrials + 1 : 0;
+  const consumedTrials = trial
+    ? Math.max(0, trial.index - visibleBufferTrials + (trial.isBuffer ? 0 : 1))
+    : Math.max(0, clampedTrialIndex - visibleBufferTrials);
+  const clampedConsumedTrials = Math.min(visibleTotalTrials, consumedTrials);
+  const remainingTrials = Math.max(0, visibleTotalTrials - clampedConsumedTrials);
+  const hudTrialIndex = displayedTrial > 0 ? displayedTrial - 1 : -1;
   const sessionJourneyStageId = session.getJourneyStageId();
   const sessionJourneyId = session.getJourneyId();
   const effectiveJourneyStageId = sessionJourneyStageId ?? journeyStageId;
@@ -2323,14 +2279,14 @@ function GameplayContent({
                   </span>
                   <span className="text-woven-text-muted"> / </span>
                   <span className="text-[15px] tabular-nums tracking-tight">
-                    {String(safeTotalTrials).padStart(2, '0')}
+                    {String(visibleTotalTrials).padStart(2, '0')}
                   </span>
                 </>
               )}
             </button>
           }
-          trialIndex={trialIndex}
-          totalTrials={totalTrials}
+          trialIndex={hudTrialIndex}
+          totalTrials={visibleTotalTrials}
           countdownMode={gameCountdownMode}
           isPaused={isPaused}
           canPause={isPlaying || isPaused}
@@ -2412,7 +2368,7 @@ function GameplayContent({
                 {t('game.hud.enterToAdvance', 'Press Enter to advance')}
               </p>
             ) : (
-              <StartingCountdown
+              <SessionStartingCountdown
                 phase={phase}
                 prepDelayMs={prepDelayMs}
                 getReadyText={t('game.starting.getReady')}

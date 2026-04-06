@@ -103,9 +103,10 @@ export const GameHUD = memo(function GameHUD({
   className,
 }: GameHUDProps): ReactNode {
   const safeTotalTrials = Math.max(0, totalTrials);
+  const hasStarted = trialIndex >= 0;
   const clampedTrialIndex =
     safeTotalTrials > 0 ? Math.min(Math.max(trialIndex, 0), safeTotalTrials - 1) : 0;
-  const displayedTrial = safeTotalTrials > 0 ? clampedTrialIndex + 1 : 0;
+  const displayedTrial = hasStarted && safeTotalTrials > 0 ? clampedTrialIndex + 1 : 0;
   const remaining = Math.max(0, safeTotalTrials - displayedTrial);
   const progressPercent =
     safeTotalTrials > 0 ? Math.min(100, Math.max(0, (displayedTrial / safeTotalTrials) * 100)) : 0;

@@ -31,6 +31,8 @@ export interface CognitiveTaskHUDProps {
   trialIndex: number;
   /** Total number of trials */
   totalTrials: number;
+  /** Optional custom trial counter node */
+  customTrialCounter?: ReactNode;
   /** Called when quit button is clicked */
   onQuit: () => void;
   /** Show progress bar below HUD (default: true) */
@@ -58,6 +60,7 @@ export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
   sublabel,
   trialIndex,
   totalTrials,
+  customTrialCounter,
   onQuit,
   showProgressBar = true,
   isPaused = false,
@@ -115,6 +118,7 @@ export const CognitiveTaskHUD = memo(function CognitiveTaskHUD({
         sublabel={sublabel}
         trialIndex={trialIndex}
         totalTrials={totalTrials}
+        customTrialCounter={customTrialCounter}
         isPaused={isPaused}
         canPause={canPause}
         onTogglePause={onTogglePause}

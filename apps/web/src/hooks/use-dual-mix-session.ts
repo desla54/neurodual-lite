@@ -464,6 +464,15 @@ export function useDualMixSession(): UseDualMixSessionResult {
     setPhase('idle');
   }, [clearPuzzleResetTimer, invalidateTransitions, nLevel, runSeed, totalRounds]);
 
+  useEffect(() => {
+    if (phase !== 'countdown') return;
+    invalidateTransitions();
+    scheduleTimer(() => {
+      setRound(0);
+      startNBackStimulus(0);
+    }, DUAL_MIX_PREP_DELAY_MS);
+  }, [invalidateTransitions, phase, scheduleTimer, startNBackStimulus]);
+
   const startSession = useCallback(() => {
     if (phase !== 'idle') return;
     setIsStarting(true);
@@ -495,24 +504,16 @@ export function useDualMixSession(): UseDualMixSessionResult {
         });
         setRound(0);
         setIsStarting(false);
-        invalidateTransitions();
         setPhase('countdown');
-        scheduleTimer(() => {
-          setRound(0);
-          startNBackStimulus(0);
-        }, DUAL_MIX_PREP_DELAY_MS);
       });
   }, [
     audio,
-    invalidateTransitions,
     haptic,
     includeGridlock,
     manualAdvance,
     nLevel,
     phase,
     platformInfo,
-    scheduleTimer,
-    startNBackStimulus,
     stroopTiming.fixationMs,
     stroopTiming.stimulusTimeoutMs,
     totalRounds,
