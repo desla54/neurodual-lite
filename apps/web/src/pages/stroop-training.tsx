@@ -128,7 +128,13 @@ function generateTrials(
       if (inkIdx === wordIdx) inkIdx = (inkIdx + 1) % colors.length;
       const wordC = colors[wordIdx]!;
       const inkC = colors[inkIdx]!;
-      trials.push({ word: wordC.word, inkColor: inkC.id, wordColor: wordC.id, congruent: false, rule });
+      trials.push({
+        word: wordC.word,
+        inkColor: inkC.id,
+        wordColor: wordC.id,
+        congruent: false,
+        rule,
+      });
     }
   }
 
@@ -553,7 +559,15 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
     emitterRef.current.events = [];
     void cleanupAbandonedSession(persistence, emitterRef.current.sessionId).catch(() => {});
     transitionNavigate(resolveNavigationOrigin(location.state));
-  }, [location.state, persistence, results.length, totalTrials, track, transitionNavigate, variant]);
+  }, [
+    location.state,
+    persistence,
+    results.length,
+    totalTrials,
+    track,
+    transitionNavigate,
+    variant,
+  ]);
 
   const handleRestart = useCallback(() => {
     track('report_action_clicked', {
@@ -645,25 +659,25 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
             text: '',
             tone: 'muted' as StatusTone,
           }
-      : isCurrentBuffer
-        ? {
-            text:
-              isFlex && nLevel > 1
-                ? trialIndex === 0
-                  ? t(
-                      'game.cogTask.stroopFlex.memorizeFirst',
-                      "Memorize — you'll respond next turn",
-                    )
-                  : t('game.cogTask.stroopFlex.memorize', 'Memorize')
-                : t('game.cogTask.stroopFlex.observe', 'Observe'),
-            tone: 'muted' as StatusTone,
-          }
-        : isFlex
-          ? { text: '', tone: 'muted' as StatusTone }
-          : {
-              text: t('game.cogTask.stroop.pressInkColorButton'),
-              tone: 'default' as StatusTone,
-            };
+        : isCurrentBuffer
+          ? {
+              text:
+                isFlex && nLevel > 1
+                  ? trialIndex === 0
+                    ? t(
+                        'game.cogTask.stroopFlex.memorizeFirst',
+                        "Memorize — you'll respond next turn",
+                      )
+                    : t('game.cogTask.stroopFlex.memorize', 'Memorize')
+                  : t('game.cogTask.stroopFlex.observe', 'Observe'),
+              tone: 'muted' as StatusTone,
+            }
+          : isFlex
+            ? { text: '', tone: 'muted' as StatusTone }
+            : {
+                text: t('game.cogTask.stroop.pressInkColorButton'),
+                tone: 'default' as StatusTone,
+              };
 
   return (
     <div className="game-page-shell">
@@ -677,60 +691,66 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
         />
       )}
 
-      <CognitiveTaskHUD
-        trialIndex={hudTrialIndex}
-        totalTrials={visibleTotalTrials}
-        onQuit={() => setShowQuitModal(true)}
-        isPaused={phase === 'paused'}
-        canPause={
-          phase !== 'idle' &&
-          phase !== 'starting' &&
-          phase !== 'countdown' &&
-          phase !== 'finished'
-        }
-        onTogglePause={handleTogglePause}
-        settingsMenuTitle={modeLabel}
-        settingsMenuContent={
-          <div className="divide-y divide-border/60">
-            <Toggle
-              label={t('settings.audio.haptic', 'Haptic feedback')}
-              checked={hapticEnabled}
-              onChange={setHapticEnabled}
-            />
-            <Toggle
-              label={t('settings.audio.buttonSounds', 'Button sounds')}
-              checked={buttonSoundsEnabled}
-              onChange={setButtonSoundsEnabled}
-            />
-            <Toggle
-              label={t('settings.audio.gameplaySounds', 'Gameplay sounds')}
-              checked={soundEnabled}
-              onChange={setSoundEnabled}
-            />
-          </div>
-        }
-      />
-
-      <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
-        {phase === 'starting' || phase === 'countdown' ? (
-          <SessionStartingCountdown
-            phase={phase}
-            prepDelayMs={PREP_DELAY_MS}
-            getReadyText={t('game.starting.getReady', 'Get ready')}
-            scheduleAudio={(prepDelayMs) => audio.scheduleCountdownTicks?.(prepDelayMs) ?? (() => {})}
-            className="text-sm text-woven-text-muted"
+      {!showIntro && (
+        <>
+          <CognitiveTaskHUD
+            trialIndex={hudTrialIndex}
+            totalTrials={visibleTotalTrials}
+            onQuit={() => setShowQuitModal(true)}
+            isPaused={phase === 'paused'}
+            canPause={
+              phase !== 'idle' &&
+              phase !== 'starting' &&
+              phase !== 'countdown' &&
+              phase !== 'finished'
+            }
+            onTogglePause={handleTogglePause}
+            settingsMenuTitle={modeLabel}
+            settingsMenuContent={
+              <div className="divide-y divide-border/60">
+                <Toggle
+                  label={t('settings.audio.haptic', 'Haptic feedback')}
+                  checked={hapticEnabled}
+                  onChange={setHapticEnabled}
+                />
+                <Toggle
+                  label={t('settings.audio.buttonSounds', 'Button sounds')}
+                  checked={buttonSoundsEnabled}
+                  onChange={setButtonSoundsEnabled}
+                />
+                <Toggle
+                  label={t('settings.audio.gameplaySounds', 'Gameplay sounds')}
+                  checked={soundEnabled}
+                  onChange={setSoundEnabled}
+                />
+              </div>
+            }
           />
-        ) : (
-          <p
-            className={cn(
-              'text-sm font-medium transition-colors',
-              statusLine.tone === 'default' ? 'text-woven-text' : 'text-woven-text-muted',
+
+          <div className="min-h-[clamp(1.1rem,3vh,1.8rem)] px-4 py-[clamp(0.1rem,0.45vh,0.35rem)] text-center">
+            {phase === 'starting' || phase === 'countdown' ? (
+              <SessionStartingCountdown
+                phase={phase}
+                prepDelayMs={PREP_DELAY_MS}
+                getReadyText={t('game.starting.getReady', 'Get ready')}
+                scheduleAudio={(prepDelayMs) =>
+                  audio.scheduleCountdownTicks?.(prepDelayMs) ?? (() => {})
+                }
+                className="text-sm text-woven-text-muted"
+              />
+            ) : (
+              <p
+                className={cn(
+                  'text-sm font-medium transition-colors',
+                  statusLine.tone === 'default' ? 'text-woven-text' : 'text-woven-text-muted',
+                )}
+              >
+                {statusLine.text}
+              </p>
             )}
-          >
-            {statusLine.text}
-          </p>
-        )}
-      </div>
+          </div>
+        </>
+      )}
 
       <div className="game-page-stage">
         <div className="relative flex aspect-square w-full max-w-[360px] items-center justify-center overflow-hidden rounded-2xl border border-white/18 bg-woven-surface shadow-[0_24px_60px_hsl(var(--foreground)/0.10)] shadow-[inset_0_0_0_1px_hsl(var(--woven-border)/0.32)] sm:max-w-[420px]">

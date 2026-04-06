@@ -1,13 +1,12 @@
-import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import {
-  CanvasWeave,
-  cn,
-} from '@neurodual/ui';
-import {
-  listValidMoves,
-  type GridlockBoard,
-  type GridlockMove,
-} from '@neurodual/logic';
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from 'react';
+import { CanvasWeave, cn } from '@neurodual/ui';
+import { listValidMoves, type GridlockBoard, type GridlockMove } from '@neurodual/logic';
 import { BOARD_SIZE } from '../../lib/dual-mix-session';
 
 interface DragState {

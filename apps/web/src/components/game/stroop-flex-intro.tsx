@@ -25,13 +25,7 @@ interface StroopFlexIntroProps {
 const INTRO_SCREENS = ['stroop', 'flex', 'level', 'tip', 'go'] as const;
 type IntroScreenId = (typeof INTRO_SCREENS)[number];
 
-function SurfaceCard({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+function SurfaceCard({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <div
       className={cn(
@@ -46,7 +40,12 @@ function SurfaceCard({
 
 function MetaLabel({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <p className={cn('text-[10px] font-bold uppercase tracking-[0.24em] text-woven-text-muted', className)}>
+    <p
+      className={cn(
+        'text-[10px] font-bold uppercase tracking-[0.24em] text-woven-text-muted',
+        className,
+      )}
+    >
       {children}
     </p>
   );
@@ -60,12 +59,7 @@ function RulePill({ children }: { children: ReactNode }) {
   );
 }
 
-export function StroopFlexIntro({
-  nLevel,
-  totalTrials,
-  colors,
-  onComplete,
-}: StroopFlexIntroProps) {
+export function StroopFlexIntro({ nLevel, totalTrials, colors, onComplete }: StroopFlexIntroProps) {
   const { t } = useTranslation();
   const [step, setStep] = useState(0);
 
@@ -146,7 +140,9 @@ export function StroopFlexIntro({
 
             <div className="mt-3 flex items-center justify-between gap-3 text-xs">
               <MetaLabel className="text-primary">{screenLabels[currentScreen]}</MetaLabel>
-              <span className="text-woven-text-muted">{t(`${i}.swipeHint`, { defaultValue: 'Lis puis continue' })}</span>
+              <span className="text-woven-text-muted">
+                {t(`${i}.swipeHint`, { defaultValue: 'Lis puis continue' })}
+              </span>
             </div>
 
             <Hatching id="stroop-flex-intro-top" className="mt-4 text-foreground/70" />
@@ -168,18 +164,25 @@ export function StroopFlexIntro({
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,hsl(var(--background)/0.12),transparent)]" />
                   <div className="relative z-10 flex flex-col items-center gap-4 text-center">
                     <MetaLabel>{t(`${i}.exampleLabel`, { defaultValue: 'Exemple' })}</MetaLabel>
-                    <span className="select-none text-5xl font-black tracking-tight sm:text-6xl" style={{ color: redCss }}>
+                    <span
+                      className="select-none text-5xl font-black tracking-tight sm:text-6xl"
+                      style={{ color: redCss }}
+                    >
                       {blueColor?.word ?? 'BLEU'}
                     </span>
                     <div className="grid w-full grid-cols-2 gap-2">
                       <div className="rounded-2xl border border-woven-border/60 bg-background/40 p-3 text-left">
-                        <MetaLabel>{t(`${i}.autoReadLabel`, { defaultValue: 'Réflexe automatique' })}</MetaLabel>
+                        <MetaLabel>
+                          {t(`${i}.autoReadLabel`, { defaultValue: 'Réflexe automatique' })}
+                        </MetaLabel>
                         <p className="mt-2 text-base font-bold line-through opacity-70 text-woven-text">
                           {blueColor?.label ?? 'Bleu'}
                         </p>
                       </div>
                       <div className="rounded-2xl border border-woven-border/60 bg-background/40 p-3 text-left">
-                        <MetaLabel>{t(`${i}.correctAnswerLabel`, { defaultValue: 'Bonne réponse' })}</MetaLabel>
+                        <MetaLabel>
+                          {t(`${i}.correctAnswerLabel`, { defaultValue: 'Bonne réponse' })}
+                        </MetaLabel>
                         <p className="mt-2 text-base font-bold" style={{ color: redCss }}>
                           {redColor?.label ?? 'Rouge'}
                         </p>
@@ -207,10 +210,15 @@ export function StroopFlexIntro({
                       <RulePill>
                         {t(`${i}.ruleExample`, { defaultValue: 'Règle' })}: {inkLabel}
                       </RulePill>
-                      <span className="select-none text-4xl font-black tracking-tight" style={{ color: blueCss }}>
+                      <span
+                        className="select-none text-4xl font-black tracking-tight"
+                        style={{ color: blueCss }}
+                      >
                         {greenColor?.word ?? 'VERT'}
                       </span>
-                      <p className="text-sm leading-relaxed text-woven-text/80">{t(`${i}.body2ink`)}</p>
+                      <p className="text-sm leading-relaxed text-woven-text/80">
+                        {t(`${i}.body2ink`)}
+                      </p>
                       <div className="rounded-xl border border-woven-border/60 bg-background/40 px-3 py-2 text-sm text-woven-text-muted">
                         <span className="font-semibold text-woven-text">{inkLabel}</span>
                         {' → '}
@@ -226,10 +234,15 @@ export function StroopFlexIntro({
                       <RulePill>
                         {t(`${i}.ruleExample`, { defaultValue: 'Règle' })}: {wordLabel}
                       </RulePill>
-                      <span className="select-none text-4xl font-black tracking-tight" style={{ color: blueCss }}>
+                      <span
+                        className="select-none text-4xl font-black tracking-tight"
+                        style={{ color: blueCss }}
+                      >
                         {greenColor?.word ?? 'VERT'}
                       </span>
-                      <p className="text-sm leading-relaxed text-woven-text/80">{t(`${i}.body2word`)}</p>
+                      <p className="text-sm leading-relaxed text-woven-text/80">
+                        {t(`${i}.body2word`)}
+                      </p>
                       <div className="rounded-xl border border-woven-border/60 bg-background/40 px-3 py-2 text-sm text-woven-text-muted">
                         <span className="font-semibold text-woven-text">{wordLabel}</span>
                         {' → '}
@@ -271,12 +284,17 @@ export function StroopFlexIntro({
 
                 <div className="grid gap-3 sm:grid-cols-2">
                   <SurfaceCard className="p-4">
-                    <MetaLabel>{t(`${i}.cardSeenNow`, { defaultValue: "À l'écran maintenant" })}</MetaLabel>
+                    <MetaLabel>
+                      {t(`${i}.cardSeenNow`, { defaultValue: "À l'écran maintenant" })}
+                    </MetaLabel>
                     <div className="mt-3 flex flex-col gap-3">
                       <RulePill>
                         {t(`${i}.currentRuleLabel`, { defaultValue: 'Badge actuel' })}: {wordLabel}
                       </RulePill>
-                      <span className="select-none text-4xl font-black tracking-tight" style={{ color: yellowCss }}>
+                      <span
+                        className="select-none text-4xl font-black tracking-tight"
+                        style={{ color: yellowCss }}
+                      >
                         {greenColor?.word ?? 'VERT'}
                       </span>
                       <p className="text-sm leading-relaxed text-woven-text-muted">
@@ -303,7 +321,10 @@ export function StroopFlexIntro({
                           })}
                         </p>
                       )}
-                      <span className="select-none text-4xl font-black tracking-tight" style={{ color: redCss }}>
+                      <span
+                        className="select-none text-4xl font-black tracking-tight"
+                        style={{ color: redCss }}
+                      >
                         {blueColor?.word ?? 'BLEU'}
                       </span>
                       <div className="grid grid-cols-2 gap-2">
@@ -328,7 +349,9 @@ export function StroopFlexIntro({
 
                 {bufferCount > 0 && (
                   <SurfaceCard className="p-4">
-                    <MetaLabel>{t('game.cogTask.stroopFlex.memorize', { defaultValue: 'Mémorise' })}</MetaLabel>
+                    <MetaLabel>
+                      {t('game.cogTask.stroopFlex.memorize', { defaultValue: 'Mémorise' })}
+                    </MetaLabel>
                     <p className="mt-2 text-sm leading-relaxed text-woven-text/80">
                       {t(`${i}.bufferHint`, {
                         buffer: bufferCount,
@@ -355,16 +378,21 @@ export function StroopFlexIntro({
                 <SurfaceCard className="p-4">
                   <div className="space-y-3">
                     <div>
-                      <MetaLabel>{t(`${i}.tipStep1Label`, { defaultValue: '1. Regarde le badge' })}</MetaLabel>
+                      <MetaLabel>
+                        {t(`${i}.tipStep1Label`, { defaultValue: '1. Regarde le badge' })}
+                      </MetaLabel>
                       <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                         {t(`${i}.tipStep1`, {
-                          defaultValue: 'Décide d’abord si tu dois répondre à la couleur ou au mot.',
+                          defaultValue:
+                            'Décide d’abord si tu dois répondre à la couleur ou au mot.',
                         })}
                       </p>
                     </div>
                     <Hatching id="stroop-flex-intro-tip-1" className="text-foreground/70" />
                     <div>
-                      <MetaLabel>{t(`${i}.tipStep2Label`, { defaultValue: '2. Choisis la bonne cible' })}</MetaLabel>
+                      <MetaLabel>
+                        {t(`${i}.tipStep2Label`, { defaultValue: '2. Choisis la bonne cible' })}
+                      </MetaLabel>
                       <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                         {t(`${i}.tipStep2`, {
                           defaultValue:
@@ -376,10 +404,13 @@ export function StroopFlexIntro({
                     </div>
                     <Hatching id="stroop-flex-intro-tip-2" className="text-foreground/70" />
                     <div>
-                      <MetaLabel>{t(`${i}.tipStep3Label`, { defaultValue: '3. Réponds proprement' })}</MetaLabel>
+                      <MetaLabel>
+                        {t(`${i}.tipStep3Label`, { defaultValue: '3. Réponds proprement' })}
+                      </MetaLabel>
                       <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                         {t(`${i}.tipStep3`, {
-                          defaultValue: 'La vitesse viendra ensuite : cherche d’abord la bonne logique, puis accélère.',
+                          defaultValue:
+                            'La vitesse viendra ensuite : cherche d’abord la bonne logique, puis accélère.',
                         })}
                       </p>
                     </div>
@@ -402,22 +433,30 @@ export function StroopFlexIntro({
                 <div className="grid grid-cols-3 gap-2">
                   <SurfaceCard className="p-3 text-center">
                     <MetaLabel>{t('game.cogTask.trials', { defaultValue: 'Essais' })}</MetaLabel>
-                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">{totalTrials}</p>
+                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">
+                      {totalTrials}
+                    </p>
                   </SurfaceCard>
                   <SurfaceCard className="p-3 text-center">
                     <MetaLabel>{t(`${i}.levelLabel`, { defaultValue: 'Niveau' })}</MetaLabel>
-                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">{nLevel}</p>
+                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">
+                      {nLevel}
+                    </p>
                   </SurfaceCard>
                   <SurfaceCard className="p-3 text-center">
                     <MetaLabel>{t(`${i}.durationLabel`, { defaultValue: 'Durée' })}</MetaLabel>
-                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">~{durationMin}</p>
+                    <p className="mt-2 text-2xl font-black tabular-nums text-woven-text">
+                      ~{durationMin}
+                    </p>
                   </SurfaceCard>
                 </div>
 
                 <SurfaceCard className="p-4">
                   <div className="space-y-3">
                     <div>
-                      <MetaLabel>{t(`${i}.summaryRuleLabel`, { defaultValue: 'Le badge choisit la règle' })}</MetaLabel>
+                      <MetaLabel>
+                        {t(`${i}.summaryRuleLabel`, { defaultValue: 'Le badge choisit la règle' })}
+                      </MetaLabel>
                       <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                         {t(`${i}.summaryRule`, {
                           defaultValue: 'Couleur = réponds à la couleur. Mot = réponds au mot.',
@@ -426,7 +465,11 @@ export function StroopFlexIntro({
                     </div>
                     <Hatching id="stroop-flex-intro-summary-1" className="text-foreground/70" />
                     <div>
-                      <MetaLabel>{t(`${i}.summaryLevelLabel`, { defaultValue: 'Le niveau choisit la cible' })}</MetaLabel>
+                      <MetaLabel>
+                        {t(`${i}.summaryLevelLabel`, {
+                          defaultValue: 'Le niveau choisit la cible',
+                        })}
+                      </MetaLabel>
                       <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                         {nLevel === 1
                           ? t(`${i}.summaryLevelCurrent`, {
@@ -444,7 +487,9 @@ export function StroopFlexIntro({
                       <>
                         <Hatching id="stroop-flex-intro-summary-2" className="text-foreground/70" />
                         <div>
-                          <MetaLabel>{t(`${i}.summaryMemoryLabel`, { defaultValue: 'Début de session' })}</MetaLabel>
+                          <MetaLabel>
+                            {t(`${i}.summaryMemoryLabel`, { defaultValue: 'Début de session' })}
+                          </MetaLabel>
                           <p className="mt-1 text-sm leading-relaxed text-woven-text/80">
                             {t(`${i}.summaryMemory`, {
                               buffer: bufferCount,

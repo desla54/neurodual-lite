@@ -1,7 +1,13 @@
 import { describe, expect, test } from 'bun:test';
-import { generateNBackSequence, GRID_POSITIONS } from './dual-mix-session';
+import { generateNBackSequence, getDualMixTotalRounds, GRID_POSITIONS } from './dual-mix-session';
 
 describe('generateNBackSequence', () => {
+  test('adds the n-level buffer to the displayed round budget', () => {
+    expect(getDualMixTotalRounds(10, 1)).toBe(11);
+    expect(getDualMixTotalRounds(10, 2)).toBe(12);
+    expect(getDualMixTotalRounds(20, 3)).toBe(23);
+  });
+
   test('matches classic dual-n-back target budget on 20 rounds', () => {
     const nLevel = 2;
     const sequence = generateNBackSequence(20, nLevel);

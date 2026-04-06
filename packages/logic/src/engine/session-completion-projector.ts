@@ -20,6 +20,7 @@ import type {
   JourneyContext,
   ReportGameMode,
   FocusStats,
+  UnifiedModalityStats,
 } from '../types/session-report';
 import type { XPBreakdown, BadgeDefinition } from '../domain/progression';
 
@@ -115,7 +116,16 @@ function deriveCognitiveTaskLevelFromMetrics(
   return undefined;
 }
 
-function buildEmptyUnifiedModalityStats() {
+type MutableUnifiedModalityStats = {
+  hits: number | null;
+  misses: number | null;
+  falseAlarms: number | null;
+  correctRejections: number | null;
+  avgRT: number | null;
+  dPrime: number | null;
+};
+
+function buildEmptyUnifiedModalityStats(): MutableUnifiedModalityStats {
   return {
     hits: null,
     misses: null,
@@ -126,8 +136,15 @@ function buildEmptyUnifiedModalityStats() {
   };
 }
 
-function toFiniteNumber(value: unknown): number | undefined {
-  return typeof value === 'number' && Number.isFinite(value) ? value : undefined;
+function finalizeUnifiedModalityStats(stats: MutableUnifiedModalityStats): UnifiedModalityStats {
+  return {
+    hits: stats.hits ?? 0,
+    misses: stats.misses ?? 0,
+    falseAlarms: stats.falseAlarms,
+    correctRejections: stats.correctRejections,
+    avgRT: stats.avgRT,
+    dPrime: stats.dPrime,
+  };
 }
 
 function toBoolean(value: unknown): boolean | undefined {
@@ -171,7 +188,7 @@ function deriveCognitiveTaskModalities(
 }
 
 function projectDualMixBreakdown(events: readonly GameEvent[]) {
-  const byModality: Record<ModalityId, ReturnType<typeof buildEmptyUnifiedModalityStats>> = {};
+  const byModality: Record<ModalityId, MutableUnifiedModalityStats> = {};
   const ensureModality = (modality: ModalityId) =>
     (byModality[modality] ??= buildEmptyUnifiedModalityStats());
 
@@ -202,6 +219,11 @@ function projectDualMixBreakdown(events: readonly GameEvent[]) {
         : {};
 
     if (condition === 'nback') {
+      const isBuffer = toBoolean(trialData['isBuffer']) ?? false;
+      if (isBuffer) {
+        continue;
+      }
+
       const position = ensureModality('position');
       const audio = ensureModality('audio');
       const isPositionTarget = toBoolean(trialData['isPositionTarget']) ?? false;
@@ -283,14 +305,23 @@ function projectDualMixBreakdown(events: readonly GameEvent[]) {
         : 0,
     stroopRounds: metrics.stroopRounds,
     stroopAccuracy:
-      metrics.stroopRounds > 0 ? Math.round((metrics.stroopCorrect / metrics.stroopRounds) * 100) : 0,
+      metrics.stroopRounds > 0
+        ? Math.round((metrics.stroopCorrect / metrics.stroopRounds) * 100)
+        : 0,
     gridlockMoves: metrics.gridlockMoves,
     gridlockSolved: metrics.gridlockSolved,
     gridlockRounds: metrics.gridlockRounds,
   };
 
+  const finalizedByModality = Object.fromEntries(
+    Object.entries(byModality).map(([modality, stats]) => [
+      modality,
+      finalizeUnifiedModalityStats(stats),
+    ]),
+  ) as Record<ModalityId, UnifiedModalityStats>;
+
   return {
-    byModality,
+    byModality: finalizedByModality,
     totals,
     derivedMetrics,
     errorProfile: {
@@ -1367,7 +1398,8 @@ export class SessionCompletionProjector {
         : null;
     const metricMisses = typeof taskMetrics?.['misses'] === 'number' ? taskMetrics['misses'] : null;
 
-    const dualMixBreakdown = input.taskType === 'dual-mix' ? projectDualMixBreakdown(input.events) : null;
+    const dualMixBreakdown =
+      input.taskType === 'dual-mix' ? projectDualMixBreakdown(input.events) : null;
     const hits = metricHits ?? dualMixBreakdown?.totals.hits ?? input.correctTrials;
     const misses =
       metricMisses ??

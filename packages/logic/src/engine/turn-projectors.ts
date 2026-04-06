@@ -966,7 +966,7 @@ export function projectDualMixTurns(
 ): TurnSummary[] {
   const dualMixEvents = events.filter(
     (event): event is CognitiveTaskTrialCompletedEvent =>
-      event.type === 'COGNITIVE_TASK_TRIAL_COMPLETED' && event.taskType === 'dual-mix',
+      event.type === 'COGNITIVE_TASK_TRIAL_COMPLETED' && event['taskType'] === 'dual-mix',
   );
   if (dualMixEvents.length === 0) return [];
 
@@ -990,12 +990,10 @@ export function projectDualMixTurns(
       typeof roundIndexRaw === 'number' && Number.isFinite(roundIndexRaw)
         ? roundIndexRaw
         : event.trialIndex;
-    const round =
-      rounds.get(roundIndex) ??
-      {
-        startedAt: event.timestamp,
-        gridlockMoves: 0,
-      };
+    const round = rounds.get(roundIndex) ?? {
+      startedAt: event.timestamp,
+      gridlockMoves: 0,
+    };
 
     round.startedAt = Math.min(round.startedAt, event.timestamp);
     if (event.condition === 'nback') {
@@ -1024,6 +1022,7 @@ export function projectDualMixTurns(
 
     const positionTarget = nbackData['isPositionTarget'] === true;
     const audioTarget = nbackData['isAudioTarget'] === true;
+    const isBuffer = nbackData['isBuffer'] === true;
     const positionPressed = nbackData['pressedPosition'] === true;
     const audioPressed = nbackData['pressedAudio'] === true;
     const positionResult = toResponseResult(positionTarget, positionPressed);
@@ -1031,12 +1030,7 @@ export function projectDualMixTurns(
     const stroopTimedOut = stroopData['timedOut'] === true;
     const stroopCorrect = round.stroop?.correct === true;
     const colorPressed = Boolean(round.stroop) && !stroopTimedOut;
-    const colorResult =
-      round.stroop == null
-        ? 'correct-rejection'
-        : stroopCorrect
-          ? 'hit'
-          : 'miss';
+    const colorResult = round.stroop == null ? 'correct-rejection' : stroopCorrect ? 'hit' : 'miss';
 
     const responses: TempoTrialDetail['responses'] = {
       position: {
@@ -1084,11 +1078,18 @@ export function projectDualMixTurns(
 
     const detail: TempoTrialDetail = {
       kind: 'tempo-trial',
+      isBuffer,
       stimulus: {
         position:
-          typeof nbackData['targetPosition'] === 'number' ? (nbackData['targetPosition'] as number) : null,
-        audio: typeof nbackData['targetAudio'] === 'string' ? (nbackData['targetAudio'] as string) : null,
-        color: typeof stroopData['inkColor'] === 'string' ? (stroopData['inkColor'] as string) : null,
+          typeof nbackData['targetPosition'] === 'number'
+            ? (nbackData['targetPosition'] as number)
+            : null,
+        audio:
+          typeof nbackData['targetAudio'] === 'string'
+            ? (nbackData['targetAudio'] as string)
+            : null,
+        color:
+          typeof stroopData['inkColor'] === 'string' ? (stroopData['inkColor'] as string) : null,
       },
       targets,
       responses,
@@ -1097,7 +1098,7 @@ export function projectDualMixTurns(
     const statusParts = [
       `POS${positionResult === 'hit' || positionResult === 'correct-rejection' ? '✓' : '✗'}`,
       `AUD${audioResult === 'hit' || audioResult === 'correct-rejection' ? '✓' : '✗'}`,
-      `STR${stroopCorrect ? '✓' : '✗'}`,
+      round.stroop ? `STR${stroopCorrect ? '✓' : '✗'}` : 'STR·',
     ];
     const rtValues = [round.nback?.responseTimeMs ?? 0, round.stroop?.responseTimeMs ?? 0].filter(
       (value) => value > 0,
@@ -1115,8 +1116,14 @@ export function projectDualMixTurns(
       kind: 'tempo-trial',
       startedAt: round.startedAt,
       durationMs: rtValues.reduce((sum, value) => sum + value, 0) || undefined,
-      headline: `#${roundIndex + 1} [${statusParts.join(' ')}]`,
-      subline: sublineParts.length > 0 ? sublineParts.join(' · ') : undefined,
+      headline: isBuffer
+        ? `#${roundIndex + 1} [BUFFER ${statusParts.join(' ')}]`
+        : `#${roundIndex + 1} [${statusParts.join(' ')}]`,
+      subline: isBuffer
+        ? ['N-back warmup', ...sublineParts].join(' · ')
+        : sublineParts.length > 0
+          ? sublineParts.join(' · ')
+          : undefined,
       verdict,
       errorTags: errorTags.length > 0 ? errorTags : undefined,
       detail,

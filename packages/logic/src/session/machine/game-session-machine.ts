@@ -1164,7 +1164,7 @@ export const gameSessionMachine = setup({
       );
 
       // Machine orchestrates: record verdict in judge
-      if (result.verdict && context.judge) {
+      if (result.verdict && context.judge && !trial.isBuffer) {
         context.judge.record(result.verdict);
       }
 

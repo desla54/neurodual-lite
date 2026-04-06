@@ -1,21 +1,19 @@
 import type { ReactNode } from 'react';
-import { generateContextualMessageData } from '@neurodual/logic';
-import { CanvasWeave, GameControls, Grid, HUD_BADGE, UnifiedSessionReport, cn } from '@neurodual/ui';
+import { CanvasWeave, GameControls, Grid, HUD_BADGE, cn } from '@neurodual/ui';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
 import { DualMixGridlockBoard } from '../components/game/dual-mix-gridlock-board';
 import { GameQuitModal } from '../components/game/game-quit-modal';
+import { DualMixSessionReport } from '../components/reports/dual-mix-session-report';
 import { SessionStartingCountdown } from '../components/game/session-starting-countdown';
 import { useHaptic } from '../hooks/use-haptic';
 import { useDualMixSession } from '../hooks/use-dual-mix-session';
-import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
 import { DUAL_MIX_PREP_DELAY_MS } from '../lib/dual-mix-session';
 import { useAppPorts } from '../providers';
 import { getStatsPresetForReport } from '../lib/stats-preset';
 import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useSettingsStore } from '../stores';
-import { translateContextualMessage } from '../utils/contextual-message';
 import { TimerIcon } from '@phosphor-icons/react';
 
 export function DualMixTrainingPage(): ReactNode {
@@ -23,7 +21,6 @@ export function DualMixTrainingPage(): ReactNode {
   const { transitionNavigate } = useTransitionNavigate();
   const haptic = useHaptic();
   const { audio } = useAppPorts();
-  const unifiedReportLabels = useUnifiedReportLabels();
   const [showQuitModal, setShowQuitModal] = useState(false);
   const setStatsTab = useSettingsStore((state) => state.setStatsTab);
   const setStatsMode = useSettingsStore((state) => state.setStatsMode);
@@ -34,6 +31,7 @@ export function DualMixTrainingPage(): ReactNode {
     round,
     totalRounds,
     nLevel,
+    includeGridlock,
     canPause,
     isStarting,
     manualAdvance,
@@ -45,6 +43,7 @@ export function DualMixTrainingPage(): ReactNode {
     lastStroopFeedback,
     gridlockBoard,
     summary,
+    stroopResults,
     completionReport,
     modeLabel,
     startSession,
@@ -77,28 +76,17 @@ export function DualMixTrainingPage(): ReactNode {
   const hudTrialIndex = completedRoundCount > 0 ? completedRoundCount - 1 : -1;
 
   if (phase === 'finished' && summary && completionReport) {
-    const contextMessage = translateContextualMessage(
-      t,
-      generateContextualMessageData(completionReport, {
-        style: 'simple',
-        variant: 'stable',
-      }),
-    );
-
     return (
       <div className="game-report-scroll">
-        <UnifiedSessionReport
-          data={completionReport}
-          message={contextMessage}
-          labels={{
-            ...unifiedReportLabels,
-            modeScoreLabel: t(completionReport.modeScore.labelKey),
-            modeScoreTooltip: completionReport.modeScore.tooltipKey
-              ? t(completionReport.modeScore.tooltipKey)
-              : undefined,
-          }}
+        <DualMixSessionReport
+          summary={summary}
+          totalRounds={totalRounds}
+          nLevel={nLevel}
+          includeGridlock={includeGridlock}
           onPlayAgain={restartSession}
           onBackToHome={() => transitionNavigate('/')}
+          report={completionReport}
+          stroopResults={stroopResults}
           onGoToStats={(report) => {
             const preset = getStatsPresetForReport(report);
             setStatsTab(preset.tab);

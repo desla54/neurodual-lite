@@ -3,7 +3,10 @@ import type { JourneyStrategyConfig } from '@neurodual/logic';
 import type { PlayMode } from './play-intent';
 import { resolveSessionJourneyId } from './play-intent';
 import type { ResolvedNbackLaunch } from './resolve-nback-launch';
-import type { NbackJourneyConfigSnapshot, NbackActiveJourneySnapshot } from './resolve-nback-launch';
+import type {
+  NbackJourneyConfigSnapshot,
+  NbackActiveJourneySnapshot,
+} from './resolve-nback-launch';
 
 interface NbackRuntimeJourneyConfigSnapshot extends NbackJourneyConfigSnapshot {
   readonly strategyConfig?: JourneyStrategyConfig;
@@ -45,7 +48,8 @@ export function resolveNbackRuntimeContext(params: {
 }): ResolvedNbackRuntimeContext {
   const effectivePlayMode = params.recoveredState?.playMode ?? params.requestedPlayMode;
   const shouldUseJourneyContext = effectivePlayMode === 'journey';
-  const journeyStageId = params.recoveredState?.journeyStageId ?? params.requestedLaunch.journeyStageId;
+  const journeyStageId =
+    params.recoveredState?.journeyStageId ?? params.requestedLaunch.journeyStageId;
   const routeJourneyId = params.requestedLaunch.journeyId;
   const activeJourneyId = shouldUseJourneyContext
     ? (routeJourneyId ?? params.journeyConfig?.journeyId ?? params.activeJourneyIdFromStore ?? null)
@@ -85,11 +89,14 @@ export function resolveNbackRuntimeContext(params: {
       ? params.recoveredState.gameMode
       : undefined;
   const recoveredJourneyNLevel =
-    typeof params.recoveredState?.nLevel === 'number' && Number.isFinite(params.recoveredState.nLevel)
+    typeof params.recoveredState?.nLevel === 'number' &&
+    Number.isFinite(params.recoveredState.nLevel)
       ? params.recoveredState.nLevel
       : undefined;
   const shouldUseJourneySettings =
-    effectivePlayMode === 'journey' && !!journeyGameMode && typeof resolvedJourneyIdForSession === 'string';
+    effectivePlayMode === 'journey' &&
+    !!journeyGameMode &&
+    typeof resolvedJourneyIdForSession === 'string';
 
   return {
     effectivePlayMode,

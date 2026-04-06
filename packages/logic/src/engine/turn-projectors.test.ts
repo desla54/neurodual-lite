@@ -319,6 +319,44 @@ describe('Turn Projectors', () => {
       expect(turns[0]!.detail.targets).toContain('position');
       expect(turns[0]!.detail.targets).toContain('color');
     });
+
+    test('marks dual-mix warmup rounds as buffer turns', () => {
+      const events = [
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId: 'dual-mix-session',
+          taskType: 'dual-mix',
+          trialIndex: 0,
+          correct: true,
+          responseTimeMs: 3000,
+          condition: 'nback',
+          timestamp: 1200,
+          trialData: {
+            roundIndex: 0,
+            isBuffer: true,
+            isPositionTarget: false,
+            isAudioTarget: false,
+            pressedPosition: false,
+            pressedAudio: false,
+            targetPosition: 2,
+            targetAudio: 'C',
+          },
+        },
+      ] as any;
+
+      const turns = projectCognitiveTaskTurns(events);
+
+      expect(turns).toHaveLength(1);
+      expect(turns[0]!.headline).toContain('BUFFER');
+      expect(turns[0]!.subline).toContain('N-back warmup');
+      expect(turns[0]!.headline).toContain('STR·');
+      if (turns[0]!.detail.kind !== 'tempo-trial') {
+        throw new Error('Expected tempo-trial detail');
+      }
+      expect(turns[0]!.detail.responses.position?.result).toBe('correct-rejection');
+      expect(turns[0]!.detail.responses.audio?.result).toBe('correct-rejection');
+      expect(turns[0]!.detail.targets).not.toContain('color');
+    });
   });
 
   describe('projectMemoTurns', () => {

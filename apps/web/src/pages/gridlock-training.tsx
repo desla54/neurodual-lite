@@ -713,7 +713,15 @@ export function GridlockTrainingPage() {
     emitterRef.current.events = [];
     void cleanupAbandonedSession(persistence, emitterRef.current.sessionId).catch(() => {});
     transitionNavigate(resolveNavigationOrigin(location.state));
-  }, [clearTimers, location.state, persistence, results.length, totalPuzzles, track, transitionNavigate]);
+  }, [
+    clearTimers,
+    location.state,
+    persistence,
+    results.length,
+    totalPuzzles,
+    track,
+    transitionNavigate,
+  ]);
 
   const handleRestart = useCallback(() => {
     track('report_action_clicked', {

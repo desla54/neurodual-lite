@@ -1,9 +1,4 @@
-import {
-  GRIDLOCK_PUZZLES,
-  SOUNDS,
-  parseBoard,
-  type GridlockBoard,
-} from '@neurodual/logic';
+import { GRIDLOCK_PUZZLES, SOUNDS, parseBoard, type GridlockBoard } from '@neurodual/logic';
 
 export const BOARD_SIZE = 6;
 export const GRID_POSITIONS = 8;
@@ -93,6 +88,10 @@ export interface DualMixSummary {
 
 export const DUAL_MIX_COLOR_IDS: readonly DualMixColorId[] = ['red', 'blue', 'green', 'yellow'];
 
+export function getDualMixTotalRounds(rounds: number, nLevel: number): number {
+  return Math.max(0, rounds) + Math.max(0, nLevel);
+}
+
 export function deriveStroopTiming(nLevel: number): StroopTiming {
   const levelOffset = Math.max(0, nLevel - 1);
   return {
@@ -110,7 +109,12 @@ export function getPerformanceBand(score: number): { label: string; tone: string
 function shuffleInPlace<T>(values: T[]): T[] {
   for (let index = values.length - 1; index > 0; index--) {
     const swapIndex = Math.floor(Math.random() * (index + 1));
-    [values[index], values[swapIndex]] = [values[swapIndex]!, values[index]!];
+    const current = values[index];
+    const swapValue = values[swapIndex];
+    if (current === undefined || swapValue === undefined) {
+      continue;
+    }
+    [values[index], values[swapIndex]] = [swapValue, current];
   }
   return values;
 }
@@ -164,10 +168,19 @@ function randomPositionExcluding(excluded: number): number {
 }
 
 function randomSoundExcluding(excluded: string): string {
-  let value = SOUNDS[Math.floor(Math.random() * SOUNDS.length)]!;
+  const randomValue = SOUNDS[Math.floor(Math.random() * SOUNDS.length)];
+  if (randomValue === undefined) {
+    throw new Error('SOUNDS must contain at least one entry');
+  }
+  let value = randomValue;
   if (value === excluded) {
     const excludedIndex = SOUNDS.indexOf(excluded as (typeof SOUNDS)[number]);
-    value = SOUNDS[(excludedIndex + 1 + Math.floor(Math.random() * (SOUNDS.length - 1))) % SOUNDS.length]!;
+    const nextValue =
+      SOUNDS[(excludedIndex + 1 + Math.floor(Math.random() * (SOUNDS.length - 1))) % SOUNDS.length];
+    if (nextValue === undefined) {
+      throw new Error('SOUNDS must contain at least one entry');
+    }
+    value = nextValue;
   }
   return value;
 }
@@ -176,9 +189,13 @@ export function generateNBackSequence(rounds: number, nLevel: number): NBackStim
   const sequence: NBackStimulus[] = [];
 
   for (let index = 0; index < nLevel; index++) {
+    const audio = SOUNDS[Math.floor(Math.random() * SOUNDS.length)];
+    if (audio === undefined) {
+      throw new Error('SOUNDS must contain at least one entry');
+    }
     sequence.push({
       position: Math.floor(Math.random() * GRID_POSITIONS),
-      audio: SOUNDS[Math.floor(Math.random() * SOUNDS.length)]!,
+      audio,
       type: 'Non-Cible',
     });
   }
@@ -187,8 +204,11 @@ export function generateNBackSequence(rounds: number, nLevel: number): NBackStim
 
   for (let roundIndex = 0; roundIndex < distribution.length; roundIndex++) {
     const absoluteIndex = nLevel + roundIndex;
-    const nBackStimulus = sequence[absoluteIndex - nLevel]!;
-    const type = distribution[roundIndex]!;
+    const nBackStimulus = sequence[absoluteIndex - nLevel];
+    const type = distribution[roundIndex];
+    if (!nBackStimulus || !type) {
+      continue;
+    }
     const isPositionTarget = type === 'V-Seul' || type === 'Dual';
     const isAudioTarget = type === 'A-Seul' || type === 'Dual';
 
@@ -212,7 +232,10 @@ export function generateStroopTrials(
   const half = Math.floor(count / 2);
 
   for (let index = 0; index < half; index++) {
-    const color = colors[index % colors.length]!;
+    const color = colors[index % colors.length];
+    if (!color) {
+      continue;
+    }
     baseTrials.push({
       word: color.word,
       inkColor: color.id,
@@ -225,17 +248,27 @@ export function generateStroopTrials(
     const wordIndex = index % colors.length;
     let inkIndex = (wordIndex + 1 + (index % (colors.length - 1))) % colors.length;
     if (inkIndex === wordIndex) inkIndex = (inkIndex + 1) % colors.length;
+    const wordColor = colors[wordIndex];
+    const inkColor = colors[inkIndex];
+    if (!wordColor || !inkColor) {
+      continue;
+    }
     baseTrials.push({
-      word: colors[wordIndex]!.word,
-      inkColor: colors[inkIndex]!.id,
-      wordColor: colors[wordIndex]!.id,
+      word: wordColor.word,
+      inkColor: inkColor.id,
+      wordColor: wordColor.id,
       congruent: false,
     });
   }
 
   for (let index = baseTrials.length - 1; index > 0; index--) {
     const swapIndex = Math.floor(Math.random() * (index + 1));
-    [baseTrials[index], baseTrials[swapIndex]] = [baseTrials[swapIndex]!, baseTrials[index]!];
+    const current = baseTrials[index];
+    const swapValue = baseTrials[swapIndex];
+    if (!current || !swapValue) {
+      continue;
+    }
+    [baseTrials[index], baseTrials[swapIndex]] = [swapValue, current];
   }
 
   return baseTrials.map((trial, index) => ({
@@ -245,7 +278,10 @@ export function generateStroopTrials(
 }
 
 export function pickRandomPuzzle(): GridlockBoard {
-  const puzzle = GRIDLOCK_PUZZLES[Math.floor(Math.random() * GRIDLOCK_PUZZLES.length)]!;
+  const puzzle = GRIDLOCK_PUZZLES[Math.floor(Math.random() * GRIDLOCK_PUZZLES.length)];
+  if (!puzzle) {
+    throw new Error('GRIDLOCK_PUZZLES must contain at least one puzzle');
+  }
   return parseBoard(puzzle.boardStr);
 }
 
@@ -261,8 +297,7 @@ export function buildDualMixSummary(input: {
   const nPosCorrect = input.nbackResults.filter((result) => result.positionCorrect).length;
   const nAudCorrect = input.nbackResults.filter((result) => result.audioCorrect).length;
   const nTotal = input.nbackResults.length;
-  const nbackAcc =
-    nTotal > 0 ? Math.round(((nPosCorrect + nAudCorrect) / (nTotal * 2)) * 100) : 0;
+  const nbackAcc = nTotal > 0 ? Math.round(((nPosCorrect + nAudCorrect) / (nTotal * 2)) * 100) : 0;
 
   const stroopCorrect = input.stroopResults.filter((result) => result.correct).length;
   const stroopAcc =

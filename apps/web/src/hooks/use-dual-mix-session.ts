@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import * as React from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   WOVEN_COLORS,
@@ -7,12 +8,7 @@ import {
   useMountEffect,
   useSessionCompletion,
 } from '@neurodual/ui';
-import {
-  applyMove,
-  isWon,
-  type GridlockMove,
-  type SessionEndReportModel,
-} from '@neurodual/logic';
+import { applyMove, isWon, type GridlockMove, type SessionEndReportModel } from '@neurodual/logic';
 import { useAnalytics } from './use-analytics';
 import { useAudioPrewarm } from './use-audio-prewarm';
 import { useHaptic } from './use-haptic';
@@ -30,6 +26,7 @@ import {
   deriveStroopTiming,
   generateNBackSequence,
   generateStroopTrials,
+  getDualMixTotalRounds,
   DUAL_MIX_COLOR_IDS,
   DUAL_MIX_DEFAULT_LEVEL,
   DUAL_MIX_DEFAULT_ROUNDS,
@@ -80,6 +77,7 @@ export interface UseDualMixSessionResult {
   readonly lastStroopFeedback: boolean | null;
   readonly gridlockBoard: ReturnType<typeof pickRandomPuzzle>;
   readonly summary: DualMixSummary | null;
+  readonly stroopResults: readonly StroopResult[];
   readonly completionReport: SessionEndReportModel | null | undefined;
   readonly modeLabel: string;
   readonly startSession: () => void;
@@ -137,6 +135,10 @@ export function useDualMixSession(): UseDualMixSessionResult {
   }));
   const nLevel = sessionConfig.nLevel;
   const totalRounds = sessionConfig.totalRounds;
+  const effectiveTotalRounds = useMemo(
+    () => getDualMixTotalRounds(totalRounds, nLevel),
+    [nLevel, totalRounds],
+  );
   const includeGridlock = sessionConfig.includeGridlock;
   const manualAdvance = sessionConfig.manualAdvance;
   const stroopTiming = useMemo(() => deriveStroopTiming(nLevel), [nLevel]);
@@ -222,7 +224,7 @@ export function useDualMixSession(): UseDualMixSessionResult {
     };
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (phase !== 'idle') return;
     setSessionConfig((current) => {
       if (
@@ -290,90 +292,118 @@ export function useDualMixSession(): UseDualMixSessionResult {
   }, []);
 
   function commitNBackRound(roundIndex: number): void {
-      if (phaseRef.current !== 'nback-response' || roundRef.current !== roundIndex) return;
-      invalidateTransitions();
-      const sequence = nbackSequenceRef.current;
-      const targetIndex = roundIndex + nLevel;
-      const currentStimulus = sequence[targetIndex];
-      const previousStimulus = sequence[roundIndex];
-      if (!currentStimulus || !previousStimulus) return;
+    if (phaseRef.current !== 'nback-response' || roundRef.current !== roundIndex) return;
+    invalidateTransitions();
+    const sequence = nbackSequenceRef.current;
+    const currentStimulus = sequence[roundIndex];
+    if (!currentStimulus) return;
 
-      const isPositionTarget = currentStimulus.position === previousStimulus.position;
-      const isAudioTarget = currentStimulus.audio === previousStimulus.audio;
-      const committedPressedPosition = selectedPositionRef.current;
-      const committedPressedAudio = selectedAudioRef.current;
-      const result: NBackResult = {
-        isPositionTarget,
-        isAudioTarget,
-        pressedPosition: committedPressedPosition,
-        pressedAudio: committedPressedAudio,
-        positionCorrect: committedPressedPosition === isPositionTarget,
-        audioCorrect: committedPressedAudio === isAudioTarget,
-      };
-
-      setNbackResults((previous) => [...previous, result]);
+    if (roundIndex < nLevel) {
       buildTrialEvent(
         emitterRef.current,
         'dual-mix',
         nextTrialIndex(),
-        result.positionCorrect && result.audioCorrect,
+        true,
         NBACK_RESPONSE_WINDOW_MS,
         'nback',
         {
           roundIndex,
+          isBuffer: true,
           targetPosition: currentStimulus.position,
           targetAudio: currentStimulus.audio,
-          isPositionTarget,
-          isAudioTarget,
+          isPositionTarget: false,
+          isAudioTarget: false,
           stimulusType: currentStimulus.type,
-          pressedPosition: committedPressedPosition,
-          pressedAudio: committedPressedAudio,
-          positionCorrect: result.positionCorrect,
-          audioCorrect: result.audioCorrect,
+          pressedPosition: false,
+          pressedAudio: false,
+          positionCorrect: true,
+          audioCorrect: true,
           responseWindowMs: NBACK_RESPONSE_WINDOW_MS,
         },
       );
-      startStroopFixation(roundIndex);
+      advanceAfterRound(roundIndex);
+      return;
+    }
+
+    const previousStimulus = sequence[roundIndex - nLevel];
+    if (!previousStimulus) return;
+
+    const isPositionTarget = currentStimulus.position === previousStimulus.position;
+    const isAudioTarget = currentStimulus.audio === previousStimulus.audio;
+    const committedPressedPosition = selectedPositionRef.current;
+    const committedPressedAudio = selectedAudioRef.current;
+    const result: NBackResult = {
+      isPositionTarget,
+      isAudioTarget,
+      pressedPosition: committedPressedPosition,
+      pressedAudio: committedPressedAudio,
+      positionCorrect: committedPressedPosition === isPositionTarget,
+      audioCorrect: committedPressedAudio === isAudioTarget,
+    };
+
+    setNbackResults((previous) => [...previous, result]);
+    buildTrialEvent(
+      emitterRef.current,
+      'dual-mix',
+      nextTrialIndex(),
+      result.positionCorrect && result.audioCorrect,
+      NBACK_RESPONSE_WINDOW_MS,
+      'nback',
+      {
+        roundIndex,
+        targetPosition: currentStimulus.position,
+        targetAudio: currentStimulus.audio,
+        isPositionTarget,
+        isAudioTarget,
+        stimulusType: currentStimulus.type,
+        pressedPosition: committedPressedPosition,
+        pressedAudio: committedPressedAudio,
+        positionCorrect: result.positionCorrect,
+        audioCorrect: result.audioCorrect,
+        responseWindowMs: NBACK_RESPONSE_WINDOW_MS,
+      },
+    );
+    startStroopFixation(roundIndex);
   }
 
   function startNBackStimulus(roundIndex: number): void {
-      invalidateTransitions();
-      clearFlashTimers();
-      setSelectedPosition(false);
-      setSelectedAudio(false);
-      setPressedPosition(false);
-      setPressedAudio(false);
-      gridlockMoveAllowedRef.current = false;
-      setPhase('nback-stimulus');
+    invalidateTransitions();
+    clearFlashTimers();
+    setSelectedPosition(false);
+    setSelectedAudio(false);
+    setPressedPosition(false);
+    setPressedAudio(false);
+    gridlockMoveAllowedRef.current = false;
+    setPhase('nback-stimulus');
 
-      const stimulus = nbackSequenceRef.current[roundIndex + nLevel];
-      if (stimulus) {
-        audio.play(stimulus.audio as never);
+    const stimulus = nbackSequenceRef.current[roundIndex + nLevel];
+    if (stimulus) {
+      audio.play(stimulus.audio as never);
+    }
+
+    scheduleTimer(() => {
+      setPhase('nback-response');
+      if (!manualAdvance) {
+        scheduleTimer(() => {
+          commitNBackRound(roundIndex);
+        }, NBACK_RESPONSE_WINDOW_MS);
       }
-
-      scheduleTimer(() => {
-        setPhase('nback-response');
-        if (!manualAdvance) {
-          scheduleTimer(() => {
-            commitNBackRound(roundIndex);
-          }, NBACK_RESPONSE_WINDOW_MS);
-        }
-      }, NBACK_STIMULUS_MS);
+    }, NBACK_STIMULUS_MS);
   }
 
   function advanceAfterRound(roundIndex: number): void {
-      invalidateTransitions();
-      gridlockMoveAllowedRef.current = false;
-      setPhase('round-isi');
-      scheduleTimer(() => {
-        const nextRound = roundIndex + 1;
-        if (nextRound >= totalRounds) {
-          setPhase('finished');
-        } else {
-          setRound(nextRound);
-          startNBackStimulus(nextRound);
-        }
-      }, ISI_MS);
+    invalidateTransitions();
+    gridlockMoveAllowedRef.current = false;
+    setPhase('round-isi');
+    scheduleTimer(() => {
+      const nextRound = roundIndex + 1;
+      if (nextRound >= effectiveTotalRounds) {
+        setPhase('finished');
+      } else {
+        setRound(nextRound);
+        startNBackStimulus(nextRound);
+      }
+    }, ISI_MS);
   }
 
   function startGridlockMove(): void {
@@ -383,70 +413,70 @@ export function useDualMixSession(): UseDualMixSessionResult {
   }
 
   function startStroopFeedback(correct: boolean, roundIndex: number): void {
-      setLastStroopFeedback(correct);
-      setPhase('stroop-feedback');
-      scheduleTimer(() => {
-        if (includeGridlock) {
-          startGridlockMove();
-        } else {
-          advanceAfterRound(roundIndex);
-        }
-      }, STROOP_FEEDBACK_MS);
+    setLastStroopFeedback(correct);
+    setPhase('stroop-feedback');
+    scheduleTimer(() => {
+      if (includeGridlock) {
+        startGridlockMove();
+      } else {
+        advanceAfterRound(roundIndex);
+      }
+    }, STROOP_FEEDBACK_MS);
   }
 
   function startStroopFixation(roundIndex: number): void {
-      invalidateTransitions();
-      stroopRespondedRef.current = false;
-      setLastStroopFeedback(null);
-      setPhase('stroop-fixation');
+    invalidateTransitions();
+    stroopRespondedRef.current = false;
+    setLastStroopFeedback(null);
+    setPhase('stroop-fixation');
+    scheduleTimer(() => {
+      setPhase('stroop-stimulus');
+      stroopStimulusStartRef.current = performance.now();
       scheduleTimer(() => {
-        setPhase('stroop-stimulus');
-        stroopStimulusStartRef.current = performance.now();
-        scheduleTimer(() => {
-          if (stroopRespondedRef.current) return;
-          stroopRespondedRef.current = true;
-          const trial = stroopTrialsRef.current[roundIndex];
-          if (!trial) return;
-          setStroopResults((previous) => [
-            ...previous,
-            {
-              trial,
-              response: null,
-              correct: false,
-              rt: stroopTiming.stimulusTimeoutMs,
-              timedOut: true,
-            },
-          ]);
-          buildTrialEvent(
-            emitterRef.current,
-            'dual-mix',
-            nextTrialIndex(),
-            false,
-            stroopTiming.stimulusTimeoutMs,
-            'stroop-flex',
-            {
-              roundIndex,
-              timedOut: true,
-              response: null,
-              word: trial.word,
-              inkColor: trial.inkColor,
-              wordColor: trial.wordColor,
-              rule: trial.rule,
-            },
-          );
-          startStroopFeedback(false, roundIndex);
-        }, stroopTiming.stimulusTimeoutMs);
-      }, stroopTiming.fixationMs);
+        if (stroopRespondedRef.current) return;
+        stroopRespondedRef.current = true;
+        const trial = stroopTrialsRef.current[roundIndex];
+        if (!trial) return;
+        setStroopResults((previous) => [
+          ...previous,
+          {
+            trial,
+            response: null,
+            correct: false,
+            rt: stroopTiming.stimulusTimeoutMs,
+            timedOut: true,
+          },
+        ]);
+        buildTrialEvent(
+          emitterRef.current,
+          'dual-mix',
+          nextTrialIndex(),
+          false,
+          stroopTiming.stimulusTimeoutMs,
+          'stroop-flex',
+          {
+            roundIndex,
+            timedOut: true,
+            response: null,
+            word: trial.word,
+            inkColor: trial.inkColor,
+            wordColor: trial.wordColor,
+            rule: trial.rule,
+          },
+        );
+        startStroopFeedback(false, roundIndex);
+      }, stroopTiming.stimulusTimeoutMs);
+    }, stroopTiming.fixationMs);
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (startedSeedRef.current === runSeed) return;
     startedSeedRef.current = runSeed;
     invalidateTransitions();
     clearPuzzleResetTimer();
     clearFlashTimers();
     nbackSequenceRef.current = generateNBackSequence(totalRounds, nLevel);
-    stroopTrialsRef.current = generateStroopTrials(totalRounds, colorsRef.current);
+    stroopTrialsRef.current = generateStroopTrials(effectiveTotalRounds, colorsRef.current);
     emittedTrialIndexRef.current = 0;
     completionSessionIdRef.current = null;
     setRound(0);
@@ -462,9 +492,16 @@ export function useDualMixSession(): UseDualMixSessionResult {
     setPressedAudio(false);
     setIsStarting(false);
     setPhase('idle');
-  }, [clearPuzzleResetTimer, invalidateTransitions, nLevel, runSeed, totalRounds]);
+  }, [
+    clearPuzzleResetTimer,
+    effectiveTotalRounds,
+    invalidateTransitions,
+    nLevel,
+    runSeed,
+    totalRounds,
+  ]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (phase !== 'countdown') return;
     invalidateTransitions();
     scheduleTimer(() => {
@@ -487,9 +524,12 @@ export function useDualMixSession(): UseDualMixSessionResult {
         buildStartEvent(emitterRef.current, 'dual-mix', platformInfo, {
           nLevel,
           rounds: totalRounds,
+          totalRounds: effectiveTotalRounds,
           includeGridlock,
           manualAdvance,
-          activeModalities: includeGridlock ? ['position', 'audio', 'color'] : ['position', 'audio'],
+          activeModalities: includeGridlock
+            ? ['position', 'audio', 'color']
+            : ['position', 'audio'],
           nbackStimulusMs: NBACK_STIMULUS_MS,
           nbackResponseWindowMs: NBACK_RESPONSE_WINDOW_MS,
           stroopFixationMs: stroopTiming.fixationMs,
@@ -612,20 +652,12 @@ export function useDualMixSession(): UseDualMixSessionResult {
       const solved = isWon(updatedBoard);
       setGridlockTotalMoves((value) => value + 1);
       setGridlockBoard(updatedBoard);
-      buildTrialEvent(
-        emitterRef.current,
-        'dual-mix',
-        nextTrialIndex(),
-        true,
-        0,
-        'gridlock',
-        {
-          roundIndex: round,
-          pieceId: move.pieceId,
-          delta: move.delta,
-          solved,
-        },
-      );
+      buildTrialEvent(emitterRef.current, 'dual-mix', nextTrialIndex(), true, 0, 'gridlock', {
+        roundIndex: round,
+        pieceId: move.pieceId,
+        delta: move.delta,
+        solved,
+      });
 
       if (solved) {
         setGridlockPuzzlesSolved((value) => value + 1);
@@ -717,20 +749,21 @@ export function useDualMixSession(): UseDualMixSessionResult {
     totalRounds,
   ]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (phase !== 'finished' || !summary) return;
     if (completionSessionIdRef.current === emitterRef.current.sessionId) return;
     completionSessionIdRef.current = emitterRef.current.sessionId;
 
     buildEndEvent(emitterRef.current, 'dual-mix', {
       reason: 'completed',
-      totalTrials: totalRounds,
+      totalTrials: effectiveTotalRounds,
       correctTrials: Math.round((summary.overallScore / 100) * totalRounds),
       accuracy: summary.overallScore / 100,
       durationMs: summary.durationMs,
       meanRtMs: summary.stroopAvgRT,
       metrics: {
         rounds: totalRounds,
+        totalRounds: effectiveTotalRounds,
         reportedLevel: nLevel,
         manualAdvance,
         nbackRounds: nbackResults.length,
@@ -771,11 +804,11 @@ export function useDualMixSession(): UseDualMixSessionResult {
       reason: 'completed',
       accuracy: summary.overallScore,
       correctTrials: Math.round((summary.overallScore / 100) * totalRounds),
-      totalTrials: totalRounds,
+      totalTrials: effectiveTotalRounds,
       durationMs: summary.durationMs,
       meanRtMs: summary.stroopAvgRT,
     });
-  }, [complete, modeLabel, nLevel, phase, summary, totalRounds, track]);
+  }, [complete, effectiveTotalRounds, modeLabel, nLevel, phase, summary, totalRounds, track]);
 
   const abandonSession = useCallback(() => {
     invalidateTransitions();
@@ -786,8 +819,8 @@ export function useDualMixSession(): UseDualMixSessionResult {
       mode: 'dual-mix',
       n_level: nLevel,
       trials_completed: round,
-      total_trials: totalRounds,
-      progress_pct: Math.round((round / Math.max(1, totalRounds)) * 100),
+      total_trials: effectiveTotalRounds,
+      progress_pct: Math.round((round / Math.max(1, effectiveTotalRounds)) * 100),
       play_context: 'free',
     });
     emitterRef.current.events = [];
@@ -799,11 +832,12 @@ export function useDualMixSession(): UseDualMixSessionResult {
     nLevel,
     persistence,
     round,
+    effectiveTotalRounds,
     totalRounds,
     track,
   ]);
 
-  const currentStimulus = nbackSequenceRef.current[round + nLevel];
+  const currentStimulus = nbackSequenceRef.current[round];
   const currentStroopTrial = stroopTrialsRef.current[round];
   const currentInkCss = currentStroopTrial
     ? `hsl(${colors.find((color) => color.id === currentStroopTrial.inkColor)?.cssVar})`
@@ -824,7 +858,7 @@ export function useDualMixSession(): UseDualMixSessionResult {
   return {
     phase,
     round,
-    totalRounds,
+    totalRounds: effectiveTotalRounds,
     nLevel,
     includeGridlock,
     canPause,
@@ -841,6 +875,7 @@ export function useDualMixSession(): UseDualMixSessionResult {
     lastStroopFeedback,
     gridlockBoard,
     summary,
+    stroopResults,
     completionReport: completionResult?.report,
     modeLabel,
     startSession,

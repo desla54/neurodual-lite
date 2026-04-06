@@ -8,17 +8,13 @@
  */
 
 import type { ModeSpec } from './types';
-import {
-  ACCURACY_PASS_NORMALIZED,
-  MODE_COLOR_DUAL_TASK,
-} from './thresholds';
+import { ACCURACY_PASS_NORMALIZED, MODE_COLOR_DUAL_TASK } from './thresholds';
 
 export const DualMixSpec: ModeSpec = {
   metadata: {
     id: 'dual-mix',
     displayName: 'Dual Mix',
-    description:
-      'Composite session mixing N-Back, Stroop Flex and Gridlock in a single turn loop.',
+    description: 'Composite session mixing N-Back, Stroop Flex and Gridlock in a single turn loop.',
     tags: ['training', 'composite', 'executive', 'attention'],
     difficultyLevel: 4,
     version: '1.0.0',
@@ -56,7 +52,7 @@ export const DualMixSpec: ModeSpec = {
   },
 
   report: {
-    sections: ['HERO', 'PERFORMANCE', 'DETAILS', 'RECENT_TREND'],
+    sections: ['HERO', 'PERFORMANCE', 'ERROR_PROFILE', 'DETAILS', 'RECENT_TREND'],
     display: {
       modeScoreKey: 'report.modeScore.accuracy',
       modeScoreTooltipKey: 'report.modeScore.accuracyTooltip',

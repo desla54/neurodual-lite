@@ -391,6 +391,101 @@ describe('SessionCompletionProjector', () => {
       });
     });
 
+    test('should ignore dual-mix warmup rounds in per-modality metrics', () => {
+      const events: any[] = [
+        {
+          type: 'COGNITIVE_TASK_SESSION_STARTED',
+          sessionId,
+          timestamp: 0,
+          taskType: 'dual-mix',
+          playContext: 'free',
+          config: {
+            nLevel: 2,
+            activeModalities: ['position', 'audio', 'color'],
+            rounds: 10,
+            totalRounds: 12,
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId,
+          timestamp: 1000,
+          taskType: 'dual-mix',
+          trialIndex: 0,
+          correct: true,
+          responseTimeMs: 3000,
+          condition: 'nback',
+          trialData: {
+            roundIndex: 0,
+            isBuffer: true,
+            isPositionTarget: false,
+            isAudioTarget: false,
+            pressedPosition: false,
+            pressedAudio: false,
+            positionCorrect: true,
+            audioCorrect: true,
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId,
+          timestamp: 2000,
+          taskType: 'dual-mix',
+          trialIndex: 1,
+          correct: true,
+          responseTimeMs: 3000,
+          condition: 'nback',
+          trialData: {
+            roundIndex: 2,
+            isPositionTarget: true,
+            isAudioTarget: false,
+            pressedPosition: true,
+            pressedAudio: false,
+            positionCorrect: true,
+            audioCorrect: true,
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_SESSION_ENDED',
+          sessionId,
+          timestamp: 3000,
+          taskType: 'dual-mix',
+          reason: 'completed',
+          totalTrials: 12,
+          correctTrials: 11,
+          accuracy: 0.9,
+          meanRtMs: 3000,
+          durationMs: 3000,
+          metrics: {
+            overallScore: 90,
+          },
+        },
+      ];
+
+      const result = SessionCompletionProjector.project({
+        mode: 'cognitive-task',
+        sessionId,
+        gameModeLabel: 'Dual Mix',
+        taskType: 'dual-mix',
+        events,
+        reason: 'completed',
+        accuracy: 90,
+        correctTrials: 11,
+        totalTrials: 12,
+        durationMs: 3000,
+        meanRtMs: 3000,
+      });
+
+      expect(result).not.toBeNull();
+      expect(result?.report.byModality.position?.hits).toBe(1);
+      expect(result?.report.byModality.position?.correctRejections).toBeNull();
+      expect(result?.report.byModality.audio?.correctRejections).toBe(1);
+      expect(result?.report.taskMetrics).toMatchObject({
+        nbackRounds: 1,
+        rounds: 1,
+      });
+    });
+
     test('should project flow mode', () => {
       // Flow needs drops for accuracy
       const events: any[] = [

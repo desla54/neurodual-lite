@@ -69,6 +69,7 @@ export function generateTrials(
   rng: () => number = Math.random,
 ): StroopTrial[] {
   const isFlex = variant === 'stroop-flex';
+  if (colorWords.length === 0) return [];
 
   // Assign rules: 50/50 ink/word for flex, all ink for classic
   const rules: StroopRule[] = [];
@@ -78,7 +79,12 @@ export function generateTrials(
     for (let i = halfWord; i < count; i++) rules.push('ink');
     for (let i = rules.length - 1; i > 0; i--) {
       const j = Math.floor(rng() * (i + 1));
-      [rules[i]!, rules[j]!] = [rules[j]!, rules[i]!];
+      const currentRule = rules[i];
+      const swapRule = rules[j];
+      if (!currentRule || !swapRule) {
+        continue;
+      }
+      [rules[i], rules[j]] = [swapRule, currentRule];
     }
   }
 
@@ -87,26 +93,46 @@ export function generateTrials(
   let congruentCount = 0;
 
   for (let i = 0; i < count; i++) {
-    const rule: StroopRule = isFlex ? rules[i]! : 'ink';
+    const rule = isFlex ? rules[i] : 'ink';
+    if (!rule) {
+      continue;
+    }
 
     if (congruentCount < half) {
-      const c = colorWords[i % colorWords.length]!;
+      const c = colorWords[i % colorWords.length];
+      if (!c) {
+        continue;
+      }
       trials.push({ word: c.word, inkColor: c.id, wordColor: c.id, congruent: true, rule });
       congruentCount++;
     } else {
       const wordIdx = i % colorWords.length;
       let inkIdx = (wordIdx + 1 + Math.floor(rng() * (colorWords.length - 1))) % colorWords.length;
       if (inkIdx === wordIdx) inkIdx = (inkIdx + 1) % colorWords.length;
-      const wordC = colorWords[wordIdx]!;
-      const inkC = colorWords[inkIdx]!;
-      trials.push({ word: wordC.word, inkColor: inkC.id, wordColor: wordC.id, congruent: false, rule });
+      const wordC = colorWords[wordIdx];
+      const inkC = colorWords[inkIdx];
+      if (!wordC || !inkC) {
+        continue;
+      }
+      trials.push({
+        word: wordC.word,
+        inkColor: inkC.id,
+        wordColor: wordC.id,
+        congruent: false,
+        rule,
+      });
     }
   }
 
   // Fisher-Yates shuffle
   for (let i = trials.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
-    [trials[i]!, trials[j]!] = [trials[j]!, trials[i]!];
+    const currentTrial = trials[i];
+    const swapTrial = trials[j];
+    if (!currentTrial || !swapTrial) {
+      continue;
+    }
+    [trials[i], trials[j]] = [swapTrial, currentTrial];
   }
 
   return trials;

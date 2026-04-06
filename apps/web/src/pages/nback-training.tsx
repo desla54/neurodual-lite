@@ -1226,14 +1226,10 @@ function GameplayContent({
   const safeTotalTrials = Math.max(0, totalTrials);
   const clampedTrialIndex =
     safeTotalTrials > 0 ? Math.min(Math.max(trialIndex, 0), safeTotalTrials - 1) : 0;
-  const visibleBufferTrials = Math.min(Math.max(nLevel, 0), safeTotalTrials);
-  const visibleTotalTrials = Math.max(0, safeTotalTrials - visibleBufferTrials);
-  const displayedTrial = trial && !trial.isBuffer ? trial.index - visibleBufferTrials + 1 : 0;
-  const consumedTrials = trial
-    ? Math.max(0, trial.index - visibleBufferTrials + (trial.isBuffer ? 0 : 1))
-    : Math.max(0, clampedTrialIndex - visibleBufferTrials);
-  const clampedConsumedTrials = Math.min(visibleTotalTrials, consumedTrials);
-  const remainingTrials = Math.max(0, visibleTotalTrials - clampedConsumedTrials);
+  const displayedTrial = trial ? Math.min(safeTotalTrials, Math.max(0, trial.index + 1)) : 0;
+  const consumedTrials = trial ? Math.max(0, trial.index + 1) : Math.max(0, clampedTrialIndex);
+  const clampedConsumedTrials = Math.min(safeTotalTrials, consumedTrials);
+  const remainingTrials = Math.max(0, safeTotalTrials - clampedConsumedTrials);
   const hudTrialIndex = displayedTrial > 0 ? displayedTrial - 1 : -1;
   const sessionJourneyStageId = session.getJourneyStageId();
   const sessionJourneyId = session.getJourneyId();
@@ -1495,23 +1491,6 @@ function GameplayContent({
     if (r) track('report_action_clicked', buildReportActionPayload(r, 'home'));
     transitionNavigate('/');
   }, [stableFinishedReport, track, transitionNavigate]);
-
-  const handleReplay = useCallback(() => {
-    if (summary?.sessionId) {
-      const r = stableFinishedReport;
-      if (r) track('report_action_clicked', buildReportActionPayload(r, 'replay'));
-      transitionNavigate(`/replay/${summary.sessionId}`);
-    }
-  }, [stableFinishedReport, summary?.sessionId, track, transitionNavigate]);
-
-  // Interactive correction (only for Tempo mode)
-  const handleCorrect = useCallback(() => {
-    if (summary?.sessionId) {
-      const r = stableFinishedReport;
-      if (r) track('report_action_clicked', buildReportActionPayload(r, 'correct'));
-      transitionNavigate(`/replay/${summary.sessionId}?mode=interactive`);
-    }
-  }, [stableFinishedReport, summary?.sessionId, track, transitionNavigate]);
 
   // Play click sound on button press (if enabled)
   const playClickIfEnabled = useCallback(() => {
@@ -2013,19 +1992,6 @@ function GameplayContent({
               setStatsJourneyFilter(preset.journeyFilter);
               transitionNavigate('/stats');
             }}
-            onReplay={handleReplay}
-            onCorrect={
-              [
-                'dualnback-classic',
-                'dual-place',
-                'dual-memo',
-                'dualnback-classic',
-                'sim-brainworkshop',
-                'custom',
-              ].includes(effectiveMode ?? '')
-                ? handleCorrect
-                : undefined
-            }
             showFloatingCloseButton
             xpData={
               stableCompletion.xpBreakdown
@@ -2279,14 +2245,14 @@ function GameplayContent({
                   </span>
                   <span className="text-woven-text-muted"> / </span>
                   <span className="text-[15px] tabular-nums tracking-tight">
-                    {String(visibleTotalTrials).padStart(2, '0')}
+                    {String(safeTotalTrials).padStart(2, '0')}
                   </span>
                 </>
               )}
             </button>
           }
           trialIndex={hudTrialIndex}
-          totalTrials={visibleTotalTrials}
+          totalTrials={safeTotalTrials}
           countdownMode={gameCountdownMode}
           isPaused={isPaused}
           canPause={isPlaying || isPaused}

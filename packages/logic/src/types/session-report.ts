@@ -326,6 +326,8 @@ export type TurnDetail =
  */
 export interface TempoTrialDetail {
   readonly kind: 'tempo-trial';
+  /** Whether this trial is a warmup/buffer trial and should not be scored for N-back. */
+  readonly isBuffer?: boolean;
   /** Stimulus values (null if not available) */
   readonly stimulus?: {
     readonly position?: number | null;
