@@ -243,7 +243,11 @@ export function HomePage(): ReactNode {
     >
       <div className="relative flex min-h-full w-full flex-col items-center gap-5 pb-8">
         {/* OSpan badge */}
-        <div className="absolute -top-1 -left-1 z-10" data-onboarding-target="fiches">
+        <div
+          className="absolute -left-1 z-10"
+          style={{ top: 'calc(-1 * var(--safe-top) - 0.25rem)' }}
+          data-onboarding-target="fiches"
+        >
           <div data-onboarding-target="fiche-ospan">
             <OspanMeasureButton />
           </div>

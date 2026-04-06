@@ -14,7 +14,6 @@ import type { SessionHistoryItem } from '@neurodual/logic';
 import { Brain, CaretLeft, CaretRight, Clock, Trash, X } from '@phosphor-icons/react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useStagger } from '../../animations';
 import { profileDevEffectSync } from '../../debug/dev-effect-profiler';
 import { SessionWithRuns, type SessionWithRunsProps } from './session-with-runs';
 import { BulkDeleteModal, DeleteConfirmModal } from './delete-modals';
@@ -151,9 +150,6 @@ export function HistoryView({
     if (nextCursor == null) return false;
     return (currentPage + 1) * pageSize < filteredCount;
   }, [currentPage, filteredCount, nextCursor, pageSize]);
-
-  // Stagger animation for session list (re-animate on page change)
-  useStagger(listRef, '> *', { deps: [currentPage, sessions.length] });
 
   const handleDeleteClick = useCallback((session: SessionHistoryItem) => {
     setDeleteConfirm(session);

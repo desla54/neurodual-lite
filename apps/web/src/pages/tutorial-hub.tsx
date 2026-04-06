@@ -1,4 +1,5 @@
 import { TutorialHub } from '@neurodual/ui';
+import { Shuffle } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTransitionNavigate } from '../hooks/use-transition-navigate';
@@ -20,8 +21,8 @@ export function TutorialHubPage(): ReactNode {
           onClick={() => transitionNavigate('/stroop-flex?intro=1', { direction: 'modal' })}
           className="group relative flex items-center gap-4 text-left p-4 rounded-2xl transition-all duration-200 border border-border bg-card hover:bg-secondary/50 hover:border-primary/20 active:scale-[0.98] cursor-pointer"
         >
-          <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-fuchsia-100 dark:bg-fuchsia-500/15">
-            <span className="text-lg">🔀</span>
+          <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-[hsl(var(--woven-magenta)/0.12)]">
+            <Shuffle size={22} weight="duotone" className="text-[hsl(var(--woven-magenta))]" />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-base font-semibold truncate text-foreground">

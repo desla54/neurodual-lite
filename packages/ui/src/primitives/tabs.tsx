@@ -89,7 +89,7 @@ const TabsContent = forwardRef<
     ref={ref}
     className={cn(
       'mt-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-      'animate-in fade-in-50 slide-in-from-bottom-2',
+      props['data-no-animate'] !== 'true' && 'animate-in fade-in-50 slide-in-from-bottom-2',
       className,
     )}
     {...props}

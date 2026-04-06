@@ -551,6 +551,16 @@ export function StatsPage(): ReactNode {
   // Only show the counter spinner while the header counts query is actually pending.
   const isFiltering = headerCountsPending;
   const hasCounterError = Boolean(headerCountsError);
+  const [hasResolvedHeaderCountsOnce, setHasResolvedHeaderCountsOnce] = useState(false);
+
+  useEffect(() => {
+    if (!headerCountsPending) {
+      setHasResolvedHeaderCountsOnce(true);
+    }
+  }, [headerCountsPending]);
+
+  const showHeaderCounts = hasResolvedHeaderCountsOnce || !headerCountsPending;
+  const showHeaderFilteringSpinner = hasResolvedHeaderCountsOnce && isFiltering;
 
   useEffect(() => {
     if (!hasCounterError) return;
@@ -654,10 +664,12 @@ export function StatsPage(): ReactNode {
           </div>
           <div className="flex items-center gap-3">
             <div
-              className={`text-sm text-muted-foreground font-medium px-3 py-1 bg-surface rounded-full border border-border flex items-center gap-2 transition-opacity duration-150 ${isFiltering ? 'opacity-60' : ''}`}
+              className={`text-sm text-muted-foreground font-medium px-3 py-1 bg-surface rounded-full border border-border flex items-center gap-2 min-w-[7.5rem] ${showHeaderFilteringSpinner ? 'opacity-70' : ''}`}
             >
-              {isFiltering && <Spinner size={12} className="inline-block" />}
-              {filteredSessionsCount}/{totalSessionsCount} {t('stats.simple.sessions')}
+              {showHeaderFilteringSpinner && <Spinner size={12} className="inline-block" />}
+              {showHeaderCounts
+                ? `${filteredSessionsCount}/${totalSessionsCount} ${t('stats.simple.sessions')}`
+                : `--/-- ${t('stats.simple.sessions')}`}
             </div>
             <div className="flex items-center gap-1">
               <button
@@ -722,7 +734,7 @@ export function StatsPage(): ReactNode {
 
             <Hatching id="stats-tabs-hatch" className="text-foreground" />
 
-            <TabsContent value="simple" className="mt-0 p-4">
+            <TabsContent value="simple" data-no-animate="true" className="mt-0 p-4">
               <SimpleStatsTab
                 mode={effectiveMode}
                 journeyFilter={effectiveJourneyFilter}
@@ -735,7 +747,7 @@ export function StatsPage(): ReactNode {
               />
             </TabsContent>
 
-            <TabsContent value="advanced" className="mt-0 p-4">
+            <TabsContent value="advanced" data-no-animate="true" className="mt-0 p-4">
               <AdvancedStatsTab
                 mode={effectiveMode}
                 journeyFilter={effectiveJourneyFilter}
@@ -748,7 +760,7 @@ export function StatsPage(): ReactNode {
               />
             </TabsContent>
 
-            <TabsContent value="history" className="mt-0 p-4">
+            <TabsContent value="history" data-no-animate="true" className="mt-0 p-4">
               <HistoryView
                 filters={historyFilters}
                 filteredCount={filteredSessionsCount}
@@ -761,7 +773,7 @@ export function StatsPage(): ReactNode {
               />
             </TabsContent>
 
-            <TabsContent value="progression" className="mt-0 p-4">
+            <TabsContent value="progression" data-no-animate="true" className="mt-0 p-4">
               <ProgressionTab showRewardMilestones />
             </TabsContent>
           </Tabs>

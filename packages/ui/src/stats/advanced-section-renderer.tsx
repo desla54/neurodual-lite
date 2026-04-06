@@ -2116,7 +2116,7 @@ function AdvancedStatsSectionRendererInner({
   );
 
   return (
-    <div className="space-y-2 pb-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="space-y-2 pb-4">
       {/* TEMPS */}
       {showTime && (
         <>
