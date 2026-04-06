@@ -2007,15 +2007,6 @@ const BASE_GAME_MODES: Omit<GameModeConfig, 'reliability' | 'section' | 'tier'>[
   },
   // === Original modes (alpha) ===
   {
-    value: 'dualnback-classic',
-    labelKey: 'settings.gameMode.dualnbackClassic',
-    descKey: 'settings.gameMode.dualnbackClassicDesc',
-    icon: Target,
-    colorClass: 'text-[hsl(var(--woven-purple))]',
-    bgClass: 'bg-[hsl(var(--woven-purple)/0.12)]',
-    badge: 'alpha',
-  },
-  {
     value: 'ospan',
     labelKey: 'settings.gameMode.ospan',
     descKey: 'settings.gameMode.ospanDesc',

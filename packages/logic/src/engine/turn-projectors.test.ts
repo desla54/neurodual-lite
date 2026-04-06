@@ -8,6 +8,7 @@ import {
   projectMemoTurns,
   projectPlaceTurns,
   projectCorsiTurns,
+  projectCognitiveTaskTurns,
 } from './turn-projectors';
 import type { Trial } from '../types/core';
 import type { GameEvent, MemoEvent, PlaceEvent } from './events';
@@ -252,6 +253,71 @@ describe('Turn Projectors', () => {
       expect(turns[0]!.detail.responses).toHaveProperty('image');
       // @ts-expect-error test override
       expect(turns[0]!.detail.responses).toHaveProperty('arithmetic');
+    });
+  });
+
+  describe('projectCognitiveTaskTurns', () => {
+    test('projects dual-mix rounds as unified tempo-style turns', () => {
+      const events = [
+        {
+          type: 'COGNITIVE_TASK_SESSION_STARTED',
+          sessionId: 'dual-mix-session',
+          taskType: 'dual-mix',
+          timestamp: 1000,
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId: 'dual-mix-session',
+          taskType: 'dual-mix',
+          trialIndex: 0,
+          correct: false,
+          responseTimeMs: 3000,
+          condition: 'nback',
+          timestamp: 1200,
+          trialData: {
+            roundIndex: 0,
+            isPositionTarget: true,
+            isAudioTarget: false,
+            pressedPosition: true,
+            pressedAudio: true,
+            targetPosition: 2,
+            targetAudio: 'C',
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId: 'dual-mix-session',
+          taskType: 'dual-mix',
+          trialIndex: 1,
+          correct: true,
+          responseTimeMs: 640,
+          condition: 'stroop-flex',
+          timestamp: 1600,
+          trialData: {
+            roundIndex: 0,
+            timedOut: false,
+            inkColor: 'red',
+          },
+        },
+      ] as any;
+
+      const turns = projectCognitiveTaskTurns(events);
+
+      expect(turns).toHaveLength(1);
+      expect(turns[0]!.kind).toBe('tempo-trial');
+      expect(turns[0]!.index).toBe(1);
+      expect(turns[0]!.headline).toContain('POS✓');
+      expect(turns[0]!.headline).toContain('AUD✗');
+      expect(turns[0]!.headline).toContain('STR✓');
+      expect(turns[0]!.detail.kind).toBe('tempo-trial');
+      if (turns[0]!.detail.kind !== 'tempo-trial') {
+        throw new Error('Expected tempo-trial detail');
+      }
+      expect(turns[0]!.detail.responses.position?.result).toBe('hit');
+      expect(turns[0]!.detail.responses.audio?.result).toBe('false-alarm');
+      expect(turns[0]!.detail.responses.color?.result).toBe('hit');
+      expect(turns[0]!.detail.targets).toContain('position');
+      expect(turns[0]!.detail.targets).toContain('color');
     });
   });
 

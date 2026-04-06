@@ -20,7 +20,6 @@ import {
   TabsList,
   TabsTrigger,
   Hatching,
-  PageTransition,
   // Stats components (imported from @neurodual/ui)
   UnifiedSessionReport,
   FiltersDropdown,
@@ -62,7 +61,6 @@ import { useShallow } from 'zustand/react/shallow';
 import type { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
 import { logger } from '../lib';
 import { getRouteForMode, type GameModeId } from '../lib/mode-metadata';
 import { getStatsPresetForReport } from '../lib/stats-preset';
@@ -78,6 +76,7 @@ import { useHaptic } from '../hooks/use-haptic';
 import { useAlphaEnabled, useBetaEnabled, useBetaScoringEnabled } from '../hooks/use-beta-features';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
 import { useReportVariant } from '../hooks/use-report-variant';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { translateContextualMessage } from '../utils/contextual-message';
 
 // =============================================================================
@@ -93,7 +92,7 @@ const STATS_SUPPORTED_GAME_MODE_IDS = ['dualnback-classic', 'sim-brainworkshop']
 
 export function StatsPage(): ReactNode {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const betaEnabled = useBetaScoringEnabled();
   const betaAccessEnabled = useBetaEnabled();
   const alphaAccessEnabled = useAlphaEnabled();
@@ -496,7 +495,7 @@ export function StatsPage(): ReactNode {
         currentJourneyState?.nextSessionGameMode ??
         reportJourneyConfig.gameMode ??
         report.gameMode;
-      navigate(getRouteForMode(targetModeId as GameModeId), {
+      transitionNavigate(getRouteForMode(targetModeId as GameModeId), {
         state: createJourneyPlayIntent(stageId, journeyId, {
           gameModeId: targetModeId,
           journeyNLevel: nLevel,
@@ -513,11 +512,11 @@ export function StatsPage(): ReactNode {
       closeDetailModal,
       currentJourneyState?.nextSessionGameMode,
       expandJourneyStartLevel,
-      navigate,
       reportJourneyConfig.gameMode,
       reportJourneyConfig.startLevel,
       reportJourneyConfig.strategyConfig,
       reportJourneyConfig.targetLevel,
+      transitionNavigate,
     ],
   );
 
@@ -634,7 +633,7 @@ export function StatsPage(): ReactNode {
 
   return (
     <PullToRefresh onRefresh={handlePullToRefresh} onHaptic={handlePullHaptic}>
-      <PageTransition className="pt-4 pb-8 space-y-6">
+      <div className="pt-4 pb-8 space-y-6">
         {/* Hidden file input for import */}
         <input
           ref={fileInputRef}
@@ -976,7 +975,7 @@ export function StatsPage(): ReactNode {
                       if (!currentNextJourneySession || currentNextJourneySession.isComplete)
                         return;
                       closeDetailModal();
-                      navigate(currentNextJourneySession.route, {
+                      transitionNavigate(currentNextJourneySession.route, {
                         state: nextSessionToPlayIntent(currentNextJourneySession),
                       });
                     };
@@ -1052,7 +1051,7 @@ export function StatsPage(): ReactNode {
                           <StroopSessionReport
                             report={reportForDisplay}
                             onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
+                            onBackToHome={() => transitionNavigate('/')}
                           />
                         </div>
                       );
@@ -1064,7 +1063,7 @@ export function StatsPage(): ReactNode {
                           <OspanSessionReport
                             report={reportForDisplay}
                             onPlayAgain={closeDetailModal}
-                            onBackToHome={() => navigate('/')}
+                            onBackToHome={() => transitionNavigate('/')}
                           />
                         </div>
                       );
@@ -1084,12 +1083,12 @@ export function StatsPage(): ReactNode {
                           }}
                           xpData={xpData}
                           onPlayAgain={closeDetailModal}
-                          onBackToHome={() => navigate('/')}
+                          onBackToHome={() => transitionNavigate('/')}
                           onStartAtLevel={(level) => {
                             const gameMode = reportForDisplay.gameMode ?? 'dualnback-classic';
                             setModeSettingFor(gameMode, 'nLevel', Math.max(1, Math.round(level)));
                             closeDetailModal();
-                            navigate(getRouteForMode(gameMode), {
+                            transitionNavigate(getRouteForMode(gameMode), {
                               state: createFreePlayIntent(gameMode),
                             });
                           }}
@@ -1107,12 +1106,17 @@ export function StatsPage(): ReactNode {
                             setStatsFreeModeFilter('all');
                             closeDetailModal();
                           }}
-                          onReplay={() => navigate(`/replay/${selectedSessionId}${runIdQuery}`)}
+                          onReplay={() =>
+                            transitionNavigate(`/replay/${selectedSessionId}${runIdQuery}`)
+                          }
                           onCorrect={
                             ['dualnback-classic', 'sim-brainworkshop', 'custom'].includes(
                               reportData.gameMode ?? '',
                             )
-                              ? () => navigate(`/replay/${selectedSessionId}${interactiveQuery}`)
+                              ? () =>
+                                  transitionNavigate(
+                                    `/replay/${selectedSessionId}${interactiveQuery}`,
+                                  )
                               : undefined
                           }
                           showMobileCloseButton={false}
@@ -1128,7 +1132,7 @@ export function StatsPage(): ReactNode {
             </div>,
             document.body,
           )}
-      </PageTransition>
+      </div>
     </PullToRefresh>
   );
 }

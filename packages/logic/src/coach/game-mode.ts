@@ -45,6 +45,7 @@ export type ConfigurableSettingKey =
   | 'corsiDirection'
   | 'trialsCount'
   | 'dualMixIncludeGridlock'
+  | 'dualMixManualAdvance'
   | 'trialsCountMode'
   | 'intervalSeconds'
   | 'stimulusDurationSeconds'
@@ -103,6 +104,7 @@ export interface ModeSettings {
   corsiDirection?: 'forward' | 'backward';
   trialsCount?: number;
   dualMixIncludeGridlock?: boolean;
+  dualMixManualAdvance?: boolean;
   trialsCountMode?: 'auto' | 'manual';
   ufovVariant?: 'full' | 'central' | 'divided' | 'selective';
   ufovInitialDisplayMs?: number;

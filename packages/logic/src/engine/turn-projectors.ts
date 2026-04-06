@@ -923,6 +923,9 @@ function buildPlaceTurn(trialIndex: number, data: PlaceTurnData): TurnSummary {
 export function projectCognitiveTaskTurns(
   events: readonly { type: string; [key: string]: unknown }[],
 ): TurnSummary[] {
+  const dualMixTurns = projectDualMixTurns(events);
+  if (dualMixTurns.length > 0) return dualMixTurns;
+
   const turns: TurnSummary[] = [];
 
   for (const event of events) {
@@ -956,6 +959,181 @@ export function projectCognitiveTaskTurns(
   }
 
   return turns;
+}
+
+export function projectDualMixTurns(
+  events: readonly { type: string; [key: string]: unknown }[],
+): TurnSummary[] {
+  const dualMixEvents = events.filter(
+    (event): event is CognitiveTaskTrialCompletedEvent =>
+      event.type === 'COGNITIVE_TASK_TRIAL_COMPLETED' && event.taskType === 'dual-mix',
+  );
+  if (dualMixEvents.length === 0) return [];
+
+  const rounds = new Map<
+    number,
+    {
+      startedAt: number;
+      nback?: CognitiveTaskTrialCompletedEvent;
+      stroop?: CognitiveTaskTrialCompletedEvent;
+      gridlockMoves: number;
+    }
+  >();
+
+  for (const event of dualMixEvents) {
+    const trialData =
+      event.trialData && typeof event.trialData === 'object'
+        ? (event.trialData as Record<string, unknown>)
+        : {};
+    const roundIndexRaw = trialData['roundIndex'];
+    const roundIndex =
+      typeof roundIndexRaw === 'number' && Number.isFinite(roundIndexRaw)
+        ? roundIndexRaw
+        : event.trialIndex;
+    const round =
+      rounds.get(roundIndex) ??
+      {
+        startedAt: event.timestamp,
+        gridlockMoves: 0,
+      };
+
+    round.startedAt = Math.min(round.startedAt, event.timestamp);
+    if (event.condition === 'nback') {
+      round.nback = event;
+    } else if (event.condition === 'stroop-flex') {
+      round.stroop = event;
+    } else if (event.condition === 'gridlock') {
+      round.gridlockMoves += 1;
+    }
+
+    rounds.set(roundIndex, round);
+  }
+
+  const turns: TurnSummary[] = [];
+  const orderedRounds = [...rounds.entries()].sort((a, b) => a[0] - b[0]);
+
+  for (const [roundIndex, round] of orderedRounds) {
+    const nbackData =
+      round.nback?.trialData && typeof round.nback.trialData === 'object'
+        ? (round.nback.trialData as Record<string, unknown>)
+        : {};
+    const stroopData =
+      round.stroop?.trialData && typeof round.stroop.trialData === 'object'
+        ? (round.stroop.trialData as Record<string, unknown>)
+        : {};
+
+    const positionTarget = nbackData['isPositionTarget'] === true;
+    const audioTarget = nbackData['isAudioTarget'] === true;
+    const positionPressed = nbackData['pressedPosition'] === true;
+    const audioPressed = nbackData['pressedAudio'] === true;
+    const positionResult = toResponseResult(positionTarget, positionPressed);
+    const audioResult = toResponseResult(audioTarget, audioPressed);
+    const stroopTimedOut = stroopData['timedOut'] === true;
+    const stroopCorrect = round.stroop?.correct === true;
+    const colorPressed = Boolean(round.stroop) && !stroopTimedOut;
+    const colorResult =
+      round.stroop == null
+        ? 'correct-rejection'
+        : stroopCorrect
+          ? 'hit'
+          : 'miss';
+
+    const responses: TempoTrialDetail['responses'] = {
+      position: {
+        pressed: positionPressed,
+        reactionTimeMs: round.nback?.responseTimeMs,
+        phase: 'after_stimulus',
+        result: positionResult,
+      },
+      audio: {
+        pressed: audioPressed,
+        reactionTimeMs: round.nback?.responseTimeMs,
+        phase: 'after_stimulus',
+        result: audioResult,
+      },
+      color: {
+        pressed: colorPressed,
+        reactionTimeMs: round.stroop?.responseTimeMs,
+        phase: 'after_stimulus',
+        result: colorResult,
+      },
+    };
+
+    const targets: ModalityId[] = [];
+    if (positionTarget) targets.push('position');
+    if (audioTarget) targets.push('audio');
+    if (round.stroop) targets.push('color');
+
+    const correctness = [
+      positionResult === 'hit' || positionResult === 'correct-rejection',
+      audioResult === 'hit' || audioResult === 'correct-rejection',
+      round.stroop ? stroopCorrect : true,
+    ];
+    const correctCount = correctness.filter(Boolean).length;
+    const totalCount = correctness.length;
+    const verdict: TurnVerdict =
+      correctCount === totalCount ? 'correct' : correctCount === 0 ? 'incorrect' : 'partial';
+
+    const errorTags: TurnErrorTag[] = [];
+    if (positionResult === 'miss' || audioResult === 'miss' || colorResult === 'miss') {
+      errorTags.push('miss');
+    }
+    if (positionResult === 'false-alarm' || audioResult === 'false-alarm') {
+      errorTags.push('false-alarm');
+    }
+
+    const detail: TempoTrialDetail = {
+      kind: 'tempo-trial',
+      stimulus: {
+        position:
+          typeof nbackData['targetPosition'] === 'number' ? (nbackData['targetPosition'] as number) : null,
+        audio: typeof nbackData['targetAudio'] === 'string' ? (nbackData['targetAudio'] as string) : null,
+        color: typeof stroopData['inkColor'] === 'string' ? (stroopData['inkColor'] as string) : null,
+      },
+      targets,
+      responses,
+    };
+
+    const statusParts = [
+      `POS${positionResult === 'hit' || positionResult === 'correct-rejection' ? '✓' : '✗'}`,
+      `AUD${audioResult === 'hit' || audioResult === 'correct-rejection' ? '✓' : '✗'}`,
+      `STR${stroopCorrect ? '✓' : '✗'}`,
+    ];
+    const rtValues = [round.nback?.responseTimeMs ?? 0, round.stroop?.responseTimeMs ?? 0].filter(
+      (value) => value > 0,
+    );
+    const avgRt =
+      rtValues.length > 0
+        ? Math.round(rtValues.reduce((sum, value) => sum + value, 0) / rtValues.length)
+        : 0;
+    const sublineParts = [];
+    if (avgRt > 0) sublineParts.push(`RT: ${avgRt}ms`);
+    if (round.gridlockMoves > 0) sublineParts.push(`Gridlock: ${round.gridlockMoves}`);
+
+    turns.push({
+      index: roundIndex + 1,
+      kind: 'tempo-trial',
+      startedAt: round.startedAt,
+      durationMs: rtValues.reduce((sum, value) => sum + value, 0) || undefined,
+      headline: `#${roundIndex + 1} [${statusParts.join(' ')}]`,
+      subline: sublineParts.length > 0 ? sublineParts.join(' · ') : undefined,
+      verdict,
+      errorTags: errorTags.length > 0 ? errorTags : undefined,
+      detail,
+    });
+  }
+
+  return turns;
+}
+
+function toResponseResult(
+  hadTarget: boolean,
+  pressed: boolean,
+): 'hit' | 'miss' | 'false-alarm' | 'correct-rejection' {
+  if (hadTarget && pressed) return 'hit';
+  if (hadTarget && !pressed) return 'miss';
+  if (!hadTarget && pressed) return 'false-alarm';
+  return 'correct-rejection';
 }
 
 // =============================================================================

@@ -11,7 +11,6 @@ import {
   DrawerSheet,
   JourneyPath,
   Logo,
-  PageTransition,
   Select,
   SelectContent,
   SelectItem,
@@ -226,19 +225,19 @@ export function HomePage(): ReactNode {
           journeyGameModeId: journeyGameMode,
           journeyNLevel: selectedStageDef.nLevel,
         }),
-        direction: 'push',
+        direction: 'modal',
       });
       return;
     }
     const route = getRouteForMode(currentMode as GameModeId);
     transitionNavigate(route === '/nback' ? `/nback?mode=${currentMode}` : route, {
       state: createFreePlayIntent(currentMode as GameModeId),
-      direction: 'push',
+      direction: 'modal',
     });
   };
 
   return (
-    <PageTransition
+    <div
       className="flex-1 w-full max-w-md md:max-w-lg mx-auto self-stretch text-center"
       data-testid="home-page"
     >
@@ -424,7 +423,7 @@ export function HomePage(): ReactNode {
                 <div className="flex justify-center pt-1">
                   <button
                     type="button"
-                    onClick={() => transitionNavigate('/settings/mode', { direction: 'push' })}
+                    onClick={() => transitionNavigate('/settings/mode')}
                     className="home-footer-pill"
                   >
                     {t('home.allSettings', 'Tous les réglages')}
@@ -923,6 +922,6 @@ export function HomePage(): ReactNode {
           </div>
         )}
       </div>
-    </PageTransition>
+    </div>
   );
 }

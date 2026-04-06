@@ -268,6 +268,129 @@ describe('SessionCompletionProjector', () => {
       expect(result?.report.nLevel).toBe(7);
     });
 
+    test('should project dual-mix cognitive-task metrics natively', () => {
+      const events: any[] = [
+        {
+          type: 'COGNITIVE_TASK_SESSION_STARTED',
+          sessionId,
+          timestamp: 0,
+          taskType: 'dual-mix',
+          userId: 'user-1',
+          config: {
+            nLevel: 3,
+            activeModalities: ['position', 'audio', 'color'],
+            rounds: 2,
+            includeGridlock: true,
+          },
+          device: {
+            platform: 'web',
+            screenWidth: 100,
+            screenHeight: 100,
+            userAgent: 'test',
+            touchCapable: false,
+          },
+          context: {
+            timeOfDay: 'morning',
+            localHour: 9,
+            dayOfWeek: 1,
+            timezone: 'UTC',
+          },
+          playContext: 'free',
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId,
+          timestamp: 1000,
+          taskType: 'dual-mix',
+          trialIndex: 0,
+          correct: true,
+          responseTimeMs: 0,
+          condition: 'nback',
+          trialData: {
+            isPositionTarget: true,
+            isAudioTarget: false,
+            pressedPosition: true,
+            pressedAudio: false,
+            positionCorrect: true,
+            audioCorrect: true,
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId,
+          timestamp: 2000,
+          taskType: 'dual-mix',
+          trialIndex: 1,
+          correct: true,
+          responseTimeMs: 640,
+          condition: 'stroop-flex',
+          trialData: {
+            timedOut: false,
+            response: 'red',
+            rule: 'ink',
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_TRIAL_COMPLETED',
+          sessionId,
+          timestamp: 3000,
+          taskType: 'dual-mix',
+          trialIndex: 2,
+          correct: true,
+          responseTimeMs: 0,
+          condition: 'gridlock',
+          trialData: {
+            pieceId: 'A',
+            delta: 1,
+            solved: true,
+          },
+        },
+        {
+          type: 'COGNITIVE_TASK_SESSION_ENDED',
+          sessionId,
+          timestamp: 4000,
+          taskType: 'dual-mix',
+          reason: 'completed',
+          totalTrials: 8,
+          correctTrials: 7,
+          accuracy: 0.88,
+          meanRtMs: 640,
+          durationMs: 4000,
+          playContext: 'free',
+          metrics: {
+            overallScore: 88,
+          },
+        },
+      ];
+
+      const result = SessionCompletionProjector.project({
+        mode: 'cognitive-task',
+        sessionId,
+        gameModeLabel: 'Dual Mix',
+        taskType: 'dual-mix',
+        events,
+        reason: 'completed',
+        accuracy: 88,
+        correctTrials: 7,
+        totalTrials: 8,
+        durationMs: 4000,
+        meanRtMs: 640,
+      });
+
+      expect(result).not.toBeNull();
+      expect(result?.report.nLevel).toBe(3);
+      expect(result?.report.activeModalities).toEqual(['position', 'audio', 'color']);
+      expect(result?.report.byModality.position?.hits).toBe(1);
+      expect(result?.report.byModality.audio?.correctRejections).toBe(1);
+      expect(result?.report.byModality.color?.avgRT).toBe(640);
+      expect(result?.report.taskMetrics).toMatchObject({
+        overallScore: 88,
+        nbackAccuracy: 100,
+        stroopAccuracy: 100,
+        gridlockSolved: 1,
+      });
+    });
+
     test('should project flow mode', () => {
       // Flow needs drops for accuracy
       const events: any[] = [

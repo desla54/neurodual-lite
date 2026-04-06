@@ -199,6 +199,7 @@ export { OspanSpec, OspanSpecs, type OspanExtensions } from './ospan.spec';
 // =============================================================================
 
 export { GridlockSpec, GridlockSpecs } from './gridlock.spec';
+export { DualMixSpec, DualMixSpecs } from './dual-mix.spec';
 
 // =============================================================================
 // Tutorial Specs
@@ -219,6 +220,7 @@ export {
 import { StroopSpecs } from './stroop.spec';
 import { OspanSpecs } from './ospan.spec';
 import { GridlockSpecs } from './gridlock.spec';
+import { DualMixSpecs } from './dual-mix.spec';
 import { TutorialSpecs } from './tutorial.spec';
 
 /**
@@ -230,6 +232,7 @@ export const AllSpecs = {
   ...StroopSpecs,
   ...OspanSpecs,
   ...GridlockSpecs,
+  ...DualMixSpecs,
 } as const;
 
 /**
@@ -308,6 +311,7 @@ const I18N_KEY_TO_SPEC_ID: Record<string, string> = {
   Stroop: 'stroop',
   StroopFlex: 'stroop-flex',
   Ospan: 'ospan',
+  DualMix: 'dual-mix',
 };
 
 /**
@@ -513,6 +517,7 @@ const MODE_I18N_KEY_MAP: Record<string, string> = {
   'stroop-flex': 'stroopFlex',
   ospan: 'ospan',
   gridlock: 'gridlock',
+  'dual-mix': 'dualMix',
 };
 
 /**

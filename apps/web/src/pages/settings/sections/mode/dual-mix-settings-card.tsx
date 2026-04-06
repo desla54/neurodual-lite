@@ -15,10 +15,10 @@ import { NLevelSelect } from './plugins/shared';
 const DUAL_MIX_MIN_LEVEL = 1;
 const DUAL_MIX_MAX_LEVEL = 9;
 const DUAL_MIX_DEFAULT_LEVEL = 2;
-const DUAL_MIX_MIN_ROUNDS = 5;
+const DUAL_MIX_MIN_ROUNDS = 10;
 const DUAL_MIX_MAX_ROUNDS = 60;
 const DUAL_MIX_ROUNDS_STEP = 5;
-const DUAL_MIX_DEFAULT_ROUNDS = 10;
+const DUAL_MIX_DEFAULT_ROUNDS = 20;
 
 export function DualMixSettingsCard(): ReactNode {
   const { t } = useTranslation();
@@ -44,6 +44,10 @@ export function DualMixSettingsCard(): ReactNode {
     typeof modeSettings['dualMixIncludeGridlock'] === 'boolean'
       ? modeSettings['dualMixIncludeGridlock']
       : true;
+  const manualAdvance =
+    typeof modeSettings['dualMixManualAdvance'] === 'boolean'
+      ? modeSettings['dualMixManualAdvance']
+      : false;
 
   const roundOptions = Array.from(
     { length: (DUAL_MIX_MAX_ROUNDS - DUAL_MIX_MIN_ROUNDS) / DUAL_MIX_ROUNDS_STEP + 1 },
@@ -106,6 +110,22 @@ export function DualMixSettingsCard(): ReactNode {
         )}
         checked={includeGridlock}
         onChange={(value) => setModeSettingFor('dual-mix', 'dualMixIncludeGridlock', value)}
+      />
+
+      <Toggle
+        label={t('settings.dualMix.manualAdvance', 'Manual N-Back advance')}
+        description={t(
+          'settings.dualMix.manualAdvanceDesc',
+          'Off by default: N-Back advances automatically after the response window. On: show the Next button again.',
+        )}
+        checked={manualAdvance}
+        onChange={(value) =>
+          setModeSettingFor(
+            'dual-mix',
+            'dualMixManualAdvance' as never,
+            value as never,
+          )
+        }
       />
     </CardShell>
   );

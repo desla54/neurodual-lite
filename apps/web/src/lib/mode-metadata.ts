@@ -796,7 +796,7 @@ export const MODE_DEFAULTS: Record<KnownGameModeId, ModeDefaults> = {
   'pattern-recognition': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   tower: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
   gridlock: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
-  'dual-mix': { nLevel: 2, trialsCount: 10 },
+  'dual-mix': { nLevel: 2, trialsCount: 20 },
   maze: { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_FLOW },
   'word-flow': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },
   'word-chain': { nLevel: 1, trialsCount: DEFAULT_TRIALS_COUNT_TEMPO },

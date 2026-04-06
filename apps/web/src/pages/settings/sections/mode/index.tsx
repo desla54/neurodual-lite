@@ -39,6 +39,7 @@ import { useIsReady } from '../../../../providers';
 import { useHapticTrigger } from '../../../../hooks/use-haptic';
 import { useAnalytics } from '../../../../hooks/use-analytics';
 import { useModeGates } from '../../../../hooks/use-mode-gates';
+import { useTransitionNavigate } from '../../../../hooks/use-transition-navigate';
 import { DualMixSettingsCard } from './dual-mix-settings-card';
 
 // Lazy load mode-specific settings for code splitting
@@ -61,7 +62,7 @@ function ModeSettingsSkeleton(): ReactNode {
 
 function ModeQuickLaunchFooter({ mode }: { mode: GameMode }): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const triggerHaptic = useHapticTrigger();
   const { track } = useAnalytics();
   const { isModePlayable } = useModeGates();
@@ -125,7 +126,8 @@ function ModeQuickLaunchFooter({ mode }: { mode: GameMode }): ReactNode {
                 mode,
                 source: 'settings_mode_config',
               });
-              navigate(getRouteForMode(mode), {
+              transitionNavigate(getRouteForMode(mode), {
+                direction: 'modal',
                 state: createFreePlayIntent(mode),
               });
             }}
@@ -162,6 +164,7 @@ function isModeSubPage(value: string | undefined): value is ModeSubPage {
 export function ModeSection(): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const { subSection } = useParams<{ subSection?: string }>();
   const alphaEnabled = useAlphaEnabled();
   const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId) as GameMode;
@@ -247,7 +250,10 @@ export function ModeSection(): ReactNode {
   const setModeSettingFor = useSettingsStore((s) => s.setModeSettingFor);
 
   const navigateToPage = (nextPage: ModePage, replace = false) => {
-    navigate(nextPage === 'root' ? '/settings/mode' : `/settings/mode/${nextPage}`, { replace });
+    transitionNavigate(nextPage === 'root' ? '/settings/mode' : `/settings/mode/${nextPage}`, {
+      replace,
+      direction: nextPage === 'root' ? 'back' : 'push',
+    });
   };
 
   if (page === 'mode') {
@@ -257,7 +263,12 @@ export function ModeSection(): ReactNode {
           variant="card"
           lockedModesUi="hidden"
           sectionFilter="training"
-          onPlay={(mode) => navigate(getRouteForMode(mode), { state: createFreePlayIntent(mode) })}
+          onPlay={(mode) =>
+            transitionNavigate(getRouteForMode(mode), {
+              direction: 'modal',
+              state: createFreePlayIntent(mode),
+            })
+          }
           stickyExtra={
             <button
               type="button"

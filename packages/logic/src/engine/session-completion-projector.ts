@@ -115,6 +115,195 @@ function deriveCognitiveTaskLevelFromMetrics(
   return undefined;
 }
 
+function buildEmptyUnifiedModalityStats() {
+  return {
+    hits: null,
+    misses: null,
+    falseAlarms: null,
+    correctRejections: null,
+    avgRT: null,
+    dPrime: null,
+  };
+}
+
+function toFiniteNumber(value: unknown): number | undefined {
+  return typeof value === 'number' && Number.isFinite(value) ? value : undefined;
+}
+
+function toBoolean(value: unknown): boolean | undefined {
+  return typeof value === 'boolean' ? value : undefined;
+}
+
+function deriveCognitiveTaskLevelFromStartConfig(events: readonly GameEvent[]): number | undefined {
+  const startEvent = events.find((event) => event.type === 'COGNITIVE_TASK_SESSION_STARTED') as
+    | Record<string, unknown>
+    | undefined;
+  const config =
+    startEvent && typeof startEvent['config'] === 'object' && startEvent['config'] !== null
+      ? (startEvent['config'] as Record<string, unknown>)
+      : undefined;
+  const nLevel = toPositiveInt(config?.['nLevel']);
+  return nLevel;
+}
+
+function deriveCognitiveTaskModalities(
+  taskType: string,
+  events: readonly GameEvent[],
+): readonly ModalityId[] {
+  const startEvent = events.find((event) => event.type === 'COGNITIVE_TASK_SESSION_STARTED') as
+    | Record<string, unknown>
+    | undefined;
+  const config =
+    startEvent && typeof startEvent['config'] === 'object' && startEvent['config'] !== null
+      ? (startEvent['config'] as Record<string, unknown>)
+      : undefined;
+  const configured = Array.isArray(config?.['activeModalities'])
+    ? config?.['activeModalities'].filter((value): value is string => typeof value === 'string')
+    : [];
+  if (configured.length > 0) return configured;
+
+  const spec = AllSpecs[taskType as keyof typeof AllSpecs];
+  if (spec?.defaults?.activeModalities && spec.defaults.activeModalities.length > 0) {
+    return spec.defaults.activeModalities;
+  }
+
+  return [];
+}
+
+function projectDualMixBreakdown(events: readonly GameEvent[]) {
+  const byModality: Record<ModalityId, ReturnType<typeof buildEmptyUnifiedModalityStats>> = {};
+  const ensureModality = (modality: ModalityId) =>
+    (byModality[modality] ??= buildEmptyUnifiedModalityStats());
+
+  const collectRt = new Map<ModalityId, number[]>();
+  const pushRt = (modality: ModalityId, value: number) => {
+    const list = collectRt.get(modality) ?? [];
+    list.push(value);
+    collectRt.set(modality, list);
+  };
+
+  const metrics = {
+    nbackRounds: 0,
+    nbackCorrectUnits: 0,
+    nbackTotalUnits: 0,
+    stroopRounds: 0,
+    stroopCorrect: 0,
+    gridlockMoves: 0,
+    gridlockSolved: 0,
+    gridlockRounds: 0,
+  };
+
+  for (const event of events) {
+    if (event.type !== 'COGNITIVE_TASK_TRIAL_COMPLETED' || event.taskType !== 'dual-mix') continue;
+    const condition = event.condition;
+    const trialData =
+      event.trialData && typeof event.trialData === 'object'
+        ? (event.trialData as Record<string, unknown>)
+        : {};
+
+    if (condition === 'nback') {
+      const position = ensureModality('position');
+      const audio = ensureModality('audio');
+      const isPositionTarget = toBoolean(trialData['isPositionTarget']) ?? false;
+      const isAudioTarget = toBoolean(trialData['isAudioTarget']) ?? false;
+      const pressedPosition = toBoolean(trialData['pressedPosition']) ?? false;
+      const pressedAudio = toBoolean(trialData['pressedAudio']) ?? false;
+      const positionCorrect = toBoolean(trialData['positionCorrect']) ?? false;
+      const audioCorrect = toBoolean(trialData['audioCorrect']) ?? false;
+
+      metrics.nbackRounds += 1;
+      metrics.nbackTotalUnits += 2;
+      metrics.nbackCorrectUnits += Number(positionCorrect) + Number(audioCorrect);
+
+      if (isPositionTarget) {
+        position.hits = (position.hits ?? 0) + Number(pressedPosition);
+        position.misses = (position.misses ?? 0) + Number(!pressedPosition);
+      } else {
+        position.falseAlarms = (position.falseAlarms ?? 0) + Number(pressedPosition);
+        position.correctRejections = (position.correctRejections ?? 0) + Number(!pressedPosition);
+      }
+
+      if (isAudioTarget) {
+        audio.hits = (audio.hits ?? 0) + Number(pressedAudio);
+        audio.misses = (audio.misses ?? 0) + Number(!pressedAudio);
+      } else {
+        audio.falseAlarms = (audio.falseAlarms ?? 0) + Number(pressedAudio);
+        audio.correctRejections = (audio.correctRejections ?? 0) + Number(!pressedAudio);
+      }
+      continue;
+    }
+
+    if (condition === 'stroop-flex') {
+      const color = ensureModality('color');
+      const timedOut = toBoolean(trialData['timedOut']) ?? false;
+      metrics.stroopRounds += 1;
+      metrics.stroopCorrect += Number(event.correct);
+      color.hits = (color.hits ?? 0) + Number(event.correct);
+      color.misses = (color.misses ?? 0) + Number(!event.correct);
+      if (!timedOut && event.responseTimeMs > 0) {
+        pushRt('color', event.responseTimeMs);
+      }
+      continue;
+    }
+
+    if (condition === 'gridlock') {
+      metrics.gridlockMoves += 1;
+      metrics.gridlockRounds += 1;
+      metrics.gridlockSolved += Number(toBoolean(trialData['solved']) ?? false);
+    }
+  }
+
+  for (const [modality, stats] of Object.entries(byModality)) {
+    const rts = collectRt.get(modality) ?? [];
+    stats.avgRT =
+      rts.length > 0 ? Math.round(rts.reduce((sum, value) => sum + value, 0) / rts.length) : null;
+  }
+
+  const totals = {
+    hits: 0,
+    misses: 0,
+    falseAlarms: 0,
+    correctRejections: 0,
+  };
+
+  for (const stats of Object.values(byModality)) {
+    totals.hits += stats.hits ?? 0;
+    totals.misses += stats.misses ?? 0;
+    totals.falseAlarms += stats.falseAlarms ?? 0;
+    totals.correctRejections += stats.correctRejections ?? 0;
+  }
+
+  const totalErrors = totals.misses + totals.falseAlarms;
+  const derivedMetrics = {
+    rounds: Math.max(metrics.nbackRounds, metrics.stroopRounds),
+    nbackRounds: metrics.nbackRounds,
+    nbackAccuracy:
+      metrics.nbackTotalUnits > 0
+        ? Math.round((metrics.nbackCorrectUnits / metrics.nbackTotalUnits) * 100)
+        : 0,
+    stroopRounds: metrics.stroopRounds,
+    stroopAccuracy:
+      metrics.stroopRounds > 0 ? Math.round((metrics.stroopCorrect / metrics.stroopRounds) * 100) : 0,
+    gridlockMoves: metrics.gridlockMoves,
+    gridlockSolved: metrics.gridlockSolved,
+    gridlockRounds: metrics.gridlockRounds,
+  };
+
+  return {
+    byModality,
+    totals,
+    derivedMetrics,
+    errorProfile: {
+      errorRate:
+        totals.hits + totalErrors + totals.correctRejections > 0
+          ? totalErrors / (totals.hits + totalErrors + totals.correctRejections)
+          : 0,
+      missShare: totalErrors > 0 ? totals.misses / totalErrors : 1,
+      faShare: totalErrors > 0 ? totals.falseAlarms / totalErrors : 0,
+    },
+  };
+}
+
 // =============================================================================
 // Input Types (Discriminated Union by Mode)
 // =============================================================================
@@ -1154,6 +1343,8 @@ export class SessionCompletionProjector {
       | undefined;
     const taskMetrics = (endEvent?.['metrics'] as Readonly<Record<string, unknown>>) ?? undefined;
     const derivedLevel = deriveCognitiveTaskLevelFromMetrics(taskMetrics);
+    const configuredLevel = deriveCognitiveTaskLevelFromStartConfig(input.events);
+    const activeModalities = deriveCognitiveTaskModalities(input.taskType, input.events);
     const ups = UnifiedScoreCalculator.calculate(
       input.accuracy,
       input.meanRtMs ? Math.max(0, 100 - input.meanRtMs / 10) : null,
@@ -1163,7 +1354,7 @@ export class SessionCompletionProjector {
     const spec = AllSpecs[input.taskType as keyof typeof AllSpecs];
     const passThreshold = spec?.scoring?.passThreshold ?? 0.6;
     const passed = completed && accuracy >= passThreshold;
-    const nextLevel = derivedLevel ?? input.maxLevel ?? 1;
+    const nextLevel = derivedLevel ?? configuredLevel ?? input.maxLevel ?? 1;
     const createdAt = new Date(input.events[0]?.timestamp ?? Date.now()).toISOString();
 
     // Extract signal-detection totals from metrics when available
@@ -1176,8 +1367,18 @@ export class SessionCompletionProjector {
         : null;
     const metricMisses = typeof taskMetrics?.['misses'] === 'number' ? taskMetrics['misses'] : null;
 
-    const hits = metricHits ?? input.correctTrials;
-    const misses = metricMisses ?? Math.max(0, input.totalTrials - input.correctTrials);
+    const dualMixBreakdown = input.taskType === 'dual-mix' ? projectDualMixBreakdown(input.events) : null;
+    const hits = metricHits ?? dualMixBreakdown?.totals.hits ?? input.correctTrials;
+    const misses =
+      metricMisses ??
+      dualMixBreakdown?.totals.misses ??
+      Math.max(0, input.totalTrials - input.correctTrials);
+    const falseAlarms = metricFA ?? dualMixBreakdown?.totals.falseAlarms ?? null;
+    const correctRejections = metricCR ?? dualMixBreakdown?.totals.correctRejections ?? null;
+    const mergedTaskMetrics = {
+      ...(dualMixBreakdown?.derivedMetrics ?? {}),
+      ...(taskMetrics ?? {}),
+    };
 
     const report: SessionEndReportModel = {
       sessionId: input.sessionId,
@@ -1187,7 +1388,7 @@ export class SessionCompletionProjector {
       gameModeLabel: input.gameModeLabel,
       taskType: input.taskType,
       nLevel: nextLevel,
-      activeModalities: [],
+      activeModalities,
       trialsCount: input.totalTrials,
       durationMs: input.durationMs,
       ups,
@@ -1201,16 +1402,20 @@ export class SessionCompletionProjector {
       totals: {
         hits,
         misses,
-        falseAlarms: metricFA,
-        correctRejections: metricCR,
+        falseAlarms,
+        correctRejections,
       },
-      byModality: {},
+      byModality: dualMixBreakdown?.byModality ?? {},
       errorProfile: {
-        errorRate: 1 - accuracy,
-        missShare: metricFA != null ? misses / (misses + (metricFA ?? 0) || 1) : 1,
-        faShare: metricFA != null ? (metricFA ?? 0) / (misses + (metricFA ?? 0) || 1) : null,
+        errorRate: dualMixBreakdown?.errorProfile.errorRate ?? 1 - accuracy,
+        missShare:
+          dualMixBreakdown?.errorProfile.missShare ??
+          (falseAlarms != null ? misses / (misses + (falseAlarms ?? 0) || 1) : 1),
+        faShare:
+          dualMixBreakdown?.errorProfile.faShare ??
+          (falseAlarms != null ? (falseAlarms ?? 0) / (misses + (falseAlarms ?? 0) || 1) : null),
       },
-      taskMetrics,
+      taskMetrics: Object.keys(mergedTaskMetrics).length > 0 ? mergedTaskMetrics : undefined,
       turns: projectCognitiveTaskTurns(input.events),
     };
 
@@ -1244,7 +1449,7 @@ export class SessionCompletionProjector {
       summary,
       report: reportWithPlayContext,
       journeyContext: input.journeyContext,
-      activeModalities: [],
+      activeModalities,
     };
   }
 
