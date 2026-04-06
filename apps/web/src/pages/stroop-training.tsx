@@ -27,7 +27,6 @@ import { useAppPorts, useCommandBus } from '../providers';
 
 import { cleanupAbandonedSession } from '../services/abandoned-session-cleanup';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
 import {
   type CogTaskEventEmitter,
   buildStartEvent,
@@ -35,6 +34,7 @@ import {
   buildEndEvent,
 } from '../lib/cognitive-task-events';
 import { useSettingsStore } from '../stores';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 
 const DEFAULT_TOTAL_TRIALS = 96;
 const MIN_TOTAL_TRIALS = 5;
@@ -130,7 +130,7 @@ function generateTrials(
 
 function StroopPage({ variant }: { variant: StroopModeId }) {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const isFlex = variant === 'stroop-flex';
   const modeLabel = isFlex ? t('settings.gameMode.stroopFlex') : t('settings.gameMode.stroop');
   const modeSettings = useSettingsStore((state) => state.modes[variant] ?? EMPTY_MODE_SETTINGS);
@@ -551,7 +551,7 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
             avgRtMs={summary.avgRT}
             congruencyEffectMs={summary.congruencyEffect}
             onPlayAgain={() => handleRestart()}
-            onBackToHome={() => navigate('/')}
+            onBackToHome={() => transitionNavigate('/')}
           />
         </div>
       </div>
@@ -680,10 +680,10 @@ function StroopPage({ variant }: { variant: StroopModeId }) {
               <span
                 className={cn(
                   'select-none text-3xl font-black',
-                  lastFeedback ? 'text-woven-correct' : 'text-woven-incorrect',
+                  lastFeedback?.correct ? 'text-woven-correct' : 'text-woven-incorrect',
                 )}
               >
-                {lastFeedback
+                {lastFeedback?.correct
                   ? t('game.cogTask.feedbackCorrect')
                   : t('game.cogTask.feedbackIncorrect')}
               </span>

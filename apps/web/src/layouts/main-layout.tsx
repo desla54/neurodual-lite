@@ -5,11 +5,12 @@
 
 import { cn, CanvasWeave, PageTransitionProvider, useMountEffect } from '@neurodual/ui';
 import { useEffect, useRef, type ReactNode } from 'react';
-import { Navigate, Outlet, useLocation } from 'react-router';
+import { Navigate, useLocation, useOutlet } from 'react-router';
 import { CommandPalette } from '../components/command-palette';
 import { NavBar } from '../components/nav-bar';
 import { GlobalProfileButton } from '../components/profile';
 import { PWAInstallButton } from '../components/pwa-install-button';
+import { RouteTransitionShell } from '../components/route-transition-shell';
 import { SessionRecoveryGate } from '../components/session-recovery';
 import { useBackButton } from '../hooks/use-back-button';
 import { useModeGates } from '../hooks/use-mode-gates';
@@ -23,6 +24,7 @@ import {
 
 export function MainLayout(): ReactNode {
   const location = useLocation();
+  const outlet = useOutlet();
   const { isModePlayable } = useModeGates();
   const mainScrollRef = useRef<HTMLElement | null>(null);
   const scrollMemoryKey = getNavigationMemoryKey(location.pathname, location.search);
@@ -200,11 +202,11 @@ export function MainLayout(): ReactNode {
                 </div>
               )}
               {isFullscreenPage ? (
-                <div className="fullscreen-route-content">
-                  <Outlet />
+                <div className="fullscreen-route-content flex flex-1 flex-col">
+                  <RouteTransitionShell routeKey={scrollMemoryKey}>{outlet}</RouteTransitionShell>
                 </div>
               ) : (
-                <Outlet />
+                <RouteTransitionShell routeKey={scrollMemoryKey}>{outlet}</RouteTransitionShell>
               )}
             </div>
           </main>

@@ -1956,3 +1956,13 @@ h1,
   animation-duration: 1ms;
   animation-fill-mode: both;
 }
+
+.app-route-surface {
+  isolation: isolate;
+  min-height: 0;
+}
+
+.app-route-layer {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}

@@ -1,30 +1,35 @@
 /**
  * useTransitionNavigate
  *
- * Animated navigation hook that wraps React Router's navigate()
- * with direction-aware enter transitions using GSAP.
+ * Centralized app navigation hook.
  *
- * Instead of a sequential exit→navigate→enter flow (which causes a visible
- * flash), we navigate immediately and let the new page's <PageTransition>
- * handle the enter animation. React unmounts the old page instantly,
- * the new page fades/slides in — no gap, no flash.
+ * It classifies each navigation intent (tab, push/back, modal),
+ * arms the shell-level transition state, and still exposes the
+ * transition direction through context for any legacy consumers.
  *
  * Direction options:
- * - 'push': forward — new slides from right
- * - 'back': backward — new slides from left
- * - 'modal': modal — new scales up
- * - 'fade': crossfade
+ * - 'push': forward stack navigation
+ * - 'back': backward stack navigation
+ * - 'modal': fullscreen / cover transition
+ * - 'fade': tab-like handoff
  */
 
 import { useCallback } from 'react';
-import { useNavigate, type To, type NavigateOptions } from 'react-router';
+import { useLocation, useNavigate, type To, type NavigateOptions } from 'react-router';
 import { usePageTransition, type TransitionDirection } from '@neurodual/ui';
+import {
+  armShellNavigationTransition,
+  inferTransitionDirection,
+  normalizePathname,
+  toShellNavigationKind,
+} from '../lib/navigation-transitions';
 
 export interface TransitionNavigateOptions extends NavigateOptions {
   direction?: TransitionDirection;
 }
 
 export function useTransitionNavigate() {
+  const location = useLocation();
   const navigate = useNavigate();
   const { setTransitionDirection } = usePageTransition();
 
@@ -36,13 +41,20 @@ export function useTransitionNavigate() {
         return;
       }
 
-      const { direction = 'push', ...navOptions } = options ?? {};
+      const { direction: explicitDirection, ...navOptions } = options ?? {};
+      const nextPathname =
+        typeof to === 'string'
+          ? normalizePathname(to.split('?')[0]?.split('#')[0] ?? '/')
+          : normalizePathname(to.pathname ?? location.pathname);
+      const direction =
+        explicitDirection ?? inferTransitionDirection(location.pathname, nextPathname);
+      const shellKind = toShellNavigationKind(direction);
 
-      // Set direction so the next PageTransition reads it for enter animation
       setTransitionDirection(direction);
+      armShellNavigationTransition(shellKind);
       navigate(to, navOptions);
     },
-    [navigate, setTransitionDirection],
+    [location.pathname, navigate, setTransitionDirection],
   );
 
   return { transitionNavigate };

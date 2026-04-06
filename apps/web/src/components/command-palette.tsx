@@ -13,9 +13,10 @@ import {
 } from '@phosphor-icons/react';
 import { useEffect, useEffectEvent, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
 import { useAlphaEnabled } from '../hooks/use-beta-features';
 import { useModeGates } from '../hooks/use-mode-gates';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { getRouteForMode } from '../lib/mode-metadata';
 import {
   ESSENTIAL_MODES,
@@ -95,7 +96,7 @@ function getShortcutLabel(): string {
 
 export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const location = useLocation();
   const setCurrentMode = useSettingsStore((state) => state.setCurrentMode);
   const currentMode = useSettingsStore((state) => state.currentMode);
@@ -198,7 +199,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['home', '/', 'dashboard'],
         icon: House,
-        onSelect: () => navigate('/'),
+        onSelect: () => transitionNavigate('/'),
       },
       {
         id: 'nav:play',
@@ -206,7 +207,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['play', 'train', 'home'],
         icon: GameController,
-        onSelect: () => navigate('/'),
+        onSelect: () => transitionNavigate('/'),
       },
       {
         id: 'nav:stats',
@@ -214,7 +215,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['stats', 'history', 'progress'],
         icon: ChartBar,
-        onSelect: () => navigate('/stats'),
+        onSelect: () => transitionNavigate('/stats'),
       },
       {
         id: 'nav:social',
@@ -222,7 +223,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['social', 'leaderboard', 'ranking'],
         icon: Trophy,
-        onSelect: () => navigate('/social'),
+        onSelect: () => transitionNavigate('/social'),
       },
       {
         id: 'nav:tutorial',
@@ -230,7 +231,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['tutorial', 'help', 'guide'],
         icon: BookOpenText,
-        onSelect: () => navigate('/tutorial'),
+        onSelect: () => transitionNavigate('/tutorial'),
       },
       {
         id: 'nav:settings',
@@ -238,10 +239,10 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
         subtitle: t('commandPalette.openPage', 'Open page'),
         keywords: ['settings', 'preferences', 'options'],
         icon: GearSix,
-        onSelect: () => navigate('/settings'),
+        onSelect: () => transitionNavigate('/settings'),
       },
     ],
-    [navigate, t],
+    [t, transitionNavigate],
   );
 
   const settingsActions = useMemo<CommandAction[]>(() => {
@@ -254,10 +255,10 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
           subtitle: t('commandPalette.openSettings', 'Open settings'),
           keywords: [group.id, item.id, 'settings', t(group.labelKey)],
           icon: getSectionIcon(item.id),
-          onSelect: () => navigate(`/settings/${encodeURIComponent(item.id)}`),
+          onSelect: () => transitionNavigate(`/settings/${encodeURIComponent(item.id)}`),
         })),
     );
-  }, [isAlphaEnabled, navigate, t]);
+  }, [isAlphaEnabled, t, transitionNavigate]);
 
   const featuredSettingIdSet = useMemo(() => new Set<string>(FEATURED_SETTING_IDS), []);
   const visibleSettingsActions = useMemo(() => {
@@ -300,7 +301,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
           icon: mode.icon,
           onSelect: () => {
             setCurrentMode(mode.value);
-            navigate(getRouteForMode(mode.value));
+            transitionNavigate(getRouteForMode(mode.value), { direction: 'modal' });
           },
           toneClassName: cn(mode.colorClass, 'bg-transparent'),
           badge: displayedBadge,
@@ -311,7 +312,7 @@ export function CommandPalette({ chrome = 'standalone' }: CommandPaletteProps): 
       .sort((left, right) =>
         left.label.localeCompare(right.label, undefined, { sensitivity: 'base' }),
       );
-  }, [categoryLabelByMode, currentMode, isModePlayable, navigate, setCurrentMode, t]);
+  }, [categoryLabelByMode, currentMode, isModePlayable, setCurrentMode, t, transitionNavigate]);
 
   const essentialModeSet = useMemo(() => new Set<GameMode>(ESSENTIAL_MODES), []);
   const visibleModeActions = useMemo(() => {

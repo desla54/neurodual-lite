@@ -10,8 +10,12 @@ import { AppFrame } from './layouts/app-frame';
 import { MainLayout } from './layouts/main-layout';
 import { RouteErrorBoundary } from './components/route-error-boundary';
 
-// HomePage loaded eagerly (critical path for LCP)
+// Primary tabs are loaded eagerly so tab switches stay app-like.
 import { HomePage } from './pages/home';
+import { SocialPage } from './pages/social';
+import { StatsPage } from './pages/stats';
+import { SettingsPage } from './pages/settings';
+import { TutorialHubPage } from './pages/tutorial-hub';
 
 // Lazy load training pages — only the 3 kept modes
 const NbackTrainingPage = lazy(() =>
@@ -36,18 +40,9 @@ const OspanMeasurePage = lazy(() =>
   import('./pages/ospan-measure').then((m) => ({ default: m.OspanMeasurePage })),
 );
 
-// Tutorial page
+// Tutorial session stays lazy — it's full-screen and heavier than the hub.
 const TutorialGuidedPage = lazy(() =>
   import('./pages/tutorial-guided').then((m) => ({ default: m.TutorialGuidedPage })),
-);
-
-// Social page (placeholder)
-const SocialPage = lazy(() => import('./pages/social').then((m) => ({ default: m.SocialPage })));
-
-// Utility pages
-const StatsPage = lazy(() => import('./pages/stats').then((m) => ({ default: m.StatsPage })));
-const SettingsPage = lazy(() =>
-  import('./pages/settings').then((m) => ({ default: m.SettingsPage })),
 );
 
 // Minimal loading fallback
@@ -91,13 +86,13 @@ export const router = createBrowserRouter([
           { path: 'dual-mix', element: withSuspense(DualMixTrainingPage) },
           { path: 'ospan-measure', element: withSuspense(OspanMeasurePage) },
           // Tutorial
-          { path: 'tutorial', element: withSuspense(TutorialGuidedPage) },
+          { path: 'tutorial', element: <TutorialHubPage /> },
           { path: 'tutorial/:specId', element: withSuspense(TutorialGuidedPage) },
           // Social
-          { path: 'social', element: withSuspense(SocialPage) },
+          { path: 'social', element: <SocialPage /> },
           // Utility pages
-          { path: 'stats', element: withSuspense(StatsPage) },
-          { path: 'settings/:section?/:subSection?', element: withSuspense(SettingsPage) },
+          { path: 'stats', element: <StatsPage /> },
+          { path: 'settings/:section?/:subSection?', element: <SettingsPage /> },
         ],
       },
     ],

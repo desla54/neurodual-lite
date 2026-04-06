@@ -3,7 +3,7 @@
  * Currently a placeholder - full implementation coming soon
  */
 
-import { Hatching, PageTransition } from '@neurodual/ui';
+import { Hatching } from '@neurodual/ui';
 import { Trophy, Rocket } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ export function SocialPage(): ReactNode {
   const { t } = useTranslation();
 
   return (
-    <PageTransition className="flex-1 flex items-center justify-center">
+    <div className="flex-1 flex items-center justify-center">
       <div className="w-full max-w-md mx-auto text-center px-4">
         {/* Coming soon card */}
         <div className="surface-card-typography bg-card border border-border/50 rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_hsl(var(--border)/0.15)]">
@@ -62,6 +62,6 @@ export function SocialPage(): ReactNode {
           </div>
         </div>
       </div>
-    </PageTransition>
+    </div>
   );
 }

@@ -13,7 +13,6 @@ import {
   useCallback,
 } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
 import { createPortal } from 'react-dom';
 import gsap from 'gsap';
 import { XIcon } from '@phosphor-icons/react';
@@ -27,6 +26,7 @@ import {
   useAuthQuery,
 } from '@neurodual/ui';
 import { useAlphaEnabled } from '../../../hooks/use-beta-features';
+import { useTransitionNavigate } from '../../../hooks/use-transition-navigate';
 import { useSettingsStore } from '../../../stores/settings-store';
 import { settingsNavGroups } from '../config';
 
@@ -62,7 +62,7 @@ function MenuLinesIcon(): ReactNode {
 
 export function SettingsMobileNav({ currentSection }: SettingsMobileNavProps): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const [isDrawerMounted, setIsDrawerMounted] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isAlphaEnabled = useAlphaEnabled();
@@ -265,7 +265,7 @@ export function SettingsMobileNav({ currentSection }: SettingsMobileNavProps): R
       return;
     }
     closeDrawer();
-    navigate(`/settings/${sectionId}`);
+    transitionNavigate(`/settings/${sectionId}`, { direction: 'fade' });
   };
 
   const handleTouchStart = (event: TouchEvent<HTMLElement>) => {

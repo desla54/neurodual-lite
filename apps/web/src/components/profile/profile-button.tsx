@@ -7,7 +7,7 @@ import { Avatar, useAuthQuery } from '@neurodual/ui';
 import { User } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
+import { useTransitionNavigate } from '../../hooks/use-transition-navigate';
 import { useSettingsStore } from '../../stores/settings-store';
 
 interface ProfileButtonProps {
@@ -20,7 +20,7 @@ export function ProfileButton({
   chrome = 'standalone',
 }: ProfileButtonProps): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const authState = useAuthQuery();
 
   const localAvatarId = useSettingsStore((s) => s.ui.localAvatarId);
@@ -38,7 +38,7 @@ export function ProfileButton({
   return (
     <button
       type="button"
-      onClick={() => navigate('/settings/profile')}
+      onClick={() => transitionNavigate('/settings/profile')}
       data-capture-control={compact && chrome === 'embedded' ? 'toolbar-button' : undefined}
       className={compact ? compactClassName : compactClassName}
       aria-label={label}

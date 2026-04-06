@@ -79,7 +79,7 @@ export function NavBar(): ReactNode {
   const { transitionNavigate } = useTransitionNavigate();
   const haptic = useHaptic();
 
-  // Sliding indicator ref for mobile bottom nav
+  // Shared active bubble for mobile bottom nav
   const indicatorRef = useRef<HTMLDivElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const indicatorReadyRef = useRef(false);
@@ -113,7 +113,7 @@ export function NavBar(): ReactNode {
       if (!indicator || !container || activeMobileIndex < 0) {
         if (indicator) {
           gsap.killTweensOf(indicator);
-          gsap.set(indicator, { opacity: 0, x: 0 });
+          gsap.set(indicator, { autoAlpha: 0, x: 0, y: 0, scale: 0.92 });
         }
         indicatorReadyRef.current = false;
         return;
@@ -123,15 +123,19 @@ export function NavBar(): ReactNode {
       const targetEl = navItems[activeMobileIndex];
       if (!targetEl) return;
 
-      const indicatorWidth = indicator.offsetWidth || 40;
+      const indicatorWidth = indicator.offsetWidth || 48;
+      const indicatorHeight = indicator.offsetHeight || 48;
       const x = Math.round(targetEl.offsetLeft + (targetEl.offsetWidth - indicatorWidth) / 2);
+      const y = Math.round(targetEl.offsetTop + (targetEl.offsetHeight - indicatorHeight) / 2);
 
       gsap.killTweensOf(indicator);
 
       if (!indicatorReadyRef.current || !animate) {
         gsap.set(indicator, {
           x,
-          opacity: 1,
+          y,
+          autoAlpha: 1,
+          scale: 1,
           force3D: true,
         });
         indicatorReadyRef.current = true;
@@ -140,8 +144,10 @@ export function NavBar(): ReactNode {
 
       gsap.to(indicator, {
         x,
-        opacity: 1,
-        duration: 0.24,
+        y,
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.22,
         ease: 'power3.out',
         overwrite: 'auto',
         force3D: true,
@@ -189,7 +195,7 @@ export function NavBar(): ReactNode {
     (e: React.MouseEvent, href: string) => {
       e.preventDefault();
       haptic.selectionChanged();
-      transitionNavigate(href, { direction: 'fade' });
+      transitionNavigate(href);
     },
     [haptic, transitionNavigate],
   );
@@ -326,11 +332,11 @@ export function NavBar(): ReactNode {
             ))}
           </svg>
 
-          {/* Sliding indicator — pill that follows the active tab */}
+          {/* Shared active bubble — GSAP moves it behind the current tab */}
           <div
             ref={indicatorRef}
-            className="absolute left-0 bottom-1 w-10 h-1.5 rounded-full bg-primary pointer-events-none will-change-transform"
-            style={{ opacity: 0 }}
+            className="absolute left-0 top-0 z-0 size-12 rounded-full bg-primary shadow-[0_10px_26px_-14px_hsl(var(--foreground)/0.7)] pointer-events-none will-change-transform"
+            style={{ opacity: 0, visibility: 'hidden' }}
             aria-hidden="true"
           />
 
@@ -351,9 +357,9 @@ export function NavBar(): ReactNode {
                   handleMobileTabClick(e, href);
                 }}
                 className={cn(
-                  'relative flex flex-col items-center justify-center w-14 h-14 rounded-full transition-[background-color,color,transform] duration-200 active:scale-[0.94]',
+                  'relative z-10 flex flex-col items-center justify-center w-14 h-14 rounded-full transition-[color,transform] duration-200 active:scale-[0.94]',
                   isActive
-                    ? 'bg-primary text-primary-foreground font-semibold'
+                    ? 'text-primary-foreground font-semibold'
                     : 'text-muted-foreground hover:bg-muted/50',
                   isSpotlighted &&
                     !isActive &&

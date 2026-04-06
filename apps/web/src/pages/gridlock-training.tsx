@@ -59,7 +59,6 @@ import {
 } from '@neurodual/ui';
 import { ArrowClockwise, ArrowCounterClockwise, Check, Lightbulb } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
 
 import { GameQuitModal } from '../components/game';
 import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
@@ -67,6 +66,7 @@ import { CognitiveTaskHUD } from '../components/game/CognitiveTaskHUD';
 const useCloudSyncActions = () => ({ syncEventsAndProgression: async () => {} });
 import { useAnalytics } from '../hooks/use-analytics';
 import { useHaptic } from '../hooks/use-haptic';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
 import {
   buildEndEvent,
@@ -166,7 +166,7 @@ function computeDeltaRange(
 
 export function GridlockTrainingPage() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const haptic = useHaptic();
   const { track } = useAnalytics();
   const commandBus = useCommandBus();
@@ -898,7 +898,7 @@ export function GridlockTrainingPage() {
               setStatsTab(preset.tab);
               setStatsMode(preset.mode);
               setStatsJourneyFilter(preset.journeyFilter);
-              navigate('/stats');
+              transitionNavigate('/stats');
             }}
             showFloatingCloseButton
           />

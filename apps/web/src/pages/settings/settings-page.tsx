@@ -10,9 +10,9 @@
 import { type ComponentType, type ReactNode, lazy, useEffect } from 'react';
 import { SuspenseFade } from '../../components/suspense-fade';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { ArrowLeft } from '@phosphor-icons/react';
-import { PageTransition } from '@neurodual/ui';
+import { useTransitionNavigate } from '../../hooks/use-transition-navigate';
 import { useSettingsStore } from '../../stores';
 import {
   DEFAULT_TEST_MODE,
@@ -76,7 +76,7 @@ export function SettingsPage(): ReactNode {
     section?: string;
     subSection?: string;
   }>();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const currentMode = useSettingsStore((s) => s.freeTraining.selectedModeId);
   const setCurrentMode = useSettingsStore((s) => s.setCurrentMode);
 
@@ -161,13 +161,15 @@ export function SettingsPage(): ReactNode {
     : t(sectionTitle);
 
   return (
-    <PageTransition className={pagePaddingClassName}>
+    <div className={pagePaddingClassName}>
       {/* Header - Mobile */}
       <div className="md:hidden -mx-4 px-4 py-3 flex items-center gap-3 min-w-0">
         {isSubPage ? (
           <button
             type="button"
-            onClick={() => navigate(`/settings/${section}`, { replace: true })}
+            onClick={() =>
+              transitionNavigate(`/settings/${section}`, { replace: true, direction: 'back' })
+            }
             className="shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground/10 text-foreground hover:bg-foreground/15 active:scale-[0.97] transition-all"
             aria-label={t('common.back')}
           >
@@ -193,7 +195,9 @@ export function SettingsPage(): ReactNode {
         <div className="hidden md:flex items-center gap-3 min-w-0">
           <button
             type="button"
-            onClick={() => navigate(`/settings/${section}`, { replace: true })}
+            onClick={() =>
+              transitionNavigate(`/settings/${section}`, { replace: true, direction: 'back' })
+            }
             className="shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-foreground/10 text-foreground hover:bg-foreground/15 active:scale-[0.97] transition-all"
             aria-label={t('common.back')}
           >
@@ -212,6 +216,6 @@ export function SettingsPage(): ReactNode {
 
       {/* Section Content */}
       <div className="space-y-8">{renderSection()}</div>
-    </PageTransition>
+    </div>
   );
 }

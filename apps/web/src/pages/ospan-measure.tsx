@@ -4,13 +4,13 @@
  */
 
 import { type ReactNode, useCallback, useRef } from 'react';
-import { useNavigate } from 'react-router';
 import gsap from 'gsap';
 import { useMountEffect } from '@neurodual/ui';
 import { OspanMeasure } from '../components/ospan-measure/ospan-measure';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 
 export function OspanMeasurePage(): ReactNode {
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
 
   useMountEffect(() => {
@@ -23,7 +23,7 @@ export function OspanMeasurePage(): ReactNode {
     });
   });
 
-  const handleClose = useCallback(() => navigate('/'), [navigate]);
+  const handleClose = useCallback(() => transitionNavigate('/'), [transitionNavigate]);
 
   return (
     <div

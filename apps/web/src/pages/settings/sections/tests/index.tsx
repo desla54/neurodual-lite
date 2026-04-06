@@ -29,6 +29,7 @@ import { useAnalytics } from '../../../../hooks/use-analytics';
 import { useModeGates } from '../../../../hooks/use-mode-gates';
 import { useDailyPlaytimeGate } from '@neurodual/ui';
 import { UpgradeDialog } from '../../components';
+import { useTransitionNavigate } from '../../../../hooks/use-transition-navigate';
 
 const ModeSettingsPanel = lazy(() =>
   import('../mode/mode-settings-panel').then((m) => {
@@ -49,7 +50,7 @@ function SettingsSkeleton(): ReactNode {
 
 function TestQuickLaunchFooter({ mode }: { mode: GameMode }): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const triggerHaptic = useHapticTrigger();
   const { track } = useAnalytics();
   const { isModePlayable } = useModeGates();
@@ -113,7 +114,8 @@ function TestQuickLaunchFooter({ mode }: { mode: GameMode }): ReactNode {
                 mode,
                 source: 'settings_test_config',
               });
-              navigate(getRouteForMode(mode), {
+              transitionNavigate(getRouteForMode(mode), {
+                direction: 'modal',
                 state: createFreePlayIntent(mode),
               });
             }}
@@ -149,6 +151,7 @@ function isTestSubPage(value: string | undefined): value is ModeSubPage {
 export function TestsSection(): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const { subSection } = useParams<{ subSection?: string }>();
   const alphaEnabled = useAlphaEnabled();
   const currentMode = useSettingsStore((s) => s.currentMode) as GameMode;
@@ -180,7 +183,10 @@ export function TestsSection(): ReactNode {
   }, [alphaEnabled, currentMode, navigate, page, supportsModeSettings]);
 
   const navigateToPage = (nextPage: TestPage, replace = false) => {
-    navigate(nextPage === 'root' ? '/settings/tests' : `/settings/tests/${nextPage}`, { replace });
+    transitionNavigate(nextPage === 'root' ? '/settings/tests' : `/settings/tests/${nextPage}`, {
+      replace,
+      direction: nextPage === 'root' ? 'back' : 'push',
+    });
   };
 
   // ── Sub-page: full test catalogue ──
@@ -191,7 +197,12 @@ export function TestsSection(): ReactNode {
           variant="card"
           lockedModesUi="hidden"
           sectionFilter="test"
-          onPlay={(mode) => navigate(getRouteForMode(mode), { state: createFreePlayIntent(mode) })}
+          onPlay={(mode) =>
+            transitionNavigate(getRouteForMode(mode), {
+              direction: 'modal',
+              state: createFreePlayIntent(mode),
+            })
+          }
           stickyExtra={
             <button
               type="button"

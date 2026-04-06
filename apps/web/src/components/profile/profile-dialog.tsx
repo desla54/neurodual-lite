@@ -9,7 +9,7 @@ import { Bug, GearSix, SignOut, X } from '@phosphor-icons/react';
 import { type ReactNode, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
+import { useTransitionNavigate } from '../../hooks/use-transition-navigate';
 import { BugReportModal } from '../bug-report/bug-report-modal';
 import { nonAuthInputProps } from '../../utils/non-auth-input-props';
 import { AvatarSelectionModal } from './avatar-selection-modal';
@@ -22,7 +22,7 @@ interface ProfileDialogProps {
 
 export function ProfileDialog({ isOpen, onClose }: ProfileDialogProps): ReactNode {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const logic = useProfileDialog(isOpen, onClose);
   const signOutMutation = useSignOut();
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
@@ -35,7 +35,7 @@ export function ProfileDialog({ isOpen, onClose }: ProfileDialogProps): ReactNod
 
   const handleOpenProfileSettings = () => {
     onClose();
-    navigate('/settings/profile');
+    transitionNavigate('/settings/profile');
   };
 
   const handleLogout = async () => {

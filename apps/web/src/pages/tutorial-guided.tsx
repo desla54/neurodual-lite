@@ -14,8 +14,9 @@ import { TutorialSpecs, type TutorialCompletionReport } from '@neurodual/logic';
 import { TutorialHub, TutorialEngine, TutorialReport } from '@neurodual/ui';
 import type { ReactNode } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 import { useAppPorts } from '../providers';
 import { useSettingsStore } from '../stores/settings-store';
 
@@ -27,7 +28,7 @@ import { useSettingsStore } from '../stores/settings-store';
  */
 export function TutorialGuidedPage(): ReactNode {
   const { specId } = useParams();
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const { t } = useTranslation();
   const completedTutorials = useSettingsStore((s) => s.ui.completedTutorials ?? []);
   const addCompletedTutorial = useSettingsStore((s) => s.addCompletedTutorial);
@@ -77,8 +78,8 @@ export function TutorialGuidedPage(): ReactNode {
   const handleExit = useCallback(() => {
     tutorialRecovery.clearTutorialRecoverySnapshot();
     setShowCompletionDialog(false);
-    navigate('/');
-  }, [navigate]);
+    transitionNavigate('/');
+  }, [transitionNavigate, tutorialRecovery]);
 
   const handleComplete = useCallback(
     (report?: TutorialCompletionReport) => {
@@ -133,13 +134,13 @@ export function TutorialGuidedPage(): ReactNode {
   if (!activeSpec) {
     return (
       <TutorialHub
-        onSelect={(id) => navigate(`/tutorial/${id}`)}
+        onSelect={(id) => transitionNavigate(`/tutorial/${id}`, { direction: 'modal' })}
         completedTutorials={completedTutorials}
         lockedModeIds={[]}
         extraCards={
           <button
             type="button"
-            onClick={() => navigate('/stroop-flex?intro=1')}
+            onClick={() => transitionNavigate('/stroop-flex?intro=1', { direction: 'modal' })}
             className="group relative flex items-center gap-4 text-left p-4 rounded-2xl transition-all duration-200 border border-border bg-card hover:bg-secondary/50 hover:border-primary/20 active:scale-[0.98] cursor-pointer"
           >
             <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-fuchsia-100 dark:bg-fuchsia-500/15">
@@ -217,7 +218,7 @@ export function TutorialGuidedPage(): ReactNode {
           onBackToHome={handleExit}
           onRetry={handleRestart}
           onGoToTraining={() =>
-            navigate('/', {
+            transitionNavigate('/', {
               state: {
                 homeTab: 'free',
                 suggestedModeId: modeId,

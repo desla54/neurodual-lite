@@ -8,10 +8,10 @@
  */
 
 import type { ReactNode } from 'react';
-import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { useEffectiveUserId } from '@neurodual/ui';
+import { useTransitionNavigate } from '../../hooks/use-transition-navigate';
 import { useAppPorts } from '../../providers';
 
 /** Metallic gray paperclip — centered on the card */
@@ -47,7 +47,7 @@ function EquationSketch(): ReactNode {
 }
 
 export function OspanMeasureButton(): ReactNode {
-  const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const { t } = useTranslation();
   const userId = useEffectiveUserId();
   const { persistence } = useAppPorts();
@@ -71,7 +71,7 @@ export function OspanMeasureButton(): ReactNode {
   return (
     <button
       type="button"
-      onClick={() => navigate('/ospan-measure')}
+      onClick={() => transitionNavigate('/ospan-measure', { direction: 'modal' })}
       className="group relative rotate-2 origin-top-left active:scale-[0.97] active:origin-top-left transition-transform duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 rounded-b-sm"
       aria-label={t('home.showOspanMeasure', 'Working memory measure')}
     >

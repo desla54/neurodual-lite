@@ -114,6 +114,7 @@ import { useSessionWakeLock } from '../hooks/use-session-wake-lock';
 import { useSynergySessionInvalidation } from '../hooks/use-synergy-session-invalidation';
 import { useUnifiedReportLabels } from '../hooks/use-unified-report-labels';
 import { useAnalytics } from '../hooks/use-analytics';
+import { useTransitionNavigate } from '../hooks/use-transition-navigate';
 const AdminGameToolsLazy = lazy(() =>
   import('../components/dev/AdminGameTools').then((m) => ({ default: m.AdminGameTools })),
 );
@@ -1197,6 +1198,7 @@ function GameplayContent({
 }: GameplayContentProps): ReactNode {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { transitionNavigate } = useTransitionNavigate();
   const { audio, wakeLock, diagnostics, sessionRecovery } = useAppPorts();
   const persistence = usePersistence();
 
@@ -1470,10 +1472,9 @@ function GameplayContent({
       stage_id: effectiveJourneyStageId,
     });
     dispatch({ type: 'STOP' });
-    navigate('/');
+    transitionNavigate('/');
   }, [
     dispatch,
-    navigate,
     track,
     summary,
     effectiveMode,
@@ -1481,6 +1482,7 @@ function GameplayContent({
     trialIndex,
     totalTrials,
     sessionPlayContext,
+    transitionNavigate,
   ]);
 
   const handleQuitCancel = useCallback(() => {
@@ -1510,7 +1512,7 @@ function GameplayContent({
       !nextJourneySessionForPlayAgain.isComplete
     ) {
       if (nextJourneySessionForPlayAgain.gameMode !== r.gameMode) {
-        navigate(nextJourneySessionForPlayAgain.route, {
+        transitionNavigate(nextJourneySessionForPlayAgain.route, {
           state: nextSessionToPlayIntent(nextJourneySessionForPlayAgain),
         });
         return;
@@ -1522,10 +1524,10 @@ function GameplayContent({
     createSession,
     isJourneySession,
     nextJourneySessionForPlayAgain,
-    navigate,
     setPendingAutoStart,
     stableFinishedReport,
     track,
+    transitionNavigate,
   ]);
 
   /**
@@ -1535,25 +1537,25 @@ function GameplayContent({
   const handleBackToHome = useCallback(async () => {
     const r = stableFinishedReport;
     if (r) track('report_action_clicked', buildReportActionPayload(r, 'home'));
-    navigate('/');
-  }, [navigate, stableFinishedReport, track]);
+    transitionNavigate('/');
+  }, [stableFinishedReport, track, transitionNavigate]);
 
   const handleReplay = useCallback(() => {
     if (summary?.sessionId) {
       const r = stableFinishedReport;
       if (r) track('report_action_clicked', buildReportActionPayload(r, 'replay'));
-      navigate(`/replay/${summary.sessionId}`);
+      transitionNavigate(`/replay/${summary.sessionId}`);
     }
-  }, [navigate, stableFinishedReport, summary?.sessionId, track]);
+  }, [stableFinishedReport, summary?.sessionId, track, transitionNavigate]);
 
   // Interactive correction (only for Tempo mode)
   const handleCorrect = useCallback(() => {
     if (summary?.sessionId) {
       const r = stableFinishedReport;
       if (r) track('report_action_clicked', buildReportActionPayload(r, 'correct'));
-      navigate(`/replay/${summary.sessionId}?mode=interactive`);
+      transitionNavigate(`/replay/${summary.sessionId}?mode=interactive`);
     }
-  }, [navigate, stableFinishedReport, summary?.sessionId, track]);
+  }, [stableFinishedReport, summary?.sessionId, track, transitionNavigate]);
 
   // Play click sound on button press (if enabled)
   const playClickIfEnabled = useCallback(() => {
@@ -2043,7 +2045,7 @@ function GameplayContent({
                 return;
               }
               const targetModeId = action.intent.gameModeId ?? stableReport.gameMode;
-              navigate(getRouteForMode(targetModeId), {
+              transitionNavigate(getRouteForMode(targetModeId), {
                 state: action.intent,
               });
             }}
@@ -2053,7 +2055,7 @@ function GameplayContent({
               setStatsTab(preset.tab);
               setStatsMode(preset.mode);
               setStatsJourneyFilter(preset.journeyFilter);
-              navigate('/stats');
+              transitionNavigate('/stats');
             }}
             onReplay={handleReplay}
             onCorrect={
