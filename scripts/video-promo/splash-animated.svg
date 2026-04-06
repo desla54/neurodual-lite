@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  NeuroDual animated splash — web SVG version.
+  Faithful port of Android animated-vector (ic_splash_animated.xml).
+
+  Phase 1 — Build-up (0 → 2.5s):
+    0-1s:     Circle border draws (trimPath via stroke-dashoffset)
+    0.9-1.5s: Top-left cell pops (scale 0→1, overshoot)
+    1.5-2.1s: Bot-right cell pops (scale 0→1, overshoot)
+    2.1-2.5s: Amber center dash draws
+
+  Phase 2 — Breathing (2.6s → loop):
+    Filled cells pulse scale 1→1.08→1 (900ms, déphasées)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="400" height="400">
+  <defs>
+    <style>
+      /* ── Phase 1: Circle border draw ── */
+      @keyframes circle-draw {
+        0%   { stroke-dashoffset: 276.46; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* ── Phase 1: Cell pop (overshoot) ── */
+      @keyframes cell-pop {
+        0%   { transform: scale(0); }
+        70%  { transform: scale(1.12); }
+        85%  { transform: scale(0.97); }
+        100% { transform: scale(1); }
+      }
+
+      /* ── Phase 1: Dash draw ── */
+      @keyframes dash-draw {
+        0%   { stroke-dashoffset: 6; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* ── Phase 2: Breathing pulse ── */
+      @keyframes pulse {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.08); }
+        100% { transform: scale(1); }
+      }
+
+      /* ── Apply animations ── */
+
+      .circle-border {
+        stroke-dasharray: 276.46;
+        stroke-dashoffset: 276.46;
+        animation: circle-draw 1s cubic-bezier(0.33, 0, 0.1, 1) forwards;
+      }
+
+      .cell-tl {
+        transform: scale(0);
+        transform-origin: 31px 31px;
+        animation:
+          cell-pop 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.9s forwards;
+      }
+
+      .cell-br {
+        transform: scale(0);
+        transform-origin: 69px 69px;
+        animation:
+          cell-pop 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1.5s forwards;
+      }
+
+      .center-dash {
+        stroke-dasharray: 6;
+        stroke-dashoffset: 6;
+        animation: dash-draw 0.4s cubic-bezier(0.33, 0, 0.1, 1) 2.1s forwards;
+      }
+
+      /* Pulse wrappers — start after build-up */
+      .pulse-tl {
+        transform-origin: 31px 31px;
+        animation: pulse 1.8s ease-in-out 2.6s infinite;
+      }
+
+      .pulse-br {
+        transform-origin: 69px 69px;
+        animation: pulse 1.8s ease-in-out 3.0s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer circle border (animated draw) -->
+  <circle class="circle-border"
+    cx="50" cy="50" r="44"
+    fill="none"
+    stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"
+  />
+
+  <!-- 6 outlined cells (static) -->
+  <!-- (1,0) -->
+  <rect x="42" y="23" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+  <!-- (2,0) -->
+  <rect x="61" y="23" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+  <!-- (2,1) -->
+  <rect x="61" y="42" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+  <!-- (1,2) -->
+  <rect x="42" y="61" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+  <!-- (0,2) -->
+  <rect x="23" y="61" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+  <!-- (0,1) -->
+  <rect x="23" y="42" width="16" height="16" rx="4"
+    fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+
+  <!-- Filled cell (0,0) top-left — pulse wrapper > pop wrapper -->
+  <g class="pulse-tl">
+    <g class="cell-tl">
+      <rect x="23" y="23" width="16" height="16" rx="4" fill="#ECEBE6"/>
+    </g>
+  </g>
+
+  <!-- Filled cell (2,2) bot-right — pulse wrapper > pop wrapper -->
+  <g class="pulse-br">
+    <g class="cell-br">
+      <rect x="61" y="61" width="16" height="16" rx="4" fill="#ECEBE6"/>
+    </g>
+  </g>
+
+  <!-- Amber center dash (animated draw) -->
+  <line class="center-dash"
+    x1="47" y1="50" x2="53" y2="50"
+    stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"
+  />
+</svg>

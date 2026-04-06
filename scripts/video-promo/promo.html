@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+  :root {
+    --nd-beige-100: #F5F1EB;
+    --nd-beige-200: #EDE8E0;
+    --nd-amber-400: #E8A020;
+    --nd-forest-800: #2D3A2E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: var(--nd-beige-100);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: var(--nd-forest-800);
+  }
+
+  /* ── Scenes ── */
+  .scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* ── Splash ── */
+  #scene-splash { background: #171512; }
+  .splash-logo { width: 360px; height: 360px; }
+  .splash-brand { text-align: center; margin-top: 40px; }
+  .splash-brand h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 72px; color: #F0EEE9;
+    letter-spacing: -1px; opacity: 0;
+  }
+  .splash-brand p {
+    font-size: 22px; font-weight: 600; letter-spacing: 4px;
+    color: #f59e0b; margin-top: 10px; opacity: 0;
+  }
+
+  /* ── Content scenes ── */
+  .scene-header {
+    position: absolute;
+    z-index: 5;
+  }
+  /* Default: top center */
+  .scene-header.top-center {
+    top: 80px; left: 0; right: 0; text-align: center;
+  }
+  /* Left side, vertically centered */
+  .scene-header.left-mid {
+    top: 50%; left: 60px; right: auto;
+    transform: translateY(-50%);
+    text-align: left; max-width: 440px;
+  }
+  /* Right side, vertically centered */
+  .scene-header.right-mid {
+    top: 50%; right: 60px; left: auto;
+    transform: translateY(-50%);
+    text-align: right; max-width: 440px;
+  }
+  .scene-header h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 58px; color: var(--nd-forest-800); opacity: 0;
+  }
+  .scene-header p {
+    font-size: 28px; font-weight: 500;
+    color: var(--nd-amber-400); margin-top: 10px; opacity: 0;
+  }
+
+  /* Phone */
+  .phone-mockup {
+    width: 580px; height: 1180px;
+    background: var(--nd-forest-800);
+    border-radius: 36px; padding: 10px;
+    box-shadow: 0 40px 100px rgba(45,58,46,0.25), 0 0 0 1px rgba(45,58,46,0.15);
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    border-radius: 28px; overflow: hidden;
+    background: var(--nd-beige-200);
+  }
+  .phone-screen img {
+    width: 100%; height: auto;
+    margin-top: -44px;
+  }
+
+  /* Layout variants */
+  .phone-wrap {
+    position: absolute; opacity: 0;
+  }
+  /* Center bottom (cut off) */
+  .phone-wrap.center-bottom {
+    bottom: -80px; left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Right side (cut off right edge) */
+  .phone-wrap.right-cut {
+    top: 280px; right: -160px; left: auto;
+  }
+  /* Left side (cut off left edge) */
+  .phone-wrap.left-cut {
+    top: 280px; left: -160px; right: auto;
+  }
+  /* Center, higher up */
+  .phone-wrap.center-high {
+    top: 200px; left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ── Outro ── */
+  #scene-outro { background: #171512; }
+  .outro-logo { width: 220px; height: 220px; opacity: 0; }
+  .outro-brand { text-align: center; }
+  .outro-brand h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 64px; color: #F0EEE9;
+    letter-spacing: -1px; margin-top: 28px; opacity: 0;
+  }
+  .outro-brand p {
+    font-size: 20px; font-weight: 600; letter-spacing: 4px;
+    color: #f59e0b; margin-top: 8px; opacity: 0;
+  }
+  .cta-btn {
+    display: inline-block; margin-top: 48px;
+    padding: 24px 60px;
+    background: var(--nd-amber-400); color: #171512;
+    font-size: 30px; font-weight: 700;
+    border-radius: 16px; opacity: 0; transform: scale(0.8);
+  }
+  .outro-sub {
+    font-size: 22px; color: #787570;
+    margin-top: 18px; opacity: 0;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- ═══ SCENE 0: SPLASH ═══ -->
+<div class="scene" id="scene-splash">
+  <svg class="splash-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle id="circle-border" cx="50" cy="50" r="44" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"
+      stroke-dasharray="276.46" stroke-dashoffset="276.46"/>
+    <!-- 8 outlined cells (visible from start) -->
+    <rect x="23" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="42" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="42" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="42" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="42" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <!-- Filled cells (light up) -->
+    <rect id="cell-tl" x="23" y="23" width="16" height="16" rx="4" fill="#ECEBE6" opacity="0"/>
+    <rect id="cell-br" x="61" y="61" width="16" height="16" rx="4" fill="#ECEBE6" opacity="0"/>
+    <!-- Amber dash -->
+    <line id="center-dash" x1="47" y1="50" x2="53" y2="50" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"
+      stroke-dasharray="6" stroke-dashoffset="6"/>
+  </svg>
+  <div class="splash-brand">
+    <h1 id="splash-title">NeuroDual</h1>
+    <p id="splash-sub">BRAIN TRAINING</p>
+  </div>
+</div>
+
+<!-- ═══ SCENE 1: HOME — phone center-bottom ═══ -->
+<div class="scene" id="scene-home">
+  <div class="scene-header top-center">
+    <h2>Choisis ton entraînement</h2>
+    <p>10+ modes cognitifs</p>
+  </div>
+  <div class="phone-wrap center-bottom">
+    <div class="phone-mockup"><div class="phone-screen">
+      <img src="assets/selected/home.jpg" alt="">
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SCENE 2: GAMEPLAY 1 — phone right, text left ═══ -->
+<div class="scene" id="scene-gameplay1">
+  <div class="scene-header left-mid">
+    <h2>Mémoire spatiale</h2>
+    <p>Retiens les positions sur la grille</p>
+  </div>
+  <div class="phone-wrap right-cut">
+    <div class="phone-mockup"><div class="phone-screen">
+      <img src="assets/selected/gameplay1.jpg" alt="">
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SCENE 3: GAMEPLAY 2 — phone left, text right ═══ -->
+<div class="scene" id="scene-gameplay2">
+  <div class="scene-header right-mid">
+    <h2>Dual N-Back</h2>
+    <p>Position + Audio simultanés</p>
+  </div>
+  <div class="phone-wrap left-cut">
+    <div class="phone-mockup"><div class="phone-screen">
+      <img src="assets/selected/gameplay2.jpg" alt="">
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SCENE 4: RESULTS 1 — phone center high ═══ -->
+<div class="scene" id="scene-results1">
+  <div class="scene-header top-center">
+    <h2>Analyse détaillée</h2>
+    <p>Performance par modalité</p>
+  </div>
+  <div class="phone-wrap center-high">
+    <div class="phone-mockup"><div class="phone-screen">
+      <img src="assets/selected/results1.jpg" alt="">
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SCENE 5: RESULTS 2 — phone center-bottom ═══ -->
+<div class="scene" id="scene-results2">
+  <div class="scene-header top-center">
+    <h2>Suis ta progression</h2>
+    <p>Timeline et analyse d'erreurs</p>
+  </div>
+  <div class="phone-wrap center-bottom">
+    <div class="phone-mockup"><div class="phone-screen">
+      <img src="assets/selected/results2.jpg" alt="">
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SCENE 6: OUTRO ═══ -->
+<div class="scene" id="scene-outro">
+  <svg class="outro-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="42" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="23" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="42" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="42" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="42" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="61" y="61" width="16" height="16" rx="4" fill="none" stroke="#ECEBE6" stroke-width="1.8" stroke-opacity="0.3"/>
+    <rect x="23" y="23" width="16" height="16" rx="4" fill="#ECEBE6"/>
+    <rect x="61" y="61" width="16" height="16" rx="4" fill="#ECEBE6"/>
+    <line x1="47" y1="50" x2="53" y2="50" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+  <div class="outro-brand">
+    <h1>NeuroDual</h1>
+    <p>BRAIN TRAINING</p>
+  </div>
+  <div class="cta-btn">Télécharger gratuitement</div>
+  <div class="outro-sub">Disponible sur iOS & Android</div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// GSAP Master Timeline
+// ═══════════════════════════════════════════
+
+const tl = gsap.timeline({ paused: true });
+
+// Helper: show/hide a scene
+function showScene(id) {
+  return gsap.set(id, { visibility: 'visible', opacity: 1 });
+}
+function hideScene(id) {
+  return gsap.set(id, { visibility: 'hidden', opacity: 0 });
+}
+
+// Helper: build a content scene (title + phone) with layout-aware animation
+function contentScene(sceneId, duration) {
+  const el = document.querySelector(sceneId);
+  const h2 = el.querySelector('.scene-header h2');
+  const p = el.querySelector('.scene-header p');
+  const phone = el.querySelector('.phone-wrap');
+  const header = el.querySelector('.scene-header');
+
+  const scene = gsap.timeline();
+
+  // Detect layout
+  const isRightCut = phone.classList.contains('right-cut');
+  const isLeftCut = phone.classList.contains('left-cut');
+  const isCenterBottom = phone.classList.contains('center-bottom');
+  const isCenterHigh = phone.classList.contains('center-high');
+  const isLeftMid = header.classList.contains('left-mid');
+  const isRightMid = header.classList.contains('right-mid');
+
+  // Phone enter direction
+  let phoneFrom;
+  if (isRightCut) {
+    phoneFrom = { opacity: 0, x: 60, scale: 0.97 };
+  } else if (isLeftCut) {
+    phoneFrom = { opacity: 0, x: -60, scale: 0.97 };
+  } else if (isCenterBottom) {
+    phoneFrom = { opacity: 0, y: 60, scale: 0.97 };
+  } else {
+    phoneFrom = { opacity: 0, y: 40, scale: 0.97 };
+  }
+
+  const phoneTo = { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: 'power3.out' };
+  // For centered layouts, preserve the translateX(-50%)
+  if (isCenterBottom || isCenterHigh) {
+    phoneFrom.xPercent = -50;
+    phoneTo.xPercent = -50;
+  }
+
+  // Text enter direction
+  let h2From = { opacity: 0, y: 30 };
+  let pFrom = { opacity: 0, y: 20 };
+  if (isLeftMid) {
+    h2From = { opacity: 0, x: -30, y: 0 };
+    pFrom = { opacity: 0, x: -20, y: 0 };
+  } else if (isRightMid) {
+    h2From = { opacity: 0, x: 30, y: 0 };
+    pFrom = { opacity: 0, x: 20, y: 0 };
+  }
+
+  // Enter
+  scene.set(sceneId, { visibility: 'visible' });
+  scene.fromTo(sceneId, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' });
+  scene.fromTo(h2, h2From, { opacity: 1, x: 0, y: 0, duration: 0.6, ease: 'power3.out' }, '<0.1');
+  scene.fromTo(p, pFrom, { opacity: 1, x: 0, y: 0, duration: 0.5, ease: 'power3.out' }, '<0.15');
+  scene.fromTo(phone, phoneFrom, phoneTo, '<0.1');
+
+  // Hold
+  scene.to({}, { duration: duration });
+
+  // Ken Burns on phone image
+  const img = el.querySelector('.phone-screen img');
+  if (img) {
+    scene.fromTo(img, { scale: 1 }, { scale: 1.04, duration: duration + 1.5, ease: 'none' }, 0.5);
+  }
+
+  // Exit
+  scene.to(sceneId, { opacity: 0, duration: 0.4, ease: 'power2.in' });
+  scene.set(sceneId, { visibility: 'hidden' });
+
+  return scene;
+}
+
+// ═══ SCENE 0: SPLASH (≈5.5s) ═══
+const splashScene = gsap.timeline();
+splashScene.set('#scene-splash', { visibility: 'visible', opacity: 1 });
+
+// Circle draws
+splashScene.to('#circle-border', {
+  attr: { 'stroke-dashoffset': 0 },
+  duration: 1.2, ease: 'power2.out'
+}, 0.3);
+
+// Top-left cell lights up
+splashScene.to('#cell-tl', {
+  attr: { opacity: 1 },
+  duration: 0.4, ease: 'power2.out'
+}, 1.3);
+
+// Bottom-right cell lights up
+splashScene.to('#cell-br', {
+  attr: { opacity: 1 },
+  duration: 0.4, ease: 'power2.out'
+}, 1.9);
+
+// Amber dash draws
+splashScene.to('#center-dash', {
+  attr: { 'stroke-dashoffset': 0 },
+  duration: 0.4, ease: 'power2.out'
+}, 2.4);
+
+// Brand text fades in
+splashScene.to('#splash-title', {
+  opacity: 1, y: 0, duration: 0.6, ease: 'power3.out'
+}, 2.8);
+splashScene.set('#splash-title', { y: 16, opacity: 0 }, 0); // initial state
+splashScene.to('#splash-sub', {
+  opacity: 1, y: 0, duration: 0.5, ease: 'power3.out'
+}, 3.1);
+splashScene.set('#splash-sub', { y: 12, opacity: 0 }, 0);
+
+// Hold — let the viewer see the complete logo
+splashScene.to({}, { duration: 2.0 });
+
+// Fade out
+splashScene.to('#scene-splash', { opacity: 0, duration: 0.5, ease: 'power2.in' });
+splashScene.set('#scene-splash', { visibility: 'hidden' });
+
+tl.add(splashScene);
+
+// ═══ SCENES 1-5: CONTENT ═══
+tl.add(contentScene('#scene-home', 2.2));
+tl.add(contentScene('#scene-gameplay1', 2.2));
+tl.add(contentScene('#scene-gameplay2', 2.2));
+tl.add(contentScene('#scene-results1', 2.2));
+tl.add(contentScene('#scene-results2', 2.2));
+
+// ═══ SCENE 6: OUTRO (≈5s) ═══
+const outroScene = gsap.timeline();
+outroScene.set('#scene-outro', { visibility: 'visible' });
+outroScene.fromTo('#scene-outro', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+
+outroScene.fromTo('.outro-logo',
+  { opacity: 0, scale: 0.7 },
+  { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.4)' },
+  0.3
+);
+outroScene.fromTo('#scene-outro .outro-brand h1',
+  { opacity: 0, y: 20 },
+  { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
+  0.7
+);
+outroScene.fromTo('#scene-outro .outro-brand p',
+  { opacity: 0, y: 12 },
+  { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' },
+  0.9
+);
+outroScene.fromTo('.cta-btn',
+  { opacity: 0, scale: 0.8 },
+  { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.6)' },
+  1.2
+);
+outroScene.fromTo('.outro-sub',
+  { opacity: 0 },
+  { opacity: 1, duration: 0.5, ease: 'power2.out' },
+  1.5
+);
+
+// Hold
+outroScene.to({}, { duration: 2.5 });
+
+// Fade out
+outroScene.to('#scene-outro', { opacity: 0, duration: 0.6, ease: 'power2.in' });
+
+tl.add(outroScene);
+
+// ═══ Expose for Puppeteer ═══
+window.__timeline = tl;
+window.__totalDuration = tl.duration();
+window.__ready = false;
+
+document.fonts.ready.then(() => {
+  window.__ready = true;
+  console.log('Timeline duration:', tl.duration().toFixed(2) + 's');
+});
+</script>
+</body>
+</html>
